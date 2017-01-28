@@ -15,7 +15,102 @@
       <pubDate>Sat, 28 Jan 2017 14:59:00 +0000</pubDate>
       
       <guid>http://petanikode.com/2017/01/4-cara-penulisan-kode-javscript-pada-html/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Javascript sebagai bahasa pemrograman yang berjalan di atas browser harus di tulis di dalam HTML. Ada empat cara penulisan javascript pada HTML.&lt;br /&gt;&lt;h2&gt;1. Tag &amp;lt;script&amp;gt;&lt;/h2&gt;Cara yang umum yang dipakai adalah menuliskanya dalam tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;. Tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; bisa dibuat di dalam tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;, mauapun di dalam tag &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html js&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;meta charset=&amp;ldquo;utf-8&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;script&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; console.log(&amp;ldquo;Hi, ini kode Javascript&amp;rdquo;);&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;/script&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/head&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;body&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;script&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; document.write(&amp;ldquo;Javascript itu keren!&amp;rdquo;);&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;/script&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;2. File Eksternal&lt;/h2&gt;Tidak ingin kode Javascript bercampur aduk dengan HTML, kita bisa menuliskannya pada file terpisah. Caranya, buatlah sebuah file yang berekstensi &lt;code&gt;.js&lt;/code&gt;, misalnya isinya sebagai berikut.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;// file-eksternal.js&lt;br /&gt;alert(&amp;ldquo;Kode Javascript dari File Eksternal&amp;rdquo;);&lt;/code&gt;&lt;/pre&gt;Kemudian, kita perlu menghubungkan file eksternal tersebut dengan file HTML. Caranya, gunakan tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; dengan atribut &lt;code&gt;src&lt;/code&gt; untuk menentukan lokasi file Javascriptnya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html js&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;meta charset=&amp;ldquo;utf-8&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;mark&gt;&amp;lt;script src=&amp;ldquo;file-eksternal.js&amp;rdquo;&amp;gt;&amp;lt;/script&amp;gt;&lt;/mark&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/head&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;body&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;3. Atribut Event&lt;/h2&gt;Cara yang ketiga ini sering digunakan untuk memanggil fungsi pada &lt;i&gt;event&lt;/i&gt; terentu. Misalnya ketika suatu elemen diklik, maka jalankan fungsi Javascript.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html js&#34;&gt;&amp;lt;button onclick=&amp;ldquo;alert(&amp;lsquo;Ok Terima kasih!&amp;rsquo;)&amp;rdquo;&amp;gt;Klik donk!&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;/pre&gt;Selain &lt;i&gt;event onclick&lt;/i&gt; ada juga &lt;i&gt;event-event&lt;/i&gt; yang lain, seperti &lt;i&gt;onsubmit&lt;/i&gt;, &lt;i&gt;onload&lt;/i&gt;, &lt;i&gt;ondoubleclick&lt;/i&gt;, &lt;i&gt;onmouseover&lt;/i&gt;, &lt;i&gt;onmouseout&lt;/i&gt;, dsb.&lt;br /&gt;&lt;h2&gt;4. URL&lt;/h2&gt;Terakhir, penulisan Javascript pada URL. Cara ini jarang digunakan, namun kita juga perlu mengetahuinya. Penulisan Javascript pada URL menggunakan protokol Javascript. Misal, cobalah untuk menuliskan kode seperti ini pada URL browser.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;javascript:alert(&amp;ldquo;Nah! ini Javascript&amp;rdquo;)&lt;/code&gt;&lt;/pre&gt;Hasilnya, Javascript akan dieksekusi browser.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-fqpdp9Si9Lg/WGlO8500McI/AAAAAAAADjw/V5vuPu-4Hx4-kuJ_Ru3Q6OV03mPQgkRPwCK4B/s1600/Penulisan%2BJavascript%2Bpada%2BURL.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-fqpdp9Si9Lg/WGlO8500McI/AAAAAAAADjw/V5vuPu-4Hx4-kuJ_Ru3Q6OV03mPQgkRPwCK4B/s1600/Penulisan%2BJavascript%2Bpada%2BURL.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Lalu, bagaiaman kita menggunakan cara ini di HTML?&lt;br /&gt;&lt;br /&gt;Cara ini bisa kita gunakan pada tag &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;, kemudian mengisi kode javascript pada atribut &lt;code&gt;href&lt;/code&gt;. Cara ini bisa menggantikan&lt;i&gt; event onclick&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html js&#34;&gt;&amp;lt;a href=&amp;ldquo;javascript:alert(&amp;lsquo;Wih! hebat bukan?&amp;rsquo;)&amp;rdquo;&amp;gt;Klik Aku&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;Baca juga: &lt;a href=&#34;http://www.petanikode.com/2015/10/cara-efisien-memanggil-fungsi.html&#34;&gt;Cara Efisien Memanggil Javascript pada Elemen Link&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Itulah empat cara penulisan Javascript pada HTML. Manakah cara yang sering kalian gunakan?&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://docstore.mik.ua/orelly/webprog/jscript/ch12_02.htm&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://docstore.mik.ua/orelly/webprog/jscript/ch12_02.htm&#34;&gt;http://docstore.mik.ua/orelly/webprog/jscript/ch12_02.htm&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>
+
+&lt;p&gt;&lt;amp-img
+width=&#34;720&#34;
+height=&#34;380&#34;
+alt=&#34;pemrograman javascript&#34;
+src=&#34;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Javascript sebagai bahasa pemrograman yang berjalan di atas browser harus di tulis di dalam HTML. Ada empat cara penulisan javascript pada HTML.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-tag-script&#34;&gt;1. Tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Cara yang umum yang dipakai adalah menuliskanya dalam tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;. Tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; bisa dibuat di dalam tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;, mauapun di dalam tag &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;. Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt;
+    &amp;lt;script&amp;gt;
+    console.log(&amp;quot;Hi, ini kode Javascript&amp;quot;);
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;script&amp;gt;
+document.write(&amp;quot;Javascript itu keren!&amp;quot;);
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-file-eksternal&#34;&gt;2. File Eksternal&lt;/h2&gt;
+
+&lt;p&gt;Tidak ingin kode Javascript bercampur aduk dengan HTML, kita bisa menuliskannya pada file terpisah. Caranya, buatlah sebuah file yang berekstensi &lt;code&gt;.js&lt;/code&gt;, misalnya isinya sebagai berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;// file-eksternal.js
+alert(&amp;quot;Kode Javascript dari File Eksternal&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian, kita perlu menghubungkan file eksternal tersebut dengan file HTML. Caranya, gunakan tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; dengan atribut &lt;code&gt;src&lt;/code&gt; untuk menentukan lokasi file Javascriptnya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+&amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt;
+
+&amp;lt;script src=&amp;quot;file-eksternal.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-atribut-event&#34;&gt;3. Atribut Event&lt;/h2&gt;
+
+&lt;p&gt;Cara yang ketiga ini sering digunakan untuk memanggil fungsi pada &lt;em&gt;event&lt;/em&gt; terentu. Misalnya ketika suatu elemen diklik, maka jalankan fungsi Javascript.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;button onclick=&amp;quot;alert(&#39;Ok Terima kasih!&#39;)&amp;quot;&amp;gt;Klik donk!&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Selain &lt;em&gt;event onclick&lt;/em&gt; ada juga &lt;em&gt;event-event&lt;/em&gt; yang lain, seperti &lt;em&gt;onsubmit&lt;/em&gt;, &lt;em&gt;onload&lt;/em&gt;, &lt;em&gt;ondoubleclick&lt;/em&gt;, &lt;em&gt;onmouseover&lt;/em&gt;, &lt;em&gt;onmouseout&lt;/em&gt;, dsb.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-url&#34;&gt;4. URL&lt;/h2&gt;
+
+&lt;p&gt;Terakhir, penulisan Javascript pada URL. Cara ini jarang digunakan, namun kita juga perlu mengetahuinya. Penulisan Javascript pada URL menggunakan protokol Javascript. Misal, cobalah untuk menuliskan kode seperti ini pada URL browser.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;javascript:alert(&amp;quot;Nah! ini Javascript&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya, Javascript akan dieksekusi browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;914&#34;
+height=&#34;460&#34;
+alt=&#34;pemrograman javascript&#34;
+src=&#34;http://3.bp.blogspot.com/-fqpdp9Si9Lg/WGlO8500McI/AAAAAAAADjw/V5vuPu-4Hx4-kuJ_Ru3Q6OV03mPQgkRPwCK4B/s1600/Penulisan%2BJavascript%2Bpada%2BURL.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu, bagaiaman kita menggunakan cara ini di HTML?&lt;/p&gt;
+
+&lt;p&gt;Cara ini bisa kita gunakan pada tag &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;, kemudian mengisi kode javascript pada atribut &lt;code&gt;href&lt;/code&gt;. Cara ini bisa menggantikan &lt;em&gt;event onclick&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;javascript:alert(&#39;Wih! hebat bukan?&#39;)&amp;quot;&amp;gt;Klik Aku&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2015/10/cara-efisien-memanggil-fungsi-javascript-pada-elemen-link/&#34;&gt;Cara Efisien Memanggil Javascript pada Elemen Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah empat cara penulisan Javascript pada HTML. Manakah cara yang sering kalian gunakan?&lt;/p&gt;
+
+&lt;p&gt;Referensi: &lt;a href=&#34;http://docstore.mik.ua/orelly/webprog/jscript/ch12_02.htm&#34;&gt;http://docstore.mik.ua/orelly/webprog/jscript/ch12_02.htm&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

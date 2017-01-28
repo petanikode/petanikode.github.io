@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Petani Kode</title>
+    <link>http://petanikode.com/index.xml</link>
+    <description>Recent content on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 25 Jan 2017 08:06:22 +0800</lastBuildDate>
+    <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Membuat Halaman Github Kurang dari 10 Menit</title>
+      <link>http://petanikode.com/2017/01/cara-membuat-halaman-github-kurang-dari-10-menit/</link>
+      <pubDate>Wed, 25 Jan 2017 08:06:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-membuat-halaman-github-kurang-dari-10-menit/</guid>
+      <description>
+
+&lt;p&gt;Halaman Github &lt;em&gt;(Github Pages)&lt;/em&gt; merupakan layanan &lt;em&gt;hosting&lt;/em&gt;  web statis yang diberikan oleh Github.
+Layanan ini diberikan secara gratis dan kita juga akan mendapatkan subdomain &lt;code&gt;.github.io&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;720&#34;
+height=&#34;380&#34;
+alt=&#34;Github Octocat&#34;
+src=&#34;https://3.bp.blogspot.com/-f3NdPaAWgzs/WITOd9XOGUI/AAAAAAAADtY/s2eqhveYCsIcHO6gLlcERO7xGa4HuTmcQCPcB/s1600/github-octocat-petanikode.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagaimanakah cara membuatnya?&lt;/p&gt;
+
+&lt;p&gt;Baiklah, pastikan anda sudah punya akun &lt;a href=&#34;http://petanikode.com/topik/github&#34;&gt;Github&lt;/a&gt; dan sudah menginstal &lt;a href=&#34;http://petanikode.com/topik/git&#34;&gt;Git&lt;/a&gt;. Kemudian
+silahkan ikuti langkah-langkah berikut, tidak sampai 10 menit kok.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-buat-repositori-baru&#34;&gt;1. Buat Repositori Baru&lt;/h2&gt;
+
+&lt;p&gt;Buatlah repositori baru dengan nama &lt;code&gt;username.github.io&lt;/code&gt;. Gunakan username github Anda,
+contoh &lt;code&gt;petanikode.github.io&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;539&#34;
+width=&#34;656&#34;
+alt=&#34;Membuat Repositori Baru di Github&#34;
+src=&#34;https://1.bp.blogspot.com/-C7pZt2jjSSo/WITHtNFH8yI/AAAAAAAADso/f15grxfIIngnZHMliFwp9fwkRDOlzXieACPcB/s1600/Membuat%2BRepositori%2Bbaru%2Bdi%2Bgithub.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-buat-repositri-di-komputer&#34;&gt;2. Buat Repositri di Komputer&lt;/h2&gt;
+
+&lt;p&gt;Buka terminal atau CMD, kemudian buatlah repositori baru. Kita akan mengisi,
+repositori ini dengan file &lt;code&gt;index.html&lt;/code&gt; saja. Silahkan ikuti perintah berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir halaman-github
+cd halaman-github
+echo &amp;quot;Hello World! Welcome to my website&amp;quot; &amp;gt;&amp;gt; index.html
+git init
+git add index.html
+git commit -m &amp;quot;first commit&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-tambahkan-url-remote-repository&#34;&gt;3. Tambahkan URL &lt;em&gt;Remote Repository&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Silahkan ketik perintah berikut untuk menambahkan &lt;em&gt;remote repository&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote add origin https://github.com/petanikode/petanikode.github.io.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sesuaikan dengan URL repository anda.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-kirim-ke-github&#34;&gt;4. Kirim ke Github&lt;/h2&gt;
+
+&lt;p&gt;Setelah itu, anda bisa sinkronkan repositori lokal dengan repositori remote di
+Github.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-coba-lihat-hasilnya&#34;&gt;5. Coba Lihat Hasilnya&lt;/h2&gt;
+
+&lt;p&gt;Coba buka alamat github yang anda buat, &lt;code&gt;petanikode.github.io&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;228&#34;
+width=&#34;750&#34;
+alt=&#34;Halaman Github Petani Kode&#34;
+src=&#34;https://3.bp.blogspot.com/-IQKEvR-_QFg/WITLMJ4f67I/AAAAAAAADtE/rOJkP3e6tiEbogoxvucyQcby2zJFCIK1QCPcB/s1600/Halaman%2BGithub%2BPetani%2BKode.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah! Bagaimana, tidak sampai 10 menit &amp;lsquo;kan? Selanjutnya anda bisa kembangkan sendiri
+websitenya. Kalau cara di atas masih belum jelas, silahkan simak video berikut.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe
+width=&#34;836&#34;
+height=&#34;836&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+src=&#34;https://asciinema.org/api/asciicasts/100278?&amp;speed=2&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Belajar Pemrograman Mulai dari Mana?</title>
+      <link>http://petanikode.com/2017/01/belajar-pemrograman-mulai-dari-mana/</link>
+      <pubDate>Mon, 23 Jan 2017 19:58:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/belajar-pemrograman-mulai-dari-mana/</guid>
+      <description>
+
+&lt;p&gt;Pertanyaan ini sering ditanyakan oleh kawan-kawan yang ingin memasuki dunia pemrograman.
+Setiap orang akan memiliki jawaban yang berbeda-beda. Sebenarnya jawabnnya
+sangat tergantung dari yang bertanya. Sudah sejauh mana pengetahuannya tentang
+komputer dan pemrograman?&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;720&#34;
+height=&#34;380&#34;
+alt=&#34;kopi dan laptop - Belajar Pemrograman&#34;
+src=&#34;https://4.bp.blogspot.com/-IkP1sd_J1Vw/WIAfKIyz7lI/AAAAAAAADqo/O-cgHSD3bvkmOqabe9Rbu8UVMKUkJRjdwCPcB/s1600/belajar-pemrograman-petanikode.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Saya asumsikan yang bertanya sudah paham tentang konsep dasar komputer,
+bisa menginstal sistem operasi (Windows/Linux), paham CLI/CMD, dan punya
+rasa keingintahuan yang tinggi.&lt;/p&gt;
+
+&lt;h2 id=&#34;mulai-dari-sekarang-dan-di-sini&#34;&gt;Mulai dari Sekarang dan di sini&lt;/h2&gt;
+
+&lt;p&gt;Benar sekali, jangan ditunda-tunda sampai besok. Mulailah sekarang juga dan di
+sini. Ya! di sini, di tempat anda berada sekarang.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Jangan tunda sampai besok apa yang bisa anda lakukan hari ini.&amp;rdquo;
+&amp;ndash; Benjamin Franklin&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Setiap orang memang mimiliki titik awal yang berbeda-beda. Ada yang mulai dari
+kursus, buku, kuliah, tutorial, dsb. Anda bisa memulianya di sini, di web &lt;a href=&#34;http://petanikode.com/&#34;&gt;Petani Kode&lt;/a&gt; ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;pelajari-hal-hal-dasar&#34;&gt;Pelajari Hal-hal dasar&lt;/h2&gt;
+
+&lt;p&gt;Baiklah, sekarang saya anggap anda seorang yang baru pindah tempat kos.
+Di tempat kos anda saat ini, banyak hal asing yang belum anda ketahui,
+seperti jalan, warung, tempat loundry, dsb. Apakah yang akan anda lakukan,
+bila berada dalam kondisi ini.&lt;/p&gt;
+
+&lt;p&gt;Mungkin anda bisa mulai mencari informasi di Google dan jalan-jalan di sekitaran
+kos. Bertanya dan berkenalan dengan para tetangga.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Saya selalu mencari di Google apa yang tidak diketahui&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Begitu juga dengan belajar pemrograman dan belajar apapun juga. Anda akan berada
+dalam kondisi seperti orang asing. Jangan khawatir, yang perlu anda lakukan adalah
+mencari tahu. Kumpulkan informasi sebanyak mungkin dan pelajari, sehingga tidak
+merasa asing lagi.&lt;/p&gt;
+
+&lt;p&gt;Pada saat anda berada dalam kondisi asing, sebaiknya jangan telalu banyak bertanya di forum.
+Karena para penghuni forum atau grup kurang senang pertanyaan &lt;em&gt;mainstream&lt;/em&gt; yang sudah ada jawabannya di
+dokumentasi, FAQs, maupun di Google.&lt;/p&gt;
+
+&lt;h2 id=&#34;memilih-bahasa-pemrograman&#34;&gt;Memilih Bahasa Pemrograman&lt;/h2&gt;
+
+&lt;p&gt;Sekarang saatnya memilih bahasa pemrograman, atau mungkin anda sudah punya pilihan.
+Pilihlah bahasa pemrograman yang ingin anda pelajari. Mungkin ada yang menyarankan
+mempelajar bahasa pemrograman x, sedangkan anda tidak ingin pelajari itu. Ya,
+jangan dipelajari. Karena akan sulit rasanya menerima ilmu yang tidak kita inginkan.&lt;/p&gt;
+
+&lt;p&gt;Setiap orang mulai belajar dari bahasa yang berbeda-beda. Saya sendiri mulai dari
+belajar bahasa pemrograman &lt;a href=&#34;http://petanikode.com/topik/pascal&#34;&gt;Pascal&lt;/a&gt;, Assembly 8086, kemudian ke &lt;a href=&#34;http://petanikode.com/topik/html&#34;&gt;HTML&lt;/a&gt;,
+&lt;a href=&#34;http://petanikode.com/topik/css&#34;&gt;CSS&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/javascript&#34;&gt;Javasript&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/python&#34;&gt;Python&lt;/a&gt;,
+&lt;a href=&#34;http://petanikode.com/topik/c&#34;&gt;C&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/c++&#34;&gt;C++&lt;/a&gt;, dan &lt;a href=&#34;http://petanikode.com/topik/java&#34;&gt;Java&lt;/a&gt;. Karena saya tidak hanya
+tertarik pada satu bahasa. Tentu saja, membutuhkan waktu lama untuk mempelajari itu semua.
+Karena itu, anda tidak harus mengikuti apa yang saya pelajari.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Saya ingin tahu, apa yang belum diketahui.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Itulah ungkapan yang mengantarkan saya sampai saat ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;praktik-dan-praktik&#34;&gt;Praktik dan Praktik&lt;/h2&gt;
+
+&lt;p&gt;Jika anda ingin mahir bermain gitar, apa yang akan anda lakukan? Membaca panduan
+tentang bermain gitar ataukah berlatih. Ya, tentu saja yang paling utama adalah berlatih.
+Entah seperti apa suara yang dihasilkan, yang penting berlatih sampai jari-jari terbiasa.
+Begitu juga dengan belajar pemrograman. Anda harus terus-menerus berlatih dengan praktik.&lt;/p&gt;
+
+&lt;p&gt;Pemrograman tidak hanya tentang menulis kode saja. Pemrograman itu, 80% berpikir.
+Latihlah pikiran anda agar terbiasa memecahkan masalah dan error.&lt;/p&gt;
+
+&lt;p&gt;Itulah jawaban saya atas pertanyaan &amp;ldquo;Belajar Pemrograman mulai dari dari mana?&amp;rdquo;
+Jawaban sederhananya, &lt;strong&gt;mulai dari sekarang dan di sini&lt;/strong&gt;. Cari tahu apa yang belum
+diketahui. Setiap orang akan memiliki jawaban yang berbeda-beda. Kalau anda punya jawaban,
+silahkan disampaikan melalui komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kenapa Bahasa Pemrograman Java Kurang Cocok untuk Pemula?</title>
+      <link>http://petanikode.com/2017/01/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/</link>
+      <pubDate>Sat, 21 Jan 2017 16:45:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/</guid>
+      <description>
+
+&lt;p&gt;Sudah dua kali semester saya mengajar di praktikum pemrograman &lt;a href=&#34;http://petanikode.com/topik/java&#34;&gt;Java&lt;/a&gt;. Hasilnya, hanya sebagian mahasiswa yang mengerti. Sebagiannya lagi masih pusing. Karena mereka belum pernah ada pengalaman &lt;em&gt;coding&lt;/em&gt; sebelumnya. Bahasa pemrograman Java memang populer, oleh karena itu pihak kampus memilih bahasa ini untuk diajarkan pada semester I.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;720&#34;
+height=&#34;380&#34;
+alt=&#34;Anak-anak ngoding di sawah&#34;
+src=&#34;https://4.bp.blogspot.com/-JLEbu94zv1c/WGjrfTdQdrI/AAAAAAAADjg/OkDhW7IniKY5d21yGt-Nb4rChbTtSPE9gCK4B/s1600/Anak-anak%2Bcoding%2Bdi%2Bsawah%2BPetani%2BKode.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Om Endy Muhardin, dalam tulisan di blognya yang berjudul &lt;a href=&#34;http://software.endy.muhardin.com/java/java-tidak-untuk-pemula/&#34;&gt;Java: Tidak untuk Pemula&lt;/a&gt; mengatakan: &amp;ldquo;Java memang bahasa yang &lt;em&gt;mature&lt;/em&gt;. Sudah stabil (artinya tidak terlalu banyak perubahan fundamental) dan sudah teruji digunakan berbagai aplikasi besar dengan sukses. Tetapi tidak berarti mudah bagi pemula.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Kemudian saya mencoba mengumpulkan beberapa alasan, kenapa bahasa pemrograman Java kurang cocok untuk pemula.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-sintak-susah-dihapal&#34;&gt;1. Sintak Susah Dihapal&lt;/h2&gt;
+
+&lt;p&gt;Menurut saya, sintak Java agak susah dihapal/diingat. Karena sintaknya cukup panjang. Pembuatan program &lt;em&gt;Hello World&lt;/em&gt; saja sampai sepanjang ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.petanikode.HelloWorld;
+
+    public class HelloWorld {
+        public static void main(String[] args){
+        System.out.println(&amp;quot;Hello World&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada pertemuan pertama, saya mengajarkan kode di atas. Besoknya tidak ada yang ingat, kalau tidak mencontek.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-belum-belajar-akses-level&#34;&gt;2. Belum Belajar Akses Level&lt;/h2&gt;
+
+&lt;p&gt;Pada pemrograman berorientasikan objek, ada yang namanya akses level &lt;i&gt;(public, protected, &lt;/i&gt;dan&lt;i&gt; private)&lt;/i&gt;. Akses level ini untuk menentukan akses pada class, atribut, dan method. Bagaimana seorang yang tidak pernah &lt;i&gt;coding&lt;/i&gt; akan mengerti hal ini. Sedangkan mereka tidak pernah belajar OOP. Saya pun ikut bingung mau menjelaskannya seperti apa.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-belum-belajar-class&#34;&gt;3. Belum Belajar Class&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Class&lt;/em&gt;, apaan itu? &lt;em&gt;Class&lt;/em&gt; adalah rancangan dari sebuah objek. Objek, apaan lagi itu? Duh! Akhirnya saya menjelaskan &lt;em&gt;Class&lt;/em&gt; itu untuk membuat nama program. Meskipun itu bukan pengertian yang sesungguhnya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.petanikode.NamaProgram;
+
+    public class NamaProgram {
+        public static void main(String[] args){
+            System.out.println(&amp;quot;Hello World&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-belum-belajar-array&#34;&gt;4. Belum Belajar Array&lt;/h2&gt;
+
+&lt;p&gt;Lihat saja pada program &lt;em&gt;HelloWorld&lt;/em&gt; di atas, array sudah digunakan untuk menyimpan argumen atau parameter. Mereka lalu bertanya, &amp;ldquo;Kata om tadi &lt;code&gt;String[] args&lt;/code&gt; itu sebuah &lt;em&gt;array&lt;/em&gt; yang bertipe data &lt;em&gt;String&lt;/em&gt;. &lt;em&gt;String&lt;/em&gt; itu apa dan &lt;em&gt;Array&lt;/em&gt; itu apa?&amp;rdquo; Penjelasan teknikal saya pun tidak bisa dipahami, karena mereka belum belajar variabel, tipe data, dan &lt;em&gt;array&lt;/em&gt;. Mau tidak mau, kita harus mengabaikan dulu bagian ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-belum-tahu-method-instance-dan-static&#34;&gt;5. Belum Tahu Method Instance dan Static&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Static void main&lt;/em&gt; itu maksudnya apa? Kenapa harus ada &lt;em&gt;static&lt;/em&gt;? &lt;em&gt;main&lt;/em&gt; adalah &lt;em&gt;method&lt;/em&gt; utama dalam program. &lt;em&gt;Method&lt;/em&gt; ini wajib ada agar program bisa dijalankan. Tunggu dulu, &lt;em&gt;method&lt;/em&gt; itu apa om?&lt;/p&gt;
+
+&lt;p&gt;Karena belum memahami OOP, mereka pun tidak akan bisa mengerti bila saya jelakan dengan sudut pandang OOP.&lt;/p&gt;
+
+&lt;h2 id=&#34;6-belum-paham-tentang-package&#34;&gt;6. Belum Paham Tentang Package&lt;/h2&gt;
+
+&lt;p&gt;Apa maksud dari baris ini om?&lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.petanikode.NamaProgram;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Itu untuk menandakan lokasi &lt;em&gt;namespace&lt;/em&gt; atau lokasi kodenya. Wah, &lt;em&gt;namespace&lt;/em&gt; itu apa lagi om?&lt;/p&gt;
+
+&lt;p&gt;Jadi, itulah beberapa alasan kenapa bahasa &lt;a href=&#34;https://petanikode.com/search/label/Pemrograman&#34;&gt;pemrograman&lt;/a&gt; Java kurang cocok untuk pemula. Karena Java menggunakan paradigma OOP &lt;em&gt;(Object Oriented Programming)&lt;/em&gt;, sedangkan para pemula yang belum parnah &lt;em&gt;coding&lt;/em&gt; tidak pernah belajar tentang OOP. Namun, bukan berarti Java tidak boleh dipelajari oleh pemula. Silahkan dipelajari dengan tekun.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Replace String dalam Template Go</title>
+      <link>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</link>
+      <pubDate>Fri, 20 Jan 2017 14:32:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</guid>
+      <description>&lt;p&gt;Sebuah masalah kecil yang saya temukan ketika mengedit skrip &lt;a href=&#34;https://github.com/natefinch/blogimport&#34;&gt;Blogimport&lt;/a&gt;.
+Saya ingin memperbesar ukuran gambar &lt;em&gt;thumbnail&lt;/em&gt; dengan cara me-replace string yang ada di URL.&lt;/p&gt;
+
+&lt;p&gt;Misalnya, dari URL ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s72-c/pemrograman%2Bjavascript%2B-%2Bpetanikode.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Menjadi seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah, di sana saya ingin merubah &lt;code&gt;s72-c&lt;/code&gt; agar menjadi &lt;code&gt;s1600&lt;/code&gt;. Pada template Hugo,
+saya bisa melakukannya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;{{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Namun, Go belum memiliki fungsi &lt;code&gt;replace&lt;/code&gt; seperti Hugo. Setelah bolak-balik Google
+dan Stack Overflow, saya akhirnya membuat sebuah &lt;a href=&#34;http://stackoverflow.com/q/41647788/2658551&#34;&gt;pertanyaan baru&lt;/a&gt;
+di Stack Overflow dan mendapatkan jawabannya.&lt;/p&gt;
+
+&lt;p&gt;Pertama, kita harus membuat fungsi replace dulu dengan Go.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func replace(input, from,to string) string {
+    return strings.Replace(input,from,to, -1)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian melakukan &lt;em&gt;mapping&lt;/em&gt; terhadap fungsi tadi agar nanti bisa dikenali dalam template.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;funcMap = template.FuncMap{
+     &amp;quot;replace&amp;quot;:  replace,
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, barulah kita masukan fungsinya ketika eksekusi template.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;template := template.New(&amp;quot;&amp;quot;).Funcs(funcMap)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Barulah kita dapat menggunakan fungsi &lt;em&gt;replace&lt;/em&gt; pada template go.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;{{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Contoh kode lengkapnya dapat anda lihat &lt;a href=&#34;https://github.com/ardianta/blogimport/blob/master/main.go&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>5 Alasan Petani Kode Migrasi ke Hugo</title>
+      <link>http://petanikode.com/2017/01/5-alasan-petani-kode-migrasi-ke-hugo/</link>
+      <pubDate>Wed, 18 Jan 2017 22:06:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/5-alasan-petani-kode-migrasi-ke-hugo/</guid>
+      <description>
+
+&lt;p&gt;Minggu ini, Petani Kode melakukan migrasi dari Blogger ke Hugo.
+Proses migrasi berjalan dengan lancar, meskipun masih banyak yang belum dikerjakan.
+Ada beberapa alasan, kenapa Petani Kode melakukan migrasi ke Hugo.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-template-blogger-masih-menggunakan-xml&#34;&gt;1. Template Blogger Masih menggunakan XML&lt;/h2&gt;
+
+&lt;p&gt;Salah satu produk Google yang jarang diperbaharui adalah Blogger. Buktinya,
+ketika Google memperkenalkan konsep &lt;em&gt;Material Design&lt;/em&gt;, berbagai produknya kemudian
+menerapkan material desain. Google Analytic, Adsense, Photo, Drive, GMail, dsb.
+Lalu, bagaimana dengan Blogger? tampilannya masih begitu-begitu saja sejak tahun 2012. Aplikasi Androidnya juga kurang bagus.&lt;/p&gt;
+
+&lt;p&gt;Begitu juga dengan template engine-nya, masih menggunakan XML.
+XML membuat saya cukup lelah membuat template. Karena tidak bisa dibuat secara
+offline. Selain itu juga, dokumentasinya kurang lengkap.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-menulis-di-blogger-kurang-efisien&#34;&gt;2. Menulis di Blogger Kurang Efisien&lt;/h2&gt;
+
+&lt;p&gt;Menurut Saya sebagai programmer yang terbiasa menulis di teks editor,
+menulis di Blogger itu kurang efisien. Karena ketika kita menulis di sana, lalu melakukan &lt;em&gt;preview&lt;/em&gt; kita akan membuka tab baru dan men-download hasil &lt;em&gt;preview&lt;/em&gt;.
+Berapa waktu dan kuota yang dihabiskan?&lt;/p&gt;
+
+&lt;p&gt;Dulu saya pernah mencoba menulis draf artikel dalam bentuk teks, html,
+&lt;em&gt;markdown&lt;/em&gt;,  dan dokumen. Namun, ketika ingin diterbitkan, harus disunting
+lagi di Blogger. Berbeda dengan Hugo, kita bisa menulis di teks editor mana saja
+dengan format &lt;em&gt;markdown&lt;/em&gt; dan HTML. Sublime, Atom, Vim, mau pakai yang mana?&lt;/p&gt;
+
+&lt;p&gt;Saya pilih Atom, karena bisa lihat preview-nya langsung.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;675&#34;
+width=&#34;1245&#34;
+alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
+src=&#34;https://2.bp.blogspot.com/-5K1vDdxvIOE/WIAa-PInq_I/AAAAAAAADqQ/2hNl6Vmw_Po5NHOCQ5Kn__0iBefttOHHACPcB/s1600/Nulis%2Bartikel%2Bdi%2BAtom%2Buntuk%2BHugo.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-amp-susah-valid&#34;&gt;3. AMP Susah Valid&lt;/h2&gt;
+
+&lt;p&gt;Validator AMP sangat ketat dalam menilai web. Kita dilarang keras menggunakan
+Javascript. Karena Javascript katanya dapat memperlambat web. Sementara,
+di Blogger banyak menggunakan Javascript; dan parahnya lagi, di sana untuk &lt;em&gt;load&lt;/em&gt;
+widget-nya pakai Javascript.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;380&#34;
+width=&#34;720&#34;
+alt=&#34;Validasi AMP&#34;
+src=&#34;http://i.imgur.com/5sv5CXW.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada Hugo, saya tidak menggunakan Javascript. Kecuali Javascript bawaan AMP.
+Hasilnya pun valid tanpa error.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;486&#34; height=&#34;657&#34;
+    layout=&#34;responsive&#34;
+    data-tweetid=&#34;821021406854946816&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-agar-terbiasa-menggunakan-git&#34;&gt;4. Agar Terbiasa Menggunakan Git&lt;/h2&gt;
+
+&lt;p&gt;Saya harus melakukan &lt;em&gt;push&lt;/em&gt; atau upload ke server repository git untuk &lt;em&gt;update&lt;/em&gt; konten. Karena Hugo sebuah generator web statis. Oleh sebab itu, ini bisa jadi sarana untuk latihan git agar terbiasa.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-ingin-mencoba-teknologi-baru&#34;&gt;5. Ingin Mencoba Teknologi Baru&lt;/h2&gt;
+
+&lt;p&gt;Hugo memang baru, dibangun dengan bahasa pemrograman Go. Versi Hugo saat tulisan
+ini dibut adalah 0.18. Meski belum mencapai versi 1.0, tidak ada salahnya untuk dicoba.&lt;/p&gt;
+
+&lt;p&gt;Ketika mengembangkan Petani Kode, saya sedikit kesulitan,
+karena hasil pencarian Google hanya mengarah ke dokumentasi Hugo, Forum Hugo,
+dan Isu Hugo di Github. Sangat jarang ke Stack Overflow. Namun, itu bukanlah kendala.&lt;/p&gt;
+
+&lt;p&gt;Bahkan saya sampai dusuruh nulis kode dengan bahasa pemrograman Go. Sedangkan
+Saya tidak pernah belajar bahasa pemrograman Go sama sekali.&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/&#34;&gt;Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Itulah lima alasan Petani Kode migrasi ke Hugo. Mungkin saja, Petani Kode menjadi web Indonesia yang pertama kali menggunakan Hugo. Karena saya lihat di &lt;a href=&#34;https://gohugo.io/showcase/&#34;&gt;Showcase Hugo&lt;/a&gt;, tidak ada web indonesia.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Redirect Domain dengan CloudFlare</title>
+      <link>http://petanikode.com/2017/01/cara-redirect-domain-dengan-cloudflare/</link>
+      <pubDate>Tue, 17 Jan 2017 22:06:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-redirect-domain-dengan-cloudflare/</guid>
+      <description>
+
+&lt;p&gt;Saya akhirnya mengurus jaringan lagi, setelah sekian lama tidak belajar jaringan.
+Pada &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;proses migrasi&lt;/a&gt; kemarin,
+proses propagasi domain memakan waktu cukup lama.
+Domain Petani Kode &lt;code&gt;www.petanikode.com&lt;/code&gt; masih menunjukan halaman &lt;code&gt;404&lt;/code&gt;. Namun,
+domain yang tanpa menggunakan &lt;code&gt;www&lt;/code&gt;, sudah bisa diakses.&lt;/p&gt;
+
+&lt;p&gt;Karena tidak ingin semua pengunjung mendapatkan &lt;em&gt;error&lt;/em&gt; &lt;code&gt;404&lt;/code&gt;, saya harus melakukan
+&lt;em&gt;redirect&lt;/em&gt; ke domain baru yang tidak menggunakan &lt;code&gt;www&lt;/code&gt;. Berikut ini caranya.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-masuk-ke-halaman-pages-rules&#34;&gt;1. Masuk ke Halaman Pages Rules&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka halaman &lt;em&gt;Pages Rules&lt;/em&gt; di Cloudflare.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;111&#34;
+width=&#34;379&#34;
+alt=&#34;Menu Cloudflare&#34;
+src=&#34;http://i.imgur.com/9m7NJeT.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-buat-pages-rules-baru&#34;&gt;2. Buat Pages Rules Baru&lt;/h2&gt;
+
+&lt;p&gt;Klik tombol &lt;em&gt;Create Page Rule&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;227&#34;
+width=&#34;983&#34;
+alt=&#34;Menu Cloudflare&#34;
+src=&#34;http://i.imgur.com/8OO2z36.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-input-data-domain&#34;&gt;3. Input data domain&lt;/h2&gt;
+
+&lt;p&gt;Masukkan domain yang akan dialihkan ke, misalnya saya ingin mengalihkan
+&lt;code&gt;www.petanikode.com&lt;/code&gt; ke &lt;code&gt;petanikode.com&lt;/code&gt; saja.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;654&#34;
+width=&#34;801&#34;
+alt=&#34;Membuat aturan redirect&#34;
+src=&#34;http://i.imgur.com/7Ih4BiE.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, klik &lt;em&gt;save and deploy&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sampai tahap ini, cobalah untuk mengakses alaman yang dialihkan tadi.
+Kalau pengalihan berhasil berarti konfigurasi sudah benar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan</title>
+      <link>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</link>
+      <pubDate>Sun, 15 Jan 2017 21:06:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</guid>
+      <description>&lt;p&gt;Ada cerita menarik yang saya alami ketika &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi Petani Kode dari Blogger ke Hugo&lt;/a&gt;.
+Waktu itu, ketika saya ingin mengimpor konten dari Blogger ke Hugo, ada sesuatu
+yang kurang dari skrip Go yang disediakan. Kekuarangnnya tidak mampu membuat
+atau mengambil gambar &lt;em&gt;(thumbnail)&lt;/em&gt; untuk setiap artikel.&lt;/p&gt;
+
+&lt;p&gt;Saya kemudian berpikir, mungkin nanti saya bisa edit setiap gambar untuk artikel.
+Namun, rasanya akan sangat melelahkan melakukannya karena jumlah artikelnya sampai ratusan. Tidak ingin melakukan hal yang berulang-ulang seperti kata orang,
+&lt;em&gt;Don&amp;rsquo;t Repeat Yourself&lt;/em&gt; di singkat DRY. Saya kemudian membuka &lt;a href=&#34;https://github.com/natefinch/blogimport/issues/1&#34;&gt;isu baru&lt;/a&gt; di repositori
+skrip ini.&lt;/p&gt;
+
+&lt;p&gt;Beberapa jam kemudian, Nate Finch membalas isu yang saya buat.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I&amp;rsquo;d be more than happy to accept a pull request for this, if you want to write it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Terjemahnya kira-kira begini, &amp;ldquo;Saya akan sangat senang sekali menerima &lt;em&gt;pull request&lt;/em&gt; untuk hal ini, jika anda berkenan menulisnya&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Awalnya saya berharap agar Nate Finch mau meng-update skripnya, tapi malah saya yang disuruh nulis dan saya tidak paham bahasa pemrograman Go sama sekali. Mungkin saja si Nate Finch sedang sibuk, sehingga tidak punya waktu untuk menulis skrip ini lagi.&lt;/p&gt;
+
+&lt;p&gt;Karena isu ini adalah kebutuhan saya, maka mau tidak mau saya sendiri yang harus membuatnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;380&#34;
+width=&#34;720&#34;
+alt=&#34;Ghoper Petani Kode&#34;
+src=&#34;https://3.bp.blogspot.com/-tHAcqs4Bv1o/WIAVwWJzaLI/AAAAAAAADps/sBBGZxVxmcI66poCB-Mj0AEzIkDeDG8KQCPcB/s1600/go-gopher-petanikode.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Saya tidak harus belajar bahasa pemrograman Go dari awal. Karena sintaknya cukup mirip dengan bahasa pemrograman yang pernah saya pelajari. Pertama saya harus pahami dulu skrip yang ditulis Nate Finch.&lt;/p&gt;
+
+&lt;p&gt;Pertama, saya menebak-nebak dulu fungsi dari setiap prosedurnya dengan membaca dari bawah ke atas.&lt;/p&gt;
+
+&lt;p&gt;Saya kemudian mengetahui, fungsi ini untuk membuat file &lt;em&gt;markdown&lt;/em&gt;, meski tidak tahu detail algoritmanya. Saya dapat petunjuk karena melihat ada &lt;code&gt;.md&lt;/code&gt; di sana.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func writeEntry(e Entry, dir string) error {
+	filename := filepath.Join(dir, makePath(e.Title)+&amp;quot;.md&amp;quot;)
+	f, err := os.OpenFile(filename, os.O_CREATE | os.O_TRUNC | os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	return t.Execute(f, e)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian naik ke atas, saya menemukan baris kode ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;if err := writeEntry(entry, dir); err != nil {
+    log.Fatalf(&amp;quot;Failed writing post %q to disk:\n%s&amp;quot;, entry.Title, err)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kode tersebut pasti pemanggilan fungsi yang tadi. Kemudian saya melakukan penelusuran dengan parameternya &lt;code&gt;entry&lt;/code&gt; dan &lt;code&gt;dir&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bolak-balik, atas-bawah. Saya menemukan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;parameter &lt;code&gt;dir&lt;/code&gt; dari &lt;code&gt;dir := args[1]&lt;/code&gt;, yaitu argumen yang diberikan ketika menjalankan kode ini. Karena &lt;code&gt;args&lt;/code&gt; itu tidak asing bagi pengguna linux seperti saya.&lt;/li&gt;
+&lt;li&gt;parameter &lt;code&gt;entry&lt;/code&gt; dari nama alias &lt;code&gt;exp.Entries&lt;/code&gt;, karena di sana sepertinya ada perulangan &lt;em&gt;foreach&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kemudian saya menelusuri asal-usul &lt;code&gt;exp.Entries&lt;/code&gt; ini. Ternyata dia barasal dari &lt;code&gt;exp := Export{}&lt;/code&gt;. Lalu, &lt;code&gt;Export{}&lt;/code&gt; itu berasal dari struk &lt;code&gt;Export&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;type Export struct {
+    XMLName xml.Name `xml:&amp;quot;feed&amp;quot;`
+    Entries []Entry `xml:&amp;quot;entry&amp;quot;`
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sampai di sini saya sedikit mengerti algoritma dari skrip ini.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Skrip ini mengubah semua tag XML menjadi struk&lt;/li&gt;
+&lt;li&gt;Lalu Struk tadi diurai dalam perluangan&lt;/li&gt;
+&lt;li&gt;Setelah itu, buat file &lt;em&gt;markdown&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Kira-kira begitulah yang saya pahami.&lt;/p&gt;
+
+&lt;p&gt;Kemudian saya mencoba merubah atribut yang ada dalam struk. Karena saya kira sudah paham maksud dari struk tersebut. Namun ternyata tidak ada hasil apa-apa.&lt;/p&gt;
+
+&lt;p&gt;Saya ingin mengambil URL dari elemen XML ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;media:thumbnail xmlns:media=&#39;http://search.yahoo.com/mrss/&#39; url=&#39;https://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s72-c/thumbnail-image.png&#39; height=&#39;72&#39; width=&#39;72&#39;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Terlihat di sana ada penggunaan &lt;em&gt;namespace&lt;/em&gt; untuk elemen tersebut. Kemudian saya mencari dan menemukan jawaban di &lt;a href=&#34;http://stackoverflow.com/a/14152832&#34;&gt;Stack Overflow&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Setelah mencoba dan berhasil mendapatkan URL-nya, yay!&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;400&#34;
+width=&#34;600&#34;
+alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
+src=&#34;http://i.imgur.com/z7MveXv.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Namun, ukuran gambar dari URL tersebut adalah 72x72 piksel. Lalu, selanjutnya saya menginginkan gambar yang lebih besar.&lt;/p&gt;
+
+&lt;p&gt;Ketemu masalah lagi, gambar tidak bisa diperbesar. Karena tidak ada fungsi untuk &lt;em&gt;replace string&lt;/em&gt; pada template Go. Tidak lama kemudian, saya berhasil menyelesaikannya.&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/&#34;&gt;Cara Replace String pada Template Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah semuanya beres, saya kemudian melakukan &lt;em&gt;pull request&lt;/em&gt; ke repositori milik Nate Finch. Saat ini masih belum di-reviw, diterima atau ditolak terserah Nate Finch. Saya hanya butuh untuk masalah saya saja. Namun, jika anda juga membutuhkannya bisa klon atau &lt;em&gt;fork&lt;/em&gt; &lt;a href=&#34;https://github.com/ardianta/blogimport&#34;&gt;repositori dari saya&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Luar biasa, tidak pernah belajar bahasa pemrograman Go sama sekali, malah melakukan &lt;em&gt;pull request&lt;/em&gt; ke proyek yang menggnuakan bahasa pemrograman Go.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>10 Negara dengan Programmer Terbaik dan Indonesia Ranking Berapa?</title>
+      <link>http://petanikode.com/2017/01/10-negara-dengan-programmer-terbaik-dan-indonesia-ranking-berapa/</link>
+      <pubDate>Sat, 14 Jan 2017 15:26:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/10-negara-dengan-programmer-terbaik-dan-indonesia-ranking-berapa/</guid>
+      <description>
+
+&lt;p&gt;Banyak yang mungkin menduga, Amerika adalah negara dengan programmer terbaik. Karena di sana sarangnya para programmer legendaris seperti Bill Gates, Ken Thompson, Dennis Ritchie, dan Donald Knuth. Namun ternyata bukan. Hal ini dibuktikan oleh HackerRank.&lt;/p&gt;
+
+&lt;p&gt;HackerRank merupakan sebuah &lt;i&gt;platform&lt;/i&gt; untuk menentukan rangking para programmer beradasarkan skill &lt;i&gt;coding &lt;/i&gt;yang dimilikinya. HackerRank sering mengadakan tantangan &lt;i&gt;(challenges)&lt;/i&gt; untuk meningkatkan kemampuan para programmer. Ribuan programmer dari seluruh penjuru dunia ikut berpartisipasi dalam tantangan. Programmer dinilai berdasarkan kombinasi akurasi dan kecepatannya. Beberapa bulan yang lalu, HackerRank mempublikasi hasil analisis datanya. Berikut ini 10 Negara dengan programmer terbaik menurut HackerRank.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-cina&#34;&gt;#1 Cina&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;525&#34;
+width=&#34;938&#34;
+alt=&#34;Programmer Cina&#34;
+src=&#34;https://2.bp.blogspot.com/-loSqxxajlMg/WGiTEHt7VyI/AAAAAAAADhY/hZoknwSypCcRXybjS031ResOUYllu1r7ACK4B/s1600/china_programmer_cheerleaders_01.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Cina menjadi negeara dengan ranking 1 di HackerRank. Cina unggul pada tantangan struktur data, matematika, dan pemrograman fungsional.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-rusia&#34;&gt;#2 Rusia&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;340&#34;
+width=&#34;600&#34;
+alt=&#34;Programmer Rusia&#34;
+src=&#34;https://1.bp.blogspot.com/-Ow9v19qs4ME/WGiVDDiWnaI/AAAAAAAADhk/OyXCvAHX5Tovu_-f8h-H6E4zREqvdMieQCK4B/s1600/russian%2Bprogrammer.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sementara Rusia meraih ranking ke-2 setelah Cina. Rusia unggul pada tantangan Algoritma.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-polandia&#34;&gt;#3 Polandia&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;512&#34;
+width=&#34;770&#34;
+alt=&#34;Programmer Polandia&#34;
+src=&#34;http://2.bp.blogspot.com/-XL2Uq49Hrrs/WGiXFFDvs9I/AAAAAAAADhw/Hg4Otn2dTjQ_uu_Fgz7db2uNrpQiba4NwCK4B/s1600/programmer%2Bpolandia.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Polandia unggul dalam tantangan pemrograman Java. Anak-anak di Polandia sudah diajari pemrograman di sekolah. Sistem pendidikan mereka lebih fokus pada sains dan komputasi.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-swis&#34;&gt;#4 Swis&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;428&#34;
+width=&#34;640&#34;
+alt=&#34;Programmer Swis&#34;
+src=&#34;http://3.bp.blogspot.com/-WAkwDc9GmxA/WGiYtV23gRI/AAAAAAAADh8/TT-OROmA49Qv0A3yPPSVCvkTGLlV5blVACK4B/s1600/swiz%2Bprogrammer.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Swis meraih peringkat ke-4 pada HackerRank. Swis meruapakan tempat kelahiran bahasa pemrograman &lt;a href=&#34;http://petanikode.com/topik/pascal&#34;&gt;Pascal&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-hongaria&#34;&gt;#5 Hongaria&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;638&#34;
+width=&#34;960&#34;
+alt=&#34;Programmer Hongaria&#34;
+src=&#34;http://4.bp.blogspot.com/-FVl0_338U6g/WGiZWxDaNCI/AAAAAAAADiE/EmBM3z4Hv0EmWtRrbZSWRr1Oxshar1jQQCK4B/s1600/programmer%2Bhungaria.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Hongaria mendapat rangking ke-5, mereka unggul pada tantangan dalam bentuk tutorial. Hongaria juga menjadi negeara eropa pertama yang memasukan pelajaran pemrograman dalam sistem pendidikan mereka.&lt;/p&gt;
+
+&lt;h2 id=&#34;6-jepang&#34;&gt;#6 Jepang&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;1228&#34;
+width=&#34;1600&#34;
+alt=&#34;Programmer Jepang&#34;
+src=&#34;https://3.bp.blogspot.com/-twdklvtJC-g/WGiashGCq1I/AAAAAAAADiQ/C8tXNG83jqcgJV1Sjs_25jbneR6zNiomwCK4B/s1600/programmer%2Bjepang.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Jepang adalah negara terbaik yang menyelesaikan tantangan kecerdasan buatan di HackerRank. Jepang juga tempat kelahiran bahasa pemrograman &lt;a href=&#34;http://petanikode.com/topik/ruby&#34;&gt;Ruby&lt;/a&gt;. Namun, Jepang mendapatkan peringkat ke-6 pada HackerRank.&lt;/p&gt;
+
+&lt;h2 id=&#34;7-taiwan&#34;&gt;#7 Taiwan&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;600&#34;
+height=&#34;400&#34;
+alt=&#34;Programmer Taiwan&#34;
+src=&#34;http://3.bp.blogspot.com/-ZKS-vk0eUwA/WGicxZnTDnI/AAAAAAAADic/TR7N5w7CmLocBzJj6G_-HSDO4a_SLlD8gCK4B/s1600/programmer%2Btaiwan.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Taiwan mendapatkan rangking ke-7. Merka meraih skor tinggi pada tantangan database, pemrograman fungsional, algoritma dan struktur data.&lt;/p&gt;
+
+&lt;h2 id=&#34;8-prancis&#34;&gt;#8 Prancis&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;864&#34;
+height=&#34;487&#34;
+alt=&#34;Programmer Prancis&#34;
+src=&#34;https://2.bp.blogspot.com/-a698X84gyWQ/WGidrszBt4I/AAAAAAAADik/HE0Rm6kF-tADlb4vbD2QadGiK8YCdaDKACK4B/s1600/programmer%2Bprancis.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Prancis lebih dominan pada C++. Karena prancis sudah memasukan pelajaran pemrograman pada sekolah dasar sejak bulan &lt;a href=&#34;http://www.itworld.com/article/2696639/application-management/france-to-offer-programming-in-elementary-school.html&#34;&gt;juni 2014&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;9-republik-ceko&#34;&gt;#9 Republik Ceko&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;630&#34;
+height=&#34;350&#34;
+alt=&#34;Programmer Ceko&#34;
+src=&#34;https://4.bp.blogspot.com/-og-xJ6_H42A/WGievUCgafI/AAAAAAAADi0/9PbecauaWwIHz9C-3w5JrKeH-G4gC4G1ACK4B/s1600/programmer%2Bceko.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Republik ceko lebih unggul pada tantangan dengan &lt;i&gt;shell scripting&lt;/i&gt;. Mereka juga meraih peringkat kedua pada tantangan matematika. Namun, hanya mampu masuk rangking ke-9.&lt;/p&gt;
+
+&lt;h2 id=&#34;10-itali&#34;&gt;#10 Itali&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;1000&#34;
+height=&#34;536&#34;
+alt=&#34;Programmer Italia&#34;
+src=&#34;https://4.bp.blogspot.com/-brojwlLJuKI/WGihV6Umf3I/AAAAAAAADjA/7clsKJ8rFZgLfgofiDjYWonBnWhjIFSmACK4B/s1600/programmer%2Bitalia.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Itali meraih peringkat ke-10. Mereka hebat dalam tantangan database dan tutorial. Mereka dapat rangking kedua pada dua tantangan tersebut.&lt;/p&gt;
+
+&lt;p&gt;Itulah 10 negara dengan programmer terbaik menurut HackerRank Lalu, Indonesia peringkat ke berapa?&lt;/p&gt;
+
+&lt;p&gt;Berdasarkan &lt;a href=&#34;http://blog.hackerrank.com/which-country-would-win-in-the-programming-olympics/&#34;&gt;data yang dipublikasikan HackerRank&lt;/a&gt;, Indonesia meraih peringkat ke-40. Berada di atas Slandia Baru, Mesir, Afrika Selatan, Banglades, Kolombia, Filipina, Malaysia, Nigeria, Srilangka, dan Pakistan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;642&#34;
+height=&#34;612&#34;
+alt=&#34;Peringkat negara menurut hackerrank&#34;
+src=&#34;https://4.bp.blogspot.com/-X587f0Th2H8/WGircqM3tKI/AAAAAAAADjM/HBuAl-4A1fIgN8gjNiSYVneaAe7Bry8SgCLcB/s1600/peringkat%2Bprogrammer%2Bbedasarkan%2Bnegara.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Meskipun masih rangking 40, kita masih punya kesempatan untuk meraih rangking yang lebih baik.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Indeks</title>
+      <link>http://petanikode.com/indeks/</link>
+      <pubDate>Sat, 14 Jan 2017 23:19:14 +0800</pubDate>
+      
+      <guid>http://petanikode.com/indeks/</guid>
+      <description>&lt;p&gt;Halaman ini berisi indeks untuk topik, kategori, dan serial yang bisa anda gunakan untuk memudahkan pencarian artikel pada topik tertentu.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kontribusi</title>
+      <link>http://petanikode.com/kontribusi/</link>
+      <pubDate>Sat, 14 Jan 2017 22:32:05 +0800</pubDate>
+      
+      <guid>http://petanikode.com/kontribusi/</guid>
+      <description>
+
+&lt;p&gt;Anda dapat menerbitkan artikel di Petani Kode. Anda bisa mengirimkan artikel dengan format &lt;em&gt;markdown&lt;/em&gt;, HTML, maupun dokumen (odt, doc, docx). Artikel Akan terbit apabila lolos dari seleksi editor. Berikut ini ketentuan artikel yang boleh terbit di Petani Kode.&lt;/p&gt;
+
+&lt;h2 id=&#34;ketentuan-artikel&#34;&gt;Ketentuan Artikel&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Artikel yang dikirim ke Petani Kode harus membahas topik seputar pemrograman. Anda bisa menulisnya berdasarkan pengalaman atau wawasan yang Anda ketahui;&lt;/li&gt;
+&lt;li&gt;Tidak boleh ada unsur kekerasan, SARA, dan pornografi;&lt;/li&gt;
+&lt;li&gt;Artikel original karya sendiri dan tidak pernah dipubilkasikan di tempat lain;&lt;/li&gt;
+&lt;li&gt;Hindari menggunakan material yang mengandung hak cipta;&lt;/li&gt;
+&lt;li&gt;Artikel minimal 300 kata;&lt;/li&gt;
+&lt;li&gt;Silahkan ikuti contoh template ini &lt;a href=&#34;https://goo.gl/tk63kd&#34;&gt;https://goo.gl/tk63kd&lt;/a&gt; untuk format dokumen.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;cara-kirim-artikel&#34;&gt;Cara Kirim Artikel&lt;/h2&gt;
+
+&lt;p&gt;Kirimkan artikel anda ke alamat email &lt;code&gt;ahmad.muhardian@gmail.com&lt;/code&gt; (lampirkan juga gambar yang anda gunakan di artikel). Kami akan me-review artikel. Kemudian akan diterbitkan apabila sudah disetujui.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kebijakan Privasi</title>
+      <link>http://petanikode.com/kebijakan-privasi/</link>
+      <pubDate>Sat, 14 Jan 2017 22:20:58 +0800</pubDate>
+      
+      <guid>http://petanikode.com/kebijakan-privasi/</guid>
+      <description>
+
+&lt;p&gt;Kami menyadari bahwa privasi Anda sangat penting, untuk itu kami berusaha menuliskan beberapa kebijakan privasi (Privacy Policy) yang berhubungan dengan penggunaan website ini:&lt;/p&gt;
+
+&lt;h2 id=&#34;informasi-apa-yang-kami-kumpulkan&#34;&gt;Informasi apa yang kami kumpulkan?&lt;/h2&gt;
+
+&lt;p&gt;Kami mengumpulkan informasi dari Anda ketika Anda melakukan login untuk memberikan komentar, pengisiaan form kontak kami, mengikuti kegiatan-kegiatan yang diselengarakan ataupun pengumpulan informasi lainya. Saat mengisi data di situs Petani Kode, sebagaimana mestinya, Anda mungkin akan diminta untuk memasukkan: nama, alamat e-mail, alamat tempat tinggal, nomor telepon atau akun jejaring sosial. Anda juga dapat mengunjungi situs kami secara anonim (tidak dikenal).&lt;/p&gt;
+
+&lt;p&gt;Selain itu, kami juga melakukan pencatatan informasi ke dalam sistem kami. Informasi yang dicatat pada umumnya meliputi alamat protokol internet &lt;em&gt;(IP Address)&lt;/em&gt;, jenis &lt;em&gt;browser&lt;/em&gt;, &lt;em&gt;Internet Service Provider&lt;/em&gt; (ISP), tanggal/waktu, &lt;em&gt;referer&lt;/em&gt;, jumlah klik, informasi demografis dan informasi lainnya.&lt;/p&gt;
+
+&lt;h2 id=&#34;untuk-apa-kami-menggunakan-informasi-anda&#34;&gt;Untuk apa kami menggunakan informasi Anda?&lt;/h2&gt;
+
+&lt;p&gt;Setiap informasi yang kami kumpulkan dari Anda, mungkin digunakan dalam salah satu hal berikut:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Untuk mempersonalisasi pengalaman Anda (Informasi Anda membantu kami untuk lebih menanggapi kebutuhan personal Anda)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Untuk meningkatkan kualitas website kami (Kami terus berupaya untuk meningkatkan kualitas website kami berdasarkan informasi dan umpan balik yang kami terima dari Anda)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Untuk meningkatkan layanan pengunjung (Informasi Anda membantu kami untuk lebih efektif menanggapi permintaan layanan pelanggan Anda dan dukungan yang diperlukan)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Untuk mengirim email berkala/newsletter (Alamat email yang Anda berikan dapat digunakan untuk mengirimkan informasi, menjawab pertanyaan, dan/atau permintaan atau pertanyaan.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;bagaimana-kami-melindungi-informasi-anda&#34;&gt;Bagaimana kami melindungi informasi Anda?&lt;/h2&gt;
+
+&lt;p&gt;Kami menerapkan berbagai langkah-langkah keamanan untuk menjaga keamanan informasi pribadi Anda ketika Anda login atau masukkan, kirim, atau mengakses informasi pribadi Anda.&lt;/p&gt;
+
+&lt;h2 id=&#34;apakah-kami-memberikan-informasi-anda-kepada-pihak-luar&#34;&gt;Apakah Kami memberikan informasi Anda kepada pihak luar?&lt;/h2&gt;
+
+&lt;p&gt;Tidak! Kami tidak menjual, memperdagangkan, atau mengalihkan kepada pihak luar informasi pribadi Anda. Ini tidak termasuk pihak ketiga terpercaya yang membantu kami dalam mengoperasikan website kami, melakukan bisnis kami, atau melayani anda, asalkan pihak-pihak setuju untuk menjaga informasi ini agar tetap rahasia. Kami juga dapat melepaskan informasi Anda ketika kita percaya kepada pihak ketiga yang mematuhi hukum, menegakkan kebijakan situs kami, atau melindungi kita atau hak orang lain, milik, atau keselamatan. Namun, informasi pengunjung non-pribadi mungkin akan diberikan kepada pihak lain untuk pemasaran, iklan, atau penggunaan lainnya.&lt;/p&gt;
+
+&lt;h2 id=&#34;kebijakan-privasi-online&#34;&gt;Kebijakan Privasi Online&lt;/h2&gt;
+
+&lt;p&gt;Kebijakan privasi hanya berlaku online untuk informasi yang dikumpulkan melalui website kami dan bukan untuk informasi yang dikumpulkan offline.&lt;/p&gt;
+
+&lt;h2 id=&#34;syarat-dan-ketentuan&#34;&gt;Syarat dan Ketentuan&lt;/h2&gt;
+
+&lt;p&gt;Silahkan juga kunjungi Syarat dan Ketentuan, menetapkan penggunaan, penolakan, dan batasan tanggung jawab yang mengatur penggunaan situs kami di sini.&lt;/p&gt;
+
+&lt;h2 id=&#34;izin-anda&#34;&gt;Izin Anda&lt;/h2&gt;
+
+&lt;p&gt;Dengan mengakses situs Petani Kode, Anda telah menyetujui kebijakan privasi website kami.&lt;/p&gt;
+
+&lt;h2 id=&#34;hubungi-kami&#34;&gt;Hubungi Kami&lt;/h2&gt;
+
+&lt;p&gt;Jika ada pertanyaan tentang kebijakan privasi, maupun laporan, saran atau masukan mengenai website ini, Anda dapat menghubungi kami melalui halaman kontak.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Aturan</title>
+      <link>http://petanikode.com/aturan/</link>
+      <pubDate>Sat, 14 Jan 2017 22:15:11 +0800</pubDate>
+      
+      <guid>http://petanikode.com/aturan/</guid>
+      <description>
+
+&lt;p&gt;Dengan mengakses situs web ini, Anda setuju untuk terikat oleh Syarat dan Ketentuan Penggunaan, semua hukum dan peraturan yang berlaku, dan setuju bahwa Anda bertanggung jawab untuk mematuhi hukum setempat yang berlaku. Jika Anda tidak setuju dengan ini, Anda dilarang untuk menggunakan atau mengakses situs ini. Materi yang terkandung dalam situs web ini telah dilindungi oleh Hak Cipta yang berlaku dan Hak Kekayaan Intelektual.&lt;/p&gt;
+
+&lt;h2 id=&#34;penggunaan-lisensi&#34;&gt;Penggunaan Lisensi&lt;/h2&gt;
+
+&lt;p&gt;Izin diberikan sementara untuk mengunduh salinan materi artikel/berita (teks, foto, video, logo) pada situs Petani Kode untuk pribadi, untuk penggunaan sementara dan non-komersial. Ini adalah pemberian lisensi, bukan pengalihan hak, dan di bawah lisensi ini Anda tidak dapat:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Mengubah isi dari materi;&lt;/li&gt;
+&lt;li&gt;Mengunakan materi untuk tujuan komersial, atau untuk menampilkan di muka umum (komersial atau non-komersial);&lt;/li&gt;
+&lt;li&gt;Mencoba untuk mendekompilasi atau melakukan reverse engineering materi yang terdapat pada situs web Petani Kode;&lt;/li&gt;
+&lt;li&gt;Menghapus setiap hak cipta atau notasi milik lainnya (watermark) dari materi, atau&lt;/li&gt;
+&lt;li&gt;Transfer materi ke orang lain atau melakukan “Mirror” materi di server lain.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Lisensi ini dengan sendirinya akan berakhir jika Anda melanggar salah satu pembatasan dan dapat diakhiri oleh kami setiap saat. Setelah Anda mengakhiri penggunaan materi-materi tersebut atau pada saat berakhirnya lisensi ini, Anda harus menghancurkan materi download milik Anda baik dalam format elektronik atau format cetak.&lt;/p&gt;
+
+&lt;p&gt;Pemanfaatan materi untuk keperluan pendidikan, penelitian, kajian non-komersial dan konsumsi individual seperti mailing-list, blog dan forum komunitas, tidak harus mendapatkan izin dari Petani Kode, namun tetap disarankan untuk mencatumkan sumber jika perlu terlebih dahulu menyampaikan pemberitahuan guna menghindari penyalahgunaan materi terkait.&lt;/p&gt;
+
+&lt;h2 id=&#34;hukum&#34;&gt;Hukum&lt;/h2&gt;
+
+&lt;p&gt;Setiap klaim yang berhubungan dengan situs website Petani Kode akan diatur oleh hukum Negara Indonesia dan undang-undang IT tanpa memperhatikan pertentangan
+ketentuan hukum. Syarat dan Ketentuan berlaku umum untuk pengunaan situs Petani Kode.&lt;/p&gt;
+
+&lt;h2 id=&#34;lain-lain&#34;&gt;Lain-lain&lt;/h2&gt;
+
+&lt;p&gt;Logo dan Ikon Petani Kode merupakan hak cipta dan kepemilikan dari Petani Kode, dengan ini Anda dilarang mengunakan, memakai, dan mencantumkan materi tersebut tanpa seizin dari pihak Petani Kode untuk keperluan komersial maupun keperluan atau kegiatan yang dapat menimbukan kerugian materil maupun non-materil, serta penyalahgunaan nama Petani Kode.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Arsip Petani Kode</title>
+      <link>http://petanikode.com/arsip/</link>
+      <pubDate>Fri, 13 Jan 2017 21:08:45 +0800</pubDate>
+      
+      <guid>http://petanikode.com/arsip/</guid>
+      <description>&lt;p&gt;Untuk mendapatkan informasi artikel terbaru, Anda bisa berlangganan melalui &lt;a href=&#34;http://petanikode.com/artikel/index.xml&#34;&gt;RSS Feed&lt;/a&gt;, Desktop &lt;a href=&#34;https://petanikode.pushcrew.com/&#34;&gt;Push Notification&lt;/a&gt;, atau &lt;a href=&#34;http://eepurl.com/cvp63b&#34;&gt;surat kabar&lt;/a&gt; &lt;em&gt;(newsletter)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Tips&lt;/strong&gt;: Tekan Ctrl+F kemudian ketik judul artikel yang anda cari&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Anda juga dapat menggunakan halaman &lt;a href=&#34;http://petanikode.com/indeks&#34;&gt;Indeks&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/kategori&#34;&gt;Kategori&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/seri&#34;&gt;Seri&lt;/a&gt;, dan &lt;a href=&#34;http://petanikode.com/topik&#34;&gt;Topik&lt;/a&gt; untuk pencarian lebih lanjut.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Impor Artikel Blogger ke Hugo Kurang dari 15 Menit</title>
+      <link>http://petanikode.com/2017/01/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/</link>
+      <pubDate>Fri, 13 Jan 2017 21:08:45 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/</guid>
+      <description>
+
+&lt;p&gt;Dalam rangka migrasi Petani Kode ke Hugo, saya harus melakukan impor artikel dari Blogger ke Hugo. Untungnya Hugo sudah menyediakan skrip untuk impor konten dari blogger ke Hugo. Proses impor ini memakan waktu cukup cepat. Saya kira, tidak sampai 15 menit. Benar sekali, mungkin anda bisa melakukannya lebih cepat.&lt;/p&gt;
+
+&lt;p&gt;Saya asumsikan, kita telah menginstal &lt;a href=&#34;https://golang.org&#34;&gt;Go (Golang)&lt;/a&gt; dan &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt;. Kemudian lakukan langkah-langkah berikut ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-ekspor-blog&#34;&gt;1. Ekspor Blog&lt;/h2&gt;
+
+&lt;p&gt;Pertama, kita perlu mengekspor dulu konten yang ada di blogger. Masuk ke &lt;em&gt;Settings&amp;gt;Other&lt;/em&gt; kemudian klik &lt;em&gt;Back up Content&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    src=&#34;https://lh3.googleusercontent.com/8hFKhTL6Mxfi6L9ht8Zy1vGhnbrw-yX12l91QfUShBV9DJrqGfYYDjZgUB0-MKmwvL4OukfMqYBUyi4j7xh7aFPmpgMiRX8mIrNRTiPi1_uNr8dl-v7v-w0IL4ZhSs3kmjB8Moe6DykxLHtME2Ei6qj5_W0xL9BBHht7gErt5vSTaf2Q_sTwtc9eAhoiVkBRgrwFnRp8GwX1gDz9CVI_KT32DhFRMdyWKT-zeFJbIlH4UMbatDm_lGt_S7OtI22z0QbWEH7v1ZoLshqfXLBKrPjlBVneAOdmmV9E4Lbydx1AxHvNQjIGyoZOQLPOTRWQKXApYyTWMdgtdfZv0NqiX9IgQ-ld1lrC2DYTphdIWPvDv7QDcSok3prUz54Wep0AT98m9Y0UCaFIT1qnqIJa8J05JUEfHzsl-nXA43fBmk5J1Kt7JFP7ODlGQkzbSPazkEcxpkVxBVzB6KWQqqaysVad1A14cu-Caa86vP1HMIDxjXTl4RX54l15gIxfa6KpUY34ZCDR9Q8eoIyEuaTTlk70n48MYAvNCFNNUm95Uk1ZOrECYm9AB-xr2aLoCB-DDt2E335GkMzWLy6TOLFQfZhzJDtbIkgSr5pEKdB0C9VQKG8TPEG2=w796-h286-no&#34;
+    width=&#34;796&#34;
+    height=&#34;268&#34;
+    layout=&#34;responsive&#34;
+    alt=&#34;Ekspor kontent blog&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kita akan mendapatkan file &lt;code&gt;.xml&lt;/code&gt;, nah file ini nanti yang akan kita ekstrak isinya menjadi format &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-download-skrip&#34;&gt;2. Download skrip&lt;/h2&gt;
+
+&lt;p&gt;Selanjutnya kita membutuhkan skrip untuk melakukan ekstrak terhadap file &lt;code&gt;.xml&lt;/code&gt; tadi. Silahkan klon skripnya di &lt;a href=&#34;https://github.com/natefinch/blogimport&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/natefinch/blogimport
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-impor-konten&#34;&gt;3. Impor Konten&lt;/h2&gt;
+
+&lt;p&gt;Setelah kita mendapatkan skripnya, sekarang kita harus mengekstrak isi dari file &lt;code&gt;.xml&lt;/code&gt; menjadi file &lt;em&gt;markdown&lt;/em&gt;. Pertama, masuk dulu ke direktori skripnya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd blogimpor
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buat direktori baru sebagai tempat menampung hasil ekstraksi.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir artikel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jalankan skrip:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go run main.go ~/Downloads/blog-2017-01-13.xml artikel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, coba periksa direktori artikel.
+&lt;amp-img
+    src=&#34;https://lh3.googleusercontent.com/I36HhwnAxaNYEouTOg7BpGwcbnhX-Gxjab8gCSGUj69Q2Kif1TyPiQbyLuHQ9zLzaoHy6pYS8lZivKFKWkBW69Gh5oNrrl797rBt3LN26t2nqtxXdqH5E95jFxGOUkAE7ule2FuxVEdqQTp3Uc9dEu8O1CldVHZ-5PdthwNCgux7t8R7yEEhvBVOyPZOCoYJLp6agg6Ckmq2sF8lP8P5C3_qxWXo9IcuDURRmn6qnpd0oRTdRtR9NGiR65-8nyQ-cEMbnGvPXer7HG2Nb65ramTqtZ27ycrJA-u8PqK79ZTryEsYj2gBOwRh5U3Yn3xbQkqc41ZnnUJ0qpQFy_M-54BEzHdU43cIgtsHaIRw7GYERk81xor3htxrOc-pF-1JNcq8IcbjWzYHSeDx17zlkiB9kedDhsBoluIjmTPHEWdgoYfsngylDRH8Eg_in4lE05XE9lUIe1S_sbHTik_1VdRp29SFujsfliQYRLfNDGhrHSomljnS8Vf_oM0P8aVvy27Y5ONkmNa-YYLGuYrDSBGonJ53VYVHVXN5gr900nnl7cVMmApjKL25SIlgsbGmX_RKZxKzAExmpOn7q2dsoKc4wR0gzpDFgXRmAEG-lypoeD68ouGj=w854-h457-no&#34;
+    width=&#34;854&#34;
+    height=&#34;457&#34;
+    layout=&#34;responsive&#34;
+    alt=&#34;Ekspor kontent blog&#34;&gt;&lt;/amp-img&gt;
+Selanjutnya, kita bisa pindahkan semua file &lt;em&gt;markdown&lt;/em&gt; ini ke direktori &lt;em&gt;content&lt;/em&gt; di Hugo.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tetang Petani Kode</title>
+      <link>http://petanikode.com/tentang/</link>
+      <pubDate>Wed, 11 Jan 2017 23:28:19 +0800</pubDate>
+      
+      <guid>http://petanikode.com/tentang/</guid>
+      <description>
+
+&lt;p&gt;Petani Kode atau Petanikode.com merupakan sebuah blog pemrograman komputer. Kebanyakan artikel di blog ini menggunakan Linux, karena saya sendiri menggunakan Linux dalam keseharian.&lt;/p&gt;
+
+&lt;p&gt;Blog ini menjadi tempat beristirahat dan berteduh saat kelelahan bertani di ladang kode. Ladang kode adalah tempat menanam kode agar menjadi program/aplikasi yang bermanfaat.&lt;/p&gt;
+
+&lt;p&gt;Blog sederhana ini, dulunya adalah sebuah tempat yang berantakan. Pernah menjadi blog pribadi, blog desain, blog berita, dan bermacam-macam. Namun, sekarang sudah menjadi tempat yang asri dan nyaman.&lt;/p&gt;
+
+&lt;h2 id=&#34;sejarah-dan-catatan-perubahan&#34;&gt;Sejarah dan Catatan Perubahan&lt;/h2&gt;
+
+&lt;p&gt;Blog Petani Kode sering memperbaharui dan memperbaiki tampilannya. Upaya ini kami lakukan agar pengunjung merasa semakin nyaman dan senang berkunjung ke sini. Berikut ini catatan perubahan tampilan Petani Kode dari masa ke masa&lt;/p&gt;
+
+&lt;h5 id=&#34;17-oktober-2015-modifikasi-template&#34;&gt;17 Oktober 2015: Modifikasi Template&lt;/h5&gt;
+
+&lt;p&gt;Template asli dari blogger dimodifikasi. Merapikan header, menu navigasi, dan footer. Tampilan untuk ponsel juga diperbaiki dan dirapikan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-facebook width=&#34;552&#34;
+      height=&#34;303&#34;
+      layout=&#34;responsive&#34;
+      data-href=&#34;https://www.facebook.com/petanikode/posts/437642546419344:0&#34;&gt;
+&lt;/amp-facebook&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;02-juli-2016-ganti-font-logo&#34;&gt;02 Juli 2016: Ganti Font Logo&lt;/h5&gt;
+
+&lt;p&gt;Logo petani kode menggunakan font: Rancho&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-facebook width=&#34;552&#34;
+      height=&#34;303&#34;
+      layout=&#34;responsive&#34;
+      data-href=&#34;https://www.facebook.com/petanikode/posts/519259974924267&#34;&gt;
+&lt;/amp-facebook&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;04-09-juli-2016-ganti-template-dengan-amp&#34;&gt;04 - 09 Juli 2016: Ganti Template dengan AMP&lt;/h5&gt;
+
+&lt;p&gt;Pembuatan template baru dengan AMP (Accelerated Mobile Pages), dimulai sejak H-2 Sebelum idul fitri.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-facebook width=&#34;552&#34;
+      height=&#34;303&#34;
+      layout=&#34;responsive&#34;
+      data-href=&#34;https://www.facebook.com/petanikode/posts/521781054672159:0&#34;&gt;
+&lt;/amp-facebook&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;28-desember-2016-peningkatan-ui&#34;&gt;28 Desember 2016: Peningkatan UI&lt;/h4&gt;
+
+&lt;p&gt;Peningkatan UI, merapikan bagian-bagian yang masih berantakan.&lt;/p&gt;
+
+&lt;h4 id=&#34;10-januari-2017-migrasi-ke-hugo&#34;&gt;10 Januari 2017: Migrasi ke Hugo&lt;/h4&gt;
+
+&lt;p&gt;Petani Kode melakukan &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi dari Blogger ke Hugo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;media-di-internet&#34;&gt;Media di Internet&lt;/h2&gt;
+
+&lt;p&gt;Berikut ini daftar media yang digunakan Petani Kode:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Facebook: &lt;a href=&#34;https://www.facebook.com/petanikode/&#34;&gt;https://www.facebook.com/petanikode/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/petanikode&#34;&gt;https://twitter.com/petanikode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google+: &lt;a href=&#34;https://plus.google.com/b/104290087375687044123/104290087375687044123&#34;&gt;https://plus.google.com/b/104290087375687044123/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Instagram: &lt;a href=&#34;https://www.instagram.com/petanikode/&#34;&gt;https://www.instagram.com/petanikode/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Telegram Channel: &lt;a href=&#34;http://telegram.me/petanikode/&#34;&gt;http://telegram.me/petanikode/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Youtube Channel: &lt;a href=&#34;https://www.youtube.com/channel/UCVEEB0XiaogU6UodKXRaNyg&#34;&gt;http://telegram.me/petanikode/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pemrograman on Petani Kode</title>
+    <link>http://petanikode.com/kategori/pemrograman/index.xml</link>
+    <description>Recent content in Pemrograman on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <atom:link href="http://petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Belajar Pemrograman Mulai dari Mana?</title>
+      <link>http://petanikode.com/2017/01/belajar-pemrograman-mulai-dari-mana/</link>
+      <pubDate>Mon, 23 Jan 2017 19:58:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/belajar-pemrograman-mulai-dari-mana/</guid>
+      <description>
+
+&lt;p&gt;Pertanyaan ini sering ditanyakan oleh kawan-kawan yang ingin memasuki dunia pemrograman.
+Setiap orang akan memiliki jawaban yang berbeda-beda. Sebenarnya jawabnnya
+sangat tergantung dari yang bertanya. Sudah sejauh mana pengetahuannya tentang
+komputer dan pemrograman?&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;720&#34;
+height=&#34;380&#34;
+alt=&#34;kopi dan laptop - Belajar Pemrograman&#34;
+src=&#34;https://4.bp.blogspot.com/-IkP1sd_J1Vw/WIAfKIyz7lI/AAAAAAAADqo/O-cgHSD3bvkmOqabe9Rbu8UVMKUkJRjdwCPcB/s1600/belajar-pemrograman-petanikode.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Saya asumsikan yang bertanya sudah paham tentang konsep dasar komputer,
+bisa menginstal sistem operasi (Windows/Linux), paham CLI/CMD, dan punya
+rasa keingintahuan yang tinggi.&lt;/p&gt;
+
+&lt;h2 id=&#34;mulai-dari-sekarang-dan-di-sini&#34;&gt;Mulai dari Sekarang dan di sini&lt;/h2&gt;
+
+&lt;p&gt;Benar sekali, jangan ditunda-tunda sampai besok. Mulailah sekarang juga dan di
+sini. Ya! di sini, di tempat anda berada sekarang.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Jangan tunda sampai besok apa yang bisa anda lakukan hari ini.&amp;rdquo;
+&amp;ndash; Benjamin Franklin&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Setiap orang memang mimiliki titik awal yang berbeda-beda. Ada yang mulai dari
+kursus, buku, kuliah, tutorial, dsb. Anda bisa memulianya di sini, di web &lt;a href=&#34;http://petanikode.com/&#34;&gt;Petani Kode&lt;/a&gt; ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;pelajari-hal-hal-dasar&#34;&gt;Pelajari Hal-hal dasar&lt;/h2&gt;
+
+&lt;p&gt;Baiklah, sekarang saya anggap anda seorang yang baru pindah tempat kos.
+Di tempat kos anda saat ini, banyak hal asing yang belum anda ketahui,
+seperti jalan, warung, tempat loundry, dsb. Apakah yang akan anda lakukan,
+bila berada dalam kondisi ini.&lt;/p&gt;
+
+&lt;p&gt;Mungkin anda bisa mulai mencari informasi di Google dan jalan-jalan di sekitaran
+kos. Bertanya dan berkenalan dengan para tetangga.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Saya selalu mencari di Google apa yang tidak diketahui&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Begitu juga dengan belajar pemrograman dan belajar apapun juga. Anda akan berada
+dalam kondisi seperti orang asing. Jangan khawatir, yang perlu anda lakukan adalah
+mencari tahu. Kumpulkan informasi sebanyak mungkin dan pelajari, sehingga tidak
+merasa asing lagi.&lt;/p&gt;
+
+&lt;p&gt;Pada saat anda berada dalam kondisi asing, sebaiknya jangan telalu banyak bertanya di forum.
+Karena para penghuni forum atau grup kurang senang pertanyaan &lt;em&gt;mainstream&lt;/em&gt; yang sudah ada jawabannya di
+dokumentasi, FAQs, maupun di Google.&lt;/p&gt;
+
+&lt;h2 id=&#34;memilih-bahasa-pemrograman&#34;&gt;Memilih Bahasa Pemrograman&lt;/h2&gt;
+
+&lt;p&gt;Sekarang saatnya memilih bahasa pemrograman, atau mungkin anda sudah punya pilihan.
+Pilihlah bahasa pemrograman yang ingin anda pelajari. Mungkin ada yang menyarankan
+mempelajar bahasa pemrograman x, sedangkan anda tidak ingin pelajari itu. Ya,
+jangan dipelajari. Karena akan sulit rasanya menerima ilmu yang tidak kita inginkan.&lt;/p&gt;
+
+&lt;p&gt;Setiap orang mulai belajar dari bahasa yang berbeda-beda. Saya sendiri mulai dari
+belajar bahasa pemrograman &lt;a href=&#34;http://petanikode.com/topik/pascal&#34;&gt;Pascal&lt;/a&gt;, Assembly 8086, kemudian ke &lt;a href=&#34;http://petanikode.com/topik/html&#34;&gt;HTML&lt;/a&gt;,
+&lt;a href=&#34;http://petanikode.com/topik/css&#34;&gt;CSS&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/javascript&#34;&gt;Javasript&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/python&#34;&gt;Python&lt;/a&gt;,
+&lt;a href=&#34;http://petanikode.com/topik/c&#34;&gt;C&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/c++&#34;&gt;C++&lt;/a&gt;, dan &lt;a href=&#34;http://petanikode.com/topik/java&#34;&gt;Java&lt;/a&gt;. Karena saya tidak hanya
+tertarik pada satu bahasa. Tentu saja, membutuhkan waktu lama untuk mempelajari itu semua.
+Karena itu, anda tidak harus mengikuti apa yang saya pelajari.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Saya ingin tahu, apa yang belum diketahui.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Itulah ungkapan yang mengantarkan saya sampai saat ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;praktik-dan-praktik&#34;&gt;Praktik dan Praktik&lt;/h2&gt;
+
+&lt;p&gt;Jika anda ingin mahir bermain gitar, apa yang akan anda lakukan? Membaca panduan
+tentang bermain gitar ataukah berlatih. Ya, tentu saja yang paling utama adalah berlatih.
+Entah seperti apa suara yang dihasilkan, yang penting berlatih sampai jari-jari terbiasa.
+Begitu juga dengan belajar pemrograman. Anda harus terus-menerus berlatih dengan praktik.&lt;/p&gt;
+
+&lt;p&gt;Pemrograman tidak hanya tentang menulis kode saja. Pemrograman itu, 80% berpikir.
+Latihlah pikiran anda agar terbiasa memecahkan masalah dan error.&lt;/p&gt;
+
+&lt;p&gt;Itulah jawaban saya atas pertanyaan &amp;ldquo;Belajar Pemrograman mulai dari dari mana?&amp;rdquo;
+Jawaban sederhananya, &lt;strong&gt;mulai dari sekarang dan di sini&lt;/strong&gt;. Cari tahu apa yang belum
+diketahui. Setiap orang akan memiliki jawaban yang berbeda-beda. Kalau anda punya jawaban,
+silahkan disampaikan melalui komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kenapa Bahasa Pemrograman Java Kurang Cocok untuk Pemula?</title>
+      <link>http://petanikode.com/2017/01/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/</link>
+      <pubDate>Sat, 21 Jan 2017 16:45:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/</guid>
+      <description>
+
+&lt;p&gt;Sudah dua kali semester saya mengajar di praktikum pemrograman &lt;a href=&#34;http://petanikode.com/topik/java&#34;&gt;Java&lt;/a&gt;. Hasilnya, hanya sebagian mahasiswa yang mengerti. Sebagiannya lagi masih pusing. Karena mereka belum pernah ada pengalaman &lt;em&gt;coding&lt;/em&gt; sebelumnya. Bahasa pemrograman Java memang populer, oleh karena itu pihak kampus memilih bahasa ini untuk diajarkan pada semester I.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;720&#34;
+height=&#34;380&#34;
+alt=&#34;Anak-anak ngoding di sawah&#34;
+src=&#34;https://4.bp.blogspot.com/-JLEbu94zv1c/WGjrfTdQdrI/AAAAAAAADjg/OkDhW7IniKY5d21yGt-Nb4rChbTtSPE9gCK4B/s1600/Anak-anak%2Bcoding%2Bdi%2Bsawah%2BPetani%2BKode.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Om Endy Muhardin, dalam tulisan di blognya yang berjudul &lt;a href=&#34;http://software.endy.muhardin.com/java/java-tidak-untuk-pemula/&#34;&gt;Java: Tidak untuk Pemula&lt;/a&gt; mengatakan: &amp;ldquo;Java memang bahasa yang &lt;em&gt;mature&lt;/em&gt;. Sudah stabil (artinya tidak terlalu banyak perubahan fundamental) dan sudah teruji digunakan berbagai aplikasi besar dengan sukses. Tetapi tidak berarti mudah bagi pemula.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Kemudian saya mencoba mengumpulkan beberapa alasan, kenapa bahasa pemrograman Java kurang cocok untuk pemula.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-sintak-susah-dihapal&#34;&gt;1. Sintak Susah Dihapal&lt;/h2&gt;
+
+&lt;p&gt;Menurut saya, sintak Java agak susah dihapal/diingat. Karena sintaknya cukup panjang. Pembuatan program &lt;em&gt;Hello World&lt;/em&gt; saja sampai sepanjang ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.petanikode.HelloWorld;
+
+    public class HelloWorld {
+        public static void main(String[] args){
+        System.out.println(&amp;quot;Hello World&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada pertemuan pertama, saya mengajarkan kode di atas. Besoknya tidak ada yang ingat, kalau tidak mencontek.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-belum-belajar-akses-level&#34;&gt;2. Belum Belajar Akses Level&lt;/h2&gt;
+
+&lt;p&gt;Pada pemrograman berorientasikan objek, ada yang namanya akses level &lt;i&gt;(public, protected, &lt;/i&gt;dan&lt;i&gt; private)&lt;/i&gt;. Akses level ini untuk menentukan akses pada class, atribut, dan method. Bagaimana seorang yang tidak pernah &lt;i&gt;coding&lt;/i&gt; akan mengerti hal ini. Sedangkan mereka tidak pernah belajar OOP. Saya pun ikut bingung mau menjelaskannya seperti apa.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-belum-belajar-class&#34;&gt;3. Belum Belajar Class&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Class&lt;/em&gt;, apaan itu? &lt;em&gt;Class&lt;/em&gt; adalah rancangan dari sebuah objek. Objek, apaan lagi itu? Duh! Akhirnya saya menjelaskan &lt;em&gt;Class&lt;/em&gt; itu untuk membuat nama program. Meskipun itu bukan pengertian yang sesungguhnya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.petanikode.NamaProgram;
+
+    public class NamaProgram {
+        public static void main(String[] args){
+            System.out.println(&amp;quot;Hello World&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-belum-belajar-array&#34;&gt;4. Belum Belajar Array&lt;/h2&gt;
+
+&lt;p&gt;Lihat saja pada program &lt;em&gt;HelloWorld&lt;/em&gt; di atas, array sudah digunakan untuk menyimpan argumen atau parameter. Mereka lalu bertanya, &amp;ldquo;Kata om tadi &lt;code&gt;String[] args&lt;/code&gt; itu sebuah &lt;em&gt;array&lt;/em&gt; yang bertipe data &lt;em&gt;String&lt;/em&gt;. &lt;em&gt;String&lt;/em&gt; itu apa dan &lt;em&gt;Array&lt;/em&gt; itu apa?&amp;rdquo; Penjelasan teknikal saya pun tidak bisa dipahami, karena mereka belum belajar variabel, tipe data, dan &lt;em&gt;array&lt;/em&gt;. Mau tidak mau, kita harus mengabaikan dulu bagian ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-belum-tahu-method-instance-dan-static&#34;&gt;5. Belum Tahu Method Instance dan Static&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Static void main&lt;/em&gt; itu maksudnya apa? Kenapa harus ada &lt;em&gt;static&lt;/em&gt;? &lt;em&gt;main&lt;/em&gt; adalah &lt;em&gt;method&lt;/em&gt; utama dalam program. &lt;em&gt;Method&lt;/em&gt; ini wajib ada agar program bisa dijalankan. Tunggu dulu, &lt;em&gt;method&lt;/em&gt; itu apa om?&lt;/p&gt;
+
+&lt;p&gt;Karena belum memahami OOP, mereka pun tidak akan bisa mengerti bila saya jelakan dengan sudut pandang OOP.&lt;/p&gt;
+
+&lt;h2 id=&#34;6-belum-paham-tentang-package&#34;&gt;6. Belum Paham Tentang Package&lt;/h2&gt;
+
+&lt;p&gt;Apa maksud dari baris ini om?&lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.petanikode.NamaProgram;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Itu untuk menandakan lokasi &lt;em&gt;namespace&lt;/em&gt; atau lokasi kodenya. Wah, &lt;em&gt;namespace&lt;/em&gt; itu apa lagi om?&lt;/p&gt;
+
+&lt;p&gt;Jadi, itulah beberapa alasan kenapa bahasa &lt;a href=&#34;https://petanikode.com/search/label/Pemrograman&#34;&gt;pemrograman&lt;/a&gt; Java kurang cocok untuk pemula. Karena Java menggunakan paradigma OOP &lt;em&gt;(Object Oriented Programming)&lt;/em&gt;, sedangkan para pemula yang belum parnah &lt;em&gt;coding&lt;/em&gt; tidak pernah belajar tentang OOP. Namun, bukan berarti Java tidak boleh dipelajari oleh pemula. Silahkan dipelajari dengan tekun.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Replace String dalam Template Go</title>
+      <link>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</link>
+      <pubDate>Fri, 20 Jan 2017 14:32:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</guid>
+      <description>&lt;p&gt;Sebuah masalah kecil yang saya temukan ketika mengedit skrip &lt;a href=&#34;https://github.com/natefinch/blogimport&#34;&gt;Blogimport&lt;/a&gt;.
+Saya ingin memperbesar ukuran gambar &lt;em&gt;thumbnail&lt;/em&gt; dengan cara me-replace string yang ada di URL.&lt;/p&gt;
+
+&lt;p&gt;Misalnya, dari URL ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s72-c/pemrograman%2Bjavascript%2B-%2Bpetanikode.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Menjadi seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah, di sana saya ingin merubah &lt;code&gt;s72-c&lt;/code&gt; agar menjadi &lt;code&gt;s1600&lt;/code&gt;. Pada template Hugo,
+saya bisa melakukannya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;{{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Namun, Go belum memiliki fungsi &lt;code&gt;replace&lt;/code&gt; seperti Hugo. Setelah bolak-balik Google
+dan Stack Overflow, saya akhirnya membuat sebuah &lt;a href=&#34;http://stackoverflow.com/q/41647788/2658551&#34;&gt;pertanyaan baru&lt;/a&gt;
+di Stack Overflow dan mendapatkan jawabannya.&lt;/p&gt;
+
+&lt;p&gt;Pertama, kita harus membuat fungsi replace dulu dengan Go.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func replace(input, from,to string) string {
+    return strings.Replace(input,from,to, -1)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian melakukan &lt;em&gt;mapping&lt;/em&gt; terhadap fungsi tadi agar nanti bisa dikenali dalam template.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;funcMap = template.FuncMap{
+     &amp;quot;replace&amp;quot;:  replace,
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, barulah kita masukan fungsinya ketika eksekusi template.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;template := template.New(&amp;quot;&amp;quot;).Funcs(funcMap)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Barulah kita dapat menggunakan fungsi &lt;em&gt;replace&lt;/em&gt; pada template go.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;{{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Contoh kode lengkapnya dapat anda lihat &lt;a href=&#34;https://github.com/ardianta/blogimport/blob/master/main.go&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan</title>
+      <link>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</link>
+      <pubDate>Sun, 15 Jan 2017 21:06:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</guid>
+      <description>&lt;p&gt;Ada cerita menarik yang saya alami ketika &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi Petani Kode dari Blogger ke Hugo&lt;/a&gt;.
+Waktu itu, ketika saya ingin mengimpor konten dari Blogger ke Hugo, ada sesuatu
+yang kurang dari skrip Go yang disediakan. Kekuarangnnya tidak mampu membuat
+atau mengambil gambar &lt;em&gt;(thumbnail)&lt;/em&gt; untuk setiap artikel.&lt;/p&gt;
+
+&lt;p&gt;Saya kemudian berpikir, mungkin nanti saya bisa edit setiap gambar untuk artikel.
+Namun, rasanya akan sangat melelahkan melakukannya karena jumlah artikelnya sampai ratusan. Tidak ingin melakukan hal yang berulang-ulang seperti kata orang,
+&lt;em&gt;Don&amp;rsquo;t Repeat Yourself&lt;/em&gt; di singkat DRY. Saya kemudian membuka &lt;a href=&#34;https://github.com/natefinch/blogimport/issues/1&#34;&gt;isu baru&lt;/a&gt; di repositori
+skrip ini.&lt;/p&gt;
+
+&lt;p&gt;Beberapa jam kemudian, Nate Finch membalas isu yang saya buat.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I&amp;rsquo;d be more than happy to accept a pull request for this, if you want to write it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Terjemahnya kira-kira begini, &amp;ldquo;Saya akan sangat senang sekali menerima &lt;em&gt;pull request&lt;/em&gt; untuk hal ini, jika anda berkenan menulisnya&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Awalnya saya berharap agar Nate Finch mau meng-update skripnya, tapi malah saya yang disuruh nulis dan saya tidak paham bahasa pemrograman Go sama sekali. Mungkin saja si Nate Finch sedang sibuk, sehingga tidak punya waktu untuk menulis skrip ini lagi.&lt;/p&gt;
+
+&lt;p&gt;Karena isu ini adalah kebutuhan saya, maka mau tidak mau saya sendiri yang harus membuatnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;380&#34;
+width=&#34;720&#34;
+alt=&#34;Ghoper Petani Kode&#34;
+src=&#34;https://3.bp.blogspot.com/-tHAcqs4Bv1o/WIAVwWJzaLI/AAAAAAAADps/sBBGZxVxmcI66poCB-Mj0AEzIkDeDG8KQCPcB/s1600/go-gopher-petanikode.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Saya tidak harus belajar bahasa pemrograman Go dari awal. Karena sintaknya cukup mirip dengan bahasa pemrograman yang pernah saya pelajari. Pertama saya harus pahami dulu skrip yang ditulis Nate Finch.&lt;/p&gt;
+
+&lt;p&gt;Pertama, saya menebak-nebak dulu fungsi dari setiap prosedurnya dengan membaca dari bawah ke atas.&lt;/p&gt;
+
+&lt;p&gt;Saya kemudian mengetahui, fungsi ini untuk membuat file &lt;em&gt;markdown&lt;/em&gt;, meski tidak tahu detail algoritmanya. Saya dapat petunjuk karena melihat ada &lt;code&gt;.md&lt;/code&gt; di sana.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func writeEntry(e Entry, dir string) error {
+	filename := filepath.Join(dir, makePath(e.Title)+&amp;quot;.md&amp;quot;)
+	f, err := os.OpenFile(filename, os.O_CREATE | os.O_TRUNC | os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	return t.Execute(f, e)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian naik ke atas, saya menemukan baris kode ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;if err := writeEntry(entry, dir); err != nil {
+    log.Fatalf(&amp;quot;Failed writing post %q to disk:\n%s&amp;quot;, entry.Title, err)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kode tersebut pasti pemanggilan fungsi yang tadi. Kemudian saya melakukan penelusuran dengan parameternya &lt;code&gt;entry&lt;/code&gt; dan &lt;code&gt;dir&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bolak-balik, atas-bawah. Saya menemukan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;parameter &lt;code&gt;dir&lt;/code&gt; dari &lt;code&gt;dir := args[1]&lt;/code&gt;, yaitu argumen yang diberikan ketika menjalankan kode ini. Karena &lt;code&gt;args&lt;/code&gt; itu tidak asing bagi pengguna linux seperti saya.&lt;/li&gt;
+&lt;li&gt;parameter &lt;code&gt;entry&lt;/code&gt; dari nama alias &lt;code&gt;exp.Entries&lt;/code&gt;, karena di sana sepertinya ada perulangan &lt;em&gt;foreach&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kemudian saya menelusuri asal-usul &lt;code&gt;exp.Entries&lt;/code&gt; ini. Ternyata dia barasal dari &lt;code&gt;exp := Export{}&lt;/code&gt;. Lalu, &lt;code&gt;Export{}&lt;/code&gt; itu berasal dari struk &lt;code&gt;Export&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;type Export struct {
+    XMLName xml.Name `xml:&amp;quot;feed&amp;quot;`
+    Entries []Entry `xml:&amp;quot;entry&amp;quot;`
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sampai di sini saya sedikit mengerti algoritma dari skrip ini.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Skrip ini mengubah semua tag XML menjadi struk&lt;/li&gt;
+&lt;li&gt;Lalu Struk tadi diurai dalam perluangan&lt;/li&gt;
+&lt;li&gt;Setelah itu, buat file &lt;em&gt;markdown&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Kira-kira begitulah yang saya pahami.&lt;/p&gt;
+
+&lt;p&gt;Kemudian saya mencoba merubah atribut yang ada dalam struk. Karena saya kira sudah paham maksud dari struk tersebut. Namun ternyata tidak ada hasil apa-apa.&lt;/p&gt;
+
+&lt;p&gt;Saya ingin mengambil URL dari elemen XML ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;media:thumbnail xmlns:media=&#39;http://search.yahoo.com/mrss/&#39; url=&#39;https://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s72-c/thumbnail-image.png&#39; height=&#39;72&#39; width=&#39;72&#39;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Terlihat di sana ada penggunaan &lt;em&gt;namespace&lt;/em&gt; untuk elemen tersebut. Kemudian saya mencari dan menemukan jawaban di &lt;a href=&#34;http://stackoverflow.com/a/14152832&#34;&gt;Stack Overflow&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Setelah mencoba dan berhasil mendapatkan URL-nya, yay!&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;400&#34;
+width=&#34;600&#34;
+alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
+src=&#34;http://i.imgur.com/z7MveXv.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Namun, ukuran gambar dari URL tersebut adalah 72x72 piksel. Lalu, selanjutnya saya menginginkan gambar yang lebih besar.&lt;/p&gt;
+
+&lt;p&gt;Ketemu masalah lagi, gambar tidak bisa diperbesar. Karena tidak ada fungsi untuk &lt;em&gt;replace string&lt;/em&gt; pada template Go. Tidak lama kemudian, saya berhasil menyelesaikannya.&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/&#34;&gt;Cara Replace String pada Template Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah semuanya beres, saya kemudian melakukan &lt;em&gt;pull request&lt;/em&gt; ke repositori milik Nate Finch. Saat ini masih belum di-reviw, diterima atau ditolak terserah Nate Finch. Saya hanya butuh untuk masalah saya saja. Namun, jika anda juga membutuhkannya bisa klon atau &lt;em&gt;fork&lt;/em&gt; &lt;a href=&#34;https://github.com/ardianta/blogimport&#34;&gt;repositori dari saya&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Luar biasa, tidak pernah belajar bahasa pemrograman Go sama sekali, malah melakukan &lt;em&gt;pull request&lt;/em&gt; ke proyek yang menggnuakan bahasa pemrograman Go.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>10 Negara dengan Programmer Terbaik dan Indonesia Ranking Berapa?</title>
+      <link>http://petanikode.com/2017/01/10-negara-dengan-programmer-terbaik-dan-indonesia-ranking-berapa/</link>
+      <pubDate>Sat, 14 Jan 2017 15:26:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/10-negara-dengan-programmer-terbaik-dan-indonesia-ranking-berapa/</guid>
+      <description>
+
+&lt;p&gt;Banyak yang mungkin menduga, Amerika adalah negara dengan programmer terbaik. Karena di sana sarangnya para programmer legendaris seperti Bill Gates, Ken Thompson, Dennis Ritchie, dan Donald Knuth. Namun ternyata bukan. Hal ini dibuktikan oleh HackerRank.&lt;/p&gt;
+
+&lt;p&gt;HackerRank merupakan sebuah &lt;i&gt;platform&lt;/i&gt; untuk menentukan rangking para programmer beradasarkan skill &lt;i&gt;coding &lt;/i&gt;yang dimilikinya. HackerRank sering mengadakan tantangan &lt;i&gt;(challenges)&lt;/i&gt; untuk meningkatkan kemampuan para programmer. Ribuan programmer dari seluruh penjuru dunia ikut berpartisipasi dalam tantangan. Programmer dinilai berdasarkan kombinasi akurasi dan kecepatannya. Beberapa bulan yang lalu, HackerRank mempublikasi hasil analisis datanya. Berikut ini 10 Negara dengan programmer terbaik menurut HackerRank.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-cina&#34;&gt;#1 Cina&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;525&#34;
+width=&#34;938&#34;
+alt=&#34;Programmer Cina&#34;
+src=&#34;https://2.bp.blogspot.com/-loSqxxajlMg/WGiTEHt7VyI/AAAAAAAADhY/hZoknwSypCcRXybjS031ResOUYllu1r7ACK4B/s1600/china_programmer_cheerleaders_01.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Cina menjadi negeara dengan ranking 1 di HackerRank. Cina unggul pada tantangan struktur data, matematika, dan pemrograman fungsional.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-rusia&#34;&gt;#2 Rusia&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;340&#34;
+width=&#34;600&#34;
+alt=&#34;Programmer Rusia&#34;
+src=&#34;https://1.bp.blogspot.com/-Ow9v19qs4ME/WGiVDDiWnaI/AAAAAAAADhk/OyXCvAHX5Tovu_-f8h-H6E4zREqvdMieQCK4B/s1600/russian%2Bprogrammer.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sementara Rusia meraih ranking ke-2 setelah Cina. Rusia unggul pada tantangan Algoritma.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-polandia&#34;&gt;#3 Polandia&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;512&#34;
+width=&#34;770&#34;
+alt=&#34;Programmer Polandia&#34;
+src=&#34;http://2.bp.blogspot.com/-XL2Uq49Hrrs/WGiXFFDvs9I/AAAAAAAADhw/Hg4Otn2dTjQ_uu_Fgz7db2uNrpQiba4NwCK4B/s1600/programmer%2Bpolandia.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Polandia unggul dalam tantangan pemrograman Java. Anak-anak di Polandia sudah diajari pemrograman di sekolah. Sistem pendidikan mereka lebih fokus pada sains dan komputasi.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-swis&#34;&gt;#4 Swis&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;428&#34;
+width=&#34;640&#34;
+alt=&#34;Programmer Swis&#34;
+src=&#34;http://3.bp.blogspot.com/-WAkwDc9GmxA/WGiYtV23gRI/AAAAAAAADh8/TT-OROmA49Qv0A3yPPSVCvkTGLlV5blVACK4B/s1600/swiz%2Bprogrammer.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Swis meraih peringkat ke-4 pada HackerRank. Swis meruapakan tempat kelahiran bahasa pemrograman &lt;a href=&#34;http://petanikode.com/topik/pascal&#34;&gt;Pascal&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-hongaria&#34;&gt;#5 Hongaria&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;638&#34;
+width=&#34;960&#34;
+alt=&#34;Programmer Hongaria&#34;
+src=&#34;http://4.bp.blogspot.com/-FVl0_338U6g/WGiZWxDaNCI/AAAAAAAADiE/EmBM3z4Hv0EmWtRrbZSWRr1Oxshar1jQQCK4B/s1600/programmer%2Bhungaria.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Hongaria mendapat rangking ke-5, mereka unggul pada tantangan dalam bentuk tutorial. Hongaria juga menjadi negeara eropa pertama yang memasukan pelajaran pemrograman dalam sistem pendidikan mereka.&lt;/p&gt;
+
+&lt;h2 id=&#34;6-jepang&#34;&gt;#6 Jepang&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;1228&#34;
+width=&#34;1600&#34;
+alt=&#34;Programmer Jepang&#34;
+src=&#34;https://3.bp.blogspot.com/-twdklvtJC-g/WGiashGCq1I/AAAAAAAADiQ/C8tXNG83jqcgJV1Sjs_25jbneR6zNiomwCK4B/s1600/programmer%2Bjepang.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Jepang adalah negara terbaik yang menyelesaikan tantangan kecerdasan buatan di HackerRank. Jepang juga tempat kelahiran bahasa pemrograman &lt;a href=&#34;http://petanikode.com/topik/ruby&#34;&gt;Ruby&lt;/a&gt;. Namun, Jepang mendapatkan peringkat ke-6 pada HackerRank.&lt;/p&gt;
+
+&lt;h2 id=&#34;7-taiwan&#34;&gt;#7 Taiwan&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;600&#34;
+height=&#34;400&#34;
+alt=&#34;Programmer Taiwan&#34;
+src=&#34;http://3.bp.blogspot.com/-ZKS-vk0eUwA/WGicxZnTDnI/AAAAAAAADic/TR7N5w7CmLocBzJj6G_-HSDO4a_SLlD8gCK4B/s1600/programmer%2Btaiwan.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Taiwan mendapatkan rangking ke-7. Merka meraih skor tinggi pada tantangan database, pemrograman fungsional, algoritma dan struktur data.&lt;/p&gt;
+
+&lt;h2 id=&#34;8-prancis&#34;&gt;#8 Prancis&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;864&#34;
+height=&#34;487&#34;
+alt=&#34;Programmer Prancis&#34;
+src=&#34;https://2.bp.blogspot.com/-a698X84gyWQ/WGidrszBt4I/AAAAAAAADik/HE0Rm6kF-tADlb4vbD2QadGiK8YCdaDKACK4B/s1600/programmer%2Bprancis.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Prancis lebih dominan pada C++. Karena prancis sudah memasukan pelajaran pemrograman pada sekolah dasar sejak bulan &lt;a href=&#34;http://www.itworld.com/article/2696639/application-management/france-to-offer-programming-in-elementary-school.html&#34;&gt;juni 2014&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;9-republik-ceko&#34;&gt;#9 Republik Ceko&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;630&#34;
+height=&#34;350&#34;
+alt=&#34;Programmer Ceko&#34;
+src=&#34;https://4.bp.blogspot.com/-og-xJ6_H42A/WGievUCgafI/AAAAAAAADi0/9PbecauaWwIHz9C-3w5JrKeH-G4gC4G1ACK4B/s1600/programmer%2Bceko.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Republik ceko lebih unggul pada tantangan dengan &lt;i&gt;shell scripting&lt;/i&gt;. Mereka juga meraih peringkat kedua pada tantangan matematika. Namun, hanya mampu masuk rangking ke-9.&lt;/p&gt;
+
+&lt;h2 id=&#34;10-itali&#34;&gt;#10 Itali&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;1000&#34;
+height=&#34;536&#34;
+alt=&#34;Programmer Italia&#34;
+src=&#34;https://4.bp.blogspot.com/-brojwlLJuKI/WGihV6Umf3I/AAAAAAAADjA/7clsKJ8rFZgLfgofiDjYWonBnWhjIFSmACK4B/s1600/programmer%2Bitalia.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Itali meraih peringkat ke-10. Mereka hebat dalam tantangan database dan tutorial. Mereka dapat rangking kedua pada dua tantangan tersebut.&lt;/p&gt;
+
+&lt;p&gt;Itulah 10 negara dengan programmer terbaik menurut HackerRank Lalu, Indonesia peringkat ke berapa?&lt;/p&gt;
+
+&lt;p&gt;Berdasarkan &lt;a href=&#34;http://blog.hackerrank.com/which-country-would-win-in-the-programming-olympics/&#34;&gt;data yang dipublikasikan HackerRank&lt;/a&gt;, Indonesia meraih peringkat ke-40. Berada di atas Slandia Baru, Mesir, Afrika Selatan, Banglades, Kolombia, Filipina, Malaysia, Nigeria, Srilangka, dan Pakistan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;642&#34;
+height=&#34;612&#34;
+alt=&#34;Peringkat negara menurut hackerrank&#34;
+src=&#34;https://4.bp.blogspot.com/-X587f0Th2H8/WGircqM3tKI/AAAAAAAADjM/HBuAl-4A1fIgN8gjNiSYVneaAe7Bry8SgCLcB/s1600/peringkat%2Bprogrammer%2Bbedasarkan%2Bnegara.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Meskipun masih rangking 40, kita masih punya kesempatan untuk meraih rangking yang lebih baik.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>17 Resolusi untuk Meningkatkan Kemampuan Pemrograman di Tahun 2017</title>
+      <link>http://petanikode.com/2017/01/17-resolusi-untuk-meningkatkan-kemampuan-pemrograman-di-tahun-2017/</link>
+      <pubDate>Tue, 03 Jan 2017 07:12:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/17-resolusi-untuk-meningkatkan-kemampuan-pemrograman-di-tahun-2017/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-iXT4baQA15U/WGM1TS5gqWI/AAAAAAAADgo/5v1xfk6tpjg7FNVtZRoAjSEUyVutBz-RACK4B/s1600/resolusi%2Btahun%2Bbaru.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-iXT4baQA15U/WGM1TS5gqWI/AAAAAAAADgo/5v1xfk6tpjg7FNVtZRoAjSEUyVutBz-RACK4B/s1600/resolusi%2Btahun%2Bbaru.jpg&#34; /&gt;&lt;/a&gt;Selamat tahun baru 2017. Sejauh mana kemampuan pemrograman yang kalian miliki? apakah kalian ingin meningkatkannya? atau malah menurun dan lebih buruk dari tahun sebelumnya. Wah, semoga saja tidak. Berikut ini ada 17 resolusi untuk meningkatkan kemampuan pemrogramanmu di tahun 2017.&lt;br /&gt;&lt;h2&gt;1. Mulai Menggunakan Linux&lt;/h2&gt;&lt;div&gt;Bagi kalian yang masih menggunakan windows, tidak ada salahnya mencoba menggunakan linux untuk pemrograman. Kenali konsep dan filosofi &lt;i&gt;open source&lt;/i&gt;. Rasakan sensasinya menulis kode dengan linux. Saya yakin, setelah satu tahun menggunakan Linux, anda pasti bisa.&lt;/div&gt;&lt;h2&gt;2. Terilbat dalam Komunitas&lt;/h2&gt;&lt;div&gt;Komunitas sangat penting untuk bertukar ilmu, pengalaman, dan informasi. Ikutilah komunitas-komunitas pemrograman yang ada di sekitarmu, entah itu komunitas &lt;i&gt;offline&lt;/i&gt; maupun &lt;i&gt;online&lt;/i&gt;. Komunitas juga dapat meningkatkan kemampuan komunikasimu.&lt;/div&gt;&lt;h2&gt;3. Mulai Menggunakan &lt;i&gt;Version Control&lt;/i&gt;&lt;/h2&gt;&lt;div&gt;Version Control tidak diajari di kampus. Sedangkan di dunia kerja banyak dibutuhkan. Bahkan ada perusahaan yang menjadikan &lt;i&gt;version control&lt;/i&gt; sebagai syarat untuk melamar pekerjaan. Mulai tahun ini, coba belajar&lt;i&gt; version control&lt;/i&gt;.&lt;/div&gt;&lt;h2&gt;4. Kurangi Begadang&lt;/h2&gt;&lt;div&gt;Banyak begadang bisa jadi menurunkan kinerja otak dan tubuh kita. Karena itu, kurangilah begadang pada tahun 2017 ini. Saya sendiri sudah merencanakan sejak awal bulan desember lalu untuk mengubah pola tidur. Tidur setelah solat isa, kemudian bangun pukul 1 untuk belajar dan &lt;i&gt;coding&lt;/i&gt;. Karena pada pukul 1, tidak banyak yang online di sosial media. Ngoding menjadi lebih fokus.&lt;/div&gt;&lt;h2&gt;5. Perbanyak Baca Buku dan Artikel&lt;/h2&gt;Apa bacaan yang kalian konsumsi setiap hari? status, SMS, Chat, spam, atau apa? apakah itu bermanfaat? Kalau itu memang tidak bermanfaat, sebaiknya dihindari. Karena akan membuang-buang waktu. Lebih baik kalian mulai membaca buku dan artikel yang bermanfaat.&lt;br /&gt;&lt;h2&gt;6. Perbanyak Praktik &lt;i&gt;(coding)&lt;/i&gt;&lt;/h2&gt;&lt;div&gt;Jika kalian ikut seni bela diri karate dan jarang latihan, apakah akan meningkatkan kemampuan? Tentu saja tidak. Sama halnya juga dengan pemrograman. Semakin sering latihan semakin meningkat pula kemampuan yang dimiliki. Latihan bisa dilakukan dengan praktik di kelas atau mengikuti tutorial di internet. Hal ini ditekankan oleh bapak Peter Jack Kambey di PHP indonesia.&lt;/div&gt;&lt;div&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-O-2uDesj-T8/WGK-qKwMNSI/AAAAAAAADgY/yftpS_rmpoY3pBLZ5cnMKshnPMAlSemGwCK4B/s1600/peter%2Bjack%2Bkambey%2B-%2Bphp%2Bindonesia.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-O-2uDesj-T8/WGK-qKwMNSI/AAAAAAAADgY/yftpS_rmpoY3pBLZ5cnMKshnPMAlSemGwCK4B/s1600/peter%2Bjack%2Bkambey%2B-%2Bphp%2Bindonesia.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2&gt;7. Selesaikan Error Secara Mandiri&lt;/h2&gt;&lt;div&gt;Sebelum kalian melempar pertanyaan ke forum maupun grup, sebaiknya selesaikan dulu errornya secara mandiri. Error sedikit, jangan langsung di kirim ke grup. Cobalah untuk berpikir, mencari tahu dan analisa terlebih dahulu. Kalau sudah mencoba berbagai cara, namun belum juga berhasil. Barulah coba lempar ke grup.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-captioned=&#34;&#34; data-instgrm-version=&#34;7&#34; style=&#34;background: #fff; border-radius: 3px; border: 0; box-shadow: 0 0 1px 0 rgba(0 , 0 , 0 , 0.5) , 0 1px 10px 0 rgba(0 , 0 , 0 , 0.15); margin: 1px; max-width: 658px; padding: 0; width: 99.375%;&#34;&gt;&lt;div style=&#34;padding: 8px;&#34;&gt;&lt;div style=&#34;background: #F8F8F8; line-height: 0; margin-top: 40px; padding: 50.0% 0; text-align: center; width: 100%;&#34;&gt;&lt;div style=&#34;background: url(data:image/png; display: block; height: 44px; margin: 0 auto -44px; position: relative; top: -22px; width: 44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;margin: 8px 0 0 0; padding: 0 4px;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BJaTBjwDXQW/&#34; style=&#34;color: black; font-family: &amp;quot;arial&amp;quot; , sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none; word-wrap: break-word;&#34; target=&#34;_blank&#34;&gt;Sudah berapa banyak masalah yang berhasil kalian selesaikan?&lt;/a&gt;&lt;/div&gt;&lt;div style=&#34;color: #c9c8cd; font-family: Arial,sans-serif; font-size: 14px; line-height: 17px; margin-bottom: 0; margin-top: 8px; overflow: hidden; padding: 8px 0 7px; text-align: center; text-overflow: ellipsis; white-space: nowrap;&#34;&gt;A photo posted by Petani Kode (@petanikode) on &lt;time datetime=&#34;2016-08-22T12:25:17+00:00&#34; style=&#34;font-family: Arial,sans-serif; font-size: 14px; line-height: 17px;&#34;&gt;Aug 22, 2016 at 5:25am PDT&lt;/time&gt;&lt;/div&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;script async=&#34;&#34; defer=&#34;&#34; src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;/div&gt;&lt;h2&gt;8. Ikuti Tantangan&lt;/h2&gt;&lt;div&gt;Asah terus kemampuan dengan mengikuti berbagai tantangan di internet, seperti di &lt;a href=&#34;https://codefights.com/&#34; target=&#34;_blank&#34;&gt;codefights.com&lt;/a&gt;, &lt;a href=&#34;https://www.hackerrank.com/&#34; target=&#34;_blank&#34;&gt;HackerRank&lt;/a&gt;, &lt;a href=&#34;https://www.dicoding.com/challenges&#34; target=&#34;_blank&#34;&gt;dicoding&lt;/a&gt;, dsb.&lt;/div&gt;&lt;h2&gt;9. Belajar Jaringan Komputer&lt;/h2&gt;&lt;div&gt;Meskipun kalian bukan dari jurusan jaringan komputer, tidak ada salahnya belajar jaringan. Belajar konsep-konsep jaringan komputer. Dengan demikian, kita dapat memhami bagaiman data antar mesin berpindah.&lt;/div&gt;&lt;h2&gt;10. Selesaikan Tugas Tepat Waktu&lt;/h2&gt;&lt;div&gt;Jangan menunda-nunda tugas. Selesaikanlah secepatnya. Karena, bila anda tunda-tunda terus, maka akan menjadi beban dan kesempatan atau waktu anda belajar hal yang lain jadi tertunda juga. Kerjakan sekarang dan hari ini, agar besok lebih banyak waktu untuk belajar yang lain. (nasihat untuk saya juga 😊)&lt;/div&gt;&lt;h2&gt;11. Kurangi Multi Tasking&lt;/h2&gt;&lt;div&gt;Ingat, kita bukan komputer yang mampu melakukan lebih dari satu pekerjaan sekaligus. Kita juga bukan Naruto yang mampu menggandakan diri dengan jurus bayangan. Jadi, lakukanlah pekerjaan satu persatu.&lt;/div&gt;&lt;h2&gt;12. Kurangi Buka Sosial Media&lt;/h2&gt;&lt;div&gt;Jangan berlama-lama nongkrong di sosial media. Kurangi membuka sosial media mulai tahun ini. Atau, kalian bisa membuat jadwal dan jatah untuk membuka sosial media. Misalnya pada jam tertentu dengan durasi waktu tertentu.&lt;/div&gt;&lt;h2&gt;13. Buat Karya atau Portofolio&lt;/h2&gt;&lt;div&gt;Kalian diakui bisa atau mengusai sesuatu dari karya atau portofolio yang dibuat, bukan dari berapa tinggi IPK di kampus. Percuma IPK tinggi di jurusan teknik informatika, tapi tidak bisa &lt;i&gt;ngoding&lt;/i&gt;. Mulai tahun ini, cobalah untuk membuat sebuah karya. Tunjukan pada semua orang, hasil kerja kerasmu.&lt;/div&gt;&lt;h2&gt;14. Belajar Bahasa Pemrograman Baru&lt;/h2&gt;&lt;div&gt;Bahasa pemrograman berkembang sangat cepat. Bahkan di tahun lalu, banyak juga bahasa-bahasa baru yang bermunculan. Bagi kalian yang tertarik mencoba sesuatu yang baru, tidak ada salahnya mencoba bahasa pemrograman baru. Kalian bisa mencoba, Swift, Go, Dart, Kotlin, dsb.&lt;/div&gt;&lt;h2&gt;15. Buat Blog&lt;/h2&gt;&lt;div&gt;Kalau sudah punya banyak ilmu, jangan lupa dibagikan. Salah satu caranya bisa melalui blog. Tulislah apa saja yang sudah dipelajari, pengalaman menyelesaikan error, catan-catan penting. Insa&amp;rsquo;allah akan menjadi kontribusi dunia akhirat dan bermanfaat untuk orang banyak.&lt;/div&gt;&lt;h2&gt;16. Belajar Bahasa Inggris&lt;/h2&gt;&lt;div&gt;Bahasa inggris menjadi bahasa yang sangat penting bagi programmer. Karena dengan bahasa inggris kita bisa memahami lebih cepat dan lebih banyak tentang pemrograman. Kita akan lebih mudah menemukan solusi error di Stack Overflow. Mudah mempelajari dokumentasi. Tidak tersesat, bila jalan-jalan ke web mancanegara.&lt;/div&gt;&lt;h2&gt;17. Selalu Ingat Resolusi dan Lakukan&lt;/h2&gt;Terkadang kita sering membuat resolusi di tahun baru. Satu minggu kemudian dilupakan. Lalu, apa gunanya kita membuat resolusi.&lt;br /&gt;&lt;br /&gt;Itulah 17 resolusi untuk meningkatkan kemampuan pemrograman di tahun 2017. Apakah ada di antara 17 ini yang ingin anda wujudkan? atau punya resolusi selain di atas, silahkan ditambahkan.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Melindungi Web dari Serangan XSS pada Framework CodeIgniter</title>
+      <link>http://petanikode.com/2016/12/cara-melindungi-web-dari-serangan-xss-pada-framework-codeigniter/</link>
+      <pubDate>Fri, 23 Dec 2016 05:13:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/12/cara-melindungi-web-dari-serangan-xss-pada-framework-codeigniter/</guid>
+      <description>&lt;p&gt;XSS merupakan kependekan yang digunakan untuk istilah &lt;i&gt;cross site scripting&lt;/i&gt;. XSS merupakan salah satu jenis serangan injeksi code (code injection attack). XSS dilakukan oleh penyerang dengan cara memasukkan kode HTML atau client script code lainnya ke suatu situs. Serangan ini akan seolah-olah datang dari situs tersebut. Akibat serangan ini antara lain penyerang dapat mem-bypass keamanan di sisi klien, mendapatkan informasi sensitif, atau menyimpan aplikasi berbahaya. Alasan kependekan yang digunakan XSS bukan CSS karena CSS sudah digunakan untuk &lt;i&gt;cascade style sheet&lt;/i&gt;. –&amp;nbsp;&lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34; target=&#34;_blank&#34;&gt;id.wikipedia.org&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Saya akan perjelas lagi. Ceritanya, ada sebuah form dan di sana kita diminta untuk mengisi &lt;i&gt;nama&lt;/i&gt;, &lt;i&gt;nip&lt;/i&gt;, dan &lt;i&gt;jabatan&lt;/i&gt;. Akan tetapi, karena ada seorang yang usil. Dia tidak mengisi &lt;i&gt;nama&lt;/i&gt;, melainkan mengisi kode HTML dan Javascript.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-RaTvgUtLC_0/WEAYT6jwX_I/AAAAAAAADeY/eD26N9ib44UY0fK8qDymlxWfeEgMQRi3wCK4B/s1600/Percobaan%2Bserangan%2BXSS%2Bmelalui%2BForm.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-RaTvgUtLC_0/WEAYT6jwX_I/AAAAAAAADeY/eD26N9ib44UY0fK8qDymlxWfeEgMQRi3wCK4B/s1600/Percobaan%2Bserangan%2BXSS%2Bmelalui%2BForm.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Maka yang akan tersimpan ke dalam database adalah skrip di atas. Secara otomatis, ketika data ditampilkan, browser akan mengekekusi skrip tersebut.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-mKxLOdBzrJ0/WEAYdrVSV7I/AAAAAAAADeg/fNvZ-TPt-OY4bS6-tHDb2favPObm6V9MgCK4B/s1600/Serangan%2Bsukses%2B1%2B-%2Bhacked%2Bby%2Bpetani%2Bkode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-mKxLOdBzrJ0/WEAYdrVSV7I/AAAAAAAADeg/fNvZ-TPt-OY4bS6-tHDb2favPObm6V9MgCK4B/s1600/Serangan%2Bsukses%2B1%2B-%2Bhacked%2Bby%2Bpetani%2Bkode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Si admin sepertinya akan panik.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_S5JiF6GTVc/WEAYmOKIzYI/AAAAAAAADeo/qjKNEKZgWtE1GapgZMS9v1z9RZI3j_38wCK4B/s1600/hasil%2Bhacking%2BXSS.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-_S5JiF6GTVc/WEAYmOKIzYI/AAAAAAAADeo/qjKNEKZgWtE1GapgZMS9v1z9RZI3j_38wCK4B/s1600/hasil%2Bhacking%2BXSS.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Nah, itulah salah satu bentuk serangan XSS. Penyerang sangant leluasa memasukan skrip ke website kita. Lalu, bagaimana cara mengatasi ini di CodeIgniter?&lt;br /&gt;&lt;br /&gt;CodeIgniter sebenarnya sudah menyediakan fitur &lt;i&gt;Global XSS Filtering&lt;/i&gt;. Cara mengaktifkannya, tinggal mengganti nilai &lt;code&gt;FALSE&lt;/code&gt; menjadi &lt;code&gt;TRUE&lt;/code&gt; pada &lt;code&gt;application/config/config.php&lt;/code&gt;.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-_C7i3mJy-1A/WECD4J7ifrI/AAAAAAAADe8/s1JFRU96nycO-rwguskQdqIHeNrpIOMGwCK4B/s1600/Global%2BXSS%2BFiltering.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-_C7i3mJy-1A/WECD4J7ifrI/AAAAAAAADe8/s1JFRU96nycO-rwguskQdqIHeNrpIOMGwCK4B/s1600/Global%2BXSS%2BFiltering.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Dengan demikian, semua input dari pengguna atau penyerang akan dikonversi dulu sebelum di simpan ke database. Akan tetapi fitur ini sudah tidak tersedia lagi.&lt;br /&gt;&lt;blockquote class=&#34;tr_bq&#34;&gt;&lt;i&gt;The ‘global_xss_filtering’ setting is DEPRECATED and kept solely for backwards-compatibility purposes. XSS escaping should be performed on output, not input!&lt;/i&gt;&lt;br /&gt;–&amp;nbsp;&lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/input.html?highlight=xss#xss-filtering&#34; target=&#34;_blank&#34;&gt;dokumentasi CI&lt;/a&gt;&lt;/blockquote&gt;Sepertinya pengembang CI sudah menyadari, kalau XSS itu masalah pada output, bukan input.&lt;br /&gt;&lt;br /&gt;Cara mengatasi XSS yang lain adalah dengan melakukan validasi input (&lt;code&gt;xss_clean&lt;/code&gt;). Namun, seperti yang disebutkan tadi. XSS masalah pada output bukan input. Lalu bagaimana?&lt;br /&gt;&lt;br /&gt;Mau tidak mau, kita harus merubah dulu data yang akan ditampilkan agar tidak dieksekusi oleh browser. Misalnya seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;echo htmlentities($data-&amp;gt;nama, ENT_QUOTES, &amp;lsquo;UTF-8&amp;rsquo;);&lt;/code&gt;&lt;/pre&gt;Sepertinya terlalu panjang. Kita harus mengetik fungsi tersebut setiap mau menampilkan data. Kalau begitu kita jadikan &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Buatlah sebuah &lt;i&gt;helper&lt;/i&gt; pada direktori &lt;code&gt;application/helpers&lt;/code&gt;. Berikan nama &lt;code&gt;xss_helper.php&lt;/code&gt;, kemudian isi kodenya seperti berikut ini.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-oF2kSVvYF2I/WECIbBIH7jI/AAAAAAAADfI/fBgAJyXYRhcbifZ6G9BOd2GrmUEn-AG4ACK4B/s1600/XSS%2BHelper%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-oF2kSVvYF2I/WECIbBIH7jI/AAAAAAAADfI/fBgAJyXYRhcbifZ6G9BOd2GrmUEn-AG4ACK4B/s1600/XSS%2BHelper%2BCodeIgniter.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;&lt;br /&gt;function cetak($str){&lt;br /&gt;&amp;nbsp; &amp;nbsp; echo htmlentities($str, ENT_QUOTES, &amp;lsquo;UTF-8&amp;rsquo;);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Setelah itu,masukan helper ini ke dalam &lt;i&gt;autoload&lt;/i&gt;. Buka, &lt;code&gt;application/config/autoload.php&lt;/code&gt;, kemudian tambahkan &lt;code&gt;xss&lt;/code&gt; pada &lt;i&gt;autoload helper&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code clas=&#34;php&#34;&gt;/&lt;em&gt;&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| &amp;nbsp;Auto-load Helper Files&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| Prototype:&lt;br /&gt;|&lt;br /&gt;| $autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;, &amp;lsquo;file&amp;rsquo;);&lt;br /&gt;&lt;/em&gt;/&lt;br /&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;,&amp;lsquo;cookie&amp;rsquo;,&amp;lsquo;form&amp;rsquo;, &lt;mark&gt;&amp;lsquo;xss&amp;rsquo;&lt;/mark&gt;);&lt;/code&gt;&lt;/pre&gt;Sekarang fungsi &lt;code&gt;echo&lt;/code&gt;, kita ganti dengan fungsi &lt;code&gt;cetak()&lt;/code&gt;. Cara penggunaanya, tinggal kita panggil fungsi &lt;code&gt;cetak()&lt;/code&gt; pada tempat atau &lt;i&gt;view&lt;/i&gt; yang mungkin bisa terkena XSS.&lt;br /&gt;&lt;pre&gt;&lt;code clas=&#34;php&#34;&gt;&amp;lt;?php foreach($pejabat as $pjb){?&amp;gt;&lt;br /&gt;&amp;lt;tr&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;nama) ?&amp;gt;&amp;lt;/td&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;nip) ?&amp;gt;&amp;lt;/td&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;jabatan) ?&amp;gt;&amp;lt;/td&amp;gt;&lt;br /&gt;&amp;lt;/tr&amp;gt;&lt;br /&gt;&amp;lt;?php } ?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Maka, teks akan ditampilkan apa adanya, tidak lagi dieksekusi oleh browser. 😊&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-D3P_TkOCiQw/WECJoF0hhBI/AAAAAAAADfQ/c6BaAuc_Kts7vgmSjZrrdHRO7vyoV5NEwCK4B/s1600/Hasil%2Boutput%2BXSS%2Bfiltering.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-D3P_TkOCiQw/WECJoF0hhBI/AAAAAAAADfQ/c6BaAuc_Kts7vgmSjZrrdHRO7vyoV5NEwCK4B/s1600/Hasil%2Boutput%2BXSS%2Bfiltering.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34;&gt;https://id.wikipedia.org/wiki/XSS&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&#34;&gt;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.htmlentities.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.htmlentities.php&#34;&gt;http://php.net/manual/en/function.htmlentities.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/security.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/security.html&#34;&gt;https://www.codeigniter.com/userguide3/libraries/security.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&#34;&gt;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Helper CodeIgniter untuk Membuat Tanggal dalam Bahasa Indonesia</title>
+      <link>http://petanikode.com/2016/12/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</link>
+      <pubDate>Thu, 22 Dec 2016 18:21:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/12/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;Saat kita membuat sbuah tanggal otomatis dengan fungsi &lt;code&gt;Date()&lt;/code&gt;, kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, &lt;code&gt;Date(&amp;rsquo;d F Y&amp;rsquo;)&lt;/code&gt; akan menghasilkan output &lt;code&gt;22 December 2016&lt;/code&gt; (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.&lt;br /&gt;&lt;br /&gt;Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi &lt;code&gt;Date()&lt;/code&gt;. Kita bisa melakukannya seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$bulan = Date(&amp;rsquo;m&amp;rsquo;);&lt;br /&gt;switch ($bulan) {&lt;br /&gt;    case 1:&lt;br /&gt;&amp;nbsp; &amp;nbsp;     $bulan = &amp;ldquo;Januari&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 2:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Februari&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 3:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Maret&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 4:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;April&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 5:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Mei&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 6:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Juni&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 7:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Juli&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 8:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Agustus&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 9:&lt;br /&gt;  &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;September&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 10:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Oktober&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 11:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;November&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 12:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Desember&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; default:&lt;br /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = Date(&amp;lsquo;F&amp;rsquo;);&lt;br /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Karena kita membutuhkannya untuk digunakan atau dijalankan pada&amp;nbsp;&lt;i&gt;view&lt;/i&gt;, sebaiknya dijadikan &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/ba0934a0ee88315359d30095c7e442de.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;Cara menggunakannya, silahkan taruh file &lt;code&gt;tanggal_helper.php&lt;/code&gt;&amp;nbsp;pada direktori &lt;code&gt;application/helpers&lt;/code&gt; kemudian tambahkan pada &lt;i&gt;autoload&lt;/i&gt; &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;/&lt;em&gt;&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| &amp;nbsp;Auto-load Helper Files&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| Prototype:&lt;br /&gt;|&lt;br /&gt;|&lt;span class=&#34;Apple-tab-span&#34; style=&#34;white-space: pre;&#34;&gt; &lt;/span&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;, &amp;lsquo;file&amp;rsquo;);&lt;br /&gt;&lt;/em&gt;/&lt;br /&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;,&amp;lsquo;cookie&amp;rsquo;,&amp;lsquo;form&amp;rsquo;, &amp;lsquo;xss&amp;rsquo;, &amp;lsquo;dump&amp;rsquo;, &amp;lsquo;tanggal&amp;rsquo;);&lt;/code&gt;&lt;/pre&gt;Setelah itu bisa digunakan langsung pada &lt;i&gt;view&lt;/i&gt;, &lt;i&gt;controller&lt;/i&gt;, maupun &lt;i&gt;model&lt;/i&gt; seperti menggunakan helper &lt;code&gt;url&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;lt;div class=&amp;ldquo;tanda-tangan&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;p align=&amp;ldquo;center&amp;rdquo;&amp;gt;Mataram, &amp;lt;?php echo tanggal() ?&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;&lt;span class=&#34;Apple-tab-span&#34; style=&#34;white-space: pre;&#34;&gt; &lt;/span&gt; &amp;nbsp; &amp;nbsp;Kepala Dinas Pertanian&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Provinsi Nusa Tenggara Barat&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/p&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;p align=&amp;ldquo;center&amp;rdquo;&amp;gt;&amp;lt;b&amp;gt;&amp;lt;u&amp;gt;Ir. Hj. Budi Septiani&amp;lt;/b&amp;gt;&amp;lt;/u&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; NIP. &amp;hellip;..&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/p&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;Akan menghasilkan output:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Hasil output format tanggal dalam bahasa indonesia pada CodeIgniter&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Asyik, Akhirnya Telegram Merilis API untuk Telegraph</title>
+      <link>http://petanikode.com/2016/12/asyik-akhirnya-telegram-merilis-api-untuk-telegraph/</link>
+      <pubDate>Wed, 21 Dec 2016 21:42:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/12/asyik-akhirnya-telegram-merilis-api-untuk-telegraph/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://1.bp.blogspot.com/-aDsiFEuM5xc/WFqCkAnYW8I/AAAAAAAADfo/EeFWl7vn00077JQIDJZH2uzO6WfMhPYaQCLcB/s1600/telegraph-api-oleh-telegram.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-aDsiFEuM5xc/WFqCkAnYW8I/AAAAAAAADfo/EeFWl7vn00077JQIDJZH2uzO6WfMhPYaQCLcB/s1600/telegraph-api-oleh-telegram.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Setelah satu bulan dirilis, Telegraph akhirnya dirilis API-nya. Telegraph merupakan sebuah &lt;i&gt;tool&lt;/i&gt; untuk menerbitkan artikel. Teks editor Telegraph dibangun dengan &lt;a href=&#34;http://quilljs.com/&#34; target=&#34;_blank&#34;&gt;Quill&lt;/a&gt; dan tampilannya mirip seperti Medium. Menulis di Telegraph, rasanya seperti menulis di Medium.&lt;br /&gt;&lt;br /&gt;Sebelumnya Telegram menambahkan fitur &lt;i&gt;instant view&lt;/i&gt;. &lt;i&gt;Instan view&lt;/i&gt; hanya berlaku untuk artikel yang dibagikan dari Medium dan Telegraph. Selain dari itu, tidak bisa ditampilkan dengan &lt;i&gt;instan view&lt;/i&gt;. Namun, dengan kemunculan API Telegraph, kita mungkin bisa membuat &lt;i&gt;instant view&lt;/i&gt; secara otomatis.&lt;br /&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt; Tertarik mencobanya, silahkan kunjungi halaman dokumentasi Telegraph. Dokumentasi API Telegraph dapat anda baca di&amp;nbsp;&lt;a href=&#34;http://telegra.ph/api&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://telegra.ph/api&#34;&gt;http://telegra.ph/api&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Contoh kode untuk mengirim artikel ke Telegraph:&lt;br /&gt;&lt;pre spellcheck=&#34;false&#34;&gt;&lt;code class=&#34;js&#34;&gt;$.ajax(&amp;lsquo;&lt;a href=&#34;https://api.telegra.ph/createPage&#39;&#34;&gt;https://api.telegra.ph/createPage&#39;&lt;/a&gt;, {&lt;br /&gt;&amp;nbsp; data: {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;access_token:&amp;nbsp;  &amp;lsquo;%access_token%&amp;lsquo;,&lt;br /&gt;  &amp;nbsp;&amp;nbsp;title:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;     &amp;nbsp;&amp;lsquo;Title of page&amp;rsquo;,&lt;br /&gt;  &amp;nbsp;&amp;nbsp;content:&amp;nbsp;&amp;nbsp;&amp;nbsp;    &amp;nbsp;JSON.stringify(content),&lt;br /&gt;  &amp;nbsp;&amp;nbsp;return_content: true&lt;br /&gt;  },&lt;br /&gt;  type: &amp;lsquo;POST&amp;rsquo;,&lt;br /&gt;&amp;nbsp; dataType: &amp;lsquo;json&amp;rsquo;,&lt;br /&gt;&amp;nbsp; success: function(data) {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;if (data.content) {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; while (article.firstChild) {&lt;br /&gt;    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;article.removeChild(article.firstChild);&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; article.appendChild(nodeToDom({children: data.content}));&lt;br /&gt;  &amp;nbsp;&amp;nbsp;}&lt;br /&gt;&amp;nbsp; }&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nilai Primary Key untuk Data Unlimited</title>
+      <link>http://petanikode.com/2016/12/nilai-primary-key-untuk-data-unlimited/</link>
+      <pubDate>Sat, 17 Dec 2016 08:09:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/12/nilai-primary-key-untuk-data-unlimited/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Big Data - MYSQL - Petani Kode&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg&#34; title=&#34;&#34; /&gt;&lt;/a&gt;Pada terbitan sebelumnya saya sudah pernah membahas &lt;a href=&#34;http://www.petanikode.com/2016/08/berapa-banyak-data-yang-mampu-disimpan.html&#34;&gt;keterbatasan AUTO_INCREMENT di MySQL&lt;/a&gt;. AUTO_INCREMENT sangat bergantung pada tipe datanya. Kita tidak bisa menggunakannya untuk data yang tak terhingga &lt;i&gt;(unlimited)&lt;/i&gt;, karena terbatas. Sebagai gantinya, kita harus membuat fungsi generator ID yang mampu membuat ID yang unik.&lt;br /&gt;&lt;br /&gt;Pada kesempatan yang lain, saya juga pernah membuat &lt;a href=&#34;http://www.petanikode.com/2016/07/membuat-generator-id-unik-seperti-id.html&#34; target=&#34;_blank&#34;&gt;generator ID yang mirip seperti ID video Youtube&lt;/a&gt;. Namun, saya belum yakin sepenuhnya dengan ID unik yang dihasilkannya. Mungkin saja, suatu saat nanti generator ini akan membuat ID yang sama. Seperti halnya fungsi bawaan PHP, &lt;code&gt;uniqid()&lt;/code&gt;. Fungsi ini memang menghasilkan ID yang unik. Akan tetapi, masih meragukan, karena kita telah diperingatkan pada dokumentasinya.&lt;br /&gt;&lt;blockquote&gt;&lt;i&gt;&lt;b&gt;Warning&lt;/b&gt;&lt;/i&gt;&lt;br /&gt;&lt;i&gt;This function does not guarantee uniqueness of return value. Since most systems adjust system clock by NTP or like, system time is changed constantly. Therefore, it is possible that this function does not return unique ID for the process/thread. Use more_entropy to increase likelihood of uniqueness.&lt;/i&gt;&lt;/blockquote&gt;Kalau begitu, apa solusinya?&lt;br /&gt;&lt;h2&gt;UUID atau GUID&lt;/h2&gt;UUID merupakan singkatan dari &lt;i&gt;Universally Unique Identifier&lt;/i&gt;. Sedangkan GUID, singkatan dari &lt;i&gt;Globally Unique Identifier&lt;/i&gt;. UUID dan GUID adalah hal yang sama. Perbedaanya, GUID itu merupakan implementasi dari UUID yang dilakukan oleh Microsoft. UUID terdiri dari &lt;code&gt;32&lt;/code&gt; digit bilangan desimal yang dipisahkan dengan tanda &lt;i&gt;hyphens&lt;/i&gt; (-), &lt;code&gt;8-4-4-4-12&lt;/code&gt; sehingga total semuanya adalah &lt;code&gt;32&lt;/code&gt; karakter. Contoh UUID:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;&lt;b&gt;123e4567-e89b-12d3-a456-426655440000&lt;/b&gt;&lt;/code&gt;&lt;/pre&gt;UUID memiliki beberapa versi, yaitu versi 1, 2, 3, 4, dan 5. Versi 4 digunakan untuk nilai acak &lt;i&gt;(random)&lt;/i&gt;. Ini bisa kita manfaatkan untuk nilai &lt;i&gt;Primary Key&lt;/i&gt;. Menurut penjelasan Wikipedia, setelah membuat 1 miliar UUID untuk setiap detik, kemungkinan untuk terjadi duplikasi nilai yang sama untuk 100 tahun berikutnya adalah 50%. &lt;br /&gt;&lt;h2&gt;Fungsi Generator GUID&lt;/h2&gt;Sekarang kita coba membuat sebuah fungsi generator GUID di PHP. Fungsi ini bisa kita manfaatkan untuk pengisian nilai &lt;i&gt;Primary Key&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;function guidv4()&lt;br /&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (function_exists(&amp;lsquo;com_create_guid&amp;rsquo;) === true)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return trim(com_create_guid(), &amp;lsquo;{}&amp;rsquo;);&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $data = openssl_random_pseudo_bytes(16);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $data[6] = chr(ord($data[6]) &amp;amp; 0x0f | 0x40); // set version to 0100&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $data[8] = chr(ord($data[8]) &amp;amp; 0x3f | 0x80); // set bits 6-7 to 10&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; return vsprintf(&amp;lsquo;%s%s-%s-%s-%s-%s%s%s&amp;rsquo;, str_split(bin2hex($data), 4));&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Hasil ketika mengeksekusi fungsi tersebut:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-Ip3KjGUzH_I/WDzDdszEwYI/AAAAAAAADd0/UMaj3_jOX782kKoafwhu5nFjZOG7VbQFwCK4B/s1600/Percobaan%2Bfungsi%2Bgenerator%2BUUID.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-Ip3KjGUzH_I/WDzDdszEwYI/AAAAAAAADd0/UMaj3_jOX782kKoafwhu5nFjZOG7VbQFwCK4B/s1600/Percobaan%2Bfungsi%2Bgenerator%2BUUID.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Jadi, gunakanlah UUID untuk nilai &lt;i&gt;primary key&lt;/i&gt; bila data anda terlalu banyak, supaya tidak menjadi masalah di masa depan.&lt;br /&gt;&lt;br /&gt;Referensi&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.uniqid.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.uniqid.php&#34;&gt;http://php.net/manual/en/function.uniqid.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid&#34;&gt;http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/18206984/2658551&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/a/18206984/2658551&#34;&gt;http://stackoverflow.com/a/18206984/2658551&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.com-create-guid.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.com-create-guid.php&#34;&gt;http://php.net/manual/en/function.com-create-guid.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Universally_unique_identifier&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Universally_unique_identifier&#34;&gt;https://en.wikipedia.org/wiki/Universally_unique_identifier&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Globally_unique_identifier&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Globally_unique_identifier&#34;&gt;https://en.wikipedia.org/wiki/Globally_unique_identifier&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size&#34;&gt;https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Termudah Menyimpan Graf pada Database Relasional</title>
+      <link>http://petanikode.com/2016/12/cara-termudah-menyimpan-graf-pada-database-relasional/</link>
+      <pubDate>Sat, 10 Dec 2016 15:53:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/12/cara-termudah-menyimpan-graf-pada-database-relasional/</guid>
+      <description>&lt;p&gt;Pada awalnya saya sangat bingung tentang kegunaan graf dalam komputer. Karena itu, saya tidak begitu memperhatikan materi graf pada matakuliah Kalkulus. Namun, semuanya berubah setelah saya mengenal matakuliah Kecerdasan Buatan, Analisa Algoritma, Struktur Data, dsb. Ternyata penggunaan Graf dan Pohon &lt;i&gt;(tree)&lt;/i&gt; di matakuliah tersebut cukup banyak.&lt;br /&gt;&lt;br /&gt;Saya menjadi cukup penasaran tentang cara komputasi graf. Akhirnya saya belajar dari Google dan menerbitkan sebuah tulisan di blog ini yang berjudul &lt;i&gt;&lt;a href=&#34;http://www.petanikode.com/2016/11/representasi-graf-dalam-kode-python.html&#34; target=&#34;_blank&#34;&gt;Representasi Graf dalam Kode Python&lt;/a&gt;. &lt;/i&gt;Namun, sekarang saya ingin grafnya disimpan dalam database relasional seperti MySQL.&lt;br /&gt;&lt;br /&gt;Memikirkan sendiri cara penyimpanan graf dalam MySQL membuat saya pusing. Akhirnya saya menemukan sebuah &lt;i&gt;slide&lt;/i&gt; milik bapak &lt;a href=&#34;http://www.slideshare.net/billkarwin&#34; target=&#34;_blank&#34;&gt;Karwin&lt;/a&gt;. Beliau menjelaskan empat metode penyimpanan graf pada database relasional dan pada akhirnya membandingkan setiap metode.&lt;br /&gt;&lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;485&#34; marginheight=&#34;0&#34; marginwidth=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//www.slideshare.net/slideshow/embed_code/key/tI9jfoqFHAcQdn?startSlide=5&#34; style=&#34;border-width: 1px; border: 1px solid #ccc; margin-bottom: 5px; max-width: 100%;&#34; width=&#34;100%&#34;&gt; &lt;/iframe&gt; &lt;br /&gt;&lt;div style=&#34;margin-bottom: 5px;&#34;&gt;&lt;b&gt; &lt;a href=&#34;https://www.slideshare.net/billkarwin/models-for-hierarchical-data&#34; target=&#34;_blank&#34; title=&#34;Models for hierarchical data&#34;&gt;Models for hierarchical data&lt;/a&gt; &lt;/b&gt; from &lt;b&gt;&lt;a href=&#34;https://www.slideshare.net/billkarwin&#34; target=&#34;_blank&#34;&gt;Karwin Software Solutions LLC&lt;/a&gt;&lt;/b&gt; &lt;/div&gt;Perbandingan beliau pada slide tersebut, menentukan metode &lt;i&gt;Closeure Table&lt;/i&gt; terpilih sebagai yang termudah. Termudah yang saya maksudkan di sini adalah mudah untuk melakukan &lt;i&gt;Query&lt;/i&gt; CRUD &lt;i&gt;(Create, Read, Update, Delete)&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Masing-masing metode memang memiliki kelebihan dan kekurangan. Contohnya metode &lt;i&gt;Path Enumerattion&lt;/i&gt;, bagus digunakan untuk membuat &lt;i&gt;breadcrums. Sedangkan Adjacency List &lt;/i&gt;tidak bagus digunakan untuk graf yang punya banyak&lt;i&gt; node.&lt;/i&gt;&lt;br /&gt;&lt;h2&gt;Metode &lt;i&gt;Closure Table&lt;/i&gt;&lt;/h2&gt;Mari kita pelajari cara penyimpanan graf dengan metode &lt;i&gt;Closure Table&lt;/i&gt;. Misalkan, kita memiliki graf seperti pada gambar ini.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-dWgknbxEzmU/WCLzqncwFzI/AAAAAAAADag/6wDc7P2eC7IwFY3dOdmTXHpcaT-woBqFQCK4B/s1600/graf%2Bberarah%2B-%2Bpetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-dWgknbxEzmU/WCLzqncwFzI/AAAAAAAADag/6wDc7P2eC7IwFY3dOdmTXHpcaT-woBqFQCK4B/s1600/graf%2Bberarah%2B-%2Bpetanikode.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Anggaplah semua titik-titik pada graf tersebut merupakan sebuah kota yang saling terhubung. Kemudian, yang kita harus lakukan adalah membuat tabel untuk menyimpan kota (titik) dan jalan yang menghubungkannya.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-rCy4_zOhkfE/WDmI8o6D06I/AAAAAAAADdY/cttgx1o55l4VGyGvr-toyHGhEk8aP1qtACK4B/s1600/Relasi%2BTabel%2BGraf.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Diagram Relasi Tabel Graf&#34; border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-rCy4_zOhkfE/WDmI8o6D06I/AAAAAAAADdY/cttgx1o55l4VGyGvr-toyHGhEk8aP1qtACK4B/s1600/Relasi%2BTabel%2BGraf.png&#34; title=&#34;&#34; /&gt;&amp;nbsp;&lt;/a&gt;&lt;br /&gt;Relasi yang akan tercipta adalah &lt;i&gt;Many-to-Many&lt;/i&gt;. Kolom &lt;code&gt;kota_asal&lt;/code&gt; dan &lt;code&gt;kota_tujuan&lt;/code&gt; akan menyimpan &lt;code&gt;id&lt;/code&gt; dari &lt;i&gt;kota&lt;/i&gt;. Kemudian kolom &lt;code&gt;panjang&lt;/code&gt; untuk menyimpan panjang jalannya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;create table kota(&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; id int,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; nama char,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; PRIMARY KEY(id)&lt;br /&gt;);&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;create table jalan(&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; kota_asal int,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; kota_tujuan int,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; panjang int,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; FOREIGN KEY(kota_asal) REFERENCES kota(id),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; FOREIGN KEY(kota_tujuan) REFERENCES kota(id)&lt;br /&gt;);&lt;/code&gt;&lt;/pre&gt;Sekarang kita sudah punya dua tabel yang saling berelasi.&lt;br /&gt;&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-MpXwEwCU8Ek/WDmLo9QF4rI/AAAAAAAADdk/UsgJ7jVgr8IYkYm1GL7Vs2w-mTxw55HPACK4B/s1600/Relasi%2Btabel%2Bgraf%2Bdi%2Bdatabase%2Bmysql.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Relasi tabel database Graf&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-MpXwEwCU8Ek/WDmLo9QF4rI/AAAAAAAADdk/UsgJ7jVgr8IYkYm1GL7Vs2w-mTxw55HPACK4B/s1600/Relasi%2Btabel%2Bgraf%2Bdi%2Bdatabase%2Bmysql.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Sekarang kita coba menambahkan semua titik pada graf:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;INSERT INTO kota (id,nama) VALUE (1,&amp;lsquo;A&amp;rsquo;);&lt;br /&gt;INSERT INTO kota (id,nama) VALUE (2,&amp;lsquo;B&amp;rsquo;);&lt;br /&gt;INSERT INTO kota (id,nama) VALUE (3,&amp;lsquo;C&amp;rsquo;);&lt;br /&gt;INSERT INTO kota (id,nama) VALUE (4,&amp;rsquo;D&amp;rsquo;);&lt;br /&gt;INSERT INTO kota (id,nama) VALUE (5,&amp;lsquo;E&amp;rsquo;);&lt;br /&gt;INSERT INTO kota (id,nama) VALUE (6,&amp;lsquo;F&amp;rsquo;);&lt;/code&gt;&lt;/pre&gt;Selanjutnya menambahkan data jalan:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (1,2,14);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (1,3,10);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (2,3,6);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (2,4,18);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (3,4,7);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (4,3,9);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (5,6,8);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (6,4,11);&lt;/code&gt;&lt;/pre&gt;Panjang jalan saya tentukan sendiri. Sekarang semuanya sudah masuk. Mari kita coba-coba melakukan &lt;i&gt;query&lt;/i&gt; yang lain. Misalnya, berapakah panjang jalan dari kota B menuju kota D?&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;SELECT panjang FROM &lt;code&gt;jalan&lt;/code&gt; WHERE kota_asal=2 AND kota_tujuan=4 &lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;+&amp;mdash;&amp;mdash;&amp;mdash;+&lt;br /&gt;| panjang |&lt;br /&gt;+&amp;mdash;&amp;mdash;&amp;mdash;+&lt;br /&gt;|      18 |&lt;br /&gt;+&amp;mdash;&amp;mdash;&amp;mdash;+&lt;br /&gt;1 row in set (0,00 sec)&lt;/code&gt;&lt;/pre&gt;Sebenarnya ada dua jalan yang bisa dilewati dari kota B menuju kota D, yaitu &lt;code&gt;B-&amp;gt;D&lt;/code&gt; dan &lt;code&gt;B-&amp;gt;C-&amp;gt;D&lt;/code&gt;. Akan tetapi &lt;i&gt;query&lt;/i&gt; tersebut hanya memilih jalur &lt;code&gt;B-&amp;gt;D&lt;/code&gt; saja. Untuk query yang lebih rumit, mungkin kita bisa lakukan dengan membuat program. Misalnya, program untuk menentukan jalur terpedek.&lt;br /&gt;&lt;br /&gt;File SQL contoh di atas dapat anda download di: &lt;a href=&#34;https://gist.github.com/ardianta/7ae139c95570a35d3af9dc40b70f18db&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://gist.github.com/ardianta/7ae139c95570a35d3af9dc40b70f18db&#34;&gt;https://gist.github.com/ardianta/7ae139c95570a35d3af9dc40b70f18db&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Begitulah cara termudah menyimpan graf pada database relasional. Metode &lt;i&gt;Closure Table&lt;/i&gt; memang yang termudah, namun pasti memiliki kekurangan. Saya kira metode inilah yang paling terbaik di antara kawan-kawannya, bagaimana menurutmu?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Menggunakan Composer pada CodeIgniter</title>
+      <link>http://petanikode.com/2016/12/cara-menggunakan-composer-pada-codeigniter/</link>
+      <pubDate>Sat, 03 Dec 2016 13:13:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/12/cara-menggunakan-composer-pada-codeigniter/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34; /&gt;&lt;/a&gt;CodeIgniter tidak seperti Laravel yang menggunakan Composer untuk memulai proyeknya. Namun, kita juga bisa menggunakan Composer pada CodeIgniter. Composer sebenarnya sudah didukung pada CodeIgninter versi 3, tapi autoload-nya belum diaktifkan.&lt;br /&gt;&lt;h2&gt;Konfigurasi CodeIgniter&lt;/h2&gt;Buka file konfigurasi proyek CodeIgniter pada &lt;code&gt;application/config/config.php&lt;/code&gt;. Kemudian isi nilai autoload untuk Composer seperti beikut ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$config[&amp;lsquo;composer_autoload&amp;rsquo;] = &amp;ldquo;vendor/autoload.php&amp;rdquo;;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Instalasi Pustaka&lt;/h2&gt;Sekarang coba buka file &lt;code&gt;composer.json&lt;/code&gt; yang ada di &lt;i&gt;root&lt;/i&gt; direktori proyek. Kemudian tambahkan pustaka FPDF.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;json js&#34;&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;description&amp;rdquo;: &amp;ldquo;The CodeIgniter framework&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;codeigniter/framework&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;type&amp;rdquo;: &amp;ldquo;project&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;homepage&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;http://codeigniter.com&amp;quot;&#34;&gt;http://codeigniter.com&amp;quot;&lt;/a&gt;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;license&amp;rdquo;: &amp;ldquo;MIT&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;support&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;forum&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;http://forum.codeigniter.com/&amp;quot;&#34;&gt;http://forum.codeigniter.com/&amp;quot;&lt;/a&gt;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;wiki&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;https://github.com/bcit-ci/CodeIgniter/wiki&amp;quot;&#34;&gt;https://github.com/bcit-ci/CodeIgniter/wiki&amp;quot;&lt;/a&gt;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;irc&amp;rdquo;: &amp;ldquo;irc://irc.freenode.net/codeigniter&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;source&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;https://github.com/bcit-ci/CodeIgniter&amp;quot;&#34;&gt;https://github.com/bcit-ci/CodeIgniter&amp;quot;&lt;/a&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; },&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;require&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;php&amp;rdquo;: &amp;ldquo;&amp;gt;=5.2.4&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;mark&gt;&amp;ldquo;setasign/fpdf&amp;rdquo;: &amp;ldquo;1.8.1&amp;rdquo;&lt;/mark&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; },&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;require-dev&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;mikey179/vfsStream&amp;rdquo;: &amp;ldquo;1.1.*&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Ini hanya sekedar contoh saja. Anda boleh menambahkan atau menggunakan pustaka selain FPDF.&lt;br /&gt;&lt;br /&gt;Setelah itu, ketik perintah berikut ini untuk menginstal semua pustaka:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;composer update&lt;/code&gt;&lt;/pre&gt;Tunggulah sampai prosesnya selesai. &lt;br /&gt;&lt;h2&gt;Percobaan Pustaka &lt;/h2&gt;Sekarang coba tambahkan kode berikut ini pada &lt;i&gt;Controller&lt;/i&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php defined(&amp;lsquo;BASEPATH&amp;rsquo;) OR exit(&amp;lsquo;No direct script access allowed&amp;rsquo;);&lt;br /&gt;&lt;br /&gt;/&lt;strong&gt;&lt;br /&gt;&amp;nbsp;* Class untuk membuat laporan&lt;br /&gt;&amp;nbsp;*/&lt;br /&gt;class Laporan extends CI_Controller{&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; function &lt;strong&gt;construct(){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; parent::&lt;/strong&gt;construct();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; /&lt;/strong&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; * Fungsi untuk menampilkan menu laporan penerima bantuan&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; * @param none&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; * @return void&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; */&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; function penerima_bantuan(){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $pdf = new FPDF();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $pdf-&amp;gt;AddPage();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $pdf-&amp;gt;SetFont(&amp;lsquo;Arial&amp;rsquo;,&amp;lsquo;B&amp;rsquo;,16);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $pdf-&amp;gt;Cell(40,10,&amp;lsquo;Hello World!&amp;rsquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $pdf-&amp;gt;Output();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Setelah itu, cobalah lihat hasilnya.&lt;a href=&#34;http://3.bp.blogspot.com/-8fHaWAf885E/WDhDiJ38GfI/AAAAAAAADdI/uzu77wy_lwMs0cb4ZJvs7FxFtm9jOgOWACK4B/s1600/Penggunaan%2Bpustaka%2BFPDF%2Bdi%2BCodeIgniter%2Bdengan%2BComposer.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-8fHaWAf885E/WDhDiJ38GfI/AAAAAAAADdI/uzu77wy_lwMs0cb4ZJvs7FxFtm9jOgOWACK4B/s1600/Penggunaan%2Bpustaka%2BFPDF%2Bdi%2BCodeIgniter%2Bdengan%2BComposer.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Pustaka FPDF berhasil kita gunakan di CodeIgniter. Percobaan di atas sebenarnya untuk memastikan pustaka dari Composer berhasil di-load atau tidak. Selebihnya anda bisa bereksperiman dengan membuat &lt;i&gt;Class&lt;/i&gt; &lt;i&gt;exstend&lt;/i&gt; dari pustaka tersebut.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Mengaktifkan Profiler CodeIgniter</title>
+      <link>http://petanikode.com/2016/11/cara-mengaktifkan-profiler-codeigniter/</link>
+      <pubDate>Wed, 30 Nov 2016 11:30:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/11/cara-mengaktifkan-profiler-codeigniter/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Profiler fungsinya untuk menampilkan beberapa informasi yang diperlukan untuk &lt;i&gt;debugging&lt;/i&gt;. Kita dapat mengetahui &lt;i&gt;query&lt;/i&gt; apa yang dikerjakan, berapa detik &lt;i&gt;query&lt;/i&gt; tersebut dikerjakan, &lt;i&gt;benchmarks&lt;/i&gt;, dan sebagainya. Informasi ini sangat berguna ketika kita membangun sebuah aplikasi dengan CodeIgniter.&lt;br /&gt;&lt;br /&gt;Cara mengaktifkan Profiler di CodeIgniter sangat mudah, cukup menjalankan fungsi ini di &lt;i&gt;Controller&lt;/i&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);&lt;/code&gt;&lt;/pre&gt;Maka kita akan mendapatkan informasi seperti berikut ini:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-gsNeLWLfBhk/WD5EMFf8yLI/AAAAAAAADeE/C3mfDihq1acM5LVhpGFvcAUgng4sxuOIwCK4B/s1600/Profiler%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-gsNeLWLfBhk/WD5EMFf8yLI/AAAAAAAADeE/C3mfDihq1acM5LVhpGFvcAUgng4sxuOIwCK4B/s1600/Profiler%2BCodeIgniter.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian, agar Profiler aktif di setiap &lt;i&gt;method&lt;/i&gt; atau fungsi, letakan kode tersebut di dalam konstruktor:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;function &lt;strong&gt;construct(){&lt;br /&gt;&amp;nbsp; &amp;nbsp; parent::&lt;/strong&gt;construct();&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; // untuk debugging&lt;br /&gt;&amp;nbsp; &amp;nbsp; $this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Namun, sepertinya akan ada masalah ketika aplikasi kita di-hosting. Kita akan menghapus kode itu lagi, karena tidak mungkin kita tampilkan informasi Profiler pada website yang sudah jadi. Untuk mengatasi hal tersebut, ganti nilai &lt;code&gt;TRUE&lt;/code&gt; menjadi seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$this-&amp;gt;output-&amp;gt;enable_profiler(ENVIRONMENT == &amp;ldquo;development&amp;rdquo;);&lt;/code&gt;&lt;/pre&gt;Artinya, Profiler hanya akan aktif pada lingkungan &lt;i&gt;development&lt;/i&gt; saja. Sedangkan pada lingkungan &lt;i&gt;production&lt;/i&gt; dan &lt;i&gt;testing&lt;/i&gt; tidak diaktifkan.&lt;br /&gt;&lt;br /&gt;Begitulah cara mengaktifkan Profiler di CodeIgniter. Semoga bermanfaat 😅.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Composer untuk Pemula</title>
+      <link>http://petanikode.com/2016/11/tutorial-composer-untuk-pemula/</link>
+      <pubDate>Sat, 26 Nov 2016 13:02:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/11/tutorial-composer-untuk-pemula/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34; /&gt;&lt;/a&gt;Composer merupakan sebuah alat &lt;i&gt;(tool)&lt;/i&gt; untuk manajemen pustaka &lt;i&gt;(library)&lt;/i&gt; dalam proyek web PHP. Composer dapat kita suruh melakukan instalasi dan &lt;i&gt;update&lt;/i&gt; pustaka yang dibutuhkan. Kalau tidak pakai Composer, kita biasanya mengunduh sendiri pustakanya, kemudian di-copy ke direktori proyek. Bagaimana kalau banyak pustaka yang dibutuhkan, pasti kita akan melelahkan mengunduh dan menyalin semuanya. Oleh karena itu, kita harus menggunakan Composer.&lt;br /&gt;&lt;h2&gt;1. Instalasi Composer&lt;/h2&gt;Panduan instalasi Composer sebenarnya sudah lengkap di &lt;a href=&#34;https://getcomposer.org/doc/00-intro.md&#34; target=&#34;_blank&#34;&gt;dokumentasi Composer&lt;/a&gt;. Namun, saya ingin menunjukkan cara saya menginstalnya di Linux.&lt;br /&gt;&lt;br /&gt;Instalasi melalui apt: &lt;code&gt;sudo apt install composer&lt;/code&gt;&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-W1-7q5-nUpM/WDgUeuhtduI/AAAAAAAADb8/KAlMQmaMBOEqWeucxHSmsu7NVJulM2EHQCK4B/s1600/Instalasi%2BComposer%2Bmelalui%2Bapt.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Instalasi Composer pada Linux&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-W1-7q5-nUpM/WDgUeuhtduI/AAAAAAAADb8/KAlMQmaMBOEqWeucxHSmsu7NVJulM2EHQCK4B/s1600/Instalasi%2BComposer%2Bmelalui%2Bapt.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Pada distro Linux yang saya gunakan, paket Composer sudah tersedia di repositori. Akan tetapi masih versi beta (&lt;code&gt;1.0.0-beta&lt;/code&gt;). Pada saat tulisan ini dubuat, versi terakhir Composer adalah &lt;code&gt;1.3-dev&lt;/code&gt;. Bila ingin menginstal versi terakhir, bisa menggunakan perintah berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;wget &lt;a href=&#34;https://getcomposer.org/composer.phar&#34;&gt;https://getcomposer.org/composer.phar&lt;/a&gt;&lt;br /&gt;sudo cp composer.phar /usr/local/bin/composer&lt;br /&gt;sudo chmod +x /usr/local/bin/composer&lt;/code&gt;&lt;/pre&gt;Kemudian coba periksa versi yang terinstal:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;petanikode@imajinasi ~ $ composer &amp;ndash;version&lt;br /&gt;Composer version 1.2.2 2016-11-03 17:43:15&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;2. Menggunakan Composer&lt;/h2&gt;Sekarang saya punya sebuah proyek yang berlokasi di &lt;code&gt;/var/www/html/belajar/belajar-composer&lt;/code&gt;. Saya perlu pindah dulu ke direktori tersebut.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;cd&amp;nbsp; /var/www/html/belajar/belajar-composer&lt;/code&gt;&lt;/pre&gt;Kemudian ketik:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;composer init&lt;/code&gt;&lt;/pre&gt;Setelah itu, silahkan isi informasi proyek seperti berikut ini.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-6VfgmYHYvtA/WDgcgbaPmwI/AAAAAAAADcM/VNYVun0VOEgS0DaqISYXxzvquzJhO_v8wCK4B/s1600/Informasi%2Bproyek%2Bcomposer%2B-%2Bpetani%2Bkode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-6VfgmYHYvtA/WDgcgbaPmwI/AAAAAAAADcM/VNYVun0VOEgS0DaqISYXxzvquzJhO_v8wCK4B/s1600/Informasi%2Bproyek%2Bcomposer%2B-%2Bpetani%2Bkode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Perintah di atas akan menghasilkan file &lt;code&gt;composer.json&lt;/code&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;json js&#34;&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;petanikode/belajar-composer&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;description&amp;rdquo;: &amp;ldquo;Hanya untuk latihan composer saja&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;type&amp;rdquo;: &amp;ldquo;project&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;license&amp;rdquo;: &amp;ldquo;GPL&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;authors&amp;rdquo;: [&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;Ardianta Pargo&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;email&amp;rdquo;: &amp;ldquo;ardianta_pargo@yahoo.co.id&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; ],&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;require&amp;rdquo;: {}&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Informasi yang tertera pada file &lt;code&gt;composer.json&lt;/code&gt; merupakan informasi yang baru saja kita masukkan. Perhatikan pada atribut &lt;code&gt;&amp;ldquo;require&amp;rdquo;&lt;/code&gt;, isinya masih kosong, karena tadi kita menjawab &lt;code&gt;no&lt;/code&gt; pada &lt;i&gt;define depedency&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Selanjutnya cobalah instal pustaka &lt;i&gt;Carbon&lt;/i&gt;, pustaka ini menyediakan fungsi-fungsi untuk pengolahan waktu &lt;i&gt;(Date Time)&lt;/i&gt;. Ketik pada terminal:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;composer require nesbot/carbon&lt;/code&gt;&lt;/pre&gt;Maka sekarang file &lt;code&gt;composer.json&lt;/code&gt; akan menjadi seperti ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;json js&#34;&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;petanikode/belajar-composer&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;description&amp;rdquo;: &amp;ldquo;Hanya untuk latihan composer saja&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;type&amp;rdquo;: &amp;ldquo;project&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;license&amp;rdquo;: &amp;ldquo;GPL&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;authors&amp;rdquo;: [&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;Ardianta Pargo&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;email&amp;rdquo;: &amp;ldquo;ardianta_pargo@yahoo.co.id&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; ],&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;require&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;mark&gt;&amp;ldquo;nesbot/carbon&amp;rdquo;: &amp;ldquo;^1.21&amp;rdquo;&lt;/mark&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Selain itu juga, perintah tersebut melakukan pengunduhan pustaka ke dalam proyek. Cobalah buka direktori proyeknya, pasti ada direktori baru bernama &lt;code&gt;vendor&lt;/code&gt;. Semua pustaka yang diunduh Composer akan tersimpan di sana.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-RFYIlqvd0ls/WDgmlBcqZ7I/AAAAAAAADcc/2BSf_2e72LY43-XnnBQ2-wLTbMXATKgSwCK4B/s1600/direktori%2Bvendor%2Byang%2Bdi%2Bdownload%2Bcomposer.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-RFYIlqvd0ls/WDgmlBcqZ7I/AAAAAAAADcc/2BSf_2e72LY43-XnnBQ2-wLTbMXATKgSwCK4B/s1600/direktori%2Bvendor%2Byang%2Bdi%2Bdownload%2Bcomposer.png&#34; /&gt;&lt;/a&gt; Selanjutnya, kita akan mencoba pustaka yang baru saja kita tambahkan. Buatlah file PHP baru di direktori proyek beranam &lt;code&gt;tes_carbon.php&lt;/code&gt; dengan isi sebagai berikut.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;&lt;br /&gt;require &amp;lsquo;vendor/autoload.php&amp;rsquo;;&lt;br /&gt;&lt;br /&gt;use Carbon\Carbon;&lt;br /&gt;&lt;br /&gt;$sekarang = Carbon::now();&lt;br /&gt;&lt;br /&gt;echo &amp;ldquo;Sekarang: $sekarang &amp;lt;br&amp;gt;&amp;rdquo;;&lt;br /&gt;echo &amp;ldquo;Umur saya: &amp;ldquo; . Carbon::createFromDate(2000, 1, 1)-&amp;gt;age . &amp;ldquo;&amp;lt;br&amp;gt;&amp;rdquo;;&lt;br /&gt;echo &amp;ldquo;Besok: &amp;ldquo; . $sekarang-&amp;gt;addDay() .&amp;rdquo;&amp;lt;br&amp;gt;&amp;rdquo;;&lt;br /&gt;&lt;br /&gt;?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasil outputnya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;Sekarang: 2016-11-25 21:03:18 &lt;br /&gt;Umur saya: 16&lt;br /&gt;Besok: 2016-11-26 21:03:18 &lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;3. Mencari Pustaka&lt;/h2&gt;Misalkan kita membutuhkan lebih banyak pustaka untuk diinstal. Kita hanya perlu menambahkan nama-nama pustakanya ke dalam atribut &lt;code&gt;&amp;ldquo;require&amp;rdquo;&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;json js&#34;&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;petanikode/belajar-composer&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;description&amp;rdquo;: &amp;ldquo;Hanya untuk latihan composer saja&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;type&amp;rdquo;: &amp;ldquo;project&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;license&amp;rdquo;: &amp;ldquo;GPL&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;authors&amp;rdquo;: [&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;Ardianta Pargo&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;email&amp;rdquo;: &amp;ldquo;ardianta_pargo@yahoo.co.id&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; ],&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;require&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;mark&gt;&amp;ldquo;nesbot/carbon&amp;rdquo;: &amp;ldquo;^1.21&amp;rdquo;,&lt;/mark&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;mark&gt;&amp;ldquo;setasign/fpdf&amp;rdquo;: &amp;ldquo;1.8.1&amp;rdquo;&amp;nbsp;&lt;/mark&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Formatnya, &lt;code&gt;&amp;ldquo;vendor/pustaka&amp;rdquo;: &amp;ldquo;versi&amp;rdquo;&lt;/code&gt;. Lalu, bagaimana cara kita mengetahui nama-nama vendor dari pustaka tersebut? Kita dapat menggunakan perintah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;composer search fpdf&lt;/code&gt;&lt;/pre&gt;Perintah tersebut untuk mencari nama vendor penyedia pustaka &lt;code&gt;fpdf&lt;/code&gt;. Atau kita juga bisa mencarinya di website &lt;a href=&#34;http://packagist.org/&#34; target=&#34;_blank&#34;&gt;packagist.org&lt;/a&gt;.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-zHazZ7X65qA/WDgq5-qCO-I/AAAAAAAADco/UVGicQ9aEyYYKJPQeQIIDotwiTpfpUPoQCK4B/s1600/Mencari%2Bpustaka%2Bdi%2Bpackagist.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-zHazZ7X65qA/WDgq5-qCO-I/AAAAAAAADco/UVGicQ9aEyYYKJPQeQIIDotwiTpfpUPoQCK4B/s1600/Mencari%2Bpustaka%2Bdi%2Bpackagist.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Setelah semua pustaka yang kita butuhkan ditulis dalam file &lt;code&gt;composer.json&lt;/code&gt;, selanjutnya kita bisa menginstal semuanya dengan perintah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;composer update&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Penutup&lt;/h2&gt;Cukup sekian tutorial cara menggunakan Composer ini. Selengkapnya bisa dipelajari pada dokumentasi Composer atau kalau ada yang masih belum jelas, bisa ditanyakan melalui komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apakah Perbedaan dari i&#43;&#43; dengan &#43;&#43;i?</title>
+      <link>http://petanikode.com/2016/11/apakah-perbedaan-dari-i&#43;&#43;-dengan-&#43;&#43;i/</link>
+      <pubDate>Wed, 16 Nov 2016 05:07:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/11/apakah-perbedaan-dari-i&#43;&#43;-dengan-&#43;&#43;i/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-6j668XHTBQo/WCnfapitW3I/AAAAAAAADbA/9eERDIwxUTw4octKK6KfTBNb1E5I8KiBwCK4B/s1600/post-increment-vs-pre-increment-ptenikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;post-increment vs pre-increment&#34; border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-6j668XHTBQo/WCnfapitW3I/AAAAAAAADbA/9eERDIwxUTw4octKK6KfTBNb1E5I8KiBwCK4B/s1600/post-increment-vs-pre-increment-ptenikode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;Sebagai pemula, kita mungkin sedikit bingung dengan perbedaan dari &lt;code&gt;i++&lt;/code&gt; &lt;i&gt;(post increment)&lt;/i&gt; dengan &lt;code&gt;++i&lt;/code&gt; &lt;i&gt;(pre increment)&lt;/i&gt;. Simbol &lt;code&gt;++&lt;/code&gt; artinya tambah satu (&lt;code&gt;+1&lt;/code&gt;) atau &lt;i&gt;increment&lt;/i&gt;. &lt;code&gt;i++&lt;/code&gt; dan &lt;code&gt;++i&lt;/code&gt; sering kita temukan ketika membuat sebuah perulangan.&lt;br /&gt;&lt;br /&gt;Contoh:&lt;br /&gt;&lt;i&gt;Post-Increment &lt;/i&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;for(int i = 1; i &amp;lt;= 10; i++){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; System.out.print(i);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;i&gt;Pre-Increment &lt;/i&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;for(int i = 1; i &amp;lt;= 10; ++i){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; System.out.print(i);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;Kedua perulangan tersebut akan menghasilkan bilangan dari &lt;code&gt;1&lt;/code&gt; sampai &lt;code&gt;10&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;12345678910&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;&lt;code&gt;i++&lt;/code&gt; itu sama seperti &lt;code&gt;i = i + 1&lt;/code&gt;, jadi nilai variabel &lt;code&gt;i&lt;/code&gt; yang sebelumnya akan ditambah satu. Sedangkan &lt;code&gt;++i&lt;/code&gt; sama seperti &lt;code&gt;i = 1 + i&lt;/code&gt;, satu ditambah dengan nilai variabel &lt;code&gt;i&lt;/code&gt; yang sebelumnya. Apakah ada perbedaan? tentu saja ada, posisi &lt;code&gt;i&lt;/code&gt; dengan angka &lt;code&gt;1&lt;/code&gt; berbeda. Namun, meskipun begitu, hasilnya akan tetap sama. Lalu, di mana kah letak perbedaan yang sesungguhnya?&lt;br /&gt;&lt;br /&gt;Perbedaan &lt;code&gt;i++&lt;/code&gt; dan &lt;code&gt;++i&lt;/code&gt; dapat kita lihat pada sebuah ekspresi atau &lt;i&gt;statement&lt;/i&gt;. Misalkan, selain variabel &lt;code&gt;i&lt;/code&gt;, kita punya variabel &lt;code&gt;a&lt;/code&gt;. Kemudian variabel &lt;code&gt;a&lt;/code&gt; kita isi dengan &lt;code&gt;i++&lt;/code&gt; atau &lt;code&gt;++i&lt;/code&gt;.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Post-Increment&lt;/i&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;int a;&lt;br /&gt;int i = 1;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;a = i++;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;System.out.println(&amp;ldquo;a = &amp;rdquo; + a);&lt;br /&gt;System.out.println(&amp;ldquo;i = &amp;rdquo; + i);&lt;/code&gt;&lt;/pre&gt;Hasil output:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;a = 1&lt;br /&gt;i = 2&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;&lt;i&gt;Pre-Increment&lt;/i&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;int a;&lt;br /&gt;int i = 1;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;a = ++i;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;System.out.println(&amp;ldquo;a = &amp;rdquo; + a);&lt;br /&gt;System.out.println(&amp;ldquo;i = &amp;rdquo; + i);&lt;/code&gt;&lt;/pre&gt;Hasil output:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;a = 2&lt;br /&gt;i = 2&lt;/code&gt;&lt;/pre&gt;Perhatikanlah! apakah ada perbedaan sekarang? Pada &lt;i&gt;post-increment&lt;/i&gt;, nilai &lt;code&gt;a&lt;/code&gt; akan mengambil nilai &lt;code&gt;i&lt;/code&gt;, tanpa ditambah satu. Sedangkan pada p&lt;i&gt;re-increment&lt;/i&gt;, nilai &lt;code&gt;a&lt;/code&gt; akan mengambil nilai &lt;code&gt;i&lt;/code&gt; yang ditambah satu terlebih dahulu. Itulah perbedaan yang cukup terlihat dari &lt;i&gt;post-increment&lt;/i&gt; (&lt;code&gt;i++&lt;/code&gt;) dengan &lt;i&gt;pre-increment&lt;/i&gt; (&lt;code&gt;++i&lt;/code&gt;).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

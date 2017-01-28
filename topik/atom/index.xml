@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Atom on Petani Kode</title>
+    <link>http://petanikode.com/topik/atom/index.xml</link>
+    <description>Recent content in Atom on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <atom:link href="http://petanikode.com/topik/atom/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bug Activate-Power-Mode Sudah Diperbaiki</title>
+      <link>http://petanikode.com/2016/05/bug-activate-power-mode-sudah-diperbaiki/</link>
+      <pubDate>Sat, 14 May 2016 10:45:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/05/bug-activate-power-mode-sudah-diperbaiki/</guid>
+      <description>&lt;p&gt;Beberapa bulan yang lalau, &lt;a href=&#34;http://petanikode.blogspot.com/2015/12/menulis-kode-serasa-main-game-dengan.html&#34; target=&#34;_blank&#34;&gt;saya pernah menulis&lt;/a&gt; tentang paket teks editor atom yang sangat menarik. Paket tersebut bernama &lt;i&gt;Activate Power Mode&lt;/i&gt;. Paket ini fungsinya untuk membuat effek partikel berhamburan saat mengetik kode. Mungkin dengan effek ini, kita bisa lebih bersemangat menuli kode program. Namun, dalam paket ini, saya temukan sebuah bugs. Bugs-nya, partikel tidak mengikuti kursor ketika teks editornya dalam kondisi &lt;i&gt;soft wrap mode&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;iframe allowfullscreen=&#34;&#34; class=&#34;YOUTUBE-iframe-video&#34; data-thumbnail-src=&#34;https://i.ytimg.com/vi/pCZRB48yW0s/0.jpg&#34; frameborder=&#34;0&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/pCZRB48yW0s?feature=player_embedded&#34; width=&#34;100%&#34;&gt;&lt;/iframe&gt;&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Bug&lt;/i&gt; ini sudah saya &lt;a href=&#34;https://github.com/JoelBesada/activate-power-mode/issues/91&#34; target=&#34;_blank&#34;&gt;laporkan ke github&lt;/a&gt;. Allhamdulillah, sudah diperbaiki dan sekarang sudah bisa.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html5 on Petani Kode</title>
+    <link>http://petanikode.com/topik/html5/index.xml</link>
+    <description>Recent content in Html5 on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <atom:link href="http://petanikode.com/topik/html5/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Mengganti Bahasa Validator HTML5 ke dalam Bahasa Indonesia</title>
+      <link>http://petanikode.com/2016/08/cara-mengganti-bahasa-validator-html5-ke-dalam-bahasa-indonesia/</link>
+      <pubDate>Sun, 07 Aug 2016 20:44:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/08/cara-mengganti-bahasa-validator-html5-ke-dalam-bahasa-indonesia/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://4.bp.blogspot.com/-dNNJvns8P_Y/V3d-ZGdAKRI/AAAAAAAAC5s/28FqVj0Ho3E7CyeXhwv1bmra0VaaADSkwCLcB/s1600/html5-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-dNNJvns8P_Y/V3d-ZGdAKRI/AAAAAAAAC5s/28FqVj0Ho3E7CyeXhwv1bmra0VaaADSkwCLcB/s1600/html5-petanikode.png&#34; /&gt;&lt;/a&gt;HTML5 memiliki validator form untuk memvalidasi inputan. Misalnya, jika ada field yang masih kosong, maka validator akan membertahukan; kalau data masih kososng. Namun, bahasa yang digunakan adalah bahasa inggris. Bagaimana jika kita ingin merubahnya ke bahasa indonesia?&lt;br /&gt;&lt;h2&gt;Fungsi Javascript&lt;/h2&gt;Kita membutuhkan fungsi Javascript untuk mengganti bahasa yang digunakan validator HTML5. Fungsi yang dapat digunakan berdasarkan jawaban yang saya temukan di Stack Overflow adalah &lt;code&gt;setCustomValidit()&lt;/code&gt;. Fungsi ini kita jalankan ketika input field dalam status &lt;i&gt;invalid&lt;/i&gt; (tidak valid). Sebelumnya kita memerlukan JQuery untuk mempermudah pemilihan elemen.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;$(&amp;lsquo;form input[type=text]&amp;lsquo;).on(&amp;lsquo;change invalid&amp;rsquo;, function() {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; var textfield = $(this).get(0);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // hapus dulu pesan yang sudah ada&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; textfield.setCustomValidity(&amp;ldquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (!textfield.validity.valid) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; textfield.setCustomValidity(&amp;lsquo;Tidak boleh kosong!&amp;rsquo;);&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Kode diatas hanya menyeleksi elemen &lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;. Bila dalam form terdapat elemen lain seperti &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;, maka perlu ditambahkan pada &lt;i&gt;selector&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;$(&amp;lsquo;form input[type=text], form textarea&amp;rsquo;).on(&amp;lsquo;change invalid&amp;rsquo;, function() {&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;hellip; &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Demo&lt;/h2&gt;&lt;iframe allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34; height=&#34;300&#34; src=&#34;//jsfiddle.net/Ardianta/a49yzzmw/2/embedded/result,js,html/&#34; width=&#34;100%&#34;&gt;&lt;/iframe&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://stackoverflow.com/a/10754847&#34; target=&#34;_blank&#34;&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

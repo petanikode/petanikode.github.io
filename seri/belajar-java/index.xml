@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Belajar Java on Petani Kode</title>
+    <link>http://petanikode.com/seri/belajar-java/index.xml</link>
+    <description>Recent content in Belajar Java on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <atom:link href="http://petanikode.com/seri/belajar-java/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Belajar Pemrograman Java di Linux</title>
+      <link>http://petanikode.com/2015/01/belajar-pemrograman-java-di-linux/</link>
+      <pubDate>Sun, 11 Jan 2015 16:40:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2015/01/belajar-pemrograman-java-di-linux/</guid>
+      <description>
+
+&lt;p&gt;Hallo, kali ini saya akan mengajak anda belajar pemrograman Java di Linux.
+Pemrograman Java tidak hanya dapat dilakukan pada Windows saja, karena Java
+bersifat lintas-platform. Lalu, bagaimana cara pemrograman Java di Linux?&lt;/p&gt;
+
+&lt;h2 id=&#34;persiapan-alat&#34;&gt;Persiapan Alat&lt;/h2&gt;
+
+&lt;p&gt;Adapun alat-alat yang perlu dispersiapan untuk belajar pemrograman Java di
+Linux adalah sebagai berikut.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-teks-editor&#34;&gt;1. Teks Editor&lt;/h3&gt;
+
+&lt;p&gt;Teks editor adalah tempat kita menulis kode. Anda dapat menggunakan teks
+editor apa saja. Di linux sudah tersedia berbagai macam teks editor.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;658&#34;
+height=&#34;412&#34;
+alt=&#34;Teks editor di Linux&#34;
+src=&#34;http://1.bp.blogspot.com/-sB0H3FO2nfI/V9KNFZ4T7AI/AAAAAAAADP4/Ip-QVVjWnug0Q8a5GaKqKurVTPHiSw89gCK4B/s1600/Text%2Beditor%2BNano%2Bdi%2BLinux%2BMint%2B-%2BPetani%2BKode.png&#34; layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Baca juga:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/6-teks-editor-berbasis-teks-cli-di-linux-untuk-menulis-kode/&#34;&gt;6 Teks Editor Berbasis Teks di Linux untuk Menulis Kode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Selain teks editor, anda juga dapat menggunakan IDE seperti &lt;a href=&#34;http://petanikode.com/topik/netbeans&#34;&gt;Netbeans&lt;/a&gt; dan &lt;a href=&#34;http://petanikode.com/topik/eclipse&#34;&gt;Eclipse&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-jdk-java-development-kit&#34;&gt;2. JDK (Java Development Kit)&lt;/h3&gt;
+
+&lt;p&gt;JDK atau &lt;em&gt;Java Development Kit&lt;/em&gt; digunakan untuk mengompilasi, &lt;em&gt;debugging&lt;/em&gt;
+(memeriksa &lt;em&gt;error&lt;/em&gt;), dan menjalankan program java. Dalam JDK terdapat dua
+hal yang perlu diktahui:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Kompilator: Bertugas menerjemahkan kode java menjadi &lt;em&gt;bytecode&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Debugger&lt;/em&gt;: Bertugas memeriksa &lt;em&gt;error&lt;/em&gt; pada kode. Jadi, JDK inilah yang
+digunakan &lt;em&gt;Programmer&lt;/em&gt; untuk membuat program java.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Di Linux, nama paket JDK adalah &lt;em&gt;openjdk&lt;/em&gt;. Gunakan fasilitas &lt;code&gt;apt-cache search&lt;/code&gt;
+untuk mencari tahu &lt;em&gt;openjdk&lt;/em&gt; yang tersedia di server &lt;em&gt;repositori&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;petanikode@imajinasi:~$ apt-cache search openjdk
+. . .
+openjdk-7-jdk - OpenJDK Development Kit (JDK)
+...
+openjdk-6-jdk - OpenJDK Development Kit (JDK)
+...
+openjdk-8-jdk - OpenJDK Development Kit (JDK)
+. . .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tersedia tiga &lt;em&gt;openjdk&lt;/em&gt;, manakah yang harus saya instal? Saya sendiri memilih
+yang terbaru, yaitu &lt;em&gt;openjdk 8&lt;/em&gt;. Bila di Linux yang anda gunakan belum tersedia
+yang versi 8, Saya rekomendasikan menggunakan yang versi 7 saja.
+Untuk menginstal &lt;em&gt;openjdk 8&lt;/em&gt; ketik perintah berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install openjdk-8-jdk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kalau sudah diinstal, periksalah versi berapa yang terpasang. Gunakan perintah di bawah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;java -version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-jre-java-runtime-environment&#34;&gt;3. JRE (Java Runtime Environment)&lt;/h3&gt;
+
+&lt;p&gt;Sementara itu, JRE atau &lt;em&gt;Java Runtime Environment&lt;/em&gt; digunakan untuk menjalankan program java. JRE inilah yang dipasang oleh pengguna, bila ingin menjalankan program atau aplikasi java.&lt;/p&gt;
+
+&lt;p&gt;JRE di Linux dapat diinstal melalui terminal. Sejauh pengalaman saya, setelah menginstal &lt;em&gt;openjdk&lt;/em&gt;, JRE juga ikut terinstal. Tapi kalau belum terinstal, silahkan diinstal. Berikut ini perintah untuk menginstal yang versi 8:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install openjdk-8-jre
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;membuat-program-pertama&#34;&gt;Membuat program pertama&lt;/h2&gt;
+
+&lt;p&gt;Setelah semuanya siap, mari kita coba membuat sebuah program.
+Program yang akan kita buat adalah program &lt;code&gt;Hello World&lt;/code&gt;.
+Program ini sangat terkenal di dunia. Calon &lt;em&gt;Programmer&lt;/em&gt;,
+harus bisa membuat program ini. Semua &lt;em&gt;Programmer&lt;/em&gt; yang hebat,
+pastilah sudah pernah membuat program ini. Jadi,
+ bersiaplah! Sebentar lagi Anda akan menjadi orang hebat. :smile:&lt;/p&gt;
+
+&lt;h3 id=&#34;1-menulis-program&#34;&gt;1. Menulis program&lt;/h3&gt;
+
+&lt;p&gt;Buka teks editor, lalu tulislah program di bawah ini. Perhatikan huruf bersar dan kecilnya,
+dalam java huruf kecil dan huruf besar dibedakan. Inilah yang dinamakan &lt;em&gt;case sensitive&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class HelloWorld{
+    public static void main(String[] argumen){
+        System.out.println(&amp;quot;Hello World!&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simpanlah dengan nama &lt;code&gt;HelloWorld.java&lt;/code&gt;. Simpan dimana? Saya sendiri
+menyimpannya di direktori &lt;em&gt;home&lt;/em&gt; agar mudah diakses.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;636&#34;
+height=&#34;530&#34;
+alt=&#34;simpan program java&#34;
+src=&#34;http://2.bp.blogspot.com/-b3lbw-KNYpU/VLFRhte8VLI/AAAAAAAAA-A/38jMWHVJehs/s1600/simpan%2Bprogram%2Bjava.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;2-kompilasi-kode&#34;&gt;2. Kompilasi kode&lt;/h3&gt;
+
+&lt;p&gt;Saatnya mengompilasi kode program yang sudah ditulis.
+Sekarang buka terminal dan ketiklah perintah berikut untuk mengopilasi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;javac HelloWorld.java
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Karena terismpan di direktori &lt;em&gt;home&lt;/em&gt;, jadi mudah untuk mengompilasinya.
+Lihatlah bagaimana saya melakukannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;659&#34;
+height=&#34;167&#34;
+alt=&#34;kompilasi program java&#34;
+src=&#34;http://4.bp.blogspot.com/-HQsBgde0pD0/VLFTCz9CaWI/AAAAAAAAA-M/cfMb_LArENI/s1600/kompilasi%2Bprogram%2Bjava%2Bdi%2Blinux.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kalau tidak ada &lt;em&gt;error&lt;/em&gt;, berarti kode programnya sukses dikompilasi.
+Maka akan terciptalah sebuah berkas baru bernama &lt;em&gt;HelloWorld.class&lt;/em&gt;.
+Berkas ini berisi &lt;em&gt;bytecode&lt;/em&gt; yang akan dijalankan oleh JRE.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;642&#34;
+height=&#34;520&#34;
+alt=&#34;file hasil eksekusi program java&#34;
+src=&#34;http://2.bp.blogspot.com/-ccxNH2Xqz48/VLFZJqfJjuI/AAAAAAAAA-c/2KoJA-ep2MM/s1600/berkas%2Bjava%2Bbytecode.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;3-menjalankan-program&#34;&gt;3. Menjalankan program&lt;/h3&gt;
+
+&lt;p&gt;Jalankan programnya, gunakan perintah &lt;code&gt;java NamaKelas&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;659&#34;
+height=&#34;167&#34;
+alt=&#34;eksekusi program java&#34;
+src=&#34;http://1.bp.blogspot.com/-opsN72CWzSY/VLFZSgkZivI/AAAAAAAAA-k/8_HVqKYdIsA/s1600/menjalankan%2BProgram%2Bjava.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
+
+&lt;p&gt;Selamat, anda baru saja membuat program Java pertama di Linux. Selanjutnya,
+anda bisa terus menggunakan Linux untuk belajar pemrograman Java. Nantikan
+tulisan terbaru tentang &lt;a href=&#34;http://petanikode.com/topik/java&#34;&gt;Java&lt;/a&gt; di Blog ini.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

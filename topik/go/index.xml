@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Petani Kode</title>
+    <link>http://petanikode.com/topik/go/index.xml</link>
+    <description>Recent content in Go on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <atom:link href="http://petanikode.com/topik/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Replace String dalam Template Go</title>
+      <link>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</link>
+      <pubDate>Fri, 20 Jan 2017 14:32:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</guid>
+      <description>&lt;p&gt;Sebuah masalah kecil yang saya temukan ketika mengedit skrip &lt;a href=&#34;https://github.com/natefinch/blogimport&#34;&gt;Blogimport&lt;/a&gt;.
+Saya ingin memperbesar ukuran gambar &lt;em&gt;thumbnail&lt;/em&gt; dengan cara me-replace string yang ada di URL.&lt;/p&gt;
+
+&lt;p&gt;Misalnya, dari URL ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s72-c/pemrograman%2Bjavascript%2B-%2Bpetanikode.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Menjadi seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah, di sana saya ingin merubah &lt;code&gt;s72-c&lt;/code&gt; agar menjadi &lt;code&gt;s1600&lt;/code&gt;. Pada template Hugo,
+saya bisa melakukannya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;{{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Namun, Go belum memiliki fungsi &lt;code&gt;replace&lt;/code&gt; seperti Hugo. Setelah bolak-balik Google
+dan Stack Overflow, saya akhirnya membuat sebuah &lt;a href=&#34;http://stackoverflow.com/q/41647788/2658551&#34;&gt;pertanyaan baru&lt;/a&gt;
+di Stack Overflow dan mendapatkan jawabannya.&lt;/p&gt;
+
+&lt;p&gt;Pertama, kita harus membuat fungsi replace dulu dengan Go.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func replace(input, from,to string) string {
+    return strings.Replace(input,from,to, -1)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian melakukan &lt;em&gt;mapping&lt;/em&gt; terhadap fungsi tadi agar nanti bisa dikenali dalam template.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;funcMap = template.FuncMap{
+     &amp;quot;replace&amp;quot;:  replace,
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, barulah kita masukan fungsinya ketika eksekusi template.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;template := template.New(&amp;quot;&amp;quot;).Funcs(funcMap)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Barulah kita dapat menggunakan fungsi &lt;em&gt;replace&lt;/em&gt; pada template go.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;{{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Contoh kode lengkapnya dapat anda lihat &lt;a href=&#34;https://github.com/ardianta/blogimport/blob/master/main.go&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan</title>
+      <link>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</link>
+      <pubDate>Sun, 15 Jan 2017 21:06:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</guid>
+      <description>&lt;p&gt;Ada cerita menarik yang saya alami ketika &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi Petani Kode dari Blogger ke Hugo&lt;/a&gt;.
+Waktu itu, ketika saya ingin mengimpor konten dari Blogger ke Hugo, ada sesuatu
+yang kurang dari skrip Go yang disediakan. Kekuarangnnya tidak mampu membuat
+atau mengambil gambar &lt;em&gt;(thumbnail)&lt;/em&gt; untuk setiap artikel.&lt;/p&gt;
+
+&lt;p&gt;Saya kemudian berpikir, mungkin nanti saya bisa edit setiap gambar untuk artikel.
+Namun, rasanya akan sangat melelahkan melakukannya karena jumlah artikelnya sampai ratusan. Tidak ingin melakukan hal yang berulang-ulang seperti kata orang,
+&lt;em&gt;Don&amp;rsquo;t Repeat Yourself&lt;/em&gt; di singkat DRY. Saya kemudian membuka &lt;a href=&#34;https://github.com/natefinch/blogimport/issues/1&#34;&gt;isu baru&lt;/a&gt; di repositori
+skrip ini.&lt;/p&gt;
+
+&lt;p&gt;Beberapa jam kemudian, Nate Finch membalas isu yang saya buat.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I&amp;rsquo;d be more than happy to accept a pull request for this, if you want to write it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Terjemahnya kira-kira begini, &amp;ldquo;Saya akan sangat senang sekali menerima &lt;em&gt;pull request&lt;/em&gt; untuk hal ini, jika anda berkenan menulisnya&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Awalnya saya berharap agar Nate Finch mau meng-update skripnya, tapi malah saya yang disuruh nulis dan saya tidak paham bahasa pemrograman Go sama sekali. Mungkin saja si Nate Finch sedang sibuk, sehingga tidak punya waktu untuk menulis skrip ini lagi.&lt;/p&gt;
+
+&lt;p&gt;Karena isu ini adalah kebutuhan saya, maka mau tidak mau saya sendiri yang harus membuatnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;380&#34;
+width=&#34;720&#34;
+alt=&#34;Ghoper Petani Kode&#34;
+src=&#34;https://3.bp.blogspot.com/-tHAcqs4Bv1o/WIAVwWJzaLI/AAAAAAAADps/sBBGZxVxmcI66poCB-Mj0AEzIkDeDG8KQCPcB/s1600/go-gopher-petanikode.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Saya tidak harus belajar bahasa pemrograman Go dari awal. Karena sintaknya cukup mirip dengan bahasa pemrograman yang pernah saya pelajari. Pertama saya harus pahami dulu skrip yang ditulis Nate Finch.&lt;/p&gt;
+
+&lt;p&gt;Pertama, saya menebak-nebak dulu fungsi dari setiap prosedurnya dengan membaca dari bawah ke atas.&lt;/p&gt;
+
+&lt;p&gt;Saya kemudian mengetahui, fungsi ini untuk membuat file &lt;em&gt;markdown&lt;/em&gt;, meski tidak tahu detail algoritmanya. Saya dapat petunjuk karena melihat ada &lt;code&gt;.md&lt;/code&gt; di sana.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func writeEntry(e Entry, dir string) error {
+	filename := filepath.Join(dir, makePath(e.Title)+&amp;quot;.md&amp;quot;)
+	f, err := os.OpenFile(filename, os.O_CREATE | os.O_TRUNC | os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	return t.Execute(f, e)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian naik ke atas, saya menemukan baris kode ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;if err := writeEntry(entry, dir); err != nil {
+    log.Fatalf(&amp;quot;Failed writing post %q to disk:\n%s&amp;quot;, entry.Title, err)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kode tersebut pasti pemanggilan fungsi yang tadi. Kemudian saya melakukan penelusuran dengan parameternya &lt;code&gt;entry&lt;/code&gt; dan &lt;code&gt;dir&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bolak-balik, atas-bawah. Saya menemukan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;parameter &lt;code&gt;dir&lt;/code&gt; dari &lt;code&gt;dir := args[1]&lt;/code&gt;, yaitu argumen yang diberikan ketika menjalankan kode ini. Karena &lt;code&gt;args&lt;/code&gt; itu tidak asing bagi pengguna linux seperti saya.&lt;/li&gt;
+&lt;li&gt;parameter &lt;code&gt;entry&lt;/code&gt; dari nama alias &lt;code&gt;exp.Entries&lt;/code&gt;, karena di sana sepertinya ada perulangan &lt;em&gt;foreach&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kemudian saya menelusuri asal-usul &lt;code&gt;exp.Entries&lt;/code&gt; ini. Ternyata dia barasal dari &lt;code&gt;exp := Export{}&lt;/code&gt;. Lalu, &lt;code&gt;Export{}&lt;/code&gt; itu berasal dari struk &lt;code&gt;Export&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;type Export struct {
+    XMLName xml.Name `xml:&amp;quot;feed&amp;quot;`
+    Entries []Entry `xml:&amp;quot;entry&amp;quot;`
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sampai di sini saya sedikit mengerti algoritma dari skrip ini.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Skrip ini mengubah semua tag XML menjadi struk&lt;/li&gt;
+&lt;li&gt;Lalu Struk tadi diurai dalam perluangan&lt;/li&gt;
+&lt;li&gt;Setelah itu, buat file &lt;em&gt;markdown&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Kira-kira begitulah yang saya pahami.&lt;/p&gt;
+
+&lt;p&gt;Kemudian saya mencoba merubah atribut yang ada dalam struk. Karena saya kira sudah paham maksud dari struk tersebut. Namun ternyata tidak ada hasil apa-apa.&lt;/p&gt;
+
+&lt;p&gt;Saya ingin mengambil URL dari elemen XML ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;media:thumbnail xmlns:media=&#39;http://search.yahoo.com/mrss/&#39; url=&#39;https://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s72-c/thumbnail-image.png&#39; height=&#39;72&#39; width=&#39;72&#39;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Terlihat di sana ada penggunaan &lt;em&gt;namespace&lt;/em&gt; untuk elemen tersebut. Kemudian saya mencari dan menemukan jawaban di &lt;a href=&#34;http://stackoverflow.com/a/14152832&#34;&gt;Stack Overflow&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Setelah mencoba dan berhasil mendapatkan URL-nya, yay!&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;400&#34;
+width=&#34;600&#34;
+alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
+src=&#34;http://i.imgur.com/z7MveXv.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Namun, ukuran gambar dari URL tersebut adalah 72x72 piksel. Lalu, selanjutnya saya menginginkan gambar yang lebih besar.&lt;/p&gt;
+
+&lt;p&gt;Ketemu masalah lagi, gambar tidak bisa diperbesar. Karena tidak ada fungsi untuk &lt;em&gt;replace string&lt;/em&gt; pada template Go. Tidak lama kemudian, saya berhasil menyelesaikannya.&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/&#34;&gt;Cara Replace String pada Template Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah semuanya beres, saya kemudian melakukan &lt;em&gt;pull request&lt;/em&gt; ke repositori milik Nate Finch. Saat ini masih belum di-reviw, diterima atau ditolak terserah Nate Finch. Saya hanya butuh untuk masalah saya saja. Namun, jika anda juga membutuhkannya bisa klon atau &lt;em&gt;fork&lt;/em&gt; &lt;a href=&#34;https://github.com/ardianta/blogimport&#34;&gt;repositori dari saya&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Luar biasa, tidak pernah belajar bahasa pemrograman Go sama sekali, malah melakukan &lt;em&gt;pull request&lt;/em&gt; ke proyek yang menggnuakan bahasa pemrograman Go.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Petani Kode</title>
+    <link>http://petanikode.com/topik/hugo/index.xml</link>
+    <description>Recent content in Hugo on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <atom:link href="http://petanikode.com/topik/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>5 Alasan Petani Kode Migrasi ke Hugo</title>
+      <link>http://petanikode.com/2017/01/5-alasan-petani-kode-migrasi-ke-hugo/</link>
+      <pubDate>Wed, 18 Jan 2017 22:06:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/5-alasan-petani-kode-migrasi-ke-hugo/</guid>
+      <description>
+
+&lt;p&gt;Minggu ini, Petani Kode melakukan migrasi dari Blogger ke Hugo.
+Proses migrasi berjalan dengan lancar, meskipun masih banyak yang belum dikerjakan.
+Ada beberapa alasan, kenapa Petani Kode melakukan migrasi ke Hugo.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-template-blogger-masih-menggunakan-xml&#34;&gt;1. Template Blogger Masih menggunakan XML&lt;/h2&gt;
+
+&lt;p&gt;Salah satu produk Google yang jarang diperbaharui adalah Blogger. Buktinya,
+ketika Google memperkenalkan konsep &lt;em&gt;Material Design&lt;/em&gt;, berbagai produknya kemudian
+menerapkan material desain. Google Analytic, Adsense, Photo, Drive, GMail, dsb.
+Lalu, bagaimana dengan Blogger? tampilannya masih begitu-begitu saja sejak tahun 2012. Aplikasi Androidnya juga kurang bagus.&lt;/p&gt;
+
+&lt;p&gt;Begitu juga dengan template engine-nya, masih menggunakan XML.
+XML membuat saya cukup lelah membuat template. Karena tidak bisa dibuat secara
+offline. Selain itu juga, dokumentasinya kurang lengkap.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-menulis-di-blogger-kurang-efisien&#34;&gt;2. Menulis di Blogger Kurang Efisien&lt;/h2&gt;
+
+&lt;p&gt;Menurut Saya sebagai programmer yang terbiasa menulis di teks editor,
+menulis di Blogger itu kurang efisien. Karena ketika kita menulis di sana, lalu melakukan &lt;em&gt;preview&lt;/em&gt; kita akan membuka tab baru dan men-download hasil &lt;em&gt;preview&lt;/em&gt;.
+Berapa waktu dan kuota yang dihabiskan?&lt;/p&gt;
+
+&lt;p&gt;Dulu saya pernah mencoba menulis draf artikel dalam bentuk teks, html,
+&lt;em&gt;markdown&lt;/em&gt;,  dan dokumen. Namun, ketika ingin diterbitkan, harus disunting
+lagi di Blogger. Berbeda dengan Hugo, kita bisa menulis di teks editor mana saja
+dengan format &lt;em&gt;markdown&lt;/em&gt; dan HTML. Sublime, Atom, Vim, mau pakai yang mana?&lt;/p&gt;
+
+&lt;p&gt;Saya pilih Atom, karena bisa lihat preview-nya langsung.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;675&#34;
+width=&#34;1245&#34;
+alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
+src=&#34;https://2.bp.blogspot.com/-5K1vDdxvIOE/WIAa-PInq_I/AAAAAAAADqQ/2hNl6Vmw_Po5NHOCQ5Kn__0iBefttOHHACPcB/s1600/Nulis%2Bartikel%2Bdi%2BAtom%2Buntuk%2BHugo.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-amp-susah-valid&#34;&gt;3. AMP Susah Valid&lt;/h2&gt;
+
+&lt;p&gt;Validator AMP sangat ketat dalam menilai web. Kita dilarang keras menggunakan
+Javascript. Karena Javascript katanya dapat memperlambat web. Sementara,
+di Blogger banyak menggunakan Javascript; dan parahnya lagi, di sana untuk &lt;em&gt;load&lt;/em&gt;
+widget-nya pakai Javascript.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;380&#34;
+width=&#34;720&#34;
+alt=&#34;Validasi AMP&#34;
+src=&#34;http://i.imgur.com/5sv5CXW.jpg&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada Hugo, saya tidak menggunakan Javascript. Kecuali Javascript bawaan AMP.
+Hasilnya pun valid tanpa error.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;486&#34; height=&#34;657&#34;
+    layout=&#34;responsive&#34;
+    data-tweetid=&#34;821021406854946816&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-agar-terbiasa-menggunakan-git&#34;&gt;4. Agar Terbiasa Menggunakan Git&lt;/h2&gt;
+
+&lt;p&gt;Saya harus melakukan &lt;em&gt;push&lt;/em&gt; atau upload ke server repository git untuk &lt;em&gt;update&lt;/em&gt; konten. Karena Hugo sebuah generator web statis. Oleh sebab itu, ini bisa jadi sarana untuk latihan git agar terbiasa.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-ingin-mencoba-teknologi-baru&#34;&gt;5. Ingin Mencoba Teknologi Baru&lt;/h2&gt;
+
+&lt;p&gt;Hugo memang baru, dibangun dengan bahasa pemrograman Go. Versi Hugo saat tulisan
+ini dibut adalah 0.18. Meski belum mencapai versi 1.0, tidak ada salahnya untuk dicoba.&lt;/p&gt;
+
+&lt;p&gt;Ketika mengembangkan Petani Kode, saya sedikit kesulitan,
+karena hasil pencarian Google hanya mengarah ke dokumentasi Hugo, Forum Hugo,
+dan Isu Hugo di Github. Sangat jarang ke Stack Overflow. Namun, itu bukanlah kendala.&lt;/p&gt;
+
+&lt;p&gt;Bahkan saya sampai dusuruh nulis kode dengan bahasa pemrograman Go. Sedangkan
+Saya tidak pernah belajar bahasa pemrograman Go sama sekali.&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/&#34;&gt;Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Itulah lima alasan Petani Kode migrasi ke Hugo. Mungkin saja, Petani Kode menjadi web Indonesia yang pertama kali menggunakan Hugo. Karena saya lihat di &lt;a href=&#34;https://gohugo.io/showcase/&#34;&gt;Showcase Hugo&lt;/a&gt;, tidak ada web indonesia.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan</title>
+      <link>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</link>
+      <pubDate>Sun, 15 Jan 2017 21:06:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</guid>
+      <description>&lt;p&gt;Ada cerita menarik yang saya alami ketika &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi Petani Kode dari Blogger ke Hugo&lt;/a&gt;.
+Waktu itu, ketika saya ingin mengimpor konten dari Blogger ke Hugo, ada sesuatu
+yang kurang dari skrip Go yang disediakan. Kekuarangnnya tidak mampu membuat
+atau mengambil gambar &lt;em&gt;(thumbnail)&lt;/em&gt; untuk setiap artikel.&lt;/p&gt;
+
+&lt;p&gt;Saya kemudian berpikir, mungkin nanti saya bisa edit setiap gambar untuk artikel.
+Namun, rasanya akan sangat melelahkan melakukannya karena jumlah artikelnya sampai ratusan. Tidak ingin melakukan hal yang berulang-ulang seperti kata orang,
+&lt;em&gt;Don&amp;rsquo;t Repeat Yourself&lt;/em&gt; di singkat DRY. Saya kemudian membuka &lt;a href=&#34;https://github.com/natefinch/blogimport/issues/1&#34;&gt;isu baru&lt;/a&gt; di repositori
+skrip ini.&lt;/p&gt;
+
+&lt;p&gt;Beberapa jam kemudian, Nate Finch membalas isu yang saya buat.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I&amp;rsquo;d be more than happy to accept a pull request for this, if you want to write it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Terjemahnya kira-kira begini, &amp;ldquo;Saya akan sangat senang sekali menerima &lt;em&gt;pull request&lt;/em&gt; untuk hal ini, jika anda berkenan menulisnya&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Awalnya saya berharap agar Nate Finch mau meng-update skripnya, tapi malah saya yang disuruh nulis dan saya tidak paham bahasa pemrograman Go sama sekali. Mungkin saja si Nate Finch sedang sibuk, sehingga tidak punya waktu untuk menulis skrip ini lagi.&lt;/p&gt;
+
+&lt;p&gt;Karena isu ini adalah kebutuhan saya, maka mau tidak mau saya sendiri yang harus membuatnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;380&#34;
+width=&#34;720&#34;
+alt=&#34;Ghoper Petani Kode&#34;
+src=&#34;https://3.bp.blogspot.com/-tHAcqs4Bv1o/WIAVwWJzaLI/AAAAAAAADps/sBBGZxVxmcI66poCB-Mj0AEzIkDeDG8KQCPcB/s1600/go-gopher-petanikode.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Saya tidak harus belajar bahasa pemrograman Go dari awal. Karena sintaknya cukup mirip dengan bahasa pemrograman yang pernah saya pelajari. Pertama saya harus pahami dulu skrip yang ditulis Nate Finch.&lt;/p&gt;
+
+&lt;p&gt;Pertama, saya menebak-nebak dulu fungsi dari setiap prosedurnya dengan membaca dari bawah ke atas.&lt;/p&gt;
+
+&lt;p&gt;Saya kemudian mengetahui, fungsi ini untuk membuat file &lt;em&gt;markdown&lt;/em&gt;, meski tidak tahu detail algoritmanya. Saya dapat petunjuk karena melihat ada &lt;code&gt;.md&lt;/code&gt; di sana.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func writeEntry(e Entry, dir string) error {
+	filename := filepath.Join(dir, makePath(e.Title)+&amp;quot;.md&amp;quot;)
+	f, err := os.OpenFile(filename, os.O_CREATE | os.O_TRUNC | os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	return t.Execute(f, e)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian naik ke atas, saya menemukan baris kode ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;if err := writeEntry(entry, dir); err != nil {
+    log.Fatalf(&amp;quot;Failed writing post %q to disk:\n%s&amp;quot;, entry.Title, err)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kode tersebut pasti pemanggilan fungsi yang tadi. Kemudian saya melakukan penelusuran dengan parameternya &lt;code&gt;entry&lt;/code&gt; dan &lt;code&gt;dir&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bolak-balik, atas-bawah. Saya menemukan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;parameter &lt;code&gt;dir&lt;/code&gt; dari &lt;code&gt;dir := args[1]&lt;/code&gt;, yaitu argumen yang diberikan ketika menjalankan kode ini. Karena &lt;code&gt;args&lt;/code&gt; itu tidak asing bagi pengguna linux seperti saya.&lt;/li&gt;
+&lt;li&gt;parameter &lt;code&gt;entry&lt;/code&gt; dari nama alias &lt;code&gt;exp.Entries&lt;/code&gt;, karena di sana sepertinya ada perulangan &lt;em&gt;foreach&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kemudian saya menelusuri asal-usul &lt;code&gt;exp.Entries&lt;/code&gt; ini. Ternyata dia barasal dari &lt;code&gt;exp := Export{}&lt;/code&gt;. Lalu, &lt;code&gt;Export{}&lt;/code&gt; itu berasal dari struk &lt;code&gt;Export&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;type Export struct {
+    XMLName xml.Name `xml:&amp;quot;feed&amp;quot;`
+    Entries []Entry `xml:&amp;quot;entry&amp;quot;`
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sampai di sini saya sedikit mengerti algoritma dari skrip ini.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Skrip ini mengubah semua tag XML menjadi struk&lt;/li&gt;
+&lt;li&gt;Lalu Struk tadi diurai dalam perluangan&lt;/li&gt;
+&lt;li&gt;Setelah itu, buat file &lt;em&gt;markdown&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Kira-kira begitulah yang saya pahami.&lt;/p&gt;
+
+&lt;p&gt;Kemudian saya mencoba merubah atribut yang ada dalam struk. Karena saya kira sudah paham maksud dari struk tersebut. Namun ternyata tidak ada hasil apa-apa.&lt;/p&gt;
+
+&lt;p&gt;Saya ingin mengambil URL dari elemen XML ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;media:thumbnail xmlns:media=&#39;http://search.yahoo.com/mrss/&#39; url=&#39;https://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s72-c/thumbnail-image.png&#39; height=&#39;72&#39; width=&#39;72&#39;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Terlihat di sana ada penggunaan &lt;em&gt;namespace&lt;/em&gt; untuk elemen tersebut. Kemudian saya mencari dan menemukan jawaban di &lt;a href=&#34;http://stackoverflow.com/a/14152832&#34;&gt;Stack Overflow&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Setelah mencoba dan berhasil mendapatkan URL-nya, yay!&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+height=&#34;400&#34;
+width=&#34;600&#34;
+alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
+src=&#34;http://i.imgur.com/z7MveXv.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Namun, ukuran gambar dari URL tersebut adalah 72x72 piksel. Lalu, selanjutnya saya menginginkan gambar yang lebih besar.&lt;/p&gt;
+
+&lt;p&gt;Ketemu masalah lagi, gambar tidak bisa diperbesar. Karena tidak ada fungsi untuk &lt;em&gt;replace string&lt;/em&gt; pada template Go. Tidak lama kemudian, saya berhasil menyelesaikannya.&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/&#34;&gt;Cara Replace String pada Template Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah semuanya beres, saya kemudian melakukan &lt;em&gt;pull request&lt;/em&gt; ke repositori milik Nate Finch. Saat ini masih belum di-reviw, diterima atau ditolak terserah Nate Finch. Saya hanya butuh untuk masalah saya saja. Namun, jika anda juga membutuhkannya bisa klon atau &lt;em&gt;fork&lt;/em&gt; &lt;a href=&#34;https://github.com/ardianta/blogimport&#34;&gt;repositori dari saya&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Luar biasa, tidak pernah belajar bahasa pemrograman Go sama sekali, malah melakukan &lt;em&gt;pull request&lt;/em&gt; ke proyek yang menggnuakan bahasa pemrograman Go.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Impor Artikel Blogger ke Hugo Kurang dari 15 Menit</title>
+      <link>http://petanikode.com/2017/01/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/</link>
+      <pubDate>Fri, 13 Jan 2017 21:08:45 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/</guid>
+      <description>
+
+&lt;p&gt;Dalam rangka migrasi Petani Kode ke Hugo, saya harus melakukan impor artikel dari Blogger ke Hugo. Untungnya Hugo sudah menyediakan skrip untuk impor konten dari blogger ke Hugo. Proses impor ini memakan waktu cukup cepat. Saya kira, tidak sampai 15 menit. Benar sekali, mungkin anda bisa melakukannya lebih cepat.&lt;/p&gt;
+
+&lt;p&gt;Saya asumsikan, kita telah menginstal &lt;a href=&#34;https://golang.org&#34;&gt;Go (Golang)&lt;/a&gt; dan &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt;. Kemudian lakukan langkah-langkah berikut ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-ekspor-blog&#34;&gt;1. Ekspor Blog&lt;/h2&gt;
+
+&lt;p&gt;Pertama, kita perlu mengekspor dulu konten yang ada di blogger. Masuk ke &lt;em&gt;Settings&amp;gt;Other&lt;/em&gt; kemudian klik &lt;em&gt;Back up Content&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    src=&#34;https://lh3.googleusercontent.com/8hFKhTL6Mxfi6L9ht8Zy1vGhnbrw-yX12l91QfUShBV9DJrqGfYYDjZgUB0-MKmwvL4OukfMqYBUyi4j7xh7aFPmpgMiRX8mIrNRTiPi1_uNr8dl-v7v-w0IL4ZhSs3kmjB8Moe6DykxLHtME2Ei6qj5_W0xL9BBHht7gErt5vSTaf2Q_sTwtc9eAhoiVkBRgrwFnRp8GwX1gDz9CVI_KT32DhFRMdyWKT-zeFJbIlH4UMbatDm_lGt_S7OtI22z0QbWEH7v1ZoLshqfXLBKrPjlBVneAOdmmV9E4Lbydx1AxHvNQjIGyoZOQLPOTRWQKXApYyTWMdgtdfZv0NqiX9IgQ-ld1lrC2DYTphdIWPvDv7QDcSok3prUz54Wep0AT98m9Y0UCaFIT1qnqIJa8J05JUEfHzsl-nXA43fBmk5J1Kt7JFP7ODlGQkzbSPazkEcxpkVxBVzB6KWQqqaysVad1A14cu-Caa86vP1HMIDxjXTl4RX54l15gIxfa6KpUY34ZCDR9Q8eoIyEuaTTlk70n48MYAvNCFNNUm95Uk1ZOrECYm9AB-xr2aLoCB-DDt2E335GkMzWLy6TOLFQfZhzJDtbIkgSr5pEKdB0C9VQKG8TPEG2=w796-h286-no&#34;
+    width=&#34;796&#34;
+    height=&#34;268&#34;
+    layout=&#34;responsive&#34;
+    alt=&#34;Ekspor kontent blog&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kita akan mendapatkan file &lt;code&gt;.xml&lt;/code&gt;, nah file ini nanti yang akan kita ekstrak isinya menjadi format &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-download-skrip&#34;&gt;2. Download skrip&lt;/h2&gt;
+
+&lt;p&gt;Selanjutnya kita membutuhkan skrip untuk melakukan ekstrak terhadap file &lt;code&gt;.xml&lt;/code&gt; tadi. Silahkan klon skripnya di &lt;a href=&#34;https://github.com/natefinch/blogimport&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/natefinch/blogimport
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-impor-konten&#34;&gt;3. Impor Konten&lt;/h2&gt;
+
+&lt;p&gt;Setelah kita mendapatkan skripnya, sekarang kita harus mengekstrak isi dari file &lt;code&gt;.xml&lt;/code&gt; menjadi file &lt;em&gt;markdown&lt;/em&gt;. Pertama, masuk dulu ke direktori skripnya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd blogimpor
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buat direktori baru sebagai tempat menampung hasil ekstraksi.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir artikel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jalankan skrip:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go run main.go ~/Downloads/blog-2017-01-13.xml artikel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, coba periksa direktori artikel.
+&lt;amp-img
+    src=&#34;https://lh3.googleusercontent.com/I36HhwnAxaNYEouTOg7BpGwcbnhX-Gxjab8gCSGUj69Q2Kif1TyPiQbyLuHQ9zLzaoHy6pYS8lZivKFKWkBW69Gh5oNrrl797rBt3LN26t2nqtxXdqH5E95jFxGOUkAE7ule2FuxVEdqQTp3Uc9dEu8O1CldVHZ-5PdthwNCgux7t8R7yEEhvBVOyPZOCoYJLp6agg6Ckmq2sF8lP8P5C3_qxWXo9IcuDURRmn6qnpd0oRTdRtR9NGiR65-8nyQ-cEMbnGvPXer7HG2Nb65ramTqtZ27ycrJA-u8PqK79ZTryEsYj2gBOwRh5U3Yn3xbQkqc41ZnnUJ0qpQFy_M-54BEzHdU43cIgtsHaIRw7GYERk81xor3htxrOc-pF-1JNcq8IcbjWzYHSeDx17zlkiB9kedDhsBoluIjmTPHEWdgoYfsngylDRH8Eg_in4lE05XE9lUIe1S_sbHTik_1VdRp29SFujsfliQYRLfNDGhrHSomljnS8Vf_oM0P8aVvy27Y5ONkmNa-YYLGuYrDSBGonJ53VYVHVXN5gr900nnl7cVMmApjKL25SIlgsbGmX_RKZxKzAExmpOn7q2dsoKc4wR0gzpDFgXRmAEG-lypoeD68ouGj=w854-h457-no&#34;
+    width=&#34;854&#34;
+    height=&#34;457&#34;
+    layout=&#34;responsive&#34;
+    alt=&#34;Ekspor kontent blog&#34;&gt;&lt;/amp-img&gt;
+Selanjutnya, kita bisa pindahkan semua file &lt;em&gt;markdown&lt;/em&gt; ini ke direktori &lt;em&gt;content&lt;/em&gt; di Hugo.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Migrasi Petani Kode dari Blogger ke Hugo</title>
+      <link>http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/</link>
+      <pubDate>Wed, 11 Jan 2017 22:06:22 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/</guid>
+      <description>
+
+&lt;p&gt;Tercatat pada tanggal 11 Januari 2017, website Petani Kode mulai dikembangkan
+dengan mesin &lt;em&gt;(engine)&lt;/em&gt; Hugo. Hugo adalah salah satu mesin generator web statis
+yang berusia cukup muda. Hugo ditulis dengan bahasa pemrograman Go dan diklaim
+&lt;a href=&#34;https://www.youtube.com/watch?v=CdiDYZ51a2o&#34;&gt;lebih cepat&lt;/a&gt; dari mesin sejenisnya
+ seperti &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt;, &lt;a href=&#34;https://middlemanapp.com/&#34;&gt;Middleman&lt;/a&gt;,
+&lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt;, dsb.&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/5-alasan-petani-kode-migrasi-ke-hugo/&#34;&gt;5 Alasan Petani Kode Migrasi ke Hugo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pengembangan website Petani Kode berlangsung cukup cepat. Meskipun bahasa
+pemrograman Go belum pernah saya pelajari dan pahami. Namun, berkat kerja
+keras dan semangat website ini bisa jadi dalam waktu sekejap. Ya, karena di
+Hugo kita tidak menulis kode Go, melainkan hanya bermain pada template Go.&lt;/p&gt;
+
+&lt;p&gt;Kesulitan saya rasakan ketika belum paham fungsi dan variabel dalam template Go.
+Namun, itu bukanlah kendala. Karena Hugo sudah menyediakan
+&lt;a href=&#34;https://gohugo.io/overview/introduction/&#34;&gt;dokumentasi&lt;/a&gt; dan
+&lt;a href=&#34;http://discuss.gohugo.io&#34;&gt;forum disksui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Saya tidak sadar sudah menulis kode CSS hampir 700 baris. Template ini jadi
+dalam waktu dua setengah hari. Template ini menerapkan &lt;a href=&#34;http://petanikode.com/topik/amp&#34;&gt;AMP&lt;/a&gt; yang
+dikembangkan dari temlpate &lt;a href=&#34;https://gohugo-amp.gohugohq.com/&#34;&gt;AMP Starter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;proses-migrasi&#34;&gt;Proses Migrasi&lt;/h2&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Pembuatan Template Hugo (11~13 Januari)&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;http://petanikode.com/2017/01/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/&#34;&gt;Impor Artikel dari Blogger ke Hugo&lt;/a&gt; (13~14 Januari)&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Deploy ke domain utama petanikode.com (15~17 Januari)&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;http://petanikode.com/2017/01/cara-redirect-domain-dengan-cloudflare/&#34;&gt;Redirect link lama ke link baru&lt;/a&gt; (17 Januari)&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Edit Artikel (18 Januari [0.04%])&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;sebelum-dan-sesudah-migrasi&#34;&gt;Sebelum dan Sesudah Migrasi&lt;/h2&gt;
+
+&lt;p&gt;Tabel perbandingan:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Sebelum&lt;/th&gt;
+&lt;th&gt;Sesudah&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Hosting&lt;/td&gt;
+&lt;td&gt;Blogger&lt;/td&gt;
+&lt;td&gt;Gitlab&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Hosting Gambar&lt;/td&gt;
+&lt;td&gt;Google/Blogger&lt;/td&gt;
+&lt;td&gt;Google, Dropbox, Flickr, dll&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://member.idwebhost.com/aff.php?aff=7137&#34;&gt;Idwebhost&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Cloudflare&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Engine&lt;/td&gt;
+&lt;td&gt;Blogger&lt;/td&gt;
+&lt;td&gt;Hugo&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Template Engine&lt;/td&gt;
+&lt;td&gt;XML Blogger&lt;/td&gt;
+&lt;td&gt;Go Template, Ace&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Format Artikel&lt;/td&gt;
+&lt;td&gt;HTML&lt;/td&gt;
+&lt;td&gt;Markdown, HTML&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Font&lt;/td&gt;
+&lt;td&gt;Open Sans, Roboto, Merriweather, Font-awesome&lt;/td&gt;
+&lt;td&gt;PT Serif, Open Sans, Font-awesome&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Font Provider&lt;/td&gt;
+&lt;td&gt;Google Font, Wordpress, CDN Bootstrap&lt;/td&gt;
+&lt;td&gt;Google Font, CDN Bootstrap&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Sistem Komentar&lt;/td&gt;
+&lt;td&gt;Disqus, Blogger, Facebook&lt;/td&gt;
+&lt;td&gt;Disqus&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Petani Kode memilih hosting di Gitlab karena di sana bisa membuat &lt;em&gt;private&lt;/em&gt; repositori dan langsung terintegaris dengan CI. Sedangkan di Github, tidak bisa membuat repositori &lt;em&gt;private&lt;/em&gt; kalau menggunakan akun gratis. Kemudian, saya juga pernah mencoba di Bitbucket. Akan tetapi terbatas dengan deploy, minimal 5x deploy per hari.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Github&lt;/th&gt;
+&lt;th&gt;Gitlab&lt;/th&gt;
+&lt;th&gt;Bitbucket&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Maksimal Ruang Repositori&lt;/td&gt;
+&lt;td&gt;1GB&lt;/td&gt;
+&lt;td&gt;10Gb&lt;/td&gt;
+&lt;td&gt;10GB&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Private Repository&lt;/td&gt;
+&lt;td&gt;premium&lt;/td&gt;
+&lt;td&gt;ya&lt;/td&gt;
+&lt;td&gt;ya&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Dukungan HTTPS&lt;/td&gt;
+&lt;td&gt;github.io&lt;/td&gt;
+&lt;td&gt;ya&lt;/td&gt;
+&lt;td&gt;ya&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Pages&lt;/td&gt;
+&lt;td&gt;Github pages&lt;/td&gt;
+&lt;td&gt;Gitlab Pages&lt;/td&gt;
+&lt;td&gt;Aerobatic&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Sebelum migrasi, penulisan artikel dilakukan dengan membuka Blogger. Namun setelah migrasi, penulisan artikel bisa dilakukan di teks editor mana saja. Rasanya seperti menulis kode, dan kalau ingin diterbitkan tinggal melakukan &lt;em&gt;push&lt;/em&gt; ke repositori git.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+src=&#34;https://1.bp.blogspot.com/-z2_QdrUKmfE/WHx5QoVkwRI/AAAAAAAADok/AtwB9HQYNV4cxVuOFLlwgYCch_gi41rjQCK4B/s1600/tulisartikel-blogger-dan-hugo.jpg&#34;
+width=&#34;720&#34;
+height=&#34;380&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Perbandingan skor kecepatan, &lt;a href=&#34;https://gtmetrix.com/compare/iHmjKf5p/OF52WEdH&#34;&gt;analisis gtmetrix&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+src=&#34;http://i.imgur.com/gyQ5t6a.png&#34;
+width=&#34;1016&#34;
+height=&#34;570&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Validasi AMP&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+src=&#34;http://i.imgur.com/5sv5CXW.jpg&#34;
+width=&#34;720&#34;
+height=&#34;380&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

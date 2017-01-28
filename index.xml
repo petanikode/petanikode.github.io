@@ -7,8 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 25 Jan 2017 08:06:22 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 28 Jan 2017 14:59:00 +0000</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>4 Cara Penulisan Kode Javscript pada HTML</title>
+      <link>http://petanikode.com/2017/01/4-cara-penulisan-kode-javscript-pada-html/</link>
+      <pubDate>Sat, 28 Jan 2017 14:59:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/4-cara-penulisan-kode-javscript-pada-html/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Javascript sebagai bahasa pemrograman yang berjalan di atas browser harus di tulis di dalam HTML. Ada empat cara penulisan javascript pada HTML.&lt;br /&gt;&lt;h2&gt;1. Tag &amp;lt;script&amp;gt;&lt;/h2&gt;Cara yang umum yang dipakai adalah menuliskanya dalam tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;. Tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; bisa dibuat di dalam tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;, mauapun di dalam tag &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html js&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;meta charset=&amp;ldquo;utf-8&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;script&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; console.log(&amp;ldquo;Hi, ini kode Javascript&amp;rdquo;);&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;/script&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/head&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;body&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;script&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; document.write(&amp;ldquo;Javascript itu keren!&amp;rdquo;);&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;/script&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;2. File Eksternal&lt;/h2&gt;Tidak ingin kode Javascript bercampur aduk dengan HTML, kita bisa menuliskannya pada file terpisah. Caranya, buatlah sebuah file yang berekstensi &lt;code&gt;.js&lt;/code&gt;, misalnya isinya sebagai berikut.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;// file-eksternal.js&lt;br /&gt;alert(&amp;ldquo;Kode Javascript dari File Eksternal&amp;rdquo;);&lt;/code&gt;&lt;/pre&gt;Kemudian, kita perlu menghubungkan file eksternal tersebut dengan file HTML. Caranya, gunakan tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; dengan atribut &lt;code&gt;src&lt;/code&gt; untuk menentukan lokasi file Javascriptnya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html js&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;meta charset=&amp;ldquo;utf-8&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;mark&gt;&amp;lt;script src=&amp;ldquo;file-eksternal.js&amp;rdquo;&amp;gt;&amp;lt;/script&amp;gt;&lt;/mark&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/head&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;body&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;3. Atribut Event&lt;/h2&gt;Cara yang ketiga ini sering digunakan untuk memanggil fungsi pada &lt;i&gt;event&lt;/i&gt; terentu. Misalnya ketika suatu elemen diklik, maka jalankan fungsi Javascript.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html js&#34;&gt;&amp;lt;button onclick=&amp;ldquo;alert(&amp;lsquo;Ok Terima kasih!&amp;rsquo;)&amp;rdquo;&amp;gt;Klik donk!&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;/pre&gt;Selain &lt;i&gt;event onclick&lt;/i&gt; ada juga &lt;i&gt;event-event&lt;/i&gt; yang lain, seperti &lt;i&gt;onsubmit&lt;/i&gt;, &lt;i&gt;onload&lt;/i&gt;, &lt;i&gt;ondoubleclick&lt;/i&gt;, &lt;i&gt;onmouseover&lt;/i&gt;, &lt;i&gt;onmouseout&lt;/i&gt;, dsb.&lt;br /&gt;&lt;h2&gt;4. URL&lt;/h2&gt;Terakhir, penulisan Javascript pada URL. Cara ini jarang digunakan, namun kita juga perlu mengetahuinya. Penulisan Javascript pada URL menggunakan protokol Javascript. Misal, cobalah untuk menuliskan kode seperti ini pada URL browser.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;javascript:alert(&amp;ldquo;Nah! ini Javascript&amp;rdquo;)&lt;/code&gt;&lt;/pre&gt;Hasilnya, Javascript akan dieksekusi browser.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-fqpdp9Si9Lg/WGlO8500McI/AAAAAAAADjw/V5vuPu-4Hx4-kuJ_Ru3Q6OV03mPQgkRPwCK4B/s1600/Penulisan%2BJavascript%2Bpada%2BURL.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-fqpdp9Si9Lg/WGlO8500McI/AAAAAAAADjw/V5vuPu-4Hx4-kuJ_Ru3Q6OV03mPQgkRPwCK4B/s1600/Penulisan%2BJavascript%2Bpada%2BURL.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Lalu, bagaiaman kita menggunakan cara ini di HTML?&lt;br /&gt;&lt;br /&gt;Cara ini bisa kita gunakan pada tag &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;, kemudian mengisi kode javascript pada atribut &lt;code&gt;href&lt;/code&gt;. Cara ini bisa menggantikan&lt;i&gt; event onclick&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html js&#34;&gt;&amp;lt;a href=&amp;ldquo;javascript:alert(&amp;lsquo;Wih! hebat bukan?&amp;rsquo;)&amp;rdquo;&amp;gt;Klik Aku&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;Baca juga: &lt;a href=&#34;http://www.petanikode.com/2015/10/cara-efisien-memanggil-fungsi.html&#34;&gt;Cara Efisien Memanggil Javascript pada Elemen Link&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Itulah empat cara penulisan Javascript pada HTML. Manakah cara yang sering kalian gunakan?&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://docstore.mik.ua/orelly/webprog/jscript/ch12_02.htm&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://docstore.mik.ua/orelly/webprog/jscript/ch12_02.htm&#34;&gt;http://docstore.mik.ua/orelly/webprog/jscript/ch12_02.htm&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Cara Membuat Halaman Github Kurang dari 10 Menit</title>
@@ -930,77 +940,6 @@ ketentuan hukum. Syarat dan Ketentuan berlaku umum untuk pengunaan situs Petani 
     layout=&#34;responsive&#34;
     alt=&#34;Ekspor kontent blog&#34;&gt;&lt;/amp-img&gt;
 Selanjutnya, kita bisa pindahkan semua file &lt;em&gt;markdown&lt;/em&gt; ini ke direktori &lt;em&gt;content&lt;/em&gt; di Hugo.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tetang Petani Kode</title>
-      <link>http://petanikode.com/tentang/</link>
-      <pubDate>Wed, 11 Jan 2017 23:28:19 +0800</pubDate>
-      
-      <guid>http://petanikode.com/tentang/</guid>
-      <description>
-
-&lt;p&gt;Petani Kode atau Petanikode.com merupakan sebuah blog pemrograman komputer. Kebanyakan artikel di blog ini menggunakan Linux, karena saya sendiri menggunakan Linux dalam keseharian.&lt;/p&gt;
-
-&lt;p&gt;Blog ini menjadi tempat beristirahat dan berteduh saat kelelahan bertani di ladang kode. Ladang kode adalah tempat menanam kode agar menjadi program/aplikasi yang bermanfaat.&lt;/p&gt;
-
-&lt;p&gt;Blog sederhana ini, dulunya adalah sebuah tempat yang berantakan. Pernah menjadi blog pribadi, blog desain, blog berita, dan bermacam-macam. Namun, sekarang sudah menjadi tempat yang asri dan nyaman.&lt;/p&gt;
-
-&lt;h2 id=&#34;sejarah-dan-catatan-perubahan&#34;&gt;Sejarah dan Catatan Perubahan&lt;/h2&gt;
-
-&lt;p&gt;Blog Petani Kode sering memperbaharui dan memperbaiki tampilannya. Upaya ini kami lakukan agar pengunjung merasa semakin nyaman dan senang berkunjung ke sini. Berikut ini catatan perubahan tampilan Petani Kode dari masa ke masa&lt;/p&gt;
-
-&lt;h5 id=&#34;17-oktober-2015-modifikasi-template&#34;&gt;17 Oktober 2015: Modifikasi Template&lt;/h5&gt;
-
-&lt;p&gt;Template asli dari blogger dimodifikasi. Merapikan header, menu navigasi, dan footer. Tampilan untuk ponsel juga diperbaiki dan dirapikan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-facebook width=&#34;552&#34;
-      height=&#34;303&#34;
-      layout=&#34;responsive&#34;
-      data-href=&#34;https://www.facebook.com/petanikode/posts/437642546419344:0&#34;&gt;
-&lt;/amp-facebook&gt;&lt;/p&gt;
-
-&lt;h5 id=&#34;02-juli-2016-ganti-font-logo&#34;&gt;02 Juli 2016: Ganti Font Logo&lt;/h5&gt;
-
-&lt;p&gt;Logo petani kode menggunakan font: Rancho&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-facebook width=&#34;552&#34;
-      height=&#34;303&#34;
-      layout=&#34;responsive&#34;
-      data-href=&#34;https://www.facebook.com/petanikode/posts/519259974924267&#34;&gt;
-&lt;/amp-facebook&gt;&lt;/p&gt;
-
-&lt;h5 id=&#34;04-09-juli-2016-ganti-template-dengan-amp&#34;&gt;04 - 09 Juli 2016: Ganti Template dengan AMP&lt;/h5&gt;
-
-&lt;p&gt;Pembuatan template baru dengan AMP (Accelerated Mobile Pages), dimulai sejak H-2 Sebelum idul fitri.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-facebook width=&#34;552&#34;
-      height=&#34;303&#34;
-      layout=&#34;responsive&#34;
-      data-href=&#34;https://www.facebook.com/petanikode/posts/521781054672159:0&#34;&gt;
-&lt;/amp-facebook&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;28-desember-2016-peningkatan-ui&#34;&gt;28 Desember 2016: Peningkatan UI&lt;/h4&gt;
-
-&lt;p&gt;Peningkatan UI, merapikan bagian-bagian yang masih berantakan.&lt;/p&gt;
-
-&lt;h4 id=&#34;10-januari-2017-migrasi-ke-hugo&#34;&gt;10 Januari 2017: Migrasi ke Hugo&lt;/h4&gt;
-
-&lt;p&gt;Petani Kode melakukan &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi dari Blogger ke Hugo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;media-di-internet&#34;&gt;Media di Internet&lt;/h2&gt;
-
-&lt;p&gt;Berikut ini daftar media yang digunakan Petani Kode:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Facebook: &lt;a href=&#34;https://www.facebook.com/petanikode/&#34;&gt;https://www.facebook.com/petanikode/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/petanikode&#34;&gt;https://twitter.com/petanikode&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Google+: &lt;a href=&#34;https://plus.google.com/b/104290087375687044123/104290087375687044123&#34;&gt;https://plus.google.com/b/104290087375687044123/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Instagram: &lt;a href=&#34;https://www.instagram.com/petanikode/&#34;&gt;https://www.instagram.com/petanikode/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Telegram Channel: &lt;a href=&#34;http://telegram.me/petanikode/&#34;&gt;http://telegram.me/petanikode/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Youtube Channel: &lt;a href=&#34;https://www.youtube.com/channel/UCVEEB0XiaogU6UodKXRaNyg&#34;&gt;http://telegram.me/petanikode/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

@@ -20,15 +20,15 @@
 
 
 
-    <link rel="canonical" href="http://petanikode.com/topik/lab/index.java/">
+    <link rel="canonical" href="http://petanikode.gitlab.io/topik/lab/index.java/">
 
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
     
-    <link href="http://petanikode.com/topik/lab.java/index.xml" rel="alternate" type="application/rss+xml" title="Petani Kode" />
-    <link href="http://petanikode.com/topik/lab.java/index.xml" rel="feed" type="application/rss+xml" title="Petani Kode" />
+    <link href="http://petanikode.gitlab.io/topik/lab.java/index.xml" rel="alternate" type="application/rss+xml" title="Petani Kode" />
+    <link href="http://petanikode.gitlab.io/topik/lab.java/index.xml" rel="feed" type="application/rss+xml" title="Petani Kode" />
     
 
     <meta name="theme-color" content="#008080" />
@@ -49,7 +49,7 @@
     <meta property="og:title" content="Lab.Java" />
     <meta property="og:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://petanikode.com/topik/lab/index.java/" />
+    <meta property="og:url" content="http://petanikode.gitlab.io/topik/lab/index.java/" />
 
     <meta property="og:image" content="" />
 
@@ -96,7 +96,7 @@
         "@type": "WebSite",
         "name": "Petani Kode",
         "alternateName": "Petanikode",
-        "url": "http:\/\/petanikode.com\/"
+        "url": "http:\/\/petanikode.gitlab.io\/"
     }
     </script>
 
@@ -105,7 +105,7 @@
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "petanikode.com",
-  "url": "http:\/\/petanikode.com\/"
+  "url": "http:\/\/petanikode.gitlab.io\/"
   
   , "logo": "http:\/\/2.bp.blogspot.com\/-pJdBch_oQqw\/V3y2tFqPZ4I\/AAAAAAAAC9U\/7ujD0ZwCPp8ONjjVN_Hsh7zKqg6z7SKjwCK4B\/s1600\/petanikode-logo-2016-withtext.png"
   , "address": "Gang H. Abdul Basit, Desa Sisik, Kecamtatan Pringgarata, Lombok Tengah"
@@ -150,7 +150,7 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-            "@id": "http:\/\/petanikode.com\/",
+            "@id": "http:\/\/petanikode.gitlab.io\/",
             "name": "home"
             }
       },
@@ -165,7 +165,7 @@
         "@type": "ListItem",
         "position":  4 ,
         "item": {
-          "@id": "http:\/\/petanikode.com\/topik\/",
+          "@id": "http:\/\/petanikode.gitlab.io\/topik\/",
           "name": "topik"
         }
         }
@@ -174,7 +174,7 @@
         "@type": "ListItem",
         "position":  5 ,
         "item": {
-          "@id": "http:\/\/petanikode.com\/topik\/lab\/",
+          "@id": "http:\/\/petanikode.gitlab.io\/topik\/lab\/",
           "name": "lab"
         }
         }
@@ -183,7 +183,7 @@
         "@type": "ListItem",
         "position":  6 ,
         "item": {
-          "@id": "http:\/\/petanikode.com\/topik\/lab\/index.java\/",
+          "@id": "http:\/\/petanikode.gitlab.io\/topik\/lab\/index.java\/",
           "name": "index.java"
         }
         }
@@ -211,7 +211,7 @@
       "height" : 380,
       "width" : 720
     },
-  "mainEntityOfPage" : "http:\/\/petanikode.com\/topik\/lab\/index.java\/",
+  "mainEntityOfPage" : "http:\/\/petanikode.gitlab.io\/topik\/lab\/index.java\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "petanikode.com",
@@ -1063,7 +1063,7 @@ padding: 16px;
             </a>
         </li>
         <li class="hide-on-mobile">
-            <a href="http://petanikode.com/">
+            <a href="http://petanikode.gitlab.io/">
                 Home
             </a>
         </li>
@@ -1093,7 +1093,7 @@ padding: 16px;
         <div class="site-wrapper">
             <div class="site-title">
 
-                    <a href="http://petanikode.com/">
+                    <a href="http://petanikode.gitlab.io/">
                         <amp-img
                             src="http://2.bp.blogspot.com/-pJdBch_oQqw/V3y2tFqPZ4I/AAAAAAAAC9U/7ujD0ZwCPp8ONjjVN_Hsh7zKqg6z7SKjwCK4B/s1600/petanikode-logo-2016-withtext.png"
                             layout="responsive"
@@ -1158,11 +1158,11 @@ padding: 16px;
 
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&t=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&text=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method%20http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method&body=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method:%20http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&t=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&text=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method%20http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method&body=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method:%20http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 
@@ -1210,11 +1210,11 @@ padding: 16px;
 
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f&t=Pemrograman%20Java%20di%20Lab%20%2815%29%3a%20Mengenal%20Array" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f&text=Pemrograman%20Java%20di%20Lab%20%2815%29%3a%20Mengenal%20Array%20http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20Java%20di%20Lab%20%2815%29%3a%20Mengenal%20Array&body=Pemrograman%20Java%20di%20Lab%20%2815%29%3a%20Mengenal%20Array:%20http%3a%2f%2fpetanikode.com%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f&t=Pemrograman%20Java%20di%20Lab%20%2815%29%3a%20Mengenal%20Array" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f&text=Pemrograman%20Java%20di%20Lab%20%2815%29%3a%20Mengenal%20Array%20http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20Java%20di%20Lab%20%2815%29%3a%20Mengenal%20Array&body=Pemrograman%20Java%20di%20Lab%20%2815%29%3a%20Mengenal%20Array:%20http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f04%2fpemrograman-java-di-lab-15-mengenal-array%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 
@@ -1262,11 +1262,11 @@ padding: 16px;
 
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f&t=Pemrograman%20Java%20di%20Lab%20%2814%29%3a%20Perulangan%20While%20dan%20Do%2fWhile" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f&text=Pemrograman%20Java%20di%20Lab%20%2814%29%3a%20Perulangan%20While%20dan%20Do%2fWhile%20http%3a%2f%2fpetanikode.com%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20Java%20di%20Lab%20%2814%29%3a%20Perulangan%20While%20dan%20Do%2fWhile&body=Pemrograman%20Java%20di%20Lab%20%2814%29%3a%20Perulangan%20While%20dan%20Do%2fWhile:%20http%3a%2f%2fpetanikode.com%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f&t=Pemrograman%20Java%20di%20Lab%20%2814%29%3a%20Perulangan%20While%20dan%20Do%2fWhile" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f&text=Pemrograman%20Java%20di%20Lab%20%2814%29%3a%20Perulangan%20While%20dan%20Do%2fWhile%20http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20Java%20di%20Lab%20%2814%29%3a%20Perulangan%20While%20dan%20Do%2fWhile&body=Pemrograman%20Java%20di%20Lab%20%2814%29%3a%20Perulangan%20While%20dan%20Do%2fWhile:%20http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f03%2fpemrograman-java-di-lab-14-perulangan-while-dan-do%2fwhile%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 
@@ -1314,11 +1314,11 @@ padding: 16px;
 
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f&t=Pemrograman%20java%20di%20lab%20%2813%29%3a%20Perulangan%20FOR" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f&text=Pemrograman%20java%20di%20lab%20%2813%29%3a%20Perulangan%20FOR%20http%3a%2f%2fpetanikode.com%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%2813%29%3a%20Perulangan%20FOR&body=Pemrograman%20java%20di%20lab%20%2813%29%3a%20Perulangan%20FOR:%20http%3a%2f%2fpetanikode.com%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f&t=Pemrograman%20java%20di%20lab%20%2813%29%3a%20Perulangan%20FOR" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f&text=Pemrograman%20java%20di%20lab%20%2813%29%3a%20Perulangan%20FOR%20http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%2813%29%3a%20Perulangan%20FOR&body=Pemrograman%20java%20di%20lab%20%2813%29%3a%20Perulangan%20FOR:%20http%3a%2f%2fpetanikode.gitlab.io%2f2016%2f01%2fpemrograman-java-di-lab-13-perulangan-for%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 
@@ -1366,11 +1366,11 @@ padding: 16px;
 
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f&t=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f&text=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang%20http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang&body=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang:%20http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f&t=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f&text=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang%20http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang&body=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang:%20http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 
@@ -1418,11 +1418,11 @@ padding: 16px;
 
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f&t=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f&text=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase%20http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase&body=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase:%20http%3a%2f%2fpetanikode.com%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f&t=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f&text=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase%20http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase&body=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase:%20http%3a%2f%2fpetanikode.gitlab.io%2f2015%2f11%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 
@@ -1640,7 +1640,7 @@ padding: 16px;
 <footer class='footer-wrapper block-group'>
     <section class="footer">
     <div class="link-footer">
-        <a href="http://petanikode.com/">Home</a>
+        <a href="http://petanikode.gitlab.io/">Home</a>
         <a href="/arsip">Arsip</a>
         <a href="/tentang">Tentang</a>
         <a href="/kontribusi">Kontribusi</a>
@@ -1660,7 +1660,7 @@ padding: 16px;
     </div>
 
     <div class='text-center'>
-    &copy; 2017 <a href="http://petanikode.com/">Petani Kode</a>. Made in Lombok using <a href='https://gohugo.io' target='_blank'>Hugo 0.18.1</a>.
+    &copy; 2017 <a href="http://petanikode.gitlab.io/">Petani Kode</a>. Made in Lombok using <a href='https://gohugo.io' target='_blank'>Hugo 0.18.1</a>.
     </div>
     </section>
 </footer>

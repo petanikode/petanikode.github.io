@@ -10,6 +10,154 @@
     <atom:link href="http://petanikode.com/topik/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cara Hosting Hugo di Github</title>
+      <link>http://petanikode.com/2017/01/cara-hosting-hugo-di-github/</link>
+      <pubDate>Mon, 30 Jan 2017 20:14:28 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-hosting-hugo-di-github/</guid>
+      <description>
+
+&lt;p&gt;Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu
+mengunggah file yang ada di direktori &lt;code&gt;public&lt;/code&gt; saja. Ada empat cara hosting
+Hugo di Github yang diberikan pada dokumentasi, diantaranya:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Hosting ke direktori &lt;code&gt;doc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Hosting ke cabang &lt;code&gt;gh-pages&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Hosting ke halaman personal/organisasi&lt;/li&gt;
+&lt;li&gt;Hosting Github dengan Continuous Integration (CI)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang. Kita
+membutuhkan dua repositori untuk melakukan cara ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-membuat-repositori&#34;&gt;1. Membuat Repositori&lt;/h2&gt;
+
+&lt;p&gt;Buatlah dua repositori di Github dengan nama seperti berikut ini.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;kontent-web-hugo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;username.github.io&lt;/code&gt; atau &lt;code&gt;organisasi.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Pertama, repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt; fungsinya untuk menyimpan konten dari Web.
+Sementara repositori &lt;code&gt;username.github.io&lt;/code&gt; untuk menyimpan file yang ada di &lt;code&gt;public&lt;/code&gt;
+atau hasil &lt;em&gt;render&lt;/em&gt; dari Hugo. Nama repositori anda tidak harus &lt;code&gt;kontent-web-hugo&lt;/code&gt;,
+Anda bisa menggunakan nama selain itu.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-persiapkan-repositori-lokal&#34;&gt;2. Persiapkan Repositori Lokal&lt;/h2&gt;
+
+&lt;p&gt;Buatlah repositori baru di dalam proyek hugo. Lakukan inisialisasi git.
+Silahkan ikuti perintah berikut ini.&lt;/p&gt;
+
+&lt;p&gt;masuk ke direktori Hugo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd kontent-web-hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Inisialisasi Git:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hapus direktori &lt;code&gt;public&lt;/code&gt;, tenang nanti kita bisa buat lagi dengan perntah &lt;code&gt;hugo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rm -rf public
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tambahkan repositori &lt;em&gt;remote&lt;/em&gt; (github):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote add origin https://github.com/{username}/{nama-repo}.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-upload-ke-github&#34;&gt;3. Upload ke Github&lt;/h2&gt;
+
+&lt;p&gt;Repositori lokal sudah dipersiapkan, sekarang kita upload dulu ke github.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
+git commit -m &amp;quot;commit pertama&amp;quot;
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-membuat-submodul&#34;&gt;4. Membuat Submodul&lt;/h2&gt;
+
+&lt;p&gt;Submodul ini merupakan repositori anak dari repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt;.
+Repositori ini akan menggunakan repositori &lt;code&gt;username.github.io&lt;/code&gt; sebagai
+repositori remote-nya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git submodule add -b master https://github.com/{username}/{username}.github.io.git public
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-membuat-skrip-deploy-sh&#34;&gt;5. Membuat Skrip &lt;code&gt;deploy.sh&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Sebenarnya kita bisa langsung unggah semua file yang ada di direktori &lt;code&gt;public&lt;/code&gt;
+dengan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd public
+git add .
+git commit -m &amp;quot;tes Deploy hugo&amp;quot;
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Agar kita tidak mengetik perintah di atas terus-menerus setiap mau deploy, maka
+kita memerlukan skrip. Untungnya Hugo sudah menyediakannya. Silahkan ditambahkan
+skrip ini di direktori Hugo-nya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;#!/bin/bash
+
+echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
+
+# Build the project.
+hugo # if using a theme, replace by `hugo -t &amp;lt;yourtheme&amp;gt;`
+
+# Go To Public folder
+cd public
+# Add changes to git.
+git add -A
+
+# Commit changes.
+msg=&amp;quot;rebuilding site `date`&amp;quot;
+if [ $# -eq 1 ]
+  then msg=&amp;quot;$1&amp;quot;
+fi
+git commit -m &amp;quot;$msg&amp;quot;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back
+cd ..
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikan hak akses eksekusi untuk skrip ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;chmod +x deploy.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah, kita bisa melakukan deploy dengan skrip tersebut. Setiap kali kita ingin
+meng-update ke Github, kita cukup menjalankan skrip itu saja. Contohnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;./deploy.sh &amp;quot;tes deploy web hugo ke github&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tuggulah beberapa saat, website kita akan segera mengudara di &lt;code&gt;username.github.io&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cara ini sudah saya coba di blog saya,&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Repositori konten &lt;a href=&#34;https://github.com/ardianta/ardianta-pargo&#34;&gt;https://github.com/ardianta/ardianta-pargo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Repositori hasil render &lt;a href=&#34;https://github.com/ardianta/ardianta.github.io&#34;&gt;https://github.com/ardianta/ardianta.github.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Sebenarnya kita tidak harus membuat repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt;, karena webnya
+sudah bisa langsung di-hosting di &lt;code&gt;username.github.io&lt;/code&gt;. Tapi untuk jaga-jaga
+kalau suatu saat nanti repositori lokalnya hilang, maka kita bisa ambil dari sana lagi.&lt;/p&gt;
+
+&lt;p&gt;Referensi: &lt;a href=&#34;https://gohugo.io/tutorials/github-pages-blog/&#34;&gt;https://gohugo.io/tutorials/github-pages-blog/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>5 Alasan Petani Kode Migrasi ke Hugo</title>
       <link>http://petanikode.com/2017/01/5-alasan-petani-kode-migrasi-ke-hugo/</link>
       <pubDate>Wed, 18 Jan 2017 22:06:22 +0800</pubDate>

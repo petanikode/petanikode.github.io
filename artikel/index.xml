@@ -7,8 +7,156 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 29 Jan 2017 17:52:51 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Jan 2017 20:14:28 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Hosting Hugo di Github</title>
+      <link>http://petanikode.com/2017/01/cara-hosting-hugo-di-github/</link>
+      <pubDate>Mon, 30 Jan 2017 20:14:28 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-hosting-hugo-di-github/</guid>
+      <description>
+
+&lt;p&gt;Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu
+mengunggah file yang ada di direktori &lt;code&gt;public&lt;/code&gt; saja. Ada empat cara hosting
+Hugo di Github yang diberikan pada dokumentasi, diantaranya:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Hosting ke direktori &lt;code&gt;doc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Hosting ke cabang &lt;code&gt;gh-pages&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Hosting ke halaman personal/organisasi&lt;/li&gt;
+&lt;li&gt;Hosting Github dengan Continuous Integration (CI)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang. Kita
+membutuhkan dua repositori untuk melakukan cara ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-membuat-repositori&#34;&gt;1. Membuat Repositori&lt;/h2&gt;
+
+&lt;p&gt;Buatlah dua repositori di Github dengan nama seperti berikut ini.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;kontent-web-hugo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;username.github.io&lt;/code&gt; atau &lt;code&gt;organisasi.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Pertama, repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt; fungsinya untuk menyimpan konten dari Web.
+Sementara repositori &lt;code&gt;username.github.io&lt;/code&gt; untuk menyimpan file yang ada di &lt;code&gt;public&lt;/code&gt;
+atau hasil &lt;em&gt;render&lt;/em&gt; dari Hugo. Nama repositori anda tidak harus &lt;code&gt;kontent-web-hugo&lt;/code&gt;,
+Anda bisa menggunakan nama selain itu.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-persiapkan-repositori-lokal&#34;&gt;2. Persiapkan Repositori Lokal&lt;/h2&gt;
+
+&lt;p&gt;Buatlah repositori baru di dalam proyek hugo. Lakukan inisialisasi git.
+Silahkan ikuti perintah berikut ini.&lt;/p&gt;
+
+&lt;p&gt;masuk ke direktori Hugo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd kontent-web-hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Inisialisasi Git:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hapus direktori &lt;code&gt;public&lt;/code&gt;, tenang nanti kita bisa buat lagi dengan perntah &lt;code&gt;hugo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rm -rf public
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tambahkan repositori &lt;em&gt;remote&lt;/em&gt; (github):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote add origin https://github.com/{username}/{nama-repo}.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-upload-ke-github&#34;&gt;3. Upload ke Github&lt;/h2&gt;
+
+&lt;p&gt;Repositori lokal sudah dipersiapkan, sekarang kita upload dulu ke github.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
+git commit -m &amp;quot;commit pertama&amp;quot;
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-membuat-submodul&#34;&gt;4. Membuat Submodul&lt;/h2&gt;
+
+&lt;p&gt;Submodul ini merupakan repositori anak dari repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt;.
+Repositori ini akan menggunakan repositori &lt;code&gt;username.github.io&lt;/code&gt; sebagai
+repositori remote-nya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git submodule add -b master https://github.com/{username}/{username}.github.io.git public
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-membuat-skrip-deploy-sh&#34;&gt;5. Membuat Skrip &lt;code&gt;deploy.sh&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Sebenarnya kita bisa langsung unggah semua file yang ada di direktori &lt;code&gt;public&lt;/code&gt;
+dengan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd public
+git add .
+git commit -m &amp;quot;tes Deploy hugo&amp;quot;
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Agar kita tidak mengetik perintah di atas terus-menerus setiap mau deploy, maka
+kita memerlukan skrip. Untungnya Hugo sudah menyediakannya. Silahkan ditambahkan
+skrip ini di direktori Hugo-nya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;#!/bin/bash
+
+echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
+
+# Build the project.
+hugo # if using a theme, replace by `hugo -t &amp;lt;yourtheme&amp;gt;`
+
+# Go To Public folder
+cd public
+# Add changes to git.
+git add -A
+
+# Commit changes.
+msg=&amp;quot;rebuilding site `date`&amp;quot;
+if [ $# -eq 1 ]
+  then msg=&amp;quot;$1&amp;quot;
+fi
+git commit -m &amp;quot;$msg&amp;quot;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back
+cd ..
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikan hak akses eksekusi untuk skrip ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;chmod +x deploy.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah, kita bisa melakukan deploy dengan skrip tersebut. Setiap kali kita ingin
+meng-update ke Github, kita cukup menjalankan skrip itu saja. Contohnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;./deploy.sh &amp;quot;tes deploy web hugo ke github&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tuggulah beberapa saat, website kita akan segera mengudara di &lt;code&gt;username.github.io&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cara ini sudah saya coba di blog saya,&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Repositori konten &lt;a href=&#34;https://github.com/ardianta/ardianta-pargo&#34;&gt;https://github.com/ardianta/ardianta-pargo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Repositori hasil render &lt;a href=&#34;https://github.com/ardianta/ardianta.github.io&#34;&gt;https://github.com/ardianta/ardianta.github.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Sebenarnya kita tidak harus membuat repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt;, karena webnya
+sudah bisa langsung di-hosting di &lt;code&gt;username.github.io&lt;/code&gt;. Tapi untuk jaga-jaga
+kalau suatu saat nanti repositori lokalnya hilang, maka kita bisa ambil dari sana lagi.&lt;/p&gt;
+
+&lt;p&gt;Referensi: &lt;a href=&#34;https://gohugo.io/tutorials/github-pages-blog/&#34;&gt;https://gohugo.io/tutorials/github-pages-blog/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Cara Menggunakan SSH di Github</title>
@@ -1220,16 +1368,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       
       <guid>http://petanikode.com/2016/12/cara-melindungi-web-dari-serangan-xss-pada-framework-codeigniter/</guid>
       <description>&lt;p&gt;XSS merupakan kependekan yang digunakan untuk istilah &lt;i&gt;cross site scripting&lt;/i&gt;. XSS merupakan salah satu jenis serangan injeksi code (code injection attack). XSS dilakukan oleh penyerang dengan cara memasukkan kode HTML atau client script code lainnya ke suatu situs. Serangan ini akan seolah-olah datang dari situs tersebut. Akibat serangan ini antara lain penyerang dapat mem-bypass keamanan di sisi klien, mendapatkan informasi sensitif, atau menyimpan aplikasi berbahaya. Alasan kependekan yang digunakan XSS bukan CSS karena CSS sudah digunakan untuk &lt;i&gt;cascade style sheet&lt;/i&gt;. –&amp;nbsp;&lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34; target=&#34;_blank&#34;&gt;id.wikipedia.org&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Saya akan perjelas lagi. Ceritanya, ada sebuah form dan di sana kita diminta untuk mengisi &lt;i&gt;nama&lt;/i&gt;, &lt;i&gt;nip&lt;/i&gt;, dan &lt;i&gt;jabatan&lt;/i&gt;. Akan tetapi, karena ada seorang yang usil. Dia tidak mengisi &lt;i&gt;nama&lt;/i&gt;, melainkan mengisi kode HTML dan Javascript.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-RaTvgUtLC_0/WEAYT6jwX_I/AAAAAAAADeY/eD26N9ib44UY0fK8qDymlxWfeEgMQRi3wCK4B/s1600/Percobaan%2Bserangan%2BXSS%2Bmelalui%2BForm.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-RaTvgUtLC_0/WEAYT6jwX_I/AAAAAAAADeY/eD26N9ib44UY0fK8qDymlxWfeEgMQRi3wCK4B/s1600/Percobaan%2Bserangan%2BXSS%2Bmelalui%2BForm.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Maka yang akan tersimpan ke dalam database adalah skrip di atas. Secara otomatis, ketika data ditampilkan, browser akan mengekekusi skrip tersebut.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-mKxLOdBzrJ0/WEAYdrVSV7I/AAAAAAAADeg/fNvZ-TPt-OY4bS6-tHDb2favPObm6V9MgCK4B/s1600/Serangan%2Bsukses%2B1%2B-%2Bhacked%2Bby%2Bpetani%2Bkode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-mKxLOdBzrJ0/WEAYdrVSV7I/AAAAAAAADeg/fNvZ-TPt-OY4bS6-tHDb2favPObm6V9MgCK4B/s1600/Serangan%2Bsukses%2B1%2B-%2Bhacked%2Bby%2Bpetani%2Bkode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Si admin sepertinya akan panik.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_S5JiF6GTVc/WEAYmOKIzYI/AAAAAAAADeo/qjKNEKZgWtE1GapgZMS9v1z9RZI3j_38wCK4B/s1600/hasil%2Bhacking%2BXSS.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-_S5JiF6GTVc/WEAYmOKIzYI/AAAAAAAADeo/qjKNEKZgWtE1GapgZMS9v1z9RZI3j_38wCK4B/s1600/hasil%2Bhacking%2BXSS.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Nah, itulah salah satu bentuk serangan XSS. Penyerang sangant leluasa memasukan skrip ke website kita. Lalu, bagaimana cara mengatasi ini di CodeIgniter?&lt;br /&gt;&lt;br /&gt;CodeIgniter sebenarnya sudah menyediakan fitur &lt;i&gt;Global XSS Filtering&lt;/i&gt;. Cara mengaktifkannya, tinggal mengganti nilai &lt;code&gt;FALSE&lt;/code&gt; menjadi &lt;code&gt;TRUE&lt;/code&gt; pada &lt;code&gt;application/config/config.php&lt;/code&gt;.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-_C7i3mJy-1A/WECD4J7ifrI/AAAAAAAADe8/s1JFRU96nycO-rwguskQdqIHeNrpIOMGwCK4B/s1600/Global%2BXSS%2BFiltering.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-_C7i3mJy-1A/WECD4J7ifrI/AAAAAAAADe8/s1JFRU96nycO-rwguskQdqIHeNrpIOMGwCK4B/s1600/Global%2BXSS%2BFiltering.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Dengan demikian, semua input dari pengguna atau penyerang akan dikonversi dulu sebelum di simpan ke database. Akan tetapi fitur ini sudah tidak tersedia lagi.&lt;br /&gt;&lt;blockquote class=&#34;tr_bq&#34;&gt;&lt;i&gt;The ‘global_xss_filtering’ setting is DEPRECATED and kept solely for backwards-compatibility purposes. XSS escaping should be performed on output, not input!&lt;/i&gt;&lt;br /&gt;–&amp;nbsp;&lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/input.html?highlight=xss#xss-filtering&#34; target=&#34;_blank&#34;&gt;dokumentasi CI&lt;/a&gt;&lt;/blockquote&gt;Sepertinya pengembang CI sudah menyadari, kalau XSS itu masalah pada output, bukan input.&lt;br /&gt;&lt;br /&gt;Cara mengatasi XSS yang lain adalah dengan melakukan validasi input (&lt;code&gt;xss_clean&lt;/code&gt;). Namun, seperti yang disebutkan tadi. XSS masalah pada output bukan input. Lalu bagaimana?&lt;br /&gt;&lt;br /&gt;Mau tidak mau, kita harus merubah dulu data yang akan ditampilkan agar tidak dieksekusi oleh browser. Misalnya seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;echo htmlentities($data-&amp;gt;nama, ENT_QUOTES, &amp;lsquo;UTF-8&amp;rsquo;);&lt;/code&gt;&lt;/pre&gt;Sepertinya terlalu panjang. Kita harus mengetik fungsi tersebut setiap mau menampilkan data. Kalau begitu kita jadikan &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Buatlah sebuah &lt;i&gt;helper&lt;/i&gt; pada direktori &lt;code&gt;application/helpers&lt;/code&gt;. Berikan nama &lt;code&gt;xss_helper.php&lt;/code&gt;, kemudian isi kodenya seperti berikut ini.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-oF2kSVvYF2I/WECIbBIH7jI/AAAAAAAADfI/fBgAJyXYRhcbifZ6G9BOd2GrmUEn-AG4ACK4B/s1600/XSS%2BHelper%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-oF2kSVvYF2I/WECIbBIH7jI/AAAAAAAADfI/fBgAJyXYRhcbifZ6G9BOd2GrmUEn-AG4ACK4B/s1600/XSS%2BHelper%2BCodeIgniter.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;&lt;br /&gt;function cetak($str){&lt;br /&gt;&amp;nbsp; &amp;nbsp; echo htmlentities($str, ENT_QUOTES, &amp;lsquo;UTF-8&amp;rsquo;);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Setelah itu,masukan helper ini ke dalam &lt;i&gt;autoload&lt;/i&gt;. Buka, &lt;code&gt;application/config/autoload.php&lt;/code&gt;, kemudian tambahkan &lt;code&gt;xss&lt;/code&gt; pada &lt;i&gt;autoload helper&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code clas=&#34;php&#34;&gt;/&lt;em&gt;&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| &amp;nbsp;Auto-load Helper Files&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| Prototype:&lt;br /&gt;|&lt;br /&gt;| $autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;, &amp;lsquo;file&amp;rsquo;);&lt;br /&gt;&lt;/em&gt;/&lt;br /&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;,&amp;lsquo;cookie&amp;rsquo;,&amp;lsquo;form&amp;rsquo;, &lt;mark&gt;&amp;lsquo;xss&amp;rsquo;&lt;/mark&gt;);&lt;/code&gt;&lt;/pre&gt;Sekarang fungsi &lt;code&gt;echo&lt;/code&gt;, kita ganti dengan fungsi &lt;code&gt;cetak()&lt;/code&gt;. Cara penggunaanya, tinggal kita panggil fungsi &lt;code&gt;cetak()&lt;/code&gt; pada tempat atau &lt;i&gt;view&lt;/i&gt; yang mungkin bisa terkena XSS.&lt;br /&gt;&lt;pre&gt;&lt;code clas=&#34;php&#34;&gt;&amp;lt;?php foreach($pejabat as $pjb){?&amp;gt;&lt;br /&gt;&amp;lt;tr&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;nama) ?&amp;gt;&amp;lt;/td&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;nip) ?&amp;gt;&amp;lt;/td&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;jabatan) ?&amp;gt;&amp;lt;/td&amp;gt;&lt;br /&gt;&amp;lt;/tr&amp;gt;&lt;br /&gt;&amp;lt;?php } ?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Maka, teks akan ditampilkan apa adanya, tidak lagi dieksekusi oleh browser. 😊&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-D3P_TkOCiQw/WECJoF0hhBI/AAAAAAAADfQ/c6BaAuc_Kts7vgmSjZrrdHRO7vyoV5NEwCK4B/s1600/Hasil%2Boutput%2BXSS%2Bfiltering.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-D3P_TkOCiQw/WECJoF0hhBI/AAAAAAAADfQ/c6BaAuc_Kts7vgmSjZrrdHRO7vyoV5NEwCK4B/s1600/Hasil%2Boutput%2BXSS%2Bfiltering.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34;&gt;https://id.wikipedia.org/wiki/XSS&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&#34;&gt;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.htmlentities.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.htmlentities.php&#34;&gt;http://php.net/manual/en/function.htmlentities.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/security.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/security.html&#34;&gt;https://www.codeigniter.com/userguide3/libraries/security.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&#34;&gt;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Helper CodeIgniter untuk Membuat Tanggal dalam Bahasa Indonesia</title>
-      <link>http://petanikode.com/2016/12/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</link>
-      <pubDate>Thu, 22 Dec 2016 18:21:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/12/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;Saat kita membuat sbuah tanggal otomatis dengan fungsi &lt;code&gt;Date()&lt;/code&gt;, kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, &lt;code&gt;Date(&amp;rsquo;d F Y&amp;rsquo;)&lt;/code&gt; akan menghasilkan output &lt;code&gt;22 December 2016&lt;/code&gt; (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.&lt;br /&gt;&lt;br /&gt;Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi &lt;code&gt;Date()&lt;/code&gt;. Kita bisa melakukannya seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$bulan = Date(&amp;rsquo;m&amp;rsquo;);&lt;br /&gt;switch ($bulan) {&lt;br /&gt;    case 1:&lt;br /&gt;&amp;nbsp; &amp;nbsp;     $bulan = &amp;ldquo;Januari&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 2:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Februari&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 3:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Maret&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 4:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;April&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 5:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Mei&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 6:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Juni&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 7:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Juli&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 8:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Agustus&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 9:&lt;br /&gt;  &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;September&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 10:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Oktober&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 11:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;November&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 12:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Desember&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; default:&lt;br /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = Date(&amp;lsquo;F&amp;rsquo;);&lt;br /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Karena kita membutuhkannya untuk digunakan atau dijalankan pada&amp;nbsp;&lt;i&gt;view&lt;/i&gt;, sebaiknya dijadikan &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/ba0934a0ee88315359d30095c7e442de.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;Cara menggunakannya, silahkan taruh file &lt;code&gt;tanggal_helper.php&lt;/code&gt;&amp;nbsp;pada direktori &lt;code&gt;application/helpers&lt;/code&gt; kemudian tambahkan pada &lt;i&gt;autoload&lt;/i&gt; &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;/&lt;em&gt;&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| &amp;nbsp;Auto-load Helper Files&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| Prototype:&lt;br /&gt;|&lt;br /&gt;|&lt;span class=&#34;Apple-tab-span&#34; style=&#34;white-space: pre;&#34;&gt; &lt;/span&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;, &amp;lsquo;file&amp;rsquo;);&lt;br /&gt;&lt;/em&gt;/&lt;br /&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;,&amp;lsquo;cookie&amp;rsquo;,&amp;lsquo;form&amp;rsquo;, &amp;lsquo;xss&amp;rsquo;, &amp;lsquo;dump&amp;rsquo;, &amp;lsquo;tanggal&amp;rsquo;);&lt;/code&gt;&lt;/pre&gt;Setelah itu bisa digunakan langsung pada &lt;i&gt;view&lt;/i&gt;, &lt;i&gt;controller&lt;/i&gt;, maupun &lt;i&gt;model&lt;/i&gt; seperti menggunakan helper &lt;code&gt;url&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;lt;div class=&amp;ldquo;tanda-tangan&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;p align=&amp;ldquo;center&amp;rdquo;&amp;gt;Mataram, &amp;lt;?php echo tanggal() ?&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;&lt;span class=&#34;Apple-tab-span&#34; style=&#34;white-space: pre;&#34;&gt; &lt;/span&gt; &amp;nbsp; &amp;nbsp;Kepala Dinas Pertanian&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Provinsi Nusa Tenggara Barat&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/p&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;p align=&amp;ldquo;center&amp;rdquo;&amp;gt;&amp;lt;b&amp;gt;&amp;lt;u&amp;gt;Ir. Hj. Budi Septiani&amp;lt;/b&amp;gt;&amp;lt;/u&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; NIP. &amp;hellip;..&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/p&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;Akan menghasilkan output:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Hasil output format tanggal dalam bahasa indonesia pada CodeIgniter&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

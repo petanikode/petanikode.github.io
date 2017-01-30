@@ -7,8 +7,139 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 28 Jan 2017 14:59:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Jan 2017 17:52:51 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Menggunakan SSH di Github</title>
+      <link>http://petanikode.com/2017/01/cara-menggunakan-ssh-di-github/</link>
+      <pubDate>Sun, 29 Jan 2017 17:52:51 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-menggunakan-ssh-di-github/</guid>
+      <description>
+
+&lt;p&gt;SSH memungkinkan kita untuk melakukan &lt;em&gt;push&lt;/em&gt; ke repository github tanpa login.
+Berbeda dengan cara yang biasa (melalui HTTPS), kita harus memasukkan &lt;em&gt;username&lt;/em&gt; dan &lt;em&gt;password&lt;/em&gt;
+setiap kali melakukan &lt;em&gt;push&lt;/em&gt;. Tapi dengan SSH kita tidak akan melakukan itu lagi.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-membuat-key-ssh&#34;&gt;1. Membuat Key SSH&lt;/h2&gt;
+
+&lt;p&gt;Jalankan perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda.
+Untuk &lt;em&gt;passpharse&lt;/em&gt; dikosongkan saja.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;644&#34;
+height=&#34;334&#34;
+alt=&#34;perintah ssh-keygen&#34;
+src=&#34;http://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka di dalam direktori &lt;code&gt;~/.ssh/&lt;/code&gt; akan tercipa file key baru.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;575&#34;
+height=&#34;116&#34;
+alt=&#34;file key ssh&#34;
+src=&#34;http://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-jalankan-ssh-angen-dan-load-ssh-key&#34;&gt;2. Jalankan SSH Angen dan Load SSH Key&lt;/h2&gt;
+
+&lt;p&gt;Untuk memastikan apakah &lt;em&gt;SSH Agent&lt;/em&gt; sudah berajalan atau tidak, gunakan perintah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ps -e | grep [s]sh-agent
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kalau hasilnya seperti di bawah ini, berati &lt;em&gt;SSH Agent&lt;/em&gt; sudah berjalan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;884&#34;
+height=&#34;32&#34;
+alt=&#34;cek ssh agent&#34;
+src=&#34;http://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Tapi, kalau belum berjalan, gunakan perintah berikut ini untuk menjalankan SSH agent:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-agent /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikutnya kita Load SSH Key. Gunakan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-add ~/.ssh/id_anda
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian untuk mengecek, gunakan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-add -l
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;659&#34;
+height=&#34;106&#34;
+alt=&#34;Mendambahkan SSH&#34;
+src=&#34;http://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-tambahkan-ssh-key-ke-github&#34;&gt;3. Tambahkan SSH Key ke Github&lt;/h2&gt;
+
+&lt;p&gt;Sebelumnya ambil dulu kuncil publik yang sudah anda buat, gunakan perintah &lt;code&gt;cat&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cat ~/.ssh/id_anda.pub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Copy semua teks yang ditampilkan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;659&#34;
+height=&#34;139&#34;
+alt=&#34;Melihat public key&#34;
+src=&#34;http://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu masuk ke &lt;a href=&#34;https://github.com/settings/keys&#34;&gt;&lt;em&gt;Settings&amp;gt;SSH and GPG Keys&lt;/em&gt;&lt;/a&gt;,
+buat kunci baru dengan mengelik &lt;em&gt;New SSH Key&lt;/em&gt;. Lalu masukkan key yang sudah
+dibuat.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;1012&#34;
+height=&#34;553&#34;
+alt=&#34;Melihat public key&#34;
+src=&#34;https://1.bp.blogspot.com/-OmGVJTJicSU/WI3C0rA5EQI/AAAAAAAADuI/VI7r_F750gApkdo5rZDqOc7csITftAbdACPcB/s1600/Tambah%2BSSH%2Bkey%2Bke%2BGithub.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-uji-konektivitas&#34;&gt;4. Uji Konektivitas&lt;/h2&gt;
+
+&lt;p&gt;Ketik perintah berikut untuk menguji konektivitas SSH ke Github&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh -T git@github.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika hasilnya seperti berikut ini, berarti berhasil. Selanjutnya kita tinggal
+melakukan &lt;em&gt;push&lt;/em&gt; dengan SSH.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;626&#34;
+height=&#34;156&#34;
+alt=&#34;Uji konektivitas SSH Github&#34;
+src=&#34;https://4.bp.blogspot.com/-u_nlbitvZYQ/WI3DluqqeTI/AAAAAAAADuc/pPEzdkn3uhY51L7yGzgBLtm-4SQN--wqQCPcB/s1600/Uji%2Bcoba%2Bkonektivitas%2Bssh%2Bgithub.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba &lt;em&gt;clone&lt;/em&gt; sebuah repository dengan SSH dan lakukan push.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;467&#34;
+height=&#34;293&#34;
+alt=&#34;Clone Repositori dengan SSH&#34;
+src=&#34;https://2.bp.blogspot.com/-GWYLb-m67Ho/WI3FCCS2bBI/AAAAAAAADuw/r71ELqTvSD0HLVsW8KrOPv5Z7zb2XO3XwCPcB/s1600/Clone%2Brepository%2Bdengan%2BSSH.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah cara menggunakan SSH di Gitub. Kita hanya perlu membuat &lt;em&gt;public key&lt;/em&gt;,
+kemudian mendaftarkannya di akun Github.&lt;/p&gt;
+
+&lt;p&gt;referensi: &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;help.github.com&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>4 Cara Penulisan Kode Javscript pada HTML</title>
@@ -1099,16 +1230,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       
       <guid>http://petanikode.com/2016/12/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;Saat kita membuat sbuah tanggal otomatis dengan fungsi &lt;code&gt;Date()&lt;/code&gt;, kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, &lt;code&gt;Date(&amp;rsquo;d F Y&amp;rsquo;)&lt;/code&gt; akan menghasilkan output &lt;code&gt;22 December 2016&lt;/code&gt; (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.&lt;br /&gt;&lt;br /&gt;Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi &lt;code&gt;Date()&lt;/code&gt;. Kita bisa melakukannya seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$bulan = Date(&amp;rsquo;m&amp;rsquo;);&lt;br /&gt;switch ($bulan) {&lt;br /&gt;    case 1:&lt;br /&gt;&amp;nbsp; &amp;nbsp;     $bulan = &amp;ldquo;Januari&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 2:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Februari&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 3:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Maret&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 4:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;April&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 5:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Mei&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 6:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Juni&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 7:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Juli&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 8:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Agustus&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 9:&lt;br /&gt;  &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;September&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 10:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Oktober&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 11:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;November&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 12:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Desember&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; default:&lt;br /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = Date(&amp;lsquo;F&amp;rsquo;);&lt;br /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Karena kita membutuhkannya untuk digunakan atau dijalankan pada&amp;nbsp;&lt;i&gt;view&lt;/i&gt;, sebaiknya dijadikan &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/ba0934a0ee88315359d30095c7e442de.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;Cara menggunakannya, silahkan taruh file &lt;code&gt;tanggal_helper.php&lt;/code&gt;&amp;nbsp;pada direktori &lt;code&gt;application/helpers&lt;/code&gt; kemudian tambahkan pada &lt;i&gt;autoload&lt;/i&gt; &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;/&lt;em&gt;&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| &amp;nbsp;Auto-load Helper Files&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| Prototype:&lt;br /&gt;|&lt;br /&gt;|&lt;span class=&#34;Apple-tab-span&#34; style=&#34;white-space: pre;&#34;&gt; &lt;/span&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;, &amp;lsquo;file&amp;rsquo;);&lt;br /&gt;&lt;/em&gt;/&lt;br /&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;,&amp;lsquo;cookie&amp;rsquo;,&amp;lsquo;form&amp;rsquo;, &amp;lsquo;xss&amp;rsquo;, &amp;lsquo;dump&amp;rsquo;, &amp;lsquo;tanggal&amp;rsquo;);&lt;/code&gt;&lt;/pre&gt;Setelah itu bisa digunakan langsung pada &lt;i&gt;view&lt;/i&gt;, &lt;i&gt;controller&lt;/i&gt;, maupun &lt;i&gt;model&lt;/i&gt; seperti menggunakan helper &lt;code&gt;url&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;lt;div class=&amp;ldquo;tanda-tangan&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;p align=&amp;ldquo;center&amp;rdquo;&amp;gt;Mataram, &amp;lt;?php echo tanggal() ?&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;&lt;span class=&#34;Apple-tab-span&#34; style=&#34;white-space: pre;&#34;&gt; &lt;/span&gt; &amp;nbsp; &amp;nbsp;Kepala Dinas Pertanian&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Provinsi Nusa Tenggara Barat&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/p&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;p align=&amp;ldquo;center&amp;rdquo;&amp;gt;&amp;lt;b&amp;gt;&amp;lt;u&amp;gt;Ir. Hj. Budi Septiani&amp;lt;/b&amp;gt;&amp;lt;/u&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; NIP. &amp;hellip;..&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/p&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;Akan menghasilkan output:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Hasil output format tanggal dalam bahasa indonesia pada CodeIgniter&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Asyik, Akhirnya Telegram Merilis API untuk Telegraph</title>
-      <link>http://petanikode.com/2016/12/asyik-akhirnya-telegram-merilis-api-untuk-telegraph/</link>
-      <pubDate>Wed, 21 Dec 2016 21:42:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/12/asyik-akhirnya-telegram-merilis-api-untuk-telegraph/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://1.bp.blogspot.com/-aDsiFEuM5xc/WFqCkAnYW8I/AAAAAAAADfo/EeFWl7vn00077JQIDJZH2uzO6WfMhPYaQCLcB/s1600/telegraph-api-oleh-telegram.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-aDsiFEuM5xc/WFqCkAnYW8I/AAAAAAAADfo/EeFWl7vn00077JQIDJZH2uzO6WfMhPYaQCLcB/s1600/telegraph-api-oleh-telegram.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Setelah satu bulan dirilis, Telegraph akhirnya dirilis API-nya. Telegraph merupakan sebuah &lt;i&gt;tool&lt;/i&gt; untuk menerbitkan artikel. Teks editor Telegraph dibangun dengan &lt;a href=&#34;http://quilljs.com/&#34; target=&#34;_blank&#34;&gt;Quill&lt;/a&gt; dan tampilannya mirip seperti Medium. Menulis di Telegraph, rasanya seperti menulis di Medium.&lt;br /&gt;&lt;br /&gt;Sebelumnya Telegram menambahkan fitur &lt;i&gt;instant view&lt;/i&gt;. &lt;i&gt;Instan view&lt;/i&gt; hanya berlaku untuk artikel yang dibagikan dari Medium dan Telegraph. Selain dari itu, tidak bisa ditampilkan dengan &lt;i&gt;instan view&lt;/i&gt;. Namun, dengan kemunculan API Telegraph, kita mungkin bisa membuat &lt;i&gt;instant view&lt;/i&gt; secara otomatis.&lt;br /&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt; Tertarik mencobanya, silahkan kunjungi halaman dokumentasi Telegraph. Dokumentasi API Telegraph dapat anda baca di&amp;nbsp;&lt;a href=&#34;http://telegra.ph/api&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://telegra.ph/api&#34;&gt;http://telegra.ph/api&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Contoh kode untuk mengirim artikel ke Telegraph:&lt;br /&gt;&lt;pre spellcheck=&#34;false&#34;&gt;&lt;code class=&#34;js&#34;&gt;$.ajax(&amp;lsquo;&lt;a href=&#34;https://api.telegra.ph/createPage&#39;&#34;&gt;https://api.telegra.ph/createPage&#39;&lt;/a&gt;, {&lt;br /&gt;&amp;nbsp; data: {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;access_token:&amp;nbsp;  &amp;lsquo;%access_token%&amp;lsquo;,&lt;br /&gt;  &amp;nbsp;&amp;nbsp;title:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;     &amp;nbsp;&amp;lsquo;Title of page&amp;rsquo;,&lt;br /&gt;  &amp;nbsp;&amp;nbsp;content:&amp;nbsp;&amp;nbsp;&amp;nbsp;    &amp;nbsp;JSON.stringify(content),&lt;br /&gt;  &amp;nbsp;&amp;nbsp;return_content: true&lt;br /&gt;  },&lt;br /&gt;  type: &amp;lsquo;POST&amp;rsquo;,&lt;br /&gt;&amp;nbsp; dataType: &amp;lsquo;json&amp;rsquo;,&lt;br /&gt;&amp;nbsp; success: function(data) {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;if (data.content) {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; while (article.firstChild) {&lt;br /&gt;    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;article.removeChild(article.firstChild);&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; article.appendChild(nodeToDom({children: data.content}));&lt;br /&gt;  &amp;nbsp;&amp;nbsp;}&lt;br /&gt;&amp;nbsp; }&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
 </description>
     </item>
     

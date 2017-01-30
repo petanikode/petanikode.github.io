@@ -10,6 +10,137 @@
     <atom:link href="http://petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cara Menggunakan SSH di Github</title>
+      <link>http://petanikode.com/2017/01/cara-menggunakan-ssh-di-github/</link>
+      <pubDate>Sun, 29 Jan 2017 17:52:51 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-menggunakan-ssh-di-github/</guid>
+      <description>
+
+&lt;p&gt;SSH memungkinkan kita untuk melakukan &lt;em&gt;push&lt;/em&gt; ke repository github tanpa login.
+Berbeda dengan cara yang biasa (melalui HTTPS), kita harus memasukkan &lt;em&gt;username&lt;/em&gt; dan &lt;em&gt;password&lt;/em&gt;
+setiap kali melakukan &lt;em&gt;push&lt;/em&gt;. Tapi dengan SSH kita tidak akan melakukan itu lagi.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-membuat-key-ssh&#34;&gt;1. Membuat Key SSH&lt;/h2&gt;
+
+&lt;p&gt;Jalankan perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda.
+Untuk &lt;em&gt;passpharse&lt;/em&gt; dikosongkan saja.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;644&#34;
+height=&#34;334&#34;
+alt=&#34;perintah ssh-keygen&#34;
+src=&#34;http://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka di dalam direktori &lt;code&gt;~/.ssh/&lt;/code&gt; akan tercipa file key baru.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;575&#34;
+height=&#34;116&#34;
+alt=&#34;file key ssh&#34;
+src=&#34;http://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-jalankan-ssh-angen-dan-load-ssh-key&#34;&gt;2. Jalankan SSH Angen dan Load SSH Key&lt;/h2&gt;
+
+&lt;p&gt;Untuk memastikan apakah &lt;em&gt;SSH Agent&lt;/em&gt; sudah berajalan atau tidak, gunakan perintah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ps -e | grep [s]sh-agent
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kalau hasilnya seperti di bawah ini, berati &lt;em&gt;SSH Agent&lt;/em&gt; sudah berjalan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;884&#34;
+height=&#34;32&#34;
+alt=&#34;cek ssh agent&#34;
+src=&#34;http://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Tapi, kalau belum berjalan, gunakan perintah berikut ini untuk menjalankan SSH agent:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-agent /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikutnya kita Load SSH Key. Gunakan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-add ~/.ssh/id_anda
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian untuk mengecek, gunakan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-add -l
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;659&#34;
+height=&#34;106&#34;
+alt=&#34;Mendambahkan SSH&#34;
+src=&#34;http://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-tambahkan-ssh-key-ke-github&#34;&gt;3. Tambahkan SSH Key ke Github&lt;/h2&gt;
+
+&lt;p&gt;Sebelumnya ambil dulu kuncil publik yang sudah anda buat, gunakan perintah &lt;code&gt;cat&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cat ~/.ssh/id_anda.pub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Copy semua teks yang ditampilkan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;659&#34;
+height=&#34;139&#34;
+alt=&#34;Melihat public key&#34;
+src=&#34;http://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu masuk ke &lt;a href=&#34;https://github.com/settings/keys&#34;&gt;&lt;em&gt;Settings&amp;gt;SSH and GPG Keys&lt;/em&gt;&lt;/a&gt;,
+buat kunci baru dengan mengelik &lt;em&gt;New SSH Key&lt;/em&gt;. Lalu masukkan key yang sudah
+dibuat.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;1012&#34;
+height=&#34;553&#34;
+alt=&#34;Melihat public key&#34;
+src=&#34;https://1.bp.blogspot.com/-OmGVJTJicSU/WI3C0rA5EQI/AAAAAAAADuI/VI7r_F750gApkdo5rZDqOc7csITftAbdACPcB/s1600/Tambah%2BSSH%2Bkey%2Bke%2BGithub.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-uji-konektivitas&#34;&gt;4. Uji Konektivitas&lt;/h2&gt;
+
+&lt;p&gt;Ketik perintah berikut untuk menguji konektivitas SSH ke Github&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh -T git@github.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika hasilnya seperti berikut ini, berarti berhasil. Selanjutnya kita tinggal
+melakukan &lt;em&gt;push&lt;/em&gt; dengan SSH.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;626&#34;
+height=&#34;156&#34;
+alt=&#34;Uji konektivitas SSH Github&#34;
+src=&#34;https://4.bp.blogspot.com/-u_nlbitvZYQ/WI3DluqqeTI/AAAAAAAADuc/pPEzdkn3uhY51L7yGzgBLtm-4SQN--wqQCPcB/s1600/Uji%2Bcoba%2Bkonektivitas%2Bssh%2Bgithub.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba &lt;em&gt;clone&lt;/em&gt; sebuah repository dengan SSH dan lakukan push.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;467&#34;
+height=&#34;293&#34;
+alt=&#34;Clone Repositori dengan SSH&#34;
+src=&#34;https://2.bp.blogspot.com/-GWYLb-m67Ho/WI3FCCS2bBI/AAAAAAAADuw/r71ELqTvSD0HLVsW8KrOPv5Z7zb2XO3XwCPcB/s1600/Clone%2Brepository%2Bdengan%2BSSH.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah cara menggunakan SSH di Gitub. Kita hanya perlu membuat &lt;em&gt;public key&lt;/em&gt;,
+kemudian mendaftarkannya di akun Github.&lt;/p&gt;
+
+&lt;p&gt;referensi: &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;help.github.com&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>4 Cara Penulisan Kode Javscript pada HTML</title>
       <link>http://petanikode.com/2017/01/4-cara-penulisan-kode-javscript-pada-html/</link>
       <pubDate>Sat, 28 Jan 2017 14:59:00 +0000</pubDate>
@@ -675,16 +806,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       
       <guid>http://petanikode.com/2016/11/cara-mengaktifkan-profiler-codeigniter/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Profiler fungsinya untuk menampilkan beberapa informasi yang diperlukan untuk &lt;i&gt;debugging&lt;/i&gt;. Kita dapat mengetahui &lt;i&gt;query&lt;/i&gt; apa yang dikerjakan, berapa detik &lt;i&gt;query&lt;/i&gt; tersebut dikerjakan, &lt;i&gt;benchmarks&lt;/i&gt;, dan sebagainya. Informasi ini sangat berguna ketika kita membangun sebuah aplikasi dengan CodeIgniter.&lt;br /&gt;&lt;br /&gt;Cara mengaktifkan Profiler di CodeIgniter sangat mudah, cukup menjalankan fungsi ini di &lt;i&gt;Controller&lt;/i&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);&lt;/code&gt;&lt;/pre&gt;Maka kita akan mendapatkan informasi seperti berikut ini:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-gsNeLWLfBhk/WD5EMFf8yLI/AAAAAAAADeE/C3mfDihq1acM5LVhpGFvcAUgng4sxuOIwCK4B/s1600/Profiler%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-gsNeLWLfBhk/WD5EMFf8yLI/AAAAAAAADeE/C3mfDihq1acM5LVhpGFvcAUgng4sxuOIwCK4B/s1600/Profiler%2BCodeIgniter.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian, agar Profiler aktif di setiap &lt;i&gt;method&lt;/i&gt; atau fungsi, letakan kode tersebut di dalam konstruktor:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;function &lt;strong&gt;construct(){&lt;br /&gt;&amp;nbsp; &amp;nbsp; parent::&lt;/strong&gt;construct();&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; // untuk debugging&lt;br /&gt;&amp;nbsp; &amp;nbsp; $this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Namun, sepertinya akan ada masalah ketika aplikasi kita di-hosting. Kita akan menghapus kode itu lagi, karena tidak mungkin kita tampilkan informasi Profiler pada website yang sudah jadi. Untuk mengatasi hal tersebut, ganti nilai &lt;code&gt;TRUE&lt;/code&gt; menjadi seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$this-&amp;gt;output-&amp;gt;enable_profiler(ENVIRONMENT == &amp;ldquo;development&amp;rdquo;);&lt;/code&gt;&lt;/pre&gt;Artinya, Profiler hanya akan aktif pada lingkungan &lt;i&gt;development&lt;/i&gt; saja. Sedangkan pada lingkungan &lt;i&gt;production&lt;/i&gt; dan &lt;i&gt;testing&lt;/i&gt; tidak diaktifkan.&lt;br /&gt;&lt;br /&gt;Begitulah cara mengaktifkan Profiler di CodeIgniter. Semoga bermanfaat 😅.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Composer untuk Pemula</title>
-      <link>http://petanikode.com/2016/11/tutorial-composer-untuk-pemula/</link>
-      <pubDate>Sat, 26 Nov 2016 13:02:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/11/tutorial-composer-untuk-pemula/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34; /&gt;&lt;/a&gt;Composer merupakan sebuah alat &lt;i&gt;(tool)&lt;/i&gt; untuk manajemen pustaka &lt;i&gt;(library)&lt;/i&gt; dalam proyek web PHP. Composer dapat kita suruh melakukan instalasi dan &lt;i&gt;update&lt;/i&gt; pustaka yang dibutuhkan. Kalau tidak pakai Composer, kita biasanya mengunduh sendiri pustakanya, kemudian di-copy ke direktori proyek. Bagaimana kalau banyak pustaka yang dibutuhkan, pasti kita akan melelahkan mengunduh dan menyalin semuanya. Oleh karena itu, kita harus menggunakan Composer.&lt;br /&gt;&lt;h2&gt;1. Instalasi Composer&lt;/h2&gt;Panduan instalasi Composer sebenarnya sudah lengkap di &lt;a href=&#34;https://getcomposer.org/doc/00-intro.md&#34; target=&#34;_blank&#34;&gt;dokumentasi Composer&lt;/a&gt;. Namun, saya ingin menunjukkan cara saya menginstalnya di Linux.&lt;br /&gt;&lt;br /&gt;Instalasi melalui apt: &lt;code&gt;sudo apt install composer&lt;/code&gt;&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-W1-7q5-nUpM/WDgUeuhtduI/AAAAAAAADb8/KAlMQmaMBOEqWeucxHSmsu7NVJulM2EHQCK4B/s1600/Instalasi%2BComposer%2Bmelalui%2Bapt.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Instalasi Composer pada Linux&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-W1-7q5-nUpM/WDgUeuhtduI/AAAAAAAADb8/KAlMQmaMBOEqWeucxHSmsu7NVJulM2EHQCK4B/s1600/Instalasi%2BComposer%2Bmelalui%2Bapt.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Pada distro Linux yang saya gunakan, paket Composer sudah tersedia di repositori. Akan tetapi masih versi beta (&lt;code&gt;1.0.0-beta&lt;/code&gt;). Pada saat tulisan ini dubuat, versi terakhir Composer adalah &lt;code&gt;1.3-dev&lt;/code&gt;. Bila ingin menginstal versi terakhir, bisa menggunakan perintah berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;wget &lt;a href=&#34;https://getcomposer.org/composer.phar&#34;&gt;https://getcomposer.org/composer.phar&lt;/a&gt;&lt;br /&gt;sudo cp composer.phar /usr/local/bin/composer&lt;br /&gt;sudo chmod +x /usr/local/bin/composer&lt;/code&gt;&lt;/pre&gt;Kemudian coba periksa versi yang terinstal:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;petanikode@imajinasi ~ $ composer &amp;ndash;version&lt;br /&gt;Composer version 1.2.2 2016-11-03 17:43:15&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;2. Menggunakan Composer&lt;/h2&gt;Sekarang saya punya sebuah proyek yang berlokasi di &lt;code&gt;/var/www/html/belajar/belajar-composer&lt;/code&gt;. Saya perlu pindah dulu ke direktori tersebut.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;cd&amp;nbsp; /var/www/html/belajar/belajar-composer&lt;/code&gt;&lt;/pre&gt;Kemudian ketik:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;composer init&lt;/code&gt;&lt;/pre&gt;Setelah itu, silahkan isi informasi proyek seperti berikut ini.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-6VfgmYHYvtA/WDgcgbaPmwI/AAAAAAAADcM/VNYVun0VOEgS0DaqISYXxzvquzJhO_v8wCK4B/s1600/Informasi%2Bproyek%2Bcomposer%2B-%2Bpetani%2Bkode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-6VfgmYHYvtA/WDgcgbaPmwI/AAAAAAAADcM/VNYVun0VOEgS0DaqISYXxzvquzJhO_v8wCK4B/s1600/Informasi%2Bproyek%2Bcomposer%2B-%2Bpetani%2Bkode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Perintah di atas akan menghasilkan file &lt;code&gt;composer.json&lt;/code&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;json js&#34;&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;petanikode/belajar-composer&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;description&amp;rdquo;: &amp;ldquo;Hanya untuk latihan composer saja&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;type&amp;rdquo;: &amp;ldquo;project&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;license&amp;rdquo;: &amp;ldquo;GPL&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;authors&amp;rdquo;: [&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;Ardianta Pargo&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;email&amp;rdquo;: &amp;ldquo;ardianta_pargo@yahoo.co.id&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; ],&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;require&amp;rdquo;: {}&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Informasi yang tertera pada file &lt;code&gt;composer.json&lt;/code&gt; merupakan informasi yang baru saja kita masukkan. Perhatikan pada atribut &lt;code&gt;&amp;ldquo;require&amp;rdquo;&lt;/code&gt;, isinya masih kosong, karena tadi kita menjawab &lt;code&gt;no&lt;/code&gt; pada &lt;i&gt;define depedency&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Selanjutnya cobalah instal pustaka &lt;i&gt;Carbon&lt;/i&gt;, pustaka ini menyediakan fungsi-fungsi untuk pengolahan waktu &lt;i&gt;(Date Time)&lt;/i&gt;. Ketik pada terminal:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;composer require nesbot/carbon&lt;/code&gt;&lt;/pre&gt;Maka sekarang file &lt;code&gt;composer.json&lt;/code&gt; akan menjadi seperti ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;json js&#34;&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;petanikode/belajar-composer&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;description&amp;rdquo;: &amp;ldquo;Hanya untuk latihan composer saja&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;type&amp;rdquo;: &amp;ldquo;project&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;license&amp;rdquo;: &amp;ldquo;GPL&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;authors&amp;rdquo;: [&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;Ardianta Pargo&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;email&amp;rdquo;: &amp;ldquo;ardianta_pargo@yahoo.co.id&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; ],&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;require&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;mark&gt;&amp;ldquo;nesbot/carbon&amp;rdquo;: &amp;ldquo;^1.21&amp;rdquo;&lt;/mark&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Selain itu juga, perintah tersebut melakukan pengunduhan pustaka ke dalam proyek. Cobalah buka direktori proyeknya, pasti ada direktori baru bernama &lt;code&gt;vendor&lt;/code&gt;. Semua pustaka yang diunduh Composer akan tersimpan di sana.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-RFYIlqvd0ls/WDgmlBcqZ7I/AAAAAAAADcc/2BSf_2e72LY43-XnnBQ2-wLTbMXATKgSwCK4B/s1600/direktori%2Bvendor%2Byang%2Bdi%2Bdownload%2Bcomposer.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-RFYIlqvd0ls/WDgmlBcqZ7I/AAAAAAAADcc/2BSf_2e72LY43-XnnBQ2-wLTbMXATKgSwCK4B/s1600/direktori%2Bvendor%2Byang%2Bdi%2Bdownload%2Bcomposer.png&#34; /&gt;&lt;/a&gt; Selanjutnya, kita akan mencoba pustaka yang baru saja kita tambahkan. Buatlah file PHP baru di direktori proyek beranam &lt;code&gt;tes_carbon.php&lt;/code&gt; dengan isi sebagai berikut.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;&lt;br /&gt;require &amp;lsquo;vendor/autoload.php&amp;rsquo;;&lt;br /&gt;&lt;br /&gt;use Carbon\Carbon;&lt;br /&gt;&lt;br /&gt;$sekarang = Carbon::now();&lt;br /&gt;&lt;br /&gt;echo &amp;ldquo;Sekarang: $sekarang &amp;lt;br&amp;gt;&amp;rdquo;;&lt;br /&gt;echo &amp;ldquo;Umur saya: &amp;ldquo; . Carbon::createFromDate(2000, 1, 1)-&amp;gt;age . &amp;ldquo;&amp;lt;br&amp;gt;&amp;rdquo;;&lt;br /&gt;echo &amp;ldquo;Besok: &amp;ldquo; . $sekarang-&amp;gt;addDay() .&amp;rdquo;&amp;lt;br&amp;gt;&amp;rdquo;;&lt;br /&gt;&lt;br /&gt;?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasil outputnya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;Sekarang: 2016-11-25 21:03:18 &lt;br /&gt;Umur saya: 16&lt;br /&gt;Besok: 2016-11-26 21:03:18 &lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;3. Mencari Pustaka&lt;/h2&gt;Misalkan kita membutuhkan lebih banyak pustaka untuk diinstal. Kita hanya perlu menambahkan nama-nama pustakanya ke dalam atribut &lt;code&gt;&amp;ldquo;require&amp;rdquo;&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;json js&#34;&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;petanikode/belajar-composer&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;description&amp;rdquo;: &amp;ldquo;Hanya untuk latihan composer saja&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;type&amp;rdquo;: &amp;ldquo;project&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;license&amp;rdquo;: &amp;ldquo;GPL&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;authors&amp;rdquo;: [&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;Ardianta Pargo&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;email&amp;rdquo;: &amp;ldquo;ardianta_pargo@yahoo.co.id&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; ],&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;require&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;mark&gt;&amp;ldquo;nesbot/carbon&amp;rdquo;: &amp;ldquo;^1.21&amp;rdquo;,&lt;/mark&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;mark&gt;&amp;ldquo;setasign/fpdf&amp;rdquo;: &amp;ldquo;1.8.1&amp;rdquo;&amp;nbsp;&lt;/mark&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Formatnya, &lt;code&gt;&amp;ldquo;vendor/pustaka&amp;rdquo;: &amp;ldquo;versi&amp;rdquo;&lt;/code&gt;. Lalu, bagaimana cara kita mengetahui nama-nama vendor dari pustaka tersebut? Kita dapat menggunakan perintah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;composer search fpdf&lt;/code&gt;&lt;/pre&gt;Perintah tersebut untuk mencari nama vendor penyedia pustaka &lt;code&gt;fpdf&lt;/code&gt;. Atau kita juga bisa mencarinya di website &lt;a href=&#34;http://packagist.org/&#34; target=&#34;_blank&#34;&gt;packagist.org&lt;/a&gt;.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-zHazZ7X65qA/WDgq5-qCO-I/AAAAAAAADco/UVGicQ9aEyYYKJPQeQIIDotwiTpfpUPoQCK4B/s1600/Mencari%2Bpustaka%2Bdi%2Bpackagist.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-zHazZ7X65qA/WDgq5-qCO-I/AAAAAAAADco/UVGicQ9aEyYYKJPQeQIIDotwiTpfpUPoQCK4B/s1600/Mencari%2Bpustaka%2Bdi%2Bpackagist.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Setelah semua pustaka yang kita butuhkan ditulis dalam file &lt;code&gt;composer.json&lt;/code&gt;, selanjutnya kita bisa menginstal semuanya dengan perintah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;composer update&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Penutup&lt;/h2&gt;Cukup sekian tutorial cara menggunakan Composer ini. Selengkapnya bisa dipelajari pada dokumentasi Composer atau kalau ada yang masih belum jelas, bisa ditanyakan melalui komentar.&lt;/p&gt;
 </description>
     </item>
     

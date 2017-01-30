@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Template on Petani Kode</title>
-    <link>http://petanikode.gitlab.io/topik/template/index.xml</link>
+    <link>http://petanikode.com/topik/template/index.xml</link>
     <description>Recent content in Template on Petani Kode</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="http://petanikode.gitlab.io/topik/template/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://petanikode.com/topik/template/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cara Replace String dalam Template Go</title>
-      <link>http://petanikode.gitlab.io/2017/01/cara-replace-string-dalam-template-go/</link>
+      <link>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</link>
       <pubDate>Fri, 20 Jan 2017 14:32:22 +0800</pubDate>
       
-      <guid>http://petanikode.gitlab.io/2017/01/cara-replace-string-dalam-template-go/</guid>
+      <guid>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</guid>
       <description>&lt;p&gt;Sebuah masalah kecil yang saya temukan ketika mengedit skrip &lt;a href=&#34;https://github.com/natefinch/blogimport&#34;&gt;Blogimport&lt;/a&gt;.
 Saya ingin memperbesar ukuran gambar &lt;em&gt;thumbnail&lt;/em&gt; dengan cara me-replace string yang ada di URL.&lt;/p&gt;
 

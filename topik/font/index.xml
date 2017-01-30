@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Font on Petani Kode</title>
-    <link>http://petanikode.gitlab.io/topik/font/index.xml</link>
+    <link>http://petanikode.com/topik/font/index.xml</link>
     <description>Recent content in Font on Petani Kode</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="http://petanikode.gitlab.io/topik/font/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://petanikode.com/topik/font/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Font Merriweather Google vs Merriweather Wordpress</title>
-      <link>http://petanikode.gitlab.io/2016/06/font-merriweather-google-vs-merriweather-wordpress/</link>
+      <link>http://petanikode.com/2016/06/font-merriweather-google-vs-merriweather-wordpress/</link>
       <pubDate>Thu, 30 Jun 2016 22:54:00 +0000</pubDate>
       
-      <guid>http://petanikode.gitlab.io/2016/06/font-merriweather-google-vs-merriweather-wordpress/</guid>
+      <guid>http://petanikode.com/2016/06/font-merriweather-google-vs-merriweather-wordpress/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://4.bp.blogspot.com/-HcxitcobNWA/V3UxbfFa8FI/AAAAAAAAC4s/k1sd8LAxat4SWzHNgqpL4jMokhuFmMeQwCLcB/s1600/Font-Merrieweather-Petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-HcxitcobNWA/V3UxbfFa8FI/AAAAAAAAC4s/k1sd8LAxat4SWzHNgqpL4jMokhuFmMeQwCLcB/s1600/Font-Merrieweather-Petanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Meski namanya sama, namun ternyata keduanya berbeda. Font Merriweather yang disediakan oleh Google, berbeda dengan font Merriweather yang digunakan Wordpress. Hal ini saya temukan ketika mendesain Template Blogger yang menggunakan font tersebut.&lt;br /&gt;&lt;br /&gt;Pertama, saya menggunakan font Merriweather yang disediakan Google. Akan tetapi hasilnya kurang tabal di Google Chrome, sementara di Firefox terlihat tebal dan bagus. Setelah saya cek kembali kode CSS-nya, tidak ada yang berbeda antara kode CSS yang digunakan di Wordpress dengan kode CSS yang saya buat.&lt;br /&gt;&lt;br /&gt;Link font:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link href=&amp;lsquo;&lt;a href=&#34;http://fonts.googleapis.com/css?family=Merriweather&#39;&#34;&gt;http://fonts.googleapis.com/css?family=Merriweather&#39;&lt;/a&gt; rel=&amp;lsquo;stylesheet&amp;rsquo; type=&amp;lsquo;text/css&amp;rsquo;&amp;gt;&lt;/code&gt;&lt;/pre&gt;Kode CSS:&lt;br /&gt;&lt;pre&gt;&lt;code calss=&#34;css&#34;&gt;.post-body {&lt;br /&gt;    font-family: Marriewether, serif;&lt;br /&gt;    font-size: 16px;&lt;br /&gt;    line-height: 1.8em;&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Tampilan di Firefox memang tidak masalah, di Google Chrome malah kurang bagus.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-HtXnqQP5LRA/V3Us9Pwr2XI/AAAAAAAAC4Y/YnVyKpOQzhksI1a-aAwr5YUaiqktnQ_zQCK4B/s1600/Merriweather%2B-%2BGoogle%2BChrome%2B-%2BFirefox%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-HtXnqQP5LRA/V3Us9Pwr2XI/AAAAAAAAC4Y/YnVyKpOQzhksI1a-aAwr5YUaiqktnQ_zQCK4B/s1600/Merriweather%2B-%2BGoogle%2BChrome%2B-%2BFirefox%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian, saya mencoba menggunakan font Marriewether yang digunakan Wordpress.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link href=&amp;lsquo;&lt;a href=&#34;https://s1.wp.com/i/fonts/merriweather/merriweather.css?v=20160210&#39;&#34;&gt;https://s1.wp.com/i/fonts/merriweather/merriweather.css?v=20160210&#39;&lt;/a&gt; rel=&amp;lsquo;stylesheet&amp;rsquo; type=&amp;lsquo;text/css&amp;rsquo;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasilnya, sesui seperti yang saya harapkan.&lt;br /&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-kRKBmTQRYxQ/V3UulAmo6qI/AAAAAAAAC4k/Bedsm3r7WCcM6ZX3NjggTU69FtieDWAYgCLcB/s1600/Merrieweather%2BWordpress%2B-%2BGoogle%2BChrome%2B-%2BFirefox%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-kRKBmTQRYxQ/V3UulAmo6qI/AAAAAAAAC4k/Bedsm3r7WCcM6ZX3NjggTU69FtieDWAYgCLcB/s1600/Merrieweather%2BWordpress%2B-%2BGoogle%2BChrome%2B-%2BFirefox%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Dari kasus ini, saya mengambil sebuah kesimpulan. Mungkin Wordpress menggunakan font Merriweather dari Google yang sudah mereka modifikasi dan optimasi, sehingga tampilanya lebih tebal dan bagus.&lt;/p&gt;
 </description>
     </item>

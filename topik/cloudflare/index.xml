@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloudflare on Petani Kode</title>
-    <link>http://petanikode.gitlab.io/topik/cloudflare/index.xml</link>
+    <link>http://petanikode.com/topik/cloudflare/index.xml</link>
     <description>Recent content in Cloudflare on Petani Kode</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="http://petanikode.gitlab.io/topik/cloudflare/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://petanikode.com/topik/cloudflare/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cara Redirect Domain dengan CloudFlare</title>
-      <link>http://petanikode.gitlab.io/2017/01/cara-redirect-domain-dengan-cloudflare/</link>
+      <link>http://petanikode.com/2017/01/cara-redirect-domain-dengan-cloudflare/</link>
       <pubDate>Tue, 17 Jan 2017 22:06:22 +0800</pubDate>
       
-      <guid>http://petanikode.gitlab.io/2017/01/cara-redirect-domain-dengan-cloudflare/</guid>
+      <guid>http://petanikode.com/2017/01/cara-redirect-domain-dengan-cloudflare/</guid>
       <description>
 
 &lt;p&gt;Saya akhirnya mengurus jaringan lagi, setelah sekian lama tidak belajar jaringan.
-Pada &lt;a href=&#34;http://petanikode.gitlab.io/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;proses migrasi&lt;/a&gt; kemarin,
+Pada &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;proses migrasi&lt;/a&gt; kemarin,
 proses propagasi domain memakan waktu cukup lama.
 Domain Petani Kode &lt;code&gt;www.petanikode.com&lt;/code&gt; masih menunjukan halaman &lt;code&gt;404&lt;/code&gt;. Namun,
 domain yang tanpa menggunakan &lt;code&gt;www&lt;/code&gt;, sudah bisa diakses.&lt;/p&gt;

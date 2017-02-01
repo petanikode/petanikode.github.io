@@ -127,7 +127,12 @@ System.out.println(&ldquo;Petani Kode&rdquo;);Kemudian coba tambahkan 5 lagi, se
         "@type": "WebSite",
         "name": "Petani Kode",
         "alternateName": "Petanikode",
-        "url": "http:\/\/petanikode.com\/"
+        "url": "http:\/\/petanikode.com\/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://petanikode.com/topik/{search_term_string}",
+            "query-input": "required name=search_term_string"
+         }
     }
     </script>
 

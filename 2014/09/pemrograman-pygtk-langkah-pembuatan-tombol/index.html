@@ -119,7 +119,12 @@ tombol = gtk.Button(&ldquo;Sebuah Tombol&rdquo;)2. Membuat KontainerKontainer ki
         "@type": "WebSite",
         "name": "Petani Kode",
         "alternateName": "Petanikode",
-        "url": "http:\/\/petanikode.com\/"
+        "url": "http:\/\/petanikode.com\/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://petanikode.com/topik/{search_term_string}",
+            "query-input": "required name=search_term_string"
+         }
     }
     </script>
 

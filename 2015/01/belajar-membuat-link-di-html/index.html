@@ -113,7 +113,12 @@ Penulisan LinkLink dapat dibuat dengan tag &lt;a&gt;. Untuk dapat menuju ke temp
         "@type": "WebSite",
         "name": "Petani Kode",
         "alternateName": "Petanikode",
-        "url": "http:\/\/petanikode.com\/"
+        "url": "http:\/\/petanikode.com\/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://petanikode.com/topik/{search_term_string}",
+            "query-input": "required name=search_term_string"
+         }
     }
     </script>
 

@@ -7,8 +7,109 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 30 Jan 2017 20:14:28 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 31 Jan 2017 12:09:55 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Upload File ke Server FTP ala Git</title>
+      <link>http://petanikode.com/2017/01/cara-upload-file-ke-server-ftp-ala-git/</link>
+      <pubDate>Tue, 31 Jan 2017 12:09:55 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/01/cara-upload-file-ke-server-ftp-ala-git/</guid>
+      <description>
+
+&lt;p&gt;Ketika kita akan men-deploy atau &lt;em&gt;hosting&lt;/em&gt; sebuah web di server &lt;em&gt;shared hosting&lt;/em&gt;,
+kita akan diberikan fasilitas FTP untuk upload file. Kita bisa menggunakan
+&lt;em&gt;FTP Client&lt;/em&gt; seperti FileZilla untuk upload file. Namun, bagaimana kalau nanti
+ada perubahan? Tentu kita akan mencari file yang diubah dan di-upload lagi.
+Hal ini mungkin terasa sedikit melelahkan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;720&#34;
+height=&#34;380&#34;
+alt=&#34;Git FTP&#34;
+src=&#34;https://1.bp.blogspot.com/-jeWvQeAn-TQ/WJGe6gyu6vI/AAAAAAAADwM/yJ-X3DG9T5sLyIow4kyD-cHt_nCOYP_qgCPcB/s1600/upload-file-ftp-ala-git-petanikode.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sedangkan, kalau kita menggunakan Git. Kita hanya perlu melakukan &lt;em&gt;push&lt;/em&gt; untuk
+mengupload perubahan ke server atau repository &lt;em&gt;remote&lt;/em&gt;. Akan tetapi, server yang
+kita gunakan tidak mendukung Git.&lt;/p&gt;
+
+&lt;p&gt;Sebuah alat bernama &lt;code&gt;git-ftp&lt;/code&gt; memungkinkan kita untuk meng-upload file ke server
+FTP seperti cara Git. Kita tidak akan repot mencari file yang sudah diubah untuk
+diupload lagi dan menindih yang sudah ada di server. Karena &lt;code&gt;git-ftp&lt;/code&gt; akan melakukan
+sinkronisasi berdasarkan perubahan yang dicatat oleh Git.&lt;/p&gt;
+
+&lt;h2 id=&#34;instalasi-git-ftp&#34;&gt;Instalasi git-ftp&lt;/h2&gt;
+
+&lt;p&gt;Instalasi &lt;code&gt;git-ftp&lt;/code&gt; di Ubuntu dapat dilakukan dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;sudo apt install git-ftp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Instalasi di sistem operasi lain, silahkan baca &lt;a href=&#34;https://github.com/git-ftp/git-ftp/blob/develop/INSTALL.md&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;konfigurasi-awal&#34;&gt;Konfigurasi Awal&lt;/h2&gt;
+
+&lt;p&gt;Masuk ke direktori proyeknya. Pastikan sudah menggunakan Git di sana. Kemudian
+tambahkan konfigurasi &lt;code&gt;git-ftp&lt;/code&gt; dengan perintah berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config git-ftp.url ftp.example.net
+git config git-ftp.user ftp-user
+git config git-ftp.password rah4sia
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sebagai contoh, saya menggunakan hosting &lt;a href=&#34;http://api.idhostinger.com/redir/18671649&#34;&gt;gratis dari idhostinger&lt;/a&gt;
+dan membuat akun FTP sebagai berikut.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;924&#34;
+height=&#34;255&#34;
+alt=&#34;Akun FTP di IDhostinger&#34;
+src=&#34;https://4.bp.blogspot.com/-3WZZA8H29bY/WI_rPPRQvJI/AAAAAAAADvs/YpKGbgQs6b0d1zZTwnJYOm9okOq4FlCyQCPcB/s1600/Akun%2BFTP%2Bdi%2Bihostinger.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Misalkan saya ingin upload ke direktori &lt;code&gt;project1&lt;/code&gt;, Maka konfigurasi
+&lt;code&gt;git-ftp&lt;/code&gt;-nya seagai berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config git-ftp.url ftp.petanikode.hol.es/project1
+git config git-ftp.user u898309845.petanikode
+git config git-ftp.password SangatRah4sia
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;upload-pertama&#34;&gt;Upload Pertama&lt;/h2&gt;
+
+&lt;p&gt;Setelah kita melakukan konfigurasi &lt;code&gt;git-ftp&lt;/code&gt;, selanjutnya kita bisa upload semua
+file dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git ftp init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Proses ini akan memakan waktu cukup lama apabila terdapat banyak file yang akan
+di-upload. Perintah ini akan meng-upload semua file, kecuali yang terdaftar dalam
+&lt;code&gt;.gitignore&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;upload-perubahan&#34;&gt;Upload Perubahan&lt;/h2&gt;
+
+&lt;p&gt;Jika ada perubahan, kita harus mealkukan &lt;code&gt;commit&lt;/code&gt; terlebih dahulu.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git add .
+git commit -m &amp;quot;ini perubahan yang dilakukan&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, kita bisa upload lagi perubahannya dengan perintah.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git ftp push
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka &lt;code&gt;git-ftp&lt;/code&gt; akan melakukan upload file-file yang sudah diubah dan menindih
+yang sudah ada di server.&lt;/p&gt;
+
+&lt;p&gt;Begitulah cara upload file seperti cara &lt;a href=&#34;http://petanikode.com/topik/git&#34;&gt;Git&lt;/a&gt;. Semoga bermanfaat.&lt;/p&gt;
+
+&lt;p&gt;Referensi: &lt;a href=&#34;https://git-ftp.github.io/&#34;&gt;git-ftp.github.io&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Cara Hosting Hugo di Github</title>
@@ -1358,16 +1459,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       
       <guid>http://petanikode.com/2017/01/17-resolusi-untuk-meningkatkan-kemampuan-pemrograman-di-tahun-2017/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-iXT4baQA15U/WGM1TS5gqWI/AAAAAAAADgo/5v1xfk6tpjg7FNVtZRoAjSEUyVutBz-RACK4B/s1600/resolusi%2Btahun%2Bbaru.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-iXT4baQA15U/WGM1TS5gqWI/AAAAAAAADgo/5v1xfk6tpjg7FNVtZRoAjSEUyVutBz-RACK4B/s1600/resolusi%2Btahun%2Bbaru.jpg&#34; /&gt;&lt;/a&gt;Selamat tahun baru 2017. Sejauh mana kemampuan pemrograman yang kalian miliki? apakah kalian ingin meningkatkannya? atau malah menurun dan lebih buruk dari tahun sebelumnya. Wah, semoga saja tidak. Berikut ini ada 17 resolusi untuk meningkatkan kemampuan pemrogramanmu di tahun 2017.&lt;br /&gt;&lt;h2&gt;1. Mulai Menggunakan Linux&lt;/h2&gt;&lt;div&gt;Bagi kalian yang masih menggunakan windows, tidak ada salahnya mencoba menggunakan linux untuk pemrograman. Kenali konsep dan filosofi &lt;i&gt;open source&lt;/i&gt;. Rasakan sensasinya menulis kode dengan linux. Saya yakin, setelah satu tahun menggunakan Linux, anda pasti bisa.&lt;/div&gt;&lt;h2&gt;2. Terilbat dalam Komunitas&lt;/h2&gt;&lt;div&gt;Komunitas sangat penting untuk bertukar ilmu, pengalaman, dan informasi. Ikutilah komunitas-komunitas pemrograman yang ada di sekitarmu, entah itu komunitas &lt;i&gt;offline&lt;/i&gt; maupun &lt;i&gt;online&lt;/i&gt;. Komunitas juga dapat meningkatkan kemampuan komunikasimu.&lt;/div&gt;&lt;h2&gt;3. Mulai Menggunakan &lt;i&gt;Version Control&lt;/i&gt;&lt;/h2&gt;&lt;div&gt;Version Control tidak diajari di kampus. Sedangkan di dunia kerja banyak dibutuhkan. Bahkan ada perusahaan yang menjadikan &lt;i&gt;version control&lt;/i&gt; sebagai syarat untuk melamar pekerjaan. Mulai tahun ini, coba belajar&lt;i&gt; version control&lt;/i&gt;.&lt;/div&gt;&lt;h2&gt;4. Kurangi Begadang&lt;/h2&gt;&lt;div&gt;Banyak begadang bisa jadi menurunkan kinerja otak dan tubuh kita. Karena itu, kurangilah begadang pada tahun 2017 ini. Saya sendiri sudah merencanakan sejak awal bulan desember lalu untuk mengubah pola tidur. Tidur setelah solat isa, kemudian bangun pukul 1 untuk belajar dan &lt;i&gt;coding&lt;/i&gt;. Karena pada pukul 1, tidak banyak yang online di sosial media. Ngoding menjadi lebih fokus.&lt;/div&gt;&lt;h2&gt;5. Perbanyak Baca Buku dan Artikel&lt;/h2&gt;Apa bacaan yang kalian konsumsi setiap hari? status, SMS, Chat, spam, atau apa? apakah itu bermanfaat? Kalau itu memang tidak bermanfaat, sebaiknya dihindari. Karena akan membuang-buang waktu. Lebih baik kalian mulai membaca buku dan artikel yang bermanfaat.&lt;br /&gt;&lt;h2&gt;6. Perbanyak Praktik &lt;i&gt;(coding)&lt;/i&gt;&lt;/h2&gt;&lt;div&gt;Jika kalian ikut seni bela diri karate dan jarang latihan, apakah akan meningkatkan kemampuan? Tentu saja tidak. Sama halnya juga dengan pemrograman. Semakin sering latihan semakin meningkat pula kemampuan yang dimiliki. Latihan bisa dilakukan dengan praktik di kelas atau mengikuti tutorial di internet. Hal ini ditekankan oleh bapak Peter Jack Kambey di PHP indonesia.&lt;/div&gt;&lt;div&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-O-2uDesj-T8/WGK-qKwMNSI/AAAAAAAADgY/yftpS_rmpoY3pBLZ5cnMKshnPMAlSemGwCK4B/s1600/peter%2Bjack%2Bkambey%2B-%2Bphp%2Bindonesia.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-O-2uDesj-T8/WGK-qKwMNSI/AAAAAAAADgY/yftpS_rmpoY3pBLZ5cnMKshnPMAlSemGwCK4B/s1600/peter%2Bjack%2Bkambey%2B-%2Bphp%2Bindonesia.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2&gt;7. Selesaikan Error Secara Mandiri&lt;/h2&gt;&lt;div&gt;Sebelum kalian melempar pertanyaan ke forum maupun grup, sebaiknya selesaikan dulu errornya secara mandiri. Error sedikit, jangan langsung di kirim ke grup. Cobalah untuk berpikir, mencari tahu dan analisa terlebih dahulu. Kalau sudah mencoba berbagai cara, namun belum juga berhasil. Barulah coba lempar ke grup.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-captioned=&#34;&#34; data-instgrm-version=&#34;7&#34; style=&#34;background: #fff; border-radius: 3px; border: 0; box-shadow: 0 0 1px 0 rgba(0 , 0 , 0 , 0.5) , 0 1px 10px 0 rgba(0 , 0 , 0 , 0.15); margin: 1px; max-width: 658px; padding: 0; width: 99.375%;&#34;&gt;&lt;div style=&#34;padding: 8px;&#34;&gt;&lt;div style=&#34;background: #F8F8F8; line-height: 0; margin-top: 40px; padding: 50.0% 0; text-align: center; width: 100%;&#34;&gt;&lt;div style=&#34;background: url(data:image/png; display: block; height: 44px; margin: 0 auto -44px; position: relative; top: -22px; width: 44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;margin: 8px 0 0 0; padding: 0 4px;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BJaTBjwDXQW/&#34; style=&#34;color: black; font-family: &amp;quot;arial&amp;quot; , sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none; word-wrap: break-word;&#34; target=&#34;_blank&#34;&gt;Sudah berapa banyak masalah yang berhasil kalian selesaikan?&lt;/a&gt;&lt;/div&gt;&lt;div style=&#34;color: #c9c8cd; font-family: Arial,sans-serif; font-size: 14px; line-height: 17px; margin-bottom: 0; margin-top: 8px; overflow: hidden; padding: 8px 0 7px; text-align: center; text-overflow: ellipsis; white-space: nowrap;&#34;&gt;A photo posted by Petani Kode (@petanikode) on &lt;time datetime=&#34;2016-08-22T12:25:17+00:00&#34; style=&#34;font-family: Arial,sans-serif; font-size: 14px; line-height: 17px;&#34;&gt;Aug 22, 2016 at 5:25am PDT&lt;/time&gt;&lt;/div&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;script async=&#34;&#34; defer=&#34;&#34; src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;/div&gt;&lt;h2&gt;8. Ikuti Tantangan&lt;/h2&gt;&lt;div&gt;Asah terus kemampuan dengan mengikuti berbagai tantangan di internet, seperti di &lt;a href=&#34;https://codefights.com/&#34; target=&#34;_blank&#34;&gt;codefights.com&lt;/a&gt;, &lt;a href=&#34;https://www.hackerrank.com/&#34; target=&#34;_blank&#34;&gt;HackerRank&lt;/a&gt;, &lt;a href=&#34;https://www.dicoding.com/challenges&#34; target=&#34;_blank&#34;&gt;dicoding&lt;/a&gt;, dsb.&lt;/div&gt;&lt;h2&gt;9. Belajar Jaringan Komputer&lt;/h2&gt;&lt;div&gt;Meskipun kalian bukan dari jurusan jaringan komputer, tidak ada salahnya belajar jaringan. Belajar konsep-konsep jaringan komputer. Dengan demikian, kita dapat memhami bagaiman data antar mesin berpindah.&lt;/div&gt;&lt;h2&gt;10. Selesaikan Tugas Tepat Waktu&lt;/h2&gt;&lt;div&gt;Jangan menunda-nunda tugas. Selesaikanlah secepatnya. Karena, bila anda tunda-tunda terus, maka akan menjadi beban dan kesempatan atau waktu anda belajar hal yang lain jadi tertunda juga. Kerjakan sekarang dan hari ini, agar besok lebih banyak waktu untuk belajar yang lain. (nasihat untuk saya juga 😊)&lt;/div&gt;&lt;h2&gt;11. Kurangi Multi Tasking&lt;/h2&gt;&lt;div&gt;Ingat, kita bukan komputer yang mampu melakukan lebih dari satu pekerjaan sekaligus. Kita juga bukan Naruto yang mampu menggandakan diri dengan jurus bayangan. Jadi, lakukanlah pekerjaan satu persatu.&lt;/div&gt;&lt;h2&gt;12. Kurangi Buka Sosial Media&lt;/h2&gt;&lt;div&gt;Jangan berlama-lama nongkrong di sosial media. Kurangi membuka sosial media mulai tahun ini. Atau, kalian bisa membuat jadwal dan jatah untuk membuka sosial media. Misalnya pada jam tertentu dengan durasi waktu tertentu.&lt;/div&gt;&lt;h2&gt;13. Buat Karya atau Portofolio&lt;/h2&gt;&lt;div&gt;Kalian diakui bisa atau mengusai sesuatu dari karya atau portofolio yang dibuat, bukan dari berapa tinggi IPK di kampus. Percuma IPK tinggi di jurusan teknik informatika, tapi tidak bisa &lt;i&gt;ngoding&lt;/i&gt;. Mulai tahun ini, cobalah untuk membuat sebuah karya. Tunjukan pada semua orang, hasil kerja kerasmu.&lt;/div&gt;&lt;h2&gt;14. Belajar Bahasa Pemrograman Baru&lt;/h2&gt;&lt;div&gt;Bahasa pemrograman berkembang sangat cepat. Bahkan di tahun lalu, banyak juga bahasa-bahasa baru yang bermunculan. Bagi kalian yang tertarik mencoba sesuatu yang baru, tidak ada salahnya mencoba bahasa pemrograman baru. Kalian bisa mencoba, Swift, Go, Dart, Kotlin, dsb.&lt;/div&gt;&lt;h2&gt;15. Buat Blog&lt;/h2&gt;&lt;div&gt;Kalau sudah punya banyak ilmu, jangan lupa dibagikan. Salah satu caranya bisa melalui blog. Tulislah apa saja yang sudah dipelajari, pengalaman menyelesaikan error, catan-catan penting. Insa&amp;rsquo;allah akan menjadi kontribusi dunia akhirat dan bermanfaat untuk orang banyak.&lt;/div&gt;&lt;h2&gt;16. Belajar Bahasa Inggris&lt;/h2&gt;&lt;div&gt;Bahasa inggris menjadi bahasa yang sangat penting bagi programmer. Karena dengan bahasa inggris kita bisa memahami lebih cepat dan lebih banyak tentang pemrograman. Kita akan lebih mudah menemukan solusi error di Stack Overflow. Mudah mempelajari dokumentasi. Tidak tersesat, bila jalan-jalan ke web mancanegara.&lt;/div&gt;&lt;h2&gt;17. Selalu Ingat Resolusi dan Lakukan&lt;/h2&gt;Terkadang kita sering membuat resolusi di tahun baru. Satu minggu kemudian dilupakan. Lalu, apa gunanya kita membuat resolusi.&lt;br /&gt;&lt;br /&gt;Itulah 17 resolusi untuk meningkatkan kemampuan pemrograman di tahun 2017. Apakah ada di antara 17 ini yang ingin anda wujudkan? atau punya resolusi selain di atas, silahkan ditambahkan.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Melindungi Web dari Serangan XSS pada Framework CodeIgniter</title>
-      <link>http://petanikode.com/2016/12/cara-melindungi-web-dari-serangan-xss-pada-framework-codeigniter/</link>
-      <pubDate>Fri, 23 Dec 2016 05:13:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/12/cara-melindungi-web-dari-serangan-xss-pada-framework-codeigniter/</guid>
-      <description>&lt;p&gt;XSS merupakan kependekan yang digunakan untuk istilah &lt;i&gt;cross site scripting&lt;/i&gt;. XSS merupakan salah satu jenis serangan injeksi code (code injection attack). XSS dilakukan oleh penyerang dengan cara memasukkan kode HTML atau client script code lainnya ke suatu situs. Serangan ini akan seolah-olah datang dari situs tersebut. Akibat serangan ini antara lain penyerang dapat mem-bypass keamanan di sisi klien, mendapatkan informasi sensitif, atau menyimpan aplikasi berbahaya. Alasan kependekan yang digunakan XSS bukan CSS karena CSS sudah digunakan untuk &lt;i&gt;cascade style sheet&lt;/i&gt;. –&amp;nbsp;&lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34; target=&#34;_blank&#34;&gt;id.wikipedia.org&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Saya akan perjelas lagi. Ceritanya, ada sebuah form dan di sana kita diminta untuk mengisi &lt;i&gt;nama&lt;/i&gt;, &lt;i&gt;nip&lt;/i&gt;, dan &lt;i&gt;jabatan&lt;/i&gt;. Akan tetapi, karena ada seorang yang usil. Dia tidak mengisi &lt;i&gt;nama&lt;/i&gt;, melainkan mengisi kode HTML dan Javascript.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-RaTvgUtLC_0/WEAYT6jwX_I/AAAAAAAADeY/eD26N9ib44UY0fK8qDymlxWfeEgMQRi3wCK4B/s1600/Percobaan%2Bserangan%2BXSS%2Bmelalui%2BForm.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-RaTvgUtLC_0/WEAYT6jwX_I/AAAAAAAADeY/eD26N9ib44UY0fK8qDymlxWfeEgMQRi3wCK4B/s1600/Percobaan%2Bserangan%2BXSS%2Bmelalui%2BForm.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Maka yang akan tersimpan ke dalam database adalah skrip di atas. Secara otomatis, ketika data ditampilkan, browser akan mengekekusi skrip tersebut.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-mKxLOdBzrJ0/WEAYdrVSV7I/AAAAAAAADeg/fNvZ-TPt-OY4bS6-tHDb2favPObm6V9MgCK4B/s1600/Serangan%2Bsukses%2B1%2B-%2Bhacked%2Bby%2Bpetani%2Bkode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-mKxLOdBzrJ0/WEAYdrVSV7I/AAAAAAAADeg/fNvZ-TPt-OY4bS6-tHDb2favPObm6V9MgCK4B/s1600/Serangan%2Bsukses%2B1%2B-%2Bhacked%2Bby%2Bpetani%2Bkode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Si admin sepertinya akan panik.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_S5JiF6GTVc/WEAYmOKIzYI/AAAAAAAADeo/qjKNEKZgWtE1GapgZMS9v1z9RZI3j_38wCK4B/s1600/hasil%2Bhacking%2BXSS.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-_S5JiF6GTVc/WEAYmOKIzYI/AAAAAAAADeo/qjKNEKZgWtE1GapgZMS9v1z9RZI3j_38wCK4B/s1600/hasil%2Bhacking%2BXSS.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Nah, itulah salah satu bentuk serangan XSS. Penyerang sangant leluasa memasukan skrip ke website kita. Lalu, bagaimana cara mengatasi ini di CodeIgniter?&lt;br /&gt;&lt;br /&gt;CodeIgniter sebenarnya sudah menyediakan fitur &lt;i&gt;Global XSS Filtering&lt;/i&gt;. Cara mengaktifkannya, tinggal mengganti nilai &lt;code&gt;FALSE&lt;/code&gt; menjadi &lt;code&gt;TRUE&lt;/code&gt; pada &lt;code&gt;application/config/config.php&lt;/code&gt;.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-_C7i3mJy-1A/WECD4J7ifrI/AAAAAAAADe8/s1JFRU96nycO-rwguskQdqIHeNrpIOMGwCK4B/s1600/Global%2BXSS%2BFiltering.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-_C7i3mJy-1A/WECD4J7ifrI/AAAAAAAADe8/s1JFRU96nycO-rwguskQdqIHeNrpIOMGwCK4B/s1600/Global%2BXSS%2BFiltering.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Dengan demikian, semua input dari pengguna atau penyerang akan dikonversi dulu sebelum di simpan ke database. Akan tetapi fitur ini sudah tidak tersedia lagi.&lt;br /&gt;&lt;blockquote class=&#34;tr_bq&#34;&gt;&lt;i&gt;The ‘global_xss_filtering’ setting is DEPRECATED and kept solely for backwards-compatibility purposes. XSS escaping should be performed on output, not input!&lt;/i&gt;&lt;br /&gt;–&amp;nbsp;&lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/input.html?highlight=xss#xss-filtering&#34; target=&#34;_blank&#34;&gt;dokumentasi CI&lt;/a&gt;&lt;/blockquote&gt;Sepertinya pengembang CI sudah menyadari, kalau XSS itu masalah pada output, bukan input.&lt;br /&gt;&lt;br /&gt;Cara mengatasi XSS yang lain adalah dengan melakukan validasi input (&lt;code&gt;xss_clean&lt;/code&gt;). Namun, seperti yang disebutkan tadi. XSS masalah pada output bukan input. Lalu bagaimana?&lt;br /&gt;&lt;br /&gt;Mau tidak mau, kita harus merubah dulu data yang akan ditampilkan agar tidak dieksekusi oleh browser. Misalnya seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;echo htmlentities($data-&amp;gt;nama, ENT_QUOTES, &amp;lsquo;UTF-8&amp;rsquo;);&lt;/code&gt;&lt;/pre&gt;Sepertinya terlalu panjang. Kita harus mengetik fungsi tersebut setiap mau menampilkan data. Kalau begitu kita jadikan &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Buatlah sebuah &lt;i&gt;helper&lt;/i&gt; pada direktori &lt;code&gt;application/helpers&lt;/code&gt;. Berikan nama &lt;code&gt;xss_helper.php&lt;/code&gt;, kemudian isi kodenya seperti berikut ini.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-oF2kSVvYF2I/WECIbBIH7jI/AAAAAAAADfI/fBgAJyXYRhcbifZ6G9BOd2GrmUEn-AG4ACK4B/s1600/XSS%2BHelper%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-oF2kSVvYF2I/WECIbBIH7jI/AAAAAAAADfI/fBgAJyXYRhcbifZ6G9BOd2GrmUEn-AG4ACK4B/s1600/XSS%2BHelper%2BCodeIgniter.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;&lt;br /&gt;function cetak($str){&lt;br /&gt;&amp;nbsp; &amp;nbsp; echo htmlentities($str, ENT_QUOTES, &amp;lsquo;UTF-8&amp;rsquo;);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Setelah itu,masukan helper ini ke dalam &lt;i&gt;autoload&lt;/i&gt;. Buka, &lt;code&gt;application/config/autoload.php&lt;/code&gt;, kemudian tambahkan &lt;code&gt;xss&lt;/code&gt; pada &lt;i&gt;autoload helper&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code clas=&#34;php&#34;&gt;/&lt;em&gt;&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| &amp;nbsp;Auto-load Helper Files&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| Prototype:&lt;br /&gt;|&lt;br /&gt;| $autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;, &amp;lsquo;file&amp;rsquo;);&lt;br /&gt;&lt;/em&gt;/&lt;br /&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;,&amp;lsquo;cookie&amp;rsquo;,&amp;lsquo;form&amp;rsquo;, &lt;mark&gt;&amp;lsquo;xss&amp;rsquo;&lt;/mark&gt;);&lt;/code&gt;&lt;/pre&gt;Sekarang fungsi &lt;code&gt;echo&lt;/code&gt;, kita ganti dengan fungsi &lt;code&gt;cetak()&lt;/code&gt;. Cara penggunaanya, tinggal kita panggil fungsi &lt;code&gt;cetak()&lt;/code&gt; pada tempat atau &lt;i&gt;view&lt;/i&gt; yang mungkin bisa terkena XSS.&lt;br /&gt;&lt;pre&gt;&lt;code clas=&#34;php&#34;&gt;&amp;lt;?php foreach($pejabat as $pjb){?&amp;gt;&lt;br /&gt;&amp;lt;tr&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;nama) ?&amp;gt;&amp;lt;/td&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;nip) ?&amp;gt;&amp;lt;/td&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;jabatan) ?&amp;gt;&amp;lt;/td&amp;gt;&lt;br /&gt;&amp;lt;/tr&amp;gt;&lt;br /&gt;&amp;lt;?php } ?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Maka, teks akan ditampilkan apa adanya, tidak lagi dieksekusi oleh browser. 😊&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-D3P_TkOCiQw/WECJoF0hhBI/AAAAAAAADfQ/c6BaAuc_Kts7vgmSjZrrdHRO7vyoV5NEwCK4B/s1600/Hasil%2Boutput%2BXSS%2Bfiltering.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-D3P_TkOCiQw/WECJoF0hhBI/AAAAAAAADfQ/c6BaAuc_Kts7vgmSjZrrdHRO7vyoV5NEwCK4B/s1600/Hasil%2Boutput%2BXSS%2Bfiltering.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34;&gt;https://id.wikipedia.org/wiki/XSS&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&#34;&gt;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.htmlentities.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.htmlentities.php&#34;&gt;http://php.net/manual/en/function.htmlentities.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/security.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/security.html&#34;&gt;https://www.codeigniter.com/userguide3/libraries/security.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&#34;&gt;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
 </description>
     </item>
     

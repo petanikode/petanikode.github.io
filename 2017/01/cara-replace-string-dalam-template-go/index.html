@@ -33,7 +33,6 @@
     <meta content='ID-id' http-equiv='content-language'/>
 <meta content='index,follow' name='robots'/>
 <meta content='Petani Kode' name='copyright'/>
-<meta content='index,follow' name='googlebot'/>
 <meta content='Indonesian' name='language'/>
 <meta content='6F355AD626E325F1305BDE3A0BA81A7A' name='msvalidate.01'/>
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
@@ -45,6 +44,19 @@ Misalnya, dari URL ini:
 https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s72-c/pemrograman%2Bjavascript%2B-%2Bpetanikode.png  Menjadi seperti ini:
 https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png  Nah, di sana saya ingin merubah s72-c agar menjadi s1600. Pada template Hugo, saya bisa melakukannya seperti ini:
 {{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}  Namun, Go belum memiliki fungsi replace seperti Hugo. Setelah bolak-balik Google dan Stack Overflow, saya akhirnya membuat sebuah pertanyaan baru di Stack Overflow dan mendapatkan jawabannya."/>
+
+<meta content='index,follow' name='googlebot'/>
+<meta content='follow, all' name='Googlebot-Image'/>
+<meta content='follow, all' name='Scooter'/>
+<meta content='follow, all' name='msnbot'/>
+<meta content='follow, all' name='alexabot'/>
+<meta content='follow, all' name='Slurp'/>
+<meta content='follow, all' name='ZyBorg'/>
+<meta content='follow, all' name='Scooter'/>
+<meta content='true' name='MSSmartTagsPreventParsing'/>
+<meta content='ALL' name='SPIDERS'/>
+<meta content='ALL' name='WEBCRAWLERS'/>
+<meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
     <meta property="og:title" content="Cara Replace String dalam Template Go" />
@@ -249,6 +261,30 @@ https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXp
         "url" : "http:\/\/2.bp.blogspot.com\/-pJdBch_oQqw\/V3y2tFqPZ4I\/AAAAAAAAC9U\/7ujD0ZwCPp8ONjjVN_Hsh7zKqg6z7SKjwCK4B\/s1600\/petanikode-logo-2016-withtext.png",
         "height" :  60 ,
         "width" :  600 
+    }
+  }
+
+  "review": {
+    "@type": "Review",
+    "url": "http:\/\/petanikode.com\/2017\/01\/cara-replace-string-dalam-template-go\/",
+    "author": {
+      "@type": "Person",
+      "name": "Ardianta Pargo",
+      "sameAs": "http:\/\/twitter.com\/ardiantapargo"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "petanikode.com",
+      "sameAs": "http://petanikode.com"
+    },
+    "datePublished": "2017-01-20T14:32:22",
+    "description": "Sebuah masalah kecil yang saya temukan ketika mengedit skrip Blogimport. Saya ingin memperbesar ukuran gambar thumbnail dengan cara me-replace string yang ada di URL.\nMisalnya, dari URL ini:\nhttps:\/\/2.bp.blogspot.com\/-DEeRanrBa6s\/WGWGwA2qW5I\/AAAAAAAADg4\/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B\/s72-c\/pemrograman%2Bjavascript%2B-%2Bpetanikode.png  Menjadi seperti ini:\nhttps:\/\/2.bp.blogspot.com\/-DEeRanrBa6s\/WGWGwA2qW5I\/AAAAAAAADg4\/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B\/s1600\/pemrograman%2Bjavascript%2B-%2Bpetanikode.png  Nah, di sana saya ingin merubah s72-c agar menjadi s1600. Pada template Hugo, saya bisa melakukannya seperti ini:\n{{ replace .Media.ThumbnailUrl \x27s72-c\x27 \x27s1600\x27 }}  Namun, Go belum memiliki fungsi replace seperti Hugo. Setelah bolak-balik Google dan Stack Overflow, saya akhirnya membuat sebuah pertanyaan baru di Stack Overflow dan mendapatkan jawabannya.",
+    "inLanguage": "id",
+    "reviewRating": {
+      "@type": "Rating",
+      "worstRating": 1,
+      "bestRating": 5,
+      "ratingValue": 5
     }
   }
 }

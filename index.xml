@@ -7,8 +7,112 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 31 Jan 2017 12:09:55 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Feb 2017 08:15:19 +0000</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Menjalankan PHP Melalui CMD</title>
+      <link>http://petanikode.com/2017/02/cara-menjalankan-php-melalui-cmd/</link>
+      <pubDate>Sat, 04 Feb 2017 08:15:19 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/cara-menjalankan-php-melalui-cmd/</guid>
+      <description>
+
+&lt;p&gt;&lt;amp-img
+width=&#34;720&#34;
+height=&#34;380&#34;
+alt=&#34;CMD PHP petnaikode.com&#34;
+src=&#34;http://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s1600/CMD%2BPHP%2B-%2BPetanikode.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sudah lama tidak otak-atik Windows. Pemrograman di Windows sepertinya terasa sedikit sulit, karena sudah terbiasa dengen Linux. Ketika saya menginginkan apa-apa, tinggal ketik &lt;code&gt;sudo apt install&lt;/code&gt; dan semuanya sudah siap. Namun, kali ini saya sedang meminjam komputer lab. yang menggunakan sistem operasi Windows. Jadi, tidak ada &lt;code&gt;sudo apt install&lt;/code&gt; yang dapat kita suruh-suruh.&lt;/p&gt;
+
+&lt;p&gt;Ketika saya mencoba mengetik perintah &lt;code&gt;php&lt;/code&gt; di &lt;em&gt;Command Prompt&lt;/em&gt; (CMD), perintah tersebut tidak dikenali. Padahal di sana sudah terinstal XAMPP. Menjalankan PHP melalui CMD sebenarnya bisa dilakukan langsung melalui XAMPP Control Panel. Di sana sudah disediakan tombol untuk mengakses &lt;em&gt;shell&lt;/em&gt;. Namun, saya maunya &lt;code&gt;php&lt;/code&gt; dapat dijalankan melalui CMD, bukan dari &lt;em&gt;shell&lt;/em&gt; bawaan XAMPP.&lt;/p&gt;
+
+&lt;p&gt;Adapun langkah-langkah yang harus dilakukan agar perintah &lt;code&gt;php&lt;/code&gt; dapat dikenali pada CMD adalah sebagai berikut.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-cari-lokasi-php-yang-terinstal&#34;&gt;1. Cari Lokasi PHP yang Terinstal&lt;/h2&gt;
+
+&lt;p&gt;Pertama, silahkan cari lokasi PHP terinstal. Kalau menggunakan XAMPP, biasanya lokasinya berada di &lt;code&gt;C:\xampp\php&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;853&#34;
+height=&#34;465&#34;
+alt=&#34;Loksi PHP yang terinstal di windows&#34;
+src=&#34;http://1.bp.blogspot.com/-BwbtpA4Qf4M/WGlYGgzzJMI/AAAAAAAADkA/p7BjNBLUrLEmNxGucbaft6_EMksG5VLzwCK4B/s1600/1.%2BLokasi%2BPHP%2Bdiinstal%2Boleh%2BXAMPP.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-jalankan-system-properties&#34;&gt;2. Jalankan System Properties&lt;/h2&gt;
+
+&lt;p&gt;Tekan tombol Windows+R, kemudian pada jendela Run ketik &lt;code&gt;%windir%\System32\SystemPropertiesAdvanced.exe&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;413&#34;
+height=&#34;212&#34;
+alt=&#34;Jalankan Sistem Properties&#34;
+src=&#34;http://2.bp.blogspot.com/-GgrDET8Sve4/WGlY0botnhI/AAAAAAAADkI/ZExvx82wEaYP3Jko1RP4O9AyAQfA4-n9QCK4B/s1600/2.%2BJalankan%2BSystemPropertiesAdvenced.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-masuk-ke-environtment-variables&#34;&gt;3. Masuk ke &lt;em&gt;Environtment Variables&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Klik tombol &lt;em&gt;Environtment Variables.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;426&#34;
+height=&#34;474&#34;
+alt=&#34;Masuk ke environtment variables&#34;
+src=&#34;http://4.bp.blogspot.com/-eHLY5HjNKeA/WGlZXlU6V7I/AAAAAAAADkQ/UzLvUEsC2Ug4gqTZfa6duacvgF2suM0rQCK4B/s1600/3.%2BKetika%2BEnvironment%2BVariables.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-edit-variabel-path&#34;&gt;4. Edit Variabel Path&lt;/h2&gt;
+
+&lt;p&gt;Pilih dulu variabel &lt;i&gt;path&lt;/i&gt;, kemudian klik tombol &lt;i&gt;Edit&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;394&#34;
+height=&#34;436&#34;
+alt=&#34;Pilih path&#34;
+src=&#34;http://2.bp.blogspot.com/-gx_iydRBbnA/WGlZxn_YrhI/AAAAAAAADkc/hCDMEfxR8KoRao_GwYF2QNvMlsqAwYBngCK4B/s1600/4.%2BPilih%2BPath%2Bkemudian%2Bklik%2BEdit.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-masukan-lokasi-php&#34;&gt;5. Masukan Lokasi PHP&lt;/h2&gt;
+
+&lt;p&gt;Tambahkan nilai akhir pada variabel &lt;em&gt;path&lt;/em&gt; dengan lokasi PHP yang kita dapatkan pada langkah pertama tadi. Tambahkan tanda titik koma (&lt;code&gt;;&lt;/code&gt;) di depannya untuk memisahkan. Sehingga menjadi seperti ini &lt;code&gt;;C:\xampp\php&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;394&#34;
+height=&#34;436&#34;
+alt=&#34;Pilih path&#34;
+src=&#34;http://1.bp.blogspot.com/-09vetrJJMrA/WGlaam0jrBI/AAAAAAAADko/H1vZyV144Wkh9tx3xxCgBLMlWASlveP3gCK4B/s1600/5.%2BTambahkan%2Blokasi%2Bphp.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, klik OK.&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-percobaan&#34;&gt;6. Percobaan&lt;/h2&gt;
+
+&lt;p&gt;Cobalah untuk mengetik perintah &lt;code&gt;php --version&lt;/code&gt; pada CMD. Kalau hasilnya seperti gambar berikut ini, artinya perintah &lt;code&gt;php&lt;/code&gt; sudah berhasil dikenali pada CMD.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;667&#34;
+height=&#34;342&#34;
+alt=&#34;Percobaan perintah php&#34;
+src=&#34;http://1.bp.blogspot.com/-dsh2u0m42gM/WGla43_2kwI/AAAAAAAADkw/rXmmwo3T__g2j5LdUDg7WBZBXbohl9eegCK4B/s1600/6.%2BPercobaan%2Bperintah%2BPHP%2Bmelalui%2BCMD.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-percobaan-eksekusi-file-php&#34;&gt;7. Percobaan Eksekusi File PHP&lt;/h2&gt;
+
+&lt;p&gt;Sekarang Cobalah buat file PHP, kemudian eksekusi melalui CMD.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;667&#34;
+height=&#34;342&#34;
+alt=&#34;Percobaan eksekusi php&#34;
+src=&#34;https://3.bp.blogspot.com/-iliONqyMRiw/WGlb06iwoNI/AAAAAAAADk8/dKuuPCDZl1cBLOajBcIVRlzBMcdLSB3qQCK4B/s1600/7.%2BEksekusi%2BFile%2BPHP%2Bdari%2BCMD.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selaamt! Sekarang PHP sudah bisa dijalankan melalui CMD.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Cara Upload File ke Server FTP ala Git</title>
@@ -1246,62 +1350,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 &lt;h2 id=&#34;cara-kirim-artikel&#34;&gt;Cara Kirim Artikel&lt;/h2&gt;
 
 &lt;p&gt;Kirimkan artikel anda ke alamat email &lt;code&gt;ahmad.muhardian@gmail.com&lt;/code&gt; (lampirkan juga gambar yang anda gunakan di artikel). Kami akan me-review artikel. Kemudian akan diterbitkan apabila sudah disetujui.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Kebijakan Privasi</title>
-      <link>http://petanikode.com/kebijakan-privasi/</link>
-      <pubDate>Sat, 14 Jan 2017 22:20:58 +0800</pubDate>
-      
-      <guid>http://petanikode.com/kebijakan-privasi/</guid>
-      <description>
-
-&lt;p&gt;Kami menyadari bahwa privasi Anda sangat penting, untuk itu kami berusaha menuliskan beberapa kebijakan privasi (Privacy Policy) yang berhubungan dengan penggunaan website ini:&lt;/p&gt;
-
-&lt;h2 id=&#34;informasi-apa-yang-kami-kumpulkan&#34;&gt;Informasi apa yang kami kumpulkan?&lt;/h2&gt;
-
-&lt;p&gt;Kami mengumpulkan informasi dari Anda ketika Anda melakukan login untuk memberikan komentar, pengisiaan form kontak kami, mengikuti kegiatan-kegiatan yang diselengarakan ataupun pengumpulan informasi lainya. Saat mengisi data di situs Petani Kode, sebagaimana mestinya, Anda mungkin akan diminta untuk memasukkan: nama, alamat e-mail, alamat tempat tinggal, nomor telepon atau akun jejaring sosial. Anda juga dapat mengunjungi situs kami secara anonim (tidak dikenal).&lt;/p&gt;
-
-&lt;p&gt;Selain itu, kami juga melakukan pencatatan informasi ke dalam sistem kami. Informasi yang dicatat pada umumnya meliputi alamat protokol internet &lt;em&gt;(IP Address)&lt;/em&gt;, jenis &lt;em&gt;browser&lt;/em&gt;, &lt;em&gt;Internet Service Provider&lt;/em&gt; (ISP), tanggal/waktu, &lt;em&gt;referer&lt;/em&gt;, jumlah klik, informasi demografis dan informasi lainnya.&lt;/p&gt;
-
-&lt;h2 id=&#34;untuk-apa-kami-menggunakan-informasi-anda&#34;&gt;Untuk apa kami menggunakan informasi Anda?&lt;/h2&gt;
-
-&lt;p&gt;Setiap informasi yang kami kumpulkan dari Anda, mungkin digunakan dalam salah satu hal berikut:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Untuk mempersonalisasi pengalaman Anda (Informasi Anda membantu kami untuk lebih menanggapi kebutuhan personal Anda)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Untuk meningkatkan kualitas website kami (Kami terus berupaya untuk meningkatkan kualitas website kami berdasarkan informasi dan umpan balik yang kami terima dari Anda)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Untuk meningkatkan layanan pengunjung (Informasi Anda membantu kami untuk lebih efektif menanggapi permintaan layanan pelanggan Anda dan dukungan yang diperlukan)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Untuk mengirim email berkala/newsletter (Alamat email yang Anda berikan dapat digunakan untuk mengirimkan informasi, menjawab pertanyaan, dan/atau permintaan atau pertanyaan.)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;bagaimana-kami-melindungi-informasi-anda&#34;&gt;Bagaimana kami melindungi informasi Anda?&lt;/h2&gt;
-
-&lt;p&gt;Kami menerapkan berbagai langkah-langkah keamanan untuk menjaga keamanan informasi pribadi Anda ketika Anda login atau masukkan, kirim, atau mengakses informasi pribadi Anda.&lt;/p&gt;
-
-&lt;h2 id=&#34;apakah-kami-memberikan-informasi-anda-kepada-pihak-luar&#34;&gt;Apakah Kami memberikan informasi Anda kepada pihak luar?&lt;/h2&gt;
-
-&lt;p&gt;Tidak! Kami tidak menjual, memperdagangkan, atau mengalihkan kepada pihak luar informasi pribadi Anda. Ini tidak termasuk pihak ketiga terpercaya yang membantu kami dalam mengoperasikan website kami, melakukan bisnis kami, atau melayani anda, asalkan pihak-pihak setuju untuk menjaga informasi ini agar tetap rahasia. Kami juga dapat melepaskan informasi Anda ketika kita percaya kepada pihak ketiga yang mematuhi hukum, menegakkan kebijakan situs kami, atau melindungi kita atau hak orang lain, milik, atau keselamatan. Namun, informasi pengunjung non-pribadi mungkin akan diberikan kepada pihak lain untuk pemasaran, iklan, atau penggunaan lainnya.&lt;/p&gt;
-
-&lt;h2 id=&#34;kebijakan-privasi-online&#34;&gt;Kebijakan Privasi Online&lt;/h2&gt;
-
-&lt;p&gt;Kebijakan privasi hanya berlaku online untuk informasi yang dikumpulkan melalui website kami dan bukan untuk informasi yang dikumpulkan offline.&lt;/p&gt;
-
-&lt;h2 id=&#34;syarat-dan-ketentuan&#34;&gt;Syarat dan Ketentuan&lt;/h2&gt;
-
-&lt;p&gt;Silahkan juga kunjungi Syarat dan Ketentuan, menetapkan penggunaan, penolakan, dan batasan tanggung jawab yang mengatur penggunaan situs kami di sini.&lt;/p&gt;
-
-&lt;h2 id=&#34;izin-anda&#34;&gt;Izin Anda&lt;/h2&gt;
-
-&lt;p&gt;Dengan mengakses situs Petani Kode, Anda telah menyetujui kebijakan privasi website kami.&lt;/p&gt;
-
-&lt;h2 id=&#34;hubungi-kami&#34;&gt;Hubungi Kami&lt;/h2&gt;
-
-&lt;p&gt;Jika ada pertanyaan tentang kebijakan privasi, maupun laporan, saran atau masukan mengenai website ini, Anda dapat menghubungi kami melalui halaman kontak.&lt;/p&gt;
 </description>
     </item>
     

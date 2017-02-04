@@ -1518,6 +1518,23 @@ padding: 16px;
                
                <li>
                    <div class="pull-left recent-thumb">
+                       <a href="/2017/02/cara-menjalankan-php-melalui-cmd/">
+                           
+                                <amp-img src="https://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s72-c/CMD%2BPHP%2B-%2BPetanikode.png" width="32" height="32" layout="fixed"></amp-img>
+                           
+                        </a>
+                   </div>
+                   <div class="recent-title">
+                   <a href="/2017/02/cara-menjalankan-php-melalui-cmd/">Cara Menjalankan PHP Melalui CMD</a><br>
+                    04 Feb 2017 · baca 2 menit
+                    </div>
+
+                </li>
+               
+            
+               
+               <li>
+                   <div class="pull-left recent-thumb">
                        <a href="/2017/01/cara-upload-file-ke-server-ftp-ala-git/">
                            
                                 <amp-img src="https://1.bp.blogspot.com/-jeWvQeAn-TQ/WJGe6gyu6vI/AAAAAAAADwM/yJ-X3DG9T5sLyIow4kyD-cHt_nCOYP_qgCPcB/s160-c/upload-file-ftp-ala-git-petanikode.png" width="32" height="32" layout="fixed"></amp-img>
@@ -1578,23 +1595,6 @@ padding: 16px;
                    <div class="recent-title">
                    <a href="/2017/01/4-cara-penulisan-kode-javscript-pada-html/">4 Cara Penulisan Kode Javscript pada HTML</a><br>
                     28 Jan 2017 · baca 2 menit
-                    </div>
-
-                </li>
-               
-            
-               
-               <li>
-                   <div class="pull-left recent-thumb">
-                       <a href="/2017/01/cara-membuat-halaman-github-kurang-dari-10-menit/">
-                           
-                                <amp-img src="https://3.bp.blogspot.com/-f3NdPaAWgzs/WITOd9XOGUI/AAAAAAAADtY/s2eqhveYCsIcHO6gLlcERO7xGa4HuTmcQCPcB/s180-c/github-octocat-petanikode.jpg" width="32" height="32" layout="fixed"></amp-img>
-                           
-                        </a>
-                   </div>
-                   <div class="recent-title">
-                   <a href="/2017/01/cara-membuat-halaman-github-kurang-dari-10-menit/">Cara Membuat Halaman Github Kurang dari 10 Menit</a><br>
-                    25 Jan 2017 · baca 1 menit
                     </div>
 
                 </li>

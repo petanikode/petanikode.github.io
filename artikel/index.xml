@@ -7,8 +7,112 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 31 Jan 2017 12:09:55 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Feb 2017 08:15:19 +0000</lastBuildDate>
     <atom:link href="http://petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Menjalankan PHP Melalui CMD</title>
+      <link>http://petanikode.com/2017/02/cara-menjalankan-php-melalui-cmd/</link>
+      <pubDate>Sat, 04 Feb 2017 08:15:19 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/cara-menjalankan-php-melalui-cmd/</guid>
+      <description>
+
+&lt;p&gt;&lt;amp-img
+width=&#34;720&#34;
+height=&#34;380&#34;
+alt=&#34;CMD PHP petnaikode.com&#34;
+src=&#34;http://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s1600/CMD%2BPHP%2B-%2BPetanikode.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sudah lama tidak otak-atik Windows. Pemrograman di Windows sepertinya terasa sedikit sulit, karena sudah terbiasa dengen Linux. Ketika saya menginginkan apa-apa, tinggal ketik &lt;code&gt;sudo apt install&lt;/code&gt; dan semuanya sudah siap. Namun, kali ini saya sedang meminjam komputer lab. yang menggunakan sistem operasi Windows. Jadi, tidak ada &lt;code&gt;sudo apt install&lt;/code&gt; yang dapat kita suruh-suruh.&lt;/p&gt;
+
+&lt;p&gt;Ketika saya mencoba mengetik perintah &lt;code&gt;php&lt;/code&gt; di &lt;em&gt;Command Prompt&lt;/em&gt; (CMD), perintah tersebut tidak dikenali. Padahal di sana sudah terinstal XAMPP. Menjalankan PHP melalui CMD sebenarnya bisa dilakukan langsung melalui XAMPP Control Panel. Di sana sudah disediakan tombol untuk mengakses &lt;em&gt;shell&lt;/em&gt;. Namun, saya maunya &lt;code&gt;php&lt;/code&gt; dapat dijalankan melalui CMD, bukan dari &lt;em&gt;shell&lt;/em&gt; bawaan XAMPP.&lt;/p&gt;
+
+&lt;p&gt;Adapun langkah-langkah yang harus dilakukan agar perintah &lt;code&gt;php&lt;/code&gt; dapat dikenali pada CMD adalah sebagai berikut.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-cari-lokasi-php-yang-terinstal&#34;&gt;1. Cari Lokasi PHP yang Terinstal&lt;/h2&gt;
+
+&lt;p&gt;Pertama, silahkan cari lokasi PHP terinstal. Kalau menggunakan XAMPP, biasanya lokasinya berada di &lt;code&gt;C:\xampp\php&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;853&#34;
+height=&#34;465&#34;
+alt=&#34;Loksi PHP yang terinstal di windows&#34;
+src=&#34;http://1.bp.blogspot.com/-BwbtpA4Qf4M/WGlYGgzzJMI/AAAAAAAADkA/p7BjNBLUrLEmNxGucbaft6_EMksG5VLzwCK4B/s1600/1.%2BLokasi%2BPHP%2Bdiinstal%2Boleh%2BXAMPP.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-jalankan-system-properties&#34;&gt;2. Jalankan System Properties&lt;/h2&gt;
+
+&lt;p&gt;Tekan tombol Windows+R, kemudian pada jendela Run ketik &lt;code&gt;%windir%\System32\SystemPropertiesAdvanced.exe&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;413&#34;
+height=&#34;212&#34;
+alt=&#34;Jalankan Sistem Properties&#34;
+src=&#34;http://2.bp.blogspot.com/-GgrDET8Sve4/WGlY0botnhI/AAAAAAAADkI/ZExvx82wEaYP3Jko1RP4O9AyAQfA4-n9QCK4B/s1600/2.%2BJalankan%2BSystemPropertiesAdvenced.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-masuk-ke-environtment-variables&#34;&gt;3. Masuk ke &lt;em&gt;Environtment Variables&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Klik tombol &lt;em&gt;Environtment Variables.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;426&#34;
+height=&#34;474&#34;
+alt=&#34;Masuk ke environtment variables&#34;
+src=&#34;http://4.bp.blogspot.com/-eHLY5HjNKeA/WGlZXlU6V7I/AAAAAAAADkQ/UzLvUEsC2Ug4gqTZfa6duacvgF2suM0rQCK4B/s1600/3.%2BKetika%2BEnvironment%2BVariables.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-edit-variabel-path&#34;&gt;4. Edit Variabel Path&lt;/h2&gt;
+
+&lt;p&gt;Pilih dulu variabel &lt;i&gt;path&lt;/i&gt;, kemudian klik tombol &lt;i&gt;Edit&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;394&#34;
+height=&#34;436&#34;
+alt=&#34;Pilih path&#34;
+src=&#34;http://2.bp.blogspot.com/-gx_iydRBbnA/WGlZxn_YrhI/AAAAAAAADkc/hCDMEfxR8KoRao_GwYF2QNvMlsqAwYBngCK4B/s1600/4.%2BPilih%2BPath%2Bkemudian%2Bklik%2BEdit.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-masukan-lokasi-php&#34;&gt;5. Masukan Lokasi PHP&lt;/h2&gt;
+
+&lt;p&gt;Tambahkan nilai akhir pada variabel &lt;em&gt;path&lt;/em&gt; dengan lokasi PHP yang kita dapatkan pada langkah pertama tadi. Tambahkan tanda titik koma (&lt;code&gt;;&lt;/code&gt;) di depannya untuk memisahkan. Sehingga menjadi seperti ini &lt;code&gt;;C:\xampp\php&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;394&#34;
+height=&#34;436&#34;
+alt=&#34;Pilih path&#34;
+src=&#34;http://1.bp.blogspot.com/-09vetrJJMrA/WGlaam0jrBI/AAAAAAAADko/H1vZyV144Wkh9tx3xxCgBLMlWASlveP3gCK4B/s1600/5.%2BTambahkan%2Blokasi%2Bphp.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, klik OK.&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-percobaan&#34;&gt;6. Percobaan&lt;/h2&gt;
+
+&lt;p&gt;Cobalah untuk mengetik perintah &lt;code&gt;php --version&lt;/code&gt; pada CMD. Kalau hasilnya seperti gambar berikut ini, artinya perintah &lt;code&gt;php&lt;/code&gt; sudah berhasil dikenali pada CMD.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;667&#34;
+height=&#34;342&#34;
+alt=&#34;Percobaan perintah php&#34;
+src=&#34;http://1.bp.blogspot.com/-dsh2u0m42gM/WGla43_2kwI/AAAAAAAADkw/rXmmwo3T__g2j5LdUDg7WBZBXbohl9eegCK4B/s1600/6.%2BPercobaan%2Bperintah%2BPHP%2Bmelalui%2BCMD.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-percobaan-eksekusi-file-php&#34;&gt;7. Percobaan Eksekusi File PHP&lt;/h2&gt;
+
+&lt;p&gt;Sekarang Cobalah buat file PHP, kemudian eksekusi melalui CMD.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;667&#34;
+height=&#34;342&#34;
+alt=&#34;Percobaan eksekusi php&#34;
+src=&#34;https://3.bp.blogspot.com/-iliONqyMRiw/WGlb06iwoNI/AAAAAAAADk8/dKuuPCDZl1cBLOajBcIVRlzBMcdLSB3qQCK4B/s1600/7.%2BEksekusi%2BFile%2BPHP%2Bdari%2BCMD.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selaamt! Sekarang PHP sudah bisa dijalankan melalui CMD.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Cara Upload File ke Server FTP ala Git</title>
@@ -1449,16 +1553,6 @@ src=&#34;http://i.imgur.com/5sv5CXW.jpg&#34;
 width=&#34;720&#34;
 height=&#34;380&#34;
 layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>17 Resolusi untuk Meningkatkan Kemampuan Pemrograman di Tahun 2017</title>
-      <link>http://petanikode.com/2017/01/17-resolusi-untuk-meningkatkan-kemampuan-pemrograman-di-tahun-2017/</link>
-      <pubDate>Tue, 03 Jan 2017 07:12:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/17-resolusi-untuk-meningkatkan-kemampuan-pemrograman-di-tahun-2017/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-iXT4baQA15U/WGM1TS5gqWI/AAAAAAAADgo/5v1xfk6tpjg7FNVtZRoAjSEUyVutBz-RACK4B/s1600/resolusi%2Btahun%2Bbaru.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-iXT4baQA15U/WGM1TS5gqWI/AAAAAAAADgo/5v1xfk6tpjg7FNVtZRoAjSEUyVutBz-RACK4B/s1600/resolusi%2Btahun%2Bbaru.jpg&#34; /&gt;&lt;/a&gt;Selamat tahun baru 2017. Sejauh mana kemampuan pemrograman yang kalian miliki? apakah kalian ingin meningkatkannya? atau malah menurun dan lebih buruk dari tahun sebelumnya. Wah, semoga saja tidak. Berikut ini ada 17 resolusi untuk meningkatkan kemampuan pemrogramanmu di tahun 2017.&lt;br /&gt;&lt;h2&gt;1. Mulai Menggunakan Linux&lt;/h2&gt;&lt;div&gt;Bagi kalian yang masih menggunakan windows, tidak ada salahnya mencoba menggunakan linux untuk pemrograman. Kenali konsep dan filosofi &lt;i&gt;open source&lt;/i&gt;. Rasakan sensasinya menulis kode dengan linux. Saya yakin, setelah satu tahun menggunakan Linux, anda pasti bisa.&lt;/div&gt;&lt;h2&gt;2. Terilbat dalam Komunitas&lt;/h2&gt;&lt;div&gt;Komunitas sangat penting untuk bertukar ilmu, pengalaman, dan informasi. Ikutilah komunitas-komunitas pemrograman yang ada di sekitarmu, entah itu komunitas &lt;i&gt;offline&lt;/i&gt; maupun &lt;i&gt;online&lt;/i&gt;. Komunitas juga dapat meningkatkan kemampuan komunikasimu.&lt;/div&gt;&lt;h2&gt;3. Mulai Menggunakan &lt;i&gt;Version Control&lt;/i&gt;&lt;/h2&gt;&lt;div&gt;Version Control tidak diajari di kampus. Sedangkan di dunia kerja banyak dibutuhkan. Bahkan ada perusahaan yang menjadikan &lt;i&gt;version control&lt;/i&gt; sebagai syarat untuk melamar pekerjaan. Mulai tahun ini, coba belajar&lt;i&gt; version control&lt;/i&gt;.&lt;/div&gt;&lt;h2&gt;4. Kurangi Begadang&lt;/h2&gt;&lt;div&gt;Banyak begadang bisa jadi menurunkan kinerja otak dan tubuh kita. Karena itu, kurangilah begadang pada tahun 2017 ini. Saya sendiri sudah merencanakan sejak awal bulan desember lalu untuk mengubah pola tidur. Tidur setelah solat isa, kemudian bangun pukul 1 untuk belajar dan &lt;i&gt;coding&lt;/i&gt;. Karena pada pukul 1, tidak banyak yang online di sosial media. Ngoding menjadi lebih fokus.&lt;/div&gt;&lt;h2&gt;5. Perbanyak Baca Buku dan Artikel&lt;/h2&gt;Apa bacaan yang kalian konsumsi setiap hari? status, SMS, Chat, spam, atau apa? apakah itu bermanfaat? Kalau itu memang tidak bermanfaat, sebaiknya dihindari. Karena akan membuang-buang waktu. Lebih baik kalian mulai membaca buku dan artikel yang bermanfaat.&lt;br /&gt;&lt;h2&gt;6. Perbanyak Praktik &lt;i&gt;(coding)&lt;/i&gt;&lt;/h2&gt;&lt;div&gt;Jika kalian ikut seni bela diri karate dan jarang latihan, apakah akan meningkatkan kemampuan? Tentu saja tidak. Sama halnya juga dengan pemrograman. Semakin sering latihan semakin meningkat pula kemampuan yang dimiliki. Latihan bisa dilakukan dengan praktik di kelas atau mengikuti tutorial di internet. Hal ini ditekankan oleh bapak Peter Jack Kambey di PHP indonesia.&lt;/div&gt;&lt;div&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-O-2uDesj-T8/WGK-qKwMNSI/AAAAAAAADgY/yftpS_rmpoY3pBLZ5cnMKshnPMAlSemGwCK4B/s1600/peter%2Bjack%2Bkambey%2B-%2Bphp%2Bindonesia.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-O-2uDesj-T8/WGK-qKwMNSI/AAAAAAAADgY/yftpS_rmpoY3pBLZ5cnMKshnPMAlSemGwCK4B/s1600/peter%2Bjack%2Bkambey%2B-%2Bphp%2Bindonesia.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2&gt;7. Selesaikan Error Secara Mandiri&lt;/h2&gt;&lt;div&gt;Sebelum kalian melempar pertanyaan ke forum maupun grup, sebaiknya selesaikan dulu errornya secara mandiri. Error sedikit, jangan langsung di kirim ke grup. Cobalah untuk berpikir, mencari tahu dan analisa terlebih dahulu. Kalau sudah mencoba berbagai cara, namun belum juga berhasil. Barulah coba lempar ke grup.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-captioned=&#34;&#34; data-instgrm-version=&#34;7&#34; style=&#34;background: #fff; border-radius: 3px; border: 0; box-shadow: 0 0 1px 0 rgba(0 , 0 , 0 , 0.5) , 0 1px 10px 0 rgba(0 , 0 , 0 , 0.15); margin: 1px; max-width: 658px; padding: 0; width: 99.375%;&#34;&gt;&lt;div style=&#34;padding: 8px;&#34;&gt;&lt;div style=&#34;background: #F8F8F8; line-height: 0; margin-top: 40px; padding: 50.0% 0; text-align: center; width: 100%;&#34;&gt;&lt;div style=&#34;background: url(data:image/png; display: block; height: 44px; margin: 0 auto -44px; position: relative; top: -22px; width: 44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;margin: 8px 0 0 0; padding: 0 4px;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BJaTBjwDXQW/&#34; style=&#34;color: black; font-family: &amp;quot;arial&amp;quot; , sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none; word-wrap: break-word;&#34; target=&#34;_blank&#34;&gt;Sudah berapa banyak masalah yang berhasil kalian selesaikan?&lt;/a&gt;&lt;/div&gt;&lt;div style=&#34;color: #c9c8cd; font-family: Arial,sans-serif; font-size: 14px; line-height: 17px; margin-bottom: 0; margin-top: 8px; overflow: hidden; padding: 8px 0 7px; text-align: center; text-overflow: ellipsis; white-space: nowrap;&#34;&gt;A photo posted by Petani Kode (@petanikode) on &lt;time datetime=&#34;2016-08-22T12:25:17+00:00&#34; style=&#34;font-family: Arial,sans-serif; font-size: 14px; line-height: 17px;&#34;&gt;Aug 22, 2016 at 5:25am PDT&lt;/time&gt;&lt;/div&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;script async=&#34;&#34; defer=&#34;&#34; src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;/div&gt;&lt;h2&gt;8. Ikuti Tantangan&lt;/h2&gt;&lt;div&gt;Asah terus kemampuan dengan mengikuti berbagai tantangan di internet, seperti di &lt;a href=&#34;https://codefights.com/&#34; target=&#34;_blank&#34;&gt;codefights.com&lt;/a&gt;, &lt;a href=&#34;https://www.hackerrank.com/&#34; target=&#34;_blank&#34;&gt;HackerRank&lt;/a&gt;, &lt;a href=&#34;https://www.dicoding.com/challenges&#34; target=&#34;_blank&#34;&gt;dicoding&lt;/a&gt;, dsb.&lt;/div&gt;&lt;h2&gt;9. Belajar Jaringan Komputer&lt;/h2&gt;&lt;div&gt;Meskipun kalian bukan dari jurusan jaringan komputer, tidak ada salahnya belajar jaringan. Belajar konsep-konsep jaringan komputer. Dengan demikian, kita dapat memhami bagaiman data antar mesin berpindah.&lt;/div&gt;&lt;h2&gt;10. Selesaikan Tugas Tepat Waktu&lt;/h2&gt;&lt;div&gt;Jangan menunda-nunda tugas. Selesaikanlah secepatnya. Karena, bila anda tunda-tunda terus, maka akan menjadi beban dan kesempatan atau waktu anda belajar hal yang lain jadi tertunda juga. Kerjakan sekarang dan hari ini, agar besok lebih banyak waktu untuk belajar yang lain. (nasihat untuk saya juga 😊)&lt;/div&gt;&lt;h2&gt;11. Kurangi Multi Tasking&lt;/h2&gt;&lt;div&gt;Ingat, kita bukan komputer yang mampu melakukan lebih dari satu pekerjaan sekaligus. Kita juga bukan Naruto yang mampu menggandakan diri dengan jurus bayangan. Jadi, lakukanlah pekerjaan satu persatu.&lt;/div&gt;&lt;h2&gt;12. Kurangi Buka Sosial Media&lt;/h2&gt;&lt;div&gt;Jangan berlama-lama nongkrong di sosial media. Kurangi membuka sosial media mulai tahun ini. Atau, kalian bisa membuat jadwal dan jatah untuk membuka sosial media. Misalnya pada jam tertentu dengan durasi waktu tertentu.&lt;/div&gt;&lt;h2&gt;13. Buat Karya atau Portofolio&lt;/h2&gt;&lt;div&gt;Kalian diakui bisa atau mengusai sesuatu dari karya atau portofolio yang dibuat, bukan dari berapa tinggi IPK di kampus. Percuma IPK tinggi di jurusan teknik informatika, tapi tidak bisa &lt;i&gt;ngoding&lt;/i&gt;. Mulai tahun ini, cobalah untuk membuat sebuah karya. Tunjukan pada semua orang, hasil kerja kerasmu.&lt;/div&gt;&lt;h2&gt;14. Belajar Bahasa Pemrograman Baru&lt;/h2&gt;&lt;div&gt;Bahasa pemrograman berkembang sangat cepat. Bahkan di tahun lalu, banyak juga bahasa-bahasa baru yang bermunculan. Bagi kalian yang tertarik mencoba sesuatu yang baru, tidak ada salahnya mencoba bahasa pemrograman baru. Kalian bisa mencoba, Swift, Go, Dart, Kotlin, dsb.&lt;/div&gt;&lt;h2&gt;15. Buat Blog&lt;/h2&gt;&lt;div&gt;Kalau sudah punya banyak ilmu, jangan lupa dibagikan. Salah satu caranya bisa melalui blog. Tulislah apa saja yang sudah dipelajari, pengalaman menyelesaikan error, catan-catan penting. Insa&amp;rsquo;allah akan menjadi kontribusi dunia akhirat dan bermanfaat untuk orang banyak.&lt;/div&gt;&lt;h2&gt;16. Belajar Bahasa Inggris&lt;/h2&gt;&lt;div&gt;Bahasa inggris menjadi bahasa yang sangat penting bagi programmer. Karena dengan bahasa inggris kita bisa memahami lebih cepat dan lebih banyak tentang pemrograman. Kita akan lebih mudah menemukan solusi error di Stack Overflow. Mudah mempelajari dokumentasi. Tidak tersesat, bila jalan-jalan ke web mancanegara.&lt;/div&gt;&lt;h2&gt;17. Selalu Ingat Resolusi dan Lakukan&lt;/h2&gt;Terkadang kita sering membuat resolusi di tahun baru. Satu minggu kemudian dilupakan. Lalu, apa gunanya kita membuat resolusi.&lt;br /&gt;&lt;br /&gt;Itulah 17 resolusi untuk meningkatkan kemampuan pemrograman di tahun 2017. Apakah ada di antara 17 ini yang ingin anda wujudkan? atau punya resolusi selain di atas, silahkan ditambahkan.&lt;/p&gt;
 </description>
     </item>
     

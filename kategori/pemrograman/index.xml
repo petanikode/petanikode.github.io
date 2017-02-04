@@ -10,6 +10,110 @@
     <atom:link href="http://petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cara Menjalankan PHP Melalui CMD</title>
+      <link>http://petanikode.com/2017/02/cara-menjalankan-php-melalui-cmd/</link>
+      <pubDate>Sat, 04 Feb 2017 08:15:19 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/cara-menjalankan-php-melalui-cmd/</guid>
+      <description>
+
+&lt;p&gt;&lt;amp-img
+width=&#34;720&#34;
+height=&#34;380&#34;
+alt=&#34;CMD PHP petnaikode.com&#34;
+src=&#34;http://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s1600/CMD%2BPHP%2B-%2BPetanikode.png&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sudah lama tidak otak-atik Windows. Pemrograman di Windows sepertinya terasa sedikit sulit, karena sudah terbiasa dengen Linux. Ketika saya menginginkan apa-apa, tinggal ketik &lt;code&gt;sudo apt install&lt;/code&gt; dan semuanya sudah siap. Namun, kali ini saya sedang meminjam komputer lab. yang menggunakan sistem operasi Windows. Jadi, tidak ada &lt;code&gt;sudo apt install&lt;/code&gt; yang dapat kita suruh-suruh.&lt;/p&gt;
+
+&lt;p&gt;Ketika saya mencoba mengetik perintah &lt;code&gt;php&lt;/code&gt; di &lt;em&gt;Command Prompt&lt;/em&gt; (CMD), perintah tersebut tidak dikenali. Padahal di sana sudah terinstal XAMPP. Menjalankan PHP melalui CMD sebenarnya bisa dilakukan langsung melalui XAMPP Control Panel. Di sana sudah disediakan tombol untuk mengakses &lt;em&gt;shell&lt;/em&gt;. Namun, saya maunya &lt;code&gt;php&lt;/code&gt; dapat dijalankan melalui CMD, bukan dari &lt;em&gt;shell&lt;/em&gt; bawaan XAMPP.&lt;/p&gt;
+
+&lt;p&gt;Adapun langkah-langkah yang harus dilakukan agar perintah &lt;code&gt;php&lt;/code&gt; dapat dikenali pada CMD adalah sebagai berikut.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-cari-lokasi-php-yang-terinstal&#34;&gt;1. Cari Lokasi PHP yang Terinstal&lt;/h2&gt;
+
+&lt;p&gt;Pertama, silahkan cari lokasi PHP terinstal. Kalau menggunakan XAMPP, biasanya lokasinya berada di &lt;code&gt;C:\xampp\php&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;853&#34;
+height=&#34;465&#34;
+alt=&#34;Loksi PHP yang terinstal di windows&#34;
+src=&#34;http://1.bp.blogspot.com/-BwbtpA4Qf4M/WGlYGgzzJMI/AAAAAAAADkA/p7BjNBLUrLEmNxGucbaft6_EMksG5VLzwCK4B/s1600/1.%2BLokasi%2BPHP%2Bdiinstal%2Boleh%2BXAMPP.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-jalankan-system-properties&#34;&gt;2. Jalankan System Properties&lt;/h2&gt;
+
+&lt;p&gt;Tekan tombol Windows+R, kemudian pada jendela Run ketik &lt;code&gt;%windir%\System32\SystemPropertiesAdvanced.exe&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;413&#34;
+height=&#34;212&#34;
+alt=&#34;Jalankan Sistem Properties&#34;
+src=&#34;http://2.bp.blogspot.com/-GgrDET8Sve4/WGlY0botnhI/AAAAAAAADkI/ZExvx82wEaYP3Jko1RP4O9AyAQfA4-n9QCK4B/s1600/2.%2BJalankan%2BSystemPropertiesAdvenced.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-masuk-ke-environtment-variables&#34;&gt;3. Masuk ke &lt;em&gt;Environtment Variables&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Klik tombol &lt;em&gt;Environtment Variables.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;426&#34;
+height=&#34;474&#34;
+alt=&#34;Masuk ke environtment variables&#34;
+src=&#34;http://4.bp.blogspot.com/-eHLY5HjNKeA/WGlZXlU6V7I/AAAAAAAADkQ/UzLvUEsC2Ug4gqTZfa6duacvgF2suM0rQCK4B/s1600/3.%2BKetika%2BEnvironment%2BVariables.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-edit-variabel-path&#34;&gt;4. Edit Variabel Path&lt;/h2&gt;
+
+&lt;p&gt;Pilih dulu variabel &lt;i&gt;path&lt;/i&gt;, kemudian klik tombol &lt;i&gt;Edit&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;394&#34;
+height=&#34;436&#34;
+alt=&#34;Pilih path&#34;
+src=&#34;http://2.bp.blogspot.com/-gx_iydRBbnA/WGlZxn_YrhI/AAAAAAAADkc/hCDMEfxR8KoRao_GwYF2QNvMlsqAwYBngCK4B/s1600/4.%2BPilih%2BPath%2Bkemudian%2Bklik%2BEdit.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-masukan-lokasi-php&#34;&gt;5. Masukan Lokasi PHP&lt;/h2&gt;
+
+&lt;p&gt;Tambahkan nilai akhir pada variabel &lt;em&gt;path&lt;/em&gt; dengan lokasi PHP yang kita dapatkan pada langkah pertama tadi. Tambahkan tanda titik koma (&lt;code&gt;;&lt;/code&gt;) di depannya untuk memisahkan. Sehingga menjadi seperti ini &lt;code&gt;;C:\xampp\php&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;394&#34;
+height=&#34;436&#34;
+alt=&#34;Pilih path&#34;
+src=&#34;http://1.bp.blogspot.com/-09vetrJJMrA/WGlaam0jrBI/AAAAAAAADko/H1vZyV144Wkh9tx3xxCgBLMlWASlveP3gCK4B/s1600/5.%2BTambahkan%2Blokasi%2Bphp.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, klik OK.&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-percobaan&#34;&gt;6. Percobaan&lt;/h2&gt;
+
+&lt;p&gt;Cobalah untuk mengetik perintah &lt;code&gt;php --version&lt;/code&gt; pada CMD. Kalau hasilnya seperti gambar berikut ini, artinya perintah &lt;code&gt;php&lt;/code&gt; sudah berhasil dikenali pada CMD.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;667&#34;
+height=&#34;342&#34;
+alt=&#34;Percobaan perintah php&#34;
+src=&#34;http://1.bp.blogspot.com/-dsh2u0m42gM/WGla43_2kwI/AAAAAAAADkw/rXmmwo3T__g2j5LdUDg7WBZBXbohl9eegCK4B/s1600/6.%2BPercobaan%2Bperintah%2BPHP%2Bmelalui%2BCMD.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-percobaan-eksekusi-file-php&#34;&gt;7. Percobaan Eksekusi File PHP&lt;/h2&gt;
+
+&lt;p&gt;Sekarang Cobalah buat file PHP, kemudian eksekusi melalui CMD.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;667&#34;
+height=&#34;342&#34;
+alt=&#34;Percobaan eksekusi php&#34;
+src=&#34;https://3.bp.blogspot.com/-iliONqyMRiw/WGlb06iwoNI/AAAAAAAADk8/dKuuPCDZl1cBLOajBcIVRlzBMcdLSB3qQCK4B/s1600/7.%2BEksekusi%2BFile%2BPHP%2Bdari%2BCMD.PNG&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selaamt! Sekarang PHP sudah bisa dijalankan melalui CMD.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Menggunakan SSH di Github</title>
       <link>http://petanikode.com/2017/01/cara-menggunakan-ssh-di-github/</link>
       <pubDate>Sun, 29 Jan 2017 17:52:51 +0800</pubDate>
@@ -796,16 +900,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       
       <guid>http://petanikode.com/2016/12/cara-menggunakan-composer-pada-codeigniter/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34; /&gt;&lt;/a&gt;CodeIgniter tidak seperti Laravel yang menggunakan Composer untuk memulai proyeknya. Namun, kita juga bisa menggunakan Composer pada CodeIgniter. Composer sebenarnya sudah didukung pada CodeIgninter versi 3, tapi autoload-nya belum diaktifkan.&lt;br /&gt;&lt;h2&gt;Konfigurasi CodeIgniter&lt;/h2&gt;Buka file konfigurasi proyek CodeIgniter pada &lt;code&gt;application/config/config.php&lt;/code&gt;. Kemudian isi nilai autoload untuk Composer seperti beikut ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$config[&amp;lsquo;composer_autoload&amp;rsquo;] = &amp;ldquo;vendor/autoload.php&amp;rdquo;;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Instalasi Pustaka&lt;/h2&gt;Sekarang coba buka file &lt;code&gt;composer.json&lt;/code&gt; yang ada di &lt;i&gt;root&lt;/i&gt; direktori proyek. Kemudian tambahkan pustaka FPDF.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;json js&#34;&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;description&amp;rdquo;: &amp;ldquo;The CodeIgniter framework&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;name&amp;rdquo;: &amp;ldquo;codeigniter/framework&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;type&amp;rdquo;: &amp;ldquo;project&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;homepage&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;http://codeigniter.com&amp;quot;&#34;&gt;http://codeigniter.com&amp;quot;&lt;/a&gt;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;license&amp;rdquo;: &amp;ldquo;MIT&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;support&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;forum&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;http://forum.codeigniter.com/&amp;quot;&#34;&gt;http://forum.codeigniter.com/&amp;quot;&lt;/a&gt;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;wiki&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;https://github.com/bcit-ci/CodeIgniter/wiki&amp;quot;&#34;&gt;https://github.com/bcit-ci/CodeIgniter/wiki&amp;quot;&lt;/a&gt;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;irc&amp;rdquo;: &amp;ldquo;irc://irc.freenode.net/codeigniter&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;source&amp;rdquo;: &amp;ldquo;&lt;a href=&#34;https://github.com/bcit-ci/CodeIgniter&amp;quot;&#34;&gt;https://github.com/bcit-ci/CodeIgniter&amp;quot;&lt;/a&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; },&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;require&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;php&amp;rdquo;: &amp;ldquo;&amp;gt;=5.2.4&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;mark&gt;&amp;ldquo;setasign/fpdf&amp;rdquo;: &amp;ldquo;1.8.1&amp;rdquo;&lt;/mark&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; },&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;require-dev&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;mikey179/vfsStream&amp;rdquo;: &amp;ldquo;1.1.*&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Ini hanya sekedar contoh saja. Anda boleh menambahkan atau menggunakan pustaka selain FPDF.&lt;br /&gt;&lt;br /&gt;Setelah itu, ketik perintah berikut ini untuk menginstal semua pustaka:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;composer update&lt;/code&gt;&lt;/pre&gt;Tunggulah sampai prosesnya selesai. &lt;br /&gt;&lt;h2&gt;Percobaan Pustaka &lt;/h2&gt;Sekarang coba tambahkan kode berikut ini pada &lt;i&gt;Controller&lt;/i&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php defined(&amp;lsquo;BASEPATH&amp;rsquo;) OR exit(&amp;lsquo;No direct script access allowed&amp;rsquo;);&lt;br /&gt;&lt;br /&gt;/&lt;strong&gt;&lt;br /&gt;&amp;nbsp;* Class untuk membuat laporan&lt;br /&gt;&amp;nbsp;*/&lt;br /&gt;class Laporan extends CI_Controller{&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; function &lt;strong&gt;construct(){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; parent::&lt;/strong&gt;construct();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; /&lt;/strong&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; * Fungsi untuk menampilkan menu laporan penerima bantuan&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; * @param none&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; * @return void&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; */&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; function penerima_bantuan(){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $pdf = new FPDF();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $pdf-&amp;gt;AddPage();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $pdf-&amp;gt;SetFont(&amp;lsquo;Arial&amp;rsquo;,&amp;lsquo;B&amp;rsquo;,16);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $pdf-&amp;gt;Cell(40,10,&amp;lsquo;Hello World!&amp;rsquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $pdf-&amp;gt;Output();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Setelah itu, cobalah lihat hasilnya.&lt;a href=&#34;http://3.bp.blogspot.com/-8fHaWAf885E/WDhDiJ38GfI/AAAAAAAADdI/uzu77wy_lwMs0cb4ZJvs7FxFtm9jOgOWACK4B/s1600/Penggunaan%2Bpustaka%2BFPDF%2Bdi%2BCodeIgniter%2Bdengan%2BComposer.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-8fHaWAf885E/WDhDiJ38GfI/AAAAAAAADdI/uzu77wy_lwMs0cb4ZJvs7FxFtm9jOgOWACK4B/s1600/Penggunaan%2Bpustaka%2BFPDF%2Bdi%2BCodeIgniter%2Bdengan%2BComposer.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Pustaka FPDF berhasil kita gunakan di CodeIgniter. Percobaan di atas sebenarnya untuk memastikan pustaka dari Composer berhasil di-load atau tidak. Selebihnya anda bisa bereksperiman dengan membuat &lt;i&gt;Class&lt;/i&gt; &lt;i&gt;exstend&lt;/i&gt; dari pustaka tersebut.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Mengaktifkan Profiler CodeIgniter</title>
-      <link>http://petanikode.com/2016/11/cara-mengaktifkan-profiler-codeigniter/</link>
-      <pubDate>Wed, 30 Nov 2016 11:30:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/11/cara-mengaktifkan-profiler-codeigniter/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Profiler fungsinya untuk menampilkan beberapa informasi yang diperlukan untuk &lt;i&gt;debugging&lt;/i&gt;. Kita dapat mengetahui &lt;i&gt;query&lt;/i&gt; apa yang dikerjakan, berapa detik &lt;i&gt;query&lt;/i&gt; tersebut dikerjakan, &lt;i&gt;benchmarks&lt;/i&gt;, dan sebagainya. Informasi ini sangat berguna ketika kita membangun sebuah aplikasi dengan CodeIgniter.&lt;br /&gt;&lt;br /&gt;Cara mengaktifkan Profiler di CodeIgniter sangat mudah, cukup menjalankan fungsi ini di &lt;i&gt;Controller&lt;/i&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);&lt;/code&gt;&lt;/pre&gt;Maka kita akan mendapatkan informasi seperti berikut ini:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-gsNeLWLfBhk/WD5EMFf8yLI/AAAAAAAADeE/C3mfDihq1acM5LVhpGFvcAUgng4sxuOIwCK4B/s1600/Profiler%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-gsNeLWLfBhk/WD5EMFf8yLI/AAAAAAAADeE/C3mfDihq1acM5LVhpGFvcAUgng4sxuOIwCK4B/s1600/Profiler%2BCodeIgniter.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian, agar Profiler aktif di setiap &lt;i&gt;method&lt;/i&gt; atau fungsi, letakan kode tersebut di dalam konstruktor:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;function &lt;strong&gt;construct(){&lt;br /&gt;&amp;nbsp; &amp;nbsp; parent::&lt;/strong&gt;construct();&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; // untuk debugging&lt;br /&gt;&amp;nbsp; &amp;nbsp; $this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Namun, sepertinya akan ada masalah ketika aplikasi kita di-hosting. Kita akan menghapus kode itu lagi, karena tidak mungkin kita tampilkan informasi Profiler pada website yang sudah jadi. Untuk mengatasi hal tersebut, ganti nilai &lt;code&gt;TRUE&lt;/code&gt; menjadi seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$this-&amp;gt;output-&amp;gt;enable_profiler(ENVIRONMENT == &amp;ldquo;development&amp;rdquo;);&lt;/code&gt;&lt;/pre&gt;Artinya, Profiler hanya akan aktif pada lingkungan &lt;i&gt;development&lt;/i&gt; saja. Sedangkan pada lingkungan &lt;i&gt;production&lt;/i&gt; dan &lt;i&gt;testing&lt;/i&gt; tidak diaktifkan.&lt;br /&gt;&lt;br /&gt;Begitulah cara mengaktifkan Profiler di CodeIgniter. Semoga bermanfaat 😅.&lt;/p&gt;
 </description>
     </item>
     

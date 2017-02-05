@@ -99,7 +99,7 @@ saya butuhkan agar nanti ketika paste url, langsung dibuat tag &lt;code&gt;amp-i
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;input v-model=&amp;quot;src&amp;quot; type=&amp;quot;text&amp;quot; placeholder=&amp;quot;http://example.com/image.jpg&amp;quot; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Nama model yang saya buat di atas adala &lt;code&gt;src&lt;/code&gt;. Model ini untuk menampung url gambar.
+&lt;p&gt;Nama model yang saya buat di atas adalah &lt;code&gt;src&lt;/code&gt;. Model ini untuk menampung url gambar.
 Kemudian untuk mengambil nilai dari model tersebut caranya seperti ini.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;textarea rows=&amp;quot;8&amp;quot;&amp;gt;

@@ -22,7 +22,7 @@ Vue.js dari beberapa teman dan forum. Tapi, saya belum pernah mulai mencobanya.&
 
 &lt;p&gt;Awalnya saya ingin membuat sebuah alat untuk kebutuhan saya sendiri, yaitu alat
 yang bisa membuat tag &lt;code&gt;amp-img&lt;/code&gt; secara otmatis melalui url gambar. Karena masih
-banyak artikel di blog ini yang belum disungting dan belum valid AMP.&lt;/p&gt;
+banyak artikel di blog ini yang belum disunting dan belum valid AMP.&lt;/p&gt;
 
 &lt;p&gt;Pembuatan tag &lt;code&gt;amp-img&lt;/code&gt; secara manual terasa sangat melelahkan, karena saya harus
 menyesuiakan nilai atribut &lt;code&gt;width&lt;/code&gt; dan &lt;code&gt;height&lt;/code&gt; dengan ukuran gambarnya. Saya

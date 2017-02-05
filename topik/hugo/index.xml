@@ -515,7 +515,7 @@ dikembangkan dari temlpate &lt;a href=&#34;https://gohugo-amp.gohugohq.com/&#34;
 &lt;tr&gt;
 &lt;td&gt;Font&lt;/td&gt;
 &lt;td&gt;Open Sans, Roboto, Merriweather, Font-awesome&lt;/td&gt;
-&lt;td&gt;PT Serif, Open Sans, Font-awesome&lt;/td&gt;
+&lt;td&gt;Merriweather, Open Sans, Font-awesome&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -533,6 +533,11 @@ dikembangkan dari temlpate &lt;a href=&#34;https://gohugo-amp.gohugohq.com/&#34;
 &lt;/table&gt;
 
 &lt;p&gt;Petani Kode memilih hosting di Gitlab karena di sana bisa membuat &lt;em&gt;private&lt;/em&gt; repositori dan langsung terintegaris dengan CI. Sedangkan di Github, tidak bisa membuat repositori &lt;em&gt;private&lt;/em&gt; kalau menggunakan akun gratis. Kemudian, saya juga pernah mencoba di Bitbucket. Akan tetapi terbatas dengan deploy, minimal 5x deploy per hari.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: (01 Februari 2017) Petani kode migrasi ke Github, karena sering gagal
+melakukan build di CI Gitlab.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;table&gt;
 &lt;thead&gt;

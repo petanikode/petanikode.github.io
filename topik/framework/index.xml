@@ -85,7 +85,82 @@
       <pubDate>Sat, 28 May 2016 16:39:00 +0000</pubDate>
       
       <guid>http://petanikode.com/2016/05/apa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;CodeIgniter - Petani Kode&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Fungis &lt;code&gt;base_url()&lt;/code&gt; dan &lt;code&gt;site_url()&lt;/code&gt; merupakan dua fungsi untuk mengambil URL web pada framework CodeIgniter. Kedua fungsi ini dapat digunakan dengan mengaktifkan &lt;i&gt;helper&lt;/i&gt; &lt;code&gt;url&lt;/code&gt; terlebih dahulu.&lt;br /&gt;&lt;h2&gt;Fungsi &lt;code&gt;base_url()&lt;/code&gt;&lt;/h2&gt;fungsi &lt;code&gt;base_url()&lt;/code&gt; akan menghasilkan sebuah url dasar berdasarkan konfigurasi diisi pada &lt;code&gt;config.php&lt;/code&gt;. Misalkan konfigurasinya seperti ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$config[&amp;lsquo;base_url&amp;rsquo;] = &amp;lsquo;&lt;a href=&#34;http://petanikode.com/&#39;&#34;&gt;http://petanikode.com/&#39;&lt;/a&gt;;&lt;/code&gt;&lt;/pre&gt;Maka, ketika kita menggunakan fungsi &lt;code&gt;base_url()&lt;/code&gt;, akan mendapatkan nilai:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&lt;a href=&#34;http://petanikode.com/&#34;&gt;http://petanikode.com/&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Fungsi &lt;code&gt;site_url()&lt;/code&gt; &lt;/h2&gt;Seperti namanya, fungsi &lt;code&gt;site_url()&lt;/code&gt; akan menghasilkan URL atau alamat web beserta file index-nya. Misalkan konfigurasi webnya seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$config[&amp;lsquo;base_url&amp;rsquo;] = &amp;lsquo;&lt;a href=&#34;http://petanikode.com/&#39;&#34;&gt;http://petanikode.com/&#39;&lt;/a&gt;;&lt;br /&gt;$config[&amp;lsquo;index_page&amp;rsquo;] = &amp;lsquo;index.php&amp;rsquo;;&lt;/code&gt;&lt;/pre&gt;Maka, ketika kita menggunakan fungsi &lt;code&gt;site_url()&lt;/code&gt;, akan mendapatkan nilai: &lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&lt;a href=&#34;http://petanikode.com/index.php&#34;&gt;http://petanikode.com/index.php&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Kapan &lt;code&gt;base_url()&lt;/code&gt; dan &lt;code&gt;site_url()&lt;/code&gt; dipakai?&lt;/h2&gt;Sesui hasil yang didapatkan dari fungsi tersebut, anda bisa menebak sendiri kapan waktu yang tepat menggunakan kedua fungsi tersebut. Fungsi &lt;code&gt;base_url()&lt;/code&gt; biasanya digunakan untuk membuat URL dari &lt;i&gt;resource&lt;/i&gt; yang berada di direktori awal &lt;i&gt;(root)&lt;/i&gt; web. Contohnya, sering dipakai untuk membuat URL &lt;i&gt;assets&lt;/i&gt; seperti berikut ini.&lt;a href=&#34;http://1.bp.blogspot.com/-EUamVuxQjSg/V0lS0Bkh_BI/AAAAAAAAC1E/KYwq8_MGsM4kNi-bIqY-jvWCVYLf1DtpACK4B/s1600/Contoh%2Bpenggunaan%2Bfungsi%2Bbase_url%2Bcodeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-EUamVuxQjSg/V0lS0Bkh_BI/AAAAAAAAC1E/KYwq8_MGsM4kNi-bIqY-jvWCVYLf1DtpACK4B/s1600/Contoh%2Bpenggunaan%2Bfungsi%2Bbase_url%2Bcodeigniter%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Baca juga: &lt;a href=&#34;http://www.petanikode.com/2016/08/mengapa-harus-menggunakan-fungsi.html&#34;&gt;Mengapa Harus Menggunakan Fungsi base_url() untuk Menyisipkan File Aset?&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Sementara itu, fungsi &lt;code&gt;site_url()&lt;/code&gt; sering digunakan untuk membuat URL ke &lt;i&gt;Controller&lt;/i&gt; atau dengan kata lain, fungsi ini dipakai untuk mengakses Controller tertentu. Contoh penggunaanya sebagai berikut.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-HXg3x6Hj7uo/V62O31kbnyI/AAAAAAAADIs/HVEUePK8JTQK48MpMkpMFY2jXMG8p7jWgCK4B/s1600/Penggunaan%2Bfungsi%2Bsite_url%2Buntuk%2Bmengakses%2Bcontroller%2BCI%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-HXg3x6Hj7uo/V62O31kbnyI/AAAAAAAADIs/HVEUePK8JTQK48MpMkpMFY2jXMG8p7jWgCK4B/s1600/Penggunaan%2Bfungsi%2Bsite_url%2Buntuk%2Bmengakses%2Bcontroller%2BCI%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Contoh lain penggunaan fungsi &lt;code&gt;site_url()&lt;/code&gt; untuk mengalihkan&lt;i&gt; (redirect)&lt;/i&gt;.&lt;a href=&#34;http://2.bp.blogspot.com/-aOcIvxTEusw/V62PbakJ2mI/AAAAAAAADI0/cLRBz_hE-YsXYVroi9shLYlmtxx4hmPFwCK4B/s1600/Penggunaan%2Bfungsi%2Bsite_url%2Buntuk%2Bredirect.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-aOcIvxTEusw/V62PbakJ2mI/AAAAAAAADI0/cLRBz_hE-YsXYVroi9shLYlmtxx4hmPFwCK4B/s1600/Penggunaan%2Bfungsi%2Bsite_url%2Buntuk%2Bredirect.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Fungsi &lt;code&gt;base_url()&lt;/code&gt; dan fungsi &lt;code&gt;site_url()&lt;/code&gt; adalah fungsi bantuan dari &lt;i&gt;url helper&lt;/i&gt;. Fungsi ini digunakan untk mengambil URL dasar dan URL web. fungsi &lt;code&gt;base_url()&lt;/code&gt; digunakan untuk membangun url untuk mengakses resource yang barada di direktori &lt;i&gt;root&lt;/i&gt; web. Sedangkan fungsi &lt;code&gt;site_url()&lt;/code&gt; digunakan untuk mengakses &lt;i&gt;Controller&lt;/i&gt; tertentu.&lt;br /&gt;&lt;br /&gt;Kurang-lebih, begitulah kesimpulan dari saya. Mungkin ada yang kurang tepat, silahkan ditambahakan.&lt;/p&gt;
+      <description>
+
+&lt;p&gt;&lt;amp-img
+width=&#34;800&#34;
+height=&#34;394&#34;
+alt=&#34;codeigniter+-+petanikode.png&#34;
+src=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Fungis &lt;code&gt;base_url()&lt;/code&gt; dan &lt;code&gt;site_url()&lt;/code&gt; merupakan dua fungsi untuk mengambil URL web pada framework CodeIgniter. Kedua fungsi ini dapat digunakan dengan mengaktifkan &lt;em&gt;helper&lt;/em&gt; &lt;code&gt;url&lt;/code&gt; terlebih dahulu.&lt;/p&gt;
+
+&lt;h2 id=&#34;fungsi-base-url&#34;&gt;Fungsi &lt;code&gt;base_url()&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;fungsi &lt;code&gt;base_url()&lt;/code&gt; akan menghasilkan sebuah url dasar berdasarkan konfigurasi diisi pada &lt;code&gt;config.php&lt;/code&gt;. Misalkan konfigurasinya seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$config[&#39;base_url&#39;] = &#39;http://petanikode.com/&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka, ketika kita menggunakan fungsi &lt;code&gt;base_url()&lt;/code&gt;, akan mendapatkan nilai:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://petanikode.com/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;fungsi-site-url&#34;&gt;Fungsi &lt;code&gt;site_url()&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Seperti namanya, fungsi &lt;code&gt;site_url()&lt;/code&gt; akan menghasilkan URL atau alamat web beserta file index-nya. Misalkan konfigurasi webnya seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$config[&#39;base_url&#39;] = &#39;http://petanikode.com/&#39;;
+$config[&#39;index_page&#39;] = &#39;index.php&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka, ketika kita menggunakan fungsi &lt;code&gt;site_url()&lt;/code&gt;, akan mendapatkan nilai:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://petanikode.com/index.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;kapan-base-url-dan-site-url-dipakai&#34;&gt;Kapan &lt;code&gt;base_url()&lt;/code&gt; dan &lt;code&gt;site_url()&lt;/code&gt; dipakai?&lt;/h2&gt;
+
+&lt;p&gt;Sesui hasil yang didapatkan dari fungsi tersebut, anda bisa menebak sendiri kapan waktu yang tepat menggunakan kedua fungsi tersebut. Fungsi &lt;code&gt;base_url()&lt;/code&gt; biasanya digunakan untuk membuat URL dari &lt;em&gt;resource&lt;/em&gt; yang berada di direktori awal &lt;em&gt;(root)&lt;/em&gt; web. Contohnya, sering dipakai untuk membuat URL &lt;em&gt;assets&lt;/em&gt; seperti berikut ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;1102&#34;
+height=&#34;194&#34;
+alt=&#34;Contoh+penggunaan+fungsi+base_url+codeigniter+-+petanikode.png&#34;
+src=&#34;http://1.bp.blogspot.com/-EUamVuxQjSg/V0lS0Bkh_BI/AAAAAAAAC1E/KYwq8_MGsM4kNi-bIqY-jvWCVYLf1DtpACK4B/s1600/Contoh%2Bpenggunaan%2Bfungsi%2Bbase_url%2Bcodeigniter%2B-%2Bpetanikode.png&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2016/08/mengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset/&#34;&gt;Mengapa Harus Menggunakan Fungsi base_url() untuk Menyisipkan File Aset?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sementara itu, fungsi &lt;code&gt;site_url()&lt;/code&gt; sering digunakan untuk membuat URL ke &lt;em&gt;Controller&lt;/em&gt; atau dengan kata lain, fungsi ini dipakai untuk mengakses Controller tertentu. Contoh penggunaanya sebagai berikut.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;977&#34;
+height=&#34;252&#34;
+alt=&#34;Penggunaan+fungsi+site_url+untuk+mengakses+controller+CI+-+Petani+Kode.png&#34;
+src=&#34;https://2.bp.blogspot.com/-HXg3x6Hj7uo/V62O31kbnyI/AAAAAAAADIs/HVEUePK8JTQK48MpMkpMFY2jXMG8p7jWgCK4B/s1600/Penggunaan%2Bfungsi%2Bsite_url%2Buntuk%2Bmengakses%2Bcontroller%2BCI%2B-%2BPetani%2BKode.png&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Contoh lain penggunaan fungsi &lt;code&gt;site_url()&lt;/code&gt; untuk mengalihkan &lt;em&gt;(redirect)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;825&#34;
+height=&#34;255&#34;
+alt=&#34;Penggunaan+fungsi+site_url+untuk+redirect.png&#34;
+src=&#34;https://2.bp.blogspot.com/-aOcIvxTEusw/V62PbakJ2mI/AAAAAAAADI0/cLRBz_hE-YsXYVroi9shLYlmtxx4hmPFwCK4B/s1600/Penggunaan%2Bfungsi%2Bsite_url%2Buntuk%2Bredirect.png&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
+
+&lt;p&gt;Fungsi &lt;code&gt;base_url()&lt;/code&gt; dan fungsi &lt;code&gt;site_url()&lt;/code&gt; adalah fungsi bantuan dari &lt;em&gt;url helper&lt;/em&gt;. Fungsi ini digunakan untk mengambil URL dasar dan URL web. fungsi &lt;code&gt;base_url()&lt;/code&gt; digunakan untuk membangun url untuk mengakses resource yang barada di direktori &lt;em&gt;root&lt;/em&gt; web. Sedangkan fungsi &lt;code&gt;site_url()&lt;/code&gt; digunakan untuk mengakses &lt;em&gt;Controller&lt;/em&gt; tertentu.&lt;/p&gt;
+
+&lt;p&gt;Kurang-lebih, begitulah kesimpulan dari saya. Mungkin ada yang kurang tepat, silahkan ditambahakan.&lt;/p&gt;
 </description>
     </item>
     

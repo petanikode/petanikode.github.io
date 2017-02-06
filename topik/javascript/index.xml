@@ -10,6 +10,77 @@
     <atom:link href="http://petanikode.com/topik/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cara Membuat Halaman Github untuk Proyek atau Repositori</title>
+      <link>http://petanikode.com/2017/02/cara-membuat-halaman-github-untuk-proyek-atau-repositori/</link>
+      <pubDate>Mon, 06 Feb 2017 07:15:11 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/cara-membuat-halaman-github-untuk-proyek-atau-repositori/</guid>
+      <description>
+
+&lt;p&gt;Pada tulisan sebelumnya, saya pernah membahas tentang &lt;a href=&#34;http://petanikode.com/2017/01/cara-membuat-halaman-github-kurang-dari-10-menit/&#34;&gt;cara membuat halaman
+Github untuk profil individu dan organisasi&lt;/a&gt;.
+Nah, kali ini kita akan membuat halaman github untuk proyek atau repositori.&lt;/p&gt;
+
+&lt;p&gt;Jadi sebenarnya, setiap proyek atau respositori di Github itu bisa dijadikan
+halaman Github &lt;em&gt;(Github Pages)&lt;/em&gt;. Pastikan di dalam proyek berisi file web statis
+seperti HTML, CSS, dan Javascript.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-repositori&#34;&gt;Membuat repositori&lt;/h2&gt;
+
+&lt;p&gt;Buatlah repositori dengan nama apa saja, kemudian di dalamnya berisi file web statis.
+Setelah itu, upload ke github.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
+git add .
+git commit -m &amp;quot;commit pertama&amp;quot;
+git add remote origin https://github.com/{username}/{nama-repo}
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;pengaturan-repositori&#34;&gt;Pengaturan Repositori&lt;/h2&gt;
+
+&lt;p&gt;Klik tombol &lt;em&gt;Settings&lt;/em&gt; pada repositori untuk masuk ke pengaturan repositori,
+kemudian gulung ke bawah sampai menemukan bagian &lt;em&gt;Github Pages&lt;/em&gt;. Lalu pada
+&lt;em&gt;Source&lt;/em&gt;, pilih cabang &lt;em&gt;(branch)&lt;/em&gt; yang akan menjadi halaman Github.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;748&#34;
+height=&#34;462&#34;
+alt=&#34;Membuat halaman github untuk repositori.png&#34;
+src=&#34;https://1.bp.blogspot.com/-wfzIqx9du78/WJe3rJKMs1I/AAAAAAAADxg/qleBmhPbOEggZ9EnYU_6-4hH_eIYYkC7gCPcB/s1600/Membuat%2Bhalaman%2Bgithub%2Buntuk%2Brepositori.png&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, saya menggunakan cabang &lt;code&gt;master&lt;/code&gt;. Sebenarnya tidak disarankan
+menggunakan cabang ini untuk halaman github. Kita disarankan menggunakan cabang lain, tapi
+harus dibuat terlebih dahulu. Cara pembuatan cabang dapat dilakukan dengan perintah berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout -b nama-cabang
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;percobaan&#34;&gt;Percobaan&lt;/h2&gt;
+
+&lt;p&gt;Setelah itu, beberapa detik kemudian, halaman akan langsung jadi. Kita bisa
+mengaksesnya melalui alamat &lt;code&gt;https://{username}.github.io/nama-repo&lt;/code&gt;. Karena
+saya sudah menggunakan domain untuk halaman github, maka nanti saya akan
+mengaksesnya melalui &lt;code&gt;http://petanikode.com/nama-repo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh yang sudah saya buat:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Halaman Github: &lt;a href=&#34;http://petanikode.com/amp-tools&#34;&gt;http://petanikode.com/amp-tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Repositorinya: &lt;a href=&#34;https://github.com/petanikode/amp-tools/&#34;&gt;https://github.com/petanikode/amp-tools/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Selain cara ini, ada juga cara lain, yaitu melalui direktori &lt;code&gt;docs&lt;/code&gt;. Mungkin
+akan saya bahas pada kesempatan berikutnya. Tetap pantau blog ini ya, :smile:.&lt;/p&gt;
+
+&lt;p&gt;Jadi, itulah cara membuat halaman
+github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Berkenalan dengan Vue.js</title>
       <link>http://petanikode.com/2017/02/berkenalan-dengan-vue.js/</link>
       <pubDate>Sun, 05 Feb 2017 19:25:26 +0800</pubDate>
@@ -404,16 +475,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       
       <guid>http://petanikode.com/2016/06/tutorial-google-maps-api---menampilkan-peta-di-dalam-web/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Di tengah-tengah kesibukan mengerjakan proyek, akhirnya saya menyempatkan diri untuk mem-posting sesuatu. Pada kesempatan ini kita akan mempelajari Google Maps API. Karena kebetulan, pada proyek yang sedang saya kerjakan menggunakan Google Map. Saya akan menggunakan referensi yang sahih dan dapat dipercaya, &lt;a href=&#34;http://www.w3schools.com/googleapi/default.asp&#34; target=&#34;_blank&#34;&gt;W3Schools&lt;/a&gt; dan &lt;a href=&#34;https://developers.google.com/maps/&#34; target=&#34;_blank&#34;&gt;Google Developer&lt;/a&gt;. Baiklah mari kita mulai.&lt;br /&gt;&lt;h2&gt;Apa itu Google Maps API?&lt;/h2&gt;Google Maps API &lt;i&gt;(Application Programming Interface)&lt;/i&gt; merupakan sebuah API yang disediakan oleh Google untuk menggunakan peta Google &lt;i&gt;(Google Map)&lt;/i&gt; dalam aplikasi yang kita bangun. Google Maps API memungkinkan kita memodifikasi peta dan informasi yang ada di dalamnya.&lt;br /&gt;&lt;br /&gt;Google Maps API dikelompokkan berdasarkan platform: Web, Android, dan iOS. Pada kesempatan ini kita akan menggunakan Google Maps API untuk Web. Sedangkan untuk Android dan iOS, mungkin (insa&amp;rsquo;allah) saya akan bahas nanti.&lt;br /&gt;&lt;h2&gt;Menampilkan Peta&lt;/h2&gt;Ada beberapa langkah yang dilakukan untuk menampilkan peta di dalam Web:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Menyisipkan &lt;i&gt;library&lt;/i&gt; API Google Map&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://maps.googleapis.com/maps/api/js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://maps.googleapis.com/maps/api/js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Membuat sebuah fungsi &lt;code&gt;initialize()&lt;/code&gt; untuk mempersiapkan peta.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;function initialize() { &amp;hellip; }&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Membuat properti peta dalam bentuk objek&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var propertiPeta = {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; center:new google.maps.LatLng(-8.5830695,116.3202515),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; zoom:9,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mapTypeId:google.maps.MapTypeId.ROADMAP&lt;br /&gt;};&lt;/code&gt;&lt;/pre&gt;Letakkan kode di atas dalam fungsi &lt;code&gt;initialize()&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Membuat objek Peta&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var peta = new google.maps.Map(document.getElementById(&amp;ldquo;googleMap&amp;rdquo;), propertiPeta);&lt;/code&gt;&lt;/pre&gt;Letakkan kode di atas dalam fungsi &lt;code&gt;initialize()&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Menampilkan peta ketika jendela &lt;i&gt;(window)&lt;/i&gt; di-load&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;google.maps.event.addDomListener(window, &amp;lsquo;load&amp;rsquo;, initialize);&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Membuat tag &lt;i&gt;div&lt;/i&gt; sebagai kontainer untuk menampilkan peta&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;div id=&amp;ldquo;googleMap&amp;rdquo; style=&amp;ldquo;width:100%;height:380px;&amp;rdquo;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;/ol&gt;Kode Lengkapnya dan demo hasil:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/bejiduz/embed?html,output&#34;&gt;Tutorial Google Map - Petani Kode on jsbin.com&lt;/a&gt;&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?3.35.13&#34;&gt;&lt;/script&gt;&lt;br /&gt;Dalam pembuatan properti peta, kita bisa menentukan posisi peta atau titik koordinat mula-mula, skala &lt;i&gt;(zoom)&lt;/i&gt;, tipe peta, dsb. Sementara untuk tag &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; untuk menampilkan peta, atribut &lt;i&gt;id&lt;/i&gt;-nya harus sesui dengan &lt;i&gt;id&lt;/i&gt; yang dipilih saat pembuatan peta (nomer 4).&lt;br /&gt;&lt;br /&gt;Ada baiknya juga kita perhatikan level zoom yang digunakan. Berdasarkan dokumentasi di &lt;a href=&#34;https://developers.google.com/maps/documentation/javascript/tutorial#zoom-levels&#34; target=&#34;_blank&#34;&gt;Google Developer&lt;/a&gt;, berikut ini nilai level zoom dan kegunaanya.&lt;br /&gt;&lt;ul&gt;&lt;li&gt;0: Bumi (smua peta ditampilkan)&lt;/li&gt;&lt;li&gt;1: Peta Dunia&lt;/li&gt;&lt;li&gt;5: Landmass/continent&lt;/li&gt;&lt;li&gt;10: Kota&lt;/li&gt;&lt;li&gt;15: Jalan&lt;/li&gt;&lt;li&gt;20: Bangunan &lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;Penutup&lt;/h2&gt;Sekian tutorial singkat Google Maps API ini, semoga bermanfaat dan mudah-mudahan saya diberikan kesehatan untuk melanjutkan tutorial ini.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Memahami Cara Kerja Fungsi Rekursif</title>
-      <link>http://petanikode.com/2016/06/memahami-cara-kerja-fungsi-rekursif/</link>
-      <pubDate>Wed, 01 Jun 2016 21:13:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/06/memahami-cara-kerja-fungsi-rekursif/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-Hyqh5hLq9jg/V07h3ZpVj_I/AAAAAAAAC2c/phYr-ot51sUoL-7T5gobAFf5XUCg9YvRwCK4B/s1600/Petanikode%2B-%2B116592-thewallpaper.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-Hyqh5hLq9jg/V07h3ZpVj_I/AAAAAAAAC2c/phYr-ot51sUoL-7T5gobAFf5XUCg9YvRwCK4B/s1600/Petanikode%2B-%2B116592-thewallpaper.jpg&#34; /&gt;&lt;/a&gt;Fungsi rekursif dalam pemrograman merupakan fungsi yang memanggil dirinya sendiri. Fungsi rekursif sering saya bayangkan seperti perulangan. Karena tingkah lakunya yang mengulang-ulang setiap pemanggilan dirinya. Berikut ini contoh sederhana fungsi rekursif.&lt;br /&gt;&lt;br /&gt;Python:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;def fungsiRekursif():&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; print(&amp;ldquo;Hello, ini fungsi rekursif&amp;rdquo;)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; fungsiRekursif()&lt;/code&gt;&lt;/pre&gt;Javascript:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;function fungsiRekursif(){&lt;br /&gt;&amp;nbsp; &amp;nbsp; console.log(&amp;ldquo;Hello, ini fungsi rekursif&amp;rdquo;);&lt;br /&gt;&amp;nbsp; &amp;nbsp; fungsiRekursif(); &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;Dua contoh fungsi di atas akan menampilkan teks &lt;code&gt;&amp;ldquo;Hello, ini fungsi rekursif&amp;rdquo;&lt;/code&gt; terus menerus, karena memanggil dirinya sendiri tampa henti. Fungsi rekursif dapat menyelesaikan beberapa persoalan seperti perhitungan bilangan &lt;i&gt;fibbonaci&lt;/i&gt; dan faktorial. Berikut ini animasi fungsi rekursif dalam menghitung faktorial dari &lt;code&gt;5&lt;/code&gt;.&lt;br /&gt;&lt;br /&gt;&lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; height=&#34;433&#34; scrolling=&#34;no&#34; src=&#34;https://web.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fpetanikode%2Fposts%2F507089246141340&amp;amp;width=500&#34; style=&#34;border: none; overflow: hidden;&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;br /&gt;&lt;br /&gt;Fungsi rekursif untuk faktorial mungkin cukup membingungkan. Animasi di atas dapat kita jabarkan menjadi seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;faktorial(5) = 5 * faktorial(4)&lt;br /&gt;faktorial(4) = 4 * faktorial(3)&lt;br /&gt;faktorial(3) = 3 * faktorial(2)&lt;br /&gt;faktorial(2) = 2 * faktorial(1)&lt;br /&gt;faktorial(1) = 1&lt;/code&gt;&lt;/pre&gt;Maka &lt;code&gt;faktorial(5) = 5 * 4 * 3 * 2 * 1&lt;/code&gt;, akan menghasilkan &lt;code&gt;120&lt;/code&gt;.&lt;br /&gt;&lt;br /&gt;Cara lain yang lebih mudah memahami fungsi rekursif adalah dengan membayangkan sebuah lukisan seperti berikut ini: (sumber: &lt;a href=&#34;http://s.id/3dG&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://s.id/3dG&#34;&gt;http://s.id/3dG&lt;/a&gt;&lt;/a&gt;)&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-Hyqh5hLq9jg/V07h3ZpVj_I/AAAAAAAAC2c/phYr-ot51sUoL-7T5gobAFf5XUCg9YvRwCK4B/s1600/Petanikode%2B-%2B116592-thewallpaper.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-Hyqh5hLq9jg/V07h3ZpVj_I/AAAAAAAAC2c/phYr-ot51sUoL-7T5gobAFf5XUCg9YvRwCK4B/s1600/Petanikode%2B-%2B116592-thewallpaper.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Sebuah lukisan dilukis oleh seorang pelukis yang dilukis oleh seorang pelukis yang dilukis oleh seorang pelukis&amp;hellip; (sumber: &lt;a href=&#34;http://programmers.stackexchange.com/a/93852&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://programmers.stackexchange.com/a/93852&#34;&gt;http://programmers.stackexchange.com/a/93852&lt;/a&gt;&lt;/a&gt;).&lt;br /&gt;&lt;br /&gt;Ada satu lagi. Video yang mengulang dirinya sendiri: (sumber: &lt;a href=&#34;http://penjee.com/&#34; target=&#34;_blank&#34;&gt;penjee.com&lt;/a&gt;)&lt;br /&gt;&lt;div class=&#34;separator&#34; style=&#34;clear: both; text-align: center;&#34;&gt;&lt;a href=&#34;https://blog.penjee.com/wp-content/uploads/2015/06/visual-animation-recursion.gif&#34; imageanchor=&#34;1&#34; style=&#34;margin-left: 1em; margin-right: 1em;&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://blog.penjee.com/wp-content/uploads/2015/06/visual-animation-recursion.gif&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Saya kira, dari contoh animasi dan lukisan di atas, kita dapat memahami cara kerja fungsi rekursif. Sekian tulisan pendek ini, kalau ada yang kurang, silahkan ditambahkan.&lt;/p&gt;
 </description>
     </item>
     

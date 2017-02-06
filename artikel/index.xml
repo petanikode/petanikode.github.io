@@ -7,8 +7,79 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 05 Feb 2017 19:25:26 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Feb 2017 07:15:11 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Membuat Halaman Github untuk Proyek atau Repositori</title>
+      <link>http://petanikode.com/2017/02/cara-membuat-halaman-github-untuk-proyek-atau-repositori/</link>
+      <pubDate>Mon, 06 Feb 2017 07:15:11 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/cara-membuat-halaman-github-untuk-proyek-atau-repositori/</guid>
+      <description>
+
+&lt;p&gt;Pada tulisan sebelumnya, saya pernah membahas tentang &lt;a href=&#34;http://petanikode.com/2017/01/cara-membuat-halaman-github-kurang-dari-10-menit/&#34;&gt;cara membuat halaman
+Github untuk profil individu dan organisasi&lt;/a&gt;.
+Nah, kali ini kita akan membuat halaman github untuk proyek atau repositori.&lt;/p&gt;
+
+&lt;p&gt;Jadi sebenarnya, setiap proyek atau respositori di Github itu bisa dijadikan
+halaman Github &lt;em&gt;(Github Pages)&lt;/em&gt;. Pastikan di dalam proyek berisi file web statis
+seperti HTML, CSS, dan Javascript.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-repositori&#34;&gt;Membuat repositori&lt;/h2&gt;
+
+&lt;p&gt;Buatlah repositori dengan nama apa saja, kemudian di dalamnya berisi file web statis.
+Setelah itu, upload ke github.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
+git add .
+git commit -m &amp;quot;commit pertama&amp;quot;
+git add remote origin https://github.com/{username}/{nama-repo}
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;pengaturan-repositori&#34;&gt;Pengaturan Repositori&lt;/h2&gt;
+
+&lt;p&gt;Klik tombol &lt;em&gt;Settings&lt;/em&gt; pada repositori untuk masuk ke pengaturan repositori,
+kemudian gulung ke bawah sampai menemukan bagian &lt;em&gt;Github Pages&lt;/em&gt;. Lalu pada
+&lt;em&gt;Source&lt;/em&gt;, pilih cabang &lt;em&gt;(branch)&lt;/em&gt; yang akan menjadi halaman Github.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;748&#34;
+height=&#34;462&#34;
+alt=&#34;Membuat halaman github untuk repositori.png&#34;
+src=&#34;https://1.bp.blogspot.com/-wfzIqx9du78/WJe3rJKMs1I/AAAAAAAADxg/qleBmhPbOEggZ9EnYU_6-4hH_eIYYkC7gCPcB/s1600/Membuat%2Bhalaman%2Bgithub%2Buntuk%2Brepositori.png&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, saya menggunakan cabang &lt;code&gt;master&lt;/code&gt;. Sebenarnya tidak disarankan
+menggunakan cabang ini untuk halaman github. Kita disarankan menggunakan cabang lain, tapi
+harus dibuat terlebih dahulu. Cara pembuatan cabang dapat dilakukan dengan perintah berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout -b nama-cabang
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;percobaan&#34;&gt;Percobaan&lt;/h2&gt;
+
+&lt;p&gt;Setelah itu, beberapa detik kemudian, halaman akan langsung jadi. Kita bisa
+mengaksesnya melalui alamat &lt;code&gt;https://{username}.github.io/nama-repo&lt;/code&gt;. Karena
+saya sudah menggunakan domain untuk halaman github, maka nanti saya akan
+mengaksesnya melalui &lt;code&gt;http://petanikode.com/nama-repo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh yang sudah saya buat:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Halaman Github: &lt;a href=&#34;http://petanikode.com/amp-tools&#34;&gt;http://petanikode.com/amp-tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Repositorinya: &lt;a href=&#34;https://github.com/petanikode/amp-tools/&#34;&gt;https://github.com/petanikode/amp-tools/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Selain cara ini, ada juga cara lain, yaitu melalui direktori &lt;code&gt;docs&lt;/code&gt;. Mungkin
+akan saya bahas pada kesempatan berikutnya. Tetap pantau blog ini ya, :smile:.&lt;/p&gt;
+
+&lt;p&gt;Jadi, itulah cara membuat halaman
+github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Berkenalan dengan Vue.js</title>
@@ -1486,66 +1557,6 @@ src=&#34;https://4.bp.blogspot.com/-X587f0Th2H8/WGircqM3tKI/AAAAAAAADjM/HBuAl-4A
 layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 
 &lt;p&gt;Meskipun masih rangking 40, kita masih punya kesempatan untuk meraih rangking yang lebih baik.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Impor Artikel Blogger ke Hugo Kurang dari 15 Menit</title>
-      <link>http://petanikode.com/2017/01/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/</link>
-      <pubDate>Fri, 13 Jan 2017 21:08:45 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/</guid>
-      <description>
-
-&lt;p&gt;Dalam rangka migrasi Petani Kode ke Hugo, saya harus melakukan impor artikel dari Blogger ke Hugo. Untungnya Hugo sudah menyediakan skrip untuk impor konten dari blogger ke Hugo. Proses impor ini memakan waktu cukup cepat. Saya kira, tidak sampai 15 menit. Benar sekali, mungkin anda bisa melakukannya lebih cepat.&lt;/p&gt;
-
-&lt;p&gt;Saya asumsikan, kita telah menginstal &lt;a href=&#34;https://golang.org&#34;&gt;Go (Golang)&lt;/a&gt; dan &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt;. Kemudian lakukan langkah-langkah berikut ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-ekspor-blog&#34;&gt;1. Ekspor Blog&lt;/h2&gt;
-
-&lt;p&gt;Pertama, kita perlu mengekspor dulu konten yang ada di blogger. Masuk ke &lt;em&gt;Settings&amp;gt;Other&lt;/em&gt; kemudian klik &lt;em&gt;Back up Content&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    src=&#34;https://lh3.googleusercontent.com/8hFKhTL6Mxfi6L9ht8Zy1vGhnbrw-yX12l91QfUShBV9DJrqGfYYDjZgUB0-MKmwvL4OukfMqYBUyi4j7xh7aFPmpgMiRX8mIrNRTiPi1_uNr8dl-v7v-w0IL4ZhSs3kmjB8Moe6DykxLHtME2Ei6qj5_W0xL9BBHht7gErt5vSTaf2Q_sTwtc9eAhoiVkBRgrwFnRp8GwX1gDz9CVI_KT32DhFRMdyWKT-zeFJbIlH4UMbatDm_lGt_S7OtI22z0QbWEH7v1ZoLshqfXLBKrPjlBVneAOdmmV9E4Lbydx1AxHvNQjIGyoZOQLPOTRWQKXApYyTWMdgtdfZv0NqiX9IgQ-ld1lrC2DYTphdIWPvDv7QDcSok3prUz54Wep0AT98m9Y0UCaFIT1qnqIJa8J05JUEfHzsl-nXA43fBmk5J1Kt7JFP7ODlGQkzbSPazkEcxpkVxBVzB6KWQqqaysVad1A14cu-Caa86vP1HMIDxjXTl4RX54l15gIxfa6KpUY34ZCDR9Q8eoIyEuaTTlk70n48MYAvNCFNNUm95Uk1ZOrECYm9AB-xr2aLoCB-DDt2E335GkMzWLy6TOLFQfZhzJDtbIkgSr5pEKdB0C9VQKG8TPEG2=w796-h286-no&#34;
-    width=&#34;796&#34;
-    height=&#34;268&#34;
-    layout=&#34;responsive&#34;
-    alt=&#34;Ekspor kontent blog&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kita akan mendapatkan file &lt;code&gt;.xml&lt;/code&gt;, nah file ini nanti yang akan kita ekstrak isinya menjadi format &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-download-skrip&#34;&gt;2. Download skrip&lt;/h2&gt;
-
-&lt;p&gt;Selanjutnya kita membutuhkan skrip untuk melakukan ekstrak terhadap file &lt;code&gt;.xml&lt;/code&gt; tadi. Silahkan klon skripnya di &lt;a href=&#34;https://github.com/natefinch/blogimport&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/natefinch/blogimport
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;3-impor-konten&#34;&gt;3. Impor Konten&lt;/h2&gt;
-
-&lt;p&gt;Setelah kita mendapatkan skripnya, sekarang kita harus mengekstrak isi dari file &lt;code&gt;.xml&lt;/code&gt; menjadi file &lt;em&gt;markdown&lt;/em&gt;. Pertama, masuk dulu ke direktori skripnya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd blogimpor
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu buat direktori baru sebagai tempat menampung hasil ekstraksi.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mkdir artikel
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jalankan skrip:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;go run main.go ~/Downloads/blog-2017-01-13.xml artikel
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, coba periksa direktori artikel.
-&lt;amp-img
-    src=&#34;https://lh3.googleusercontent.com/I36HhwnAxaNYEouTOg7BpGwcbnhX-Gxjab8gCSGUj69Q2Kif1TyPiQbyLuHQ9zLzaoHy6pYS8lZivKFKWkBW69Gh5oNrrl797rBt3LN26t2nqtxXdqH5E95jFxGOUkAE7ule2FuxVEdqQTp3Uc9dEu8O1CldVHZ-5PdthwNCgux7t8R7yEEhvBVOyPZOCoYJLp6agg6Ckmq2sF8lP8P5C3_qxWXo9IcuDURRmn6qnpd0oRTdRtR9NGiR65-8nyQ-cEMbnGvPXer7HG2Nb65ramTqtZ27ycrJA-u8PqK79ZTryEsYj2gBOwRh5U3Yn3xbQkqc41ZnnUJ0qpQFy_M-54BEzHdU43cIgtsHaIRw7GYERk81xor3htxrOc-pF-1JNcq8IcbjWzYHSeDx17zlkiB9kedDhsBoluIjmTPHEWdgoYfsngylDRH8Eg_in4lE05XE9lUIe1S_sbHTik_1VdRp29SFujsfliQYRLfNDGhrHSomljnS8Vf_oM0P8aVvy27Y5ONkmNa-YYLGuYrDSBGonJ53VYVHVXN5gr900nnl7cVMmApjKL25SIlgsbGmX_RKZxKzAExmpOn7q2dsoKc4wR0gzpDFgXRmAEG-lypoeD68ouGj=w854-h457-no&#34;
-    width=&#34;854&#34;
-    height=&#34;457&#34;
-    layout=&#34;responsive&#34;
-    alt=&#34;Ekspor kontent blog&#34;&gt;&lt;/amp-img&gt;
-Selanjutnya, kita bisa pindahkan semua file &lt;em&gt;markdown&lt;/em&gt; ini ke direktori &lt;em&gt;content&lt;/em&gt; di Hugo.&lt;/p&gt;
 </description>
     </item>
     

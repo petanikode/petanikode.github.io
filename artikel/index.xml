@@ -7,8 +7,202 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 06 Feb 2017 07:15:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Feb 2017 17:20:36 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Apa itu Git dan Kenapa Penting bagi Programmer?</title>
+      <link>http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/</link>
+      <pubDate>Wed, 08 Feb 2017 17:20:36 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/</guid>
+      <description>
+
+&lt;p&gt;Git adalah salah satu alat pengontrol versi &lt;em&gt;(Version Control System)&lt;/em&gt; pada
+proyek perangkat lunak yang diciptakan oleh Linus Torvalds. Awalnya Linus
+menciptakan Git untuk mengelola kode sumber &lt;em&gt;(source kode)&lt;/em&gt; kernel Linux.
+Tapi, karena Linus mempublikasikannya dengan lisensi open soure,
+semua orang jadi bisa pakai Git secara gratis.&lt;/p&gt;
+
+&lt;p&gt;Sungguh baik ya bapak Linus Torvalds :smile:.&lt;/p&gt;
+
+&lt;p&gt;Bayangkan ada 1000 programmer dari seluruh dunia yang ikut berkontribusi membangun kernel Linux.
+Bagaimana cara Linus akan mengelola itu semua? Bagaimana cara menggabungkan kode
+dari 1000 programmer ini? Kalau ada kode yang bentrok gimana? Itulah alasan
+kenapa git dibuat. Selain sebagai pengontrol versi, Git juga bisa dugunakan untuk
+kolaborasi.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-yang-dilakukan-oleh-git&#34;&gt;Apa yang dilakukan oleh Git?&lt;/h2&gt;
+
+&lt;p&gt;Git sebenarnya akan memantau perubahan yang terjadi pada kode-kode yang kita tulis.
+Lalu menyimpan perubahan tersebut. Kalau misalnya nanti ada kesalahan,
+kita bisa kembalikan lagi.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;800&#34;
+    height=&#34;563&#34;
+    alt=&#34;800px-GNOME_gitg.png&#34;
+    src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GNOME_gitg.png/800px-GNOME_gitg.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Misalnya begini, ada seorang mahasiswa yang akan merevisi kode-kodenya. Lalu dosenya
+bilang, &amp;ldquo;kode yang kemarin sudah benar, kenapa banyak perubahan?&amp;rdquo; Karena si mahasiswa
+tida menggunakan Git, akhirnya dia tidak bisa mengembalikannya seperti saat kemarin.
+Kecuali ada &lt;em&gt;backup&lt;/em&gt; yang sudah disimpan.&lt;/p&gt;
+
+&lt;p&gt;Berbeda kalau misalnya dia menggunakan Git. Dia akan bisa kembalikan kondisi kodenya
+seperti sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Tidak hanya itu, git juga bisa melakukan berbagai hal yang mungkin akan saya bahas
+nanti (insa&amp;rsquo;allah pada kesempatan yang akan datang).&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-upload-file-ke-server-ftp-ala-git/&#34;&gt;Cara Upload file ke Server FTP ala Git&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kenapa-git-penting-bagi-programmer&#34;&gt;Kenapa Git penting bagi programmer?&lt;/h2&gt;
+
+&lt;p&gt;Seperti yang sudah saya ceritakan di atas. Bagaimana Linus akan berkolaborasi dengan
+1000 programmer dan bagaimana mahasiswa akan lebih mudah megelola kodenya dengan git.&lt;/p&gt;
+
+&lt;p&gt;Saat ini Git menjadi salah satu alat yang populer digunakan pada pengembangan
+perangkat lunak &lt;em&gt;open souce&lt;/em&gt; maupun &lt;em&gt;closed source&lt;/em&gt;. Google, Microsoft, Facebook
+dan berbagai perusahaan raksasa lainnya menggunakan Git.&lt;/p&gt;
+
+&lt;p&gt;Jadi, buat kalian yang punya impian ingin bekerja di perusahaan raksasa seperti
+yang saya sebutkan di atas, kalian harus bisa Git.&lt;/p&gt;
+
+&lt;p&gt;Selain itu, berikut ini ada beberapa menfaat yang mungkin kita bisa rasakan setelah
+menggunakan Git.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Revisi kode disimpan semua, sehingga kita lebih gampang mengelolanya.&lt;/li&gt;
+&lt;li&gt;Kode dapat di-backup di Github, Gitlab, Bitbucket, dll.&lt;/li&gt;
+&lt;li&gt;Bisa kolaborasi atau ikut kontribusi di proyek open source.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Jadi, apakah kalian sudah mengenal git? Bagus, selanjutnya silahkan ikuti tutorial
+git berikut ini.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Tutorial Git 01 - Instalasi dan &lt;a href=&#34;http://petanikode.com/2016/03/3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux/&#34;&gt;Perisiapan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tutorial Git 02 - Membuat Repositori&lt;/li&gt;
+&lt;li&gt;Tutorial Git 03 - Melihat Status&lt;/li&gt;
+&lt;li&gt;Tutorial Git 04 - Membuat Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 05 - Melihat Log&lt;/li&gt;
+&lt;li&gt;Tutorial Git 06 - Melihat Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 07 - Membatalkan Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 08 - Percabangan&lt;/li&gt;
+&lt;li&gt;Tutorial Git 09 - Penggabungan Cabang&lt;/li&gt;
+&lt;li&gt;Tutorial Git 10 - Remote Repositori&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Catatan&lt;/strong&gt;: Kalau link di atas masih mati, berarti masih dalam draf. Sabar ya,
+nanti juga terbit kok. :smile:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;https://git-scm.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Git&#34;&gt;https://en.wikipedia.org/wiki/Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>7 Video yang Akan Menginspirasimu untuk Belajar Pemrograman</title>
+      <link>http://petanikode.com/2017/02/7-video-yang-akan-menginspirasimu-untuk-belajar-pemrograman/</link>
+      <pubDate>Mon, 06 Feb 2017 12:32:28 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/7-video-yang-akan-menginspirasimu-untuk-belajar-pemrograman/</guid>
+      <description>
+
+&lt;p&gt;Belajar pemrograman memang sulit, apalagi saat kekurangan motivasi dan inspirasi.
+Namun, jangan khawatir. Saat kamu kekurangan motivasi dan inspirasi,
+cobalah untuk nonton video-video berikut ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-what-most-schools-don-t-teach&#34;&gt;1. What Most Schools Don&amp;rsquo;t Teach&lt;/h2&gt;
+
+&lt;p&gt;Video ini berisi kompilasi kumpulan pendapat dan nasihat dari orang-orang terkenal seperti
+Bill Gates, Jack, Mark Zuckerberg, Drew, Gabe, Will.i.am, dll.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube width=&#34;480&#34;
+     height=&#34;270&#34;
+     layout=&#34;responsive&#34;
+     data-videoid=&#34;nKIu9yen5nc&#34;&gt;
+ &lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;!-- https://www.youtube.com/watch?v=nKIu9yen5nc --&gt;
+
+&lt;h2 id=&#34;2-14-year-old-prodigy-programmer-dreams-in-code&#34;&gt;2. 14-Year-Old Prodigy Programmer Dreams In Code&lt;/h2&gt;
+
+&lt;p&gt;Video ini bersisi kisah tentang Santiago Gonzalez yang berusia 14 tahun.
+Ia sangat menyukai pemrograman.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube width=&#34;480&#34;
+     height=&#34;270&#34;
+     layout=&#34;responsive&#34;
+     data-videoid=&#34;DBXZWB_dNsw&#34;&gt;
+ &lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-aspiring-game-programmer-motivational-video&#34;&gt;3. Aspiring Game Programmer - Motivational Video&lt;/h2&gt;
+
+&lt;p&gt;Video ini berisi nasihat dan motivasi dari beberapa Game Developer yang
+akan menggugah semangatmu. Video ini lebih fokus untuk memotivasi &lt;em&gt;game programmer&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube width=&#34;480&#34;
+     height=&#34;270&#34;
+     layout=&#34;responsive&#34;
+     data-videoid=&#34;j_yGRhdhVhY&#34;&gt;
+ &lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-a-12-year-old-app-developer-thomas-suarez&#34;&gt;4. A 12-year-old app developer | Thomas Suarez&lt;/h2&gt;
+
+&lt;p&gt;Video ini berisi seorang bocah bernama Thomas Suarez, berumur 12 tahun yang presentasi di TED. Dia membuat aplikasi iPhone, iTouch, dan iPad.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube width=&#34;480&#34;
+     height=&#34;270&#34;
+     layout=&#34;responsive&#34;
+     data-videoid=&#34;Fkd9TWUtFm0&#34;&gt;
+ &lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-computer-science-matters&#34;&gt;5. Computer Science Matters&lt;/h2&gt;
+
+&lt;p&gt;Sama seperti video pertama, video ini juga berisi nasihat dari orang-orang terkenal.
+Video dari channel &lt;a href=&#34;https://www.youtube.com/channel/UCJyEBMU1xVP2be1-AoGS1BA&#34;&gt;code.org&lt;/a&gt;
+ini sebenarnya untuk gerakan &lt;em&gt;hour of code&lt;/em&gt; yang diselenggarakan setiap tahun.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube width=&#34;480&#34;
+     height=&#34;270&#34;
+     layout=&#34;responsive&#34;
+     data-videoid=&#34;IiPLtP-jm8&#34;&gt;
+ &lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-change-the-world-2015-hour-of-code&#34;&gt;6. Change The World - 2015 Hour Of Code&lt;/h2&gt;
+
+&lt;p&gt;Satu lagi vide dari Hour of Code&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube width=&#34;480&#34;
+     height=&#34;270&#34;
+     layout=&#34;responsive&#34;
+     data-videoid=&#34;BvRvluhfzf0&#34;&gt;
+&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-the-mind-behind-linux-linus-torvalds&#34;&gt;7. The mind behind Linux | Linus Torvalds&lt;/h2&gt;
+
+&lt;p&gt;Video ini berisi tentang Talk Show Linus Torvalds di TED.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube width=&#34;480&#34;
+     height=&#34;270&#34;
+     layout=&#34;responsive&#34;
+     data-videoid=&#34;o8NPllzkFhE&#34;&gt;
+&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah video motivasi dan inspirasi untuk belajar pemrograman. Semoga teman-teman
+semakin termotivasi.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Cara Membuat Halaman Github untuk Proyek atau Repositori</title>
@@ -1303,260 +1497,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 
 &lt;p&gt;Sampai tahap ini, cobalah untuk mengakses alaman yang dialihkan tadi.
 Kalau pengalihan berhasil berarti konfigurasi sudah benar.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan</title>
-      <link>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</link>
-      <pubDate>Sun, 15 Jan 2017 21:06:22 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</guid>
-      <description>&lt;p&gt;Ada cerita menarik yang saya alami ketika &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi Petani Kode dari Blogger ke Hugo&lt;/a&gt;.
-Waktu itu, ketika saya ingin mengimpor konten dari Blogger ke Hugo, ada sesuatu
-yang kurang dari skrip Go yang disediakan. Kekuarangnnya tidak mampu membuat
-atau mengambil gambar &lt;em&gt;(thumbnail)&lt;/em&gt; untuk setiap artikel.&lt;/p&gt;
-
-&lt;p&gt;Saya kemudian berpikir, mungkin nanti saya bisa edit setiap gambar untuk artikel.
-Namun, rasanya akan sangat melelahkan melakukannya karena jumlah artikelnya sampai ratusan. Tidak ingin melakukan hal yang berulang-ulang seperti kata orang,
-&lt;em&gt;Don&amp;rsquo;t Repeat Yourself&lt;/em&gt; di singkat DRY. Saya kemudian membuka &lt;a href=&#34;https://github.com/natefinch/blogimport/issues/1&#34;&gt;isu baru&lt;/a&gt; di repositori
-skrip ini.&lt;/p&gt;
-
-&lt;p&gt;Beberapa jam kemudian, Nate Finch membalas isu yang saya buat.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I&amp;rsquo;d be more than happy to accept a pull request for this, if you want to write it.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Terjemahnya kira-kira begini, &amp;ldquo;Saya akan sangat senang sekali menerima &lt;em&gt;pull request&lt;/em&gt; untuk hal ini, jika anda berkenan menulisnya&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;Awalnya saya berharap agar Nate Finch mau meng-update skripnya, tapi malah saya yang disuruh nulis dan saya tidak paham bahasa pemrograman Go sama sekali. Mungkin saja si Nate Finch sedang sibuk, sehingga tidak punya waktu untuk menulis skrip ini lagi.&lt;/p&gt;
-
-&lt;p&gt;Karena isu ini adalah kebutuhan saya, maka mau tidak mau saya sendiri yang harus membuatnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;380&#34;
-width=&#34;720&#34;
-alt=&#34;Ghoper Petani Kode&#34;
-src=&#34;https://3.bp.blogspot.com/-tHAcqs4Bv1o/WIAVwWJzaLI/AAAAAAAADps/sBBGZxVxmcI66poCB-Mj0AEzIkDeDG8KQCPcB/s1600/go-gopher-petanikode.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Saya tidak harus belajar bahasa pemrograman Go dari awal. Karena sintaknya cukup mirip dengan bahasa pemrograman yang pernah saya pelajari. Pertama saya harus pahami dulu skrip yang ditulis Nate Finch.&lt;/p&gt;
-
-&lt;p&gt;Pertama, saya menebak-nebak dulu fungsi dari setiap prosedurnya dengan membaca dari bawah ke atas.&lt;/p&gt;
-
-&lt;p&gt;Saya kemudian mengetahui, fungsi ini untuk membuat file &lt;em&gt;markdown&lt;/em&gt;, meski tidak tahu detail algoritmanya. Saya dapat petunjuk karena melihat ada &lt;code&gt;.md&lt;/code&gt; di sana.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func writeEntry(e Entry, dir string) error {
-	filename := filepath.Join(dir, makePath(e.Title)+&amp;quot;.md&amp;quot;)
-	f, err := os.OpenFile(filename, os.O_CREATE | os.O_TRUNC | os.O_WRONLY, 0644)
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	return t.Execute(f, e)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian naik ke atas, saya menemukan baris kode ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;if err := writeEntry(entry, dir); err != nil {
-    log.Fatalf(&amp;quot;Failed writing post %q to disk:\n%s&amp;quot;, entry.Title, err)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kode tersebut pasti pemanggilan fungsi yang tadi. Kemudian saya melakukan penelusuran dengan parameternya &lt;code&gt;entry&lt;/code&gt; dan &lt;code&gt;dir&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Bolak-balik, atas-bawah. Saya menemukan:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;parameter &lt;code&gt;dir&lt;/code&gt; dari &lt;code&gt;dir := args[1]&lt;/code&gt;, yaitu argumen yang diberikan ketika menjalankan kode ini. Karena &lt;code&gt;args&lt;/code&gt; itu tidak asing bagi pengguna linux seperti saya.&lt;/li&gt;
-&lt;li&gt;parameter &lt;code&gt;entry&lt;/code&gt; dari nama alias &lt;code&gt;exp.Entries&lt;/code&gt;, karena di sana sepertinya ada perulangan &lt;em&gt;foreach&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kemudian saya menelusuri asal-usul &lt;code&gt;exp.Entries&lt;/code&gt; ini. Ternyata dia barasal dari &lt;code&gt;exp := Export{}&lt;/code&gt;. Lalu, &lt;code&gt;Export{}&lt;/code&gt; itu berasal dari struk &lt;code&gt;Export&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;type Export struct {
-    XMLName xml.Name `xml:&amp;quot;feed&amp;quot;`
-    Entries []Entry `xml:&amp;quot;entry&amp;quot;`
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sampai di sini saya sedikit mengerti algoritma dari skrip ini.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Skrip ini mengubah semua tag XML menjadi struk&lt;/li&gt;
-&lt;li&gt;Lalu Struk tadi diurai dalam perluangan&lt;/li&gt;
-&lt;li&gt;Setelah itu, buat file &lt;em&gt;markdown&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Kira-kira begitulah yang saya pahami.&lt;/p&gt;
-
-&lt;p&gt;Kemudian saya mencoba merubah atribut yang ada dalam struk. Karena saya kira sudah paham maksud dari struk tersebut. Namun ternyata tidak ada hasil apa-apa.&lt;/p&gt;
-
-&lt;p&gt;Saya ingin mengambil URL dari elemen XML ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;media:thumbnail xmlns:media=&#39;http://search.yahoo.com/mrss/&#39; url=&#39;https://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s72-c/thumbnail-image.png&#39; height=&#39;72&#39; width=&#39;72&#39;/&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Terlihat di sana ada penggunaan &lt;em&gt;namespace&lt;/em&gt; untuk elemen tersebut. Kemudian saya mencari dan menemukan jawaban di &lt;a href=&#34;http://stackoverflow.com/a/14152832&#34;&gt;Stack Overflow&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Setelah mencoba dan berhasil mendapatkan URL-nya, yay!&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;400&#34;
-width=&#34;600&#34;
-alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
-src=&#34;http://i.imgur.com/z7MveXv.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Namun, ukuran gambar dari URL tersebut adalah 72x72 piksel. Lalu, selanjutnya saya menginginkan gambar yang lebih besar.&lt;/p&gt;
-
-&lt;p&gt;Ketemu masalah lagi, gambar tidak bisa diperbesar. Karena tidak ada fungsi untuk &lt;em&gt;replace string&lt;/em&gt; pada template Go. Tidak lama kemudian, saya berhasil menyelesaikannya.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/&#34;&gt;Cara Replace String pada Template Go&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah semuanya beres, saya kemudian melakukan &lt;em&gt;pull request&lt;/em&gt; ke repositori milik Nate Finch. Saat ini masih belum di-reviw, diterima atau ditolak terserah Nate Finch. Saya hanya butuh untuk masalah saya saja. Namun, jika anda juga membutuhkannya bisa klon atau &lt;em&gt;fork&lt;/em&gt; &lt;a href=&#34;https://github.com/ardianta/blogimport&#34;&gt;repositori dari saya&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Luar biasa, tidak pernah belajar bahasa pemrograman Go sama sekali, malah melakukan &lt;em&gt;pull request&lt;/em&gt; ke proyek yang menggnuakan bahasa pemrograman Go.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>10 Negara dengan Programmer Terbaik dan Indonesia Ranking Berapa?</title>
-      <link>http://petanikode.com/2017/01/10-negara-dengan-programmer-terbaik-dan-indonesia-ranking-berapa/</link>
-      <pubDate>Sat, 14 Jan 2017 15:26:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/10-negara-dengan-programmer-terbaik-dan-indonesia-ranking-berapa/</guid>
-      <description>
-
-&lt;p&gt;Banyak yang mungkin menduga, Amerika adalah negara dengan programmer terbaik. Karena di sana sarangnya para programmer legendaris seperti Bill Gates, Ken Thompson, Dennis Ritchie, dan Donald Knuth. Namun ternyata bukan. Hal ini dibuktikan oleh HackerRank.&lt;/p&gt;
-
-&lt;p&gt;HackerRank merupakan sebuah &lt;i&gt;platform&lt;/i&gt; untuk menentukan rangking para programmer beradasarkan skill &lt;i&gt;coding &lt;/i&gt;yang dimilikinya. HackerRank sering mengadakan tantangan &lt;i&gt;(challenges)&lt;/i&gt; untuk meningkatkan kemampuan para programmer. Ribuan programmer dari seluruh penjuru dunia ikut berpartisipasi dalam tantangan. Programmer dinilai berdasarkan kombinasi akurasi dan kecepatannya. Beberapa bulan yang lalu, HackerRank mempublikasi hasil analisis datanya. Berikut ini 10 Negara dengan programmer terbaik menurut HackerRank.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-cina&#34;&gt;#1 Cina&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;525&#34;
-width=&#34;938&#34;
-alt=&#34;Programmer Cina&#34;
-src=&#34;https://2.bp.blogspot.com/-loSqxxajlMg/WGiTEHt7VyI/AAAAAAAADhY/hZoknwSypCcRXybjS031ResOUYllu1r7ACK4B/s1600/china_programmer_cheerleaders_01.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Cina menjadi negeara dengan ranking 1 di HackerRank. Cina unggul pada tantangan struktur data, matematika, dan pemrograman fungsional.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-rusia&#34;&gt;#2 Rusia&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;340&#34;
-width=&#34;600&#34;
-alt=&#34;Programmer Rusia&#34;
-src=&#34;https://1.bp.blogspot.com/-Ow9v19qs4ME/WGiVDDiWnaI/AAAAAAAADhk/OyXCvAHX5Tovu_-f8h-H6E4zREqvdMieQCK4B/s1600/russian%2Bprogrammer.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sementara Rusia meraih ranking ke-2 setelah Cina. Rusia unggul pada tantangan Algoritma.&lt;/p&gt;
-
-&lt;h2 id=&#34;3-polandia&#34;&gt;#3 Polandia&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;512&#34;
-width=&#34;770&#34;
-alt=&#34;Programmer Polandia&#34;
-src=&#34;http://2.bp.blogspot.com/-XL2Uq49Hrrs/WGiXFFDvs9I/AAAAAAAADhw/Hg4Otn2dTjQ_uu_Fgz7db2uNrpQiba4NwCK4B/s1600/programmer%2Bpolandia.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Polandia unggul dalam tantangan pemrograman Java. Anak-anak di Polandia sudah diajari pemrograman di sekolah. Sistem pendidikan mereka lebih fokus pada sains dan komputasi.&lt;/p&gt;
-
-&lt;h2 id=&#34;4-swis&#34;&gt;#4 Swis&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;428&#34;
-width=&#34;640&#34;
-alt=&#34;Programmer Swis&#34;
-src=&#34;http://3.bp.blogspot.com/-WAkwDc9GmxA/WGiYtV23gRI/AAAAAAAADh8/TT-OROmA49Qv0A3yPPSVCvkTGLlV5blVACK4B/s1600/swiz%2Bprogrammer.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Swis meraih peringkat ke-4 pada HackerRank. Swis meruapakan tempat kelahiran bahasa pemrograman &lt;a href=&#34;http://petanikode.com/topik/pascal&#34;&gt;Pascal&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;5-hongaria&#34;&gt;#5 Hongaria&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;638&#34;
-width=&#34;960&#34;
-alt=&#34;Programmer Hongaria&#34;
-src=&#34;http://4.bp.blogspot.com/-FVl0_338U6g/WGiZWxDaNCI/AAAAAAAADiE/EmBM3z4Hv0EmWtRrbZSWRr1Oxshar1jQQCK4B/s1600/programmer%2Bhungaria.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Hongaria mendapat rangking ke-5, mereka unggul pada tantangan dalam bentuk tutorial. Hongaria juga menjadi negeara eropa pertama yang memasukan pelajaran pemrograman dalam sistem pendidikan mereka.&lt;/p&gt;
-
-&lt;h2 id=&#34;6-jepang&#34;&gt;#6 Jepang&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;1228&#34;
-width=&#34;1600&#34;
-alt=&#34;Programmer Jepang&#34;
-src=&#34;https://3.bp.blogspot.com/-twdklvtJC-g/WGiashGCq1I/AAAAAAAADiQ/C8tXNG83jqcgJV1Sjs_25jbneR6zNiomwCK4B/s1600/programmer%2Bjepang.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Jepang adalah negara terbaik yang menyelesaikan tantangan kecerdasan buatan di HackerRank. Jepang juga tempat kelahiran bahasa pemrograman &lt;a href=&#34;http://petanikode.com/topik/ruby&#34;&gt;Ruby&lt;/a&gt;. Namun, Jepang mendapatkan peringkat ke-6 pada HackerRank.&lt;/p&gt;
-
-&lt;h2 id=&#34;7-taiwan&#34;&gt;#7 Taiwan&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;600&#34;
-height=&#34;400&#34;
-alt=&#34;Programmer Taiwan&#34;
-src=&#34;http://3.bp.blogspot.com/-ZKS-vk0eUwA/WGicxZnTDnI/AAAAAAAADic/TR7N5w7CmLocBzJj6G_-HSDO4a_SLlD8gCK4B/s1600/programmer%2Btaiwan.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Taiwan mendapatkan rangking ke-7. Merka meraih skor tinggi pada tantangan database, pemrograman fungsional, algoritma dan struktur data.&lt;/p&gt;
-
-&lt;h2 id=&#34;8-prancis&#34;&gt;#8 Prancis&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;864&#34;
-height=&#34;487&#34;
-alt=&#34;Programmer Prancis&#34;
-src=&#34;https://2.bp.blogspot.com/-a698X84gyWQ/WGidrszBt4I/AAAAAAAADik/HE0Rm6kF-tADlb4vbD2QadGiK8YCdaDKACK4B/s1600/programmer%2Bprancis.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Prancis lebih dominan pada C++. Karena prancis sudah memasukan pelajaran pemrograman pada sekolah dasar sejak bulan &lt;a href=&#34;http://www.itworld.com/article/2696639/application-management/france-to-offer-programming-in-elementary-school.html&#34;&gt;juni 2014&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;9-republik-ceko&#34;&gt;#9 Republik Ceko&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;630&#34;
-height=&#34;350&#34;
-alt=&#34;Programmer Ceko&#34;
-src=&#34;https://4.bp.blogspot.com/-og-xJ6_H42A/WGievUCgafI/AAAAAAAADi0/9PbecauaWwIHz9C-3w5JrKeH-G4gC4G1ACK4B/s1600/programmer%2Bceko.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Republik ceko lebih unggul pada tantangan dengan &lt;i&gt;shell scripting&lt;/i&gt;. Mereka juga meraih peringkat kedua pada tantangan matematika. Namun, hanya mampu masuk rangking ke-9.&lt;/p&gt;
-
-&lt;h2 id=&#34;10-itali&#34;&gt;#10 Itali&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;1000&#34;
-height=&#34;536&#34;
-alt=&#34;Programmer Italia&#34;
-src=&#34;https://4.bp.blogspot.com/-brojwlLJuKI/WGihV6Umf3I/AAAAAAAADjA/7clsKJ8rFZgLfgofiDjYWonBnWhjIFSmACK4B/s1600/programmer%2Bitalia.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Itali meraih peringkat ke-10. Mereka hebat dalam tantangan database dan tutorial. Mereka dapat rangking kedua pada dua tantangan tersebut.&lt;/p&gt;
-
-&lt;p&gt;Itulah 10 negara dengan programmer terbaik menurut HackerRank Lalu, Indonesia peringkat ke berapa?&lt;/p&gt;
-
-&lt;p&gt;Berdasarkan &lt;a href=&#34;http://blog.hackerrank.com/which-country-would-win-in-the-programming-olympics/&#34;&gt;data yang dipublikasikan HackerRank&lt;/a&gt;, Indonesia meraih peringkat ke-40. Berada di atas Slandia Baru, Mesir, Afrika Selatan, Banglades, Kolombia, Filipina, Malaysia, Nigeria, Srilangka, dan Pakistan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;642&#34;
-height=&#34;612&#34;
-alt=&#34;Peringkat negara menurut hackerrank&#34;
-src=&#34;https://4.bp.blogspot.com/-X587f0Th2H8/WGircqM3tKI/AAAAAAAADjM/HBuAl-4A1fIgN8gjNiSYVneaAe7Bry8SgCLcB/s1600/peringkat%2Bprogrammer%2Bbedasarkan%2Bnegara.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Meskipun masih rangking 40, kita masih punya kesempatan untuk meraih rangking yang lebih baik.&lt;/p&gt;
 </description>
     </item>
     

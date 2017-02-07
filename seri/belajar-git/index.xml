@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Belajar Git on Petani Kode</title>
+    <link>http://petanikode.com/seri/belajar-git/index.xml</link>
+    <description>Recent content in Belajar Git on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <atom:link href="http://petanikode.com/seri/belajar-git/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Apa itu Git dan Kenapa Penting bagi Programmer?</title>
+      <link>http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/</link>
+      <pubDate>Wed, 08 Feb 2017 17:20:36 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/</guid>
+      <description>
+
+&lt;p&gt;Git adalah salah satu alat pengontrol versi &lt;em&gt;(Version Control System)&lt;/em&gt; pada
+proyek perangkat lunak yang diciptakan oleh Linus Torvalds. Awalnya Linus
+menciptakan Git untuk mengelola kode sumber &lt;em&gt;(source kode)&lt;/em&gt; kernel Linux.
+Tapi, karena Linus mempublikasikannya dengan lisensi open soure,
+semua orang jadi bisa pakai Git secara gratis.&lt;/p&gt;
+
+&lt;p&gt;Sungguh baik ya bapak Linus Torvalds :smile:.&lt;/p&gt;
+
+&lt;p&gt;Bayangkan ada 1000 programmer dari seluruh dunia yang ikut berkontribusi membangun kernel Linux.
+Bagaimana cara Linus akan mengelola itu semua? Bagaimana cara menggabungkan kode
+dari 1000 programmer ini? Kalau ada kode yang bentrok gimana? Itulah alasan
+kenapa git dibuat. Selain sebagai pengontrol versi, Git juga bisa dugunakan untuk
+kolaborasi.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-yang-dilakukan-oleh-git&#34;&gt;Apa yang dilakukan oleh Git?&lt;/h2&gt;
+
+&lt;p&gt;Git sebenarnya akan memantau perubahan yang terjadi pada kode-kode yang kita tulis.
+Lalu menyimpan perubahan tersebut. Kalau misalnya nanti ada kesalahan,
+kita bisa kembalikan lagi.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;800&#34;
+    height=&#34;563&#34;
+    alt=&#34;800px-GNOME_gitg.png&#34;
+    src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GNOME_gitg.png/800px-GNOME_gitg.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Misalnya begini, ada seorang mahasiswa yang akan merevisi kode-kodenya. Lalu dosenya
+bilang, &amp;ldquo;kode yang kemarin sudah benar, kenapa banyak perubahan?&amp;rdquo; Karena si mahasiswa
+tida menggunakan Git, akhirnya dia tidak bisa mengembalikannya seperti saat kemarin.
+Kecuali ada &lt;em&gt;backup&lt;/em&gt; yang sudah disimpan.&lt;/p&gt;
+
+&lt;p&gt;Berbeda kalau misalnya dia menggunakan Git. Dia akan bisa kembalikan kondisi kodenya
+seperti sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Tidak hanya itu, git juga bisa melakukan berbagai hal yang mungkin akan saya bahas
+nanti (insa&amp;rsquo;allah pada kesempatan yang akan datang).&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-upload-file-ke-server-ftp-ala-git/&#34;&gt;Cara Upload file ke Server FTP ala Git&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kenapa-git-penting-bagi-programmer&#34;&gt;Kenapa Git penting bagi programmer?&lt;/h2&gt;
+
+&lt;p&gt;Seperti yang sudah saya ceritakan di atas. Bagaimana Linus akan berkolaborasi dengan
+1000 programmer dan bagaimana mahasiswa akan lebih mudah megelola kodenya dengan git.&lt;/p&gt;
+
+&lt;p&gt;Saat ini Git menjadi salah satu alat yang populer digunakan pada pengembangan
+perangkat lunak &lt;em&gt;open souce&lt;/em&gt; maupun &lt;em&gt;closed source&lt;/em&gt;. Google, Microsoft, Facebook
+dan berbagai perusahaan raksasa lainnya menggunakan Git.&lt;/p&gt;
+
+&lt;p&gt;Jadi, buat kalian yang punya impian ingin bekerja di perusahaan raksasa seperti
+yang saya sebutkan di atas, kalian harus bisa Git.&lt;/p&gt;
+
+&lt;p&gt;Selain itu, berikut ini ada beberapa menfaat yang mungkin kita bisa rasakan setelah
+menggunakan Git.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Revisi kode disimpan semua, sehingga kita lebih gampang mengelolanya.&lt;/li&gt;
+&lt;li&gt;Kode dapat di-backup di Github, Gitlab, Bitbucket, dll.&lt;/li&gt;
+&lt;li&gt;Bisa kolaborasi atau ikut kontribusi di proyek open source.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Jadi, apakah kalian sudah mengenal git? Bagus, selanjutnya silahkan ikuti tutorial
+git berikut ini.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Tutorial Git 01 - Instalasi dan &lt;a href=&#34;http://petanikode.com/2016/03/3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux/&#34;&gt;Perisiapan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tutorial Git 02 - Membuat Repositori&lt;/li&gt;
+&lt;li&gt;Tutorial Git 03 - Melihat Status&lt;/li&gt;
+&lt;li&gt;Tutorial Git 04 - Membuat Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 05 - Melihat Log&lt;/li&gt;
+&lt;li&gt;Tutorial Git 06 - Melihat Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 07 - Membatalkan Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 08 - Percabangan&lt;/li&gt;
+&lt;li&gt;Tutorial Git 09 - Penggabungan Cabang&lt;/li&gt;
+&lt;li&gt;Tutorial Git 10 - Remote Repositori&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Catatan&lt;/strong&gt;: Kalau link di atas masih mati, berarti masih dalam draf. Sabar ya,
+nanti juga terbit kok. :smile:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;https://git-scm.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Git&#34;&gt;https://en.wikipedia.org/wiki/Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

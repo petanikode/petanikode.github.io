@@ -10,9 +10,79 @@
     <atom:link href="http://petanikode.com/seri/belajar-git/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tutorial Git 01 - Instalasi dan Persiapan</title>
+      <link>http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/</link>
+      <pubDate>Wed, 08 Feb 2017 11:26:37 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/</guid>
+      <description>
+
+&lt;p&gt;Kita sudah mengenal Git pada &lt;a href=&#34;http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/&#34;&gt;tulisan sebelumnya&lt;/a&gt;.
+Sekarang Kita akan melakukan instalasi dan persiapan sebelum mulai menggunakan Git.&lt;/p&gt;
+
+&lt;h2 id=&#34;instalasi-git&#34;&gt;Instalasi Git&lt;/h2&gt;
+
+&lt;p&gt;Instalasi pada Ubuntu dan keluarga Debian lainnya dapat menggunakan perintah ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fedora:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;yum install git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Windows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download Git&lt;/li&gt;
+&lt;li&gt;Instal, Next, Next, Finish&lt;/li&gt;
+&lt;li&gt;Konfigurasi Variabel Lingkungan&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;persiapan&#34;&gt;Persiapan&lt;/h2&gt;
+
+&lt;p&gt;Ada beberapa konfigurasi yang harus dupersiapakan sebelum mulai menggunakan Git,
+seperti &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt;. Silahkan lakukan konfigurasi dengan perintah berikut
+ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --global user.name &amp;quot;Petani Kode&amp;quot;
+git config --global user.email contoh@petanikode.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2016/03/3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux/&#34;&gt;3 Hal yang Perlu Dilakukan Setelah Instal Git di Linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian periksa konfigurasinya dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apabila berhasil tampil seperti gambar berikut ini, berarti konfigurasi berhasil.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;659&#34;
+height=&#34;180&#34;
+alt=&#34;Konfigurasi+git+admin+petani+kode.png&#34;
+src=&#34;https://1.bp.blogspot.com/-Lc0x4c4UFOM/VvYTsGHo1WI/AAAAAAAACkU/Bl3n__Da8hETuwWU52ZvR9C5NYywPINuQ/s1600/Konfigurasi%2Bgit%2Badmin%2Bpetani%2Bkode.png&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Konfigurasi &lt;code&gt;core.editor&lt;/code&gt; bersifat opsional. Sedangkan &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt; wajib.&lt;/p&gt;
+
+&lt;p&gt;Bagus, sekarang kita sudah melakukan konfigurasi awal. Selanjutnya kita bisa
+langsung membuat repositori.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Apa itu Git dan Kenapa Penting bagi Programmer?</title>
       <link>http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/</link>
-      <pubDate>Wed, 08 Feb 2017 17:20:36 +0800</pubDate>
+      <pubDate>Wed, 08 Feb 2017 09:08:36 +0800</pubDate>
       
       <guid>http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/</guid>
       <description>
@@ -82,8 +152,8 @@ menggunakan Git.&lt;/p&gt;
 &lt;p&gt;Jadi, apakah kalian sudah mengenal git? Bagus, selanjutnya silahkan ikuti tutorial
 git berikut ini.&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Tutorial Git 01 - Instalasi dan &lt;a href=&#34;http://petanikode.com/2016/03/3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux/&#34;&gt;Perisiapan&lt;/a&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;Tutorial Git 01 - Instalasi dan Perisiapan&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Tutorial Git 02 - Membuat Repositori&lt;/li&gt;
 &lt;li&gt;Tutorial Git 03 - Melihat Status&lt;/li&gt;
 &lt;li&gt;Tutorial Git 04 - Membuat Revisi&lt;/li&gt;
@@ -93,7 +163,7 @@ git berikut ini.&lt;/p&gt;
 &lt;li&gt;Tutorial Git 08 - Percabangan&lt;/li&gt;
 &lt;li&gt;Tutorial Git 09 - Penggabungan Cabang&lt;/li&gt;
 &lt;li&gt;Tutorial Git 10 - Remote Repositori&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Catatan&lt;/strong&gt;: Kalau link di atas masih mati, berarti masih dalam draf. Sabar ya,

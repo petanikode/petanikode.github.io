@@ -7,8 +7,178 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 06 Feb 2017 12:32:28 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Feb 2017 11:26:37 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tutorial Git 01 - Instalasi dan Persiapan</title>
+      <link>http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/</link>
+      <pubDate>Wed, 08 Feb 2017 11:26:37 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/</guid>
+      <description>
+
+&lt;p&gt;Kita sudah mengenal Git pada &lt;a href=&#34;http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/&#34;&gt;tulisan sebelumnya&lt;/a&gt;.
+Sekarang Kita akan melakukan instalasi dan persiapan sebelum mulai menggunakan Git.&lt;/p&gt;
+
+&lt;h2 id=&#34;instalasi-git&#34;&gt;Instalasi Git&lt;/h2&gt;
+
+&lt;p&gt;Instalasi pada Ubuntu dan keluarga Debian lainnya dapat menggunakan perintah ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fedora:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;yum install git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Windows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download Git&lt;/li&gt;
+&lt;li&gt;Instal, Next, Next, Finish&lt;/li&gt;
+&lt;li&gt;Konfigurasi Variabel Lingkungan&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;persiapan&#34;&gt;Persiapan&lt;/h2&gt;
+
+&lt;p&gt;Ada beberapa konfigurasi yang harus dupersiapakan sebelum mulai menggunakan Git,
+seperti &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt;. Silahkan lakukan konfigurasi dengan perintah berikut
+ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --global user.name &amp;quot;Petani Kode&amp;quot;
+git config --global user.email contoh@petanikode.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2016/03/3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux/&#34;&gt;3 Hal yang Perlu Dilakukan Setelah Instal Git di Linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian periksa konfigurasinya dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apabila berhasil tampil seperti gambar berikut ini, berarti konfigurasi berhasil.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;659&#34;
+height=&#34;180&#34;
+alt=&#34;Konfigurasi+git+admin+petani+kode.png&#34;
+src=&#34;https://1.bp.blogspot.com/-Lc0x4c4UFOM/VvYTsGHo1WI/AAAAAAAACkU/Bl3n__Da8hETuwWU52ZvR9C5NYywPINuQ/s1600/Konfigurasi%2Bgit%2Badmin%2Bpetani%2Bkode.png&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Konfigurasi &lt;code&gt;core.editor&lt;/code&gt; bersifat opsional. Sedangkan &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt; wajib.&lt;/p&gt;
+
+&lt;p&gt;Bagus, sekarang kita sudah melakukan konfigurasi awal. Selanjutnya kita bisa
+langsung membuat repositori.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apa itu Git dan Kenapa Penting bagi Programmer?</title>
+      <link>http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/</link>
+      <pubDate>Wed, 08 Feb 2017 09:08:36 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/</guid>
+      <description>
+
+&lt;p&gt;Git adalah salah satu alat pengontrol versi &lt;em&gt;(Version Control System)&lt;/em&gt; pada
+proyek perangkat lunak yang diciptakan oleh Linus Torvalds. Awalnya Linus
+menciptakan Git untuk mengelola kode sumber &lt;em&gt;(source kode)&lt;/em&gt; kernel Linux.
+Tapi, karena Linus mempublikasikannya dengan lisensi open soure,
+semua orang jadi bisa pakai Git secara gratis.&lt;/p&gt;
+
+&lt;p&gt;Sungguh baik ya bapak Linus Torvalds :smile:.&lt;/p&gt;
+
+&lt;p&gt;Bayangkan ada 1000 programmer dari seluruh dunia yang ikut berkontribusi membangun kernel Linux.
+Bagaimana cara Linus akan mengelola itu semua? Bagaimana cara menggabungkan kode
+dari 1000 programmer ini? Kalau ada kode yang bentrok gimana? Itulah alasan
+kenapa git dibuat. Selain sebagai pengontrol versi, Git juga bisa dugunakan untuk
+kolaborasi.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-yang-dilakukan-oleh-git&#34;&gt;Apa yang dilakukan oleh Git?&lt;/h2&gt;
+
+&lt;p&gt;Git sebenarnya akan memantau perubahan yang terjadi pada kode-kode yang kita tulis.
+Lalu menyimpan perubahan tersebut. Kalau misalnya nanti ada kesalahan,
+kita bisa kembalikan lagi.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;800&#34;
+    height=&#34;563&#34;
+    alt=&#34;800px-GNOME_gitg.png&#34;
+    src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GNOME_gitg.png/800px-GNOME_gitg.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Misalnya begini, ada seorang mahasiswa yang akan merevisi kode-kodenya. Lalu dosenya
+bilang, &amp;ldquo;kode yang kemarin sudah benar, kenapa banyak perubahan?&amp;rdquo; Karena si mahasiswa
+tida menggunakan Git, akhirnya dia tidak bisa mengembalikannya seperti saat kemarin.
+Kecuali ada &lt;em&gt;backup&lt;/em&gt; yang sudah disimpan.&lt;/p&gt;
+
+&lt;p&gt;Berbeda kalau misalnya dia menggunakan Git. Dia akan bisa kembalikan kondisi kodenya
+seperti sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Tidak hanya itu, git juga bisa melakukan berbagai hal yang mungkin akan saya bahas
+nanti (insa&amp;rsquo;allah pada kesempatan yang akan datang).&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-upload-file-ke-server-ftp-ala-git/&#34;&gt;Cara Upload file ke Server FTP ala Git&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kenapa-git-penting-bagi-programmer&#34;&gt;Kenapa Git penting bagi programmer?&lt;/h2&gt;
+
+&lt;p&gt;Seperti yang sudah saya ceritakan di atas. Bagaimana Linus akan berkolaborasi dengan
+1000 programmer dan bagaimana mahasiswa akan lebih mudah megelola kodenya dengan git.&lt;/p&gt;
+
+&lt;p&gt;Saat ini Git menjadi salah satu alat yang populer digunakan pada pengembangan
+perangkat lunak &lt;em&gt;open souce&lt;/em&gt; maupun &lt;em&gt;closed source&lt;/em&gt;. Google, Microsoft, Facebook
+dan berbagai perusahaan raksasa lainnya menggunakan Git.&lt;/p&gt;
+
+&lt;p&gt;Jadi, buat kalian yang punya impian ingin bekerja di perusahaan raksasa seperti
+yang saya sebutkan di atas, kalian harus bisa Git.&lt;/p&gt;
+
+&lt;p&gt;Selain itu, berikut ini ada beberapa menfaat yang mungkin kita bisa rasakan setelah
+menggunakan Git.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Revisi kode disimpan semua, sehingga kita lebih gampang mengelolanya.&lt;/li&gt;
+&lt;li&gt;Kode dapat di-backup di Github, Gitlab, Bitbucket, dll.&lt;/li&gt;
+&lt;li&gt;Bisa kolaborasi atau ikut kontribusi di proyek open source.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Jadi, apakah kalian sudah mengenal git? Bagus, selanjutnya silahkan ikuti tutorial
+git berikut ini.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;Tutorial Git 01 - Instalasi dan Perisiapan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tutorial Git 02 - Membuat Repositori&lt;/li&gt;
+&lt;li&gt;Tutorial Git 03 - Melihat Status&lt;/li&gt;
+&lt;li&gt;Tutorial Git 04 - Membuat Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 05 - Melihat Log&lt;/li&gt;
+&lt;li&gt;Tutorial Git 06 - Melihat Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 07 - Membatalkan Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 08 - Percabangan&lt;/li&gt;
+&lt;li&gt;Tutorial Git 09 - Penggabungan Cabang&lt;/li&gt;
+&lt;li&gt;Tutorial Git 10 - Remote Repositori&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Catatan&lt;/strong&gt;: Kalau link di atas masih mati, berarti masih dalam draf. Sabar ya,
+nanti juga terbit kok. :smile:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;https://git-scm.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Git&#34;&gt;https://en.wikipedia.org/wiki/Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>7 Video yang Akan Menginspirasimu untuk Belajar Pemrograman</title>
@@ -1340,181 +1510,6 @@ Saya tidak pernah belajar bahasa pemrograman Go sama sekali.&lt;/p&gt;
 &lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/&#34;&gt;Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Itulah lima alasan Petani Kode migrasi ke Hugo. Mungkin saja, Petani Kode menjadi web Indonesia yang pertama kali menggunakan Hugo. Karena saya lihat di &lt;a href=&#34;https://gohugo.io/showcase/&#34;&gt;Showcase Hugo&lt;/a&gt;, tidak ada web indonesia.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Redirect Domain dengan CloudFlare</title>
-      <link>http://petanikode.com/2017/01/cara-redirect-domain-dengan-cloudflare/</link>
-      <pubDate>Tue, 17 Jan 2017 22:06:22 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/cara-redirect-domain-dengan-cloudflare/</guid>
-      <description>
-
-&lt;p&gt;Saya akhirnya mengurus jaringan lagi, setelah sekian lama tidak belajar jaringan.
-Pada &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;proses migrasi&lt;/a&gt; kemarin,
-proses propagasi domain memakan waktu cukup lama.
-Domain Petani Kode &lt;code&gt;www.petanikode.com&lt;/code&gt; masih menunjukan halaman &lt;code&gt;404&lt;/code&gt;. Namun,
-domain yang tanpa menggunakan &lt;code&gt;www&lt;/code&gt;, sudah bisa diakses.&lt;/p&gt;
-
-&lt;p&gt;Karena tidak ingin semua pengunjung mendapatkan &lt;em&gt;error&lt;/em&gt; &lt;code&gt;404&lt;/code&gt;, saya harus melakukan
-&lt;em&gt;redirect&lt;/em&gt; ke domain baru yang tidak menggunakan &lt;code&gt;www&lt;/code&gt;. Berikut ini caranya.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-masuk-ke-halaman-pages-rules&#34;&gt;1. Masuk ke Halaman Pages Rules&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka halaman &lt;em&gt;Pages Rules&lt;/em&gt; di Cloudflare.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;111&#34;
-width=&#34;379&#34;
-alt=&#34;Menu Cloudflare&#34;
-src=&#34;http://i.imgur.com/9m7NJeT.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-buat-pages-rules-baru&#34;&gt;2. Buat Pages Rules Baru&lt;/h2&gt;
-
-&lt;p&gt;Klik tombol &lt;em&gt;Create Page Rule&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;227&#34;
-width=&#34;983&#34;
-alt=&#34;Menu Cloudflare&#34;
-src=&#34;http://i.imgur.com/8OO2z36.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-input-data-domain&#34;&gt;3. Input data domain&lt;/h2&gt;
-
-&lt;p&gt;Masukkan domain yang akan dialihkan ke, misalnya saya ingin mengalihkan
-&lt;code&gt;www.petanikode.com&lt;/code&gt; ke &lt;code&gt;petanikode.com&lt;/code&gt; saja.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;654&#34;
-width=&#34;801&#34;
-alt=&#34;Membuat aturan redirect&#34;
-src=&#34;http://i.imgur.com/7Ih4BiE.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, klik &lt;em&gt;save and deploy&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sampai tahap ini, cobalah untuk mengakses alaman yang dialihkan tadi.
-Kalau pengalihan berhasil berarti konfigurasi sudah benar.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan</title>
-      <link>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</link>
-      <pubDate>Sun, 15 Jan 2017 21:06:22 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</guid>
-      <description>&lt;p&gt;Ada cerita menarik yang saya alami ketika &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi Petani Kode dari Blogger ke Hugo&lt;/a&gt;.
-Waktu itu, ketika saya ingin mengimpor konten dari Blogger ke Hugo, ada sesuatu
-yang kurang dari skrip Go yang disediakan. Kekuarangnnya tidak mampu membuat
-atau mengambil gambar &lt;em&gt;(thumbnail)&lt;/em&gt; untuk setiap artikel.&lt;/p&gt;
-
-&lt;p&gt;Saya kemudian berpikir, mungkin nanti saya bisa edit setiap gambar untuk artikel.
-Namun, rasanya akan sangat melelahkan melakukannya karena jumlah artikelnya sampai ratusan. Tidak ingin melakukan hal yang berulang-ulang seperti kata orang,
-&lt;em&gt;Don&amp;rsquo;t Repeat Yourself&lt;/em&gt; di singkat DRY. Saya kemudian membuka &lt;a href=&#34;https://github.com/natefinch/blogimport/issues/1&#34;&gt;isu baru&lt;/a&gt; di repositori
-skrip ini.&lt;/p&gt;
-
-&lt;p&gt;Beberapa jam kemudian, Nate Finch membalas isu yang saya buat.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I&amp;rsquo;d be more than happy to accept a pull request for this, if you want to write it.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Terjemahnya kira-kira begini, &amp;ldquo;Saya akan sangat senang sekali menerima &lt;em&gt;pull request&lt;/em&gt; untuk hal ini, jika anda berkenan menulisnya&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;Awalnya saya berharap agar Nate Finch mau meng-update skripnya, tapi malah saya yang disuruh nulis dan saya tidak paham bahasa pemrograman Go sama sekali. Mungkin saja si Nate Finch sedang sibuk, sehingga tidak punya waktu untuk menulis skrip ini lagi.&lt;/p&gt;
-
-&lt;p&gt;Karena isu ini adalah kebutuhan saya, maka mau tidak mau saya sendiri yang harus membuatnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;380&#34;
-width=&#34;720&#34;
-alt=&#34;Ghoper Petani Kode&#34;
-src=&#34;https://3.bp.blogspot.com/-tHAcqs4Bv1o/WIAVwWJzaLI/AAAAAAAADps/sBBGZxVxmcI66poCB-Mj0AEzIkDeDG8KQCPcB/s1600/go-gopher-petanikode.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Saya tidak harus belajar bahasa pemrograman Go dari awal. Karena sintaknya cukup mirip dengan bahasa pemrograman yang pernah saya pelajari. Pertama saya harus pahami dulu skrip yang ditulis Nate Finch.&lt;/p&gt;
-
-&lt;p&gt;Pertama, saya menebak-nebak dulu fungsi dari setiap prosedurnya dengan membaca dari bawah ke atas.&lt;/p&gt;
-
-&lt;p&gt;Saya kemudian mengetahui, fungsi ini untuk membuat file &lt;em&gt;markdown&lt;/em&gt;, meski tidak tahu detail algoritmanya. Saya dapat petunjuk karena melihat ada &lt;code&gt;.md&lt;/code&gt; di sana.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func writeEntry(e Entry, dir string) error {
-	filename := filepath.Join(dir, makePath(e.Title)+&amp;quot;.md&amp;quot;)
-	f, err := os.OpenFile(filename, os.O_CREATE | os.O_TRUNC | os.O_WRONLY, 0644)
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	return t.Execute(f, e)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian naik ke atas, saya menemukan baris kode ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;if err := writeEntry(entry, dir); err != nil {
-    log.Fatalf(&amp;quot;Failed writing post %q to disk:\n%s&amp;quot;, entry.Title, err)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kode tersebut pasti pemanggilan fungsi yang tadi. Kemudian saya melakukan penelusuran dengan parameternya &lt;code&gt;entry&lt;/code&gt; dan &lt;code&gt;dir&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Bolak-balik, atas-bawah. Saya menemukan:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;parameter &lt;code&gt;dir&lt;/code&gt; dari &lt;code&gt;dir := args[1]&lt;/code&gt;, yaitu argumen yang diberikan ketika menjalankan kode ini. Karena &lt;code&gt;args&lt;/code&gt; itu tidak asing bagi pengguna linux seperti saya.&lt;/li&gt;
-&lt;li&gt;parameter &lt;code&gt;entry&lt;/code&gt; dari nama alias &lt;code&gt;exp.Entries&lt;/code&gt;, karena di sana sepertinya ada perulangan &lt;em&gt;foreach&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kemudian saya menelusuri asal-usul &lt;code&gt;exp.Entries&lt;/code&gt; ini. Ternyata dia barasal dari &lt;code&gt;exp := Export{}&lt;/code&gt;. Lalu, &lt;code&gt;Export{}&lt;/code&gt; itu berasal dari struk &lt;code&gt;Export&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;type Export struct {
-    XMLName xml.Name `xml:&amp;quot;feed&amp;quot;`
-    Entries []Entry `xml:&amp;quot;entry&amp;quot;`
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sampai di sini saya sedikit mengerti algoritma dari skrip ini.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Skrip ini mengubah semua tag XML menjadi struk&lt;/li&gt;
-&lt;li&gt;Lalu Struk tadi diurai dalam perluangan&lt;/li&gt;
-&lt;li&gt;Setelah itu, buat file &lt;em&gt;markdown&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Kira-kira begitulah yang saya pahami.&lt;/p&gt;
-
-&lt;p&gt;Kemudian saya mencoba merubah atribut yang ada dalam struk. Karena saya kira sudah paham maksud dari struk tersebut. Namun ternyata tidak ada hasil apa-apa.&lt;/p&gt;
-
-&lt;p&gt;Saya ingin mengambil URL dari elemen XML ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;media:thumbnail xmlns:media=&#39;http://search.yahoo.com/mrss/&#39; url=&#39;https://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s72-c/thumbnail-image.png&#39; height=&#39;72&#39; width=&#39;72&#39;/&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Terlihat di sana ada penggunaan &lt;em&gt;namespace&lt;/em&gt; untuk elemen tersebut. Kemudian saya mencari dan menemukan jawaban di &lt;a href=&#34;http://stackoverflow.com/a/14152832&#34;&gt;Stack Overflow&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Setelah mencoba dan berhasil mendapatkan URL-nya, yay!&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;400&#34;
-width=&#34;600&#34;
-alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
-src=&#34;http://i.imgur.com/z7MveXv.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Namun, ukuran gambar dari URL tersebut adalah 72x72 piksel. Lalu, selanjutnya saya menginginkan gambar yang lebih besar.&lt;/p&gt;
-
-&lt;p&gt;Ketemu masalah lagi, gambar tidak bisa diperbesar. Karena tidak ada fungsi untuk &lt;em&gt;replace string&lt;/em&gt; pada template Go. Tidak lama kemudian, saya berhasil menyelesaikannya.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/&#34;&gt;Cara Replace String pada Template Go&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah semuanya beres, saya kemudian melakukan &lt;em&gt;pull request&lt;/em&gt; ke repositori milik Nate Finch. Saat ini masih belum di-reviw, diterima atau ditolak terserah Nate Finch. Saya hanya butuh untuk masalah saya saja. Namun, jika anda juga membutuhkannya bisa klon atau &lt;em&gt;fork&lt;/em&gt; &lt;a href=&#34;https://github.com/ardianta/blogimport&#34;&gt;repositori dari saya&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Luar biasa, tidak pernah belajar bahasa pemrograman Go sama sekali, malah melakukan &lt;em&gt;pull request&lt;/em&gt; ke proyek yang menggnuakan bahasa pemrograman Go.&lt;/p&gt;
 </description>
     </item>
     

@@ -10,6 +10,176 @@
     <atom:link href="http://petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tutorial Git 01 - Instalasi dan Persiapan</title>
+      <link>http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/</link>
+      <pubDate>Wed, 08 Feb 2017 11:26:37 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/</guid>
+      <description>
+
+&lt;p&gt;Kita sudah mengenal Git pada &lt;a href=&#34;http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/&#34;&gt;tulisan sebelumnya&lt;/a&gt;.
+Sekarang Kita akan melakukan instalasi dan persiapan sebelum mulai menggunakan Git.&lt;/p&gt;
+
+&lt;h2 id=&#34;instalasi-git&#34;&gt;Instalasi Git&lt;/h2&gt;
+
+&lt;p&gt;Instalasi pada Ubuntu dan keluarga Debian lainnya dapat menggunakan perintah ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fedora:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;yum install git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Windows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download Git&lt;/li&gt;
+&lt;li&gt;Instal, Next, Next, Finish&lt;/li&gt;
+&lt;li&gt;Konfigurasi Variabel Lingkungan&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;persiapan&#34;&gt;Persiapan&lt;/h2&gt;
+
+&lt;p&gt;Ada beberapa konfigurasi yang harus dupersiapakan sebelum mulai menggunakan Git,
+seperti &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt;. Silahkan lakukan konfigurasi dengan perintah berikut
+ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --global user.name &amp;quot;Petani Kode&amp;quot;
+git config --global user.email contoh@petanikode.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2016/03/3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux/&#34;&gt;3 Hal yang Perlu Dilakukan Setelah Instal Git di Linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian periksa konfigurasinya dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apabila berhasil tampil seperti gambar berikut ini, berarti konfigurasi berhasil.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;659&#34;
+height=&#34;180&#34;
+alt=&#34;Konfigurasi+git+admin+petani+kode.png&#34;
+src=&#34;https://1.bp.blogspot.com/-Lc0x4c4UFOM/VvYTsGHo1WI/AAAAAAAACkU/Bl3n__Da8hETuwWU52ZvR9C5NYywPINuQ/s1600/Konfigurasi%2Bgit%2Badmin%2Bpetani%2Bkode.png&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Konfigurasi &lt;code&gt;core.editor&lt;/code&gt; bersifat opsional. Sedangkan &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt; wajib.&lt;/p&gt;
+
+&lt;p&gt;Bagus, sekarang kita sudah melakukan konfigurasi awal. Selanjutnya kita bisa
+langsung membuat repositori.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apa itu Git dan Kenapa Penting bagi Programmer?</title>
+      <link>http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/</link>
+      <pubDate>Wed, 08 Feb 2017 09:08:36 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/</guid>
+      <description>
+
+&lt;p&gt;Git adalah salah satu alat pengontrol versi &lt;em&gt;(Version Control System)&lt;/em&gt; pada
+proyek perangkat lunak yang diciptakan oleh Linus Torvalds. Awalnya Linus
+menciptakan Git untuk mengelola kode sumber &lt;em&gt;(source kode)&lt;/em&gt; kernel Linux.
+Tapi, karena Linus mempublikasikannya dengan lisensi open soure,
+semua orang jadi bisa pakai Git secara gratis.&lt;/p&gt;
+
+&lt;p&gt;Sungguh baik ya bapak Linus Torvalds :smile:.&lt;/p&gt;
+
+&lt;p&gt;Bayangkan ada 1000 programmer dari seluruh dunia yang ikut berkontribusi membangun kernel Linux.
+Bagaimana cara Linus akan mengelola itu semua? Bagaimana cara menggabungkan kode
+dari 1000 programmer ini? Kalau ada kode yang bentrok gimana? Itulah alasan
+kenapa git dibuat. Selain sebagai pengontrol versi, Git juga bisa dugunakan untuk
+kolaborasi.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-yang-dilakukan-oleh-git&#34;&gt;Apa yang dilakukan oleh Git?&lt;/h2&gt;
+
+&lt;p&gt;Git sebenarnya akan memantau perubahan yang terjadi pada kode-kode yang kita tulis.
+Lalu menyimpan perubahan tersebut. Kalau misalnya nanti ada kesalahan,
+kita bisa kembalikan lagi.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;800&#34;
+    height=&#34;563&#34;
+    alt=&#34;800px-GNOME_gitg.png&#34;
+    src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GNOME_gitg.png/800px-GNOME_gitg.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Misalnya begini, ada seorang mahasiswa yang akan merevisi kode-kodenya. Lalu dosenya
+bilang, &amp;ldquo;kode yang kemarin sudah benar, kenapa banyak perubahan?&amp;rdquo; Karena si mahasiswa
+tida menggunakan Git, akhirnya dia tidak bisa mengembalikannya seperti saat kemarin.
+Kecuali ada &lt;em&gt;backup&lt;/em&gt; yang sudah disimpan.&lt;/p&gt;
+
+&lt;p&gt;Berbeda kalau misalnya dia menggunakan Git. Dia akan bisa kembalikan kondisi kodenya
+seperti sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Tidak hanya itu, git juga bisa melakukan berbagai hal yang mungkin akan saya bahas
+nanti (insa&amp;rsquo;allah pada kesempatan yang akan datang).&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-upload-file-ke-server-ftp-ala-git/&#34;&gt;Cara Upload file ke Server FTP ala Git&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kenapa-git-penting-bagi-programmer&#34;&gt;Kenapa Git penting bagi programmer?&lt;/h2&gt;
+
+&lt;p&gt;Seperti yang sudah saya ceritakan di atas. Bagaimana Linus akan berkolaborasi dengan
+1000 programmer dan bagaimana mahasiswa akan lebih mudah megelola kodenya dengan git.&lt;/p&gt;
+
+&lt;p&gt;Saat ini Git menjadi salah satu alat yang populer digunakan pada pengembangan
+perangkat lunak &lt;em&gt;open souce&lt;/em&gt; maupun &lt;em&gt;closed source&lt;/em&gt;. Google, Microsoft, Facebook
+dan berbagai perusahaan raksasa lainnya menggunakan Git.&lt;/p&gt;
+
+&lt;p&gt;Jadi, buat kalian yang punya impian ingin bekerja di perusahaan raksasa seperti
+yang saya sebutkan di atas, kalian harus bisa Git.&lt;/p&gt;
+
+&lt;p&gt;Selain itu, berikut ini ada beberapa menfaat yang mungkin kita bisa rasakan setelah
+menggunakan Git.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Revisi kode disimpan semua, sehingga kita lebih gampang mengelolanya.&lt;/li&gt;
+&lt;li&gt;Kode dapat di-backup di Github, Gitlab, Bitbucket, dll.&lt;/li&gt;
+&lt;li&gt;Bisa kolaborasi atau ikut kontribusi di proyek open source.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Jadi, apakah kalian sudah mengenal git? Bagus, selanjutnya silahkan ikuti tutorial
+git berikut ini.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;Tutorial Git 01 - Instalasi dan Perisiapan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tutorial Git 02 - Membuat Repositori&lt;/li&gt;
+&lt;li&gt;Tutorial Git 03 - Melihat Status&lt;/li&gt;
+&lt;li&gt;Tutorial Git 04 - Membuat Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 05 - Melihat Log&lt;/li&gt;
+&lt;li&gt;Tutorial Git 06 - Melihat Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 07 - Membatalkan Revisi&lt;/li&gt;
+&lt;li&gt;Tutorial Git 08 - Percabangan&lt;/li&gt;
+&lt;li&gt;Tutorial Git 09 - Penggabungan Cabang&lt;/li&gt;
+&lt;li&gt;Tutorial Git 10 - Remote Repositori&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Catatan&lt;/strong&gt;: Kalau link di atas masih mati, berarti masih dalam draf. Sabar ya,
+nanti juga terbit kok. :smile:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;https://git-scm.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Git&#34;&gt;https://en.wikipedia.org/wiki/Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>7 Video yang Akan Menginspirasimu untuk Belajar Pemrograman</title>
       <link>http://petanikode.com/2017/02/7-video-yang-akan-menginspirasimu-untuk-belajar-pemrograman/</link>
       <pubDate>Mon, 06 Feb 2017 12:32:28 +0800</pubDate>
@@ -965,26 +1135,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       
       <guid>http://petanikode.com/2016/12/asyik-akhirnya-telegram-merilis-api-untuk-telegraph/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://1.bp.blogspot.com/-aDsiFEuM5xc/WFqCkAnYW8I/AAAAAAAADfo/EeFWl7vn00077JQIDJZH2uzO6WfMhPYaQCLcB/s1600/telegraph-api-oleh-telegram.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-aDsiFEuM5xc/WFqCkAnYW8I/AAAAAAAADfo/EeFWl7vn00077JQIDJZH2uzO6WfMhPYaQCLcB/s1600/telegraph-api-oleh-telegram.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Setelah satu bulan dirilis, Telegraph akhirnya dirilis API-nya. Telegraph merupakan sebuah &lt;i&gt;tool&lt;/i&gt; untuk menerbitkan artikel. Teks editor Telegraph dibangun dengan &lt;a href=&#34;http://quilljs.com/&#34; target=&#34;_blank&#34;&gt;Quill&lt;/a&gt; dan tampilannya mirip seperti Medium. Menulis di Telegraph, rasanya seperti menulis di Medium.&lt;br /&gt;&lt;br /&gt;Sebelumnya Telegram menambahkan fitur &lt;i&gt;instant view&lt;/i&gt;. &lt;i&gt;Instan view&lt;/i&gt; hanya berlaku untuk artikel yang dibagikan dari Medium dan Telegraph. Selain dari itu, tidak bisa ditampilkan dengan &lt;i&gt;instan view&lt;/i&gt;. Namun, dengan kemunculan API Telegraph, kita mungkin bisa membuat &lt;i&gt;instant view&lt;/i&gt; secara otomatis.&lt;br /&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt; Tertarik mencobanya, silahkan kunjungi halaman dokumentasi Telegraph. Dokumentasi API Telegraph dapat anda baca di&amp;nbsp;&lt;a href=&#34;http://telegra.ph/api&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://telegra.ph/api&#34;&gt;http://telegra.ph/api&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Contoh kode untuk mengirim artikel ke Telegraph:&lt;br /&gt;&lt;pre spellcheck=&#34;false&#34;&gt;&lt;code class=&#34;js&#34;&gt;$.ajax(&amp;lsquo;&lt;a href=&#34;https://api.telegra.ph/createPage&#39;&#34;&gt;https://api.telegra.ph/createPage&#39;&lt;/a&gt;, {&lt;br /&gt;&amp;nbsp; data: {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;access_token:&amp;nbsp;  &amp;lsquo;%access_token%&amp;lsquo;,&lt;br /&gt;  &amp;nbsp;&amp;nbsp;title:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;     &amp;nbsp;&amp;lsquo;Title of page&amp;rsquo;,&lt;br /&gt;  &amp;nbsp;&amp;nbsp;content:&amp;nbsp;&amp;nbsp;&amp;nbsp;    &amp;nbsp;JSON.stringify(content),&lt;br /&gt;  &amp;nbsp;&amp;nbsp;return_content: true&lt;br /&gt;  },&lt;br /&gt;  type: &amp;lsquo;POST&amp;rsquo;,&lt;br /&gt;&amp;nbsp; dataType: &amp;lsquo;json&amp;rsquo;,&lt;br /&gt;&amp;nbsp; success: function(data) {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;if (data.content) {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; while (article.firstChild) {&lt;br /&gt;    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;article.removeChild(article.firstChild);&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; article.appendChild(nodeToDom({children: data.content}));&lt;br /&gt;  &amp;nbsp;&amp;nbsp;}&lt;br /&gt;&amp;nbsp; }&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Nilai Primary Key untuk Data Unlimited</title>
-      <link>http://petanikode.com/2016/12/nilai-primary-key-untuk-data-unlimited/</link>
-      <pubDate>Sat, 17 Dec 2016 08:09:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/12/nilai-primary-key-untuk-data-unlimited/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Big Data - MYSQL - Petani Kode&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg&#34; title=&#34;&#34; /&gt;&lt;/a&gt;Pada terbitan sebelumnya saya sudah pernah membahas &lt;a href=&#34;http://www.petanikode.com/2016/08/berapa-banyak-data-yang-mampu-disimpan.html&#34;&gt;keterbatasan AUTO_INCREMENT di MySQL&lt;/a&gt;. AUTO_INCREMENT sangat bergantung pada tipe datanya. Kita tidak bisa menggunakannya untuk data yang tak terhingga &lt;i&gt;(unlimited)&lt;/i&gt;, karena terbatas. Sebagai gantinya, kita harus membuat fungsi generator ID yang mampu membuat ID yang unik.&lt;br /&gt;&lt;br /&gt;Pada kesempatan yang lain, saya juga pernah membuat &lt;a href=&#34;http://www.petanikode.com/2016/07/membuat-generator-id-unik-seperti-id.html&#34; target=&#34;_blank&#34;&gt;generator ID yang mirip seperti ID video Youtube&lt;/a&gt;. Namun, saya belum yakin sepenuhnya dengan ID unik yang dihasilkannya. Mungkin saja, suatu saat nanti generator ini akan membuat ID yang sama. Seperti halnya fungsi bawaan PHP, &lt;code&gt;uniqid()&lt;/code&gt;. Fungsi ini memang menghasilkan ID yang unik. Akan tetapi, masih meragukan, karena kita telah diperingatkan pada dokumentasinya.&lt;br /&gt;&lt;blockquote&gt;&lt;i&gt;&lt;b&gt;Warning&lt;/b&gt;&lt;/i&gt;&lt;br /&gt;&lt;i&gt;This function does not guarantee uniqueness of return value. Since most systems adjust system clock by NTP or like, system time is changed constantly. Therefore, it is possible that this function does not return unique ID for the process/thread. Use more_entropy to increase likelihood of uniqueness.&lt;/i&gt;&lt;/blockquote&gt;Kalau begitu, apa solusinya?&lt;br /&gt;&lt;h2&gt;UUID atau GUID&lt;/h2&gt;UUID merupakan singkatan dari &lt;i&gt;Universally Unique Identifier&lt;/i&gt;. Sedangkan GUID, singkatan dari &lt;i&gt;Globally Unique Identifier&lt;/i&gt;. UUID dan GUID adalah hal yang sama. Perbedaanya, GUID itu merupakan implementasi dari UUID yang dilakukan oleh Microsoft. UUID terdiri dari &lt;code&gt;32&lt;/code&gt; digit bilangan desimal yang dipisahkan dengan tanda &lt;i&gt;hyphens&lt;/i&gt; (-), &lt;code&gt;8-4-4-4-12&lt;/code&gt; sehingga total semuanya adalah &lt;code&gt;32&lt;/code&gt; karakter. Contoh UUID:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;&lt;b&gt;123e4567-e89b-12d3-a456-426655440000&lt;/b&gt;&lt;/code&gt;&lt;/pre&gt;UUID memiliki beberapa versi, yaitu versi 1, 2, 3, 4, dan 5. Versi 4 digunakan untuk nilai acak &lt;i&gt;(random)&lt;/i&gt;. Ini bisa kita manfaatkan untuk nilai &lt;i&gt;Primary Key&lt;/i&gt;. Menurut penjelasan Wikipedia, setelah membuat 1 miliar UUID untuk setiap detik, kemungkinan untuk terjadi duplikasi nilai yang sama untuk 100 tahun berikutnya adalah 50%. &lt;br /&gt;&lt;h2&gt;Fungsi Generator GUID&lt;/h2&gt;Sekarang kita coba membuat sebuah fungsi generator GUID di PHP. Fungsi ini bisa kita manfaatkan untuk pengisian nilai &lt;i&gt;Primary Key&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;function guidv4()&lt;br /&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (function_exists(&amp;lsquo;com_create_guid&amp;rsquo;) === true)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return trim(com_create_guid(), &amp;lsquo;{}&amp;rsquo;);&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $data = openssl_random_pseudo_bytes(16);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $data[6] = chr(ord($data[6]) &amp;amp; 0x0f | 0x40); // set version to 0100&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $data[8] = chr(ord($data[8]) &amp;amp; 0x3f | 0x80); // set bits 6-7 to 10&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; return vsprintf(&amp;lsquo;%s%s-%s-%s-%s-%s%s%s&amp;rsquo;, str_split(bin2hex($data), 4));&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Hasil ketika mengeksekusi fungsi tersebut:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-Ip3KjGUzH_I/WDzDdszEwYI/AAAAAAAADd0/UMaj3_jOX782kKoafwhu5nFjZOG7VbQFwCK4B/s1600/Percobaan%2Bfungsi%2Bgenerator%2BUUID.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-Ip3KjGUzH_I/WDzDdszEwYI/AAAAAAAADd0/UMaj3_jOX782kKoafwhu5nFjZOG7VbQFwCK4B/s1600/Percobaan%2Bfungsi%2Bgenerator%2BUUID.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Jadi, gunakanlah UUID untuk nilai &lt;i&gt;primary key&lt;/i&gt; bila data anda terlalu banyak, supaya tidak menjadi masalah di masa depan.&lt;br /&gt;&lt;br /&gt;Referensi&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.uniqid.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.uniqid.php&#34;&gt;http://php.net/manual/en/function.uniqid.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid&#34;&gt;http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/18206984/2658551&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/a/18206984/2658551&#34;&gt;http://stackoverflow.com/a/18206984/2658551&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.com-create-guid.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.com-create-guid.php&#34;&gt;http://php.net/manual/en/function.com-create-guid.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Universally_unique_identifier&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Universally_unique_identifier&#34;&gt;https://en.wikipedia.org/wiki/Universally_unique_identifier&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Globally_unique_identifier&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Globally_unique_identifier&#34;&gt;https://en.wikipedia.org/wiki/Globally_unique_identifier&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size&#34;&gt;https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Termudah Menyimpan Graf pada Database Relasional</title>
-      <link>http://petanikode.com/2016/12/cara-termudah-menyimpan-graf-pada-database-relasional/</link>
-      <pubDate>Sat, 10 Dec 2016 15:53:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/12/cara-termudah-menyimpan-graf-pada-database-relasional/</guid>
-      <description>&lt;p&gt;Pada awalnya saya sangat bingung tentang kegunaan graf dalam komputer. Karena itu, saya tidak begitu memperhatikan materi graf pada matakuliah Kalkulus. Namun, semuanya berubah setelah saya mengenal matakuliah Kecerdasan Buatan, Analisa Algoritma, Struktur Data, dsb. Ternyata penggunaan Graf dan Pohon &lt;i&gt;(tree)&lt;/i&gt; di matakuliah tersebut cukup banyak.&lt;br /&gt;&lt;br /&gt;Saya menjadi cukup penasaran tentang cara komputasi graf. Akhirnya saya belajar dari Google dan menerbitkan sebuah tulisan di blog ini yang berjudul &lt;i&gt;&lt;a href=&#34;http://www.petanikode.com/2016/11/representasi-graf-dalam-kode-python.html&#34; target=&#34;_blank&#34;&gt;Representasi Graf dalam Kode Python&lt;/a&gt;. &lt;/i&gt;Namun, sekarang saya ingin grafnya disimpan dalam database relasional seperti MySQL.&lt;br /&gt;&lt;br /&gt;Memikirkan sendiri cara penyimpanan graf dalam MySQL membuat saya pusing. Akhirnya saya menemukan sebuah &lt;i&gt;slide&lt;/i&gt; milik bapak &lt;a href=&#34;http://www.slideshare.net/billkarwin&#34; target=&#34;_blank&#34;&gt;Karwin&lt;/a&gt;. Beliau menjelaskan empat metode penyimpanan graf pada database relasional dan pada akhirnya membandingkan setiap metode.&lt;br /&gt;&lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;485&#34; marginheight=&#34;0&#34; marginwidth=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//www.slideshare.net/slideshow/embed_code/key/tI9jfoqFHAcQdn?startSlide=5&#34; style=&#34;border-width: 1px; border: 1px solid #ccc; margin-bottom: 5px; max-width: 100%;&#34; width=&#34;100%&#34;&gt; &lt;/iframe&gt; &lt;br /&gt;&lt;div style=&#34;margin-bottom: 5px;&#34;&gt;&lt;b&gt; &lt;a href=&#34;https://www.slideshare.net/billkarwin/models-for-hierarchical-data&#34; target=&#34;_blank&#34; title=&#34;Models for hierarchical data&#34;&gt;Models for hierarchical data&lt;/a&gt; &lt;/b&gt; from &lt;b&gt;&lt;a href=&#34;https://www.slideshare.net/billkarwin&#34; target=&#34;_blank&#34;&gt;Karwin Software Solutions LLC&lt;/a&gt;&lt;/b&gt; &lt;/div&gt;Perbandingan beliau pada slide tersebut, menentukan metode &lt;i&gt;Closeure Table&lt;/i&gt; terpilih sebagai yang termudah. Termudah yang saya maksudkan di sini adalah mudah untuk melakukan &lt;i&gt;Query&lt;/i&gt; CRUD &lt;i&gt;(Create, Read, Update, Delete)&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Masing-masing metode memang memiliki kelebihan dan kekurangan. Contohnya metode &lt;i&gt;Path Enumerattion&lt;/i&gt;, bagus digunakan untuk membuat &lt;i&gt;breadcrums. Sedangkan Adjacency List &lt;/i&gt;tidak bagus digunakan untuk graf yang punya banyak&lt;i&gt; node.&lt;/i&gt;&lt;br /&gt;&lt;h2&gt;Metode &lt;i&gt;Closure Table&lt;/i&gt;&lt;/h2&gt;Mari kita pelajari cara penyimpanan graf dengan metode &lt;i&gt;Closure Table&lt;/i&gt;. Misalkan, kita memiliki graf seperti pada gambar ini.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-dWgknbxEzmU/WCLzqncwFzI/AAAAAAAADag/6wDc7P2eC7IwFY3dOdmTXHpcaT-woBqFQCK4B/s1600/graf%2Bberarah%2B-%2Bpetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-dWgknbxEzmU/WCLzqncwFzI/AAAAAAAADag/6wDc7P2eC7IwFY3dOdmTXHpcaT-woBqFQCK4B/s1600/graf%2Bberarah%2B-%2Bpetanikode.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Anggaplah semua titik-titik pada graf tersebut merupakan sebuah kota yang saling terhubung. Kemudian, yang kita harus lakukan adalah membuat tabel untuk menyimpan kota (titik) dan jalan yang menghubungkannya.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-rCy4_zOhkfE/WDmI8o6D06I/AAAAAAAADdY/cttgx1o55l4VGyGvr-toyHGhEk8aP1qtACK4B/s1600/Relasi%2BTabel%2BGraf.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Diagram Relasi Tabel Graf&#34; border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-rCy4_zOhkfE/WDmI8o6D06I/AAAAAAAADdY/cttgx1o55l4VGyGvr-toyHGhEk8aP1qtACK4B/s1600/Relasi%2BTabel%2BGraf.png&#34; title=&#34;&#34; /&gt;&amp;nbsp;&lt;/a&gt;&lt;br /&gt;Relasi yang akan tercipta adalah &lt;i&gt;Many-to-Many&lt;/i&gt;. Kolom &lt;code&gt;kota_asal&lt;/code&gt; dan &lt;code&gt;kota_tujuan&lt;/code&gt; akan menyimpan &lt;code&gt;id&lt;/code&gt; dari &lt;i&gt;kota&lt;/i&gt;. Kemudian kolom &lt;code&gt;panjang&lt;/code&gt; untuk menyimpan panjang jalannya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;create table kota(&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; id int,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; nama char,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; PRIMARY KEY(id)&lt;br /&gt;);&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;create table jalan(&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; kota_asal int,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; kota_tujuan int,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; panjang int,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; FOREIGN KEY(kota_asal) REFERENCES kota(id),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; FOREIGN KEY(kota_tujuan) REFERENCES kota(id)&lt;br /&gt;);&lt;/code&gt;&lt;/pre&gt;Sekarang kita sudah punya dua tabel yang saling berelasi.&lt;br /&gt;&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-MpXwEwCU8Ek/WDmLo9QF4rI/AAAAAAAADdk/UsgJ7jVgr8IYkYm1GL7Vs2w-mTxw55HPACK4B/s1600/Relasi%2Btabel%2Bgraf%2Bdi%2Bdatabase%2Bmysql.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Relasi tabel database Graf&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-MpXwEwCU8Ek/WDmLo9QF4rI/AAAAAAAADdk/UsgJ7jVgr8IYkYm1GL7Vs2w-mTxw55HPACK4B/s1600/Relasi%2Btabel%2Bgraf%2Bdi%2Bdatabase%2Bmysql.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Sekarang kita coba menambahkan semua titik pada graf:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;INSERT INTO kota (id,nama) VALUE (1,&amp;lsquo;A&amp;rsquo;);&lt;br /&gt;INSERT INTO kota (id,nama) VALUE (2,&amp;lsquo;B&amp;rsquo;);&lt;br /&gt;INSERT INTO kota (id,nama) VALUE (3,&amp;lsquo;C&amp;rsquo;);&lt;br /&gt;INSERT INTO kota (id,nama) VALUE (4,&amp;rsquo;D&amp;rsquo;);&lt;br /&gt;INSERT INTO kota (id,nama) VALUE (5,&amp;lsquo;E&amp;rsquo;);&lt;br /&gt;INSERT INTO kota (id,nama) VALUE (6,&amp;lsquo;F&amp;rsquo;);&lt;/code&gt;&lt;/pre&gt;Selanjutnya menambahkan data jalan:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (1,2,14);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (1,3,10);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (2,3,6);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (2,4,18);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (3,4,7);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (4,3,9);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (5,6,8);&lt;br /&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (6,4,11);&lt;/code&gt;&lt;/pre&gt;Panjang jalan saya tentukan sendiri. Sekarang semuanya sudah masuk. Mari kita coba-coba melakukan &lt;i&gt;query&lt;/i&gt; yang lain. Misalnya, berapakah panjang jalan dari kota B menuju kota D?&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;SELECT panjang FROM &lt;code&gt;jalan&lt;/code&gt; WHERE kota_asal=2 AND kota_tujuan=4 &lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;+&amp;mdash;&amp;mdash;&amp;mdash;+&lt;br /&gt;| panjang |&lt;br /&gt;+&amp;mdash;&amp;mdash;&amp;mdash;+&lt;br /&gt;|      18 |&lt;br /&gt;+&amp;mdash;&amp;mdash;&amp;mdash;+&lt;br /&gt;1 row in set (0,00 sec)&lt;/code&gt;&lt;/pre&gt;Sebenarnya ada dua jalan yang bisa dilewati dari kota B menuju kota D, yaitu &lt;code&gt;B-&amp;gt;D&lt;/code&gt; dan &lt;code&gt;B-&amp;gt;C-&amp;gt;D&lt;/code&gt;. Akan tetapi &lt;i&gt;query&lt;/i&gt; tersebut hanya memilih jalur &lt;code&gt;B-&amp;gt;D&lt;/code&gt; saja. Untuk query yang lebih rumit, mungkin kita bisa lakukan dengan membuat program. Misalnya, program untuk menentukan jalur terpedek.&lt;br /&gt;&lt;br /&gt;File SQL contoh di atas dapat anda download di: &lt;a href=&#34;https://gist.github.com/ardianta/7ae139c95570a35d3af9dc40b70f18db&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://gist.github.com/ardianta/7ae139c95570a35d3af9dc40b70f18db&#34;&gt;https://gist.github.com/ardianta/7ae139c95570a35d3af9dc40b70f18db&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Begitulah cara termudah menyimpan graf pada database relasional. Metode &lt;i&gt;Closure Table&lt;/i&gt; memang yang termudah, namun pasti memiliki kekurangan. Saya kira metode inilah yang paling terbaik di antara kawan-kawannya, bagaimana menurutmu?&lt;/p&gt;
 </description>
     </item>
     

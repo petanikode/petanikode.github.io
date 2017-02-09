@@ -87,11 +87,68 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
     
     <item>
       <title>Apakah Perbedaan dari i&#43;&#43; dengan &#43;&#43;i?</title>
-      <link>http://petanikode.com/2016/11/apakah-perbedaan-dari-i&#43;&#43;-dengan-&#43;&#43;i/</link>
+      <link>http://petanikode.com/2016/11/apakah-perbedaan-dari-i-increment-dengan-increment-i/</link>
       <pubDate>Wed, 16 Nov 2016 05:07:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/2016/11/apakah-perbedaan-dari-i&#43;&#43;-dengan-&#43;&#43;i/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-6j668XHTBQo/WCnfapitW3I/AAAAAAAADbA/9eERDIwxUTw4octKK6KfTBNb1E5I8KiBwCK4B/s1600/post-increment-vs-pre-increment-ptenikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;post-increment vs pre-increment&#34; border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-6j668XHTBQo/WCnfapitW3I/AAAAAAAADbA/9eERDIwxUTw4octKK6KfTBNb1E5I8KiBwCK4B/s1600/post-increment-vs-pre-increment-ptenikode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;Sebagai pemula, kita mungkin sedikit bingung dengan perbedaan dari &lt;code&gt;i++&lt;/code&gt; &lt;i&gt;(post increment)&lt;/i&gt; dengan &lt;code&gt;++i&lt;/code&gt; &lt;i&gt;(pre increment)&lt;/i&gt;. Simbol &lt;code&gt;++&lt;/code&gt; artinya tambah satu (&lt;code&gt;+1&lt;/code&gt;) atau &lt;i&gt;increment&lt;/i&gt;. &lt;code&gt;i++&lt;/code&gt; dan &lt;code&gt;++i&lt;/code&gt; sering kita temukan ketika membuat sebuah perulangan.&lt;br /&gt;&lt;br /&gt;Contoh:&lt;br /&gt;&lt;i&gt;Post-Increment &lt;/i&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;for(int i = 1; i &amp;lt;= 10; i++){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; System.out.print(i);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;i&gt;Pre-Increment &lt;/i&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;for(int i = 1; i &amp;lt;= 10; ++i){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; System.out.print(i);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;Kedua perulangan tersebut akan menghasilkan bilangan dari &lt;code&gt;1&lt;/code&gt; sampai &lt;code&gt;10&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;12345678910&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;&lt;code&gt;i++&lt;/code&gt; itu sama seperti &lt;code&gt;i = i + 1&lt;/code&gt;, jadi nilai variabel &lt;code&gt;i&lt;/code&gt; yang sebelumnya akan ditambah satu. Sedangkan &lt;code&gt;++i&lt;/code&gt; sama seperti &lt;code&gt;i = 1 + i&lt;/code&gt;, satu ditambah dengan nilai variabel &lt;code&gt;i&lt;/code&gt; yang sebelumnya. Apakah ada perbedaan? tentu saja ada, posisi &lt;code&gt;i&lt;/code&gt; dengan angka &lt;code&gt;1&lt;/code&gt; berbeda. Namun, meskipun begitu, hasilnya akan tetap sama. Lalu, di mana kah letak perbedaan yang sesungguhnya?&lt;br /&gt;&lt;br /&gt;Perbedaan &lt;code&gt;i++&lt;/code&gt; dan &lt;code&gt;++i&lt;/code&gt; dapat kita lihat pada sebuah ekspresi atau &lt;i&gt;statement&lt;/i&gt;. Misalkan, selain variabel &lt;code&gt;i&lt;/code&gt;, kita punya variabel &lt;code&gt;a&lt;/code&gt;. Kemudian variabel &lt;code&gt;a&lt;/code&gt; kita isi dengan &lt;code&gt;i++&lt;/code&gt; atau &lt;code&gt;++i&lt;/code&gt;.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Post-Increment&lt;/i&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;int a;&lt;br /&gt;int i = 1;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;a = i++;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;System.out.println(&amp;ldquo;a = &amp;rdquo; + a);&lt;br /&gt;System.out.println(&amp;ldquo;i = &amp;rdquo; + i);&lt;/code&gt;&lt;/pre&gt;Hasil output:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;a = 1&lt;br /&gt;i = 2&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;&lt;i&gt;Pre-Increment&lt;/i&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;int a;&lt;br /&gt;int i = 1;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;a = ++i;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;System.out.println(&amp;ldquo;a = &amp;rdquo; + a);&lt;br /&gt;System.out.println(&amp;ldquo;i = &amp;rdquo; + i);&lt;/code&gt;&lt;/pre&gt;Hasil output:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;a = 2&lt;br /&gt;i = 2&lt;/code&gt;&lt;/pre&gt;Perhatikanlah! apakah ada perbedaan sekarang? Pada &lt;i&gt;post-increment&lt;/i&gt;, nilai &lt;code&gt;a&lt;/code&gt; akan mengambil nilai &lt;code&gt;i&lt;/code&gt;, tanpa ditambah satu. Sedangkan pada p&lt;i&gt;re-increment&lt;/i&gt;, nilai &lt;code&gt;a&lt;/code&gt; akan mengambil nilai &lt;code&gt;i&lt;/code&gt; yang ditambah satu terlebih dahulu. Itulah perbedaan yang cukup terlihat dari &lt;i&gt;post-increment&lt;/i&gt; (&lt;code&gt;i++&lt;/code&gt;) dengan &lt;i&gt;pre-increment&lt;/i&gt; (&lt;code&gt;++i&lt;/code&gt;).&lt;/p&gt;
+      <guid>http://petanikode.com/2016/11/apakah-perbedaan-dari-i-increment-dengan-increment-i/</guid>
+      <description>&lt;p&gt;Sebagai pemula, kita mungkin sedikit bingung dengan perbedaan dari &lt;code&gt;i++&lt;/code&gt; &lt;em&gt;(post increment)&lt;/em&gt; dengan &lt;code&gt;++i&lt;/code&gt; &lt;em&gt;(pre increment)&lt;/em&gt;. Simbol &lt;code&gt;++&lt;/code&gt; artinya tambah satu (&lt;code&gt;+1&lt;/code&gt;) atau &lt;em&gt;increment&lt;/em&gt;. &lt;code&gt;i++&lt;/code&gt; dan &lt;code&gt;++i&lt;/code&gt; sering kita temukan ketika membuat sebuah perulangan.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Post-Increment&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for(int i = 1; i &amp;lt;= 10; i++){
+    System.out.print(i);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Pre-Increment&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for(int i = 1; i &amp;lt;= 10; ++i){
+    System.out.print(i);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kedua perulangan tersebut akan menghasilkan bilangan dari &lt;code&gt;1&lt;/code&gt; sampai &lt;code&gt;10&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;12345678910
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;i++&lt;/code&gt; itu sama seperti &lt;code&gt;i = i + 1&lt;/code&gt;, jadi nilai variabel &lt;code&gt;i&lt;/code&gt; yang sebelumnya akan ditambah satu. Sedangkan &lt;code&gt;++i&lt;/code&gt; sama seperti &lt;code&gt;i = 1 + i&lt;/code&gt;, satu ditambah dengan nilai variabel &lt;code&gt;i&lt;/code&gt; yang sebelumnya. Apakah ada perbedaan? tentu saja ada, posisi &lt;code&gt;i&lt;/code&gt; dengan angka &lt;code&gt;1&lt;/code&gt; berbeda. Namun, meskipun begitu, hasilnya akan tetap sama. Lalu, di mana kah letak perbedaan yang sesungguhnya?&lt;/p&gt;
+
+&lt;p&gt;Perbedaan &lt;code&gt;i++&lt;/code&gt; dan &lt;code&gt;++i&lt;/code&gt; dapat kita lihat pada sebuah ekspresi atau &lt;em&gt;statement&lt;/em&gt;. Misalkan, selain variabel &lt;code&gt;i&lt;/code&gt;, kita punya variabel &lt;code&gt;a&lt;/code&gt;. Kemudian variabel &lt;code&gt;a&lt;/code&gt; kita isi dengan &lt;code&gt;i++&lt;/code&gt; atau &lt;code&gt;++i&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Post-Increment&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int a;
+int i = 1;
+a = i++;
+System.out.println(&amp;quot;a = &amp;quot; + a);
+System.out.println(&amp;quot;i = &amp;quot; + i);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = 1
+i = 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Pre-Increment&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int a;
+int i = 1;
+a = ++i;
+System.out.println(&amp;quot;a = &amp;quot; + a);
+System.out.println(&amp;quot;i = &amp;quot; + i);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = 2
+i = 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikanlah! apakah ada perbedaan sekarang? Pada &lt;em&gt;post-increment&lt;/em&gt;, nilai &lt;code&gt;a&lt;/code&gt; akan mengambil nilai &lt;code&gt;i&lt;/code&gt;, tanpa ditambah satu. Sedangkan pada p&lt;em&gt;re-increment&lt;/em&gt;, nilai &lt;code&gt;a&lt;/code&gt; akan mengambil nilai &lt;code&gt;i&lt;/code&gt; yang ditambah satu terlebih dahulu. Itulah perbedaan yang cukup terlihat dari &lt;em&gt;post-increment&lt;/em&gt; (&lt;code&gt;i++&lt;/code&gt;) dengan &lt;em&gt;pre-increment&lt;/em&gt; (&lt;code&gt;++i&lt;/code&gt;).&lt;/p&gt;
 </description>
     </item>
     

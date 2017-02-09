@@ -10,6 +10,169 @@
     <atom:link href="http://petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cara Instal Git di Windows</title>
+      <link>http://petanikode.com/2017/02/cara-instal-git-di-windows/</link>
+      <pubDate>Fri, 10 Feb 2017 01:42:35 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/cara-instal-git-di-windows/</guid>
+      <description>
+
+&lt;p&gt;Instalasi Git di Windows memang tidak seperti di Linux yang ketik perintah
+langsung terinstal. Kita harus menguduh dulu, kemudian melakukan ritual
+&lt;em&gt;next&amp;gt;next&amp;gt;finish&lt;/em&gt;. Tapi dalam ritual tersebut, ada pilihan
+yang harus diperhatikan agar perintah &lt;code&gt;git&lt;/code&gt; dapat dikenali di CMD.&lt;/p&gt;
+
+&lt;p&gt;Baiklah, kali ini saya numpang &lt;em&gt;screenshot&lt;/em&gt; di laptop teman yang menggunakan
+windows untuk pembuatan tutorial ini. Silahkan disimak ya :smile:.&lt;/p&gt;
+
+&lt;h2 id=&#34;unduh-git&#34;&gt;Unduh Git&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka website resminya Git (&lt;a href=&#34;https://git-scm.com/&#34;&gt;git-scm.com&lt;/a&gt;).
+Kemudian unduh Git sesuai dengan arsitektur komputer kita. Kalau menggunakan
+64bit, unduh yang 64bit. Begitu juga kalau menggunakan 32bit.&lt;/p&gt;
+
+&lt;h2 id=&#34;ritual-instal&#34;&gt;Ritual Instal&lt;/h2&gt;
+
+&lt;p&gt;Baiklah, mari kita mulai ritual instalnya. Silahkan klik 2x file instaler Git yang sudah diunduh.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;836&#34;
+height=&#34;268&#34;
+alt=&#34;1.+Buka+file+instaler+Git.JPG&#34;
+src=&#34;https://3.bp.blogspot.com/-GJG55D0dDUE/WJyvgHq7V6I/AAAAAAAAD0Y/1eNFR16HwmoDXixtJfQ5HRMZ_hCelqD0gCPcB/s1600/1.%2BBuka%2Bfile%2Binstaler%2BGit.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka akan muncul infomasi lisensi Git, klik &lt;em&gt;Next &amp;gt;&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;2.+Informasi+tentang+git.JPG&#34;
+src=&#34;https://3.bp.blogspot.com/-NzbswuR4CgU/WJyvgMeY3cI/AAAAAAAAD0Y/aa_6vg_W7Q0l7cf20FkatIkU0dXGAJXtACPcB/s1600/2.%2BInformasi%2Btentang%2Bgit.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya menentukan lokasi instalasi. Biarkan saja apa adanya, kemudian klik
+&lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;3.+Lokasi+instal.JPG&#34;
+src=&#34;https://2.bp.blogspot.com/-Ye-09zmjGXY/WJyvgKQWTxI/AAAAAAAAD0Y/hbIXryc1LBkUOaXOOlP92ynIwdVGAZs9gCPcB/s1600/3.%2BLokasi%2Binstal.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemilihan komoponen, biarkan saja seperti ini kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;4.+Pemilihan+komponen.JPG&#34;
+src=&#34;https://2.bp.blogspot.com/-ywOWK8HlXtY/WJyvgBmH9YI/AAAAAAAAD0Y/IoJbYkEjw0oIQYxLR3Jf7AvbDhwbDneoQCPcB/s1600/4.%2BPemilihan%2Bkomponen.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemlilihan direktori start menu, klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;5.+pembuatan+start+menu.JPG&#34;
+src=&#34;https://3.bp.blogspot.com/-iGNC1QrWtDg/WJyvgHelUtI/AAAAAAAAD0Y/fJKy0-mD6MgikbyjrjD4FDabTfPynbCiwCPcB/s1600/5.%2Bpembuatan%2Bstart%2Bmenu.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pengaturan &lt;em&gt;PATH Environment&lt;/em&gt;. Pilih yang tengah agar perintah &lt;code&gt;git&lt;/code&gt;
+dapat di kenali di &lt;em&gt;Command Prompt&lt;/em&gt; (CMD). Setelah itu klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;6.+Path+environment.JPG&#34;
+src=&#34;https://4.bp.blogspot.com/-79ZG8B-IzCA/WJyvgLBQbjI/AAAAAAAAD0Y/u87asmJOm9UcFAT0Q87pM8xgcW82kkOOwCPcB/s1600/6.%2BPath%2Benvironment.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya konversi &lt;em&gt;line ending&lt;/em&gt;. Biarkan saja seperti ini, kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;7.+konversi+line+ending.JPG&#34;
+src=&#34;https://3.bp.blogspot.com/-3ZL1Ea4exvo/WJyvgLEi3NI/AAAAAAAAD0Y/3jSy13aPLkAqkaZ5CrFQbmfCNb6m8kniQCPcB/s1600/7.%2Bkonversi%2Bline%2Bending.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemilihan emulator terminal. Pilih saja yang bawah, kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;8.+Pemilihan+emulator+terminal.JPG&#34;
+src=&#34;https://4.bp.blogspot.com/-wuVBFyFlmjo/WJyvgNkAcvI/AAAAAAAAD0Y/UDKA-JsD3UIuv2sDOEkdwd_X_gRG8uX3QCPcB/s1600/8.%2BPemilihan%2Bemulator%2Bterminal.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemilihan opsi ekstra. Klik saja &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;9.+Konfigurasi+Opsi+Ekstra.JPG&#34;
+src=&#34;https://1.bp.blogspot.com/-5oq7fAHTb7Q/WJyvgMQFc6I/AAAAAAAAD0Y/-5KmjFlMrsMkIsrPjoja277tQDaA_nr5ACPcB/s1600/9.%2BKonfigurasi%2BOpsi%2BEkstra.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemilihan opsi ekspreimental, langsung saja klik &lt;em&gt;Install&lt;/em&gt; untuk memaulai instalasi.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;10.+Opsi+ekperimental.JPG&#34;
+src=&#34;https://2.bp.blogspot.com/-lrAn-7lh7jY/WJyvgMm0PiI/AAAAAAAAD0Y/sEhM1irdMPkvv3v615R5JhIcIDNUJxArQCPcB/s1600/10.%2BOpsi%2Bekperimental.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggu beberapa saat, instalasi sedang dilakukan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;11.+Installing.JPG&#34;
+src=&#34;https://4.bp.blogspot.com/-1jecFYkwTzg/WJyvgJt9g5I/AAAAAAAAD0Y/5DG8OAc44Zk31_VjHz3mXybB3kThzHcbwCPcB/s1600/11.%2BInstalling.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah selesai, kita bisa langsung klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;12.+Finish.JPG&#34;
+src=&#34;https://1.bp.blogspot.com/-lCGee-56K5Y/WJyvgAbeLGI/AAAAAAAAD0Y/fNaJIaZKf2cqMFuV_5occ6y4oAi7_vaawCPcB/s1600/12.%2BFinish.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat, Git sudah terinstal di Windows. Untuk mencobanya, silahkan buka CMD atau
+PowerShell, kemudian ketik perintah &lt;code&gt;git --version&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;745&#34;
+height=&#34;204&#34;
+alt=&#34;13.+Percobaan.JPG&#34;
+src=&#34;https://4.bp.blogspot.com/-JMZtMOkESYQ/WJyvgOEh_TI/AAAAAAAAD0Y/4Mtf48YbMUwVtQ9jbJc_TYHe2MymmooAQCPcB/s1600/13.%2BPercobaan.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;OK, meskipun Git sudah terinstal. Akan tetapi masih belum bisa dipakai. Karena
+kita belum melakukan konfigurasi &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt;. Cara konfigurasinya
+silahkan &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;baca di sni&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutorial Git 01 - Instalasi dan Persiapan</title>
       <link>http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/</link>
       <pubDate>Wed, 08 Feb 2017 11:26:37 +0800</pubDate>
@@ -37,12 +200,11 @@ Sekarang Kita akan melakukan instalasi dan persiapan sebelum mulai menggunakan G
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;yum install git
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Windows:&lt;/p&gt;
+&lt;p&gt;Windows: &lt;a href=&#34;http://petanikode.com/2017/02/cara-instal-git-di-windows/&#34;&gt;Cara Instal Git di Windows&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Download Git&lt;/li&gt;
 &lt;li&gt;Instal, Next, Next, Finish&lt;/li&gt;
-&lt;li&gt;Konfigurasi Variabel Lingkungan&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;persiapan&#34;&gt;Persiapan&lt;/h2&gt;
@@ -1130,16 +1292,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       
       <guid>http://petanikode.com/2016/12/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;Saat kita membuat sbuah tanggal otomatis dengan fungsi &lt;code&gt;Date()&lt;/code&gt;, kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, &lt;code&gt;Date(&amp;rsquo;d F Y&amp;rsquo;)&lt;/code&gt; akan menghasilkan output &lt;code&gt;22 December 2016&lt;/code&gt; (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.&lt;br /&gt;&lt;br /&gt;Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi &lt;code&gt;Date()&lt;/code&gt;. Kita bisa melakukannya seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$bulan = Date(&amp;rsquo;m&amp;rsquo;);&lt;br /&gt;switch ($bulan) {&lt;br /&gt;    case 1:&lt;br /&gt;&amp;nbsp; &amp;nbsp;     $bulan = &amp;ldquo;Januari&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 2:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Februari&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 3:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Maret&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 4:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;April&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 5:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Mei&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 6:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Juni&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 7:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Juli&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 8:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Agustus&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 9:&lt;br /&gt;  &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;September&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 10:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Oktober&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 11:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;November&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 12:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Desember&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; default:&lt;br /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = Date(&amp;lsquo;F&amp;rsquo;);&lt;br /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Karena kita membutuhkannya untuk digunakan atau dijalankan pada&amp;nbsp;&lt;i&gt;view&lt;/i&gt;, sebaiknya dijadikan &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/ba0934a0ee88315359d30095c7e442de.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;Cara menggunakannya, silahkan taruh file &lt;code&gt;tanggal_helper.php&lt;/code&gt;&amp;nbsp;pada direktori &lt;code&gt;application/helpers&lt;/code&gt; kemudian tambahkan pada &lt;i&gt;autoload&lt;/i&gt; &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;/&lt;em&gt;&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| &amp;nbsp;Auto-load Helper Files&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| Prototype:&lt;br /&gt;|&lt;br /&gt;|&lt;span class=&#34;Apple-tab-span&#34; style=&#34;white-space: pre;&#34;&gt; &lt;/span&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;, &amp;lsquo;file&amp;rsquo;);&lt;br /&gt;&lt;/em&gt;/&lt;br /&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;,&amp;lsquo;cookie&amp;rsquo;,&amp;lsquo;form&amp;rsquo;, &amp;lsquo;xss&amp;rsquo;, &amp;lsquo;dump&amp;rsquo;, &amp;lsquo;tanggal&amp;rsquo;);&lt;/code&gt;&lt;/pre&gt;Setelah itu bisa digunakan langsung pada &lt;i&gt;view&lt;/i&gt;, &lt;i&gt;controller&lt;/i&gt;, maupun &lt;i&gt;model&lt;/i&gt; seperti menggunakan helper &lt;code&gt;url&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;lt;div class=&amp;ldquo;tanda-tangan&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;p align=&amp;ldquo;center&amp;rdquo;&amp;gt;Mataram, &amp;lt;?php echo tanggal() ?&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;&lt;span class=&#34;Apple-tab-span&#34; style=&#34;white-space: pre;&#34;&gt; &lt;/span&gt; &amp;nbsp; &amp;nbsp;Kepala Dinas Pertanian&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Provinsi Nusa Tenggara Barat&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/p&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;p align=&amp;ldquo;center&amp;rdquo;&amp;gt;&amp;lt;b&amp;gt;&amp;lt;u&amp;gt;Ir. Hj. Budi Septiani&amp;lt;/b&amp;gt;&amp;lt;/u&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; NIP. &amp;hellip;..&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/p&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;Akan menghasilkan output:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Hasil output format tanggal dalam bahasa indonesia pada CodeIgniter&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Asyik, Akhirnya Telegram Merilis API untuk Telegraph</title>
-      <link>http://petanikode.com/2016/12/asyik-akhirnya-telegram-merilis-api-untuk-telegraph/</link>
-      <pubDate>Wed, 21 Dec 2016 21:42:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/12/asyik-akhirnya-telegram-merilis-api-untuk-telegraph/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://1.bp.blogspot.com/-aDsiFEuM5xc/WFqCkAnYW8I/AAAAAAAADfo/EeFWl7vn00077JQIDJZH2uzO6WfMhPYaQCLcB/s1600/telegraph-api-oleh-telegram.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-aDsiFEuM5xc/WFqCkAnYW8I/AAAAAAAADfo/EeFWl7vn00077JQIDJZH2uzO6WfMhPYaQCLcB/s1600/telegraph-api-oleh-telegram.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Setelah satu bulan dirilis, Telegraph akhirnya dirilis API-nya. Telegraph merupakan sebuah &lt;i&gt;tool&lt;/i&gt; untuk menerbitkan artikel. Teks editor Telegraph dibangun dengan &lt;a href=&#34;http://quilljs.com/&#34; target=&#34;_blank&#34;&gt;Quill&lt;/a&gt; dan tampilannya mirip seperti Medium. Menulis di Telegraph, rasanya seperti menulis di Medium.&lt;br /&gt;&lt;br /&gt;Sebelumnya Telegram menambahkan fitur &lt;i&gt;instant view&lt;/i&gt;. &lt;i&gt;Instan view&lt;/i&gt; hanya berlaku untuk artikel yang dibagikan dari Medium dan Telegraph. Selain dari itu, tidak bisa ditampilkan dengan &lt;i&gt;instan view&lt;/i&gt;. Namun, dengan kemunculan API Telegraph, kita mungkin bisa membuat &lt;i&gt;instant view&lt;/i&gt; secara otomatis.&lt;br /&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt; Tertarik mencobanya, silahkan kunjungi halaman dokumentasi Telegraph. Dokumentasi API Telegraph dapat anda baca di&amp;nbsp;&lt;a href=&#34;http://telegra.ph/api&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://telegra.ph/api&#34;&gt;http://telegra.ph/api&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Contoh kode untuk mengirim artikel ke Telegraph:&lt;br /&gt;&lt;pre spellcheck=&#34;false&#34;&gt;&lt;code class=&#34;js&#34;&gt;$.ajax(&amp;lsquo;&lt;a href=&#34;https://api.telegra.ph/createPage&#39;&#34;&gt;https://api.telegra.ph/createPage&#39;&lt;/a&gt;, {&lt;br /&gt;&amp;nbsp; data: {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;access_token:&amp;nbsp;  &amp;lsquo;%access_token%&amp;lsquo;,&lt;br /&gt;  &amp;nbsp;&amp;nbsp;title:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;     &amp;nbsp;&amp;lsquo;Title of page&amp;rsquo;,&lt;br /&gt;  &amp;nbsp;&amp;nbsp;content:&amp;nbsp;&amp;nbsp;&amp;nbsp;    &amp;nbsp;JSON.stringify(content),&lt;br /&gt;  &amp;nbsp;&amp;nbsp;return_content: true&lt;br /&gt;  },&lt;br /&gt;  type: &amp;lsquo;POST&amp;rsquo;,&lt;br /&gt;&amp;nbsp; dataType: &amp;lsquo;json&amp;rsquo;,&lt;br /&gt;&amp;nbsp; success: function(data) {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;if (data.content) {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; while (article.firstChild) {&lt;br /&gt;    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;article.removeChild(article.firstChild);&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; article.appendChild(nodeToDom({children: data.content}));&lt;br /&gt;  &amp;nbsp;&amp;nbsp;}&lt;br /&gt;&amp;nbsp; }&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
 </description>
     </item>
     

@@ -7,8 +7,171 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 08 Feb 2017 11:26:37 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Feb 2017 01:42:35 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Instal Git di Windows</title>
+      <link>http://petanikode.com/2017/02/cara-instal-git-di-windows/</link>
+      <pubDate>Fri, 10 Feb 2017 01:42:35 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/cara-instal-git-di-windows/</guid>
+      <description>
+
+&lt;p&gt;Instalasi Git di Windows memang tidak seperti di Linux yang ketik perintah
+langsung terinstal. Kita harus menguduh dulu, kemudian melakukan ritual
+&lt;em&gt;next&amp;gt;next&amp;gt;finish&lt;/em&gt;. Tapi dalam ritual tersebut, ada pilihan
+yang harus diperhatikan agar perintah &lt;code&gt;git&lt;/code&gt; dapat dikenali di CMD.&lt;/p&gt;
+
+&lt;p&gt;Baiklah, kali ini saya numpang &lt;em&gt;screenshot&lt;/em&gt; di laptop teman yang menggunakan
+windows untuk pembuatan tutorial ini. Silahkan disimak ya :smile:.&lt;/p&gt;
+
+&lt;h2 id=&#34;unduh-git&#34;&gt;Unduh Git&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka website resminya Git (&lt;a href=&#34;https://git-scm.com/&#34;&gt;git-scm.com&lt;/a&gt;).
+Kemudian unduh Git sesuai dengan arsitektur komputer kita. Kalau menggunakan
+64bit, unduh yang 64bit. Begitu juga kalau menggunakan 32bit.&lt;/p&gt;
+
+&lt;h2 id=&#34;ritual-instal&#34;&gt;Ritual Instal&lt;/h2&gt;
+
+&lt;p&gt;Baiklah, mari kita mulai ritual instalnya. Silahkan klik 2x file instaler Git yang sudah diunduh.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;836&#34;
+height=&#34;268&#34;
+alt=&#34;1.+Buka+file+instaler+Git.JPG&#34;
+src=&#34;https://3.bp.blogspot.com/-GJG55D0dDUE/WJyvgHq7V6I/AAAAAAAAD0Y/1eNFR16HwmoDXixtJfQ5HRMZ_hCelqD0gCPcB/s1600/1.%2BBuka%2Bfile%2Binstaler%2BGit.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka akan muncul infomasi lisensi Git, klik &lt;em&gt;Next &amp;gt;&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;2.+Informasi+tentang+git.JPG&#34;
+src=&#34;https://3.bp.blogspot.com/-NzbswuR4CgU/WJyvgMeY3cI/AAAAAAAAD0Y/aa_6vg_W7Q0l7cf20FkatIkU0dXGAJXtACPcB/s1600/2.%2BInformasi%2Btentang%2Bgit.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya menentukan lokasi instalasi. Biarkan saja apa adanya, kemudian klik
+&lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;3.+Lokasi+instal.JPG&#34;
+src=&#34;https://2.bp.blogspot.com/-Ye-09zmjGXY/WJyvgKQWTxI/AAAAAAAAD0Y/hbIXryc1LBkUOaXOOlP92ynIwdVGAZs9gCPcB/s1600/3.%2BLokasi%2Binstal.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemilihan komoponen, biarkan saja seperti ini kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;4.+Pemilihan+komponen.JPG&#34;
+src=&#34;https://2.bp.blogspot.com/-ywOWK8HlXtY/WJyvgBmH9YI/AAAAAAAAD0Y/IoJbYkEjw0oIQYxLR3Jf7AvbDhwbDneoQCPcB/s1600/4.%2BPemilihan%2Bkomponen.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemlilihan direktori start menu, klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;5.+pembuatan+start+menu.JPG&#34;
+src=&#34;https://3.bp.blogspot.com/-iGNC1QrWtDg/WJyvgHelUtI/AAAAAAAAD0Y/fJKy0-mD6MgikbyjrjD4FDabTfPynbCiwCPcB/s1600/5.%2Bpembuatan%2Bstart%2Bmenu.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pengaturan &lt;em&gt;PATH Environment&lt;/em&gt;. Pilih yang tengah agar perintah &lt;code&gt;git&lt;/code&gt;
+dapat di kenali di &lt;em&gt;Command Prompt&lt;/em&gt; (CMD). Setelah itu klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;6.+Path+environment.JPG&#34;
+src=&#34;https://4.bp.blogspot.com/-79ZG8B-IzCA/WJyvgLBQbjI/AAAAAAAAD0Y/u87asmJOm9UcFAT0Q87pM8xgcW82kkOOwCPcB/s1600/6.%2BPath%2Benvironment.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya konversi &lt;em&gt;line ending&lt;/em&gt;. Biarkan saja seperti ini, kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;7.+konversi+line+ending.JPG&#34;
+src=&#34;https://3.bp.blogspot.com/-3ZL1Ea4exvo/WJyvgLEi3NI/AAAAAAAAD0Y/3jSy13aPLkAqkaZ5CrFQbmfCNb6m8kniQCPcB/s1600/7.%2Bkonversi%2Bline%2Bending.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemilihan emulator terminal. Pilih saja yang bawah, kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;8.+Pemilihan+emulator+terminal.JPG&#34;
+src=&#34;https://4.bp.blogspot.com/-wuVBFyFlmjo/WJyvgNkAcvI/AAAAAAAAD0Y/UDKA-JsD3UIuv2sDOEkdwd_X_gRG8uX3QCPcB/s1600/8.%2BPemilihan%2Bemulator%2Bterminal.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemilihan opsi ekstra. Klik saja &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;9.+Konfigurasi+Opsi+Ekstra.JPG&#34;
+src=&#34;https://1.bp.blogspot.com/-5oq7fAHTb7Q/WJyvgMQFc6I/AAAAAAAAD0Y/-5KmjFlMrsMkIsrPjoja277tQDaA_nr5ACPcB/s1600/9.%2BKonfigurasi%2BOpsi%2BEkstra.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemilihan opsi ekspreimental, langsung saja klik &lt;em&gt;Install&lt;/em&gt; untuk memaulai instalasi.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;10.+Opsi+ekperimental.JPG&#34;
+src=&#34;https://2.bp.blogspot.com/-lrAn-7lh7jY/WJyvgMm0PiI/AAAAAAAAD0Y/sEhM1irdMPkvv3v615R5JhIcIDNUJxArQCPcB/s1600/10.%2BOpsi%2Bekperimental.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggu beberapa saat, instalasi sedang dilakukan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;11.+Installing.JPG&#34;
+src=&#34;https://4.bp.blogspot.com/-1jecFYkwTzg/WJyvgJt9g5I/AAAAAAAAD0Y/5DG8OAc44Zk31_VjHz3mXybB3kThzHcbwCPcB/s1600/11.%2BInstalling.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah selesai, kita bisa langsung klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;499&#34;
+height=&#34;387&#34;
+alt=&#34;12.+Finish.JPG&#34;
+src=&#34;https://1.bp.blogspot.com/-lCGee-56K5Y/WJyvgAbeLGI/AAAAAAAAD0Y/fNaJIaZKf2cqMFuV_5occ6y4oAi7_vaawCPcB/s1600/12.%2BFinish.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat, Git sudah terinstal di Windows. Untuk mencobanya, silahkan buka CMD atau
+PowerShell, kemudian ketik perintah &lt;code&gt;git --version&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+width=&#34;745&#34;
+height=&#34;204&#34;
+alt=&#34;13.+Percobaan.JPG&#34;
+src=&#34;https://4.bp.blogspot.com/-JMZtMOkESYQ/WJyvgOEh_TI/AAAAAAAAD0Y/4Mtf48YbMUwVtQ9jbJc_TYHe2MymmooAQCPcB/s1600/13.%2BPercobaan.JPG&#34;
+layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;OK, meskipun Git sudah terinstal. Akan tetapi masih belum bisa dipakai. Karena
+kita belum melakukan konfigurasi &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt;. Cara konfigurasinya
+silahkan &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;baca di sni&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Tutorial Git 01 - Instalasi dan Persiapan</title>
@@ -38,12 +201,11 @@ Sekarang Kita akan melakukan instalasi dan persiapan sebelum mulai menggunakan G
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;yum install git
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Windows:&lt;/p&gt;
+&lt;p&gt;Windows: &lt;a href=&#34;http://petanikode.com/2017/02/cara-instal-git-di-windows/&#34;&gt;Cara Instal Git di Windows&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Download Git&lt;/li&gt;
 &lt;li&gt;Instal, Next, Next, Finish&lt;/li&gt;
-&lt;li&gt;Konfigurasi Variabel Lingkungan&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;persiapan&#34;&gt;Persiapan&lt;/h2&gt;
@@ -1428,93 +1590,6 @@ di Stack Overflow dan mendapatkan jawabannya.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Contoh kode lengkapnya dapat anda lihat &lt;a href=&#34;https://github.com/ardianta/blogimport/blob/master/main.go&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>5 Alasan Petani Kode Migrasi ke Hugo</title>
-      <link>http://petanikode.com/2017/01/5-alasan-petani-kode-migrasi-ke-hugo/</link>
-      <pubDate>Wed, 18 Jan 2017 22:06:22 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/5-alasan-petani-kode-migrasi-ke-hugo/</guid>
-      <description>
-
-&lt;p&gt;Minggu ini, Petani Kode melakukan migrasi dari Blogger ke Hugo.
-Proses migrasi berjalan dengan lancar, meskipun masih banyak yang belum dikerjakan.
-Ada beberapa alasan, kenapa Petani Kode melakukan migrasi ke Hugo.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-template-blogger-masih-menggunakan-xml&#34;&gt;1. Template Blogger Masih menggunakan XML&lt;/h2&gt;
-
-&lt;p&gt;Salah satu produk Google yang jarang diperbaharui adalah Blogger. Buktinya,
-ketika Google memperkenalkan konsep &lt;em&gt;Material Design&lt;/em&gt;, berbagai produknya kemudian
-menerapkan material desain. Google Analytic, Adsense, Photo, Drive, GMail, dsb.
-Lalu, bagaimana dengan Blogger? tampilannya masih begitu-begitu saja sejak tahun 2012. Aplikasi Androidnya juga kurang bagus.&lt;/p&gt;
-
-&lt;p&gt;Begitu juga dengan template engine-nya, masih menggunakan XML.
-XML membuat saya cukup lelah membuat template. Karena tidak bisa dibuat secara
-offline. Selain itu juga, dokumentasinya kurang lengkap.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-menulis-di-blogger-kurang-efisien&#34;&gt;2. Menulis di Blogger Kurang Efisien&lt;/h2&gt;
-
-&lt;p&gt;Menurut Saya sebagai programmer yang terbiasa menulis di teks editor,
-menulis di Blogger itu kurang efisien. Karena ketika kita menulis di sana, lalu melakukan &lt;em&gt;preview&lt;/em&gt; kita akan membuka tab baru dan men-download hasil &lt;em&gt;preview&lt;/em&gt;.
-Berapa waktu dan kuota yang dihabiskan?&lt;/p&gt;
-
-&lt;p&gt;Dulu saya pernah mencoba menulis draf artikel dalam bentuk teks, html,
-&lt;em&gt;markdown&lt;/em&gt;,  dan dokumen. Namun, ketika ingin diterbitkan, harus disunting
-lagi di Blogger. Berbeda dengan Hugo, kita bisa menulis di teks editor mana saja
-dengan format &lt;em&gt;markdown&lt;/em&gt; dan HTML. Sublime, Atom, Vim, mau pakai yang mana?&lt;/p&gt;
-
-&lt;p&gt;Saya pilih Atom, karena bisa lihat preview-nya langsung.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;675&#34;
-width=&#34;1245&#34;
-alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
-src=&#34;https://2.bp.blogspot.com/-5K1vDdxvIOE/WIAa-PInq_I/AAAAAAAADqQ/2hNl6Vmw_Po5NHOCQ5Kn__0iBefttOHHACPcB/s1600/Nulis%2Bartikel%2Bdi%2BAtom%2Buntuk%2BHugo.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-amp-susah-valid&#34;&gt;3. AMP Susah Valid&lt;/h2&gt;
-
-&lt;p&gt;Validator AMP sangat ketat dalam menilai web. Kita dilarang keras menggunakan
-Javascript. Karena Javascript katanya dapat memperlambat web. Sementara,
-di Blogger banyak menggunakan Javascript; dan parahnya lagi, di sana untuk &lt;em&gt;load&lt;/em&gt;
-widget-nya pakai Javascript.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;380&#34;
-width=&#34;720&#34;
-alt=&#34;Validasi AMP&#34;
-src=&#34;http://i.imgur.com/5sv5CXW.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada Hugo, saya tidak menggunakan Javascript. Kecuali Javascript bawaan AMP.
-Hasilnya pun valid tanpa error.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;486&#34; height=&#34;657&#34;
-    layout=&#34;responsive&#34;
-    data-tweetid=&#34;821021406854946816&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-agar-terbiasa-menggunakan-git&#34;&gt;4. Agar Terbiasa Menggunakan Git&lt;/h2&gt;
-
-&lt;p&gt;Saya harus melakukan &lt;em&gt;push&lt;/em&gt; atau upload ke server repository git untuk &lt;em&gt;update&lt;/em&gt; konten. Karena Hugo sebuah generator web statis. Oleh sebab itu, ini bisa jadi sarana untuk latihan git agar terbiasa.&lt;/p&gt;
-
-&lt;h2 id=&#34;5-ingin-mencoba-teknologi-baru&#34;&gt;5. Ingin Mencoba Teknologi Baru&lt;/h2&gt;
-
-&lt;p&gt;Hugo memang baru, dibangun dengan bahasa pemrograman Go. Versi Hugo saat tulisan
-ini dibut adalah 0.18. Meski belum mencapai versi 1.0, tidak ada salahnya untuk dicoba.&lt;/p&gt;
-
-&lt;p&gt;Ketika mengembangkan Petani Kode, saya sedikit kesulitan,
-karena hasil pencarian Google hanya mengarah ke dokumentasi Hugo, Forum Hugo,
-dan Isu Hugo di Github. Sangat jarang ke Stack Overflow. Namun, itu bukanlah kendala.&lt;/p&gt;
-
-&lt;p&gt;Bahkan saya sampai dusuruh nulis kode dengan bahasa pemrograman Go. Sedangkan
-Saya tidak pernah belajar bahasa pemrograman Go sama sekali.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/&#34;&gt;Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Itulah lima alasan Petani Kode migrasi ke Hugo. Mungkin saja, Petani Kode menjadi web Indonesia yang pertama kali menggunakan Hugo. Karena saya lihat di &lt;a href=&#34;https://gohugo.io/showcase/&#34;&gt;Showcase Hugo&lt;/a&gt;, tidak ada web indonesia.&lt;/p&gt;
 </description>
     </item>
     

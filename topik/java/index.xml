@@ -116,6 +116,15 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;i++&lt;/code&gt; itu sama seperti &lt;code&gt;i = i + 1&lt;/code&gt;, jadi nilai variabel &lt;code&gt;i&lt;/code&gt; yang sebelumnya akan ditambah satu. Sedangkan &lt;code&gt;++i&lt;/code&gt; sama seperti &lt;code&gt;i = 1 + i&lt;/code&gt;, satu ditambah dengan nilai variabel &lt;code&gt;i&lt;/code&gt; yang sebelumnya. Apakah ada perbedaan? tentu saja ada, posisi &lt;code&gt;i&lt;/code&gt; dengan angka &lt;code&gt;1&lt;/code&gt; berbeda. Namun, meskipun begitu, hasilnya akan tetap sama. Lalu, di mana kah letak perbedaan yang sesungguhnya?&lt;/p&gt;
 
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
 &lt;p&gt;Perbedaan &lt;code&gt;i++&lt;/code&gt; dan &lt;code&gt;++i&lt;/code&gt; dapat kita lihat pada sebuah ekspresi atau &lt;em&gt;statement&lt;/em&gt;. Misalkan, selain variabel &lt;code&gt;i&lt;/code&gt;, kita punya variabel &lt;code&gt;a&lt;/code&gt;. Kemudian variabel &lt;code&gt;a&lt;/code&gt; kita isi dengan &lt;code&gt;i++&lt;/code&gt; atau &lt;code&gt;++i&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Post-Increment&lt;/em&gt;&lt;/p&gt;

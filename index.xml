@@ -7,8 +7,86 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 10 Feb 2017 01:42:35 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Feb 2017 22:44:49 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Integarsi Bot Autoposting Telegram dengan Channel</title>
+      <link>http://petanikode.com/2017/02/integarsi-bot-autoposting-telegram-dengan-channel/</link>
+      <pubDate>Sun, 12 Feb 2017 22:44:49 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/integarsi-bot-autoposting-telegram-dengan-channel/</guid>
+      <description>
+
+&lt;p&gt;Pada tulisan &lt;a href=&#34;http://petanikode.com/2016/07/membuat-bot-telegram-tanpa-menulis-kode-program-coding/&#34;&gt;sebelumnya&lt;/a&gt;,
+Saya pernah membuat Bot Autoposting dari RSS Reddit. Sekarang bagaimana caranya
+agar kiriman &lt;em&gt;(post)&lt;/em&gt; dari bot tersebut diteruskan ke &lt;em&gt;Channel&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Channel&lt;/em&gt; dapat di-follow setiap orang, sedangkan bot tidak. Bot hanya dapat
+digunakan saja. Bot tidak cocok sebagai sarana promosi. Oleh karena itu, kita membutuhkan
+&lt;em&gt;Channel&lt;/em&gt; yang dapat melakukan &lt;em&gt;posting&lt;/em&gt; otomatis (Autoposting).&lt;/p&gt;
+
+&lt;p&gt;Ok, mari kita mulai. Pastikan anda sudah menyiapkan &lt;em&gt;Channel&lt;/em&gt; dan Bot Autoposting.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tambahkan-bot-sebagai-admin&#34;&gt;Tambahkan Bot sebagai Admin&lt;/h2&gt;
+
+&lt;p&gt;Agar Bot dapat melakukan posting otomatis ke &lt;em&gt;Channel&lt;/em&gt; kita harus menjadikan bot
+sebagai admin dalam &lt;em&gt;Channel&lt;/em&gt; tersebut.&lt;/p&gt;
+
+&lt;p&gt;Silahkan buka Channel-nya, kemudian pada bagian &lt;em&gt;Member&lt;/em&gt; klik &lt;em&gt;Administrator&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;483&#34;
+    height=&#34;154&#34;
+    alt=&#34;Masuk+ke+administrator+channel+telegram+-+petanikode.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-rTBfC_TdkBI/WKB_0gBjFwI/AAAAAAAAD1Y/HhgyZED8UzsyV5rO_Qteun-CLoUMldX6wCPcB/s1600/Masuk%2Bke%2Badministrator%2Bchannel%2Btelegram%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu klik &lt;em&gt;Add Administrator&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;894&#34;
+    height=&#34;659&#34;
+    alt=&#34;Administrator+Channel+Telegram.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-NG9JZ8pqvF0/WKCBMDiZD-I/AAAAAAAAD14/Fuyn_OBgMZQUKe7L_tlUB6fC1e5XBrAJgCPcB/s1600/Administrator%2BChannel%2BTelegram.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Cari nama Bot-nya, tuliskan usernamenya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;894&#34;
+    height=&#34;659&#34;
+    alt=&#34;Cari+username+bot+untuk+dijadikan+administrator.png&#34;
+    src=&#34;https://1.bp.blogspot.com/-Y62g-iqUy30/WKCCNXUpzaI/AAAAAAAAD2M/333zMorSpEMAgNVTsNM_udAgbov1wZDFACPcB/s1600/Cari%2Busername%2Bbot%2Buntuk%2Bdijadikan%2Badministrator.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kalau sudah ketemu, tinggal diklik saja. Nanti akan ada pesan dialog seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;519&#34;
+    height=&#34;232&#34;
+    alt=&#34;Konfirmasi+penambahan+admin.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-mZhGXWDzbU8/WKCCvQ4h8xI/AAAAAAAAD2U/VXMvylWgYXsxB_8mV8uYazEvw63ckhnJwCPcB/s1600/Konfirmasi%2Bpenambahan%2Badmin.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Klik saja &lt;em&gt;Ok&lt;/em&gt;, maka akan selesai. Penambahan administrator sudah dilakukan.&lt;/p&gt;
+
+&lt;p&gt;Setiap post terbaru di bot tersebut akan diteruskan ke Channel.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Cara Instal Git di Windows</title>
@@ -1533,63 +1611,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 &lt;p&gt;Itu untuk menandakan lokasi &lt;em&gt;namespace&lt;/em&gt; atau lokasi kodenya. Wah, &lt;em&gt;namespace&lt;/em&gt; itu apa lagi om?&lt;/p&gt;
 
 &lt;p&gt;Jadi, itulah beberapa alasan kenapa bahasa &lt;a href=&#34;https://petanikode.com/search/label/Pemrograman&#34;&gt;pemrograman&lt;/a&gt; Java kurang cocok untuk pemula. Karena Java menggunakan paradigma OOP &lt;em&gt;(Object Oriented Programming)&lt;/em&gt;, sedangkan para pemula yang belum parnah &lt;em&gt;coding&lt;/em&gt; tidak pernah belajar tentang OOP. Namun, bukan berarti Java tidak boleh dipelajari oleh pemula. Silahkan dipelajari dengan tekun.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Replace String dalam Template Go</title>
-      <link>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</link>
-      <pubDate>Fri, 20 Jan 2017 14:32:22 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</guid>
-      <description>&lt;p&gt;Sebuah masalah kecil yang saya temukan ketika mengedit skrip &lt;a href=&#34;https://github.com/natefinch/blogimport&#34;&gt;Blogimport&lt;/a&gt;.
-Saya ingin memperbesar ukuran gambar &lt;em&gt;thumbnail&lt;/em&gt; dengan cara me-replace string yang ada di URL.&lt;/p&gt;
-
-&lt;p&gt;Misalnya, dari URL ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s72-c/pemrograman%2Bjavascript%2B-%2Bpetanikode.png
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Menjadi seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nah, di sana saya ingin merubah &lt;code&gt;s72-c&lt;/code&gt; agar menjadi &lt;code&gt;s1600&lt;/code&gt;. Pada template Hugo,
-saya bisa melakukannya seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;{{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Namun, Go belum memiliki fungsi &lt;code&gt;replace&lt;/code&gt; seperti Hugo. Setelah bolak-balik Google
-dan Stack Overflow, saya akhirnya membuat sebuah &lt;a href=&#34;http://stackoverflow.com/q/41647788/2658551&#34;&gt;pertanyaan baru&lt;/a&gt;
-di Stack Overflow dan mendapatkan jawabannya.&lt;/p&gt;
-
-&lt;p&gt;Pertama, kita harus membuat fungsi replace dulu dengan Go.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func replace(input, from,to string) string {
-    return strings.Replace(input,from,to, -1)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian melakukan &lt;em&gt;mapping&lt;/em&gt; terhadap fungsi tadi agar nanti bisa dikenali dalam template.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;funcMap = template.FuncMap{
-     &amp;quot;replace&amp;quot;:  replace,
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, barulah kita masukan fungsinya ketika eksekusi template.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;template := template.New(&amp;quot;&amp;quot;).Funcs(funcMap)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Barulah kita dapat menggunakan fungsi &lt;em&gt;replace&lt;/em&gt; pada template go.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;{{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh kode lengkapnya dapat anda lihat &lt;a href=&#34;https://github.com/ardianta/blogimport/blob/master/main.go&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

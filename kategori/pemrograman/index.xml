@@ -10,6 +10,166 @@
     <atom:link href="http://petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tutorial Git 03 - Membuat Revisi</title>
+      <link>http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/</link>
+      <pubDate>Mon, 13 Feb 2017 17:30:51 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/</guid>
+      <description>
+
+&lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;tutorial git yang kedua&lt;/a&gt;,
+kita sudah membuat repositori kosong. Belum ada apa-apa di sana. Sekarang coba
+tambahkan sebuah file baru. Sebagai contoh, saya akan menambahkan tiga file HTML
+kosong.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;806&#34;
+    height=&#34;516&#34;
+    alt=&#34;project-01_repositori-git-petanikode.png&#34;
+    src=&#34;https://1.bp.blogspot.com/-H_In4IFcsOM/WKF-vsJ3qtI/AAAAAAAAD3g/qoBlvBQWYDYwnPYOnvxXNG72R-T5m2i4gCPcB/s1600/project-01_repositori-git-petanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setalah ditambahkan, coba ketik perintah &lt;code&gt;git status&lt;/code&gt; untuk melihat status
+repositorinya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;285&#34;
+    alt=&#34;Git+status.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-kMBRMIo7wFU/WKGAIxRBTDI/AAAAAAAAD30/QH-AmxcXXXsvXtpfWX6R3ZW8svOnHRILACPcB/s1600/Git%2Bstatus.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Berdasarkan keterangan di atas, saat ini kita berada cabang &lt;em&gt;(branch) master&lt;/em&gt; dan
+ada tiga file yang belum ditambahkan ke Git.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tiga-kelompok-kondisi-file-dalam-git&#34;&gt;Tiga Kelompok Kondisi File dalam Git&lt;/h2&gt;
+
+&lt;p&gt;Sebelum kita membuat revisi, kita akan berkenalan dulu dengan tiga kondisi file
+dalam Git.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-modified&#34;&gt;1. Modified&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Modified&lt;/em&gt; adalah kondisi dimana revisi atau perubahan sudah dilakukan tetapi
+belum ditandai dan belum disimpan di version control. Contohnya pada gambar di
+atas, ada tiga file HTML yang dalam kondisi &lt;em&gt;modified&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-staged&#34;&gt;2. Staged&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Staged&lt;/em&gt; adalah kondisi dimana revisi sudah ditandai tetapi belum disimpan
+di version control. Untuk mengubah kondisi file dari &lt;em&gt;modified&lt;/em&gt; ke &lt;em&gt;staged&lt;/em&gt;
+gunakan perintah &lt;code&gt;git add nama_file&lt;/code&gt;. Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-commited&#34;&gt;3. Commited&lt;/h3&gt;
+
+&lt;p&gt;Commited adalah kondisi dimana revisi sudah disimpan di version control. perintah
+untuk mengubah kondisi file dari &lt;em&gt;staged&lt;/em&gt; ke &lt;em&gt;commited&lt;/em&gt; adalah &lt;code&gt;git commit&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-revisi-pertama&#34;&gt;Membuat Revisi Pertama&lt;/h2&gt;
+
+&lt;p&gt;Baiklah, sekarang kita akan sudah tahu kondisi-kondisi file dalam Git. Selanjutnya,
+silahkan ubah kondisi tiga file HTML tadi menjadi &lt;em&gt;staged&lt;/em&gt; dengan perintah &lt;code&gt;git add&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
+git add about.html
+git add contact.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Atau kita bisa melakukannya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add *.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Atau seperti ini (semua file dan direktori):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, cobalah ketik perintah &lt;code&gt;git status&lt;/code&gt; lagi. Kondisi filenya sekarang
+akan menjadi &lt;em&gt;staged&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;285&#34;
+    alt=&#34;kondisi+file+staged+di+Git.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-2Q335OAbng4/WKGEsuQIQcI/AAAAAAAAD4Q/eL9z36naaKYe5jYwp9awlfXCw99A3to4wCPcB/s1600/kondisi%2Bfile%2Bstaged%2Bdi%2BGit.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, ubah kondisi file tersebut ke &lt;em&gt;commited&lt;/em&gt; agar semua perubahan disimpan
+oleh Git.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git commit -m &amp;quot;Commit pertama&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, coba cek dengan perintah &lt;code&gt;git status&lt;/code&gt; lagi.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;205&#34;
+    alt=&#34;Commit+pertama+git.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-5EKJNZ9NN5o/WKGF6f1ojnI/AAAAAAAAD4k/vmQksU_KdioAM7xbUBJWYkVMWoXIELFCwCPcB/s1600/Commit%2Bpertama%2Bgit.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat, revisi pertama sudah kita buat. Selanjutnya cobalah untuk membuat revisi kedua.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-revisi-kedua&#34;&gt;Membuat Revisi kedua&lt;/h2&gt;
+
+&lt;p&gt;Ceritanya ada perubahan yang akan kita lakukan pada file &lt;code&gt;index.html&lt;/code&gt;. Silahkan
+modifikasi isi file &lt;code&gt;index.html&lt;/code&gt;. Sebagai contoh saya mengisinya seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;Belajar Git - Project 01&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+        &amp;lt;p&amp;gt;Hello Semua, Saya sedang belajar Git&amp;lt;/p&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu ketik lagi perintah &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;205&#34;
+    alt=&#34;Git+status+revisi+kedua.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-5kIOLZT1Ots/WKGIVv95vPI/AAAAAAAAD5M/sS0l7NFCdtM4NYlxIQ4sNWp8lOQDkRKdgCKgB/s1600/Git%2Bstatus%2Brevisi%2Bkedua.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Terilhat di sana, file &lt;code&gt;index.html&lt;/code&gt; sudah dimodifikasi. Kondisinya skarang berada
+dalam &lt;em&gt;modified&lt;/em&gt;. Lakukan &lt;em&gt;commit&lt;/em&gt; lagi seperti revisi pertama.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
+git commit -m &amp;quot;ditambahkan isi&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dengan demikian, revisi kedua sudah disipan oleh Git. Mungkin anda belum tahu
+maksud dari argumen &lt;code&gt;-m&lt;/code&gt;, argumen tersebut untuk menambahkan pesan setiap menyimpan
+revisi.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya: Tutorial Git 04 - Melihat Log Revisi (draf)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Integarsi Bot Autoposting Telegram dengan Channel</title>
       <link>http://petanikode.com/2017/02/integarsi-bot-autoposting-telegram-dengan-channel/</link>
       <pubDate>Sun, 12 Feb 2017 22:44:49 +0800</pubDate>
@@ -345,9 +505,8 @@ ini&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Sekian dulu untuk tutorial kedua ini, Kita baru saja mengetahui cara pembuatan
 repositori dan tentang &lt;code&gt;.gitignore&lt;/code&gt;. Penggunaan &lt;code&gt;.gitignore&lt;/code&gt; memang belum dapat
-kita rasakan saat ini, karena kita belum membuat revisi apa pun.&lt;/p&gt;
-
-&lt;!-- Karena itu, silahkan lanjutkan ke tutorial ketiga &#39;Membuat Revisi&#39; --&gt;
+kita rasakan saat ini, karena kita belum membuat revisi apa pun. Karena itu,
+silahkan lanjutkan ke &lt;a href=&#34;2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial ketiga &amp;lsquo;Membuat Revisi&amp;rsquo;&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -519,8 +678,8 @@ git berikut ini.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;Tutorial Git 01 - Instalasi dan Perisiapan&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;Tutorial Git 02 - Membuat Repositori&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Tutorial Git 03 - Membuat Revisi&lt;/li&gt;
-&lt;li&gt;Tutorial Git 04 - Melihat Status dan Log&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;Tutorial Git 03 - Membuat Revisi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/li&gt;
 &lt;li&gt;Tutorial Git 05 - Melihat Revisi&lt;/li&gt;
 &lt;li&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/li&gt;
 &lt;li&gt;Tutorial Git 07 - Percabangan&lt;/li&gt;
@@ -1476,16 +1635,6 @@ src=&#34;https://4.bp.blogspot.com/-X587f0Th2H8/WGircqM3tKI/AAAAAAAADjM/HBuAl-4A
 layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 
 &lt;p&gt;Meskipun masih rangking 40, kita masih punya kesempatan untuk meraih rangking yang lebih baik.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>17 Resolusi untuk Meningkatkan Kemampuan Pemrograman di Tahun 2017</title>
-      <link>http://petanikode.com/2017/01/17-resolusi-untuk-meningkatkan-kemampuan-pemrograman-di-tahun-2017/</link>
-      <pubDate>Tue, 03 Jan 2017 07:12:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/17-resolusi-untuk-meningkatkan-kemampuan-pemrograman-di-tahun-2017/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-iXT4baQA15U/WGM1TS5gqWI/AAAAAAAADgo/5v1xfk6tpjg7FNVtZRoAjSEUyVutBz-RACK4B/s1600/resolusi%2Btahun%2Bbaru.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-iXT4baQA15U/WGM1TS5gqWI/AAAAAAAADgo/5v1xfk6tpjg7FNVtZRoAjSEUyVutBz-RACK4B/s1600/resolusi%2Btahun%2Bbaru.jpg&#34; /&gt;&lt;/a&gt;Selamat tahun baru 2017. Sejauh mana kemampuan pemrograman yang kalian miliki? apakah kalian ingin meningkatkannya? atau malah menurun dan lebih buruk dari tahun sebelumnya. Wah, semoga saja tidak. Berikut ini ada 17 resolusi untuk meningkatkan kemampuan pemrogramanmu di tahun 2017.&lt;br /&gt;&lt;h2&gt;1. Mulai Menggunakan Linux&lt;/h2&gt;&lt;div&gt;Bagi kalian yang masih menggunakan windows, tidak ada salahnya mencoba menggunakan linux untuk pemrograman. Kenali konsep dan filosofi &lt;i&gt;open source&lt;/i&gt;. Rasakan sensasinya menulis kode dengan linux. Saya yakin, setelah satu tahun menggunakan Linux, anda pasti bisa.&lt;/div&gt;&lt;h2&gt;2. Terilbat dalam Komunitas&lt;/h2&gt;&lt;div&gt;Komunitas sangat penting untuk bertukar ilmu, pengalaman, dan informasi. Ikutilah komunitas-komunitas pemrograman yang ada di sekitarmu, entah itu komunitas &lt;i&gt;offline&lt;/i&gt; maupun &lt;i&gt;online&lt;/i&gt;. Komunitas juga dapat meningkatkan kemampuan komunikasimu.&lt;/div&gt;&lt;h2&gt;3. Mulai Menggunakan &lt;i&gt;Version Control&lt;/i&gt;&lt;/h2&gt;&lt;div&gt;Version Control tidak diajari di kampus. Sedangkan di dunia kerja banyak dibutuhkan. Bahkan ada perusahaan yang menjadikan &lt;i&gt;version control&lt;/i&gt; sebagai syarat untuk melamar pekerjaan. Mulai tahun ini, coba belajar&lt;i&gt; version control&lt;/i&gt;.&lt;/div&gt;&lt;h2&gt;4. Kurangi Begadang&lt;/h2&gt;&lt;div&gt;Banyak begadang bisa jadi menurunkan kinerja otak dan tubuh kita. Karena itu, kurangilah begadang pada tahun 2017 ini. Saya sendiri sudah merencanakan sejak awal bulan desember lalu untuk mengubah pola tidur. Tidur setelah solat isa, kemudian bangun pukul 1 untuk belajar dan &lt;i&gt;coding&lt;/i&gt;. Karena pada pukul 1, tidak banyak yang online di sosial media. Ngoding menjadi lebih fokus.&lt;/div&gt;&lt;h2&gt;5. Perbanyak Baca Buku dan Artikel&lt;/h2&gt;Apa bacaan yang kalian konsumsi setiap hari? status, SMS, Chat, spam, atau apa? apakah itu bermanfaat? Kalau itu memang tidak bermanfaat, sebaiknya dihindari. Karena akan membuang-buang waktu. Lebih baik kalian mulai membaca buku dan artikel yang bermanfaat.&lt;br /&gt;&lt;h2&gt;6. Perbanyak Praktik &lt;i&gt;(coding)&lt;/i&gt;&lt;/h2&gt;&lt;div&gt;Jika kalian ikut seni bela diri karate dan jarang latihan, apakah akan meningkatkan kemampuan? Tentu saja tidak. Sama halnya juga dengan pemrograman. Semakin sering latihan semakin meningkat pula kemampuan yang dimiliki. Latihan bisa dilakukan dengan praktik di kelas atau mengikuti tutorial di internet. Hal ini ditekankan oleh bapak Peter Jack Kambey di PHP indonesia.&lt;/div&gt;&lt;div&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-O-2uDesj-T8/WGK-qKwMNSI/AAAAAAAADgY/yftpS_rmpoY3pBLZ5cnMKshnPMAlSemGwCK4B/s1600/peter%2Bjack%2Bkambey%2B-%2Bphp%2Bindonesia.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-O-2uDesj-T8/WGK-qKwMNSI/AAAAAAAADgY/yftpS_rmpoY3pBLZ5cnMKshnPMAlSemGwCK4B/s1600/peter%2Bjack%2Bkambey%2B-%2Bphp%2Bindonesia.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2&gt;7. Selesaikan Error Secara Mandiri&lt;/h2&gt;&lt;div&gt;Sebelum kalian melempar pertanyaan ke forum maupun grup, sebaiknya selesaikan dulu errornya secara mandiri. Error sedikit, jangan langsung di kirim ke grup. Cobalah untuk berpikir, mencari tahu dan analisa terlebih dahulu. Kalau sudah mencoba berbagai cara, namun belum juga berhasil. Barulah coba lempar ke grup.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-captioned=&#34;&#34; data-instgrm-version=&#34;7&#34; style=&#34;background: #fff; border-radius: 3px; border: 0; box-shadow: 0 0 1px 0 rgba(0 , 0 , 0 , 0.5) , 0 1px 10px 0 rgba(0 , 0 , 0 , 0.15); margin: 1px; max-width: 658px; padding: 0; width: 99.375%;&#34;&gt;&lt;div style=&#34;padding: 8px;&#34;&gt;&lt;div style=&#34;background: #F8F8F8; line-height: 0; margin-top: 40px; padding: 50.0% 0; text-align: center; width: 100%;&#34;&gt;&lt;div style=&#34;background: url(data:image/png; display: block; height: 44px; margin: 0 auto -44px; position: relative; top: -22px; width: 44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;margin: 8px 0 0 0; padding: 0 4px;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BJaTBjwDXQW/&#34; style=&#34;color: black; font-family: &amp;quot;arial&amp;quot; , sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none; word-wrap: break-word;&#34; target=&#34;_blank&#34;&gt;Sudah berapa banyak masalah yang berhasil kalian selesaikan?&lt;/a&gt;&lt;/div&gt;&lt;div style=&#34;color: #c9c8cd; font-family: Arial,sans-serif; font-size: 14px; line-height: 17px; margin-bottom: 0; margin-top: 8px; overflow: hidden; padding: 8px 0 7px; text-align: center; text-overflow: ellipsis; white-space: nowrap;&#34;&gt;A photo posted by Petani Kode (@petanikode) on &lt;time datetime=&#34;2016-08-22T12:25:17+00:00&#34; style=&#34;font-family: Arial,sans-serif; font-size: 14px; line-height: 17px;&#34;&gt;Aug 22, 2016 at 5:25am PDT&lt;/time&gt;&lt;/div&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;script async=&#34;&#34; defer=&#34;&#34; src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;/div&gt;&lt;h2&gt;8. Ikuti Tantangan&lt;/h2&gt;&lt;div&gt;Asah terus kemampuan dengan mengikuti berbagai tantangan di internet, seperti di &lt;a href=&#34;https://codefights.com/&#34; target=&#34;_blank&#34;&gt;codefights.com&lt;/a&gt;, &lt;a href=&#34;https://www.hackerrank.com/&#34; target=&#34;_blank&#34;&gt;HackerRank&lt;/a&gt;, &lt;a href=&#34;https://www.dicoding.com/challenges&#34; target=&#34;_blank&#34;&gt;dicoding&lt;/a&gt;, dsb.&lt;/div&gt;&lt;h2&gt;9. Belajar Jaringan Komputer&lt;/h2&gt;&lt;div&gt;Meskipun kalian bukan dari jurusan jaringan komputer, tidak ada salahnya belajar jaringan. Belajar konsep-konsep jaringan komputer. Dengan demikian, kita dapat memhami bagaiman data antar mesin berpindah.&lt;/div&gt;&lt;h2&gt;10. Selesaikan Tugas Tepat Waktu&lt;/h2&gt;&lt;div&gt;Jangan menunda-nunda tugas. Selesaikanlah secepatnya. Karena, bila anda tunda-tunda terus, maka akan menjadi beban dan kesempatan atau waktu anda belajar hal yang lain jadi tertunda juga. Kerjakan sekarang dan hari ini, agar besok lebih banyak waktu untuk belajar yang lain. (nasihat untuk saya juga 😊)&lt;/div&gt;&lt;h2&gt;11. Kurangi Multi Tasking&lt;/h2&gt;&lt;div&gt;Ingat, kita bukan komputer yang mampu melakukan lebih dari satu pekerjaan sekaligus. Kita juga bukan Naruto yang mampu menggandakan diri dengan jurus bayangan. Jadi, lakukanlah pekerjaan satu persatu.&lt;/div&gt;&lt;h2&gt;12. Kurangi Buka Sosial Media&lt;/h2&gt;&lt;div&gt;Jangan berlama-lama nongkrong di sosial media. Kurangi membuka sosial media mulai tahun ini. Atau, kalian bisa membuat jadwal dan jatah untuk membuka sosial media. Misalnya pada jam tertentu dengan durasi waktu tertentu.&lt;/div&gt;&lt;h2&gt;13. Buat Karya atau Portofolio&lt;/h2&gt;&lt;div&gt;Kalian diakui bisa atau mengusai sesuatu dari karya atau portofolio yang dibuat, bukan dari berapa tinggi IPK di kampus. Percuma IPK tinggi di jurusan teknik informatika, tapi tidak bisa &lt;i&gt;ngoding&lt;/i&gt;. Mulai tahun ini, cobalah untuk membuat sebuah karya. Tunjukan pada semua orang, hasil kerja kerasmu.&lt;/div&gt;&lt;h2&gt;14. Belajar Bahasa Pemrograman Baru&lt;/h2&gt;&lt;div&gt;Bahasa pemrograman berkembang sangat cepat. Bahkan di tahun lalu, banyak juga bahasa-bahasa baru yang bermunculan. Bagi kalian yang tertarik mencoba sesuatu yang baru, tidak ada salahnya mencoba bahasa pemrograman baru. Kalian bisa mencoba, Swift, Go, Dart, Kotlin, dsb.&lt;/div&gt;&lt;h2&gt;15. Buat Blog&lt;/h2&gt;&lt;div&gt;Kalau sudah punya banyak ilmu, jangan lupa dibagikan. Salah satu caranya bisa melalui blog. Tulislah apa saja yang sudah dipelajari, pengalaman menyelesaikan error, catan-catan penting. Insa&amp;rsquo;allah akan menjadi kontribusi dunia akhirat dan bermanfaat untuk orang banyak.&lt;/div&gt;&lt;h2&gt;16. Belajar Bahasa Inggris&lt;/h2&gt;&lt;div&gt;Bahasa inggris menjadi bahasa yang sangat penting bagi programmer. Karena dengan bahasa inggris kita bisa memahami lebih cepat dan lebih banyak tentang pemrograman. Kita akan lebih mudah menemukan solusi error di Stack Overflow. Mudah mempelajari dokumentasi. Tidak tersesat, bila jalan-jalan ke web mancanegara.&lt;/div&gt;&lt;h2&gt;17. Selalu Ingat Resolusi dan Lakukan&lt;/h2&gt;Terkadang kita sering membuat resolusi di tahun baru. Satu minggu kemudian dilupakan. Lalu, apa gunanya kita membuat resolusi.&lt;br /&gt;&lt;br /&gt;Itulah 17 resolusi untuk meningkatkan kemampuan pemrograman di tahun 2017. Apakah ada di antara 17 ini yang ingin anda wujudkan? atau punya resolusi selain di atas, silahkan ditambahkan.&lt;/p&gt;
 </description>
     </item>
     

@@ -7,8 +7,168 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 12 Feb 2017 22:44:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Feb 2017 17:30:51 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tutorial Git 03 - Membuat Revisi</title>
+      <link>http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/</link>
+      <pubDate>Mon, 13 Feb 2017 17:30:51 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/</guid>
+      <description>
+
+&lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;tutorial git yang kedua&lt;/a&gt;,
+kita sudah membuat repositori kosong. Belum ada apa-apa di sana. Sekarang coba
+tambahkan sebuah file baru. Sebagai contoh, saya akan menambahkan tiga file HTML
+kosong.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;806&#34;
+    height=&#34;516&#34;
+    alt=&#34;project-01_repositori-git-petanikode.png&#34;
+    src=&#34;https://1.bp.blogspot.com/-H_In4IFcsOM/WKF-vsJ3qtI/AAAAAAAAD3g/qoBlvBQWYDYwnPYOnvxXNG72R-T5m2i4gCPcB/s1600/project-01_repositori-git-petanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setalah ditambahkan, coba ketik perintah &lt;code&gt;git status&lt;/code&gt; untuk melihat status
+repositorinya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;285&#34;
+    alt=&#34;Git+status.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-kMBRMIo7wFU/WKGAIxRBTDI/AAAAAAAAD30/QH-AmxcXXXsvXtpfWX6R3ZW8svOnHRILACPcB/s1600/Git%2Bstatus.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Berdasarkan keterangan di atas, saat ini kita berada cabang &lt;em&gt;(branch) master&lt;/em&gt; dan
+ada tiga file yang belum ditambahkan ke Git.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tiga-kelompok-kondisi-file-dalam-git&#34;&gt;Tiga Kelompok Kondisi File dalam Git&lt;/h2&gt;
+
+&lt;p&gt;Sebelum kita membuat revisi, kita akan berkenalan dulu dengan tiga kondisi file
+dalam Git.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-modified&#34;&gt;1. Modified&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Modified&lt;/em&gt; adalah kondisi dimana revisi atau perubahan sudah dilakukan tetapi
+belum ditandai dan belum disimpan di version control. Contohnya pada gambar di
+atas, ada tiga file HTML yang dalam kondisi &lt;em&gt;modified&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-staged&#34;&gt;2. Staged&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Staged&lt;/em&gt; adalah kondisi dimana revisi sudah ditandai tetapi belum disimpan
+di version control. Untuk mengubah kondisi file dari &lt;em&gt;modified&lt;/em&gt; ke &lt;em&gt;staged&lt;/em&gt;
+gunakan perintah &lt;code&gt;git add nama_file&lt;/code&gt;. Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-commited&#34;&gt;3. Commited&lt;/h3&gt;
+
+&lt;p&gt;Commited adalah kondisi dimana revisi sudah disimpan di version control. perintah
+untuk mengubah kondisi file dari &lt;em&gt;staged&lt;/em&gt; ke &lt;em&gt;commited&lt;/em&gt; adalah &lt;code&gt;git commit&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-revisi-pertama&#34;&gt;Membuat Revisi Pertama&lt;/h2&gt;
+
+&lt;p&gt;Baiklah, sekarang kita akan sudah tahu kondisi-kondisi file dalam Git. Selanjutnya,
+silahkan ubah kondisi tiga file HTML tadi menjadi &lt;em&gt;staged&lt;/em&gt; dengan perintah &lt;code&gt;git add&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
+git add about.html
+git add contact.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Atau kita bisa melakukannya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add *.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Atau seperti ini (semua file dan direktori):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, cobalah ketik perintah &lt;code&gt;git status&lt;/code&gt; lagi. Kondisi filenya sekarang
+akan menjadi &lt;em&gt;staged&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;285&#34;
+    alt=&#34;kondisi+file+staged+di+Git.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-2Q335OAbng4/WKGEsuQIQcI/AAAAAAAAD4Q/eL9z36naaKYe5jYwp9awlfXCw99A3to4wCPcB/s1600/kondisi%2Bfile%2Bstaged%2Bdi%2BGit.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, ubah kondisi file tersebut ke &lt;em&gt;commited&lt;/em&gt; agar semua perubahan disimpan
+oleh Git.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git commit -m &amp;quot;Commit pertama&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, coba cek dengan perintah &lt;code&gt;git status&lt;/code&gt; lagi.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;205&#34;
+    alt=&#34;Commit+pertama+git.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-5EKJNZ9NN5o/WKGF6f1ojnI/AAAAAAAAD4k/vmQksU_KdioAM7xbUBJWYkVMWoXIELFCwCPcB/s1600/Commit%2Bpertama%2Bgit.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat, revisi pertama sudah kita buat. Selanjutnya cobalah untuk membuat revisi kedua.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-revisi-kedua&#34;&gt;Membuat Revisi kedua&lt;/h2&gt;
+
+&lt;p&gt;Ceritanya ada perubahan yang akan kita lakukan pada file &lt;code&gt;index.html&lt;/code&gt;. Silahkan
+modifikasi isi file &lt;code&gt;index.html&lt;/code&gt;. Sebagai contoh saya mengisinya seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;Belajar Git - Project 01&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+        &amp;lt;p&amp;gt;Hello Semua, Saya sedang belajar Git&amp;lt;/p&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu ketik lagi perintah &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;205&#34;
+    alt=&#34;Git+status+revisi+kedua.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-5kIOLZT1Ots/WKGIVv95vPI/AAAAAAAAD5M/sS0l7NFCdtM4NYlxIQ4sNWp8lOQDkRKdgCKgB/s1600/Git%2Bstatus%2Brevisi%2Bkedua.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Terilhat di sana, file &lt;code&gt;index.html&lt;/code&gt; sudah dimodifikasi. Kondisinya skarang berada
+dalam &lt;em&gt;modified&lt;/em&gt;. Lakukan &lt;em&gt;commit&lt;/em&gt; lagi seperti revisi pertama.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
+git commit -m &amp;quot;ditambahkan isi&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dengan demikian, revisi kedua sudah disipan oleh Git. Mungkin anda belum tahu
+maksud dari argumen &lt;code&gt;-m&lt;/code&gt;, argumen tersebut untuk menambahkan pesan setiap menyimpan
+revisi.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya: Tutorial Git 04 - Melihat Log Revisi (draf)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Integarsi Bot Autoposting Telegram dengan Channel</title>
@@ -346,9 +506,8 @@ ini&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Sekian dulu untuk tutorial kedua ini, Kita baru saja mengetahui cara pembuatan
 repositori dan tentang &lt;code&gt;.gitignore&lt;/code&gt;. Penggunaan &lt;code&gt;.gitignore&lt;/code&gt; memang belum dapat
-kita rasakan saat ini, karena kita belum membuat revisi apa pun.&lt;/p&gt;
-
-&lt;!-- Karena itu, silahkan lanjutkan ke tutorial ketiga &#39;Membuat Revisi&#39; --&gt;
+kita rasakan saat ini, karena kita belum membuat revisi apa pun. Karena itu,
+silahkan lanjutkan ke &lt;a href=&#34;2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial ketiga &amp;lsquo;Membuat Revisi&amp;rsquo;&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -520,8 +679,8 @@ git berikut ini.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;Tutorial Git 01 - Instalasi dan Perisiapan&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;Tutorial Git 02 - Membuat Repositori&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Tutorial Git 03 - Membuat Revisi&lt;/li&gt;
-&lt;li&gt;Tutorial Git 04 - Melihat Status dan Log&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;Tutorial Git 03 - Membuat Revisi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/li&gt;
 &lt;li&gt;Tutorial Git 05 - Melihat Revisi&lt;/li&gt;
 &lt;li&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/li&gt;
 &lt;li&gt;Tutorial Git 07 - Percabangan&lt;/li&gt;
@@ -1592,103 +1751,6 @@ height=&#34;836&#34;
 sandbox=&#34;allow-scripts allow-same-origin&#34;
 src=&#34;https://asciinema.org/api/asciicasts/100278?&amp;speed=2&#34;
 layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Belajar Pemrograman Mulai dari Mana?</title>
-      <link>http://petanikode.com/2017/01/belajar-pemrograman-mulai-dari-mana/</link>
-      <pubDate>Mon, 23 Jan 2017 19:58:22 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/belajar-pemrograman-mulai-dari-mana/</guid>
-      <description>
-
-&lt;p&gt;Pertanyaan ini sering ditanyakan oleh kawan-kawan yang ingin memasuki dunia pemrograman.
-Setiap orang akan memiliki jawaban yang berbeda-beda. Sebenarnya jawabnnya
-sangat tergantung dari yang bertanya. Sudah sejauh mana pengetahuannya tentang
-komputer dan pemrograman?&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;720&#34;
-height=&#34;380&#34;
-alt=&#34;kopi dan laptop - Belajar Pemrograman&#34;
-src=&#34;https://4.bp.blogspot.com/-IkP1sd_J1Vw/WIAfKIyz7lI/AAAAAAAADqo/O-cgHSD3bvkmOqabe9Rbu8UVMKUkJRjdwCPcB/s1600/belajar-pemrograman-petanikode.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Saya asumsikan yang bertanya sudah paham tentang konsep dasar komputer,
-bisa menginstal sistem operasi (Windows/Linux), paham CLI/CMD, dan punya
-rasa keingintahuan yang tinggi.&lt;/p&gt;
-
-&lt;h2 id=&#34;mulai-dari-sekarang-dan-di-sini&#34;&gt;Mulai dari Sekarang dan di sini&lt;/h2&gt;
-
-&lt;p&gt;Benar sekali, jangan ditunda-tunda sampai besok. Mulailah sekarang juga dan di
-sini. Ya! di sini, di tempat anda berada sekarang.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;Jangan tunda sampai besok apa yang bisa anda lakukan hari ini.&amp;rdquo;
-&amp;ndash; Benjamin Franklin&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Setiap orang memang mimiliki titik awal yang berbeda-beda. Ada yang mulai dari
-kursus, buku, kuliah, tutorial, dsb. Anda bisa memulianya di sini, di web &lt;a href=&#34;http://petanikode.com/&#34;&gt;Petani Kode&lt;/a&gt; ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;pelajari-hal-hal-dasar&#34;&gt;Pelajari Hal-hal dasar&lt;/h2&gt;
-
-&lt;p&gt;Baiklah, sekarang saya anggap anda seorang yang baru pindah tempat kos.
-Di tempat kos anda saat ini, banyak hal asing yang belum anda ketahui,
-seperti jalan, warung, tempat loundry, dsb. Apakah yang akan anda lakukan,
-bila berada dalam kondisi ini.&lt;/p&gt;
-
-&lt;p&gt;Mungkin anda bisa mulai mencari informasi di Google dan jalan-jalan di sekitaran
-kos. Bertanya dan berkenalan dengan para tetangga.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Saya selalu mencari di Google apa yang tidak diketahui&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Begitu juga dengan belajar pemrograman dan belajar apapun juga. Anda akan berada
-dalam kondisi seperti orang asing. Jangan khawatir, yang perlu anda lakukan adalah
-mencari tahu. Kumpulkan informasi sebanyak mungkin dan pelajari, sehingga tidak
-merasa asing lagi.&lt;/p&gt;
-
-&lt;p&gt;Pada saat anda berada dalam kondisi asing, sebaiknya jangan telalu banyak bertanya di forum.
-Karena para penghuni forum atau grup kurang senang pertanyaan &lt;em&gt;mainstream&lt;/em&gt; yang sudah ada jawabannya di
-dokumentasi, FAQs, maupun di Google.&lt;/p&gt;
-
-&lt;h2 id=&#34;memilih-bahasa-pemrograman&#34;&gt;Memilih Bahasa Pemrograman&lt;/h2&gt;
-
-&lt;p&gt;Sekarang saatnya memilih bahasa pemrograman, atau mungkin anda sudah punya pilihan.
-Pilihlah bahasa pemrograman yang ingin anda pelajari. Mungkin ada yang menyarankan
-mempelajar bahasa pemrograman x, sedangkan anda tidak ingin pelajari itu. Ya,
-jangan dipelajari. Karena akan sulit rasanya menerima ilmu yang tidak kita inginkan.&lt;/p&gt;
-
-&lt;p&gt;Setiap orang mulai belajar dari bahasa yang berbeda-beda. Saya sendiri mulai dari
-belajar bahasa pemrograman &lt;a href=&#34;http://petanikode.com/topik/pascal&#34;&gt;Pascal&lt;/a&gt;, Assembly 8086, kemudian ke &lt;a href=&#34;http://petanikode.com/topik/html&#34;&gt;HTML&lt;/a&gt;,
-&lt;a href=&#34;http://petanikode.com/topik/css&#34;&gt;CSS&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/javascript&#34;&gt;Javasript&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/python&#34;&gt;Python&lt;/a&gt;,
-&lt;a href=&#34;http://petanikode.com/topik/c&#34;&gt;C&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/c++&#34;&gt;C++&lt;/a&gt;, dan &lt;a href=&#34;http://petanikode.com/topik/java&#34;&gt;Java&lt;/a&gt;. Karena saya tidak hanya
-tertarik pada satu bahasa. Tentu saja, membutuhkan waktu lama untuk mempelajari itu semua.
-Karena itu, anda tidak harus mengikuti apa yang saya pelajari.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Saya ingin tahu, apa yang belum diketahui.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Itulah ungkapan yang mengantarkan saya sampai saat ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;praktik-dan-praktik&#34;&gt;Praktik dan Praktik&lt;/h2&gt;
-
-&lt;p&gt;Jika anda ingin mahir bermain gitar, apa yang akan anda lakukan? Membaca panduan
-tentang bermain gitar ataukah berlatih. Ya, tentu saja yang paling utama adalah berlatih.
-Entah seperti apa suara yang dihasilkan, yang penting berlatih sampai jari-jari terbiasa.
-Begitu juga dengan belajar pemrograman. Anda harus terus-menerus berlatih dengan praktik.&lt;/p&gt;
-
-&lt;p&gt;Pemrograman tidak hanya tentang menulis kode saja. Pemrograman itu, 80% berpikir.
-Latihlah pikiran anda agar terbiasa memecahkan masalah dan error.&lt;/p&gt;
-
-&lt;p&gt;Itulah jawaban saya atas pertanyaan &amp;ldquo;Belajar Pemrograman mulai dari dari mana?&amp;rdquo;
-Jawaban sederhananya, &lt;strong&gt;mulai dari sekarang dan di sini&lt;/strong&gt;. Cari tahu apa yang belum
-diketahui. Setiap orang akan memiliki jawaban yang berbeda-beda. Kalau anda punya jawaban,
-silahkan disampaikan melalui komentar.&lt;/p&gt;
 </description>
     </item>
     

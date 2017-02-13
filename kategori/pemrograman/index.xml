@@ -90,6 +90,11 @@ git add contact.html
 
 &lt;p&gt;Atau kita bisa melakukannya seperti ini:&lt;/p&gt;
 
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html about.html contect.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add *.html
 &lt;/code&gt;&lt;/pre&gt;
 

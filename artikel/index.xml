@@ -264,6 +264,86 @@ silahkan &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instala
     </item>
     
     <item>
+      <title>Tutorial Git 02 - Membuat Repositori</title>
+      <link>http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/</link>
+      <pubDate>Wed, 08 Feb 2017 11:52:59 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/</guid>
+      <description>
+
+&lt;p&gt;Repositori &lt;em&gt;(repository)&lt;/em&gt; dalam bahasa indonesia artinya gudang. Repositori
+merupakan istilah yang digunakan untuk direktori proyek yang menggunakan Git.
+Jika kita memiliki sebuah direktori dengan nama &lt;code&gt;proyek-01&lt;/code&gt; dan di dalamnya
+sudah menggunakan git, maka kita sudah punya repositori bernama &lt;code&gt;proyek-01&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-repositori&#34;&gt;Membuat Repositori&lt;/h2&gt;
+
+&lt;p&gt;Pembuatan repositori dapat dilakukan dengan perintah &lt;code&gt;git init nama-dir&lt;/code&gt;.
+Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init proyek-01
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perintah tersebut akan membuat direktori bernama &lt;code&gt;proyek-01&lt;/code&gt;. Kalau direktorinya
+sudah ada, maka Git akan melakukan inisialisasi di dalam direktori tersebut.&lt;/p&gt;
+
+&lt;h2 id=&#34;contoh-contoh-lain&#34;&gt;Contoh-contoh lain&lt;/h2&gt;
+
+&lt;p&gt;Perintah berikut ini akan membuat repositori pada direktori saat ini &lt;em&gt;(working directory)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;157&#34;
+    alt=&#34;Membuat+repositori+git.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-IAgZktRDWBQ/WKF1raoDB4I/AAAAAAAAD3I/Uy29jWo73WARH2mV9v0rI-57tWnIlLRIACPcB/s1600/Membuat%2Brepositori%2Bgit.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Perintah berikut ini akan membuat repositori pada direktori &lt;code&gt;/var/www/html/proyekweb/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init /var/www/html/proyekweb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;gitignore&#34;&gt;.gitignore&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;.gitignore&lt;/code&gt; merupakan sebuah file yang berisi daftar nama-nama file dan direktori
+yang akan diabaikan oleh Git. Perubahan apapun yang kita lakukan terhadap file
+dan direktori yang sudah masuk ke dalam daftar &lt;code&gt;.gitignore&lt;/code&gt; tidak akan dicatat oleh
+Git.&lt;/p&gt;
+
+&lt;p&gt;Cara mengunakan &lt;code&gt;.gitignore&lt;/code&gt;, buat saja sebuah file bernama &lt;code&gt;.gitignore&lt;/code&gt; dalam
+root direktori/repositori.&lt;/p&gt;
+
+&lt;p&gt;File: &lt;code&gt;.gitignore&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/vendor/
+/upload/
+/cache
+test.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada contoh file &lt;code&gt;.gitignore&lt;/code&gt; di atas, saya memasukan direktori &lt;code&gt;vendor&lt;/code&gt;, &lt;code&gt;upload&lt;/code&gt;,
+&lt;code&gt;cache&lt;/code&gt; dan file &lt;code&gt;test.php&lt;/code&gt;. File dan direktori tersebut akan diabaikan oleh Git.&lt;/p&gt;
+
+&lt;p&gt;Pembuatan file &lt;code&gt;.gitignore&lt;/code&gt; sebaiknya dilakukan di awal pembuatan repositori.&lt;/p&gt;
+
+&lt;p&gt;Contoh &lt;code&gt;.gitignore&lt;/code&gt; pada proyek-proyek tertentu kita bisa melihatnya di &lt;a href=&#34;https://github.com/github/gitignore&#34;&gt;repositori
+ini&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
+
+&lt;p&gt;Sekian dulu untuk tutorial kedua ini, Kita baru saja mengetahui cara pembuatan
+repositori dan tentang &lt;code&gt;.gitignore&lt;/code&gt;. Penggunaan &lt;code&gt;.gitignore&lt;/code&gt; memang belum dapat
+kita rasakan saat ini, karena kita belum membuat revisi apa pun.&lt;/p&gt;
+
+&lt;!-- Karena itu, silahkan lanjutkan ke tutorial ketiga &#39;Membuat Revisi&#39; --&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutorial Git 01 - Instalasi dan Persiapan</title>
       <link>http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/</link>
       <pubDate>Wed, 08 Feb 2017 11:26:37 +0800</pubDate>
@@ -337,7 +417,7 @@ layout=&#34;responsive&#34;&gt;
 &lt;p&gt;Konfigurasi &lt;code&gt;core.editor&lt;/code&gt; bersifat opsional. Sedangkan &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt; wajib.&lt;/p&gt;
 
 &lt;p&gt;Bagus, sekarang kita sudah melakukan konfigurasi awal. Selanjutnya kita bisa
-langsung membuat repositori.&lt;/p&gt;
+langsung &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;membuat repositori&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -430,7 +510,7 @@ git berikut ini.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;Tutorial Git 01 - Instalasi dan Perisiapan&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Tutorial Git 02 - Membuat Repositori&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;Tutorial Git 02 - Membuat Repositori&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Tutorial Git 03 - Melihat Status&lt;/li&gt;
 &lt;li&gt;Tutorial Git 04 - Membuat Revisi&lt;/li&gt;
 &lt;li&gt;Tutorial Git 05 - Melihat Log&lt;/li&gt;
@@ -1601,82 +1681,6 @@ Latihlah pikiran anda agar terbiasa memecahkan masalah dan error.&lt;/p&gt;
 Jawaban sederhananya, &lt;strong&gt;mulai dari sekarang dan di sini&lt;/strong&gt;. Cari tahu apa yang belum
 diketahui. Setiap orang akan memiliki jawaban yang berbeda-beda. Kalau anda punya jawaban,
 silahkan disampaikan melalui komentar.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Kenapa Bahasa Pemrograman Java Kurang Cocok untuk Pemula?</title>
-      <link>http://petanikode.com/2017/01/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/</link>
-      <pubDate>Sat, 21 Jan 2017 16:45:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/</guid>
-      <description>
-
-&lt;p&gt;Sudah dua kali semester saya mengajar di praktikum pemrograman &lt;a href=&#34;http://petanikode.com/topik/java&#34;&gt;Java&lt;/a&gt;. Hasilnya, hanya sebagian mahasiswa yang mengerti. Sebagiannya lagi masih pusing. Karena mereka belum pernah ada pengalaman &lt;em&gt;coding&lt;/em&gt; sebelumnya. Bahasa pemrograman Java memang populer, oleh karena itu pihak kampus memilih bahasa ini untuk diajarkan pada semester I.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;720&#34;
-height=&#34;380&#34;
-alt=&#34;Anak-anak ngoding di sawah&#34;
-src=&#34;https://4.bp.blogspot.com/-JLEbu94zv1c/WGjrfTdQdrI/AAAAAAAADjg/OkDhW7IniKY5d21yGt-Nb4rChbTtSPE9gCK4B/s1600/Anak-anak%2Bcoding%2Bdi%2Bsawah%2BPetani%2BKode.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Om Endy Muhardin, dalam tulisan di blognya yang berjudul &lt;a href=&#34;http://software.endy.muhardin.com/java/java-tidak-untuk-pemula/&#34;&gt;Java: Tidak untuk Pemula&lt;/a&gt; mengatakan: &amp;ldquo;Java memang bahasa yang &lt;em&gt;mature&lt;/em&gt;. Sudah stabil (artinya tidak terlalu banyak perubahan fundamental) dan sudah teruji digunakan berbagai aplikasi besar dengan sukses. Tetapi tidak berarti mudah bagi pemula.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;Kemudian saya mencoba mengumpulkan beberapa alasan, kenapa bahasa pemrograman Java kurang cocok untuk pemula.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-sintak-susah-dihapal&#34;&gt;1. Sintak Susah Dihapal&lt;/h2&gt;
-
-&lt;p&gt;Menurut saya, sintak Java agak susah dihapal/diingat. Karena sintaknya cukup panjang. Pembuatan program &lt;em&gt;Hello World&lt;/em&gt; saja sampai sepanjang ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.petanikode.HelloWorld;
-
-    public class HelloWorld {
-        public static void main(String[] args){
-        System.out.println(&amp;quot;Hello World&amp;quot;);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pada pertemuan pertama, saya mengajarkan kode di atas. Besoknya tidak ada yang ingat, kalau tidak mencontek.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-belum-belajar-akses-level&#34;&gt;2. Belum Belajar Akses Level&lt;/h2&gt;
-
-&lt;p&gt;Pada pemrograman berorientasikan objek, ada yang namanya akses level &lt;i&gt;(public, protected, &lt;/i&gt;dan&lt;i&gt; private)&lt;/i&gt;. Akses level ini untuk menentukan akses pada class, atribut, dan method. Bagaimana seorang yang tidak pernah &lt;i&gt;coding&lt;/i&gt; akan mengerti hal ini. Sedangkan mereka tidak pernah belajar OOP. Saya pun ikut bingung mau menjelaskannya seperti apa.&lt;/p&gt;
-
-&lt;h2 id=&#34;3-belum-belajar-class&#34;&gt;3. Belum Belajar Class&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Class&lt;/em&gt;, apaan itu? &lt;em&gt;Class&lt;/em&gt; adalah rancangan dari sebuah objek. Objek, apaan lagi itu? Duh! Akhirnya saya menjelaskan &lt;em&gt;Class&lt;/em&gt; itu untuk membuat nama program. Meskipun itu bukan pengertian yang sesungguhnya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.petanikode.NamaProgram;
-
-    public class NamaProgram {
-        public static void main(String[] args){
-            System.out.println(&amp;quot;Hello World&amp;quot;);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;4-belum-belajar-array&#34;&gt;4. Belum Belajar Array&lt;/h2&gt;
-
-&lt;p&gt;Lihat saja pada program &lt;em&gt;HelloWorld&lt;/em&gt; di atas, array sudah digunakan untuk menyimpan argumen atau parameter. Mereka lalu bertanya, &amp;ldquo;Kata om tadi &lt;code&gt;String[] args&lt;/code&gt; itu sebuah &lt;em&gt;array&lt;/em&gt; yang bertipe data &lt;em&gt;String&lt;/em&gt;. &lt;em&gt;String&lt;/em&gt; itu apa dan &lt;em&gt;Array&lt;/em&gt; itu apa?&amp;rdquo; Penjelasan teknikal saya pun tidak bisa dipahami, karena mereka belum belajar variabel, tipe data, dan &lt;em&gt;array&lt;/em&gt;. Mau tidak mau, kita harus mengabaikan dulu bagian ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;5-belum-tahu-method-instance-dan-static&#34;&gt;5. Belum Tahu Method Instance dan Static&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Static void main&lt;/em&gt; itu maksudnya apa? Kenapa harus ada &lt;em&gt;static&lt;/em&gt;? &lt;em&gt;main&lt;/em&gt; adalah &lt;em&gt;method&lt;/em&gt; utama dalam program. &lt;em&gt;Method&lt;/em&gt; ini wajib ada agar program bisa dijalankan. Tunggu dulu, &lt;em&gt;method&lt;/em&gt; itu apa om?&lt;/p&gt;
-
-&lt;p&gt;Karena belum memahami OOP, mereka pun tidak akan bisa mengerti bila saya jelakan dengan sudut pandang OOP.&lt;/p&gt;
-
-&lt;h2 id=&#34;6-belum-paham-tentang-package&#34;&gt;6. Belum Paham Tentang Package&lt;/h2&gt;
-
-&lt;p&gt;Apa maksud dari baris ini om?&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.petanikode.NamaProgram;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Itu untuk menandakan lokasi &lt;em&gt;namespace&lt;/em&gt; atau lokasi kodenya. Wah, &lt;em&gt;namespace&lt;/em&gt; itu apa lagi om?&lt;/p&gt;
-
-&lt;p&gt;Jadi, itulah beberapa alasan kenapa bahasa &lt;a href=&#34;https://petanikode.com/search/label/Pemrograman&#34;&gt;pemrograman&lt;/a&gt; Java kurang cocok untuk pemula. Karena Java menggunakan paradigma OOP &lt;em&gt;(Object Oriented Programming)&lt;/em&gt;, sedangkan para pemula yang belum parnah &lt;em&gt;coding&lt;/em&gt; tidak pernah belajar tentang OOP. Namun, bukan berarti Java tidak boleh dipelajari oleh pemula. Silahkan dipelajari dengan tekun.&lt;/p&gt;
 </description>
     </item>
     

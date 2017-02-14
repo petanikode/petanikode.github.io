@@ -10,6 +10,114 @@
     <atom:link href="http://petanikode.com/seri/belajar-git/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tutorial Git 04 - Melihat Log Revisi</title>
+      <link>http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/</link>
+      <pubDate>Tue, 14 Feb 2017 08:56:09 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/</guid>
+      <description>
+
+&lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial sebelumnya&lt;/a&gt;, kita
+sudah membuat dua revisi pada repositori &lt;code&gt;project-01&lt;/code&gt;. Sekarang bagaimana caranya
+kita melihat catatan log dari revisi-reivisi tersebut?&lt;/p&gt;
+
+&lt;p&gt;Git sudah menyediakan perintah &lt;code&gt;git log&lt;/code&gt; untuk melihat catatan log perubahan
+pada respositori. Contoh penggunaannya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka kita akan melihat log perubahan apa saja yang sudah dilakukan dalam repositori.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;285&#34;
+    alt=&#34;Log+revisi+yang+sudah+dibuat.png&#34;
+    src=&#34;https://1.bp.blogspot.com/-BEp5Qadw3U0/WKJkMIVKV4I/AAAAAAAAD50/p7u0PSctYIkLDOnV_zLMhN29ZwIlImv2ACPcB/s1600/Log%2Brevisi%2Byang%2Bsudah%2Bdibuat.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada gambar di atas, terdapat dua revisi perubahan yang telah dilakuan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;log-yang-lebih-pendek&#34;&gt;Log yang Lebih Pendek&lt;/h2&gt;
+
+&lt;p&gt;Untuk menampilkan log yang lebih pendek, kita bisa menambahkan argumen &lt;code&gt;--oneline&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log --oneline
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;06f735a ditambahkan isi
+cf08ca0 commit pertama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;log-pada-nomer-revisi-commit&#34;&gt;Log pada Nomer Revisi/&lt;em&gt;Commit&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Untuk melihat log pada revisi tertentu, kita bisa memasukan nomer revisi/commit.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log cf08ca0837cf26f1c595be36bb3a6b815e311be1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;commit cf08ca0837cf26f1c595be36bb3a6b815e311be1
+Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
+Date:   Mon Feb 13 18:08:56 2017 +0800
+
+    commit pertama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;log-pada-file-tertentu&#34;&gt;Log pada File Tertentu&lt;/h2&gt;
+
+&lt;p&gt;Untuk melihat revisi pada file tertentu, kita dapat memasukan nama filenya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;commit 06f735af7724558164c87f6b1ce3ca7778eb1c1b
+Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
+Date:   Mon Feb 13 18:26:50 2017 +0800
+
+    ditambahkan isi
+
+commit cf08ca0837cf26f1c595be36bb3a6b815e311be1
+Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
+Date:   Mon Feb 13 18:08:56 2017 +0800
+
+    commit pertama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Karena file &lt;code&gt;index.html&lt;/code&gt; sudah direvisi sebanyak dua kali.&lt;/p&gt;
+
+&lt;h2 id=&#34;log-revisi-yang-dilakukan-oleh-author-tertentu&#34;&gt;Log Revisi yang dilakukan oleh Author Tertentu&lt;/h2&gt;
+
+&lt;p&gt;Misalkan dalam repositori dikerjakan oleh banyak orang. Maka kita dapat melihat
+revisi apa saja yang dilakukan oleh orang tertentu dengan perintah berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log --author=&#39;Petani Kode&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
+
+&lt;p&gt;Itulah beberapa cara melihat log revisi pada repositori. Perintah yang digunakan
+adalah &lt;code&gt;git log&lt;/code&gt;. Selanjutnya kita akan pelajari perintah &lt;code&gt;git diff&lt;/code&gt; untuk melihat
+perbandingan pada revisi.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutorial Git 03 - Membuat Revisi</title>
       <link>http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/</link>
       <pubDate>Mon, 13 Feb 2017 17:30:51 +0800</pubDate>
@@ -170,7 +278,7 @@ git commit -m &amp;quot;ditambahkan isi&amp;quot;
 maksud dari argumen &lt;code&gt;-m&lt;/code&gt;, argumen tersebut untuk menambahkan pesan setiap menyimpan
 revisi.&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya: Tutorial Git 04 - Melihat Log Revisi (draf)&lt;/p&gt;
+&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/&#34;&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -603,8 +711,8 @@ git berikut ini.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;Tutorial Git 01 - Instalasi dan Perisiapan&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;Tutorial Git 02 - Membuat Repositori&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;Tutorial Git 03 - Membuat Revisi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/li&gt;
-&lt;li&gt;Tutorial Git 05 - Melihat Revisi&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/&#34;&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tutorial Git 05 - Melihat Perbandingan Revisi&lt;/li&gt;
 &lt;li&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/li&gt;
 &lt;li&gt;Tutorial Git 07 - Percabangan&lt;/li&gt;
 &lt;li&gt;Tutorial Git 08 - Penggabungan Cabang&lt;/li&gt;

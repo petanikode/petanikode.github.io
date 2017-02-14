@@ -10,6 +10,114 @@
     <atom:link href="http://petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tutorial Git 04 - Melihat Log Revisi</title>
+      <link>http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/</link>
+      <pubDate>Tue, 14 Feb 2017 08:56:09 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/</guid>
+      <description>
+
+&lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial sebelumnya&lt;/a&gt;, kita
+sudah membuat dua revisi pada repositori &lt;code&gt;project-01&lt;/code&gt;. Sekarang bagaimana caranya
+kita melihat catatan log dari revisi-reivisi tersebut?&lt;/p&gt;
+
+&lt;p&gt;Git sudah menyediakan perintah &lt;code&gt;git log&lt;/code&gt; untuk melihat catatan log perubahan
+pada respositori. Contoh penggunaannya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka kita akan melihat log perubahan apa saja yang sudah dilakukan dalam repositori.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;285&#34;
+    alt=&#34;Log+revisi+yang+sudah+dibuat.png&#34;
+    src=&#34;https://1.bp.blogspot.com/-BEp5Qadw3U0/WKJkMIVKV4I/AAAAAAAAD50/p7u0PSctYIkLDOnV_zLMhN29ZwIlImv2ACPcB/s1600/Log%2Brevisi%2Byang%2Bsudah%2Bdibuat.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada gambar di atas, terdapat dua revisi perubahan yang telah dilakuan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;log-yang-lebih-pendek&#34;&gt;Log yang Lebih Pendek&lt;/h2&gt;
+
+&lt;p&gt;Untuk menampilkan log yang lebih pendek, kita bisa menambahkan argumen &lt;code&gt;--oneline&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log --oneline
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;06f735a ditambahkan isi
+cf08ca0 commit pertama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;log-pada-nomer-revisi-commit&#34;&gt;Log pada Nomer Revisi/&lt;em&gt;Commit&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Untuk melihat log pada revisi tertentu, kita bisa memasukan nomer revisi/commit.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log cf08ca0837cf26f1c595be36bb3a6b815e311be1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;commit cf08ca0837cf26f1c595be36bb3a6b815e311be1
+Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
+Date:   Mon Feb 13 18:08:56 2017 +0800
+
+    commit pertama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;log-pada-file-tertentu&#34;&gt;Log pada File Tertentu&lt;/h2&gt;
+
+&lt;p&gt;Untuk melihat revisi pada file tertentu, kita dapat memasukan nama filenya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;commit 06f735af7724558164c87f6b1ce3ca7778eb1c1b
+Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
+Date:   Mon Feb 13 18:26:50 2017 +0800
+
+    ditambahkan isi
+
+commit cf08ca0837cf26f1c595be36bb3a6b815e311be1
+Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
+Date:   Mon Feb 13 18:08:56 2017 +0800
+
+    commit pertama
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Karena file &lt;code&gt;index.html&lt;/code&gt; sudah direvisi sebanyak dua kali.&lt;/p&gt;
+
+&lt;h2 id=&#34;log-revisi-yang-dilakukan-oleh-author-tertentu&#34;&gt;Log Revisi yang dilakukan oleh Author Tertentu&lt;/h2&gt;
+
+&lt;p&gt;Misalkan dalam repositori dikerjakan oleh banyak orang. Maka kita dapat melihat
+revisi apa saja yang dilakukan oleh orang tertentu dengan perintah berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log --author=&#39;Petani Kode&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
+
+&lt;p&gt;Itulah beberapa cara melihat log revisi pada repositori. Perintah yang digunakan
+adalah &lt;code&gt;git log&lt;/code&gt;. Selanjutnya kita akan pelajari perintah &lt;code&gt;git diff&lt;/code&gt; untuk melihat
+perbandingan pada revisi.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutorial Git 03 - Membuat Revisi</title>
       <link>http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/</link>
       <pubDate>Mon, 13 Feb 2017 17:30:51 +0800</pubDate>
@@ -170,7 +278,7 @@ git commit -m &amp;quot;ditambahkan isi&amp;quot;
 maksud dari argumen &lt;code&gt;-m&lt;/code&gt;, argumen tersebut untuk menambahkan pesan setiap menyimpan
 revisi.&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya: Tutorial Git 04 - Melihat Log Revisi (draf)&lt;/p&gt;
+&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/&#34;&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -684,8 +792,8 @@ git berikut ini.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;Tutorial Git 01 - Instalasi dan Perisiapan&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;Tutorial Git 02 - Membuat Repositori&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;Tutorial Git 03 - Membuat Revisi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/li&gt;
-&lt;li&gt;Tutorial Git 05 - Melihat Revisi&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/&#34;&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tutorial Git 05 - Melihat Perbandingan Revisi&lt;/li&gt;
 &lt;li&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/li&gt;
 &lt;li&gt;Tutorial Git 07 - Percabangan&lt;/li&gt;
 &lt;li&gt;Tutorial Git 08 - Penggabungan Cabang&lt;/li&gt;
@@ -1503,143 +1611,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 &lt;p&gt;Setelah semuanya beres, saya kemudian melakukan &lt;em&gt;pull request&lt;/em&gt; ke repositori milik Nate Finch. Saat ini masih belum di-reviw, diterima atau ditolak terserah Nate Finch. Saya hanya butuh untuk masalah saya saja. Namun, jika anda juga membutuhkannya bisa klon atau &lt;em&gt;fork&lt;/em&gt; &lt;a href=&#34;https://github.com/ardianta/blogimport&#34;&gt;repositori dari saya&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Luar biasa, tidak pernah belajar bahasa pemrograman Go sama sekali, malah melakukan &lt;em&gt;pull request&lt;/em&gt; ke proyek yang menggnuakan bahasa pemrograman Go.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>10 Negara dengan Programmer Terbaik dan Indonesia Ranking Berapa?</title>
-      <link>http://petanikode.com/2017/01/10-negara-dengan-programmer-terbaik-dan-indonesia-ranking-berapa/</link>
-      <pubDate>Sat, 14 Jan 2017 15:26:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/10-negara-dengan-programmer-terbaik-dan-indonesia-ranking-berapa/</guid>
-      <description>
-
-&lt;p&gt;Banyak yang mungkin menduga, Amerika adalah negara dengan programmer terbaik. Karena di sana sarangnya para programmer legendaris seperti Bill Gates, Ken Thompson, Dennis Ritchie, dan Donald Knuth. Namun ternyata bukan. Hal ini dibuktikan oleh HackerRank.&lt;/p&gt;
-
-&lt;p&gt;HackerRank merupakan sebuah &lt;i&gt;platform&lt;/i&gt; untuk menentukan rangking para programmer beradasarkan skill &lt;i&gt;coding &lt;/i&gt;yang dimilikinya. HackerRank sering mengadakan tantangan &lt;i&gt;(challenges)&lt;/i&gt; untuk meningkatkan kemampuan para programmer. Ribuan programmer dari seluruh penjuru dunia ikut berpartisipasi dalam tantangan. Programmer dinilai berdasarkan kombinasi akurasi dan kecepatannya. Beberapa bulan yang lalu, HackerRank mempublikasi hasil analisis datanya. Berikut ini 10 Negara dengan programmer terbaik menurut HackerRank.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-cina&#34;&gt;#1 Cina&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;525&#34;
-width=&#34;938&#34;
-alt=&#34;Programmer Cina&#34;
-src=&#34;https://2.bp.blogspot.com/-loSqxxajlMg/WGiTEHt7VyI/AAAAAAAADhY/hZoknwSypCcRXybjS031ResOUYllu1r7ACK4B/s1600/china_programmer_cheerleaders_01.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Cina menjadi negeara dengan ranking 1 di HackerRank. Cina unggul pada tantangan struktur data, matematika, dan pemrograman fungsional.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-rusia&#34;&gt;#2 Rusia&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;340&#34;
-width=&#34;600&#34;
-alt=&#34;Programmer Rusia&#34;
-src=&#34;https://1.bp.blogspot.com/-Ow9v19qs4ME/WGiVDDiWnaI/AAAAAAAADhk/OyXCvAHX5Tovu_-f8h-H6E4zREqvdMieQCK4B/s1600/russian%2Bprogrammer.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sementara Rusia meraih ranking ke-2 setelah Cina. Rusia unggul pada tantangan Algoritma.&lt;/p&gt;
-
-&lt;h2 id=&#34;3-polandia&#34;&gt;#3 Polandia&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;512&#34;
-width=&#34;770&#34;
-alt=&#34;Programmer Polandia&#34;
-src=&#34;http://2.bp.blogspot.com/-XL2Uq49Hrrs/WGiXFFDvs9I/AAAAAAAADhw/Hg4Otn2dTjQ_uu_Fgz7db2uNrpQiba4NwCK4B/s1600/programmer%2Bpolandia.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Polandia unggul dalam tantangan pemrograman Java. Anak-anak di Polandia sudah diajari pemrograman di sekolah. Sistem pendidikan mereka lebih fokus pada sains dan komputasi.&lt;/p&gt;
-
-&lt;h2 id=&#34;4-swis&#34;&gt;#4 Swis&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;428&#34;
-width=&#34;640&#34;
-alt=&#34;Programmer Swis&#34;
-src=&#34;http://3.bp.blogspot.com/-WAkwDc9GmxA/WGiYtV23gRI/AAAAAAAADh8/TT-OROmA49Qv0A3yPPSVCvkTGLlV5blVACK4B/s1600/swiz%2Bprogrammer.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Swis meraih peringkat ke-4 pada HackerRank. Swis meruapakan tempat kelahiran bahasa pemrograman &lt;a href=&#34;http://petanikode.com/topik/pascal&#34;&gt;Pascal&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;5-hongaria&#34;&gt;#5 Hongaria&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;638&#34;
-width=&#34;960&#34;
-alt=&#34;Programmer Hongaria&#34;
-src=&#34;http://4.bp.blogspot.com/-FVl0_338U6g/WGiZWxDaNCI/AAAAAAAADiE/EmBM3z4Hv0EmWtRrbZSWRr1Oxshar1jQQCK4B/s1600/programmer%2Bhungaria.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Hongaria mendapat rangking ke-5, mereka unggul pada tantangan dalam bentuk tutorial. Hongaria juga menjadi negeara eropa pertama yang memasukan pelajaran pemrograman dalam sistem pendidikan mereka.&lt;/p&gt;
-
-&lt;h2 id=&#34;6-jepang&#34;&gt;#6 Jepang&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;1228&#34;
-width=&#34;1600&#34;
-alt=&#34;Programmer Jepang&#34;
-src=&#34;https://3.bp.blogspot.com/-twdklvtJC-g/WGiashGCq1I/AAAAAAAADiQ/C8tXNG83jqcgJV1Sjs_25jbneR6zNiomwCK4B/s1600/programmer%2Bjepang.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Jepang adalah negara terbaik yang menyelesaikan tantangan kecerdasan buatan di HackerRank. Jepang juga tempat kelahiran bahasa pemrograman &lt;a href=&#34;http://petanikode.com/topik/ruby&#34;&gt;Ruby&lt;/a&gt;. Namun, Jepang mendapatkan peringkat ke-6 pada HackerRank.&lt;/p&gt;
-
-&lt;h2 id=&#34;7-taiwan&#34;&gt;#7 Taiwan&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;600&#34;
-height=&#34;400&#34;
-alt=&#34;Programmer Taiwan&#34;
-src=&#34;http://3.bp.blogspot.com/-ZKS-vk0eUwA/WGicxZnTDnI/AAAAAAAADic/TR7N5w7CmLocBzJj6G_-HSDO4a_SLlD8gCK4B/s1600/programmer%2Btaiwan.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Taiwan mendapatkan rangking ke-7. Merka meraih skor tinggi pada tantangan database, pemrograman fungsional, algoritma dan struktur data.&lt;/p&gt;
-
-&lt;h2 id=&#34;8-prancis&#34;&gt;#8 Prancis&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;864&#34;
-height=&#34;487&#34;
-alt=&#34;Programmer Prancis&#34;
-src=&#34;https://2.bp.blogspot.com/-a698X84gyWQ/WGidrszBt4I/AAAAAAAADik/HE0Rm6kF-tADlb4vbD2QadGiK8YCdaDKACK4B/s1600/programmer%2Bprancis.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Prancis lebih dominan pada C++. Karena prancis sudah memasukan pelajaran pemrograman pada sekolah dasar sejak bulan &lt;a href=&#34;http://www.itworld.com/article/2696639/application-management/france-to-offer-programming-in-elementary-school.html&#34;&gt;juni 2014&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;9-republik-ceko&#34;&gt;#9 Republik Ceko&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;630&#34;
-height=&#34;350&#34;
-alt=&#34;Programmer Ceko&#34;
-src=&#34;https://4.bp.blogspot.com/-og-xJ6_H42A/WGievUCgafI/AAAAAAAADi0/9PbecauaWwIHz9C-3w5JrKeH-G4gC4G1ACK4B/s1600/programmer%2Bceko.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Republik ceko lebih unggul pada tantangan dengan &lt;i&gt;shell scripting&lt;/i&gt;. Mereka juga meraih peringkat kedua pada tantangan matematika. Namun, hanya mampu masuk rangking ke-9.&lt;/p&gt;
-
-&lt;h2 id=&#34;10-itali&#34;&gt;#10 Itali&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;1000&#34;
-height=&#34;536&#34;
-alt=&#34;Programmer Italia&#34;
-src=&#34;https://4.bp.blogspot.com/-brojwlLJuKI/WGihV6Umf3I/AAAAAAAADjA/7clsKJ8rFZgLfgofiDjYWonBnWhjIFSmACK4B/s1600/programmer%2Bitalia.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Itali meraih peringkat ke-10. Mereka hebat dalam tantangan database dan tutorial. Mereka dapat rangking kedua pada dua tantangan tersebut.&lt;/p&gt;
-
-&lt;p&gt;Itulah 10 negara dengan programmer terbaik menurut HackerRank Lalu, Indonesia peringkat ke berapa?&lt;/p&gt;
-
-&lt;p&gt;Berdasarkan &lt;a href=&#34;http://blog.hackerrank.com/which-country-would-win-in-the-programming-olympics/&#34;&gt;data yang dipublikasikan HackerRank&lt;/a&gt;, Indonesia meraih peringkat ke-40. Berada di atas Slandia Baru, Mesir, Afrika Selatan, Banglades, Kolombia, Filipina, Malaysia, Nigeria, Srilangka, dan Pakistan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;642&#34;
-height=&#34;612&#34;
-alt=&#34;Peringkat negara menurut hackerrank&#34;
-src=&#34;https://4.bp.blogspot.com/-X587f0Th2H8/WGircqM3tKI/AAAAAAAADjM/HBuAl-4A1fIgN8gjNiSYVneaAe7Bry8SgCLcB/s1600/peringkat%2Bprogrammer%2Bbedasarkan%2Bnegara.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Meskipun masih rangking 40, kita masih punya kesempatan untuk meraih rangking yang lebih baik.&lt;/p&gt;
 </description>
     </item>
     

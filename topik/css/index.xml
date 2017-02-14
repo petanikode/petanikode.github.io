@@ -140,16 +140,6 @@ github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/
     </item>
     
     <item>
-      <title>Font Merriweather Google vs Merriweather Wordpress</title>
-      <link>http://petanikode.com/2016/06/font-merriweather-google-vs-merriweather-wordpress/</link>
-      <pubDate>Thu, 30 Jun 2016 22:54:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/06/font-merriweather-google-vs-merriweather-wordpress/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://4.bp.blogspot.com/-HcxitcobNWA/V3UxbfFa8FI/AAAAAAAAC4s/k1sd8LAxat4SWzHNgqpL4jMokhuFmMeQwCLcB/s1600/Font-Merrieweather-Petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-HcxitcobNWA/V3UxbfFa8FI/AAAAAAAAC4s/k1sd8LAxat4SWzHNgqpL4jMokhuFmMeQwCLcB/s1600/Font-Merrieweather-Petanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Meski namanya sama, namun ternyata keduanya berbeda. Font Merriweather yang disediakan oleh Google, berbeda dengan font Merriweather yang digunakan Wordpress. Hal ini saya temukan ketika mendesain Template Blogger yang menggunakan font tersebut.&lt;br /&gt;&lt;br /&gt;Pertama, saya menggunakan font Merriweather yang disediakan Google. Akan tetapi hasilnya kurang tabal di Google Chrome, sementara di Firefox terlihat tebal dan bagus. Setelah saya cek kembali kode CSS-nya, tidak ada yang berbeda antara kode CSS yang digunakan di Wordpress dengan kode CSS yang saya buat.&lt;br /&gt;&lt;br /&gt;Link font:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link href=&amp;lsquo;&lt;a href=&#34;http://fonts.googleapis.com/css?family=Merriweather&#39;&#34;&gt;http://fonts.googleapis.com/css?family=Merriweather&#39;&lt;/a&gt; rel=&amp;lsquo;stylesheet&amp;rsquo; type=&amp;lsquo;text/css&amp;rsquo;&amp;gt;&lt;/code&gt;&lt;/pre&gt;Kode CSS:&lt;br /&gt;&lt;pre&gt;&lt;code calss=&#34;css&#34;&gt;.post-body {&lt;br /&gt;    font-family: Marriewether, serif;&lt;br /&gt;    font-size: 16px;&lt;br /&gt;    line-height: 1.8em;&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Tampilan di Firefox memang tidak masalah, di Google Chrome malah kurang bagus.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-HtXnqQP5LRA/V3Us9Pwr2XI/AAAAAAAAC4Y/YnVyKpOQzhksI1a-aAwr5YUaiqktnQ_zQCK4B/s1600/Merriweather%2B-%2BGoogle%2BChrome%2B-%2BFirefox%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-HtXnqQP5LRA/V3Us9Pwr2XI/AAAAAAAAC4Y/YnVyKpOQzhksI1a-aAwr5YUaiqktnQ_zQCK4B/s1600/Merriweather%2B-%2BGoogle%2BChrome%2B-%2BFirefox%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian, saya mencoba menggunakan font Marriewether yang digunakan Wordpress.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link href=&amp;lsquo;&lt;a href=&#34;https://s1.wp.com/i/fonts/merriweather/merriweather.css?v=20160210&#39;&#34;&gt;https://s1.wp.com/i/fonts/merriweather/merriweather.css?v=20160210&#39;&lt;/a&gt; rel=&amp;lsquo;stylesheet&amp;rsquo; type=&amp;lsquo;text/css&amp;rsquo;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasilnya, sesui seperti yang saya harapkan.&lt;br /&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-kRKBmTQRYxQ/V3UulAmo6qI/AAAAAAAAC4k/Bedsm3r7WCcM6ZX3NjggTU69FtieDWAYgCLcB/s1600/Merrieweather%2BWordpress%2B-%2BGoogle%2BChrome%2B-%2BFirefox%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-kRKBmTQRYxQ/V3UulAmo6qI/AAAAAAAAC4k/Bedsm3r7WCcM6ZX3NjggTU69FtieDWAYgCLcB/s1600/Merrieweather%2BWordpress%2B-%2BGoogle%2BChrome%2B-%2BFirefox%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Dari kasus ini, saya mengambil sebuah kesimpulan. Mungkin Wordpress menggunakan font Merriweather dari Google yang sudah mereka modifikasi dan optimasi, sehingga tampilanya lebih tebal dan bagus.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Membuat Kode CSS untuk Badge Notifikasi</title>
       <link>http://petanikode.com/2016/06/membuat-kode-css-untuk-badge-notifikasi/</link>
       <pubDate>Wed, 22 Jun 2016 23:33:00 +0000</pubDate>
@@ -226,6 +216,105 @@ github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/
       
       <guid>http://petanikode.com/2015/09/kode-css-untuk-merapikan-embed-gist-github-di-blog/</guid>
       <description>&lt;p&gt;Saya mencoba memajang kode yang ada di Gist Github ke blog. Namun, kodenya terlalu panjang dan memakan banyak tempat. Seharusnya kode ini ditampilkan setinggi 500px, agar pembaca tidak capek melalkukan &lt;i&gt;scroll&lt;/i&gt;.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-7u7PnzZxyYw/Vfw9ie8oWsI/AAAAAAAAB1c/_mhpqRvkdxI/s1600/Kode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2BGist%2Bdi%2Bblog%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-7u7PnzZxyYw/Vfw9ie8oWsI/AAAAAAAAB1c/_mhpqRvkdxI/s1600/Kode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2BGist%2Bdi%2Bblog%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Berikut kode CSS untuk merapikannya:&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/fc3beb2d591fc52692de.js&#34;&gt;&lt;/script&gt;Pada blogger, kode CSS tersebut dapat ditambahkan pada &lt;i&gt;Template Designer&amp;gt;Advenced&amp;gt;Add CSS&lt;/i&gt;&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-MjIHgYZ58co/VfwwSLK33tI/AAAAAAAAB08/jYj7DQ7VjMw/s1600/Penambahan%2Bkode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2Bgist.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-MjIHgYZ58co/VfwwSLK33tI/AAAAAAAAB08/jYj7DQ7VjMw/s1600/Penambahan%2Bkode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2Bgist.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Sebenarnya, kita hanya perlu menambahkan &lt;code&gt;max-height: 500px&lt;/code&gt; saja, agar kotak kode ditampilkan maksimal setinggi &lt;samp&gt;500px&lt;/samp&gt;. Namun, kode CSS di atas adalah hasil &lt;i&gt;fork&lt;/i&gt; dan modifikasi yang saya lakukan untuk blog ini. Jadi, anda juga bisa mem-&lt;i&gt;fork&lt;/i&gt; dan memodifikasinya sesuka hati.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>3 Cara Penulisan Kode CSS dalam HTML</title>
+      <link>http://petanikode.com/2015/07/3-cara-penulisan-kode-css-dalam-html/</link>
+      <pubDate>Sun, 12 Jul 2015 21:14:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2015/07/3-cara-penulisan-kode-css-dalam-html/</guid>
+      <description>
+
+&lt;p&gt;Penulisan kode CSS dalam HTML dibagi menjadi tiga cara, internal, &lt;em&gt;inline&lt;/em&gt;, dan eksternal.
+Pembagian ini berdasarkan letak kode CSS tersebut ditulis.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-internal-css&#34;&gt;1. Internal CSS&lt;/h2&gt;
+
+&lt;p&gt;Internal CSS adalah istilah untuk kode CSS yang ditulis langsung dalam berkas HTML. Kode CSS ini dituliskan pada tag &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;. Tag ini bisa ditulis di dalam blok &lt;code&gt;head&lt;/code&gt; atapun &lt;code&gt;body&lt;/code&gt;, kedua-duanya sah. Nah, berikut ini contoh internal CSS.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;700&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/eNrXGW/?height=600&amp;theme-id=dark&amp;default-tab=html,result&amp;embed-version=2&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-eksternal-css&#34;&gt;2. Eksternal CSS&lt;/h2&gt;
+
+&lt;p&gt;Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML.
+Eksternal CSS ditulis disebuah berkas khusus yang berekstensi &lt;code&gt;.css&lt;/code&gt;.
+Sebagai contoh, saya akan membuat sebuah berkas bernama &lt;code&gt;style-ku.css&lt;/code&gt;.
+Berikut ini cuplikan isi berkas &lt;code&gt;style-ku.css&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p {
+    font-family: serif;
+    line-height: 1.75em;
+}
+
+i {
+    font-family: sans;
+    color: orange;
+}
+
+h2 {
+    font-family: sans;
+    color: #333;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk menggunakan CSS tersebut dalam HTML, kita perlu mengimpornya. Ada beberapa cara memasukkan kode CSS dari berkas eksternal:&lt;/p&gt;
+
+&lt;p&gt;Pertama menggunakan tag &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style-ku.css&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Atau bisa juga bisa menggunakan &lt;code&gt;@import&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
+@import &amp;quot;style-ku.css&amp;quot;;
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Penulisan pada HTML versi lengkapnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;Contoh Eksternal CSS&amp;lt;/title&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style-ku.css&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+    &amp;lt;h2&amp;gt;Ini judul artikel&amp;lt;/h2&amp;gt;
+    &amp;lt;p&amp;gt;Ini adalah paragraf yang memuat isi artikel. Paragraf ini hanya untuk percobaan saja. Percobaan untuk mendemokan &amp;lt;i&amp;gt;internal css&amp;lt;/i&amp;gt;. Seperti namanya, &amp;lt;i&amp;gt;inline CSS&amp;lt;/i&amp;gt; adalah kode CSS yang ditulis langsung dalam file HTML.&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya pun akan sama seperti contoh internal CSS, karena kode CSS-nya sama. Hanya saja berbeda tempat penulisannya.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-inline-css&#34;&gt;3. Inline CSS&lt;/h2&gt;
+
+&lt;p&gt;Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Setiap elemen HTML memiliki atribut &lt;code&gt;style&lt;/code&gt;, di sana lah inline CSS ditulis. Contohnya seperti ini:&lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h2 style=&amp;quot;color:red; font-family: sans;&amp;quot;&amp;gt;Ini judul artikel&amp;lt;/h2&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Contoh lengkap:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;420&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/NqMmjj?height=380&amp;theme-id=dark&amp;default-tab=html,result&amp;embed-version=2&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Referensi:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://matthewjamestaylor.com/blog/adding-css-to-html-with-link-embed-inline-and-import&#34;&gt;http://matthewjamestaylor.com/blog/adding-css-to-html-with-link-embed-inline-and-import&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.w3schools.com/css/css_howto.asp&#34;&gt;http://www.w3schools.com/css/css_howto.asp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.w3.org/TR/xhtml2/mod-styleSheet.html#edef_styleSheet_style&#34;&gt;http://www.w3.org/TR/xhtml2/mod-styleSheet.html#edef_styleSheet_style&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

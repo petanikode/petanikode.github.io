@@ -7,7 +7,7 @@
 
 <html amp lang="id-id" class="no-js">
 <head>
-    <title>Query MySQL untuk menentukan pemenang</title>
+    <title>Query MySQL untuk Menentukan Pemenang</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -48,11 +48,10 @@
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
 <meta name="author" content="Ardianta Pargo"/>
 
-<meta name="keywords" content="Query MySQL untuk menentukan pemenang, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membingungkan, yaitu penentuan pemenang setelah pemilihan selesai.
-
-Query pertama‒menurut saya sesuai‒yang didapatkan dari pencarian solusi di google adalah sebagai berikut:
-SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak."/>
+<meta name="keywords" content="Query MySQL untuk Menentukan Pemenang, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membuat saya bingung, yaitu penentuan pemenang setelah pemilihan selesai.
+Query pertama&ndash;menurut saya sesuai&ndash;yang didapatkan dari pencarian di google adalah sebagai berikut:
+SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1  Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak."/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -68,11 +67,10 @@ SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalo
 <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
-    <meta property="og:title" content="Query MySQL untuk menentukan pemenang" />
-    <meta property="og:description" content="Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membingungkan, yaitu penentuan pemenang setelah pemilihan selesai.
-
-Query pertama‒menurut saya sesuai‒yang didapatkan dari pencarian solusi di google adalah sebagai berikut:
-SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak." />
+    <meta property="og:title" content="Query MySQL untuk Menentukan Pemenang" />
+    <meta property="og:description" content="Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membuat saya bingung, yaitu penentuan pemenang setelah pemilihan selesai.
+Query pertama&ndash;menurut saya sesuai&ndash;yang didapatkan dari pencarian di google adalah sebagai berikut:
+SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1  Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="http://petanikode.com/2015/08/query-mysql-untuk-menentukan-pemenang/" />
 
@@ -256,9 +254,9 @@ SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalo
   "author": {
     "name" : "Ardianta Pargo"
   },
-  "headline": "Query MySQL untuk menentukan pemenang",
-  "description": "Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membingungkan, yaitu penentuan pemenang setelah pemilihan selesai.\n\nQuery pertama‒menurut saya sesuai‒yang didapatkan dari pencarian solusi di google adalah sebagai berikut:\nSELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak.",
-  "wordCount":  168 ,
+  "headline": "Query MySQL untuk Menentukan Pemenang",
+  "description": "Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membuat saya bingung, yaitu penentuan pemenang setelah pemilihan selesai.\nQuery pertama\x26ndash;menurut saya sesuai\x26ndash;yang didapatkan dari pencarian di google adalah sebagai berikut:\nSELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1  Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak.",
+  "wordCount":  170 ,
   "datePublished" : "2015-08-03T05:53:00",
   "dateModified" : "2015-08-03T05:53:00",
   "image" : {
@@ -293,7 +291,7 @@ SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalo
       "sameAs": "http://petanikode.com"
     },
     "datePublished": "2015-08-03T05:53:00",
-    "description": "Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membingungkan, yaitu penentuan pemenang setelah pemilihan selesai.\n\nQuery pertama‒menurut saya sesuai‒yang didapatkan dari pencarian solusi di google adalah sebagai berikut:\nSELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak.",
+    "description": "Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membuat saya bingung, yaitu penentuan pemenang setelah pemilihan selesai.\nQuery pertama\x26ndash;menurut saya sesuai\x26ndash;yang didapatkan dari pencarian di google adalah sebagai berikut:\nSELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1  Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak.",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -1199,7 +1197,7 @@ padding: 16px;
     <article class="article block">
     <div class="article-wrapper">
         <div class="content">
-            <h1 class="post-title">Query MySQL untuk menentukan pemenang</h1>
+            <h1 class="post-title">Query MySQL untuk Menentukan Pemenang</h1>
 
             
                 <div class="post-header">
@@ -1216,16 +1214,86 @@ padding: 16px;
     
 </div>
 
-                <p>Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membingungkan, yaitu penentuan pemenang setelah pemilihan selesai.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-QG4Z1jestZs/Vb6MEZwnejI/AAAAAAAABpY/9Z6O4YtwjRw/s1600/Query-mysql-untuk-menentukan-pemenang-pada-e-voting-system.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-QG4Z1jestZs/Vb6MEZwnejI/AAAAAAAABpY/9Z6O4YtwjRw/s1600/Query-mysql-untuk-menentukan-pemenang-pada-e-voting-system.png" /></a></div><br />Query pertama‒menurut saya sesuai‒yang didapatkan dari pencarian solusi di google adalah sebagai berikut:<br /><pre><code class="mysql">SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1</code></pre>Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak. Tapi, bagaiaman kalau ada dua orang yang memiliki sura terbanyak. Kalau menggunakan query di atas, hasilnya tetap satu orang.<br /><br />Akhirnya, saya diberikan query manjur dari salah satu member <a href="https://www.facebook.com/groups/mysql.indonesia/permalink/10153422674235996/" target="blank">group MySQL Indonesia</a>. Query sakti ini dapat menampilkan semua pemenang dengan perolehan suara yang sama.<br /><pre><code class="mysql">SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon HAVING COUNT( calon_idcalon) &gt;= ( SELECT COUNT( calon_idcalon ) AS SUM FROM kotak_suara GROUP BY calon_idcalon ORDER BY SUM DESC LIMIT 1 )</code></pre><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-f9AQWcJ4J9s/Vb6PHq3oXpI/AAAAAAAABpk/WFAKYTdT-7w/s1600/Pemenang%2Byang%2Bterpilih%2Bdari%2Bhasil%2Bquery.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-f9AQWcJ4J9s/Vb6PHq3oXpI/AAAAAAAABpk/WFAKYTdT-7w/s1600/Pemenang%2Byang%2Bterpilih%2Bdari%2Bhasil%2Bquery.png" /></a></div><br /></p>
+                <p><amp-img
+    width="672"
+    height="397"
+    alt="Query-mysql-untuk-menentukan-pemenang-pada-e-voting-system.png"
+    src="http://1.bp.blogspot.com/-QG4Z1jestZs/Vb6MEZwnejI/AAAAAAAABpY/9Z6O4YtwjRw/s1600/Query-mysql-untuk-menentukan-pemenang-pada-e-voting-system.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan
+framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal
+yang masih membuat saya bingung, yaitu penentuan pemenang setelah pemilihan selesai.</p>
+
+<p>Query pertama&ndash;menurut saya sesuai&ndash;yang didapatkan dari pencarian di google adalah sebagai berikut:</p>
+
+<pre><code class="language-sql">SELECT
+    calon_idcalon,
+    calon.nama AS nama,
+    calon.foto AS foto,
+    COUNT(calon_idcalon) AS jumlah
+FROM
+    kotak_suara,
+    calon
+WHERE
+    calon_idcalon = calon.nim
+GROUP BY calon_idcalon
+ORDER BY jumlah
+DESC LIMIT 1
+</code></pre>
+
+<p>Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak. Tapi, bagaiaman kalau ada dua orang yang memiliki sura terbanyak. Kalau menggunakan query di atas, hasilnya tetap satu orang.</p>
+
+<p><amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='7044550664'
+    width='720'
+    height='380'
+    type='adsense'
+    layout="responsive">
+</amp-ad></p>
+
+<p>Akhirnya, saya diberikan query manjur dari salah satu member <a href="https://www.facebook.com/groups/mysql.indonesia/permalink/10153422674235996/">group MySQL Indonesia</a>. Query sakti ini dapat menampilkan semua pemenang dengan perolehan suara yang sama.</p>
+
+<pre><code class="language-sql">SELECT
+    calon_idcalon,
+    calon.nama AS nama,
+    calon.foto AS foto,
+    COUNT(calon_idcalon) AS jumlah
+FROM
+    kotak_suara,
+    calon
+WHERE
+    calon_idcalon = calon.nim
+GROUP BY
+    calon_idcalon
+HAVING
+    COUNT( calon_idcalon) &gt;= (
+        SELECT COUNT( calon_idcalon ) AS SUM
+        FROM kotak_suara
+        GROUP BY calon_idcalon
+        ORDER BY SUM
+        DESC LIMIT 1
+    )
+</code></pre>
+
+<p><amp-img
+    width="991"
+    height="503"
+    alt="Pemenang+yang+terpilih+dari+hasil+query.png"
+    src="http://3.bp.blogspot.com/-f9AQWcJ4J9s/Vb6PHq3oXpI/AAAAAAAABpk/WFAKYTdT-7w/s1600/Pemenang%2Byang%2Bterpilih%2Bdari%2Bhasil%2Bquery.png"
+    layout="responsive">
+</amp-img></p>
 
                 <div class="post-footer">
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f&t=Query%20MySQL%20untuk%20menentukan%20pemenang" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f&text=Query%20MySQL%20untuk%20menentukan%20pemenang%20http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f&t=Query%20MySQL%20untuk%20Menentukan%20Pemenang" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f&text=Query%20MySQL%20untuk%20Menentukan%20Pemenang%20http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
   <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
   <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Query%20MySQL%20untuk%20menentukan%20pemenang&body=Query%20MySQL%20untuk%20menentukan%20pemenang:%20http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="mailto:?subject=Query%20MySQL%20untuk%20Menentukan%20Pemenang&body=Query%20MySQL%20untuk%20Menentukan%20Pemenang:%20http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 

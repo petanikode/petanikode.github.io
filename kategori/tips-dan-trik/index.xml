@@ -116,5 +116,83 @@ silahkan disampaikan melalui komentar.&lt;/p&gt;
 </description>
     </item>
     
+    <item>
+      <title>Menulis Kode Serasa Main Game dengan Modul Activate Power Mode di Atom</title>
+      <link>http://petanikode.com/2015/12/menulis-kode-serasa-main-game-dengan-modul-activate-power-mode-di-atom/</link>
+      <pubDate>Sat, 19 Dec 2015 15:37:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2015/12/menulis-kode-serasa-main-game-dengan-modul-activate-power-mode-di-atom/</guid>
+      <description>
+
+&lt;p&gt;Beberapa minggu yang lalu, saya menemukan sebuah gambar animasi gif di facebook.
+Animasi penulisan kode yang disertai efek partikel bertaburan. Menarik,
+sepertinya akan menyenangkan menulis kode dengan efek ini.
+Tidak lama kemudian, saya menemukan modulnya untuk Atom.&lt;/p&gt;
+
+&lt;p&gt;Efek ini awalnya hanya bisa dinikmati di &lt;em&gt;&lt;a href=&#34;http://codeinthedark.com/editor/&#34;&gt;Code in Dark Editor&lt;/a&gt;.&lt;/em&gt;
+Kemdian, seorang programmer bernama &lt;a href=&#34;https://github.com/JoelBesada&#34;&gt;Joel Besada&lt;/a&gt;
+membuat replikasinya. Joel menulis sebuah modul untuk Atom,
+namanya &lt;a href=&#34;https://github.com/JoelBesada/activate-power-mode&#34;&gt;activate-power-mode&lt;/a&gt;.
+Berikut ini cuplikannya:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;510&#34;
+    height=&#34;274&#34;
+    src=&#34;https://1.bp.blogspot.com/-2NnuasJU9Oo/VnUCMk2NMTI/AAAAAAAACSE/528Cjx8x_EE/s1600/active-power-mode-atom.gif&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-instal&#34;&gt;Cara Instal&lt;/h2&gt;
+
+&lt;p&gt;Buka teks editor Atom, kemudian masuk ke manu &lt;em&gt;Edit&lt;/em&gt;&amp;gt;&lt;em&gt;Preferences&lt;/em&gt; atau tekan
+tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;,&lt;/code&gt; (koma). Setelah itu masuk ke menu &lt;em&gt;Install&lt;/em&gt;. Cari
+&lt;code&gt;activate-power-mode&lt;/code&gt;, kemudian &lt;em&gt;install&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;510&#34;
+    height=&#34;274&#34;
+    alt=&#34;Instal+Activate+Power+Mode+di+Atom.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-qffFw0Sx85A/WKKps7Mo-qI/AAAAAAAAD6g/orzlEQgrFWsh86xHPRlly2kHrlVJvxENACK4B/s1600/Instal%2BActivate%2BPower%2BMode%2Bdi%2BAtom.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;atau bisa juga dilakukan dengan perintah di terminal&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;apm install activate-power-mode
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Aktivasi efek dapat dilakukan dengan menekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;Alt&lt;/code&gt;+&lt;code&gt;o&lt;/code&gt; di area
+kerja Atom. Untuk menonaktifkan tekan lagi tombol yang tadi.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;bug&#34;&gt;Bug&lt;/h2&gt;
+
+&lt;p&gt;Sebuah bug saya temukan ketika mencoba modul ini. Pada mode &lt;em&gt;soft-wrap&lt;/em&gt; partikelnya
+tidak mengikuti kursor.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;pCZRB48yW0s&#34;
+    layout=&#34;responsive&#34;
+width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;p&gt;Efek partikelnya terjebak, tidak mau mengikuti kursor. Namun saya sudah
+&lt;a href=&#34;https://github.com/JoelBesada/activate-power-mode/issues/91&#34;&gt;melaporkan bug&lt;/a&gt; ini ke github.
+Semoga cepat diperbaiki.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Update 7 Mei 2016: Bug sudah diperbaiki :smile:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Nah, bagaimana dengan teman-teman? apakah sudah mencoba &lt;em&gt;activate-power-mode&lt;/em&gt;? Ceritakan bagaimana rasanya!&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

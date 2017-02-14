@@ -7,8 +7,207 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 14 Feb 2017 08:56:09 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Feb 2017 21:46:29 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Activate Power Mode Ada di Mana-mana</title>
+      <link>http://petanikode.com/2017/02/activate-power-mode-ada-di-mana-mana/</link>
+      <pubDate>Tue, 14 Feb 2017 21:46:29 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/activate-power-mode-ada-di-mana-mana/</guid>
+      <description>
+
+&lt;p&gt;Pada akhir tahun 2015, saya pernah menulis tentang &lt;a href=&#34;http://petanikode.com/2015/12/menulis-kode-serasa-main-game-dengan-modul-activate-power-mode-di-atom/&#34;&gt;plug-in Atom&lt;/a&gt;
+bernama &lt;code&gt;activate-power-mode&lt;/code&gt;. Plug-in memang keren, membuat kita merasa semakin asyik
+menulis kode. Kepopuleran plug-in ini membuat programmer yang lain ikut membuat
+plug-in serupa untuk teks editor selain Atom.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini daftar plug-in &lt;code&gt;activate-power-mode&lt;/code&gt;, dikutip dari repositori
+&lt;a href=&#34;https://github.com/codeinthedark/awesome-power-mode&#34;&gt;awesome-power-mode&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-atom&#34;&gt;1. Atom&lt;/h2&gt;
+
+&lt;p&gt;Awalmulanya plug-in ini dibuat sebagai replikas dari &lt;a href=&#34;http://codeinthedark.com/editor/&#34;&gt;&lt;em&gt;Code in Dark Editor&lt;/em&gt;&lt;/a&gt;.
+Kita harus mendapatkan skor di atas 200 untuk dapat menyaksikan efek &lt;code&gt;activate-power-mode&lt;/code&gt;.
+Sedangkan, kalau kita menggunakan plug-in kita tidak perlu mendapatkan skor.&lt;/p&gt;
+
+&lt;p&gt;Cara instal plugin dapat di baca &lt;a href=&#34;http://petanikode.com/2015/12/menulis-kode-serasa-main-game-dengan-modul-activate-power-mode-di-atom/&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;510&#34;
+    height=&#34;274&#34;
+    src=&#34;https://1.bp.blogspot.com/-2NnuasJU9Oo/VnUCMk2NMTI/AAAAAAAACSE/528Cjx8x_EE/s1600/active-power-mode-atom.gif&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-brackets&#34;&gt;2. Brackets&lt;/h2&gt;
+
+&lt;p&gt;Seorang programmer dengan nama akun Github Equals182, membuat plugin &lt;code&gt;activate-power-mode&lt;/code&gt;
+untuk teks editor Brackets.&lt;/p&gt;
+
+&lt;p&gt;Alamat repositorinya: &lt;a href=&#34;https://github.com/Equals182/brackets-power-mode&#34;&gt;https://github.com/Equals182/brackets-power-mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-codemirror&#34;&gt;3. Codemirror&lt;/h2&gt;
+
+&lt;p&gt;Pengguna Github bernama chinchang membuat plugin &lt;code&gt;activate-power-mode&lt;/code&gt; untuk
+Codemirror.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;655&#34;
+    height=&#34;285&#34;
+    alt=&#34;demo.gif&#34;
+    src=&#34;https://github.com/chinchang/code-blast-codemirror/raw/master/demo.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Live demo: &lt;a href=&#34;https://rawgit.com/chinchang/code-blast-codemirror/master/demo/index.html&#34;&gt;https://rawgit.com/chinchang/code-blast-codemirror/master/demo/index.html&lt;/a&gt;
+Alamat repositorinya: &lt;a href=&#34;https://github.com/chinchang/code-blast-codemirror&#34;&gt;https://github.com/chinchang/code-blast-codemirror&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-idea&#34;&gt;4. IDEA&lt;/h2&gt;
+
+&lt;p&gt;IntelliJ IDEA merupakan salah satu IDE untuk bahasa pemrograman Java. Android
+Studio dikembangkan dari IDEA, mungkin saja &lt;code&gt;activate-power-mode&lt;/code&gt; untuk
+IDEA bisa juga digunakan untuk Android Studio.&lt;/p&gt;
+
+&lt;p&gt;Alamat Repositori: &lt;a href=&#34;https://github.com/ViceFantasyPlace/activate-power-mode&#34;&gt;https://github.com/ViceFantasyPlace/activate-power-mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;736&#34;
+    height=&#34;421&#34;
+    alt=&#34;ActivatePowerModePreview.gif?raw=true&#34;
+    src=&#34;https://github.com/ViceFantasyPlace/activate-power-mode/raw/master/ActivatePowerModePreview.gif?raw=true&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-phpstrom&#34;&gt;5. PHPStrom&lt;/h2&gt;
+
+&lt;p&gt;PHPStrom juga IDE pengembangan dari IntelliJ IDEA. Namun, ada juga &lt;code&gt;activate-power-mode&lt;/code&gt;-nya
+tersendiri.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Alamat Plugin: &lt;a href=&#34;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&#34;&gt;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Alamat Repositori: &lt;a href=&#34;https://github.com/axaluss/power-mode-intellij-plugin&#34;&gt;https://github.com/axaluss/power-mode-intellij-plugin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;736&#34;
+    height=&#34;421&#34;
+    alt=&#34;screenshot_15884.png&#34;
+    src=&#34;https://plugins.jetbrains.com/files/8251/screenshot_15884.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Woho, panas :smile: &lt;code&gt;activate-power-mode&lt;/code&gt; di PHPStrom ada apinya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-javascript&#34;&gt;6. Javascript&lt;/h2&gt;
+
+&lt;p&gt;Javascript memang bukan teks editor. Atom sendiri dibuat dengan Javascript.
+Karena itu, ada juga yang membuatnya untuk &lt;em&gt;libaray&lt;/em&gt; javascript.&lt;/p&gt;
+
+&lt;p&gt;Live demo: &lt;a href=&#34;http://0xabcdef.com/activate-power-mode/&#34;&gt;http://0xabcdef.com/activate-power-mode/&lt;/a&gt;
+Repositori: &lt;a href=&#34;https://github.com/disjukr/activate-power-mode&#34;&gt;https://github.com/disjukr/activate-power-mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-vim&#34;&gt;7. Vim&lt;/h2&gt;
+
+&lt;p&gt;Teks editor legendaris, tidak banyak yang bisa menggunakannya. Konon,
+yang menguasai teks editor ini, bisa dibilang sudah master.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;701&#34;
+    height=&#34;457&#34;
+    alt=&#34;screenshot.gif&#34;
+    src=&#34;https://raw.githubusercontent.com/mattn/vim-particle/master/data/screenshot.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositri: &lt;a href=&#34;https://github.com/mattn/vim-particle&#34;&gt;https://github.com/mattn/vim-particle&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;8-visual-studio&#34;&gt;8. Visual Studio&lt;/h2&gt;
+
+&lt;p&gt;Visual Studio merupakan IDE untuk pemrograman VB, C#, dan .NET. Visual Studio
+merupakan produk yang dikeluarkan Microsoft.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;820&#34;
+    height=&#34;180&#34;
+    alt=&#34;Screenshot.png&#34;
+    src=&#34;https://raw.githubusercontent.com/LiamMorrow/Visual-Studio-Power-Mode/master/PowerMode/Resources/Screenshot.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositri: &lt;a href=&#34;https://github.com/LiamMorrow/Visual-Studio-Power-Mode&#34;&gt;https://github.com/LiamMorrow/Visual-Studio-Power-Mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;9-windows&#34;&gt;9. Windows&lt;/h2&gt;
+
+&lt;p&gt;Activate Power Mode yang satu ini khusus untuk sistem operasi Windows. Efek
+&lt;code&gt;activate-power-mode&lt;/code&gt; muncul ketika mengetik. Bisa untuk Notepad++, Notepad,
+dan teks editor Windows lainnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;500&#34;
+    height=&#34;200&#34;
+    alt=&#34;demo.gif&#34;
+    src=&#34;https://raw.githubusercontent.com/if1live/ParticleOnTextCursor/master/document/demo.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositori: &lt;a href=&#34;https://github.com/if1live/ParticleOnTextCursor&#34;&gt;https://github.com/if1live/ParticleOnTextCursor&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;10-xcode&#34;&gt;10. XCode&lt;/h2&gt;
+
+&lt;p&gt;XCode merupakan IDE untuk MacOS. Tidak mau kalah dengan yang lain, plug-in
+&lt;code&gt;activate-power-mode&lt;/code&gt; untuk XCode tersedia dalam tiga respositori.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;500&#34;
+    height=&#34;200&#34;
+    alt=&#34;about.gif&#34;
+    src=&#34;https://github.com/poboke/ActivatePowerMode/raw/master/Screenshots/about.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositori&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/poboke/ActivatePowerMode&#34;&gt;https://github.com/poboke/ActivatePowerMode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/qfish/XActivatePowerMode&#34;&gt;https://github.com/qfish/XActivatePowerMode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Dawn-/CoderPower&#34;&gt;https://github.com/Dawn-/CoderPower&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;11-hyper&#34;&gt;11. Hyper&lt;/h2&gt;
+
+&lt;p&gt;Hyper bukan teks editor maupun IDE. Hyper adalah Terminal Emulator berbasis Web (&lt;a href=&#34;http://petanikode.com/topik/javascript&#34;&gt;Javascript&lt;/a&gt;).
+Pada &lt;a href=&#34;https://hyper.is&#34;&gt;website resminya&lt;/a&gt;, Hyper memperlihatkan efek &lt;code&gt;activate-power-mode&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;457&#34;
+    height=&#34;340&#34;
+    alt=&#34;13c9bfe6-4905-11e6-8fe4-baf8fc8d9293.gif&#34;
+    src=&#34;https://cloud.githubusercontent.com/assets/13041/16820268/13c9bfe6-4905-11e6-8fe4-baf8fc8d9293.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah beberapa plug-in Activate Power Mode, menurut kalian manakah yang paling
+bagus?&lt;/p&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/codeinthedark/awesome-power-mode&#34;&gt;github.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hyper.is&#34;&gt;hyper.is&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&#34;&gt;plugins.jetbrains.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Tutorial Git 04 - Melihat Log Revisi</title>
@@ -1665,120 +1864,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 kemudian mendaftarkannya di akun Github.&lt;/p&gt;
 
 &lt;p&gt;referensi: &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;help.github.com&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>4 Cara Penulisan Kode Javascript pada HTML</title>
-      <link>http://petanikode.com/2017/01/4-cara-penulisan-kode-javascript-pada-html/</link>
-      <pubDate>Sat, 28 Jan 2017 14:59:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/4-cara-penulisan-kode-javascript-pada-html/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-width=&#34;720&#34;
-height=&#34;380&#34;
-alt=&#34;pemrograman javascript&#34;
-src=&#34;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Javascript sebagai bahasa pemrograman yang berjalan di atas browser harus di tulis di dalam HTML. Ada empat cara penulisan javascript pada HTML.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-tag-script&#34;&gt;1. Tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Cara yang umum yang dipakai adalah menuliskanya dalam tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;. Tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; bisa dibuat di dalam tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;, mauapun di dalam tag &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;. Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-    &amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt;
-    &amp;lt;script&amp;gt;
-    console.log(&amp;quot;Hi, ini kode Javascript&amp;quot;);
-    &amp;lt;/script&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;script&amp;gt;
-document.write(&amp;quot;Javascript itu keren!&amp;quot;);
-&amp;lt;/script&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;2-file-eksternal&#34;&gt;2. File Eksternal&lt;/h2&gt;
-
-&lt;p&gt;Tidak ingin kode Javascript bercampur aduk dengan HTML, kita bisa menuliskannya pada file terpisah. Caranya, buatlah sebuah file yang berekstensi &lt;code&gt;.js&lt;/code&gt;, misalnya isinya sebagai berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;// file-eksternal.js
-alert(&amp;quot;Kode Javascript dari File Eksternal&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian, kita perlu menghubungkan file eksternal tersebut dengan file HTML. Caranya, gunakan tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; dengan atribut &lt;code&gt;src&lt;/code&gt; untuk menentukan lokasi file Javascriptnya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-&amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt;
-
-&amp;lt;script src=&amp;quot;file-eksternal.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-atribut-event&#34;&gt;3. Atribut Event&lt;/h2&gt;
-
-&lt;p&gt;Cara yang ketiga ini sering digunakan untuk memanggil fungsi pada &lt;em&gt;event&lt;/em&gt; terentu. Misalnya ketika suatu elemen diklik, maka jalankan fungsi Javascript.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;button onclick=&amp;quot;alert(&#39;Ok Terima kasih!&#39;)&amp;quot;&amp;gt;Klik donk!&amp;lt;/button&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Selain &lt;em&gt;event onclick&lt;/em&gt; ada juga &lt;em&gt;event-event&lt;/em&gt; yang lain, seperti &lt;em&gt;onsubmit&lt;/em&gt;, &lt;em&gt;onload&lt;/em&gt;, &lt;em&gt;ondoubleclick&lt;/em&gt;, &lt;em&gt;onmouseover&lt;/em&gt;, &lt;em&gt;onmouseout&lt;/em&gt;, dsb.&lt;/p&gt;
-
-&lt;h2 id=&#34;4-url&#34;&gt;4. URL&lt;/h2&gt;
-
-&lt;p&gt;Terakhir, penulisan Javascript pada URL. Cara ini jarang digunakan, namun kita juga perlu mengetahuinya. Penulisan Javascript pada URL menggunakan protokol Javascript. Misal, cobalah untuk menuliskan kode seperti ini pada URL browser.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;javascript:alert(&amp;quot;Nah! ini Javascript&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya, Javascript akan dieksekusi browser.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;914&#34;
-height=&#34;460&#34;
-alt=&#34;pemrograman javascript&#34;
-src=&#34;http://3.bp.blogspot.com/-fqpdp9Si9Lg/WGlO8500McI/AAAAAAAADjw/V5vuPu-4Hx4-kuJ_Ru3Q6OV03mPQgkRPwCK4B/s1600/Penulisan%2BJavascript%2Bpada%2BURL.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Lalu, bagaiaman kita menggunakan cara ini di HTML?&lt;/p&gt;
-
-&lt;p&gt;Cara ini bisa kita gunakan pada tag &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;, kemudian mengisi kode javascript pada atribut &lt;code&gt;href&lt;/code&gt;. Cara ini bisa menggantikan &lt;em&gt;event onclick&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;javascript:alert(&#39;Wih! hebat bukan?&#39;)&amp;quot;&amp;gt;Klik Aku&amp;lt;/a&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2015/10/cara-efisien-memanggil-fungsi-javascript-pada-elemen-link/&#34;&gt;Cara Efisien Memanggil Javascript pada Elemen Link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah empat cara penulisan Javascript pada HTML. Manakah cara yang sering kalian gunakan?&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;http://docstore.mik.ua/orelly/webprog/jscript/ch12_02.htm&#34;&gt;docstore.mik.ua&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

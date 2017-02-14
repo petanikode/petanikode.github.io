@@ -10,6 +10,205 @@
     <atom:link href="http://petanikode.com/topik/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Activate Power Mode Ada di Mana-mana</title>
+      <link>http://petanikode.com/2017/02/activate-power-mode-ada-di-mana-mana/</link>
+      <pubDate>Tue, 14 Feb 2017 21:46:29 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/activate-power-mode-ada-di-mana-mana/</guid>
+      <description>
+
+&lt;p&gt;Pada akhir tahun 2015, saya pernah menulis tentang &lt;a href=&#34;http://petanikode.com/2015/12/menulis-kode-serasa-main-game-dengan-modul-activate-power-mode-di-atom/&#34;&gt;plug-in Atom&lt;/a&gt;
+bernama &lt;code&gt;activate-power-mode&lt;/code&gt;. Plug-in memang keren, membuat kita merasa semakin asyik
+menulis kode. Kepopuleran plug-in ini membuat programmer yang lain ikut membuat
+plug-in serupa untuk teks editor selain Atom.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini daftar plug-in &lt;code&gt;activate-power-mode&lt;/code&gt;, dikutip dari repositori
+&lt;a href=&#34;https://github.com/codeinthedark/awesome-power-mode&#34;&gt;awesome-power-mode&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-atom&#34;&gt;1. Atom&lt;/h2&gt;
+
+&lt;p&gt;Awalmulanya plug-in ini dibuat sebagai replikas dari &lt;a href=&#34;http://codeinthedark.com/editor/&#34;&gt;&lt;em&gt;Code in Dark Editor&lt;/em&gt;&lt;/a&gt;.
+Kita harus mendapatkan skor di atas 200 untuk dapat menyaksikan efek &lt;code&gt;activate-power-mode&lt;/code&gt;.
+Sedangkan, kalau kita menggunakan plug-in kita tidak perlu mendapatkan skor.&lt;/p&gt;
+
+&lt;p&gt;Cara instal plugin dapat di baca &lt;a href=&#34;http://petanikode.com/2015/12/menulis-kode-serasa-main-game-dengan-modul-activate-power-mode-di-atom/&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;510&#34;
+    height=&#34;274&#34;
+    src=&#34;https://1.bp.blogspot.com/-2NnuasJU9Oo/VnUCMk2NMTI/AAAAAAAACSE/528Cjx8x_EE/s1600/active-power-mode-atom.gif&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-brackets&#34;&gt;2. Brackets&lt;/h2&gt;
+
+&lt;p&gt;Seorang programmer dengan nama akun Github Equals182, membuat plugin &lt;code&gt;activate-power-mode&lt;/code&gt;
+untuk teks editor Brackets.&lt;/p&gt;
+
+&lt;p&gt;Alamat repositorinya: &lt;a href=&#34;https://github.com/Equals182/brackets-power-mode&#34;&gt;https://github.com/Equals182/brackets-power-mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-codemirror&#34;&gt;3. Codemirror&lt;/h2&gt;
+
+&lt;p&gt;Pengguna Github bernama chinchang membuat plugin &lt;code&gt;activate-power-mode&lt;/code&gt; untuk
+Codemirror.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;655&#34;
+    height=&#34;285&#34;
+    alt=&#34;demo.gif&#34;
+    src=&#34;https://github.com/chinchang/code-blast-codemirror/raw/master/demo.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Live demo: &lt;a href=&#34;https://rawgit.com/chinchang/code-blast-codemirror/master/demo/index.html&#34;&gt;https://rawgit.com/chinchang/code-blast-codemirror/master/demo/index.html&lt;/a&gt;
+Alamat repositorinya: &lt;a href=&#34;https://github.com/chinchang/code-blast-codemirror&#34;&gt;https://github.com/chinchang/code-blast-codemirror&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-idea&#34;&gt;4. IDEA&lt;/h2&gt;
+
+&lt;p&gt;IntelliJ IDEA merupakan salah satu IDE untuk bahasa pemrograman Java. Android
+Studio dikembangkan dari IDEA, mungkin saja &lt;code&gt;activate-power-mode&lt;/code&gt; untuk
+IDEA bisa juga digunakan untuk Android Studio.&lt;/p&gt;
+
+&lt;p&gt;Alamat Repositori: &lt;a href=&#34;https://github.com/ViceFantasyPlace/activate-power-mode&#34;&gt;https://github.com/ViceFantasyPlace/activate-power-mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;736&#34;
+    height=&#34;421&#34;
+    alt=&#34;ActivatePowerModePreview.gif?raw=true&#34;
+    src=&#34;https://github.com/ViceFantasyPlace/activate-power-mode/raw/master/ActivatePowerModePreview.gif?raw=true&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-phpstrom&#34;&gt;5. PHPStrom&lt;/h2&gt;
+
+&lt;p&gt;PHPStrom juga IDE pengembangan dari IntelliJ IDEA. Namun, ada juga &lt;code&gt;activate-power-mode&lt;/code&gt;-nya
+tersendiri.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Alamat Plugin: &lt;a href=&#34;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&#34;&gt;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Alamat Repositori: &lt;a href=&#34;https://github.com/axaluss/power-mode-intellij-plugin&#34;&gt;https://github.com/axaluss/power-mode-intellij-plugin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;736&#34;
+    height=&#34;421&#34;
+    alt=&#34;screenshot_15884.png&#34;
+    src=&#34;https://plugins.jetbrains.com/files/8251/screenshot_15884.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Woho, panas :smile: &lt;code&gt;activate-power-mode&lt;/code&gt; di PHPStrom ada apinya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-javascript&#34;&gt;6. Javascript&lt;/h2&gt;
+
+&lt;p&gt;Javascript memang bukan teks editor. Atom sendiri dibuat dengan Javascript.
+Karena itu, ada juga yang membuatnya untuk &lt;em&gt;libaray&lt;/em&gt; javascript.&lt;/p&gt;
+
+&lt;p&gt;Live demo: &lt;a href=&#34;http://0xabcdef.com/activate-power-mode/&#34;&gt;http://0xabcdef.com/activate-power-mode/&lt;/a&gt;
+Repositori: &lt;a href=&#34;https://github.com/disjukr/activate-power-mode&#34;&gt;https://github.com/disjukr/activate-power-mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-vim&#34;&gt;7. Vim&lt;/h2&gt;
+
+&lt;p&gt;Teks editor legendaris, tidak banyak yang bisa menggunakannya. Konon,
+yang menguasai teks editor ini, bisa dibilang sudah master.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;701&#34;
+    height=&#34;457&#34;
+    alt=&#34;screenshot.gif&#34;
+    src=&#34;https://raw.githubusercontent.com/mattn/vim-particle/master/data/screenshot.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositri: &lt;a href=&#34;https://github.com/mattn/vim-particle&#34;&gt;https://github.com/mattn/vim-particle&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;8-visual-studio&#34;&gt;8. Visual Studio&lt;/h2&gt;
+
+&lt;p&gt;Visual Studio merupakan IDE untuk pemrograman VB, C#, dan .NET. Visual Studio
+merupakan produk yang dikeluarkan Microsoft.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;820&#34;
+    height=&#34;180&#34;
+    alt=&#34;Screenshot.png&#34;
+    src=&#34;https://raw.githubusercontent.com/LiamMorrow/Visual-Studio-Power-Mode/master/PowerMode/Resources/Screenshot.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositri: &lt;a href=&#34;https://github.com/LiamMorrow/Visual-Studio-Power-Mode&#34;&gt;https://github.com/LiamMorrow/Visual-Studio-Power-Mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;9-windows&#34;&gt;9. Windows&lt;/h2&gt;
+
+&lt;p&gt;Activate Power Mode yang satu ini khusus untuk sistem operasi Windows. Efek
+&lt;code&gt;activate-power-mode&lt;/code&gt; muncul ketika mengetik. Bisa untuk Notepad++, Notepad,
+dan teks editor Windows lainnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;500&#34;
+    height=&#34;200&#34;
+    alt=&#34;demo.gif&#34;
+    src=&#34;https://raw.githubusercontent.com/if1live/ParticleOnTextCursor/master/document/demo.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositori: &lt;a href=&#34;https://github.com/if1live/ParticleOnTextCursor&#34;&gt;https://github.com/if1live/ParticleOnTextCursor&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;10-xcode&#34;&gt;10. XCode&lt;/h2&gt;
+
+&lt;p&gt;XCode merupakan IDE untuk MacOS. Tidak mau kalah dengan yang lain, plug-in
+&lt;code&gt;activate-power-mode&lt;/code&gt; untuk XCode tersedia dalam tiga respositori.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;500&#34;
+    height=&#34;200&#34;
+    alt=&#34;about.gif&#34;
+    src=&#34;https://github.com/poboke/ActivatePowerMode/raw/master/Screenshots/about.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositori&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/poboke/ActivatePowerMode&#34;&gt;https://github.com/poboke/ActivatePowerMode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/qfish/XActivatePowerMode&#34;&gt;https://github.com/qfish/XActivatePowerMode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Dawn-/CoderPower&#34;&gt;https://github.com/Dawn-/CoderPower&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;11-hyper&#34;&gt;11. Hyper&lt;/h2&gt;
+
+&lt;p&gt;Hyper bukan teks editor maupun IDE. Hyper adalah Terminal Emulator berbasis Web (&lt;a href=&#34;http://petanikode.com/topik/javascript&#34;&gt;Javascript&lt;/a&gt;).
+Pada &lt;a href=&#34;https://hyper.is&#34;&gt;website resminya&lt;/a&gt;, Hyper memperlihatkan efek &lt;code&gt;activate-power-mode&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;457&#34;
+    height=&#34;340&#34;
+    alt=&#34;13c9bfe6-4905-11e6-8fe4-baf8fc8d9293.gif&#34;
+    src=&#34;https://cloud.githubusercontent.com/assets/13041/16820268/13c9bfe6-4905-11e6-8fe4-baf8fc8d9293.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah beberapa plug-in Activate Power Mode, menurut kalian manakah yang paling
+bagus?&lt;/p&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/codeinthedark/awesome-power-mode&#34;&gt;github.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hyper.is&#34;&gt;hyper.is&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&#34;&gt;plugins.jetbrains.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Membuat Halaman Github untuk Proyek atau Repositori</title>
       <link>http://petanikode.com/2017/02/cara-membuat-halaman-github-untuk-proyek-atau-repositori/</link>
       <pubDate>Mon, 06 Feb 2017 07:15:11 +0800</pubDate>
@@ -492,16 +691,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       
       <guid>http://petanikode.com/2016/06/tutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;i&gt;Marker&lt;/i&gt; berfungsi sebagai penanda sebuah lokasi atau titik dalam peta. Pada kesempatan ini, kita akan coba membuat sebuah marker di Google Maps. Anda bisa menggunakan &lt;a href=&#34;http://jsbin.com/bejiduz/3/edit&#34; target=&#34;_blank&#34;&gt;contoh kode sebelumnya&lt;/a&gt; untuk uji coba.&lt;br /&gt;&lt;h2&gt;Objek &lt;i&gt;Marker&lt;/i&gt;&lt;/h2&gt;Seperti halnya peta, &lt;i&gt;marker&lt;/i&gt; juga merupakan sebuah objek yang dapat dibuat dengan kode berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker = new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: new google.maps.LatLng(-8.5830695,116.3202515),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Pada kode pembuatan marker di atas, terdapat dua properti penting yaitu &lt;code&gt;position&lt;/code&gt; dan &lt;code&gt;map&lt;/code&gt;. Properti &lt;code&gt;position&lt;/code&gt; berfungsi untuk menentukan titik atau posisi &lt;i&gt;marker&lt;/i&gt; pada peta. Sementara itu, properti &lt;code&gt;map&lt;/code&gt; berfungsi untuk meletakkan &lt;i&gt;marker&lt;/i&gt; pada peta. Karena sebelumnya kita sudah membuat objek peta, maka kita tinggal menggunakan saja.&lt;br /&gt;&lt;br /&gt;Kode Lengkapnya:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/7/embed?html&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Hasil output:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/7/embed?output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Animasi &lt;i&gt;Marker&lt;/i&gt;&lt;/h2&gt;Animasi &lt;i&gt;marker&lt;/i&gt; dapat dibuat dengan menambahkan properti &lt;code&gt;animation&lt;/code&gt;, contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker=new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: new google.maps.LatLng(-8.5830695,116.3202515),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; animation: google.maps.Animation.BOUNCE&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Maka akan menghasilkan:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/8/embed&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kostum Ikon&lt;/h2&gt;Kita bisa mengganti ikon bawaan &lt;i&gt;marker&lt;/i&gt; sesui dengan selera kita. Gunakan properti &lt;code&gt;icon&lt;/code&gt; dengan nilai alamat URL gambar ikon. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker=new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: new google.maps.LatLng(-8.623592, 116.222123),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; icon: &amp;ldquo;&lt;a href=&#34;http://www.petanikode.com/favicon.ico&amp;quot;&#34;&gt;http://www.petanikode.com/favicon.ico&amp;quot;&lt;/a&gt;&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Format ikon tidak harus &lt;i&gt;&amp;rsquo;.ico&amp;rsquo;&lt;/i&gt;, format gambar seperti &lt;i&gt;jpg&lt;/i&gt;, &lt;i&gt;png&lt;/i&gt;, dan &lt;i&gt;gif&lt;/i&gt; juga diterima. Kode diatas akan menghasilkan output:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/9/embed&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Taruh Marker ketika Peta Diklik&lt;/h2&gt;Bagaimana kalau, &lt;i&gt;marker&lt;/i&gt; dibuat ketika peta diklik? Hal ini dapat dilakukan dengan menambahkan &lt;i&gt;event listerner&lt;/i&gt; pada peta. Kemudian memanggil fungsi pembuat &lt;i&gt;marker&lt;/i&gt;. Sebelumnya kita buat dulu fungsi pembuat &lt;i&gt;marker&lt;/i&gt; bernama &lt;code&gt;taruhMarker()&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;function taruhMarker(peta, posisiTitik){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // membuat Marker&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; var marker = new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: posisiTitik,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; });&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Letakkan fungsi &lt;code&gt;taruhMarker()&lt;/code&gt; di atas fungsi &lt;code&gt;initialize()&lt;/code&gt;. Kemudian tambahkan event listerner pada fungsi &lt;code&gt;initialize()&lt;/code&gt; atau persiapan peta.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;google.maps.event.addListener(peta, &amp;lsquo;click&amp;rsquo;, function(event) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; taruhMarker(this, event.latLng);&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Kode lengkap dan hasil output:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/12/embed?html,output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Taruh Hanya Satu Marker&lt;/h2&gt;Hasil output di atas menampilkan lebih dari satu &lt;i&gt;marker&lt;/i&gt;. Setiap kali peta diklik, &lt;i&gt;marker&lt;/i&gt; akan senantiasa bertambah. Agar hanya ada satu marker saja yang ditaruh di peta, maka kita perlu membuatkan pengecekan kondisi (apakah sudah ada &lt;i&gt;marker&lt;/i&gt; atau tidak?) pada fungsi &lt;code&gt;taruhMarker()&lt;/code&gt;. Sebelumnya, buatlah objek atau variabel &lt;i&gt;marker&lt;/i&gt; menjadi global agar dapat dicek.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker;&lt;br /&gt;function taruhMarker(peta, posisiTitik){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if( marker ){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // pindahkan marker&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; marker.setPosition(posisiTitik);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; } else {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // buat marker baru&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; marker = new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: posisiTitik,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; });&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Kode lengkap dan demo hasil:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/14/embed?html,output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?3.36.9&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;h2&gt;Penutup&lt;/h2&gt;Nah!, sekian dulu tutorial ini. Terima kasih sudah membaca. Selemat menunaikan ibadah puasa.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Google Maps API - Menampilkan Peta di dalam Web</title>
-      <link>http://petanikode.com/2016/06/tutorial-google-maps-api---menampilkan-peta-di-dalam-web/</link>
-      <pubDate>Fri, 24 Jun 2016 09:37:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/06/tutorial-google-maps-api---menampilkan-peta-di-dalam-web/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Di tengah-tengah kesibukan mengerjakan proyek, akhirnya saya menyempatkan diri untuk mem-posting sesuatu. Pada kesempatan ini kita akan mempelajari Google Maps API. Karena kebetulan, pada proyek yang sedang saya kerjakan menggunakan Google Map. Saya akan menggunakan referensi yang sahih dan dapat dipercaya, &lt;a href=&#34;http://www.w3schools.com/googleapi/default.asp&#34; target=&#34;_blank&#34;&gt;W3Schools&lt;/a&gt; dan &lt;a href=&#34;https://developers.google.com/maps/&#34; target=&#34;_blank&#34;&gt;Google Developer&lt;/a&gt;. Baiklah mari kita mulai.&lt;br /&gt;&lt;h2&gt;Apa itu Google Maps API?&lt;/h2&gt;Google Maps API &lt;i&gt;(Application Programming Interface)&lt;/i&gt; merupakan sebuah API yang disediakan oleh Google untuk menggunakan peta Google &lt;i&gt;(Google Map)&lt;/i&gt; dalam aplikasi yang kita bangun. Google Maps API memungkinkan kita memodifikasi peta dan informasi yang ada di dalamnya.&lt;br /&gt;&lt;br /&gt;Google Maps API dikelompokkan berdasarkan platform: Web, Android, dan iOS. Pada kesempatan ini kita akan menggunakan Google Maps API untuk Web. Sedangkan untuk Android dan iOS, mungkin (insa&amp;rsquo;allah) saya akan bahas nanti.&lt;br /&gt;&lt;h2&gt;Menampilkan Peta&lt;/h2&gt;Ada beberapa langkah yang dilakukan untuk menampilkan peta di dalam Web:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Menyisipkan &lt;i&gt;library&lt;/i&gt; API Google Map&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://maps.googleapis.com/maps/api/js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://maps.googleapis.com/maps/api/js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Membuat sebuah fungsi &lt;code&gt;initialize()&lt;/code&gt; untuk mempersiapkan peta.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;function initialize() { &amp;hellip; }&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Membuat properti peta dalam bentuk objek&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var propertiPeta = {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; center:new google.maps.LatLng(-8.5830695,116.3202515),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; zoom:9,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mapTypeId:google.maps.MapTypeId.ROADMAP&lt;br /&gt;};&lt;/code&gt;&lt;/pre&gt;Letakkan kode di atas dalam fungsi &lt;code&gt;initialize()&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Membuat objek Peta&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var peta = new google.maps.Map(document.getElementById(&amp;ldquo;googleMap&amp;rdquo;), propertiPeta);&lt;/code&gt;&lt;/pre&gt;Letakkan kode di atas dalam fungsi &lt;code&gt;initialize()&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Menampilkan peta ketika jendela &lt;i&gt;(window)&lt;/i&gt; di-load&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;google.maps.event.addDomListener(window, &amp;lsquo;load&amp;rsquo;, initialize);&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Membuat tag &lt;i&gt;div&lt;/i&gt; sebagai kontainer untuk menampilkan peta&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;div id=&amp;ldquo;googleMap&amp;rdquo; style=&amp;ldquo;width:100%;height:380px;&amp;rdquo;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;/ol&gt;Kode Lengkapnya dan demo hasil:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/bejiduz/embed?html,output&#34;&gt;Tutorial Google Map - Petani Kode on jsbin.com&lt;/a&gt;&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?3.35.13&#34;&gt;&lt;/script&gt;&lt;br /&gt;Dalam pembuatan properti peta, kita bisa menentukan posisi peta atau titik koordinat mula-mula, skala &lt;i&gt;(zoom)&lt;/i&gt;, tipe peta, dsb. Sementara untuk tag &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; untuk menampilkan peta, atribut &lt;i&gt;id&lt;/i&gt;-nya harus sesui dengan &lt;i&gt;id&lt;/i&gt; yang dipilih saat pembuatan peta (nomer 4).&lt;br /&gt;&lt;br /&gt;Ada baiknya juga kita perhatikan level zoom yang digunakan. Berdasarkan dokumentasi di &lt;a href=&#34;https://developers.google.com/maps/documentation/javascript/tutorial#zoom-levels&#34; target=&#34;_blank&#34;&gt;Google Developer&lt;/a&gt;, berikut ini nilai level zoom dan kegunaanya.&lt;br /&gt;&lt;ul&gt;&lt;li&gt;0: Bumi (smua peta ditampilkan)&lt;/li&gt;&lt;li&gt;1: Peta Dunia&lt;/li&gt;&lt;li&gt;5: Landmass/continent&lt;/li&gt;&lt;li&gt;10: Kota&lt;/li&gt;&lt;li&gt;15: Jalan&lt;/li&gt;&lt;li&gt;20: Bangunan &lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;Penutup&lt;/h2&gt;Sekian tutorial singkat Google Maps API ini, semoga bermanfaat dan mudah-mudahan saya diberikan kesehatan untuk melanjutkan tutorial ini.&lt;/p&gt;
 </description>
     </item>
     

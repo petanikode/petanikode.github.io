@@ -10,6 +10,205 @@
     <atom:link href="http://petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Activate Power Mode Ada di Mana-mana</title>
+      <link>http://petanikode.com/2017/02/activate-power-mode-ada-di-mana-mana/</link>
+      <pubDate>Tue, 14 Feb 2017 21:46:29 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/activate-power-mode-ada-di-mana-mana/</guid>
+      <description>
+
+&lt;p&gt;Pada akhir tahun 2015, saya pernah menulis tentang &lt;a href=&#34;http://petanikode.com/2015/12/menulis-kode-serasa-main-game-dengan-modul-activate-power-mode-di-atom/&#34;&gt;plug-in Atom&lt;/a&gt;
+bernama &lt;code&gt;activate-power-mode&lt;/code&gt;. Plug-in memang keren, membuat kita merasa semakin asyik
+menulis kode. Kepopuleran plug-in ini membuat programmer yang lain ikut membuat
+plug-in serupa untuk teks editor selain Atom.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini daftar plug-in &lt;code&gt;activate-power-mode&lt;/code&gt;, dikutip dari repositori
+&lt;a href=&#34;https://github.com/codeinthedark/awesome-power-mode&#34;&gt;awesome-power-mode&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-atom&#34;&gt;1. Atom&lt;/h2&gt;
+
+&lt;p&gt;Awalmulanya plug-in ini dibuat sebagai replikas dari &lt;a href=&#34;http://codeinthedark.com/editor/&#34;&gt;&lt;em&gt;Code in Dark Editor&lt;/em&gt;&lt;/a&gt;.
+Kita harus mendapatkan skor di atas 200 untuk dapat menyaksikan efek &lt;code&gt;activate-power-mode&lt;/code&gt;.
+Sedangkan, kalau kita menggunakan plug-in kita tidak perlu mendapatkan skor.&lt;/p&gt;
+
+&lt;p&gt;Cara instal plugin dapat di baca &lt;a href=&#34;http://petanikode.com/2015/12/menulis-kode-serasa-main-game-dengan-modul-activate-power-mode-di-atom/&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;510&#34;
+    height=&#34;274&#34;
+    src=&#34;https://1.bp.blogspot.com/-2NnuasJU9Oo/VnUCMk2NMTI/AAAAAAAACSE/528Cjx8x_EE/s1600/active-power-mode-atom.gif&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-brackets&#34;&gt;2. Brackets&lt;/h2&gt;
+
+&lt;p&gt;Seorang programmer dengan nama akun Github Equals182, membuat plugin &lt;code&gt;activate-power-mode&lt;/code&gt;
+untuk teks editor Brackets.&lt;/p&gt;
+
+&lt;p&gt;Alamat repositorinya: &lt;a href=&#34;https://github.com/Equals182/brackets-power-mode&#34;&gt;https://github.com/Equals182/brackets-power-mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-codemirror&#34;&gt;3. Codemirror&lt;/h2&gt;
+
+&lt;p&gt;Pengguna Github bernama chinchang membuat plugin &lt;code&gt;activate-power-mode&lt;/code&gt; untuk
+Codemirror.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;655&#34;
+    height=&#34;285&#34;
+    alt=&#34;demo.gif&#34;
+    src=&#34;https://github.com/chinchang/code-blast-codemirror/raw/master/demo.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Live demo: &lt;a href=&#34;https://rawgit.com/chinchang/code-blast-codemirror/master/demo/index.html&#34;&gt;https://rawgit.com/chinchang/code-blast-codemirror/master/demo/index.html&lt;/a&gt;
+Alamat repositorinya: &lt;a href=&#34;https://github.com/chinchang/code-blast-codemirror&#34;&gt;https://github.com/chinchang/code-blast-codemirror&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-idea&#34;&gt;4. IDEA&lt;/h2&gt;
+
+&lt;p&gt;IntelliJ IDEA merupakan salah satu IDE untuk bahasa pemrograman Java. Android
+Studio dikembangkan dari IDEA, mungkin saja &lt;code&gt;activate-power-mode&lt;/code&gt; untuk
+IDEA bisa juga digunakan untuk Android Studio.&lt;/p&gt;
+
+&lt;p&gt;Alamat Repositori: &lt;a href=&#34;https://github.com/ViceFantasyPlace/activate-power-mode&#34;&gt;https://github.com/ViceFantasyPlace/activate-power-mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;736&#34;
+    height=&#34;421&#34;
+    alt=&#34;ActivatePowerModePreview.gif?raw=true&#34;
+    src=&#34;https://github.com/ViceFantasyPlace/activate-power-mode/raw/master/ActivatePowerModePreview.gif?raw=true&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-phpstrom&#34;&gt;5. PHPStrom&lt;/h2&gt;
+
+&lt;p&gt;PHPStrom juga IDE pengembangan dari IntelliJ IDEA. Namun, ada juga &lt;code&gt;activate-power-mode&lt;/code&gt;-nya
+tersendiri.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Alamat Plugin: &lt;a href=&#34;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&#34;&gt;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Alamat Repositori: &lt;a href=&#34;https://github.com/axaluss/power-mode-intellij-plugin&#34;&gt;https://github.com/axaluss/power-mode-intellij-plugin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;736&#34;
+    height=&#34;421&#34;
+    alt=&#34;screenshot_15884.png&#34;
+    src=&#34;https://plugins.jetbrains.com/files/8251/screenshot_15884.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Woho, panas :smile: &lt;code&gt;activate-power-mode&lt;/code&gt; di PHPStrom ada apinya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-javascript&#34;&gt;6. Javascript&lt;/h2&gt;
+
+&lt;p&gt;Javascript memang bukan teks editor. Atom sendiri dibuat dengan Javascript.
+Karena itu, ada juga yang membuatnya untuk &lt;em&gt;libaray&lt;/em&gt; javascript.&lt;/p&gt;
+
+&lt;p&gt;Live demo: &lt;a href=&#34;http://0xabcdef.com/activate-power-mode/&#34;&gt;http://0xabcdef.com/activate-power-mode/&lt;/a&gt;
+Repositori: &lt;a href=&#34;https://github.com/disjukr/activate-power-mode&#34;&gt;https://github.com/disjukr/activate-power-mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-vim&#34;&gt;7. Vim&lt;/h2&gt;
+
+&lt;p&gt;Teks editor legendaris, tidak banyak yang bisa menggunakannya. Konon,
+yang menguasai teks editor ini, bisa dibilang sudah master.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;701&#34;
+    height=&#34;457&#34;
+    alt=&#34;screenshot.gif&#34;
+    src=&#34;https://raw.githubusercontent.com/mattn/vim-particle/master/data/screenshot.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositri: &lt;a href=&#34;https://github.com/mattn/vim-particle&#34;&gt;https://github.com/mattn/vim-particle&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;8-visual-studio&#34;&gt;8. Visual Studio&lt;/h2&gt;
+
+&lt;p&gt;Visual Studio merupakan IDE untuk pemrograman VB, C#, dan .NET. Visual Studio
+merupakan produk yang dikeluarkan Microsoft.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;820&#34;
+    height=&#34;180&#34;
+    alt=&#34;Screenshot.png&#34;
+    src=&#34;https://raw.githubusercontent.com/LiamMorrow/Visual-Studio-Power-Mode/master/PowerMode/Resources/Screenshot.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositri: &lt;a href=&#34;https://github.com/LiamMorrow/Visual-Studio-Power-Mode&#34;&gt;https://github.com/LiamMorrow/Visual-Studio-Power-Mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;9-windows&#34;&gt;9. Windows&lt;/h2&gt;
+
+&lt;p&gt;Activate Power Mode yang satu ini khusus untuk sistem operasi Windows. Efek
+&lt;code&gt;activate-power-mode&lt;/code&gt; muncul ketika mengetik. Bisa untuk Notepad++, Notepad,
+dan teks editor Windows lainnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;500&#34;
+    height=&#34;200&#34;
+    alt=&#34;demo.gif&#34;
+    src=&#34;https://raw.githubusercontent.com/if1live/ParticleOnTextCursor/master/document/demo.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositori: &lt;a href=&#34;https://github.com/if1live/ParticleOnTextCursor&#34;&gt;https://github.com/if1live/ParticleOnTextCursor&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;10-xcode&#34;&gt;10. XCode&lt;/h2&gt;
+
+&lt;p&gt;XCode merupakan IDE untuk MacOS. Tidak mau kalah dengan yang lain, plug-in
+&lt;code&gt;activate-power-mode&lt;/code&gt; untuk XCode tersedia dalam tiga respositori.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-anim
+    width=&#34;500&#34;
+    height=&#34;200&#34;
+    alt=&#34;about.gif&#34;
+    src=&#34;https://github.com/poboke/ActivatePowerMode/raw/master/Screenshots/about.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-anim&gt;&lt;/p&gt;
+
+&lt;p&gt;Repositori&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/poboke/ActivatePowerMode&#34;&gt;https://github.com/poboke/ActivatePowerMode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/qfish/XActivatePowerMode&#34;&gt;https://github.com/qfish/XActivatePowerMode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Dawn-/CoderPower&#34;&gt;https://github.com/Dawn-/CoderPower&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;11-hyper&#34;&gt;11. Hyper&lt;/h2&gt;
+
+&lt;p&gt;Hyper bukan teks editor maupun IDE. Hyper adalah Terminal Emulator berbasis Web (&lt;a href=&#34;http://petanikode.com/topik/javascript&#34;&gt;Javascript&lt;/a&gt;).
+Pada &lt;a href=&#34;https://hyper.is&#34;&gt;website resminya&lt;/a&gt;, Hyper memperlihatkan efek &lt;code&gt;activate-power-mode&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;457&#34;
+    height=&#34;340&#34;
+    alt=&#34;13c9bfe6-4905-11e6-8fe4-baf8fc8d9293.gif&#34;
+    src=&#34;https://cloud.githubusercontent.com/assets/13041/16820268/13c9bfe6-4905-11e6-8fe4-baf8fc8d9293.gif&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah beberapa plug-in Activate Power Mode, menurut kalian manakah yang paling
+bagus?&lt;/p&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/codeinthedark/awesome-power-mode&#34;&gt;github.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hyper.is&#34;&gt;hyper.is&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&#34;&gt;plugins.jetbrains.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutorial Git 04 - Melihat Log Revisi</title>
       <link>http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/</link>
       <pubDate>Tue, 14 Feb 2017 08:56:09 +0800</pubDate>
@@ -1497,123 +1696,6 @@ di Stack Overflow dan mendapatkan jawabannya.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Contoh kode lengkapnya dapat anda lihat &lt;a href=&#34;https://github.com/ardianta/blogimport/blob/master/main.go&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan</title>
-      <link>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</link>
-      <pubDate>Sun, 15 Jan 2017 21:06:22 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</guid>
-      <description>&lt;p&gt;Ada cerita menarik yang saya alami ketika &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi Petani Kode dari Blogger ke Hugo&lt;/a&gt;.
-Waktu itu, ketika saya ingin mengimpor konten dari Blogger ke Hugo, ada sesuatu
-yang kurang dari skrip Go yang disediakan. Kekuarangnnya tidak mampu membuat
-atau mengambil gambar &lt;em&gt;(thumbnail)&lt;/em&gt; untuk setiap artikel.&lt;/p&gt;
-
-&lt;p&gt;Saya kemudian berpikir, mungkin nanti saya bisa edit setiap gambar untuk artikel.
-Namun, rasanya akan sangat melelahkan melakukannya karena jumlah artikelnya sampai ratusan. Tidak ingin melakukan hal yang berulang-ulang seperti kata orang,
-&lt;em&gt;Don&amp;rsquo;t Repeat Yourself&lt;/em&gt; di singkat DRY. Saya kemudian membuka &lt;a href=&#34;https://github.com/natefinch/blogimport/issues/1&#34;&gt;isu baru&lt;/a&gt; di repositori
-skrip ini.&lt;/p&gt;
-
-&lt;p&gt;Beberapa jam kemudian, Nate Finch membalas isu yang saya buat.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I&amp;rsquo;d be more than happy to accept a pull request for this, if you want to write it.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Terjemahnya kira-kira begini, &amp;ldquo;Saya akan sangat senang sekali menerima &lt;em&gt;pull request&lt;/em&gt; untuk hal ini, jika anda berkenan menulisnya&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;Awalnya saya berharap agar Nate Finch mau meng-update skripnya, tapi malah saya yang disuruh nulis dan saya tidak paham bahasa pemrograman Go sama sekali. Mungkin saja si Nate Finch sedang sibuk, sehingga tidak punya waktu untuk menulis skrip ini lagi.&lt;/p&gt;
-
-&lt;p&gt;Karena isu ini adalah kebutuhan saya, maka mau tidak mau saya sendiri yang harus membuatnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;380&#34;
-width=&#34;720&#34;
-alt=&#34;Ghoper Petani Kode&#34;
-src=&#34;https://3.bp.blogspot.com/-tHAcqs4Bv1o/WIAVwWJzaLI/AAAAAAAADps/sBBGZxVxmcI66poCB-Mj0AEzIkDeDG8KQCPcB/s1600/go-gopher-petanikode.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Saya tidak harus belajar bahasa pemrograman Go dari awal. Karena sintaknya cukup mirip dengan bahasa pemrograman yang pernah saya pelajari. Pertama saya harus pahami dulu skrip yang ditulis Nate Finch.&lt;/p&gt;
-
-&lt;p&gt;Pertama, saya menebak-nebak dulu fungsi dari setiap prosedurnya dengan membaca dari bawah ke atas.&lt;/p&gt;
-
-&lt;p&gt;Saya kemudian mengetahui, fungsi ini untuk membuat file &lt;em&gt;markdown&lt;/em&gt;, meski tidak tahu detail algoritmanya. Saya dapat petunjuk karena melihat ada &lt;code&gt;.md&lt;/code&gt; di sana.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func writeEntry(e Entry, dir string) error {
-	filename := filepath.Join(dir, makePath(e.Title)+&amp;quot;.md&amp;quot;)
-	f, err := os.OpenFile(filename, os.O_CREATE | os.O_TRUNC | os.O_WRONLY, 0644)
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	return t.Execute(f, e)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian naik ke atas, saya menemukan baris kode ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;if err := writeEntry(entry, dir); err != nil {
-    log.Fatalf(&amp;quot;Failed writing post %q to disk:\n%s&amp;quot;, entry.Title, err)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kode tersebut pasti pemanggilan fungsi yang tadi. Kemudian saya melakukan penelusuran dengan parameternya &lt;code&gt;entry&lt;/code&gt; dan &lt;code&gt;dir&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Bolak-balik, atas-bawah. Saya menemukan:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;parameter &lt;code&gt;dir&lt;/code&gt; dari &lt;code&gt;dir := args[1]&lt;/code&gt;, yaitu argumen yang diberikan ketika menjalankan kode ini. Karena &lt;code&gt;args&lt;/code&gt; itu tidak asing bagi pengguna linux seperti saya.&lt;/li&gt;
-&lt;li&gt;parameter &lt;code&gt;entry&lt;/code&gt; dari nama alias &lt;code&gt;exp.Entries&lt;/code&gt;, karena di sana sepertinya ada perulangan &lt;em&gt;foreach&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kemudian saya menelusuri asal-usul &lt;code&gt;exp.Entries&lt;/code&gt; ini. Ternyata dia barasal dari &lt;code&gt;exp := Export{}&lt;/code&gt;. Lalu, &lt;code&gt;Export{}&lt;/code&gt; itu berasal dari struk &lt;code&gt;Export&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;type Export struct {
-    XMLName xml.Name `xml:&amp;quot;feed&amp;quot;`
-    Entries []Entry `xml:&amp;quot;entry&amp;quot;`
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sampai di sini saya sedikit mengerti algoritma dari skrip ini.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Skrip ini mengubah semua tag XML menjadi struk&lt;/li&gt;
-&lt;li&gt;Lalu Struk tadi diurai dalam perluangan&lt;/li&gt;
-&lt;li&gt;Setelah itu, buat file &lt;em&gt;markdown&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Kira-kira begitulah yang saya pahami.&lt;/p&gt;
-
-&lt;p&gt;Kemudian saya mencoba merubah atribut yang ada dalam struk. Karena saya kira sudah paham maksud dari struk tersebut. Namun ternyata tidak ada hasil apa-apa.&lt;/p&gt;
-
-&lt;p&gt;Saya ingin mengambil URL dari elemen XML ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;media:thumbnail xmlns:media=&#39;http://search.yahoo.com/mrss/&#39; url=&#39;https://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s72-c/thumbnail-image.png&#39; height=&#39;72&#39; width=&#39;72&#39;/&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Terlihat di sana ada penggunaan &lt;em&gt;namespace&lt;/em&gt; untuk elemen tersebut. Kemudian saya mencari dan menemukan jawaban di &lt;a href=&#34;http://stackoverflow.com/a/14152832&#34;&gt;Stack Overflow&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Setelah mencoba dan berhasil mendapatkan URL-nya, yay!&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;400&#34;
-width=&#34;600&#34;
-alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
-src=&#34;http://i.imgur.com/z7MveXv.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Namun, ukuran gambar dari URL tersebut adalah 72x72 piksel. Lalu, selanjutnya saya menginginkan gambar yang lebih besar.&lt;/p&gt;
-
-&lt;p&gt;Ketemu masalah lagi, gambar tidak bisa diperbesar. Karena tidak ada fungsi untuk &lt;em&gt;replace string&lt;/em&gt; pada template Go. Tidak lama kemudian, saya berhasil menyelesaikannya.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/&#34;&gt;Cara Replace String pada Template Go&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah semuanya beres, saya kemudian melakukan &lt;em&gt;pull request&lt;/em&gt; ke repositori milik Nate Finch. Saat ini masih belum di-reviw, diterima atau ditolak terserah Nate Finch. Saya hanya butuh untuk masalah saya saja. Namun, jika anda juga membutuhkannya bisa klon atau &lt;em&gt;fork&lt;/em&gt; &lt;a href=&#34;https://github.com/ardianta/blogimport&#34;&gt;repositori dari saya&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Luar biasa, tidak pernah belajar bahasa pemrograman Go sama sekali, malah melakukan &lt;em&gt;pull request&lt;/em&gt; ke proyek yang menggnuakan bahasa pemrograman Go.&lt;/p&gt;
 </description>
     </item>
     

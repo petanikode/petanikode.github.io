@@ -7,8 +7,191 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 14 Feb 2017 21:46:29 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 Feb 2017 20:12:19 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bahaya! Password dan Token API Bisa Dicuri dengan Sangat Mudah di Github</title>
+      <link>http://petanikode.com/2017/02/bahaya-password-dan-token-api-bisa-dicuri-dengan-sangat-mudah-di-github/</link>
+      <pubDate>Wed, 15 Feb 2017 20:12:19 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/bahaya-password-dan-token-api-bisa-dicuri-dengan-sangat-mudah-di-github/</guid>
+      <description>
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;github-remove-password-petanikode.jpg&#34;
+    src=&#34;https://1.bp.blogspot.com/-jXRLtOGiGXs/WKSVce4PaDI/AAAAAAAAD_o/tMWKujJUoXwrKxbJBI9QHe2XlNuzQBTHACPcB/s1600/github-remove-password-petanikode.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Tidak perlu kemampuan khusus, tidak pelu &lt;em&gt;tools&lt;/em&gt; yang canggih, hanya bermodal
+kata kunci, kita sudah bisa mencuri password dan token API di Github. Teknik
+ini mirip seperti Google Dork.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Peringatan&lt;/strong&gt;: Tulisan ini bukan untuk mengajarkan anda menjadi pencuri dan
+melakukan perusakan, melainkan untuk berbagi pengetahuan. Agar developer
+semakin teliti dan berhati-hati dalam melakukan &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;password-dan-token-api-dalam-kode&#34;&gt;Password dan Token API dalam Kode&lt;/h2&gt;
+
+&lt;p&gt;Bayangkan kita lagi mengerjakan proyek web dengan &lt;a href=&#34;http://petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt;. Nanti
+kalau sudah jadi, kodenya akan kita sebar di Github dengan repositori publik.&lt;/p&gt;
+
+&lt;p&gt;Lalu, ditengah-tengah penulisan kode ini, kita melakukan &lt;em&gt;testing&lt;/em&gt; dengan konfigurasi
+&lt;em&gt;production&lt;/em&gt; dari server yang sudah kita sewa. Kira-kira konfigurasinya akan
+seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+// file: config.php
+
+$dbhost = &amp;quot;mysql.petanikode.com&amp;quot;;
+$dbuser = &amp;quot;petanikode&amp;quot;;
+$dbpass = &amp;quot;kopi&amp;quot;;
+$dbname = &amp;quot;petanikode_web&amp;quot;;
+
+$api_token = &amp;quot;09vasd9a7sdny7asdwqmnbe&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian kita melakukan &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
+git commit -m &amp;quot;blablablabla&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Beberapa saat kemudian, kode sudah hampir jadi dan siap untuk dipublikasikan ke
+Github. Lalu kita menghapus password pada konfigurasi yang tadi agar tidak diketahui
+orang.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+// file: config.php
+
+$dbhost = &amp;quot;YOUR DB HOST&amp;quot;;
+$dbuser = &amp;quot;YOUR DB USERNAME&amp;quot;;
+$dbpass = &amp;quot;YOUR DB PASS&amp;quot;;
+$dbname = &amp;quot;YOUR DB NAME&amp;quot;;
+
+$api_token = &amp;quot;YOUR API KEY&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu melakukan &lt;em&gt;commit&lt;/em&gt; lagi.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
+git commit -m &amp;quot;remove password&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian melakukan &lt;em&gt;push&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah! Di sinilah letak kesalahan fatalnya.&lt;/p&gt;
+
+&lt;p&gt;Tunggu sebantar, maksudnya apa?
+Saya kan sudah menghapus password dan token API dalam kode. Kesalahan fatal
+bagaimana maksudnya?&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;berburu-password-dan-token-api-di-github&#34;&gt;Berburu Password dan Token API di Github&lt;/h2&gt;
+
+&lt;p&gt;Berdasarkan kronologi cerita di atas, si Developer secara tidak sadar sudah
+menyebar password dan token API-nya di Github. Perhatikan saja pada &lt;em&gt;commit&lt;/em&gt;
+&lt;strong&gt;&amp;ldquo;remove password&amp;rdquo;&lt;/strong&gt;. Pada saat itu dilakukan, Git akan menyimpan perubahan yang ia lakukan.&lt;/p&gt;
+
+&lt;p&gt;Lalu seseorang mencari di Github dengan kata kunci &lt;strong&gt;&amp;ldquo;remove password&amp;rdquo;&lt;/strong&gt;, dan
+boom! Lihatlah apa yang ditemukan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1147&#34;
+    height=&#34;631&#34;
+    alt=&#34;Search+-+remove+password+-+github+-+petanikode.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-7dZKO50Nk8Y/WKRlNmQrLxI/AAAAAAAAD98/ZVAWYQ24Igsg5mMPAjCnALTrkp8ebmU5QCPcB/s1600/Search%2B-%2Bremove%2Bpassword%2B-%2Bgithub%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba lihat salah satu.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;758&#34;
+    height=&#34;436&#34;
+    alt=&#34;password+yang+dibagikan+di+github.png&#34;
+    src=&#34;https://1.bp.blogspot.com/-giPYQqSeGjw/WKRmEoZ-B3I/AAAAAAAAD-Q/TnplB4O0JgYol7FSnRF-dJ0uLRf2Hp8rACPcB/s1600/password%2Byang%2Bdibagikan%2Bdi%2Bgithub.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Lihat, sekarang sudah tahu kan kesalahan fatalnya. Oke, mari kita coba tes.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1366&#34;
+    height=&#34;743&#34;
+    alt=&#34;testing+server+hasil+curian.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-3k5ngoYU3fs/WKRnLXmtZPI/AAAAAAAAD-k/e2AIfgliihISqWYUsNkjpjEyC92OVT1nwCPcB/s1600/testing%2Bserver%2Bhasil%2Bcurian.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Whihihi :smile: bisa.&lt;/p&gt;
+
+&lt;h2 id=&#34;kata-kunci-yang-lain&#34;&gt;Kata Kunci yang Lain&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;add password&lt;/li&gt;
+&lt;li&gt;add .env&lt;/li&gt;
+&lt;li&gt;remove .env&lt;/li&gt;
+&lt;li&gt;delete .env&lt;/li&gt;
+&lt;li&gt;rm .env&lt;/li&gt;
+&lt;li&gt;remove secrets&lt;/li&gt;
+&lt;li&gt;hapus password&lt;/li&gt;
+&lt;li&gt;DriverManager.getConnection(&lt;/li&gt;
+&lt;li&gt;password extension:yaml extension:yml extension:json&lt;/li&gt;
+&lt;li&gt;remove password extension:php&lt;/li&gt;
+&lt;li&gt;I don&amp;rsquo;t know&lt;/li&gt;
+&lt;li&gt;dll.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;solusi&#34;&gt;Solusi&lt;/h2&gt;
+
+&lt;p&gt;Sebenarnya isu ini sedang ramai diperbincangkan di Hacker News. Orang-orang HN
+&lt;a href=&#34;https://github.com/BinetLoisir/FlipperMap/commit/5a384d9d4658669b9324de7ba933ed5b05911154&#34;&gt;mengomentari&lt;/a&gt; &lt;em&gt;commit&lt;/em&gt; yang dilakukan seperti di atas. Bahkan ada yang sampai membuat meme di sana.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;629&#34;
+    height=&#34;673&#34;
+    alt=&#34;komentar+dari+HN.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-1Ks3Oni8KGY/WKRthVg3pPI/AAAAAAAAD_M/lGS2Laa7J_Q0V57E6PEK47e7W9jhBeQ8QCPcB/s1600/komentar%2Bdari%2BHN.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Solusi yang mereka tawarkan diantaranya:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Masukan file konfigurasi ke dalam &lt;code&gt;.gitignore&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gunakan &lt;a href=&#34;https://github.com/AGWA/git-crypt&#34;&gt;git-crypt&lt;/a&gt; untuk mengenkripsi data sensitif.&lt;/li&gt;
+&lt;li&gt;Ubah Password&lt;/li&gt;
+&lt;li&gt;Gunakan &lt;a href=&#34;https://github.com/StackExchange/blackbox&#34;&gt;Blackbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/removing-sensitive-data-from-a-repository/&#34;&gt;Ikuti saran dari Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
+
+&lt;p&gt;Sekarang kita sudah tahu, bagaimana cara pencurian password dan token API di
+Github. Setidaknya kita bisa berhati-hati agar tidak melakukan kesalahan seperti
+di atas. Bayangkan kalau password server &lt;em&gt;production&lt;/em&gt; yang kita sebar itu milik
+perusahaan atau pemerintah, apa yang akan terjadi?&lt;/p&gt;
+
+&lt;p&gt;Referensi: &lt;a href=&#34;https://news.ycombinator.com/item?id=13650818&#34;&gt;HN&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Activate Power Mode Ada di Mana-mana</title>
@@ -1735,137 +1918,6 @@ sudah bisa langsung di-hosting di &lt;code&gt;username.github.io&lt;/code&gt;. T
 kalau suatu saat nanti repositori lokalnya hilang, maka kita bisa ambil dari sana lagi.&lt;/p&gt;
 
 &lt;p&gt;Referensi: &lt;a href=&#34;https://gohugo.io/tutorials/github-pages-blog/&#34;&gt;https://gohugo.io/tutorials/github-pages-blog/&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Menggunakan SSH di Github</title>
-      <link>http://petanikode.com/2017/01/cara-menggunakan-ssh-di-github/</link>
-      <pubDate>Sun, 29 Jan 2017 17:52:51 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/cara-menggunakan-ssh-di-github/</guid>
-      <description>
-
-&lt;p&gt;SSH memungkinkan kita untuk melakukan &lt;em&gt;push&lt;/em&gt; ke repository github tanpa login.
-Berbeda dengan cara yang biasa (melalui HTTPS), kita harus memasukkan &lt;em&gt;username&lt;/em&gt; dan &lt;em&gt;password&lt;/em&gt;
-setiap kali melakukan &lt;em&gt;push&lt;/em&gt;. Tapi dengan SSH kita tidak akan melakukan itu lagi.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-membuat-key-ssh&#34;&gt;1. Membuat Key SSH&lt;/h2&gt;
-
-&lt;p&gt;Jalankan perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda.
-Untuk &lt;em&gt;passpharse&lt;/em&gt; dikosongkan saja.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;644&#34;
-height=&#34;334&#34;
-alt=&#34;perintah ssh-keygen&#34;
-src=&#34;http://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Maka di dalam direktori &lt;code&gt;~/.ssh/&lt;/code&gt; akan tercipa file key baru.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;575&#34;
-height=&#34;116&#34;
-alt=&#34;file key ssh&#34;
-src=&#34;http://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-jalankan-ssh-angen-dan-load-ssh-key&#34;&gt;2. Jalankan SSH Angen dan Load SSH Key&lt;/h2&gt;
-
-&lt;p&gt;Untuk memastikan apakah &lt;em&gt;SSH Agent&lt;/em&gt; sudah berajalan atau tidak, gunakan perintah ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ps -e | grep [s]sh-agent
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kalau hasilnya seperti di bawah ini, berati &lt;em&gt;SSH Agent&lt;/em&gt; sudah berjalan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;884&#34;
-height=&#34;32&#34;
-alt=&#34;cek ssh agent&#34;
-src=&#34;http://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Tapi, kalau belum berjalan, gunakan perintah berikut ini untuk menjalankan SSH agent:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-agent /bin/bash
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Berikutnya kita Load SSH Key. Gunakan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-add ~/.ssh/id_anda
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian untuk mengecek, gunakan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-add -l
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;659&#34;
-height=&#34;106&#34;
-alt=&#34;Mendambahkan SSH&#34;
-src=&#34;http://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-tambahkan-ssh-key-ke-github&#34;&gt;3. Tambahkan SSH Key ke Github&lt;/h2&gt;
-
-&lt;p&gt;Sebelumnya ambil dulu kuncil publik yang sudah anda buat, gunakan perintah &lt;code&gt;cat&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cat ~/.ssh/id_anda.pub
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Copy semua teks yang ditampilkan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;659&#34;
-height=&#34;139&#34;
-alt=&#34;Melihat public key&#34;
-src=&#34;http://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Lalu masuk ke &lt;a href=&#34;https://github.com/settings/keys&#34;&gt;&lt;em&gt;Settings&amp;gt;SSH and GPG Keys&lt;/em&gt;&lt;/a&gt;,
-buat kunci baru dengan mengelik &lt;em&gt;New SSH Key&lt;/em&gt;. Lalu masukkan key yang sudah
-dibuat.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;1012&#34;
-height=&#34;553&#34;
-alt=&#34;Melihat public key&#34;
-src=&#34;https://1.bp.blogspot.com/-OmGVJTJicSU/WI3C0rA5EQI/AAAAAAAADuI/VI7r_F750gApkdo5rZDqOc7csITftAbdACPcB/s1600/Tambah%2BSSH%2Bkey%2Bke%2BGithub.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-uji-konektivitas&#34;&gt;4. Uji Konektivitas&lt;/h2&gt;
-
-&lt;p&gt;Ketik perintah berikut untuk menguji konektivitas SSH ke Github&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh -T git@github.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika hasilnya seperti berikut ini, berarti berhasil. Selanjutnya kita tinggal
-melakukan &lt;em&gt;push&lt;/em&gt; dengan SSH.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;626&#34;
-height=&#34;156&#34;
-alt=&#34;Uji konektivitas SSH Github&#34;
-src=&#34;https://4.bp.blogspot.com/-u_nlbitvZYQ/WI3DluqqeTI/AAAAAAAADuc/pPEzdkn3uhY51L7yGzgBLtm-4SQN--wqQCPcB/s1600/Uji%2Bcoba%2Bkonektivitas%2Bssh%2Bgithub.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Coba &lt;em&gt;clone&lt;/em&gt; sebuah repository dengan SSH dan lakukan push.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;467&#34;
-height=&#34;293&#34;
-alt=&#34;Clone Repositori dengan SSH&#34;
-src=&#34;https://2.bp.blogspot.com/-GWYLb-m67Ho/WI3FCCS2bBI/AAAAAAAADuw/r71ELqTvSD0HLVsW8KrOPv5Z7zb2XO3XwCPcB/s1600/Clone%2Brepository%2Bdengan%2BSSH.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah cara menggunakan SSH di Gitub. Kita hanya perlu membuat &lt;em&gt;public key&lt;/em&gt;,
-kemudian mendaftarkannya di akun Github.&lt;/p&gt;
-
-&lt;p&gt;referensi: &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;help.github.com&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

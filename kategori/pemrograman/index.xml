@@ -10,6 +10,189 @@
     <atom:link href="http://petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Bahaya! Password dan Token API Bisa Dicuri dengan Sangat Mudah di Github</title>
+      <link>http://petanikode.com/2017/02/bahaya-password-dan-token-api-bisa-dicuri-dengan-sangat-mudah-di-github/</link>
+      <pubDate>Wed, 15 Feb 2017 20:12:19 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/bahaya-password-dan-token-api-bisa-dicuri-dengan-sangat-mudah-di-github/</guid>
+      <description>
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;github-remove-password-petanikode.jpg&#34;
+    src=&#34;https://1.bp.blogspot.com/-jXRLtOGiGXs/WKSVce4PaDI/AAAAAAAAD_o/tMWKujJUoXwrKxbJBI9QHe2XlNuzQBTHACPcB/s1600/github-remove-password-petanikode.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Tidak perlu kemampuan khusus, tidak pelu &lt;em&gt;tools&lt;/em&gt; yang canggih, hanya bermodal
+kata kunci, kita sudah bisa mencuri password dan token API di Github. Teknik
+ini mirip seperti Google Dork.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Peringatan&lt;/strong&gt;: Tulisan ini bukan untuk mengajarkan anda menjadi pencuri dan
+melakukan perusakan, melainkan untuk berbagi pengetahuan. Agar developer
+semakin teliti dan berhati-hati dalam melakukan &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;password-dan-token-api-dalam-kode&#34;&gt;Password dan Token API dalam Kode&lt;/h2&gt;
+
+&lt;p&gt;Bayangkan kita lagi mengerjakan proyek web dengan &lt;a href=&#34;http://petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt;. Nanti
+kalau sudah jadi, kodenya akan kita sebar di Github dengan repositori publik.&lt;/p&gt;
+
+&lt;p&gt;Lalu, ditengah-tengah penulisan kode ini, kita melakukan &lt;em&gt;testing&lt;/em&gt; dengan konfigurasi
+&lt;em&gt;production&lt;/em&gt; dari server yang sudah kita sewa. Kira-kira konfigurasinya akan
+seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+// file: config.php
+
+$dbhost = &amp;quot;mysql.petanikode.com&amp;quot;;
+$dbuser = &amp;quot;petanikode&amp;quot;;
+$dbpass = &amp;quot;kopi&amp;quot;;
+$dbname = &amp;quot;petanikode_web&amp;quot;;
+
+$api_token = &amp;quot;09vasd9a7sdny7asdwqmnbe&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian kita melakukan &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
+git commit -m &amp;quot;blablablabla&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Beberapa saat kemudian, kode sudah hampir jadi dan siap untuk dipublikasikan ke
+Github. Lalu kita menghapus password pada konfigurasi yang tadi agar tidak diketahui
+orang.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+// file: config.php
+
+$dbhost = &amp;quot;YOUR DB HOST&amp;quot;;
+$dbuser = &amp;quot;YOUR DB USERNAME&amp;quot;;
+$dbpass = &amp;quot;YOUR DB PASS&amp;quot;;
+$dbname = &amp;quot;YOUR DB NAME&amp;quot;;
+
+$api_token = &amp;quot;YOUR API KEY&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu melakukan &lt;em&gt;commit&lt;/em&gt; lagi.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
+git commit -m &amp;quot;remove password&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian melakukan &lt;em&gt;push&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah! Di sinilah letak kesalahan fatalnya.&lt;/p&gt;
+
+&lt;p&gt;Tunggu sebantar, maksudnya apa?
+Saya kan sudah menghapus password dan token API dalam kode. Kesalahan fatal
+bagaimana maksudnya?&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;berburu-password-dan-token-api-di-github&#34;&gt;Berburu Password dan Token API di Github&lt;/h2&gt;
+
+&lt;p&gt;Berdasarkan kronologi cerita di atas, si Developer secara tidak sadar sudah
+menyebar password dan token API-nya di Github. Perhatikan saja pada &lt;em&gt;commit&lt;/em&gt;
+&lt;strong&gt;&amp;ldquo;remove password&amp;rdquo;&lt;/strong&gt;. Pada saat itu dilakukan, Git akan menyimpan perubahan yang ia lakukan.&lt;/p&gt;
+
+&lt;p&gt;Lalu seseorang mencari di Github dengan kata kunci &lt;strong&gt;&amp;ldquo;remove password&amp;rdquo;&lt;/strong&gt;, dan
+boom! Lihatlah apa yang ditemukan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1147&#34;
+    height=&#34;631&#34;
+    alt=&#34;Search+-+remove+password+-+github+-+petanikode.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-7dZKO50Nk8Y/WKRlNmQrLxI/AAAAAAAAD98/ZVAWYQ24Igsg5mMPAjCnALTrkp8ebmU5QCPcB/s1600/Search%2B-%2Bremove%2Bpassword%2B-%2Bgithub%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba lihat salah satu.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;758&#34;
+    height=&#34;436&#34;
+    alt=&#34;password+yang+dibagikan+di+github.png&#34;
+    src=&#34;https://1.bp.blogspot.com/-giPYQqSeGjw/WKRmEoZ-B3I/AAAAAAAAD-Q/TnplB4O0JgYol7FSnRF-dJ0uLRf2Hp8rACPcB/s1600/password%2Byang%2Bdibagikan%2Bdi%2Bgithub.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Lihat, sekarang sudah tahu kan kesalahan fatalnya. Oke, mari kita coba tes.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1366&#34;
+    height=&#34;743&#34;
+    alt=&#34;testing+server+hasil+curian.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-3k5ngoYU3fs/WKRnLXmtZPI/AAAAAAAAD-k/e2AIfgliihISqWYUsNkjpjEyC92OVT1nwCPcB/s1600/testing%2Bserver%2Bhasil%2Bcurian.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Whihihi :smile: bisa.&lt;/p&gt;
+
+&lt;h2 id=&#34;kata-kunci-yang-lain&#34;&gt;Kata Kunci yang Lain&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;add password&lt;/li&gt;
+&lt;li&gt;add .env&lt;/li&gt;
+&lt;li&gt;remove .env&lt;/li&gt;
+&lt;li&gt;delete .env&lt;/li&gt;
+&lt;li&gt;rm .env&lt;/li&gt;
+&lt;li&gt;remove secrets&lt;/li&gt;
+&lt;li&gt;hapus password&lt;/li&gt;
+&lt;li&gt;DriverManager.getConnection(&lt;/li&gt;
+&lt;li&gt;password extension:yaml extension:yml extension:json&lt;/li&gt;
+&lt;li&gt;remove password extension:php&lt;/li&gt;
+&lt;li&gt;I don&amp;rsquo;t know&lt;/li&gt;
+&lt;li&gt;dll.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;solusi&#34;&gt;Solusi&lt;/h2&gt;
+
+&lt;p&gt;Sebenarnya isu ini sedang ramai diperbincangkan di Hacker News. Orang-orang HN
+&lt;a href=&#34;https://github.com/BinetLoisir/FlipperMap/commit/5a384d9d4658669b9324de7ba933ed5b05911154&#34;&gt;mengomentari&lt;/a&gt; &lt;em&gt;commit&lt;/em&gt; yang dilakukan seperti di atas. Bahkan ada yang sampai membuat meme di sana.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;629&#34;
+    height=&#34;673&#34;
+    alt=&#34;komentar+dari+HN.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-1Ks3Oni8KGY/WKRthVg3pPI/AAAAAAAAD_M/lGS2Laa7J_Q0V57E6PEK47e7W9jhBeQ8QCPcB/s1600/komentar%2Bdari%2BHN.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Solusi yang mereka tawarkan diantaranya:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Masukan file konfigurasi ke dalam &lt;code&gt;.gitignore&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gunakan &lt;a href=&#34;https://github.com/AGWA/git-crypt&#34;&gt;git-crypt&lt;/a&gt; untuk mengenkripsi data sensitif.&lt;/li&gt;
+&lt;li&gt;Ubah Password&lt;/li&gt;
+&lt;li&gt;Gunakan &lt;a href=&#34;https://github.com/StackExchange/blackbox&#34;&gt;Blackbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/removing-sensitive-data-from-a-repository/&#34;&gt;Ikuti saran dari Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
+
+&lt;p&gt;Sekarang kita sudah tahu, bagaimana cara pencurian password dan token API di
+Github. Setidaknya kita bisa berhati-hati agar tidak melakukan kesalahan seperti
+di atas. Bayangkan kalau password server &lt;em&gt;production&lt;/em&gt; yang kita sebar itu milik
+perusahaan atau pemerintah, apa yang akan terjadi?&lt;/p&gt;
+
+&lt;p&gt;Referensi: &lt;a href=&#34;https://news.ycombinator.com/item?id=13650818&#34;&gt;HN&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Activate Power Mode Ada di Mana-mana</title>
       <link>http://petanikode.com/2017/02/activate-power-mode-ada-di-mana-mana/</link>
       <pubDate>Tue, 14 Feb 2017 21:46:29 +0800</pubDate>
@@ -1641,63 +1824,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 &lt;p&gt;Itu untuk menandakan lokasi &lt;em&gt;namespace&lt;/em&gt; atau lokasi kodenya. Wah, &lt;em&gt;namespace&lt;/em&gt; itu apa lagi om?&lt;/p&gt;
 
 &lt;p&gt;Jadi, itulah beberapa alasan kenapa bahasa &lt;a href=&#34;https://petanikode.com/search/label/Pemrograman&#34;&gt;pemrograman&lt;/a&gt; Java kurang cocok untuk pemula. Karena Java menggunakan paradigma OOP &lt;em&gt;(Object Oriented Programming)&lt;/em&gt;, sedangkan para pemula yang belum parnah &lt;em&gt;coding&lt;/em&gt; tidak pernah belajar tentang OOP. Namun, bukan berarti Java tidak boleh dipelajari oleh pemula. Silahkan dipelajari dengan tekun.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Replace String dalam Template Go</title>
-      <link>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</link>
-      <pubDate>Fri, 20 Jan 2017 14:32:22 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/</guid>
-      <description>&lt;p&gt;Sebuah masalah kecil yang saya temukan ketika mengedit skrip &lt;a href=&#34;https://github.com/natefinch/blogimport&#34;&gt;Blogimport&lt;/a&gt;.
-Saya ingin memperbesar ukuran gambar &lt;em&gt;thumbnail&lt;/em&gt; dengan cara me-replace string yang ada di URL.&lt;/p&gt;
-
-&lt;p&gt;Misalnya, dari URL ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s72-c/pemrograman%2Bjavascript%2B-%2Bpetanikode.png
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Menjadi seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nah, di sana saya ingin merubah &lt;code&gt;s72-c&lt;/code&gt; agar menjadi &lt;code&gt;s1600&lt;/code&gt;. Pada template Hugo,
-saya bisa melakukannya seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;{{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Namun, Go belum memiliki fungsi &lt;code&gt;replace&lt;/code&gt; seperti Hugo. Setelah bolak-balik Google
-dan Stack Overflow, saya akhirnya membuat sebuah &lt;a href=&#34;http://stackoverflow.com/q/41647788/2658551&#34;&gt;pertanyaan baru&lt;/a&gt;
-di Stack Overflow dan mendapatkan jawabannya.&lt;/p&gt;
-
-&lt;p&gt;Pertama, kita harus membuat fungsi replace dulu dengan Go.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func replace(input, from,to string) string {
-    return strings.Replace(input,from,to, -1)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian melakukan &lt;em&gt;mapping&lt;/em&gt; terhadap fungsi tadi agar nanti bisa dikenali dalam template.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;funcMap = template.FuncMap{
-     &amp;quot;replace&amp;quot;:  replace,
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, barulah kita masukan fungsinya ketika eksekusi template.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;template := template.New(&amp;quot;&amp;quot;).Funcs(funcMap)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Barulah kita dapat menggunakan fungsi &lt;em&gt;replace&lt;/em&gt; pada template go.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;{{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh kode lengkapnya dapat anda lihat &lt;a href=&#34;https://github.com/ardianta/blogimport/blob/master/main.go&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

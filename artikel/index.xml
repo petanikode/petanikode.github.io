@@ -63,7 +63,7 @@ git commit -m &amp;quot;blablablabla&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Beberapa saat kemudian, kode sudah hampir jadi dan siap untuk dipublikasikan ke
-Github. Lalu kita menghapus password pada konfigurasi yang tadi agar tidak diketahui
+Github. Lalu kita menghapus password pada konfigurasi yang tadi, agar tidak diketahui
 orang.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php

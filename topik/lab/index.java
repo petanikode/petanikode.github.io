@@ -1692,6 +1692,11 @@ padding: 16px;
 
         <ul class="recent-post">
             <li>
+               <a href="/2017/02/bahaya-password-dan-token-api-bisa-dicuri-dengan-sangat-mudah-di-github/">
+                   Bahaya! Password dan Token API Bisa Dicuri dengan Sangat Mudah di Github
+               </a>
+            </li>
+            <li>
                <a href="/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/">
                    Apa itu Git dan Kenapa Penting bagi Programmer?
                </a>

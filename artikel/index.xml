@@ -7,8 +7,149 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 15 Feb 2017 20:12:19 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Feb 2017 13:56:42 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tutorial Git 05 - Melihat Perbandingan Revisi</title>
+      <link>http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/</link>
+      <pubDate>Thu, 16 Feb 2017 13:56:42 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/</guid>
+      <description>
+
+&lt;p&gt;Pada tutorial sebelumnya, kita sudah belajar cara melihat log revisi di repositori.
+Sekarang kita kan peljari perintah &lt;code&gt;git diff&lt;/code&gt;, fungsinya untuk melihat perbedaan
+perubahan di revisi.&lt;/p&gt;
+
+&lt;h2 id=&#34;melihat-perbandingan-perubahan-yang-dilakukan-pada-revisi&#34;&gt;Melihat Perbandingan Perubahan yang Dilakukan pada Revisi&lt;/h2&gt;
+
+&lt;p&gt;Gunakan perintah berikut ini untuk melihat perubahan yang dilakukan pada revisi
+tertentu.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git diff cf08ca0837cf26f1c595be36bb3a6b815e311be1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;cf08ca0837cf26f1c595be36bb3a6b815e311be1&lt;/code&gt; adalah nomer revisi yang ingin dilihat.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;413&#34;
+    alt=&#34;Git+diff+pada+nomer+revisi.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-TTQ75FYjK0A/WKLaGx0rtXI/AAAAAAAAD6w/LYC6kmS0i9MZsPHTcVSysZttpiAoYmNDwCPcB/s1600/Git%2Bdiff%2Bpada%2Bnomer%2Brevisi.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Lihatlah hasil di atas, simbol plus (&lt;code&gt;+&lt;/code&gt;) artinya kode yang ditambahkan. Sedangkan
+kalau ada kode yang dihapus simbolnya akan menggunakan minus (&lt;code&gt;-&lt;/code&gt;). Contoh:&lt;/p&gt;
+
+&lt;p&gt;Ditambahkan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;+ &amp;lt;p&amp;gt;ini kode yang ditambahkan&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dihapus:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;- &amp;lt;i&amp;gt;ini kode yang dihapus&amp;lt;/i&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dimodifikasi/diubah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;- &amp;lt;span&amp;gt;ini kode sebelum diubah&amp;lt;/span&amp;gt;
++ &amp;lt;span&amp;gt;ini kode sesudah diubah&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang kita akan mencoba merubah isi dari &lt;code&gt;index.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sebelum diubah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;Belajar Git - Project 01&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+        &amp;lt;p&amp;gt;Hello Semua, Saya sedang belajar Git&amp;lt;/p&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah diubah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;Belajar Git - Project 01&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+        &amp;lt;p&amp;gt;Hello Dunia!, Saya sedang belajar Git&amp;lt;/p&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu lakukan jalankan perintah &lt;code&gt;git diff&lt;/code&gt; lagi.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;285&#34;
+    alt=&#34;perbedaan+revisi.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-SjaJbM_jRkM/WKLqY4qyW3I/AAAAAAAAD74/N-nRApzmQocxPGEwt07Ao947aAjyDzG_gCPcB/s1600/perbedaan%2Brevisi.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Apa yang dilakukan &lt;code&gt;git diff&lt;/code&gt;? Perintah &lt;code&gt;git diff&lt;/code&gt; akan membandingkan perubahan
+yang baru saja dilakukan dengan revisi/commit terakhir.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;melihat-perbandingan-pada-file&#34;&gt;Melihat Perbandingan pada File&lt;/h2&gt;
+
+&lt;p&gt;Apa bila kita melakukan banyak perubahan, maka akan banyak sekali tampil output.
+Karena itu, kita mungkin hanya perlu melihat perubahan untuk file tertentu saja.
+Untuk melihat perbandingan perubahan pada file tertentu, gunakan perintah berukut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git diff index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perintah di atas akan melihat pebedaan perubahan pada file &lt;code&gt;index.html&lt;/code&gt; saja.&lt;/p&gt;
+
+&lt;h2 id=&#34;melihat-perbandingan-antar-revisi-commit&#34;&gt;Melihat Perbandingan antar Revisi/Commit&lt;/h2&gt;
+
+&lt;p&gt;Perintah untuk membandingkan perubahan pada revisi dengan revisi yang lain
+adalah sebagai berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git diff &amp;lt;nomer commit&amp;gt; &amp;lt;nomer commit&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git diff git diff cf08ca0837cf26f1c595be36bb3a6b815e311be1 06f735af7724558164c87f6b1ce3ca7778eb1c1b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;perbandingan-antar-cabang-branch&#34;&gt;Perbandingan Antar Cabang (Branch)&lt;/h2&gt;
+
+&lt;p&gt;Kita memang belum masuk ke materi percabangan di Git. Tapi tidak ada salahnya megetahui
+cara melihat perbandingan perubahan antar cabang.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git diff &amp;lt;nama cabang&amp;gt; &amp;lt;nama cabang&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah pelajari fungsi dari perintah &lt;code&gt;git diff&lt;/code&gt;. Perintah ini untuk melihat
+perubahan apa saja yang telah dilakukan pada repositori. Selanjutnya, kita
+akan belajar membatalkan revisi.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Bahaya! Password dan Token API Bisa Dicuri dengan Sangat Mudah di Github</title>
@@ -1774,154 +1915,6 @@ yang sudah ada di server.&lt;/p&gt;
 &lt;p&gt;Begitulah cara upload file seperti cara &lt;a href=&#34;http://petanikode.com/topik/git&#34;&gt;Git&lt;/a&gt;. Semoga bermanfaat.&lt;/p&gt;
 
 &lt;p&gt;Referensi: &lt;a href=&#34;https://git-ftp.github.io/&#34;&gt;git-ftp.github.io&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Hosting Hugo di Github</title>
-      <link>http://petanikode.com/2017/01/cara-hosting-hugo-di-github/</link>
-      <pubDate>Mon, 30 Jan 2017 20:14:28 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/cara-hosting-hugo-di-github/</guid>
-      <description>
-
-&lt;p&gt;Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu
-mengunggah file yang ada di direktori &lt;code&gt;public&lt;/code&gt; saja. Ada empat cara hosting
-Hugo di Github yang diberikan pada dokumentasi, diantaranya:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Hosting ke direktori &lt;code&gt;doc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Hosting ke cabang &lt;code&gt;gh-pages&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Hosting ke halaman personal/organisasi&lt;/li&gt;
-&lt;li&gt;Hosting Github dengan Continuous Integration (CI)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang. Kita
-membutuhkan dua repositori untuk melakukan cara ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-membuat-repositori&#34;&gt;1. Membuat Repositori&lt;/h2&gt;
-
-&lt;p&gt;Buatlah dua repositori di Github dengan nama seperti berikut ini.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;kontent-web-hugo&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;username.github.io&lt;/code&gt; atau &lt;code&gt;organisasi.github.io&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Pertama, repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt; fungsinya untuk menyimpan konten dari Web.
-Sementara repositori &lt;code&gt;username.github.io&lt;/code&gt; untuk menyimpan file yang ada di &lt;code&gt;public&lt;/code&gt;
-atau hasil &lt;em&gt;render&lt;/em&gt; dari Hugo. Nama repositori anda tidak harus &lt;code&gt;kontent-web-hugo&lt;/code&gt;,
-Anda bisa menggunakan nama selain itu.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-persiapkan-repositori-lokal&#34;&gt;2. Persiapkan Repositori Lokal&lt;/h2&gt;
-
-&lt;p&gt;Buatlah repositori baru di dalam proyek hugo. Lakukan inisialisasi git.
-Silahkan ikuti perintah berikut ini.&lt;/p&gt;
-
-&lt;p&gt;masuk ke direktori Hugo:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd kontent-web-hugo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Inisialisasi Git:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hapus direktori &lt;code&gt;public&lt;/code&gt;, tenang nanti kita bisa buat lagi dengan perntah &lt;code&gt;hugo&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rm -rf public
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tambahkan repositori &lt;em&gt;remote&lt;/em&gt; (github):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote add origin https://github.com/{username}/{nama-repo}.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;3-upload-ke-github&#34;&gt;3. Upload ke Github&lt;/h2&gt;
-
-&lt;p&gt;Repositori lokal sudah dipersiapkan, sekarang kita upload dulu ke github.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
-git commit -m &amp;quot;commit pertama&amp;quot;
-git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;4-membuat-submodul&#34;&gt;4. Membuat Submodul&lt;/h2&gt;
-
-&lt;p&gt;Submodul ini merupakan repositori anak dari repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt;.
-Repositori ini akan menggunakan repositori &lt;code&gt;username.github.io&lt;/code&gt; sebagai
-repositori remote-nya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git submodule add -b master https://github.com/{username}/{username}.github.io.git public
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;5-membuat-skrip-deploy-sh&#34;&gt;5. Membuat Skrip &lt;code&gt;deploy.sh&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Sebenarnya kita bisa langsung unggah semua file yang ada di direktori &lt;code&gt;public&lt;/code&gt;
-dengan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd public
-git add .
-git commit -m &amp;quot;tes Deploy hugo&amp;quot;
-git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Agar kita tidak mengetik perintah di atas terus-menerus setiap mau deploy, maka
-kita memerlukan skrip. Untungnya Hugo sudah menyediakannya. Silahkan ditambahkan
-skrip ini di direktori Hugo-nya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;#!/bin/bash
-
-echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
-
-# Build the project.
-hugo # if using a theme, replace by `hugo -t &amp;lt;yourtheme&amp;gt;`
-
-# Go To Public folder
-cd public
-# Add changes to git.
-git add -A
-
-# Commit changes.
-msg=&amp;quot;rebuilding site `date`&amp;quot;
-if [ $# -eq 1 ]
-  then msg=&amp;quot;$1&amp;quot;
-fi
-git commit -m &amp;quot;$msg&amp;quot;
-
-# Push source and build repos.
-git push origin master
-
-# Come Back
-cd ..
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Berikan hak akses eksekusi untuk skrip ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;chmod +x deploy.sh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nah, kita bisa melakukan deploy dengan skrip tersebut. Setiap kali kita ingin
-meng-update ke Github, kita cukup menjalankan skrip itu saja. Contohnya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;./deploy.sh &amp;quot;tes deploy web hugo ke github&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tuggulah beberapa saat, website kita akan segera mengudara di &lt;code&gt;username.github.io&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Cara ini sudah saya coba di blog saya,&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Repositori konten &lt;a href=&#34;https://github.com/ardianta/ardianta-pargo&#34;&gt;https://github.com/ardianta/ardianta-pargo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Repositori hasil render &lt;a href=&#34;https://github.com/ardianta/ardianta.github.io&#34;&gt;https://github.com/ardianta/ardianta.github.io&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Sebenarnya kita tidak harus membuat repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt;, karena webnya
-sudah bisa langsung di-hosting di &lt;code&gt;username.github.io&lt;/code&gt;. Tapi untuk jaga-jaga
-kalau suatu saat nanti repositori lokalnya hilang, maka kita bisa ambil dari sana lagi.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;https://gohugo.io/tutorials/github-pages-blog/&#34;&gt;https://gohugo.io/tutorials/github-pages-blog/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

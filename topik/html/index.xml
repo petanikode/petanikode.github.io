@@ -237,7 +237,7 @@ github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/
 
 &lt;p&gt;Kode CSS yang ditulis di Inspect Element bersifat temporer. Kita harus menyalinnya ke kode CSS di teks editor agar tersimpan.&lt;/p&gt;
 
-&lt;h2 id=&#34;2-pengujian-web-responsif-dengan-mudah&#34;&gt;2. Pengujian Web Responsif dengan Mudah&lt;/h2&gt;
+&lt;h2 id=&#34;2-pengujian-web-responsif&#34;&gt;2. Pengujian Web Responsif&lt;/h2&gt;
 
 &lt;p&gt;Kita tidak perlu punya banyak perangkat untuk pengujian responsif. Cukup manfaatkan Inspect Element, kita sudah bisa menggunakan berbagai jenis perangkat mobile.&lt;/p&gt;
 
@@ -308,7 +308,7 @@ Kadang, browser hanya menampilkan halaman kosong saat error.&lt;/p&gt;
 
 &lt;h2 id=&#34;7-mengukur-performa-memori-dan-cpu&#34;&gt;7. Mengukur Performa Memori dan CPU&lt;/h2&gt;
 
-&lt;p&gt;Semakin banyak tab yang kita buka di browser, semakin banyak pula memori yang akan dimakan. Selain itu, skrip-skrip pada web juga membuat CPU berkerja semakin keras. Untuk melihat performa memori dan CPU ketika membuka web, silahkan masuk ke menu &lt;em&gt;Timeline&lt;/em&gt; di Inspect Element miliknya Google Chrome. Sedangkan di Firefox, masuk ke &lt;em&gt;Performance&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Semakin banyak tab yang kita buka di browser, semakin banyak pula memori yang akan dimakan. Selain itu, skrip-skrip pada web juga membuat CPU berkerja semakin keras. Untuk melihat performa memori dan CPU ketika membuka web, silahkan masuk ke menu &lt;em&gt;Timeline&lt;/em&gt; pada Google Chrome. Sedangkan di Firefox, masuk ke &lt;em&gt;Performance&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;861&#34;

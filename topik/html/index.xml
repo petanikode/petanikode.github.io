@@ -210,22 +210,125 @@ github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/
     </item>
     
     <item>
+      <title>7 Maanfaat Inspect Element Bagi Web Developer</title>
+      <link>http://petanikode.com/2016/01/7-maanfaat-inspect-element-bagi-web-developer/</link>
+      <pubDate>Thu, 14 Jan 2016 11:03:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/01/7-maanfaat-inspect-element-bagi-web-developer/</guid>
+      <description>
+
+&lt;p&gt;Inspect Element merupakan fitur browser yang dibuat untuk memudahkan web depelover dalam mengembangkan web. Inspect Element dapat kita akses dengan klik kanan, kemudian memilih Inspect Element, atau bisa juga dengan menekan tombol &lt;code&gt;F12&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Adapun manfaat dari Inspect Element untuk web Developer adalah sebagai berikut.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-tempat-eksperimen-css&#34;&gt;1. Tempat Eksperimen CSS&lt;/h2&gt;
+
+&lt;p&gt;Selain ada console Javascript, bisa dibilang di Inspect Elemen juga ada console-nya CSS. Ya, di sana kita bisa eksperimen kode CSS.&lt;/p&gt;
+
+&lt;p&gt;Sebelum kita menulis kode CSS, sebaiknya gunakan Inspect Element terlebih dahulu. Karena saat kita menulis kode CSS di Inspect Elemen, browser akan langsung mengeksekusinya. Selain itu, kita diberikan fitur yang memudahkan penulisan CSS seperti autocomplete, colorpicker, filter, visual model box, dll.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1366&#34;
+    height=&#34;768&#34;
+    alt=&#34;Edit CSS d iInspect Element&#34;
+    src=&#34;https://4.bp.blogspot.com/-YA3lbRkw6z0/WKhR5OizENI/AAAAAAAAEAU/vxaVOYaLjBExO0cpMeCw1vnzf3lbMbrswCPcB/s1600/Edit%2BCSS%2Bdi%2BInspect%2BElement.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kode CSS yang ditulis di Inspect Element bersifat temporer. Kita harus menyalinnya ke kode CSS di teks editor agar tersimpan.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-pengujian-web-responsif-dengan-mudah&#34;&gt;2. Pengujian Web Responsif dengan Mudah&lt;/h2&gt;
+
+&lt;p&gt;Kita tidak perlu punya banyak perangkat untuk pengujian responsif. Cukup manfaatkan Inspect Element, kita sudah bisa menggunakan berbagai jenis perangkat mobile.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1270&#34;
+    height=&#34;679&#34;
+    alt=&#34;Pengujian+tampilan+responsif+web+di+inspect+element+-+petanikode.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-F0ipNxOxWnU/WKhTDjXhQzI/AAAAAAAAEAs/dASGP5AdMRgNdTrkNAd2JEkCZpBVom6rgCPcB/s1600/Pengujian%2Btampilan%2Bresponsif%2Bweb%2Bdi%2Binspect%2Belement%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-mengukur-kecepatan-web&#34;&gt;3. Mengukur Kecepatan Web&lt;/h2&gt;
+
+&lt;p&gt;Kita dapat mengetahui seberapa lama web diunduh oleh browser dan berapa kecepatan dan ukuran kapasitas webnya? Silahkan gunakan fitur Network atau Timeline untuk melakukannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1364&#34;
+    height=&#34;678&#34;
+    alt=&#34;Mengukur+kecepatan+web+di+inspect+element+-+petanikode.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-LDis0GBfR9s/WKhT0iA4nHI/AAAAAAAAEBA/XLqopt_G0nEd1pTUQGHrTMvBhfwTOGYAACPcB/s1600/Mengukur%2Bkecepatan%2Bweb%2Bdi%2Binspect%2Belement%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-debugging-javascript&#34;&gt;4. Debugging Javascript&lt;/h2&gt;
+
+&lt;p&gt;Ada yang bilang, belajar javascript itu susah karena kita tidak tahu tempat error-nya.
+Kadang, browser hanya menampilkan halaman kosong saat error.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;486&#34; height=&#34;657&#34;
+    layout=&#34;responsive&#34;
+    data-tweetid=&#34;818038227143561218&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebenarnya pendapat itu salah, karena kita bisa melihat pesan error javascript pada console-nya. Dimana console-nya? ya di dalam Inspect Elemen. Silahkan buka menu Console.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-alat-untuk-audit-web&#34;&gt;5. Alat untuk Audit Web&lt;/h2&gt;
+
+&lt;p&gt;Audit perlu kita lakukan untuk meningkatkan kinerja web. Pada Inspect Elemen milik Google Chrome, kita disediakan fitur audit untuk mengetahui apa saja resource yang digunakan dan yang tidak digunakan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;945&#34;
+    height=&#34;500&#34;
+    alt=&#34;Audit+web+di+Inspect+element+-+petanikode.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-vNQJtWwp3iM/WKhVV2r5KoI/AAAAAAAAEBU/7LlDpgbnLRYoPhmrJcpUIN2GUEBGK1oJwCPcB/s1600/Audit%2Bweb%2Bdi%2BInspect%2Belement%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-mengambil-screenshot-dengan-mudah&#34;&gt;6. Mengambil Screenshot dengan Mudah&lt;/h2&gt;
+
+&lt;p&gt;Khusus di Firefox, kita disediakan fitur untuk mengambil screenshot web. Caranya, klik kanan pada elemen yang ingin di-screenshot, kemudian pilih &lt;em&gt;Screenshot Node&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;917&#34;
+    height=&#34;525&#34;
+    alt=&#34;mengambil+screenshoot+di+Inspect+element+firefox.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-xPgOdZAg8YY/WKhWPl_wGdI/AAAAAAAAEBs/K-eZEeDd8PMljRx03SLpEfkHFPj6LaJBgCPcB/s1600/mengambil%2Bscreenshoot%2Bdi%2BInspect%2Belement%2Bfirefox.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-mengukur-performa-memori-dan-cpu&#34;&gt;7. Mengukur Performa Memori dan CPU&lt;/h2&gt;
+
+&lt;p&gt;Semakin banyak tab yang kita buka di browser, semakin banyak pula memori yang akan dimakan. Selain itu, skrip-skrip pada web juga membuat CPU berkerja semakin keras. Untuk melihat performa memori dan CPU ketika membuka web, silahkan masuk ke menu &lt;em&gt;Timeline&lt;/em&gt; di Inspect Element miliknya Google Chrome. Sedangkan di Firefox, masuk ke &lt;em&gt;Performance&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;861&#34;
+    height=&#34;680&#34;
+    alt=&#34;Mengukur+Performa+Web.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-FFcmZfK42IM/WKhWgp7E1bI/AAAAAAAAEB0/ATHEopUYKrww2uDAKimbKK8B-OlZfiLzACPcB/s1600/Mengukur%2BPerforma%2BWeb.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah 7 manfaat Inspect Element bagi web developer. Sebanarnya masih banyak lagi manfaat dari Inspect Element yang belum kita ketahui. Selebihnya silahkan cari sendiri atau jika mau menambahkan silahkan corat-coret di komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutorial Bootstrap (3) - Memahami fungsi viewport</title>
       <link>http://petanikode.com/2016/01/tutorial-bootstrap-3---memahami-fungsi-viewport/</link>
       <pubDate>Tue, 12 Jan 2016 16:20:00 +0000</pubDate>
       
       <guid>http://petanikode.com/2016/01/tutorial-bootstrap-3---memahami-fungsi-viewport/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Cover Tutorial&#34; border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; title=&#34;Tutorial Bootstrap Petani Kode&#34; /&gt;&lt;/a&gt;Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag &lt;i&gt;meta&lt;/i&gt; &lt;i&gt;viewport&lt;/i&gt;. Mengapa kita perlu menambahkan &lt;i&gt;meta viewport&lt;/i&gt;? apa sih fungsinya? Mari kita bahas bersama.&lt;br /&gt;&lt;br /&gt;Pada bagian kepala &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; terdapat tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; yang menampung nilai &lt;i&gt;viewport&lt;/i&gt;. &lt;i&gt;Viewport&lt;/i&gt; merupakan area yang terlihat pada (perangkat) user/pengunjung web. &lt;i&gt;Viewport&lt;/i&gt; digunakan untuk desain web yang responsif &lt;i&gt;(responsive web design)&lt;/i&gt;. Seperti selogan Bootstrap yang mengutamakan desain responsif.&lt;br /&gt;&lt;blockquote class=&#34;tr_bq&#34;&gt;Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.&lt;br /&gt;— &lt;cite&gt;getbootstrap.com&lt;/cite&gt;&lt;/blockquote&gt;Jadi dengan menambahkan &lt;i&gt;viewport&lt;/i&gt;, web akan menjadi responsif. Responsif artinya bisa menyesuaikan diri dengan perangkat yang digunakan oleh user/pengunjung web. Contoh kode viewport yang diberikan di &lt;a href=&#34;http://getbootstrap.com/css/#overview-mobile&#34; target=&#34;_blank&#34;&gt;dokumentasi Bootstrap&lt;/a&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;meta name=&amp;ldquo;viewport&amp;rdquo; content=&amp;ldquo;width=device-width, initial-scale=1&amp;rdquo;&amp;gt;&lt;/code&gt;&lt;/pre&gt;Tag &lt;i&gt;meta viewport&lt;/i&gt; akan memberikan intruksi ke browser untuk mengatur dimensi dan sekala web. Nilai &lt;code&gt;width=device-width&lt;/code&gt;, artinya lebar web akan mengikuti lebar dari layar perangkat yang digunakan. Nilai &lt;code&gt;inital-scale=1&lt;/code&gt;, artinya web akan diberikan skala &lt;i&gt;(zoom)&lt;/i&gt; menjadi &lt;code&gt;1&lt;/code&gt; (normal).&lt;br /&gt;&lt;br /&gt;Pengaruh dari tag &lt;i&gt;meta viewport&lt;/i&gt; ini dapat kita lihat dengan membuka web dari ponsel android atau semacamnya. Tetapi tenang saja, anda juga bisa memanfaatkan fitur &lt;i&gt;inspect element&lt;/i&gt; pada Google Chrome. Baiklah, mari kita uji coba. Pertama kita coba dulu membuka web yang tampa menggunakan tag &lt;i&gt;meta&lt;/i&gt; &lt;i&gt;viewport&lt;/i&gt;. Berikut ini cuplikan kode &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;-nya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;Hello Bootstrap&amp;lt;/title&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; menyisipkan bootstrap &amp;ndash;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/pre&gt;Bukalah dengan Google Chrome. Kemudian klik kanan, lalu pilih &lt;i&gt;inspect element&lt;/i&gt;. Setelah itu klik ikon ponsel ( &lt;i class=&#34;fa fa-mobile&#34;&gt;&lt;/i&gt; ).&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Tampilan web tampa tag meta viewport&#34; border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png&#34; title=&#34;Tampilan web tampa tag meta viewport&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tampa menggunakan &lt;i&gt;viewport&lt;/i&gt; web akan ditampilkan apa adanya. Seperti yang terlihat pada gambar di atas, web tidak diperbesar atau diatur ulang skalanya. Untuk itu, kita perlu menambahkan &lt;i&gt;viewport&lt;/i&gt;. Sehingga kodenya menjadi seperti ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;Hello Bootstrap&amp;lt;/title&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; menyisipkan bootstrap &amp;ndash;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;    &lt;span style=&#34;background-color: #93c47d;&#34;&gt;&amp;lt;meta name=&amp;ldquo;viewport&amp;rdquo; content=&amp;ldquo;width=device-width, initial-scale=1&amp;rdquo;&amp;gt;&lt;/span&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/pre&gt;Setelah menambahkan &lt;i&gt;viewport&lt;/i&gt;, sekarang coba &lt;i&gt;reload&lt;/i&gt; kembali halamanya.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Tampilan web yang menggunakan meta viewport&#34; border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png&#34; title=&#34;Tampilan web yang menggunakan meta viewport&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Jelas sekali &amp;lsquo;kan perbedaanya? Masih belum puas, coba lagi melihat dari ponsel yang berbeda (Nokia Lumia 520).&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520&#34; border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png&#34; title=&#34;Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Selain mencoba simulasi dari inspect element, saya juga mencoba melalui ponsel Samsung Galaxy C1 dan hasilnya sebagai berikut.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Jadi, tag &lt;i&gt;meta viewport&lt;/i&gt; berfungsi untuk mengatur ulang dimensi dan skala (zoom) web. Tag ini diperlukan untuk membangun web yang responsif.&lt;br /&gt;&lt;br /&gt;&amp;mdash; &lt;br /&gt;Nah, sekian dulu tutorial ke-3 ini. Kode lengkap tutorial ini dapat dilihat di file repositori github: &lt;a href=&#34;https://github.com/petanikode/tutorial-bootstrap/blob/master/view_port.html&#34; target=&#34;_blank&#34;&gt;view_port.html&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;&lt;a href=&#34;http://www.w3schools.com/css/css_rwd_viewport.asp&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.w3schools.com/css/css_rwd_viewport.asp&#34;&gt;http://www.w3schools.com/css/css_rwd_viewport.asp&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://getbootstrap.com/css/#overview-mobile&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://getbootstrap.com/css/#overview-mobile&#34;&gt;http://getbootstrap.com/css/#overview-mobile&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tata cara menggunakan highlight.js di blogger</title>
-      <link>http://petanikode.com/2016/01/tata-cara-menggunakan-highlight.js-di-blogger/</link>
-      <pubDate>Wed, 06 Jan 2016 13:20:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/01/tata-cara-menggunakan-highlight.js-di-blogger/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-WhR_5T4yVSg/VoyfngB0mAI/AAAAAAAACXo/L94qeANsUgI/s1600/higlightjs%2B-%2Bpetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;higlight.js&#34; border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-WhR_5T4yVSg/VoyfngB0mAI/AAAAAAAACXo/L94qeANsUgI/s1600/higlightjs%2B-%2Bpetanikode.jpg&#34; title=&#34;&#34; /&gt;&lt;/a&gt;Template baawan blogger sudah saya modifikasi sedemikian rupa. Namun, masih ada yang kurang, pewarnaan kode &lt;i&gt;(syntax highlighting)&lt;/i&gt;. Kode yang saya sisipkan di dalam artikel tidak berwarna. Kadang saya memanfaatkan &lt;a href=&#34;http://gist.github.com/&#34; target=&#34;_blank&#34;&gt;gist github&lt;/a&gt;, &lt;a href=&#34;http://pastebin.com/&#34; target=&#34;_blank&#34;&gt;pastebin&lt;/a&gt;, &lt;a href=&#34;https://ideone.com/&#34; target=&#34;_blank&#34;&gt;ideone&lt;/a&gt;, dsb. untuk menyisipkan kode yang berwarna.&lt;br /&gt;&lt;br /&gt;Modul &lt;i&gt;highlight.js&lt;/i&gt; berfungsi untuk membuat kode (di web) menjadi berwarna. Kode yang berwarna akan lebih mudah dibaca. Karena itu, kita perlu menggunakan &lt;i&gt;highlight.js&lt;/i&gt;. Berikut ini cara menggunakan &lt;i&gt;highlight.js&lt;/i&gt; di blogger.&lt;br /&gt;&lt;h2&gt;1. Memasang higlight.js&lt;/h2&gt;Kita akan memanfaatkan CDN &lt;i&gt;(&lt;/i&gt;&lt;i&gt;&lt;span class=&#34;st&#34;&gt;&lt;i&gt;content delivery network&lt;/i&gt;&lt;/span&gt;)&lt;/i&gt; nutuk memasang highlight.js, karena blogger tidak menyediakan tempat untuk hosting file. Silahkan masuk ke &lt;i&gt;edit html template&lt;/i&gt;. Kemudian masukkan kode berikut ini ke dalam tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;!&amp;ndash; Syntax highlighter &amp;ndash;&amp;gt;&lt;br /&gt;&amp;lt;link href=&amp;lsquo;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/github.min.css&amp;rsquo; rel=&amp;lsquo;stylesheet&amp;rsquo;/&amp;gt;&lt;br /&gt;&amp;lt;script src=&amp;lsquo;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js&amp;rsquo;/&amp;gt;&lt;br /&gt;&amp;lt;script&amp;gt;hljs.initHighlightingOnLoad();&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;!&amp;ndash; end Syntax highlighter &amp;ndash;&amp;gt;&lt;/code&gt;&lt;/pre&gt;Versi higlight.js yang digunakan adalah versi &lt;code&gt;9.0.0&lt;/code&gt;. Bila ada versi yang lebih baru lagi, anda tinggal mengganti angka itu saja. Kemudian &lt;code&gt;github.min.css&lt;/code&gt; adalah kode CSS tema yang digunakan. Anda bisa menggunakan tema lain. Daftar tema bisa dilihat di &lt;a href=&#34;https://github.com/isagalaev/highlight.js/tree/master/src/styles&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;.&lt;a href=&#34;http://4.bp.blogspot.com/-vP-cTgEQsdY/Vou9k4mDwxI/AAAAAAAACXY/FS3pvvryUdk/s1600/Memasang%2Bhighlight-js%2Bdi%2Btemplate%2Bblogger%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-vP-cTgEQsdY/Vou9k4mDwxI/AAAAAAAACXY/FS3pvvryUdk/s1600/Memasang%2Bhighlight-js%2Bdi%2Btemplate%2Bblogger%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;2. Menggunakan higlight.js&lt;/h2&gt;Cara menggunakan &lt;i&gt;highlight.js&lt;/i&gt; sangat mudah. Kita hanya perlu mengapit kode dengan tag &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; dan &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; yang diberikan atribut kelas dengan nilai sesui dengan nama bahasa pemrogramannya. Contoh:&lt;br /&gt;&lt;br /&gt;Bahasa pemrograman Java &lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;ldquo;java&amp;rdquo;&amp;gt;&lt;br /&gt;Class Contoh{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; public static void main(String[] args){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; System.out.println(&amp;ldquo;Hello World!&amp;rdquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;br /&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasilnya: &lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;Class Contoh{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; public static void main(String[] args){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; System.out.println(&amp;ldquo;Hello World!&amp;rdquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Bahasa pemrograman C++&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;ldquo;cpp&amp;rdquo;&amp;gt;&lt;br /&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&lt;br /&gt;using namespace std;&lt;br /&gt;&lt;br /&gt;int main(){&lt;br /&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;ldquo;Hello World!&amp;rdquo; &amp;lt;&amp;lt; endl;&lt;br /&gt;&amp;nbsp; &amp;nbsp; return 0; &lt;br /&gt;}&lt;br /&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;cpp&#34;&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&lt;br /&gt;using namespace std;&lt;br /&gt;&lt;br /&gt;int main(){&lt;br /&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;ldquo;Hello World!&amp;rdquo; &amp;lt;&amp;lt; endl;&lt;br /&gt;&amp;nbsp; &amp;nbsp; return 0; &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Bagaimana kalau kode bahasa pemrogramannya ada lebih dari satu? Misalnya html, css, javascript, dan PHP. Jawabanya tinggal memanggil nama kelas-kelasnya jadi satu, dipisah dengan spasi. Contoh&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;rdquo;&lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;html css js php&lt;/span&gt;&amp;ldquo;&amp;gt;&lt;br /&gt;&amp;amp;lt;html&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;head&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;style type=&amp;lsquo;text/css&amp;rsquo;&amp;amp;gt;&lt;br /&gt;.body{&lt;br /&gt;&amp;amp;nbsp; &amp;amp;nbsp; background: #008080;&lt;br /&gt;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp; color: white;&lt;br /&gt;}&lt;br /&gt;&amp;amp;lt;/style&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;script type=&amp;lsquo;text/javascript&amp;rsquo;&amp;amp;gt;&lt;br /&gt;console.log(&amp;ldquo;javascript dijalankan&amp;rdquo;); &lt;br /&gt;&amp;amp;lt;/script&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;/head&amp;amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;amp;lt;body&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;?php echo &amp;ldquo;&amp;amp;lt;h2&amp;amp;gt;Hello World&amp;amp;lt;/h2&amp;rdquo;; ?&amp;amp;gt; &lt;br /&gt;&amp;amp;lt;/body&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;/html&amp;amp;gt;&lt;br /&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt;&lt;/pre&gt;Untuk kode HTML, kita perlu meng-encode karater &lt;code&gt;&amp;lt;&lt;/code&gt; (lebih kecil) menjadi &lt;code&gt;&amp;amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt; (lebih besar) menjadi &lt;code&gt;&amp;amp;gt;&lt;/code&gt;, dan spasi menjadi &lt;code&gt;&amp;amp;nbsp;&lt;/code&gt; Hasilnya: &lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html css js php&#34;&gt;&amp;lt;html&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;lt;style type=&amp;lsquo;text/css&amp;rsquo;&amp;gt;&lt;br /&gt;.body{&lt;br /&gt;&amp;nbsp; &amp;nbsp; background: #008080;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; color: white;&lt;br /&gt;}&lt;br /&gt;&amp;lt;/style&amp;gt;&lt;br /&gt;&amp;lt;script type=&amp;lsquo;text/javascript&amp;rsquo;&amp;gt;&lt;br /&gt;console.log(&amp;ldquo;javascript dijalankan&amp;rdquo;); &lt;br /&gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&amp;lt;?php echo &amp;ldquo;&amp;lt;h2&amp;gt;Hello World&amp;lt;/h2&amp;rdquo;; ?&amp;gt; &lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;Mudah bukan? selamat mencoba.&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;https://highlightjs.org/usage/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://highlightjs.org/usage/&#34;&gt;https://highlightjs.org/usage/&lt;/a&gt; &lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

@@ -160,6 +160,119 @@ github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/
     </item>
     
     <item>
+      <title>7 Maanfaat Inspect Element Bagi Web Developer</title>
+      <link>http://petanikode.com/2016/01/7-maanfaat-inspect-element-bagi-web-developer/</link>
+      <pubDate>Thu, 14 Jan 2016 11:03:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/01/7-maanfaat-inspect-element-bagi-web-developer/</guid>
+      <description>
+
+&lt;p&gt;Inspect Element merupakan fitur browser yang dibuat untuk memudahkan web depelover dalam mengembangkan web. Inspect Element dapat kita akses dengan klik kanan, kemudian memilih Inspect Element, atau bisa juga dengan menekan tombol &lt;code&gt;F12&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Adapun manfaat dari Inspect Element untuk web Developer adalah sebagai berikut.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-tempat-eksperimen-css&#34;&gt;1. Tempat Eksperimen CSS&lt;/h2&gt;
+
+&lt;p&gt;Selain ada console Javascript, bisa dibilang di Inspect Elemen juga ada console-nya CSS. Ya, di sana kita bisa eksperimen kode CSS.&lt;/p&gt;
+
+&lt;p&gt;Sebelum kita menulis kode CSS, sebaiknya gunakan Inspect Element terlebih dahulu. Karena saat kita menulis kode CSS di Inspect Elemen, browser akan langsung mengeksekusinya. Selain itu, kita diberikan fitur yang memudahkan penulisan CSS seperti autocomplete, colorpicker, filter, visual model box, dll.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1366&#34;
+    height=&#34;768&#34;
+    alt=&#34;Edit CSS d iInspect Element&#34;
+    src=&#34;https://4.bp.blogspot.com/-YA3lbRkw6z0/WKhR5OizENI/AAAAAAAAEAU/vxaVOYaLjBExO0cpMeCw1vnzf3lbMbrswCPcB/s1600/Edit%2BCSS%2Bdi%2BInspect%2BElement.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kode CSS yang ditulis di Inspect Element bersifat temporer. Kita harus menyalinnya ke kode CSS di teks editor agar tersimpan.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-pengujian-web-responsif-dengan-mudah&#34;&gt;2. Pengujian Web Responsif dengan Mudah&lt;/h2&gt;
+
+&lt;p&gt;Kita tidak perlu punya banyak perangkat untuk pengujian responsif. Cukup manfaatkan Inspect Element, kita sudah bisa menggunakan berbagai jenis perangkat mobile.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1270&#34;
+    height=&#34;679&#34;
+    alt=&#34;Pengujian+tampilan+responsif+web+di+inspect+element+-+petanikode.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-F0ipNxOxWnU/WKhTDjXhQzI/AAAAAAAAEAs/dASGP5AdMRgNdTrkNAd2JEkCZpBVom6rgCPcB/s1600/Pengujian%2Btampilan%2Bresponsif%2Bweb%2Bdi%2Binspect%2Belement%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-mengukur-kecepatan-web&#34;&gt;3. Mengukur Kecepatan Web&lt;/h2&gt;
+
+&lt;p&gt;Kita dapat mengetahui seberapa lama web diunduh oleh browser dan berapa kecepatan dan ukuran kapasitas webnya? Silahkan gunakan fitur Network atau Timeline untuk melakukannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1364&#34;
+    height=&#34;678&#34;
+    alt=&#34;Mengukur+kecepatan+web+di+inspect+element+-+petanikode.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-LDis0GBfR9s/WKhT0iA4nHI/AAAAAAAAEBA/XLqopt_G0nEd1pTUQGHrTMvBhfwTOGYAACPcB/s1600/Mengukur%2Bkecepatan%2Bweb%2Bdi%2Binspect%2Belement%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-debugging-javascript&#34;&gt;4. Debugging Javascript&lt;/h2&gt;
+
+&lt;p&gt;Ada yang bilang, belajar javascript itu susah karena kita tidak tahu tempat error-nya.
+Kadang, browser hanya menampilkan halaman kosong saat error.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;486&#34; height=&#34;657&#34;
+    layout=&#34;responsive&#34;
+    data-tweetid=&#34;818038227143561218&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebenarnya pendapat itu salah, karena kita bisa melihat pesan error javascript pada console-nya. Dimana console-nya? ya di dalam Inspect Elemen. Silahkan buka menu Console.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-alat-untuk-audit-web&#34;&gt;5. Alat untuk Audit Web&lt;/h2&gt;
+
+&lt;p&gt;Audit perlu kita lakukan untuk meningkatkan kinerja web. Pada Inspect Elemen milik Google Chrome, kita disediakan fitur audit untuk mengetahui apa saja resource yang digunakan dan yang tidak digunakan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;945&#34;
+    height=&#34;500&#34;
+    alt=&#34;Audit+web+di+Inspect+element+-+petanikode.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-vNQJtWwp3iM/WKhVV2r5KoI/AAAAAAAAEBU/7LlDpgbnLRYoPhmrJcpUIN2GUEBGK1oJwCPcB/s1600/Audit%2Bweb%2Bdi%2BInspect%2Belement%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-mengambil-screenshot-dengan-mudah&#34;&gt;6. Mengambil Screenshot dengan Mudah&lt;/h2&gt;
+
+&lt;p&gt;Khusus di Firefox, kita disediakan fitur untuk mengambil screenshot web. Caranya, klik kanan pada elemen yang ingin di-screenshot, kemudian pilih &lt;em&gt;Screenshot Node&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;917&#34;
+    height=&#34;525&#34;
+    alt=&#34;mengambil+screenshoot+di+Inspect+element+firefox.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-xPgOdZAg8YY/WKhWPl_wGdI/AAAAAAAAEBs/K-eZEeDd8PMljRx03SLpEfkHFPj6LaJBgCPcB/s1600/mengambil%2Bscreenshoot%2Bdi%2BInspect%2Belement%2Bfirefox.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-mengukur-performa-memori-dan-cpu&#34;&gt;7. Mengukur Performa Memori dan CPU&lt;/h2&gt;
+
+&lt;p&gt;Semakin banyak tab yang kita buka di browser, semakin banyak pula memori yang akan dimakan. Selain itu, skrip-skrip pada web juga membuat CPU berkerja semakin keras. Untuk melihat performa memori dan CPU ketika membuka web, silahkan masuk ke menu &lt;em&gt;Timeline&lt;/em&gt; di Inspect Element miliknya Google Chrome. Sedangkan di Firefox, masuk ke &lt;em&gt;Performance&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;861&#34;
+    height=&#34;680&#34;
+    alt=&#34;Mengukur+Performa+Web.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-FFcmZfK42IM/WKhWgp7E1bI/AAAAAAAAEB0/ATHEopUYKrww2uDAKimbKK8B-OlZfiLzACPcB/s1600/Mengukur%2BPerforma%2BWeb.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah 7 manfaat Inspect Element bagi web developer. Sebanarnya masih banyak lagi manfaat dari Inspect Element yang belum kita ketahui. Selebihnya silahkan cari sendiri atau jika mau menambahkan silahkan corat-coret di komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutorial Bootstrap (3) - Memahami fungsi viewport</title>
       <link>http://petanikode.com/2016/01/tutorial-bootstrap-3---memahami-fungsi-viewport/</link>
       <pubDate>Tue, 12 Jan 2016 16:20:00 +0000</pubDate>
@@ -216,105 +329,6 @@ github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/
       
       <guid>http://petanikode.com/2015/09/kode-css-untuk-merapikan-embed-gist-github-di-blog/</guid>
       <description>&lt;p&gt;Saya mencoba memajang kode yang ada di Gist Github ke blog. Namun, kodenya terlalu panjang dan memakan banyak tempat. Seharusnya kode ini ditampilkan setinggi 500px, agar pembaca tidak capek melalkukan &lt;i&gt;scroll&lt;/i&gt;.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-7u7PnzZxyYw/Vfw9ie8oWsI/AAAAAAAAB1c/_mhpqRvkdxI/s1600/Kode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2BGist%2Bdi%2Bblog%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-7u7PnzZxyYw/Vfw9ie8oWsI/AAAAAAAAB1c/_mhpqRvkdxI/s1600/Kode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2BGist%2Bdi%2Bblog%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Berikut kode CSS untuk merapikannya:&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/fc3beb2d591fc52692de.js&#34;&gt;&lt;/script&gt;Pada blogger, kode CSS tersebut dapat ditambahkan pada &lt;i&gt;Template Designer&amp;gt;Advenced&amp;gt;Add CSS&lt;/i&gt;&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-MjIHgYZ58co/VfwwSLK33tI/AAAAAAAAB08/jYj7DQ7VjMw/s1600/Penambahan%2Bkode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2Bgist.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-MjIHgYZ58co/VfwwSLK33tI/AAAAAAAAB08/jYj7DQ7VjMw/s1600/Penambahan%2Bkode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2Bgist.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Sebenarnya, kita hanya perlu menambahkan &lt;code&gt;max-height: 500px&lt;/code&gt; saja, agar kotak kode ditampilkan maksimal setinggi &lt;samp&gt;500px&lt;/samp&gt;. Namun, kode CSS di atas adalah hasil &lt;i&gt;fork&lt;/i&gt; dan modifikasi yang saya lakukan untuk blog ini. Jadi, anda juga bisa mem-&lt;i&gt;fork&lt;/i&gt; dan memodifikasinya sesuka hati.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>3 Cara Penulisan Kode CSS dalam HTML</title>
-      <link>http://petanikode.com/2015/07/3-cara-penulisan-kode-css-dalam-html/</link>
-      <pubDate>Sun, 12 Jul 2015 21:14:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2015/07/3-cara-penulisan-kode-css-dalam-html/</guid>
-      <description>
-
-&lt;p&gt;Penulisan kode CSS dalam HTML dibagi menjadi tiga cara, internal, &lt;em&gt;inline&lt;/em&gt;, dan eksternal.
-Pembagian ini berdasarkan letak kode CSS tersebut ditulis.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-internal-css&#34;&gt;1. Internal CSS&lt;/h2&gt;
-
-&lt;p&gt;Internal CSS adalah istilah untuk kode CSS yang ditulis langsung dalam berkas HTML. Kode CSS ini dituliskan pada tag &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;. Tag ini bisa ditulis di dalam blok &lt;code&gt;head&lt;/code&gt; atapun &lt;code&gt;body&lt;/code&gt;, kedua-duanya sah. Nah, berikut ini contoh internal CSS.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;700&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/eNrXGW/?height=600&amp;theme-id=dark&amp;default-tab=html,result&amp;embed-version=2&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-eksternal-css&#34;&gt;2. Eksternal CSS&lt;/h2&gt;
-
-&lt;p&gt;Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML.
-Eksternal CSS ditulis disebuah berkas khusus yang berekstensi &lt;code&gt;.css&lt;/code&gt;.
-Sebagai contoh, saya akan membuat sebuah berkas bernama &lt;code&gt;style-ku.css&lt;/code&gt;.
-Berikut ini cuplikan isi berkas &lt;code&gt;style-ku.css&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p {
-    font-family: serif;
-    line-height: 1.75em;
-}
-
-i {
-    font-family: sans;
-    color: orange;
-}
-
-h2 {
-    font-family: sans;
-    color: #333;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk menggunakan CSS tersebut dalam HTML, kita perlu mengimpornya. Ada beberapa cara memasukkan kode CSS dari berkas eksternal:&lt;/p&gt;
-
-&lt;p&gt;Pertama menggunakan tag &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style-ku.css&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Atau bisa juga bisa menggunakan &lt;code&gt;@import&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
-@import &amp;quot;style-ku.css&amp;quot;;
-&amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Penulisan pada HTML versi lengkapnya seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;title&amp;gt;Contoh Eksternal CSS&amp;lt;/title&amp;gt;
-    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style-ku.css&amp;quot;&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-    &amp;lt;h2&amp;gt;Ini judul artikel&amp;lt;/h2&amp;gt;
-    &amp;lt;p&amp;gt;Ini adalah paragraf yang memuat isi artikel. Paragraf ini hanya untuk percobaan saja. Percobaan untuk mendemokan &amp;lt;i&amp;gt;internal css&amp;lt;/i&amp;gt;. Seperti namanya, &amp;lt;i&amp;gt;inline CSS&amp;lt;/i&amp;gt; adalah kode CSS yang ditulis langsung dalam file HTML.&amp;lt;/p&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya pun akan sama seperti contoh internal CSS, karena kode CSS-nya sama. Hanya saja berbeda tempat penulisannya.&lt;/p&gt;
-
-&lt;h2 id=&#34;3-inline-css&#34;&gt;3. Inline CSS&lt;/h2&gt;
-
-&lt;p&gt;Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Setiap elemen HTML memiliki atribut &lt;code&gt;style&lt;/code&gt;, di sana lah inline CSS ditulis. Contohnya seperti ini:&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;h2 style=&amp;quot;color:red; font-family: sans;&amp;quot;&amp;gt;Ini judul artikel&amp;lt;/h2&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh lengkap:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;420&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/NqMmjj?height=380&amp;theme-id=dark&amp;default-tab=html,result&amp;embed-version=2&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Referensi:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://matthewjamestaylor.com/blog/adding-css-to-html-with-link-embed-inline-and-import&#34;&gt;http://matthewjamestaylor.com/blog/adding-css-to-html-with-link-embed-inline-and-import&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.w3schools.com/css/css_howto.asp&#34;&gt;http://www.w3schools.com/css/css_howto.asp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.w3.org/TR/xhtml2/mod-styleSheet.html#edef_styleSheet_style&#34;&gt;http://www.w3.org/TR/xhtml2/mod-styleSheet.html#edef_styleSheet_style&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

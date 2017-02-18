@@ -304,6 +304,119 @@ silahkan disampaikan melalui komentar.&lt;/p&gt;
     </item>
     
     <item>
+      <title>7 Manfaat Inspect Element Bagi Web Developer</title>
+      <link>http://petanikode.com/2016/01/7-manfaat-inspect-element-bagi-web-developer/</link>
+      <pubDate>Thu, 14 Jan 2016 11:03:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/01/7-manfaat-inspect-element-bagi-web-developer/</guid>
+      <description>
+
+&lt;p&gt;Inspect Element merupakan fitur browser yang dibuat untuk memudahkan web developer dalam mengembangkan web. Inspect Element dapat kita akses dengan klik kanan, kemudian memilih Inspect Element, atau bisa juga dengan menekan tombol &lt;code&gt;F12&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Adapun manfaat dari Inspect Element untuk web Developer adalah sebagai berikut.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-tempat-eksperimen-css&#34;&gt;1. Tempat Eksperimen CSS&lt;/h2&gt;
+
+&lt;p&gt;Selain ada console Javascript, bisa dibilang di Inspect Elemen juga ada console-nya CSS. Ya, di sana kita bisa eksperimen kode CSS.&lt;/p&gt;
+
+&lt;p&gt;Sebelum kita menulis kode CSS, sebaiknya gunakan Inspect Element terlebih dahulu. Karena saat kita menulis kode CSS di Inspect Elemen, browser akan langsung mengeksekusinya. Selain itu, kita diberikan fitur yang memudahkan penulisan CSS seperti autocomplete, colorpicker, filter, visual model box, dll.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1366&#34;
+    height=&#34;768&#34;
+    alt=&#34;Edit CSS d iInspect Element&#34;
+    src=&#34;https://4.bp.blogspot.com/-YA3lbRkw6z0/WKhR5OizENI/AAAAAAAAEAU/vxaVOYaLjBExO0cpMeCw1vnzf3lbMbrswCPcB/s1600/Edit%2BCSS%2Bdi%2BInspect%2BElement.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kode CSS yang ditulis di Inspect Element bersifat temporer. Kita harus menyalinnya ke kode CSS di teks editor agar tersimpan.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-pengujian-web-responsif&#34;&gt;2. Pengujian Web Responsif&lt;/h2&gt;
+
+&lt;p&gt;Kita tidak perlu punya banyak perangkat untuk pengujian responsif. Cukup manfaatkan Inspect Element, kita sudah bisa menggunakan berbagai jenis perangkat mobile.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1270&#34;
+    height=&#34;679&#34;
+    alt=&#34;Pengujian+tampilan+responsif+web+di+inspect+element+-+petanikode.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-F0ipNxOxWnU/WKhTDjXhQzI/AAAAAAAAEAs/dASGP5AdMRgNdTrkNAd2JEkCZpBVom6rgCPcB/s1600/Pengujian%2Btampilan%2Bresponsif%2Bweb%2Bdi%2Binspect%2Belement%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-mengukur-kecepatan-web&#34;&gt;3. Mengukur Kecepatan Web&lt;/h2&gt;
+
+&lt;p&gt;Kita dapat mengetahui seberapa lama web diunduh oleh browser dan berapa kecepatan dan ukuran kapasitas webnya? Silahkan gunakan fitur Network atau Timeline untuk melakukannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1364&#34;
+    height=&#34;678&#34;
+    alt=&#34;Mengukur+kecepatan+web+di+inspect+element+-+petanikode.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-LDis0GBfR9s/WKhT0iA4nHI/AAAAAAAAEBA/XLqopt_G0nEd1pTUQGHrTMvBhfwTOGYAACPcB/s1600/Mengukur%2Bkecepatan%2Bweb%2Bdi%2Binspect%2Belement%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-debugging-javascript&#34;&gt;4. Debugging Javascript&lt;/h2&gt;
+
+&lt;p&gt;Ada yang bilang, belajar javascript itu susah karena kita tidak tahu tempat error-nya.
+Kadang, browser hanya menampilkan halaman kosong saat error.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;486&#34; height=&#34;657&#34;
+    layout=&#34;responsive&#34;
+    data-tweetid=&#34;818038227143561218&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebenarnya pendapat itu salah, karena kita bisa melihat pesan error javascript pada console-nya. Dimana console-nya? ya di dalam Inspect Elemen. Silahkan buka menu Console.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-alat-untuk-audit-web&#34;&gt;5. Alat untuk Audit Web&lt;/h2&gt;
+
+&lt;p&gt;Audit perlu kita lakukan untuk meningkatkan kinerja web. Pada Inspect Elemen milik Google Chrome, kita disediakan fitur audit untuk mengetahui apa saja resource yang digunakan dan yang tidak digunakan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;945&#34;
+    height=&#34;500&#34;
+    alt=&#34;Audit+web+di+Inspect+element+-+petanikode.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-vNQJtWwp3iM/WKhVV2r5KoI/AAAAAAAAEBU/7LlDpgbnLRYoPhmrJcpUIN2GUEBGK1oJwCPcB/s1600/Audit%2Bweb%2Bdi%2BInspect%2Belement%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-mengambil-screenshot-dengan-mudah&#34;&gt;6. Mengambil Screenshot dengan Mudah&lt;/h2&gt;
+
+&lt;p&gt;Khusus di Firefox, kita disediakan fitur untuk mengambil screenshot web. Caranya, klik kanan pada elemen yang ingin di-screenshot, kemudian pilih &lt;em&gt;Screenshot Node&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;917&#34;
+    height=&#34;525&#34;
+    alt=&#34;mengambil+screenshoot+di+Inspect+element+firefox.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-xPgOdZAg8YY/WKhWPl_wGdI/AAAAAAAAEBs/K-eZEeDd8PMljRx03SLpEfkHFPj6LaJBgCPcB/s1600/mengambil%2Bscreenshoot%2Bdi%2BInspect%2Belement%2Bfirefox.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-mengukur-performa-memori-dan-cpu&#34;&gt;7. Mengukur Performa Memori dan CPU&lt;/h2&gt;
+
+&lt;p&gt;Semakin banyak tab yang kita buka di browser, semakin banyak pula memori yang akan dimakan. Selain itu, skrip-skrip pada web juga membuat CPU berkerja semakin keras. Untuk melihat performa memori dan CPU ketika membuka web, silahkan masuk ke menu &lt;em&gt;Timeline&lt;/em&gt; pada Google Chrome. Sedangkan di Firefox, masuk ke &lt;em&gt;Performance&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;861&#34;
+    height=&#34;680&#34;
+    alt=&#34;Mengukur+Performa+Web.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-FFcmZfK42IM/WKhWgp7E1bI/AAAAAAAAEB0/ATHEopUYKrww2uDAKimbKK8B-OlZfiLzACPcB/s1600/Mengukur%2BPerforma%2BWeb.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah 7 manfaat Inspect Element bagi web developer. Sebanarnya masih banyak lagi manfaat dari Inspect Element yang belum kita ketahui. Selebihnya silahkan cari sendiri atau jika mau menambahkan silahkan corat-coret di komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Menulis Kode Serasa Main Game dengan Modul Activate Power Mode di Atom</title>
       <link>http://petanikode.com/2015/12/menulis-kode-serasa-main-game-dengan-modul-activate-power-mode-di-atom/</link>
       <pubDate>Sat, 19 Dec 2015 15:37:00 +0000</pubDate>

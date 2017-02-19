@@ -98,7 +98,12 @@ saja kita buat.&lt;/p&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;File view yang di-load bernama &lt;code&gt;laporan_pdf&lt;/code&gt;, berarti kita harus membuat
+file view bernama &lt;code&gt;laporan_pdf.php&lt;/code&gt; di &lt;code&gt;application/views&lt;/code&gt;.&lt;/p&gt;
+
 &lt;h2 id=&#34;5-membuat-view&#34;&gt;5. Membuat View&lt;/h2&gt;
+
+&lt;p&gt;File: &lt;code&gt;application/views/laporan_pdf.php&lt;/code&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;pre&amp;gt;&amp;lt;?php print_r($dataku); ?&amp;gt;&amp;lt;/pre&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;

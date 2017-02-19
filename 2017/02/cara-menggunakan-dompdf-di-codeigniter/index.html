@@ -263,7 +263,7 @@ $config[&#39;composer_autoload&#39;] = &quot;vendor/autoload.php&quot;;  2. Inst
   },
   "headline": "Cara Menggunakan Dompdf di Codeigniter",
   "description": "Dompdf merupakan salah satu pustaka PHP untuk membuat PDF. Dompdf membuat PDF dari HTML. Kita juga bisa menggunakan CSS di dalamnya. Saat ini Dompdf mendukung CSS versi 2.1.\nUntuk menggunakan Dompdf di Codeigniter, silahkan ikuti langkah-langkah berikut ini.\n1. Aktifkan Autoload Composer Kita akan menggunakan Composer untuk menginstal Dompdf di proyek Codeigniter. Silahkan buka file application\/config\/config.php, kemudian isi bagian autoload Composer seperti ini.\n$config[\x27composer_autoload\x27] = \x26quot;vendor\/autoload.php\x26quot;;  2. Instal Dompdf Setelah itu, sekarang kita instal dompdf dengan perintah",
-  "wordCount":  194 ,
+  "wordCount":  212 ,
   "datePublished" : "2017-02-19T16:48:58",
   "dateModified" : "2017-02-19T16:48:58",
   "image" : {
@@ -1303,7 +1303,12 @@ saja kita buat.</p>
 }
 </code></pre>
 
+<p>File view yang di-load bernama <code>laporan_pdf</code>, berarti kita harus membuat
+file view bernama <code>laporan_pdf.php</code> di <code>application/views</code>.</p>
+
 <h2 id="5-membuat-view">5. Membuat View</h2>
+
+<p>File: <code>application/views/laporan_pdf.php</code></p>
 
 <pre><code class="language-html">&lt;pre&gt;&lt;?php print_r($dataku); ?&gt;&lt;/pre&gt;
 </code></pre>

@@ -7,8 +7,116 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 16 Feb 2017 13:56:42 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Feb 2017 16:48:58 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Menggunakan Dompdf di Codeigniter</title>
+      <link>http://petanikode.com/2017/02/cara-menggunakan-dompdf-di-codeigniter/</link>
+      <pubDate>Sun, 19 Feb 2017 16:48:58 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/cara-menggunakan-dompdf-di-codeigniter/</guid>
+      <description>
+
+&lt;p&gt;Dompdf merupakan salah satu pustaka PHP untuk membuat PDF. Dompdf membuat
+PDF dari HTML. Kita juga bisa menggunakan CSS di dalamnya. Saat ini Dompdf
+mendukung CSS versi 2.1.&lt;/p&gt;
+
+&lt;p&gt;Untuk menggunakan Dompdf di &lt;a href=&#34;http://petanikode.com/topik/codeigniter&#34;&gt;Codeigniter&lt;/a&gt;, silahkan ikuti langkah-langkah
+berikut ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-aktifkan-autoload-composer&#34;&gt;1. Aktifkan Autoload Composer&lt;/h2&gt;
+
+&lt;p&gt;Kita akan menggunakan &lt;a href=&#34;http://petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt; untuk menginstal Dompdf di proyek Codeigniter.
+Silahkan buka file &lt;code&gt;application/config/config.php&lt;/code&gt;, kemudian isi bagian &lt;em&gt;autoload&lt;/em&gt;
+Composer seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-instal-dompdf&#34;&gt;2. Instal Dompdf&lt;/h2&gt;
+
+&lt;p&gt;Setelah itu, sekarang kita instal &lt;code&gt;dompdf&lt;/code&gt; dengan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;composer require dompdf/dompdf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;767&#34;
+    height=&#34;397&#34;
+    alt=&#34;Instal+dompdf+di+proyek+codeigniter.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-s_nZmMzBxw4/WKloKD7bnsI/AAAAAAAAEDM/i43FYKNjq0UIDMEEpupojCfzFnekvkQdgCPcB/s1600/Instal%2Bdompdf%2Bdi%2Bproyek%2Bcodeigniter.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2016/12/cara-menggunakan-composer-pada-codeigniter/&#34;&gt;Cara Menggunakan Composer pada CodeIgniter&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-membuat-pustaka-sendiri&#34;&gt;3. Membuat Pustaka Sendiri&lt;/h2&gt;
+
+&lt;p&gt;Agar lebih praktis, kita buat saja pustaka sendiri. Silahkan buat file baru
+di direktori &lt;code&gt;application/libraries&lt;/code&gt; dengan nama &lt;code&gt;pdf.php&lt;/code&gt;. Isinya seperti berikut
+ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;1560&#34;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
+    frameborder=&#34;0&#34;
+    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/52f860ff/amp-gist.html?url=https://gist.github.com/ardianta/f4bfa696ca9a040677e87f2cde4d5887&#34;&gt;
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Kode di atas merupakan &lt;em&gt;class ekstends&lt;/em&gt; dari &lt;em&gt;class&lt;/em&gt; Dompdf.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-membuat-controller&#34;&gt;4. Membuat Controller&lt;/h2&gt;
+
+&lt;p&gt;Buat sebuah fungsi di dalam &lt;em&gt;Controller&lt;/em&gt; untuk menggunakan pustaka yang baru
+saja kita buat.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;public function laporan_pdf(){
+
+    $data = array(
+        &amp;quot;dataku&amp;quot; =&amp;gt; array(
+            &amp;quot;nama&amp;quot; =&amp;gt; &amp;quot;Petani Kode&amp;quot;,
+            &amp;quot;url&amp;quot; =&amp;gt; &amp;quot;http://petanikode.com&amp;quot;
+        )
+    );
+
+    $this-&amp;gt;load-&amp;gt;library(&#39;pdf&#39;);
+    $this-&amp;gt;pdf-&amp;gt;setPaper(&#39;A4&#39;, &#39;potrait&#39;);
+    $this-&amp;gt;pdf-&amp;gt;filename = &amp;quot;laporan-petanikode.pdf&amp;quot;;
+    $this-&amp;gt;pdf-&amp;gt;load_view(&#39;laporan_pdf&#39;, $data);
+
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-membuat-view&#34;&gt;5. Membuat View&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;pre&amp;gt;&amp;lt;?php print_r($dataku); ?&amp;gt;&amp;lt;/pre&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;6-percobaan&#34;&gt;6. Percobaan&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1123&#34;
+    height=&#34;583&#34;
+    alt=&#34;laporan-pdf-codeigniter-dengan-dompdf.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-kboJqCRNU4o/WKmUXJshcRI/AAAAAAAAEDw/EN3ddQNV6KAd7i8Am8rf2uyIluTFD-0eQCPcB/s1600/laporan-pdf-codeigniter-dengan-dompdf.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Begitulah cara menggunakan Dompdf di Codeigniter. Selebihnya anda bisa bereksperiman
+sendiri.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Tutorial Git 05 - Melihat Perbandingan Revisi</title>
@@ -1813,107 +1921,6 @@ src=&#34;https://3.bp.blogspot.com/-iliONqyMRiw/WGlb06iwoNI/AAAAAAAADk8/dKuuPCDZ
 layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 
 &lt;p&gt;Selaamt! Sekarang PHP sudah bisa dijalankan melalui CMD.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Upload File ke Server FTP ala Git</title>
-      <link>http://petanikode.com/2017/01/cara-upload-file-ke-server-ftp-ala-git/</link>
-      <pubDate>Tue, 31 Jan 2017 12:09:55 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/cara-upload-file-ke-server-ftp-ala-git/</guid>
-      <description>
-
-&lt;p&gt;Ketika kita akan men-deploy atau &lt;em&gt;hosting&lt;/em&gt; sebuah web di server &lt;em&gt;shared hosting&lt;/em&gt;,
-kita akan diberikan fasilitas FTP untuk upload file. Kita bisa menggunakan
-&lt;em&gt;FTP Client&lt;/em&gt; seperti FileZilla untuk upload file. Namun, bagaimana kalau nanti
-ada perubahan? Tentu kita akan mencari file yang diubah dan di-upload lagi.
-Hal ini mungkin terasa sedikit melelahkan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;720&#34;
-height=&#34;380&#34;
-alt=&#34;Git FTP&#34;
-src=&#34;https://1.bp.blogspot.com/-jeWvQeAn-TQ/WJGe6gyu6vI/AAAAAAAADwM/yJ-X3DG9T5sLyIow4kyD-cHt_nCOYP_qgCPcB/s1600/upload-file-ftp-ala-git-petanikode.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sedangkan, kalau kita menggunakan Git. Kita hanya perlu melakukan &lt;em&gt;push&lt;/em&gt; untuk
-mengupload perubahan ke server atau repository &lt;em&gt;remote&lt;/em&gt;. Akan tetapi, server yang
-kita gunakan tidak mendukung Git.&lt;/p&gt;
-
-&lt;p&gt;Sebuah alat bernama &lt;code&gt;git-ftp&lt;/code&gt; memungkinkan kita untuk meng-upload file ke server
-FTP seperti cara Git. Kita tidak akan repot mencari file yang sudah diubah untuk
-diupload lagi dan menindih yang sudah ada di server. Karena &lt;code&gt;git-ftp&lt;/code&gt; akan melakukan
-sinkronisasi berdasarkan perubahan yang dicatat oleh Git.&lt;/p&gt;
-
-&lt;h2 id=&#34;instalasi-git-ftp&#34;&gt;Instalasi git-ftp&lt;/h2&gt;
-
-&lt;p&gt;Instalasi &lt;code&gt;git-ftp&lt;/code&gt; di Ubuntu dapat dilakukan dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;sudo apt install git-ftp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Instalasi di sistem operasi lain, silahkan baca &lt;a href=&#34;https://github.com/git-ftp/git-ftp/blob/develop/INSTALL.md&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;konfigurasi-awal&#34;&gt;Konfigurasi Awal&lt;/h2&gt;
-
-&lt;p&gt;Masuk ke direktori proyeknya. Pastikan sudah menggunakan Git di sana. Kemudian
-tambahkan konfigurasi &lt;code&gt;git-ftp&lt;/code&gt; dengan perintah berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config git-ftp.url ftp.example.net
-git config git-ftp.user ftp-user
-git config git-ftp.password rah4sia
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sebagai contoh, saya menggunakan hosting &lt;a href=&#34;http://api.idhostinger.com/redir/18671649&#34;&gt;gratis dari idhostinger&lt;/a&gt;
-dan membuat akun FTP sebagai berikut.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;924&#34;
-height=&#34;255&#34;
-alt=&#34;Akun FTP di IDhostinger&#34;
-src=&#34;https://4.bp.blogspot.com/-3WZZA8H29bY/WI_rPPRQvJI/AAAAAAAADvs/YpKGbgQs6b0d1zZTwnJYOm9okOq4FlCyQCPcB/s1600/Akun%2BFTP%2Bdi%2Bihostinger.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Misalkan saya ingin upload ke direktori &lt;code&gt;project1&lt;/code&gt;, Maka konfigurasi
-&lt;code&gt;git-ftp&lt;/code&gt;-nya seagai berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config git-ftp.url ftp.petanikode.hol.es/project1
-git config git-ftp.user u898309845.petanikode
-git config git-ftp.password SangatRah4sia
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;upload-pertama&#34;&gt;Upload Pertama&lt;/h2&gt;
-
-&lt;p&gt;Setelah kita melakukan konfigurasi &lt;code&gt;git-ftp&lt;/code&gt;, selanjutnya kita bisa upload semua
-file dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git ftp init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Proses ini akan memakan waktu cukup lama apabila terdapat banyak file yang akan
-di-upload. Perintah ini akan meng-upload semua file, kecuali yang terdaftar dalam
-&lt;code&gt;.gitignore&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;upload-perubahan&#34;&gt;Upload Perubahan&lt;/h2&gt;
-
-&lt;p&gt;Jika ada perubahan, kita harus mealkukan &lt;code&gt;commit&lt;/code&gt; terlebih dahulu.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git add .
-git commit -m &amp;quot;ini perubahan yang dilakukan&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, kita bisa upload lagi perubahannya dengan perintah.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git ftp push
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka &lt;code&gt;git-ftp&lt;/code&gt; akan melakukan upload file-file yang sudah diubah dan menindih
-yang sudah ada di server.&lt;/p&gt;
-
-&lt;p&gt;Begitulah cara upload file seperti cara &lt;a href=&#34;http://petanikode.com/topik/git&#34;&gt;Git&lt;/a&gt;. Semoga bermanfaat.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;https://git-ftp.github.io/&#34;&gt;git-ftp.github.io&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

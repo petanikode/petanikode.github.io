@@ -10,6 +10,114 @@
     <atom:link href="http://petanikode.com/topik/php/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cara Menggunakan Dompdf di Codeigniter</title>
+      <link>http://petanikode.com/2017/02/cara-menggunakan-dompdf-di-codeigniter/</link>
+      <pubDate>Sun, 19 Feb 2017 16:48:58 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/cara-menggunakan-dompdf-di-codeigniter/</guid>
+      <description>
+
+&lt;p&gt;Dompdf merupakan salah satu pustaka PHP untuk membuat PDF. Dompdf membuat
+PDF dari HTML. Kita juga bisa menggunakan CSS di dalamnya. Saat ini Dompdf
+mendukung CSS versi 2.1.&lt;/p&gt;
+
+&lt;p&gt;Untuk menggunakan Dompdf di &lt;a href=&#34;http://petanikode.com/topik/codeigniter&#34;&gt;Codeigniter&lt;/a&gt;, silahkan ikuti langkah-langkah
+berikut ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-aktifkan-autoload-composer&#34;&gt;1. Aktifkan Autoload Composer&lt;/h2&gt;
+
+&lt;p&gt;Kita akan menggunakan &lt;a href=&#34;http://petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt; untuk menginstal Dompdf di proyek Codeigniter.
+Silahkan buka file &lt;code&gt;application/config/config.php&lt;/code&gt;, kemudian isi bagian &lt;em&gt;autoload&lt;/em&gt;
+Composer seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-instal-dompdf&#34;&gt;2. Instal Dompdf&lt;/h2&gt;
+
+&lt;p&gt;Setelah itu, sekarang kita instal &lt;code&gt;dompdf&lt;/code&gt; dengan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;composer require dompdf/dompdf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;767&#34;
+    height=&#34;397&#34;
+    alt=&#34;Instal+dompdf+di+proyek+codeigniter.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-s_nZmMzBxw4/WKloKD7bnsI/AAAAAAAAEDM/i43FYKNjq0UIDMEEpupojCfzFnekvkQdgCPcB/s1600/Instal%2Bdompdf%2Bdi%2Bproyek%2Bcodeigniter.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2016/12/cara-menggunakan-composer-pada-codeigniter/&#34;&gt;Cara Menggunakan Composer pada CodeIgniter&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-membuat-pustaka-sendiri&#34;&gt;3. Membuat Pustaka Sendiri&lt;/h2&gt;
+
+&lt;p&gt;Agar lebih praktis, kita buat saja pustaka sendiri. Silahkan buat file baru
+di direktori &lt;code&gt;application/libraries&lt;/code&gt; dengan nama &lt;code&gt;pdf.php&lt;/code&gt;. Isinya seperti berikut
+ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;1560&#34;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
+    frameborder=&#34;0&#34;
+    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/52f860ff/amp-gist.html?url=https://gist.github.com/ardianta/f4bfa696ca9a040677e87f2cde4d5887&#34;&gt;
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Kode di atas merupakan &lt;em&gt;class ekstends&lt;/em&gt; dari &lt;em&gt;class&lt;/em&gt; Dompdf.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-membuat-controller&#34;&gt;4. Membuat Controller&lt;/h2&gt;
+
+&lt;p&gt;Buat sebuah fungsi di dalam &lt;em&gt;Controller&lt;/em&gt; untuk menggunakan pustaka yang baru
+saja kita buat.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;public function laporan_pdf(){
+
+    $data = array(
+        &amp;quot;dataku&amp;quot; =&amp;gt; array(
+            &amp;quot;nama&amp;quot; =&amp;gt; &amp;quot;Petani Kode&amp;quot;,
+            &amp;quot;url&amp;quot; =&amp;gt; &amp;quot;http://petanikode.com&amp;quot;
+        )
+    );
+
+    $this-&amp;gt;load-&amp;gt;library(&#39;pdf&#39;);
+    $this-&amp;gt;pdf-&amp;gt;setPaper(&#39;A4&#39;, &#39;potrait&#39;);
+    $this-&amp;gt;pdf-&amp;gt;filename = &amp;quot;laporan-petanikode.pdf&amp;quot;;
+    $this-&amp;gt;pdf-&amp;gt;load_view(&#39;laporan_pdf&#39;, $data);
+
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-membuat-view&#34;&gt;5. Membuat View&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;pre&amp;gt;&amp;lt;?php print_r($dataku); ?&amp;gt;&amp;lt;/pre&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;6-percobaan&#34;&gt;6. Percobaan&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1123&#34;
+    height=&#34;583&#34;
+    alt=&#34;laporan-pdf-codeigniter-dengan-dompdf.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-kboJqCRNU4o/WKmUXJshcRI/AAAAAAAAEDw/EN3ddQNV6KAd7i8Am8rf2uyIluTFD-0eQCPcB/s1600/laporan-pdf-codeigniter-dengan-dompdf.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Begitulah cara menggunakan Dompdf di Codeigniter. Selebihnya anda bisa bereksperiman
+sendiri.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Menjalankan PHP Melalui CMD</title>
       <link>http://petanikode.com/2017/02/cara-menjalankan-php-melalui-cmd/</link>
       <pubDate>Sat, 04 Feb 2017 08:15:19 +0000</pubDate>
@@ -240,16 +348,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       
       <guid>http://petanikode.com/2016/09/cara-menghapus-dan-mengubah-nama-direktori-dengan-php/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Rasanya kurang lengkap, bila saya hanya memperkenalkan dua fungsi untuk operasi&amp;nbsp; file sistem di PHP. Pada &lt;a href=&#34;http://www.petanikode.com/2016/09/membuat-dan-menampilkan-isi-direktori.html&#34; target=&#34;_blank&#34;&gt;terbitan sebelumnya&lt;/a&gt;, saya sudah membahas fungsi &lt;code&gt;mkdir()&lt;/code&gt; dan &lt;code&gt;scandir()&lt;/code&gt;. Kali ini saya akan membahas fungsi &lt;code&gt;rename()&lt;/code&gt; dan &lt;code&gt;rmdir()&lt;/code&gt;. &lt;br /&gt;&lt;h2&gt;Menghapus direktori&lt;/h2&gt;Menghapus direktori dapat dilakukan dengan fungsi &lt;code&gt;rmdir()&lt;/code&gt;. Fungsi ini memiliki parameter berupa string. Parameter tersebut adalah nama direktori yang ingin dihapus. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php rmdir(&amp;ldquo;nama_dir&amp;rdquo;); ?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Fungsi tersebut akan menghasilkan error apabila direktorinya tidak ditemukan. Untuk mengatasi ini, kita bisa menggunakan fungsi &lt;code&gt;is_dir()&lt;/code&gt; untuk mengecek direktorinya ada atau tidak.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$nama_dir = &amp;ldquo;petanikode&amp;rdquo;;&lt;br /&gt;&lt;br /&gt;if( is_dir($nama_dir) ) {&lt;br /&gt;&amp;nbsp; &amp;nbsp; rmdir($nama_dir); &lt;br /&gt;} else {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; echo &amp;ldquo;Direktori tidak ditemukan&amp;rdquo;; &lt;br /&gt;}&lt;br /&gt;?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Percobaan:&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-iNbyhRtAH1w/V9ek2zq-VQI/AAAAAAAADRQ/Ne5EXYZ5ulk3Ib6cZzUhFLsM3Gri4S5wACK4B/s1600/Percobaan%2Bpenghapusan%2Bdirektori%2Bdengan%2Bphp.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-iNbyhRtAH1w/V9ek2zq-VQI/AAAAAAAADRQ/Ne5EXYZ5ulk3Ib6cZzUhFLsM3Gri4S5wACK4B/s1600/Percobaan%2Bpenghapusan%2Bdirektori%2Bdengan%2Bphp.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Mengubah Nama&lt;/h2&gt;Kita dapat merubah nama direktori dengan fungsi &lt;code&gt;rename()&lt;/code&gt;. Fungsi ini tidak hanya untuk merubah nama direktori, merubah nama file juga dapat menggunakan fungsi ini. Ada dua parameter yang perlu diberikan kepada fungsi ini. Pertama adalah nama file atau direktori yang akan dirubah namanya. Kedua nama barunya. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php rename(&amp;ldquo;petanikode&amp;rdquo;, &amp;ldquo;petani_kode_baru&amp;rdquo;); ?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Percobaan:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-gJXpnYQNh38/V9enQyzUe1I/AAAAAAAADRc/CuGvcEvjBjEh6b4wE1vgwEeuO7yP4ltZQCK4B/s1600/Percobaan%2Brename%2Bdirektori%2Bdengan%2BPHP%2B-%2BPetani%2Bkode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-gJXpnYQNh38/V9enQyzUe1I/AAAAAAAADRc/CuGvcEvjBjEh6b4wE1vgwEeuO7yP4ltZQCK4B/s1600/Percobaan%2Brename%2Bdirektori%2Bdengan%2BPHP%2B-%2BPetani%2Bkode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Begitulah cara menghapus dan mengubah nama direktori dengan PHP. Selamat mencoba!&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.rmdir.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.rmdir.php&#34;&gt;http://php.net/manual/en/function.rmdir.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.rename.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.rename.php&#34;&gt;http://php.net/manual/en/function.rename.php&lt;/a&gt;&lt;/a&gt;&amp;nbsp;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://www.w3schools.com/php/func_filesystem_rename.asp&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.w3schools.com/php/func_filesystem_rename.asp&#34;&gt;http://www.w3schools.com/php/func_filesystem_rename.asp&lt;/a&gt;&lt;/a&gt; &lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Membuat dan Menampilkan isi Direktori dengan PHP</title>
-      <link>http://petanikode.com/2016/09/membuat-dan-menampilkan-isi-direktori-dengan-php/</link>
-      <pubDate>Sun, 04 Sep 2016 10:46:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/09/membuat-dan-menampilkan-isi-direktori-dengan-php/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Pada kesempatan ini, saya akan mengajak teman-teman mengenal dua fungsi yang mungkin dibutuhkan untuk melakukan operasi pada file sistem. Fungsi pertama &lt;code&gt;mkdir()&lt;/code&gt; untuk membuat direktori, mirip seperti perintah &lt;code&gt;mkdir&lt;/code&gt; pada Linux dan &lt;code&gt;md&lt;/code&gt; pada CMD Windows. Fungsi kedua &lt;code&gt;scandir()&lt;/code&gt; untuk menampilkan direktori, mirip seperti perintah &lt;code&gt;ls&lt;/code&gt; dan &lt;code&gt;dir&lt;/code&gt; pada terminal ataupun CMD.&lt;br /&gt;&lt;h2&gt;Membuat direktori&lt;/h2&gt;Mari kita mulai percobaan pertama, membuat direktori denga fungsi &lt;code&gt;mkdir()&lt;/code&gt;. Fungsi ini dapat kita berikan parameter berupa &lt;i&gt;string&lt;/i&gt; yang akan menjadi nama direktorinya. Direktori akan dibuat pada lokasi skrip PHP itu berada dan juga bisa di lokasi &lt;i&gt;(path)&lt;/i&gt; tertentu. Fungsi &lt;code&gt;mkdir()&lt;/code&gt; akan mengembalikan nilai &lt;code&gt;true&lt;/code&gt; apabila berhasil membuat direktori dan &lt;code&gt;false&lt;/code&gt; apabila gagal.&lt;br /&gt;&lt;br /&gt;Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;lt;?php mkdir(&amp;ldquo;contoh_direktori&amp;rdquo;); ?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Contoh pembuatan di path tertentu:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;lt;?php mkdir(&amp;ldquo;./ini_direktori/contoh/saja&amp;rdquo;, 0777, true); ?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Parameter &lt;code&gt;0777&lt;/code&gt; adalah kode hak akses direktori dan nilai &lt;code&gt;true&lt;/code&gt; pada parameter terakhir fungsinya untuk mengizinkan pembuatan direktori secara rekursif.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-Hk90zBrPQD0/V8rXrdlcYGI/AAAAAAAADMI/I2HJWtwYCusToQF3ehrng7hh_ivSK4GSACK4B/s1600/hasil%2Bpercobaan%2Bpembuatan%2Bdirektori.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-Hk90zBrPQD0/V8rXrdlcYGI/AAAAAAAADMI/I2HJWtwYCusToQF3ehrng7hh_ivSK4GSACK4B/s1600/hasil%2Bpercobaan%2Bpembuatan%2Bdirektori.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Melihat isi Direktori&lt;/h2&gt;Setelah kita mengetahui cara membuat direktori, selanjutnya kita akan coba fungsi &lt;code&gt;scandir()&lt;/code&gt; untuk melihat direktori. Fungsi ini mengembalikan hasil berupa &lt;i&gt;array&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$dir = scandir(&amp;ldquo;ini_direktori&amp;rdquo;);&lt;br /&gt;print_r($dir);&lt;br /&gt;?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Akan menghasilkan output:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;Array&lt;br /&gt;(&lt;br /&gt;    [0] =&amp;gt; .&lt;br /&gt;    [1] =&amp;gt; ..&lt;br /&gt;    [2] =&amp;gt; contoh&lt;br /&gt;)&lt;/code&gt;&lt;/pre&gt;Terdapat satu isi, berupa direktori (pada indeks ke-2). Sedangkan indeks ke-0 dan 1 adalah link yang mengarah ke direktori itu sendiri dan direktori di atasnya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;.  = direktori itu sendiri&lt;br /&gt;.. = direktori di atasnya&lt;/code&gt;&lt;/pre&gt;Selanjutnya, kita bisa menampilkan isi dari hasil fungsi &lt;code&gt;scandir()&lt;/code&gt; dengan perulangan.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-WFCPusboujc/V8rgbKX76AI/AAAAAAAADMY/KctE0YT0uB4Vlpxz-6DxrjxddkL46eQIgCK4B/s1600/hasil%2Bscandir.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-WFCPusboujc/V8rgbKX76AI/AAAAAAAADMY/KctE0YT0uB4Vlpxz-6DxrjxddkL46eQIgCK4B/s1600/hasil%2Bscandir.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Isinya ada 6 direktori. Karena sebelumnya, saya sudah membuat 6 direktori dengan perulangan.&lt;br /&gt;&lt;br /&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-captioned=&#34;&#34; data-instgrm-version=&#34;7&#34; style=&#34;background: #fff; border-radius: 3px; border: 0; box-shadow: 0 0 1px 0 rgba(0 , 0 , 0 , 0.5) , 0 1px 10px 0 rgba(0 , 0 , 0 , 0.15); margin: 1px; max-width: 658px; padding: 0; width: 99.375%;&#34;&gt;&lt;div style=&#34;padding: 8px;&#34;&gt;&lt;div style=&#34;background: #F8F8F8; line-height: 0; margin-top: 40px; padding: 50.0% 0; text-align: center; width: 100%;&#34;&gt;&lt;div style=&#34;background: url(data:image/png; display: block; height: 44px; margin: 0 auto -44px; position: relative; top: -22px; width: 44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;margin: 8px 0 0 0; padding: 0 4px;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BJ5KW3EDw7Q/&#34; style=&#34;color: black; font-family: &amp;quot;arial&amp;quot; , sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none; word-wrap: break-word;&#34; target=&#34;_blank&#34;&gt;Berani coba!?&lt;/a&gt;&lt;/div&gt;&lt;div style=&#34;color: #c9c8cd; font-family: Arial,sans-serif; font-size: 14px; line-height: 17px; margin-bottom: 0; margin-top: 8px; overflow: hidden; padding: 8px 0 7px; text-align: center; text-overflow: ellipsis; white-space: nowrap;&#34;&gt;A photo posted by Petani Kode (@petanikode) on &lt;time datetime=&#34;2016-09-03T12:06:00+00:00&#34; style=&#34;font-family: Arial,sans-serif; font-size: 14px; line-height: 17px;&#34;&gt;Sep 3, 2016 at 5:06am PDT&lt;/time&gt;&lt;/div&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;script async=&#34;&#34; defer=&#34;&#34; src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Pembuatan direktori dengan PHP dilakukan dengan fungsi &lt;code&gt;mkdir()&lt;/code&gt; dan untuk melihat isi direkotri dilakukan dengan fungsi &lt;code&gt;scandir()&lt;/code&gt;. Dua fungsi tersebut dapat diterapkan pada pembuatan sistem manajemen file berbasis web. &lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.mkdir.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.mkdir.php&#34;&gt;http://php.net/manual/en/function.mkdir.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.scandir.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.scandir.php&#34;&gt;http://php.net/manual/en/function.scandir.php&lt;/a&gt;&lt;/a&gt; &lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
 </description>
     </item>
     

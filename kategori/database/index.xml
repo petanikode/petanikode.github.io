@@ -99,5 +99,82 @@ HAVING
 </description>
     </item>
     
+    <item>
+      <title>Instalasi MongoDB di Linux</title>
+      <link>http://petanikode.com/2015/03/instalasi-mongodb-di-linux/</link>
+      <pubDate>Mon, 09 Mar 2015 08:15:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2015/03/instalasi-mongodb-di-linux/</guid>
+      <description>&lt;p&gt;MongoDB adalah salah satu jenis basis data NoSQL. basis data ini berorientasi
+dokumen. MongoDB dibuat dengan bahasa pemrograman C++. MongoDB memungkinkan
+kita untuk menyimpan dokumen berbasis JSON dengan sekema dinamis secara sederhana.&lt;/p&gt;
+
+&lt;p&gt;MongoDB tersedia dalam berbagai &lt;em&gt;platform&lt;/em&gt; seperti Windows, Linux, Solaris, dan Mac.
+MongoDB dapat diunduh di &lt;a href=&#34;http://www.mongodb.org/downloads&#34;&gt;situs resminya&lt;/a&gt;.
+Pada tulisan ini, kita akan menginstal MongoDB pada Ubuntu 14.10 melalui &lt;code&gt;apt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;p&gt;Kita mulai saja, pertama-tama, untuk memastikan paket MongoDB tersedia di
+repositori, kita lakukan pencarian dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ apt-cache search mongodb
+
+...
+mongodb - object/document-oriented database (metapackage)
+mongodb-clients - object/document-oriented database (client apps)
+mongodb-server - object/document-oriented database (server package)
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada hasil pencarian paket bernama &lt;code&gt;mongodb&lt;/code&gt;, &lt;code&gt;mongodb-clients&lt;/code&gt;, dan &lt;code&gt;mongodb-server&lt;/code&gt;.
+Kita akan menginstal paket &lt;code&gt;mongodb&lt;/code&gt;, karena, &lt;code&gt;mongodb-server&lt;/code&gt; dan &lt;code&gt;mongodb-clients&lt;/code&gt;
+ sudah termasuk di dalamnya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install mongodb
+[sudo] password for ardianta:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+libboost-program-options1.55.0 libboost-thread1.55.0 libgoogle-perftools4
+libsnappy1 libtcmalloc-minimal4 libyaml-cpp0.5 mongodb-clients
+mongodb-server
+The following NEW packages will be installed:
+libboost-program-options1.55.0 libboost-thread1.55.0 libgoogle-perftools4
+libsnappy1 libtcmalloc-minimal4 libyaml-cpp0.5 mongodb mongodb-clients
+mongodb-server
+0 upgraded, 9 newly installed, 0 to remove and 80 not upgraded.
+Need to get 54,9 MB of archives.
+After this operation, 182 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ukuran paket yang diunduh lumayan besar, 54,9 MB.
+Setelah berhasil tersintal, cobalah periksa, versi berapa yang terinstal.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mongo --version
+MongoDB shell version: 2.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Versi yang saya instal ternyata versi &lt;code&gt;2.6.3&lt;/code&gt;. Versi terbaru saat ini adalah versi &lt;code&gt;3.0.0&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;739&#34;
+    height=&#34;452&#34;
+    alt=&#34;uji+coba+mongodb+di+ubuntu.png&#34;
+    src=&#34;http://3.bp.blogspot.com/-tIvgX8MvGoY/VPw38Nw15sI/AAAAAAAABf8/pjtaeojcUmA/s1600/uji%2Bcoba%2Bmongodb%2Bdi%2Bubuntu.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

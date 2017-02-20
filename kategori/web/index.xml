@@ -953,6 +953,92 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
     </item>
     
     <item>
+      <title>Eksekusi Perintah Command Line (CMD) melalui PHP</title>
+      <link>http://petanikode.com/2016/10/eksekusi-perintah-command-line-cmd-melalui-php/</link>
+      <pubDate>Sat, 15 Oct 2016 19:00:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/10/eksekusi-perintah-command-line-cmd-melalui-php/</guid>
+      <description>&lt;p&gt;Perintah-perintah dasar yang sering kita ketik di Terminal maupun CMD, dapat
+juga kita eksekusi melalui web. Tentu saja dengan bantuan PHP. Pada artikel
+sebelumnya, saya sudah pernah membahas fungsi-fungsi untuk operasi file
+dan direktori. Nah, sekarang ini kita akan coba fungsi &lt;code&gt;system()&lt;/code&gt;.
+Fungsi ini untuk mengeksekusi perintah-perintah Terminal atau CMD.&lt;/p&gt;
+
+&lt;p&gt;Baca Juga:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/cara-menghapus-dan-mengubah-nama-direktori-dengan-php/&#34;&gt;Cara Menghapus dan Mengubah Nama Direktori dengan PHP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/membuat-dan-menampilkan-isi-direktori-dengan-php/&#34;&gt;Membuat dan Menampilkan isi Direktori dengan PHP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mari kita mulai dengan membuat sebuah file baru bernama &lt;code&gt;eksekusi_perintah.php&lt;/code&gt;,
+kemudian isi dengan kode berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;Eksekusi Perintah&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+
+    &amp;lt;form&amp;gt;
+    &amp;lt;label for=&amp;quot;cmd&amp;quot;&amp;gt;Perintah&amp;lt;/label&amp;gt;
+    &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;cmd&amp;quot; placeholder=&amp;quot;perintah (cmd)&amp;quot; /&amp;gt;
+    &amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;Eksekusi&amp;quot; /&amp;gt;
+    &amp;lt;/form&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+&amp;lt;?php
+
+    if(isset($_GET[&#39;cmd&#39;])){
+        echo &amp;quot;&amp;lt;pre&amp;gt;&amp;quot;;
+        echo system($_GET[&#39;cmd&#39;]);
+        echo &amp;quot;&amp;lt;/pre&amp;gt;&amp;quot;;
+    }
+
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, silahkan di simpan dalam direktori web server (&lt;code&gt;/var/www/html&lt;/code&gt;
+atau &lt;code&gt;C:\xampp\htdocs&lt;/code&gt;). Pertahitkan lah kode di atas, di sana kita menggunakan
+sebuah form untuk mendapatkan perintah. Kemudian perintah tersebut akan
+ditampung dalam variabel &lt;code&gt;$_GET&lt;/code&gt;. Sebelum perintah itu dieksekusi,
+kita periksa dulu, apakah sudah ada perintah atau belum dengan fungsi &lt;code&gt;isset()&lt;/code&gt;.
+Terakhir, barulah kita eksekusi perinah dengan fungsi &lt;code&gt;system()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hasilnya ketika dicoba dengan perintah &lt;code&gt;ls -l&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;890&#34;
+    height=&#34;277&#34;
+    alt=&#34;Eksekusi+Perintah+-+Mozilla+Firefox+%28Private+Browsing%29_024.png&#34;
+    src=&#34;http://1.bp.blogspot.com/-hoTSReyAPxE/WAIJ5jDek4I/AAAAAAAADVg/qTUhDWE3EUgzUI_w5HhY-q7eoEw0LQ-aACK4B/s1600/Eksekusi%2BPerintah%2B-%2BMozilla%2BFirefox%2B%2528Private%2BBrowsing%2529_024.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba juga perintah Linux yang lainnya seperti &lt;code&gt;lspci&lt;/code&gt;, &lt;code&gt;date 2016&lt;/code&gt;, &lt;code&gt;uname -a&lt;/code&gt;,
+&lt;code&gt;man ls&lt;/code&gt;, dan sebagainya. Bagaimanakah hasilnya?&lt;/p&gt;
+
+&lt;p&gt;Itulah cara mengeksekusi perintah &lt;em&gt;command line&lt;/em&gt; melalui PHP.
+Kita hanya memerlukan fungsi &lt;code&gt;system()&lt;/code&gt; untuk melakukannya.
+Lalu hasil eksekusinya bisa kita tampilkan dengan perintah &lt;code&gt;echo&lt;/code&gt; atau &lt;code&gt;print&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Menggunakan Web Server dari PHP</title>
       <link>http://petanikode.com/2016/10/cara-menggunakan-web-server-dari-php/</link>
       <pubDate>Mon, 10 Oct 2016 10:16:00 +0000</pubDate>

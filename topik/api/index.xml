@@ -232,7 +232,74 @@ perusahaan atau pemerintah, apa yang akan terjadi?&lt;/p&gt;
       <pubDate>Sat, 03 Sep 2016 04:30:00 +0000</pubDate>
       
       <guid>http://petanikode.com/2016/09/penguraian-parshing-json-dari-url-web-service-dengan-python/</guid>
-      <description>&lt;p&gt;Kita membutuhkan modul atau pustakan &lt;code&gt;urlib&lt;/code&gt; untuk mengambil JSON dari URL Web Service. Setelah itu, kita dapat melakukan penguraian &lt;i&gt;(parshing)&lt;/i&gt; informasi yang ada di dalamnya. Web service yang akan saya gunakan pada tulisan ini adalah web service dari Google. Web service tersebut menyediakan RSS Feed untuk Blogger dalam bentuk JSON.&lt;br /&gt;&lt;h2&gt;Percobaan di Postman&lt;/h2&gt;Sebelum kita mulai &lt;i&gt;parshing&lt;/i&gt;, ada baiknya kita coba dulu URL web service-nya. Supaya kita mudah mengetahui, atribut atau kunci yang digunakan pada JSON.&lt;br /&gt;&lt;br /&gt;URL:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&lt;a href=&#34;http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&amp;amp;num=100&amp;amp;q=http://feeds.feedburner.com/petanikode&#34;&gt;http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&amp;amp;num=100&amp;amp;q=http://feeds.feedburner.com/petanikode&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;Hasil Percobaan di Postman:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-Cs1yNESapiE/V8lyiRKIaFI/AAAAAAAADLk/4x3bocxP_hkeZXG2RvQTzZCw6aYI-cIYgCK4B/s1600/hasil%2Bpercobaan%2Brequest%2Bdari%2BPostman.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-Cs1yNESapiE/V8lyiRKIaFI/AAAAAAAADLk/4x3bocxP_hkeZXG2RvQTzZCw6aYI-cIYgCK4B/s1600/hasil%2Bpercobaan%2Brequest%2Bdari%2BPostman.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Hasil respon:&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/2b80ab0dc28b243a5aa3e6655a7d8d3b.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;h2&gt;Penguraian Informasi&lt;/h2&gt;Setelah mengetahui, struktur JSON yang diterima. Selanjutnya kita bisa mengurai informasi yang ada di dalamnya dengan mudah. Baiklah! Kita coba tampilkan semua judul yang ada di RSS Feed saja dulu.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py python&#34;&gt;import urllib, json&lt;br /&gt;&lt;br /&gt;url = &amp;ldquo;&lt;a href=&#34;http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&amp;amp;num=100&amp;amp;q=http://feeds.feedburner.com/petanikode&amp;quot;&#34;&gt;http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&amp;amp;num=100&amp;amp;q=http://feeds.feedburner.com/petanikode&amp;quot;&lt;/a&gt;&lt;br /&gt;respon = urllib.urlopen(url)&lt;br /&gt;data = json.loads(respon.read())&lt;br /&gt;&lt;br /&gt;post = data[&amp;lsquo;responseData&amp;rsquo;][&amp;lsquo;feed&amp;rsquo;][&amp;lsquo;entries&amp;rsquo;]&lt;br /&gt;&lt;br /&gt;for artikel in post:&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; print artikel[&amp;lsquo;title&amp;rsquo;]&lt;/code&gt;&lt;/pre&gt;Perhatikan pada kode di atas, kita menggunakan modul &lt;code&gt;urlib&lt;/code&gt; untuk mengambil JSON dari URL. Kemudian kita menggunakan modul &lt;code&gt;json&lt;/code&gt; untuk mengurai informasinya.&lt;br /&gt;&lt;br /&gt;Berikut ini hasil yang akan kita dapatkan dari kode di atas.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-qXSw7cjmP8k/V8l36-nVhhI/AAAAAAAADL0/EYtHY0rKzaoEGU_zdlZMoAZxrOIG4sYSgCK4B/s1600/hasil%2Bparsing%2Bdata%2BJSON%2Bdari%2BURL.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-qXSw7cjmP8k/V8l36-nVhhI/AAAAAAAADL0/EYtHY0rKzaoEGU_zdlZMoAZxrOIG4sYSgCK4B/s1600/hasil%2Bparsing%2Bdata%2BJSON%2Bdari%2BURL.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Penguraian data JSON dari URL web service membutuhkan satu lagi modul tambahan, yaitu &lt;code&gt;urlib&lt;/code&gt;. Modul tersebut berfungsi mengambil atau meminta (request) data JSON yang ada di web service. Kemudian, tainggal kita olah data JSON-nya dengan modul &lt;code&gt;json&lt;/code&gt;. Begitulah cara penguraian JSON dari URL, terima kasih! :)&lt;/p&gt;
+      <description>
+
+&lt;p&gt;Kita membutuhkan modul atau pustakan &lt;code&gt;urlib&lt;/code&gt; untuk mengambil JSON dari URL
+Web Service. Setelah itu, kita dapat melakukan penguraian &lt;em&gt;(parshing)&lt;/em&gt;
+informasi yang ada di dalamnya. Web service yang akan saya gunakan pada
+tulisan ini adalah web service dari Google.
+Web service tersebut menyediakan RSS Feed untuk Blogger dalam bentuk JSON.&lt;/p&gt;
+
+&lt;h2 id=&#34;percobaan-di-postman&#34;&gt;Percobaan di Postman&lt;/h2&gt;
+
+&lt;p&gt;Sebelum kita mulai &lt;em&gt;parshing&lt;/em&gt;, ada baiknya kita coba dulu URL web service-nya.
+Supaya kita mudah mengetahui, atribut atau kunci yang digunakan pada JSON.&lt;/p&gt;
+
+&lt;p&gt;URL: &lt;a href=&#34;http://ajax.googleapis.com/ajax/services/feed/load?v=1.0#=100&amp;amp;q=http://feeds.feedburner.com/petanikode&#34;&gt;http://ajax.googleapis.com/ajax/services/feed/load?v=1.0#=100&amp;amp;q=http://feeds.feedburner.com/petanikode&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasil Percobaan di Postman:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1366&#34;
+    height=&#34;743&#34;
+    alt=&#34;hasil+percobaan+request+dari+Postman.png&#34;
+    src=&#34;http://1.bp.blogspot.com/-Cs1yNESapiE/V8lyiRKIaFI/AAAAAAAADLk/4x3bocxP_hkeZXG2RvQTzZCw6aYI-cIYgCK4B/s1600/hasil%2Bpercobaan%2Brequest%2Bdari%2BPostman.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasil respon:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;700&#34;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
+    frameborder=&#34;0&#34;
+    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/2b80ab0dc28b243a5aa3e6655a7d8d3b&#34;&gt;
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;penguraian-informasi&#34;&gt;Penguraian Informasi&lt;/h2&gt;
+
+&lt;p&gt;Setelah mengetahui, struktur JSON yang diterima. Selanjutnya kita bisa mengurai informasi yang ada di dalamnya dengan mudah. Baiklah! Kita coba tampilkan semua judul yang ada di RSS Feed saja dulu.&lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import urllib, json
+
+url = &amp;quot;http://ajax.googleapis.com/ajax/services/feed/load?v=1.0#=100&amp;amp;q=http://feeds.feedburner.com/petanikode&amp;quot;
+respon = urllib.urlopen(url)
+data = json.loads(respon.read())
+
+post = data[&#39;responseData&#39;][&#39;feed&#39;][&#39;entries&#39;]
+
+for artikel in post:&amp;lt;br&amp;gt;
+print artikel[&#39;title&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikan pada kode di atas, kita menggunakan modul &lt;code&gt;urlib&lt;/code&gt; untuk mengambil JSON dari URL. Kemudian kita menggunakan modul &lt;code&gt;json&lt;/code&gt; untuk mengurai informasinya.&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikut ini hasil yang akan kita dapatkan dari kode di atas.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;842&#34;
+    height=&#34;460&#34;
+    alt=&#34;hasil+parsing+data+JSON+dari+URL.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-qXSw7cjmP8k/V8l36-nVhhI/AAAAAAAADL0/EYtHY0rKzaoEGU_zdlZMoAZxrOIG4sYSgCK4B/s1600/hasil%2Bparsing%2Bdata%2BJSON%2Bdari%2BURL.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
+
+&lt;p&gt;Penguraian data JSON dari URL web service membutuhkan satu lagi modul tambahan,
+yaitu &lt;code&gt;urlib&lt;/code&gt;. Modul tersebut berfungsi mengambil atau meminta (request) data
+JSON yang ada di web service. Kemudian, tainggal kita olah data JSON-nya dengan
+modul &lt;code&gt;json&lt;/code&gt;. Begitulah cara penguraian JSON dari URL, terima kasih! :smile:&lt;/p&gt;
 </description>
     </item>
     

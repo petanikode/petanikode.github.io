@@ -51,7 +51,7 @@ berikut ini.&lt;/p&gt;
 &lt;p&gt;Buat kode HTML untuk menampilkan stikernya.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;440&#34;
-    layout=&#34;fixed-height&#34;
+    layout=&#34;responsive&#34;
     sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
     frameborder=&#34;0&#34;
     src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/932578dbdaddd72cf36289923892101c&#34;&gt;

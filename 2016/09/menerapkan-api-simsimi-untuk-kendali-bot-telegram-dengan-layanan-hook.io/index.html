@@ -260,7 +260,7 @@ Kali ini saya akan melakukan eksperimen API Simsimi untuk mengendalikan Bot Tele
   },
   "headline": "Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io",
   "description": "Simsimi bisa kita pinjam otaknya untuk dipakai di bot Telegram. Tapi, sayang sekali, kunci gratis (API Key Trial) untuk meminjam otak (API) Simsimi hanya berlaku selama 7 hari. Setelah itu, tidak bisa digunakan lagi. Selain kunci gratis, ada juga kunci berbayar yang bisa disewa sesuai kebutuhan.\nKali ini saya akan melakukan eksperimen API Simsimi untuk mengendalikan Bot Telegram yang sudah dibuat. Berikut ini gambaran cara Bot Telegram, Hook.io dan API Simsimi berkomunikasi.",
-  "wordCount":  360 ,
+  "wordCount":  308 ,
   "datePublished" : "2016-09-09T14:16:00",
   "dateModified" : "2016-09-09T14:16:00",
   "image" : {
@@ -1217,7 +1217,132 @@ padding: 16px;
     
 </div>
 
-                <p>Simsimi bisa kita pinjam otaknya untuk dipakai di bot Telegram. Tapi, sayang sekali, kunci gratis <i>(API Key Trial)</i> untuk meminjam otak (API) Simsimi hanya berlaku selama 7 hari. Setelah itu, tidak bisa digunakan lagi. Selain kunci gratis, ada juga kunci berbayar yang bisa disewa sesuai kebutuhan.<br /><br />Kali ini saya akan melakukan eksperimen API Simsimi untuk mengendalikan Bot Telegram yang sudah dibuat. Berikut ini gambaran cara Bot Telegram, Hook.io dan API Simsimi berkomunikasi.<br /><a href="http://4.bp.blogspot.com/-89RK3vsPeAw/V9FJ-fgPW5I/AAAAAAAADOY/D-R__QHvwzMdNNKsIaNkEU7rzT2hVep7gCK4B/s1600/API%2BSimsimi%2Bdan%2BBot%2BTelegram%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-89RK3vsPeAw/V9FJ-fgPW5I/AAAAAAAADOY/D-R__QHvwzMdNNKsIaNkEU7rzT2hVep7gCK4B/s1600/API%2BSimsimi%2Bdan%2BBot%2BTelegram%2B-%2BPetani%2BKode.png" /></a><br />Baca Juga:<br /><ul><li><a href="http://www.petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-hook-io.html" target="_blank">Cara Membuat Bot Telegram dengan Layanan Hook.io</a></li><li><a href="http://www.petanikode.com/2016/09/eksperimen-dengan-api-simsimi.html" target="_blank">Eksperimen dengan API Simsimi</a></li></ul><h2>Bahan-Bahan yang Dibutuhkan</h2><ol><li>Token Bot Telegram (<a href="http://www.petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-hook-io.html" target="_blank">Cara mendapatkannya</a>)</li><li>Akun Hook.io (<a href="https://hook.io/ardianta?s" target="_blank">Daftar di sini</a>)</li><li>Kunci API Simsimi (<a href="http://developer.simsimi.com/api" target="_blank">Daftar di sini</a>)</li></ol><h2>Membuat Service dan Variabel Lingkungan</h2>Buatlah sebuah service pada Hook.io (<a href="https://hook.io/new" target="_blank">klik di sini</a>). Sebagai contoh, saya membuat sebuah service bernama <code>iyan-chan</code>.<br /><a href="http://4.bp.blogspot.com/-hIasWFzSQzg/V9JFX8awRgI/AAAAAAAADOo/q6Jz2sW3op4pgk-47xQ_9AkNWNFU8xrrgCK4B/s1600/Pembuatan%2BService%2Bdi%2BHook.io.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-hIasWFzSQzg/V9JFX8awRgI/AAAAAAAADOo/q6Jz2sW3op4pgk-47xQ_9AkNWNFU8xrrgCK4B/s1600/Pembuatan%2BService%2Bdi%2BHook.io.png" /></a><br />Setelah itu, silahkan buat variabel lingkungan di <a href="https://hook.io/env" target="_blank"><a href="https://hook.io/env">https://hook.io/env</a></a>. Variabel lingkungan berfungsi untuk menampung token bot.<br /><a href="http://4.bp.blogspot.com/-GC7UcmQ5_tY/V9JGfrYteLI/AAAAAAAADOw/yXET7qahS6U83pjJidHKjbDGjVQhP7vuACK4B/s1600/Variabel%2Blingkungan%2Bdi%2BHookio.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-GC7UcmQ5_tY/V9JGfrYteLI/AAAAAAAADOw/yXET7qahS6U83pjJidHKjbDGjVQhP7vuACK4B/s1600/Variabel%2Blingkungan%2Bdi%2BHookio.png" /></a><br /><h2>Kode Kendali</h2>Buka kembali service yang sudah dibuat. Silahkan ganti kode (hook source) dengan kode berikut ini.<br /><pre><code class="js javascript node"><code>module[&lsquo;exports&rsquo;] = function iyanChanBot(hook) {<br />&nbsp; <br />&nbsp; <br />&nbsp;&nbsp;&nbsp; var request = require(&lsquo;request&rsquo;);<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; var simiUrl = &lsquo;<a href="http://sandbox.api.simsimi.com/request.p?key=">http://sandbox.api.simsimi.com/request.p?key=</a><b><span style="color: red;">API_KEY_SIMSIMI</span></b>&amp;lc=id&amp;ft=1.0&amp;text=&lsquo;+hook.params.message.text;<br /><br />&nbsp; <br />&nbsp; &nbsp;&nbsp; &nbsp;request(simiUrl, function (error, response, body) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (!error &amp;&amp; response.statusCode == 200) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var data = JSON.parse(body);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; request<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .post(&lsquo;<a href="https://api.telegram.org/bot'">https://api.telegram.org/bot'</a> + hook.env.<b>iyan_chan_bot</b> + &lsquo;/sendMessage&rsquo;)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .form({<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ldquo;chat_id&rdquo;: hook.params.message.chat.id,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ldquo;text&rdquo;: data.response<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; });<br />&nbsp;&nbsp;&nbsp; <br />};</code></code></pre>Fungsi utama dari kode di atas adalah menerima dan meminta request. Pertama kita akan menerima request dari bot, kemudian request tersebut diteruskan ke API Simsimi. Setelah mendapatkan balasan dari API simsimi, balasan tersebut kita kirim kembali ke bot.<br /><br />Ada dua hal yang harus teman-teman ganti dalam kode di atas. Pertama <code>API_KEY_SIMSIMI</code>, silahkan diisi dengan kunci yang sudah didapatkan. Kedua, <code>hook.env.<b>iyan_chan_bot</b></code> ganti dengan nama variabel lingkungan yang sudah dibuat.<br /><h2>Menghubungkan Bot dengan Hook.io&nbsp;</h2>Untuk menghubungkan bot dengan hook, silahkan susun URL-nya menjadi seperti ini:<br /><pre><code class="html hljs xml"><a href="https://api.telegram.org/bot">https://api.telegram.org/bot</a><b><span style="color: red;"><span class="hljs-tag">&lt;<span class="hljs-name">TOKEN</span>&gt;</span></span></b>/setWebhook?url=<a href="https://hook.io/">https://hook.io/</a><span style="color: red;"><b><span class="hljs-tag">&lt;<span class="hljs-name">hook-user</span>&gt;</span></b></span>/<span style="color: red;"><b><span class="hljs-tag">&lt;<span class="hljs-name">hook-name</span>&gt;</span></b></span></code></pre>Silahkan diganti:<br /><ul><li><code>&lt;TOKEN&gt;</code> dengan token bot anda</li><li><code>&lt;hook-user&gt;</code> dengan username hook.io anda</li><li><code>&lt;hook-name&gt;</code> dengan nama layanan/service hook yang anda buat </li></ul>Setelah itu, silahkan buka URL tersebut melalui browser. Jika  mendapatkan balasan seperti ini, maka bot berhasil dihubungkan dengan  layanan hook.<br /><a href="https://2.bp.blogspot.com/-NJWNvnEf3Vg/V8wAe-8k9vI/AAAAAAAADOA/7u1Ezl7Fl5418LAHz49Uu1zm1PZ7xS_jQCK4B/s1600/Respon%2Bberhasil%2Bmengaitkan%2Bhook%2Bdengan%2Bbot%2Btelegram.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-NJWNvnEf3Vg/V8wAe-8k9vI/AAAAAAAADOA/7u1Ezl7Fl5418LAHz49Uu1zm1PZ7xS_jQCK4B/s1600/Respon%2Bberhasil%2Bmengaitkan%2Bhook%2Bdengan%2Bbot%2Btelegram.png" /></a><br /><h2>Demo Percobaan</h2><a href="http://4.bp.blogspot.com/-eNMhxjFRExs/V9JOMICTWNI/AAAAAAAADPM/Me9uiX9wm7ATgEOrAEoWArpcoRFyxq-mwCK4B/s1600/Percobaan%2Bbot%2Bdengan%2Bapi%2BSimsimi%2B-%2Bpetanikode.jpg" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-eNMhxjFRExs/V9JOMICTWNI/AAAAAAAADPM/Me9uiX9wm7ATgEOrAEoWArpcoRFyxq-mwCK4B/s1600/Percobaan%2Bbot%2Bdengan%2Bapi%2BSimsimi%2B-%2Bpetanikode.jpg" /></a><br /><h2>Kesimpulan</h2>Nah, itu dia cara menerapkan API Simsimi untuk kendali Bot Telegram. Pada dasarnya hanya meneruskan request ke API Simsimi dan mengembalikan lagi ke Bot.</p>
+                
+
+<p>Simsimi bisa kita pinjam otaknya untuk dipakai di bot Telegram. Tapi,
+sayang sekali, kunci gratis <em>(API Key Trial)</em> untuk meminjam otak (API)
+Simsimi hanya berlaku selama 7 hari. Setelah itu, tidak bisa digunakan lagi.
+Selain kunci gratis, ada juga kunci berbayar yang bisa disewa sesuai kebutuhan.</p>
+
+<p>Kali ini saya akan melakukan eksperimen API Simsimi untuk mengendalikan Bot
+Telegram yang sudah dibuat. Berikut ini gambaran cara Bot Telegram,
+Hook.io dan API Simsimi berkomunikasi.</p>
+
+<p><amp-img
+    width="712"
+    height="376"
+    alt="API+Simsimi+dan+Bot+Telegram+-+Petani+Kode.png"
+    src="http://4.bp.blogspot.com/-89RK3vsPeAw/V9FJ-fgPW5I/AAAAAAAADOY/D-R__QHvwzMdNNKsIaNkEU7rzT2hVep7gCK4B/s1600/API%2BSimsimi%2Bdan%2BBot%2BTelegram%2B-%2BPetani%2BKode.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Baca Juga:</p>
+
+<ul>
+<li><a href="/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/">Cara Membuat Bot Telegram dengan Layanan Hook.io</a></li>
+<li><a href="/2016/09/eksperimen-dengan-api-simsimi/">Eksperimen dengan API Simsimi</a></li>
+</ul>
+
+<h2 id="bahan-bahan-yang-dibutuhkan">Bahan-Bahan yang Dibutuhkan</h2>
+
+<ol>
+<li>Token Bot Telegram (<a href="/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/">Cara mendapatkannya</a>)</li>
+<li>Akun Hook.io (<a href="https://hook.io/ardianta?s">Daftar di sini</a>)</li>
+<li>Kunci API Simsimi (<a href="http://developer.simsimi.com/api">Daftar di sini</a>)</li>
+</ol>
+
+<p><amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='7044550664'
+    width='720'
+    height='380'
+    type='adsense'
+    layout="responsive">
+</amp-ad></p>
+
+<h2 id="membuat-service-dan-variabel-lingkungan">Membuat Service dan Variabel Lingkungan</h2>
+
+<p>Buatlah sebuah service pada Hook.io (<a href="https://hook.io/new">klik di sini</a>).
+Sebagai contoh, saya membuat sebuah service bernama <code>iyan-chan</code>.</p>
+
+<p><amp-img
+    width="930"
+    height="567"
+    alt="Pembuatan+Service+di+Hook.io.png"
+    src="http://4.bp.blogspot.com/-hIasWFzSQzg/V9JFX8awRgI/AAAAAAAADOo/q6Jz2sW3op4pgk-47xQ_9AkNWNFU8xrrgCK4B/s1600/Pembuatan%2BService%2Bdi%2BHook.io.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Setelah itu, silahkan buat variabel lingkungan di <a href="https://hook.io/env">https://hook.io/env</a>.
+Variabel lingkungan berfungsi untuk menampung token bot.</p>
+
+<p><amp-img
+    width="1103"
+    height="359"
+    alt="Variabel+lingkungan+di+Hookio.png"
+    src="http://4.bp.blogspot.com/-GC7UcmQ5_tY/V9JGfrYteLI/AAAAAAAADOw/yXET7qahS6U83pjJidHKjbDGjVQhP7vuACK4B/s1600/Variabel%2Blingkungan%2Bdi%2BHookio.png"
+    layout="responsive">
+</amp-img></p>
+
+<h2 id="kode-kendali">Kode Kendali</h2>
+
+<p>Buka kembali service yang sudah dibuat. Silahkan ganti kode (hook source) dengan kode berikut ini.<br></p>
+
+<p><amp-iframe width="600" height="480"
+    layout="responsive"
+    sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups"
+    frameborder="0"
+    src="https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/b67caece3b5ded0a4d958c9fed8adcac">
+</amp-iframe></p>
+
+<p>Fungsi utama dari kode di atas adalah menerima dan meminta request.
+Pertama kita akan menerima request dari bot, kemudian request tersebut
+diteruskan ke API Simsimi. Setelah mendapatkan balasan dari API simsimi,
+balasan tersebut kita kirim kembali ke bot.</p>
+
+<p>Ada dua hal yang harus teman-teman ganti dalam kode di atas.
+Pertama <code>API_KEY_SIMSIMI</code>, silahkan diisi dengan kunci yang sudah didapatkan.
+Kedua, <code>hook.env.iyan_chan_bot</code> ganti dengan nama variabel lingkungan yang sudah dibuat.</p>
+
+<h2 id="menghubungkan-bot-dengan-hook-io">Menghubungkan Bot dengan Hook.io</h2>
+
+<p>Untuk menghubungkan bot dengan hook, silahkan susun URL-nya menjadi seperti ini:<br></p>
+
+<pre><code>https://api.telegram.org/bot&lt;TOKEN&gt;/setWebhook?url=https://hook.io/&lt;hook-user&gt;/&lt;hook-name&gt;
+</code></pre>
+
+<p>Silahkan diganti:</p>
+
+<ul>
+<li><code>&lt;TOKEN&gt;</code> dengan token bot anda</li>
+<li><code>&lt;hook-user&gt;</code> dengan username hook.io anda</li>
+<li><code>&lt;hook-name&gt;</code> dengan nama layanan/service hook yang anda buat</li>
+</ul>
+
+<p>Setelah itu, silahkan buka URL tersebut melalui browser. Jika mendapatkan balasan seperti ini, maka bot berhasil dihubungkan dengan layanan hook.</p>
+
+<p><amp-img
+    width="1001"
+    height="309"
+    alt="Respon+berhasil+mengaitkan+hook+dengan+bot+telegram.png"
+    src="https://2.bp.blogspot.com/-NJWNvnEf3Vg/V8wAe-8k9vI/AAAAAAAADOA/7u1Ezl7Fl5418LAHz49Uu1zm1PZ7xS_jQCK4B/s1600/Respon%2Bberhasil%2Bmengaitkan%2Bhook%2Bdengan%2Bbot%2Btelegram.png"
+    layout="responsive">
+</amp-img></p>
+
+<h2 id="demo-percobaan">Demo Percobaan</h2>
+
+<p><amp-img
+    width="1280"
+    height="720"
+    alt="Percobaan+bot+dengan+api+Simsimi+-+petanikode.jpg"
+    src="http://4.bp.blogspot.com/-eNMhxjFRExs/V9JOMICTWNI/AAAAAAAADPM/Me9uiX9wm7ATgEOrAEoWArpcoRFyxq-mwCK4B/s1600/Percobaan%2Bbot%2Bdengan%2Bapi%2BSimsimi%2B-%2Bpetanikode.jpg"
+    layout="responsive">
+</amp-img></p>
+
+<h2 id="kesimpulan">Kesimpulan</h2>
+
+<p>Nah, itu dia cara menerapkan API Simsimi untuk kendali Bot Telegram.
+Pada dasarnya hanya meneruskan request ke API Simsimi dan mengembalikan lagi ke Bot.</p>
 
                 <div class="post-footer">
                 <div>Bagikan:

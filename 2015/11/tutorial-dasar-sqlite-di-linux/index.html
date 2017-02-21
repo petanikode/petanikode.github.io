@@ -7,7 +7,7 @@
 
 <html amp lang="id-id" class="no-js">
 <head>
-    <title>Database</title>
+    <title>Tutorial Dasar SQLite di Linux</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -20,8 +20,8 @@
 
 
 
-    <link rel="canonical" href="http://petanikode.com/kategori/database/" />
-    <link rel="amphtml" href="http://petanikode.com/kategori/database/" />
+    <link rel="canonical" href="http://petanikode.com/2015/11/tutorial-dasar-sqlite-di-linux/" />
+    <link rel="amphtml" href="http://petanikode.com/2015/11/tutorial-dasar-sqlite-di-linux/" />
 
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
     <meta content='/favicon.png' name='msapplication-TileImage'/>
@@ -31,10 +31,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
     
-    <link href="http://petanikode.com/kategori/database/index.xml" rel="alternate" type="application/rss+xml" title="Petani Kode" />
-    <link href="http://petanikode.com/kategori/database/index.xml" rel="feed" type="application/rss+xml" title="Petani Kode" />
-    
-
 
     
     
@@ -52,8 +48,10 @@
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
 <meta name="author" content="Ardianta Pargo"/>
 
-<meta name="keywords" content="Database, pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode."/>
+<meta name="keywords" content="Tutorial Dasar SQLite di Linux, SQLite, Tutorial SQLite, Panduan SQLite, pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="SQLite merupakan sebuah Relational Database Management System (RDMS) yang tidak memerlukan server untuk beroperasi. Bisa dibilang, SQLite adalah database portable yang bisa digunakan tanpa jaringan. Inilah yang membuatnya banyak digunakan dalam berbagai aplikasi luring (offline) seperti aplikasi Android, aplikasi desktop, java, VB.net, Game, dsb.
+Pada kesempatan ini, kita akan belajar dasar-dsar SQLite dengan menggunakan Linux.
+Instalasi SQLite di Linux Pertama kita perlu menginstal SQL dulu, silahkan ketik perintah berikut."/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -69,15 +67,17 @@
 <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
-    <meta property="og:title" content="Database" />
-    <meta property="og:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode." />
+    <meta property="og:title" content="Tutorial Dasar SQLite di Linux" />
+    <meta property="og:description" content="SQLite merupakan sebuah Relational Database Management System (RDMS) yang tidak memerlukan server untuk beroperasi. Bisa dibilang, SQLite adalah database portable yang bisa digunakan tanpa jaringan. Inilah yang membuatnya banyak digunakan dalam berbagai aplikasi luring (offline) seperti aplikasi Android, aplikasi desktop, java, VB.net, Game, dsb.
+Pada kesempatan ini, kita akan belajar dasar-dsar SQLite dengan menggunakan Linux.
+Instalasi SQLite di Linux Pertama kita perlu menginstal SQL dulu, silahkan ketik perintah berikut." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://petanikode.com/kategori/database/" />
+    <meta property="og:url" content="http://petanikode.com/2015/11/tutorial-dasar-sqlite-di-linux/" />
 
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="https://3.bp.blogspot.com/-W6KO5hpzP6I/WKwUC8kNWWI/AAAAAAAAEI8/jI7XG3UKz6UyhSl1uDhIq7rIp-j7dQRlQCPcB/s1600/sqlite-petanikode.png" />
 
     
-    <meta property="og:updated_time" content="2016-12-10 15:53:00 &#43;0000 UTC"/>
+    <meta property="og:updated_time" content="2015-11-13 23:03:00 &#43;0000 UTC"/>
     <meta content='id_ID' property='og:locale'/>
     <meta content='ms_MY' property='og:locale:alternate'/>
     <meta content='en_US' property='og:locale:alternate'/>
@@ -98,10 +98,16 @@
     <meta property="article:publisher" content="https://www.facebook.com/petanikode" />
 
     
+    <meta property="article:published_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
+    
 
-    <meta property="article:modified_time" content="2016-12-10 15:53:00 &#43;0000 UTC" />
-    <meta property="article:section" content="" />
+    <meta property="article:modified_time" content="2015-11-13 23:03:00 &#43;0000 UTC" />
+    <meta property="article:section" content="artikel" />
 
+    
+    	<meta property="article:tag" content="SQLite" />
+    
+    	<meta property="article:tag" content="SQL" />
     
 
     
@@ -160,6 +166,12 @@
     
     
     
+        
+    
+
+    
+    
+    
 
 
 <script type="application/ld+json">
@@ -178,7 +190,25 @@
       },
 
       
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+            "@id": "http:\/\/petanikode.com\/kategori\/database",
+            "name": "Database"
+            }
+      },
+      
 
+      
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+            "@id": "http:\/\/petanikode.com\/topik\/sqlite",
+            "name": "SQLite"
+            }
+      },
       
 
 
@@ -187,8 +217,8 @@
         "@type": "ListItem",
         "position":  4 ,
         "item": {
-          "@id": "http:\/\/petanikode.com\/kategori\/",
-          "name": "kategori"
+          "@id": "http:\/\/petanikode.com\/2015\/",
+          "name": "2015"
         }
         }
     
@@ -196,8 +226,17 @@
         "@type": "ListItem",
         "position":  5 ,
         "item": {
-          "@id": "http:\/\/petanikode.com\/kategori\/database\/",
-          "name": "database"
+          "@id": "http:\/\/petanikode.com\/2015\/11\/",
+          "name": "11"
+        }
+        }
+    
+      ,{
+        "@type": "ListItem",
+        "position":  6 ,
+        "item": {
+          "@id": "http:\/\/petanikode.com\/2015\/11\/tutorial-dasar-sqlite-di-linux\/",
+          "name": "tutorial-dasar-sqlite-di-linux"
         }
         }
     
@@ -213,18 +252,18 @@
   "author": {
     "name" : "Ardianta Pargo"
   },
-  "headline": "Database",
-  "description": "",
-  "wordCount":  0 ,
-  "datePublished" : "2016-12-10T15:53:00",
-  "dateModified" : "2016-12-10T15:53:00",
+  "headline": "Tutorial Dasar SQLite di Linux",
+  "description": "SQLite merupakan sebuah Relational Database Management System (RDMS) yang tidak memerlukan server untuk beroperasi. Bisa dibilang, SQLite adalah database portable yang bisa digunakan tanpa jaringan. Inilah yang membuatnya banyak digunakan dalam berbagai aplikasi luring (offline) seperti aplikasi Android, aplikasi desktop, java, VB.net, Game, dsb.\nPada kesempatan ini, kita akan belajar dasar-dsar SQLite dengan menggunakan Linux.\nInstalasi SQLite di Linux Pertama kita perlu menginstal SQL dulu, silahkan ketik perintah berikut.",
+  "wordCount":  285 ,
+  "datePublished" : "2015-11-13T23:03:00",
+  "dateModified" : "2015-11-13T23:03:00",
   "image" : {
       "@type": "ImageObject",
-      "url": "",
+      "url": "https:\/\/3.bp.blogspot.com\/-W6KO5hpzP6I\/WKwUC8kNWWI\/AAAAAAAAEI8\/jI7XG3UKz6UyhSl1uDhIq7rIp-j7dQRlQCPcB\/s1600\/sqlite-petanikode.png",
       "height" : 380,
       "width" : 720
     },
-  "mainEntityOfPage" : "http:\/\/petanikode.com\/kategori\/database\/",
+  "mainEntityOfPage" : "http:\/\/petanikode.com\/2015\/11\/tutorial-dasar-sqlite-di-linux\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "petanikode.com",
@@ -238,7 +277,7 @@
 
   "review": {
     "@type": "Review",
-    "url": "http:\/\/petanikode.com\/kategori\/database\/",
+    "url": "http:\/\/petanikode.com\/2015\/11\/tutorial-dasar-sqlite-di-linux\/",
     "author": {
       "@type": "Person",
       "name": "Ardianta Pargo",
@@ -249,8 +288,8 @@
       "name": "petanikode.com",
       "sameAs": "http://petanikode.com"
     },
-    "datePublished": "2016-12-10T15:53:00",
-    "description": "",
+    "datePublished": "2015-11-13T23:03:00",
+    "description": "SQLite merupakan sebuah Relational Database Management System (RDMS) yang tidak memerlukan server untuk beroperasi. Bisa dibilang, SQLite adalah database portable yang bisa digunakan tanpa jaringan. Inilah yang membuatnya banyak digunakan dalam berbagai aplikasi luring (offline) seperti aplikasi Android, aplikasi desktop, java, VB.net, Game, dsb.\nPada kesempatan ini, kita akan belajar dasar-dsar SQLite dengan menggunakan Linux.\nInstalasi SQLite di Linux Pertama kita perlu menginstal SQL dulu, silahkan ketik perintah berikut.",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -1001,6 +1040,39 @@ padding: 16px;
 
 
 
+<nav class="fixed-top block">
+    <ul>
+        <li>
+            <a href="#!" on="tap:sidebar.toggle">
+            <i class="fa fa-bars"></i>
+            </a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="http://petanikode.com/">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/arsip/">Arsip</a>
+        </li>
+        <li>
+            <a href="/seri/tutorial">Tutorial</a>
+        </li>
+        <li>
+            <a href="/kategori/tips-dan-trik">Tips dan Trik</a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="/topik/buku">Buku</a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="http://projects.id/petani_kode">Proyek</a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="/kontribusi">Kontribusi</a>
+        </li>
+    </ul>
+</nav>
+
 <amp-sidebar id='sidebar'
      layout="nodisplay"
      side="left">
@@ -1093,39 +1165,6 @@ padding: 16px;
   </amp-accordion>
  </amp-sidebar>
 
-<nav class="fixed-top block">
-    <ul>
-        <li>
-            <a href="#!" on="tap:sidebar.toggle">
-            <i class="fa fa-bars"></i>
-            </a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="http://petanikode.com/">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="/arsip/">Arsip</a>
-        </li>
-        <li>
-            <a href="/seri/tutorial">Tutorial</a>
-        </li>
-        <li>
-            <a href="/kategori/tips-dan-trik">Tips dan Trik</a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="/topik/buku">Buku</a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="http://projects.id/petani_kode">Proyek</a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="/kontribusi">Kontribusi</a>
-        </li>
-    </ul>
-</nav>
-
 <header class="block-group">
     <section class="header block">
         <div class="site-wrapper">
@@ -1151,68 +1190,14 @@ padding: 16px;
 
 
 <main class="main block-group">
+
     <article class="article block">
+    <div class="article-wrapper">
+        <div class="content">
+            <h1 class="post-title">Tutorial Dasar SQLite di Linux</h1>
 
-
-    
-
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/database">Database</a></span>
-            <br>
-        10 Dec · baca 3 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/2016/12/cara-termudah-menyimpan-graf-pada-database-relasional/">Cara Termudah Menyimpan Graf pada Database Relasional</a></h2>
-                <a href="/2016/12/cara-termudah-menyimpan-graf-pada-database-relasional/">
-                    
-                    <amp-img src="https://3.bp.blogspot.com/-dWgknbxEzmU/WCLzqncwFzI/AAAAAAAADag/6wDc7P2eC7IwFY3dOdmTXHpcaT-woBqFQCK4B/s1600/graf%2Bberarah%2B-%2Bpetanikode.jpg"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/2016/12/cara-termudah-menyimpan-graf-pada-database-relasional/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <div>Bagikan:
-<ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2016%2f12%2fcara-termudah-menyimpan-graf-pada-database-relasional%2f&t=Cara%20Termudah%20Menyimpan%20Graf%20pada%20Database%20Relasional" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2016%2f12%2fcara-termudah-menyimpan-graf-pada-database-relasional%2f&text=Cara%20Termudah%20Menyimpan%20Graf%20pada%20Database%20Relasional%20http%3a%2f%2fpetanikode.com%2f2016%2f12%2fcara-termudah-menyimpan-graf-pada-database-relasional%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2f2016%2f12%2fcara-termudah-menyimpan-graf-pada-database-relasional%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2f2016%2f12%2fcara-termudah-menyimpan-graf-pada-database-relasional%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Cara%20Termudah%20Menyimpan%20Graf%20pada%20Database%20Relasional&body=Cara%20Termudah%20Menyimpan%20Graf%20pada%20Database%20Relasional:%20http%3a%2f%2fpetanikode.com%2f2016%2f12%2fcara-termudah-menyimpan-graf-pada-database-relasional%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-</div>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
+            
+                <div class="post-header">
     
         <div class="author-foto pull-left">
             <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
@@ -1221,31 +1206,131 @@ padding: 16px;
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
         <span class="author"><a href="/kategori/database">Database</a></span>
             <br>
-        13 Nov · baca 2 menit
+        13 November 2015 · 23:03
     </div>
     
 </div>
 
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/2015/11/tutorial-dasar-sqlite-di-linux/">Tutorial Dasar SQLite di Linux</a></h2>
-                <a href="/2015/11/tutorial-dasar-sqlite-di-linux/">
-                    
-                    <amp-img src="https://3.bp.blogspot.com/-W6KO5hpzP6I/WKwUC8kNWWI/AAAAAAAAEI8/jI7XG3UKz6UyhSl1uDhIq7rIp-j7dQRlQCPcB/s1600/sqlite-petanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/2015/11/tutorial-dasar-sqlite-di-linux/" id="read-more-button">
-                Selengkapnya…
-                </a>
                 
 
+<p>SQLite merupakan sebuah <em>Relational Database Management System</em> (RDMS)
+yang tidak memerlukan server untuk beroperasi. Bisa dibilang, SQLite adalah
+database <em>portable</em> yang bisa digunakan tanpa jaringan. Inilah yang membuatnya banyak digunakan
+dalam berbagai aplikasi luring <em>(offline)</em> seperti aplikasi <a href="/topik/android">Android</a>, aplikasi
+<a href="/topik/desktop">desktop</a>, <a href="/topik/java">java</a>, VB.net, Game, dsb.</p>
+
+<p>Pada kesempatan ini, kita akan belajar dasar-dsar SQLite dengan menggunakan Linux.</p>
+
+<h2 id="instalasi-sqlite-di-linux">Instalasi SQLite di Linux</h2>
+
+<p>Pertama kita perlu menginstal SQL dulu, silahkan ketik perintah berikut.</p>
+
+<pre><code class="language-bash">sudo apt install sqlite3
+</code></pre>
+
+<p><amp-img
+    width="659"
+    height="451"
+    alt="instalasi+SQLite+di+ubuntu+15.04.png"
+    src="http://2.bp.blogspot.com/-Slt2BbZRZmU/Vhy9Z_zueQI/AAAAAAAACAE/IeP3gnLpQJI/s1600/instalasi%2BSQLite%2Bdi%2Bubuntu%2B15.04.png"
+    layout="responsive">
+</amp-img></p>
+
+<h2 id="membuat-database">Membuat Database</h2>
+
+<p>Pembuatan database dapat dilakukan dengan perintah <code>sqlite3 nama.db</code>. Ekstensi
+database SQLite menggunakan <code>.db</code>. Misalkan, kita akan membuat database
+bernama <code>petani.db</code>.</p>
+
+<pre><code class="language-bash">sqlite3 petani.db
+</code></pre>
+
+<p>Maka kita akan dibawa masuk ke <em>console</em>/<em>shell</em> SQLite.</p>
+
+<p><amp-img
+    width="655"
+    height="141"
+    alt="membuat+database+SQLite.png"
+    src="https://1.bp.blogspot.com/--LR50xki2ZE/WKwNKA79lpI/AAAAAAAAEHw/w1hUIJL8pZ0dcRpfyDMr2tl6ccEUWNLNQCPcB/s1600/membuat%2Bdatabase%2BSQLite.png"
+    layout="responsive">
+</amp-img></p>
+
+<h2 id="membuat-tabel">Membuat Tabel</h2>
+
+<p>Selanjutnya kita akan membuat tabel pertani dengan <em>Query</em> SQL berikut ini.</p>
+
+<pre><code class="language-sql">create table anggota(
+    id integer,
+    nama varchar(20),
+    alamat varchar(32)
+);
+</code></pre>
+
+<p>Kalau tidak ada error, berarti pembuatan tabel berhasil.</p>
+
+<p><amp-img
+    width="655"
+    height="157"
+    alt="membuat+tabel+anggota+di+database+petani.png"
+    src="https://1.bp.blogspot.com/-adf7TEp47BA/WKwOQoAPdOI/AAAAAAAAEII/WbVQG7pgYAASsowr1zMtQRDcYrUfjgu8gCPcB/s1600/membuat%2Btabel%2Banggota%2Bdi%2Bdatabase%2Bpetani.png"
+    layout="responsive">
+</amp-img></p>
+
+<h2 id="mengisi-data-ke-tabel">Mengisi Data ke Tabel</h2>
+
+<p>Sekarang kita akan coba mengisi 5 data ke tabel. Silahkan ketik perintah SQL
+berikut di dalam <em>shell</em> SQLite.</p>
+
+<pre><code class="language-sql">insert into anggota values(1,'Madun','Praya');
+insert into anggota values(2,'Sahdan','Cakra');
+insert into anggota values(3,'Iskandar','Sweta');
+insert into anggota values(4,'Zulfikar','Gunung Sari');
+insert into anggota values(5,'Samsudin','Narmada');
+</code></pre>
+
+<p>Kalau tidak ada error, berarti berhasil.</p>
+
+<p><amp-img
+    width="655"
+    height="125"
+    alt="Insert+data+ke+tabel+di+SQLite.png"
+    src="https://3.bp.blogspot.com/-63HC2t12cdU/WKwP66dy0oI/AAAAAAAAEIk/a_F5GXqPWYggK-ToR2Yc4vM-mjmflJ6jwCPcB/s1600/Insert%2Bdata%2Bke%2Btabel%2Bdi%2BSQLite.png"
+    layout="responsive">
+</amp-img></p>
+
+<h2 id="melihat-isi-tabel">Melihat isi Tabel</h2>
+
+<p>Perintah SQL untuk melihat isi tabel adalah <code>select * from nama_tabel</code>.</p>
+
+<pre><code class="language-sql">sqlite&gt; select * from anggota;
+1|Madun|Praya
+2|Sahdan|Cakra
+3|Iskandar|Sweta
+4|Zulfikar|Gunung Sari
+5|Samsudin|Narmada
+</code></pre>
+
+<h2 id="keluar-dari-shell-sqlite">Keluar dari Shell SQLite</h2>
+
+<p>Tekan <code>Ctrl</code>+<code>D</code> untuk keluar dari <em>shell</em> SQLite.</p>
+
+<h2 id="membuka-kembali-database">Membuka Kembali Database</h2>
+
+<p>Saat kita membuat database tadi, SQLite juga akan membuat sebuah file
+bernama <code>petani.db</code>. File ini menyimpan tabel dan data yang baru saja kita buat.
+Untuk membuka kembali database-nya, kita tinggal ketik perintah seperti pembuatan
+database tadi.</p>
+
+<pre><code class="language-bash">sqlite3 petani.db
+</code></pre>
+
+<h2 id="penutup">Penutup</h2>
+
+<p>Sekian tutorial SQLite di Linux ini. Mudah-mudahan bermanfaat. Terima kasih
+sudah membaca sampai akhir. Tutorial lebih lengkap, bisa dipelajari di
+<a href="https://www.sqlite.org/docs.html">dokumentasinya SQLite</a>.</p>
+
+                <div class="post-footer">
                 <div>Bagikan:
 <ul class="share-buttons">
   <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2015%2f11%2ftutorial-dasar-sqlite-di-linux%2f&t=Tutorial%20Dasar%20SQLite%20di%20Linux" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
@@ -1256,121 +1341,108 @@ padding: 16px;
 </ul>
 </div>
 
-            </div>
+                <p>Topik:
+                  
+                    #<a href="/topik/sqlite">SQLite</a>
+                  
+                    #<a href="/topik/sql">SQL</a>
+                  
 
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/database">Database</a></span>
-            <br>
-        3 Aug · baca 1 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
+                </p>
                 
-                <h2 class="post-title index-title"><a href="/2015/08/query-mysql-untuk-menentukan-pemenang/">Query MySQL untuk Menentukan Pemenang</a></h2>
-                <a href="/2015/08/query-mysql-untuk-menentukan-pemenang/">
-                    
-                    <amp-img src="http://1.bp.blogspot.com/-QG4Z1jestZs/Vb6MEZwnejI/AAAAAAAABpY/9Z6O4YtwjRw/s1600/Query-mysql-untuk-menentukan-pemenang-pada-e-voting-system.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Query MySQL untuk Menentukan Pemenang"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/2015/08/query-mysql-untuk-menentukan-pemenang/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
+<hr>
+<p><b>Artikel Terkait:</b></p>
 
-                <div>Bagikan:
-<ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f&t=Query%20MySQL%20untuk%20Menentukan%20Pemenang" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f&text=Query%20MySQL%20untuk%20Menentukan%20Pemenang%20http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Query%20MySQL%20untuk%20Menentukan%20Pemenang&body=Query%20MySQL%20untuk%20Menentukan%20Pemenang:%20http%3a%2f%2fpetanikode.com%2f2015%2f08%2fquery-mysql-untuk-menentukan-pemenang%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+
+
+
+
+
+<ul class="related-post">
+    
 </ul>
-</div>
 
-            </div>
 
-    </div>
-    </div>
+
+<ul class="related-post">
     
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/database">Database</a></span>
-            <br>
-        9 Mar · baca 2 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/2015/03/instalasi-mongodb-di-linux/">Instalasi MongoDB di Linux</a></h2>
-                <a href="/2015/03/instalasi-mongodb-di-linux/">
-                    
-                    <amp-img src="http://2.bp.blogspot.com/-0E9J4GeNNvI/VPwoJGziROI/AAAAAAAABfs/qDGtWB8LTLM/s1600/MongoDB-petanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/2015/03/instalasi-mongodb-di-linux/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <div>Bagikan:
-<ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2015%2f03%2finstalasi-mongodb-di-linux%2f&t=Instalasi%20MongoDB%20di%20Linux" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2015%2f03%2finstalasi-mongodb-di-linux%2f&text=Instalasi%20MongoDB%20di%20Linux%20http%3a%2f%2fpetanikode.com%2f2015%2f03%2finstalasi-mongodb-di-linux%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2f2015%2f03%2finstalasi-mongodb-di-linux%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2f2015%2f03%2finstalasi-mongodb-di-linux%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Instalasi%20MongoDB%20di%20Linux&body=Instalasi%20MongoDB%20di%20Linux:%20http%3a%2f%2fpetanikode.com%2f2015%2f03%2finstalasi-mongodb-di-linux%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
-</div>
 
-            </div>
 
-    </div>
-    </div>
+
+<ul class="related-post">
     
+</ul>
 
-    <div class="pager">
+
+
+<ul class="related-post">
     
+</ul>
+
+
+
+<ul class="related-post">
     
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+<hr>
+
+                <div align="center">
+                <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                </div>
+                <amp-iframe width="600" height="400"
+    layout="responsive"
+    sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups"
+    resizable
+    frameborder="0"
+    src="https://cdn.rawgit.com/petanikode/disqusAMP/f92df3a8/disqus-amp.html?shortname=petanikode&url=http://petanikode.com/2015/11/tutorial-dasar-sqlite-di-linux/">
+    <div overflow tabindex=0 role=button aria-label="Disqus Comments"></div>
+</amp-iframe>
+
+                </div>
+            
+
+        </div>
     </div>
-
     </article>
 
     <aside class="aside block">
@@ -1603,6 +1675,7 @@ padding: 16px;
 
 
 </aside>
+
 
 </main>
 

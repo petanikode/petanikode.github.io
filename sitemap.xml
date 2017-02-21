@@ -987,6 +987,13 @@
     </url>
     
     <url>
+        <loc>http://petanikode.com/2015/11/tutorial-dasar-sqlite-di-linux/</loc>
+        <lastmod>2015-11-13T23:03:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>http://petanikode.com/2015/11/emulator-alternatif-untuk-android-studio/</loc>
         <lastmod>2015-11-13T21:05:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -2026,7 +2033,7 @@
     
     <url>
         <loc>http://petanikode.com/kategori/</loc>
-        <lastmod> 2017-02-21T16:51:23&#43;08:00 </lastmod>
+        <lastmod> 2017-02-21T18:21:28&#43;08:00 </lastmod>
         <priority>0</priority>
     </url>
     
@@ -2320,7 +2327,7 @@
     
     <url>
         <loc>http://petanikode.com/seri/</loc>
-        <lastmod> 2017-02-21T16:51:23&#43;08:00 </lastmod>
+        <lastmod> 2017-02-21T18:21:28&#43;08:00 </lastmod>
         <priority>0</priority>
     </url>
     
@@ -2339,6 +2346,18 @@
     <url>
         <loc>http://petanikode.com/topik/slim/</loc>
         <lastmod>2015-02-25T01:16:00+00:00</lastmod>
+        <priority>0</priority>
+    </url>
+    
+    <url>
+        <loc>http://petanikode.com/topik/sql/</loc>
+        <lastmod>2015-11-13T23:03:00+00:00</lastmod>
+        <priority>0</priority>
+    </url>
+    
+    <url>
+        <loc>http://petanikode.com/topik/sqlite/</loc>
+        <lastmod>2015-11-13T23:03:00+00:00</lastmod>
         <priority>0</priority>
     </url>
     
@@ -2410,7 +2429,7 @@
     
     <url>
         <loc>http://petanikode.com/topik/</loc>
-        <lastmod> 2017-02-21T16:51:23&#43;08:00 </lastmod>
+        <lastmod> 2017-02-21T18:21:28&#43;08:00 </lastmod>
         <priority>0</priority>
     </url>
     

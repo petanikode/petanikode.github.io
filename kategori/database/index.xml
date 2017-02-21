@@ -20,6 +20,133 @@
     </item>
     
     <item>
+      <title>Tutorial Dasar SQLite di Linux</title>
+      <link>http://petanikode.com/2015/11/tutorial-dasar-sqlite-di-linux/</link>
+      <pubDate>Fri, 13 Nov 2015 23:03:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2015/11/tutorial-dasar-sqlite-di-linux/</guid>
+      <description>
+
+&lt;p&gt;SQLite merupakan sebuah &lt;em&gt;Relational Database Management System&lt;/em&gt; (RDMS)
+yang tidak memerlukan server untuk beroperasi. Bisa dibilang, SQLite adalah
+database &lt;em&gt;portable&lt;/em&gt; yang bisa digunakan tanpa jaringan. Inilah yang membuatnya banyak digunakan
+dalam berbagai aplikasi luring &lt;em&gt;(offline)&lt;/em&gt; seperti aplikasi &lt;a href=&#34;http://petanikode.com/topik/android&#34;&gt;Android&lt;/a&gt;, aplikasi
+&lt;a href=&#34;http://petanikode.com/topik/desktop&#34;&gt;desktop&lt;/a&gt;, &lt;a href=&#34;http://petanikode.com/topik/java&#34;&gt;java&lt;/a&gt;, VB.net, Game, dsb.&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan ini, kita akan belajar dasar-dsar SQLite dengan menggunakan Linux.&lt;/p&gt;
+
+&lt;h2 id=&#34;instalasi-sqlite-di-linux&#34;&gt;Instalasi SQLite di Linux&lt;/h2&gt;
+
+&lt;p&gt;Pertama kita perlu menginstal SQL dulu, silahkan ketik perintah berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install sqlite3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;659&#34;
+    height=&#34;451&#34;
+    alt=&#34;instalasi+SQLite+di+ubuntu+15.04.png&#34;
+    src=&#34;http://2.bp.blogspot.com/-Slt2BbZRZmU/Vhy9Z_zueQI/AAAAAAAACAE/IeP3gnLpQJI/s1600/instalasi%2BSQLite%2Bdi%2Bubuntu%2B15.04.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-database&#34;&gt;Membuat Database&lt;/h2&gt;
+
+&lt;p&gt;Pembuatan database dapat dilakukan dengan perintah &lt;code&gt;sqlite3 nama.db&lt;/code&gt;. Ekstensi
+database SQLite menggunakan &lt;code&gt;.db&lt;/code&gt;. Misalkan, kita akan membuat database
+bernama &lt;code&gt;petani.db&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sqlite3 petani.db
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka kita akan dibawa masuk ke &lt;em&gt;console&lt;/em&gt;/&lt;em&gt;shell&lt;/em&gt; SQLite.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;141&#34;
+    alt=&#34;membuat+database+SQLite.png&#34;
+    src=&#34;https://1.bp.blogspot.com/--LR50xki2ZE/WKwNKA79lpI/AAAAAAAAEHw/w1hUIJL8pZ0dcRpfyDMr2tl6ccEUWNLNQCPcB/s1600/membuat%2Bdatabase%2BSQLite.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-tabel&#34;&gt;Membuat Tabel&lt;/h2&gt;
+
+&lt;p&gt;Selanjutnya kita akan membuat tabel pertani dengan &lt;em&gt;Query&lt;/em&gt; SQL berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;create table anggota(
+    id integer,
+    nama varchar(20),
+    alamat varchar(32)
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kalau tidak ada error, berarti pembuatan tabel berhasil.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;157&#34;
+    alt=&#34;membuat+tabel+anggota+di+database+petani.png&#34;
+    src=&#34;https://1.bp.blogspot.com/-adf7TEp47BA/WKwOQoAPdOI/AAAAAAAAEII/WbVQG7pgYAASsowr1zMtQRDcYrUfjgu8gCPcB/s1600/membuat%2Btabel%2Banggota%2Bdi%2Bdatabase%2Bpetani.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mengisi-data-ke-tabel&#34;&gt;Mengisi Data ke Tabel&lt;/h2&gt;
+
+&lt;p&gt;Sekarang kita akan coba mengisi 5 data ke tabel. Silahkan ketik perintah SQL
+berikut di dalam &lt;em&gt;shell&lt;/em&gt; SQLite.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;insert into anggota values(1,&#39;Madun&#39;,&#39;Praya&#39;);
+insert into anggota values(2,&#39;Sahdan&#39;,&#39;Cakra&#39;);
+insert into anggota values(3,&#39;Iskandar&#39;,&#39;Sweta&#39;);
+insert into anggota values(4,&#39;Zulfikar&#39;,&#39;Gunung Sari&#39;);
+insert into anggota values(5,&#39;Samsudin&#39;,&#39;Narmada&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kalau tidak ada error, berarti berhasil.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;125&#34;
+    alt=&#34;Insert+data+ke+tabel+di+SQLite.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-63HC2t12cdU/WKwP66dy0oI/AAAAAAAAEIk/a_F5GXqPWYggK-ToR2Yc4vM-mjmflJ6jwCPcB/s1600/Insert%2Bdata%2Bke%2Btabel%2Bdi%2BSQLite.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;melihat-isi-tabel&#34;&gt;Melihat isi Tabel&lt;/h2&gt;
+
+&lt;p&gt;Perintah SQL untuk melihat isi tabel adalah &lt;code&gt;select * from nama_tabel&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;sqlite&amp;gt; select * from anggota;
+1|Madun|Praya
+2|Sahdan|Cakra
+3|Iskandar|Sweta
+4|Zulfikar|Gunung Sari
+5|Samsudin|Narmada
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;keluar-dari-shell-sqlite&#34;&gt;Keluar dari Shell SQLite&lt;/h2&gt;
+
+&lt;p&gt;Tekan &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;D&lt;/code&gt; untuk keluar dari &lt;em&gt;shell&lt;/em&gt; SQLite.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuka-kembali-database&#34;&gt;Membuka Kembali Database&lt;/h2&gt;
+
+&lt;p&gt;Saat kita membuat database tadi, SQLite juga akan membuat sebuah file
+bernama &lt;code&gt;petani.db&lt;/code&gt;. File ini menyimpan tabel dan data yang baru saja kita buat.
+Untuk membuka kembali database-nya, kita tinggal ketik perintah seperti pembuatan
+database tadi.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sqlite3 petani.db
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
+
+&lt;p&gt;Sekian tutorial SQLite di Linux ini. Mudah-mudahan bermanfaat. Terima kasih
+sudah membaca sampai akhir. Tutorial lebih lengkap, bisa dipelajari di
+&lt;a href=&#34;https://www.sqlite.org/docs.html&#34;&gt;dokumentasinya SQLite&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Query MySQL untuk Menentukan Pemenang</title>
       <link>http://petanikode.com/2015/08/query-mysql-untuk-menentukan-pemenang/</link>
       <pubDate>Mon, 03 Aug 2015 05:53:00 +0000</pubDate>

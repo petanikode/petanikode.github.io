@@ -10,6 +10,263 @@
     <atom:link href="http://petanikode.com/seri/belajar-git/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tutorial Git 06 - Membatalkan Revisi</title>
+      <link>http://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/</link>
+      <pubDate>Tue, 21 Feb 2017 14:55:42 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/</guid>
+      <description>
+
+&lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/&#34;&gt;tutorial git 05&lt;/a&gt;,
+kita sudah belajar cara melihat perbedaan di setiap revisi.
+Sekarang kita akan belajar, cara membatalkan sebuah revisi.&lt;/p&gt;
+
+&lt;p&gt;Terkadang pada perubahan yang kita lakukan terjadi error dan kita ingin
+mengembalikannya seperti keadaan sebelumnya. Maka kita perlu menyuruh git untuk
+megembalikannya. Ada beberapa perintah yang digunakan diantaranya: &lt;code&gt;git checkout&lt;/code&gt;,
+&lt;code&gt;git reset&lt;/code&gt;, dan &lt;code&gt;git revert&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;membatalkan-perubahan&#34;&gt;Membatalkan Perubahan&lt;/h2&gt;
+
+&lt;p&gt;Jika revisi kita belum &lt;em&gt;staged&lt;/em&gt; ataupun &lt;em&gt;committed&lt;/em&gt;, kita bisa mengembalikannya
+menggunakan perintah &lt;code&gt;git checkout nama_file.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Misalkan kita akan merubah isi dari file &lt;code&gt;index.html&lt;/code&gt; pada repositori &lt;code&gt;project-01&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sebelum diubah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;Belajar Git - Project 01&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+        &amp;lt;p&amp;gt;Hello Dunia!, Saya sedang belajar Git&amp;lt;/p&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah diubah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;Belajar Git - Project 01&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+        &amp;lt;p&amp;gt;Hello Dunia!, Saya sudah belajar Git&amp;lt;/p&amp;gt;
+        &amp;lt;p&amp;gt;Belajar git ternyata cukup menyenangkan&amp;lt;/p&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil &lt;code&gt;git diff&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git diff
+diff --git a/index.html b/index.html
+index c5082e6..115efcb 100644
+--- a/index.html
++++ b/index.html
+@@ -5,6 +5,7 @@
+         &amp;lt;title&amp;gt;Belajar Git - Project 01&amp;lt;/title&amp;gt;
+     &amp;lt;/head&amp;gt;
+     &amp;lt;body&amp;gt;
+-        &amp;lt;p&amp;gt;Hello Dunia!, Saya sedang belajar Git&amp;lt;/p&amp;gt;
++        &amp;lt;p&amp;gt;Hello Dunia!, Saya sudah belajar Git&amp;lt;/p&amp;gt;
++        &amp;lt;p&amp;gt;Belajar git ternyata cukup menyenangkan&amp;lt;/p&amp;gt;
+     &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang kita akan membatalkan perubahan tersebut. Karena kita belum melakukan
+&lt;em&gt;stage&lt;/em&gt; dan &lt;em&gt;commit&lt;/em&gt;, maka kita bisa menggnakan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perubahan yang baru saja kita lakukan akan dibatalkan. Kalau tidak percaya,
+coba saja periksa file yang sudah dirubah tadi atau cek dengan perintah &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git status
+On branch master
+nothing to commit, working directory clean
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membatalkan-perubahan-file-yang-sudah-dalam-kondisi-staged&#34;&gt;Membatalkan Perubahan File yang Sudah dalam Kondisi &lt;em&gt;staged&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Kondisi &lt;em&gt;staged&lt;/em&gt; merupakan kondisi file yang sudah di &lt;em&gt;add&lt;/em&gt; (&lt;code&gt;git add&lt;/code&gt;),
+namun belum disimpan (&lt;code&gt;git commit&lt;/code&gt;) ke dalam Git.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, kita lakukan perubahan lagi di file &lt;code&gt;index.html&lt;/code&gt; seperti pada
+contoh sebelumnya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git diff
+diff --git a/index.html b/index.html
+index c5082e6..c99aa5b 100644
+--- a/index.html
++++ b/index.html
+@@ -5,6 +5,7 @@
+         &amp;lt;title&amp;gt;Belajar Git - Project 01&amp;lt;/title&amp;gt;
+     &amp;lt;/head&amp;gt;
+     &amp;lt;body&amp;gt;
+-        &amp;lt;p&amp;gt;Hello Dunia!, Saya sedang belajar Git&amp;lt;/p&amp;gt;
++        &amp;lt;p&amp;gt;Hello Dunia!, Saya sudah belajar Git&amp;lt;/p&amp;gt;
++        &amp;lt;p&amp;gt;Belajar git ternyata gampang-gampang susah&amp;lt;/p&amp;gt;
+     &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, kita ubah kondisi file menjadi &lt;em&gt;staged&lt;/em&gt; dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cek statunya dulu:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git status
+On branch master
+Changes to be committed:
+  (use &amp;quot;git reset HEAD &amp;lt;file&amp;gt;...&amp;quot; to unstage)
+
+	modified:   index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah, file &lt;code&gt;index.html&lt;/code&gt; sudah masuk ke dalam kondisi &lt;em&gt;staged&lt;/em&gt;. Untuk mengubahnya
+menjadi kondisi &lt;em&gt;modified&lt;/em&gt;, kita bisa menggunakan perintah &lt;code&gt;git reset&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git reset index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cek statusnya lagi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git status
+On branch master
+Changes not staged for commit:
+  (use &amp;quot;git add &amp;lt;file&amp;gt;...&amp;quot; to update what will be committed)
+  (use &amp;quot;git checkout -- &amp;lt;file&amp;gt;...&amp;quot; to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use &amp;quot;git add&amp;quot; and/or &amp;quot;git commit -a&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang file &lt;code&gt;index.html&lt;/code&gt; sudah dalam kondisi &lt;em&gt;modified&lt;/em&gt;, kita bisa membatalkan
+perubahannya dengan perintah &lt;code&gt;git checkout&lt;/code&gt; seperti contoh sebelumnya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka perubahan yang kita lakukan akan dibatalkan, :smile:.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;666&#34;
+    height=&#34;343&#34;
+    alt=&#34;git-reset-petanikode.png&#34;
+    src=&#34;https://1.bp.blogspot.com/-nKfz_yfDVa0/WKv4RFDPcdI/AAAAAAAAEHQ/pV5A9iL7cUUyK02t_1yNwRsquFr9x4dnQCPcB/s1600/git-reset-petanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membatalkan-perubahan-file-yang-sudah-dalam-kondisi-commited&#34;&gt;Membatalkan Perubahan File yang Sudah dalam Kondisi &lt;em&gt;Commited&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Sekarang bagaimana kalau filenya sudah dalam kondisi &lt;em&gt;commited&lt;/em&gt; dan kita ingin
+mengembalikannya? Untuk melakukan ini, kita harus mengetahui nomer &lt;em&gt;commit&lt;/em&gt;,
+kemudian mengembalikan perubahannya seperti pada nomer &lt;em&gt;commit&lt;/em&gt; tersebut.&lt;/p&gt;
+
+&lt;p&gt;Misalkan, kita ubah kembali file &lt;code&gt;index.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gitdiff&#34;&gt;$ git diff
+diff --git a/index.html b/index.html
+index c5082e6..3c150a8 100644
+--- a/index.html
++++ b/index.html
+@@ -5,6 +5,7 @@
+         &amp;lt;title&amp;gt;Belajar Git - Project 01&amp;lt;/title&amp;gt;
+     &amp;lt;/head&amp;gt;
+     &amp;lt;body&amp;gt;
+-        &amp;lt;p&amp;gt;Hello Dunia!, Saya sedang belajar Git&amp;lt;/p&amp;gt;
++        &amp;lt;p&amp;gt;Hello Dunia!, Saya sudah belajar Git&amp;lt;/p&amp;gt;
++        &amp;lt;p&amp;gt;Belajar Git Greget!&amp;lt;/p&amp;gt;
+     &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian kita melakukan &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
+git commit -m &amp;quot;belajar git greget!&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang kita akan melihat nomer commit dengan perintah &lt;code&gt;git log&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;413&#34;
+    alt=&#34;cek+nomer+commit+dengan+git+log+-+petanikode.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-vppCXWn5slY/WKvztiN-TRI/AAAAAAAAEG4/rpE8yVDIHA8CBu51Snc7U1e58kdrbHl8ACPcB/s1600/cek%2Bnomer%2Bcommit%2Bdengan%2Bgit%2Blog%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kita akan mengembalikan kondisi file &lt;code&gt;index.html&lt;/code&gt;, seperti pada &lt;em&gt;commit&lt;/em&gt;
+sebelumnya. Maka kita bisa menggunakan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout b05f7d05c9298f2cd11b870369f3cf4b2350eca7 index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Seperti mesin waktu, kita sudah mengembalikan keadaan file &lt;code&gt;index.html&lt;/code&gt; seperti
+keadaan saat &lt;em&gt;commit&lt;/em&gt; tersebut. Namun, saat ini kondisi &lt;code&gt;index.html&lt;/code&gt; dalam
+keadaan &lt;em&gt;staged&lt;/em&gt;. Kita bisa kembalikan ke dalam kondisi &lt;em&gt;modified&lt;/em&gt; dengan perintah
+&lt;code&gt;git reset&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git reset index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada contoh tersebut, kita sudah berhasil mengembalikan file &lt;code&gt;index.html&lt;/code&gt; ke dalam
+keadaan seperti &lt;em&gt;commit&lt;/em&gt; sebelumnya. Apabila kita ingin mengembalikan seluruh file
+dalam commit, kita cukup melakukan &lt;em&gt;checkout&lt;/em&gt; ke nomer &lt;em&gt;commit&lt;/em&gt; saja, tanpa diikuti
+nama file. Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout ac6d798f98bac5fad693ef8159f957c5b0805c23
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;kembali-ke-3-commit-sebelumnya&#34;&gt;Kembali ke 3 Commit sebelumnya&lt;/h2&gt;
+
+&lt;p&gt;Untuk kembali ke 3 &lt;em&gt;commit&lt;/em&gt; sebelumnya, kita bisa menggunakan perintah berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout HEAD~3 index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;membatalkan-semua-perubahan-yang-ada&#34;&gt;Membatalkan Semua Perubahan yang ada&lt;/h2&gt;
+
+&lt;p&gt;Jika kita ingin mengembalikan semua file ke suatu commit, kita
+bisa melakukannya dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rever -n &amp;lt;nomer commit&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git revert -n 2400ba0e258bd6a144caa273012b130d6baa5e42
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&lt;/h2&gt;
+
+&lt;p&gt;OK, sekian dulu tutorial ke-6 ini. Rasanya agak kepanjangan. Terima kasih
+sudah membaca. Sampai jumpa di tutorial ke-7.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutorial Git 05 - Melihat Perbandingan Revisi</title>
       <link>http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/</link>
       <pubDate>Thu, 16 Feb 2017 13:56:42 +0800</pubDate>
@@ -147,6 +404,8 @@ cara melihat perbandingan perubahan antar cabang.&lt;/p&gt;
 &lt;p&gt;Kita sudah pelajari fungsi dari perintah &lt;code&gt;git diff&lt;/code&gt;. Perintah ini untuk melihat
 perubahan apa saja yang telah dilakukan pada repositori. Selanjutnya, kita
 akan belajar membatalkan revisi.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/&#34;&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -856,7 +1115,7 @@ git berikut ini.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;Tutorial Git 03 - Membuat Revisi&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/&#34;&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/&#34;&gt;Tutorial Git 05 - Melihat Perbandingan Revisi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/&#34;&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Tutorial Git 07 - Percabangan&lt;/li&gt;
 &lt;li&gt;Tutorial Git 08 - Penggabungan Cabang&lt;/li&gt;
 &lt;li&gt;Tutorial Git 09 - Remote Repositori&lt;/li&gt;

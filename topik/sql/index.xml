@@ -80,6 +80,15 @@ bernama &lt;code&gt;petani.db&lt;/code&gt;.&lt;/p&gt;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;mengisi-data-ke-tabel&#34;&gt;Mengisi Data ke Tabel&lt;/h2&gt;
 
 &lt;p&gt;Sekarang kita akan coba mengisi 5 data ke tabel. Silahkan ketik perintah SQL
@@ -131,7 +140,7 @@ database tadi.&lt;/p&gt;
 &lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
 
 &lt;p&gt;Sekian tutorial SQLite di Linux ini. Mudah-mudahan bermanfaat. Terima kasih
-sudah membaca sampai akhir. Tutorial lebih lengkap, bisa dipelajari di
+sudah membaca sampai akhir. Tutorial lebih lanjut, bisa dipelajari di
 &lt;a href=&#34;https://www.sqlite.org/docs.html&#34;&gt;dokumentasinya SQLite&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>

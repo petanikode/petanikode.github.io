@@ -101,7 +101,171 @@ modul &lt;code&gt;json&lt;/code&gt;. Begitulah cara penguraian JSON dari URL, te
       <pubDate>Fri, 02 Sep 2016 14:25:00 +0000</pubDate>
       
       <guid>http://petanikode.com/2016/09/eksperimen-dengan-api-simsimi/</guid>
-      <description>&lt;p&gt;Kali ini saya akan mengajak teman-teman bereksperimen dengan API Simsimi. Apa itu Simsimi? buat yang belum tau, silahkan instal saja aplikasi Simsimi di smarphone-nya. Oke, mari kita mulai.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-rBmfBrehRwM/V8kRQFVKH1I/AAAAAAAADLU/yOYWb9XdTrIxf5AopZzpLJQdXJHNM3ZwQCK4B/s1600/simsimi-api%2BPetani%2BKode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-rBmfBrehRwM/V8kRQFVKH1I/AAAAAAAADLU/yOYWb9XdTrIxf5AopZzpLJQdXJHNM3ZwQCK4B/s1600/simsimi-api%2BPetani%2BKode.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;API Simsimi konsepnya sangat sederhana. Kita hanya melakukan &lt;i&gt;request&lt;/i&gt; dari URL dengan &lt;i&gt;query string&lt;/i&gt;, lalu nanti akan mendapatkan jawaban atau respon berdasarkan data yang dimiliki Simsimi. Respon tersebut, bisa kita olah untuk membuat Simsimi versi kita sendiri.&lt;br /&gt;&lt;h2&gt;1. Mendapatkan Kunci API&lt;/h2&gt;Ada dua jenis kunci API &lt;i&gt;(API Key)&lt;/i&gt; yang disediakan oleh Simsimi. Pertama, kunci API percobaan (diberikan gratis selama 7 hari). Kedua, API Berbayar. Untuk mendapatkan kunci API, silakan mendaftar di &lt;a href=&#34;http://developer.simsimi.com/api&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://developer.simsimi.com/api&#34;&gt;http://developer.simsimi.com/api&lt;/a&gt;&lt;/a&gt;. Isi data diri dan nama aplikasi yang akan dibuat. Setelah berhasil, nanti akan mendapatkan kunci API seperti ini.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-n2-UI48r17w/V8jmhykWk8I/AAAAAAAADKc/buQnCJ_lzlkHqr5css1FaNwnH9xd1F8uACK4B/s1600/Mendapatkan%2BKunci%2BAPI%2Bkey%2BSimsimi.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Mendapatkan kunci API (API Key)&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-n2-UI48r17w/V8jmhykWk8I/AAAAAAAADKc/buQnCJ_lzlkHqr5css1FaNwnH9xd1F8uACK4B/s1600/Mendapatkan%2BKunci%2BAPI%2Bkey%2BSimsimi.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;2. Membuat Request&lt;/h2&gt;Pembuatan Request dilakukan melalui URL dengan&lt;i&gt; Query String&lt;/i&gt;. Kita disediakan dua jenis URL. Pertama, untuk yang menggunakan kunci API percobaan (gratis) dan untuk yang menggunakan kinci API berbayar.&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Kunci Percobaan: &lt;code&gt;&lt;a href=&#34;http://sandbox.api.simsimi.com/request.p&#34;&gt;http://sandbox.api.simsimi.com/request.p&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Kunci Berbayar: &lt;code&gt;&lt;code&gt;&lt;a href=&#34;http://api.simsimi.com/request.p&#34;&gt;http://api.simsimi.com/request.p&lt;/a&gt;&lt;/code&gt;&amp;nbsp;&lt;/code&gt; &lt;/li&gt;&lt;/ol&gt;Berikut ini parameter untuk membuat request melalui URL di atas.&lt;br /&gt;&lt;table border=&#34;1&#34; class=&#34;table table-bordered table-striped&#34;&gt;&lt;thead&gt;&lt;tr&gt;       &lt;th&gt;Parameter&lt;/th&gt;       &lt;th&gt;Tipe Data&lt;/th&gt;       &lt;th&gt;Wajib&lt;/th&gt;       &lt;th&gt;Nilai Default&lt;/th&gt;       &lt;th&gt;Keterangan&lt;/th&gt;      &lt;/tr&gt;&lt;/thead&gt;     &lt;tbody&gt;&lt;tr&gt;       &lt;td&gt;key&lt;/td&gt;       &lt;td&gt;String&lt;/td&gt;       &lt;td&gt;Ya&lt;/td&gt;       &lt;td&gt;&lt;/td&gt;       &lt;td&gt;Kunci API&lt;/td&gt;      &lt;/tr&gt;&lt;tr&gt;       &lt;td&gt;text&lt;/td&gt;       &lt;td&gt;String&lt;/td&gt;       &lt;td&gt;Ya&lt;/td&gt;       &lt;td&gt;&lt;/td&gt;       &lt;td&gt;Query message&lt;/td&gt;      &lt;/tr&gt;&lt;tr&gt;       &lt;td&gt;lc&lt;/td&gt;       &lt;td&gt;String&lt;/td&gt;       &lt;td&gt;Ya&lt;/td&gt;       &lt;td&gt;&lt;/td&gt;       &lt;td&gt;Kode bahasa (&lt;a href=&#34;http://developer.simsimi.com/lclist&#34; target=&#34;_blank&#34;&gt;Cek di sini&lt;/a&gt;)&lt;/td&gt;      &lt;/tr&gt;&lt;tr&gt;       &lt;td&gt;ft&lt;/td&gt;       &lt;td&gt;Double(0.0 ~ 1.0)&lt;/td&gt;       &lt;td&gt;Tidak&lt;/td&gt;       &lt;td&gt;0.0&lt;/td&gt;       &lt;td&gt;1.0 : &amp;lsquo;Bad Word Discriminator&amp;rsquo;&lt;/td&gt;      &lt;/tr&gt;&lt;/tbody&gt;    &lt;/table&gt;Nah, untuk membuat request-nya, silahkan susun URL-nya menjadi seperti ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&lt;a href=&#34;http://sandbox.api.simsimi.com/request.p?key=&#34;&gt;http://sandbox.api.simsimi.com/request.p?key=&lt;/a&gt;&lt;span style=&#34;color: red;&#34;&gt;KUNCI_API&lt;/span&gt;&amp;amp;lc=&lt;span style=&#34;color: lime;&#34;&gt;id&lt;/span&gt;&amp;amp;ft=1.0&amp;amp;text=&lt;span style=&#34;color: orange;&#34;&gt;tau petanikode?&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;Berikut ini contoh hasil requestnya melalui browser dengan query message &amp;ldquo;tau petanikode?&amp;rdquo;&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-sAnaWLlCpc0/V8jrCLLCjEI/AAAAAAAADKo/ysrLyJiCfMg6-ImPwt98NXMni-GWxtZswCK4B/s1600/Contoh%2BRequest%2Bdari%2BBrowser.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Percobaan pengiriman request melalui browser&#34; border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-sAnaWLlCpc0/V8jrCLLCjEI/AAAAAAAADKo/ysrLyJiCfMg6-ImPwt98NXMni-GWxtZswCK4B/s1600/Contoh%2BRequest%2Bdari%2BBrowser.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Seperti yang kita dapatkan pada gambar di atas, responnya dalam bentuk JSON. Percobaan kedua saya lakukan dengan Postman.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-5X2aUgflQJM/V8jse108zvI/AAAAAAAADK0/kgvhXuR-RNgpiZzBs_33EkoXCAw0KKyVwCK4B/s1600/Percobaan%2Bpengiriman%2Brequest%2Bmelalui%2BPostman.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-5X2aUgflQJM/V8jse108zvI/AAAAAAAADK0/kgvhXuR-RNgpiZzBs_33EkoXCAw0KKyVwCK4B/s1600/Percobaan%2Bpengiriman%2Brequest%2Bmelalui%2BPostman.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;3. Membuat Aplikasi Chat&lt;/h2&gt;Oke, tiba saatnya di bagian yang paling menyenangkan. Jadi, setelah kita tau respon&amp;nbsp; dari API Simsimi berupa JSON. Kita tinggal melakukan penguraian &lt;i&gt;(parshing)&lt;/i&gt; saja sehingga menjadi sebuah aplikasi. Untuk melakukan ini, saya menggunakan bahasa pemrograman Python. Karena kodenya lebih simpel dan singkat.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py python&#34;&gt;import urllib, json&lt;br /&gt;&lt;br /&gt;print &amp;ldquo;Silahkan kirim pesan!&amp;rdquo;&lt;br /&gt;&lt;br /&gt;while(True):&lt;br /&gt;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;pesan = raw_input(&amp;ldquo;Anda: &amp;ldquo;)&lt;br /&gt;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;url = &amp;ldquo;&lt;a href=&#34;http://sandbox.api.simsimi.com/request.p?key=KUNCI_API&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=%s&amp;quot;&#34;&gt;http://sandbox.api.simsimi.com/request.p?key=KUNCI_API&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=%s&amp;quot;&lt;/a&gt; % pesan&lt;br /&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;link_json = urllib.urlopen(url)&lt;br /&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;data = json.loads(link_json.read())&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;print &amp;ldquo;Petanikode-simi: %s&amp;rdquo; % data[&amp;lsquo;response&amp;rsquo;]&lt;/code&gt;&lt;/pre&gt;Baca juga:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://www.petanikode.com/2016/09/penguraian-parshing-json-pada-python.html&#34;&gt;Penguraian (parsing) JSON pada Python&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://www.petanikode.com/2016/09/penguraian-parshing-json-dari-url-web.html&#34; target=&#34;_blank&#34;&gt;Penguraian (parsing) JSON dari URL Web Service dengan Python&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;Hasilnya, ketika dijalankan:&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-Pj_inXe0bAo/V8jyen6uLeI/AAAAAAAADLE/H_9jJ4U_554VAJ8s5_RWtQK_A5PVsO6BwCK4B/s1600/aplikasi%2Bchat%2Bberbasis%2BCLI%2Bdengan%2Bpython%2B-%2Bpetanikode%2Bsimsimi.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-Pj_inXe0bAo/V8jyen6uLeI/AAAAAAAADLE/H_9jJ4U_554VAJ8s5_RWtQK_A5PVsO6BwCK4B/s1600/aplikasi%2Bchat%2Bberbasis%2BCLI%2Bdengan%2Bpython%2B-%2Bpetanikode%2Bsimsimi.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://developer.simsimi.com/api&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://developer.simsimi.com/api&#34;&gt;http://developer.simsimi.com/api&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>
+
+&lt;p&gt;Kali ini saya akan mengajak teman-teman bereksperimen dengan API Simsimi.
+Apa itu Simsimi? buat yang belum tau, silahkan instal saja aplikasi Simsimi
+di smarphone-nya. Oke, mari kita mulai.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;simsimi-api+Petani+Kode.jpg&#34;
+    src=&#34;http://2.bp.blogspot.com/-rBmfBrehRwM/V8kRQFVKH1I/AAAAAAAADLU/yOYWb9XdTrIxf5AopZzpLJQdXJHNM3ZwQCK4B/s1600/simsimi-api%2BPetani%2BKode.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;API Simsimi konsepnya sangat sederhana. Kita hanya melakukan &lt;em&gt;request&lt;/em&gt; dari URL dengan &lt;em&gt;query string&lt;/em&gt;, lalu nanti akan mendapatkan jawaban atau respon berdasarkan data yang dimiliki Simsimi. Respon tersebut, bisa kita olah untuk membuat Simsimi versi kita sendiri.&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-mendapatkan-kunci-api&#34;&gt;1. Mendapatkan Kunci API&lt;/h2&gt;
+
+&lt;p&gt;Kunci &lt;a href=&#34;http://petanikode.com/topik/api&#34;&gt;API&lt;/a&gt; atau &lt;em&gt;API Key&lt;/em&gt;, merupakan kunci yang digunakan untuk
+mengakses API Simsimi. Ada dua jenis kunci API &lt;em&gt;(API Key)&lt;/em&gt; yang disediakan
+oleh Simsimi. Pertama, kunci API percobaan (diberikan gratis selama 7 hari).
+Kedua, API Berbayar. Untuk mendapatkan kunci API, silakan mendaftar di
+&lt;a href=&#34;http://developer.simsimi.com/api&#34;&gt;http://developer.simsimi.com/api&lt;/a&gt;. Isi data diri dan nama aplikasi yang akan
+dibuat. Setelah berhasil, nanti akan mendapatkan kunci API seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1365&#34;
+    height=&#34;562&#34;
+    alt=&#34;Mendapatkan+Kunci+API+key+Simsimi.png)&#34;
+    src=&#34;https://4.bp.blogspot.com/-n2-UI48r17w/V8jmhykWk8I/AAAAAAAADKc/buQnCJ_lzlkHqr5css1FaNwnH9xd1F8uACK4B/s1600/Mendapatkan%2BKunci%2BAPI%2Bkey%2BSimsimi.png)&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-membuat-request&#34;&gt;2. Membuat &lt;em&gt;Request&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Pembuatan &lt;em&gt;Request&lt;/em&gt; dilakukan melalui URL dengan &lt;em&gt;Query String&lt;/em&gt;.
+Kita disediakan dua jenis URL. Pertama, untuk yang menggunakan kunci API
+percobaan (gratis) dan untuk yang menggunakan kinci API berbayar.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Kunci Percobaan: &lt;code&gt;http://sandbox.api.simsimi.com/request.p&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Kunci Berbayar: &lt;code&gt;http://api.simsimi.com/request.p&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Berikut ini parameter untuk membuat request melalui URL di atas.&lt;br&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;Tipe Data&lt;/th&gt;
+&lt;th&gt;Wajib&lt;/th&gt;
+&lt;th&gt;Nilai Default&lt;/th&gt;
+&lt;th&gt;Keterangan&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;key&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;Ya&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Kunci API&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;text&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;Ya&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Query message&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;lc&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;Ya&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Kode bahasa (&lt;a href=&#34;http://developer.simsimi.com/lclist&#34;&gt;Cek di sini&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ft&lt;/td&gt;
+&lt;td&gt;Double(0.0 ~ 1.0)&lt;/td&gt;
+&lt;td&gt;Tidak&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;1.0 : &amp;lsquo;Bad Word Discriminator&amp;rsquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Nah, untuk membuat request-nya, silahkan susun URL-nya menjadi seperti ini:&lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://sandbox.api.simsimi.com/request.p?key=KUNCI_API&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=tau petanikode?
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut ini contoh hasil requestnya melalui browser dengan &lt;em&gt;query message&lt;/em&gt; &amp;ldquo;tau petanikode?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;745&#34;
+    height=&#34;343&#34;
+    alt=&#34;Contoh+Request+dari+Browser.png&#34;
+    src=&#34;http://1.bp.blogspot.com/-sAnaWLlCpc0/V8jrCLLCjEI/AAAAAAAADKo/ysrLyJiCfMg6-ImPwt98NXMni-GWxtZswCK4B/s1600/Contoh%2BRequest%2Bdari%2BBrowser.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Seperti yang kita dapatkan pada gambar di atas, responnya dalam bentuk JSON. Percobaan kedua saya lakukan dengan Postman.&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1366&#34;
+    height=&#34;743&#34;
+    alt=&#34;Percobaan+pengiriman+request+melalui+Postman.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-5X2aUgflQJM/V8jse108zvI/AAAAAAAADK0/kgvhXuR-RNgpiZzBs_33EkoXCAw0KKyVwCK4B/s1600/Percobaan%2Bpengiriman%2Brequest%2Bmelalui%2BPostman.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-membuat-aplikasi-chat&#34;&gt;3. Membuat Aplikasi Chat&lt;/h2&gt;
+
+&lt;p&gt;Oke, tiba saatnya di bagian yang paling menyenangkan. Jadi, setelah kita tahu
+respon dari API Simsimi berupa JSON. Kita tinggal melakukan penguraian
+&lt;em&gt;(parshing)&lt;/em&gt; saja sehingga menjadi sebuah aplikasi.
+Untuk melakukan ini, saya menggunakan bahasa pemrograman Python.
+Karena kodenya lebih sederhana dan singkat.&amp;gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import urllib, json
+
+print &amp;quot;Silahkan kirim pesan!&amp;quot;&amp;quot;
+
+while(True):
+    pesan = raw_input(&amp;quot;Anda: &amp;quot;)
+    url = &amp;quot;http://sandbox.api.simsimi.com/request.p?key=KUNCI_API&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=%s&amp;quot; % pesan
+    link_json = urllib.urlopen(url)
+    data = json.loads(link_json.read())
+
+    print &amp;quot;Petanikode-simi: %s&amp;quot; % data[&#39;response&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Baca juga:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/penguraian-parshing-json-pada-python/&#34;&gt;Penguraian (parsing) JSON pada Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/penguraian-parshing-json-dari-url-web-service-dengan-python/&#34;&gt;Penguraian (parsing) JSON dari URL Web Service dengan Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hasilnya, ketika dijalankan:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;658&#34;
+    height=&#34;412&#34;
+    alt=&#34;aplikasi+chat+berbasis+CLI+dengan+python+-+petanikode+simsimi.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-Pj_inXe0bAo/V8jyen6uLeI/AAAAAAAADLE/H_9jJ4U_554VAJ8s5_RWtQK_A5PVsO6BwCK4B/s1600/aplikasi%2Bchat%2Bberbasis%2BCLI%2Bdengan%2Bpython%2B-%2Bpetanikode%2Bsimsimi.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Referensi: &lt;a href=&#34;http://developer.simsimi.com/api&#34;&gt;http://developer.simsimi.com/api&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

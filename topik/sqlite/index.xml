@@ -61,7 +61,7 @@ bernama &lt;code&gt;petani.db&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;membuat-tabel&#34;&gt;Membuat Tabel&lt;/h2&gt;
 
-&lt;p&gt;Selanjutnya kita akan membuat tabel pertani dengan &lt;em&gt;Query&lt;/em&gt; SQL berikut ini.&lt;/p&gt;
+&lt;p&gt;Selanjutnya kita akan membuat tabel &lt;em&gt;anggota&lt;/em&gt; dengan &lt;em&gt;Query&lt;/em&gt; SQL berikut ini.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;create table anggota(
     id integer,

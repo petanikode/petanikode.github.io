@@ -847,7 +847,190 @@ Pada dasarnya hanya meneruskan request ke API Simsimi dan mengembalikan lagi ke 
       <pubDate>Mon, 05 Sep 2016 05:00:00 +0000</pubDate>
       
       <guid>http://petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-O5BDsC5sx7U/V386o1PkOrI/AAAAAAAAC_s/dYtT6GzAIp8Mv16BMe1uR9Y31fxLR4hzACK4B/s1600/telegram-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-O5BDsC5sx7U/V386o1PkOrI/AAAAAAAAC_s/dYtT6GzAIp8Mv16BMe1uR9Y31fxLR4hzACK4B/s1600/telegram-petanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Pada &lt;a href=&#34;http://www.petanikode.com/2016/07/membuat-bot-telegram-tampa-menulis-kode.html&#34; target=&#34;&#34;&gt;terbitan sebelumnya&lt;/a&gt;, saya sudah membahas cara membuat bot &lt;a href=&#34;http://www.petanikode.com/search/label/Telegram&#34;&gt;Telegram&lt;/a&gt; melalui &lt;a href=&#34;https://manybot.io/&#34; target=&#34;_blank&#34;&gt;@manybot&lt;/a&gt;. Tapi hanya berfungsi untuk &lt;i&gt;auto posting&lt;/i&gt; dari &lt;i&gt;RSS feed,&lt;/i&gt; VK, Youtube dan &lt;i&gt;Twitter&lt;/i&gt;. Nah, sekarang kita akan coba membuat bot yang bisa kita kostum sendiri, tentunya dengan kode.&lt;br /&gt;&lt;br /&gt;Hook.io memungkinkan kita menaruh kode bot dalam layanan mereka. Menurut Nicola Malizia, pada artikelnya yang berjudul &lt;i&gt;&amp;ldquo;How to easily build a Telegram Bot with Hook.io&amp;rdquo; &lt;/i&gt;Hook.io sebuah platform open srouce untuk menyimpan dan membuat layanan mikro HTTP.&lt;i&gt; &lt;/i&gt;Hook.io mendukung banyak bahasa pemrograman.&lt;i&gt;&lt;/i&gt;&lt;br /&gt;&lt;h2&gt;Bahan-bahan yang dibutuhkan&lt;/h2&gt;&lt;ol&gt;&lt;li&gt;Token Bot Telegram&lt;/li&gt;&lt;li&gt;Akun &lt;a href=&#34;https://hook.io/ardianta?s&#34; target=&#34;_blank&#34;&gt;Hook.io&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;h2&gt;Membuat Bot dan Mendapatkan Token&lt;/h2&gt;Silahkan buka &lt;a href=&#34;https://telegram.me/botfather&#34; target=&#34;_blank&#34;&gt;@botfather&lt;/a&gt; untuk mendaftarkan bot baru. Pada tombol perintah bot (/), pilih &lt;code&gt;/newBot&lt;/code&gt;.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-hJXSKJhBIrs/V8vuG07Lo3I/AAAAAAAADMo/x6GrFA-umIYYPPTMFFg6PBCCAaL-k0zuwCK4B/s1600/Mendaftar%2BBot%2BBaru.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-hJXSKJhBIrs/V8vuG07Lo3I/AAAAAAAADMo/x6GrFA-umIYYPPTMFFg6PBCCAaL-k0zuwCK4B/s1600/Mendaftar%2BBot%2BBaru.png&#34; /&gt;&amp;nbsp;&lt;/a&gt;&lt;br /&gt;Setelah itu, silahkan balas dengan nama bot yang ingin anda daftarkan. Contoh: &amp;ldquo;Pak Tani&amp;rdquo;.&lt;br /&gt;&amp;nbsp;&lt;a href=&#34;http://2.bp.blogspot.com/-wEukZuaXceo/V8vxUhHisWI/AAAAAAAADNA/siC4xzzQqqckCOhhxkpLnuoB1MmYXG82QCK4B/s1600/Memberikan%2Bnama%2Bbot%2Bpak%2Btani%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-wEukZuaXceo/V8vxUhHisWI/AAAAAAAADNA/siC4xzzQqqckCOhhxkpLnuoB1MmYXG82QCK4B/s1600/Memberikan%2Bnama%2Bbot%2Bpak%2Btani%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Selanjutnya, anda akan diminta &lt;i&gt;username&lt;/i&gt; untuk bot. Setiap &lt;i&gt;username&lt;/i&gt; harus diakhiri dengan kata &lt;i&gt;&amp;ldquo;bot&amp;rdquo;&lt;/i&gt; dibelakangnya.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-l0aMjl67n0g/V8vxlfg9TjI/AAAAAAAADNI/DA_R-PpVi8M-FH9m_4tK7rEevsmRkPOMgCK4B/s1600/username%2Buntuk%2Bpak%2Btani%2Bbot.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-l0aMjl67n0g/V8vxlfg9TjI/AAAAAAAADNI/DA_R-PpVi8M-FH9m_4tK7rEevsmRkPOMgCK4B/s1600/username%2Buntuk%2Bpak%2Btani%2Bbot.png&#34; /&gt;&amp;nbsp;&lt;/a&gt;&lt;br /&gt;Lalu anda akan mendapatkan kode token bot.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-touscbOB_TQ/V8vx9XWCD_I/AAAAAAAADNU/w2XUhhaVULAqu7nyvO-lq-1gnv-x3yZhwCK4B/s1600/Token%2BHTTP%2Bbot%2BTelegram%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-touscbOB_TQ/V8vx9XWCD_I/AAAAAAAADNU/w2XUhhaVULAqu7nyvO-lq-1gnv-x3yZhwCK4B/s1600/Token%2BHTTP%2Bbot%2BTelegram%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Simpan token tersebut, karena akan kita gunakan untuk menghubungkannya dengan Hook.io. &lt;br /&gt;&lt;h2&gt;Membuat &lt;i&gt;Service&lt;/i&gt; &lt;i&gt;Hook&lt;/i&gt;&lt;/h2&gt;Setelah anda membuat akun di Hook.io, silahkan buat service baru. &lt;a href=&#34;https://hook.io/new&#34; target=&#34;_blank&#34;&gt;Klik di sini&lt;/a&gt; untuk membuatnya. Isi nama &lt;i&gt;hook&lt;/i&gt; yang akan dibuat, contoh &amp;ldquo;petani&amp;rdquo;.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-PAz2S5gacWQ/V8v1B18JG_I/AAAAAAAADNg/UcbTwJrOenQg31j8SImshIiNcJ2tCtizgCK4B/s1600/membuat%2Bhook%2Buntuk%2Bpak%2Btani%2Bbot%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-PAz2S5gacWQ/V8v1B18JG_I/AAAAAAAADNg/UcbTwJrOenQg31j8SImshIiNcJ2tCtizgCK4B/s1600/membuat%2Bhook%2Buntuk%2Bpak%2Btani%2Bbot%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Klik Create untuk membuatnya.&lt;br /&gt;&lt;h2&gt;Membuat Variabel Lingkungan (Env)&lt;/h2&gt;Silahkan masuk ke &lt;a href=&#34;https://hook.io/env&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://hook.io/env&#34;&gt;https://hook.io/env&lt;/a&gt;&lt;/a&gt; untuk membuat variabel lingkungan. Variabel lingkungan akan kita gunakan untuk menyimpan token bot agar kita tidak mengetik tokennya dalam kode.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-q7KFbPByGMc/V8v3unFLRfI/AAAAAAAADNw/a2FRHAFrdwkGhXynaLSfiD1CY8Qeq-NmwCK4B/s1600/Menyiman%2Btoken%2Bdalam%2Bvariabel%2Blingkungan.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-q7KFbPByGMc/V8v3unFLRfI/AAAAAAAADNw/a2FRHAFrdwkGhXynaLSfiD1CY8Qeq-NmwCK4B/s1600/Menyiman%2Btoken%2Bdalam%2Bvariabel%2Blingkungan.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Membuat Kode Bot&lt;/h2&gt;Perahatikan kode &lt;i&gt;Hook Source&lt;/i&gt;:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-GD_pTZzcs0o/V8v1stxe8fI/AAAAAAAADNo/MYnrQvepdlwjwQHoqT7l5F2BZvQdGfQIgCK4B/s1600/Kode%2Bdefault%2Bhook.io.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-GD_pTZzcs0o/V8v1stxe8fI/AAAAAAAADNo/MYnrQvepdlwjwQHoqT7l5F2BZvQdGfQIgCK4B/s1600/Kode%2Bdefault%2Bhook.io.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Silahkan ganti kode &lt;i&gt;(Hook Source)&lt;/i&gt; tersebut dengan kode ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js node&#34;&gt;module[&amp;lsquo;exports&amp;rsquo;] = function petaniBot (hook) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; var request = require(&amp;lsquo;request&amp;rsquo;);&lt;br /&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; request&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; .post(&amp;lsquo;&lt;a href=&#34;https://api.telegram.org/bot&#39;&#34;&gt;https://api.telegram.org/bot&#39;&lt;/a&gt; + hook.env.&lt;b&gt;&lt;span style=&#34;color: red;&#34;&gt;token_petani_bot&lt;/span&gt;&lt;/b&gt; + &amp;lsquo;/sendMessage&amp;rsquo;)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; .form({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;chat_id&amp;rdquo;: hook.params.message.chat.id,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;text&amp;rdquo;: &amp;ldquo;Anda mengirim: &amp;ldquo; + hook.params.message.text&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; });&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Perhatikan &lt;code&gt;hook.env.token_petani_bot&lt;/code&gt;, itu adalah nama variabel lingkungan yang baru saja kita buat. Kemudian &lt;code&gt;hook.params.message&lt;/code&gt; adalah parameter yang diterima dari chat Telegram.&lt;br /&gt;&lt;br /&gt;Pada kode tersebut, kita melakukan &lt;i&gt;request&lt;/i&gt; pengiriman ke API Telegram setelah menerima data dari parameter. &lt;i&gt;Method&lt;/i&gt; yang digunakan untuk mengirim/membalas pesan adalah &lt;code&gt;/sendMessage&lt;/code&gt;. Lihat di &lt;a href=&#34;https://core.telegram.org/bots/api&#34; target=&#34;_blank&#34;&gt;dokumentasi API &lt;/a&gt;Telegram.&lt;br /&gt;&lt;h2&gt;Menghubungkan Bot dengan Hook &lt;/h2&gt;Untuk menghubungkan bot dengan hook, silahkan susun URL-nya menjadi seperti ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&lt;a href=&#34;https://api.telegram.org/bot&#34;&gt;https://api.telegram.org/bot&lt;/a&gt;&lt;b&gt;&lt;span style=&#34;color: red;&#34;&gt;&amp;lt;TOKEN&amp;gt;&lt;/span&gt;&lt;/b&gt;/setWebhook?url=&lt;a href=&#34;https://hook.io/&#34;&gt;https://hook.io/&lt;/a&gt;&lt;span style=&#34;color: red;&#34;&gt;&lt;b&gt;&amp;lt;hook-user&amp;gt;&lt;/b&gt;&lt;/span&gt;/&lt;span style=&#34;color: red;&#34;&gt;&lt;b&gt;&amp;lt;hook-name&amp;gt;&lt;/b&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;Silahkan diganti:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;&amp;lt;TOKEN&amp;gt;&lt;/code&gt; dengan token bot anda&lt;/li&gt;&lt;li&gt;&lt;code&gt;&amp;lt;hook-user&amp;gt;&lt;/code&gt; dengan username hook.io anda&lt;/li&gt;&lt;li&gt;&lt;code&gt;&amp;lt;hook-name&amp;gt;&lt;/code&gt; dengan nama layanan/service hook yang anda buat &lt;/li&gt;&lt;/ul&gt;Setelah itu, silahkan buka URL tersebut melalui browser. Jika anda mendapatkan balasan seperti ini, maka bot berhasil dihubungkan dengan layanan hook.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-NJWNvnEf3Vg/V8wAe-8k9vI/AAAAAAAADOA/7u1Ezl7Fl5418LAHz49Uu1zm1PZ7xS_jQCK4B/s1600/Respon%2Bberhasil%2Bmengaitkan%2Bhook%2Bdengan%2Bbot%2Btelegram.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-NJWNvnEf3Vg/V8wAe-8k9vI/AAAAAAAADOA/7u1Ezl7Fl5418LAHz49Uu1zm1PZ7xS_jQCK4B/s1600/Respon%2Bberhasil%2Bmengaitkan%2Bhook%2Bdengan%2Bbot%2Btelegram.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Percobaan&lt;/h2&gt;Silahkan buka atau chat dengan bot yang sudah dibuat, &lt;a href=&#34;http://telegram.me/petani_bot&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://telegram.me/petani_bot&#34;&gt;http://telegram.me/petani_bot&lt;/a&gt;&lt;/a&gt;.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-OURsnIUYzXg/V8wB9Y0sKVI/AAAAAAAADOI/MJ_9TcnX3SgUQXUzTJFuWKd6vHKdOL7FACK4B/s1600/Hasil%2Buji%2Bcoba%2Bbot.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-OURsnIUYzXg/V8wB9Y0sKVI/AAAAAAAADOI/MJ_9TcnX3SgUQXUzTJFuWKd6vHKdOL7FACK4B/s1600/Hasil%2Buji%2Bcoba%2Bbot.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kesimpulan dan Saran&lt;/h2&gt;Bot Telegram dapat kita kendalikan dengan kode yang disimpan di Hook.io. Kita bisa menentukan bagaimana tingkah laku Bot melalui kode. Saran untuk pengembangan selanjutnya, bisa ditambahkan kecerdasan buatan agar bot lebih bermanfaat. Misalnya, kecerdasan buatan untuk menganalisa cuaca dan tanaman yang harus ditanam pada musim tertentu. Atau bisa kita &lt;a href=&#34;http://www.petanikode.com/2016/09/eksperimen-dengan-api-simsimi.html&#34; target=&#34;_blank&#34;&gt;terapkan API Simsimi&lt;/a&gt; agar bot bisa berbicara seperti Simsimi.&lt;br /&gt;&lt;br /&gt;Jangan lupa bergabung ke Channel Petani Kode di Telegram: &lt;a href=&#34;https://telegram.me/petanikode&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://telegram.me/petanikode&#34;&gt;https://telegram.me/petanikode&lt;/a&gt;&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;https://unnikked.ga/build-telegram-bot-hook-io/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://unnikked.ga/build-telegram-bot-hook-io/&#34;&gt;https://unnikked.ga/build-telegram-bot-hook-io/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-O5BDsC5sx7U/V386o1PkOrI/AAAAAAAAC_s/dYtT6GzAIp8Mv16BMe1uR9Y31fxLR4hzACK4B/s1600/telegram-petanikode.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-O5BDsC5sx7U/V386o1PkOrI/AAAAAAAAC_s/dYtT6GzAIp8Mv16BMe1uR9Y31fxLR4hzACK4B/s1600/telegram-petanikode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2016/07/membuat-bot-telegram-tanpa-menulis-kode-program-coding/&#34;&gt;tulisan sebelumnya&lt;/a&gt;,
+saya sudah membahas cara membuat bot &lt;a href=&#34;http://petanikode.com/topik/telegram&#34;&gt;Telegram&lt;/a&gt; melalui &lt;a href=&#34;https://manybot.io/&#34;&gt;@manybot&lt;/a&gt;.
+Tapi hanya sekedar berfungsi untuk &lt;em&gt;auto posting&lt;/em&gt; dari &lt;em&gt;RSS feed,&lt;/em&gt; VK, Youtube dan &lt;em&gt;Twitter&lt;/em&gt;.
+Nah, sekarang kita akan coba membuat bot yang bisa kita kostum sendiri, tentunya dengan kode.&lt;/p&gt;
+
+&lt;p&gt;Kode kendali bot akan kita simpan di Hookio. Menurut Nicola Malizia,
+pada artikelnya yang berjudul &lt;em&gt;&amp;ldquo;How to easily build a Telegram Bot with Hook.io&amp;rdquo;&lt;/em&gt;
+Hook.io merupakan sebuah platform open srouce untuk menyimpan dan membuat layanan mikro HTTP.&lt;/p&gt;
+
+&lt;h2 id=&#34;bahan-bahan-yang-dibutuhkan&#34;&gt;Bahan-bahan yang dibutuhkan&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Token Bot Telegram&lt;/li&gt;
+&lt;li&gt;Akun &lt;a href=&#34;https://hook.io/ardianta?s&#34;&gt;Hook.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;membuat-bot-dan-mendapatkan-token&#34;&gt;Membuat Bot dan Mendapatkan Token&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka &lt;a href=&#34;https://telegram.me/botfather&#34;&gt;@botfather&lt;/a&gt; untuk mendaftarkan
+bot baru. Pada tombol perintah bot (&lt;code&gt;/&lt;/code&gt;), pilih &lt;code&gt;/newBot&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;617&#34;
+    height=&#34;506&#34;
+    alt=&#34;Mendaftar+Bot+Baru.png&#34;
+    src=&#34;http://4.bp.blogspot.com/-hJXSKJhBIrs/V8vuG07Lo3I/AAAAAAAADMo/x6GrFA-umIYYPPTMFFg6PBCCAaL-k0zuwCK4B/s1600/Mendaftar%2BBot%2BBaru.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, silahkan balas dengan nama bot yang ingin anda daftarkan. Contoh: &amp;ldquo;Pak Tani&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;642&#34;
+    height=&#34;133&#34;
+    alt=&#34;Memberikan nama bot pak tani&#34;
+    src=&#34;http://2.bp.blogspot.com/-wEukZuaXceo/V8vxUhHisWI/AAAAAAAADNA/siC4xzzQqqckCOhhxkpLnuoB1MmYXG82QCK4B/s1600/Memberikan%2Bnama%2Bbot%2Bpak%2Btani%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, anda akan diminta &lt;em&gt;username&lt;/em&gt; untuk bot. Setiap &lt;em&gt;username&lt;/em&gt; harus diakhiri dengan kata &lt;em&gt;&amp;ldquo;bot&amp;rdquo;&lt;/em&gt; dibelakangnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;635&#34;
+    height=&#34;125&#34;
+    alt=&#34;username+untuk+pak+tani+bot.png&#34;
+    src=&#34;http://4.bp.blogspot.com/-l0aMjl67n0g/V8vxlfg9TjI/AAAAAAAADNI/DA_R-PpVi8M-FH9m_4tK7rEevsmRkPOMgCK4B/s1600/username%2Buntuk%2Bpak%2Btani%2Bbot.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu anda akan mendapatkan kode token bot.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;617&#34;
+    height=&#34;506&#34;
+    alt=&#34;Token+HTTP+bot+Telegram+-+petanikode.png&#34;
+    src=&#34;http://1.bp.blogspot.com/-touscbOB_TQ/V8vx9XWCD_I/AAAAAAAADNU/w2XUhhaVULAqu7nyvO-lq-1gnv-x3yZhwCK4B/s1600/Token%2BHTTP%2Bbot%2BTelegram%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Simpan token tersebut, karena akan kita gunakan untuk menghubungkannya dengan Hook.io.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-service-di-hook-io&#34;&gt;Membuat &lt;em&gt;Service&lt;/em&gt; di Hook.io&lt;/h2&gt;
+
+&lt;p&gt;Setelah anda membuat akun di Hook.io, silahkan buat service baru. &lt;a href=&#34;https://hook.io/new&#34;&gt;Klik di sini&lt;/a&gt; untuk membuatnya. Isi nama &lt;em&gt;hook&lt;/em&gt; yang akan dibuat, contoh &amp;ldquo;petani&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1155&#34;
+    height=&#34;536&#34;
+    alt=&#34;membuat+hook+untuk+pak+tani+bot+-+petanikode.png&#34;
+    src=&#34;http://2.bp.blogspot.com/-PAz2S5gacWQ/V8v1B18JG_I/AAAAAAAADNg/UcbTwJrOenQg31j8SImshIiNcJ2tCtizgCK4B/s1600/membuat%2Bhook%2Buntuk%2Bpak%2Btani%2Bbot%2B-%2Bpetanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Klik Create untuk membuatnya.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-variabel-lingkungan-env&#34;&gt;Membuat Variabel Lingkungan (Env)&lt;/h2&gt;
+
+&lt;p&gt;Silahkan masuk ke &lt;a href=&#34;https://hook.io/env&#34;&gt;https://hook.io/env&lt;/a&gt; untuk membuat variabel lingkungan.
+Variabel lingkungan akan kita gunakan untuk menyimpan token bot agar
+kita tidak mengetik tokennya dalam kode. Karena token bersifat rahasia.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1121&#34;
+    height=&#34;427&#34;
+    alt=&#34;Menyiman+token+dalam+variabel+lingkungan.png&#34;
+    src=&#34;http://3.bp.blogspot.com/-q7KFbPByGMc/V8v3unFLRfI/AAAAAAAADNw/a2FRHAFrdwkGhXynaLSfiD1CY8Qeq-NmwCK4B/s1600/Menyiman%2Btoken%2Bdalam%2Bvariabel%2Blingkungan.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-kode-bot&#34;&gt;Membuat Kode Bot&lt;/h2&gt;
+
+&lt;p&gt;Perahatikan kode &lt;em&gt;Hook Source&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1158&#34;
+    height=&#34;451&#34;
+    alt=&#34;Kode+default+hook.io.png&#34;
+    src=&#34;http://2.bp.blogspot.com/-GD_pTZzcs0o/V8v1stxe8fI/AAAAAAAADNo/MYnrQvepdlwjwQHoqT7l5F2BZvQdGfQIgCK4B/s1600/Kode%2Bdefault%2Bhook.io.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Silahkan ganti kode &lt;em&gt;(Hook Source)&lt;/em&gt; tersebut dengan kode ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;390&#34;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
+    frameborder=&#34;0&#34;
+    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/18d039ef83336779f081a3eb440a1a49&#34;&gt;
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Perhatikan &lt;code&gt;hook.env.token_petani_bot&lt;/code&gt;, itu adalah nama variabel lingkungan
+yang baru saja kita buat. Kemudian &lt;code&gt;hook.params.message&lt;/code&gt; adalah parameter yang
+diterima dari chat Telegram.&lt;/p&gt;
+
+&lt;p&gt;Pada kode tersebut, kita melakukan &lt;em&gt;request&lt;/em&gt; pengiriman ke API Telegram setelah
+menerima data dari parameter. &lt;em&gt;Method&lt;/em&gt; yang digunakan untuk mengirim/membalas
+pesan adalah &lt;code&gt;/sendMessage&lt;/code&gt;.
+Lihat di &lt;a href=&#34;https://core.telegram.org/bots/api&#34;&gt;dokumentasi API&lt;/a&gt; Telegram.&lt;/p&gt;
+
+&lt;h2 id=&#34;menghubungkan-bot-dengan-hook&#34;&gt;Menghubungkan Bot dengan Hook&lt;/h2&gt;
+
+&lt;p&gt;Untuk menghubungkan bot dengan hook, silahkan susun URL-nya menjadi seperti ini:&lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://api.telegram.org/bot&amp;lt;TOKEN&amp;gt;/setWebhook?url=https://hook.io/&amp;lt;hook-user&amp;gt;/&amp;lt;hook-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silahkan diganti:&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;TOKEN&amp;gt;&lt;/code&gt; dengan token bot anda&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;hook-user&amp;gt;&lt;/code&gt; dengan username hook.io anda&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;hook-name&amp;gt;&lt;/code&gt; dengan nama layanan/service hook yang anda buat&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Setelah itu, silahkan buka URL tersebut melalui browser. Jika anda mendapatkan
+balasan seperti ini, maka bot berhasil dihubungkan dengan layanan hook.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1001&#34;
+    height=&#34;309&#34;
+    alt=&#34;Respon+berhasil+mengaitkan+hook+dengan+bot+telegram.png&#34;
+    src=&#34;http://2.bp.blogspot.com/-NJWNvnEf3Vg/V8wAe-8k9vI/AAAAAAAADOA/7u1Ezl7Fl5418LAHz49Uu1zm1PZ7xS_jQCK4B/s1600/Respon%2Bberhasil%2Bmengaitkan%2Bhook%2Bdengan%2Bbot%2Btelegram.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;percobaan&#34;&gt;Percobaan&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka atau chat dengan bot yang sudah dibuat, &lt;a href=&#34;http://telegram.me/petani_bot&#34;&gt;http://telegram.me/petani_bot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;617&#34;
+    height=&#34;506&#34;
+    alt=&#34;Hasil+uji+coba+bot.png&#34;
+    src=&#34;http://4.bp.blogspot.com/-OURsnIUYzXg/V8wB9Y0sKVI/AAAAAAAADOI/MJ_9TcnX3SgUQXUzTJFuWKd6vHKdOL7FACK4B/s1600/Hasil%2Buji%2Bcoba%2Bbot.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kesimpulan-dan-saran&#34;&gt;Kesimpulan dan Saran&lt;/h2&gt;
+
+&lt;p&gt;Bot Telegram dapat kita kendalikan dengan kode yang disimpan di Hook.io.
+Kita bisa menentukan bagaimana tingkah laku Bot melalui kode. Saran untuk
+pengembangan selanjutnya, bisa ditambahkan kecerdasan buatan agar bot
+lebih bermanfaat. Misalnya, kecerdasan buatan untuk menganalisa cuaca dan
+tanaman yang harus ditanam pada musim tertentu. Atau bisa kita
+&lt;a href=&#34;http://petanikode.com/2016/09/eksperimen-dengan-api-simsimi/&#34;&gt;terapkan API Simsimi&lt;/a&gt;
+agar bot bisa berbicara seperti Simsimi.&lt;/p&gt;
+
+&lt;p&gt;Jangan lupa bergabung ke Channel Petani Kode di Telegram: &lt;a href=&#34;https://t.me/petanikode&#34;&gt;https://t.me/petanikode&lt;/a&gt;
+untuk mendapatkan informasi terbaru.&lt;/p&gt;
+
+&lt;p&gt;Referensi: &lt;a href=&#34;https://unnikked.ga/build-telegram-bot-hook-io/&#34;&gt;unnikked.ga&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

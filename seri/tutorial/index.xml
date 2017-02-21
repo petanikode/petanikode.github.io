@@ -10,6 +10,106 @@
     <atom:link href="http://petanikode.com/seri/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Animasi Gambar dengan Javascript</title>
+      <link>http://petanikode.com/2017/02/animasi-gambar-dengan-javascript/</link>
+      <pubDate>Tue, 21 Feb 2017 08:53:16 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/animasi-gambar-dengan-javascript/</guid>
+      <description>
+
+&lt;p&gt;Saya sempat mengira, kalau animasi stiker di facebook menggunakan gif,
+ternyata bukan. Animasi tersebut menggunakan javascript dengan mengubah
+posisi backgound.&lt;/p&gt;
+
+&lt;p&gt;Coba saja klik kanan pada stikernya, kemudian pilih &lt;a href=&#34;http://petanikode.com/2016/01/7-manfaat-inspect-element-bagi-web-developer/&#34;&gt;inspect element&lt;/a&gt;,
+maka kita akan mendapatkan kode seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;980&#34;
+    height=&#34;312&#34;
+    alt=&#34;inspect+element+stiker+facebook.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-SQfVn7m_aEc/WKuRWlddqjI/AAAAAAAAEFE/zhbfkLT-7tgQByj-tSOYzJz4rXntrpmbQCPcB/s1600/inspect%2Belement%2Bstiker%2Bfacebook.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Terlihat pada kode di atas, stikernya menggunakan backgound image.
+Ketika kita membuka backgound tersebut, kita akan mendapatkan gambar seperti
+berikut ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;animasi-gambar-dengan-javascript.jpg&#34;
+    src=&#34;https://2.bp.blogspot.com/-JaGQH_Fd7IA/WKuP-C-aNaI/AAAAAAAAEEs/5ZaEEc3eyIAk-gX28-t60Ea8GMDd6r9IACPcB/s1600/animasi-gambar-dengan-javascript.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang, bagaimana kalau kita coba membuatnya.&lt;/p&gt;
+
+&lt;h2 id=&#34;kode-html&#34;&gt;Kode HTML&lt;/h2&gt;
+
+&lt;p&gt;Buat kode HTML untuk menampilkan stikernya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;440&#34;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
+    frameborder=&#34;0&#34;
+    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/932578dbdaddd72cf36289923892101c&#34;&gt;
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kode-css&#34;&gt;Kode CSS&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.sticker {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    background: url(burung.png);
+    background-size: 320px 320px;
+    cursor: default;
+    background-position: 0px 0px;
+    image-rendering: -webkit-optimize-contrast;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada kode CSS di atas, terdapat background bernama &lt;code&gt;burung.png&lt;/code&gt;. Silahkan download
+&lt;a href=&#34;https://2.bp.blogspot.com/-BBx70tsKzTQ/WKuUWrml-lI/AAAAAAAAEFk/EhAj_uISOV85dK1GHt1TuikfN2zAC9kVACPcB/s1600/burung.png&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;javascript&#34;&gt;Javascript&lt;/h2&gt;
+
+&lt;p&gt;Javascript fungsinya untuk membuat animasi, mengubah posisi background.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;610&#34;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
+    frameborder=&#34;0&#34;
+    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/abb5cf78e609202e614c34cc6fa6bad9&#34;&gt;
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada kode di atas kita menggunakan fungsi &lt;code&gt;setInterval()&lt;/code&gt; untuk melakukan animasi
+dengan waktu 100 milidetik. Setiap rentang waktu tersebut, posisi background
+akan berubah sesuai dengan nilai &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+
+&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;350&#34;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
+    frameborder=&#34;0&#34;
+    src=&#34;https://codepen.io/ardianta/embed/BpXoyz/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;&gt;
+&lt;/amp-iframe&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Menggunakan Dompdf di Codeigniter</title>
       <link>http://petanikode.com/2017/02/cara-menggunakan-dompdf-di-codeigniter/</link>
       <pubDate>Sun, 19 Feb 2017 16:48:58 +0800</pubDate>

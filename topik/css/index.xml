@@ -90,6 +90,110 @@ github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/
     </item>
     
     <item>
+      <title>Tutorial Web Responsif: Pengenalan RWD dan Viewport</title>
+      <link>http://petanikode.com/2016/11/tutorial-web-responsif-pengenalan-rwd-dan-viewport/</link>
+      <pubDate>Fri, 25 Nov 2016 15:19:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/11/tutorial-web-responsif-pengenalan-rwd-dan-viewport/</guid>
+      <description>
+
+&lt;p&gt;Bagaimana cara membuat web responsif? itulah pertanyaan yang cukup sering ditanyakan
+kepada saya. Pertanyaan ini membutuhkan jawaban yang cukup panjang,
+karena itu saya tidak bisa langsung menjawab secara detail melalui
+lisan maupun pesan instan, selain itu juga waktu yang tidak mendukung.
+Berangkat dari keterbatasan itu, akhirnya saya menrebitkan tulisan ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;apakah-itu-rwd&#34;&gt;Apakah itu RWD?&lt;/h2&gt;
+
+&lt;p&gt;RWD singkatan dari &lt;em&gt;Responsive Web Design&lt;/em&gt;. Responsif artinya webnya dapat
+merespon atau menyesuaikan diri dengan perangkat yang digunakan.
+Misalnya kita membuka webnya melalui ponsel, maka secara otomatis tampilan
+webnya akan disesuikan dengan ukuran layar ponselnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;web-responsif-petanikode.jpg&#34;
+    src=&#34;http://1.bp.blogspot.com/-MCZ3AuXYuWE/WDfTTUPuYuI/AAAAAAAADbQ/aEiKsTSoRSA4umhvvQB4HbTMu90Te2HwgCK4B/s1600/web-responsif-petanikode.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemunculan teknologi-teknologi &lt;em&gt;mobile&lt;/em&gt; seperti saat ini, membuat kita harus
+menggunakan RWD agar web kita dapat ditampilkan dengan baik di semua perangkat.&lt;/p&gt;
+
+&lt;h2 id=&#34;mengenal-viewport&#34;&gt;Mengenal &lt;em&gt;ViewPort&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;ViewPort&lt;/em&gt; adalah area web yang terlihat dari perangkat &lt;em&gt;(visible area)&lt;/em&gt;.
+Antara komputer dengan ponsel tentu saja memiliki ukuran &lt;em&gt;ViewPort&lt;/em&gt; yang berbeda.
+Ponsel lebih sempit, sedangkan komputer lebih luas.&lt;/p&gt;
+
+&lt;p&gt;Baca Juga: &lt;a href=&#34;http://petanikode.com/2016/01/tutorial-bootstrap-3---memahami-fungsi-viewport/&#34;&gt;Tutorial Bootstrap: Memahami Fungsi ViewPort&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-mengatur-viewport&#34;&gt;Cara Mengatur &lt;em&gt;ViewPort&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Kita bisa mengatur &lt;em&gt;ViewPort&lt;/em&gt; sebuah web melalui tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;,
+tapi sebelum melakukan itu, cobalah untuk membuat halaman web dengan kode berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;Belajar Web Responsif&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya ketika dibuka melalui ponsel:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;427&#34;
+    height=&#34;637&#34;
+    alt=&#34;Web+tanpa+viewport+di+Ponsel+Android.png&#34;
+    src=&#34;http://1.bp.blogspot.com/-ELePoaNCte0/WDfgnP7nHRI/AAAAAAAADbg/SJ_eVKdDRGkHEWJtY0nz95zueUq3O29kACK4B/s1600/Web%2Btanpa%2Bviewport%2Bdi%2BPonsel%2BAndroid.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang, coba modifikasi kode tadi. Tambahkan tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; untuk mengatur &lt;em&gt;ViewPort&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;Belajar Web Responsif&amp;lt;/title&amp;gt;&amp;lt;br&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya setelah ditambahkan &lt;em&gt;ViewPort&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;426&#34;
+    height=&#34;635&#34;
+    alt=&#34;Web+dengan+ViewPort+di+ponsel+android.png&#34;
+    src=&#34;http://4.bp.blogspot.com/-HCvVviNGj8I/WDfi31o3sWI/AAAAAAAADbs/puaEgnZEocos4CX8Ki9LU1ykcguu2M51wCK4B/s1600/Web%2Bdengan%2BViewPort%2Bdi%2Bponsel%2Bandroid.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah, bagaimana? sudah tahu &amp;lsquo;kan perbedaanya. Kita baru saja mengetahui fungsi
+dari &lt;em&gt;Viewport&lt;/em&gt; dalam RWD &lt;em&gt;(Responsive Web Design)&lt;/em&gt;. Cukup sampai di sini dulu,
+selanjutnya kita akan pelajari satuan-satuan yang digunakan pada RWD.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya: Satuan Ukuran untuk RWD (draf)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>6 Nilai Warna yang Valid dalam CSS</title>
       <link>http://petanikode.com/2016/10/6-nilai-warna-yang-valid-dalam-css/</link>
       <pubDate>Sat, 22 Oct 2016 22:23:00 +0000</pubDate>
@@ -319,16 +423,6 @@ Kadang, browser hanya menampilkan halaman kosong saat error.&lt;/p&gt;
       
       <guid>http://petanikode.com/2015/11/properti-box-shadow-dan-text-shadow-di-css3/</guid>
       <description>&lt;p&gt;Kedua properti ini, sama-sama berfungsi untuk membuat bayangan. Namun, bayangan yang dihasilkan berbeda. Properti &lt;code&gt;box-shadow&lt;/code&gt; digunakan untuk membuat bayangan untuk kotak atau elemen. Sementara itu, properti &lt;code&gt;text-shadow&lt;/code&gt; digunakan untuk membuat bayangan text.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-dFQIAhtNzUg/VjACACJQKLI/AAAAAAAACH4/dTVJOWFUNPE/s1600/box-shadow%2Bdan%2Btext-shadow%2Bdi%2Bcss%2B%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;ilustrasi box-shadow dan text-shadow&#34; border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-dFQIAhtNzUg/VjACACJQKLI/AAAAAAAACH4/dTVJOWFUNPE/s1600/box-shadow%2Bdan%2Btext-shadow%2Bdi%2Bcss%2B%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Nilai dari kedua properti ini juga sama. Formatnya &lt;code&gt;&lt;span style=&#34;color: orange;&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: blue;&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color: magenta;&#34;&gt;z&lt;/span&gt; &lt;span style=&#34;color: #6aa84f;&#34;&gt;warna&lt;/span&gt;&lt;/code&gt;, contohnya&lt;br /&gt;&lt;pre&gt;box-shadow: &lt;span style=&#34;color: orange;&#34;&gt;10px&lt;/span&gt; &lt;span style=&#34;color: blue;&#34;&gt;2px&lt;/span&gt; &lt;span style=&#34;color: magenta;&#34;&gt;4px&lt;/span&gt; &lt;span style=&#34;color: #6aa84f;&#34;&gt;black&lt;/span&gt;;&lt;/pre&gt;Nilai &lt;code&gt;&lt;span style=&#34;color: orange;&#34;&gt;x&lt;/span&gt;&lt;/code&gt; adalah &lt;span style=&#34;color: orange;&#34;&gt;10px&lt;/span&gt;, artinya panjang bayangan ke arah &lt;code&gt;&lt;span style=&#34;color: orange;&#34;&gt;x&lt;/span&gt;&lt;/code&gt; (horizontal) adalah &lt;span style=&#34;color: orange;&#34;&gt;10px&lt;/span&gt;. Sedangkan nilai &lt;code&gt;&lt;span style=&#34;color: blue;&#34;&gt;y&lt;/span&gt;&lt;/code&gt; adalah &lt;span style=&#34;color: blue;&#34;&gt;2px&lt;/span&gt;. Arah bayangan &lt;code&gt;&lt;span style=&#34;color: blue;&#34;&gt;y&lt;/span&gt;&lt;/code&gt; merukan arah vertikal. Sementara itu, &lt;code&gt;&lt;span style=&#34;color: magenta;&#34;&gt;z&lt;/span&gt;&lt;/code&gt; digunakan sebagai nilai pudar (blur). Arah &lt;code&gt;&lt;span style=&#34;color: magenta;&#34;&gt;z&lt;/span&gt;&lt;/code&gt; biasanya menentukan jarak cahaya ke elemen. Semakin besar nilai &lt;code&gt;&lt;span style=&#34;color: magenta;&#34;&gt;z&lt;/span&gt;&lt;/code&gt;, maka semakin pudar bayangan yang dihasilkan. Bila &lt;code&gt;&lt;span style=&#34;color: magenta;&#34;&gt;z&lt;/span&gt;&lt;/code&gt; bernilai &lt;code&gt;0&lt;/code&gt; (nol), maka bayangan akan terlihat jelas.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-xGgDAt57rV4/VjAJDS9TKBI/AAAAAAAACII/SVJ1Z6C_HsU/s1600/nilai%2Bbox-shadow%2Bdi%2Bcss.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-xGgDAt57rV4/VjAJDS9TKBI/AAAAAAAACII/SVJ1Z6C_HsU/s1600/nilai%2Bbox-shadow%2Bdi%2Bcss.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Warna bayangan dapat kita isi dengan nama warna, kode heksa, fungsi &lt;code&gt;rgb()&lt;/code&gt;, dan &lt;code&gt;rgba()&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;/* dengan nama warna &lt;em&gt;/&lt;br /&gt;box-shadow: 3px 3px 2px grey;&lt;br /&gt;&lt;br /&gt;/&lt;/em&gt; dengan kode heksa &lt;em&gt;/&lt;br /&gt;box-shadow: 3px 3px 2px #fff;&lt;br /&gt;&lt;br /&gt;/&lt;/em&gt; dengan fungsi rgb() &lt;em&gt;/&lt;br /&gt;box-shadow: 3px 3px 2px rgb(0,0,21);&lt;br /&gt;&lt;br /&gt;/&lt;/em&gt; dengan fungsi rgba() */&lt;br /&gt;box-shadow: 3px 3px 2px rgba(0,0,0,0.5);&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Bayangan normal arahnya menuju ke&lt;code&gt;&lt;span style=&#34;color: orange;&#34;&gt; x&lt;/span&gt;&lt;/code&gt; (kanan) dan ke &lt;code&gt;&lt;span style=&#34;color: blue;&#34;&gt;y&lt;/span&gt;&lt;/code&gt; (bawah), karena diumpamakan cahaya berada di atas. Nah, bila ingin arah bayangannya menuju ke atas atau arah sebaliknya dari bayangan normal, berikan nilai negatif pada &lt;code&gt;&lt;span style=&#34;color: orange;&#34;&gt;x&lt;/span&gt;&lt;/code&gt; dan &lt;code&gt;&lt;span style=&#34;color: blue;&#34;&gt;y&lt;/span&gt;&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;text-shadow: -4px -3px 2px rgba(0,0,0,0.8);&lt;/code&gt;&lt;/pre&gt;hasilnya:&lt;br /&gt;&lt;div style=&#34;font-size: 46px; padding: 20px 0; text-shadow: -4px -3px 2px rgba(0,0,0,0.8);&#34;&gt;Bayangan ke atas!&lt;/div&gt;Bayangan normal juga letaknya di luar elemen. Namun, bila kita ingin meletakkan bayangan ke dalam elemen, maka kita hanya perlu menambahkan kata &lt;code&gt;inset&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;box-shadow: 0px 0px 10px rgba(0,0,0,0.8) inset;&lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;br /&gt;&lt;div style=&#34;box-shadow: 0px 0px 10px rgba(0,0,0,0.8) inset; color: grey; font-size: 36px; padding: 20px;&#34;&gt;Bayangan ke dalam elemen!&lt;/div&gt;&lt;br /&gt;Cukup sekian pembahasan tentang properti &lt;code&gt;box-shadow&lt;/code&gt; dan &lt;code&gt;text-shadow&lt;/code&gt; ini. Saya harap anda dapat memahami dan semoga bermanfaat.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Kode CSS untuk merapikan embed Gist Github di blog</title>
-      <link>http://petanikode.com/2015/09/kode-css-untuk-merapikan-embed-gist-github-di-blog/</link>
-      <pubDate>Sat, 19 Sep 2015 00:29:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2015/09/kode-css-untuk-merapikan-embed-gist-github-di-blog/</guid>
-      <description>&lt;p&gt;Saya mencoba memajang kode yang ada di Gist Github ke blog. Namun, kodenya terlalu panjang dan memakan banyak tempat. Seharusnya kode ini ditampilkan setinggi 500px, agar pembaca tidak capek melalkukan &lt;i&gt;scroll&lt;/i&gt;.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-7u7PnzZxyYw/Vfw9ie8oWsI/AAAAAAAAB1c/_mhpqRvkdxI/s1600/Kode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2BGist%2Bdi%2Bblog%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-7u7PnzZxyYw/Vfw9ie8oWsI/AAAAAAAAB1c/_mhpqRvkdxI/s1600/Kode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2BGist%2Bdi%2Bblog%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Berikut kode CSS untuk merapikannya:&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/fc3beb2d591fc52692de.js&#34;&gt;&lt;/script&gt;Pada blogger, kode CSS tersebut dapat ditambahkan pada &lt;i&gt;Template Designer&amp;gt;Advenced&amp;gt;Add CSS&lt;/i&gt;&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-MjIHgYZ58co/VfwwSLK33tI/AAAAAAAAB08/jYj7DQ7VjMw/s1600/Penambahan%2Bkode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2Bgist.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-MjIHgYZ58co/VfwwSLK33tI/AAAAAAAAB08/jYj7DQ7VjMw/s1600/Penambahan%2Bkode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2Bgist.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Sebenarnya, kita hanya perlu menambahkan &lt;code&gt;max-height: 500px&lt;/code&gt; saja, agar kotak kode ditampilkan maksimal setinggi &lt;samp&gt;500px&lt;/samp&gt;. Namun, kode CSS di atas adalah hasil &lt;i&gt;fork&lt;/i&gt; dan modifikasi yang saya lakukan untuk blog ini. Jadi, anda juga bisa mem-&lt;i&gt;fork&lt;/i&gt; dan memodifikasinya sesuka hati.&lt;/p&gt;
 </description>
     </item>
     

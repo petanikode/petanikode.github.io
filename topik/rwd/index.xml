@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rwd on Petani Kode</title>
+    <link>http://petanikode.com/topik/rwd/index.xml</link>
+    <description>Recent content in Rwd on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <atom:link href="http://petanikode.com/topik/rwd/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tutorial Web Responsif: Pengenalan RWD dan Viewport</title>
+      <link>http://petanikode.com/2016/11/tutorial-web-responsif-pengenalan-rwd-dan-viewport/</link>
+      <pubDate>Fri, 25 Nov 2016 15:19:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/11/tutorial-web-responsif-pengenalan-rwd-dan-viewport/</guid>
+      <description>
+
+&lt;p&gt;Bagaimana cara membuat web responsif? itulah pertanyaan yang cukup sering ditanyakan
+kepada saya. Pertanyaan ini membutuhkan jawaban yang cukup panjang,
+karena itu saya tidak bisa langsung menjawab secara detail melalui
+lisan maupun pesan instan, selain itu juga waktu yang tidak mendukung.
+Berangkat dari keterbatasan itu, akhirnya saya menrebitkan tulisan ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;apakah-itu-rwd&#34;&gt;Apakah itu RWD?&lt;/h2&gt;
+
+&lt;p&gt;RWD singkatan dari &lt;em&gt;Responsive Web Design&lt;/em&gt;. Responsif artinya webnya dapat
+merespon atau menyesuaikan diri dengan perangkat yang digunakan.
+Misalnya kita membuka webnya melalui ponsel, maka secara otomatis tampilan
+webnya akan disesuikan dengan ukuran layar ponselnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;web-responsif-petanikode.jpg&#34;
+    src=&#34;http://1.bp.blogspot.com/-MCZ3AuXYuWE/WDfTTUPuYuI/AAAAAAAADbQ/aEiKsTSoRSA4umhvvQB4HbTMu90Te2HwgCK4B/s1600/web-responsif-petanikode.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemunculan teknologi-teknologi &lt;em&gt;mobile&lt;/em&gt; seperti saat ini, membuat kita harus
+menggunakan RWD agar web kita dapat ditampilkan dengan baik di semua perangkat.&lt;/p&gt;
+
+&lt;h2 id=&#34;mengenal-viewport&#34;&gt;Mengenal &lt;em&gt;ViewPort&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;ViewPort&lt;/em&gt; adalah area web yang terlihat dari perangkat &lt;em&gt;(visible area)&lt;/em&gt;.
+Antara komputer dengan ponsel tentu saja memiliki ukuran &lt;em&gt;ViewPort&lt;/em&gt; yang berbeda.
+Ponsel lebih sempit, sedangkan komputer lebih luas.&lt;/p&gt;
+
+&lt;p&gt;Baca Juga: &lt;a href=&#34;http://petanikode.com/2016/01/tutorial-bootstrap-3---memahami-fungsi-viewport/&#34;&gt;Tutorial Bootstrap: Memahami Fungsi ViewPort&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-mengatur-viewport&#34;&gt;Cara Mengatur &lt;em&gt;ViewPort&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Kita bisa mengatur &lt;em&gt;ViewPort&lt;/em&gt; sebuah web melalui tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;,
+tapi sebelum melakukan itu, cobalah untuk membuat halaman web dengan kode berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;Belajar Web Responsif&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya ketika dibuka melalui ponsel:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;427&#34;
+    height=&#34;637&#34;
+    alt=&#34;Web+tanpa+viewport+di+Ponsel+Android.png&#34;
+    src=&#34;http://1.bp.blogspot.com/-ELePoaNCte0/WDfgnP7nHRI/AAAAAAAADbg/SJ_eVKdDRGkHEWJtY0nz95zueUq3O29kACK4B/s1600/Web%2Btanpa%2Bviewport%2Bdi%2BPonsel%2BAndroid.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang, coba modifikasi kode tadi. Tambahkan tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; untuk mengatur &lt;em&gt;ViewPort&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;Belajar Web Responsif&amp;lt;/title&amp;gt;&amp;lt;br&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya setelah ditambahkan &lt;em&gt;ViewPort&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;426&#34;
+    height=&#34;635&#34;
+    alt=&#34;Web+dengan+ViewPort+di+ponsel+android.png&#34;
+    src=&#34;http://4.bp.blogspot.com/-HCvVviNGj8I/WDfi31o3sWI/AAAAAAAADbs/puaEgnZEocos4CX8Ki9LU1ykcguu2M51wCK4B/s1600/Web%2Bdengan%2BViewPort%2Bdi%2Bponsel%2Bandroid.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah, bagaimana? sudah tahu &amp;lsquo;kan perbedaanya. Kita baru saja mengetahui fungsi
+dari &lt;em&gt;Viewport&lt;/em&gt; dalam RWD &lt;em&gt;(Responsive Web Design)&lt;/em&gt;. Cukup sampai di sini dulu,
+selanjutnya kita akan pelajari satuan-satuan yang digunakan pada RWD.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya: Satuan Ukuran untuk RWD (draf)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

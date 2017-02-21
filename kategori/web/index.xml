@@ -1053,6 +1053,110 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
     </item>
     
     <item>
+      <title>Tutorial Web Responsif: Pengenalan RWD dan Viewport</title>
+      <link>http://petanikode.com/2016/11/tutorial-web-responsif-pengenalan-rwd-dan-viewport/</link>
+      <pubDate>Fri, 25 Nov 2016 15:19:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/11/tutorial-web-responsif-pengenalan-rwd-dan-viewport/</guid>
+      <description>
+
+&lt;p&gt;Bagaimana cara membuat web responsif? itulah pertanyaan yang cukup sering ditanyakan
+kepada saya. Pertanyaan ini membutuhkan jawaban yang cukup panjang,
+karena itu saya tidak bisa langsung menjawab secara detail melalui
+lisan maupun pesan instan, selain itu juga waktu yang tidak mendukung.
+Berangkat dari keterbatasan itu, akhirnya saya menrebitkan tulisan ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;apakah-itu-rwd&#34;&gt;Apakah itu RWD?&lt;/h2&gt;
+
+&lt;p&gt;RWD singkatan dari &lt;em&gt;Responsive Web Design&lt;/em&gt;. Responsif artinya webnya dapat
+merespon atau menyesuaikan diri dengan perangkat yang digunakan.
+Misalnya kita membuka webnya melalui ponsel, maka secara otomatis tampilan
+webnya akan disesuikan dengan ukuran layar ponselnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;web-responsif-petanikode.jpg&#34;
+    src=&#34;http://1.bp.blogspot.com/-MCZ3AuXYuWE/WDfTTUPuYuI/AAAAAAAADbQ/aEiKsTSoRSA4umhvvQB4HbTMu90Te2HwgCK4B/s1600/web-responsif-petanikode.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemunculan teknologi-teknologi &lt;em&gt;mobile&lt;/em&gt; seperti saat ini, membuat kita harus
+menggunakan RWD agar web kita dapat ditampilkan dengan baik di semua perangkat.&lt;/p&gt;
+
+&lt;h2 id=&#34;mengenal-viewport&#34;&gt;Mengenal &lt;em&gt;ViewPort&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;ViewPort&lt;/em&gt; adalah area web yang terlihat dari perangkat &lt;em&gt;(visible area)&lt;/em&gt;.
+Antara komputer dengan ponsel tentu saja memiliki ukuran &lt;em&gt;ViewPort&lt;/em&gt; yang berbeda.
+Ponsel lebih sempit, sedangkan komputer lebih luas.&lt;/p&gt;
+
+&lt;p&gt;Baca Juga: &lt;a href=&#34;http://petanikode.com/2016/01/tutorial-bootstrap-3---memahami-fungsi-viewport/&#34;&gt;Tutorial Bootstrap: Memahami Fungsi ViewPort&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-mengatur-viewport&#34;&gt;Cara Mengatur &lt;em&gt;ViewPort&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Kita bisa mengatur &lt;em&gt;ViewPort&lt;/em&gt; sebuah web melalui tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;,
+tapi sebelum melakukan itu, cobalah untuk membuat halaman web dengan kode berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;Belajar Web Responsif&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya ketika dibuka melalui ponsel:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;427&#34;
+    height=&#34;637&#34;
+    alt=&#34;Web+tanpa+viewport+di+Ponsel+Android.png&#34;
+    src=&#34;http://1.bp.blogspot.com/-ELePoaNCte0/WDfgnP7nHRI/AAAAAAAADbg/SJ_eVKdDRGkHEWJtY0nz95zueUq3O29kACK4B/s1600/Web%2Btanpa%2Bviewport%2Bdi%2BPonsel%2BAndroid.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang, coba modifikasi kode tadi. Tambahkan tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; untuk mengatur &lt;em&gt;ViewPort&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;Belajar Web Responsif&amp;lt;/title&amp;gt;&amp;lt;br&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya setelah ditambahkan &lt;em&gt;ViewPort&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;426&#34;
+    height=&#34;635&#34;
+    alt=&#34;Web+dengan+ViewPort+di+ponsel+android.png&#34;
+    src=&#34;http://4.bp.blogspot.com/-HCvVviNGj8I/WDfi31o3sWI/AAAAAAAADbs/puaEgnZEocos4CX8Ki9LU1ykcguu2M51wCK4B/s1600/Web%2Bdengan%2BViewPort%2Bdi%2Bponsel%2Bandroid.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah, bagaimana? sudah tahu &amp;lsquo;kan perbedaanya. Kita baru saja mengetahui fungsi
+dari &lt;em&gt;Viewport&lt;/em&gt; dalam RWD &lt;em&gt;(Responsive Web Design)&lt;/em&gt;. Cukup sampai di sini dulu,
+selanjutnya kita akan pelajari satuan-satuan yang digunakan pada RWD.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya: Satuan Ukuran untuk RWD (draf)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Eksekusi Perintah Command Line (CMD) melalui PHP</title>
       <link>http://petanikode.com/2016/10/eksekusi-perintah-command-line-cmd-melalui-php/</link>
       <pubDate>Sat, 15 Oct 2016 19:00:00 +0000</pubDate>
@@ -1594,105 +1698,6 @@ HAVING
     src=&#34;http://3.bp.blogspot.com/-f9AQWcJ4J9s/Vb6PHq3oXpI/AAAAAAAABpk/WFAKYTdT-7w/s1600/Pemenang%2Byang%2Bterpilih%2Bdari%2Bhasil%2Bquery.png&#34;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>3 Cara Penulisan Kode CSS dalam HTML</title>
-      <link>http://petanikode.com/2015/07/3-cara-penulisan-kode-css-dalam-html/</link>
-      <pubDate>Sun, 12 Jul 2015 21:14:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2015/07/3-cara-penulisan-kode-css-dalam-html/</guid>
-      <description>
-
-&lt;p&gt;Penulisan kode CSS dalam HTML dibagi menjadi tiga cara, internal, &lt;em&gt;inline&lt;/em&gt;, dan eksternal.
-Pembagian ini berdasarkan letak kode CSS tersebut ditulis.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-internal-css&#34;&gt;1. Internal CSS&lt;/h2&gt;
-
-&lt;p&gt;Internal CSS adalah istilah untuk kode CSS yang ditulis langsung dalam berkas HTML. Kode CSS ini dituliskan pada tag &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;. Tag ini bisa ditulis di dalam blok &lt;code&gt;head&lt;/code&gt; atapun &lt;code&gt;body&lt;/code&gt;, kedua-duanya sah. Nah, berikut ini contoh internal CSS.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;700&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/eNrXGW/?height=600&amp;theme-id=dark&amp;default-tab=html,result&amp;embed-version=2&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-eksternal-css&#34;&gt;2. Eksternal CSS&lt;/h2&gt;
-
-&lt;p&gt;Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML.
-Eksternal CSS ditulis disebuah berkas khusus yang berekstensi &lt;code&gt;.css&lt;/code&gt;.
-Sebagai contoh, saya akan membuat sebuah berkas bernama &lt;code&gt;style-ku.css&lt;/code&gt;.
-Berikut ini cuplikan isi berkas &lt;code&gt;style-ku.css&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p {
-    font-family: serif;
-    line-height: 1.75em;
-}
-
-i {
-    font-family: sans;
-    color: orange;
-}
-
-h2 {
-    font-family: sans;
-    color: #333;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk menggunakan CSS tersebut dalam HTML, kita perlu mengimpornya. Ada beberapa cara memasukkan kode CSS dari berkas eksternal:&lt;/p&gt;
-
-&lt;p&gt;Pertama menggunakan tag &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style-ku.css&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Atau bisa juga bisa menggunakan &lt;code&gt;@import&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
-@import &amp;quot;style-ku.css&amp;quot;;
-&amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Penulisan pada HTML versi lengkapnya seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;title&amp;gt;Contoh Eksternal CSS&amp;lt;/title&amp;gt;
-    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style-ku.css&amp;quot;&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-    &amp;lt;h2&amp;gt;Ini judul artikel&amp;lt;/h2&amp;gt;
-    &amp;lt;p&amp;gt;Ini adalah paragraf yang memuat isi artikel. Paragraf ini hanya untuk percobaan saja. Percobaan untuk mendemokan &amp;lt;i&amp;gt;internal css&amp;lt;/i&amp;gt;. Seperti namanya, &amp;lt;i&amp;gt;inline CSS&amp;lt;/i&amp;gt; adalah kode CSS yang ditulis langsung dalam file HTML.&amp;lt;/p&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya pun akan sama seperti contoh internal CSS, karena kode CSS-nya sama. Hanya saja berbeda tempat penulisannya.&lt;/p&gt;
-
-&lt;h2 id=&#34;3-inline-css&#34;&gt;3. Inline CSS&lt;/h2&gt;
-
-&lt;p&gt;Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Setiap elemen HTML memiliki atribut &lt;code&gt;style&lt;/code&gt;, di sana lah inline CSS ditulis. Contohnya seperti ini:&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;h2 style=&amp;quot;color:red; font-family: sans;&amp;quot;&amp;gt;Ini judul artikel&amp;lt;/h2&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh lengkap:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;420&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/NqMmjj?height=380&amp;theme-id=dark&amp;default-tab=html,result&amp;embed-version=2&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Referensi:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://matthewjamestaylor.com/blog/adding-css-to-html-with-link-embed-inline-and-import&#34;&gt;http://matthewjamestaylor.com/blog/adding-css-to-html-with-link-embed-inline-and-import&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.w3schools.com/css/css_howto.asp&#34;&gt;http://www.w3schools.com/css/css_howto.asp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.w3.org/TR/xhtml2/mod-styleSheet.html#edef_styleSheet_style&#34;&gt;http://www.w3.org/TR/xhtml2/mod-styleSheet.html#edef_styleSheet_style&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

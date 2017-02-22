@@ -15,7 +15,109 @@
       <pubDate>Thu, 31 Mar 2016 18:21:00 +0000</pubDate>
       
       <guid>http://petanikode.com/2016/03/kode-crud-dalam-satu-file-php/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Pernah mebayangkan, tidak? Membuat CRUD &lt;i&gt;(Create, Read, Update, Delete)&lt;/i&gt; dalam satu file PHP. Biasanya, membuat CRUD dilakukan dengan membuat file terpisah. Masing-masing file mewakili CRUD. Misalkan file &lt;i&gt;create.php&lt;/i&gt; untuk menambahkan data, &lt;i&gt;read.php&lt;/i&gt; untuk menampikan data, &lt;i&gt;update.php&lt;/i&gt; untuk mengubah data, dan &lt;i&gt;delete.php&lt;/i&gt; untuk menghapus data. Bagaimana kalau, semuanya digabungkan ke dalam satu file PHP?&lt;br /&gt;&lt;br /&gt;Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam satu file PHP. Kode ini, saya buat dengan koneksi database menggunakan API &lt;i&gt;mysqli&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Dalam kode, terdapat empat fungsi yang mewakili CRUD. Pertama fungsi &lt;code&gt;tambah()&lt;/code&gt; untuk menambahkan data. Kedua fungsi &lt;code&gt;tampil_data()&lt;/code&gt; untuk membaca data dan menampilkanya dalam bentuk tabel. Ketiga fungsi &lt;code&gt;ubah()&lt;/code&gt; untuk mengubah data. Terakhir ada fungsi &lt;code&gt;hapus()&lt;/code&gt; untuk menghapus data.&lt;br /&gt;&lt;br /&gt;Fungsi-fungsi tersebut dipanggil pada fungsi (program) utama. Program utama bertindak sebagai router yang mengatur pemanggilan fungsi. Misalkan, pada halaman Home, fungsi yang dipanggil adalah &lt;code&gt;tambah_data()&lt;/code&gt; dan &lt;code&gt;tampil_data()&lt;/code&gt;. Hal ini bisa dilakukan dengan stuktur pemilihan &lt;i&gt;Switch/Case&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Kode lengkapnya bisa dicek di &lt;a href=&#34;https://github.com/petanikode/curd-pertanian&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;http://gist-it.appspot.com/github.com/petanikode/curd-pertanian/blob/master/index.php&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;br /&gt;Sementara untuk database yang digunakan bernama pertanian. Database ini memiliki sebuah tabel bernama &lt;i&gt;tabel_panen&lt;/i&gt;. Tabel panen digunakan untuk menyimpan data panen pertanian. Berikut ini stuktur &lt;i&gt;tabel_penen&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;https://4.bp.blogspot.com/-9wONg1kdO3Q/Vvug9hW9cuI/AAAAAAAAClQ/agQVDbVLlyAG4FvyPPYuMLS5AScjSizuQ/s1600/Struktur%2Btabel%2Bpertanian%2B-%2Bcrud%2Bdalam%2Bsatu%2Bfile%2Bphp%2B-%2Bpetani%2Bkode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-9wONg1kdO3Q/Vvug9hW9cuI/AAAAAAAAClQ/agQVDbVLlyAG4FvyPPYuMLS5AScjSizuQ/s1600/Struktur%2Btabel%2Bpertanian%2B-%2Bcrud%2Bdalam%2Bsatu%2Bfile%2Bphp%2B-%2Bpetani%2Bkode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;File SQL-nya tersedia di github: &lt;a href=&#34;https://github.com/petanikode/curd-pertanian/blob/master/pertanian.sql&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/petanikode/curd-pertanian/blob/master/pertanian.sql&#34;&gt;https://github.com/petanikode/curd-pertanian/blob/master/pertanian.sql&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Tampilan atau hasil output kode masih dalam bentuk polos. Saya tidak menggunakan CSS maupun Javascript. Hanya terdapat PHP dan HTML saja. Berikut ini cuplikan tampilannya.&lt;br /&gt;&lt;br /&gt;Halaman &lt;i&gt;Home&lt;/i&gt; atau halaman utama&lt;i&gt; (index.php)&lt;/i&gt;:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-209OSDN5vUI/Vvz05Tf8W_I/AAAAAAAAClk/DfR1UcrDTUgYndpuvZIdGYkxyT5oBMkuQ/s1600/Halaman%2BHome%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-209OSDN5vUI/Vvz05Tf8W_I/AAAAAAAAClk/DfR1UcrDTUgYndpuvZIdGYkxyT5oBMkuQ/s1600/Halaman%2BHome%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Halaman &lt;i&gt;(form)&lt;/i&gt; tambah data:&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-h8GF2O3srqI/Vvz1C3zl7XI/AAAAAAAACls/4en9pJoAzQc-tuosZkRsQLXOfiqktMorw/s1600/Halaman%2BCreate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-h8GF2O3srqI/Vvz1C3zl7XI/AAAAAAAACls/4en9pJoAzQc-tuosZkRsQLXOfiqktMorw/s1600/Halaman%2BCreate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Halaman tampil data:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-hQ-1ygzfj8M/Vvz1MMzrDFI/AAAAAAAACl0/Un_t5yYpsIoYHR46clTHfK3t4Z37srKpA/s1600/Halaman%2BRead%2BData%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-hQ-1ygzfj8M/Vvz1MMzrDFI/AAAAAAAACl0/Un_t5yYpsIoYHR46clTHfK3t4Z37srKpA/s1600/Halaman%2BRead%2BData%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Halaman &lt;i&gt;(form)&lt;/i&gt; ubah data:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-lsrvTMidEvc/Vvz1THw_ZsI/AAAAAAAACl8/zMbyn_7J9zIRl_zsfiGEAuVIjoH9NG9QQ/s1600/Halaman%2BUpdate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-lsrvTMidEvc/Vvz1THw_ZsI/AAAAAAAACl8/zMbyn_7J9zIRl_zsfiGEAuVIjoH9NG9QQ/s1600/Halaman%2BUpdate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Demo:&lt;br /&gt;&lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/hND_ycfi1d0&#34; width=&#34;100%&#34;&gt;&lt;/iframe&gt;&lt;br /&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pernah mebayangkan, tidak? Membuat CRUD &lt;em&gt;(Create, Read, Update, Delete)&lt;/em&gt; dalam
+satu file PHP. Biasanya, membuat CRUD dilakukan dengan membuat file terpisah.
+Masing-masing file mewakili CRUD. Misalkan file &lt;em&gt;create.php&lt;/em&gt; untuk menambahkan
+data, &lt;em&gt;read.php&lt;/em&gt; untuk menampikan data, &lt;em&gt;update.php&lt;/em&gt; untuk mengubah data, dan
+&lt;em&gt;delete.php&lt;/em&gt; untuk menghapus data. Bagaimana kalau, semuanya digabungkan ke
+dalam satu file PHP?&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam
+satu file PHP. Kode ini, saya buat dengan koneksi database menggunakan API &lt;em&gt;mysqli&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Dalam kode, terdapat empat fungsi yang mewakili CRUD. Pertama fungsi &lt;code&gt;tambah()&lt;/code&gt;
+untuk menambahkan data. Kedua fungsi &lt;code&gt;tampil_data()&lt;/code&gt; untuk membaca data dan
+menampilkanya dalam bentuk tabel. Ketiga fungsi &lt;code&gt;ubah()&lt;/code&gt; untuk mengubah data.
+Terakhir ada fungsi &lt;code&gt;hapus()&lt;/code&gt; untuk menghapus data.&lt;/p&gt;
+
+&lt;p&gt;Fungsi-fungsi tersebut dipanggil pada fungsi (program) utama. Program utama
+bertindak sebagai router yang mengatur pemanggilan fungsi. Misalkan, pada
+halaman Home, fungsi yang dipanggil adalah &lt;code&gt;tambah_data()&lt;/code&gt; dan &lt;code&gt;tampil_data()&lt;/code&gt;.
+Hal ini bisa dilakukan dengan stuktur pemilihan &lt;em&gt;Switch/Case&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kode lengkapnya bisa dicek di &lt;a href=&#34;https://github.com/petanikode/curd-pertanian&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;700&#34;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
+    frameborder=&#34;0&#34;
+    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/83d60cd7f3c5adb060fd804a206f2158&#34;&gt;
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;p&gt;Sementara untuk database yang digunakan bernama pertanian. Database ini memiliki
+sebuah tabel bernama _tabel&lt;em&gt;panen&lt;/em&gt;. Tabel panen digunakan untuk menyimpan data
+panen pertanian. Berikut ini stuktur _tabel&lt;em&gt;penen&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1352&#34;
+    height=&#34;602&#34;
+    alt=&#34;Struktur+tabel+pertanian+-+crud+dalam+satu+file+php+-+petani+kode.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-9wONg1kdO3Q/Vvug9hW9cuI/AAAAAAAAClQ/agQVDbVLlyAG4FvyPPYuMLS5AScjSizuQ/s1600/Struktur%2Btabel%2Bpertanian%2B-%2Bcrud%2Bdalam%2Bsatu%2Bfile%2Bphp%2B-%2Bpetani%2Bkode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;File SQL-nya tersedia di github: &lt;a href=&#34;https://github.com/petanikode/curd-pertanian/blob/master/pertanian.sql&#34;&gt;pertanian.sql&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tampilan atau hasil output kode masih dalam bentuk polos. Saya tidak menggunakan
+CSS maupun Javascript. Hanya terdapat PHP dan HTML saja. Berikut ini cuplikan tampilannya.&lt;/p&gt;
+
+&lt;p&gt;Halaman &lt;em&gt;Home&lt;/em&gt; atau halaman utama &lt;em&gt;(index.php)&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;923&#34;
+    height=&#34;600&#34;
+    alt=&#34;Halaman+Home+-+CRUD+dalam+satu+file+php.png&#34;
+    src=&#34;http://4.bp.blogspot.com/-209OSDN5vUI/Vvz05Tf8W_I/AAAAAAAAClk/DfR1UcrDTUgYndpuvZIdGYkxyT5oBMkuQ/s1600/Halaman%2BHome%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Halaman &lt;em&gt;(form)&lt;/em&gt; tambah data:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;923&#34;
+    height=&#34;386&#34;
+    alt=&#34;Halaman+Create+-+CRUD+dalam+satu+file+php.png&#34;
+    src=&#34;http://3.bp.blogspot.com/-h8GF2O3srqI/Vvz1C3zl7XI/AAAAAAAACls/4en9pJoAzQc-tuosZkRsQLXOfiqktMorw/s1600/Halaman%2BCreate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Halaman tampil data:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;923&#34;
+    height=&#34;386&#34;
+    alt=&#34;Halaman+Read+Data+-+CRUD+dalam+satu+file+php.png&#34;
+    src=&#34;http://2.bp.blogspot.com/-hQ-1ygzfj8M/Vvz1MMzrDFI/AAAAAAAACl0/Un_t5yYpsIoYHR46clTHfK3t4Z37srKpA/s1600/Halaman%2BRead%2BData%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Halaman &lt;em&gt;(form)&lt;/em&gt; ubah data:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;923&#34;
+    height=&#34;386&#34;
+    alt=&#34;Halaman+Update+-+CRUD+dalam+satu+file+php.png&#34;
+    src=&#34;http://2.bp.blogspot.com/-lsrvTMidEvc/Vvz1THw_ZsI/AAAAAAAACl8/zMbyn_7J9zIRl_zsfiGEAuVIjoH9NG9QQ/s1600/Halaman%2BUpdate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Demo:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;hND_ycfi1d0&#34;
+    layout=&#34;responsive&#34;
+width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
 </description>
     </item>
     

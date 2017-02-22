@@ -12,6 +12,11 @@
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 
+    
+        
+            <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+            
+        
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
     
@@ -103,9 +108,9 @@ Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam s
     <meta property="article:section" content="artikel" />
 
     
-    	<meta property="article:tag" content="MySQL" />
-    
     	<meta property="article:tag" content="PHP" />
+    
+    	<meta property="article:tag" content="MySQL" />
     
     	<meta property="article:tag" content="mysqli" />
     
@@ -194,8 +199,8 @@ Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam s
         "@type": "ListItem",
         "position": 2,
         "item": {
-            "@id": "http:\/\/petanikode.com\/kategori\/pemrograman",
-            "name": "pemrograman"
+            "@id": "http:\/\/petanikode.com\/kategori\/web",
+            "name": "Web"
             }
       },
       
@@ -205,8 +210,8 @@ Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam s
         "@type": "ListItem",
         "position": 3,
         "item": {
-            "@id": "http:\/\/petanikode.com\/topik\/mysql",
-            "name": "MySQL"
+            "@id": "http:\/\/petanikode.com\/topik\/php",
+            "name": "PHP"
             }
       },
       
@@ -1204,14 +1209,116 @@ padding: 16px;
         </div>
         <div>
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
+        <span class="author"><a href="/kategori/web">Web</a></span>
             <br>
         31 March 2016 · 18:21
     </div>
     
 </div>
 
-                <p><a href="http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" /></a>Pernah mebayangkan, tidak? Membuat CRUD <i>(Create, Read, Update, Delete)</i> dalam satu file PHP. Biasanya, membuat CRUD dilakukan dengan membuat file terpisah. Masing-masing file mewakili CRUD. Misalkan file <i>create.php</i> untuk menambahkan data, <i>read.php</i> untuk menampikan data, <i>update.php</i> untuk mengubah data, dan <i>delete.php</i> untuk menghapus data. Bagaimana kalau, semuanya digabungkan ke dalam satu file PHP?<br /><br />Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam satu file PHP. Kode ini, saya buat dengan koneksi database menggunakan API <i>mysqli</i>.<br /><br />Dalam kode, terdapat empat fungsi yang mewakili CRUD. Pertama fungsi <code>tambah()</code> untuk menambahkan data. Kedua fungsi <code>tampil_data()</code> untuk membaca data dan menampilkanya dalam bentuk tabel. Ketiga fungsi <code>ubah()</code> untuk mengubah data. Terakhir ada fungsi <code>hapus()</code> untuk menghapus data.<br /><br />Fungsi-fungsi tersebut dipanggil pada fungsi (program) utama. Program utama bertindak sebagai router yang mengatur pemanggilan fungsi. Misalkan, pada halaman Home, fungsi yang dipanggil adalah <code>tambah_data()</code> dan <code>tampil_data()</code>. Hal ini bisa dilakukan dengan stuktur pemilihan <i>Switch/Case</i>.<br /><br />Kode lengkapnya bisa dicek di <a href="https://github.com/petanikode/curd-pertanian" target="_blank">github</a><br /><br /><script src="http://gist-it.appspot.com/github.com/petanikode/curd-pertanian/blob/master/index.php"></script><br /><br />Sementara untuk database yang digunakan bernama pertanian. Database ini memiliki sebuah tabel bernama <i>tabel_panen</i>. Tabel panen digunakan untuk menyimpan data panen pertanian. Berikut ini stuktur <i>tabel_penen</i>.<br /><a href="https://4.bp.blogspot.com/-9wONg1kdO3Q/Vvug9hW9cuI/AAAAAAAAClQ/agQVDbVLlyAG4FvyPPYuMLS5AScjSizuQ/s1600/Struktur%2Btabel%2Bpertanian%2B-%2Bcrud%2Bdalam%2Bsatu%2Bfile%2Bphp%2B-%2Bpetani%2Bkode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-9wONg1kdO3Q/Vvug9hW9cuI/AAAAAAAAClQ/agQVDbVLlyAG4FvyPPYuMLS5AScjSizuQ/s1600/Struktur%2Btabel%2Bpertanian%2B-%2Bcrud%2Bdalam%2Bsatu%2Bfile%2Bphp%2B-%2Bpetani%2Bkode.png" /></a><br />File SQL-nya tersedia di github: <a href="https://github.com/petanikode/curd-pertanian/blob/master/pertanian.sql" target="_blank"><a href="https://github.com/petanikode/curd-pertanian/blob/master/pertanian.sql">https://github.com/petanikode/curd-pertanian/blob/master/pertanian.sql</a></a><br /><br />Tampilan atau hasil output kode masih dalam bentuk polos. Saya tidak menggunakan CSS maupun Javascript. Hanya terdapat PHP dan HTML saja. Berikut ini cuplikan tampilannya.<br /><br />Halaman <i>Home</i> atau halaman utama<i> (index.php)</i>:<br /><a href="http://4.bp.blogspot.com/-209OSDN5vUI/Vvz05Tf8W_I/AAAAAAAAClk/DfR1UcrDTUgYndpuvZIdGYkxyT5oBMkuQ/s1600/Halaman%2BHome%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-209OSDN5vUI/Vvz05Tf8W_I/AAAAAAAAClk/DfR1UcrDTUgYndpuvZIdGYkxyT5oBMkuQ/s1600/Halaman%2BHome%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" /></a><br />Halaman <i>(form)</i> tambah data:<br /><a href="http://3.bp.blogspot.com/-h8GF2O3srqI/Vvz1C3zl7XI/AAAAAAAACls/4en9pJoAzQc-tuosZkRsQLXOfiqktMorw/s1600/Halaman%2BCreate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-h8GF2O3srqI/Vvz1C3zl7XI/AAAAAAAACls/4en9pJoAzQc-tuosZkRsQLXOfiqktMorw/s1600/Halaman%2BCreate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" /></a><br />Halaman tampil data:<br /><a href="http://2.bp.blogspot.com/-hQ-1ygzfj8M/Vvz1MMzrDFI/AAAAAAAACl0/Un_t5yYpsIoYHR46clTHfK3t4Z37srKpA/s1600/Halaman%2BRead%2BData%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-hQ-1ygzfj8M/Vvz1MMzrDFI/AAAAAAAACl0/Un_t5yYpsIoYHR46clTHfK3t4Z37srKpA/s1600/Halaman%2BRead%2BData%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" /></a><br />Halaman <i>(form)</i> ubah data:<br /><a href="http://2.bp.blogspot.com/-lsrvTMidEvc/Vvz1THw_ZsI/AAAAAAAACl8/zMbyn_7J9zIRl_zsfiGEAuVIjoH9NG9QQ/s1600/Halaman%2BUpdate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-lsrvTMidEvc/Vvz1THw_ZsI/AAAAAAAACl8/zMbyn_7J9zIRl_zsfiGEAuVIjoH9NG9QQ/s1600/Halaman%2BUpdate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" /></a><br />Demo:<br /><iframe allowfullscreen="" frameborder="0" height="400" src="https://www.youtube.com/embed/hND_ycfi1d0" width="100%"></iframe><br /></p>
+                <p><a href="http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png"><img src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" alt="" /></a></p>
+
+<p>Pernah mebayangkan, tidak? Membuat CRUD <em>(Create, Read, Update, Delete)</em> dalam
+satu file PHP. Biasanya, membuat CRUD dilakukan dengan membuat file terpisah.
+Masing-masing file mewakili CRUD. Misalkan file <em>create.php</em> untuk menambahkan
+data, <em>read.php</em> untuk menampikan data, <em>update.php</em> untuk mengubah data, dan
+<em>delete.php</em> untuk menghapus data. Bagaimana kalau, semuanya digabungkan ke
+dalam satu file PHP?</p>
+
+<p>Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam
+satu file PHP. Kode ini, saya buat dengan koneksi database menggunakan API <em>mysqli</em>.</p>
+
+<p>Dalam kode, terdapat empat fungsi yang mewakili CRUD. Pertama fungsi <code>tambah()</code>
+untuk menambahkan data. Kedua fungsi <code>tampil_data()</code> untuk membaca data dan
+menampilkanya dalam bentuk tabel. Ketiga fungsi <code>ubah()</code> untuk mengubah data.
+Terakhir ada fungsi <code>hapus()</code> untuk menghapus data.</p>
+
+<p>Fungsi-fungsi tersebut dipanggil pada fungsi (program) utama. Program utama
+bertindak sebagai router yang mengatur pemanggilan fungsi. Misalkan, pada
+halaman Home, fungsi yang dipanggil adalah <code>tambah_data()</code> dan <code>tampil_data()</code>.
+Hal ini bisa dilakukan dengan stuktur pemilihan <em>Switch/Case</em>.</p>
+
+<p>Kode lengkapnya bisa dicek di <a href="https://github.com/petanikode/curd-pertanian">github</a></p>
+
+<p><amp-iframe width="600" height="700"
+    layout="responsive"
+    sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups"
+    frameborder="0"
+    src="https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/83d60cd7f3c5adb060fd804a206f2158">
+</amp-iframe></p>
+
+<p><amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='7044550664'
+    width='720'
+    height='380'
+    type='adsense'
+    layout="responsive">
+</amp-ad></p>
+
+<p>Sementara untuk database yang digunakan bernama pertanian. Database ini memiliki
+sebuah tabel bernama _tabel<em>panen</em>. Tabel panen digunakan untuk menyimpan data
+panen pertanian. Berikut ini stuktur _tabel<em>penen</em>.</p>
+
+<p><amp-img
+    width="1352"
+    height="602"
+    alt="Struktur+tabel+pertanian+-+crud+dalam+satu+file+php+-+petani+kode.png"
+    src="https://4.bp.blogspot.com/-9wONg1kdO3Q/Vvug9hW9cuI/AAAAAAAAClQ/agQVDbVLlyAG4FvyPPYuMLS5AScjSizuQ/s1600/Struktur%2Btabel%2Bpertanian%2B-%2Bcrud%2Bdalam%2Bsatu%2Bfile%2Bphp%2B-%2Bpetani%2Bkode.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>File SQL-nya tersedia di github: <a href="https://github.com/petanikode/curd-pertanian/blob/master/pertanian.sql">pertanian.sql</a></p>
+
+<p>Tampilan atau hasil output kode masih dalam bentuk polos. Saya tidak menggunakan
+CSS maupun Javascript. Hanya terdapat PHP dan HTML saja. Berikut ini cuplikan tampilannya.</p>
+
+<p>Halaman <em>Home</em> atau halaman utama <em>(index.php)</em>:</p>
+
+<p><amp-img
+    width="923"
+    height="600"
+    alt="Halaman+Home+-+CRUD+dalam+satu+file+php.png"
+    src="http://4.bp.blogspot.com/-209OSDN5vUI/Vvz05Tf8W_I/AAAAAAAAClk/DfR1UcrDTUgYndpuvZIdGYkxyT5oBMkuQ/s1600/Halaman%2BHome%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Halaman <em>(form)</em> tambah data:</p>
+
+<p><amp-img
+    width="923"
+    height="386"
+    alt="Halaman+Create+-+CRUD+dalam+satu+file+php.png"
+    src="http://3.bp.blogspot.com/-h8GF2O3srqI/Vvz1C3zl7XI/AAAAAAAACls/4en9pJoAzQc-tuosZkRsQLXOfiqktMorw/s1600/Halaman%2BCreate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Halaman tampil data:</p>
+
+<p><amp-img
+    width="923"
+    height="386"
+    alt="Halaman+Read+Data+-+CRUD+dalam+satu+file+php.png"
+    src="http://2.bp.blogspot.com/-hQ-1ygzfj8M/Vvz1MMzrDFI/AAAAAAAACl0/Un_t5yYpsIoYHR46clTHfK3t4Z37srKpA/s1600/Halaman%2BRead%2BData%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Halaman <em>(form)</em> ubah data:</p>
+
+<p><amp-img
+    width="923"
+    height="386"
+    alt="Halaman+Update+-+CRUD+dalam+satu+file+php.png"
+    src="http://2.bp.blogspot.com/-lsrvTMidEvc/Vvz1THw_ZsI/AAAAAAAACl8/zMbyn_7J9zIRl_zsfiGEAuVIjoH9NG9QQ/s1600/Halaman%2BUpdate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Demo:</p>
+
+<p><amp-youtube
+    data-videoid="hND_ycfi1d0"
+    layout="responsive"
+width="480" height="270"></amp-youtube></p>
 
                 <div class="post-footer">
                 <div>Bagikan:
@@ -1226,9 +1333,9 @@ padding: 16px;
 
                 <p>Topik:
                   
-                    #<a href="/topik/mysql">MySQL</a>
-                  
                     #<a href="/topik/php">PHP</a>
+                  
+                    #<a href="/topik/mysql">MySQL</a>
                   
                     #<a href="/topik/mysqli">mysqli</a>
                   

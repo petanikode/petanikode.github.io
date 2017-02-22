@@ -75,9 +75,7 @@
       <pubDate>Thu, 31 Mar 2016 18:21:00 +0000</pubDate>
       
       <guid>http://petanikode.com/2016/03/kode-crud-dalam-satu-file-php/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pernah mebayangkan, tidak? Membuat CRUD &lt;em&gt;(Create, Read, Update, Delete)&lt;/em&gt; dalam
+      <description>&lt;p&gt;Pernah mebayangkan, tidak? Membuat CRUD &lt;em&gt;(Create, Read, Update, Delete)&lt;/em&gt; dalam
 satu file PHP. Biasanya, membuat CRUD dilakukan dengan membuat file terpisah.
 Masing-masing file mewakili CRUD. Misalkan file &lt;em&gt;create.php&lt;/em&gt; untuk menambahkan
 data, &lt;em&gt;read.php&lt;/em&gt; untuk menampikan data, &lt;em&gt;update.php&lt;/em&gt; untuk mengubah data, dan

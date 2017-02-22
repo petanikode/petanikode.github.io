@@ -27,7 +27,7 @@ dalam berbagai aplikasi luring &lt;em&gt;(offline)&lt;/em&gt; seperti aplikasi &
 
 &lt;h2 id=&#34;instalasi-sqlite-di-linux&#34;&gt;Instalasi SQLite di Linux&lt;/h2&gt;
 
-&lt;p&gt;Pertama kita perlu menginstal SQL dulu, silahkan ketik perintah berikut.&lt;/p&gt;
+&lt;p&gt;Pertama kita perlu menginstal SQLite-nya dulu, silahkan ketik perintah berikut.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install sqlite3
 &lt;/code&gt;&lt;/pre&gt;

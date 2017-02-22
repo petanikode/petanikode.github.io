@@ -291,137 +291,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
     </item>
     
     <item>
-      <title>Sejarah dan Asal Usul `Hello World`</title>
-      <link>http://petanikode.com/2016/10/sejarah-dan-asal-usul-hello-world/</link>
-      <pubDate>Sun, 30 Oct 2016 20:30:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/10/sejarah-dan-asal-usul-hello-world/</guid>
-      <description>
-
-&lt;p&gt;Siapa yang tidak kenal dengan program &lt;em&gt;Hello World&lt;/em&gt;? Sebuah program yang
-paling sederhana di dunia. Fungsi utama dari program ini adalah menampilkan
-pesan &amp;lsquo;hello world&amp;rsquo; ke layar. Hampir di setiap bahasa pemrograman menggunakan
-program &lt;em&gt;Hello World&lt;/em&gt; untuk perkenalan pertama. Namun, tidak banyak yang tahu,
-kapan program ini pertama kali dibuat? Siapa yang membuatnya? dan Kenapa harus
-Hello World? Karena itu, mari kita bahas sejarah dan asal usul program &lt;em&gt;Hello World&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Tulisan ini terinspirasi dari komentar teman-teman di instagram:
-&lt;a href=&#34;https://www.instagram.com/p/BMLMk3GliaN&#34;&gt;https://www.instagram.com/p/BMLMk3GliaN&lt;/a&gt;, terima kasih sebelumnya sudah
-menyarankan saya untuk membahas asal-usul program &lt;em&gt;Hello World&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;siapa-yang-pertama-kali-membuat-program-hello-world&#34;&gt;Siapa yang Pertama Kali Membuat Program &lt;em&gt;Hello World&lt;/em&gt;?&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;830&#34;
-    height=&#34;554&#34;
-    alt=&#34;Brian+Kernighan.jpg&#34;
-    src=&#34;http://3.bp.blogspot.com/-PZ26xylF3N0/WBXdvIiDMUI/AAAAAAAADXY/-6fdGadGoTM0ywlMsKJbQaCEreR37DZ1gCK4B/s1600/Brian%2BKernighan.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Orang yang pertama kali menulis program &lt;em&gt;Hello World&lt;/em&gt; adalah Brian Kernighan.
-Ketika itu, beliau menulis dokumentasi untuk bahasa pemrograman BCPL
-&lt;em&gt;(Basic Combined Programming Language)&lt;/em&gt; dan memberikan contoh program
-&lt;em&gt;Hello World&lt;/em&gt;. Berikut ini cuplikan kode program &lt;em&gt;Hello World&lt;/em&gt; pertama
-dalam bahasa pemrograman BCPL.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;main(){
-  extrn a,b,c;
-  putchar(a); putchar(b); putchar(c); putchar(&#39;!*n&#39;);
-}
-
-a &#39;hell&#39;;
-b &#39;o, w&#39;;
-c &#39;orld&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;!--*--&gt;
-
-&lt;p&gt;Program tersebut akan menghasilkan output &lt;code&gt;hello, world&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Setelah bahasa pemrograman C dirilis, bahasa pemrograman BCPL selanjutnya
-dikenal dengan bahasa B. Kadang dibuat menjadi bahan lelucon dengan merubah
-kepanjangan BCPL menjadi &lt;em&gt;&amp;ldquo;Before C Programming Language&amp;rdquo;&lt;/em&gt;
-(Bahasa Pemrograman Sebelum C).&lt;/p&gt;
-
-&lt;p&gt;Brian Kernighan juga menulis dokumentasi untuk bahasa pemrograman C dan
-diterbitkan dengan judul &lt;em&gt;&amp;ldquo;Programming in C: A Tutorial&lt;/em&gt;&amp;rdquo;. Dalam dokumentasi
-tersebut, beliau menuliskan contoh program &lt;em&gt;Hello World&lt;/em&gt; Juga.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;main() {
-    printf(&amp;quot;hello, world&amp;quot;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kapan-program-hello-world-pertama-kali-diperkenalkan&#34;&gt;Kapan Program &lt;em&gt;Hello World&lt;/em&gt; Pertama Kali Diperkenalkan?&lt;/h2&gt;
-
-&lt;p&gt;Seperti yang sudah kita ketahui bersama, program &lt;em&gt;Hello World&lt;/em&gt; pertama kali
-diperkenalkan pada dokumentasi/tutorial bahasa pemrograman B. Dokumentasi
-tersebut terbit pada tahun 1972. Jadi, program Hello World pertama kali muncul
-di dunia pada tahun 1972.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1600&#34;
-    height=&#34;1076&#34;
-    alt=&#34;Untitled-Infographic-61.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-jLzJIRHltpE/WBXijxevgHI/AAAAAAAADXo/lFFKF04V6QAFJAh6bTwK-pgKrm7PsOv3ACK4B/s1600/Untitled-Infographic-61.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sumber infografis: &lt;a href=&#34;http://blog.hackerrank.com/the-history-of-hello-world/&#34;&gt;blog.hackerrank.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Kemudian, program tersebut digunakan kembali pada dokumentasi bahasa pemrograman
-C (&lt;em&gt;Programming in C: A Tutorial&lt;/em&gt;). Dokumen tersebut terbit pada tahun 1974.
-Satu tahun kemudian (1975), buku karangan Brian Kernighan bersama Dennis Ritchie
-yang berjudul &amp;ldquo;&lt;em&gt;The C Programming Language&lt;/em&gt;&amp;rdquo; diterbitkan. Dalam buku tersebut
-juga menggunakan contoh &lt;em&gt;Hello World&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-main()
-{
-    printf(&amp;quot;hello, world\n&amp;quot;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;kenapa-harus-hello-world&#34;&gt;Kenapa Harus &lt;em&gt;Hello World&lt;/em&gt;?&lt;/h2&gt;
-
-&lt;p&gt;Brian Kernighan sebenarnya tidak ingat betul, mengapa beliau menggunakan kata
-&lt;em&gt;Hello World&lt;/em&gt;. Namun, berdasarkan wawancara Forbes India, beliau hanya menyampaikan:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Memory is dim now. What I do remember is that I had seen a cartoon that
-showed an egg and a chick and the chick was saying, &amp;ldquo;Hello, world&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;Ingatan saya sangat suram sekarang. Apa yang saya ingat adalah sebuah kartun
-yang menampilkan seekor telur dan anak ayam. Anak ayam itu mengatakan &amp;ldquo;Hello world&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah sejarah dan asal usul program &lt;em&gt;Hello World&lt;/em&gt;. Entah bagaimana program
-ini bisa begitu populer sampai saat ini. Bagaimana pendapat teman-teman?&lt;/p&gt;
-
-&lt;p&gt;Referensi:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/%22Hello,_World!%22_program&#34;&gt;en.wikipedia.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.hackerrank.com/the-history-of-hello-world/&#34;&gt;blog.hackerrank.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.forbesindia.com/interview/special/brian-kernighan-no-one-thought-c-would-become-so-big/29982/1#ixzz20uGsw1jH&#34;&gt;forbesindia.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.bell-labs.com/usr/dmr/www/btut.pdf&#34;&gt;bell-labs.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/BCPL&#34;&gt;https://en.wikipedia.org/wiki/BCPL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Brian_Kernighan&#34;&gt;https://en.wikipedia.org/wiki/Brian_Kernighan&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Menghitung Tahun Kabisat dengan Python</title>
       <link>http://petanikode.com/2016/09/menghitung-tahun-kabisat-dengan-python/</link>
       <pubDate>Wed, 14 Sep 2016 15:24:00 +0000</pubDate>
@@ -498,6 +367,16 @@ ini bisa begitu populer sampai saat ini. Bagaimana pendapat teman-teman?&lt;/p&g
       
       <guid>http://petanikode.com/2016/07/pemrograman-c-di-linux-persiapan-dan-percobaan/</guid>
       <description>&lt;p&gt;Sebenarnya sudah lama sekali artikel ini tersimpan dalam tumpukan draf di blog ini. Tidak terbit-terbit sampai menjadi fosil. Oleh karena itu, dari pada disimpan terus, lebih baik saya terbitkan saja apa adanya. &lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-2LstJXFflxY/V4jGRp5vy3I/AAAAAAAADBs/0yZMqbWfSCwaOUlUkcWqMmH7LaGUC4tKwCK4B/s1600/the-c-programming-language-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Belajar Pemrograman C di Linux - The C Programming Language&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-2LstJXFflxY/V4jGRp5vy3I/AAAAAAAADBs/0yZMqbWfSCwaOUlUkcWqMmH7LaGUC4tKwCK4B/s1600/the-c-programming-language-petanikode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Bahasa pemrograman C memang bahasa yang cukup tua dan tidak begitu populer saat ini. Tetapi tidak ada salahnya kita pelajari, karena bahasa yang populer saat ini berasal dari bahasa C.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-W1LIhdOXPaQ/V4i5ij6wOlI/AAAAAAAADBA/OFzhePd8l70wWNJk8G8RBfHLpZgyiUaJACK4B/s1600/Teknologi%2Byang%2Bpopuler%2Bsaat%2Bini%2Bmenurut%2Bsurvey%2BStack%2BOverflow%2B2016.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Teknologi yang populer saat ini menurut survery stackoverflow 2016&#34; border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-W1LIhdOXPaQ/V4i5ij6wOlI/AAAAAAAADBA/OFzhePd8l70wWNJk8G8RBfHLpZgyiUaJACK4B/s1600/Teknologi%2Byang%2Bpopuler%2Bsaat%2Bini%2Bmenurut%2Bsurvey%2BStack%2BOverflow%2B2016.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Teknologi yang pupuler saat ini menurut &lt;a href=&#34;http://stackoverflow.com/research/developer-survey-2016&#34; target=&#34;_blank&#34;&gt;survey stackoverflow&lt;/a&gt;.&lt;br /&gt;&lt;h2&gt;Persiapan Pemrograman C di Linux &lt;/h2&gt;Ada dua peralatan yang harus dipersiapkan untuk memrogram C di Linux, diantaranya:&lt;br /&gt;&lt;h3&gt;1. Teks Editor&lt;/h3&gt;Anda bebas menggunakan teks editor apa pun. Teks editor digunakan untuk menulis kode program C. Rekomendasi dari saya, bisa pakai Gedit, Geany, Mousepad, Kate, Atom, dsb.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-Cu_mejkU9Jc/V5BKdu5g3QI/AAAAAAAADEo/V1LJyiQh3aIoc29vcWfLc04Yl9xhYKGdgCK4B/s1600/Teks%2Beditor%2BAtom.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-Cu_mejkU9Jc/V5BKdu5g3QI/AAAAAAAADEo/V1LJyiQh3aIoc29vcWfLc04Yl9xhYKGdgCK4B/s1600/Teks%2Beditor%2BAtom.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h3&gt;2. Kompilator GCC&lt;/h3&gt;Kompilator fungsinya untuk mengubah kode bahasa C ke dalam program yang siap dieksekusi. Silahkan instal kompilator C di Linux dengan perintah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo apt install&amp;nbsp; gcc&lt;/code&gt;&lt;/pre&gt;Atau, kalau mau yang lebih lengkap dengan &lt;a href=&#34;http://www.petanikode.com/search/label/Build%20Tool&#34; target=&#34;_blank&#34;&gt;build tools&lt;/a&gt;-nya ketik:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo apt install build-essential&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Percobaan Pemrograman C di Linux&lt;/h2&gt;Percobaan kita lakukan dengan membuat sebuah program sederhana. Program yang sangat populer untuk mencoba-coba, namanya &lt;i&gt;Hello World!&lt;/i&gt;. Silahkan buat kode di bawah ini dengan teks editor, kemudian simpan dengan nama &lt;code&gt;hello_world.c&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;&lt;br /&gt;&lt;br /&gt;int main(){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; printf(&amp;ldquo;Hello World!&amp;rdquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; return 0;&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Simpan di tempat yang sudah anda tentukan. Setelah itu buka terminal dan arahkan ke direktori tempat anda menyimpan kode tersebut. &lt;br /&gt;&lt;br /&gt;&lt;h3&gt;Cara Kompilasi&lt;/h3&gt;Berikut ini perintah untuk mengompilasi kode program bahasa C di Linux:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;c&#34;&gt;gcc kode_program.c -o output_hasil&lt;/code&gt;&lt;/pre&gt;&lt;code&gt;kode_program.c&lt;/code&gt; adalah nama file kodenya, sedangkan &lt;code&gt;output_hasil&lt;/code&gt; adalah nama file hasilnya. Nanti hasilnya akan berupa file &lt;i&gt;executable&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-CdTViktbhTo/V4jAGWHwNQI/AAAAAAAADBQ/hwCJyL3Qxt0G-VUPcbJmlSCKN2FV0ts1QCK4B/s1600/Kompilasi%2BKode%2BProgram%2BC%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Kompilasi kode program C di Linux&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-CdTViktbhTo/V4jAGWHwNQI/AAAAAAAADBQ/hwCJyL3Qxt0G-VUPcbJmlSCKN2FV0ts1QCK4B/s1600/Kompilasi%2BKode%2BProgram%2BC%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h3&gt;Cara Eksekusi Program&lt;/h3&gt;Berikut ini perintah untuk mengeksekusi atau menjalankan program di Linux:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;./nama_program&lt;/code&gt;&lt;/pre&gt;Pastikan anda berada dalam direktori tempat program tersebut berada dan diberikan hak aksess untuk mengeksekusi.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-s_vN4ovkEEQ/V4jA6Tm-VxI/AAAAAAAADBc/e6cTEj1miKgM5UeU7jlfxas2gnA8LazSgCK4B/s1600/Eksekusi%2Bprogram%2BC%2Bdi%2BLinux.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Cara eksekusi program di Linux&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-s_vN4ovkEEQ/V4jA6Tm-VxI/AAAAAAAADBc/e6cTEj1miKgM5UeU7jlfxas2gnA8LazSgCK4B/s1600/Eksekusi%2Bprogram%2BC%2Bdi%2BLinux.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tampilannya ke samping karena lupa dikasih &lt;i&gt;Enter&lt;/i&gt;.&lt;br /&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Pemrograman C di Linux membutuhkan dua alat, yaitu teks editor dan kompilator. Kompilasi kode program C dilakukan melalui terminal atau bisa juga melalui &lt;a href=&#34;http://www.petanikode.com/search/label/IDE&#34;&gt;IDE&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sahur Kode dan Belajar Pemrograman Python di Codecademy</title>
+      <link>http://petanikode.com/2016/06/sahur-kode-dan-belajar-pemrograman-python-di-codecademy/</link>
+      <pubDate>Mon, 06 Jun 2016 06:13:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2016/06/sahur-kode-dan-belajar-pemrograman-python-di-codecademy/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://1.bp.blogspot.com/-zi3AR1fZW-I/V1ShAJZDnDI/AAAAAAAAC2w/EeBb6kvMH14nqT3N0YclAjKAWdW8AZzogCLcB/s1600/sahur%2Bkode%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-zi3AR1fZW-I/V1ShAJZDnDI/AAAAAAAAC2w/EeBb6kvMH14nqT3N0YclAjKAWdW8AZzogCLcB/s1600/sahur%2Bkode%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;Selamat pagi semua, sudah santap sahur? ya, akhirnya kita sudah sampai pada bulan Ramadhan. Jadi teringat bulan ramadhan dua tahun yang lalu. Saat itu, sehabis santap sahur, saya mengikuti kursus pemrograman Python di Codecademy.&lt;br /&gt;&lt;br /&gt;Sahur kode, saya lakukan setelah santap sahur sambil menunggu waktu imsak dan adzan subuh tiba. Menyelesaikan sedikit demi sedikit kursus yang ada di Codecademy. Alhamdulillah di hari ke-28, kursusnya berhasil diselesaikan. Namun sayangnya saat ini saya tidak bisa melakukan itu lagi, karena ada proyek dan skripsi yang sedang dikerjakan.&lt;br /&gt;&lt;br /&gt;Nah, bagi kalian yang ingin mencoba sahur kode (&lt;i&gt;ngoding&lt;/i&gt; sehabis sahur), bisa dimulai dari sekarang. Dalam satu bulan, mungkin bisa menguasai satu bahasa pemrograman. Silahkan coba buktikan.&lt;br /&gt;&lt;br /&gt;Adapun pengalaman yang saya dapatkan di sahur kode dua tahun yang lalu menjadi dasar saya memahami bahasa pemrograman lain. Berikut ini saya bagi sedikit.&lt;br /&gt;&lt;h2&gt;1. Dasar Bahasa Pemrograman&lt;/h2&gt;&lt;div&gt;Pada dasarnya semua bahasa pemrograman memiliki konsep yang sama. Ketika mempelajari bahasa pemrograman python di Codecademy, saya mendapatkan pencerahan. Saya menjadi paham, hal-hal yang sering saya temukan di bahasa pemrograman lain:&lt;/div&gt;&lt;div&gt;&lt;ol&gt;&lt;li&gt;Fungsi input dan output&lt;/li&gt;&lt;li&gt;Variabel dan Tipe Data&lt;/li&gt;&lt;li&gt;Percabangan/Struktur Kondisi (IF, IF/ELSE, SWITCH)&lt;/li&gt;&lt;li&gt;Perulangan&lt;/li&gt;&lt;li&gt;Fungsi&lt;/li&gt;&lt;li&gt;Array&lt;/li&gt;&lt;li&gt;Class dan Objek&lt;/li&gt;&lt;/ol&gt;&lt;div&gt;Dengan memahami hal-hal di atas, saya semakin mudah mempelajari bahasa pemrograman lain. Mungkin hanya simbol dan sintaksnya saja yang berbeda. Tetapi, konsepnya sama saja.&lt;/div&gt;&lt;/div&gt;&lt;h2&gt;2. Pemrograman Berorientasi Objek&lt;/h2&gt;&lt;div&gt;Waktu itu saya belum begitu paham tentang pemrograman berorientasi objek (PBO), dalam bahasa inggris disebut &lt;i&gt;Object Oriented Programming&lt;/i&gt; (OOP). Melalui sahur kode, saya belajar tentang &lt;i&gt;class &lt;/i&gt;dan&lt;i&gt; &lt;/i&gt;objek&amp;nbsp;di python. Hal tersebut menjadi dasar saya memahami konsep OOP, kemudian dimantapkan dengan belajar bahasa pemrograman Java.&lt;/div&gt;&lt;h2&gt;3. Bahasa Inggris&lt;/h2&gt;&lt;div&gt;Kursus di Codecademy menggunkan bahasa inggris, mau tidak mau harus memahami bahasa inggris juga. Waktu itu, &lt;i&gt;Google Translate&lt;/i&gt; selalu siap di tab sebelah. Bahasa inggris merupakan bahasa yang harus dipahami selain bahasa pemrograman itu sendiri, karena bahasa inggris akan membuat kita lebih paham.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Selain itu, sumber referensi akan menjadi lebih luas, karena bahasa inggris adalah bahasa global. Ketika saya tidak dapat menyelesaikan suatu bab dalam kursus, biasanya saya membuka &lt;i&gt;Q/A Forum&lt;/i&gt;&amp;nbsp;(Forum tanya-jawab) yang sudah disediakan di Codecademy. Di sana juga menggunakan bahasa inggris, jadi harus memaksakan diri untuk belajar bahasa inggris.&lt;/div&gt;&lt;h2&gt;4. Bahasa Pemrograman Web&lt;/h2&gt;&lt;div&gt;Setelah menyelesaikan kursus, saya ingin mencoba Django. Sebuah &lt;i&gt;framework&lt;/i&gt; untuk membuat web dalam bahasa pemrograman python. Saya hanya mempelajari sedikit, namun itu membuat pencerahan bagi saya. Ternyata untuk membuat web itu tidak harus dengan bahasa pemrograman PHP.&lt;/div&gt;&lt;h2&gt;5. Menyenangkan&lt;/h2&gt;&lt;div&gt;Belajar pemrograman python di Codecademy sangat menyenangkan, karena kita belajar dengan praktik langsung &lt;i&gt;(learn by doing)&lt;/i&gt;. Selain itu, Codecademy juga menerapkan &lt;i&gt;gamification&lt;/i&gt; yang membuat semua orang senang menggunkan Codecademy.&lt;br /&gt;&lt;br /&gt;Itulah beberapa hal yang dapat saya ceritakan berdasarkan pengalaman sahur kode dua tahun yang lalu. Jadi, kalau kalian tertarik juga melakukan sahur kode, silahkan coba mulai dari sekarang.&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     

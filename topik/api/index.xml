@@ -1081,12 +1081,91 @@ layout=&#34;responsive&#34;&gt;
     </item>
     
     <item>
-      <title>Instalasi Slim di Linux</title>
-      <link>http://petanikode.com/2015/02/instalasi-slim-di-linux/</link>
+      <title>Cara Instal Slimframework di Linux dengan Composer</title>
+      <link>http://petanikode.com/2015/02/cara-instal-slimframework-di-linux-dengan-composer/</link>
       <pubDate>Wed, 25 Feb 2015 01:16:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/2015/02/instalasi-slim-di-linux/</guid>
-      <description>&lt;p&gt;&lt;p&gt;Slim adalah sebuah &lt;i&gt;framework&lt;/i&gt; mikro untuk PHP. Slim membantu anda mengembangkan situs web dan API lebih cepat. Di halaman &lt;a href=&#34;http://docs.slimframework.com/&#34; target=&#34;blank&#34;&gt;dokumentasi&lt;/a&gt; Slim, telah dijelaskan cara instalasinya. Lalu, apa gunanya saya membuat tulisan ini? Tulisan ini sebagai catatan pribadi saya, karena saya pelupa. Kelak, pasti akan saya butuhkan lagi.&lt;/p&gt; &lt;a href=&#34;http://2.bp.blogspot.com/-IgzzTfP2j3A/VOyvJGmbuqI/AAAAAAAABb8/DcZV1al23DY/s1600/framework-Slim.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-IgzzTfP2j3A/VOyvJGmbuqI/AAAAAAAABb8/DcZV1al23DY/s1600/framework-Slim.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Saat ini saya menjalankan Xubuntu dengan kondisi &lt;a href=&#34;http://petanikode.blogspot.com/2015/02/pemrograman-php-di-linux.html&#34; target=&#34;blank&#34; rel=&#34;dofollow&#34;&gt;server web&lt;/a&gt; dan &lt;i&gt;composer&lt;/i&gt; sudah terinstal. Saya akan menggunakan &lt;i&gt;composer&lt;/i&gt; untuk menginstal Slim. Membuat proyek baru di sembarang tempat (&lt;i&gt;home&lt;/i&gt;), karena saya akan menggunakan server dari php.&lt;/p&gt; &lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;$ &lt;b&gt;mkdir proyek-slim&lt;/b&gt;&lt;br /&gt;$ &lt;b&gt;cd proyek-slim&lt;/b&gt;&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Setelah itu, membuat sebuah berkas baru bernama &lt;samp&gt;composer.json&lt;/samp&gt;, isinya:&lt;/p&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;{&lt;br /&gt;    &amp;ldquo;require&amp;rdquo;: {&lt;br /&gt;        &amp;ldquo;slim/slim&amp;rdquo;: &amp;ldquo;2.*&amp;rdquo;&lt;br /&gt;    }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Instalasi Slim dengan &lt;i&gt;composer&lt;/i&gt;:&lt;/p&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;$ &lt;b&gt;composer install&lt;/b&gt;&lt;br /&gt;Loading composer repositories with package information&lt;br /&gt;Installing dependencies (including require-dev)&lt;br /&gt;  - Installing slim/slim (2.5.0)&lt;br /&gt;    Downloading: 100%         &lt;br /&gt;&lt;br /&gt;Writing lock file&lt;br /&gt;Generating autoload files&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Setelah itu, membuat berkas &lt;samp&gt;index.php&lt;/samp&gt; yang berisi:&lt;/p&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;&lt;br /&gt;require &amp;lsquo;vendor/autoload.php&amp;rsquo;;&lt;br /&gt;&lt;br /&gt;$aplikasi = new \Slim\Slim();&lt;br /&gt;&lt;br /&gt;$aplikasi-&amp;gt;get(&amp;ldquo;/salam/:nama&amp;rdquo;, function($nama){&lt;br /&gt;    echo &amp;ldquo;Assalamualaikum, $nama&amp;rdquo;;&lt;br /&gt;});&lt;br /&gt;&lt;br /&gt;$aplikasi-&amp;gt;run();&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Semua sudah beres, berikut ini gambaran struktur direktori proyek:&lt;/p&gt;&lt;pre&gt;proyek-slim/&lt;br /&gt;├── composer.json&lt;br /&gt;├── composer.lock&lt;br /&gt;├── index.php&lt;br /&gt;└── vendor&lt;br /&gt;    &amp;hellip;&lt;br /&gt;14 directories, 62 files&lt;br /&gt;&lt;/pre&gt; &lt;p&gt;Sekarang menjalankan server php:&lt;/p&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$ &lt;b&gt;php -S localhost:8000&lt;/b&gt;&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Melihat hasilnya di pramban web, buka &lt;samp&gt;&lt;a href=&#34;http://localhost:8000/salam/ardianta&#34;&gt;http://localhost:8000/salam/ardianta&lt;/a&gt;&lt;/samp&gt;:&lt;/p&gt; &lt;a href=&#34;http://2.bp.blogspot.com/-BjKgeYvxjJo/VOyqigwX8gI/AAAAAAAABbw/QQcUn20VbYw/s1600/program%2Bsalam%2Bdengan%2Bframework%2Bslim.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-BjKgeYvxjJo/VOyqigwX8gI/AAAAAAAABbw/QQcUn20VbYw/s1600/program%2Bsalam%2Bdengan%2Bframework%2Bslim.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+      <guid>http://petanikode.com/2015/02/cara-instal-slimframework-di-linux-dengan-composer/</guid>
+      <description>
+
+&lt;p&gt;Slim merupakan sebuah &lt;em&gt;framework&lt;/em&gt; mikro untuk PHP. Slim bisa kita gunakan
+untuk membangun aplikasi web sederhana dan Rest API. Kali ini, saya akan
+membawakan tutorial cara menginstal Slim di Linux. Slim yang akan diinstal
+adalah versi 2.0.&lt;/p&gt;
+
+&lt;p&gt;Pastikan &lt;a href=&#34;http://petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt; dan &lt;a href=&#34;http://petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt; sudah terinstal
+di komputer teman-teman. Setelah itu ikuti langkah-langkah berikut ini.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-direktori-proyek&#34;&gt;Membuat Direktori Proyek&lt;/h2&gt;
+
+&lt;p&gt;Buatlah sebuah direktori dengan nama proyeknya, misalnya &lt;code&gt;proyek-slim&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir proyek-slim
+cd proyek-slim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;instalasi-slim-dengan-composer&#34;&gt;Instalasi Slim dengan Composer&lt;/h2&gt;
+
+&lt;p&gt;Ketik perintah berikut untuk meinginstal Slim.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;composer require slim/slim:~2.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perintah ini akan mendownload Slim dan menyimpannya di dalam direktori &lt;code&gt;vendor&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-file-index-php&#34;&gt;Membuat File &lt;code&gt;index.php&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buat file &lt;code&gt;index.php&lt;/code&gt; di dalam direktori proyeknya dengan isi sebagai
+berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+require &#39;vendor/autoload.php&#39;;
+
+$app = new \Slim\Slim();
+
+$app-&amp;gt;get(&amp;quot;/salam/:nama&amp;quot;, function($nama){
+    echo &amp;quot;Assalamualaikum, $nama&amp;quot;;
+});
+
+$app-&amp;gt;run();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang kita punya struktur proyek seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;proyek-slim/
+├── composer.json
+├── composer.lock
+├── index.php
+└── vendor
+...
+14 directories, 62 files
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bagus, selanjutnya kita bisa menggunakan server bawaan PHP.&lt;/p&gt;
+
+&lt;h2 id=&#34;menjalankan-server-php&#34;&gt;Menjalankan Server PHP&lt;/h2&gt;
+
+&lt;p&gt;Ketik perintah berikut untuk menjalankan server PHP pada &lt;code&gt;localhost&lt;/code&gt; dengan
+nomer &lt;em&gt;port&lt;/em&gt; &lt;code&gt;8000&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;php -S localhost:8000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, cobalah buka web browser dan arahkan ke alamat tersebut.
+Kalau hasilnya &lt;em&gt;not found&lt;/em&gt; berarti rute &lt;code&gt;/&lt;/code&gt; belum kita buat. Cobalah untuk
+mengakses rute &lt;code&gt;/salam/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;808&#34;
+    height=&#34;242&#34;
+    alt=&#34;program+salam+dengan+framework+slim.png&#34;
+    src=&#34;http://2.bp.blogspot.com/-BjKgeYvxjJo/VOyqigwX8gI/AAAAAAAABbw/QQcUn20VbYw/s1600/program%2Bsalam%2Bdengan%2Bframework%2Bslim.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kita sudah berhasil menginstal Slim, selanjutnya kita bisa lakukan pengembangan
+lebih lanjut. Sekian dulu untuk kali ini.&lt;/p&gt;
 </description>
     </item>
     

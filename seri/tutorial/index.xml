@@ -485,7 +485,7 @@ nama file. Contoh:&lt;/p&gt;
 &lt;p&gt;Jika kita ingin mengembalikan semua file ke suatu commit, kita
 bisa melakukannya dengan perintah:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rever -n &amp;lt;nomer commit&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git revert -n &amp;lt;nomer commit&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Contoh:&lt;/p&gt;

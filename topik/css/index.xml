@@ -10,6 +10,237 @@
     <atom:link href="http://petanikode.com/topik/css/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tutorial Dasar SASS untuk Pemula</title>
+      <link>http://petanikode.com/2017/02/tutorial-dasar-sass-untuk-pemula/</link>
+      <pubDate>Fri, 24 Feb 2017 15:28:09 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-dasar-sass-untuk-pemula/</guid>
+      <description>
+
+&lt;p&gt;Setelah mahir CSS, selanjutnya kita bisa coba SASS. SASS singkatan dari
+&lt;em&gt;Syntactically Awesome Style Sheets&lt;/em&gt;, merupakan sebuah bahasa tambahan
+&lt;em&gt;(preprocessor)&lt;/em&gt; untuk CSS yang akan membuat kita menulis kode lebih efisien.
+Karena dengan SASS kita dapat mengurangi pengulangan, maintenance kode CSS lebih mudah,
+menulis kode yang bersih dan rapi.&lt;/p&gt;
+
+&lt;h2 id=&#34;persiapan-dan-instalasi-sass&#34;&gt;Persiapan dan Instalasi SASS&lt;/h2&gt;
+
+&lt;p&gt;Sebelum kita mulai tutorial ini, persiapkan dulu alat tempurnya. Pertama,
+Pastikan sudah menginstal &lt;a href=&#34;http://petanikode.com/topik/ruby&#34;&gt;Ruby&lt;/a&gt; dan &lt;a href=&#34;http://petanikode.com/topik/gem&#34;&gt;Gem&lt;/a&gt; di dalam komputernya.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, baru kita bisa instal SASS. Silahkan ketik perintah berikut untuk
+menginstal.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo gem install sass
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Masih belum jelas, silahkan simak video ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe
+width=&#34;836&#34;
+height=&#34;736&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+src=&#34;https://asciinema.org/api/asciicasts/104463?&amp;speed=2&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;bagaimana-cara-kerja-sass&#34;&gt;Bagaimana Cara kerja SASS?&lt;/h2&gt;
+
+&lt;p&gt;SASS seperti bahasa pemrograman, kita perlu kompilasi dulu sebelum dapat digunakan.
+Kompilasi &lt;em&gt;(compile)&lt;/em&gt; artinya mengubah kode menjadi bentuk yang siap digunakan.
+Cara kompilasi SASS dapat dilakukan dengan perintah berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sass style.scss style.css
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tunggu sebentar! kok ekstensinya &lt;code&gt;.scss&lt;/code&gt; bukan &lt;code&gt;.sass&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Menurut penjelasan &lt;a href=&#34;http://thesassway.com/editorial/sass-vs-scss-which-syntax-is-better&#34;&gt;thesassway.com&lt;/a&gt;,
+awalnya sintak SASS cukup sulit dipahami karena sangat berbeda dengan CSS.
+Pada akhirnya, di versi 3, SASS memperkenalkan struktur sintak barunya yaitu
+SCSS &lt;em&gt;(Sassy CSS)&lt;/em&gt; yang lebih mirip dengan CSS dan mudah dipelajari bagi pemula.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;nesting-bersarang&#34;&gt;Nesting (Bersarang)&lt;/h2&gt;
+
+&lt;p&gt;Pertama kita akan pelajari fitur &lt;em&gt;nesting&lt;/em&gt; di SASS. &lt;em&gt;Nesting&lt;/em&gt; merupakan sebuah
+teknik penulisan yang meletakan selektor di dalam selektor yang lainya. Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.ibu {
+    color: blue;
+    .anak {
+        font-size: 12px;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Selektor &lt;code&gt;.anak&lt;/code&gt; berada dalam selektor &lt;code&gt;.ibu&lt;/code&gt;. Setelah dikompilasi ke CSS, akan
+menghasilkan kode seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.ibu {
+  color: blue;
+}
+
+.ibu .anak {
+    font-size: 12px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bagaiaman, mudah bukan?&lt;/p&gt;
+
+&lt;p&gt;Sekarang mari kita coba praktikan. Buat sebuah struktur file seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;belajar-sass/
+├── index.html
+└── style.scss
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silahkan buat kode &lt;code&gt;index.html&lt;/code&gt; seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style.css&amp;quot; /&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;header&amp;gt;
+    &amp;lt;div class=&amp;quot;title&amp;quot;&amp;gt;
+        &amp;lt;h1&amp;gt;Belajar SASS&amp;lt;/h1&amp;gt;
+        &amp;lt;span class=&amp;quot;slogan&amp;quot;&amp;gt;Gampang bangeett!!&amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buat kode SASS seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.title {
+    border: 4px solid black;
+    text-align: center;
+    padding: 60px;
+    font-family: sans;
+    .slogan {
+        font-size: 18px;
+        color: rgba(0,0,0,0.3);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lakukan kompilasi dengan perintah ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sass style.scss style.css
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang kita sudah punya file &lt;code&gt;style.css&lt;/code&gt; yang merupakan hasil dari kompilasi
+kode SASS.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;belajar-sass/
+├── index.html
+├── style.css
+├── style.css.map
+└── style.scss
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang cobalah buka dengan browser, hasilnya kira-kira akan seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe
+    height=&#39;300&#39;
+    width=&#39;600&#39;
+    scrolling=&#39;no&#39;
+    title=&#39;Belajar SASS&#39;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34; src=&#39;https://codepen.io/ardianta/embed/mWdaGR/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39; frameborder=&#39;no&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/ardianta/pen/mWdaGR/&#39;&gt;Belajar SASS&lt;/a&gt; by Ardianta Pargo (&lt;a href=&#39;http://codepen.io/ardianta&#39;&gt;@ardianta&lt;/a&gt;).
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;nested-untuk-properti&#34;&gt;&lt;em&gt;Nested&lt;/em&gt; untuk Properti&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Nested&lt;/em&gt; tidak hanya untuk selektor saja. Kita juga bisa melakukan &lt;em&gt;nested&lt;/em&gt;
+untuk properti. Misalnya seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.title {
+    border:{
+        top: 4px solid black;
+        bottom: 4px solid black;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah dikompilasi akan menghasilkan kode CSS seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.title {
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mari kita coba! Sekarang ubahlah kode yang tadi seperti contoh di atas.
+Buat &lt;em&gt;nested&lt;/em&gt; untuk properti.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe
+    height=&#39;300&#39;
+    width=&#39;600&#39;
+    scrolling=&#39;no&#39;
+    title=&#39;Belajar SASS&#39;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34; src=&#39;https://codepen.io/ardianta/embed/YZzBwV/?height=300&amp;theme-id=16572&amp;default-tab=css&amp;embed-version=2&#39; frameborder=&#39;no&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/ardianta/pen/YZzBwV/&#39;&gt;Belajar SASS&lt;/a&gt; by Ardianta Pargo (&lt;a href=&#39;http://codepen.io/ardianta&#39;&gt;@ardianta&lt;/a&gt;).
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Kompilasi lagi, dan lihatlah hasilnya.&lt;/p&gt;
+
+&lt;h2 id=&#34;variabel-dalam-sass&#34;&gt;Variabel dalam SASS&lt;/h2&gt;
+
+&lt;p&gt;SASS memungkinkan kita untuk membuat variabel untuk menyimpan sebuah nilai.
+Nilai yang tersimpan dapat berupa nilai properti, angka, teks, ukuran elemen,
+url gambar, dsb. Pembuatan variabel di SASS menggunaan simbol dolar (&lt;code&gt;$&lt;/code&gt;),
+kemudian diikuti nama variabelnya. Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;$border-default: 4px solid black;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada contoh di atas, kita membuat sebuah variabel bernama &lt;code&gt;$border-default&lt;/code&gt;
+dengan isi berupa nilai &lt;code&gt;border&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kita dapat menggunakan variabel tersebut dengan cara seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.title {
+    border: {
+        top: $border-default;
+        bottom: $border-default;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mudah bukan?&lt;/p&gt;
+
+&lt;p&gt;Sekarang cobalah untuk membuat variabel seperti contoh di atas.
+Tambahkan juga beberapa variabel yang lain.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe
+    height=&#39;300&#39;
+    width=&#39;600&#39;
+    scrolling=&#39;no&#39;
+    title=&#39;Belajar SASS&#39;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34; src=&#39;https://codepen.io/ardianta/embed/dvyaeV/?height=300&amp;theme-id=16572&amp;default-tab=css&amp;embed-version=2&#39; frameborder=&#39;no&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/ardianta/pen/dvyaeV/&#39;&gt;Belajar SASS: variabel&lt;/a&gt; by Ardianta Pargo (&lt;a href=&#39;http://codepen.io/ardianta&#39;&gt;@ardianta&lt;/a&gt;).
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
+
+&lt;p&gt;Sampai di sini, sepertinya kita sudah mengenal SASS. Sudah merasakan mudahnya
+membuat CSS dengan SASS. Masih banyak lagi yang belum kita pelajari tentang SASS.
+Karena itu, nantikan terus update terbaru di blog ini ya :smile:.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Membuat Halaman Github untuk Proyek atau Repositori</title>
       <link>http://petanikode.com/2017/02/cara-membuat-halaman-github-untuk-proyek-atau-repositori/</link>
       <pubDate>Mon, 06 Feb 2017 07:15:11 +0800</pubDate>
@@ -422,16 +653,6 @@ Kadang, browser hanya menampilkan halaman kosong saat error.&lt;/p&gt;
       
       <guid>http://petanikode.com/2016/01/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; /&gt;&lt;/a&gt;Selamat datang di tutorial pertama Bootstrap. Bootstrap adalah sebuah &lt;i&gt;framework&lt;/i&gt; CSS untuk mengatur tampilan web agar menjadi lebih bagus dan &lt;i&gt;responsive&lt;/i&gt;. Pada tutorial pertama ini, saya akan membahas cara menyisipkan Bootstrap ke dalam HTML. Sebelum memulai, silahkan anda unduh dulu Bootstrap-nya di &lt;a href=&#34;http://getbootstrap.com/&#34;&gt;getbootstrap.com&lt;/a&gt;.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-YuS4gVhY3c8/VoYuZhD3GMI/AAAAAAAACUU/74nfHCVCWNE/s1600/Download%2BBootstrap%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Download Bootstrap&#34; border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-YuS4gVhY3c8/VoYuZhD3GMI/AAAAAAAACUU/74nfHCVCWNE/s1600/Download%2BBootstrap%2B-%2Bpetanikode.png&#34; style=&#34;border: 1px solid rgb(221, 221, 221);&#34; title=&#34;Download Bootstrap&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Menyisipkan Bootstrap ke Halaman Web&lt;/h2&gt;Mari kita membuat sebuah direktori bernama &lt;i&gt;belajar-bootstrap&lt;/i&gt;. Kemdudian ekstrak Bootstrap yang sudah diunduh tadi ke dalam direktori tersebut. Extrak direktori bisa dilakukan dengan &lt;i&gt;drag-drop&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-yaEV66dSpTM/VoYw5CHEiQI/AAAAAAAACUk/UFjBnTDj7SU/s1600/Menambahkan%2Bbootstrap%2Bke%2Bproyek%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Menambahkan bootstrap ke dalam proyek&#34; border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-yaEV66dSpTM/VoYw5CHEiQI/AAAAAAAACUk/UFjBnTDj7SU/s1600/Menambahkan%2Bbootstrap%2Bke%2Bproyek%2B-%2Bpetanikode.png&#34; title=&#34;Menambahkan bootstrap ke dalam proyek&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian, ubahlah nama &lt;i&gt;bootstrap-3.3.6-dist&lt;/i&gt; menjadi &lt;i&gt;bootstrap&lt;/i&gt;. Perubahan nama ini bertujuan untuk memudahkan penulisan kode penyisipan bootstrap di HTML. Selanjutnya buatlah berkas HTML baru bernama &lt;code&gt;hello_bootstrap.html&lt;/code&gt; dengan isi sebagai berikut.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;Hello Bootstrap&amp;lt;/title&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; menyisipkan bootstrap &amp;ndash;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;h1&amp;gt;Hello Bootstrap!&amp;lt;/h1&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;p&amp;gt;Selamat datang di tutorial framework bootstrap&amp;lt;/p&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;Setelah itu, cobalah buka file HTML yang sudah dibuat. Maka, anda akan mendapatkan tampilan seperti ini:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-0lCeKXLbuAU/VoY54Zz2k7I/AAAAAAAACU0/DIBpS9YAe38/s1600/Hello%2Bbootstrap%2B-%2Bpetani%2Bkode_2016-01-01_16-32-49.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Hello bootstrap&#34; border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-0lCeKXLbuAU/VoY54Zz2k7I/AAAAAAAACU0/DIBpS9YAe38/s1600/Hello%2Bbootstrap%2B-%2Bpetani%2Bkode_2016-01-01_16-32-49.png&#34; title=&#34;Tampilan web dengan bootstrap&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tampilan seperti gambar di atas, menyatakan Bootstrap sudah berhasil di sisipkan ke halaman web atau HTML. Kode yang perlu anda perhatikan adalah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;Kode tersebut berfungsi untuk membuat relasi antara file HTML dengan &lt;a href=&#34;http://www.petanikode.com/2015/07/berbagai-cara-menulis-kode-css-dalam.html&#34; target=&#34;_blank&#34;&gt;CSS eksternal&lt;/a&gt;. Atribut &lt;code&gt;rel&lt;/code&gt; menyatakan relasinya, sedangkan &lt;code&gt;href&lt;/code&gt; untuk menentukan alamat lokasi file-nya.&lt;br /&gt;&lt;br /&gt;Bila anda menggunakan bootstrap yang online (CDN), maka anda harus memberikan nilai &lt;code&gt;href&lt;/code&gt; dengan alamat URL.&amp;nbsp; Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;&lt;a href=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&amp;quot;&#34;&gt;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&amp;quot;&lt;/a&gt; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Jadi, kita hanya membutuhkan satu baris kode untuk menyisipkan bootstrap ke dalam HTML. Kode itu merupakan tag &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;. Tag ini berfungsi untuk merelasikan dokumen HTML dengan dokumen yang lainnya.&lt;br /&gt;&lt;br /&gt;Nah, sekian dulu tutorial pertama ini. Intinya, saya ingin mengajarkan cara menyisipkan Bootstrap ke dalam proyek dan HTML. Kalau ada yang belum jelas, silahkan ditanyakan melalui komentar di bawah. Sampai jumpa pada &lt;a href=&#34;http://www.petanikode.com/2016/01/tutorial-bootstrap-2-sistem-grid-dan-layout.html&#34; target=&#34;_blank&#34;&gt;tutorial berikutnya&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Properti box-shadow dan text-shadow di CSS3</title>
-      <link>http://petanikode.com/2015/11/properti-box-shadow-dan-text-shadow-di-css3/</link>
-      <pubDate>Sun, 01 Nov 2015 09:00:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2015/11/properti-box-shadow-dan-text-shadow-di-css3/</guid>
-      <description>&lt;p&gt;Kedua properti ini, sama-sama berfungsi untuk membuat bayangan. Namun, bayangan yang dihasilkan berbeda. Properti &lt;code&gt;box-shadow&lt;/code&gt; digunakan untuk membuat bayangan untuk kotak atau elemen. Sementara itu, properti &lt;code&gt;text-shadow&lt;/code&gt; digunakan untuk membuat bayangan text.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-dFQIAhtNzUg/VjACACJQKLI/AAAAAAAACH4/dTVJOWFUNPE/s1600/box-shadow%2Bdan%2Btext-shadow%2Bdi%2Bcss%2B%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;ilustrasi box-shadow dan text-shadow&#34; border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-dFQIAhtNzUg/VjACACJQKLI/AAAAAAAACH4/dTVJOWFUNPE/s1600/box-shadow%2Bdan%2Btext-shadow%2Bdi%2Bcss%2B%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Nilai dari kedua properti ini juga sama. Formatnya &lt;code&gt;&lt;span style=&#34;color: orange;&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: blue;&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color: magenta;&#34;&gt;z&lt;/span&gt; &lt;span style=&#34;color: #6aa84f;&#34;&gt;warna&lt;/span&gt;&lt;/code&gt;, contohnya&lt;br /&gt;&lt;pre&gt;box-shadow: &lt;span style=&#34;color: orange;&#34;&gt;10px&lt;/span&gt; &lt;span style=&#34;color: blue;&#34;&gt;2px&lt;/span&gt; &lt;span style=&#34;color: magenta;&#34;&gt;4px&lt;/span&gt; &lt;span style=&#34;color: #6aa84f;&#34;&gt;black&lt;/span&gt;;&lt;/pre&gt;Nilai &lt;code&gt;&lt;span style=&#34;color: orange;&#34;&gt;x&lt;/span&gt;&lt;/code&gt; adalah &lt;span style=&#34;color: orange;&#34;&gt;10px&lt;/span&gt;, artinya panjang bayangan ke arah &lt;code&gt;&lt;span style=&#34;color: orange;&#34;&gt;x&lt;/span&gt;&lt;/code&gt; (horizontal) adalah &lt;span style=&#34;color: orange;&#34;&gt;10px&lt;/span&gt;. Sedangkan nilai &lt;code&gt;&lt;span style=&#34;color: blue;&#34;&gt;y&lt;/span&gt;&lt;/code&gt; adalah &lt;span style=&#34;color: blue;&#34;&gt;2px&lt;/span&gt;. Arah bayangan &lt;code&gt;&lt;span style=&#34;color: blue;&#34;&gt;y&lt;/span&gt;&lt;/code&gt; merukan arah vertikal. Sementara itu, &lt;code&gt;&lt;span style=&#34;color: magenta;&#34;&gt;z&lt;/span&gt;&lt;/code&gt; digunakan sebagai nilai pudar (blur). Arah &lt;code&gt;&lt;span style=&#34;color: magenta;&#34;&gt;z&lt;/span&gt;&lt;/code&gt; biasanya menentukan jarak cahaya ke elemen. Semakin besar nilai &lt;code&gt;&lt;span style=&#34;color: magenta;&#34;&gt;z&lt;/span&gt;&lt;/code&gt;, maka semakin pudar bayangan yang dihasilkan. Bila &lt;code&gt;&lt;span style=&#34;color: magenta;&#34;&gt;z&lt;/span&gt;&lt;/code&gt; bernilai &lt;code&gt;0&lt;/code&gt; (nol), maka bayangan akan terlihat jelas.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-xGgDAt57rV4/VjAJDS9TKBI/AAAAAAAACII/SVJ1Z6C_HsU/s1600/nilai%2Bbox-shadow%2Bdi%2Bcss.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-xGgDAt57rV4/VjAJDS9TKBI/AAAAAAAACII/SVJ1Z6C_HsU/s1600/nilai%2Bbox-shadow%2Bdi%2Bcss.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Warna bayangan dapat kita isi dengan nama warna, kode heksa, fungsi &lt;code&gt;rgb()&lt;/code&gt;, dan &lt;code&gt;rgba()&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;/* dengan nama warna &lt;em&gt;/&lt;br /&gt;box-shadow: 3px 3px 2px grey;&lt;br /&gt;&lt;br /&gt;/&lt;/em&gt; dengan kode heksa &lt;em&gt;/&lt;br /&gt;box-shadow: 3px 3px 2px #fff;&lt;br /&gt;&lt;br /&gt;/&lt;/em&gt; dengan fungsi rgb() &lt;em&gt;/&lt;br /&gt;box-shadow: 3px 3px 2px rgb(0,0,21);&lt;br /&gt;&lt;br /&gt;/&lt;/em&gt; dengan fungsi rgba() */&lt;br /&gt;box-shadow: 3px 3px 2px rgba(0,0,0,0.5);&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Bayangan normal arahnya menuju ke&lt;code&gt;&lt;span style=&#34;color: orange;&#34;&gt; x&lt;/span&gt;&lt;/code&gt; (kanan) dan ke &lt;code&gt;&lt;span style=&#34;color: blue;&#34;&gt;y&lt;/span&gt;&lt;/code&gt; (bawah), karena diumpamakan cahaya berada di atas. Nah, bila ingin arah bayangannya menuju ke atas atau arah sebaliknya dari bayangan normal, berikan nilai negatif pada &lt;code&gt;&lt;span style=&#34;color: orange;&#34;&gt;x&lt;/span&gt;&lt;/code&gt; dan &lt;code&gt;&lt;span style=&#34;color: blue;&#34;&gt;y&lt;/span&gt;&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;text-shadow: -4px -3px 2px rgba(0,0,0,0.8);&lt;/code&gt;&lt;/pre&gt;hasilnya:&lt;br /&gt;&lt;div style=&#34;font-size: 46px; padding: 20px 0; text-shadow: -4px -3px 2px rgba(0,0,0,0.8);&#34;&gt;Bayangan ke atas!&lt;/div&gt;Bayangan normal juga letaknya di luar elemen. Namun, bila kita ingin meletakkan bayangan ke dalam elemen, maka kita hanya perlu menambahkan kata &lt;code&gt;inset&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;box-shadow: 0px 0px 10px rgba(0,0,0,0.8) inset;&lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;br /&gt;&lt;div style=&#34;box-shadow: 0px 0px 10px rgba(0,0,0,0.8) inset; color: grey; font-size: 36px; padding: 20px;&#34;&gt;Bayangan ke dalam elemen!&lt;/div&gt;&lt;br /&gt;Cukup sekian pembahasan tentang properti &lt;code&gt;box-shadow&lt;/code&gt; dan &lt;code&gt;text-shadow&lt;/code&gt; ini. Saya harap anda dapat memahami dan semoga bermanfaat.&lt;/p&gt;
 </description>
     </item>
     

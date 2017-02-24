@@ -7,8 +7,239 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 21 Feb 2017 14:55:42 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Feb 2017 15:28:09 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tutorial Dasar SASS untuk Pemula</title>
+      <link>http://petanikode.com/2017/02/tutorial-dasar-sass-untuk-pemula/</link>
+      <pubDate>Fri, 24 Feb 2017 15:28:09 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-dasar-sass-untuk-pemula/</guid>
+      <description>
+
+&lt;p&gt;Setelah mahir CSS, selanjutnya kita bisa coba SASS. SASS singkatan dari
+&lt;em&gt;Syntactically Awesome Style Sheets&lt;/em&gt;, merupakan sebuah bahasa tambahan
+&lt;em&gt;(preprocessor)&lt;/em&gt; untuk CSS yang akan membuat kita menulis kode lebih efisien.
+Karena dengan SASS kita dapat mengurangi pengulangan, maintenance kode CSS lebih mudah,
+menulis kode yang bersih dan rapi.&lt;/p&gt;
+
+&lt;h2 id=&#34;persiapan-dan-instalasi-sass&#34;&gt;Persiapan dan Instalasi SASS&lt;/h2&gt;
+
+&lt;p&gt;Sebelum kita mulai tutorial ini, persiapkan dulu alat tempurnya. Pertama,
+Pastikan sudah menginstal &lt;a href=&#34;http://petanikode.com/topik/ruby&#34;&gt;Ruby&lt;/a&gt; dan &lt;a href=&#34;http://petanikode.com/topik/gem&#34;&gt;Gem&lt;/a&gt; di dalam komputernya.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, baru kita bisa instal SASS. Silahkan ketik perintah berikut untuk
+menginstal.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo gem install sass
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Masih belum jelas, silahkan simak video ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe
+width=&#34;836&#34;
+height=&#34;736&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+src=&#34;https://asciinema.org/api/asciicasts/104463?&amp;speed=2&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;bagaimana-cara-kerja-sass&#34;&gt;Bagaimana Cara kerja SASS?&lt;/h2&gt;
+
+&lt;p&gt;SASS seperti bahasa pemrograman, kita perlu kompilasi dulu sebelum dapat digunakan.
+Kompilasi &lt;em&gt;(compile)&lt;/em&gt; artinya mengubah kode menjadi bentuk yang siap digunakan.
+Cara kompilasi SASS dapat dilakukan dengan perintah berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sass style.scss style.css
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tunggu sebentar! kok ekstensinya &lt;code&gt;.scss&lt;/code&gt; bukan &lt;code&gt;.sass&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Menurut penjelasan &lt;a href=&#34;http://thesassway.com/editorial/sass-vs-scss-which-syntax-is-better&#34;&gt;thesassway.com&lt;/a&gt;,
+awalnya sintak SASS cukup sulit dipahami karena sangat berbeda dengan CSS.
+Pada akhirnya, di versi 3, SASS memperkenalkan struktur sintak barunya yaitu
+SCSS &lt;em&gt;(Sassy CSS)&lt;/em&gt; yang lebih mirip dengan CSS dan mudah dipelajari bagi pemula.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;nesting-bersarang&#34;&gt;Nesting (Bersarang)&lt;/h2&gt;
+
+&lt;p&gt;Pertama kita akan pelajari fitur &lt;em&gt;nesting&lt;/em&gt; di SASS. &lt;em&gt;Nesting&lt;/em&gt; merupakan sebuah
+teknik penulisan yang meletakan selektor di dalam selektor yang lainya. Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.ibu {
+    color: blue;
+    .anak {
+        font-size: 12px;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Selektor &lt;code&gt;.anak&lt;/code&gt; berada dalam selektor &lt;code&gt;.ibu&lt;/code&gt;. Setelah dikompilasi ke CSS, akan
+menghasilkan kode seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.ibu {
+  color: blue;
+}
+
+.ibu .anak {
+    font-size: 12px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bagaiaman, mudah bukan?&lt;/p&gt;
+
+&lt;p&gt;Sekarang mari kita coba praktikan. Buat sebuah struktur file seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;belajar-sass/
+├── index.html
+└── style.scss
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silahkan buat kode &lt;code&gt;index.html&lt;/code&gt; seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style.css&amp;quot; /&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;header&amp;gt;
+    &amp;lt;div class=&amp;quot;title&amp;quot;&amp;gt;
+        &amp;lt;h1&amp;gt;Belajar SASS&amp;lt;/h1&amp;gt;
+        &amp;lt;span class=&amp;quot;slogan&amp;quot;&amp;gt;Gampang bangeett!!&amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buat kode SASS seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.title {
+    border: 4px solid black;
+    text-align: center;
+    padding: 60px;
+    font-family: sans;
+    .slogan {
+        font-size: 18px;
+        color: rgba(0,0,0,0.3);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lakukan kompilasi dengan perintah ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sass style.scss style.css
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang kita sudah punya file &lt;code&gt;style.css&lt;/code&gt; yang merupakan hasil dari kompilasi
+kode SASS.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;belajar-sass/
+├── index.html
+├── style.css
+├── style.css.map
+└── style.scss
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang cobalah buka dengan browser, hasilnya kira-kira akan seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe
+    height=&#39;300&#39;
+    width=&#39;600&#39;
+    scrolling=&#39;no&#39;
+    title=&#39;Belajar SASS&#39;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34; src=&#39;https://codepen.io/ardianta/embed/mWdaGR/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39; frameborder=&#39;no&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/ardianta/pen/mWdaGR/&#39;&gt;Belajar SASS&lt;/a&gt; by Ardianta Pargo (&lt;a href=&#39;http://codepen.io/ardianta&#39;&gt;@ardianta&lt;/a&gt;).
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;nested-untuk-properti&#34;&gt;&lt;em&gt;Nested&lt;/em&gt; untuk Properti&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Nested&lt;/em&gt; tidak hanya untuk selektor saja. Kita juga bisa melakukan &lt;em&gt;nested&lt;/em&gt;
+untuk properti. Misalnya seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.title {
+    border:{
+        top: 4px solid black;
+        bottom: 4px solid black;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah dikompilasi akan menghasilkan kode CSS seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.title {
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mari kita coba! Sekarang ubahlah kode yang tadi seperti contoh di atas.
+Buat &lt;em&gt;nested&lt;/em&gt; untuk properti.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe
+    height=&#39;300&#39;
+    width=&#39;600&#39;
+    scrolling=&#39;no&#39;
+    title=&#39;Belajar SASS&#39;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34; src=&#39;https://codepen.io/ardianta/embed/YZzBwV/?height=300&amp;theme-id=16572&amp;default-tab=css&amp;embed-version=2&#39; frameborder=&#39;no&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/ardianta/pen/YZzBwV/&#39;&gt;Belajar SASS&lt;/a&gt; by Ardianta Pargo (&lt;a href=&#39;http://codepen.io/ardianta&#39;&gt;@ardianta&lt;/a&gt;).
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Kompilasi lagi, dan lihatlah hasilnya.&lt;/p&gt;
+
+&lt;h2 id=&#34;variabel-dalam-sass&#34;&gt;Variabel dalam SASS&lt;/h2&gt;
+
+&lt;p&gt;SASS memungkinkan kita untuk membuat variabel untuk menyimpan sebuah nilai.
+Nilai yang tersimpan dapat berupa nilai properti, angka, teks, ukuran elemen,
+url gambar, dsb. Pembuatan variabel di SASS menggunaan simbol dolar (&lt;code&gt;$&lt;/code&gt;),
+kemudian diikuti nama variabelnya. Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;$border-default: 4px solid black;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada contoh di atas, kita membuat sebuah variabel bernama &lt;code&gt;$border-default&lt;/code&gt;
+dengan isi berupa nilai &lt;code&gt;border&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kita dapat menggunakan variabel tersebut dengan cara seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.title {
+    border: {
+        top: $border-default;
+        bottom: $border-default;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mudah bukan?&lt;/p&gt;
+
+&lt;p&gt;Sekarang cobalah untuk membuat variabel seperti contoh di atas.
+Tambahkan juga beberapa variabel yang lain.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe
+    height=&#39;300&#39;
+    width=&#39;600&#39;
+    scrolling=&#39;no&#39;
+    title=&#39;Belajar SASS&#39;
+    layout=&#34;responsive&#34;
+    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34; src=&#39;https://codepen.io/ardianta/embed/dvyaeV/?height=300&amp;theme-id=16572&amp;default-tab=css&amp;embed-version=2&#39; frameborder=&#39;no&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/ardianta/pen/dvyaeV/&#39;&gt;Belajar SASS: variabel&lt;/a&gt; by Ardianta Pargo (&lt;a href=&#39;http://codepen.io/ardianta&#39;&gt;@ardianta&lt;/a&gt;).
+&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
+
+&lt;p&gt;Sampai di sini, sepertinya kita sudah mengenal SASS. Sudah merasakan mudahnya
+membuat CSS dengan SASS. Masih banyak lagi yang belum kita pelajari tentang SASS.
+Karena itu, nantikan terus update terbaru di blog ini ya :smile:.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Tutorial Git 06 - Membatalkan Revisi</title>
@@ -1919,86 +2150,6 @@ ini sebenarnya untuk gerakan &lt;em&gt;hour of code&lt;/em&gt; yang diselenggara
 
 &lt;p&gt;Itulah 7 video inspirasi untuk belajar pemrograman. Semoga teman-teman
 semakin termotivasi.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Membuat Halaman Github untuk Proyek atau Repositori</title>
-      <link>http://petanikode.com/2017/02/cara-membuat-halaman-github-untuk-proyek-atau-repositori/</link>
-      <pubDate>Mon, 06 Feb 2017 07:15:11 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/02/cara-membuat-halaman-github-untuk-proyek-atau-repositori/</guid>
-      <description>
-
-&lt;p&gt;Pada tulisan sebelumnya, saya pernah membahas tentang &lt;a href=&#34;http://petanikode.com/2017/01/cara-membuat-halaman-github-kurang-dari-10-menit/&#34;&gt;cara membuat halaman
-Github untuk profil individu dan organisasi&lt;/a&gt;.
-Nah, kali ini kita akan membuat halaman github untuk proyek atau repositori.&lt;/p&gt;
-
-&lt;p&gt;Jadi sebenarnya, setiap proyek atau respositori di Github itu bisa dijadikan
-halaman Github &lt;em&gt;(Github Pages)&lt;/em&gt;. Pastikan di dalam proyek berisi file web statis
-seperti HTML, CSS, dan Javascript.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-repositori&#34;&gt;Membuat repositori&lt;/h2&gt;
-
-&lt;p&gt;Buatlah repositori dengan nama apa saja, kemudian di dalamnya berisi file web statis.
-Setelah itu, upload ke github.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
-git add .
-git commit -m &amp;quot;commit pertama&amp;quot;
-git add remote origin https://github.com/{username}/{nama-repo}
-git push origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;pengaturan-repositori&#34;&gt;Pengaturan Repositori&lt;/h2&gt;
-
-&lt;p&gt;Klik tombol &lt;em&gt;Settings&lt;/em&gt; pada repositori untuk masuk ke pengaturan repositori,
-kemudian gulung ke bawah sampai menemukan bagian &lt;em&gt;Github Pages&lt;/em&gt;. Lalu pada
-&lt;em&gt;Source&lt;/em&gt;, pilih cabang &lt;em&gt;(branch)&lt;/em&gt; yang akan menjadi halaman Github. Kemudian simpan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;748&#34;
-height=&#34;462&#34;
-alt=&#34;Membuat halaman github untuk repositori.png&#34;
-src=&#34;https://1.bp.blogspot.com/-wfzIqx9du78/WJe3rJKMs1I/AAAAAAAADxg/qleBmhPbOEggZ9EnYU_6-4hH_eIYYkC7gCPcB/s1600/Membuat%2Bhalaman%2Bgithub%2Buntuk%2Brepositori.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sebagai contoh, saya menggunakan cabang &lt;code&gt;master&lt;/code&gt;. Sebenarnya tidak disarankan
-menggunakan cabang ini untuk halaman github. Kita disarankan menggunakan cabang lain, tapi
-harus dibuat terlebih dahulu. Cara pembuatan cabang dapat dilakukan dengan perintah berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout -b nama-cabang
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;percobaan&#34;&gt;Percobaan&lt;/h2&gt;
-
-&lt;p&gt;Setelah itu, beberapa detik kemudian, halaman akan langsung jadi. Kita bisa
-mengaksesnya melalui alamat &lt;code&gt;https://{username}.github.io/nama-repo&lt;/code&gt;. Karena
-saya sudah menggunakan domain untuk halaman github, maka nanti saya akan
-mengaksesnya melalui &lt;code&gt;http://petanikode.com/nama-repo&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Contoh yang sudah saya buat:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Halaman Github: &lt;a href=&#34;http://petanikode.com/amp-tools&#34;&gt;http://petanikode.com/amp-tools&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Repositorinya: &lt;a href=&#34;https://github.com/petanikode/amp-tools/&#34;&gt;https://github.com/petanikode/amp-tools/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Selain cara ini, ada juga cara lain, yaitu melalui direktori &lt;code&gt;docs&lt;/code&gt;. Mungkin
-akan saya bahas pada kesempatan berikutnya. Tetap pantau blog ini ya, :smile:.&lt;/p&gt;
-
-&lt;p&gt;Jadi, itulah cara membuat halaman
-github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/p&gt;
 </description>
     </item>
     

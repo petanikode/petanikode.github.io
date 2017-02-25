@@ -1811,6 +1811,11 @@ Contoh:&lt;/p&gt;
 &lt;p&gt;Perintah tersebut akan membuat direktori bernama &lt;code&gt;proyek-01&lt;/code&gt;. Kalau direktorinya
 sudah ada, maka Git akan melakukan inisialisasi di dalam direktori tersebut.&lt;/p&gt;
 
+&lt;p&gt;Perintah &lt;code&gt;git init&lt;/code&gt; akan membuat sebuah direktori bernama &lt;code&gt;.git&lt;/code&gt; di dalam
+proyek kita. Direktori ini digunakan Git untuk menyimpan perubahan yang kita
+lakukan. Kalau kita menghapus direktori ini, maka semua rekaman yang dilakukan
+oleh Git akan hilang.&lt;/p&gt;
+
 &lt;h2 id=&#34;contoh-contoh-lain&#34;&gt;Contoh-contoh lain&lt;/h2&gt;
 
 &lt;p&gt;Perintah berikut ini akan membuat repositori pada direktori saat ini &lt;em&gt;(working directory)&lt;/em&gt;.&lt;/p&gt;

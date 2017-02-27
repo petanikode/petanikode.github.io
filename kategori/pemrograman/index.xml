@@ -10,6 +10,288 @@
     <atom:link href="http://petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tutorial Git 07 - Percabangan</title>
+      <link>http://petanikode.com/2017/02/tutorial-git-07---percabangan/</link>
+      <pubDate>Mon, 27 Feb 2017 19:20:26 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/02/tutorial-git-07---percabangan/</guid>
+      <description>
+
+&lt;p&gt;Bayangkan anda sedang bekerja dengan tim pada suatu repositori Git.
+Repositori ini dikerjakan secara bersama-sama.&lt;/p&gt;
+
+&lt;p&gt;Kadang&amp;hellip; akan terjadi konflik, karena kode yang kita tulis berbeda
+dengan yang lain.&lt;/p&gt;
+
+&lt;p&gt;Misalnya, Si A menulis kode untuk fitur X dengan algoritma yang ia ketahui.
+Sedangkan si B menulis dengan algoritma yang berbeda.&lt;/p&gt;
+
+&lt;p&gt;Lalu mereka melakukan &lt;em&gt;commit&lt;/em&gt;, dan kode sumber jadi berantakan. Anggota tim yang
+lain menjadi pusing.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;697&#34;
+    height=&#34;464&#34;
+    alt=&#34;konflik pada repositori git&#34;
+    src=&#34;https://2.bp.blogspot.com/-DEigCiYJJfY/WLMaWoeoONI/AAAAAAAAELQ/qvDUmoiDWQMElIHdl8y4qkT0ZsjDk6TzQCPcB/s1600/konflik-branch-repositori-git.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Agar tidak terjadi hal yang seperti ini, kita harus membuat cabang &lt;em&gt;(branch)&lt;/em&gt;
+tersendiri.&lt;/p&gt;
+
+&lt;p&gt;Misalnya, si A akan mengerjakan fitur X, maka dia harus membuat cabang
+sendiri. Si A akan bebas melakukan apapun di cabangnya tanpa menggangu
+cabang utama &lt;em&gt;(master)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-membuat-cabang-baru&#34;&gt;Cara Membuat Cabang Baru&lt;/h2&gt;
+
+&lt;p&gt;Perintah untuk membuat cabang adalah &lt;code&gt;git branch&lt;/code&gt;, kemudian diikuti dengan
+nama cabangnya.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git branch fitur_register
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka Git akan membuat cabang bernama &lt;code&gt;fitur_register&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;697&#34;
+    height=&#34;376&#34;
+    alt=&#34;percabganan-di-repositori-git.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-A8Ps8Hfz-Wg/WLMdwfZK7WI/AAAAAAAAELg/n2TAtUoTztIa_mk2ldClsO0Vy_5dJuJgQCPcB/s1600/percabganan-di-repositori-git.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang setiap orang memiliki cabangnya masing-masing. Mereka bebas bereksperimen.&lt;/p&gt;
+
+&lt;p&gt;Untuk melihat cabang apa saja yang ada di repositori, gunakan perintah &lt;code&gt;git branch&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git branch
+  halaman_login
+* master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tanda bintang (&lt;code&gt;*&lt;/code&gt;) artinya cabang yang sedang aktif atau Kita sedang berada di sana.&lt;/p&gt;
+
+&lt;h2 id=&#34;latihan&#34;&gt;Latihan&lt;/h2&gt;
+
+&lt;p&gt;Untuk memantapkan pemahaman tentang percabangan Git, mari kita coba
+praktik.&lt;/p&gt;
+
+&lt;p&gt;Pada repositori, buatlah sebuah cabang baru.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch halaman_login
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, pindah ke cabang yang baru saja kita buat dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout halaman_login
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu tambahkan file &lt;code&gt;login.html&lt;/code&gt;, isinya terserah anda.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;655&#34;
+    height=&#34;413&#34;
+    alt=&#34;pembuatan+branch+dan+eksperimen+di+branch.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-qk6qZNyJR1c/WLMiYx_zUnI/AAAAAAAAEL4/ogG3XTLt4jARb5VT-3TlA8gsOcHEZMtWwCPcB/s1600/pembuatan%2Bbranch%2Bdan%2Beksperimen%2Bdi%2Bbranch.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Tips: Jangan lupa untuk menggunakan printah &lt;code&gt;git status&lt;/code&gt; untuk melihat
+status repositori.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Kita sudah menambahkan file &lt;code&gt;login.html&lt;/code&gt;. Selanjutnya kita lakukan &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add login.html
+git commit -m &amp;quot;membuat file login.html&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bagus! revisi kita pada cabang &lt;code&gt;halaman_login&lt;/code&gt; sudah disimpan. Sekarang
+coba kembali ke cabang &lt;code&gt;master&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apakah anda menemukan file &lt;code&gt;login.html&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Pasti tidak!&lt;/p&gt;
+
+&lt;p&gt;Sekarang kembali lagi ke cabang &lt;code&gt;halaman_login&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout halaman_login
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cek lagi, apakah sekarang file &lt;code&gt;login.html&lt;/code&gt; sudah ada?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;project-01/
+├── index.html
+└── login.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ternyata ada. Yep! kita bisa mengambil kesimpulan, kalau perubahan
+pada cabang &lt;code&gt;halaman_login&lt;/code&gt; tidak akan berpengaruh di cabang &lt;code&gt;master&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;menggabungkan-cabang&#34;&gt;Menggabungkan Cabang&lt;/h2&gt;
+
+&lt;p&gt;Anggaplah kita sudah selesai membuat fitur login di cabang &lt;code&gt;halaman_login&lt;/code&gt;.
+Sekarang kita ingin Menggabungkannya denga cabang &lt;code&gt;master&lt;/code&gt; (utama).&lt;/p&gt;
+
+&lt;p&gt;Pertama, kita harus pindah dulu ke cabang master.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, barulah kita bisa menggabungkan dengan perintah &lt;code&gt;git merge&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git merge halaman_login
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang lihat, file &lt;code&gt;login.html&lt;/code&gt; ada di cabang &lt;code&gt;master&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;614&#34;
+    height=&#34;350&#34;
+    alt=&#34;penggabungan cabang git&#34;
+    src=&#34;https://1.bp.blogspot.com/-hEKLHRiPiU8/WLP9cNapCzI/AAAAAAAAEMk/v5L1F61DiWQiveuB6FNMB_m3GiWl58ObwCPcB/s1600/penggabungan%2Bcabang%2Bgit.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Hati-hati! kadang sering terjadi bentrok ketika menggabungkan cabang.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=486 height=657
+    layout=&#34;responsive&#34;
+    data-tweetid=&#34;835947140383821824&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mengatasi-bentrok&#34;&gt;Mengatasi Bentrok&lt;/h2&gt;
+
+&lt;p&gt;Bentrok biasanya terjadi jika ada dua orang yang mengedit file yang sama.&lt;/p&gt;
+
+&lt;p&gt;Kenapa bisa begitu, &amp;lsquo;kan mereka sudah punya cabang masing-masing?&lt;/p&gt;
+
+&lt;p&gt;Bisa jadi, di cabang yang mereka kerjakan ada file yang sama dengan
+cabang lain. Kemudian, saat digabungkan terjadi bentrok.&lt;/p&gt;
+
+&lt;p&gt;Mengatasi bentrok adalah tugas dari pemilik atau pengelola repostiri.
+Dia harus bertindak adil, kode mana yang harus diambil.&lt;/p&gt;
+
+&lt;p&gt;Biasanya akan ada proses diskusi dulu dalam mengambil keputusan.&lt;/p&gt;
+
+&lt;p&gt;Baiklah, sekarang kita akan coba membuat bentrokan :smile:.&lt;/p&gt;
+
+&lt;p&gt;Pindah dulu ke branch &lt;code&gt;halaman_login&lt;/code&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout halaman_login
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setela itu, edit file &lt;code&gt;login.html&lt;/code&gt; atau &lt;code&gt;index.html&lt;/code&gt;, karena kedua file tersebut
+ada di kedua cabang yang akan kita gabungkan.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git diff
+diff --git a/login.html b/login.html
+index 23a3f5c..eea5658 100644
+--- a/login.html
++++ b/login.html
+@@ -1 +1 @@
+-di sini berisi kode untuk halaman login
++&amp;lt;p&amp;gt;di sini berisi kode untuk halaman login&amp;lt;p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, lakukan &lt;em&gt;commit&lt;/em&gt; lagi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add login.html
+git commit -m &amp;quot;ubah isi login.html&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Selanjutnya pindah ke cabang &lt;code&gt;master&lt;/code&gt; dan lakukan perubahan juga di cabang ini.
+Ubah file yang sama seperti di cabang &lt;code&gt;halaman_login&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lakukan &lt;em&gt;commit&lt;/em&gt; di cabang &lt;code&gt;master&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add login.html
+git commit -m &amp;quot;ubah isi login.html di cabang master&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Terakhir, coba gabungkan cabang &lt;code&gt;halaman_login&lt;/code&gt; dengan cabang &lt;code&gt;master&lt;/code&gt;,
+maka akan terjadi bentrok.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git merge halaman_login
+Auto-merging login.html
+CONFLICT (content): Merge conflict in login.html
+Automatic merge failed; fix conflicts and then commit the result.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah, kita disuruh perbaiki kode yang bentrok. Sekarang buka &lt;code&gt;login.html&lt;/code&gt;
+dengan teks editor.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;589&#34;
+    height=&#34;269&#34;
+    alt=&#34;kode+yang+bentrok.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-WU41K9x2aN0/WLQBmbmc42I/AAAAAAAAEM8/-Y5sfmgLtHcufrRScaZHhOWdwvhBeLdmQCPcB/s1600/kode%2Byang%2Bbentrok.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kedua kode cabang dipisahkan dengan tanda &lt;code&gt;======&lt;/code&gt;. Sekarang..
+tugas kita adalah memperbaikinya.&lt;/p&gt;
+
+&lt;p&gt;Silahkan eliminasi salah satu dari kode tersebut.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;589&#34;
+    height=&#34;199&#34;
+    alt=&#34;Eliminasi+kode+yang+bentrok.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-VBYWI4fCPd8/WLQCg9MDyJI/AAAAAAAAENQ/DI_SKIVd-yclfzHJNGBX4o330Yur63kuwCPcB/s1600/Eliminasi%2Bkode%2Byang%2Bbentrok.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu lakukan &lt;em&gt;commit&lt;/em&gt; untuk menyimpan perubahan ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add login.html
+git commit -m &amp;quot;perbaiki konflik&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bagus! bentrokan antar ormas programmer sudah beres :smile:.&lt;/p&gt;
+
+&lt;h2 id=&#34;menghapus-cabang&#34;&gt;Menghapus Cabang&lt;/h2&gt;
+
+&lt;p&gt;Cabang yang sudah mati atau tidak ada pengembangan lagi, sebaiknya dihapus.&lt;/p&gt;
+
+&lt;p&gt;Agar repositori kita bersih dan rapi.&lt;/p&gt;
+
+&lt;p&gt;Cara menghapus cabang, gunakan perintah &lt;code&gt;git branch&lt;/code&gt; dengan parameter &lt;code&gt;-d&lt;/code&gt;
+dan diikuti dengan nama cabangnya.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch -d halaman_login
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Sekian tutorial ini. Semoga ada manfaatnya.&lt;/p&gt;
+
+&lt;p&gt;Referensi: &lt;a href=&#34;https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/&#34;&gt;help.github.com&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutorial Git 06 - Membatalkan Revisi</title>
       <link>http://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/</link>
       <pubDate>Tue, 21 Feb 2017 14:55:42 +0800</pubDate>
@@ -1968,120 +2250,6 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 kemudian mendaftarkannya di akun Github.&lt;/p&gt;
 
 &lt;p&gt;referensi: &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;help.github.com&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>4 Cara Penulisan Kode Javascript pada HTML</title>
-      <link>http://petanikode.com/2017/01/4-cara-penulisan-kode-javascript-pada-html/</link>
-      <pubDate>Sat, 28 Jan 2017 14:59:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2017/01/4-cara-penulisan-kode-javascript-pada-html/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-width=&#34;720&#34;
-height=&#34;380&#34;
-alt=&#34;pemrograman javascript&#34;
-src=&#34;https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Javascript sebagai bahasa pemrograman yang berjalan di atas browser harus di tulis di dalam HTML. Ada empat cara penulisan javascript pada HTML.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-tag-script&#34;&gt;1. Tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Cara yang umum yang dipakai adalah menuliskanya dalam tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;. Tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; bisa dibuat di dalam tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;, mauapun di dalam tag &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;. Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-    &amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt;
-    &amp;lt;script&amp;gt;
-    console.log(&amp;quot;Hi, ini kode Javascript&amp;quot;);
-    &amp;lt;/script&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;script&amp;gt;
-document.write(&amp;quot;Javascript itu keren!&amp;quot;);
-&amp;lt;/script&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;2-file-eksternal&#34;&gt;2. File Eksternal&lt;/h2&gt;
-
-&lt;p&gt;Tidak ingin kode Javascript bercampur aduk dengan HTML, kita bisa menuliskannya pada file terpisah. Caranya, buatlah sebuah file yang berekstensi &lt;code&gt;.js&lt;/code&gt;, misalnya isinya sebagai berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;// file-eksternal.js
-alert(&amp;quot;Kode Javascript dari File Eksternal&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian, kita perlu menghubungkan file eksternal tersebut dengan file HTML. Caranya, gunakan tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; dengan atribut &lt;code&gt;src&lt;/code&gt; untuk menentukan lokasi file Javascriptnya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-&amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt;
-
-&amp;lt;script src=&amp;quot;file-eksternal.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-atribut-event&#34;&gt;3. Atribut Event&lt;/h2&gt;
-
-&lt;p&gt;Cara yang ketiga ini sering digunakan untuk memanggil fungsi pada &lt;em&gt;event&lt;/em&gt; terentu. Misalnya ketika suatu elemen diklik, maka jalankan fungsi Javascript.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;button onclick=&amp;quot;alert(&#39;Ok Terima kasih!&#39;)&amp;quot;&amp;gt;Klik donk!&amp;lt;/button&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Selain &lt;em&gt;event onclick&lt;/em&gt; ada juga &lt;em&gt;event-event&lt;/em&gt; yang lain, seperti &lt;em&gt;onsubmit&lt;/em&gt;, &lt;em&gt;onload&lt;/em&gt;, &lt;em&gt;ondoubleclick&lt;/em&gt;, &lt;em&gt;onmouseover&lt;/em&gt;, &lt;em&gt;onmouseout&lt;/em&gt;, dsb.&lt;/p&gt;
-
-&lt;h2 id=&#34;4-url&#34;&gt;4. URL&lt;/h2&gt;
-
-&lt;p&gt;Terakhir, penulisan Javascript pada URL. Cara ini jarang digunakan, namun kita juga perlu mengetahuinya. Penulisan Javascript pada URL menggunakan protokol Javascript. Misal, cobalah untuk menuliskan kode seperti ini pada URL browser.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;javascript:alert(&amp;quot;Nah! ini Javascript&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya, Javascript akan dieksekusi browser.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;914&#34;
-height=&#34;460&#34;
-alt=&#34;pemrograman javascript&#34;
-src=&#34;http://3.bp.blogspot.com/-fqpdp9Si9Lg/WGlO8500McI/AAAAAAAADjw/V5vuPu-4Hx4-kuJ_Ru3Q6OV03mPQgkRPwCK4B/s1600/Penulisan%2BJavascript%2Bpada%2BURL.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Lalu, bagaiaman kita menggunakan cara ini di HTML?&lt;/p&gt;
-
-&lt;p&gt;Cara ini bisa kita gunakan pada tag &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;, kemudian mengisi kode javascript pada atribut &lt;code&gt;href&lt;/code&gt;. Cara ini bisa menggantikan &lt;em&gt;event onclick&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;javascript:alert(&#39;Wih! hebat bukan?&#39;)&amp;quot;&amp;gt;Klik Aku&amp;lt;/a&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2015/10/cara-efisien-memanggil-fungsi-javascript-pada-elemen-link/&#34;&gt;Cara Efisien Memanggil Javascript pada Elemen Link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah empat cara penulisan Javascript pada HTML. Manakah cara yang sering kalian gunakan?&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;http://docstore.mik.ua/orelly/webprog/jscript/ch12_02.htm&#34;&gt;docstore.mik.ua&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

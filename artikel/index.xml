@@ -223,7 +223,7 @@ git commit -m &amp;quot;ubah isi login.html&amp;quot;
 &lt;p&gt;Selanjutnya pindah ke cabang &lt;code&gt;master&lt;/code&gt; dan lakukan perubahan juga di cabang ini.
 Ubah file yang sama seperti di cabang &lt;code&gt;halaman_login&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Lakukan &lt;em&gt;commit&lt;/em&gt; di cabang &lt;code&gt;master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Setelah itu, lakukan &lt;em&gt;commit&lt;/em&gt; di cabang &lt;code&gt;master&lt;/code&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add login.html
 git commit -m &amp;quot;ubah isi login.html di cabang master&amp;quot;

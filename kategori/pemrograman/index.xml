@@ -275,7 +275,7 @@ git commit -m &amp;quot;perbaiki konflik&amp;quot;
 
 &lt;p&gt;Agar repositori kita bersih dan rapi.&lt;/p&gt;
 
-&lt;p&gt;Cara menghapus cabang, gunakan perintah &lt;code&gt;git branch&lt;/code&gt; dengan parameter &lt;code&gt;-d&lt;/code&gt;
+&lt;p&gt;Cara menghapus cabang, gunakan perintah &lt;code&gt;git branch&lt;/code&gt; dengan argumen &lt;code&gt;-d&lt;/code&gt;
 dan diikuti dengan nama cabangnya.&lt;/p&gt;
 
 &lt;p&gt;Contoh:&lt;/p&gt;

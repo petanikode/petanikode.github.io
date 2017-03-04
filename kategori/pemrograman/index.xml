@@ -444,7 +444,7 @@ dan diikuti dengan nama cabangnya.&lt;/p&gt;
 kita sudah belajar cara melihat perbedaan di setiap revisi.
 Sekarang kita akan belajar, cara membatalkan sebuah revisi.&lt;/p&gt;
 
-&lt;p&gt;Terkadang pada perubahan yang kita lakukan terjadi error dan kita ingin
+&lt;p&gt;Terkadang pada perubahan yang kita lakukan terjadi kesalahan dan kita ingin
 mengembalikannya seperti keadaan sebelumnya. Maka kita perlu menyuruh git untuk
 megembalikannya. Ada beberapa perintah yang digunakan diantaranya: &lt;code&gt;git checkout&lt;/code&gt;,
 &lt;code&gt;git reset&lt;/code&gt;, dan &lt;code&gt;git revert&lt;/code&gt;.&lt;/p&gt;
@@ -454,7 +454,7 @@ megembalikannya. Ada beberapa perintah yang digunakan diantaranya: &lt;code&gt;g
 &lt;p&gt;Jika revisi kita belum &lt;em&gt;staged&lt;/em&gt; ataupun &lt;em&gt;committed&lt;/em&gt;, kita bisa mengembalikannya
 menggunakan perintah &lt;code&gt;git checkout nama_file.html&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Misalkan kita akan merubah isi dari file &lt;code&gt;index.html&lt;/code&gt; pada repositori &lt;code&gt;project-01&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Contoh: Misalkan kita akan merubah isi dari file &lt;code&gt;index.html&lt;/code&gt; pada repositori &lt;code&gt;project-01&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Sebelum diubah:&lt;/p&gt;
 
@@ -516,6 +516,10 @@ coba saja periksa file yang sudah dirubah tadi atau cek dengan perintah &lt;code
 On branch master
 nothing to commit, working directory clean
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hati-hati! Terkadang perintah ini sangat berbahaya, karena akan menghapus
+perubahan yang baru saja dilakukan. Bila kita sudah merubah banyak hal, maka
+itu akan sia-sia setelah menjalankan perintah ini.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-ad
     data-ad-client=&#39;ca-pub-6279325630224392&#39;
@@ -662,6 +666,9 @@ nama file. Contoh:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout ac6d798f98bac5fad693ef8159f957c5b0805c23
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;&lt;strong&gt;Catatan:&lt;/strong&gt; Perintah ini akan mengembalikan semua file dalam kondisi
+pada nomer commit yang diberikan, namun bersifat temporer.&lt;/p&gt;
+
 &lt;h2 id=&#34;kembali-ke-3-commit-sebelumnya&#34;&gt;Kembali ke 3 Commit sebelumnya&lt;/h2&gt;
 
 &lt;p&gt;Untuk kembali ke 3 &lt;em&gt;commit&lt;/em&gt; sebelumnya, kita bisa menggunakan perintah berikut.&lt;/p&gt;
@@ -685,7 +692,7 @@ bisa melakukannya dengan perintah:&lt;/p&gt;
 &lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&lt;/h2&gt;
 
 &lt;p&gt;OK, sekian dulu tutorial ke-6 ini. Rasanya agak kepanjangan. Terima kasih
-sudah membaca. Sampai jumpa di tutorial ke-7.&lt;/p&gt;
+sudah membaca. Sampai jumpa di &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-07---percabangan/&#34;&gt;tutorial ke-7&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -720,7 +727,9 @@ tertentu.&lt;/p&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
 &lt;p&gt;Lihatlah hasil di atas, simbol plus (&lt;code&gt;+&lt;/code&gt;) artinya kode yang ditambahkan. Sedangkan
-kalau ada kode yang dihapus simbolnya akan menggunakan minus (&lt;code&gt;-&lt;/code&gt;). Contoh:&lt;/p&gt;
+kalau ada kode yang dihapus simbolnya akan menggunakan minus (&lt;code&gt;-&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Contoh:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Ditambahkan:&lt;/p&gt;
 
@@ -825,7 +834,7 @@ cara melihat perbandingan perubahan antar cabang.&lt;/p&gt;
 &lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
 
 &lt;p&gt;Kita sudah pelajari fungsi dari perintah &lt;code&gt;git diff&lt;/code&gt;. Perintah ini untuk melihat
-perubahan apa saja yang telah dilakukan pada repositori. Selanjutnya, kita
+perbandingan perubahan apa saja yang telah dilakukan pada repositori. Selanjutnya, kita
 akan belajar membatalkan revisi.&lt;/p&gt;
 
 &lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/&#34;&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/a&gt;&lt;/p&gt;
@@ -1381,14 +1390,14 @@ dalam Git.&lt;/p&gt;
 
 &lt;h3 id=&#34;1-modified&#34;&gt;1. Modified&lt;/h3&gt;
 
-&lt;p&gt;&lt;em&gt;Modified&lt;/em&gt; adalah kondisi dimana revisi atau perubahan sudah dilakukan tetapi
-belum ditandai dan belum disimpan di version control. Contohnya pada gambar di
+&lt;p&gt;&lt;em&gt;Modified&lt;/em&gt; adalah kondisi dimana revisi atau perubahan sudah dilakukan, tetapi
+belum ditandai dan belum disimpan di &lt;em&gt;version control&lt;/em&gt;. Contohnya pada gambar di
 atas, ada tiga file HTML yang dalam kondisi &lt;em&gt;modified&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;2-staged&#34;&gt;2. Staged&lt;/h3&gt;
 
-&lt;p&gt;&lt;em&gt;Staged&lt;/em&gt; adalah kondisi dimana revisi sudah ditandai tetapi belum disimpan
-di version control. Untuk mengubah kondisi file dari &lt;em&gt;modified&lt;/em&gt; ke &lt;em&gt;staged&lt;/em&gt;
+&lt;p&gt;&lt;em&gt;Staged&lt;/em&gt; adalah kondisi dimana revisi sudah ditandai, tetapi belum disimpan
+di &lt;em&gt;version control&lt;/em&gt;. Untuk mengubah kondisi file dari &lt;em&gt;modified&lt;/em&gt; ke &lt;em&gt;staged&lt;/em&gt;
 gunakan perintah &lt;code&gt;git add nama_file&lt;/code&gt;. Contoh:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
@@ -1787,8 +1796,10 @@ Contoh:&lt;/p&gt;
 sudah ada, maka Git akan melakukan inisialisasi di dalam direktori tersebut.&lt;/p&gt;
 
 &lt;p&gt;Perintah &lt;code&gt;git init&lt;/code&gt; akan membuat sebuah direktori bernama &lt;code&gt;.git&lt;/code&gt; di dalam
-proyek kita. Direktori ini digunakan Git untuk menyimpan perubahan yang kita
-lakukan. Kalau kita menghapus direktori ini, maka semua rekaman yang dilakukan
+proyek kita. Direktori ini digunakan Git sebagai database untuk menyimpan
+perubahan yang kita lakukan.&lt;/p&gt;
+
+&lt;p&gt;Hati-hati! Kalau kita menghapus direktori ini, maka semua rekaman yang dilakukan
 oleh Git akan hilang.&lt;/p&gt;
 
 &lt;h2 id=&#34;contoh-contoh-lain&#34;&gt;Contoh-contoh lain&lt;/h2&gt;
@@ -1823,12 +1834,14 @@ oleh Git akan hilang.&lt;/p&gt;
 &lt;h2 id=&#34;gitignore&#34;&gt;.gitignore&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;.gitignore&lt;/code&gt; merupakan sebuah file yang berisi daftar nama-nama file dan direktori
-yang akan diabaikan oleh Git. Perubahan apapun yang kita lakukan terhadap file
+yang akan diabaikan oleh Git.&lt;/p&gt;
+
+&lt;p&gt;Perubahan apapun yang kita lakukan terhadap file
 dan direktori yang sudah masuk ke dalam daftar &lt;code&gt;.gitignore&lt;/code&gt; tidak akan dicatat oleh
 Git.&lt;/p&gt;
 
 &lt;p&gt;Cara mengunakan &lt;code&gt;.gitignore&lt;/code&gt;, buat saja sebuah file bernama &lt;code&gt;.gitignore&lt;/code&gt; dalam
-root direktori/repositori.&lt;/p&gt;
+root direktori proyek/repositori.&lt;/p&gt;
 
 &lt;p&gt;File: &lt;code&gt;.gitignore&lt;/code&gt;&lt;/p&gt;
 
@@ -1843,7 +1856,7 @@ test.php
 
 &lt;p&gt;Pembuatan file &lt;code&gt;.gitignore&lt;/code&gt; sebaiknya dilakukan di awal pembuatan repositori.&lt;/p&gt;
 
-&lt;p&gt;Contoh &lt;code&gt;.gitignore&lt;/code&gt; pada proyek-proyek tertentu kita bisa melihatnya di &lt;a href=&#34;https://github.com/github/gitignore&#34;&gt;repositori
+&lt;p&gt;Contoh &lt;code&gt;.gitignore&lt;/code&gt; pada proyek-proyek tertentu, bisa dilihat di &lt;a href=&#34;https://github.com/github/gitignore&#34;&gt;repositori
 ini&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
@@ -1864,7 +1877,7 @@ silahkan lanjutkan ke &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git
       <description>
 
 &lt;p&gt;Kita sudah mengenal Git pada &lt;a href=&#34;http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/&#34;&gt;tulisan sebelumnya&lt;/a&gt;.
-Sekarang Kita akan melakukan instalasi dan persiapan sebelum mulai menggunakan Git.&lt;/p&gt;
+Sekarang Kita akan melakukan instalasi dan persiapan.&lt;/p&gt;
 
 &lt;h2 id=&#34;instalasi-git&#34;&gt;Instalasi Git&lt;/h2&gt;
 
@@ -1941,25 +1954,40 @@ langsung &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat
       <guid>http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/</guid>
       <description>
 
-&lt;p&gt;Git adalah salah satu alat pengontrol versi &lt;em&gt;(Version Control System)&lt;/em&gt; pada
-proyek perangkat lunak yang diciptakan oleh Linus Torvalds. Awalnya Linus
-menciptakan Git untuk mengelola kode sumber &lt;em&gt;(source kode)&lt;/em&gt; kernel Linux.
-Tapi, karena Linus mempublikasikannya dengan lisensi open soure,
+&lt;p&gt;Git adalah salah satu sistem pengontrol versi &lt;em&gt;(Version Control System)&lt;/em&gt; pada
+proyek perangkat lunak yang diciptakan oleh Linus Torvalds.&lt;/p&gt;
+
+&lt;p&gt;Pengontrol versi bertugas mencatat setiap perubahan pada file proyek.&lt;/p&gt;
+
+&lt;p&gt;Awalnya Linus Torvalds menciptakan Git untuk mengelola kode sumber
+&lt;em&gt;(source kode)&lt;/em&gt; kernel Linux.&lt;/p&gt;
+
+&lt;p&gt;Kemudian, Linus Torvalds mempublikasikannya dengan lisensi open soure,
 semua orang jadi bisa pakai Git secara gratis.&lt;/p&gt;
 
 &lt;p&gt;Sungguh baik ya bapak Linus Torvalds :smile:.&lt;/p&gt;
 
-&lt;p&gt;Bayangkan ada 1000 programmer dari seluruh dunia yang ikut berkontribusi membangun kernel Linux.
-Bagaimana cara Linus akan mengelola itu semua? Bagaimana cara menggabungkan kode
-dari 1000 programmer ini? Kalau ada kode yang bentrok gimana? Itulah alasan
-kenapa git dibuat. Selain sebagai pengontrol versi, Git juga bisa dugunakan untuk
-kolaborasi.&lt;/p&gt;
+&lt;h2 id=&#34;kenapa-git-diciptakan&#34;&gt;Kenapa Git diciptakan?&lt;/h2&gt;
+
+&lt;p&gt;Bayangkan ada 1000 programmer dari seluruh dunia yang ikut berkontribusi membangun kernel Linux.&lt;/p&gt;
+
+&lt;p&gt;Bagaimana cara Linus Torvalds akan mengelola itu semua?&lt;/p&gt;
+
+&lt;p&gt;Bagaimana cara menggabungkan kode dari 1000 programmer ini?&lt;/p&gt;
+
+&lt;p&gt;Kalau ada kode yang bentrok gimana?&lt;/p&gt;
+
+&lt;p&gt;Itulah alasan kenapa git dibuat.&lt;/p&gt;
+
+&lt;p&gt;Selain sebagai pengontrol versi, Git juga bisa dugunakan untuk kolaborasi.&lt;/p&gt;
 
 &lt;h2 id=&#34;apa-yang-dilakukan-oleh-git&#34;&gt;Apa yang dilakukan oleh Git?&lt;/h2&gt;
 
-&lt;p&gt;Git sebenarnya akan memantau perubahan yang terjadi pada kode-kode yang kita tulis.
-Lalu menyimpan perubahan tersebut. Kalau misalnya nanti ada kesalahan,
-kita bisa kembalikan lagi.&lt;/p&gt;
+&lt;p&gt;Git sebenarnya akan memantau perubahan yang terjadi pada kode-kode yang kita tulis.&lt;/p&gt;
+
+&lt;p&gt;Lalu menyimpannya ke dalam database.&lt;/p&gt;
+
+&lt;p&gt;Kalau misalnya nanti ada kesalahan, maka kita bisa kembalikan lagi.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;800&#34;
@@ -1969,18 +1997,15 @@ kita bisa kembalikan lagi.&lt;/p&gt;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Misalnya begini, ada seorang mahasiswa yang akan merevisi kode-kodenya. Lalu dosenya
-bilang, &amp;ldquo;kode yang kemarin sudah benar, kenapa banyak perubahan?&amp;rdquo; Karena si mahasiswa
-tida menggunakan Git, akhirnya dia tidak bisa mengembalikannya seperti saat kemarin.
+&lt;p&gt;Misalnya begini&amp;hellip;, ada seorang mahasiswa yang akan merevisi kode-kodenya.&lt;/p&gt;
+
+&lt;p&gt;Lalu dosenya bilang, &amp;ldquo;kode yang kemarin sudah benar, kenapa banyak perubahan?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Karena si mahasiswa tida menggunakan Git, akhirnya dia tidak bisa mengembalikannya seperti saat kemarin.
 Kecuali ada &lt;em&gt;backup&lt;/em&gt; yang sudah disimpan.&lt;/p&gt;
 
 &lt;p&gt;Berbeda kalau misalnya dia menggunakan Git. Dia akan bisa kembalikan kondisi kodenya
-seperti sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Tidak hanya itu, git juga bisa melakukan berbagai hal yang mungkin akan saya bahas
-nanti (insa&amp;rsquo;allah pada kesempatan yang akan datang).&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-upload-file-ke-server-ftp-ala-git/&#34;&gt;Cara Upload file ke Server FTP ala Git&lt;/a&gt;&lt;/p&gt;
+seperti sebelumnya dengan mudah.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-ad
     data-ad-client=&#39;ca-pub-6279325630224392&#39;
@@ -1993,12 +2018,13 @@ nanti (insa&amp;rsquo;allah pada kesempatan yang akan datang).&lt;/p&gt;
 
 &lt;h2 id=&#34;kenapa-git-penting-bagi-programmer&#34;&gt;Kenapa Git penting bagi programmer?&lt;/h2&gt;
 
-&lt;p&gt;Seperti yang sudah saya ceritakan di atas. Bagaimana Linus akan berkolaborasi dengan
-1000 programmer dan bagaimana mahasiswa akan lebih mudah megelola kodenya dengan git.&lt;/p&gt;
+&lt;!-- Seperti yang sudah saya ceritakan di atas. Bagaimana Linus akan berkolaborasi dengan
+1000 programmer dan bagaimana mahasiswa akan lebih mudah megelola kodenya dengan git. --&gt;
 
 &lt;p&gt;Saat ini Git menjadi salah satu alat yang populer digunakan pada pengembangan
-perangkat lunak &lt;em&gt;open souce&lt;/em&gt; maupun &lt;em&gt;closed source&lt;/em&gt;. Google, Microsoft, Facebook
-dan berbagai perusahaan raksasa lainnya menggunakan Git.&lt;/p&gt;
+perangkat lunak &lt;em&gt;open souce&lt;/em&gt; maupun &lt;em&gt;closed source&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Google, Microsoft, Facebook dan berbagai perusahaan raksasa lainnya menggunakan Git.&lt;/p&gt;
 
 &lt;p&gt;Jadi, buat kalian yang punya impian ingin bekerja di perusahaan raksasa seperti
 yang saya sebutkan di atas, kalian harus bisa Git.&lt;/p&gt;
@@ -2008,11 +2034,11 @@ yang saya sebutkan di atas, kalian harus bisa Git.&lt;/p&gt;
     data-tweetid=&#34;829743602175610881&#34;&gt;
 &lt;/amp-twitter&gt;&lt;/p&gt;
 
-&lt;p&gt;Selain itu, berikut ini ada beberapa menfaat yang mungkin kita bisa rasakan setelah
+&lt;p&gt;Selain itu, berikut ini ada beberapa menfaat yang akan rasakan setelah
 menggunakan Git.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Revisi kode disimpan semua, sehingga kita lebih gampang mengelolanya.&lt;/li&gt;
+&lt;li&gt;Memudahkan untuk pengelolaan kode proyek&lt;/li&gt;
 &lt;li&gt;Kode dapat di-backup di Github, Gitlab, Bitbucket, dll.&lt;/li&gt;
 &lt;li&gt;Bisa kolaborasi atau ikut kontribusi di proyek open source.&lt;/li&gt;
 &lt;/ol&gt;

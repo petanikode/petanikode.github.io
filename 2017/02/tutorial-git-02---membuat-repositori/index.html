@@ -258,7 +258,7 @@ git init proyek-01  Perintah tersebut akan membuat direktori bernama proyek-01. 
   },
   "headline": "Tutorial Git 02 - Membuat Repositori",
   "description": "Repositori (repository) dalam bahasa indonesia artinya gudang. Repositori merupakan istilah yang digunakan untuk direktori proyek yang menggunakan Git. Jika kita memiliki sebuah direktori dengan nama proyek-01 dan di dalamnya sudah menggunakan git, maka kita sudah punya repositori bernama proyek-01.\nMembuat Repositori Pembuatan repositori dapat dilakukan dengan perintah git init nama-dir. Contoh:\ngit init proyek-01  Perintah tersebut akan membuat direktori bernama proyek-01. Kalau direktorinya sudah ada, maka Git akan melakukan inisialisasi di dalam direktori tersebut.",
-  "wordCount":  281 ,
+  "wordCount":  284 ,
   "datePublished" : "2017-02-09T11:52:59",
   "dateModified" : "2017-02-09T11:52:59",
   "image" : {
@@ -1235,8 +1235,10 @@ Contoh:</p>
 sudah ada, maka Git akan melakukan inisialisasi di dalam direktori tersebut.</p>
 
 <p>Perintah <code>git init</code> akan membuat sebuah direktori bernama <code>.git</code> di dalam
-proyek kita. Direktori ini digunakan Git untuk menyimpan perubahan yang kita
-lakukan. Kalau kita menghapus direktori ini, maka semua rekaman yang dilakukan
+proyek kita. Direktori ini digunakan Git sebagai database untuk menyimpan
+perubahan yang kita lakukan.</p>
+
+<p>Hati-hati! Kalau kita menghapus direktori ini, maka semua rekaman yang dilakukan
 oleh Git akan hilang.</p>
 
 <h2 id="contoh-contoh-lain">Contoh-contoh lain</h2>
@@ -1271,12 +1273,14 @@ oleh Git akan hilang.</p>
 <h2 id="gitignore">.gitignore</h2>
 
 <p><code>.gitignore</code> merupakan sebuah file yang berisi daftar nama-nama file dan direktori
-yang akan diabaikan oleh Git. Perubahan apapun yang kita lakukan terhadap file
+yang akan diabaikan oleh Git.</p>
+
+<p>Perubahan apapun yang kita lakukan terhadap file
 dan direktori yang sudah masuk ke dalam daftar <code>.gitignore</code> tidak akan dicatat oleh
 Git.</p>
 
 <p>Cara mengunakan <code>.gitignore</code>, buat saja sebuah file bernama <code>.gitignore</code> dalam
-root direktori/repositori.</p>
+root direktori proyek/repositori.</p>
 
 <p>File: <code>.gitignore</code></p>
 
@@ -1291,7 +1295,7 @@ test.php
 
 <p>Pembuatan file <code>.gitignore</code> sebaiknya dilakukan di awal pembuatan repositori.</p>
 
-<p>Contoh <code>.gitignore</code> pada proyek-proyek tertentu kita bisa melihatnya di <a href="https://github.com/github/gitignore">repositori
+<p>Contoh <code>.gitignore</code> pada proyek-proyek tertentu, bisa dilihat di <a href="https://github.com/github/gitignore">repositori
 ini</a>.</p>
 
 <h2 id="penutup">Penutup</h2>

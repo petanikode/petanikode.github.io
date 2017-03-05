@@ -10,6 +10,219 @@
     <atom:link href="http://petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tutorial Git 08 - Perbedaan Git checkout, Git Reset, dan Git Revert</title>
+      <link>http://petanikode.com/2017/03/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/</link>
+      <pubDate>Sun, 05 Mar 2017 21:37:21 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/03/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/</guid>
+      <description>
+
+&lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/&#34;&gt;tutoria ke-6&lt;/a&gt;,
+kita sudah mebahas cara membatalkan revisi menggunakan
+perintah &lt;code&gt;git checkout&lt;/code&gt;, &lt;code&gt;git reset&lt;/code&gt;, dan &lt;code&gt;git revert&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sekilas, tiga perintah tersebut melakukan hal yang sama. Akan tetapi
+ada perbedaanya.&lt;/p&gt;
+
+&lt;p&gt;Apa itu?&lt;/p&gt;
+
+&lt;p&gt;Mari kita bahas&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;git-checkout&#34;&gt;Git Checkout&lt;/h2&gt;
+
+&lt;p&gt;Perintah &lt;code&gt;git checkout&lt;/code&gt; seperti mesin waktu, kita bisa kembalikan kondisi
+file proyek seperti waktu yang dituju.&lt;/p&gt;
+
+&lt;p&gt;Misalnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout 06f735af7724558164c87f6b1ce3ca7778eb1c1b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka semua file akan dikembalikan seperti keadaan pada nomer commit tersebut.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;614&#34;
+    height=&#34;350&#34;
+    alt=&#34;git checkout ke masa lalu&#34;
+    src=&#34;https://2.bp.blogspot.com/-cqKubTJzwY0/WLvNhaOsuaI/AAAAAAAAEO4/lRrl0Gcc44MfwvbS7ng7NPn5flIZ9CERwCPcB/s1600/git-checkout-masa-lalu.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Akan tetapi, ini bersifat temporer (sementara). Pengembalian ini tidak disimpan dalam
+database Git.&lt;/p&gt;
+
+&lt;p&gt;Kita bisa sebut perintah &lt;code&gt;git checkout&lt;/code&gt; sebagai perintah untuk mengecek kondisi
+file di setiap commit.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Tips: Untuk kembali dari masa lalu gunakan perintah: &lt;code&gt;git checkout master&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Selain itu juga, perintah ini digunakan untuk berpindah dan membuat cabang.
+Ini bisa kita gunakan untuk membuat perubahan baru berdasarkan kode di masa lalu.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;p&gt;Misalnya kita ingin membuat cabang baru berdasarkan kondisi kode di masa lalu,
+maka kita bisa menggunakan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout -b nama_cabang &amp;lt;nomer_commit&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka nanti cabang baru akan terbentuk dari commit sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;614&#34;
+    height=&#34;350&#34;
+    alt=&#34;membuat cabang baru dari commit masa lalu&#34;
+    src=&#34;https://4.bp.blogspot.com/-ygY_7uRflA4/WLvKgowOChI/AAAAAAAAEOg/pv6WngsMPYkYjGXuV2FOVHLNJnfsYiLawCPcB/s1600/membuat%2Bcabang%2Bbaru%2Bdari%2Bcommit%2Bmasa%2Blalu.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Cara ini bisa kita ibaratkan seperti menulis cerita baru dengan plot yang berbeda.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;git-reset&#34;&gt;Git Reset&lt;/h2&gt;
+
+&lt;p&gt;Perintah &lt;code&gt;git reset&lt;/code&gt; sering disebut sebagai perintah berbahaya yang dapat
+menghancurkan catatan sejarah perubahan.&lt;/p&gt;
+
+&lt;p&gt;Hati-hati! Perintah ini membuat kita tidak bisa kembali lagi ke masa depan.
+Mau tidak mau, kita harus menulis ulang sejarah.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;614&#34;
+    height=&#34;350&#34;
+    alt=&#34;dampak+git+reset.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-BRpPbv9rlKo/WLvVCr4npTI/AAAAAAAAEPY/5TTifioVF-0LccoQx9gIYc_a8A5fB9LogCPcB/s1600/dampak%2Bgit%2Breset.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Perintah ini memiliki tiga argumen atau opsi utama, yaitu &lt;code&gt;--soft&lt;/code&gt;, &lt;code&gt;--mixed&lt;/code&gt;,
+dan &lt;code&gt;--hard&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--soft&lt;/code&gt; akan mengebalikan dengan kondisi file dalam keadaan &lt;em&gt;staged&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--mixed&lt;/code&gt; akan mengebalikan dengan kondisi file dalam keadaan &lt;em&gt;modified&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--hard&lt;/code&gt; akan mengebalikan dengan kondisi file dalam keadaan &lt;em&gt;commited&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git reset --soft 06f735af7724558164c87f6b1ce3ca7778eb1c1b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka kita akan dikebalikan dengan file dalam keadaan &lt;em&gt;staged&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;756&#34;
+    height=&#34;126&#34;
+    alt=&#34;git+reset+soft.png&#34;
+    src=&#34;https://4.bp.blogspot.com/-5jKtdcZ_sos/WLvXebQAN2I/AAAAAAAAEPw/NXRWEMwzxSkskIFOHwuK64I8RdND_l9MwCPcB/s1600/git%2Breset%2Bsoft.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba periksa catatan perubahan dengan perintah &lt;code&gt;git log&lt;/code&gt;, pasti ada yang hilang
+dan kita tidak akan bisa kembali lagi ke masa depan. Ini seperti melakukan Re:Zero :smile:.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Hati-hati!&lt;/strong&gt; Jangan lakukan git reset pada repositori yang sudah di bagikan
+ke publik, karena dapat merusaknya.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;git-revert&#34;&gt;Git Revert&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Revert&lt;/em&gt; artinya mengembalikan. Perintah ini lebih aman daripada &lt;code&gt;git reset&lt;/code&gt;, karena
+tidak akan menghapus catatan sejarah revisi.&lt;/p&gt;
+
+&lt;p&gt;Revert akan akan mengambil kondisi file yang ada di masa lalu, kemudian
+menggabungkannya dengan commit terakhir.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;614&#34;
+    height=&#34;350&#34;
+    alt=&#34;Git revert&#34;
+    src=&#34;https://1.bp.blogspot.com/-p1Hts6bga0Q/WLvqvSAOYHI/AAAAAAAAEQc/eQzgyZfu5OoEN0jkS1FPX2AGN1-za7M-wCPcB/s1600/git-revert-petanikode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Masih belum paham?&lt;/p&gt;
+
+&lt;p&gt;Mari kita coba lakukan sedikit eskperimen&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Sebelumnya, berikut ini adalah kondisi repositori yang dijadikan bahan percobaan.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;871&#34;
+    height=&#34;445&#34;
+    alt=&#34;kondisi+repositori+project-01.png&#34;
+    src=&#34;https://1.bp.blogspot.com/-Xq9vrpX-DiY/WLvz0ryEXzI/AAAAAAAAEQw/PjaEZEW1Z6IV-qvFLI0iDASf3jE4oo-2wCPcB/s1600/kondisi%2Brepositori%2Bproject-01.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Ada empat commit di sana, kemudian kita ingin melakukan revert ke commit ke-2.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;735&#34;
+    height=&#34;141&#34;
+    alt=&#34;terjadi+konflik+saat+revert.png&#34;
+    src=&#34;https://2.bp.blogspot.com/-JpdZvMkefLo/WLv3zxl30GI/AAAAAAAAERI/XbtMbUuU9Bs7wq82vb-HxveMKPJdNx1RgCPcB/s1600/terjadi%2Bkonflik%2Bsaat%2Brevert.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Terjadi error, karena ada file yang bentrok.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;735&#34;
+    height=&#34;397&#34;
+    alt=&#34;file index.html bentrok karena di-revert&#34;
+    src=&#34;https://4.bp.blogspot.com/-OhP1eD7X0fU/WLv5K1FI2xI/AAAAAAAAERg/Az4Ek5l8GDEPkQVHXh9o2rVHqg4jXy7pQCPcB/s1600/file%2Bindex%2Bbentrok%2Bkarena%2Bdi-revert.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Silahkan atasi konflik ini, setelah itu lakukan commit.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;735&#34;
+    height=&#34;397&#34;
+    alt=&#34;commit+hasil+dari+revert.png&#34;
+    src=&#34;https://1.bp.blogspot.com/-foxxXQs_L-8/WLv4x8N2qUI/AAAAAAAAERY/u_RE3k-wlFUB5SeHBNrxglm7pQlk-XWQgCPcB/s1600/commit%2Bhasil%2Bdari%2Brevert.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah, sekarang kita sudah punya lima catatan revisi/commit di dalam repositori.&lt;/p&gt;
+
+&lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Perintah &lt;code&gt;git checkout&lt;/code&gt; mengembalikan file dalam kondisi sebelumnya, tapi bersifat
+sementara.&lt;/li&gt;
+&lt;li&gt;Perintah &lt;code&gt;git reset&lt;/code&gt;, akan mengembalikan file ke kondisi sebelumnya,
+kemudian menghapus catatan sejarah commit beikutnya.&lt;/li&gt;
+&lt;li&gt;Perintah &lt;code&gt;git revert&lt;/code&gt; mengembalikan file dengan tidak menghapus sejarah commit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kira-kira seperti itulah perbedaan perintah &lt;code&gt;git checkout&lt;/code&gt;, &lt;code&gt;git reset&lt;/code&gt;, dan
+&lt;code&gt;git revert&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/4114122&#34;&gt;http://stackoverflow.com/a/4114122&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.atlassian.com/git/tutorials/undoing-changes&#34;&gt;https://www.atlassian.com/git/tutorials/undoing-changes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Apa itu Polyglot Programmer?</title>
       <link>http://petanikode.com/2017/02/apa-itu-polyglot-programmer/</link>
       <pubDate>Tue, 28 Feb 2017 18:30:02 +0800</pubDate>
@@ -1983,9 +2196,8 @@ semua orang jadi bisa pakai Git secara gratis.&lt;/p&gt;
 
 &lt;h2 id=&#34;apa-yang-dilakukan-oleh-git&#34;&gt;Apa yang dilakukan oleh Git?&lt;/h2&gt;
 
-&lt;p&gt;Git sebenarnya akan memantau perubahan yang terjadi pada kode-kode yang kita tulis.&lt;/p&gt;
-
-&lt;p&gt;Lalu menyimpannya ke dalam database.&lt;/p&gt;
+&lt;p&gt;Git sebenarnya akan memantau perubahan yang terjadi pada file yang ada di dalam
+direktori proyek. Lalu menyimpannya ke dalam database.&lt;/p&gt;
 
 &lt;p&gt;Kalau misalnya nanti ada kesalahan, maka kita bisa kembalikan lagi.&lt;/p&gt;
 
@@ -2001,8 +2213,8 @@ semua orang jadi bisa pakai Git secara gratis.&lt;/p&gt;
 
 &lt;p&gt;Lalu dosenya bilang, &amp;ldquo;kode yang kemarin sudah benar, kenapa banyak perubahan?&amp;rdquo;&lt;/p&gt;
 
-&lt;p&gt;Karena si mahasiswa tida menggunakan Git, akhirnya dia tidak bisa mengembalikannya seperti saat kemarin.
-Kecuali ada &lt;em&gt;backup&lt;/em&gt; yang sudah disimpan.&lt;/p&gt;
+&lt;p&gt;Karena si mahasiswa tida menggunakan Git, akhirnya dia tidak bisa
+mengembalikannya seperti saat kemarin. Kecuali ada &lt;em&gt;backup&lt;/em&gt; yang sudah disimpan.&lt;/p&gt;
 
 &lt;p&gt;Berbeda kalau misalnya dia menggunakan Git. Dia akan bisa kembalikan kondisi kodenya
 seperti sebelumnya dengan mudah.&lt;/p&gt;
@@ -2017,9 +2229,6 @@ seperti sebelumnya dengan mudah.&lt;/p&gt;
 &lt;/amp-ad&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;kenapa-git-penting-bagi-programmer&#34;&gt;Kenapa Git penting bagi programmer?&lt;/h2&gt;
-
-&lt;!-- Seperti yang sudah saya ceritakan di atas. Bagaimana Linus akan berkolaborasi dengan
-1000 programmer dan bagaimana mahasiswa akan lebih mudah megelola kodenya dengan git. --&gt;
 
 &lt;p&gt;Saat ini Git menjadi salah satu alat yang populer digunakan pada pengembangan
 perangkat lunak &lt;em&gt;open souce&lt;/em&gt; maupun &lt;em&gt;closed source&lt;/em&gt;.&lt;/p&gt;
@@ -2176,110 +2385,6 @@ ini sebenarnya untuk gerakan &lt;em&gt;hour of code&lt;/em&gt; yang diselenggara
 
 &lt;p&gt;Itulah 7 video inspirasi untuk belajar pemrograman. Semoga teman-teman
 semakin termotivasi.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Menjalankan PHP Melalui CMD</title>
-      <link>http://petanikode.com/2017/02/cara-menjalankan-php-melalui-cmd/</link>
-      <pubDate>Sat, 04 Feb 2017 08:15:19 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2017/02/cara-menjalankan-php-melalui-cmd/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-width=&#34;720&#34;
-height=&#34;380&#34;
-alt=&#34;CMD PHP petnaikode.com&#34;
-src=&#34;http://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s1600/CMD%2BPHP%2B-%2BPetanikode.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sudah lama tidak otak-atik Windows. Pemrograman di Windows sepertinya terasa sedikit sulit, karena sudah terbiasa dengen Linux. Ketika saya menginginkan apa-apa, tinggal ketik &lt;code&gt;sudo apt install&lt;/code&gt; dan semuanya sudah siap. Namun, kali ini saya sedang meminjam komputer lab. yang menggunakan sistem operasi Windows. Jadi, tidak ada &lt;code&gt;sudo apt install&lt;/code&gt; yang dapat kita suruh-suruh.&lt;/p&gt;
-
-&lt;p&gt;Ketika saya mencoba mengetik perintah &lt;code&gt;php&lt;/code&gt; di &lt;em&gt;Command Prompt&lt;/em&gt; (CMD), perintah tersebut tidak dikenali. Padahal di sana sudah terinstal XAMPP. Menjalankan PHP melalui CMD sebenarnya bisa dilakukan langsung melalui XAMPP Control Panel. Di sana sudah disediakan tombol untuk mengakses &lt;em&gt;shell&lt;/em&gt;. Namun, saya maunya &lt;code&gt;php&lt;/code&gt; dapat dijalankan melalui CMD, bukan dari &lt;em&gt;shell&lt;/em&gt; bawaan XAMPP.&lt;/p&gt;
-
-&lt;p&gt;Adapun langkah-langkah yang harus dilakukan agar perintah &lt;code&gt;php&lt;/code&gt; dapat dikenali pada CMD adalah sebagai berikut.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-cari-lokasi-php-yang-terinstal&#34;&gt;1. Cari Lokasi PHP yang Terinstal&lt;/h2&gt;
-
-&lt;p&gt;Pertama, silahkan cari lokasi PHP terinstal. Kalau menggunakan XAMPP, biasanya lokasinya berada di &lt;code&gt;C:\xampp\php&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;853&#34;
-height=&#34;465&#34;
-alt=&#34;Loksi PHP yang terinstal di windows&#34;
-src=&#34;http://1.bp.blogspot.com/-BwbtpA4Qf4M/WGlYGgzzJMI/AAAAAAAADkA/p7BjNBLUrLEmNxGucbaft6_EMksG5VLzwCK4B/s1600/1.%2BLokasi%2BPHP%2Bdiinstal%2Boleh%2BXAMPP.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-jalankan-system-properties&#34;&gt;2. Jalankan System Properties&lt;/h2&gt;
-
-&lt;p&gt;Tekan tombol Windows+R, kemudian pada jendela Run ketik &lt;code&gt;%windir%\System32\SystemPropertiesAdvanced.exe&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;413&#34;
-height=&#34;212&#34;
-alt=&#34;Jalankan Sistem Properties&#34;
-src=&#34;http://2.bp.blogspot.com/-GgrDET8Sve4/WGlY0botnhI/AAAAAAAADkI/ZExvx82wEaYP3Jko1RP4O9AyAQfA4-n9QCK4B/s1600/2.%2BJalankan%2BSystemPropertiesAdvenced.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-masuk-ke-environtment-variables&#34;&gt;3. Masuk ke &lt;em&gt;Environtment Variables&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Klik tombol &lt;em&gt;Environtment Variables.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;426&#34;
-height=&#34;474&#34;
-alt=&#34;Masuk ke environtment variables&#34;
-src=&#34;http://4.bp.blogspot.com/-eHLY5HjNKeA/WGlZXlU6V7I/AAAAAAAADkQ/UzLvUEsC2Ug4gqTZfa6duacvgF2suM0rQCK4B/s1600/3.%2BKetika%2BEnvironment%2BVariables.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-edit-variabel-path&#34;&gt;4. Edit Variabel Path&lt;/h2&gt;
-
-&lt;p&gt;Pilih dulu variabel &lt;i&gt;path&lt;/i&gt;, kemudian klik tombol &lt;i&gt;Edit&lt;/i&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;394&#34;
-height=&#34;436&#34;
-alt=&#34;Pilih path&#34;
-src=&#34;http://2.bp.blogspot.com/-gx_iydRBbnA/WGlZxn_YrhI/AAAAAAAADkc/hCDMEfxR8KoRao_GwYF2QNvMlsqAwYBngCK4B/s1600/4.%2BPilih%2BPath%2Bkemudian%2Bklik%2BEdit.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;5-masukan-lokasi-php&#34;&gt;5. Masukan Lokasi PHP&lt;/h2&gt;
-
-&lt;p&gt;Tambahkan nilai akhir pada variabel &lt;em&gt;path&lt;/em&gt; dengan lokasi PHP yang kita dapatkan pada langkah pertama tadi. Tambahkan tanda titik koma (&lt;code&gt;;&lt;/code&gt;) di depannya untuk memisahkan. Sehingga menjadi seperti ini &lt;code&gt;;C:\xampp\php&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;394&#34;
-height=&#34;436&#34;
-alt=&#34;Pilih path&#34;
-src=&#34;http://1.bp.blogspot.com/-09vetrJJMrA/WGlaam0jrBI/AAAAAAAADko/H1vZyV144Wkh9tx3xxCgBLMlWASlveP3gCK4B/s1600/5.%2BTambahkan%2Blokasi%2Bphp.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, klik OK.&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;6-percobaan&#34;&gt;6. Percobaan&lt;/h2&gt;
-
-&lt;p&gt;Cobalah untuk mengetik perintah &lt;code&gt;php --version&lt;/code&gt; pada CMD. Kalau hasilnya seperti gambar berikut ini, artinya perintah &lt;code&gt;php&lt;/code&gt; sudah berhasil dikenali pada CMD.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;667&#34;
-height=&#34;342&#34;
-alt=&#34;Percobaan perintah php&#34;
-src=&#34;http://1.bp.blogspot.com/-dsh2u0m42gM/WGla43_2kwI/AAAAAAAADkw/rXmmwo3T__g2j5LdUDg7WBZBXbohl9eegCK4B/s1600/6.%2BPercobaan%2Bperintah%2BPHP%2Bmelalui%2BCMD.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;7-percobaan-eksekusi-file-php&#34;&gt;7. Percobaan Eksekusi File PHP&lt;/h2&gt;
-
-&lt;p&gt;Sekarang Cobalah buat file PHP, kemudian eksekusi melalui CMD.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;667&#34;
-height=&#34;342&#34;
-alt=&#34;Percobaan eksekusi php&#34;
-src=&#34;https://3.bp.blogspot.com/-iliONqyMRiw/WGlb06iwoNI/AAAAAAAADk8/dKuuPCDZl1cBLOajBcIVRlzBMcdLSB3qQCK4B/s1600/7.%2BEksekusi%2BFile%2BPHP%2Bdari%2BCMD.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selaamt! Sekarang PHP sudah bisa dijalankan melalui CMD.&lt;/p&gt;
 </description>
     </item>
     

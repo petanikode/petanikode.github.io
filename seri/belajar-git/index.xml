@@ -1373,9 +1373,8 @@ semua orang jadi bisa pakai Git secara gratis.&lt;/p&gt;
 
 &lt;h2 id=&#34;apa-yang-dilakukan-oleh-git&#34;&gt;Apa yang dilakukan oleh Git?&lt;/h2&gt;
 
-&lt;p&gt;Git sebenarnya akan memantau perubahan yang terjadi pada kode-kode yang kita tulis.&lt;/p&gt;
-
-&lt;p&gt;Lalu menyimpannya ke dalam database.&lt;/p&gt;
+&lt;p&gt;Git sebenarnya akan memantau perubahan yang terjadi pada file yang ada di dalam
+direktori proyek. Lalu menyimpannya ke dalam database.&lt;/p&gt;
 
 &lt;p&gt;Kalau misalnya nanti ada kesalahan, maka kita bisa kembalikan lagi.&lt;/p&gt;
 
@@ -1391,8 +1390,8 @@ semua orang jadi bisa pakai Git secara gratis.&lt;/p&gt;
 
 &lt;p&gt;Lalu dosenya bilang, &amp;ldquo;kode yang kemarin sudah benar, kenapa banyak perubahan?&amp;rdquo;&lt;/p&gt;
 
-&lt;p&gt;Karena si mahasiswa tida menggunakan Git, akhirnya dia tidak bisa mengembalikannya seperti saat kemarin.
-Kecuali ada &lt;em&gt;backup&lt;/em&gt; yang sudah disimpan.&lt;/p&gt;
+&lt;p&gt;Karena si mahasiswa tida menggunakan Git, akhirnya dia tidak bisa
+mengembalikannya seperti saat kemarin. Kecuali ada &lt;em&gt;backup&lt;/em&gt; yang sudah disimpan.&lt;/p&gt;
 
 &lt;p&gt;Berbeda kalau misalnya dia menggunakan Git. Dia akan bisa kembalikan kondisi kodenya
 seperti sebelumnya dengan mudah.&lt;/p&gt;
@@ -1407,9 +1406,6 @@ seperti sebelumnya dengan mudah.&lt;/p&gt;
 &lt;/amp-ad&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;kenapa-git-penting-bagi-programmer&#34;&gt;Kenapa Git penting bagi programmer?&lt;/h2&gt;
-
-&lt;!-- Seperti yang sudah saya ceritakan di atas. Bagaimana Linus akan berkolaborasi dengan
-1000 programmer dan bagaimana mahasiswa akan lebih mudah megelola kodenya dengan git. --&gt;
 
 &lt;p&gt;Saat ini Git menjadi salah satu alat yang populer digunakan pada pengembangan
 perangkat lunak &lt;em&gt;open souce&lt;/em&gt; maupun &lt;em&gt;closed source&lt;/em&gt;.&lt;/p&gt;

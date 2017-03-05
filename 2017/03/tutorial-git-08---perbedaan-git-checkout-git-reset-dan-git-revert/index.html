@@ -1,0 +1,1829 @@
+
+
+<!DOCTYPE html>
+
+
+
+
+<html amp lang="id-id" class="no-js">
+<head>
+    <title>Tutorial Git 08 - Perbedaan Git checkout, Git Reset, dan Git Revert</title>
+    <meta charset="utf-8">
+
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+
+
+
+
+    <link rel="canonical" href="http://petanikode.com/2017/03/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/" />
+    <link rel="amphtml" href="http://petanikode.com/2017/03/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/" />
+
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
+    <meta content='/favicon.png' name='msapplication-TileImage'/>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    
+
+    
+    
+    <meta name="theme-color" content="#008080">
+    
+    <meta name="msapplication-navbutton-color" content="#008080">
+    
+    <meta name="apple-mobile-web-app-status-bar-style" content="#008080">
+
+    <meta content='ID-id' http-equiv='content-language'/>
+<meta content='index,follow' name='robots'/>
+<meta content='Petani Kode' name='copyright'/>
+<meta content='Indonesian' name='language'/>
+<meta content='6F355AD626E325F1305BDE3A0BA81A7A' name='msvalidate.01'/>
+<meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
+<meta name="author" content="Ardianta Pargo"/>
+
+<meta name="keywords" content="Tutorial Git 08 - Perbedaan Git checkout, Git Reset, dan Git Revert, Pemrograman, Bahasa Pemrograman, Belajar Pemrograman, Tutorial Pemrograman, pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="Pada tutoria ke-6, kita sudah mebahas cara membatalkan revisi menggunakan perintah git checkout, git reset, dan git revert.
+Sekilas, tiga perintah tersebut melakukan hal yang sama. Akan tetapi ada perbedaanya.
+Apa itu?
+Mari kita bahas&hellip;
+Git Checkout Perintah git checkout seperti mesin waktu, kita bisa kembalikan kondisi file proyek seperti waktu yang dituju.
+Misalnya:
+git checkout 06f735af7724558164c87f6b1ce3ca7778eb1c1b  Maka semua file akan dikembalikan seperti keadaan pada nomer commit tersebut."/>
+
+<meta content='index,follow' name='googlebot'/>
+<meta content='follow, all' name='Googlebot-Image'/>
+<meta content='follow, all' name='Scooter'/>
+<meta content='follow, all' name='msnbot'/>
+<meta content='follow, all' name='alexabot'/>
+<meta content='follow, all' name='Slurp'/>
+<meta content='follow, all' name='ZyBorg'/>
+<meta content='follow, all' name='Scooter'/>
+<meta content='true' name='MSSmartTagsPreventParsing'/>
+<meta content='ALL' name='SPIDERS'/>
+<meta content='ALL' name='WEBCRAWLERS'/>
+<meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
+
+    
+    <meta property="og:title" content="Tutorial Git 08 - Perbedaan Git checkout, Git Reset, dan Git Revert" />
+    <meta property="og:description" content="Pada tutoria ke-6, kita sudah mebahas cara membatalkan revisi menggunakan perintah git checkout, git reset, dan git revert.
+Sekilas, tiga perintah tersebut melakukan hal yang sama. Akan tetapi ada perbedaanya.
+Apa itu?
+Mari kita bahas&hellip;
+Git Checkout Perintah git checkout seperti mesin waktu, kita bisa kembalikan kondisi file proyek seperti waktu yang dituju.
+Misalnya:
+git checkout 06f735af7724558164c87f6b1ce3ca7778eb1c1b  Maka semua file akan dikembalikan seperti keadaan pada nomer commit tersebut." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://petanikode.com/2017/03/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/" />
+
+    <meta property="og:image" content="https://3.bp.blogspot.com/-ZcUp-f8LtpE/WJhkSmZoDYI/AAAAAAAADzA/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB/s1600/git-petanikode.png" />
+
+    
+    <meta property="og:updated_time" content="2017-03-05 21:37:21 &#43;0800 WITA"/>
+    <meta content='id_ID' property='og:locale'/>
+    <meta content='ms_MY' property='og:locale:alternate'/>
+    <meta content='en_US' property='og:locale:alternate'/>
+
+    <meta content='152759108115365' property='fb:app_id'/>
+    <meta content='petanikode' property='fb:pages'/>
+    <meta content='143461015837500' property='fb:pages'/>
+    <meta content='ardianta.pargo' property='fb:profile_id'/>
+
+    
+
+    
+    
+    
+    
+    	
+    	
+    
+
+    <meta property="article:author" content="https://www.facebook.com/petanikode" />
+    <meta property="article:publisher" content="https://www.facebook.com/petanikode" />
+
+    
+    <meta property="article:published_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
+    
+
+    <meta property="article:modified_time" content="2017-03-05 21:37:21 &#43;0800 WITA" />
+    <meta property="article:section" content="artikel" />
+
+    
+    	<meta property="article:tag" content="Git" />
+    
+
+    
+    <meta property="fb:admins" content="ardianta.pargo" />
+
+    
+    <meta content='summary_large_image' name='twitter:card'/>
+    <meta content='@petanikode' name='twitter:site'/>
+    <meta content='@ardiantapargo' name='twitter:creator'/>
+    
+
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Petani Kode",
+        "alternateName": "Petanikode",
+        "url": "http:\/\/petanikode.com\/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://petanikode.com/topik/{search_term_string}",
+            "query-input": "required name=search_term_string"
+         }
+    }
+    </script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "petanikode.com",
+  "url": "http:\/\/petanikode.com\/"
+  
+  , "logo": "http:\/\/petanikode.com\/petanikode-logo-bg-cerah.png"
+  , "address": "Gang H. Abdul Basit, Desa Sisik, Kecamtatan Pringgarata, Lombok Tengah"
+  
+}
+</script>
+
+
+
+
+
+    
+    
+    
+        
+    
+
+    
+    
+    
+        
+    
+
+    
+    
+    
+        
+    
+
+    
+    
+    
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+            "@id": "http:\/\/petanikode.com\/",
+            "name": "home"
+            }
+      },
+
+      
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+            "@id": "http:\/\/petanikode.com\/kategori\/pemrograman",
+            "name": "Pemrograman"
+            }
+      },
+      
+
+      
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+            "@id": "http:\/\/petanikode.com\/topik\/git",
+            "name": "Git"
+            }
+      },
+      
+
+
+      
+      {
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "http:\/\/petanikode.com\/2017\/",
+          "name": "2017"
+        }
+        }
+    
+      ,{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "http:\/\/petanikode.com\/2017\/03\/",
+          "name": "03"
+        }
+        }
+    
+      ,{
+        "@type": "ListItem",
+        "position":  6 ,
+        "item": {
+          "@id": "http:\/\/petanikode.com\/2017\/03\/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert\/",
+          "name": "tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert"
+        }
+        }
+    
+
+    ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Ardianta Pargo"
+  },
+  "headline": "Tutorial Git 08 - Perbedaan Git checkout, Git Reset, dan Git Revert",
+  "description": "Pada tutoria ke-6, kita sudah mebahas cara membatalkan revisi menggunakan perintah git checkout, git reset, dan git revert.\nSekilas, tiga perintah tersebut melakukan hal yang sama. Akan tetapi ada perbedaanya.\nApa itu?\nMari kita bahas\x26hellip;\nGit Checkout Perintah git checkout seperti mesin waktu, kita bisa kembalikan kondisi file proyek seperti waktu yang dituju.\nMisalnya:\ngit checkout 06f735af7724558164c87f6b1ce3ca7778eb1c1b  Maka semua file akan dikembalikan seperti keadaan pada nomer commit tersebut.",
+  "wordCount":  455 ,
+  "datePublished" : "2017-03-05T21:37:21",
+  "dateModified" : "2017-03-05T21:37:21",
+  "image" : {
+      "@type": "ImageObject",
+      "url": "https:\/\/3.bp.blogspot.com\/-ZcUp-f8LtpE\/WJhkSmZoDYI\/AAAAAAAADzA\/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB\/s1600\/git-petanikode.png",
+      "height" : 380,
+      "width" : 720
+    },
+  "mainEntityOfPage" : "http:\/\/petanikode.com\/2017\/03\/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "petanikode.com",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/petanikode.com\/petanikode-logo-bg-cerah.png",
+        "height" :  60 ,
+        "width" :  600 
+    }
+  },
+
+  "review": {
+    "@type": "Review",
+    "url": "http:\/\/petanikode.com\/2017\/03\/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert\/",
+    "author": {
+      "@type": "Person",
+      "name": "Ardianta Pargo",
+      "sameAs": "http:\/\/twitter.com\/ardiantapargo"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "petanikode.com",
+      "sameAs": "http://petanikode.com"
+    },
+    "datePublished": "2017-03-05T21:37:21",
+    "description": "Pada tutoria ke-6, kita sudah mebahas cara membatalkan revisi menggunakan perintah git checkout, git reset, dan git revert.\nSekilas, tiga perintah tersebut melakukan hal yang sama. Akan tetapi ada perbedaanya.\nApa itu?\nMari kita bahas\x26hellip;\nGit Checkout Perintah git checkout seperti mesin waktu, kita bisa kembalikan kondisi file proyek seperti waktu yang dituju.\nMisalnya:\ngit checkout 06f735af7724558164c87f6b1ce3ca7778eb1c1b  Maka semua file akan dikembalikan seperti keadaan pada nomer commit tersebut.",
+    "inLanguage": "id",
+    "reviewRating": {
+      "@type": "Rating",
+      "worstRating": 1,
+      "bestRating": 5,
+      "ratingValue": 5
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /**
+* stylesheet.html
+* ---------------
+* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
+* in your project file.
+*
+* For further details, please have a look at:
+* https://gohugo-amp.gohugohq.com/install/
+*
+**/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+::selection { background: #A4C639;color:white }
+::-webkit-selection { background: #A4C639; color:white}
+::-moz-selection { background: #A4C639; color:white}
+
+/*! PocketGrid 1.1.0
+* Copyright 2013 Arnaud Leray
+* MIT License
+* http://arnaudleray.github.io/pocketgrid/docs/
+*/
+
+.block-group,.block,.block-group:after,.block:after,.block-group:before,.block:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*/
+/*.block-group{*zoom:1}*/
+.block-group:before,.block-group:after{display:table;content:"";line-height:0}
+.block-group:after{clear:both}
+.block-group{list-style-type:none;margin: -2px -6px;}
+.block-group>.block-group{clear:none;float:left;margin:0 }
+.block{float:left;width:100%;padding: 0;}
+
+.fa {font-size:1.6em;}
+
+html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+html,button,input{color:#222;}
+
+main, aside, article, header, footer {
+	transition:all .5s ease-in-out;
+	-o-transition:all .5s ease-in-out;
+	-moz-transition:all .5s ease-in-out;
+	-webkit-transition:all .5s ease-in-out;
+}
+
+body{
+	margin:0;
+	color: rgba(0,0,0,0.7);
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+    background: #fafafa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #121214;
+	font-family: "Open sans", Sans;
+	font-weight: 200;
+	margin: 0;
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+	font-weight: 600;
+	line-height: 42px;
+}
+
+
+h2 {
+	font-size: 160%;
+	margin: 32px 0 20px 0;
+}
+
+h3 {
+	font-size: 140%;
+	margin: 30px 0 20px 0;
+}
+
+h4 {
+	font-size: 120%;
+	margin: 0 0 20px 0;
+}
+
+h5 {
+	font-size: 100%;
+	margin: 0 0 20px 0;
+}
+
+h6 {
+	font-size: 90%;
+	margin: 0 0 20px 0;
+}
+
+p {
+	color: #454444;
+	line-height: 1.9em;
+	margin: 0 0 20px;
+}
+
+ul{margin:1em 0;padding:0 0 0 15px;}
+li {
+	line-height: 24px;
+}
+
+.text-center{text-align:center;}
+.pull-left{float:left;}
+.pull-right{float:right;}
+
+.button-primary {
+    border-color: #008080;
+}
+.button-primary, .button-primary .label, .button-primary.button--link {
+    color: #008080;
+}
+.button-small {
+    height: 32px;
+    line-height: 30px;
+    padding: 0 14px;
+    font-size: 12px;
+}
+
+.button {
+    line-height: 35px;
+}
+.button {
+    display: inline-block;
+    position: relative;
+    height: 37px;
+    padding: 0 16px;
+    color: rgba(0,0,0,.44);
+    background: rgba(0,0,0,0);
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,.15);
+    vertical-align: bottom;
+    white-space: nowrap;
+    text-rendering: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+}
+
+.content a:link {
+  color:#A4C639;
+  text-decoration:none;
+}
+.content a:visited {
+  color:#008080;
+  text-decoration:none;
+}
+.content a:hover {
+  color: #E91E63;
+  text-decoration: underline;
+}
+.content a img, .content img {
+  border-width:0;
+  max-width: 100%;
+}
+
+.content ul {
+	padding-left: 40px;
+}
+.content ol li, .content ul li {
+	margin-bottom: 8px;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    background-color: #fff;
+    text-align: left;
+    height: 40px;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);
+    z-index: 1;
+}
+
+nav ul {
+	margin-top: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: -moz-inline-stack;
+    display: inline-block;
+    margin: 0;
+    line-height: 0.8em;
+    padding: 0;
+}
+
+nav li:first-child a {
+    padding: 0 0 10px 0;
+}
+nav li a {
+    display: block;
+    line-height: 40px;
+    text-decoration: none;
+    color: #333;
+    padding: 0 10px;
+    margin-right: 5px;
+	font-weight: 600;
+}
+
+/* AMP SIDEBAR */
+.amp-close-image {
+   top: 15px;
+   /*left: 225px;*/
+   cursor: pointer;
+}
+amp-sidebar {
+    width: 250px;
+    padding-right: 10px;
+	z-index: 3147483646 ;
+	background: white;
+	font-weight: 600;
+}
+
+amp-sidebar li {
+    margin-bottom: 20px;
+    list-style: none;
+    font-family: 'open sans',Sans-serif;
+	padding: 4px;
+}
+
+amp-sidebar ul.sidebar-icon li a, amp-sidebar ul li a{
+	margin-right: 16px;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.7);
+}
+amp-sidebar ul.sidebar-icon li a:hover, amp-sidebar ul li a:hover{
+	color: #A4C639;
+}
+/*E:AMP SIDEBAR*/
+
+/*S: AMP ACCORDION */
+section[expanded] .show-more {
+   display: none;
+}
+section:not([expanded]) .show-less {
+   display: none;
+}
+.nested-accordion h4 {
+   font-size: 14px;
+   background-color: white;
+}
+section[expanded] h4, section:not([expanded]) h4 {
+	background: white;
+	border: 0;
+	padding: 0 0 10px 14px;
+	border-bottom: 1px solid whitesmoke;
+	margin-bottom: 20px;
+	font-weight: inherit;
+}
+/*E: AMP ACCORDION */
+
+.header {
+    background: #008080;
+    color: white;
+    padding: 6%;
+    margin-top: 40px;
+}
+
+.header a {
+    color: white;
+}
+
+.header .site-title{
+    width: 260px;
+    margin: 0 auto;
+}
+
+.pengumuman {
+	margin-top: 0;
+	margin-bottom: 64px;
+    color: white;
+    padding: 10px;
+}
+
+.pengumuman-warning {
+	background: #ffeb81;
+}
+
+.pengumuman .pengumuman-text {
+	padding: 10px;
+	color: #8a6d3b;
+}
+
+.pengumuman .pengumuman-text i.fa {
+	margin-right: 8px;
+}
+
+.article {
+    line-height: 1.8em;
+    vertical-align: baseline;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+    color: #333;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 1rem;
+}
+
+.article-wrapper {
+    max-width: 100%;
+    padding: 50px 8%;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid rgba(0,0,0,.09);
+	margin-bottom: 10px;
+}
+
+.article-wrapper-index {
+    padding: 4%;
+}
+
+.content {
+    overflow-wrap: break-word;
+}
+
+.content .post-title {
+    font-family: "Open sans", Sans;
+    font-weight: 700;
+    font-size: 220%;
+    color: #333;
+	line-height: 1.2em;
+	letter-spacing: -0.01em;
+	margin: 0 0 32px 0;
+}
+
+.content .post-header { margin-bottom: 32px }
+.content .post-header, .content a.read-more {
+	font: 12px "Open Sans";
+	color: rgba(0,0,0,0.44);
+	font-weight: bold;
+}
+
+.content .post-header .author {
+	font-size: 14px;
+}
+
+/* indeks title untuk judul dibagian indeks atau list artikel*/
+.content .index-title {
+    font-size: 160%;
+	margin-bottom: 16px;
+}
+
+.article-wrapper-index .post-header  { margin-bottom: 16px }
+
+.content amp-img{
+    margin: 24px 0;
+}
+
+.author-foto amp-img {
+	margin: 3px 10px 0 0;
+	border-radius: 50%;
+}
+.content pre, .content code, .content samp {
+    font-family: Consolas, Monaco, Monospace,'Courier New',Courier,'Andale Mono';
+    font-size:15px;
+}
+
+.content pre {
+    line-height: 1.5em;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    margin: 1em 0;
+    background: #f8f8f8; /* background tema github */
+    padding: 10px;
+}
+
+.content pre code {
+    color: #333;
+}
+
+.content code {
+    color:#008080;
+    line-height:20px;
+    font-size: 100%;
+}
+
+.related-posts > a:nth-of-type(n+3), .related-posts > h3:nth-of-type(n+1) {
+  display: none;
+}
+
+hr {
+    border: 1px solid whitesmoke;
+}
+
+/*--- Blockqute -----*/
+blockquote{
+  display:block;
+  background: whitesmoke;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+
+  /*Font*/
+  /*font-family: Georgia, serif;*/
+  font-size: 16px;
+  line-height: 1.2;
+  color: #666;
+  
+
+  /*Borders - (Optional)*/
+  border-left: 15px solid #008080;
+  border-right: 2px solid #008080;
+
+  /*Box Shadow - (Optional)*/
+  /*-moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;*/
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote em{
+  font-style: italic;
+}
+/*--- End Blockqute -----*/
+
+/*--- Table -----*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin:24px 0;
+	overflow-x: auto;
+	display: block;
+}
+table, td, th {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+th {
+    background-color: #008080;
+    color: white;
+}
+th, td {
+    padding: 4px 16px;
+    text-align: left;
+    font-family: "Open sans", sans;
+    font-size: 80%;
+}
+tr:nth-child(even) {background-color: whitesmoke}
+tr:hover {background-color: #fafafa}
+/*--- END Table -----*/
+
+.post-footer {
+	margin-top: 64px;
+}
+
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+  display: inline;
+}
+
+ul.share-buttons li{
+  display: inline;
+}
+
+ul.share-buttons .sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.pager { margin-top: 64px; }
+
+/* ---- aside dan widget ----------*/
+.widget {
+	padding: 10px;
+	margin-bottom: 40px;
+}
+
+.widget-title {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-weight: 700;
+    border-bottom: 1px solid rgba(0,0,0,.0785);
+	font-size: 18px;
+}
+
+.widget-content ul.recent-post li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+.widget-content ul.recent-post li a:hover {
+    color: #E91E63;
+}
+.widget-content ul.recent-post li{
+    margin-bottom: 32px;
+	list-style: none;
+}
+.widget-content ul.recent-post .recent-thumb, .widget-content .kategori-ikon{
+    margin-right: 18px;
+	margin-top: 10px;
+	width: 32px;
+	height: 32px;
+}
+
+.widget-content ul.recent-post .recent-thumb {
+    margin-bottom: 32px;
+}
+.widget-content ul.recent-post .recent-thumb img{
+    border-radius: 50%;
+}
+
+/* Profil Sosial */
+.profil-sosial {
+text-align: center;
+padding: 16px;
+}
+.profil-sosial a {
+    margin: 0 8px;
+}
+
+.profil-sosial .facebook, .share-buttons a.facebook { color: #3b5998 }
+.profil-sosial .twitter, .share-buttons a.twitter { color: #55acee }
+.profil-sosial .gplus, .share-buttons a.gplus { color: #dd4b39 }
+.profil-sosial .instagram, .share-buttons a.instagram { color: #e95950 }
+.profil-sosial .youtube, .share-buttons a.youtube { color: #bb0000 }
+.profil-sosial .rss, .share-buttons a.rss { color: #ff6600 }
+/* /Profil Sosial */
+
+.link-footer { margin: 16px 0; text-align: center }
+.link-footer a {margin: 10px 10px 0 0;
+    display: inline-block
+ }
+
+ /* Footer ----------------------------------------------- */
+.footer-wrapper {
+    width:100vw;
+    clear:both;
+    color:#666;
+    display:block;
+    font-weight: 600;
+    background-color:white;
+	margin-top:64px;
+	box-shadow: 0 1px 7px rgba(0,0,0,.05);
+	border-top: 1px solid rgba(0,0,0,.09);
+    display: inline-block;
+}
+
+.footer {
+    max-width:980px;
+    margin:0 auto;
+    padding:2% 0;
+    color:#666;
+}
+
+.footer a {
+    color:#0e72b5;
+    color:#8BC34A;
+    text-decoration:none;
+}
+
+.footer a:hover {
+    color: #E91E63;
+}
+
+
+/*------------------------ Responsive ----------------------*/
+
+/* Smartphone version
+   Nothing to do: blocks are stacked by default. */
+
+.hide-on-mobile {
+	display: none;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 960px) {
+
+}
+
+
+/* Desktop large screen */
+@media (min-width: 1024px) {
+	.hide-on-mobile { display: inline-block; }
+    .block{float:left;width:100%;padding: 2px 6px;}
+
+	table {
+		border: 0;
+	}
+
+    nav ul {
+        margin: 0 auto;
+        padding: 0 -2px;
+        display: block;
+    }
+    .header {
+        background: #008080;
+        color: white;
+        padding: 4% 0;
+        margin-bottom: 64px;
+    }
+
+
+	.pengumuman {
+		margin-top: -64px;
+	}
+
+    .site-wrapper, .header .site-wrapper, nav ul{
+        max-width: 1024px;
+        margin:0 auto;
+    }
+
+    .header .site-title{
+        margin:0 16px;
+    }
+
+    .main {
+        margin: 0 auto;
+        max-width: 1024px;
+        /*margin: 64px auto;*/
+    }
+
+    .article {
+        width: 640px    ;
+        /*border:1px dashed grey;*/
+    }
+
+    .article-wrapper {
+        border-radius: 4px
+    }
+
+
+    .aside {
+        width: 360px;
+        float: right;
+    }
+}
+/* Desktop large screen */
+@media (min-width: 1200px) {
+
+    .header .site-wrapper, nav ul{
+        max-width: 1024px;
+        /*margin:0 auto;*/
+    }
+
+    .main {
+        margin: 0 auto;
+        max-width: 1024px;
+        /*margin: 64px auto;*/
+    }
+
+    .article {
+        width: 660px;
+        /*border:1px dashed grey;*/
+    }
+    .article-wrapper {
+        border-radius: 4px
+    }
+    .content {
+        margin: 15px 0 .75em;
+    }
+    .aside {
+        width: 360px;
+        float: right;
+    }
+}
+
+    </style>
+
+
+
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CShadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+
+</head>
+
+<body>
+
+
+
+
+
+<nav class="fixed-top block">
+    <ul>
+        <li>
+            <a href="#!" on="tap:sidebar.toggle">
+            <i class="fa fa-bars"></i>
+            </a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="http://petanikode.com/">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/arsip/">Arsip</a>
+        </li>
+        <li>
+            <a href="/seri/tutorial">Tutorial</a>
+        </li>
+        <li>
+            <a href="/kategori/tips-dan-trik">Tips dan Trik</a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="/topik/buku">Buku</a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="http://projects.id/petani_kode">Proyek</a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="/kontribusi">Kontribusi</a>
+        </li>
+    </ul>
+</nav>
+
+<amp-sidebar id='sidebar'
+     layout="nodisplay"
+     side="left">
+   <amp-img class='amp-close-image pull-right'
+       src="https://ampbyexample.com/img/ic_close_black_18dp_2x.png"
+       width="20"
+       height="20"
+       alt="close sidebar"
+       on="tap:sidebar.close"
+       role="button"
+       tabindex="0"></amp-img>
+
+
+       <ul>
+         <li>
+           <a href="/"><i class="fa fa-home fa-lg"></i> Home</a>
+         </li>
+       </ul>
+
+       <ul class="sidebar-icon">
+         <li>
+           <a href="/arsip"><i class="fa fa-archive fa-lg" title="Arsip Artikel"></i></a>&nbsp;
+           <a href="/indeks"><i class="fa fa-tags fa-lg" title="Indeks Topik, Kategori, dan Serial"></i></a>&nbsp;
+           <a href="mailto:info@ptanikode.com" title="Kontak Petani Kode"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;
+           <a href="/tentang"><i class="fa fa-info-circle fa-lg" title="Tentang Petani Kode"></i></a>&nbsp;
+           <a href="/artikel/index.xml"><i class="fa fa-rss fa-lg" title="Berlangganan RSS Feed"></i></a>&nbsp;
+         </li>
+       </ul>
+
+   <amp-accordion>
+
+    <section expanded>
+      <h4><i class="fa fa-caret-down"></i> Pemrograman</h4>
+      <ul>
+        <li><a href=""><i class="fa fa-code fa-lg"></i> Dasar</a></li>
+        <li><a href=""><i class="fa fa-globe fa-lg"></i> Web</a></li>
+        <li><a href=""><i class="fa fa-tablet fa-lg"></i> Mobile</a></li>
+        <li><a href=""><i class="fa fa-desktop fa-lg"></i> Desktop</a></li>
+        <li><a href=""><i class="fa fa-database fa-lg"></i> Database</a></li>
+        <li><a href=""><i class="fa fa-linux fa-lg"></i> Linux</a></li>
+        <li><a href=""><i class="fa fa-sitemap fa-lg"></i> Jaringan</a></li>
+        <li><a href=""><i class="fa fa-gamepad fa-lg"></i> Game</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h4><i class="fa fa-caret-right"></i> Bahasa</h4>
+      <ul>
+        <li><a href="/topik/pascal">Pascal</a></li>
+        <li><a href="/topik/ruby">Ruby</a></li>
+        <li><a href="/topik/python">Python</a></li>
+        <li><a href="/topik/go">Go</a></li>
+        <li><a href="/topik/java">Java</a></li>
+        <li><a href="/topik/php">PHP</a></li>
+        <li><a href="/topik/c">C</a></li>
+        <li><a href="/topik/c++">C++</a></li>
+        <li><a href="/topik/css">CSS</a></li>
+        <li><a href="/topik/html">HTML</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h4><i class="fa fa-caret-right"></i> Framework</h4>
+      <ul>
+        <li><a href="/topik/codeigniter">CodeIgniter</a></li>
+        <li><a href="/topik/laravel">Laravel</a></li>
+        <li><a href="/topik/slim">Slim</a></li>
+        <li><a href="/topik/django">Django</a></li>
+        <li><a href="/topik/yii">Yii</a></li>
+        <li><a href="/topik/qt">Qt</a></li>
+        <li><a href="/topik/bootstrap">Bootstrap</a></li>
+        <li><a href="/topik/materialize">Materialize CSS</a></li>
+        <li><a href="/topik/ruby-on-rails">Ruby on Rails</a></li>
+        <li><a href="/topik/hugo">Hugo</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h4><i class="fa fa-caret-right"></i> Peralatan</h4>
+      <ul>
+        <li><a href="/topik/text-editor">Text Editor</a></li>
+        <li><a href="/topik/ide">IDE</a></li>
+        <li><a href="/topik/build-tools">Build Tools</a></li>
+        <li><a href="/topik/kompilator">Kompilator</a></li>
+        <li><a href="/topik/manajemen-paket">Manajemen Paket</a></li>
+        <li><a href="/topik/git">Git</a></li>
+      </ul>
+    </section>
+
+  </amp-accordion>
+ </amp-sidebar>
+
+<header class="block-group">
+    <section class="header block">
+        <div class="site-wrapper">
+            <div class="site-title">
+
+                    <a href="http://petanikode.com/">
+                        <amp-img
+                            src="http://2.bp.blogspot.com/-pJdBch_oQqw/V3y2tFqPZ4I/AAAAAAAAC9U/7ujD0ZwCPp8ONjjVN_Hsh7zKqg6z7SKjwCK4B/s1600/petanikode-logo-2016-withtext.png"
+                            layout="responsive"
+                            width="367"
+                            height="79"
+                            >
+                        </amp-img>
+                    </a>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+</header>
+
+
+<main class="main block-group">
+
+    <article class="article block">
+    <div class="article-wrapper">
+        <div class="content">
+            <h1 class="post-title">Tutorial Git 08 - Perbedaan Git checkout, Git Reset, dan Git Revert</h1>
+
+            
+                <div class="post-header">
+    
+        <div class="author-foto pull-left">
+            <amp-img width="32" height="32" layout="fixed" src="https://pbs.twimg.com/profile_images/703308770886090752/BtdPr2NB.jpg"></amp-img>
+        </div>
+        <div>
+        <span class="author"><a href="http://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
+        dalam
+        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
+            <br>
+        5 March 2017 · 21:37
+        </div>
+    
+</div>
+
+                
+
+<p>Pada <a href="/2017/02/tutorial-git-06---membatalkan-revisi/">tutoria ke-6</a>,
+kita sudah mebahas cara membatalkan revisi menggunakan
+perintah <code>git checkout</code>, <code>git reset</code>, dan <code>git revert</code>.</p>
+
+<p>Sekilas, tiga perintah tersebut melakukan hal yang sama. Akan tetapi
+ada perbedaanya.</p>
+
+<p>Apa itu?</p>
+
+<p>Mari kita bahas&hellip;</p>
+
+<h2 id="git-checkout">Git Checkout</h2>
+
+<p>Perintah <code>git checkout</code> seperti mesin waktu, kita bisa kembalikan kondisi
+file proyek seperti waktu yang dituju.</p>
+
+<p>Misalnya:</p>
+
+<pre><code class="language-bash">git checkout 06f735af7724558164c87f6b1ce3ca7778eb1c1b
+</code></pre>
+
+<p>Maka semua file akan dikembalikan seperti keadaan pada nomer commit tersebut.</p>
+
+<p><amp-img
+    width="614"
+    height="350"
+    alt="git checkout ke masa lalu"
+    src="https://2.bp.blogspot.com/-cqKubTJzwY0/WLvNhaOsuaI/AAAAAAAAEO4/lRrl0Gcc44MfwvbS7ng7NPn5flIZ9CERwCPcB/s1600/git-checkout-masa-lalu.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Akan tetapi, ini bersifat temporer (sementara). Pengembalian ini tidak disimpan dalam
+database Git.</p>
+
+<p>Kita bisa sebut perintah <code>git checkout</code> sebagai perintah untuk mengecek kondisi
+file di setiap commit.</p>
+
+<blockquote>
+<p>Tips: Untuk kembali dari masa lalu gunakan perintah: <code>git checkout master</code></p>
+</blockquote>
+
+<p>Selain itu juga, perintah ini digunakan untuk berpindah dan membuat cabang.
+Ini bisa kita gunakan untuk membuat perubahan baru berdasarkan kode di masa lalu.</p>
+
+<p>Contoh:</p>
+
+<p>Misalnya kita ingin membuat cabang baru berdasarkan kondisi kode di masa lalu,
+maka kita bisa menggunakan perintah:</p>
+
+<pre><code class="language-bash">git checkout -b nama_cabang &lt;nomer_commit&gt;
+</code></pre>
+
+<p>Maka nanti cabang baru akan terbentuk dari commit sebelumnya.</p>
+
+<p><amp-img
+    width="614"
+    height="350"
+    alt="membuat cabang baru dari commit masa lalu"
+    src="https://4.bp.blogspot.com/-ygY_7uRflA4/WLvKgowOChI/AAAAAAAAEOg/pv6WngsMPYkYjGXuV2FOVHLNJnfsYiLawCPcB/s1600/membuat%2Bcabang%2Bbaru%2Bdari%2Bcommit%2Bmasa%2Blalu.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Cara ini bisa kita ibaratkan seperti menulis cerita baru dengan plot yang berbeda.</p>
+
+<p><amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='7044550664'
+    width='720'
+    height='380'
+    type='adsense'
+    layout="responsive">
+</amp-ad></p>
+
+<h2 id="git-reset">Git Reset</h2>
+
+<p>Perintah <code>git reset</code> sering disebut sebagai perintah berbahaya yang dapat
+menghancurkan catatan sejarah perubahan.</p>
+
+<p>Hati-hati! Perintah ini membuat kita tidak bisa kembali lagi ke masa depan.
+Mau tidak mau, kita harus menulis ulang sejarah.</p>
+
+<p><amp-img
+    width="614"
+    height="350"
+    alt="dampak+git+reset.png"
+    src="https://3.bp.blogspot.com/-BRpPbv9rlKo/WLvVCr4npTI/AAAAAAAAEPY/5TTifioVF-0LccoQx9gIYc_a8A5fB9LogCPcB/s1600/dampak%2Bgit%2Breset.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Perintah ini memiliki tiga argumen atau opsi utama, yaitu <code>--soft</code>, <code>--mixed</code>,
+dan <code>--hard</code>.</p>
+
+<ul>
+<li><code>--soft</code> akan mengebalikan dengan kondisi file dalam keadaan <em>staged</em></li>
+<li><code>--mixed</code> akan mengebalikan dengan kondisi file dalam keadaan <em>modified</em></li>
+<li><code>--hard</code> akan mengebalikan dengan kondisi file dalam keadaan <em>commited</em></li>
+</ul>
+
+<p>Contoh penggunaan:</p>
+
+<pre><code class="language-bash">git reset --soft 06f735af7724558164c87f6b1ce3ca7778eb1c1b
+</code></pre>
+
+<p>Maka kita akan dikebalikan dengan file dalam keadaan <em>staged</em>.</p>
+
+<p><amp-img
+    width="756"
+    height="126"
+    alt="git+reset+soft.png"
+    src="https://4.bp.blogspot.com/-5jKtdcZ_sos/WLvXebQAN2I/AAAAAAAAEPw/NXRWEMwzxSkskIFOHwuK64I8RdND_l9MwCPcB/s1600/git%2Breset%2Bsoft.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Coba periksa catatan perubahan dengan perintah <code>git log</code>, pasti ada yang hilang
+dan kita tidak akan bisa kembali lagi ke masa depan. Ini seperti melakukan Re:Zero 😄.</p>
+
+<blockquote>
+<p><strong>Hati-hati!</strong> Jangan lakukan git reset pada repositori yang sudah di bagikan
+ke publik, karena dapat merusaknya.</p>
+</blockquote>
+
+<h2 id="git-revert">Git Revert</h2>
+
+<p><em>Revert</em> artinya mengembalikan. Perintah ini lebih aman daripada <code>git reset</code>, karena
+tidak akan menghapus catatan sejarah revisi.</p>
+
+<p>Revert akan akan mengambil kondisi file yang ada di masa lalu, kemudian
+menggabungkannya dengan commit terakhir.</p>
+
+<p><amp-img
+    width="614"
+    height="350"
+    alt="Git revert"
+    src="https://1.bp.blogspot.com/-p1Hts6bga0Q/WLvqvSAOYHI/AAAAAAAAEQc/eQzgyZfu5OoEN0jkS1FPX2AGN1-za7M-wCPcB/s1600/git-revert-petanikode.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Masih belum paham?</p>
+
+<p>Mari kita coba lakukan sedikit eskperimen&hellip;</p>
+
+<p>Sebelumnya, berikut ini adalah kondisi repositori yang dijadikan bahan percobaan.</p>
+
+<p><amp-img
+    width="871"
+    height="445"
+    alt="kondisi+repositori+project-01.png"
+    src="https://1.bp.blogspot.com/-Xq9vrpX-DiY/WLvz0ryEXzI/AAAAAAAAEQw/PjaEZEW1Z6IV-qvFLI0iDASf3jE4oo-2wCPcB/s1600/kondisi%2Brepositori%2Bproject-01.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Ada empat commit di sana, kemudian kita ingin melakukan revert ke commit ke-2.</p>
+
+<p><amp-img
+    width="735"
+    height="141"
+    alt="terjadi+konflik+saat+revert.png"
+    src="https://2.bp.blogspot.com/-JpdZvMkefLo/WLv3zxl30GI/AAAAAAAAERI/XbtMbUuU9Bs7wq82vb-HxveMKPJdNx1RgCPcB/s1600/terjadi%2Bkonflik%2Bsaat%2Brevert.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Terjadi error, karena ada file yang bentrok.</p>
+
+<p><amp-img
+    width="735"
+    height="397"
+    alt="file index.html bentrok karena di-revert"
+    src="https://4.bp.blogspot.com/-OhP1eD7X0fU/WLv5K1FI2xI/AAAAAAAAERg/Az4Ek5l8GDEPkQVHXh9o2rVHqg4jXy7pQCPcB/s1600/file%2Bindex%2Bbentrok%2Bkarena%2Bdi-revert.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Silahkan atasi konflik ini, setelah itu lakukan commit.</p>
+
+<p><amp-img
+    width="735"
+    height="397"
+    alt="commit+hasil+dari+revert.png"
+    src="https://1.bp.blogspot.com/-foxxXQs_L-8/WLv4x8N2qUI/AAAAAAAAERY/u_RE3k-wlFUB5SeHBNrxglm7pQlk-XWQgCPcB/s1600/commit%2Bhasil%2Bdari%2Brevert.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Nah, sekarang kita sudah punya lima catatan revisi/commit di dalam repositori.</p>
+
+<h2 id="kesimpulan">Kesimpulan</h2>
+
+<ul>
+<li>Perintah <code>git checkout</code> mengembalikan file dalam kondisi sebelumnya, tapi bersifat
+sementara.</li>
+<li>Perintah <code>git reset</code>, akan mengembalikan file ke kondisi sebelumnya,
+kemudian menghapus catatan sejarah commit beikutnya.</li>
+<li>Perintah <code>git revert</code> mengembalikan file dengan tidak menghapus sejarah commit.</li>
+</ul>
+
+<p>Kira-kira seperti itulah perbedaan perintah <code>git checkout</code>, <code>git reset</code>, dan
+<code>git revert</code>.</p>
+
+<p>Referensi:</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/a/4114122">http://stackoverflow.com/a/4114122</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/undoing-changes">https://www.atlassian.com/git/tutorials/undoing-changes</a></li>
+</ul>
+
+                <div class="post-footer">
+                <div>Bagikan:
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2f2017%2f03%2ftutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert%2f&t=Tutorial%20Git%2008%20-%20Perbedaan%20Git%20checkout%2c%20Git%20Reset%2c%20dan%20Git%20Revert" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2f2017%2f03%2ftutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert%2f&text=Tutorial%20Git%2008%20-%20Perbedaan%20Git%20checkout%2c%20Git%20Reset%2c%20dan%20Git%20Revert%20http%3a%2f%2fpetanikode.com%2f2017%2f03%2ftutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2f2017%2f03%2ftutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2f2017%2f03%2ftutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Tutorial%20Git%2008%20-%20Perbedaan%20Git%20checkout%2c%20Git%20Reset%2c%20dan%20Git%20Revert&body=Tutorial%20Git%2008%20-%20Perbedaan%20Git%20checkout%2c%20Git%20Reset%2c%20dan%20Git%20Revert:%20http%3a%2f%2fpetanikode.com%2f2017%2f03%2ftutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+</ul>
+</div>
+
+                <p>Topik:
+                  
+                    #<a href="/topik/git">Git</a>
+                  
+
+                </p>
+                
+<hr>
+<p><b>Artikel Terkait:</b></p>
+
+
+
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+    <li><a href="http://petanikode.com/2017/02/tutorial-git-07---percabangan/">Tutorial Git 07 - Percabangan</a> · <i>baca 4 menit</i></li>
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+    <li><a href="http://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/">Tutorial Git 06 - Membatalkan Revisi</a> · <i>baca 4 menit</i></li>
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+    <li><a href="http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/">Tutorial Git 05 - Melihat Perbandingan Revisi</a> · <i>baca 2 menit</i></li>
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+    <li><a href="http://petanikode.com/2017/02/bahaya-password-dan-token-api-bisa-dicuri-dengan-sangat-mudah-di-github/">Bahaya! Password dan Token API Bisa Dicuri dengan Sangat Mudah di Github</a> · <i>baca 3 menit</i></li>
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+<hr>
+
+                <div align="center">
+                <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                </div>
+                <amp-iframe width="600" height="400"
+    layout="responsive"
+    sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups"
+    resizable
+    frameborder="0"
+    src="https://cdn.rawgit.com/petanikode/disqusAMP/f92df3a8/disqus-amp.html?shortname=petanikode&url=http://petanikode.com/2017/03/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/">
+    <div overflow tabindex=0 role=button aria-label="Disqus Comments"></div>
+</amp-iframe>
+
+                </div>
+            
+
+        </div>
+    </div>
+    </article>
+
+    <aside class="aside block">
+
+    <div class="widget" align="center">
+    
+    <div class="widget-content">
+        <amp-ad width='300' height='250'
+          type="adsense"
+          data-ad-client="ca-pub-6279325630224392"
+          data-ad-slot="3775834661">
+        </amp-ad>
+    </div>
+</div>
+
+    <div class="widget">
+    <h4 class="widget-title"><i class="fa fa-bolt"></i> Terbaru</h4>
+    <div class="widget-content">
+        <ul class="recent-post">
+            
+               
+               <li>
+                   <div class="pull-left recent-thumb">
+                       <a href="/2017/03/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/">
+                           
+                                <amp-img src="https://3.bp.blogspot.com/-ZcUp-f8LtpE/WJhkSmZoDYI/AAAAAAAADzA/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB/s160-c/git-petanikode.png" width="32" height="32" layout="fixed"></amp-img>
+                           
+                        </a>
+                   </div>
+                   <div class="recent-title">
+                   <a href="/2017/03/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/">Tutorial Git 08 - Perbedaan Git checkout, Git Reset, dan Git Revert</a><br>
+                    05 Mar 2017 · baca 3 menit
+                    </div>
+
+                </li>
+               
+            
+               
+               <li>
+                   <div class="pull-left recent-thumb">
+                       <a href="/2017/02/apa-itu-polyglot-programmer/">
+                           
+                                <amp-img src="https://2.bp.blogspot.com/-kn0hd8vyU5M/WLV6rRdNUfI/AAAAAAAAEN4/ayaJUF850tg9eXverAMfUU3yR5KXHMx9gCLcB/s160-c/Polyglot%2Bprogrammer%2B-%2Bpetanikode.jpg" width="32" height="32" layout="fixed"></amp-img>
+                           
+                        </a>
+                   </div>
+                   <div class="recent-title">
+                   <a href="/2017/02/apa-itu-polyglot-programmer/">Apa itu Polyglot Programmer?</a><br>
+                    28 Feb 2017 · baca 2 menit
+                    </div>
+
+                </li>
+               
+            
+               
+               <li>
+                   <div class="pull-left recent-thumb">
+                       <a href="/2017/02/tutorial-git-07---percabangan/">
+                           
+                                <amp-img src="https://3.bp.blogspot.com/-ZcUp-f8LtpE/WJhkSmZoDYI/AAAAAAAADzA/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB/s160-c/git-petanikode.png" width="32" height="32" layout="fixed"></amp-img>
+                           
+                        </a>
+                   </div>
+                   <div class="recent-title">
+                   <a href="/2017/02/tutorial-git-07---percabangan/">Tutorial Git 07 - Percabangan</a><br>
+                    27 Feb 2017 · baca 4 menit
+                    </div>
+
+                </li>
+               
+            
+               
+               <li>
+                   <div class="pull-left recent-thumb">
+                       <a href="/2017/02/tutorial-dasar-sass-untuk-pemula/">
+                           
+                                <amp-img src="https://4.bp.blogspot.com/-ZC_KDOv6AOs/WK_-8dGmFhI/AAAAAAAAEJo/MG8v86r9g_IcAhNjxdaUG-Jh9umlCIKCwCPcB/s160-c/sass-petanikode.png" width="32" height="32" layout="fixed"></amp-img>
+                           
+                        </a>
+                   </div>
+                   <div class="recent-title">
+                   <a href="/2017/02/tutorial-dasar-sass-untuk-pemula/">Tutorial Dasar SASS untuk Pemula</a><br>
+                    24 Feb 2017 · baca 3 menit
+                    </div>
+
+                </li>
+               
+            
+               
+               <li>
+                   <div class="pull-left recent-thumb">
+                       <a href="/2017/02/tutorial-git-06---membatalkan-revisi/">
+                           
+                                <amp-img src="https://3.bp.blogspot.com/-ZcUp-f8LtpE/WJhkSmZoDYI/AAAAAAAADzA/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB/s160-c/git-petanikode.png" width="32" height="32" layout="fixed"></amp-img>
+                           
+                        </a>
+                   </div>
+                   <div class="recent-title">
+                   <a href="/2017/02/tutorial-git-06---membatalkan-revisi/">Tutorial Git 06 - Membatalkan Revisi</a><br>
+                    21 Feb 2017 · baca 4 menit
+                    </div>
+
+                </li>
+               
+            
+        </ul>
+    </div>
+</div>
+
+    <div class="widget">
+    <h4 class="widget-title">Kategori</h4>
+    <div class="widget-content">
+
+        <ul class="recent-post">
+               <li>
+                   <div class="pull-left kategori-ikon">
+                       <a href="/kategori/pemrograman"><i class="fa fa-code fa-lg"></i></a>
+                    </div>
+                   <div>
+                   <a href="/kategori/pemrograman">Pemrograman</a><br>
+                    Tutorial dan dasar pemrograman
+                    </div>
+                </li>
+               <li>
+                   <div class="pull-left kategori-ikon">
+                       <a href="/kategori/web"><i class="fa fa-globe fa-lg"></i></a>
+                    </div>
+                   <div>
+                   <a href="/kategori/web">Pemrograman Web</a><br>
+                    Segala hal tentang web
+                    </div>
+                </li>
+               <li>
+                   <div class="pull-left kategori-ikon">
+                       <a href="/kategori/mobile"><i class="fa fa-tablet fa-lg"></i></a>
+                    </div>
+                   <div>
+                   <a href="/kategori/mobile">Pemrograman Mobile</a><br>
+                    Android, iPhone, dan lainnya
+                    </div>
+                </li>
+               <li>
+                   <div class="pull-left kategori-ikon">
+                       <a href="/kategori/desktop"><i class="fa fa-desktop fa-lg"></i></a>
+                    </div>
+                   <div>
+                   <a href="/kategori/desktop">Pemrograman Dekstop</a><br>
+                    Aplikasi GUI untuk dekstop
+                    </div>
+                </li>
+               <li>
+                   <div class="pull-left kategori-ikon">
+                       <a href="/kategori/database"><i class="fa fa-database fa-lg"></i></a>
+                    </div>
+                   <div>
+                   <a href="/kategori/database">Pemrograman Database</a><br>
+                    SQL, NoSQL, MySQL, dan lainnya
+                    </div>
+                </li>
+               <li>
+                   <div class="pull-left kategori-ikon">
+                       <a href="/kategori/linux"><i class="fa fa-linux fa-lg"></i></a>
+                    </div>
+                   <div>
+                   <a href="/kategori/linux">Pemrograman Linux</a><br>
+                    Hack Linux
+                    </div>
+                </li>
+               <li>
+                   <div class="pull-left kategori-ikon">
+                       <a href="/kategori/jaringan"><i class="fa fa-sitemap fa-lg"></i></a>
+                    </div>
+                   <div>
+                   <a href="/kategori/jaringan">Pemrograman Jaringan</a><br>
+                    Buat program untuk jaringan
+                    </div>
+                </li>
+               <li>
+                   <div class="pull-left kategori-ikon">
+                       <a href="/kategori/game"><i class="fa fa-gamepad fa-lg"></i></a>
+                    </div>
+                   <div>
+                   <a href="/kategori/game">Pemrograman Game</a><br>
+                    Bikin game sendiri
+                    </div>
+                </li>
+        </ul>
+
+    </div>
+</div>
+
+    <div class="widget">
+    <h4 class="widget-title"><i class="fa fa-line-chart"></i> Pilihan Editor</h4>
+    <div class="widget-content">
+
+        <ul class="recent-post">
+            <li>
+               <a href="/2017/02/bahaya-password-dan-token-api-bisa-dicuri-dengan-sangat-mudah-di-github/">
+                   Bahaya! Password dan Token API Bisa Dicuri dengan Sangat Mudah di Github
+               </a>
+            </li>
+            <li>
+               <a href="/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/">
+                   Apa itu Git dan Kenapa Penting bagi Programmer?
+               </a>
+            </li>
+            <li>
+               <a href="/2017/02/7-video-yang-akan-menginspirasimu-untuk-belajar-pemrograman/">
+                   7 Video yang Akan Menginspirasimu untuk Belajar Pemrograman
+               </a>
+            </li>
+            <li>
+               <a href="/2017/01/10-negara-dengan-programmer-terbaik-dan-indonesia-ranking-berapa/">
+                   10 Negara dengan Programmer Terbaik dan Indonesia Ranking Berapa?
+               </a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+    <div class="widget">
+    <h4 class="widget-title">Feedback</h4>
+    <div class="widget-content">
+
+        <amp-iframe src="https://cdn.rawgit.com/petanikode/cdn-petanikode/0f4d0754/amp-messenger.html?page=petanikode" frameborder="0" scrolling="no" width="300" height="330" layout="responsive" sandbox="allow-forms allow-scripts allow-same-origin allow-popups">
+
+    </div>
+</div>
+
+
+</aside>
+
+
+</main>
+
+<footer class='footer-wrapper block-group'>
+    <section class="footer">
+    <div class="link-footer">
+        <a href="http://petanikode.com/">Home</a>
+        <a href="/arsip">Arsip</a>
+        <a href="/tentang">Tentang</a>
+        <a href="/kontribusi">Kontribusi</a>
+        <a href="/aturan">Aturan</a>
+        <a href="/kebijakan-privasi">Kebijakan Privasi</a>
+        <a href="/artikel/index.xml">RSS</a>
+        <amp-iframe src="https://cdn.rawgit.com/petanikode/cdn-petanikode/184d972d/amp-hitstats.html" frameborder="0" scrolling="no" width="1" height="1" sandbox="allow-forms allow-scripts allow-same-origin allow-popups">
+    </div>
+
+    <div class='profil-sosial'>
+        <a href="https://facebook.com/petanikode" class="facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+        <a href="https://twitter.com/petanikode" class="twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
+        <a href="https://plus.google.com/b/104290087375687044123/104290087375687044123" class="gplus"><i class="fa fa-google-plus-square fa-2x"></i></a>
+        <a href="https://instagram.com/petanikode" class="instagram"><i class="fa fa-instagram fa-2x"></i></a>
+        <a href="https://www.youtube.com/channel/UCVEEB0XiaogU6UodKXRaNyg" class="youtube"><i class="fa fa-youtube-square fa-2x"></i></a>
+        <a href="/artikel/index.xml" class="rss"><i class="fa fa-rss-square fa-2x"></i></a>
+    </div>
+    </div>
+
+    <div class='text-center'>
+    &copy; 2017 <a href="http://petanikode.com/">Petani Kode</a>. Made in Lombok using <a href='https://gohugo.io' target='_blank'>Hugo 0.18.1</a>.
+    </div>
+    </section>
+</footer>
+
+
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-80537197-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+
+</body>
+</html>
+

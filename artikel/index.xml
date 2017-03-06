@@ -7,8 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 05 Mar 2017 21:37:21 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Mar 2017 20:05:01 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Download Ebook Gratis Panduan Dasar Pemrograman Tizen</title>
+      <link>http://petanikode.com/2017/03/download-ebook-gratis-panduan-dasar-pemrograman-tizen/</link>
+      <pubDate>Mon, 06 Mar 2017 20:05:01 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/03/download-ebook-gratis-panduan-dasar-pemrograman-tizen/</guid>
+      <description>&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;buku panduan dasar pemrograman tizen&#34;
+    src=&#34;https://1.bp.blogspot.com/-uWdT3vq1ROE/WL1Xe_X8xnI/AAAAAAAAESU/lZj7j37Lkfw9QgMcQDqNfaOejx9VfB0egCLcB/s1600/buku-gratis-panduan-dasar-pemrograman-tizen.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Buku ini ditulis oleh tiga orang penulis dan disebarkan secara terbuka di Gitbook.
+Terbit pada tanggal 13 Maret 2016 dengan versi 1.0.&lt;/p&gt;
+
+&lt;p&gt;Buku ini berisi panduan dasar pemrograman Tizen menggunakan Windows, Linux,
+dan Mac OS.&lt;/p&gt;
+
+&lt;p&gt;Pada BAB awal, kita akan diperkenalkan dengan Tizen. Kemudia membuat aplikasi
+&lt;em&gt;Hello World&lt;/em&gt; menggunakan Windows, Linux, dan Mac OS.&lt;/p&gt;
+
+&lt;p&gt;Buku ini ditulis dalam bentuk panduan yang mudah dipahami dengan &lt;em&gt;screenshot&lt;/em&gt;
+yang lengkap dan tersetruktur.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Download&lt;/strong&gt;: &lt;a href=&#34;https://www.gitbook.com/download/pdf/book/srin/dasar-tizen&#34;&gt;PDF&lt;/a&gt; |
+&lt;a href=&#34;https://www.gitbook.com/download/epub/book/srin/dasar-tizen&#34;&gt;ePub&lt;/a&gt; |
+&lt;a href=&#34;https://www.gitbook.com/download/mobi/book/srin/dasar-tizen&#34;&gt;Mobi&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Tutorial Git 08 - Perbedaan Git checkout, Git Reset, dan Git Revert</title>
@@ -2429,103 +2461,6 @@ layout=&#34;responsive&#34;&gt;
 &lt;p&gt;OK, meskipun Git sudah terinstal. Akan tetapi masih belum bisa dipakai. Karena
 kita belum melakukan konfigurasi &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt;. Cara konfigurasinya
 silahkan &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;baca di sni&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Git 02 - Membuat Repositori</title>
-      <link>http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/</link>
-      <pubDate>Thu, 09 Feb 2017 11:52:59 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/</guid>
-      <description>
-
-&lt;p&gt;Repositori &lt;em&gt;(repository)&lt;/em&gt; dalam bahasa indonesia artinya gudang. Repositori
-merupakan istilah yang digunakan untuk direktori proyek yang menggunakan Git.
-Jika kita memiliki sebuah direktori dengan nama &lt;code&gt;proyek-01&lt;/code&gt; dan di dalamnya
-sudah menggunakan git, maka kita sudah punya repositori bernama &lt;code&gt;proyek-01&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-repositori&#34;&gt;Membuat Repositori&lt;/h2&gt;
-
-&lt;p&gt;Pembuatan repositori dapat dilakukan dengan perintah &lt;code&gt;git init nama-dir&lt;/code&gt;.
-Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init proyek-01
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perintah tersebut akan membuat direktori bernama &lt;code&gt;proyek-01&lt;/code&gt;. Kalau direktorinya
-sudah ada, maka Git akan melakukan inisialisasi di dalam direktori tersebut.&lt;/p&gt;
-
-&lt;p&gt;Perintah &lt;code&gt;git init&lt;/code&gt; akan membuat sebuah direktori bernama &lt;code&gt;.git&lt;/code&gt; di dalam
-proyek kita. Direktori ini digunakan Git sebagai database untuk menyimpan
-perubahan yang kita lakukan.&lt;/p&gt;
-
-&lt;p&gt;Hati-hati! Kalau kita menghapus direktori ini, maka semua rekaman yang dilakukan
-oleh Git akan hilang.&lt;/p&gt;
-
-&lt;h2 id=&#34;contoh-contoh-lain&#34;&gt;Contoh-contoh lain&lt;/h2&gt;
-
-&lt;p&gt;Perintah berikut ini akan membuat repositori pada direktori saat ini &lt;em&gt;(working directory)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;655&#34;
-    height=&#34;157&#34;
-    alt=&#34;Membuat+repositori+git.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-IAgZktRDWBQ/WKF1raoDB4I/AAAAAAAAD3I/Uy29jWo73WARH2mV9v0rI-57tWnIlLRIACPcB/s1600/Membuat%2Brepositori%2Bgit.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Perintah berikut ini akan membuat repositori pada direktori &lt;code&gt;/var/www/html/proyekweb/&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init /var/www/html/proyekweb
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;gitignore&#34;&gt;.gitignore&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;.gitignore&lt;/code&gt; merupakan sebuah file yang berisi daftar nama-nama file dan direktori
-yang akan diabaikan oleh Git.&lt;/p&gt;
-
-&lt;p&gt;Perubahan apapun yang kita lakukan terhadap file
-dan direktori yang sudah masuk ke dalam daftar &lt;code&gt;.gitignore&lt;/code&gt; tidak akan dicatat oleh
-Git.&lt;/p&gt;
-
-&lt;p&gt;Cara mengunakan &lt;code&gt;.gitignore&lt;/code&gt;, buat saja sebuah file bernama &lt;code&gt;.gitignore&lt;/code&gt; dalam
-root direktori proyek/repositori.&lt;/p&gt;
-
-&lt;p&gt;File: &lt;code&gt;.gitignore&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/vendor/
-/upload/
-/cache
-test.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pada contoh file &lt;code&gt;.gitignore&lt;/code&gt; di atas, saya memasukan direktori &lt;code&gt;vendor&lt;/code&gt;, &lt;code&gt;upload&lt;/code&gt;,
-&lt;code&gt;cache&lt;/code&gt; dan file &lt;code&gt;test.php&lt;/code&gt;. File dan direktori tersebut akan diabaikan oleh Git.&lt;/p&gt;
-
-&lt;p&gt;Pembuatan file &lt;code&gt;.gitignore&lt;/code&gt; sebaiknya dilakukan di awal pembuatan repositori.&lt;/p&gt;
-
-&lt;p&gt;Contoh &lt;code&gt;.gitignore&lt;/code&gt; pada proyek-proyek tertentu, bisa dilihat di &lt;a href=&#34;https://github.com/github/gitignore&#34;&gt;repositori
-ini&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
-
-&lt;p&gt;Sekian dulu untuk tutorial kedua ini, Kita baru saja mengetahui cara pembuatan
-repositori dan tentang &lt;code&gt;.gitignore&lt;/code&gt;. Penggunaan &lt;code&gt;.gitignore&lt;/code&gt; memang belum dapat
-kita rasakan saat ini, karena kita belum membuat revisi apa pun. Karena itu,
-silahkan lanjutkan ke &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial ketiga &amp;lsquo;Membuat Revisi&amp;rsquo;&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

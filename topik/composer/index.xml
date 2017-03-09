@@ -73,7 +73,7 @@ sudo chmod +x /usr/local/bin/composer
 
 &lt;p&gt;Kemudian coba periksa versi yang terinstal:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;petanikode@imajinasi ~ $ composer --version
+&lt;pre&gt;&lt;code&gt;petanikode@imajinasi~$ composer --version
 Composer version 1.2.2 2016-11-03 17:43:15
 &lt;/code&gt;&lt;/pre&gt;
 

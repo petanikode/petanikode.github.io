@@ -50,12 +50,106 @@
     </item>
     
     <item>
-      <title>Contoh program dengan variabel dan tipe data di Lazarus</title>
+      <title>Contoh Program dengan Variabel dan Tipe Data di Lazarus</title>
       <link>http://petanikode.com/2014/09/contoh-program-dengan-variabel-dan-tipe-data-di-lazarus/</link>
       <pubDate>Mon, 01 Sep 2014 05:00:00 +0000</pubDate>
       
       <guid>http://petanikode.com/2014/09/contoh-program-dengan-variabel-dan-tipe-data-di-lazarus/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-O5Faz_Xq8x4/VCfHI5-ChOI/AAAAAAAAAuk/arm0HBB80Vw/s1600/lazarus%2Bdelphinya%2Blinux.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-O5Faz_Xq8x4/VCfHI5-ChOI/AAAAAAAAAuk/arm0HBB80Vw/s1600/lazarus%2Bdelphinya%2Blinux.png&#34; /&gt;&lt;/a&gt; &lt;br /&gt;Variabel adalah sebuah simbol tempat menyimpan sesuatu (data), sedangkan tipe data adalah jenis data yang disimpan dalam variabel. Ada empat tipe data yang sering di gunakan dalam pemrograman lazarus yaitu:&lt;i&gt; string&lt;/i&gt;, &lt;i&gt;integer&lt;/i&gt;, &lt;i&gt;real&lt;/i&gt;, dan &lt;i&gt;boolean&lt;/i&gt;.&lt;br /&gt;&lt;h2&gt;Membuat program dengan variabel&lt;/h2&gt;Untuk memahami variabel dan tipe data di pemrograman lazarus, mari kita membuat sebuah program sederhana. Buatlah proyek baru.&lt;br /&gt;&lt;h3&gt;Langkah 1: Desain Form&lt;/h3&gt;Desain form menggunakan beberapa objek, diantaranya &lt;i&gt;Label&lt;/i&gt;, &lt;i&gt;Edit&lt;/i&gt;, &lt;i&gt;GroupBox&lt;/i&gt;, dan &lt;i&gt;Button&lt;/i&gt;. Sebagian dari obejek-objek telah diganti namanya untuk mempermudah saat pengkodean.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-XsaMngXKjoc/VALCUq7ge7I/AAAAAAAAAl0/6eTf_o2LZxw/s1600/Desain%2BForm%2B-%2BProgram%2BBiodata%2Bpenduduk%2BLazarus.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-XsaMngXKjoc/VALCUq7ge7I/AAAAAAAAAl0/6eTf_o2LZxw/s1600/Desain%2BForm%2B-%2BProgram%2BBiodata%2Bpenduduk%2BLazarus.png&#34; /&gt;&lt;/a&gt; &lt;br /&gt;&lt;h3&gt;Langkah 2: Menulis Kode Program&lt;/h3&gt;Klik ganda pada objek &lt;i&gt;button&lt;/i&gt; (tampilkan), lalu tuliskan kode berikut&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;procedure TForm1.Button1Click(Sender: TObject);&lt;br /&gt;&lt;b&gt;var&lt;br /&gt;      nama: string;&lt;br /&gt;      thnLahir, thnSekarang, umur: integer;&lt;/b&gt;&lt;br /&gt;begin&lt;br /&gt;      &lt;b&gt;nama := EditNama.Text;&lt;br /&gt;      thnLahir := StrToInt(EditTahunLahir.Text);&lt;br /&gt;      thnSekarang := StrToInt(EditTahunSekarang.Text);&lt;br /&gt;&lt;br /&gt;      umur := thnSekarang - thnLahir;&lt;br /&gt;&lt;br /&gt;      LabelNama.Caption := nama;&lt;br /&gt;      LabelUmur.Caption := IntToStr(umur);&lt;/b&gt;&lt;br /&gt;end;&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;Langkah 3: Menjalankan Program&lt;/h3&gt;Simpan semua dengan mengelik tombol &lt;i&gt;save all&lt;/i&gt;. Kemudian jalankan dengna menekan tombol &lt;kbd&gt;F9&lt;/kbd&gt;.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-ZjzEmnLoVYo/VALFp1ZIpKI/AAAAAAAAAmA/ErmTknrF2ig/s1600/Biodata%2BPenduduk%2BDesa%2BLazarus_010.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-ZjzEmnLoVYo/VALFp1ZIpKI/AAAAAAAAAmA/ErmTknrF2ig/s1600/Biodata%2BPenduduk%2BDesa%2BLazarus_010.png&#34; /&gt;&lt;/a&gt; &lt;br /&gt;Deklarasi variabel dapat ditulis di atas kode &lt;code&gt;BEGIN&lt;/code&gt; dengan menggunakan kata kuci &lt;code&gt;var&lt;/code&gt;. Deklarasi berfungsi untuk mengumumkan tipe data setiap variabel yang dibuat.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;var&lt;br /&gt;     nama: string;&lt;br /&gt;     thnLahir, thnSekarang, umur: integer;&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Mengisi variabel dengan nilai yang dimasukan oleh pengguna. Data yang dimasukan di form bertipe teks (&lt;i&gt;string&lt;/i&gt;). Oleh karena itu, kita perlu merubahnya menjadi angka (&lt;i&gt;integer&lt;/i&gt;) dengan fungsi &lt;code&gt;StrToInt()&lt;/code&gt; agar dapat disimpan di variabel yang bertipe &lt;i&gt;integer&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;nama := EditNama.Text;&lt;br /&gt;thnLahir := StrToInt(EditTahunLahir.Text);&lt;br /&gt;thnSekarang := StrToInt(EditTahunSekarang.Text);&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Melakukan operasi pengurangan dengan variabel untuk menghitung umur atau selisih antara tahun sekarang dan tahun lahir.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;umur := thnSekarang - thnLahir;&lt;/code&gt;&lt;/pre&gt;Menampilkan hasil hitungan ke form. Agar dapat disimpan di atribut &lt;code&gt;caption&lt;/code&gt;, data harus bertipe teks (&lt;i&gt;string&lt;/i&gt;). Oleh karena itu, kita perlu merubahnya dengan fungsi &lt;code&gt;IntToStr()&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;LabelNama.Caption := nama;&lt;br /&gt;LabelUmur.Caption := IntToStr(umur);&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-O5Faz_Xq8x4/VCfHI5-ChOI/AAAAAAAAAuk/arm0HBB80Vw/s1600/lazarus%2Bdelphinya%2Blinux.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-O5Faz_Xq8x4/VCfHI5-ChOI/AAAAAAAAAuk/arm0HBB80Vw/s1600/lazarus%2Bdelphinya%2Blinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hallo! kali ini kita akan coba membuat sebuah program sederhana di lazarus
+yang menerapkan variabel dan tipe data.&lt;/p&gt;
+
+&lt;p&gt;Variabel merupakan sebuah nama atau simbol tempat kita menyimpan data. Variabel
+ini tersimpan dalam memori memori. Sedangkan tipe data adalah jenis data yang
+akan kita simpan.&lt;/p&gt;
+
+&lt;p&gt;Ok, mari kita coba&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Silahkan buat dulu proyek baru di Lazarus, kemudian ikuti langkah-langkah berikut.&lt;/p&gt;
+
+&lt;h2 id=&#34;langkah-1-desain-form&#34;&gt;Langkah 1: Desain Form&lt;/h2&gt;
+
+&lt;p&gt;Kita akan menggunakan beberapa objek, diantaranya &lt;em&gt;Label&lt;/em&gt;, &lt;em&gt;Edit&lt;/em&gt;, &lt;em&gt;GroupBox&lt;/em&gt;,
+dan &lt;em&gt;Button&lt;/em&gt;. Sebagian dari obejek-objek telah diganti namanya untuk mempermudah
+saat pengkodean.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;610&#34;
+    height=&#34;361&#34;
+    alt=&#34;Desain+Form+-+Program+Biodata+penduduk+Lazarus.png&#34;
+    src=&#34;http://1.bp.blogspot.com/-XsaMngXKjoc/VALCUq7ge7I/AAAAAAAAAl0/6eTf_o2LZxw/s1600/Desain%2BForm%2B-%2BProgram%2BBiodata%2Bpenduduk%2BLazarus.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;langkah-2-menulis-kode-program&#34;&gt;Langkah 2: Menulis Kode Program&lt;/h2&gt;
+
+&lt;p&gt;Kode program akan kita tulis pada &lt;em&gt;event&lt;/em&gt; tombol &lt;em&gt;Tampilkan&lt;/em&gt; diklik. Silahkan
+klik dua kali pada tombol &lt;em&gt;Tampilkan&lt;/em&gt; lalu tuliskan kode berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;procedure TForm1.Button1Click(Sender: TObject);
+var
+    nama: string;
+    thnLahir, thnSekarang, umur: integer;
+
+begin
+    nama := EditNama.Text;
+    thnLahir := StrToInt(EditTahunLahir.Text);
+    thnSekarang := StrToInt(EditTahunSekarang.Text);
+
+    umur := thnSekarang - thnLahir;
+
+    LabelNama.Caption := nama;
+    LabelUmur.Caption := IntToStr(umur);
+end;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Penjelasan&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Pertama kita mendeklarasikan empat variabel dengan kata kunci &lt;code&gt;var&lt;/code&gt;.
+Empat variabel itu adalah &lt;code&gt;nama&lt;/code&gt;, &lt;code&gt;thnLahir&lt;/code&gt;,&lt;code&gt;thnSekarang&lt;/code&gt;, dan &lt;code&gt;umur&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;var
+    nama: string;
+    thnLahir, thnSekarang, umur: integer;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, kita isi semua variabel ini dengan teks yang diinputkan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;nama := EditNama.Text;
+thnLahir := StrToInt(EditTahunLahir.Text);
+thnSekarang := StrToInt(EditTahunSekarang.Text);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang semua variabel sudah terisi dan tersimpan dalam memori. Selanjutnya
+kita bisa melakukan operasi pengurangan.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;umur := thnSekarang - thnLahir;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Terahir, kita tampilkan hasil operasi ke &lt;em&gt;Label&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;LabelNama.Caption := nama;
+LabelUmur.Caption := IntToStr(umur);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;langkah-3-menjalankan-program&#34;&gt;Langkah 3: Menjalankan Program&lt;/h2&gt;
+
+&lt;p&gt;Simpan semua dengan mengelik tombol &lt;em&gt;save all&lt;/em&gt;. Kemudian jalankan dengna
+ menekan tombol &lt;code&gt;F9&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+     width=&#34;382&#34;
+     height=&#34;307&#34;
+     alt=&#34;Biodata+Penduduk+Desa+Lazarus_010.png&#34;
+     src=&#34;http://2.bp.blogspot.com/-ZjzEmnLoVYo/VALFp1ZIpKI/AAAAAAAAAmA/ErmTknrF2ig/s1600/Biodata%2BPenduduk%2BDesa%2BLazarus_010.png&#34;
+     layout=&#34;responsive&#34;&gt;
+ &lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah, itulah contoh program sederhana penggunaan variabel di Lazarus.
+ Gampang &amp;lsquo;kan?&lt;/p&gt;
 </description>
     </item>
     

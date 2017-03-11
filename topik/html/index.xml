@@ -10,6 +10,326 @@
     <atom:link href="http://petanikode.com/topik/html/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>15 Tag HTML yang tidak Memiliki Pasangan Penutup</title>
+      <link>http://petanikode.com/2017/03/15-tag-html-yang-tidak-memiliki-pasangan-penutup/</link>
+      <pubDate>Sat, 11 Mar 2017 05:12:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2017/03/15-tag-html-yang-tidak-memiliki-pasangan-penutup/</guid>
+      <description>
+
+&lt;p&gt;Elemen pada HTML terdiri dari tag pembuka dan tag penutup. Namun, ada juga yang
+tidak memiliki tag penutup.&lt;/p&gt;
+
+&lt;p&gt;Kasihan juga ya, hehe :smile:&lt;/p&gt;
+
+&lt;p&gt;Meskipun demikian, elemen ini tetap valid dan dapat dibaca browser.
+Elemen yang tidak memiliki tag penutup ini juga disebut &lt;em&gt;void element&lt;/em&gt;,
+karena tidak memiliki isi.&lt;/p&gt;
+
+&lt;p&gt;Apa saja tag-tag yang tidak memiliki penutup itu?&lt;/p&gt;
+
+&lt;p&gt;mari kita simak&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-tag-area&#34;&gt;1. Tag &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; fungsinya untuk mendefinisikan area pada &lt;em&gt;image map&lt;/em&gt;.
+&lt;em&gt;Image map&lt;/em&gt; merupakan sebuah gambar yang memiliki area yang bisa diklik.
+Tag &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; selalu berada di dalam tag &lt;code&gt;&amp;lt;map&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;img src=&amp;quot;https://www.w3schools.com/tags/planets.gif&amp;quot; width=&amp;quot;145&amp;quot; height=&amp;quot;126&amp;quot; alt=&amp;quot;Planets&amp;quot; usemap=&amp;quot;#planetmap&amp;quot;&amp;gt;
+
+&amp;lt;map name=&amp;quot;planetmap&amp;quot;&amp;gt;
+  &amp;lt;area shape=&amp;quot;rect&amp;quot; coords=&amp;quot;0,0,82,126&amp;quot; alt=&amp;quot;Sun&amp;quot; href=&amp;quot;sun.htm&amp;quot;&amp;gt;
+  &amp;lt;area shape=&amp;quot;circle&amp;quot; coords=&amp;quot;90,58,3&amp;quot; alt=&amp;quot;Mercury&amp;quot; href=&amp;quot;mercur.htm&amp;quot;&amp;gt;
+  &amp;lt;area shape=&amp;quot;circle&amp;quot; coords=&amp;quot;124,58,8&amp;quot; alt=&amp;quot;Venus&amp;quot; href=&amp;quot;venus.htm&amp;quot;&amp;gt;
+&amp;lt;/map&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo dapat dilihat di: &lt;a href=&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_areamap&#34;&gt;w3schools.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-tag-base&#34;&gt;2. Tag &lt;code&gt;&amp;lt;base&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;base&amp;gt;&lt;/code&gt; fungsinya untuk membuat &lt;em&gt;base URL&lt;/em&gt; dan &lt;em&gt;target&lt;/em&gt; untuk sebuah link relatif.
+Contoh penggunaanya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;base href=&amp;quot;https://www.w3schools.com/images/&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;stickman.gif&amp;quot; width=&amp;quot;24&amp;quot; height=&amp;quot;39&amp;quot; alt=&amp;quot;Stickman&amp;quot;&amp;gt; - Notice that we have only specified a relative address for the image. Since we have specified a base URL in the head section, the browser will look for the image at &amp;quot;https://www.w3schools.com/images/stickman.gif&amp;quot;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://www.w3schools.com&amp;quot;&amp;gt;W3Schools&amp;lt;/a&amp;gt; - Notice that the link opens in a new window, even if it has no target=&amp;quot;_blank&amp;quot; attribute. This is because the target attribute of the base element is set to &amp;quot;_blank&amp;quot;.&amp;lt;/p&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikanlah contoh di atas, gambar &lt;code&gt;stickman.gif&lt;/code&gt; akan dicari pada alamat &lt;em&gt;base
+URL&lt;/em&gt; yang diberikan pada tag &lt;code&gt;&amp;lt;base&amp;gt;&lt;/code&gt;. Kemudian, link &lt;strong&gt;W3Schools&lt;/strong&gt; akan dibuka
+pada jendela baru, karena pada tag &lt;code&gt;&amp;lt;base&amp;gt;&lt;/code&gt; sudah ditentukan targetnya.&lt;/p&gt;
+
+&lt;p&gt;Demo: &lt;a href=&#34;http://jsbin.com/muhawoqifi/edit?html,output&#34;&gt;http://jsbin.com/muhawoqifi/edit?html,output&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-tag-br&#34;&gt;3. Tag &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag ini fungsinya untuk membuat baris baru. Contoh penggunaanya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p&amp;gt;
+    Langit seolah-olah menangis.&amp;lt;br&amp;gt;
+    Hujan waktu itu sangat berkesan.
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hasilnya:&lt;/p&gt;
+
+&lt;p&gt;
+    Langit seolah-olah menangis.&lt;br&gt;
+    Hujan waktu itu sangat berkesan.
+&lt;/p&gt;
+
+&lt;h2 id=&#34;4-tag-col&#34;&gt;4. Tag &lt;code&gt;&amp;lt;col&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;col&amp;gt;&lt;/code&gt; fungsinya untuk memberikan atribut untuk kolom pada tabel.
+Tag ini ditulis dalam tag &lt;code&gt;&amp;lt;colgroup&amp;gt;&lt;/code&gt;. Dengan tag &lt;code&gt;&amp;lt;col&amp;gt;&lt;/code&gt; ini, kita tidak harus
+membuat attribut untuk setiap sel tabel (&lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt;), karena sudah terwakili olehnya.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;table&amp;gt;
+  &amp;lt;colgroup&amp;gt;
+    &amp;lt;col span=&amp;quot;2&amp;quot; style=&amp;quot;background-color:red&amp;quot;&amp;gt;
+    &amp;lt;col style=&amp;quot;background-color:yellow&amp;quot;&amp;gt;
+  &amp;lt;/colgroup&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th&amp;gt;ISBN&amp;lt;/th&amp;gt;
+    &amp;lt;th&amp;gt;Title&amp;lt;/th&amp;gt;
+    &amp;lt;th&amp;gt;Price&amp;lt;/th&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;3476896&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;My first HTML&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;$53&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;5869207&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;My first CSS&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;$49&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo hasilnya: &lt;a href=&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_col_test&#34;&gt;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_col_test&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-tag-embed&#34;&gt;5. Tag &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt; fungsinya untuk membuat &lt;em&gt;container&lt;/em&gt; untuk aplikasi eksternal atau
+konten interaktif seperti animasi flash.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;embed src=&amp;quot;helloworld.swf&amp;quot;&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo: &lt;a href=&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_embed&#34;&gt;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_embed&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-tag-hr&#34;&gt;6. Tag &lt;code&gt;&amp;lt;hr&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;hr&amp;gt;&lt;/code&gt; fungsinya untuk membuat garis horizontal &lt;em&gt;(horizontal row)&lt;/em&gt;.
+Contoh penggunaanya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;h4&amp;gt;Waktu itu...&amp;lt;/h4&amp;gt;
+&amp;lt;hr&amp;gt;
+&amp;lt;p&amp;gt;Tak kusangka, hari itu bakal menjadi hari terakhirku berjumpa denganmu&amp;lt;/p&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;h4&gt;Waktu itu&amp;hellip;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;Tak kusangka, hari itu bakal menjadi hari terakhirku berjumpa denganmu&lt;/p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-tag-img&#34;&gt;7. Tag &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag yang satu ini pasti sudah banyak yang tahu fungsinya. Yap&amp;hellip; benar sekali.
+fungsinya untuk menampilkan gambar.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;img src=&amp;quot;foto-si-doi.jpg&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;8-tag-input&#34;&gt;8. Tag &lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt; fungsinya untuk membuat elemen input pada form. Tag ini memiliki
+atribut &lt;code&gt;type&lt;/code&gt; yang akan menentukan jenis inputannya.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form action=&amp;quot;proses.php&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;
+    &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;username&amp;quot; placeholder=&amp;quot;Username&amp;quot;&amp;gt;
+    &amp;lt;input type=&amp;quot;password&amp;quot; name=&amp;quot;password&amp;quot; placeholder=&amp;quot;Password&amp;quot;&amp;gt;
+    &amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;Masuk&amp;quot;&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;9-tag-keygen&#34;&gt;9. Tag &lt;code&gt;&amp;lt;keygen&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;keygen&amp;gt;&lt;/code&gt; fungsinya untuk membuat kunci rahasia pada form.
+Tag ini digunakan untuk keamanan.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form action=&amp;quot;/action_page.php&amp;quot; method=&amp;quot;get&amp;quot;&amp;gt;
+  Username: &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;usr_name&amp;quot;&amp;gt;
+  Encryption: &amp;lt;keygen name=&amp;quot;security&amp;quot;&amp;gt;
+  &amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;10-tag-link&#34;&gt;10. Tag &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; digunakan untuk mendefinisikan hubungan antara dokumen HTML dengan
+&lt;em&gt;resource&lt;/em&gt; eksternal seperti CSS. Tag ini juga bisa digunakan untuk membuat
+&lt;em&gt;favicon&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;/css/style.css&amp;quot;&amp;gt;
+    &amp;lt;link rel=&amp;quot;icon&amp;quot; href=&amp;quot;favicon.png&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;11-tag-meta&#34;&gt;11. Tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; digunakan untuk mendefinisikan &lt;em&gt;Metadata&lt;/em&gt; sebuah halaman web.
+&lt;em&gt;Metadata&lt;/em&gt; tidak akan ditampilkan pada halaman web, melainkan akan dibaca
+oleh mesin atau Bot (robot). Contohnya, data yang akan tampil pada mesin pencari.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;775&#34;
+    height=&#34;323&#34;
+    alt=&#34;Tampilan+tag+meta+di+Google.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-UvYa05VI5o0/WMQwKa4j6CI/AAAAAAAAETo/ProWcFFbDwAt8TNETsYjcVR5FcalpBxiACK4B/s1600/Tampilan%2Btag%2Bmeta%2Bdi%2BGoogle.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; ini penting untuk SEO &lt;em&gt;(search engine optimization)&lt;/em&gt;. Jadi,
+kalau membuat web tanpa menggunakan tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;, kemungkinan akan sulit
+terindeks oleh mesin pencari.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+  &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Web Programmer pengguna Linux&amp;quot;&amp;gt;
+  &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;Programmer,Linux,Petanikode,Petani Kode&amp;quot;&amp;gt;
+  &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;Petani Kode&amp;quot;&amp;gt;
+  &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;12-tag-param&#34;&gt;12. Tag &lt;code&gt;&amp;lt;param&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;param&amp;gt;&lt;/code&gt; digunakan untuk memberikan parameter kepada &lt;em&gt;plug-in&lt;/em&gt; yang di-embed
+menggunakan elemen &lt;code&gt;&amp;lt;object&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;object data=&amp;quot;horse.wav&amp;quot;&amp;gt;
+  &amp;lt;param name=&amp;quot;autoplay&amp;quot; value=&amp;quot;true&amp;quot;&amp;gt;
+&amp;lt;/object&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya: &lt;a href=&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_param&#34;&gt;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_param&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;13-tag-source&#34;&gt;13. Tag &lt;code&gt;&amp;lt;source&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;source&amp;gt;&lt;/code&gt; digunakan untuk mendefinisikan sumber file media untuk &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt;
+dan &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;audio controls&amp;gt;
+  &amp;lt;source src=&amp;quot;horse.ogg&amp;quot; type=&amp;quot;audio/ogg&amp;quot;&amp;gt;
+  &amp;lt;source src=&amp;quot;horse.mp3&amp;quot; type=&amp;quot;audio/mpeg&amp;quot;&amp;gt;
+  Browser anda tidak mendukung elemen audio.
+&amp;lt;/audio&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo: &lt;a href=&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_source_src&#34;&gt;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_source_src&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;14-tag-track&#34;&gt;14. Tag &lt;code&gt;&amp;lt;track&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;track&amp;gt;&lt;/code&gt; digunakan untuk mendefinisikan taks untuk elemen media (&lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt;
+dan &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;). Bisa dalam bentuk &lt;em&gt;subtitle&lt;/em&gt;, &lt;em&gt;caption&lt;/em&gt;, dan teks lainnya.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;video width=&amp;quot;320&amp;quot; height=&amp;quot;240&amp;quot; controls&amp;gt;
+  &amp;lt;source src=&amp;quot;forrest_gump.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot;&amp;gt;
+  &amp;lt;source src=&amp;quot;forrest_gump.ogg&amp;quot; type=&amp;quot;video/ogg&amp;quot;&amp;gt;
+  &amp;lt;track src=&amp;quot;subtitles_en.vtt&amp;quot; kind=&amp;quot;subtitles&amp;quot; srclang=&amp;quot;en&amp;quot; label=&amp;quot;English&amp;quot;&amp;gt;
+  &amp;lt;track src=&amp;quot;subtitles_no.vtt&amp;quot; kind=&amp;quot;subtitles&amp;quot; srclang=&amp;quot;no&amp;quot; label=&amp;quot;Norwegian&amp;quot;&amp;gt;
+&amp;lt;/video&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;15-tag-wbr&#34;&gt;15. Tag &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;WBR merupakan singkatan dari  &lt;em&gt;Word Break Opportunity&lt;/em&gt;. Tag ini hampir mirip
+dengan tag &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;. Bedanya, tag ini tidak langsung membuat baris baru seperti &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tag ini akan membuat baris baru saat tidak ada lagi ruang di samping.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p&amp;gt;
+To learn AJAX, you must be familiar with the XML&amp;lt;wbr&amp;gt;Http&amp;lt;wbr&amp;gt;Request Object.
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka nanti, kalau ukuran layarnya dipersempit, teks akan ditampilkan sperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;To learn AJAX, you must be familiar with the XML
+Http
+Request Object.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Itulah 15 tag HTML yang tidak memiliki pasangan penutup. Lalu bagaimana cara
+menutup tag-tag ini, sedangkan mereka tidak memiliki pasangan penutup?&lt;/p&gt;
+
+&lt;p&gt;Pada XHTML, semua elemen memang harus ditutup. Nah! untuk menutup
+tag-tag ini, kita bisa gunakan garis miring (&lt;code&gt;/&lt;/code&gt;) di akhir.&lt;/p&gt;
+
+&lt;p&gt;Contohnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;br /&amp;gt;
+&amp;lt;hr /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.w3.org/TR/html5/syntax.html#void-elementsg&#34;&gt;w3.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;w3schools.com&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Membuat Halaman Github untuk Proyek atau Repositori</title>
       <link>http://petanikode.com/2017/02/cara-membuat-halaman-github-untuk-proyek-atau-repositori/</link>
       <pubDate>Mon, 06 Feb 2017 07:15:11 +0800</pubDate>
@@ -319,119 +639,6 @@ selanjutnya kita akan pelajari satuan-satuan yang digunakan pada RWD.&lt;/p&gt;
       
       <guid>http://petanikode.com/2016/05/kode-latex-untuk-menulis-rumus-matematika-di-html/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-vRUklKdzFEU/Vzahq5aQO1I/AAAAAAAACzU/QUsx7qcPXXYOwA70m9QXrdT8Dz9700yUACK4B/s1600/MathJax%2B-%2BPetani%2BKode%2B-%2BTulis%2Brumus%2Bmatematika%2Bdalam%2BHTML.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-vRUklKdzFEU/Vzahq5aQO1I/AAAAAAAACzU/QUsx7qcPXXYOwA70m9QXrdT8Dz9700yUACK4B/s1600/MathJax%2B-%2BPetani%2BKode%2B-%2BTulis%2Brumus%2Bmatematika%2Bdalam%2BHTML.png&#34; /&gt;&lt;/a&gt;Ketika membaca halaman wikipedia yang memiliki rumus, kita temuakan rumus tersebut dibuat dalam bentuk gamabar. Contoh, coba cek &lt;a href=&#34;https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms&#34; target=&#34;_blank&#34;&gt;halaman ini&lt;/a&gt;. Nah, di HTML sendiri ada sebuah tag untuk menuliskan rumus matematika. Akan tetapi cukup memakan waktu membuatnya, karena menuliskan tag yang lebih panjang. Oleh karena itu, kita bisa memanfaatkan kode LaTeX dalam HTML dengan pustaka javascript MathJax.&lt;br /&gt;&lt;br /&gt;MathJax merupakan pustaka &lt;i&gt;(library)&lt;/i&gt; &lt;i&gt;open source&lt;/i&gt; untuk menampilkan hasil kode LaTeX, MathML, dan Notasi AsciiMath ke dalam HTML. MathJax diklaim dapat bekerja di semua browser.&lt;br /&gt;&lt;h2&gt;Cara Menggunakan MathJax&lt;/h2&gt;Pertama kita perlu inisialisasi dulu di dalam tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; atau di akhir tag &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;script type=&amp;ldquo;text/x-mathjax-config&amp;rdquo;&amp;gt;&lt;br /&gt;MathJax.Hub.Config({&lt;br /&gt;&amp;nbsp; tex2jax: {inlineMath: [[&amp;lsquo;$&amp;rsquo;,&amp;lsquo;$&amp;rsquo;], [&amp;rsquo;\(&amp;lsquo;,&amp;rsquo;\)&amp;lsquo;]]}&lt;br /&gt;});&lt;br /&gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;script type=&amp;ldquo;text/javascript&amp;rdquo; async&lt;br /&gt;&amp;nbsp; src=&amp;ldquo;&lt;a href=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&amp;quot;&amp;gt;&#34;&gt;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&amp;quot;&amp;gt;&lt;/a&gt;&lt;br /&gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;Selanjutnya, untuk menuliskan sebuah rumus, kita dapat menggunakan perintah LaTeX yang diapit dengan tanda dolar (&lt;code&gt;$&lt;/code&gt;). Contoh:&lt;br /&gt;&lt;pre class=&#34;latex&#34;&gt;&lt;code&gt;$f(x)=\sqrt{x^2 + 5y^4}$&lt;/code&gt;&lt;/pre&gt;Akan menghasilkan:&lt;br /&gt;$f(x)=\sqrt{x^2 + 5y^4}$&lt;br /&gt;&lt;br /&gt;Kode Lengkap:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/pohixaxuce/embed?html,output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?3.35.12&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://www.cs.tut.fi/~jkorpela/math/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.cs.tut.fi/~jkorpela/math/&#34;&gt;http://www.cs.tut.fi/~jkorpela/math/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://docs.mathjax.org/en/latest/index.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://docs.mathjax.org/en/latest/index.html&#34;&gt;http://docs.mathjax.org/en/latest/index.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;script type=&#34;text/x-mathjax-config&#34;&gt;MathJax.Hub.Config({   tex2jax: {inlineMath: [[&amp;lsquo;$&amp;rsquo;,&amp;lsquo;$&amp;rsquo;], [&amp;rsquo;\(&amp;lsquo;,&amp;rsquo;\)&amp;lsquo;]]} }); &lt;/script&gt;&lt;br /&gt;&lt;script async=&#34;&#34; src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>7 Manfaat Inspect Element Bagi Web Developer</title>
-      <link>http://petanikode.com/2016/01/7-manfaat-inspect-element-bagi-web-developer/</link>
-      <pubDate>Thu, 14 Jan 2016 11:03:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/01/7-manfaat-inspect-element-bagi-web-developer/</guid>
-      <description>
-
-&lt;p&gt;Inspect Element merupakan fitur browser yang dibuat untuk memudahkan web developer dalam mengembangkan web. Inspect Element dapat kita akses dengan klik kanan, kemudian memilih Inspect Element, atau bisa juga dengan menekan tombol &lt;code&gt;F12&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Adapun manfaat dari Inspect Element untuk web Developer adalah sebagai berikut.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-tempat-eksperimen-css&#34;&gt;1. Tempat Eksperimen CSS&lt;/h2&gt;
-
-&lt;p&gt;Selain ada console Javascript, bisa dibilang di Inspect Elemen juga ada console-nya CSS. Ya, di sana kita bisa eksperimen kode CSS.&lt;/p&gt;
-
-&lt;p&gt;Sebelum kita menulis kode CSS, sebaiknya gunakan Inspect Element terlebih dahulu. Karena saat kita menulis kode CSS di Inspect Elemen, browser akan langsung mengeksekusinya. Selain itu, kita diberikan fitur yang memudahkan penulisan CSS seperti autocomplete, colorpicker, filter, visual model box, dll.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1366&#34;
-    height=&#34;768&#34;
-    alt=&#34;Edit CSS d iInspect Element&#34;
-    src=&#34;https://4.bp.blogspot.com/-YA3lbRkw6z0/WKhR5OizENI/AAAAAAAAEAU/vxaVOYaLjBExO0cpMeCw1vnzf3lbMbrswCPcB/s1600/Edit%2BCSS%2Bdi%2BInspect%2BElement.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kode CSS yang ditulis di Inspect Element bersifat temporer. Kita harus menyalinnya ke kode CSS di teks editor agar tersimpan.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-pengujian-web-responsif&#34;&gt;2. Pengujian Web Responsif&lt;/h2&gt;
-
-&lt;p&gt;Kita tidak perlu punya banyak perangkat untuk pengujian responsif. Cukup manfaatkan Inspect Element, kita sudah bisa menggunakan berbagai jenis perangkat mobile.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1270&#34;
-    height=&#34;679&#34;
-    alt=&#34;Pengujian+tampilan+responsif+web+di+inspect+element+-+petanikode.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-F0ipNxOxWnU/WKhTDjXhQzI/AAAAAAAAEAs/dASGP5AdMRgNdTrkNAd2JEkCZpBVom6rgCPcB/s1600/Pengujian%2Btampilan%2Bresponsif%2Bweb%2Bdi%2Binspect%2Belement%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-mengukur-kecepatan-web&#34;&gt;3. Mengukur Kecepatan Web&lt;/h2&gt;
-
-&lt;p&gt;Kita dapat mengetahui seberapa lama web diunduh oleh browser dan berapa kecepatan dan ukuran kapasitas webnya? Silahkan gunakan fitur Network atau Timeline untuk melakukannya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1364&#34;
-    height=&#34;678&#34;
-    alt=&#34;Mengukur+kecepatan+web+di+inspect+element+-+petanikode.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-LDis0GBfR9s/WKhT0iA4nHI/AAAAAAAAEBA/XLqopt_G0nEd1pTUQGHrTMvBhfwTOGYAACPcB/s1600/Mengukur%2Bkecepatan%2Bweb%2Bdi%2Binspect%2Belement%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-debugging-javascript&#34;&gt;4. Debugging Javascript&lt;/h2&gt;
-
-&lt;p&gt;Ada yang bilang, belajar javascript itu susah karena kita tidak tahu tempat error-nya.
-Kadang, browser hanya menampilkan halaman kosong saat error.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;486&#34; height=&#34;657&#34;
-    layout=&#34;responsive&#34;
-    data-tweetid=&#34;818038227143561218&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;Sebenarnya pendapat itu salah, karena kita bisa melihat pesan error javascript pada console-nya. Dimana console-nya? ya di dalam Inspect Elemen. Silahkan buka menu Console.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;5-alat-untuk-audit-web&#34;&gt;5. Alat untuk Audit Web&lt;/h2&gt;
-
-&lt;p&gt;Audit perlu kita lakukan untuk meningkatkan kinerja web. Pada Inspect Elemen milik Google Chrome, kita disediakan fitur audit untuk mengetahui apa saja resource yang digunakan dan yang tidak digunakan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;945&#34;
-    height=&#34;500&#34;
-    alt=&#34;Audit+web+di+Inspect+element+-+petanikode.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-vNQJtWwp3iM/WKhVV2r5KoI/AAAAAAAAEBU/7LlDpgbnLRYoPhmrJcpUIN2GUEBGK1oJwCPcB/s1600/Audit%2Bweb%2Bdi%2BInspect%2Belement%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;6-mengambil-screenshot-dengan-mudah&#34;&gt;6. Mengambil Screenshot dengan Mudah&lt;/h2&gt;
-
-&lt;p&gt;Khusus di Firefox, kita disediakan fitur untuk mengambil screenshot web. Caranya, klik kanan pada elemen yang ingin di-screenshot, kemudian pilih &lt;em&gt;Screenshot Node&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;917&#34;
-    height=&#34;525&#34;
-    alt=&#34;mengambil+screenshoot+di+Inspect+element+firefox.png&#34;
-    src=&#34;https://2.bp.blogspot.com/-xPgOdZAg8YY/WKhWPl_wGdI/AAAAAAAAEBs/K-eZEeDd8PMljRx03SLpEfkHFPj6LaJBgCPcB/s1600/mengambil%2Bscreenshoot%2Bdi%2BInspect%2Belement%2Bfirefox.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;7-mengukur-performa-memori-dan-cpu&#34;&gt;7. Mengukur Performa Memori dan CPU&lt;/h2&gt;
-
-&lt;p&gt;Semakin banyak tab yang kita buka di browser, semakin banyak pula memori yang akan dimakan. Selain itu, skrip-skrip pada web juga membuat CPU berkerja semakin keras. Untuk melihat performa memori dan CPU ketika membuka web, silahkan masuk ke menu &lt;em&gt;Timeline&lt;/em&gt; pada Google Chrome. Sedangkan di Firefox, masuk ke &lt;em&gt;Performance&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;861&#34;
-    height=&#34;680&#34;
-    alt=&#34;Mengukur+Performa+Web.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-FFcmZfK42IM/WKhWgp7E1bI/AAAAAAAAEB0/ATHEopUYKrww2uDAKimbKK8B-OlZfiLzACPcB/s1600/Mengukur%2BPerforma%2BWeb.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah 7 manfaat Inspect Element bagi web developer. Sebanarnya masih banyak lagi manfaat dari Inspect Element yang belum kita ketahui. Selebihnya silahkan cari sendiri atau jika mau menambahkan silahkan corat-coret di komentar.&lt;/p&gt;
 </description>
     </item>
     

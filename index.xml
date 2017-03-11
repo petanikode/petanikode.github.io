@@ -7,8 +7,328 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 06 Mar 2017 20:05:01 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Mar 2017 05:12:00 +0000</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>15 Tag HTML yang tidak Memiliki Pasangan Penutup</title>
+      <link>http://petanikode.com/2017/03/15-tag-html-yang-tidak-memiliki-pasangan-penutup/</link>
+      <pubDate>Sat, 11 Mar 2017 05:12:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/2017/03/15-tag-html-yang-tidak-memiliki-pasangan-penutup/</guid>
+      <description>
+
+&lt;p&gt;Elemen pada HTML terdiri dari tag pembuka dan tag penutup. Namun, ada juga yang
+tidak memiliki tag penutup.&lt;/p&gt;
+
+&lt;p&gt;Kasihan juga ya, hehe :smile:&lt;/p&gt;
+
+&lt;p&gt;Meskipun demikian, elemen ini tetap valid dan dapat dibaca browser.
+Elemen yang tidak memiliki tag penutup ini juga disebut &lt;em&gt;void element&lt;/em&gt;,
+karena tidak memiliki isi.&lt;/p&gt;
+
+&lt;p&gt;Apa saja tag-tag yang tidak memiliki penutup itu?&lt;/p&gt;
+
+&lt;p&gt;mari kita simak&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-tag-area&#34;&gt;1. Tag &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; fungsinya untuk mendefinisikan area pada &lt;em&gt;image map&lt;/em&gt;.
+&lt;em&gt;Image map&lt;/em&gt; merupakan sebuah gambar yang memiliki area yang bisa diklik.
+Tag &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; selalu berada di dalam tag &lt;code&gt;&amp;lt;map&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;img src=&amp;quot;https://www.w3schools.com/tags/planets.gif&amp;quot; width=&amp;quot;145&amp;quot; height=&amp;quot;126&amp;quot; alt=&amp;quot;Planets&amp;quot; usemap=&amp;quot;#planetmap&amp;quot;&amp;gt;
+
+&amp;lt;map name=&amp;quot;planetmap&amp;quot;&amp;gt;
+  &amp;lt;area shape=&amp;quot;rect&amp;quot; coords=&amp;quot;0,0,82,126&amp;quot; alt=&amp;quot;Sun&amp;quot; href=&amp;quot;sun.htm&amp;quot;&amp;gt;
+  &amp;lt;area shape=&amp;quot;circle&amp;quot; coords=&amp;quot;90,58,3&amp;quot; alt=&amp;quot;Mercury&amp;quot; href=&amp;quot;mercur.htm&amp;quot;&amp;gt;
+  &amp;lt;area shape=&amp;quot;circle&amp;quot; coords=&amp;quot;124,58,8&amp;quot; alt=&amp;quot;Venus&amp;quot; href=&amp;quot;venus.htm&amp;quot;&amp;gt;
+&amp;lt;/map&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo dapat dilihat di: &lt;a href=&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_areamap&#34;&gt;w3schools.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-tag-base&#34;&gt;2. Tag &lt;code&gt;&amp;lt;base&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;base&amp;gt;&lt;/code&gt; fungsinya untuk membuat &lt;em&gt;base URL&lt;/em&gt; dan &lt;em&gt;target&lt;/em&gt; untuk sebuah link relatif.
+Contoh penggunaanya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;base href=&amp;quot;https://www.w3schools.com/images/&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;stickman.gif&amp;quot; width=&amp;quot;24&amp;quot; height=&amp;quot;39&amp;quot; alt=&amp;quot;Stickman&amp;quot;&amp;gt; - Notice that we have only specified a relative address for the image. Since we have specified a base URL in the head section, the browser will look for the image at &amp;quot;https://www.w3schools.com/images/stickman.gif&amp;quot;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://www.w3schools.com&amp;quot;&amp;gt;W3Schools&amp;lt;/a&amp;gt; - Notice that the link opens in a new window, even if it has no target=&amp;quot;_blank&amp;quot; attribute. This is because the target attribute of the base element is set to &amp;quot;_blank&amp;quot;.&amp;lt;/p&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikanlah contoh di atas, gambar &lt;code&gt;stickman.gif&lt;/code&gt; akan dicari pada alamat &lt;em&gt;base
+URL&lt;/em&gt; yang diberikan pada tag &lt;code&gt;&amp;lt;base&amp;gt;&lt;/code&gt;. Kemudian, link &lt;strong&gt;W3Schools&lt;/strong&gt; akan dibuka
+pada jendela baru, karena pada tag &lt;code&gt;&amp;lt;base&amp;gt;&lt;/code&gt; sudah ditentukan targetnya.&lt;/p&gt;
+
+&lt;p&gt;Demo: &lt;a href=&#34;http://jsbin.com/muhawoqifi/edit?html,output&#34;&gt;http://jsbin.com/muhawoqifi/edit?html,output&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-tag-br&#34;&gt;3. Tag &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag ini fungsinya untuk membuat baris baru. Contoh penggunaanya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p&amp;gt;
+    Langit seolah-olah menangis.&amp;lt;br&amp;gt;
+    Hujan waktu itu sangat berkesan.
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hasilnya:&lt;/p&gt;
+
+&lt;p&gt;
+    Langit seolah-olah menangis.&lt;br&gt;
+    Hujan waktu itu sangat berkesan.
+&lt;/p&gt;
+
+&lt;h2 id=&#34;4-tag-col&#34;&gt;4. Tag &lt;code&gt;&amp;lt;col&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;col&amp;gt;&lt;/code&gt; fungsinya untuk memberikan atribut untuk kolom pada tabel.
+Tag ini ditulis dalam tag &lt;code&gt;&amp;lt;colgroup&amp;gt;&lt;/code&gt;. Dengan tag &lt;code&gt;&amp;lt;col&amp;gt;&lt;/code&gt; ini, kita tidak harus
+membuat attribut untuk setiap sel tabel (&lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt;), karena sudah terwakili olehnya.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;table&amp;gt;
+  &amp;lt;colgroup&amp;gt;
+    &amp;lt;col span=&amp;quot;2&amp;quot; style=&amp;quot;background-color:red&amp;quot;&amp;gt;
+    &amp;lt;col style=&amp;quot;background-color:yellow&amp;quot;&amp;gt;
+  &amp;lt;/colgroup&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th&amp;gt;ISBN&amp;lt;/th&amp;gt;
+    &amp;lt;th&amp;gt;Title&amp;lt;/th&amp;gt;
+    &amp;lt;th&amp;gt;Price&amp;lt;/th&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;3476896&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;My first HTML&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;$53&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;5869207&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;My first CSS&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;$49&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo hasilnya: &lt;a href=&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_col_test&#34;&gt;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_col_test&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-tag-embed&#34;&gt;5. Tag &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt; fungsinya untuk membuat &lt;em&gt;container&lt;/em&gt; untuk aplikasi eksternal atau
+konten interaktif seperti animasi flash.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;embed src=&amp;quot;helloworld.swf&amp;quot;&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo: &lt;a href=&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_embed&#34;&gt;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_embed&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-tag-hr&#34;&gt;6. Tag &lt;code&gt;&amp;lt;hr&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;hr&amp;gt;&lt;/code&gt; fungsinya untuk membuat garis horizontal &lt;em&gt;(horizontal row)&lt;/em&gt;.
+Contoh penggunaanya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;h4&amp;gt;Waktu itu...&amp;lt;/h4&amp;gt;
+&amp;lt;hr&amp;gt;
+&amp;lt;p&amp;gt;Tak kusangka, hari itu bakal menjadi hari terakhirku berjumpa denganmu&amp;lt;/p&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;h4&gt;Waktu itu&amp;hellip;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;Tak kusangka, hari itu bakal menjadi hari terakhirku berjumpa denganmu&lt;/p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-tag-img&#34;&gt;7. Tag &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag yang satu ini pasti sudah banyak yang tahu fungsinya. Yap&amp;hellip; benar sekali.
+fungsinya untuk menampilkan gambar.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;img src=&amp;quot;foto-si-doi.jpg&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;8-tag-input&#34;&gt;8. Tag &lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt; fungsinya untuk membuat elemen input pada form. Tag ini memiliki
+atribut &lt;code&gt;type&lt;/code&gt; yang akan menentukan jenis inputannya.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form action=&amp;quot;proses.php&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;
+    &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;username&amp;quot; placeholder=&amp;quot;Username&amp;quot;&amp;gt;
+    &amp;lt;input type=&amp;quot;password&amp;quot; name=&amp;quot;password&amp;quot; placeholder=&amp;quot;Password&amp;quot;&amp;gt;
+    &amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;Masuk&amp;quot;&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;9-tag-keygen&#34;&gt;9. Tag &lt;code&gt;&amp;lt;keygen&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;keygen&amp;gt;&lt;/code&gt; fungsinya untuk membuat kunci rahasia pada form.
+Tag ini digunakan untuk keamanan.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form action=&amp;quot;/action_page.php&amp;quot; method=&amp;quot;get&amp;quot;&amp;gt;
+  Username: &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;usr_name&amp;quot;&amp;gt;
+  Encryption: &amp;lt;keygen name=&amp;quot;security&amp;quot;&amp;gt;
+  &amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;10-tag-link&#34;&gt;10. Tag &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; digunakan untuk mendefinisikan hubungan antara dokumen HTML dengan
+&lt;em&gt;resource&lt;/em&gt; eksternal seperti CSS. Tag ini juga bisa digunakan untuk membuat
+&lt;em&gt;favicon&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;/css/style.css&amp;quot;&amp;gt;
+    &amp;lt;link rel=&amp;quot;icon&amp;quot; href=&amp;quot;favicon.png&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;11-tag-meta&#34;&gt;11. Tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; digunakan untuk mendefinisikan &lt;em&gt;Metadata&lt;/em&gt; sebuah halaman web.
+&lt;em&gt;Metadata&lt;/em&gt; tidak akan ditampilkan pada halaman web, melainkan akan dibaca
+oleh mesin atau Bot (robot). Contohnya, data yang akan tampil pada mesin pencari.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;775&#34;
+    height=&#34;323&#34;
+    alt=&#34;Tampilan+tag+meta+di+Google.png&#34;
+    src=&#34;https://3.bp.blogspot.com/-UvYa05VI5o0/WMQwKa4j6CI/AAAAAAAAETo/ProWcFFbDwAt8TNETsYjcVR5FcalpBxiACK4B/s1600/Tampilan%2Btag%2Bmeta%2Bdi%2BGoogle.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; ini penting untuk SEO &lt;em&gt;(search engine optimization)&lt;/em&gt;. Jadi,
+kalau membuat web tanpa menggunakan tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;, kemungkinan akan sulit
+terindeks oleh mesin pencari.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+  &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Web Programmer pengguna Linux&amp;quot;&amp;gt;
+  &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;Programmer,Linux,Petanikode,Petani Kode&amp;quot;&amp;gt;
+  &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;Petani Kode&amp;quot;&amp;gt;
+  &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;12-tag-param&#34;&gt;12. Tag &lt;code&gt;&amp;lt;param&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;param&amp;gt;&lt;/code&gt; digunakan untuk memberikan parameter kepada &lt;em&gt;plug-in&lt;/em&gt; yang di-embed
+menggunakan elemen &lt;code&gt;&amp;lt;object&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;object data=&amp;quot;horse.wav&amp;quot;&amp;gt;
+  &amp;lt;param name=&amp;quot;autoplay&amp;quot; value=&amp;quot;true&amp;quot;&amp;gt;
+&amp;lt;/object&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya: &lt;a href=&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_param&#34;&gt;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_param&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;13-tag-source&#34;&gt;13. Tag &lt;code&gt;&amp;lt;source&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;source&amp;gt;&lt;/code&gt; digunakan untuk mendefinisikan sumber file media untuk &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt;
+dan &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;audio controls&amp;gt;
+  &amp;lt;source src=&amp;quot;horse.ogg&amp;quot; type=&amp;quot;audio/ogg&amp;quot;&amp;gt;
+  &amp;lt;source src=&amp;quot;horse.mp3&amp;quot; type=&amp;quot;audio/mpeg&amp;quot;&amp;gt;
+  Browser anda tidak mendukung elemen audio.
+&amp;lt;/audio&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo: &lt;a href=&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_source_src&#34;&gt;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_source_src&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;14-tag-track&#34;&gt;14. Tag &lt;code&gt;&amp;lt;track&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Tag &lt;code&gt;&amp;lt;track&amp;gt;&lt;/code&gt; digunakan untuk mendefinisikan taks untuk elemen media (&lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt;
+dan &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;). Bisa dalam bentuk &lt;em&gt;subtitle&lt;/em&gt;, &lt;em&gt;caption&lt;/em&gt;, dan teks lainnya.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;video width=&amp;quot;320&amp;quot; height=&amp;quot;240&amp;quot; controls&amp;gt;
+  &amp;lt;source src=&amp;quot;forrest_gump.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot;&amp;gt;
+  &amp;lt;source src=&amp;quot;forrest_gump.ogg&amp;quot; type=&amp;quot;video/ogg&amp;quot;&amp;gt;
+  &amp;lt;track src=&amp;quot;subtitles_en.vtt&amp;quot; kind=&amp;quot;subtitles&amp;quot; srclang=&amp;quot;en&amp;quot; label=&amp;quot;English&amp;quot;&amp;gt;
+  &amp;lt;track src=&amp;quot;subtitles_no.vtt&amp;quot; kind=&amp;quot;subtitles&amp;quot; srclang=&amp;quot;no&amp;quot; label=&amp;quot;Norwegian&amp;quot;&amp;gt;
+&amp;lt;/video&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;15-tag-wbr&#34;&gt;15. Tag &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;WBR merupakan singkatan dari  &lt;em&gt;Word Break Opportunity&lt;/em&gt;. Tag ini hampir mirip
+dengan tag &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;. Bedanya, tag ini tidak langsung membuat baris baru seperti &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tag ini akan membuat baris baru saat tidak ada lagi ruang di samping.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p&amp;gt;
+To learn AJAX, you must be familiar with the XML&amp;lt;wbr&amp;gt;Http&amp;lt;wbr&amp;gt;Request Object.
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka nanti, kalau ukuran layarnya dipersempit, teks akan ditampilkan sperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;To learn AJAX, you must be familiar with the XML
+Http
+Request Object.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Itulah 15 tag HTML yang tidak memiliki pasangan penutup. Lalu bagaimana cara
+menutup tag-tag ini, sedangkan mereka tidak memiliki pasangan penutup?&lt;/p&gt;
+
+&lt;p&gt;Pada XHTML, semua elemen memang harus ditutup. Nah! untuk menutup
+tag-tag ini, kita bisa gunakan garis miring (&lt;code&gt;/&lt;/code&gt;) di akhir.&lt;/p&gt;
+
+&lt;p&gt;Contohnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;br /&amp;gt;
+&amp;lt;hr /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.w3.org/TR/html5/syntax.html#void-elementsg&#34;&gt;w3.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;w3schools.com&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Download Ebook Gratis Panduan Dasar Pemrograman Tizen</title>
@@ -2289,178 +2609,6 @@ sebagai admin dalam &lt;em&gt;Channel&lt;/em&gt; tersebut.&lt;/p&gt;
 
 &lt;p&gt;Itulah cara mengintegarsikan Bot dengan &lt;em&gt;Channel&lt;/em&gt;. O ya! jangan lupa ikuti
 Channel-nya Petani Kode di Telegram &lt;a href=&#34;https:/t.me/petanikode&#34;&gt;@petanikode&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Instal Git di Windows</title>
-      <link>http://petanikode.com/2017/02/cara-instal-git-di-windows/</link>
-      <pubDate>Fri, 10 Feb 2017 01:42:35 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/02/cara-instal-git-di-windows/</guid>
-      <description>
-
-&lt;p&gt;Instalasi Git di Windows memang tidak seperti di Linux yang ketik perintah
-langsung terinstal. Kita harus menguduh dulu, kemudian melakukan ritual
-&lt;em&gt;next&amp;gt;next&amp;gt;finish&lt;/em&gt;. Tapi dalam ritual tersebut, ada pilihan
-yang harus diperhatikan agar perintah &lt;code&gt;git&lt;/code&gt; dapat dikenali di CMD.&lt;/p&gt;
-
-&lt;p&gt;Baiklah, kali ini saya numpang &lt;em&gt;screenshot&lt;/em&gt; di laptop teman yang menggunakan
-windows untuk pembuatan tutorial ini. Silahkan disimak ya :smile:.&lt;/p&gt;
-
-&lt;h2 id=&#34;unduh-git&#34;&gt;Unduh Git&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka website resminya Git (&lt;a href=&#34;https://git-scm.com/&#34;&gt;git-scm.com&lt;/a&gt;).
-Kemudian unduh Git sesuai dengan arsitektur komputer kita. Kalau menggunakan
-64bit, unduh yang 64bit. Begitu juga kalau menggunakan 32bit.&lt;/p&gt;
-
-&lt;h2 id=&#34;ritual-instal&#34;&gt;Ritual Instal&lt;/h2&gt;
-
-&lt;p&gt;Baiklah, mari kita mulai ritual instalnya. Silahkan klik 2x file instaler Git yang sudah diunduh.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;836&#34;
-height=&#34;268&#34;
-alt=&#34;1.+Buka+file+instaler+Git.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-GJG55D0dDUE/WJyvgHq7V6I/AAAAAAAAD0Y/1eNFR16HwmoDXixtJfQ5HRMZ_hCelqD0gCPcB/s1600/1.%2BBuka%2Bfile%2Binstaler%2BGit.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Maka akan muncul infomasi lisensi Git, klik &lt;em&gt;Next &amp;gt;&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;2.+Informasi+tentang+git.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-NzbswuR4CgU/WJyvgMeY3cI/AAAAAAAAD0Y/aa_6vg_W7Q0l7cf20FkatIkU0dXGAJXtACPcB/s1600/2.%2BInformasi%2Btentang%2Bgit.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya menentukan lokasi instalasi. Biarkan saja apa adanya, kemudian klik
-&lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;3.+Lokasi+instal.JPG&#34;
-src=&#34;https://2.bp.blogspot.com/-Ye-09zmjGXY/WJyvgKQWTxI/AAAAAAAAD0Y/hbIXryc1LBkUOaXOOlP92ynIwdVGAZs9gCPcB/s1600/3.%2BLokasi%2Binstal.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan komoponen, biarkan saja seperti ini kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;4.+Pemilihan+komponen.JPG&#34;
-src=&#34;https://2.bp.blogspot.com/-ywOWK8HlXtY/WJyvgBmH9YI/AAAAAAAAD0Y/IoJbYkEjw0oIQYxLR3Jf7AvbDhwbDneoQCPcB/s1600/4.%2BPemilihan%2Bkomponen.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemlilihan direktori start menu, klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;5.+pembuatan+start+menu.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-iGNC1QrWtDg/WJyvgHelUtI/AAAAAAAAD0Y/fJKy0-mD6MgikbyjrjD4FDabTfPynbCiwCPcB/s1600/5.%2Bpembuatan%2Bstart%2Bmenu.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pengaturan &lt;em&gt;PATH Environment&lt;/em&gt;. Pilih yang tengah agar perintah &lt;code&gt;git&lt;/code&gt;
-dapat di kenali di &lt;em&gt;Command Prompt&lt;/em&gt; (CMD). Setelah itu klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;6.+Path+environment.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-79ZG8B-IzCA/WJyvgLBQbjI/AAAAAAAAD0Y/u87asmJOm9UcFAT0Q87pM8xgcW82kkOOwCPcB/s1600/6.%2BPath%2Benvironment.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya konversi &lt;em&gt;line ending&lt;/em&gt;. Biarkan saja seperti ini, kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;7.+konversi+line+ending.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-3ZL1Ea4exvo/WJyvgLEi3NI/AAAAAAAAD0Y/3jSy13aPLkAqkaZ5CrFQbmfCNb6m8kniQCPcB/s1600/7.%2Bkonversi%2Bline%2Bending.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan emulator terminal. Pilih saja yang bawah, kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;8.+Pemilihan+emulator+terminal.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-wuVBFyFlmjo/WJyvgNkAcvI/AAAAAAAAD0Y/UDKA-JsD3UIuv2sDOEkdwd_X_gRG8uX3QCPcB/s1600/8.%2BPemilihan%2Bemulator%2Bterminal.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan opsi ekstra. Klik saja &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;9.+Konfigurasi+Opsi+Ekstra.JPG&#34;
-src=&#34;https://1.bp.blogspot.com/-5oq7fAHTb7Q/WJyvgMQFc6I/AAAAAAAAD0Y/-5KmjFlMrsMkIsrPjoja277tQDaA_nr5ACPcB/s1600/9.%2BKonfigurasi%2BOpsi%2BEkstra.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan opsi ekspreimental, langsung saja klik &lt;em&gt;Install&lt;/em&gt; untuk memaulai instalasi.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;10.+Opsi+ekperimental.JPG&#34;
-src=&#34;https://2.bp.blogspot.com/-lrAn-7lh7jY/WJyvgMm0PiI/AAAAAAAAD0Y/sEhM1irdMPkvv3v615R5JhIcIDNUJxArQCPcB/s1600/10.%2BOpsi%2Bekperimental.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Tunggu beberapa saat, instalasi sedang dilakukan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;11.+Installing.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-1jecFYkwTzg/WJyvgJt9g5I/AAAAAAAAD0Y/5DG8OAc44Zk31_VjHz3mXybB3kThzHcbwCPcB/s1600/11.%2BInstalling.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah selesai, kita bisa langsung klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;12.+Finish.JPG&#34;
-src=&#34;https://1.bp.blogspot.com/-lCGee-56K5Y/WJyvgAbeLGI/AAAAAAAAD0Y/fNaJIaZKf2cqMFuV_5occ6y4oAi7_vaawCPcB/s1600/12.%2BFinish.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selamat, Git sudah terinstal di Windows. Untuk mencobanya, silahkan buka CMD atau
-PowerShell, kemudian ketik perintah &lt;code&gt;git --version&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;745&#34;
-height=&#34;204&#34;
-alt=&#34;13.+Percobaan.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-JMZtMOkESYQ/WJyvgOEh_TI/AAAAAAAAD0Y/4Mtf48YbMUwVtQ9jbJc_TYHe2MymmooAQCPcB/s1600/13.%2BPercobaan.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;OK, meskipun Git sudah terinstal. Akan tetapi masih belum bisa dipakai. Karena
-kita belum melakukan konfigurasi &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt;. Cara konfigurasinya
-silahkan &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;baca di sni&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

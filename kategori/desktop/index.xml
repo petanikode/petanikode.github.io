@@ -150,10 +150,12 @@ LabelUmur.Caption := IntToStr(umur);
 dan Lazarus sebagai ganti Delphi. Baruntung dosennya tidak mempermasalahkan hal ini.&lt;/p&gt;
 
 &lt;p&gt;Pemrograman Delphi dengan Lazarus memang terlihat sama. Oleh karena itu, tugas
-akhir saya membuat program diterima dengan nilai yang memuaskan.&lt;/p&gt;
+akhir saya diterima dengan nilai yang memuaskan.&lt;/p&gt;
 
 &lt;p&gt;Lazarus tidak hanya bisa berjalan di Linux, tapi juga bisa untuk sistem operasi
 yang lain seperti Windows, Mac OS, dan Unix.&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2015/11/instalasi-dan-uji-coba-lazarus-ide-di-windows-7/&#34;&gt;Instalasi dan Ujicoba Lazarus di Windows&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Berikut ini gambar &lt;em&gt;screenshot&lt;/em&gt; Lazarus yang saya gunakan waktu itu di Kali Linux.&lt;/p&gt;
 
@@ -241,6 +243,15 @@ Lazarus dan pustaka itu belum terinstal.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install libgtk2.0-dev
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;mengenal-lingkungan-kerja-lazarus&#34;&gt;Mengenal Lingkungan Kerja Lazarus&lt;/h2&gt;
 

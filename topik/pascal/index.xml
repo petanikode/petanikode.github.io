@@ -30,12 +30,160 @@
     </item>
     
     <item>
-      <title>Pemrograman Pascal di Linux</title>
-      <link>http://petanikode.com/2015/01/pemrograman-pascal-di-linux/</link>
+      <title>Belajar Pemrograman Dasar Pascal Menggunakan Linux</title>
+      <link>http://petanikode.com/2015/01/belajar-pemrograman-dasar-pascal-menggunakan-linux/</link>
       <pubDate>Mon, 12 Jan 2015 09:30:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/2015/01/pemrograman-pascal-di-linux/</guid>
-      <description>&lt;p&gt;&lt;p&gt;Pascal, bahasa pemrograman yang mudah dipelajari. Struktur penulisan bahasa pascal begitu rapi sehingga mudah dipahami. Bahasa pascal adalah bahasa dasar untuk pemrograman Delphi dan Lazarus.&lt;/p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-FWp0UBK6TRU/VLJeySfKTtI/AAAAAAAAA_I/NpSWE1iS-go/s1600/Pemrograman%2Bpascal%2Bdi%2Blinux.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-FWp0UBK6TRU/VLJeySfKTtI/AAAAAAAAA_I/NpSWE1iS-go/s1600/Pemrograman%2Bpascal%2Bdi%2Blinux.png&#34; /&gt;&lt;/a&gt;&lt;p&gt;Untuk mempelajari pascal di Linux diperlukan sebuah kompilator dan teks editor. kompilator berfungsi untuk mengubah kode program menjadi berkas &lt;i&gt;binary&lt;/i&gt;. Kompilator pascal di linux dapat menggunakan &lt;i&gt;Free Pascal&lt;/i&gt;. Kompilator ini dapat diunduh di &lt;a href=&#34;http://freepascal.org/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://freepascal.org/&#34;&gt;http://freepascal.org/&lt;/a&gt;&lt;/a&gt;. Selain menggunakan Free Pascal, dapat juga menggunakan &lt;a href=&#34;http://www.gnu-pascal.org/&#34; target=&#34;blank&#34;&gt;GNU Pascal&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;Instalasi Free Pascal di Ubuntu&lt;/h2&gt;&lt;p&gt;Free pascal di Ubuntu dapat diinstal melalui perintah &lt;code&gt;apt-get&lt;/code&gt;.&lt;/p&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo apt-get install fp-compiler&lt;/code&gt;&lt;/pre&gt;atau &lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo apt-get install fpc&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-bKBqIpFF4nk/VKFzXHFf_OI/AAAAAAAAA7k/OBjIFjhhT8o/s1600/instalasi_kompilator_pascal_di_linux.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-bKBqIpFF4nk/VKFzXHFf_OI/AAAAAAAAA7k/OBjIFjhhT8o/s1600/instalasi_kompilator_pascal_di_linux.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Gunakan perintah &lt;code&gt;fpc -v&lt;/code&gt; untuk memeriksa versi &lt;i&gt;Free Pascal&lt;/i&gt; yang terinstal. Di Komputer saya, &lt;i&gt;output&lt;/i&gt;-nya seperti ini:&lt;/p&gt;&lt;pre&gt;Free Pascal Compiler version 2.6.4+dfsg-3 [2014/07/13] for i386&lt;br /&gt;Copyright &amp;copy; 1993-2014 by Florian Klaempfl and others&lt;br /&gt;Fatal: No source file name in command line&lt;br /&gt;Fatal: Compilation aborted&lt;br /&gt;Error: /usr/bin/ppc386 returned an error exitcode (normal if you did not specify a source file to be compiled)&lt;br /&gt;&lt;/pre&gt;&lt;h2&gt;Membuat program pertama&lt;/h2&gt;&lt;p&gt;Program yang akan kita buat adalah program &amp;lsquo;&lt;samp&gt;Hello World&lt;/samp&gt;&amp;rsquo;. Program yang paling pendek di dunia. Program ini sangat mudah dibuat. Bukalah teks editor, lalu tuliskan kode program &amp;lsquo;&lt;samp&gt;Hello World&lt;/samp&gt;&amp;rsquo; di bawah ini.&lt;/p&gt;&lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;PROGRAM hello_world;&lt;br /&gt;BEGIN&lt;br /&gt;    writeln(&amp;lsquo;Hello World&amp;rsquo;);&lt;br /&gt;END.&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Simpanlah dengan nama &lt;samp&gt;hello_world.pas&lt;/samp&gt;. Simpanlah di direktori yang mudah di akses. Saya sendiri menyimpannya di direktori &lt;samp&gt;/home/ardianta/pascal&lt;/samp&gt;.&lt;/p&gt; &lt;a href=&#34;http://4.bp.blogspot.com/-ab2gS1r9eWU/VLJmBgtWenI/AAAAAAAAA_Y/_LzO9hKN098/s1600/menyimpan%2Bkode%2Bprogram%2Bpascal.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-ab2gS1r9eWU/VLJmBgtWenI/AAAAAAAAA_Y/_LzO9hKN098/s1600/menyimpan%2Bkode%2Bprogram%2Bpascal.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Selanjutnya, melakukan kompilasi kode program yang sudah ditulis. Bukalah terminal lalu masuk ke direktori tempat menyimpan berkas pascal. Kemudian ketik perintah beikut ini untuk mengompilasi:&lt;/p&gt; &lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;fpc nama_berkas.pas&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-xS7weUz3idk/VLJnQa0k5XI/AAAAAAAAA_k/PNAmhQzaBk0/s1600/kompilasi%2Bprogram%2Bpascal.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-xS7weUz3idk/VLJnQa0k5XI/AAAAAAAAA_k/PNAmhQzaBk0/s1600/kompilasi%2Bprogram%2Bpascal.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Bila pesan yang tampil seperti pada tangkapan layar di atas, maka kompilasi berhasil. Setelah itu, akan tercipta dua berkas baru yaitu &lt;samp&gt;hello_world.o&lt;/samp&gt; dan &lt;samp&gt;hello_world&lt;/samp&gt;.&lt;/p&gt; &lt;a href=&#34;http://3.bp.blogspot.com/-UvODimFPcMA/VLJoBwh68aI/AAAAAAAAA_s/hfhw1hoS_2k/s1600/berkas%2Bpascal%2Bsetelah%2Bdikompilasi.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-UvODimFPcMA/VLJoBwh68aI/AAAAAAAAA_s/hfhw1hoS_2k/s1600/berkas%2Bpascal%2Bsetelah%2Bdikompilasi.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Berkas &lt;samp&gt;hello_world.o&lt;/samp&gt; adalah berkas objek. Sementara berkas &lt;samp&gt;hello_world&lt;/samp&gt; adalah berkas &lt;i&gt;binary&lt;/i&gt; atau &lt;i&gt;executeable&lt;/i&gt;. Berkas ini dapat dijalankan atau dieksekusi melalui terminal. Gunakan perntah &lt;code&gt;./nama_berkas&lt;/code&gt; untuk menjalankannya.&lt;/p&gt; &lt;a href=&#34;http://2.bp.blogspot.com/-bMR8NegNF0I/VLJo8VJdadI/AAAAAAAAA_0/ENw6GIn2ylQ/s1600/menjalankan%2Bprogram%2Bpascal.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-bMR8NegNF0I/VLJo8VJdadI/AAAAAAAAA_0/ENw6GIn2ylQ/s1600/menjalankan%2Bprogram%2Bpascal.png&#34; /&gt;&lt;/a&gt; &lt;h2&gt;Pembahasan program&lt;/h2&gt;&lt;p&gt;Program &amp;lsquo;&lt;samp&gt;Hello World&lt;/samp&gt;&amp;rsquo; di atas hanya berfungsi menampilkan pesan &lt;i&gt;hello world&lt;/i&gt; ke layar.&lt;/p&gt; &lt;p&gt;Pertama, kita menuliskan judul programnya.  &lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;program hello_world;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Kedua, menulis tubuh program. Dimulai dari &lt;code&gt;Begin&lt;/code&gt; sampai &lt;code&gt;End.&lt;/code&gt;. &lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;BEGIN&lt;br /&gt;    writeln(&amp;lsquo;Hello World&amp;rsquo;);&lt;br /&gt;END.&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Perhatikanlah kalimat perintah &lt;code&gt;writeln(&amp;lsquo;Hello World&amp;rsquo;);&lt;/code&gt;, kalimat perintah inilah yang menyuruh komputer untuk menuliskan pesan &lt;i&gt;hello world&lt;/i&gt; ke layar. Kalimat perintah ini ditulis di dalam tubuh program. Setiap kalimat perintah yang ditulis di dalam &lt;code&gt;begin&lt;/code&gt; sampai &lt;code&gt;end.&lt;/code&gt; akan dikerjakan oleh komputer. Satu kalimat perintah diakhiri dengan tanda titik koma (&lt;code&gt;;&lt;/code&gt;).&lt;/p&gt; &lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;PROGRAM nama_program;&lt;br /&gt;BEGIN&lt;br /&gt;    // kalimat perintah 1;&lt;br /&gt;    // kalimat perintah 2;&lt;br /&gt;    // kalimat perintah n;&lt;br /&gt;END.&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt; &lt;h2&gt;Latihan&lt;/h2&gt;&lt;p&gt;Untuk memantapkan keterampilan membuat program pascal, silahkan dicoba beberapa latihan di bawah ini.&lt;/p&gt; &lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;PROGRAM perkenalan;&lt;br /&gt;BEGIN&lt;br /&gt;    writeln(&amp;lsquo;Assalamualaikum,&amp;rsquo;);&lt;br /&gt;    writeln(&amp;lsquo;Perkenalkan, nama saya Ardianta.&amp;rsquo;);&lt;br /&gt;    writeln(&amp;lsquo;Saya dari Lombok Tengah.&amp;rsquo;);&lt;br /&gt;    writeln(&amp;lsquo;Senang berkenalan dengan Anda.&amp;rsquo;);&lt;br /&gt;    writeln(&amp;lsquo;Terima kasih sudah mengunjungi blog ini.&amp;rsquo;);&lt;br /&gt;    writeln(&amp;lsquo;Datang lagi ya!&amp;rsquo;);&lt;br /&gt;END.&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt; &lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;PROGRAM kartu_anggota;&lt;br /&gt;BEGIN&lt;br /&gt;    writeln(&amp;lsquo;## KARTU ANGGOTA ##&amp;rsquo;);&lt;br /&gt;    write(&amp;lsquo;Nama: &amp;lsquo;);&lt;br /&gt;    writeln(&amp;lsquo;Ardianta&amp;rsquo;);&lt;br /&gt;    write(&amp;lsquo;Alamat: &amp;lsquo;);&lt;br /&gt;    writeln(&amp;lsquo;Lombok Tengah&amp;rsquo;);&lt;br /&gt;    write(&amp;lsquo;Hobi: &amp;lsquo;);&lt;br /&gt;    writeln(&amp;lsquo;Membaca&amp;rsquo;);&lt;br /&gt;END.&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+      <guid>http://petanikode.com/2015/01/belajar-pemrograman-dasar-pascal-menggunakan-linux/</guid>
+      <description>
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;pemrograman-pascal-petanikode.jpg&#34;
+    src=&#34;https://2.bp.blogspot.com/-QtG2g2EG_-s/WMRwI1WgHLI/AAAAAAAAEUQ/6KtsGmNeH3sjhem5r5yGxJGYzhhBE6mrACK4B/s1600/pemrograman-pascal-petanikode.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Pascal adalah bahasa pemrograman pertama yang saya ketahui. Pertama kali
+diperkenalkan pada perlajaran muatan lokal di SMK.&lt;/p&gt;
+
+&lt;p&gt;Saat masih menggunakan Windows, saya menggunakan Turbo Pascal untuk belajar
+pemrograman Pascal. Kemudian, ketika berlaih ke Linux, saya menggunakan WINE
+untuk menjalankan Turbo Pascal.&lt;/p&gt;
+
+&lt;p&gt;Sebenarnya Linux sudah menyediakan kompilator Pascal yang memungkinkan kita
+membuat program pascal. Ada dua jenis kompilator pascal di Linux, yaitu &lt;em&gt;Free Pascal&lt;/em&gt;
+dan &lt;em&gt;GNU Pascal&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pada tulisan ini, kita akan belajar pascal menggunakan kompilator &lt;em&gt;Free Pascal&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;instalasi-free-pascal&#34;&gt;Instalasi Free Pascal&lt;/h2&gt;
+
+&lt;p&gt;Saat ini saya menggunakan Ubuntu, cara menginstal pascal dapat dengan mudah dilakukan
+melalui perintah &lt;code&gt;apt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install fpc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, gunakan perintah &lt;code&gt;fpc -v&lt;/code&gt; untuk memeriksa versi &lt;em&gt;Free Pascal&lt;/em&gt;
+yang terinstal. Di Komputer saya, &lt;em&gt;output&lt;/em&gt;-nya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Free Pascal Compiler version 2.6.4+dfsg-3 [2014/07/13] for i386
+Copyright (c) 1993-2014 by Florian Klaempfl and others
+Fatal: No source file name in command line
+Fatal: Compilation aborted
+Error: /usr/bin/ppc386 returned an error exitcode (normal if you did not specify a source file to be compiled)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;membuat-program-pascal&#34;&gt;Membuat Program Pascal&lt;/h2&gt;
+
+&lt;p&gt;Setelah kita menginstal kompilator Pascal, mari kita coba membuat program.
+Silahkan buka teks editor, kemudian tulis kode program di bawah ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;PROGRAM hello_world;
+BEGIN
+    writeln(&#39;Hello World&#39;);
+END.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simpanlah dengan nama &lt;code&gt;hello_world.pas&lt;/code&gt;. Saya menyimpannya di &lt;code&gt;/home/ardianta/pascal&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;638&#34;
+    height=&#34;530&#34;
+    alt=&#34;menyimpan kode program pascal&#34;
+    src=&#34;http://4.bp.blogspot.com/-ab2gS1r9eWU/VLJmBgtWenI/AAAAAAAAA_Y/_LzO9hKN098/s1600/menyimpan%2Bkode%2Bprogram%2Bpascal.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, kita lakukan kompilasi. Kompilasi artinya mengubah kode program,
+menjadi program yang bisal langsung dijalankan komputer.&lt;/p&gt;
+
+&lt;p&gt;Buka terminal, kemudian masuk ke direktori tempat menyimpan kode programnya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /home/ardianta/pascal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, kita lakukan kompilasi dengan perintah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fpc hello_world.pas
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;659&#34;
+    height=&#34;456&#34;
+    alt=&#34;kompilasi program pascal&#34;
+    src=&#34;http://2.bp.blogspot.com/-xS7weUz3idk/VLJnQa0k5XI/AAAAAAAAA_k/PNAmhQzaBk0/s1600/kompilasi%2Bprogram%2Bpascal.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kalau tidak ada error, maka kompulasi berhasil. Setelah itu akan tercipta
+dua file baru yaitu &lt;code&gt;hello_world.o&lt;/code&gt; dan &lt;code&gt;hello_world&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;642&#34;
+    height=&#34;520&#34;
+    alt=&#34;berkas pascal setelah dikompilasi&#34;
+    src=&#34;http://3.bp.blogspot.com/-UvODimFPcMA/VLJoBwh68aI/AAAAAAAAA_s/hfhw1hoS_2k/s1600/berkas%2Bpascal%2Bsetelah%2Bdikompilasi.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;file &lt;code&gt;hello_world.o&lt;/code&gt; adalah file objek. Sementara &lt;code&gt;hello_world&lt;/code&gt; adalah
+berkas &lt;em&gt;binary&lt;/em&gt; atau &lt;em&gt;executeable&lt;/em&gt; yang dapat kita jalankan.&lt;/p&gt;
+
+&lt;p&gt;Gunakan perntah &lt;code&gt;./hello_world&lt;/code&gt; untuk menjalankannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;659&#34;
+    height=&#34;456&#34;
+    alt=&#34;menjalankan program pascal&#34;
+    src=&#34;http://2.bp.blogspot.com/-bMR8NegNF0I/VLJo8VJdadI/AAAAAAAAA_0/ENw6GIn2ylQ/s1600/menjalankan%2Bprogram%2Bpascal.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagus! program Pascal pertama kita sudah jadi dan berhasil dijalankan.&lt;/p&gt;
+
+&lt;h2 id=&#34;memahami-kode-pascal&#34;&gt;Memahami Kode Pascal&lt;/h2&gt;
+
+&lt;p&gt;Program &lt;code&gt;Hello World&lt;/code&gt; di atas hanya berfungsi menampilkan pesan &lt;em&gt;hello world&lt;/em&gt; ke layar.&lt;/p&gt;
+
+&lt;p&gt;Pertama-tama, kita menuliskan judul programnya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;program hello_world;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kedua, menulis tubuh program. Dimulai dari &lt;code&gt;Begin&lt;/code&gt; sampai &lt;code&gt;End.&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;BEGIN
+    writeln(&#39;Hello World&#39;);
+END.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikanlah intruksi &lt;code&gt;writeln(&#39;Hello World&#39;);&lt;/code&gt;, inilah yang menyuruh komputer
+untuk menuliskan pesan &lt;em&gt;hello world&lt;/em&gt; ke layar. Setiap intruksi dalam pascal
+harus diakhiri dengan titik-koma (&lt;code&gt;;&lt;/code&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;PROGRAM nama_program;
+BEGIN
+    intruksi1();
+    intruksi2();
+    intruksi3();
+END.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
+
+&lt;p&gt;Pemrograman Pascal di Linux dapat dilakukan dengan kompilator yang sudah disediakan.
+Langkah-langkahnya:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Tulis Program&lt;/li&gt;
+&lt;li&gt;Lakukan kompilasi&lt;/li&gt;
+&lt;li&gt;Eksekusi Program&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Selanjutnya: Memahami Lebih dalam Struktur Kode Pascal&lt;/p&gt;
 </description>
     </item>
     

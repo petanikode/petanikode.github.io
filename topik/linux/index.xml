@@ -404,7 +404,9 @@ untuk menjalankan Turbo Pascal.&lt;/p&gt;
 membuat program pascal. Ada dua jenis kompilator pascal di Linux, yaitu &lt;em&gt;Free Pascal&lt;/em&gt;
 dan &lt;em&gt;GNU Pascal&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Pada tulisan ini, kita akan belajar pascal menggunakan kompilator &lt;em&gt;Free Pascal&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Pada tulisan ini, kita akan belajar pascal menggunakan kompilator &lt;em&gt;Free Pascal&lt;/em&gt;.
+&lt;em&gt;Free Pascal&lt;/em&gt; tidak hanya untuk Linux, &lt;em&gt;Free Pascal&lt;/em&gt; juga bisa digunakan untuk
+sistem operasi lain seperti Windows dan Unix.&lt;/p&gt;
 
 &lt;h2 id=&#34;instalasi-free-pascal&#34;&gt;Instalasi Free Pascal&lt;/h2&gt;
 
@@ -423,6 +425,15 @@ Fatal: No source file name in command line
 Fatal: Compilation aborted
 Error: /usr/bin/ppc386 returned an error exitcode (normal if you did not specify a source file to be compiled)
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;membuat-program-pascal&#34;&gt;Membuat Program Pascal&lt;/h2&gt;
 
@@ -531,7 +542,7 @@ Langkah-langkahnya:&lt;/p&gt;
 &lt;li&gt;Eksekusi Program&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Selanjutnya: Memahami Lebih dalam Struktur Kode Pascal&lt;/p&gt;
+&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2015/02/6-aturan-dasar-penulisan-kode-pascal-yang-wajib-dipahami/&#34;&gt;Aturan Penulisan Kode Pascal yang Wajib dipahami&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

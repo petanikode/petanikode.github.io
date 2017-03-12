@@ -20,12 +20,222 @@
     </item>
     
     <item>
-      <title>3 cara menulis komentar di pemrograman Pascal</title>
-      <link>http://petanikode.com/2015/02/3-cara-menulis-komentar-di-pemrograman-pascal/</link>
+      <title>6 Aturan Dasar Penulisan Kode Pascal yang Wajib Dipahami</title>
+      <link>http://petanikode.com/2015/02/6-aturan-dasar-penulisan-kode-pascal-yang-wajib-dipahami/</link>
       <pubDate>Sat, 21 Feb 2015 22:31:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/2015/02/3-cara-menulis-komentar-di-pemrograman-pascal/</guid>
-      <description>&lt;p&gt;Komentar adalah bagian dari kode yang tidak akan dibaca oleh kompilator. Sehebat apapun komentar yang anda tulis, kompilator tidak akan memperhatikannya. Karena memang tidak dibuat untuk kompilator. Komentar dibuat agar orang lain dan kita sendiri dapat memahami kode yang dibuat. Kelak, mungkin kita akan lupa maksud kode yang telah dibuat. Oleh karena itu, kita perlu membuat komentar.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-FWp0UBK6TRU/VLJeySfKTtI/AAAAAAAAA_I/NpSWE1iS-go/s1600/Pemrograman%2Bpascal%2Bdi%2Blinux.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-FWp0UBK6TRU/VLJeySfKTtI/AAAAAAAAA_I/NpSWE1iS-go/s1600/Pemrograman%2Bpascal%2Bdi%2Blinux.png&#34; /&gt;&lt;/a&gt; &lt;br /&gt;Komentar berfungsi untuk memperjelas kode atau dokumentasi. Komentar juga dapat digunakan untuk menon-aktifkan suatu kode. Komentar dapat ditulis di mana saja. Penulisan komentar di pascal (&lt;i&gt;free pascal&lt;/i&gt;) dapat dilakukan dengan tiga cara.&lt;br /&gt;&lt;h2 id=&#34;1.-menggunakan-kurung-bintang&#34;&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=2407178719979772668#1.-menggunakan-kurung-bintang&#34; name=&#34;1.-menggunakan-kurung-bintang&#34;&gt;&lt;/a&gt;1. Menggunakan kurung-bintang&lt;/h2&gt;Penulisan komentar dengan kurung-bintang [&lt;code&gt;(* &amp;hellip; &lt;em&gt;)&lt;/code&gt;] termasuk cara lama. Karena, sekarang banyak digantikan dengan kurung kurawal. Penulisan komentar dimulai dengan simbol &lt;code&gt;(&lt;/em&gt;&lt;/code&gt; kemudian di akhiri dengan simbol &lt;code&gt;&lt;em&gt;)&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;program komentar_kurung_bintang;&lt;br /&gt;(&lt;/em&gt;&lt;br /&gt; * ini adalah komentar&lt;br /&gt; * yang lebih dari&lt;br /&gt; * satu baris&lt;br /&gt; &lt;em&gt;)&lt;br /&gt;&lt;br /&gt;begin&lt;br /&gt;    (&lt;/em&gt; ini komentar satu baris &lt;em&gt;)&lt;br /&gt;    writeln(&amp;lsquo;sebuah intruksi&amp;rsquo;);&lt;br /&gt;    (&lt;/em&gt; writeln(&amp;lsquo;ini juga intruksi&amp;rsquo;); *)&lt;br /&gt;end.&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;2.-menggunakan-kurung-kurawal&#34;&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=2407178719979772668#2.-menggunakan-kurung-kurawal&#34; name=&#34;2.-menggunakan-kurung-kurawal&#34;&gt;&lt;/a&gt;2. Menggunakan kurung kurawal&lt;/h2&gt;Penulisan komentar dengan kurung kurawal (&lt;code&gt;{ &amp;hellip; }&lt;/code&gt;) lebih efisien dari kurung-bintang. Karena lebih cepat menulisnya. Komentar di mulai dengan tanda &lt;code&gt;{&lt;/code&gt; dan diakhiri dengan tanda &lt;code&gt;}&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;program komentar_kurung_kurawal;&lt;br /&gt;&lt;br /&gt;{ ini adalah komentar&lt;br /&gt;  yang lebih dari&lt;br /&gt;  satu baris }&lt;br /&gt;&lt;br /&gt;begin&lt;br /&gt;    { ini komentar satu baris }&lt;br /&gt;    writeln(&amp;lsquo;sebuah intruksi&amp;rsquo;);&lt;br /&gt;    { writeln(&amp;lsquo;ini juga intruksi&amp;rsquo;); }&lt;br /&gt;end.&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;3.-menggunakan-garis-miring-ganda&#34;&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=2407178719979772668#3.-menggunakan-garis-miring-ganda&#34; name=&#34;3.-menggunakan-garis-miring-ganda&#34;&gt;&lt;/a&gt;3. Menggunakan garis miring ganda&lt;/h2&gt;Penulisan komentar dengan garis miring ganda (&lt;code&gt;// &amp;hellip;&lt;/code&gt;) hanya mendukung komentar satu baris. Walaupun begitu, komentar yang lebih dari satu baris juga dapat dibuat dengan garis miring ganda. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;pascal&#34;&gt;program komentar_garis_miring;&lt;br /&gt;&lt;br /&gt; // ini adalah komentar&lt;br /&gt; // yang lebih dari&lt;br /&gt; // satu baris&lt;br /&gt;&lt;br /&gt;begin&lt;br /&gt;    // ini komentar satu baris &lt;br /&gt;    writeln(&amp;lsquo;sebuah intruksi&amp;rsquo;);&lt;br /&gt;    // writeln(&amp;lsquo;ini juga intruksi&amp;rsquo;); &lt;br /&gt;end.&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+      <guid>http://petanikode.com/2015/02/6-aturan-dasar-penulisan-kode-pascal-yang-wajib-dipahami/</guid>
+      <description>
+
+&lt;p&gt;Kode program Pascal atau sintak Pascal, memiliki aturan-aturan penulisan yang
+harus ditaati. Kalau tidak, maka program akan error.&lt;/p&gt;
+
+&lt;p&gt;Aturan-aturan ini saya bagi menjadi tujuah bagian, agar mudah dipahami.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-judul-program&#34;&gt;1. Judul program&lt;/h2&gt;
+
+&lt;p&gt;Judul program Pascal bersifat opsional. Porgram masih bisa berjalan, meskipun
+belum diberikan judul.&lt;/p&gt;
+
+&lt;p&gt;Namun, agar terlihat lebih bagus, sebaiknya diberikan judul.&lt;/p&gt;
+
+&lt;p&gt;Judul program ditulis pada bagian teratas.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;program stok_pertanian;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nama program ditulis seteah kata kunci &lt;code&gt;program&lt;/code&gt;. Lalu, apabila terdiri dari
+dia suku kata, maka dipisah dengan garis bawah (&lt;code&gt;_&lt;/code&gt;) seperti contoh di atas.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-kepala-program&#34;&gt;2. Kepala program&lt;/h2&gt;
+
+&lt;p&gt;Bagian kepala program berisi deklarasi untuk &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;constant&lt;/code&gt;, &lt;code&gt;uses&lt;/code&gt;, &lt;code&gt;var&lt;/code&gt;,
+dan termasuk juga judul program.&lt;/p&gt;
+
+&lt;h3 id=&#34;type&#34;&gt;Type&lt;/h3&gt;
+
+&lt;p&gt;Deklarasi &lt;code&gt;type&lt;/code&gt; merupakan deklarasi untuk stuktur data tertentu, seperti &lt;em&gt;Array&lt;/em&gt;,
+&lt;em&gt;Record&lt;/em&gt;, &lt;em&gt;Pointer&lt;/em&gt;, dsb.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;type
+    TMember = record
+        firstname, surname : string;
+        address: array [1..3] of string;
+        phone: string;
+        birthdate: TDateTime;
+        paidCurrentSubscription: boolean
+    end;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Penutup deklarasi &lt;code&gt;type&lt;/code&gt; menggunakan &lt;code&gt;end&lt;/code&gt; diikuti dengan titik-koma.&lt;/p&gt;
+
+&lt;h3 id=&#34;konstanta&#34;&gt;Konstanta&lt;/h3&gt;
+
+&lt;p&gt;Konstanta merupakan tetapan yang nilainya tidak bisa diubah.&lt;/p&gt;
+
+&lt;p&gt;contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;const
+PI = 3.141592654;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;PI&lt;/code&gt; adalah nama Konstantanya, kemudian &lt;code&gt;3.141592654&lt;/code&gt; adalah nilainya. Setiap
+pembuatan konstanta harus diakhiri dengan titik-koma.&lt;/p&gt;
+
+&lt;h3 id=&#34;uses&#34;&gt;Uses&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;Uses&lt;/code&gt; digunakan untuk mendeklarasikan &lt;em&gt;libaray&lt;/em&gt; atau unit yang akan digunakan
+dalam program.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;uses crt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Apabila terdapat lebih dari satu &lt;em&gt;libarary&lt;/em&gt;, maka pisahkan dengan tana koma.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;uses crt, my_libaray;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;variabel&#34;&gt;Variabel&lt;/h3&gt;
+
+&lt;p&gt;Deklarasi variabel artinya, kita mendaftarkan variabel apa saya yang akan
+dibutuhkan dalam program.&lt;/p&gt;
+
+&lt;p&gt;Format pendeklarasian variabel:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;var
+    nama_variabel: type data;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;var
+umur: integer;
+r, d, c : real;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-tubuh-program&#34;&gt;3. Tubuh Program&lt;/h2&gt;
+
+&lt;p&gt;Tubuh program merupakan bagian utama dari progam.
+Tubuh program diawali dengan kata kunci &lt;code&gt;BEGIN&lt;/code&gt;, kemudian diakhiri dengan &lt;code&gt;END.&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;BEGIN
+    // kode program di sini
+END.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikan penulisannya. Boleh menggunakan huruf kecil dan huruf besar, Pascal
+tidak membedakannya.&lt;/p&gt;
+
+&lt;p&gt;Perhatikan juga penulian &lt;code&gt;END.&lt;/code&gt;, di sana harus diakhiri dengan tanda titik (&lt;code&gt;.&lt;/code&gt;).
+Sebagai tanda kalau &lt;code&gt;END&lt;/code&gt; ini adalah akhir dari tubuh program.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;706&#34;
+    height=&#34;451&#34;
+    alt=&#34;struktur kode pascal&#34;
+    src=&#34;https://3.bp.blogspot.com/-ASOJkiwpTq4/WMSDAV9VuzI/AAAAAAAAEUs/JmiT4BNSVtM_fbT78j9cIqdD5Lh2mtl_gCPcB/s1600/struktur-kode-pascal.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-penulisan-tipe-data&#34;&gt;4. Penulisan Tipe Data&lt;/h2&gt;
+
+&lt;p&gt;Berbeda tipe data, berbeda pula cara penulisannya.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;String&lt;/em&gt; dan &lt;em&gt;char&lt;/em&gt;: diapit dengan tanda petik satu, contoh: &lt;code&gt;&#39;petani kode&#39;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Integer&lt;/em&gt;: tidak diapit dengan petik, contoh: &lt;code&gt;12&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Real&lt;/em&gt;: tidak diapit dengan petik, ditambahkan titik sebagai koma. Contoh: &lt;code&gt;13.4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;boolean&lt;/em&gt;: Tidak diapit tanda petik. contoh: &lt;code&gt;true&lt;/code&gt;;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;5-intruksi&#34;&gt;5. Intruksi&lt;/h2&gt;
+
+&lt;p&gt;Intruksi disebut juga statement, merupakan fungsi yang akan menyuruh kompiter
+melakukan sesuatu. Intruksi dutulis dalam tubuh program.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;BEGIN
+    writeln(&#39;Hello Pascal!&#39;);
+    writeln(&#39;Saya sedang belajar&#39;);
+END.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada contoh di atas, kita membuat dua intruksi untuk menampikan pesan di
+layar.&lt;/p&gt;
+
+&lt;p&gt;Setiap intruksi harus diakhiri dengan titik-koma (&lt;code&gt;;&lt;/code&gt;).&lt;/p&gt;
+
+&lt;h2 id=&#34;6-komentar&#34;&gt;6. Komentar&lt;/h2&gt;
+
+&lt;p&gt;Komentar adalah bagian yang akan diabaikan oleh komputer. Komentar digunakan
+untuk dokumentasi dan mencatat keterangan kode.&lt;/p&gt;
+
+&lt;p&gt;Ada tiga cara penulisan komentar pada pascal:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Kurung dan bintang: &lt;code&gt;(* di sini komentar *)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Garis miring ganda: &lt;code&gt;// di sini komentarnya&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Kurung kurawal: &lt;code&gt;{ ini komentar }&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;{ begin digunakan untuk memulai tubuh program }
+BEGIN
+    // ini adalah komentar
+    (* ini juga komentar *)
+    writeln(&#39;komentar ada di mana-mana&#39;);
+END.
+{
+    end digunakan untuk mengakhiri kode program, end untuk tubuh program utama diakhiri dengan tanda titik.
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;7-blok-kode&#34;&gt;7. Blok kode&lt;/h2&gt;
+
+&lt;p&gt;Blok kode berisi kumpulan intruksi. Blog kode dimulai dengan &lt;code&gt;begin&lt;/code&gt; dan diakhiri
+dengan &lt;code&gt;end&lt;/code&gt;. Blok kode untuk tubuh program (program utama) diakhiri dengan
+tanda titik (&lt;code&gt;.&lt;/code&gt;), sedangkan untuk blok kode yang lainnya diakhiri dengan titik-koma (&lt;code&gt;;&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;BEGIN
+    // ini blok kode utama
+    writeln(&#39;intruksi di blok kode utama&#39;);
+
+    if x = y then
+    begin
+        // ini blok kode IF
+        // blok kode ini berada dalam blok kode utama
+    end;
+
+    for i:= 1 to 10 do
+    begin
+        // ini blok kode FOR
+        writeln(i);
+    end;
+END.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah, itulah 7 aturan penulisan kode pascal yang harus dipahami.&lt;/p&gt;
 </description>
     </item>
     
@@ -56,7 +266,9 @@ untuk menjalankan Turbo Pascal.&lt;/p&gt;
 membuat program pascal. Ada dua jenis kompilator pascal di Linux, yaitu &lt;em&gt;Free Pascal&lt;/em&gt;
 dan &lt;em&gt;GNU Pascal&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Pada tulisan ini, kita akan belajar pascal menggunakan kompilator &lt;em&gt;Free Pascal&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Pada tulisan ini, kita akan belajar pascal menggunakan kompilator &lt;em&gt;Free Pascal&lt;/em&gt;.
+&lt;em&gt;Free Pascal&lt;/em&gt; tidak hanya untuk Linux, &lt;em&gt;Free Pascal&lt;/em&gt; juga bisa digunakan untuk
+sistem operasi lain seperti Windows dan Unix.&lt;/p&gt;
 
 &lt;h2 id=&#34;instalasi-free-pascal&#34;&gt;Instalasi Free Pascal&lt;/h2&gt;
 
@@ -75,6 +287,15 @@ Fatal: No source file name in command line
 Fatal: Compilation aborted
 Error: /usr/bin/ppc386 returned an error exitcode (normal if you did not specify a source file to be compiled)
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;membuat-program-pascal&#34;&gt;Membuat Program Pascal&lt;/h2&gt;
 
@@ -183,7 +404,7 @@ Langkah-langkahnya:&lt;/p&gt;
 &lt;li&gt;Eksekusi Program&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Selanjutnya: Memahami Lebih dalam Struktur Kode Pascal&lt;/p&gt;
+&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2015/02/6-aturan-dasar-penulisan-kode-pascal-yang-wajib-dipahami/&#34;&gt;Aturan Penulisan Kode Pascal yang Wajib dipahami&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

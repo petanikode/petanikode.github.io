@@ -287,8 +287,8 @@ diperkenalkan pada perlajaran muatan lokal di SMK.&lt;/p&gt;
 pemrograman Pascal. Kemudian, ketika berlaih ke Linux, saya menggunakan WINE
 untuk menjalankan Turbo Pascal.&lt;/p&gt;
 
-&lt;p&gt;Sebenarnya Linux sudah menyediakan kompilator Pascal yang memungkinkan kita
-membuat program pascal. Ada dua jenis kompilator pascal di Linux, yaitu &lt;em&gt;Free Pascal&lt;/em&gt;
+&lt;p&gt;Sebenarnya Linux sudah menyediakan kompilator Pascal yang bisa kita
+gunakan. Ada dua jenis kompilator pascal di Linux, yaitu &lt;em&gt;Free Pascal&lt;/em&gt;
 dan &lt;em&gt;GNU Pascal&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Pada tulisan ini, kita akan belajar pascal menggunakan kompilator &lt;em&gt;Free Pascal&lt;/em&gt;.
@@ -297,7 +297,7 @@ sistem operasi lain seperti Windows dan Unix.&lt;/p&gt;
 
 &lt;h2 id=&#34;instalasi-free-pascal&#34;&gt;Instalasi Free Pascal&lt;/h2&gt;
 
-&lt;p&gt;Saat ini saya menggunakan Ubuntu, cara menginstal pascal dapat dengan mudah dilakukan
+&lt;p&gt;Saat ini saya menggunakan Ubuntu, instalasi pascal dapat dengan mudah dilakukan
 melalui perintah &lt;code&gt;apt&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install fpc
@@ -429,7 +429,7 @@ Langkah-langkahnya:&lt;/p&gt;
 &lt;li&gt;Eksekusi Program&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2015/02/6-aturan-dasar-penulisan-kode-pascal-yang-wajib-dipahami/&#34;&gt;Aturan Penulisan Kode Pascal yang Wajib dipahami&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/7-aturan-dasar-penulisan-kode-pascal-yang-wajib-dipahami/&#34;&gt;Aturan Penulisan Kode Pascal yang Wajib dipahami&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

@@ -27,6 +27,14 @@
       <guid>http://petanikode.com/2015/02/7-aturan-dasar-penulisan-kode-pascal-yang-wajib-dipahami/</guid>
       <description>
 
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;pemrograman-pascal-petanikode.jpg&#34;
+    src=&#34;https://2.bp.blogspot.com/-QtG2g2EG_-s/WMRwI1WgHLI/AAAAAAAAEUQ/6KtsGmNeH3sjhem5r5yGxJGYzhhBE6mrACK4B/s1600/pemrograman-pascal-petanikode.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
 &lt;p&gt;Kode program Pascal atau sintak Pascal, memiliki aturan-aturan penulisan yang
 harus ditaati. Kalau tidak, maka program akan error.&lt;/p&gt;
 
@@ -73,6 +81,9 @@ dan termasuk juga judul program.&lt;/p&gt;
 
 &lt;p&gt;Penutup deklarasi &lt;code&gt;type&lt;/code&gt; menggunakan &lt;code&gt;end&lt;/code&gt; diikuti dengan titik-koma.&lt;/p&gt;
 
+&lt;p&gt;Pada contoh diatas kita sudah mendeklarasikan &lt;code&gt;type&lt;/code&gt; bernama &lt;code&gt;TMember&lt;/code&gt; yang
+bertipe &lt;code&gt;record&lt;/code&gt;.&lt;/p&gt;
+
 &lt;h3 id=&#34;konstanta&#34;&gt;Konstanta&lt;/h3&gt;
 
 &lt;p&gt;Konstanta merupakan tetapan yang nilainya tidak bisa diubah.&lt;/p&gt;
@@ -86,6 +97,9 @@ PI = 3.141592654;
 &lt;p&gt;&lt;code&gt;PI&lt;/code&gt; adalah nama Konstantanya, kemudian &lt;code&gt;3.141592654&lt;/code&gt; adalah nilainya. Setiap
 pembuatan konstanta harus diakhiri dengan titik-koma.&lt;/p&gt;
 
+&lt;p&gt;Saran: nama konstanta sebaiknya pakai huruf kapital, karena untuk menandakan
+itu sebuah konstanta.&lt;/p&gt;
+
 &lt;h3 id=&#34;uses&#34;&gt;Uses&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;Uses&lt;/code&gt; digunakan untuk mendeklarasikan &lt;em&gt;libaray&lt;/em&gt; atau unit yang akan digunakan
@@ -96,7 +110,7 @@ dalam program.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;uses crt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Apabila terdapat lebih dari satu &lt;em&gt;libarary&lt;/em&gt;, maka pisahkan dengan tana koma.&lt;/p&gt;
+&lt;p&gt;Apabila terdapat lebih dari satu &lt;em&gt;libarary&lt;/em&gt;, maka pisahkan dengan tanda koma.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;uses crt, my_libaray;
 &lt;/code&gt;&lt;/pre&gt;
@@ -115,9 +129,15 @@ dibutuhkan dalam program.&lt;/p&gt;
 &lt;p&gt;Contoh:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;var
-umur: integer;
-r, d, c : real;
+    umur: integer;
+    r, d, c : real;
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Deklarasi variabel dengan tipe data yang sama, dapat dibuat bersamaan dengan
+dipisah tanda koma seperti contoh di atas.&lt;/p&gt;
+
+&lt;p&gt;Gunakan garis bawah (&lt;code&gt;_&lt;/code&gt;) untuk memisahkan nama variabel yang lebih dari satu
+suku kata.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-ad
     data-ad-client=&#39;ca-pub-6279325630224392&#39;
@@ -143,8 +163,8 @@ END.
 &lt;p&gt;Perhatikan penulisannya. Boleh menggunakan huruf kecil dan huruf besar, Pascal
 tidak membedakannya.&lt;/p&gt;
 
-&lt;p&gt;Perhatikan juga penulian &lt;code&gt;END.&lt;/code&gt;, di sana harus diakhiri dengan tanda titik (&lt;code&gt;.&lt;/code&gt;).
-Sebagai tanda kalau &lt;code&gt;END&lt;/code&gt; ini adalah akhir dari tubuh program.&lt;/p&gt;
+&lt;p&gt;Perhatikan juga penulisan &lt;code&gt;END.&lt;/code&gt;, di sana harus diakhiri dengan tanda titik (&lt;code&gt;.&lt;/code&gt;).
+Sebagai tanda kalau &lt;code&gt;END&lt;/code&gt; ini adalah akhir dari tubuh program utama.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;706&#34;
@@ -161,13 +181,13 @@ Sebagai tanda kalau &lt;code&gt;END&lt;/code&gt; ini adalah akhir dari tubuh pro
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;String&lt;/em&gt; dan &lt;em&gt;char&lt;/em&gt;: diapit dengan tanda petik satu, contoh: &lt;code&gt;&#39;petani kode&#39;&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Integer&lt;/em&gt;: tidak diapit dengan petik, contoh: &lt;code&gt;12&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Real&lt;/em&gt;: tidak diapit dengan petik, ditambahkan titik sebagai koma. Contoh: &lt;code&gt;13.4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Real&lt;/em&gt;: tidak diapit dengan petik, ditambahkan titik sebagai ganti koma. Contoh: &lt;code&gt;13.4&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;boolean&lt;/em&gt;: Tidak diapit tanda petik. contoh: &lt;code&gt;true&lt;/code&gt;;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;5-intruksi&#34;&gt;5. Intruksi&lt;/h2&gt;
 
-&lt;p&gt;Intruksi disebut juga statement, merupakan fungsi yang akan menyuruh kompiter
+&lt;p&gt;Intruksi disebut juga statement, merupakan fungsi yang akan menyuruh komputer
 melakukan sesuatu. Intruksi dutulis dalam tubuh program.&lt;/p&gt;
 
 &lt;p&gt;Contoh:&lt;/p&gt;
@@ -211,7 +231,7 @@ END.
 
 &lt;h2 id=&#34;7-blok-kode&#34;&gt;7. Blok kode&lt;/h2&gt;
 
-&lt;p&gt;Blok kode berisi kumpulan intruksi. Blog kode dimulai dengan &lt;code&gt;begin&lt;/code&gt; dan diakhiri
+&lt;p&gt;Blok kode berisi kumpulan intruksi. Blok kode dimulai dengan &lt;code&gt;begin&lt;/code&gt; dan diakhiri
 dengan &lt;code&gt;end&lt;/code&gt;. Blok kode untuk tubuh program (program utama) diakhiri dengan
 tanda titik (&lt;code&gt;.&lt;/code&gt;), sedangkan untuk blok kode yang lainnya diakhiri dengan titik-koma (&lt;code&gt;;&lt;/code&gt;).&lt;/p&gt;
 
@@ -235,7 +255,12 @@ tanda titik (&lt;code&gt;.&lt;/code&gt;), sedangkan untuk blok kode yang lainnya
 END.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Nah, itulah 7 aturan penulisan kode pascal yang harus dipahami.&lt;/p&gt;
+&lt;p&gt;Nah, itulah 7 aturan penulisan kode pascal yang wajib dipahami bila anda ingin
+menguasai Pascal.&lt;/p&gt;
+
+&lt;p&gt;Akhir kata&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Semoga ada manfaatnya :smile:.&lt;/p&gt;
 </description>
     </item>
     

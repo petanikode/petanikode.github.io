@@ -7,8 +7,218 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 11 Mar 2017 05:12:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Mar 2017 17:36:45 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
+      <link>http://petanikode.com/2017/03/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</link>
+      <pubDate>Tue, 14 Mar 2017 17:36:45 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/03/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</guid>
+      <description>
+
+&lt;p&gt;Seperti yang kita ketahui, istilah card memang sering dipakai pada Material Design.
+Sedangkan Bootstrap versi 3 tidak memiliki komponen card. Mungkin saja akan
+ditambahkan pada versi ke-4. Kita tunggu saja.&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan ini, kita akan belajar cara modifikasi komponen panel Bootstrap
+untuk dijadikan Card.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini tampilan hasil akhir yang akan kita buat:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;panel bootstrap sebagai card&#34;
+    src=&#34;https://1.bp.blogspot.com/-0EKCQDsPHPs/WMfRU8kIjYI/AAAAAAAAEZM/9bX9E4TSGTg_Z0VbrROgBRTUtWiEKPrdQCK4B/s1600/panel-bootstrap-sebagai-card.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mempersiapkan-gird-layout&#34;&gt;Mempersiapkan Gird Layout&lt;/h2&gt;
+
+&lt;p&gt;Pertama, kita siapkan dulu grid layout dengan empat kolom.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;menambahkan-panel&#34;&gt;Menambahkan Panel&lt;/h2&gt;
+
+&lt;p&gt;Nah selanjutnya, kita buat panelnya. Ada empat item yang ingin kita tampilkan:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Gambar Artikel&lt;/li&gt;
+&lt;li&gt;Label&lt;/li&gt;
+&lt;li&gt;Judul Artikel&lt;/li&gt;
+&lt;li&gt;Penulis&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Maka kode panelnya akan seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default&amp;quot;&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
+        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
+        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
+        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
+        &amp;lt;/h3&amp;gt;
+
+        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
+            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah silahkan masukan kode panel di atas ke dalam kode sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Demo hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/BWdoEM/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kode-css&#34;&gt;Kode CSS&lt;/h2&gt;
+
+&lt;p&gt;Terlihat pada hasil demo di atas, tampilannya masih belum rapi. Karena menggunakan
+style dari Bootstrap.&lt;/p&gt;
+
+&lt;p&gt;Tugas kita selanjutnya adalah membuat kode CSS sendiri untuk mengatur komponen
+panel tersebut.&lt;/p&gt;
+
+&lt;p&gt;Seperti yang terlihat pada kode panel di atas, terdapat
+&lt;em&gt;class&lt;/em&gt; yang harus kita buat.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;.post-body&lt;/code&gt;: untuk mengatur agar tinggi card sejajar&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-thumb&lt;/code&gt;: untuk mengatur tampilan gambar artikel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-title&lt;/code&gt;: judul artikel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-author&lt;/code&gt; dan &lt;code&gt;.author-photo&lt;/code&gt; untuk nama dan foto penulisya&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mari kita buat kodenya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/* tinggi card */
+.post-body {
+    height: 215px;
+    position: relative;
+    padding: 20px 15px 0;
+}
+
+/* untuk menghilangkan padding pada .panel-heading */
+.post-thumb {
+    padding: 0
+}
+
+/* mengatur font dan link judul artikel*/
+.post-title a {
+    color: rgba(0,0,0,0.7);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5em;
+    letter-spacing: 0.01rem;
+}
+.post-title a:hover { text-decoration: none }
+
+/* posisi author selalu di bawah */
+.post-author {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 13px;
+}
+
+.post-author .author-photo {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo hasil setelah ditambahkan CSS:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/OpjMbe/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Terlihat cukup bagus.&lt;/p&gt;
+
+&lt;p&gt;Silahkan lakukan kreasi sesukamu.&lt;/p&gt;
+
+&lt;h2 id=&#34;bonus-efek-bayangan-ketika-card-disentuh&#34;&gt;Bonus: Efek Bayangan Ketika Card disentuh&lt;/h2&gt;
+
+&lt;p&gt;Baiklah, sebagai bonus, kita tambahkan efek bayangan ketika card-nya disentuh
+pointer. Efek ini akan membuat card terlihat lebih keren :smile:.&lt;/p&gt;
+
+&lt;p&gt;Tambahkan kode CSS berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.card:hover {
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.2);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, gunakan class &lt;code&gt;.card&lt;/code&gt; pada panel:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default card&amp;quot;&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
+        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
+        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
+        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
+        &amp;lt;/h3&amp;gt;
+
+        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
+            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka hasilnya akan seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/PpKZKr/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagaimana, mudah bukan?&lt;/p&gt;
+
+&lt;p&gt;Selamat berkreasi.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>15 Tag HTML yang tidak Memiliki Pasangan Penutup</title>
@@ -2537,87 +2747,6 @@ kita bisa kembali ke &lt;em&gt;checkpoint&lt;/em&gt; ini.&lt;/p&gt;
 &lt;p&gt;Sekian untuk tutorial ke-3 ini, mudah-mudahan bermanfaat.&lt;/p&gt;
 
 &lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/&#34;&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Integarsi Bot Autoposting Telegram dengan Channel</title>
-      <link>http://petanikode.com/2017/02/integarsi-bot-autoposting-telegram-dengan-channel/</link>
-      <pubDate>Sun, 12 Feb 2017 22:44:49 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/02/integarsi-bot-autoposting-telegram-dengan-channel/</guid>
-      <description>
-
-&lt;p&gt;Pada tulisan &lt;a href=&#34;http://petanikode.com/2016/07/membuat-bot-telegram-tanpa-menulis-kode-program-coding/&#34;&gt;sebelumnya&lt;/a&gt;,
-Saya pernah membuat Bot Autoposting dari RSS Reddit. Sekarang bagaimana caranya
-agar kiriman &lt;em&gt;(post)&lt;/em&gt; dari bot tersebut diteruskan ke &lt;em&gt;Channel&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Channel&lt;/em&gt; dapat di-follow setiap orang, sedangkan bot tidak. Bot hanya dapat
-digunakan saja. Bot tidak cocok sebagai sarana promosi. Oleh karena itu, kita membutuhkan
-&lt;em&gt;Channel&lt;/em&gt; yang dapat melakukan &lt;em&gt;posting&lt;/em&gt; otomatis (Autoposting).&lt;/p&gt;
-
-&lt;p&gt;Ok, mari kita mulai. Pastikan anda sudah menyiapkan &lt;em&gt;Channel&lt;/em&gt; dan Bot Autoposting.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;tambahkan-bot-sebagai-admin&#34;&gt;Tambahkan Bot sebagai Admin&lt;/h2&gt;
-
-&lt;p&gt;Agar Bot dapat melakukan posting otomatis ke &lt;em&gt;Channel&lt;/em&gt; kita harus menjadikan bot
-sebagai admin dalam &lt;em&gt;Channel&lt;/em&gt; tersebut.&lt;/p&gt;
-
-&lt;p&gt;Silahkan buka Channel-nya, kemudian pada bagian &lt;em&gt;Member&lt;/em&gt; klik &lt;em&gt;Administrator&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;483&#34;
-    height=&#34;154&#34;
-    alt=&#34;Masuk+ke+administrator+channel+telegram+-+petanikode.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-rTBfC_TdkBI/WKB_0gBjFwI/AAAAAAAAD1Y/HhgyZED8UzsyV5rO_Qteun-CLoUMldX6wCPcB/s1600/Masuk%2Bke%2Badministrator%2Bchannel%2Btelegram%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu klik &lt;em&gt;Add Administrator&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;894&#34;
-    height=&#34;659&#34;
-    alt=&#34;Administrator+Channel+Telegram.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-NG9JZ8pqvF0/WKCBMDiZD-I/AAAAAAAAD14/Fuyn_OBgMZQUKe7L_tlUB6fC1e5XBrAJgCPcB/s1600/Administrator%2BChannel%2BTelegram.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Cari nama Bot-nya, tuliskan usernamenya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;894&#34;
-    height=&#34;659&#34;
-    alt=&#34;Cari+username+bot+untuk+dijadikan+administrator.png&#34;
-    src=&#34;https://1.bp.blogspot.com/-Y62g-iqUy30/WKCCNXUpzaI/AAAAAAAAD2M/333zMorSpEMAgNVTsNM_udAgbov1wZDFACPcB/s1600/Cari%2Busername%2Bbot%2Buntuk%2Bdijadikan%2Badministrator.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kalau sudah ketemu, tinggal diklik saja. Nanti akan ada pesan dialog seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;519&#34;
-    height=&#34;232&#34;
-    alt=&#34;Konfirmasi+penambahan+admin.png&#34;
-    src=&#34;https://2.bp.blogspot.com/-mZhGXWDzbU8/WKCCvQ4h8xI/AAAAAAAAD2U/VXMvylWgYXsxB_8mV8uYazEvw63ckhnJwCPcB/s1600/Konfirmasi%2Bpenambahan%2Badmin.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Klik saja &lt;em&gt;Ok&lt;/em&gt;, maka akan selesai. Penambahan administrator sudah dilakukan.&lt;/p&gt;
-
-&lt;p&gt;Setiap post terbaru di bot tersebut akan diteruskan ke &lt;em&gt;Channel&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Itulah cara mengintegarsikan Bot dengan &lt;em&gt;Channel&lt;/em&gt;. O ya! jangan lupa ikuti
-Channel-nya Petani Kode di Telegram &lt;a href=&#34;https:/t.me/petanikode&#34;&gt;@petanikode&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

@@ -10,6 +10,216 @@
     <atom:link href="http://petanikode.com/topik/framework/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
+      <link>http://petanikode.com/2017/03/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</link>
+      <pubDate>Tue, 14 Mar 2017 17:36:45 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/03/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</guid>
+      <description>
+
+&lt;p&gt;Seperti yang kita ketahui, istilah card memang sering dipakai pada Material Design.
+Sedangkan Bootstrap versi 3 tidak memiliki komponen card. Mungkin saja akan
+ditambahkan pada versi ke-4. Kita tunggu saja.&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan ini, kita akan belajar cara modifikasi komponen panel Bootstrap
+untuk dijadikan Card.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini tampilan hasil akhir yang akan kita buat:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;panel bootstrap sebagai card&#34;
+    src=&#34;https://1.bp.blogspot.com/-0EKCQDsPHPs/WMfRU8kIjYI/AAAAAAAAEZM/9bX9E4TSGTg_Z0VbrROgBRTUtWiEKPrdQCK4B/s1600/panel-bootstrap-sebagai-card.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mempersiapkan-gird-layout&#34;&gt;Mempersiapkan Gird Layout&lt;/h2&gt;
+
+&lt;p&gt;Pertama, kita siapkan dulu grid layout dengan empat kolom.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;menambahkan-panel&#34;&gt;Menambahkan Panel&lt;/h2&gt;
+
+&lt;p&gt;Nah selanjutnya, kita buat panelnya. Ada empat item yang ingin kita tampilkan:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Gambar Artikel&lt;/li&gt;
+&lt;li&gt;Label&lt;/li&gt;
+&lt;li&gt;Judul Artikel&lt;/li&gt;
+&lt;li&gt;Penulis&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Maka kode panelnya akan seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default&amp;quot;&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
+        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
+        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
+        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
+        &amp;lt;/h3&amp;gt;
+
+        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
+            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah silahkan masukan kode panel di atas ke dalam kode sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Demo hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/BWdoEM/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kode-css&#34;&gt;Kode CSS&lt;/h2&gt;
+
+&lt;p&gt;Terlihat pada hasil demo di atas, tampilannya masih belum rapi. Karena menggunakan
+style dari Bootstrap.&lt;/p&gt;
+
+&lt;p&gt;Tugas kita selanjutnya adalah membuat kode CSS sendiri untuk mengatur komponen
+panel tersebut.&lt;/p&gt;
+
+&lt;p&gt;Seperti yang terlihat pada kode panel di atas, terdapat
+&lt;em&gt;class&lt;/em&gt; yang harus kita buat.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;.post-body&lt;/code&gt;: untuk mengatur agar tinggi card sejajar&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-thumb&lt;/code&gt;: untuk mengatur tampilan gambar artikel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-title&lt;/code&gt;: judul artikel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-author&lt;/code&gt; dan &lt;code&gt;.author-photo&lt;/code&gt; untuk nama dan foto penulisya&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mari kita buat kodenya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/* tinggi card */
+.post-body {
+    height: 215px;
+    position: relative;
+    padding: 20px 15px 0;
+}
+
+/* untuk menghilangkan padding pada .panel-heading */
+.post-thumb {
+    padding: 0
+}
+
+/* mengatur font dan link judul artikel*/
+.post-title a {
+    color: rgba(0,0,0,0.7);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5em;
+    letter-spacing: 0.01rem;
+}
+.post-title a:hover { text-decoration: none }
+
+/* posisi author selalu di bawah */
+.post-author {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 13px;
+}
+
+.post-author .author-photo {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo hasil setelah ditambahkan CSS:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/OpjMbe/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Terlihat cukup bagus.&lt;/p&gt;
+
+&lt;p&gt;Silahkan lakukan kreasi sesukamu.&lt;/p&gt;
+
+&lt;h2 id=&#34;bonus-efek-bayangan-ketika-card-disentuh&#34;&gt;Bonus: Efek Bayangan Ketika Card disentuh&lt;/h2&gt;
+
+&lt;p&gt;Baiklah, sebagai bonus, kita tambahkan efek bayangan ketika card-nya disentuh
+pointer. Efek ini akan membuat card terlihat lebih keren :smile:.&lt;/p&gt;
+
+&lt;p&gt;Tambahkan kode CSS berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.card:hover {
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.2);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, gunakan class &lt;code&gt;.card&lt;/code&gt; pada panel:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default card&amp;quot;&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
+        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
+        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
+        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
+        &amp;lt;/h3&amp;gt;
+
+        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
+            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka hasilnya akan seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/PpKZKr/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagaimana, mudah bukan?&lt;/p&gt;
+
+&lt;p&gt;Selamat berkreasi.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Menggunakan Dompdf di Codeigniter</title>
       <link>http://petanikode.com/2017/02/cara-menggunakan-dompdf-di-codeigniter/</link>
       <pubDate>Sun, 19 Feb 2017 16:48:58 +0800</pubDate>
@@ -333,104 +543,6 @@ layout=&#34;responsive&#34;&gt;
       
       <guid>http://petanikode.com/2016/01/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; /&gt;&lt;/a&gt;Selamat datang di tutorial pertama Bootstrap. Bootstrap adalah sebuah &lt;i&gt;framework&lt;/i&gt; CSS untuk mengatur tampilan web agar menjadi lebih bagus dan &lt;i&gt;responsive&lt;/i&gt;. Pada tutorial pertama ini, saya akan membahas cara menyisipkan Bootstrap ke dalam HTML. Sebelum memulai, silahkan anda unduh dulu Bootstrap-nya di &lt;a href=&#34;http://getbootstrap.com/&#34;&gt;getbootstrap.com&lt;/a&gt;.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-YuS4gVhY3c8/VoYuZhD3GMI/AAAAAAAACUU/74nfHCVCWNE/s1600/Download%2BBootstrap%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Download Bootstrap&#34; border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-YuS4gVhY3c8/VoYuZhD3GMI/AAAAAAAACUU/74nfHCVCWNE/s1600/Download%2BBootstrap%2B-%2Bpetanikode.png&#34; style=&#34;border: 1px solid rgb(221, 221, 221);&#34; title=&#34;Download Bootstrap&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Menyisipkan Bootstrap ke Halaman Web&lt;/h2&gt;Mari kita membuat sebuah direktori bernama &lt;i&gt;belajar-bootstrap&lt;/i&gt;. Kemdudian ekstrak Bootstrap yang sudah diunduh tadi ke dalam direktori tersebut. Extrak direktori bisa dilakukan dengan &lt;i&gt;drag-drop&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-yaEV66dSpTM/VoYw5CHEiQI/AAAAAAAACUk/UFjBnTDj7SU/s1600/Menambahkan%2Bbootstrap%2Bke%2Bproyek%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Menambahkan bootstrap ke dalam proyek&#34; border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-yaEV66dSpTM/VoYw5CHEiQI/AAAAAAAACUk/UFjBnTDj7SU/s1600/Menambahkan%2Bbootstrap%2Bke%2Bproyek%2B-%2Bpetanikode.png&#34; title=&#34;Menambahkan bootstrap ke dalam proyek&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian, ubahlah nama &lt;i&gt;bootstrap-3.3.6-dist&lt;/i&gt; menjadi &lt;i&gt;bootstrap&lt;/i&gt;. Perubahan nama ini bertujuan untuk memudahkan penulisan kode penyisipan bootstrap di HTML. Selanjutnya buatlah berkas HTML baru bernama &lt;code&gt;hello_bootstrap.html&lt;/code&gt; dengan isi sebagai berikut.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;Hello Bootstrap&amp;lt;/title&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; menyisipkan bootstrap &amp;ndash;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;h1&amp;gt;Hello Bootstrap!&amp;lt;/h1&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;p&amp;gt;Selamat datang di tutorial framework bootstrap&amp;lt;/p&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;Setelah itu, cobalah buka file HTML yang sudah dibuat. Maka, anda akan mendapatkan tampilan seperti ini:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-0lCeKXLbuAU/VoY54Zz2k7I/AAAAAAAACU0/DIBpS9YAe38/s1600/Hello%2Bbootstrap%2B-%2Bpetani%2Bkode_2016-01-01_16-32-49.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Hello bootstrap&#34; border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-0lCeKXLbuAU/VoY54Zz2k7I/AAAAAAAACU0/DIBpS9YAe38/s1600/Hello%2Bbootstrap%2B-%2Bpetani%2Bkode_2016-01-01_16-32-49.png&#34; title=&#34;Tampilan web dengan bootstrap&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tampilan seperti gambar di atas, menyatakan Bootstrap sudah berhasil di sisipkan ke halaman web atau HTML. Kode yang perlu anda perhatikan adalah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;Kode tersebut berfungsi untuk membuat relasi antara file HTML dengan &lt;a href=&#34;http://www.petanikode.com/2015/07/berbagai-cara-menulis-kode-css-dalam.html&#34; target=&#34;_blank&#34;&gt;CSS eksternal&lt;/a&gt;. Atribut &lt;code&gt;rel&lt;/code&gt; menyatakan relasinya, sedangkan &lt;code&gt;href&lt;/code&gt; untuk menentukan alamat lokasi file-nya.&lt;br /&gt;&lt;br /&gt;Bila anda menggunakan bootstrap yang online (CDN), maka anda harus memberikan nilai &lt;code&gt;href&lt;/code&gt; dengan alamat URL.&amp;nbsp; Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;&lt;a href=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&amp;quot;&#34;&gt;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&amp;quot;&lt;/a&gt; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Jadi, kita hanya membutuhkan satu baris kode untuk menyisipkan bootstrap ke dalam HTML. Kode itu merupakan tag &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;. Tag ini berfungsi untuk merelasikan dokumen HTML dengan dokumen yang lainnya.&lt;br /&gt;&lt;br /&gt;Nah, sekian dulu tutorial pertama ini. Intinya, saya ingin mengajarkan cara menyisipkan Bootstrap ke dalam proyek dan HTML. Kalau ada yang belum jelas, silahkan ditanyakan melalui komentar di bawah. Sampai jumpa pada &lt;a href=&#34;http://www.petanikode.com/2016/01/tutorial-bootstrap-2-sistem-grid-dan-layout.html&#34; target=&#34;_blank&#34;&gt;tutorial berikutnya&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Instal Slimframework di Linux dengan Composer</title>
-      <link>http://petanikode.com/2015/02/cara-instal-slimframework-di-linux-dengan-composer/</link>
-      <pubDate>Wed, 25 Feb 2015 01:16:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2015/02/cara-instal-slimframework-di-linux-dengan-composer/</guid>
-      <description>
-
-&lt;p&gt;Slim merupakan sebuah &lt;em&gt;framework&lt;/em&gt; mikro untuk PHP. Slim bisa kita gunakan
-untuk membangun aplikasi web sederhana dan Rest &lt;a href=&#34;http://petanikode.com/topik/api&#34;&gt;API&lt;/a&gt;. Kali ini, saya akan
-membawakan tutorial cara menginstal Slim di Linux. Slim yang akan diinstal
-adalah versi 2.0.&lt;/p&gt;
-
-&lt;p&gt;Pastikan &lt;a href=&#34;http://petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt; dan &lt;a href=&#34;http://petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt; sudah terinstal
-di komputer teman-teman. Setelah itu ikuti langkah-langkah berikut ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-direktori-proyek&#34;&gt;Membuat Direktori Proyek&lt;/h2&gt;
-
-&lt;p&gt;Buatlah sebuah direktori dengan nama proyeknya, misalnya &lt;code&gt;proyek-slim&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir proyek-slim
-cd proyek-slim
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;instalasi-slim-dengan-composer&#34;&gt;Instalasi Slim dengan Composer&lt;/h2&gt;
-
-&lt;p&gt;Ketik perintah berikut untuk meinginstal Slim.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;composer require slim/slim:~2.0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perintah ini akan mendownload Slim dan menyimpannya di dalam direktori &lt;code&gt;vendor&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-file-index-php&#34;&gt;Membuat File &lt;code&gt;index.php&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buat file &lt;code&gt;index.php&lt;/code&gt; di dalam direktori proyeknya dengan isi sebagai
-berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-require &#39;vendor/autoload.php&#39;;
-
-$app = new \Slim\Slim();
-
-$app-&amp;gt;get(&amp;quot;/salam/:nama&amp;quot;, function($nama){
-    echo &amp;quot;Assalamualaikum, $nama&amp;quot;;
-});
-
-$app-&amp;gt;run();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang kita punya struktur proyek seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;proyek-slim/
-├── composer.json
-├── composer.lock
-├── index.php
-└── vendor
-...
-14 directories, 62 files
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bagus, selanjutnya kita bisa menggunakan server bawaan PHP.&lt;/p&gt;
-
-&lt;h2 id=&#34;menjalankan-server-php&#34;&gt;Menjalankan Server PHP&lt;/h2&gt;
-
-&lt;p&gt;Ketik perintah berikut untuk menjalankan server PHP pada &lt;code&gt;localhost&lt;/code&gt; dengan
-nomer &lt;em&gt;port&lt;/em&gt; &lt;code&gt;8000&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;php -S localhost:8000
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, cobalah buka web browser dan arahkan ke alamat tersebut.
-Kalau hasilnya &lt;em&gt;not found&lt;/em&gt; berarti rute &lt;code&gt;/&lt;/code&gt; belum kita buat. Cobalah untuk
-mengakses rute &lt;code&gt;/salam/&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;808&#34;
-    height=&#34;242&#34;
-    alt=&#34;program+salam+dengan+framework+slim.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-BjKgeYvxjJo/VOyqigwX8gI/AAAAAAAABbw/QQcUn20VbYw/s1600/program%2Bsalam%2Bdengan%2Bframework%2Bslim.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kita sudah berhasil menginstal Slim, selanjutnya kita bisa lakukan pengembangan
-lebih lanjut. Sekian dulu untuk kali ini.&lt;/p&gt;
 </description>
     </item>
     

@@ -10,6 +10,216 @@
     <atom:link href="http://petanikode.com/topik/bootstrap/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
+      <link>http://petanikode.com/2017/03/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</link>
+      <pubDate>Tue, 14 Mar 2017 17:36:45 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/03/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</guid>
+      <description>
+
+&lt;p&gt;Seperti yang kita ketahui, istilah card memang sering dipakai pada Material Design.
+Sedangkan Bootstrap versi 3 tidak memiliki komponen card. Mungkin saja akan
+ditambahkan pada versi ke-4. Kita tunggu saja.&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan ini, kita akan belajar cara modifikasi komponen panel Bootstrap
+untuk dijadikan Card.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini tampilan hasil akhir yang akan kita buat:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;panel bootstrap sebagai card&#34;
+    src=&#34;https://1.bp.blogspot.com/-0EKCQDsPHPs/WMfRU8kIjYI/AAAAAAAAEZM/9bX9E4TSGTg_Z0VbrROgBRTUtWiEKPrdQCK4B/s1600/panel-bootstrap-sebagai-card.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mempersiapkan-gird-layout&#34;&gt;Mempersiapkan Gird Layout&lt;/h2&gt;
+
+&lt;p&gt;Pertama, kita siapkan dulu grid layout dengan empat kolom.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;menambahkan-panel&#34;&gt;Menambahkan Panel&lt;/h2&gt;
+
+&lt;p&gt;Nah selanjutnya, kita buat panelnya. Ada empat item yang ingin kita tampilkan:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Gambar Artikel&lt;/li&gt;
+&lt;li&gt;Label&lt;/li&gt;
+&lt;li&gt;Judul Artikel&lt;/li&gt;
+&lt;li&gt;Penulis&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Maka kode panelnya akan seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default&amp;quot;&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
+        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
+        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
+        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
+        &amp;lt;/h3&amp;gt;
+
+        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
+            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah silahkan masukan kode panel di atas ke dalam kode sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Demo hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/BWdoEM/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kode-css&#34;&gt;Kode CSS&lt;/h2&gt;
+
+&lt;p&gt;Terlihat pada hasil demo di atas, tampilannya masih belum rapi. Karena menggunakan
+style dari Bootstrap.&lt;/p&gt;
+
+&lt;p&gt;Tugas kita selanjutnya adalah membuat kode CSS sendiri untuk mengatur komponen
+panel tersebut.&lt;/p&gt;
+
+&lt;p&gt;Seperti yang terlihat pada kode panel di atas, terdapat
+&lt;em&gt;class&lt;/em&gt; yang harus kita buat.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;.post-body&lt;/code&gt;: untuk mengatur agar tinggi card sejajar&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-thumb&lt;/code&gt;: untuk mengatur tampilan gambar artikel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-title&lt;/code&gt;: judul artikel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-author&lt;/code&gt; dan &lt;code&gt;.author-photo&lt;/code&gt; untuk nama dan foto penulisya&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mari kita buat kodenya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/* tinggi card */
+.post-body {
+    height: 215px;
+    position: relative;
+    padding: 20px 15px 0;
+}
+
+/* untuk menghilangkan padding pada .panel-heading */
+.post-thumb {
+    padding: 0
+}
+
+/* mengatur font dan link judul artikel*/
+.post-title a {
+    color: rgba(0,0,0,0.7);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5em;
+    letter-spacing: 0.01rem;
+}
+.post-title a:hover { text-decoration: none }
+
+/* posisi author selalu di bawah */
+.post-author {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 13px;
+}
+
+.post-author .author-photo {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo hasil setelah ditambahkan CSS:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/OpjMbe/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Terlihat cukup bagus.&lt;/p&gt;
+
+&lt;p&gt;Silahkan lakukan kreasi sesukamu.&lt;/p&gt;
+
+&lt;h2 id=&#34;bonus-efek-bayangan-ketika-card-disentuh&#34;&gt;Bonus: Efek Bayangan Ketika Card disentuh&lt;/h2&gt;
+
+&lt;p&gt;Baiklah, sebagai bonus, kita tambahkan efek bayangan ketika card-nya disentuh
+pointer. Efek ini akan membuat card terlihat lebih keren :smile:.&lt;/p&gt;
+
+&lt;p&gt;Tambahkan kode CSS berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.card:hover {
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.2);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, gunakan class &lt;code&gt;.card&lt;/code&gt; pada panel:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default card&amp;quot;&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
+        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
+        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
+        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
+        &amp;lt;/h3&amp;gt;
+
+        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
+            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka hasilnya akan seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/PpKZKr/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagaimana, mudah bukan?&lt;/p&gt;
+
+&lt;p&gt;Selamat berkreasi.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Cepat Modifikasi Navbar Bootstrap tanpa Menulis Kode</title>
       <link>http://petanikode.com/2016/07/cara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode/</link>
       <pubDate>Wed, 20 Jul 2016 07:52:00 +0000</pubDate>

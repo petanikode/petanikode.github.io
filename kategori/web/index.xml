@@ -10,6 +10,216 @@
     <atom:link href="http://petanikode.com/kategori/web/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
+      <link>http://petanikode.com/2017/03/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</link>
+      <pubDate>Tue, 14 Mar 2017 17:36:45 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/03/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</guid>
+      <description>
+
+&lt;p&gt;Seperti yang kita ketahui, istilah card memang sering dipakai pada Material Design.
+Sedangkan Bootstrap versi 3 tidak memiliki komponen card. Mungkin saja akan
+ditambahkan pada versi ke-4. Kita tunggu saja.&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan ini, kita akan belajar cara modifikasi komponen panel Bootstrap
+untuk dijadikan Card.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini tampilan hasil akhir yang akan kita buat:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;panel bootstrap sebagai card&#34;
+    src=&#34;https://1.bp.blogspot.com/-0EKCQDsPHPs/WMfRU8kIjYI/AAAAAAAAEZM/9bX9E4TSGTg_Z0VbrROgBRTUtWiEKPrdQCK4B/s1600/panel-bootstrap-sebagai-card.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mempersiapkan-gird-layout&#34;&gt;Mempersiapkan Gird Layout&lt;/h2&gt;
+
+&lt;p&gt;Pertama, kita siapkan dulu grid layout dengan empat kolom.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
+            &amp;lt;!-- komponen panel di sini  --&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;menambahkan-panel&#34;&gt;Menambahkan Panel&lt;/h2&gt;
+
+&lt;p&gt;Nah selanjutnya, kita buat panelnya. Ada empat item yang ingin kita tampilkan:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Gambar Artikel&lt;/li&gt;
+&lt;li&gt;Label&lt;/li&gt;
+&lt;li&gt;Judul Artikel&lt;/li&gt;
+&lt;li&gt;Penulis&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Maka kode panelnya akan seperti ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default&amp;quot;&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
+        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
+        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
+        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
+        &amp;lt;/h3&amp;gt;
+
+        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
+            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nah silahkan masukan kode panel di atas ke dalam kode sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Demo hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/BWdoEM/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kode-css&#34;&gt;Kode CSS&lt;/h2&gt;
+
+&lt;p&gt;Terlihat pada hasil demo di atas, tampilannya masih belum rapi. Karena menggunakan
+style dari Bootstrap.&lt;/p&gt;
+
+&lt;p&gt;Tugas kita selanjutnya adalah membuat kode CSS sendiri untuk mengatur komponen
+panel tersebut.&lt;/p&gt;
+
+&lt;p&gt;Seperti yang terlihat pada kode panel di atas, terdapat
+&lt;em&gt;class&lt;/em&gt; yang harus kita buat.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;.post-body&lt;/code&gt;: untuk mengatur agar tinggi card sejajar&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-thumb&lt;/code&gt;: untuk mengatur tampilan gambar artikel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-title&lt;/code&gt;: judul artikel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.post-author&lt;/code&gt; dan &lt;code&gt;.author-photo&lt;/code&gt; untuk nama dan foto penulisya&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mari kita buat kodenya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/* tinggi card */
+.post-body {
+    height: 215px;
+    position: relative;
+    padding: 20px 15px 0;
+}
+
+/* untuk menghilangkan padding pada .panel-heading */
+.post-thumb {
+    padding: 0
+}
+
+/* mengatur font dan link judul artikel*/
+.post-title a {
+    color: rgba(0,0,0,0.7);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5em;
+    letter-spacing: 0.01rem;
+}
+.post-title a:hover { text-decoration: none }
+
+/* posisi author selalu di bawah */
+.post-author {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 13px;
+}
+
+.post-author .author-photo {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo hasil setelah ditambahkan CSS:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/OpjMbe/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Terlihat cukup bagus.&lt;/p&gt;
+
+&lt;p&gt;Silahkan lakukan kreasi sesukamu.&lt;/p&gt;
+
+&lt;h2 id=&#34;bonus-efek-bayangan-ketika-card-disentuh&#34;&gt;Bonus: Efek Bayangan Ketika Card disentuh&lt;/h2&gt;
+
+&lt;p&gt;Baiklah, sebagai bonus, kita tambahkan efek bayangan ketika card-nya disentuh
+pointer. Efek ini akan membuat card terlihat lebih keren :smile:.&lt;/p&gt;
+
+&lt;p&gt;Tambahkan kode CSS berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.card:hover {
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.2);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, gunakan class &lt;code&gt;.card&lt;/code&gt; pada panel:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default card&amp;quot;&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
+        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
+        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
+        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
+        &amp;lt;/h3&amp;gt;
+
+        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
+            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
+            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka hasilnya akan seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
+src=&#34;https://codepen.io/ardianta/embed/PpKZKr/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
+sandbox=&#34;allow-scripts allow-same-origin&#34;
+layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagaimana, mudah bukan?&lt;/p&gt;
+
+&lt;p&gt;Selamat berkreasi.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>15 Tag HTML yang tidak Memiliki Pasangan Penutup</title>
       <link>http://petanikode.com/2017/03/15-tag-html-yang-tidak-memiliki-pasangan-penutup/</link>
       <pubDate>Sat, 11 Mar 2017 05:12:00 +0000</pubDate>
@@ -2039,178 +2249,6 @@ Terakhir, barulah kita eksekusi perinah dengan fungsi &lt;code&gt;system()&lt;/c
 &lt;p&gt;Itulah cara mengeksekusi perintah &lt;em&gt;command line&lt;/em&gt; melalui PHP.
 Kita hanya memerlukan fungsi &lt;code&gt;system()&lt;/code&gt; untuk melakukannya.
 Lalu hasil eksekusinya bisa kita tampilkan dengan perintah &lt;code&gt;echo&lt;/code&gt; atau &lt;code&gt;print&lt;/code&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Menggunakan Web Server dari PHP</title>
-      <link>http://petanikode.com/2016/10/cara-menggunakan-web-server-dari-php/</link>
-      <pubDate>Mon, 10 Oct 2016 10:16:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/10/cara-menggunakan-web-server-dari-php/</guid>
-      <description>
-
-&lt;p&gt;Pada PHP versi &lt;code&gt;5.4.0&lt;/code&gt;, &lt;acronym title=&#34;Command Line Interpreter/Interface&#34;&gt;CLI&lt;/acronym&gt;
-&lt;acronym title=&#34;Server Application Programming Interface&#34;&gt;SAPI&lt;/acronym&gt;
-menyediakan fitur &lt;em&gt;build-in web server&lt;/em&gt; yang memungkinkan kita untuk membuat
-server web dari perintah &lt;em&gt;command line&lt;/em&gt; (CLI). Namun, server tersebut hanya
-bisa digunakan untuk pengembangan &lt;em&gt;(development)&lt;/em&gt; aplikasi saja.
-Bila kita menggunakannya untuk server produksi, kemungkinan akan macet
-karena terlalu banyak &lt;em&gt;request&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-server-dari-commnd-line&#34;&gt;Membuat Server dari Commnd Line&lt;/h2&gt;
-
-&lt;p&gt;Pastikan PHP sudah terinstal, kemudian buat sebuah server dengan perintah berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;php -S localhost:8000
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perhatikan argumen &lt;code&gt;-S&lt;/code&gt;, argumen tersebut menggunakan huruf kapital.
-Kemudian argumen kedua adalah alamat server dan nomer &lt;em&gt;port&lt;/em&gt; yang akan digunakan.
-Nomer &lt;em&gt;port&lt;/em&gt; bebas, asalkan tidak bentrok dengan nomer &lt;em&gt;port&lt;/em&gt; service lain.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;655&#34;
-    height=&#34;189&#34;
-    alt=&#34;Menjalankan+server+PHP+melalui+terminal.png&#34;
-    src=&#34;http://4.bp.blogspot.com/-h7cY8GOTbl4/V_nnICrIa1I/AAAAAAAADUg/g65OMsk6eVkJO3zQigyTUeDz9H_K70iiQCK4B/s1600/Menjalankan%2Bserver%2BPHP%2Bmelalui%2Bterminal.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar di atas menunjukkan, kalau servernya siap menerima request dari
-alamat &lt;a href=&#34;http://localhost:8000&#34;&gt;http://localhost:8000&lt;/a&gt; dengan root dokumenya &lt;code&gt;/home/petanikode&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;862&#34;
-    height=&#34;368&#34;
-    alt=&#34;Uji+coba+server+web+build+in+php.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-a5zVUWb3pFk/V_no0tnn66I/AAAAAAAADUs/qzgltxRLU7gqTFWUdx3bGeH98EMTVgaeQCK4B/s1600/Uji%2Bcoba%2Bserver%2Bweb%2Bbuild%2Bin%2Bphp.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kita akan mendapatkan &lt;em&gt;error 404&lt;/em&gt;, karena tidak ada file &lt;code&gt;index.php&lt;/code&gt; di &lt;em&gt;root&lt;/em&gt;
-dokumen server tersebut. Berikut ini log yang akan tampil di terminal.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;petanikode@imajinasi ~ $ php -S localhost:8000
-PHP 7.0.8-0ubuntu0.16.04.3 Development Server started at Sun Oct  9 14:43:04 2016
-Listening on http://localhost:8000
-Document root is /home/petanikode
-Press Ctrl-C to quit.
-[Sun Oct  9 14:49:15 2016] 127.0.0.1:40244 [404]: / - No such file or directory
-[Sun Oct  9 14:49:15 2016] 127.0.0.1:40246 [404]: /favicon.ico - No such file or directory
-[Sun Oct  9 14:49:15 2016] 127.0.0.1:40248 [404]: /favicon.ico - No such file or directory
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk menghentikan server, tekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;c&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;root-document&#34;&gt;Root Document&lt;/h2&gt;
-
-&lt;p&gt;Root Document merupakan lokasi dari dokumen proyek atau web. Misalkan,
-pada contoh percobaan di atas, root dokumennya berada di &lt;code&gt;/home/petanikode/&lt;/code&gt;.
-Karena saya menjalankan perintah tersebut di home direktori.
-Mari kita coba menggunakan root dokumen yang lain.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Buat sebuah direktori baru, kemudian masuk ke direktori tersebut&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  mkdir webku
-  cd webku
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Buat sebuah file baru bernama &lt;code&gt;index.php&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  touch index.php
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Isi file tersebut dengan kode berikut ini&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;  &amp;lt;?php
-  echo &amp;quot;Hallo, ini webku. Selamat datang ya&amp;quot;;
-  ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Keumudian jalankan servernya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  php -S localhost:8000
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Berikut ini hasil output yang akan kita dapatkan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;862&#34;
-    height=&#34;368&#34;
-    alt=&#34;Hasil+output+server+dengan+direktori+root+yang+berbeda.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-YkBn91rPNFo/V_nu52JjIeI/AAAAAAAADU8/XoCirCb8aUk8Lsv46LypT1AGxFjFvzEowCK4B/s1600/Hasil%2Boutput%2Bserver%2Bdengan%2Bdirektori%2Broot%2Byang%2Bberbeda.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Lokasi dokumen root juga dapat kita tentukan secara spesifik dengan arugmen &lt;code&gt;-t&lt;/code&gt;. Misalnya,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;php -S localhost:8000 -t /var/www/html/proyek-web/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;menggunakan-skrip-router&#34;&gt;Menggunakan Skrip Router&lt;/h2&gt;
-
-&lt;p&gt;Router fungsinya untuk mengatur arah dan tujuan. Misalkan,
-sebuah permintaan &lt;em&gt;(request)&lt;/em&gt; dengan &lt;acronym title=&#34;Uniform Resource Identifier&#34;&gt;URI&lt;/acronym&gt;
-&lt;code&gt;/profil&lt;/code&gt; maka arahkan atau buka halaman &lt;code&gt;profil.php&lt;/code&gt;.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Buatlah file baru pada direktori sebelumnya dengan nama &lt;code&gt;router.php&lt;/code&gt;, kemudian isi dengan kode berukut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;  &amp;lt;?php // router.php
-  switch ($_SERVER[&amp;quot;REQUEST_URI&amp;quot;]){
-
-  case &amp;quot;/profil&amp;quot;:
-    include(&amp;quot;profil.php&amp;quot;);
-    break;
-  case &amp;quot;/home&amp;quot;:
-    echo &amp;quot;Ini halaman Home&amp;quot;;
-    break;
-  default:
-    echo &amp;quot;404: Halaman tidak ditemukan&amp;quot;;
-
-  }
-  ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Kemudian buatlah file bernama &lt;code&gt;profil.php&lt;/code&gt; dengan isi sebagai berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;  &amp;lt;?php
-  echo &amp;quot;Ini halaman profil&amp;quot;;
-  ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Jalankan servernya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  php -S localhost:8000 router.php
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Hasil output yang akan kita dapatkan adalah seperti gambar ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;862&#34;
-    height=&#34;368&#34;
-    alt=&#34;Mozilla+Firefox_023.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-I0UD1uAfeec/V_pBrFH2nSI/AAAAAAAADVM/9hP64iz-PSg0MBxSgvP-CQ4-C8N-pYfwgCK4B/s1600/Mozilla%2BFirefox_023.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah, itulah cara menggunakan web server bawaan PHP. Lebih lengkapnya, bisa
-dipelajari di dokumentasi PHP. Sekian tulisan kali ini, mudah-mudahan bermanfaat.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;http://php.net/manual/en/features.commandline.webserver.php&#34;&gt;php.net&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

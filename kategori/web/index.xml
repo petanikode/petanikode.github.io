@@ -10,6 +10,185 @@
     <atom:link href="http://petanikode.com/kategori/web/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Apa itu WebAssembly?</title>
+      <link>http://petanikode.com/2017/03/apa-itu-webassembly/</link>
+      <pubDate>Wed, 15 Mar 2017 11:49:13 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/03/apa-itu-webassembly/</guid>
+      <description>
+
+&lt;p&gt;Saat pertama kali mendengar kata WebAssembly, saya kira kita akan membuat web dengan
+bahasa assembly. Ternyata bukan.&lt;/p&gt;
+
+&lt;p&gt;Sekitar dua minggu yang lalu saya mendapatkan kiriman link milis melalui channel
+&lt;a href=&#34;https://t.me/reddit_programming/1280&#34;&gt;@reddit_programming&lt;/a&gt; tentang pengumuman WebAssembly.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;WebAssembly akan segera tersedia di Firefox dan Google Chrome bulan ini&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;dan benar saja, Firefox dan Google Chrome merilis versi terbarunya.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.lombokfoss.com/2017/03/firefox-52-rilis-dengan-dukungan-webassembly.html&#34;&gt;Firefox 52 Rilis dengan Dukungan WebAssembly dan Peningkatan Sync&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.lombokfoss.com/2017/03/google-chrome-57-rilis-dengan-dukungan.html&#34;&gt;Google Chrome 57 Rilis dengan Dukungan WebAssembly dan Spesifikasi CSS Gird Baru&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lalu apa sebenarnya WebAssembly itu?&lt;/p&gt;
+
+&lt;p&gt;Menurut Wikipedia:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;WebAssembly&lt;/strong&gt; atau disingkat wasm adalah sebuah eksperimen untuk menggunakan
+bahasa tingkat bawah pada browser. Proyek ini masih dalam
+tahapan pengembangan yang digarap oleh orang-orang dari Firefox, Webkit (Chromium),
+Google Chrome, Microsoft Edge, dan W3C.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;763&#34;
+    height=&#34;417&#34;
+    alt=&#34;kerjasama google, yahoo, microsof, webkit, dan w3c untuk membangun webassembly&#34;
+    src=&#34;https://1.bp.blogspot.com/-35sqWt0WdsQ/WMktYpy3rWI/AAAAAAAAEaU/6byqD4vYzgQ75KNdYEcwmdqwYFjgKBonQCPcB/s1600/kerjasama%2Buntuk%2Bmembangun%2Bwebassembly.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Jadi, nanti aplikasi yang menggunakan bahasa pemrograman dari tingkat bawah
+seperti C dan C++ akan bisa berjalan di browser layaknya javascript. :open_mouth:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=686 height=657
+    layout=&#34;responsive&#34;
+    data-tweetid=&#34;841952471450808321&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;Sedangkan menurut Eric Elliott, seorang peteran javascript:&lt;/p&gt;
+
+&lt;p&gt;WebAssembly adalah:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sebuah bahasa baru: Kode WebAssembly merupakan representasi dari AST
+&lt;em&gt;(Abstract Syntax Tree)&lt;/em&gt; dalam format &lt;em&gt;binary&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Sebuah peningkatan performa untuk javascript.&lt;/li&gt;
+&lt;li&gt;Peningkatan untuk browser: Browser akan mampu mengeksekusi format &lt;em&gt;binary&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;seblum-webassembly&#34;&gt;Seblum WebAssembly&lt;/h2&gt;
+
+&lt;p&gt;Sebelum datangnya WebAssembly beberapa perusahaan sudah berusaha untuk membuat
+sesuatu agar program yang dibuat dari bahasa pemrograman selain javascript
+bisa berjalan dengan mulus di browser.&lt;/p&gt;
+
+&lt;p&gt;Mereka melakuannya dengan cara mereka sendiri,&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Firefox membuat turunan javascript bernama &lt;a href=&#34;http://asmjs.org/&#34;&gt;asm.js&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Microsoft membuat &lt;a href=&#34;https://www.typescriptlang.org/&#34;&gt;typescript&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Google membuat &lt;a href=&#34;https://developer.chrome.com/native-client&#34;&gt;NaCl&lt;/a&gt; (Native Client).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kini mereka semua bersatu membangun WebAssembly. WebAssembly sendiri dibangun
+dari asm.js dan NaCl.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;roadmap-pengembangan-webassembly&#34;&gt;Roadmap Pengembangan WebAssembly&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;April 2015 - Pembentukan tim dan komunitas WebAssembly&lt;/li&gt;
+&lt;li&gt;Juni 2015 - Publikasi pengumuman pertama&lt;/li&gt;
+&lt;li&gt;Maret 2016 - Implementasi fitur inti&lt;/li&gt;
+&lt;li&gt;Oktober 2016 - Versi Preview diluncurkan&lt;/li&gt;
+&lt;li&gt;Februari 2017 - Pemilihan logo resmi&lt;/li&gt;
+&lt;li&gt;Maret 2017 - Beberapa web browser sepakat mulai menggunakan WebAssembly dan
+versi preview berakhir.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Untuk agenda selanjutnya, dapat dipantau di: &lt;a href=&#34;http://webassembly.org/roadmap/&#34;&gt;http://webassembly.org/roadmap/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;contoh-kode-webassembly&#34;&gt;Contoh Kode WebAssembly&lt;/h2&gt;
+
+&lt;p&gt;Berikut ini contoh kode yang saya ambil dari Wikipedia:&lt;/p&gt;
+
+&lt;p&gt;program_faktorial.c&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int factorial(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return n * factorial(n-1);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah dikompilasi menjadi WASM:&lt;/p&gt;
+
+&lt;p&gt;program_faktorial.wasm&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;get_local 0
+i64.const 0
+i64.eq
+if i64
+    i64.const 1
+else
+    get_local 0
+    get_local 0
+    i64.const 1
+    i64.sub
+    call 0
+    i64.mul
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;WASM binary (heksadesimal)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;20 00
+42 00
+51
+04 7e
+42 01
+05
+20 00
+20 00
+42 01
+7d
+10 00
+7e
+0b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;demo-webassembly&#34;&gt;Demo WebAssembly&lt;/h2&gt;
+
+&lt;p&gt;Untuk mengecek browsermu sudah mendukung WebAssembly atau tidak, coba buka
+demo berikut ini:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://webassembly.org/demo/Tanks/&#34;&gt;Game Thanks!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://s3.amazonaws.com/mozilla-games/ZenGarden/EpicZenGarden.html&#34;&gt;Epic Zen Garden&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kalau belum bisa, maka browsernya harus di-update ke versi terakhir saat ini.&lt;/p&gt;
+
+&lt;p&gt;Itulah sedikit hal yang saya ketahui tentang WebAssembly.&lt;/p&gt;
+
+&lt;p&gt;Kedepan mungkin akan lebih banyak lagi game dan aplikasi yang di-porting ke Web dengan
+WebAssembly. Misalnya, nanti kita bisa buka Photoshop di browser. Jadi tidak
+perlu nginstal deh :smile:.&lt;/p&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://webassembly.org&#34;&gt;http://webassembly.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&#34;&gt;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/WebAssembly&#34;&gt;https://en.wikipedia.org/wiki/WebAssembly&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
       <link>http://petanikode.com/2017/03/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</link>
       <pubDate>Tue, 14 Mar 2017 17:36:45 +0800</pubDate>
@@ -2175,92 +2354,6 @@ dari &lt;em&gt;Viewport&lt;/em&gt; dalam RWD &lt;em&gt;(Responsive Web Design)&l
 selanjutnya kita akan pelajari satuan-satuan yang digunakan pada RWD.&lt;/p&gt;
 
 &lt;p&gt;Selanjutnya: Satuan Ukuran untuk RWD (draf)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Eksekusi Perintah Command Line (CMD) melalui PHP</title>
-      <link>http://petanikode.com/2016/10/eksekusi-perintah-command-line-cmd-melalui-php/</link>
-      <pubDate>Sat, 15 Oct 2016 19:00:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/2016/10/eksekusi-perintah-command-line-cmd-melalui-php/</guid>
-      <description>&lt;p&gt;Perintah-perintah dasar yang sering kita ketik di Terminal maupun CMD, dapat
-juga kita eksekusi melalui web. Tentu saja dengan bantuan PHP. Pada artikel
-sebelumnya, saya sudah pernah membahas fungsi-fungsi untuk operasi file
-dan direktori. Nah, sekarang ini kita akan coba fungsi &lt;code&gt;system()&lt;/code&gt;.
-Fungsi ini untuk mengeksekusi perintah-perintah Terminal atau CMD.&lt;/p&gt;
-
-&lt;p&gt;Baca Juga:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/cara-menghapus-dan-mengubah-nama-direktori-dengan-php/&#34;&gt;Cara Menghapus dan Mengubah Nama Direktori dengan PHP&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/membuat-dan-menampilkan-isi-direktori-dengan-php/&#34;&gt;Membuat dan Menampilkan isi Direktori dengan PHP&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mari kita mulai dengan membuat sebuah file baru bernama &lt;code&gt;eksekusi_perintah.php&lt;/code&gt;,
-kemudian isi dengan kode berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-    &amp;lt;title&amp;gt;Eksekusi Perintah&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-
-    &amp;lt;form&amp;gt;
-    &amp;lt;label for=&amp;quot;cmd&amp;quot;&amp;gt;Perintah&amp;lt;/label&amp;gt;
-    &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;cmd&amp;quot; placeholder=&amp;quot;perintah (cmd)&amp;quot; /&amp;gt;
-    &amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;Eksekusi&amp;quot; /&amp;gt;
-    &amp;lt;/form&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-
-&amp;lt;?php
-
-    if(isset($_GET[&#39;cmd&#39;])){
-        echo &amp;quot;&amp;lt;pre&amp;gt;&amp;quot;;
-        echo system($_GET[&#39;cmd&#39;]);
-        echo &amp;quot;&amp;lt;/pre&amp;gt;&amp;quot;;
-    }
-
-?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, silahkan di simpan dalam direktori web server (&lt;code&gt;/var/www/html&lt;/code&gt;
-atau &lt;code&gt;C:\xampp\htdocs&lt;/code&gt;). Pertahitkan lah kode di atas, di sana kita menggunakan
-sebuah form untuk mendapatkan perintah. Kemudian perintah tersebut akan
-ditampung dalam variabel &lt;code&gt;$_GET&lt;/code&gt;. Sebelum perintah itu dieksekusi,
-kita periksa dulu, apakah sudah ada perintah atau belum dengan fungsi &lt;code&gt;isset()&lt;/code&gt;.
-Terakhir, barulah kita eksekusi perinah dengan fungsi &lt;code&gt;system()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Hasilnya ketika dicoba dengan perintah &lt;code&gt;ls -l&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;890&#34;
-    height=&#34;277&#34;
-    alt=&#34;Eksekusi+Perintah+-+Mozilla+Firefox+%28Private+Browsing%29_024.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-hoTSReyAPxE/WAIJ5jDek4I/AAAAAAAADVg/qTUhDWE3EUgzUI_w5HhY-q7eoEw0LQ-aACK4B/s1600/Eksekusi%2BPerintah%2B-%2BMozilla%2BFirefox%2B%2528Private%2BBrowsing%2529_024.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Coba juga perintah Linux yang lainnya seperti &lt;code&gt;lspci&lt;/code&gt;, &lt;code&gt;date 2016&lt;/code&gt;, &lt;code&gt;uname -a&lt;/code&gt;,
-&lt;code&gt;man ls&lt;/code&gt;, dan sebagainya. Bagaimanakah hasilnya?&lt;/p&gt;
-
-&lt;p&gt;Itulah cara mengeksekusi perintah &lt;em&gt;command line&lt;/em&gt; melalui PHP.
-Kita hanya memerlukan fungsi &lt;code&gt;system()&lt;/code&gt; untuk melakukannya.
-Lalu hasil eksekusinya bisa kita tampilkan dengan perintah &lt;code&gt;echo&lt;/code&gt; atau &lt;code&gt;print&lt;/code&gt;.&lt;/p&gt;
 </description>
     </item>
     

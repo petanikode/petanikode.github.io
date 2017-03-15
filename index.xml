@@ -7,8 +7,187 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 14 Mar 2017 17:36:45 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 Mar 2017 11:49:13 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Apa itu WebAssembly?</title>
+      <link>http://petanikode.com/2017/03/apa-itu-webassembly/</link>
+      <pubDate>Wed, 15 Mar 2017 11:49:13 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/03/apa-itu-webassembly/</guid>
+      <description>
+
+&lt;p&gt;Saat pertama kali mendengar kata WebAssembly, saya kira kita akan membuat web dengan
+bahasa assembly. Ternyata bukan.&lt;/p&gt;
+
+&lt;p&gt;Sekitar dua minggu yang lalu saya mendapatkan kiriman link milis melalui channel
+&lt;a href=&#34;https://t.me/reddit_programming/1280&#34;&gt;@reddit_programming&lt;/a&gt; tentang pengumuman WebAssembly.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;WebAssembly akan segera tersedia di Firefox dan Google Chrome bulan ini&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;dan benar saja, Firefox dan Google Chrome merilis versi terbarunya.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.lombokfoss.com/2017/03/firefox-52-rilis-dengan-dukungan-webassembly.html&#34;&gt;Firefox 52 Rilis dengan Dukungan WebAssembly dan Peningkatan Sync&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.lombokfoss.com/2017/03/google-chrome-57-rilis-dengan-dukungan.html&#34;&gt;Google Chrome 57 Rilis dengan Dukungan WebAssembly dan Spesifikasi CSS Gird Baru&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lalu apa sebenarnya WebAssembly itu?&lt;/p&gt;
+
+&lt;p&gt;Menurut Wikipedia:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;WebAssembly&lt;/strong&gt; atau disingkat wasm adalah sebuah eksperimen untuk menggunakan
+bahasa tingkat bawah pada browser. Proyek ini masih dalam
+tahapan pengembangan yang digarap oleh orang-orang dari Firefox, Webkit (Chromium),
+Google Chrome, Microsoft Edge, dan W3C.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;763&#34;
+    height=&#34;417&#34;
+    alt=&#34;kerjasama google, yahoo, microsof, webkit, dan w3c untuk membangun webassembly&#34;
+    src=&#34;https://1.bp.blogspot.com/-35sqWt0WdsQ/WMktYpy3rWI/AAAAAAAAEaU/6byqD4vYzgQ75KNdYEcwmdqwYFjgKBonQCPcB/s1600/kerjasama%2Buntuk%2Bmembangun%2Bwebassembly.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Jadi, nanti aplikasi yang menggunakan bahasa pemrograman dari tingkat bawah
+seperti C dan C++ akan bisa berjalan di browser layaknya javascript. :open_mouth:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=686 height=657
+    layout=&#34;responsive&#34;
+    data-tweetid=&#34;841952471450808321&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;Sedangkan menurut Eric Elliott, seorang peteran javascript:&lt;/p&gt;
+
+&lt;p&gt;WebAssembly adalah:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sebuah bahasa baru: Kode WebAssembly merupakan representasi dari AST
+&lt;em&gt;(Abstract Syntax Tree)&lt;/em&gt; dalam format &lt;em&gt;binary&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Sebuah peningkatan performa untuk javascript.&lt;/li&gt;
+&lt;li&gt;Peningkatan untuk browser: Browser akan mampu mengeksekusi format &lt;em&gt;binary&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;seblum-webassembly&#34;&gt;Seblum WebAssembly&lt;/h2&gt;
+
+&lt;p&gt;Sebelum datangnya WebAssembly beberapa perusahaan sudah berusaha untuk membuat
+sesuatu agar program yang dibuat dari bahasa pemrograman selain javascript
+bisa berjalan dengan mulus di browser.&lt;/p&gt;
+
+&lt;p&gt;Mereka melakuannya dengan cara mereka sendiri,&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Firefox membuat turunan javascript bernama &lt;a href=&#34;http://asmjs.org/&#34;&gt;asm.js&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Microsoft membuat &lt;a href=&#34;https://www.typescriptlang.org/&#34;&gt;typescript&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Google membuat &lt;a href=&#34;https://developer.chrome.com/native-client&#34;&gt;NaCl&lt;/a&gt; (Native Client).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kini mereka semua bersatu membangun WebAssembly. WebAssembly sendiri dibangun
+dari asm.js dan NaCl.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;roadmap-pengembangan-webassembly&#34;&gt;Roadmap Pengembangan WebAssembly&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;April 2015 - Pembentukan tim dan komunitas WebAssembly&lt;/li&gt;
+&lt;li&gt;Juni 2015 - Publikasi pengumuman pertama&lt;/li&gt;
+&lt;li&gt;Maret 2016 - Implementasi fitur inti&lt;/li&gt;
+&lt;li&gt;Oktober 2016 - Versi Preview diluncurkan&lt;/li&gt;
+&lt;li&gt;Februari 2017 - Pemilihan logo resmi&lt;/li&gt;
+&lt;li&gt;Maret 2017 - Beberapa web browser sepakat mulai menggunakan WebAssembly dan
+versi preview berakhir.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Untuk agenda selanjutnya, dapat dipantau di: &lt;a href=&#34;http://webassembly.org/roadmap/&#34;&gt;http://webassembly.org/roadmap/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;contoh-kode-webassembly&#34;&gt;Contoh Kode WebAssembly&lt;/h2&gt;
+
+&lt;p&gt;Berikut ini contoh kode yang saya ambil dari Wikipedia:&lt;/p&gt;
+
+&lt;p&gt;program_faktorial.c&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int factorial(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return n * factorial(n-1);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah dikompilasi menjadi WASM:&lt;/p&gt;
+
+&lt;p&gt;program_faktorial.wasm&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;get_local 0
+i64.const 0
+i64.eq
+if i64
+    i64.const 1
+else
+    get_local 0
+    get_local 0
+    i64.const 1
+    i64.sub
+    call 0
+    i64.mul
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;WASM binary (heksadesimal)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;20 00
+42 00
+51
+04 7e
+42 01
+05
+20 00
+20 00
+42 01
+7d
+10 00
+7e
+0b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;demo-webassembly&#34;&gt;Demo WebAssembly&lt;/h2&gt;
+
+&lt;p&gt;Untuk mengecek browsermu sudah mendukung WebAssembly atau tidak, coba buka
+demo berikut ini:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://webassembly.org/demo/Tanks/&#34;&gt;Game Thanks!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://s3.amazonaws.com/mozilla-games/ZenGarden/EpicZenGarden.html&#34;&gt;Epic Zen Garden&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kalau belum bisa, maka browsernya harus di-update ke versi terakhir saat ini.&lt;/p&gt;
+
+&lt;p&gt;Itulah sedikit hal yang saya ketahui tentang WebAssembly.&lt;/p&gt;
+
+&lt;p&gt;Kedepan mungkin akan lebih banyak lagi game dan aplikasi yang di-porting ke Web dengan
+WebAssembly. Misalnya, nanti kita bisa buka Photoshop di browser. Jadi tidak
+perlu nginstal deh :smile:.&lt;/p&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://webassembly.org&#34;&gt;http://webassembly.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&#34;&gt;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/WebAssembly&#34;&gt;https://en.wikipedia.org/wiki/WebAssembly&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
@@ -2580,185 +2759,6 @@ adalah &lt;code&gt;git log&lt;/code&gt;. Selanjutnya kita akan pelajari perintah
 perbandingan pada revisi.&lt;/p&gt;
 
 &lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/&#34;&gt;Tutorial Git 05 - Melihat Perbandingan Revisi&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Git 03 - Membuat Revisi</title>
-      <link>http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/</link>
-      <pubDate>Mon, 13 Feb 2017 17:30:51 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/</guid>
-      <description>
-
-&lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;tutorial git yang kedua&lt;/a&gt;,
-kita sudah membuat repositori kosong. Belum ada apa-apa di sana. Sekarang coba
-tambahkan sebuah file baru. Sebagai contoh, saya akan menambahkan tiga file HTML
-kosong.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;806&#34;
-    height=&#34;516&#34;
-    alt=&#34;project-01_repositori-git-petanikode.png&#34;
-    src=&#34;https://1.bp.blogspot.com/-H_In4IFcsOM/WKF-vsJ3qtI/AAAAAAAAD3g/qoBlvBQWYDYwnPYOnvxXNG72R-T5m2i4gCPcB/s1600/project-01_repositori-git-petanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setalah ditambahkan, coba ketik perintah &lt;code&gt;git status&lt;/code&gt; untuk melihat status
-repositorinya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;655&#34;
-    height=&#34;285&#34;
-    alt=&#34;Git+status.png&#34;
-    src=&#34;https://2.bp.blogspot.com/-kMBRMIo7wFU/WKGAIxRBTDI/AAAAAAAAD30/QH-AmxcXXXsvXtpfWX6R3ZW8svOnHRILACPcB/s1600/Git%2Bstatus.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Berdasarkan keterangan di atas, saat ini kita berada cabang &lt;em&gt;(branch) master&lt;/em&gt; dan
-ada tiga file yang belum ditambahkan ke Git.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;tiga-kelompok-kondisi-file-dalam-git&#34;&gt;Tiga Kelompok Kondisi File dalam Git&lt;/h2&gt;
-
-&lt;p&gt;Sebelum kita membuat revisi, kita akan berkenalan dulu dengan tiga kondisi file
-dalam Git.&lt;/p&gt;
-
-&lt;h3 id=&#34;1-modified&#34;&gt;1. Modified&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;Modified&lt;/em&gt; adalah kondisi dimana revisi atau perubahan sudah dilakukan, tetapi
-belum ditandai dan belum disimpan di &lt;em&gt;version control&lt;/em&gt;. Contohnya pada gambar di
-atas, ada tiga file HTML yang dalam kondisi &lt;em&gt;modified&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;2-staged&#34;&gt;2. Staged&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;Staged&lt;/em&gt; adalah kondisi dimana revisi sudah ditandai, tetapi belum disimpan
-di &lt;em&gt;version control&lt;/em&gt;. Untuk mengubah kondisi file dari &lt;em&gt;modified&lt;/em&gt; ke &lt;em&gt;staged&lt;/em&gt;
-gunakan perintah &lt;code&gt;git add nama_file&lt;/code&gt;. Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;3-commited&#34;&gt;3. Commited&lt;/h3&gt;
-
-&lt;p&gt;Commited adalah kondisi dimana revisi sudah disimpan di version control. perintah
-untuk mengubah kondisi file dari &lt;em&gt;staged&lt;/em&gt; ke &lt;em&gt;commited&lt;/em&gt; adalah &lt;code&gt;git commit&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-revisi-pertama&#34;&gt;Membuat Revisi Pertama&lt;/h2&gt;
-
-&lt;p&gt;Baiklah, sekarang kita akan sudah tahu kondisi-kondisi file dalam Git. Selanjutnya,
-silahkan ubah kondisi tiga file HTML tadi menjadi &lt;em&gt;staged&lt;/em&gt; dengan perintah &lt;code&gt;git add&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
-git add about.html
-git add contact.html
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Atau kita bisa melakukannya seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html about.html contect.html
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;atau:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add *.html
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Atau seperti ini (semua file dan direktori):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, cobalah ketik perintah &lt;code&gt;git status&lt;/code&gt; lagi. Kondisi filenya sekarang
-akan menjadi &lt;em&gt;staged&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;655&#34;
-    height=&#34;285&#34;
-    alt=&#34;kondisi+file+staged+di+Git.png&#34;
-    src=&#34;https://2.bp.blogspot.com/-2Q335OAbng4/WKGEsuQIQcI/AAAAAAAAD4Q/eL9z36naaKYe5jYwp9awlfXCw99A3to4wCPcB/s1600/kondisi%2Bfile%2Bstaged%2Bdi%2BGit.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, ubah kondisi file tersebut ke &lt;em&gt;commited&lt;/em&gt; agar semua perubahan disimpan
-oleh Git.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git commit -m &amp;quot;Commit pertama&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, coba cek dengan perintah &lt;code&gt;git status&lt;/code&gt; lagi.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;655&#34;
-    height=&#34;205&#34;
-    alt=&#34;Commit+pertama+git.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-5EKJNZ9NN5o/WKGF6f1ojnI/AAAAAAAAD4k/vmQksU_KdioAM7xbUBJWYkVMWoXIELFCwCPcB/s1600/Commit%2Bpertama%2Bgit.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selamat, revisi pertama sudah kita buat. Selanjutnya cobalah untuk membuat revisi kedua.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-revisi-kedua&#34;&gt;Membuat Revisi kedua&lt;/h2&gt;
-
-&lt;p&gt;Ceritanya ada perubahan yang akan kita lakukan pada file &lt;code&gt;index.html&lt;/code&gt;. Silahkan
-modifikasi isi file &lt;code&gt;index.html&lt;/code&gt;. Sebagai contoh saya mengisinya seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-    &amp;lt;head&amp;gt;
-        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-        &amp;lt;title&amp;gt;Belajar Git - Project 01&amp;lt;/title&amp;gt;
-    &amp;lt;/head&amp;gt;
-    &amp;lt;body&amp;gt;
-        &amp;lt;p&amp;gt;Hello Semua, Saya sedang belajar Git&amp;lt;/p&amp;gt;
-    &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu ketik lagi perintah &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;655&#34;
-    height=&#34;205&#34;
-    alt=&#34;Git+status+revisi+kedua.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-5kIOLZT1Ots/WKGIVv95vPI/AAAAAAAAD5M/sS0l7NFCdtM4NYlxIQ4sNWp8lOQDkRKdgCKgB/s1600/Git%2Bstatus%2Brevisi%2Bkedua.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Terilhat di sana, file &lt;code&gt;index.html&lt;/code&gt; sudah dimodifikasi. Kondisinya skarang berada
-dalam &lt;em&gt;modified&lt;/em&gt;. Lakukan &lt;em&gt;commit&lt;/em&gt; lagi seperti revisi pertama.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add index.html
-git commit -m &amp;quot;ditambahkan isi&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Dengan demikian, revisi kedua sudah disipan oleh Git. Mungkin anda belum tahu
-maksud dari argumen &lt;code&gt;-m&lt;/code&gt;, argumen tersebut untuk menambahkan pesan setiap menyimpan
-revisi.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;618&#34;
-    height=&#34;323&#34;
-    alt=&#34;Timeline dua revisi&#34;
-    src=&#34;https://1.bp.blogspot.com/-_wKH9usn7FI/WLFdN6wLvcI/AAAAAAAAEKc/XQzBtD98naUfImdeuxZf8NDQ1gXKDqrZQCPcB/s1600/timeline-dua-revisi.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang Git sudah mencatat dua revisi yang sudah kita lakukan. Kita bisa ibaratkan
-revisi-revisi ini sebagai &lt;em&gt;checkpoint&lt;/em&gt; pada Game. Apabila nanti ada kesalahan,
-kita bisa kembali ke &lt;em&gt;checkpoint&lt;/em&gt; ini.&lt;/p&gt;
-
-&lt;p&gt;Sekian untuk tutorial ke-3 ini, mudah-mudahan bermanfaat.&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/&#34;&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

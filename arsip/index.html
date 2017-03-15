@@ -12,6 +12,11 @@
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 
+    
+        
+            <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+            
+        
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
     
@@ -197,8 +202,8 @@
     "name" : "Ardianta Pargo"
   },
   "headline": "Arsip Petani Kode",
-  "description": "Untuk mendapatkan informasi artikel terbaru, Anda bisa berlangganan melalui RSS Feed, Desktop Push Notification, atau surat kabar (newsletter).\n Tips: Tekan Ctrl\x2bF kemudian ketik judul artikel yang anda cari\n Anda juga dapat menggunakan halaman Indeks, Kategori, Seri, dan Topik untuk pencarian lebih lanjut.",
-  "wordCount":  42 ,
+  "description": "   ",
+  "wordCount":  0 ,
   "datePublished" : "2017-01-13T21:08:45",
   "dateModified" : "2017-01-13T21:08:45",
   "image" : {
@@ -233,7 +238,7 @@
       "sameAs": "http://petanikode.com"
     },
     "datePublished": "2017-01-13T21:08:45",
-    "description": "Untuk mendapatkan informasi artikel terbaru, Anda bisa berlangganan melalui RSS Feed, Desktop Push Notification, atau surat kabar (newsletter).\n Tips: Tekan Ctrl\x2bF kemudian ketik judul artikel yang anda cari\n Anda juga dapat menggunakan halaman Indeks, Kategori, Seri, dan Topik untuk pencarian lebih lanjut.",
+    "description": "   ",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -677,7 +682,7 @@ blockquote{
   font-size: 16px;
   line-height: 1.2;
   color: #666;
-  
+
 
   /*Borders - (Optional)*/
   border-left: 15px solid #008080;
@@ -864,6 +869,25 @@ padding: 16px;
 
 .footer a:hover {
     color: #E91E63;
+}
+
+.form-input {
+    height: 32px;
+    padding: 10px
+}
+.form-input:focus {
+    border: 2px solid #a4c664;
+    outline: none;
+}
+
+.btn {
+    height: 32px;
+    border: 0;
+    padding: 0 30px;
+}
+.btn-success {
+    background: #48c639;
+    color: white;
 }
 
 
@@ -1140,13 +1164,17 @@ padding: 16px;
     <div class="article-wrapper">
         <div class="content">
             <h2 class="post-title">Arsip Petani Kode</h2>
-            <p>Untuk mendapatkan informasi artikel terbaru, Anda bisa berlangganan melalui <a href="/artikel/index.xml">RSS Feed</a>, Desktop <a href="https://petanikode.pushcrew.com/">Push Notification</a>, atau <a href="http://eepurl.com/cvp63b">surat kabar</a> <em>(newsletter)</em>.</p>
+            <!-- Untuk mendapatkan informasi artikel terbaru, Anda bisa berlangganan melalui [RSS Feed](/artikel/index.xml), Desktop [Push Notification](https://petanikode.pushcrew.com/), atau [surat kabar](http://eepurl.com/cvp63b) *(newsletter)*. -->
 
-<blockquote>
-<p><strong>Tips</strong>: Tekan Ctrl+F kemudian ketik judul artikel yang anda cari</p>
-</blockquote>
-
-<p>Anda juga dapat menggunakan halaman <a href="/indeks">Indeks</a>, <a href="/kategori">Kategori</a>, <a href="/seri">Seri</a>, dan <a href="/topik">Topik</a> untuk pencarian lebih lanjut.</p>
+<form action="https://www.google.co.id" id="cse-search-box" target="_blank">
+      <div>
+        <input type="hidden" name="cx" value="partner-pub-6279325630224392:9670052267" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        <input type="text" class="form-input" name="q" size="55" placeholder="Kata Kunci"/>
+        <input type="hidden" name="sa" value="search" />
+        <input type="submit" class="btn btn-success" value="Cari" />
+      </div>
+</form>
 
             
             <h3>2017</h3>

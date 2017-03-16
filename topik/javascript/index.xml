@@ -172,6 +172,12 @@ demo berikut ini:&lt;/p&gt;
 
 &lt;p&gt;Kalau belum bisa, maka browsernya harus di-update ke versi terakhir saat ini.&lt;/p&gt;
 
+&lt;p&gt;&lt;amp-youtube width=&#34;480&#34;
+     height=&#34;270&#34;
+     layout=&#34;responsive&#34;
+     data-videoid=&#34;TwuIRcpeUWE&#34;&gt;
+ &lt;/amp-youtube&gt;&lt;/p&gt;
+
 &lt;p&gt;Itulah sedikit hal yang saya ketahui tentang WebAssembly.&lt;/p&gt;
 
 &lt;p&gt;Kedepan mungkin akan lebih banyak lagi game dan aplikasi yang di-porting ke Web dengan

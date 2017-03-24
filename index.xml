@@ -7,8 +7,216 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 15 Mar 2017 11:49:13 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Mar 2017 20:07:11 +0800</lastBuildDate>
     <atom:link href="http://petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Memilih Bahasa Pemrograman yang Tepat untuk Pemula</title>
+      <link>http://petanikode.com/2017/03/cara-memilih-bahasa-pemrograman-yang-tepat-untuk-pemula/</link>
+      <pubDate>Fri, 24 Mar 2017 20:07:11 +0800</pubDate>
+      
+      <guid>http://petanikode.com/2017/03/cara-memilih-bahasa-pemrograman-yang-tepat-untuk-pemula/</guid>
+      <description>
+
+&lt;p&gt;Mulai belajar pemrograman dari mana? Apa bahasa pemrograman yang harus
+saya pelajari pertama kali? Bagaiaman cara belajar pemrograman?&lt;/p&gt;
+
+&lt;p&gt;Itulah sekumpulan pertanyaan yang sering ditanyakan oleh kawan-kawan yang ingin
+belajar pemrograman.&lt;/p&gt;
+
+&lt;p&gt;Beberapa waktu yang lalu, Petani Kode menerbitkan sebuah pertanyaan:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-facebook width=&#34;500&#34;
+      height=&#34;500&#34;
+      layout=&#34;responsive&#34;
+      data-href=&#34;https://www.facebook.com/petanikode/posts/629780907205506:0&#34;&gt;
+&lt;/amp-facebook&gt;&lt;/p&gt;
+
+&lt;p&gt;Ternyata jawabannya macem-macem. Ada yang jawab Java, C, C++, Javascript, Pascal,
+PHP, dsb. Saya sendiri, menjawab Pascal.&lt;/p&gt;
+
+&lt;p&gt;Karena kurikulum di kampus waktu itu mengajari Pascal. Mau tidak mau,
+Pascal harus diterima menjadi bahasa pemrograman pertama.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;bagaimana-cara-memilih-bahasa-pemrograman-yang-tepat&#34;&gt;Bagaimana Cara Memilih Bahasa Pemrograman yang Tepat?&lt;/h2&gt;
+
+&lt;p&gt;Ketika disuruh memilih &lt;em&gt;&amp;ldquo;Mau tinggal di Arab atau Jepang?&amp;rdquo;&lt;/em&gt;
+Maka tentu kita akan mempelajari bahasa yang digunakan di sana.
+Sangat tidak tepat kalau kita pilih tinggal di Jepang, tapi mempelajari bahasa arab.&lt;/p&gt;
+
+&lt;p&gt;Begitu juga dengan memilih bahasa pemrograman. Kalian harus tentukan dulu
+tujuannya.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Saya ingin belajar cara &amp;hellip;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Rekomendasi pakai bahasa&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat aplikasi iPhone&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Swift&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat aplikasi Android&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Java&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat website&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Javascript, CSS, HTML5&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat aplikasi desktop untuk windows&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;C#&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat game 2D/3D&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Javascript, C#, atau C++&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat program Arduino/micro-controller/robot&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;C&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat program komputasi untuk matematika dan analisis data&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Julia, Python, R, or Matlab&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat automation dan scripting&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Banyak (Python, Ruby, Bash, Powershell, AutoHotKey&amp;hellip;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Masih bingung pilih yang mana?&lt;/p&gt;
+
+&lt;p&gt;Mari kita coba dengan alat bantu&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;bahasa-pemrograman-terbaik-untuk-saya&#34;&gt;Bahasa Pemrograman Terbaik untuk Saya&lt;/h2&gt;
+
+&lt;p&gt;Ada sebuah alat yang dibuat oleh Codementor, namanya &lt;a href=&#34;bestprogramminglanguagefor.me&#34;&gt;bestprogramminglanguagefor.me&lt;/a&gt;.
+Silahkan dibuka, kemudian tentukan tujuannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1139&#34;
+    height=&#34;440&#34;
+    alt=&#34;Pilih tujuan belajar bahasa pemrograman&#34;
+    src=&#34;https://4.bp.blogspot.com/-R_U7U60pQhI/WNUnfMJRlCI/AAAAAAAAEdg/C88kiwSv_Doth0JIpUhyYw6jqHaFaQGYQCPcB/s1600/Pilih%2Btujuan%2Bbelajar%2Bbahasa%2Bpemrograman.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Ada empat tujuan yang ditawarkan alat ini.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Menjadi Programmer profesional&lt;/li&gt;
+&lt;li&gt;Membangun Startup&lt;/li&gt;
+&lt;li&gt;Bersenang-senang&lt;/li&gt;
+&lt;li&gt;Punya skill tambahan&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Nah silahkan pilih, sebagai contoh saya ingin menjadi game developer yang
+profesional. Maka nanti hasil akhirnya, akan disarankan memilih C#
+(tergantung dari pilihan yang diambil).&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;725&#34;
+    height=&#34;604&#34;
+    alt=&#34;Saran bahasa pemrograman terbaik untuk saya&#34;
+    src=&#34;https://3.bp.blogspot.com/-PNIwDtRZpO0/WNUo1tzmhsI/AAAAAAAAEd8/2NY3-9SRkx0-bh_rDf-7dlmF6fOCq9dEgCPcB/s1600/Saran%2Bbahasa%2Bpemrograman%2Bterbaik%2Buntuk%2Bsaya.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba juga alat bantu yang lain: &lt;a href=&#34;http://choosing-a-language.techboss.co/&#34;&gt;Choosing a language&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tips-tips-memilih-bahasa-pemrograman&#34;&gt;Tips-tips Memilih Bahasa Pemrograman&lt;/h2&gt;
+
+&lt;p&gt;Beberapa waktu yang lalu, Petani Kode juga pernah membuat kultwit tentang
+kiat-kiat memilih bahasa pemrograman. Berikut ini rangkumannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824230986774786050&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824232508422135808&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824233108853690369&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824236821861109760&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824237560943677440&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824240509518430208&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824242367926444038&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;Pilih bahasa pemrograman yang tidak hanya digunakan pada satu platform.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;836124110597939200&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagaimana, apakah kamu sudah menentukan bahasa pemrograman yang akan dipelajari?&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Apa itu WebAssembly?</title>
@@ -2655,116 +2863,6 @@ libaray, serta terminal emulator. menurut kalian manakah yang paling bagus?&lt;/
 &lt;li&gt;&lt;a href=&#34;https://hyper.is&#34;&gt;hyper.is&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&#34;&gt;plugins.jetbrains.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Git 04 - Melihat Log Revisi</title>
-      <link>http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/</link>
-      <pubDate>Tue, 14 Feb 2017 08:56:09 +0800</pubDate>
-      
-      <guid>http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/</guid>
-      <description>
-
-&lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial sebelumnya&lt;/a&gt;, kita
-sudah membuat dua revisi pada repositori &lt;code&gt;project-01&lt;/code&gt;. Sekarang bagaimana caranya
-kita melihat catatan log dari revisi-reivisi tersebut?&lt;/p&gt;
-
-&lt;p&gt;Git sudah menyediakan perintah &lt;code&gt;git log&lt;/code&gt; untuk melihat catatan log perubahan
-pada respositori. Contoh penggunaannya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka kita akan melihat log perubahan apa saja yang sudah dilakukan dalam repositori.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;655&#34;
-    height=&#34;285&#34;
-    alt=&#34;Log+revisi+yang+sudah+dibuat.png&#34;
-    src=&#34;https://1.bp.blogspot.com/-BEp5Qadw3U0/WKJkMIVKV4I/AAAAAAAAD50/p7u0PSctYIkLDOnV_zLMhN29ZwIlImv2ACPcB/s1600/Log%2Brevisi%2Byang%2Bsudah%2Bdibuat.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada gambar di atas, terdapat dua revisi perubahan yang telah dilakuan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;log-yang-lebih-pendek&#34;&gt;Log yang Lebih Pendek&lt;/h2&gt;
-
-&lt;p&gt;Untuk menampilkan log yang lebih pendek, kita bisa menambahkan argumen &lt;code&gt;--oneline&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log --oneline
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;06f735a ditambahkan isi
-cf08ca0 commit pertama
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;log-pada-nomer-revisi-commit&#34;&gt;Log pada Nomer Revisi/&lt;em&gt;Commit&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Untuk melihat log pada revisi tertentu, kita bisa memasukan nomer revisi/commit.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log cf08ca0837cf26f1c595be36bb3a6b815e311be1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;commit cf08ca0837cf26f1c595be36bb3a6b815e311be1
-Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
-Date:   Mon Feb 13 18:08:56 2017 +0800
-
-    commit pertama
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;log-pada-file-tertentu&#34;&gt;Log pada File Tertentu&lt;/h2&gt;
-
-&lt;p&gt;Untuk melihat revisi pada file tertentu, kita dapat memasukan nama filenya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log index.html
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;commit 06f735af7724558164c87f6b1ce3ca7778eb1c1b
-Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
-Date:   Mon Feb 13 18:26:50 2017 +0800
-
-    ditambahkan isi
-
-commit cf08ca0837cf26f1c595be36bb3a6b815e311be1
-Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
-Date:   Mon Feb 13 18:08:56 2017 +0800
-
-    commit pertama
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Karena file &lt;code&gt;index.html&lt;/code&gt; sudah direvisi sebanyak dua kali.&lt;/p&gt;
-
-&lt;h2 id=&#34;log-revisi-yang-dilakukan-oleh-author-tertentu&#34;&gt;Log Revisi yang dilakukan oleh Author Tertentu&lt;/h2&gt;
-
-&lt;p&gt;Misalkan dalam repositori dikerjakan oleh banyak orang. Maka kita dapat melihat
-revisi apa saja yang dilakukan oleh orang tertentu dengan perintah berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log --author=&#39;Petani Kode&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
-
-&lt;p&gt;Itulah beberapa cara melihat log revisi pada repositori. Perintah yang digunakan
-adalah &lt;code&gt;git log&lt;/code&gt;. Selanjutnya kita akan pelajari perintah &lt;code&gt;git diff&lt;/code&gt; untuk melihat
-perbandingan pada revisi.&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/&#34;&gt;Tutorial Git 05 - Melihat Perbandingan Revisi&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

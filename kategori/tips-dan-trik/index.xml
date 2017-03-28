@@ -10,6 +10,212 @@
     <atom:link href="http://petanikode.com/kategori/tips-dan-trik/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cara Memilih Bahasa Pemrograman yang Tepat untuk Pemula</title>
+      <link>http://petanikode.com/cara-memilih-bahasa-pemrograman-yang-tepat-untuk-pemula/</link>
+      <pubDate>Fri, 24 Mar 2017 20:07:11 +0800</pubDate>
+      
+      <guid>http://petanikode.com/cara-memilih-bahasa-pemrograman-yang-tepat-untuk-pemula/</guid>
+      <description>
+
+&lt;p&gt;Mulai belajar pemrograman dari mana? Apa bahasa pemrograman yang harus
+saya pelajari pertama kali? Bagaiaman cara belajar pemrograman?&lt;/p&gt;
+
+&lt;p&gt;Itulah sekumpulan pertanyaan yang sering ditanyakan oleh kawan-kawan yang ingin
+belajar pemrograman.&lt;/p&gt;
+
+&lt;p&gt;Beberapa waktu yang lalu, Petani Kode menerbitkan sebuah pertanyaan:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-facebook width=&#34;500&#34;
+      height=&#34;500&#34;
+      layout=&#34;responsive&#34;
+      data-href=&#34;https://www.facebook.com/petanikode/posts/629780907205506:0&#34;&gt;
+&lt;/amp-facebook&gt;&lt;/p&gt;
+
+&lt;p&gt;Ternyata jawabannya macem-macem. Ada yang jawab Java, C, C++, Javascript, Pascal,
+PHP, dsb. Saya sendiri, menjawab Pascal.&lt;/p&gt;
+
+&lt;p&gt;Karena kurikulum di kampus waktu itu mengajari Pascal. Mau tidak mau,
+Pascal harus diterima menjadi bahasa pemrograman pertama.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;bagaimana-cara-memilih-bahasa-pemrograman-yang-tepat&#34;&gt;Bagaimana Cara Memilih Bahasa Pemrograman yang Tepat?&lt;/h2&gt;
+
+&lt;p&gt;Ketika disuruh memilih &lt;em&gt;&amp;ldquo;Mau tinggal di Arab atau Jepang?&amp;rdquo;&lt;/em&gt;
+Maka tentu kita akan mempelajari bahasa yang digunakan di sana.
+Sangat tidak tepat kalau kita pilih tinggal di Jepang, tapi mempelajari bahasa arab.&lt;/p&gt;
+
+&lt;p&gt;Begitu juga dengan memilih bahasa pemrograman. Kalian harus tentukan dulu
+tujuannya.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Saya ingin belajar cara &amp;hellip;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Rekomendasi pakai bahasa&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat aplikasi iPhone&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Swift&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat aplikasi Android&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Java&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat website&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Javascript, CSS, HTML5&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat aplikasi desktop untuk windows&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;C#&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat game 2D/3D&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Javascript, C#, atau C++&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat program Arduino/micro-controller/robot&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;C&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat program komputasi untuk matematika dan analisis data&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Julia, Python, R, or Matlab&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat automation dan scripting&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Banyak (Python, Ruby, Bash, Powershell, AutoHotKey&amp;hellip;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Masih bingung pilih yang mana?&lt;/p&gt;
+
+&lt;p&gt;Mari kita coba dengan alat bantu&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;bahasa-pemrograman-terbaik-untuk-saya&#34;&gt;Bahasa Pemrograman Terbaik untuk Saya&lt;/h2&gt;
+
+&lt;p&gt;Ada sebuah alat yang dibuat oleh Codementor, namanya &lt;a href=&#34;http://bestprogramminglanguagefor.me&#34;&gt;bestprogramminglanguagefor.me&lt;/a&gt;.
+Silahkan dibuka, kemudian tentukan tujuannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1139&#34;
+    height=&#34;440&#34;
+    alt=&#34;Pilih tujuan belajar bahasa pemrograman&#34;
+    src=&#34;https://4.bp.blogspot.com/-R_U7U60pQhI/WNUnfMJRlCI/AAAAAAAAEdg/C88kiwSv_Doth0JIpUhyYw6jqHaFaQGYQCPcB/s1600/Pilih%2Btujuan%2Bbelajar%2Bbahasa%2Bpemrograman.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Ada empat tujuan yang ditawarkan alat ini.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Menjadi Programmer profesional&lt;/li&gt;
+&lt;li&gt;Membangun Startup&lt;/li&gt;
+&lt;li&gt;Bersenang-senang&lt;/li&gt;
+&lt;li&gt;Punya skill tambahan&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Nah silahkan pilih, sebagai contoh saya ingin menjadi game developer yang
+profesional. Maka nanti hasil akhirnya, akan disarankan memilih C#
+(tergantung dari pilihan yang diambil).&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;725&#34;
+    height=&#34;604&#34;
+    alt=&#34;Saran bahasa pemrograman terbaik untuk saya&#34;
+    src=&#34;https://3.bp.blogspot.com/-PNIwDtRZpO0/WNUo1tzmhsI/AAAAAAAAEd8/2NY3-9SRkx0-bh_rDf-7dlmF6fOCq9dEgCPcB/s1600/Saran%2Bbahasa%2Bpemrograman%2Bterbaik%2Buntuk%2Bsaya.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba juga alat bantu yang lain: &lt;a href=&#34;http://choosing-a-language.techboss.co/&#34;&gt;Choosing a language&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;tips-tips-memilih-bahasa-pemrograman&#34;&gt;Tips-tips Memilih Bahasa Pemrograman&lt;/h2&gt;
+
+&lt;p&gt;Beberapa waktu yang lalu, Petani Kode juga pernah membuat kultwit tentang
+kiat-kiat memilih bahasa pemrograman. Berikut ini rangkumannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824230986774786050&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824232508422135808&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824233108853690369&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824236821861109760&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824237560943677440&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824240509518430208&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;824242367926444038&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;Pilih bahasa pemrograman yang tidak hanya digunakan pada satu platform.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
+  height=&#34;330&#34;
+  layout=&#34;responsive&#34;
+  data-tweetid=&#34;836124110597939200&#34;
+  data-cards=&#34;hidden&#34;&gt;
+&lt;/amp-twitter&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagaimana, apakah kamu sudah menentukan bahasa pemrograman yang akan dipelajari?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
       <link>http://petanikode.com/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</link>
       <pubDate>Tue, 14 Mar 2017 17:36:45 +0800</pubDate>

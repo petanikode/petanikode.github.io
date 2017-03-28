@@ -11,10 +11,10 @@
     
     <item>
       <title>Integarsi Bot Autoposting Telegram dengan Channel</title>
-      <link>http://petanikode.com/2017/02/integarsi-bot-autoposting-telegram-dengan-channel/</link>
+      <link>http://petanikode.com/integarsi-bot-autoposting-telegram-dengan-channel/</link>
       <pubDate>Sun, 12 Feb 2017 22:44:49 +0800</pubDate>
       
-      <guid>http://petanikode.com/2017/02/integarsi-bot-autoposting-telegram-dengan-channel/</guid>
+      <guid>http://petanikode.com/integarsi-bot-autoposting-telegram-dengan-channel/</guid>
       <description>
 
 &lt;p&gt;Pada tulisan &lt;a href=&#34;http://petanikode.com/2016/07/membuat-bot-telegram-tanpa-menulis-kode-program-coding/&#34;&gt;sebelumnya&lt;/a&gt;,
@@ -92,20 +92,20 @@ Channel-nya Petani Kode di Telegram &lt;a href=&#34;https:/t.me/petanikode&#34;&
     
     <item>
       <title>Asyik, Akhirnya Telegram Merilis API untuk Telegraph</title>
-      <link>http://petanikode.com/2016/12/asyik-akhirnya-telegram-merilis-api-untuk-telegraph/</link>
+      <link>http://petanikode.com/asyik-akhirnya-telegram-merilis-api-untuk-telegraph/</link>
       <pubDate>Wed, 21 Dec 2016 21:42:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/2016/12/asyik-akhirnya-telegram-merilis-api-untuk-telegraph/</guid>
+      <guid>http://petanikode.com/asyik-akhirnya-telegram-merilis-api-untuk-telegraph/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://1.bp.blogspot.com/-aDsiFEuM5xc/WFqCkAnYW8I/AAAAAAAADfo/EeFWl7vn00077JQIDJZH2uzO6WfMhPYaQCLcB/s1600/telegraph-api-oleh-telegram.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-aDsiFEuM5xc/WFqCkAnYW8I/AAAAAAAADfo/EeFWl7vn00077JQIDJZH2uzO6WfMhPYaQCLcB/s1600/telegraph-api-oleh-telegram.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Setelah satu bulan dirilis, Telegraph akhirnya dirilis API-nya. Telegraph merupakan sebuah &lt;i&gt;tool&lt;/i&gt; untuk menerbitkan artikel. Teks editor Telegraph dibangun dengan &lt;a href=&#34;http://quilljs.com/&#34; target=&#34;_blank&#34;&gt;Quill&lt;/a&gt; dan tampilannya mirip seperti Medium. Menulis di Telegraph, rasanya seperti menulis di Medium.&lt;br /&gt;&lt;br /&gt;Sebelumnya Telegram menambahkan fitur &lt;i&gt;instant view&lt;/i&gt;. &lt;i&gt;Instan view&lt;/i&gt; hanya berlaku untuk artikel yang dibagikan dari Medium dan Telegraph. Selain dari itu, tidak bisa ditampilkan dengan &lt;i&gt;instan view&lt;/i&gt;. Namun, dengan kemunculan API Telegraph, kita mungkin bisa membuat &lt;i&gt;instant view&lt;/i&gt; secara otomatis.&lt;br /&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt; Tertarik mencobanya, silahkan kunjungi halaman dokumentasi Telegraph. Dokumentasi API Telegraph dapat anda baca di&amp;nbsp;&lt;a href=&#34;http://telegra.ph/api&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://telegra.ph/api&#34;&gt;http://telegra.ph/api&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Contoh kode untuk mengirim artikel ke Telegraph:&lt;br /&gt;&lt;pre spellcheck=&#34;false&#34;&gt;&lt;code class=&#34;js&#34;&gt;$.ajax(&amp;lsquo;&lt;a href=&#34;https://api.telegra.ph/createPage&#39;&#34;&gt;https://api.telegra.ph/createPage&#39;&lt;/a&gt;, {&lt;br /&gt;&amp;nbsp; data: {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;access_token:&amp;nbsp;  &amp;lsquo;%access_token%&amp;lsquo;,&lt;br /&gt;  &amp;nbsp;&amp;nbsp;title:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;     &amp;nbsp;&amp;lsquo;Title of page&amp;rsquo;,&lt;br /&gt;  &amp;nbsp;&amp;nbsp;content:&amp;nbsp;&amp;nbsp;&amp;nbsp;    &amp;nbsp;JSON.stringify(content),&lt;br /&gt;  &amp;nbsp;&amp;nbsp;return_content: true&lt;br /&gt;  },&lt;br /&gt;  type: &amp;lsquo;POST&amp;rsquo;,&lt;br /&gt;&amp;nbsp; dataType: &amp;lsquo;json&amp;rsquo;,&lt;br /&gt;&amp;nbsp; success: function(data) {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;if (data.content) {&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; while (article.firstChild) {&lt;br /&gt;    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;article.removeChild(article.firstChild);&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp; article.appendChild(nodeToDom({children: data.content}));&lt;br /&gt;  &amp;nbsp;&amp;nbsp;}&lt;br /&gt;&amp;nbsp; }&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io</title>
-      <link>http://petanikode.com/2016/09/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</link>
+      <link>http://petanikode.com/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</link>
       <pubDate>Fri, 09 Sep 2016 14:16:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/2016/09/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</guid>
+      <guid>http://petanikode.com/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</guid>
       <description>
 
 &lt;p&gt;Simsimi bisa kita pinjam otaknya untuk dipakai di bot Telegram. Tapi,
@@ -237,10 +237,10 @@ Pada dasarnya hanya meneruskan request ke API Simsimi dan mengembalikan lagi ke 
     
     <item>
       <title>Cara Membuat Bot Telegram dengan Layanan Hook.io</title>
-      <link>http://petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/</link>
+      <link>http://petanikode.com/cara-membuat-bot-telegram-dengan-layanan-hook.io/</link>
       <pubDate>Mon, 05 Sep 2016 05:00:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/</guid>
+      <guid>http://petanikode.com/cara-membuat-bot-telegram-dengan-layanan-hook.io/</guid>
       <description>
 
 &lt;p&gt;&lt;amp-img
@@ -436,10 +436,10 @@ untuk mendapatkan informasi terbaru.&lt;/p&gt;
     
     <item>
       <title>Membuat Bot Telegram Tanpa Menulis Kode Program (Coding)</title>
-      <link>http://petanikode.com/2016/07/membuat-bot-telegram-tanpa-menulis-kode-program-coding/</link>
+      <link>http://petanikode.com/membuat-bot-telegram-tanpa-menulis-kode-program-coding/</link>
       <pubDate>Fri, 08 Jul 2016 14:09:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/2016/07/membuat-bot-telegram-tanpa-menulis-kode-program-coding/</guid>
+      <guid>http://petanikode.com/membuat-bot-telegram-tanpa-menulis-kode-program-coding/</guid>
       <description>
 
 &lt;p&gt;&lt;amp-img

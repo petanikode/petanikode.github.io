@@ -65,9 +65,12 @@ Nyalakan mesin!
 
 &lt;p&gt;&lt;strong&gt;Berdasarkan contoh di atas, kita dapat pahami&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;p&gt;Perulangan &lt;em&gt;do/while&lt;/em&gt; mencoba menyalakan mesin,
-padahal bensinnya sudah habis. Sedangkan, &lt;em&gt;while&lt;/em&gt; memeriksa keadaan bensin
-dulu, baru mencoba menyalakan mesin.&lt;/p&gt;
+&lt;p&gt;Perulangan &lt;em&gt;do/while&lt;/em&gt; mencoba menyalakan mesin.
+Sedangkan bensinnya sudah dihabiskan oleh &lt;em&gt;while&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, perulangan &lt;em&gt;do/while&lt;/em&gt; hanya mengulang
+satu kali. Kalau bensin ada (&lt;code&gt;bensin &amp;gt; 0&lt;/code&gt;), maka &lt;em&gt;do/while&lt;/em&gt; akan
+melanjutkan perulangan.&lt;/p&gt;
 
 &lt;p&gt;Contoh dengan bahasa pemrograman python:&lt;/p&gt;
 

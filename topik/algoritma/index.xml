@@ -15,7 +15,84 @@
       <pubDate>Sat, 12 Sep 2015 23:16:00 +0000</pubDate>
       
       <guid>http://petanikode.com/perbedaan-perulangan-while-dan-do-while/</guid>
-      <description>&lt;p&gt;Sebuah pertanyaan yang mungkin membingunkan, &amp;ldquo;apa bedanya perulangan &lt;i&gt;while&lt;/i&gt; dan &lt;i&gt;do-while&lt;/i&gt;?&amp;rdquo; Keduanya sama-sama perulangan yang tidak tentu &lt;i&gt;(uncounted loop)&lt;/i&gt;. Namun, juga memiliki perbedaan, baik dari segi penggunaan, penulisan kode, dan langkah kerja.&lt;br /&gt;&lt;div class=&#34;separator&#34; style=&#34;clear: both; text-align: center;&#34;&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-T1A0TERvMLA/VfOgVNaFLJI/AAAAAAAABxM/uOH4NleCvik/s1600/Perbedaan%2Bperulangan%2Bwhile-do%2Bdan%2Bdo-while.png&#34; imageanchor=&#34;1&#34; style=&#34;margin-left: 1em; margin-right: 1em;&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-T1A0TERvMLA/VfOgVNaFLJI/AAAAAAAABxM/uOH4NleCvik/s1600/Perbedaan%2Bperulangan%2Bwhile-do%2Bdan%2Bdo-while.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;i&gt;while&lt;/i&gt;, melakukan perulangan kalau kondisi (syarat) terpenuhi. Sedangkan &lt;i&gt;do/while&lt;/i&gt; melakukan perulangan dulu, kemudian memeriksa kondisinya atau sayaratnya. Kalau kondisi terpenuhi, maka &lt;i&gt;do/while&lt;/i&gt; akan melanjutkan perulangan. Sebaliknya, dia akan berhenti &lt;i&gt;(break)&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Contoh kode dalam Java Script:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;var bensin = 9;&amp;nbsp;&lt;br /&gt;// perulangan while-do&lt;br /&gt;while(bensin &amp;gt; 0){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; console.log(&amp;ldquo;Masih ada bensin, nyalakan mesin!&amp;rdquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; bensin&amp;ndash;;&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;// perulangan do-while&lt;br /&gt;do{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; console.log(&amp;ldquo;Nyalakan mesin!&amp;rdquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; bensin&amp;ndash;;&lt;br /&gt;} while(bensin &amp;gt; 0)&lt;/code&gt;&lt;/pre&gt;Hasil outputnya: &lt;br /&gt;&lt;pre&gt;Masih ada bensin, nyalakan mesin!&lt;br /&gt;Masih ada bensin, nyalakan mesin!&lt;br /&gt;Masih ada bensin, nyalakan mesin!&lt;br /&gt;Masih ada bensin, nyalakan mesin!&lt;br /&gt;Masih ada bensin, nyalakan mesin!&lt;br /&gt;Masih ada bensin, nyalakan mesin!&lt;br /&gt;Masih ada bensin, nyalakan mesin!&lt;br /&gt;Masih ada bensin, nyalakan mesin!&lt;br /&gt;Masih ada bensin, nyalakan mesin!&lt;br /&gt;Nyalakan mesin!&lt;/pre&gt;&lt;br /&gt;Berdasarkan contoh di atas, dapat kita pahami, kalau &lt;i&gt;d&lt;/i&gt;&lt;i&gt;o/while&lt;/i&gt; mencoba menyalakan mesin, padahal bensinnya sudah habis. Sedangkan, &lt;i&gt;while&lt;/i&gt; memeriksa keadaan bensin dulu, baru mencoba menyalakan mesin.&lt;br /&gt;&lt;br /&gt;Contoh dengan hasil output yang sama dalam bahasa pemrograman python:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py&#34;&gt;bensin = 9&lt;br /&gt;&lt;br /&gt;# Perulangan while-do&lt;br /&gt;while(bensin &amp;gt; 0):&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; print &amp;ldquo;Masih ada bensin, nyalakan mesin!&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; bensin = bensin - 1&lt;br /&gt;&lt;br /&gt;#perulangan do-while&lt;br /&gt;while(True):&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; print &amp;ldquo;Nyalakan mesin!&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; bensin = bensin - 1&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; # periksa bensin&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if(bensin &amp;lt; 0):&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; break&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;&lt;h3&gt;Kapankah kita harus menggunakan &lt;i&gt;while&lt;/i&gt; dan &lt;i&gt;do/while&lt;/i&gt;?&lt;/h3&gt;Tergantung dari kasusnya. Bila syarat perulangannya tidak berkaitan dengan hasil hitung pada blok kode yang diulang, maka pakailah &lt;i&gt;while&lt;/i&gt;. Tetapi, bila syarat perulangannya berkaitan dengan hasil perhitungan di blok kode yang diulang, maka pakailah &lt;i&gt;do/while&lt;/i&gt;.&lt;/p&gt;
+      <description>
+
+&lt;p&gt;Apakah perbedaan perulangan &lt;em&gt;while&lt;/em&gt; dengan &lt;em&gt;do/while&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;Keduanya sama-sama perulangan yang tidak tentu &lt;em&gt;(uncounted loop)&lt;/em&gt;.
+Akan tetapi memiliki beberapa perbedaan baik dari segi penggunaan,
+penulisan kode, dan langkah kerja.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-T1A0TERvMLA/VfOgVNaFLJI/AAAAAAAABxM/uOH4NleCvik/s1600/Perbedaan%2Bperulangan%2Bwhile-do%2Bdan%2Bdo-while.png&#34; alt=&#34;Perulangan while dan do/while&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;perulangan-while-vs-do-while&#34;&gt;Perulangan While vs Do/While&lt;/h2&gt;
+
+&lt;p&gt;Perulangan &lt;em&gt;while&lt;/em&gt; akan melakukan perulangan kalau kondisi (syarat) terpenuhi.
+Sedangkan &lt;em&gt;do/while&lt;/em&gt; melakukan perulangan dulu, kemudian memeriksa kondisinya
+atau sayaratnya. Kalau kondisi terpenuhi, maka &lt;em&gt;do/while&lt;/em&gt; akan melanjutkan
+perulangan. Sebaliknya, dia akan berhenti &lt;em&gt;(break)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh kode dalam Java Script:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var bensin = 9;
+
+// perulangan while-do
+while(bensin &amp;gt; 0){
+    console.log(&amp;quot;Masih ada bensin, nyalakan mesin!&amp;quot;);
+    bensin--;
+}
+
+// perulangan do-while
+do{
+    console.log(&amp;quot;Nyalakan mesin!&amp;quot;);
+    bensin--;
+} while(bensin &amp;gt; 0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Masih ada bensin, nyalakan mesin!
+Masih ada bensin, nyalakan mesin!
+Masih ada bensin, nyalakan mesin!
+Masih ada bensin, nyalakan mesin!
+Masih ada bensin, nyalakan mesin!
+Masih ada bensin, nyalakan mesin!
+Masih ada bensin, nyalakan mesin!
+Masih ada bensin, nyalakan mesin!
+Masih ada bensin, nyalakan mesin!
+Nyalakan mesin!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Berdasarkan contoh di atas, kita dapat pahami&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Perulangan &lt;em&gt;do/while&lt;/em&gt; mencoba menyalakan mesin,
+padahal bensinnya sudah habis. Sedangkan, &lt;em&gt;while&lt;/em&gt; memeriksa keadaan bensin
+dulu, baru mencoba menyalakan mesin.&lt;/p&gt;
+
+&lt;p&gt;Contoh dengan bahasa pemrograman python:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;bensin = 9
+
+# Perulangan while-do
+while(bensin &amp;gt; 0):
+    print &amp;quot;Masih ada bensin, nyalakan mesin!&amp;quot;
+    bensin = bensin - 1
+
+#perulangan do-while
+while(True):
+    print &amp;quot;Nyalakan mesin!&amp;quot;
+    bensin = bensin - 1
+    # periksa bensin
+    if(bensin &amp;lt; 0):
+        break
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;kapankah-waktu-yang-tepat-menggunakan-while-dan-do-while&#34;&gt;Kapankah Waktu yang Tepat Menggunakan &lt;em&gt;while&lt;/em&gt; dan &lt;em&gt;do/while&lt;/em&gt;?&lt;/h2&gt;
+
+&lt;p&gt;Tergantung dari kasusnya. Bila syarat perulangannya tidak berkaitan
+dengan hasil hitung pada blok kode yang diulang, maka pakailah &lt;em&gt;while&lt;/em&gt;.
+Tetapi, bila syarat perulangannya berkaitan dengan hasil perhitungan di
+blok kode yang diulang, maka pakailah &lt;em&gt;do/while&lt;/em&gt;.&lt;/p&gt;
 </description>
     </item>
     

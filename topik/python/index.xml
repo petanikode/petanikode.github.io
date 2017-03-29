@@ -685,12 +685,15 @@ penulisan kode, dan langkah kerja.&lt;/p&gt;
 
 &lt;h2 id=&#34;perulangan-while-vs-do-while&#34;&gt;Perulangan While vs Do/While&lt;/h2&gt;
 
-&lt;p&gt;Perulangan &lt;em&gt;while&lt;/em&gt; akan melakukan perulangan kalau kondisi (syarat) terpenuhi.
-Sedangkan &lt;em&gt;do/while&lt;/em&gt; melakukan perulangan dulu, kemudian memeriksa kondisinya
-atau sayaratnya. Kalau kondisi terpenuhi, maka &lt;em&gt;do/while&lt;/em&gt; akan melanjutkan
+&lt;p&gt;Perulangan &lt;em&gt;while&lt;/em&gt; akan melakukan perulangan kalau kondisi (syarat) terpenuhi.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan &lt;em&gt;do/while&lt;/em&gt; melakukan perulangan dulu, kemudian memeriksa kondisinya
+atau sayaratnya.&lt;/p&gt;
+
+&lt;p&gt;Kalau kondisi terpenuhi, maka &lt;em&gt;do/while&lt;/em&gt; akan melanjutkan
 perulangan. Sebaliknya, dia akan berhenti &lt;em&gt;(break)&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Contoh kode dalam Java Script:&lt;/p&gt;
+&lt;p&gt;Contoh kode dalam Javascript:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var bensin = 9;
 

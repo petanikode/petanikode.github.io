@@ -259,7 +259,7 @@ sudo bash netbeans-installer.sh
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Klik &lt;em&gt;Next&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
+&lt;p&gt;Klik &lt;strong&gt;Next&lt;/strong&gt; untuk melanjutkan.&lt;/p&gt;
 
 &lt;p&gt;Silahkan centang &lt;em&gt;&amp;ldquo;I accept&amp;hellip;&amp;rdquo;&lt;/em&gt; untuk menyetujui persetujuan lisensi Netbeans.&lt;/p&gt;
 
@@ -271,7 +271,7 @@ sudo bash netbeans-installer.sh
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Kemudian klik &lt;em&gt;Next&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
+&lt;p&gt;Kemudian klik &lt;strong&gt;Next&lt;/strong&gt; untuk melanjutkan.&lt;/p&gt;
 
 &lt;p&gt;Centang &lt;em&gt;&amp;ldquo;I accept&amp;hellip;&amp;rdquo;&lt;/em&gt; lagi untuk menyetujui lisensi JUnit.&lt;/p&gt;
 
@@ -283,7 +283,7 @@ sudo bash netbeans-installer.sh
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Kemudian klik &lt;em&gt;Next&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
+&lt;p&gt;Kemudian klik &lt;strong&gt;Next&lt;/strong&gt; untuk melanjutkan.&lt;/p&gt;
 
 &lt;p&gt;Setelah itu, pilih lokasi instalasi dan JDK yang akan digunakan.&lt;/p&gt;
 
@@ -297,10 +297,10 @@ sudo bash netbeans-installer.sh
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Klik &lt;em&gt;Next&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
+&lt;p&gt;Klik &lt;strong&gt;Next&lt;/strong&gt; untuk melanjutkan.&lt;/p&gt;
 
 &lt;p&gt;Kemudian akan muncul jendela pemilihan lokasi instal GlassFish. Langsung saja
-klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
+klik &lt;strong&gt;Next&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;600&#34;
@@ -320,7 +320,7 @@ klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Silahkan klik &lt;em&gt;Install&lt;/em&gt; untuk memulai proses instalasi.&lt;/p&gt;
+&lt;p&gt;Silahkan klik &lt;strong&gt;Install&lt;/strong&gt; untuk memulai proses instalasi.&lt;/p&gt;
 
 &lt;p&gt;Proses instalasi sedang berlangsung, mohon ditunggu&amp;hellip;&lt;/p&gt;
 
@@ -332,7 +332,7 @@ klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Setelah selesai, klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Setelah selesai, klik &lt;strong&gt;Finish&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;600&#34;
@@ -348,7 +348,7 @@ klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;cara-menggunakan-netbeans&#34;&gt;Cara Menggunakan Netbeans&lt;/h3&gt;
 
-&lt;p&gt;Silahkan buka Netbeans, masuk ke &lt;em&gt;Menu&lt;/em&gt;&amp;gt;&lt;em&gt;Programming&lt;/em&gt;&amp;gt;&lt;em&gt;Netbeans&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Silahkan buka Netbeans, masuk ke &lt;strong&gt;Menu&lt;/strong&gt;&amp;gt;&lt;strong&gt;Programming&lt;/strong&gt;&amp;gt;&lt;strong&gt;Netbeans&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;695&#34;
@@ -362,7 +362,7 @@ klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Untuk membuat program di Netbeans, kita harus membuat proyek baru.&lt;/p&gt;
 
-&lt;p&gt;Klik menu &lt;em&gt;File&lt;/em&gt;&amp;gt;&lt;em&gt;New Project&lt;/em&gt; untuk membuat proyek baru.&lt;/p&gt;
+&lt;p&gt;Klik menu &lt;strong&gt;File&lt;/strong&gt;&amp;gt;&lt;strong&gt;New Project&lt;/strong&gt; untuk membuat proyek baru.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;592&#34;
@@ -372,7 +372,7 @@ klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Setelah itu, pilih &lt;strong&gt;Java Application&lt;/strong&gt; dan Klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Setelah itu, pilih &lt;strong&gt;Java Application&lt;/strong&gt; dan Klik &lt;strong&gt;Next&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;721&#34;
@@ -382,7 +382,7 @@ klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Kemudian isi nama aplikasinya dengan &lt;code&gt;HelloWorld&lt;/code&gt; dan klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Kemudian isi nama aplikasinya dengan &lt;code&gt;HelloWorld&lt;/code&gt; dan klik &lt;strong&gt;Finish&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;721&#34;

@@ -10,26 +10,34 @@
     <atom:link href="http://petanikode.com/seri/belajar-java/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Belajar Pemrograman Java di Linux</title>
-      <link>http://petanikode.com/belajar-pemrograman-java-di-linux/</link>
+      <title>Belajar Pemrograman Java di Linux: Inilah Persiapan yang Harus Dilakukan</title>
+      <link>http://petanikode.com/persiapan-pemrograman-java-di-linux/</link>
       <pubDate>Sun, 11 Jan 2015 16:40:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/belajar-pemrograman-java-di-linux/</guid>
+      <guid>http://petanikode.com/persiapan-pemrograman-java-di-linux/</guid>
       <description>
 
-&lt;p&gt;Hallo, kali ini saya akan mengajak anda belajar pemrograman Java di Linux.
-Pemrograman Java tidak hanya dapat dilakukan pada Windows saja, karena Java
-bersifat lintas-platform. Lalu, bagaimana cara pemrograman Java di Linux?&lt;/p&gt;
+&lt;p&gt;Ingin belajar pemrograman Java di Linux?&lt;/p&gt;
+
+&lt;p&gt;Maka ini adalah artikel yang tepat untukmu.&lt;/p&gt;
+
+&lt;p&gt;Pada artikel ini, saya akan membahas persiapan alat-alat yang digunakan untuk
+pemrograman Java di Linux.&lt;/p&gt;
+
+&lt;p&gt;Selain itu, nanti kita akan coba membuat program sederhana.&lt;/p&gt;
+
+&lt;p&gt;Siap&amp;hellip;?&lt;/p&gt;
+
+&lt;p&gt;Mari kita mulai.&lt;/p&gt;
 
 &lt;h2 id=&#34;persiapan-alat&#34;&gt;Persiapan Alat&lt;/h2&gt;
 
 &lt;p&gt;Adapun alat-alat yang perlu dispersiapan untuk belajar pemrograman Java di
-Linux adalah sebagai berikut.&lt;/p&gt;
+Linux adalah sebagai berikut:&lt;/p&gt;
 
 &lt;h3 id=&#34;1-teks-editor&#34;&gt;1. Teks Editor&lt;/h3&gt;
 
-&lt;p&gt;Teks editor adalah tempat kita menulis kode. Anda dapat menggunakan teks
-editor apa saja. Di linux sudah tersedia berbagai macam teks editor.&lt;/p&gt;
+&lt;p&gt;Teks editor digunakan untuk menulis kode.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
 width=&#34;658&#34;
@@ -40,24 +48,27 @@ src=&#34;http://1.bp.blogspot.com/-sB0H3FO2nfI/V9KNFZ4T7AI/AAAAAAAADP4/Ip-QVVjWn
 &lt;p&gt;Baca juga:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/6-teks-editor-berbasis-teks-cli-di-linux-untuk-menulis-kode/&#34;&gt;6 Teks Editor Berbasis Teks di Linux untuk Menulis Kode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/6-teks-editor-berbasis-teks-cli-di-linux-untuk-menulis-kode/&#34;&gt;6 Teks Editor Berbasis Teks di Linux untuk Menulis Kode&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Selain teks editor, anda juga dapat menggunakan IDE seperti &lt;a href=&#34;http://petanikode.com/topik/netbeans&#34;&gt;Netbeans&lt;/a&gt; dan &lt;a href=&#34;http://petanikode.com/topik/eclipse&#34;&gt;Eclipse&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Silahkan gunakan teks editor favoritmu.&lt;/p&gt;
 
 &lt;h3 id=&#34;2-jdk-java-development-kit&#34;&gt;2. JDK (Java Development Kit)&lt;/h3&gt;
 
 &lt;p&gt;JDK atau &lt;em&gt;Java Development Kit&lt;/em&gt; digunakan untuk mengompilasi, &lt;em&gt;debugging&lt;/em&gt;
-(memeriksa &lt;em&gt;error&lt;/em&gt;), dan menjalankan program java. Dalam JDK terdapat dua
-hal yang perlu diktahui:&lt;/p&gt;
+(memeriksa &lt;em&gt;error&lt;/em&gt;), dan menjalankan program java.&lt;/p&gt;
+
+&lt;p&gt;Dalam JDK terdapat dua hal yang perlu diktahui:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Kompilator: Bertugas menerjemahkan kode java menjadi &lt;em&gt;bytecode&lt;/em&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Debugger&lt;/em&gt;: Bertugas memeriksa &lt;em&gt;error&lt;/em&gt; pada kode. Jadi, JDK inilah yang
-digunakan &lt;em&gt;Programmer&lt;/em&gt; untuk membuat program java.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Debugger&lt;/em&gt;: Bertugas memeriksa &lt;em&gt;error&lt;/em&gt; pada kode.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Di Linux, nama paket JDK adalah &lt;em&gt;openjdk&lt;/em&gt;. Gunakan fasilitas &lt;code&gt;apt-cache search&lt;/code&gt;
+&lt;p&gt;Pada sistem operasi Windows, kita bisa menggunakan JDK dari Oracle. Sedangkan
+di Linux, kita menggunakan openJDK.&lt;/p&gt;
+
+&lt;p&gt;Nama paket openJDK di Linux adalah &lt;em&gt;openjdk&lt;/em&gt;. Gunakan fasilitas &lt;code&gt;apt-cache search&lt;/code&gt;
 untuk mencari tahu &lt;em&gt;openjdk&lt;/em&gt; yang tersedia di server &lt;em&gt;repositori&lt;/em&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;petanikode@imajinasi:~$ apt-cache search openjdk
@@ -70,41 +81,62 @@ openjdk-8-jdk - OpenJDK Development Kit (JDK)
 . . .
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Tersedia tiga &lt;em&gt;openjdk&lt;/em&gt;, manakah yang harus saya instal? Saya sendiri memilih
-yang terbaru, yaitu &lt;em&gt;openjdk 8&lt;/em&gt;. Bila di Linux yang anda gunakan belum tersedia
-yang versi 8, Saya rekomendasikan menggunakan yang versi 7 saja.
-Untuk menginstal &lt;em&gt;openjdk 8&lt;/em&gt; ketik perintah berikut ini.&lt;/p&gt;
+&lt;p&gt;Tersedia tiga &lt;em&gt;openJDK&lt;/em&gt;, manakah yang harus saya instal?&lt;/p&gt;
+
+&lt;p&gt;Saya sendiri memilih yang terbaru, yaitu &lt;em&gt;openjdk 8&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bila di Linux yang kamu gunakan belum tersedia
+yang versi 8, Saya rekomendasikan menggunakan yang versi 7 saja.&lt;/p&gt;
+
+&lt;p&gt;Untuk menginstal &lt;em&gt;openjdk 8&lt;/em&gt; ketik perintah berikut ini.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo apt-get install openjdk-8-jdk
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Kalau sudah diinstal, periksalah versi berapa yang terpasang. Gunakan perintah di bawah ini:&lt;/p&gt;
+&lt;p&gt;Kalau sudah diinstal, periksalah versi berapa yang terpasang.&lt;/p&gt;
+
+&lt;p&gt;Gunakan perintah di bawah ini:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;java -version
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;3-jre-java-runtime-environment&#34;&gt;3. JRE (Java Runtime Environment)&lt;/h3&gt;
 
-&lt;p&gt;Sementara itu, JRE atau &lt;em&gt;Java Runtime Environment&lt;/em&gt; digunakan untuk menjalankan program java. JRE inilah yang dipasang oleh pengguna, bila ingin menjalankan program atau aplikasi java.&lt;/p&gt;
+&lt;p&gt;Sementara itu, JRE atau &lt;em&gt;Java Runtime Environment&lt;/em&gt; digunakan untuk menjalankan program java.&lt;/p&gt;
 
-&lt;p&gt;JRE di Linux dapat diinstal melalui terminal. Sejauh pengalaman saya, setelah menginstal &lt;em&gt;openjdk&lt;/em&gt;, JRE juga ikut terinstal. Tapi kalau belum terinstal, silahkan diinstal. Berikut ini perintah untuk menginstal yang versi 8:&lt;/p&gt;
+&lt;p&gt;JRE inilah yang dipasang oleh pengguna
+bila ingin menjalankan program atau aplikasi java.&lt;/p&gt;
+
+&lt;p&gt;JRE di Linux dapat diinstal melalui terminal.&lt;/p&gt;
+
+&lt;p&gt;Sejauh pengalaman saya, setelah menginstal &lt;em&gt;openjdk&lt;/em&gt;, JRE juga ikut terinstal.&lt;/p&gt;
+
+&lt;p&gt;Tapi kalau belum terinstal, silahkan diinstal.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini perintah untuk menginstal JRE versi 8:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo apt-get install openjdk-8-jre
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;membuat-program-pertama&#34;&gt;Membuat program pertama&lt;/h2&gt;
 
-&lt;p&gt;Setelah semuanya siap, mari kita coba membuat sebuah program.
-Program yang akan kita buat adalah program &lt;code&gt;Hello World&lt;/code&gt;.
-Program ini sangat terkenal di dunia. Calon &lt;em&gt;Programmer&lt;/em&gt;,
-harus bisa membuat program ini. Semua &lt;em&gt;Programmer&lt;/em&gt; yang hebat,
-pastilah sudah pernah membuat program ini. Jadi,
- bersiaplah! Sebentar lagi Anda akan menjadi orang hebat. :smile:&lt;/p&gt;
+&lt;p&gt;Setelah semuanya siap, mari kita coba membuat sebuah program.&lt;/p&gt;
+
+&lt;p&gt;Program yang akan kita buat adalah program &lt;code&gt;Hello World&lt;/code&gt;.
+Program ini sangat terkenal di dunia.&lt;/p&gt;
+
+&lt;p&gt;Calon programmer harus bisa membuat program ini.&lt;/p&gt;
+
+&lt;p&gt;Karena semua programmer yang hebat,
+pastilah sudah pernah membuat program ini.&lt;/p&gt;
+
+&lt;p&gt;Jadi, bersiaplah!&lt;/p&gt;
+
+&lt;p&gt;Sebentar lagi kamu akan menjadi orang hebat. :smile:&lt;/p&gt;
 
 &lt;h3 id=&#34;1-menulis-program&#34;&gt;1. Menulis program&lt;/h3&gt;
 
-&lt;p&gt;Buka teks editor, lalu tulislah program di bawah ini. Perhatikan huruf bersar dan kecilnya,
-dalam java huruf kecil dan huruf besar dibedakan. Inilah yang dinamakan &lt;em&gt;case sensitive&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Buka teks editor, lalu tulislah program di bawah ini.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class HelloWorld{
     public static void main(String[] argumen){
@@ -113,8 +145,11 @@ dalam java huruf kecil dan huruf besar dibedakan. Inilah yang dinamakan &lt;em&g
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Simpanlah dengan nama &lt;code&gt;HelloWorld.java&lt;/code&gt;. Simpan dimana? Saya sendiri
-menyimpannya di direktori &lt;em&gt;home&lt;/em&gt; agar mudah diakses.&lt;/p&gt;
+&lt;p&gt;Simpanlah dengan nama &lt;code&gt;HelloWorld.java&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Simpan dimana?&lt;/p&gt;
+
+&lt;p&gt;Saya sendiri menyimpannya di direktori &lt;em&gt;home&lt;/em&gt; agar mudah diakses.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
 width=&#34;636&#34;
@@ -125,14 +160,14 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;2-kompilasi-kode&#34;&gt;2. Kompilasi kode&lt;/h3&gt;
 
-&lt;p&gt;Saatnya mengompilasi kode program yang sudah ditulis.
-Sekarang buka terminal dan ketiklah perintah berikut untuk mengopilasi:&lt;/p&gt;
+&lt;p&gt;Saatnya mengompilasi kode program yang sudah ditulis.&lt;/p&gt;
+
+&lt;p&gt;Sekarang buka terminal dan ketiklah perintah berikut untuk mengopilasi:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;javac HelloWorld.java
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Karena terismpan di direktori &lt;em&gt;home&lt;/em&gt;, jadi mudah untuk mengompilasinya.
-Lihatlah bagaimana saya melakukannya.&lt;/p&gt;
+&lt;p&gt;Karena terismpan di direktori &lt;em&gt;home&lt;/em&gt;, jadi tinggal langsung dikompilasi saja.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
 width=&#34;659&#34;
@@ -141,9 +176,11 @@ alt=&#34;kompilasi program java&#34;
 src=&#34;http://4.bp.blogspot.com/-HQsBgde0pD0/VLFTCz9CaWI/AAAAAAAAA-M/cfMb_LArENI/s1600/kompilasi%2Bprogram%2Bjava%2Bdi%2Blinux.png&#34;
 layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Kalau tidak ada &lt;em&gt;error&lt;/em&gt;, berarti kode programnya sukses dikompilasi.
-Maka akan terciptalah sebuah berkas baru bernama &lt;em&gt;HelloWorld.class&lt;/em&gt;.
-Berkas ini berisi &lt;em&gt;bytecode&lt;/em&gt; yang akan dijalankan oleh JRE.&lt;/p&gt;
+&lt;p&gt;Kalau tidak ada &lt;em&gt;error&lt;/em&gt;, berarti kode programnya sukses dikompilasi.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu akan terciptalah sebuah berkas baru bernama &lt;em&gt;HelloWorld.class&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Berkas ini berisi &lt;em&gt;bytecode&lt;/em&gt; yang akan dijalankan oleh JRE.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
 width=&#34;642&#34;
@@ -163,11 +200,233 @@ alt=&#34;eksekusi program java&#34;
 src=&#34;http://1.bp.blogspot.com/-opsN72CWzSY/VLFZSgkZivI/AAAAAAAAA-k/8_HVqKYdIsA/s1600/menjalankan%2BProgram%2Bjava.png&#34;
 layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
+&lt;h2 id=&#34;pemrograman-java-di-linux-menggunakan-netbeans&#34;&gt;Pemrograman Java di Linux Menggunakan Netbeans&lt;/h2&gt;
 
-&lt;p&gt;Selamat, anda baru saja membuat program Java pertama di Linux. Selanjutnya,
-anda bisa terus menggunakan Linux untuk belajar pemrograman Java. Nantikan
-tulisan terbaru tentang &lt;a href=&#34;http://petanikode.com/topik/java&#34;&gt;Java&lt;/a&gt; di Blog ini.&lt;/p&gt;
+&lt;p&gt;Sejauh ini, kita telah berhasil membuat program Java dengan dikompilasi melalui
+&lt;em&gt;command line&lt;/em&gt; atau terminal.&lt;/p&gt;
+
+&lt;p&gt;Seperitnya akan terasa sedikit melelahkan apabila proses ini terus kita lakukan.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, Netbeans hadir untuk membantu kita.&lt;/p&gt;
+
+&lt;h3 id=&#34;instalasi-netbeans-di-linux&#34;&gt;Instalasi Netbeans di Linux&lt;/h3&gt;
+
+&lt;p&gt;Pertama, silahkan download dulu file instalator Netbeans di &lt;a href=&#34;https://netbeans.org/downloads/&#34;&gt;netbeans.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;960&#34;
+    height=&#34;572&#34;
+    alt=&#34;Download Netbeans untuk Linux&#34;
+    src=&#34;https://3.bp.blogspot.com/-j2XXWggdXac/WOMKMRSdPBI/AAAAAAAAEiQ/uUeB2m27RPoDWpmcZqMq96i49FqO1HqFwCPcB/s1600/Download%2BNetbeans.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, kita akan mendapatkan skrip instalator Netbeans.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;642&#34;
+    height=&#34;520&#34;
+    alt=&#34;1. file script instalator netbeans&#34;
+    src=&#34;https://1.bp.blogspot.com/-EpJwVr8u6Ss/WOMLEKY5IxI/AAAAAAAAEi0/VQszzu4RfoIO3G2Pk_KhCavktKbVB1BbACPcB/s1600/1.%2Bfile%2Bscript%2Binstalator%2Bnetbeans.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang tugas kita adalah mengeksekusi skrip tersebut.&lt;/p&gt;
+
+&lt;p&gt;Buka terminal dan ketik perintah berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd Dwonloads
+sudo bash netbeans-installer.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silahkan ikuti saja seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;659&#34;
+    height=&#34;456&#34;
+    alt=&#34;2. eksekusi skrip isntalator&#34;
+    src=&#34;https://2.bp.blogspot.com/-nvORpUg216w/WOMLEKQQGZI/AAAAAAAAEi0/GCZpAqS7GAMDbDQR6HToJgkapun7FC6NgCPcB/s1600/2.%2Beksekusi%2Bskrip%2Bisntalator.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Sampai muncul jendela sambutan dari Netbeans.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;600&#34;
+    height=&#34;500&#34;
+    alt=&#34;3. Jendela Sambutan&#34;
+    src=&#34;https://3.bp.blogspot.com/-0j27yHyk5Lk/WOMLEOnRB8I/AAAAAAAAEi0/QK6FTbTSJ709FTSbx_kqHvXDsAJP9CYBgCPcB/s1600/3.%2BJendela%2BSambutan.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Klik &lt;em&gt;Next&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
+
+&lt;p&gt;Silahkan centang &lt;em&gt;&amp;ldquo;I accept&amp;hellip;&amp;rdquo;&lt;/em&gt; untuk menyetujui persetujuan lisensi Netbeans.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;600&#34;
+    height=&#34;500&#34;
+    alt=&#34;4. Persetuajuan Lisensi Netbeans&#34;
+    src=&#34;https://3.bp.blogspot.com/-pU4Nt_A17Qc/WOMLENctefI/AAAAAAAAEi0/7peMi950CYEDav7yStBG5zx1bXI2IGdpQCPcB/s1600/4.%2BPersetuajuan%2BLisensi.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian klik &lt;em&gt;Next&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
+
+&lt;p&gt;Centang &lt;em&gt;&amp;ldquo;I accept&amp;hellip;&amp;rdquo;&lt;/em&gt; lagi untuk menyetujui lisensi JUnit.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;600&#34;
+    height=&#34;500&#34;
+    alt=&#34;5. Persetujuan Lisensi JUnit&#34;
+    src=&#34;https://1.bp.blogspot.com/-s2CFXs35hgs/WOMLEBuwyKI/AAAAAAAAEi0/OwZIcYz9FromzQztmvANt6ncxzb7uwHsACPcB/s1600/5.%2BPersetujuan%2BLisensi%2BJUnit.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian klik &lt;em&gt;Next&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, pilih lokasi instalasi dan JDK yang akan digunakan.&lt;/p&gt;
+
+&lt;p&gt;Biasanya JDK langsung terdeteksi.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;600&#34;
+    height=&#34;500&#34;
+    alt=&#34;6. Memilih JDK dan Lokasi instalasi&#34;
+    src=&#34;https://3.bp.blogspot.com/-CiSJDQ2KNf0/WOMLEBNmXuI/AAAAAAAAEi0/7YEMA8dagy0PJJWuqtGZxnrQ5eItAU3UwCPcB/s1600/6.%2BMemilih%2BJDK%2Bdan%2BLokasi%2Binstalasi.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Klik &lt;em&gt;Next&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
+
+&lt;p&gt;Kemudian akan muncul jendela pemilihan lokasi instal GlassFish. Langsung saja
+klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;600&#34;
+    height=&#34;500&#34;
+    alt=&#34;7. Lokasi Instalasi Glassfish&#34;
+    src=&#34;https://2.bp.blogspot.com/-E0qzpWgbeOQ/WOMLEHs3n0I/AAAAAAAAEi0/bEDe1kjYkPwH0sjy5xyCRFwa2jj8P7AugCPcB/s1600/7.%2BLokasi%2BInstalasi%2BGlassfish.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, akan muncul jendela rangkuman.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;600&#34;
+    height=&#34;500&#34;
+    alt=&#34;8. Rangkuman Instalasi&#34;
+    src=&#34;https://2.bp.blogspot.com/-8L682xbbydM/WOMLEH0y8lI/AAAAAAAAEi0/OcEcCT1gpv4zKBrguqR9HzPpJeNyMQ6NgCPcB/s1600/8.%2BRangkuman%2BInstalasi.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Silahkan klik &lt;em&gt;Install&lt;/em&gt; untuk memulai proses instalasi.&lt;/p&gt;
+
+&lt;p&gt;Proses instalasi sedang berlangsung, mohon ditunggu&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;600&#34;
+    height=&#34;500&#34;
+    alt=&#34;9. Proses instalasi&#34;
+    src=&#34;https://4.bp.blogspot.com/-WQV1NYWVojQ/WOMLENjt3OI/AAAAAAAAEi0/RXypLkEaD-8rJfr6wNaxZBOi2XYLjN-nACPcB/s1600/9.%2BProses%2Binstalasi.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah selesai, klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;600&#34;
+    height=&#34;500&#34;
+    alt=&#34;10. Instalasi Selesai&#34;
+    src=&#34;https://4.bp.blogspot.com/-TYcoBz90UB8/WOMLEO6MiJI/AAAAAAAAEi0/w0zF-VQAFFIXa7YndgMiyicLAzjo9w1uACPcB/s1600/10.%2BInstalasi%2BSelesai.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat!&lt;/p&gt;
+
+&lt;p&gt;Netbeans sudah terinstal.&lt;/p&gt;
+
+&lt;h3 id=&#34;cara-menggunakan-netbeans&#34;&gt;Cara Menggunakan Netbeans&lt;/h3&gt;
+
+&lt;p&gt;Silahkan buka Netbeans, masuk ke &lt;em&gt;Menu&lt;/em&gt;&amp;gt;&lt;em&gt;Programming&lt;/em&gt;&amp;gt;&lt;em&gt;Netbeans&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;695&#34;
+    height=&#34;601&#34;
+    alt=&#34;Membuka Netbeans dari Menu&#34;
+    src=&#34;https://3.bp.blogspot.com/-5I9GGzDP_yA/WOMQQzTBhqI/AAAAAAAAEjE/vD1c0GMZr1sa9mtbgm70lRdZvm0LSqK0QCPcB/s1600/Membuka%2BNetbeans%2Bdari%2BMenu.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah, mari kita coba membuat program.&lt;/p&gt;
+
+&lt;p&gt;Untuk membuat program di Netbeans, kita harus membuat proyek baru.&lt;/p&gt;
+
+&lt;p&gt;Klik menu &lt;em&gt;File&lt;/em&gt;&amp;gt;&lt;em&gt;New Project&lt;/em&gt; untuk membuat proyek baru.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;592&#34;
+    height=&#34;284&#34;
+    alt=&#34;MembuatProyek Baru di Netbeans&#34;
+    src=&#34;https://4.bp.blogspot.com/-sjMi8VI47Fg/WOMSBeong6I/AAAAAAAAEjM/vPaZkXLgWLIF6RxvjGF0q9IOFw2dz3MeACPcB/s1600/Membuat%2BProyek%2BBaru%2Bdi%2BNetbeans.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, pilih &lt;strong&gt;Java Application&lt;/strong&gt; dan Klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;721&#34;
+    height=&#34;492&#34;
+    alt=&#34;Pembuatan Proyek Baru di Netbeans&#34;
+    src=&#34;https://2.bp.blogspot.com/-R559fY33Dsk/WOMTcXsDVLI/AAAAAAAAEjU/4GC9PSvpCZoa7qktGnd1Mx9h5rL1op-hgCPcB/s1600/Pembuatan%2BProyek%2BBaru%2Bdi%2BNetbeans.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian isi nama aplikasinya dengan &lt;code&gt;HelloWorld&lt;/code&gt; dan klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;721&#34;
+    height=&#34;492&#34;
+    alt=&#34;Membuat Proyek Java di netbeans&#34;
+    src=&#34;https://2.bp.blogspot.com/-RTl9d1-Loyw/WOMT9YasX7I/AAAAAAAAEjg/sX_T1HqGjmUJ9bGOYZj-uEVzeDcvHc60wCPcB/s1600/Membuat%2BProyek%2BJava%2Bdi%2Bnetbeans.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Tulis kode &lt;em&gt;Hello World&lt;/em&gt;, kemudian jalankan.&lt;/p&gt;
+
+&lt;p&gt;Untuk menjalankan, klik tombol &lt;strong&gt;Run&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;1196&#34;
+    height=&#34;684&#34;
+    alt=&#34;Membuat Program dan Menjalankannya di Netbeans&#34;
+    src=&#34;https://3.bp.blogspot.com/-ecFhJnw4JKs/WOMT9bD-ckI/AAAAAAAAEjg/xuy-zvRjowoDOshlLobbsGyXKRJuWRJagCPcB/s1600/Membuat%2BProgram%2Bdan%2BMenjalankannya%2Bdi%2BNetbeans.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Lihat!&lt;/p&gt;
+
+&lt;p&gt;Sekarang kita tidak perlu kompilasi secara manual. Semuanya sudah ditangani oleh
+Netbeans.&lt;/p&gt;
+
+&lt;p&gt;Ketika kita menekan tombol &lt;strong&gt;Run&lt;/strong&gt;, Netbeans secara otomatis mengompilasi dan
+mengeksekusi programnya.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Selamat, kita sudah selesai mempersiapkan semuanya.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, silahkan pelajari:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/pemrograman-java-program-pertama&#34;&gt;Program Java Pertama yang Harus Dibuat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/pemrograman-java-input-dan-output&#34;&gt;Input dan Output pada Java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/pemrograman-java-variabel-dan-tipe-data&#34;&gt;Variabel dan Tipe data di Java&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ada pertanyaan?&lt;/p&gt;
+
+&lt;p&gt;Silahkan tuliskan di komentar.&lt;/p&gt;
 </description>
     </item>
     

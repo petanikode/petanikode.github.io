@@ -30,12 +30,110 @@
     </item>
     
     <item>
-      <title>Pemrograman C&#43;&#43; di linux</title>
-      <link>http://petanikode.com/pemrograman-c&#43;&#43;-di-linux/</link>
+      <title>Belajar Pemrograman C&#43;&#43; di linux</title>
+      <link>http://petanikode.com/pemrograman-cpp-di-linux/</link>
       <pubDate>Sun, 31 Aug 2014 11:50:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/pemrograman-c&#43;&#43;-di-linux/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1M/4FHFLahyFoU/s1600/cpp.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1M/4FHFLahyFoU/s1600/cpp.png&#34; /&gt;&lt;/a&gt;  &lt;br /&gt;Bahasa pemrograman C++ merupakan bahasa pengembangan dari bahasa C. Kita membutuhkan alat-alat berikut untuk melakukan pemrograman C++ di linux:&lt;br /&gt;&lt;ul&gt;&lt;/ul&gt;&lt;ol&gt;&lt;li&gt;Teks Editor: Sebagai tempat menulis kode&lt;/li&gt;&lt;li&gt;Kompilator &lt;code&gt;g++&lt;/code&gt; : Program yang menerjemahkan bahasa C++ menjadi bahasa mesin (executable).&lt;/li&gt;&lt;/ol&gt;&lt;h2&gt;Membuat program salam&lt;/h2&gt;Program salam yang umum menggunakan &lt;samp&gt;Hello World&lt;/samp&gt;. Salam tersebut terdengar kurang terlalu &lt;i&gt;mainstream&lt;/i&gt; di dunia pemrograman. Oleh karena itu, Saya akan mengajak Anda menggunakan &lt;samp&gt;Assalamualaikum&lt;/samp&gt; saja.&lt;br /&gt;&lt;h3&gt;Langkah 1: Buka teks editor&lt;/h3&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-VvTWqAkHMQU/VAKWEJpZSeI/AAAAAAAAAk4/74ro4nGp9ms/s1600/Scratch_004.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-VvTWqAkHMQU/VAKWEJpZSeI/AAAAAAAAAk4/74ro4nGp9ms/s1600/Scratch_004.png&#34; /&gt;&lt;/a&gt;  &lt;br /&gt;&lt;h3&gt;Langkah 2: Ketik kode ini&lt;/h3&gt;&lt;pre&gt;&lt;code class=&#34;cpp&#34;&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;using namespace std;&lt;br /&gt;&lt;br /&gt;int main(){&lt;br /&gt;    cout &amp;lt;&amp;lt; “Assalamualaikum” &amp;lt;&amp;lt; endl;&lt;br /&gt;    return 0;&lt;br /&gt;}&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;Langkah 3: Simpan kode&lt;/h3&gt;Simpan dengan nama &lt;samp&gt;salam.cpp&lt;/samp&gt;&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-K6X98khsRlc/VAKW5U1G3mI/AAAAAAAAAlA/vq_UkBwCouQ/s1600/Simpan-kode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-K6X98khsRlc/VAKW5U1G3mI/AAAAAAAAAlA/vq_UkBwCouQ/s1600/Simpan-kode.png&#34; /&gt;&lt;/a&gt;  &lt;br /&gt;&lt;h3&gt;Langkah 4: Kompilasi kode&lt;/h3&gt;Buka terminal dengan menekan kombinasi tombol &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;T&lt;/kbd&gt;. Arahkan ke lokasi kode &lt;samp&gt;salam.cpp&lt;/samp&gt; tersimpan. Kompilasi kode dengan mengetik perintah di bawah ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;g++ salam.cpp -o salam&lt;/code&gt;&lt;/pre&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-JJHwIcRyvI0/VAKX5PmPgVI/AAAAAAAAAlM/uhp9TlGE-bY/s1600/Compile-Cpp-in-ElementaryOS.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-JJHwIcRyvI0/VAKX5PmPgVI/AAAAAAAAAlM/uhp9TlGE-bY/s1600/Compile-Cpp-in-ElementaryOS.png&#34; /&gt;&lt;/a&gt;  &lt;br /&gt;Bila kompilasi berhasil, akan tercipta berkas baru bernama &lt;samp&gt;salam&lt;/samp&gt;. Berkas tersebut adalah berkas biner (&lt;i&gt;binary&lt;/i&gt;) yang dapat dieksekusi.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-A53GIIKmgrY/VAKYF1YXVjI/AAAAAAAAAlU/XHMKdY1mB8U/s1600/Home_elementaryOS_program_salam.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-A53GIIKmgrY/VAKYF1YXVjI/AAAAAAAAAlU/XHMKdY1mB8U/s1600/Home_elementaryOS_program_salam.png&#34; /&gt;&lt;/a&gt;  &lt;br /&gt;&lt;h3&gt;Langkah 5: Eksekusi Program&lt;/h3&gt;Eksekusi berkas &lt;samp&gt;salam&lt;/samp&gt; dengan perintah:&lt;br /&gt;&lt;pre&gt;&lt;code&gt;./salam&lt;/code&gt;&lt;/pre&gt;Maka, hasil outputnya akan menampilkan ucapan &amp;lsquo;&lt;samp&gt;Assalamualaikum&lt;/samp&gt;&amp;rsquo;. Kode program sudah berhasil dieksekusi.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-AYwlvwuvI10/VAKZWnDCQuI/AAAAAAAAAlk/GpFT2RuLMQY/s1600/menjalankan-program.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-AYwlvwuvI10/VAKZWnDCQuI/AAAAAAAAAlk/GpFT2RuLMQY/s1600/menjalankan-program.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&amp;mdash;&lt;br /&gt;Pemrograman C++ di linux hanya membutuhkan dua alat, yaitu teks editor dan kompilator. Teks editor bisa menggunakan teks editor apa saja. Selain teks editor, anda juga bisa menggunakan IDE seperti CodeBlocks dan &lt;a href=&#34;http://petanikode.blogspot.com/2015/02/panduan-instalasi-qt-di-linux.html&#34; target=&#34;_blank&#34;&gt;Qt Creator&lt;/a&gt;.&lt;/p&gt;
+      <guid>http://petanikode.com/pemrograman-cpp-di-linux/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1M/4FHFLahyFoU/s1600/cpp.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1M/4FHFLahyFoU/s1600/cpp.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bahasa pemrograman C++ merupakan bahasa pengembangan dari bahasa C.
+Kita membutuhkan alat-alat berikut untuk melakukan pemrograman C++ di linux:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Teks Editor: Sebagai tempat menulis kode&lt;/li&gt;
+&lt;li&gt;Kompilator &lt;code&gt;g++&lt;/code&gt; : Program yang menerjemahkan bahasa C++ menjadi bahasa mesin (executable).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;membuat-program-salam&#34;&gt;Membuat program salam&lt;/h1&gt;
+
+&lt;p&gt;Program salam yang umum menggunakan&lt;/p&gt;
+
+&lt;p&gt;&lt;samp&gt;Hello World&lt;/samp&gt;&lt;/p&gt;
+
+&lt;p&gt;. Salam tersebut terdengar kurang terlalu &lt;em&gt;mainstream&lt;/em&gt; di dunia pemrograman. Oleh karena itu, Saya akan mengajak Anda menggunakan&lt;/p&gt;
+
+&lt;p&gt;&lt;samp&gt;Assalamualaikum&lt;/samp&gt;&lt;/p&gt;
+
+&lt;p&gt;saja.&lt;/p&gt;
+
+&lt;h2 id=&#34;langkah-1-buka-teks-editor&#34;&gt;Langkah 1: Buka teks editor&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-VvTWqAkHMQU/VAKWEJpZSeI/AAAAAAAAAk4/74ro4nGp9ms/s1600/Scratch_004.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-VvTWqAkHMQU/VAKWEJpZSeI/AAAAAAAAAk4/74ro4nGp9ms/s1600/Scratch_004.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;langkah-2-ketik-kode-ini&#34;&gt;Langkah 2: Ketik kode ini&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+using namespace std;
+
+int main(){
+cout &amp;lt;&amp;lt; “Assalamualaikum” &amp;lt;&amp;lt; endl;
+return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;langkah-3-simpan-kode&#34;&gt;Langkah 3: Simpan kode&lt;/h2&gt;
+
+&lt;p&gt;Simpan dengan nama&lt;/p&gt;
+
+&lt;p&gt;&lt;samp&gt;salam.cpp&lt;/samp&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-K6X98khsRlc/VAKW5U1G3mI/AAAAAAAAAlA/vq_UkBwCouQ/s1600/Simpan-kode.png&#34;&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-K6X98khsRlc/VAKW5U1G3mI/AAAAAAAAAlA/vq_UkBwCouQ/s1600/Simpan-kode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;langkah-4-kompilasi-kode&#34;&gt;Langkah 4: Kompilasi kode&lt;/h2&gt;
+
+&lt;p&gt;Buka terminal dengan menekan kombinasi tombol&lt;/p&gt;
+
+&lt;p&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;&lt;/p&gt;
+
+&lt;p&gt;+&lt;/p&gt;
+
+&lt;p&gt;&lt;kbd&gt;Alt&lt;/kbd&gt;&lt;/p&gt;
+
+&lt;p&gt;+&lt;/p&gt;
+
+&lt;p&gt;&lt;kbd&gt;T&lt;/kbd&gt;&lt;/p&gt;
+
+&lt;p&gt;. Arahkan ke lokasi kode&lt;/p&gt;
+
+&lt;p&gt;&lt;samp&gt;salam.cpp&lt;/samp&gt;&lt;/p&gt;
+
+&lt;p&gt;tersimpan. Kompilasi kode dengan mengetik perintah di bawah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;g++ salam.cpp -o salam
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-JJHwIcRyvI0/VAKX5PmPgVI/AAAAAAAAAlM/uhp9TlGE-bY/s1600/Compile-Cpp-in-ElementaryOS.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-JJHwIcRyvI0/VAKX5PmPgVI/AAAAAAAAAlM/uhp9TlGE-bY/s1600/Compile-Cpp-in-ElementaryOS.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+Bila kompilasi berhasil, akan tercipta berkas baru bernama&lt;/p&gt;
+
+&lt;p&gt;&lt;samp&gt;salam&lt;/samp&gt;&lt;/p&gt;
+
+&lt;p&gt;. Berkas tersebut adalah berkas biner (&lt;em&gt;binary&lt;/em&gt;) yang dapat dieksekusi.
+&lt;a href=&#34;http://3.bp.blogspot.com/-A53GIIKmgrY/VAKYF1YXVjI/AAAAAAAAAlU/XHMKdY1mB8U/s1600/Home_elementaryOS_program_salam.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-A53GIIKmgrY/VAKYF1YXVjI/AAAAAAAAAlU/XHMKdY1mB8U/s1600/Home_elementaryOS_program_salam.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;langkah-5-eksekusi-program&#34;&gt;Langkah 5: Eksekusi Program&lt;/h2&gt;
+
+&lt;p&gt;Eksekusi berkas&lt;/p&gt;
+
+&lt;p&gt;&lt;samp&gt;salam&lt;/samp&gt;&lt;/p&gt;
+
+&lt;p&gt;dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./salam
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka, hasil outputnya akan menampilkan ucapan &amp;lsquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;samp&gt;Assalamualaikum&lt;/samp&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;rsquo;. Kode program sudah berhasil dieksekusi.
+&lt;a href=&#34;http://1.bp.blogspot.com/-AYwlvwuvI10/VAKZWnDCQuI/AAAAAAAAAlk/GpFT2RuLMQY/s1600/menjalankan-program.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-AYwlvwuvI10/VAKZWnDCQuI/AAAAAAAAAlk/GpFT2RuLMQY/s1600/menjalankan-program.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Pemrograman C++ di linux hanya membutuhkan dua alat, yaitu teks editor dan kompilator. Teks editor bisa menggunakan teks editor apa saja. Selain teks editor, anda juga bisa menggunakan IDE seperti CodeBlocks dan &lt;a href=&#34;http://petanikode.blogspot.com/2015/02/panduan-instalasi-qt-di-linux.html&#34;&gt;Qt Creator&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

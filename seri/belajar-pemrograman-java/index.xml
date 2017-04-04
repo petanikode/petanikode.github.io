@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Belajar Pemrograman Java on Petani Kode — Programmer Pengguna Linux</title>
+    <link>http://petanikode.com/seri/belajar-pemrograman-java/index.xml</link>
+    <description>Recent content in Belajar Pemrograman Java on Petani Kode — Programmer Pengguna Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <atom:link href="http://petanikode.com/seri/belajar-pemrograman-java/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Belajar Pemrograman Java: Variabel dan 6 Macam Tipe Data yang Harus Diketahui</title>
+      <link>http://petanikode.com/pemrograman-java-variabel-dan-tipe-data/</link>
+      <pubDate>Sun, 11 Oct 2015 13:44:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/pemrograman-java-variabel-dan-tipe-data/</guid>
+      <description>
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;Belajar Pemrograman Java: Variabel dan 6 Macam Tipe Data yang Harus Diketahui&#34;
+    src=&#34;https://1.bp.blogspot.com/-Wh3-vfndnRg/WOHC2viBv7I/AAAAAAAAEhE/pEdfryyz6x472o8b2uysQxG-xcVsbTdtwCPcB/s1600/variabel-dan-tipe-data.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Variabel adalah tempat menyimpan nilai sementara.&lt;/p&gt;
+
+&lt;p&gt;Itu saja.&lt;/p&gt;
+
+&lt;p&gt;Serius?&lt;/p&gt;
+
+&lt;p&gt;Iya serius, kalau mau yang lebih panjang&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;coba kita lihat pengertiannya dari Wikipedia:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Variabel: (Lat) 1. berubah-ubah, tidak tetap; 2. deklarasi sesuatu yang memiliki variasi nilai 3. berbeda-beda dalam bahasa pemrograman disebut juga simbol yang mewakili nilai tertentu, variabel yang dikenal di sub program disebut variabel lokal. sedang yang di kenal secara umum/utuh dalam satu program disebut variabel global.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah, ngerti gak?&lt;/p&gt;
+
+&lt;p&gt;Kalau tidak, cukuplah pahami: Variabel sebagai tempat menyimpan nilai sementara.&lt;/p&gt;
+
+&lt;p&gt;Lalu, apa itu tipe data?&lt;/p&gt;
+
+&lt;p&gt;Tipe data adalah jenis data yang tersimpan dalam variabel.&lt;/p&gt;
+
+&lt;h2 id=&#34;macam-macam-tipe-data&#34;&gt;Macam-macam Tipe Data&lt;/h2&gt;
+
+&lt;p&gt;Berikut ini tipe data primitif pada Java:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;char&lt;/code&gt;: Tipe data karakter, contoh &lt;code&gt;Z&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int&lt;/code&gt;: angka, contoh &lt;code&gt;29&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;float&lt;/code&gt;: bilangan desimal, contoh &lt;code&gt;2.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;double&lt;/code&gt;: bilangan desimal juga, tapi lebih besar kapasistanya, contoh &lt;code&gt;2.31&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;string&lt;/code&gt;: kumpulan dari karakter yang membentuk teks, contoh &lt;code&gt;Hello World!&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean&lt;/code&gt;: tipe data yang hanya bernilai &lt;code&gt;true&lt;/code&gt; dan &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;membuat-variabel&#34;&gt;Membuat Variabel&lt;/h2&gt;
+
+&lt;p&gt;Begini cara membuat variabel di Java:&lt;/p&gt;
+
+&lt;p&gt;variabel kosong:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;int namaVariabel;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Membuat variabel dan langsung diisi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;int namaVariabel = 19;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dimana itu ditulis?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Di dalam fungsi &lt;code&gt;main()&lt;/code&gt;: variabel yang ditulis di dalam fungsi &lt;code&gt;main()&lt;/code&gt; dan
+fungsi yang lainnya disebut variabel lokal.&lt;/li&gt;
+&lt;li&gt;Di dalam class: Variabel ini disebut variabel class atau global.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Bingung&amp;hellip;?&lt;/p&gt;
+
+&lt;h2 id=&#34;mari-kita-coba-latihan-dengan-membuat-program-datadiri&#34;&gt;Mari Kita Coba Latihan dengan Membuat Program DataDiri&lt;/h2&gt;
+
+&lt;p&gt;Buatlah program baru bernama DataDiri. Silahkan tambahkan kelas &lt;em&gt;(java class)&lt;/em&gt;
+baru di paket &lt;em&gt;(package)&lt;/em&gt; &lt;code&gt;pertemuan1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;752&#34;
+    height=&#34;521&#34;
+    alt=&#34;Membuat java class di netbeans&#34;
+    src=&#34;http://1.bp.blogspot.com/-auMt7ptDILY/VhUXJ3fj_FI/AAAAAAAAB5c/phVlb95qgig/s1600/Membuat%2Bjava%2Bclass%2Bdi%2Bnetbeans.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada jendela yang muncul, isi nama kelasnya dengan &lt;em&gt;DataDiri&lt;/em&gt;.
+Setelah itu, silahkan ikuti kode berikut.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;724&#34;
+    height=&#34;626&#34;
+    alt=&#34;Program DataDiri - Variabel dan tipe data java&#34;
+    src=&#34;http://2.bp.blogspot.com/-8e30RYXIhlY/VhnvGo1bPYI/AAAAAAAAB-Q/A63y3RrrzKQ/s1600/Program%2BDataDiri%2B-%2BVariabel%2Bdan%2Btipe%2Bdata%2Bjava.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, coba jalankan dengan menekan tombol &lt;kbd&gt;[Shift]&lt;/kbd&gt;+&lt;kbd&gt;[F6]&lt;/kbd&gt;.
+Analisa dan pahami maksud kode-kode di atas.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;553&#34;
+    height=&#34;184&#34;
+    alt=&#34;Program DataDiri petani kode dengan java&#34;
+    src=&#34;http://2.bp.blogspot.com/-bL-KEN2HXCI/VhnzLOzXvvI/AAAAAAAAB-c/6sUMVdFsPSM/s1600/Program%2BDataDiri%2Bpetani%2Bkode%2Bdengan%2Bjava.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasil outputnya sepertinya salah.&lt;/p&gt;
+
+&lt;p&gt;Usia kok nilianya alamat, mengapa demikian?&lt;/p&gt;
+
+&lt;p&gt;Itu disebabkan karena kita memanggil variabel &lt;code&gt;alamat&lt;/code&gt; pada baris &lt;em&gt;usia&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Jadi yang akan tampil adalah isi dari variable &lt;code&gt;alamat&lt;/code&gt;,
+bukan isi dari variabel &lt;code&gt;usia&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Perbaikilah kodenya menjadi seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;633&#34;
+    alt=&#34;Perbaikan program DataDiri&#34;
+    src=&#34;http://1.bp.blogspot.com/-JgBuIhQp5qk/Vhn0m_dG0wI/AAAAAAAAB-o/LmtZaZPGUMs/s1600/Perbaikan%2Bprogram%2BDataDiri%2B-%2Bpetani%2Bkode%2Bdan%2Bjava.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Dan, &amp;hellip; silahkan coba jalankan kembali programnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;590&#34;
+    height=&#34;188&#34;
+    alt=&#34;hasil output Program DataDiri petani kode dengan java&#34;
+    src=&#34;http://2.bp.blogspot.com/-Mlq6BX9Kn1k/Vhn2H52rl4I/AAAAAAAAB-0/QCD-sZtuwx0/s1600/hasil%2Boutput%2BProgram%2BDataDiri%2Bpetani%2Bkode%2Bdengan%2Bjava.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Yap! hasilnya sudah benar.&lt;/p&gt;
+
+&lt;h2 id=&#34;aturan-penulisan-variabel&#34;&gt;Aturan Penulisan Variabel&lt;/h2&gt;
+
+&lt;p&gt;Ternyata tidak boleh sembarangan dalam membuat variabel.&lt;/p&gt;
+
+&lt;p&gt;Ada aturan yang harus diikuit, diantaranya:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Nama variabel tidak boleh menggunakan kata kunci dari Java &lt;em&gt;(reserved word)&lt;/em&gt;
+seperti &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;switch&lt;/code&gt;, dll.&lt;/li&gt;
+&lt;li&gt;Nama variabel boleh menggunakan huruf, angka (0-9), garis bawah &lt;em&gt;(underscore)&lt;/em&gt;,
+dan symbol dollar ($), namun penggunaan garis bawah dan symbol lebih baik dihindari.&lt;/li&gt;
+&lt;li&gt;Nama variabel harus diawali dengan huruf kecil, karena Java menggunakan gaya CamelCase.&lt;/li&gt;
+&lt;li&gt;Apabila nama variabel lebih dari 1 suku kata, maka kata ke-2 dituliskan
+dengan diawali dengan huruf besar dan seterusnya, contoh &lt;code&gt;namaVariabel&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;latihan-ke-2-program-luaslingkaran&#34;&gt;Latihan Ke-2: Program LuasLingkaran&lt;/h2&gt;
+
+&lt;p&gt;Mari kita mantapkan pemahaman dengan membuat program &lt;em&gt;LuasLingkaran&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Program ini fungsinya untuk menghitung luas lingkaran.&lt;/p&gt;
+
+&lt;p&gt;Luas lingkaran dapat kita hitung dengan rumus &lt;code&gt;PI x r&lt;sup&gt;2&lt;/sup&gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sebelum memulai memrogram, sebaiknya kita pahami dulu algoritma dan flowchart-nya:&lt;/p&gt;
+
+&lt;h3 id=&#34;algoritma&#34;&gt;Algoritma&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;Deklarasi:
+    Double luas, PI
+    int r
+Deskripsi:
+    - Input
+        PI = 3.14
+        r = 18
+    - Proses
+        luas = PI _r_ r
+    - Output
+        cetak luas
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;flow-chart&#34;&gt;Flow Chart:&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;300&#34;
+    height=&#34;481&#34;
+    alt=&#34;Flow Chart luas lingkaran&#34;
+    src=&#34;http://4.bp.blogspot.com/-topvJ0egkaI/VhaAEc1i0rI/AAAAAAAAB7c/TLjkOJ1o7jI/s1600/Flow%2BChart%2Bluas%2Blingkaran%2B-%2Bjava.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah, sudah jelas kan?&lt;/p&gt;
+
+&lt;p&gt;Sekarang kita tinggal kita &lt;em&gt;coding&lt;/em&gt; saja.&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;591&#34;
+    height=&#34;508&#34;
+    alt=&#34;Kode java luas lingkaran&#34;
+    src=&#34;http://3.bp.blogspot.com/-GKiBCcH0k7Q/VhZ-UqlS0DI/AAAAAAAAB7Q/SJ8Cu-lksvo/s1600/Kode%2Bjava%2Bluas%2Blingkaran.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Silahkan dieksekusi dan pertahikan hasilnya.&lt;/p&gt;
+
+&lt;h2 id=&#34;koenversi-tipe-data&#34;&gt;Koenversi Tipe Data&lt;/h2&gt;
+
+&lt;p&gt;Konversi artinya merubah ke jenis yang lain.&lt;/p&gt;
+
+&lt;p&gt;Kenapa kita perlu konversi tipe data?&lt;/p&gt;
+
+&lt;p&gt;Untuk menjawabnya, saya ingin tunjukan ilustrasi berikut ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-instagram
+    data-shortcode=&#34;BJehYJRj8x-&#34;
+    width=&#34;400&#34;
+    height=&#34;400&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-instagram&gt;&lt;/p&gt;
+
+&lt;p&gt;Air yang bentuknya cair tidak bisa disimpan dalam kardus. Karena itu,
+air harus konversi dulu menjadi bentuk padat (es) agar bisa disimpan dalam
+kardus.&lt;/p&gt;
+
+&lt;p&gt;Begitu juga dengan variabel.&lt;/p&gt;
+
+&lt;p&gt;Tipe data &lt;em&gt;string&lt;/em&gt; tidak akan bisa disimpan dalam variabel dengan tipe &lt;em&gt;integer&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;cara-konversi-tipe-data&#34;&gt;Cara Konversi Tipe Data&lt;/h3&gt;
+
+&lt;p&gt;Contoh: Konversi ke tipe integer&lt;/p&gt;
+
+&lt;p&gt;Cara 1:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Integer.perseInt(nilai/vaiabel);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cara 2:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Integer.valueOf(nilai/variabel);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cara 3:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;objek.toInt();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cara 4:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(int) variabel/nilai;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ternyata, ada banyak sekali cara.&lt;/p&gt;
+
+&lt;h3 id=&#34;mari-kita-coba-dalam-program&#34;&gt;Mari Kita Coba dalam Program&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;Buatlah kelas &lt;em&gt;(java class)&lt;/em&gt; baru di paket &lt;em&gt;pertemuan2&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Berikan nama: &lt;em&gt;LuasSegitiga&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kemudian ikuti kode program berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package pertemuan2;
+
+import java.util.Scanner;
+
+public class LuasSegitia {
+
+    public static void main(String[] args) {
+        // deklarasi
+        Double luas;
+        int alas, tinggi;
+
+        // mebuat scanner baru
+        Scanner baca = new Scanner(System.in);
+
+        // Input
+        System.out.println(&amp;quot;== Program hitung luas Segitiga ==&amp;quot;);
+        System.out.print(&amp;quot;Input alas: &amp;quot;);
+        alas = baca.nextInt();
+        System.out.print(&amp;quot;Input tinggi: &amp;quot;);
+        tinggi = baca.nextInt();
+
+        // proses
+        luas = Double.valueOf((alas * tinggi) / 2);
+
+        // output
+        System.out.println(&amp;quot;Luas = &amp;quot; + luas);
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Variabel &lt;code&gt;luas&lt;/code&gt; bertipe data &lt;em&gt;Double&lt;/em&gt;, berarti nilai yang bisa disimpan adalah &lt;em&gt;Double&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan variabel &lt;code&gt;alas&lt;/code&gt; dan &lt;code&gt;tinggi&lt;/code&gt; bertipe &lt;em&gt;Integer&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Agar hasil operasi data &lt;em&gt;integer&lt;/em&gt; dapat disimpan dalam variabel bertipe double, maka perlu dikonversi.&lt;/p&gt;
+
+&lt;p&gt;Kalau dijalankan, akan menghasilkan:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;607&#34;
+    height=&#34;165&#34;
+    alt=&#34;hasil output program luas segitiga dengan java - lab java petani kode&#34;
+    src=&#34;http://4.bp.blogspot.com/-D-ewjhAcySs/ViDl9iOzQiI/AAAAAAAACAU/_y-3m7vEULw/s1600/hasil%2Boutput%2Bprogram%2Bluas%2Bsegitiga%2Bdengan%2Bjava%2B-%2Blab%2Bjava%2Bpetani%2Bkode.png&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Kita baru saja memahami variabel dan tipe data. Kalau anda belum paham,
+silahkan ditanyakan melalui komentar.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, silahkan pelajari tentang operator pada Java.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Belajar Pemrograman Java: Program Java Pertama yang Harus Anda Buat</title>
+      <link>http://petanikode.com/pemrograman-java-program-pertama/</link>
+      <pubDate>Wed, 07 Oct 2015 21:50:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/pemrograman-java-program-pertama/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah mempersiapkan alat-alat yang dibutuhkan,
+selanjutnya kita coba membuat program pertama.&lt;/p&gt;
+
+&lt;p&gt;Program yang akan dibuat sederhana, hanya menampilkan pesan ke Layar.&lt;/p&gt;
+
+&lt;p&gt;Program ini biasanya disebut program &lt;em&gt;Hello World&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Siap&amp;hellip;?&lt;/p&gt;
+
+&lt;h2 id=&#34;sebelum-memulai-pahami-dulu-konsepnya&#34;&gt;Sebelum Memulai, Pahami Dulu Konsepnya&lt;/h2&gt;
+
+&lt;p&gt;Pemrograman java sebenarnya sangat sederhana.&lt;/p&gt;
+
+&lt;p&gt;Kita hanya melakukan hal ini:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Tulis kode&lt;/strong&gt;: Menulis kode dengan Netbeans maupun teks editor yang lain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kompilasi&lt;/strong&gt;: Mengubah kode menjadi &lt;em&gt;bytecode&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Eksekusi&lt;/strong&gt;: Menjalankan program&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&#34;separator&#34;&gt;
+  &lt;a href=&#34;http://3.bp.blogspot.com/-b00DWdKs7Cg/VhUHCkW5nbI/AAAAAAAAB4g/IA48w8pcCzs/s1600/proses%2Bpemrograman%2Bjava%2Bmenggunakan%2Bnetbeans.png&#34; imageanchor=&#34;1&#34;&gt;
+  &lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-b00DWdKs7Cg/VhUHCkW5nbI/AAAAAAAAB4g/IA48w8pcCzs/s1600/proses%2Bpemrograman%2Bjava%2Bmenggunakan%2Bnetbeans.png&#34;&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;sekarang-mari-kita-mulai&#34;&gt;Sekarang, Mari Kita Mulai&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Pertama kita harus membuat proyek dulu di Netbeans.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ikuti langkah-langkah berikut ini:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Arahkan ke menu &lt;em&gt;File&lt;/em&gt; kemudian pilih &lt;em&gt;New Project&lt;/em&gt;.
+Pada jendela yang muncul, pilih &lt;em&gt;Java Application&lt;/em&gt; kemudian klik &lt;em&gt;next&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-6gXyBvHjjNo/VhURR5ovFjI/AAAAAAAAB4w/IbY0tqXt7yE/s1600/Membuat%2Bproyek%2Bbaru%2Bdi%2Bnetbeans.png&#34; alt=&#34;Membuat Proyek Baru di Netbeans&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Isi data proyek, cukup mengganti &lt;em&gt;project name&lt;/em&gt; saja (Lab-Java) dan &lt;em&gt;&amp;lsquo;Create Main Class&amp;rsquo;&lt;/em&gt; tidak perlu dicentang. Setelah itu klik &lt;em&gt;finish&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-R4PCfkVQjyE/VhUSizMLRVI/AAAAAAAAB48/3A6OsuUbefA/s1600/Mengisi%2Bdata%2Bproyek.png&#34; alt=&#34;Mengisi data proyek&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;membuat-paket-biar-rapi&#34;&gt;Membuat Paket Biar Rapi&lt;/h2&gt;
+
+&lt;p&gt;Kita akan menyimpan tiap kode java dalam paket agar tertata rapi dan mudah ditemukan.&lt;/p&gt;
+
+&lt;p&gt;Nama paket akan selalu berubah-ubah setiap kali pertemuan.
+Pada pertemuan pertama ini nama paketnya adalah &lt;code&gt;pertemuan1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pembuatan paket dapat dilakukan dengan mengklik kanan pada
+&lt;em&gt;Source Package&lt;/em&gt;. Kemudian pilih &lt;em&gt;new&lt;/em&gt; &amp;gt; &lt;em&gt;Java Package&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-AYw8Fgk3Bbk/VhUVJ_JHB8I/AAAAAAAAB5I/yh9V305ML9s/s1600/Membuat%2Bpaket%2Bbaru%2Bdi%2Bnetbeans.png&#34; alt=&#34;Membuat paket java di Netbeans&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada jendela yang muncul, isilah nama paketnya dengan &lt;code&gt;pertemuan1&lt;/code&gt;. Setelah itu, klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-FGl73OZmuGo/VhUVmTSs3CI/AAAAAAAAB5Q/RhLr9q-WvYg/s1600/Mengisi%2Bnama%2Bpaket.png&#34; alt=&#34;Mengisi nama paket&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-kode-program&#34;&gt;Membuat Kode Program&lt;/h2&gt;
+
+&lt;p&gt;Program java dibuat dalam sebuah kelas &lt;em&gt;(class)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Buatlah sebuah kelas baru &lt;em&gt;(Java Class)&lt;/em&gt; pada paket &lt;code&gt;pertemuan1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-auMt7ptDILY/VhUXJ3fj_FI/AAAAAAAAB5c/phVlb95qgig/s1600/Membuat%2Bjava%2Bclass%2Bdi%2Bnetbeans.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-auMt7ptDILY/VhUXJ3fj_FI/AAAAAAAAB5c/phVlb95qgig/s1600/Membuat%2Bjava%2Bclass%2Bdi%2Bnetbeans.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada jendela yang muncul, isilah nama kelasnya dengan &lt;code&gt;Perkenalan&lt;/code&gt;. Setelah itu klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pastikan&lt;/strong&gt;: Menggunakan huruf besar/kapital pada awal nama kelas.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-JFedcH8CnPo/VhUXo_diCBI/AAAAAAAAB5k/UYimLp7W6A0/s1600/Membuat%2Bkelas%2Bperkenalan%2Bdi%2Bjava.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-JFedcH8CnPo/VhUXo_diCBI/AAAAAAAAB5k/UYimLp7W6A0/s1600/Membuat%2Bkelas%2Bperkenalan%2Bdi%2Bjava.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka akan tercipta sebuah kelas baru bernama &lt;code&gt;Perkenalan&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-W-xPvQ0F5zw/VhUYh6wt4kI/AAAAAAAAB5w/Wp6Rnoz7vpc/s1600/Kelas%2Bperkenalan%2Bjava.png&#34;&gt;&lt;img src=&#34;http://2.bp.blogspot.com/-W-xPvQ0F5zw/VhUYh6wt4kI/AAAAAAAAB5w/Wp6Rnoz7vpc/s1600/Kelas%2Bperkenalan%2Bjava.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Teks yang berwarna &lt;span style=&#34;color: #999999;&#34;&gt;abu-abu&lt;/span&gt; adalah sebuah komentar.&lt;/p&gt;
+
+&lt;p&gt;Abaikan saja, karena tidak berpengaruh kepada program yang kita buat.&lt;/p&gt;
+
+&lt;p&gt;Biasanya digunakan sebagai keterangan tambahan untuk programmer.&lt;/p&gt;
+
+&lt;p&gt;Sementara, &lt;code&gt;package pertemuan1&lt;/code&gt; menandakan kalau kode java ini berada di dalam paket &lt;code&gt;pertemuan1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kelas perkenalan dimulai dari tanda kurung &amp;ldquo;&lt;code&gt;{&lt;/code&gt;&amp;rdquo; kemudian ditutup dengan tanda kurung &amp;ldquo;&lt;code&gt;}&lt;/code&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Di dalam sanalah kita akan menulis kode programnya.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, silahkan buat fungsi &lt;code&gt;main()&lt;/code&gt; dalam kelas &lt;code&gt;Perkenalan&lt;/code&gt;,
+isinya berupa teks perkenalan.&lt;/p&gt;
+
+&lt;p&gt;Fungsi &lt;code&gt;main()&lt;/code&gt; adalah fungsi utama dalam sebuah program. Fungsi yang wajib
+ada di setiap program Java.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-_Rj7omw9QUU/VhUbLWVHfQI/AAAAAAAAB58/4CCCFPVdY94/s1600/Membuat%2Bfungsi%2Bmain%2Bdi%2Bprogram%2Bjava.png&#34;&gt;&lt;img src=&#34;http://2.bp.blogspot.com/-_Rj7omw9QUU/VhUbLWVHfQI/AAAAAAAAB58/4CCCFPVdY94/s1600/Membuat%2Bfungsi%2Bmain%2Bdi%2Bprogram%2Bjava.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Fungsi &lt;code&gt;System.out.println(&amp;quot;...&amp;quot;);&lt;/code&gt; untuk menampilkan teks ke layar.&lt;/p&gt;
+
+&lt;p&gt;Kita akan banyak menggunakan fungsi ini untuk menampilkan output.&lt;/p&gt;
+
+&lt;p&gt;Sekarang&amp;hellip; mari kita coba eksekusi.&lt;/p&gt;
+
+&lt;p&gt;Tekan &lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;F6&lt;/code&gt; untuk mengeksekusi.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-vDCIQRwIBjA/VhUgJLfCSbI/AAAAAAAAB6U/oBBnZhUgi10/s1600/hasil%2Boutput%2Bprogram%2BSalam.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-vDCIQRwIBjA/VhUgJLfCSbI/AAAAAAAAB6U/oBBnZhUgi10/s1600/hasil%2Boutput%2Bprogram%2BSalam.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah! mudah bukan?&lt;/p&gt;
+
+&lt;p&gt;Pada saat kita mengekan &lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;F6&lt;/code&gt;, Netbeans secara otomatis melakukan kompilasi
+dan mengeksekusi program.&lt;/p&gt;
+
+&lt;p&gt;Inilah kelebihan menggunakan Netbeans.&lt;/p&gt;
+
+&lt;p&gt;Kita tidak perlu repot-repot kompilasi sendiri dengan perintah Command Line.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Selamat, Anda baru saja membuat program pertama.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, silahkan pelajari:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/pemrograman-java-input-dan-output&#34;&gt;Cara Mengambil Input dan Menampilkan Output di Java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/pemrograman-java-variabel-dan-tipe-data&#34;&gt;Variabel dan Tipe Data pada Java&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

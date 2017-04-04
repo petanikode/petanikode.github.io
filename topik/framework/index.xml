@@ -239,17 +239,23 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
       <guid>http://petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</guid>
       <description>
 
-&lt;p&gt;Dompdf merupakan salah satu pustaka PHP untuk membuat PDF. Dompdf membuat
-PDF dari HTML. Kita juga bisa menggunakan CSS di dalamnya. Saat ini Dompdf
-mendukung CSS versi 2.1.&lt;/p&gt;
+&lt;p&gt;Dompdf merupakan salah satu pustaka PHP untuk membuat PDF.&lt;/p&gt;
 
-&lt;p&gt;Untuk menggunakan Dompdf di &lt;a href=&#34;http://petanikode.com/topik/codeigniter&#34;&gt;Codeigniter&lt;/a&gt;, silahkan ikuti langkah-langkah
-berikut ini.&lt;/p&gt;
+&lt;p&gt;Dompdf membuat PDF dari HTML, sehingga lebih praktis. Selain itu juga,
+Kita bisa menggunakan CSS di dalamnya.&lt;/p&gt;
+
+&lt;p&gt;Saat ini Dompdf mendukung CSS versi 2.1.&lt;/p&gt;
+
+&lt;p&gt;Untuk menggunakan Dompdf di &lt;a href=&#34;http://petanikode.com/topik/codeigniter&#34;&gt;Codeigniter&lt;/a&gt;,
+silahkan ikuti langkah-langkah berikut ini.&lt;/p&gt;
 
 &lt;h2 id=&#34;1-aktifkan-autoload-composer&#34;&gt;1. Aktifkan Autoload Composer&lt;/h2&gt;
 
-&lt;p&gt;Kita akan menggunakan &lt;a href=&#34;http://petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt; untuk menginstal Dompdf di proyek Codeigniter.
-Silahkan buka file &lt;code&gt;application/config/config.php&lt;/code&gt;, kemudian isi bagian &lt;em&gt;autoload&lt;/em&gt;
+&lt;p&gt;Kita akan menginstal Dompdf melalui &lt;a href=&#34;http://petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, &lt;em&gt;autoload&lt;/em&gt; untuk Composer perlu diaktifkan.&lt;/p&gt;
+
+&lt;p&gt;Silahkan buka file &lt;code&gt;application/config/config.php&lt;/code&gt;, kemudian isi bagian &lt;em&gt;autoload&lt;/em&gt;
 Composer seperti ini.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;
@@ -257,26 +263,32 @@ Composer seperti ini.&lt;/p&gt;
 
 &lt;h2 id=&#34;2-instal-dompdf&#34;&gt;2. Instal Dompdf&lt;/h2&gt;
 
-&lt;p&gt;Setelah itu, sekarang kita instal &lt;code&gt;dompdf&lt;/code&gt; dengan perintah&lt;/p&gt;
+&lt;p&gt;Selanjutnya kita instal &lt;code&gt;dompdf&lt;/code&gt; dengan perintah:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;composer require dompdf/dompdf
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;Jalankan perintah tersebut di direktori proyeknya.&lt;/p&gt;
+
 &lt;p&gt;&lt;amp-img
     width=&#34;767&#34;
     height=&#34;397&#34;
-    alt=&#34;Instal+dompdf+di+proyek+codeigniter.png&#34;
+    alt=&#34;Instal dompdf di proyek codeigniter&#34;
     src=&#34;https://4.bp.blogspot.com/-s_nZmMzBxw4/WKloKD7bnsI/AAAAAAAAEDM/i43FYKNjq0UIDMEEpupojCfzFnekvkQdgCPcB/s1600/Instal%2Bdompdf%2Bdi%2Bproyek%2Bcodeigniter.png&#34;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2016/12/cara-menggunakan-composer-pada-codeigniter/&#34;&gt;Cara Menggunakan Composer pada CodeIgniter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/cara-menggunakan-composer-pada-codeigniter/&#34;&gt;Cara Menggunakan Composer pada CodeIgniter&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;3-membuat-pustaka-sendiri&#34;&gt;3. Membuat Pustaka Sendiri&lt;/h2&gt;
 
-&lt;p&gt;Agar lebih praktis, kita buat saja pustaka sendiri. Silahkan buat file baru
-di direktori &lt;code&gt;application/libraries&lt;/code&gt; dengan nama &lt;code&gt;pdf.php&lt;/code&gt;. Isinya seperti berikut
-ini.&lt;/p&gt;
+&lt;p&gt;Agar tidak menulis ulang kode yang sama disetiap penggunaan Dompdf,
+kita buat saja pustaka sendiri.&lt;/p&gt;
+
+&lt;p&gt;Silahkan buat file baru di direktori &lt;code&gt;application/libraries&lt;/code&gt;
+dengan nama &lt;code&gt;pdf.php&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Isinya seperti berikut ini.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;1560&#34;
     layout=&#34;responsive&#34;
@@ -311,6 +323,7 @@ saja kita buat.&lt;/p&gt;
     );
 
     $this-&amp;gt;load-&amp;gt;library(&#39;pdf&#39;);
+
     $this-&amp;gt;pdf-&amp;gt;setPaper(&#39;A4&#39;, &#39;potrait&#39;);
     $this-&amp;gt;pdf-&amp;gt;filename = &amp;quot;laporan-petanikode.pdf&amp;quot;;
     $this-&amp;gt;pdf-&amp;gt;load_view(&#39;laporan_pdf&#39;, $data);
@@ -339,8 +352,11 @@ file view bernama &lt;code&gt;laporan_pdf.php&lt;/code&gt; di &lt;code&gt;applic
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Begitulah cara menggunakan Dompdf di Codeigniter. Selebihnya anda bisa bereksperiman
-sendiri. Kalau masih belum jelas, bisa cek repositori ini &lt;a href=&#34;https://github.com/ardianta/codeigniter-dompdf&#34;&gt;codeigniter-dompdf&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Begitulah cara menggunakan Dompdf di Codeigniter.&lt;/p&gt;
+
+&lt;p&gt;Selebihnya anda bisa bereksperiman sendiri.&lt;/p&gt;
+
+&lt;p&gt;Kalau masih belum jelas, bisa cek repositori ini &lt;a href=&#34;https://github.com/ardianta/codeigniter-dompdf&#34;&gt;codeigniter-dompdf&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

@@ -421,9 +421,14 @@ modul &lt;code&gt;json&lt;/code&gt;. Begitulah cara penguraian JSON dari URL, te
       <guid>http://petanikode.com/eksperimen-dengan-api-simsimi/</guid>
       <description>
 
-&lt;p&gt;Kali ini saya akan mengajak teman-teman bereksperimen dengan API Simsimi.
-Apa itu Simsimi? buat yang belum tau, silahkan instal saja aplikasi Simsimi
-di smarphone-nya. Oke, mari kita mulai.&lt;/p&gt;
+&lt;p&gt;Kali ini saya akan mengajak teman-teman bereksperimen dengan API Simsimi.&lt;/p&gt;
+
+&lt;p&gt;Apa itu Simsimi?&lt;/p&gt;
+
+&lt;p&gt;buat yang belum tau, silahkan instal saja aplikasi Simsimi
+di smarphone-nya.&lt;/p&gt;
+
+&lt;p&gt;Oke, mari kita mulai.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;720&#34;
@@ -433,7 +438,7 @@ di smarphone-nya. Oke, mari kita mulai.&lt;/p&gt;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;API Simsimi konsepnya sangat sederhana. Kita hanya melakukan &lt;em&gt;request&lt;/em&gt; dari URL dengan &lt;em&gt;query string&lt;/em&gt;, lalu nanti akan mendapatkan jawaban atau respon berdasarkan data yang dimiliki Simsimi. Respon tersebut, bisa kita olah untuk membuat Simsimi versi kita sendiri.&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;API Simsimi konsepnya sangat sederhana. Kita hanya melakukan &lt;em&gt;request&lt;/em&gt; dari URL dengan &lt;em&gt;query string&lt;/em&gt;, lalu akan mendapatkan jawaban atau respon berdasarkan data yang dimiliki Simsimi. Respon tersebut, bisa kita olah untuk membuat Simsimi versi kita sendiri.&lt;/p&gt;
 
 &lt;h2 id=&#34;1-mendapatkan-kunci-api&#34;&gt;1. Mendapatkan Kunci API&lt;/h2&gt;
 
@@ -463,7 +468,7 @@ percobaan (gratis) dan untuk yang menggunakan kinci API berbayar.&lt;/p&gt;
 &lt;li&gt;Kunci Berbayar: &lt;code&gt;http://api.simsimi.com/request.p&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Berikut ini parameter untuk membuat request melalui URL di atas.&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Berikut ini parameter untuk membuat request melalui URL di atas.&lt;/p&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -511,7 +516,7 @@ percobaan (gratis) dan untuk yang menggunakan kinci API berbayar.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Nah, untuk membuat request-nya, silahkan susun URL-nya menjadi seperti ini:&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Nah, untuk membuat request-nya, silahkan susun URL-nya menjadi seperti ini:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;http://sandbox.api.simsimi.com/request.p?key=KUNCI_API&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=tau petanikode?
 &lt;/code&gt;&lt;/pre&gt;
@@ -526,7 +531,7 @@ percobaan (gratis) dan untuk yang menggunakan kinci API berbayar.&lt;/p&gt;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Seperti yang kita dapatkan pada gambar di atas, responnya dalam bentuk JSON. Percobaan kedua saya lakukan dengan Postman.&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Seperti yang kita dapatkan pada gambar di atas, responnya dalam bentuk JSON. Percobaan kedua saya lakukan dengan Postman.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;1366&#34;

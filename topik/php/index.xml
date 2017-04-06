@@ -639,8 +639,8 @@ Fungsi ini untuk mengeksekusi perintah-perintah Terminal atau CMD.&lt;/p&gt;
 &lt;p&gt;Baca Juga:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/cara-menghapus-dan-mengubah-nama-direktori-dengan-php/&#34;&gt;Cara Menghapus dan Mengubah Nama Direktori dengan PHP&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/membuat-dan-menampilkan-isi-direktori-dengan-php/&#34;&gt;Membuat dan Menampilkan isi Direktori dengan PHP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/cara-menghapus-dan-mengubah-nama-direktori-dengan-php/&#34;&gt;Cara Menghapus dan Mengubah Nama Direktori dengan PHP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/membuat-dan-menampilkan-isi-direktori-dengan-php/&#34;&gt;Membuat dan Menampilkan isi Direktori dengan PHP&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Mari kita mulai dengan membuat sebuah file baru bernama &lt;code&gt;eksekusi_perintah.php&lt;/code&gt;,
@@ -883,12 +883,117 @@ dipelajari di dokumentasi PHP. Sekian tulisan kali ini, mudah-mudahan bermanfaat
     </item>
     
     <item>
-      <title>Persiapan Pemrograman Web di Linux</title>
-      <link>http://petanikode.com/persiapan-pemrograman-web-di-linux/</link>
+      <title>Belajar Pemrograman Web di Linux: inilah 6 Alat yang Perlu Dipersiapkan</title>
+      <link>http://petanikode.com/pemrograman-web-di-linux/</link>
       <pubDate>Sun, 09 Oct 2016 11:57:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/persiapan-pemrograman-web-di-linux/</guid>
-      <description>&lt;p&gt;Pemrograman web yang akan saya bahas kali ini adalah permograman web yang menggunakan PHP. Ada pun pemrograman web yang menggunakan bahasa selain PHP (insa&amp;rsquo;allah) akan saya bahas di waktu mendatang. Ada beberapa peralatan yang perlu dipersiapkan untuk memrogram web di Linux, diantaranya:&lt;br /&gt;&lt;h2&gt;1. Teks Editor&lt;/h2&gt;Teks Editor digunakan untuk menulis kode. Banyak pilihan teks editor yang dapat digunakan, diantaranya: Gedit, Geany, Atom, Sublime, CodeLite, dsb. Pilihlah teks editor yang anda sukai. Saya sendiri menggunakan teks editor Atom.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-xYZSEJ0UIKs/V_mwJCM3-VI/AAAAAAAADTI/DWvKVoole9cE1s1R7tnDh_sxOKXUUHINACK4B/s1600/Text%2BEditor%2BAtom%2Bdi%2BLinux%2BMint%2B18.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Text Editor Atom di Linux Mint 18&#34; border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-xYZSEJ0UIKs/V_mwJCM3-VI/AAAAAAAADTI/DWvKVoole9cE1s1R7tnDh_sxOKXUUHINACK4B/s1600/Text%2BEditor%2BAtom%2Bdi%2BLinux%2BMint%2B18.png&#34; title=&#34;Text Editor Atom di Linux Mint 18&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;2. Browser&lt;/h2&gt;Browser digunakan untuk membuka web. Jadi web yang kita buat akan ditampilkan di browser. Ada beberapa browser yang dapat digunakan di Linux, diantaranya: Mozilla Firefox, Google Chrome, Chromium, Opera, dsb. Pilihlah browser yang anda sukai. Kalau saya sendiri lebih sering menggunakan Firefox.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_bmTjI5T_oM/V_mw1EUz8WI/AAAAAAAADTU/mAlTO-krOTIYktqkCCUhsv3xWKWRdi8WACK4B/s1600/Petani%2BKode%2B-%2BMozilla%2BFirefox%2Bdi%2BLinux%2BMint%2B18.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Mozilla Firefox di Linux Mint 18&#34; border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-_bmTjI5T_oM/V_mw1EUz8WI/AAAAAAAADTU/mAlTO-krOTIYktqkCCUhsv3xWKWRdi8WACK4B/s1600/Petani%2BKode%2B-%2BMozilla%2BFirefox%2Bdi%2BLinux%2BMint%2B18.png&#34; title=&#34;Mozilla Firefox di Linux Mint 18&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;3. PHP&lt;/h2&gt;PHP adalah bahasa skrip, karena itu kita membutuhkan interpreter untuk menjalankannya. Silahkan instal PHP dengan perintah berikut ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo apt install php5&lt;/code&gt;&lt;/pre&gt;atau untuk PHP 7&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo apt install php7.0&lt;/code&gt;&lt;/pre&gt;Periksalah versi PHP yang terinstal dengan mengetik perintah &lt;code&gt;php -v&lt;/code&gt; pada terminal.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-GdmDmr6NMcQ/V_mzZJGajwI/AAAAAAAADTg/isADxEszD-khKsWt71qqR0mXBmQOFtCtQCK4B/s1600/Versi%2BPHP%2Byang%2Bterinstal.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Cek Versi PHP yang terinstal&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-GdmDmr6NMcQ/V_mzZJGajwI/AAAAAAAADTg/isADxEszD-khKsWt71qqR0mXBmQOFtCtQCK4B/s1600/Versi%2BPHP%2Byang%2Bterinstal.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;PHP yang terinstal di linux secara default akan diatur sebagai &lt;i&gt;Production Server&lt;/i&gt;. Silahkan ganti menjadi &lt;i&gt;Development&lt;/i&gt; agar bisa menampilkan &lt;i&gt;error&lt;/i&gt; untuk &lt;i&gt;debugging&lt;/i&gt;. Silahkan baca: &lt;a href=&#34;http://www.petanikode.com/2016/03/cara-menampilkan-pesan-error-untuk-debugging-php.html&#34; target=&#34;_blank&#34;&gt;Cara Menampilkan Pesan Error untuk Debugging PHP&lt;/a&gt;.&lt;br /&gt;&lt;h2&gt;4. Server Web (Apache)&amp;nbsp;&lt;/h2&gt;Tanpa Server Web Apache sebenarnya PHP sudah bisa dijadikan server. Sekarang PHP sudah mampu membuat server sendiri,—Silahkan baca: &lt;a href=&#34;http://www.petanikode.com/2016/10/cara-menggunakan-web-server-dari-php.html&#34;&gt;Cara Menggunakan Server Web bawaan PHP&lt;/a&gt;— tapi web server tersebut hanya digunakan untuk &lt;i&gt;development&lt;/i&gt; saja. Oleh karena itu, ada baiknya kita menggunakan server apache.&lt;br /&gt;&lt;br /&gt;Silahkan ketik perintah berikut ini untuk menginstal server apache di Linux.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo apt install apache2&lt;/code&gt;&lt;/pre&gt;Setelah itu coba perikta versi yang terinstal dengan perintah &lt;code&gt;apache2 -v&lt;/code&gt;.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-MujHbTNIwkk/V_m3oIOYpSI/AAAAAAAADTs/tGliHR4gXwAy8eFtlE7-Ti15eEX7d7asACK4B/s1600/petanikode%2540imajinasi%2B%257E_021.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Versi Apache yang terinstal&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-MujHbTNIwkk/V_m3oIOYpSI/AAAAAAAADTs/tGliHR4gXwAy8eFtlE7-Ti15eEX7d7asACK4B/s1600/petanikode%2540imajinasi%2B%257E_021.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Gunakan perintah berikut ini untuk mengaktifkan server apache&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo service apache2 start&lt;/code&gt;&lt;/pre&gt;Perintah untuk menghentikan server apache:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo service apache2 stop&lt;/code&gt;&lt;/pre&gt;Perintah untuk me-restart:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo service apache2 restart&lt;/code&gt;&lt;/pre&gt;Selain itu, kita juga bisa membuka alamat &lt;a href=&#34;http://localhost/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://localhost&#34;&gt;http://localhost&lt;/a&gt;&lt;/a&gt; untuk memeriksa apakah server apache sudah berjalan atau belum. Bila tampilannya seperti berikut ini, maka servernya sedang berjalan.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-yc0SNC-8zO0/V_m50vldw_I/AAAAAAAADT4/Q0-zc1Uv9pcOgZixFjbQZI97T0XAb67VwCK4B/s1600/Uji%2Bcoba%2Bserver%2Bapache.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Uji coba server apache melalui browser&#34; border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-yc0SNC-8zO0/V_m50vldw_I/AAAAAAAADT4/Q0-zc1Uv9pcOgZixFjbQZI97T0XAb67VwCK4B/s1600/Uji%2Bcoba%2Bserver%2Bapache.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Jangan lupa juga untuk mengatur hak akses direktori servernya agar user biasa bebas membuat file dan direktori di sana.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo chmod 777 /var/www/html -R&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;&amp;nbsp;5. Server Database (MySQL)&lt;/h2&gt;Server MySQL digunakan untuk keperluan database. Apabila webnya nanti kompleks dan memerlukan database, maka bisa menggunakan MySQL. Selain MySQL dapat juga menggunakan DBMS (Database Management System) yang lain seperti Ms. SQL, PostgreSQL, Oracle, dsb.&lt;br /&gt;&lt;br /&gt;Silahkan ketik perintah berikut ini untuk menginstal MySQL di Linux.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;mysql&#34;&gt;sudo apt install mysql-server&lt;/code&gt;&lt;/pre&gt;Jangan lupa juga untuk memeriksa versi MySQL yang terinstal dengan perintah &lt;code&gt;mysql &amp;ndash;version&lt;/code&gt;.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-m9L8OgWTZUc/V_m7kUn3sUI/AAAAAAAADUE/K6QoJRtBOMQ_kpQLH-08-yDX15-QVo8zACK4B/s1600/Periksa%2Bversi%2Bmysql%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Periksa versi mysql yang terinstal&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-m9L8OgWTZUc/V_m7kUn3sUI/AAAAAAAADUE/K6QoJRtBOMQ_kpQLH-08-yDX15-QVo8zACK4B/s1600/Periksa%2Bversi%2Bmysql%2B-%2Bpetanikode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;6. PHPMyAdmin&lt;/h2&gt;PHPMyAdmin digunakan untuk mengelola database di MySQL. Selain menggunakan PHPMyAdmin, dapat juga menggunakan aplikasi yang lain seperti MySQL Workbench, Navicat, dsb.&lt;br /&gt;&lt;br /&gt;Ketik perintah berikut untuk menginstal PHPMyAdmin di Linux:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo apt install phpmyadmin&lt;/code&gt;&lt;/pre&gt;Dalam proses instalasi anda akan diminta password untuk root, silahkan isi saja dengan password yang mudah diingat.&lt;br /&gt;&lt;br /&gt;Setelah berhasil diinstal, silahkan periksa ke &lt;a href=&#34;http://localhost/phpmyadmin&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://localhost/phpmyadmin&#34;&gt;http://localhost/phpmyadmin&lt;/a&gt;&lt;/a&gt;. Kemudian, cobalah masuk dengan password yang sudah dibuat.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-WvGEqy8eHrs/V_m88ZVj7aI/AAAAAAAADUQ/7PysK__qpkEU61S5HLwGzwr3vDK9EPeOACK4B/s1600/phpMyAdmin%2B-%2BMozilla%2BFirefox_022.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-WvGEqy8eHrs/V_m88ZVj7aI/AAAAAAAADUQ/7PysK__qpkEU61S5HLwGzwr3vDK9EPeOACK4B/s1600/phpMyAdmin%2B-%2BMozilla%2BFirefox_022.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Nah, semua sudah dipersiapkan. Bila tidak ada error sampai tahap ini, berarti kita sudah berhasil mempersiapkan semua alat-alat yang diperlukan untuk memrogram web di Linux. Selanjutnya, kita bisa mulai membuat web.&lt;/p&gt;
+      <guid>http://petanikode.com/pemrograman-web-di-linux/</guid>
+      <description>
+
+&lt;p&gt;Pemrograman web yang akan saya bahas alah pemrograman web menggunakan HTML, Javascript,
+PHP, dan MySQL.&lt;/p&gt;
+
+&lt;p&gt;Jika kamu ingin membuat web atau belajar pemrograman web menggunakan Linux, maka
+kamu perlu persiapkan 6 alat ini:&lt;/p&gt;
+
+&lt;h2 id=&#34;1-teks-editor&#34;&gt;1. Teks Editor&lt;/h2&gt;
+
+&lt;p&gt;Teks Editor digunakan untuk menulis kode. Banyak pilihan teks editor yang dapat digunakan, diantaranya: Gedit, Geany, Atom, Sublime, CodeLite, dsb.&lt;/p&gt;
+
+&lt;p&gt;Pilihlah teks editor yang anda sukai.&lt;/p&gt;
+
+&lt;p&gt;Saya sendiri menggunakan teks editor Atom.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-xYZSEJ0UIKs/V_mwJCM3-VI/AAAAAAAADTI/DWvKVoole9cE1s1R7tnDh_sxOKXUUHINACK4B/s1600/Text%2BEditor%2BAtom%2Bdi%2BLinux%2BMint%2B18.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-xYZSEJ0UIKs/V_mwJCM3-VI/AAAAAAAADTI/DWvKVoole9cE1s1R7tnDh_sxOKXUUHINACK4B/s1600/Text%2BEditor%2BAtom%2Bdi%2BLinux%2BMint%2B18.png&#34; alt=&#34;Text Editor Atom di Linux Mint 18&#34; title=&#34;Text Editor Atom di Linux Mint 18&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-browser&#34;&gt;2. Browser&lt;/h2&gt;
+
+&lt;p&gt;Browser digunakan untuk membuka web.&lt;/p&gt;
+
+&lt;p&gt;Jadi web yang kita buat akan ditampilkan di browser.&lt;/p&gt;
+
+&lt;p&gt;Ada beberapa browser yang dapat digunakan di Linux, diantaranya: Mozilla Firefox, Google Chrome, Chromium, Opera, dsb.&lt;/p&gt;
+
+&lt;p&gt;Pilihlah browser yang anda sukai.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_bmTjI5T_oM/V_mw1EUz8WI/AAAAAAAADTU/mAlTO-krOTIYktqkCCUhsv3xWKWRdi8WACK4B/s1600/Petani%2BKode%2B-%2BMozilla%2BFirefox%2Bdi%2BLinux%2BMint%2B18.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-_bmTjI5T_oM/V_mw1EUz8WI/AAAAAAAADTU/mAlTO-krOTIYktqkCCUhsv3xWKWRdi8WACK4B/s1600/Petani%2BKode%2B-%2BMozilla%2BFirefox%2Bdi%2BLinux%2BMint%2B18.png&#34; alt=&#34;Mozilla Firefox di Linux Mint 18&#34; title=&#34;Mozilla Firefox di Linux Mint 18&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-php&#34;&gt;3. PHP&lt;/h2&gt;
+
+&lt;p&gt;PHP adalah bahasa skrip, karena itu kita membutuhkan interpreter untuk menjalankannya. Silahkan instal PHP dengan perintah berikut ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt install php5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau untuk PHP 7&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt install php7.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Periksalah versi PHP yang terinstal dengan mengetik perintah &lt;code&gt;php -v&lt;/code&gt; pada terminal.
+&lt;a href=&#34;http://2.bp.blogspot.com/-GdmDmr6NMcQ/V_mzZJGajwI/AAAAAAAADTg/isADxEszD-khKsWt71qqR0mXBmQOFtCtQCK4B/s1600/Versi%2BPHP%2Byang%2Bterinstal.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-GdmDmr6NMcQ/V_mzZJGajwI/AAAAAAAADTg/isADxEszD-khKsWt71qqR0mXBmQOFtCtQCK4B/s1600/Versi%2BPHP%2Byang%2Bterinstal.png&#34; alt=&#34;Cek Versi PHP yang terinstal&#34; /&gt;&lt;/a&gt;
+PHP yang terinstal di linux secara default akan diatur sebagai &lt;em&gt;Production Server&lt;/em&gt;. Silahkan ganti menjadi &lt;em&gt;Development&lt;/em&gt; agar bisa menampilkan &lt;em&gt;error&lt;/em&gt; untuk &lt;em&gt;debugging&lt;/em&gt;. Silahkan baca: &lt;a href=&#34;http://www.petanikode.com/2016/03/cara-menampilkan-pesan-error-untuk-debugging-php.html&#34;&gt;Cara Menampilkan Pesan Error untuk Debugging PHP&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-server-web-apache&#34;&gt;4. Server Web (Apache)&lt;/h2&gt;
+
+&lt;p&gt;Tanpa Server Web Apache sebenarnya PHP sudah bisa dijadikan server. Sekarang PHP sudah mampu membuat server sendiri,&amp;ndash;Silahkan baca: &lt;a href=&#34;http://www.petanikode.com/2016/10/cara-menggunakan-web-server-dari-php.html&#34;&gt;Cara Menggunakan Server Web bawaan PHP&lt;/a&gt;&amp;ndash; tapi web server tersebut hanya digunakan untuk &lt;em&gt;development&lt;/em&gt; saja. Oleh karena itu, ada baiknya kita menggunakan server apache.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ketik perintah berikut ini untuk menginstal server apache di Linux.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt install apache2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu coba perikta versi yang terinstal dengan perintah &lt;code&gt;apache2 -v&lt;/code&gt;.
+&lt;a href=&#34;http://4.bp.blogspot.com/-MujHbTNIwkk/V_m3oIOYpSI/AAAAAAAADTs/tGliHR4gXwAy8eFtlE7-Ti15eEX7d7asACK4B/s1600/petanikode%2540imajinasi%2B%257E_021.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-MujHbTNIwkk/V_m3oIOYpSI/AAAAAAAADTs/tGliHR4gXwAy8eFtlE7-Ti15eEX7d7asACK4B/s1600/petanikode%2540imajinasi%2B%257E_021.png&#34; alt=&#34;Versi Apache yang terinstal&#34; /&gt;&lt;/a&gt;
+Gunakan perintah berikut ini untuk mengaktifkan server apache&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service apache2 start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perintah untuk menghentikan server apache:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service apache2 stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perintah untuk me-restart:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service apache2 restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Selain itu, kita juga bisa membuka alamat &lt;a href=&#34;http://localhost/&#34;&gt;http://localhost&lt;/a&gt; untuk memeriksa apakah server apache sudah berjalan atau belum. Bila tampilannya seperti berikut ini, maka servernya sedang berjalan.
+&lt;a href=&#34;http://3.bp.blogspot.com/-yc0SNC-8zO0/V_m50vldw_I/AAAAAAAADT4/Q0-zc1Uv9pcOgZixFjbQZI97T0XAb67VwCK4B/s1600/Uji%2Bcoba%2Bserver%2Bapache.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-yc0SNC-8zO0/V_m50vldw_I/AAAAAAAADT4/Q0-zc1Uv9pcOgZixFjbQZI97T0XAb67VwCK4B/s1600/Uji%2Bcoba%2Bserver%2Bapache.png&#34; alt=&#34;Uji coba server apache melalui browser&#34; /&gt;&lt;/a&gt;
+Jangan lupa juga untuk mengatur hak akses direktori servernya agar user biasa bebas membuat file dan direktori di sana.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo chmod 777 /var/www/html -R
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-server-database-mysql&#34;&gt;5. Server Database (MySQL)&lt;/h2&gt;
+
+&lt;p&gt;Server MySQL digunakan untuk keperluan database. Apabila webnya nanti kompleks dan memerlukan database, maka bisa menggunakan MySQL. Selain MySQL dapat juga menggunakan DBMS (Database Management System) yang lain seperti Ms. SQL, PostgreSQL, Oracle, dsb.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ketik perintah berikut ini untuk menginstal MySQL di Linux.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt install mysql-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jangan lupa juga untuk memeriksa versi MySQL yang terinstal dengan perintah &lt;code&gt;mysql --version&lt;/code&gt;.
+&lt;a href=&#34;http://4.bp.blogspot.com/-m9L8OgWTZUc/V_m7kUn3sUI/AAAAAAAADUE/K6QoJRtBOMQ_kpQLH-08-yDX15-QVo8zACK4B/s1600/Periksa%2Bversi%2Bmysql%2B-%2Bpetanikode.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-m9L8OgWTZUc/V_m7kUn3sUI/AAAAAAAADUE/K6QoJRtBOMQ_kpQLH-08-yDX15-QVo8zACK4B/s1600/Periksa%2Bversi%2Bmysql%2B-%2Bpetanikode.png&#34; alt=&#34;Periksa versi mysql yang terinstal&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-phpmyadmin&#34;&gt;6. PHPMyAdmin&lt;/h2&gt;
+
+&lt;p&gt;PHPMyAdmin digunakan untuk mengelola database di MySQL. Selain menggunakan PHPMyAdmin, dapat juga menggunakan aplikasi yang lain seperti MySQL Workbench, Navicat, dsb.&lt;/p&gt;
+
+&lt;p&gt;Ketik perintah berikut untuk menginstal PHPMyAdmin di Linux:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt install phpmyadmin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dalam proses instalasi anda akan diminta password untuk root, silahkan isi saja dengan password yang mudah diingat.&lt;/p&gt;
+
+&lt;p&gt;Setelah berhasil diinstal, silahkan periksa ke &lt;a href=&#34;http://localhost/phpmyadmin&#34;&gt;http://localhost/phpmyadmin&lt;/a&gt;. Kemudian, cobalah masuk dengan password yang sudah dibuat.
+&lt;a href=&#34;http://4.bp.blogspot.com/-WvGEqy8eHrs/V_m88ZVj7aI/AAAAAAAADUQ/7PysK__qpkEU61S5HLwGzwr3vDK9EPeOACK4B/s1600/phpMyAdmin%2B-%2BMozilla%2BFirefox_022.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-WvGEqy8eHrs/V_m88ZVj7aI/AAAAAAAADUQ/7PysK__qpkEU61S5HLwGzwr3vDK9EPeOACK4B/s1600/phpMyAdmin%2B-%2BMozilla%2BFirefox_022.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah, semua sudah dipersiapkan. Bila tidak ada error sampai tahap ini, berarti kita sudah berhasil mempersiapkan semua alat-alat yang diperlukan untuk memrogram web di Linux. Selanjutnya, kita bisa mulai membuat web.&lt;/p&gt;
 </description>
     </item>
     

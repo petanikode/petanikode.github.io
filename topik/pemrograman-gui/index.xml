@@ -90,16 +90,6 @@
     </item>
     
     <item>
-      <title>Persiapan Pemrograman PyGTK</title>
-      <link>http://petanikode.com/persiapan-pemrograman-pygtk/</link>
-      <pubDate>Sun, 07 Sep 2014 10:40:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/persiapan-pemrograman-pygtk/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt; &lt;br /&gt;PyGTK merupakan sebuah modul atau pustaka untuk membuat antarmuka grafis (GUI) dengan bahasa pemrograman Python. Dalam modul PyGTK terdapat pustaka GTK+ &lt;i&gt;(Gimp Toolkit)&lt;/i&gt; yang menyediakan fungsi-fungsi untuk membangun antarmuka grafis. &lt;br /&gt;&lt;h2&gt;1. Instal Teks Editor&lt;/h2&gt;Teks editor digunakan untuk menulis kode. Gunakan teks editor yang anda sukai. Beberapa teks editor rekomendasi: &lt;a href=&#34;http://atom.io/&#34; target=&#34;_blank&#34;&gt;Atom&lt;/a&gt;, &lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34;&gt;Ms. Visual Studio Code&lt;/a&gt;, &lt;a href=&#34;http://komodoide.com/komodo-edit/&#34; target=&#34;_blank&#34;&gt;Komodo Edit&lt;/a&gt;, &lt;a href=&#34;https://www.geany.org/&#34; target=&#34;_blank&#34;&gt;Geany&lt;/a&gt;, dsb.&lt;br /&gt;&lt;h2&gt;2. Instal Python&lt;/h2&gt;Pemrograman PyGTK menggunakan bahasa pemrograman python. Pada distro Linux yang saya gunakan (Xubuntu), python sudah terinstal.&lt;br /&gt;&lt;pre&gt;petanikode@imajinasi:~$ &lt;b&gt;python &amp;ndash;version&lt;/b&gt;&lt;br /&gt;Python 2.7.6 &lt;/pre&gt;&lt;h2&gt;3. Instal PIP&lt;/h2&gt;PIP merupakan sebuah sistem manajemen paket yang digunakan untuk menginstal dan mengelola paket python. Kita akan gunakan pip untuk menginstal modul PyGTK, karena itu kita perlu PIP. Cara instal PIP:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo apt-get isntall python-pip&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;4. Instal Modul PyGTK&lt;/h2&gt;Modul PyGTK sudah tersedia di distro Linux yang menggunakan lingkungan destop GNOME. Pada lingkungan desktop lain, kadang modul ini tidak tersedia. Berikut ini perintah untuk menginstal modul PyGTK melalui PIP:&lt;br /&gt;&lt;pre&gt;&lt;code&gt;sudo pip install PyGTK&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;Itulah empat hal yang perlu dipersiapkan untuk pemrograman PyGTK. Selanjutnya anda dapat memulai membuat program sederhana, seperti &lt;a href=&#34;http://2016/04/pemrograman-pygtk-1-membuat-jendela-dan-ikon.html&#34; target=&#34;_blank&#34;&gt;membuat jendela dan ikon&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Struktur Pemilihan di Pemrograman Lazarus</title>
       <link>http://petanikode.com/struktur-pemilihan-di-pemrograman-lazarus/</link>
       <pubDate>Fri, 05 Sep 2014 23:21:00 +0000</pubDate>

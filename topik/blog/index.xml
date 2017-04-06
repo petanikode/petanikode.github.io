@@ -252,9 +252,19 @@ Saya tidak pernah belajar bahasa pemrograman Go sama sekali.&lt;/p&gt;
       <guid>http://petanikode.com/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/</guid>
       <description>
 
-&lt;p&gt;Dalam rangka migrasi Petani Kode ke Hugo, saya harus melakukan impor artikel dari Blogger ke Hugo. Untungnya Hugo sudah menyediakan skrip untuk impor konten dari blogger ke Hugo. Proses impor ini memakan waktu cukup cepat. Saya kira, tidak sampai 15 menit. Benar sekali, mungkin anda bisa melakukannya lebih cepat.&lt;/p&gt;
+&lt;p&gt;Dalam rangka migrasi Petani Kode ke Hugo, saya harus melakukan impor artikel dari Blogger ke Hugo.&lt;/p&gt;
 
-&lt;p&gt;Saya asumsikan, kita telah menginstal &lt;a href=&#34;https://golang.org&#34;&gt;Go (Golang)&lt;/a&gt; dan &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt;. Kemudian lakukan langkah-langkah berikut ini.&lt;/p&gt;
+&lt;p&gt;Untungnya Hugo sudah menyediakan skrip untuk impor konten dari blogger ke Hugo.&lt;/p&gt;
+
+&lt;p&gt;Proses impor ini memakan waktu cukup cepat. Saya kira, tidak sampai 15 menit.&lt;/p&gt;
+
+&lt;p&gt;Mungkin anda bisa melakukannya lebih cepat.&lt;/p&gt;
+
+&lt;p&gt;Begini caranya&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Sebelumnya, pastikan telah menginstal &lt;a href=&#34;https://golang.org&#34;&gt;Go (Golang)&lt;/a&gt; dan &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kemudian lakukan langkah-langkah berikut ini.&lt;/p&gt;
 
 &lt;h2 id=&#34;1-ekspor-blog&#34;&gt;1. Ekspor Blog&lt;/h2&gt;
 

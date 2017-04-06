@@ -76,7 +76,7 @@ Java sendiri sudah menyediakan tiga class untuk mengambil input:
     <meta property="og:type" content="article" />
     <meta property="og:url" content="http://petanikode.com/pemrograman-java-input-dan-output/" />
 
-    <meta property="og:image" content="http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png" />
+    <meta property="og:image" content="http://3.bp.blogspot.com/-VplNxe__W4E/WIIHJK5moxI/AAAAAAAADrs/DZ8jMlvWhP84EE2ZLNLS6YZFstFASVPbACK4B/s1600/pemrograman-java-petanikode.jpg" />
 
     
     <meta property="og:updated_time" content="2015-10-12 09:35:00 &#43;0000 UTC"/>
@@ -212,12 +212,12 @@ Java sendiri sudah menyediakan tiga class untuk mengambil input:
   },
   "headline": "Belajar Pemrograman Java: Cara Mengambil Input dan Menampilkan Output",
   "description": "Seperti yang kita ketahui, program komputer terdiri dari tiga komponen utama, yaitu: input, proses, dan output.\n Input: nilai yang kita masukan ke program Proses: langkah demi langkah yang dilakukan untuk mengelola input menjadi sesuatu yang berguna Output: hasil pengolahan  Semua bahasa pemrograman telah menyediakan fungs-fungsi untuk melakukan input dan output.\nJava sendiri sudah menyediakan tiga class untuk mengambil input:\n Class Scanner; Class BufferReader; dan Class Console.",
-  "wordCount":  807 ,
+  "wordCount":  1108 ,
   "datePublished" : "2015-10-12T09:35:00",
   "dateModified" : "2015-10-12T09:35:00",
   "image" : {
       "@type": "ImageObject",
-      "url": "http:\/\/2.bp.blogspot.com\/-FXkb84tWS_Q\/VhUetgpL57I\/AAAAAAAAB6I\/fvNLQwpVTxI\/s1600\/Lab%2BJava%2BPetani%2BKode.png",
+      "url": "http:\/\/3.bp.blogspot.com\/-VplNxe__W4E\/WIIHJK5moxI\/AAAAAAAADrs\/DZ8jMlvWhP84EE2ZLNLS6YZFstFASVPbACK4B\/s1600\/pemrograman-java-petanikode.jpg",
       "height" : 380,
       "width" : 720
     },
@@ -1190,7 +1190,13 @@ padding: 16px;
 
                 
 
-<p><a href="http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png"><img src="http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png" alt="" /></a></p>
+<p><amp-img
+    width="720"
+    height="380"
+    alt="pemrograman java - input dan output"
+    src="http://3.bp.blogspot.com/-VplNxe__W4E/WIIHJK5moxI/AAAAAAAADrs/DZ8jMlvWhP84EE2ZLNLS6YZFstFASVPbACK4B/s1600/pemrograman-java-petanikode.jpg"
+    layout="responsive">
+</amp-img></p>
 
 <p>Seperti yang kita ketahui, program komputer terdiri dari tiga komponen
 utama, yaitu: input, proses, dan
@@ -1217,7 +1223,7 @@ input dan output.</p>
 <p>Tiga class tersebut untuk mengambil input pada program berbasis teks <em>(console)</em>.
 Sedangkan untuk GUI menggunakan class yang seperti JOptionPane dan inputbox pada form.</p>
 
-<p>Sementara untuk outputnya, Java menyediakan fungsi <code>print()</code> dan <code>println()</code>.</p>
+<p>Sementara untuk outputnya, Java menyediakan fungsi <code>print()</code>, <code>println()</code>, dan <code>format()</code>.</p>
 
 <h2 id="mengambil-input-dengan-class-scanner">Mengambil Input dengan Class Scanner</h2>
 
@@ -1439,14 +1445,148 @@ kemudian masuk ke direktori tempat menyimpan kodenya.</p>
 
 <p><img src="https://4.bp.blogspot.com/-53BqUuOe0fU/WOLFjSxxltI/AAAAAAAAEh8/PlkhbCsflDcbFc3UujbMsiiGIO9W66j-ACLcB/s1600/input%2Bconsole%2Bjava.png" alt="input console java - kompilasi dan eksekusi" /></p>
 
+<h2 id="menampilkan-output">Menampilkan Output</h2>
+
+<p>Kita sudah mengenal berbagai cara mengambil input dari keyboard pada program
+berbasis teks.</p>
+
+<p>Sekarang bagaimana dengan outputnya?</p>
+
+<p>Ada beberapa fungsi yang sudah disediakan oleh Java:</p>
+
+<ol>
+<li>Fungsi <code>System.out.print()</code></li>
+<li>Fungsi <code>System.out.println()</code></li>
+<li>Fungsi <code>System.out.format()</code></li>
+</ol>
+
+<p>Apa saja perbedaan dari fungsi-fungsi tersebut?</p>
+
+<p>Mari kita bahas&hellip;</p>
+
+<h3 id="fungsi-print-vs-println">Fungsi <code>print()</code> vs <code>println()</code></h3>
+
+<p>Fungsi <code>print()</code> dan <code>println()</code> sama-sama digunakan untuk menampilkan teks.</p>
+
+<p>Lalu apa bedanya?</p>
+
+<p>Fungsi <code>print()</code> akan menampilkan teks apa adanya. Sedangkan <code>println()</code>
+akan menampilkan teks dengan ditambah baris baru.</p>
+
+<p>Mari kita coba dalam kode:</p>
+
+<pre><code class="language-java">package eksperimen;
+
+public class PrintVsPrinln {
+
+    public static void main(String[] args) {
+
+        System.out.print(&quot;ini teks yang dicetak dengan print()&quot;);
+        System.out.println(&quot;sedangkan ini teks yang dicetak dengan println()&quot;);
+        System.out.print(&quot;pake print() lagi&quot;);
+
+    }
+
+}
+</code></pre>
+
+<p>Sekarang lihat hasil outputnya:</p>
+
+<p><amp-img
+    width="1196"
+    height="684"
+    alt="Perbedaan fungsi print dan println di java"
+    src="https://4.bp.blogspot.com/-M-uiSVwlinw/WOWXFYWJy3I/AAAAAAAAEkY/nV8w_c257SAs_KxHN6-8bQHEYFRj-QzwwCPcB/s1600/Perbedaan%2Bfungsi%2Bprint%2Bdan%2Bprintln%2Bdi%2Bjava.png"
+    layout="responsive">
+</amp-img></p>
+
+<h3 id="menggabungkan-string">Menggabungkan String</h3>
+
+<p>Ketika menggunakan fungsi <code>print()</code> maupun <code>println()</code>, kadang kita perlu
+mengambil teks dari variabel dan menggabungkannya dengan teks yang lain.</p>
+
+<p>Misalnya seperti ini:</p>
+
+<p>Kita punya variabel <code>namaDepan</code> dan <code>namaBelakang</code>:</p>
+
+<pre><code class="language-java">String namaDepan = &quot;Petani&quot;;
+String namaBelakang = &quot;Kode&quot;;
+</code></pre>
+
+<p>Kemudian kita ingin menampilkannya dengan fungsi <code>print()</code>, maka
+kita hanya perlu memasukkannya ke sana.</p>
+
+<pre><code class="language-java">System.out.print(namaDepan);
+System.out.print(namaBelakang);
+</code></pre>
+
+<p>Kode tersebut akan menghasilkan: <code>PetaniKode</code></p>
+
+<p>Sebenarnya kita tidak perlu menggunakan dua fungsi <code>print()</code>, karena
+kita bisa menggabungkannya dengan operator <code>+</code>.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-java">System.out.print(namaDepan + namaBelakang);
+</code></pre>
+
+<p>Agar ada spasi, tinggal ditambahkan saja spasi:</p>
+
+<pre><code class="language-java">System.out.print(namaDepan + &quot; &quot; + namaBelakang);
+</code></pre>
+
+<h3 id="format-string">Format String</h3>
+
+<p>Sedangkan untuk menggabungkan String yang lebih kompleks, kita bisa menggunakan
+fungsi <code>format()</code>.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-java">package eksperimen;
+
+public class FormatString {
+
+    public static void main(String[] args) {
+
+        String namaDepan = &quot;Petani&quot;;
+        String namaBelakang = &quot;Kode&quot;;
+
+        System.out.format(&quot;Nama saya %s %s %n&quot;, namaDepan, namaBelakang);
+
+    }
+
+}
+</code></pre>
+
+<p><strong>Perhatikan</strong>: di sana kita menggunakan simbol <code>%s</code> untuk mengambil nilai dari variabel di
+sampingnya. <code>%s</code> artinya string.</p>
+
+<p>Selain <code>%s</code>, ada juga simbol lain:</p>
+
+<ul>
+<li><code>%d</code> untuk desimal atau angka;</li>
+<li><code>%f</code> untuk bilangan pecahan;</li>
+<li><code>%n</code> untuk baris baru, bisa juga pakai <code>\n</code>;</li>
+<li>dan masih banyak lagi, cek di <a href="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html">dokumentasi java</a>.</li>
+</ul>
+
+<p><amp-img
+    width="783"
+    height="200"
+    alt="Format String di Java"
+    src="https://4.bp.blogspot.com/-gyWiJrJNbFY/WOWc2S6aXlI/AAAAAAAAEk4/xBtlY6v5yUQAUsDpJ_fDdY8zBQ27x7L-ACPcB/s1600/Format%2BString%2Bdi%2BJava.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Kode di atas akan menghasilkan: <code>Nama saya Petani Kode</code></p>
+
 <h2 id="apa-selanjutnya">Apa selanjutnya?</h2>
 
-<p>Kita baru saja mengetahui tiga cara mengambil input pada program berbasis teks <em>(console)</em>.</p>
+<p>Kita baru saja mengetahui tiga cara mengambil input dan menampilkan output
+untuk program berbasis teks <em>(console)</em>.</p>
 
-<p>Manakah yang paling anda sukai?</p>
-
-<p>Selanjutnya, anda bisa pelajari lebih dalam konsep
-<a href="/pemrograman-java-variabel-dan-tipe-data">variabel dan tipe data di java</a>.</p>
+<p>Selanjutnya, silahkan pelajari konsep
+<a href="/pemrograman-java-variabel-dan-tipe-data">variabel dan tipe data pada java</a>.</p>
 
 <p>Jika ada yang ditanyakan, silahkan tuliskan di komentar.</p>
 

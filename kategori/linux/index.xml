@@ -675,6 +675,292 @@ Manakah teks editor favoritmu?&lt;/p&gt;
     </item>
     
     <item>
+      <title>Pemrograman Android di Linux dengan Eclipse</title>
+      <link>http://petanikode.com/pemrograman-android-di-linux-dengan-eclipse/</link>
+      <pubDate>Thu, 28 Apr 2016 06:54:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/pemrograman-android-di-linux-dengan-eclipse/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://4.bp.blogspot.com/-whVGzAqrug0/VyE_fQ3y3pI/AAAAAAAACxY/XkZcdOHA2ZQymp-yJ90WzBSaR4CAkV0IgCLcB/s1600/Pemrograman%2BAndroid%2BEclipse%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-whVGzAqrug0/VyE_fQ3y3pI/AAAAAAAACxY/XkZcdOHA2ZQymp-yJ90WzBSaR4CAkV0IgCLcB/s1600/Pemrograman%2BAndroid%2BEclipse%2BPetani%2BKode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Awalnya Google menggunakan Eclipse sebagai IDE untuk pengembangan Android.
+Kemudian beralih ke Android Studio.&lt;/p&gt;
+
+&lt;p&gt;Eclipse memang lebih ringan daripada Android Studio, akan tetapi Eclipse
+tidak lagi didukung oleh Google.&lt;/p&gt;
+
+&lt;p&gt;Namun tidak ada salahanya menggunakan Eclipse untuk membuat aplikasi Android.&lt;/p&gt;
+
+&lt;p&gt;Bila kamu ingin mencobanya, silahkan ikuti langkah-langkah berikut
+untuk melakukan perisapan.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-install-jdk&#34;&gt;1. Install JDK&lt;/h2&gt;
+
+&lt;p&gt;JDK &lt;em&gt;(Java Development Kit)&lt;/em&gt; merupakan peralatan dasar yang dibutuhkan untuk
+pemrograman Java.&lt;/p&gt;
+
+&lt;p&gt;Karena aplikasi Android menggunakan bahasa pemrograman Java, maka kita perlu
+menginstal JDK.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cara instal JDK di Linux:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;JDK versi 7:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install openjdk-7-jdk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;JDK versi 8:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install openjdk-8-jdk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;* pilih salah satu&lt;/p&gt;
+
+&lt;h2 id=&#34;2-instal-eclipse&#34;&gt;2. Instal Eclipse&lt;/h2&gt;
+
+&lt;p&gt;Silahkan instal Eclipse dengan perintah berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install eclipse
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-install-android-sdk&#34;&gt;3. Install Android SDK&lt;/h2&gt;
+
+&lt;p&gt;Android SDK adalah penting yang harus di persiapkan dalam pemrograman Android.
+Karena Android SDK menyediakan API Android yang kita perlukan.&lt;/p&gt;
+
+&lt;p&gt;Silahkan baca &lt;a href=&#34;http://petanikode.com/cara-instal-android-sdk-dan-ndk&#34;&gt;Cara Install Android SDK dan NDK di Linux&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-update-android-sdk&#34;&gt;4. Update Android SDK&lt;/h2&gt;
+
+&lt;p&gt;Setelah Andoir SDK terinstal, lakukan update untuk mendapatkan API versi terbaru.&lt;/p&gt;
+
+&lt;p&gt;Gunakan perintah berikut untuk membuka update manager Android SDK.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;android update sdk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-buat-emulator&#34;&gt;5. Buat Emulator&lt;/h2&gt;
+
+&lt;p&gt;Setelah semuanya terupdate, sekarang buat sebuah emulator baru.&lt;/p&gt;
+
+&lt;p&gt;Emulator fungsinya untuk menjalankan aplikasi Android.&lt;/p&gt;
+
+&lt;p&gt;Gunakan perintah berikut untuk membuat emulator:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;android avd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;6-install-plug-in-adt&#34;&gt;6. Install Plug-in ADT&lt;/h2&gt;
+
+&lt;p&gt;ADT &lt;em&gt;(Android Development Tool)&lt;/em&gt; merupakan plug-in yang diperlukan di Eclipse
+agar dapat digunakan untuk pemrograman Android.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini cara instal Plug-in ADT di Eclipse:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Buka Eclipse&lt;/li&gt;
+&lt;li&gt;Masuk ke menu &lt;em&gt;Help&amp;gt;Instal New Software&amp;hellip;&lt;/em&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Tambahkan Alamat Repositori ADT: &lt;a href=&#34;https://dl-ssl.google.com/android/eclipse/&#34;&gt;https://dl-ssl.google.com/android/eclipse/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-ZS6dsYqZgYY/Vw-JsRo48pI/AAAAAAAACr4/oc5rGiz9nGMHyS9-hs5rIqaBNbWRvAFBgCK4B/s1600/Tambahkan%2Balamat%2Brepostitori%2Bplugin%2BADT.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-ZS6dsYqZgYY/Vw-JsRo48pI/AAAAAAAACr4/oc5rGiz9nGMHyS9-hs5rIqaBNbWRvAFBgCK4B/s1600/Tambahkan%2Balamat%2Brepostitori%2Bplugin%2BADT.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Pilih semua kemudian klik &lt;em&gt;Next.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-N4w0emO3X7Y/Vw-J9k8cKmI/AAAAAAAACsA/KCXoIL9YDiMNQ7lqAuI80aGDsF5hpqRLQCK4B/s1600/Detail%2Binstalasi%2Bplugin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Klik &lt;em&gt;Next.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-EvaWoB8U5oo/Vw-KczeGN_I/AAAAAAAACsM/_RAxgmZXOsEwY-BcobIMCEDqpxJ2aDPHgCK4B/s1600/adt%2B3%2B-%2Bdetail%2Binstalasi.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-EvaWoB8U5oo/Vw-KczeGN_I/AAAAAAAACsM/_RAxgmZXOsEwY-BcobIMCEDqpxJ2aDPHgCK4B/s1600/adt%2B3%2B-%2Bdetail%2Binstalasi.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Pilih &lt;em&gt;&amp;ldquo;I accept the term..&amp;rdquo;&lt;/em&gt;, kemudian klik &lt;em&gt;Next.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-Dah31SsdK8g/Vw-KuXUjLvI/AAAAAAAACsY/UmjalrzUp5oDZqm1M370qEIug9Lvj2eRACK4B/s1600/adt%2B4%2B-%2BKetentuan%2Bdan%2Bpersetujuan.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-Dah31SsdK8g/Vw-KuXUjLvI/AAAAAAAACsY/UmjalrzUp5oDZqm1M370qEIug9Lvj2eRACK4B/s1600/adt%2B4%2B-%2BKetentuan%2Bdan%2Bpersetujuan.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Klik &lt;em&gt;OK&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-rsOQEeNq_r4/Vw-K8eaogXI/AAAAAAAACsg/QlN-wJ2JJYwhf6wDDtt1JJN9-3GUkxbfACK4B/s1600/adt%2B5%2B-%2BKonfirmasi%2Bkeamanan.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-rsOQEeNq_r4/Vw-K8eaogXI/AAAAAAAACsg/QlN-wJ2JJYwhf6wDDtt1JJN9-3GUkxbfACK4B/s1600/adt%2B5%2B-%2BKonfirmasi%2Bkeamanan.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Klik &lt;em&gt;OK&lt;/em&gt; untuk membuka kembali Eclipse&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-qFO9_y2FS7A/Vw-LGhUYdpI/AAAAAAAACss/vGIfb4wQqRga2pbPJ7GNL5b0EpWNWNOtgCK4B/s1600/adt%2B6%2B-%2Binstalasi%2Bselesai.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-qFO9_y2FS7A/Vw-LGhUYdpI/AAAAAAAACss/vGIfb4wQqRga2pbPJ7GNL5b0EpWNWNOtgCK4B/s1600/adt%2B6%2B-%2Binstalasi%2Bselesai.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;7-tes-proyek&#34;&gt;7. Tes Proyek&lt;/h2&gt;
+
+&lt;p&gt;Buka Eclipse, buat sebuah proyek baru.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, masuk ke menu &lt;em&gt;File&amp;gt;New&amp;gt;Other&lt;/em&gt; kemudian pilih &lt;em&gt;Android Application project.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-e1dNBty7v5E/Vw-MlG0OQtI/AAAAAAAACs8/fUQXvkH_T6MmtkHU2s4FMbb8ABs0tZnjACK4B/s1600/proyek%2B-%2BBuat%2Bproyek%2Bbaru.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-e1dNBty7v5E/Vw-MlG0OQtI/AAAAAAAACs8/fUQXvkH_T6MmtkHU2s4FMbb8ABs0tZnjACK4B/s1600/proyek%2B-%2BBuat%2Bproyek%2Bbaru.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian isi keterangan data proyek:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-z4jYkgQPbWM/Vw-Mz-II50I/AAAAAAAACtE/3QMe64wWdjY3XNw44-iCUFNsKK6SxzBrwCK4B/s1600/proyek%2B-%2Bketerangan%2Bdata%2Bproyek.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-z4jYkgQPbWM/Vw-Mz-II50I/AAAAAAAACtE/3QMe64wWdjY3XNw44-iCUFNsKK6SxzBrwCK4B/s1600/proyek%2B-%2Bketerangan%2Bdata%2Bproyek.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu, tentukan lokasi dan ikon aplikasi, setelah itu klik &lt;em&gt;Next.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-dv-xco6533s/Vw-NFahuo9I/AAAAAAAACtM/Swhz4BFrPMUrQTzqqsgkq1kpGqOF6fEFgCK4B/s1600/proyek%2B-%2Bkonfigurasi%2Bproyek.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-dv-xco6533s/Vw-NFahuo9I/AAAAAAAACtM/Swhz4BFrPMUrQTzqqsgkq1kpGqOF6fEFgCK4B/s1600/proyek%2B-%2Bkonfigurasi%2Bproyek.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tentukan ikon, setelah itu klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-KNvRefOelcM/Vw-NMtxdp1I/AAAAAAAACtY/3MgZIiOJ8WcpYHv_Uo0ZI2TszrqLcKbfACK4B/s1600/proyek%2B-%2Bkonfigurasi%2Bikon%2Baplikasi.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-KNvRefOelcM/Vw-NMtxdp1I/AAAAAAAACtY/3MgZIiOJ8WcpYHv_Uo0ZI2TszrqLcKbfACK4B/s1600/proyek%2B-%2Bkonfigurasi%2Bikon%2Baplikasi.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Buat &lt;em&gt;activity&lt;/em&gt;, Pilih saja &lt;em&gt;blank activity&lt;/em&gt;. Kemudian klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-MW-0VjI7OKw/Vw-NaaZRN0I/AAAAAAAACtk/ZujgA5hq8e88gw-OeHRZDs2UJwh5sfE5QCK4B/s1600/proyek%2B-%2Bmembuat%2Baktivity.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-MW-0VjI7OKw/Vw-NaaZRN0I/AAAAAAAACtk/ZujgA5hq8e88gw-OeHRZDs2UJwh5sfE5QCK4B/s1600/proyek%2B-%2Bmembuat%2Baktivity.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Isi nama &lt;em&gt;activity&lt;/em&gt;, Biarkan saja namanya &lt;em&gt;MainActivity&lt;/em&gt;. Kemudian klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-ONLqywZL3Kc/Vw-NljADolI/AAAAAAAACts/_Uop_Nn1vj0hMtBvbXHdzrmYIRl8GdrmACK4B/s1600/proyek%2B-%2Bnama%2Bactivity.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-ONLqywZL3Kc/Vw-NljADolI/AAAAAAAACts/_Uop_Nn1vj0hMtBvbXHdzrmYIRl8GdrmACK4B/s1600/proyek%2B-%2Bnama%2Bactivity.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Proyek pertama sudah jadi.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-yEJF9sUkgpw/Vw-Nsww3r1I/AAAAAAAACt4/WOZo-2x2HxAsFRbHs0SUtHT1B_4dAk5ZQCK4B/s1600/proyek%2B-%2BProyek%2BSedang%2Bdikerjakan.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-yEJF9sUkgpw/Vw-Nsww3r1I/AAAAAAAACt4/WOZo-2x2HxAsFRbHs0SUtHT1B_4dAk5ZQCK4B/s1600/proyek%2B-%2BProyek%2BSedang%2Bdikerjakan.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Klik kanan pada &lt;em&gt;TesProyek&amp;gt;Pilih Run As&amp;gt;Android Application&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-y230elrlXco/Vw-N-_QT4FI/AAAAAAAACuE/-QnmzLLOIbIyHiRm2pzO9Vs7axgRcjq3wCK4B/s1600/proyek%2B-%2BRun%2BProyek%2BAndroid%2Bdi%2BEclipse.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Proyek berhasil di-run pada emulator.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-ZY_3F54_r2Y/Vw-OEh-sjPI/AAAAAAAACuQ/2ksqSTJLz9YoThlcnSXcy3_6XKAN2DmKwCK4B/s1600/Proyek%2BBerhasil%2Bdi%2Brun.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-ZY_3F54_r2Y/Vw-OEh-sjPI/AAAAAAAACuQ/2ksqSTJLz9YoThlcnSXcy3_6XKAN2DmKwCK4B/s1600/Proyek%2BBerhasil%2Bdi%2Brun.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Instal Android SDK dan NDK untuk Pemrograman Android di Linux</title>
+      <link>http://petanikode.com/cara-instal-android-sdk-dan-ndk/</link>
+      <pubDate>Sun, 03 Apr 2016 17:13:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/cara-instal-android-sdk-dan-ndk/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-ZtcFanDti8k/VwDdwRqGUII/AAAAAAAACn4/T3KPPklw-Iclxhl4YJdyV5psoudEgE58Q/s1600/instal%2BAndroid%2BSDK%2Bdan%2BAnroid%2BNDK%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-ZtcFanDti8k/VwDdwRqGUII/AAAAAAAACn4/T3KPPklw-Iclxhl4YJdyV5psoudEgE58Q/s1600/instal%2BAndroid%2BSDK%2Bdan%2BAnroid%2BNDK%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Android SDK dan NDK adalah dua alat penting yang perlu dipersiapkan untuk
+membuat aplikasi Android.&lt;/p&gt;
+
+&lt;p&gt;Android SDK menyediakan API &lt;em&gt;(Application Programming Interface)&lt;/em&gt; yang digunakan
+sebagai bahan dasar pembuatan aplikasi. Selain itu juga, dia menyediakan Emulator.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan, Android NDK memungkinkan kita membuat aplikasi Android dengan bahasa
+pemrograman C/C++.&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-instal-android-sdk&#34;&gt;Cara Instal Android SDK&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Download Android SDK di website resmi Android Developer: &lt;a href=&#34;http://developer.android.com/sdk/index.html&#34;&gt;http://developer.android.com/sdk/index.html&lt;/a&gt;, pilih &lt;em&gt;SDK tools only&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-MuZmwn-o5M4/VwC44fgpxTI/AAAAAAAACmQ/bpN-Y11BC1oNbEKPHm8hHYWqdZIR414ag/s1600/Download%2BAndroid%2BSDK%2Buntuk%2BLinux.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-MuZmwn-o5M4/VwC44fgpxTI/AAAAAAAACmQ/bpN-Y11BC1oNbEKPHm8hHYWqdZIR414ag/s1600/Download%2BAndroid%2BSDK%2Buntuk%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Buat direktori bernama &lt;em&gt;Android&lt;/em&gt; di &lt;em&gt;Home&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  mkdir ~/Android
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-5xSoUaWG1-Y/VwC7NniTAWI/AAAAAAAACmc/kElzJOZscTksbBmrHXb2zqgNpPB8AsgEQ/s1600/Direktori%2BAndroid%2Bdi%2BHOME%2Bsebagai%2Blokasi%2Binstal%2BSDK%2Bdan%2BNDK.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-5xSoUaWG1-Y/VwC7NniTAWI/AAAAAAAACmc/kElzJOZscTksbBmrHXb2zqgNpPB8AsgEQ/s1600/Direktori%2BAndroid%2Bdi%2BHOME%2Bsebagai%2Blokasi%2Binstal%2BSDK%2Bdan%2BNDK.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ekstrak Android SDK ke direktori yang dibuat tadi, kemudian ganti namanya menjadi &lt;em&gt;Sdk&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-yLCGIO1bPQo/VwC-YjyQyWI/AAAAAAAACmo/SZOHTkaeUfksVFvQWAjBQCU7Wn5Y_kekQ/s1600/Instal%2BAndroid%2BSDK%2Bdi%2BLinux.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-yLCGIO1bPQo/VwC-YjyQyWI/AAAAAAAACmo/SZOHTkaeUfksVFvQWAjBQCU7Wn5Y_kekQ/s1600/Instal%2BAndroid%2BSDK%2Bdi%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Tambahkan &lt;em&gt;PATH&lt;/em&gt; Android SDK ke &lt;em&gt;Environment Variable&lt;/em&gt;. Buka file &lt;code&gt;bash.bashrc&lt;/code&gt; dengan teks editor sebagai &lt;em&gt;root&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo nano /etc/bash.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tambahkan kode berikut pada akhir file &lt;code&gt;bash.bashrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Variabel untuk menentukan lokasi SDK dan NDK
+export ANDROID_HOME=$HOME/Android
+
+# Env variabel Anrdroid SDK
+export PATH=$PATH:$ANDROID_HOME/Sdk/tools:$ANDROID_HOME/Sdk/platform-tools
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-Ub0z4L35vUA/VwDEaNLLwlI/AAAAAAAACm4/xp4ywZfAMfcBCXkxksSGL_2TbBIqimL1g/s1600/Menambahkan%2BPATH%2BAndroid%2BSDK%2Bke%2BEnvironment%2BVariabel%2BLinux.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-Ub0z4L35vUA/VwDEaNLLwlI/AAAAAAAACm4/xp4ywZfAMfcBCXkxksSGL_2TbBIqimL1g/s1600/Menambahkan%2BPATH%2BAndroid%2BSDK%2Bke%2BEnvironment%2BVariabel%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tekan &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;x&lt;/code&gt;, kemudian ketik &lt;code&gt;y&lt;/code&gt; lalu tekan &lt;code&gt;Enter&lt;/code&gt; untuk menyimpan.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Selsai!&lt;/p&gt;
+
+&lt;p&gt;Sekarang kita coba, silahkan ketik perintah  &lt;code&gt;android --help&lt;/code&gt; di terminal.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;petanikode@imajinasi:~$ android --help
+
+Usage:
+android [global options] action [action options]
+Global options:
+-s --silent     : Silent mode, shows errors only.
+-v --verbose    : Verbose mode, shows errors, warnings and all messages.
+--clear-cache: Clear the SDK Manager repository manifest cache.
+-h --help       : Help on a specific command.
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;cara-instal-android-ndk&#34;&gt;Cara Instal Android NDK&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Download Android NDK di website resmi Android Developer: &lt;a href=&#34;http://developer.android.com/ndk/downloads/index.html&#34;&gt;http://developer.android.com/ndk/downloads/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-EREYI7aCxW0/VwDHWVfv8UI/AAAAAAAACnE/grCIaskoGR8XvwBCJ133LU1s_SqbUEn8A/s1600/Download%2BNDK%2Buntuk%2BLinux.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-EREYI7aCxW0/VwDHWVfv8UI/AAAAAAAACnE/grCIaskoGR8XvwBCJ133LU1s_SqbUEn8A/s1600/Download%2BNDK%2Buntuk%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ekstrak paket &lt;em&gt;bin&lt;/em&gt; Android NDK dengan mengeksekusinya.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-VhY-KIb8Oig/VwDM2oLW_9I/AAAAAAAACnc/tE4Yssc3jgIA4fv1hus-V7emdCYyBOyVw/s1600/Ektarksi%2Bpaket%2Bbin%2BAndroid%2BNDK%2Bdengan%2BMengeksekusinya.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-VhY-KIb8Oig/VwDM2oLW_9I/AAAAAAAACnc/tE4Yssc3jgIA4fv1hus-V7emdCYyBOyVw/s1600/Ektarksi%2Bpaket%2Bbin%2BAndroid%2BNDK%2Bdengan%2BMengeksekusinya.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Pindahkan hasil ekstraksi file Android NDK ke direktori &lt;code&gt;~/Android&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-eIhWXlvbMu8/VwDOZAh-7gI/AAAAAAAACno/MlFujW9ecl0k4VYB9oL6eAU4azhA1llIw/s1600/Pindahkan%2BHasil%2Bekstrak%2Bpaket%2BBIN%2BAndroid%2BNDK%2Bke%2Bdalam%2Bdirektori%2BAndroid.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-eIhWXlvbMu8/VwDOZAh-7gI/AAAAAAAACno/MlFujW9ecl0k4VYB9oL6eAU4azhA1llIw/s1600/Pindahkan%2BHasil%2Bekstrak%2Bpaket%2BBIN%2BAndroid%2BNDK%2Bke%2Bdalam%2Bdirektori%2BAndroid.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Tambahkan &lt;em&gt;PATH&lt;/em&gt; Android NDK ke &lt;em&gt;Evnironment Variable&lt;/em&gt;. Buka kembali file &lt;code&gt;bash.bashrc&lt;/code&gt;,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo nano /etc/bash.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tambahkan kode berikut pada akhir file &lt;code&gt;bash.bashrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Env variabel Android NDK
+export PATH=$PATH:$ANDROID_HOME/android-ndk-r11c/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-JgFj9XgqdZ4/VwDJxTSTh8I/AAAAAAAACnQ/Mh6_1lYmK4IOD7qxJunh1tOJY79zs8bfg/s1600/Tambahakan%2BPATH%2BAndroid%2BNDK%2Bke%2BENVIRONMENT%2BVARIABLE%2BLinux.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-JgFj9XgqdZ4/VwDJxTSTh8I/AAAAAAAACnQ/Mh6_1lYmK4IOD7qxJunh1tOJY79zs8bfg/s1600/Tambahakan%2BPATH%2BAndroid%2BNDK%2Bke%2BENVIRONMENT%2BVARIABLE%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Ujicoba dengan perintah &lt;code&gt;ndk-build --version&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;petanikode@imajinasi:~$ ndk-build --version
+GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for x86_64-pc-linux-gnu
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- @TODO: Tambahkan cara update dan membuat emulator --&gt;
+
+&lt;h2 id=&#34;apa-berikutnya&#34;&gt;Apa Berikutnya?&lt;/h2&gt;
+
+&lt;p&gt;Android SDK dan NDK sudah terinstal di Linux.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, kita tinggal konfigurasi IDE agar terintegrasi dengan Android SDK dan NDK.&lt;/p&gt;
+
+&lt;p&gt;Silahkan baca:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://petanikode.com/pemrograman-android-di-linux-dengan-eclipse&#34;&gt;Persiapan Pemrograman Android di Linux Menggunakan Eclipse&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Baca juga: &lt;ul&gt;&lt;br /&gt;&lt;li&gt;Persiapan Pemrograman Android di Linux Menggunakan Android Studio&lt;/li&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;li&gt;Persiapan Pemrograman Android di Linux Menggunakan Qt Creator&lt;/li&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/ul&gt; --&gt;
+</description>
+    </item>
+    
+    <item>
       <title>3 Hal yang Perlu Dilakukan Setelah Instal Git di Linux</title>
       <link>http://petanikode.com/3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux/</link>
       <pubDate>Sun, 27 Mar 2016 12:48:00 +0000</pubDate>

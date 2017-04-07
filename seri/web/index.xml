@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on Petani Kode — Programmer Pengguna Linux</title>
+    <link>http://petanikode.com/seri/web/index.xml</link>
+    <description>Recent content in Web on Petani Kode — Programmer Pengguna Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <atom:link href="http://petanikode.com/seri/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Redirect Halaman di Hugo untuk Mempertahankan Trafik</title>
+      <link>http://petanikode.com/cara-redirect-halaman-di-hugo/</link>
+      <pubDate>Fri, 07 Apr 2017 15:22:34 +0800</pubDate>
+      
+      <guid>http://petanikode.com/cara-redirect-halaman-di-hugo/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-Mv7_MzM09G8/WIDgeFiJCWI/AAAAAAAADrY/0y8-pWVkHe0kjrgbjRxEeGT7jGKai90zACPcB/s1600/hugo-petanikode.jpg&#34; alt=&#34;Cara Redirect Halaman di Hugo untuk Mempertahankan Trafik&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hingga saat ini, &lt;a href=&#34;http://petanikode.com/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;proses migrasi Petani Kode ke Hugo&lt;/a&gt; masih belum selesai.&lt;/p&gt;
+
+&lt;p&gt;Mengapa saya katakan demikian?&lt;/p&gt;
+
+&lt;p&gt;Karena banyak artikel yang belum diedit.&lt;/p&gt;
+
+&lt;p&gt;Banyak artikel yang link-nya &lt;code&gt;error 404&lt;/code&gt;, alias tidak ditemukan.&lt;/p&gt;
+
+&lt;p&gt;Terpantau dari laporan Google Webmaster, error 404-nya tembus sampai 546 halaman.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-s4uEDxJPex8/WOdDMQS_3oI/AAAAAAAAEnY/oxFVV2AVafUrCgoVOsIde4_NGFV5R3-AQCK4B/s1600/error%2B404%2Bpetanikode.png&#34; alt=&#34;Error 404 Halaman Artikel Petani Kode&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hal ini akan membuat banyak orang kecewa, termasuk juga saya.&lt;/p&gt;
+
+&lt;p&gt;Karena sudah banyak artikel yang terindeks di google, di-share di sosial media, dan
+link lainnya.&lt;/p&gt;
+
+&lt;p&gt;Ketika mereka membukanya, akan mendapatkan error 404.&lt;/p&gt;
+
+&lt;p&gt;Sebelumnya, saya sudah menggunakan layanan &lt;a href=&#34;http://petanikode.com/cara-redirect-domain-dengan-cloudflare/&#34;&gt;Cloud Flare untuk mengalihkan
+&lt;em&gt;(redirect)&lt;/em&gt; halaman&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hasilnya cukup memuaskan.&lt;/p&gt;
+
+&lt;p&gt;Link yang seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://petanikode.com/2015/10/pemrograman-java-di-lab-4-berkenalan-dengan-scanner/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;bisa dialihkan ke:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://petanikode.com/pemrograman-java-di-lab-4-berkenalan-dengan-scanner/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Karena itu, saya tidak perlu pusing lagi memikirkan pengalihannya.&lt;/p&gt;
+
+&lt;p&gt;Akan tetapi, ada beberapa artikel yang saya edit dan mengganti link-nya.&lt;/p&gt;
+
+&lt;p&gt;Contohnya menjadi seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://petanikode.com/pemrograman-java-input-dan-output/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tentu saja layanan Cloud Flare tidak mampu melakukan pengalihan, karena algoritma
+mereka hanya sebatas melakukan pencocokan saja.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, pengalihan ini harus dilakukan secara manual.&lt;/p&gt;
+
+&lt;p&gt;Untungnya Hugo sudah menyediakan fitur untuk melakukannya.&lt;/p&gt;
+
+&lt;h2 id=&#34;pengalihan-dengan-aliases&#34;&gt;Pengalihan dengan Aliases&lt;/h2&gt;
+
+&lt;p&gt;Panduan lengkap penggunaan &lt;code&gt;aliases&lt;/code&gt; ada di &lt;a href=&#34;https://gohugo.io/extras/aliases/&#34;&gt;dokumentasinya Hugo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untuk format TOML, &lt;code&gt;aliases&lt;/code&gt; ditulis seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+        ...
+aliases = [
+    &amp;quot;/posts/my-original-url/&amp;quot;,
+    &amp;quot;/2010/01/01/even-earlier-url.html&amp;quot;
+]
+        ...
++++
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sedangkan untuk YAML, seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+        ...
+aliases:
+    - /posts/my-original-url/
+    - /2010/01/01/even-earlier-url.html
+        ...
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-15qdDAXdeBw/WOdFQaEvgAI/AAAAAAAAEnk/4Ou3MEg8hGUgEmECJmCPRfdiiGgaSxDUgCK4B/s1600/Penggunaan%2BAliases%2Bdi%2Bsalah%2Bsatu%2BArtikel%2BHugo.png&#34; alt=&#34;Penggunaan Aliases di salah satu Artikel Hugo&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apa yang akan dilakukan oleh &lt;code&gt;aliases&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Ketika link-link yang kita tulis dalam &lt;code&gt;aliases&lt;/code&gt;, kita akan otomatis
+dialihkan ke link barunya &lt;em&gt;(canonical)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;kenapa-melakukan-pengalihan&#34;&gt;Kenapa Melakukan Pengalihan?&lt;/h2&gt;
+
+&lt;p&gt;Kalau kalian perhatikan, link artikel dari Petani Kode saat ini tidak menggunakan
+tanggal.&lt;/p&gt;
+
+&lt;p&gt;Hal ini karena, saya meniru dari beberapa web pakar SEO. Mereka tidak
+mencantumkan tanggal di link-nya.&lt;/p&gt;
+
+&lt;p&gt;Dampaknya, mungkin lebih disukai Search Engine.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-7SVs12ejUJg/WOdIeYknQWI/AAAAAAAAEnw/mO72vT5obD0uobmvRryl2MLWEeUhu3XxQCK4B/s1600/Trafik%2BPetani%2BKode.png&#34; alt=&#34;Trafik Petani Kode&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lah kok malah bahas SEO&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Hehehe maaf, :smile:.&lt;/p&gt;
+
+&lt;p&gt;Pengalihan saya lakukan agar pengunjung Petani Kode merasa puas dan tidak kecewa.&lt;/p&gt;
+
+&lt;p&gt;Selain itu, saya juga melakukan pengeditan artikel: ditambahkan, dilengkapi,
+dan ditingkatkan kualitasnya.&lt;/p&gt;
+
+&lt;p&gt;Semoga dengan begini, tidak ada yang tersesat ke halaman &lt;code&gt;error 404&lt;/code&gt; lagi.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

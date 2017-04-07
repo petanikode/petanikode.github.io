@@ -10,7 +10,7 @@
     <atom:link href="http://petanikode.com/seri/belajar-pemrograman-java/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Belajar Pemrograman Java: Variabel dan 6 Macam Tipe Data yang Harus Diketahui</title>
+      <title>Belajar Pemrograman Java: Variabel dan Tipe Data</title>
       <link>http://petanikode.com/pemrograman-java-variabel-dan-tipe-data/</link>
       <pubDate>Sun, 11 Oct 2015 13:44:00 +0000</pubDate>
       
@@ -54,25 +54,37 @@
 &lt;li&gt;&lt;code&gt;int&lt;/code&gt;: angka, contoh &lt;code&gt;29&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;float&lt;/code&gt;: bilangan desimal, contoh &lt;code&gt;2.1&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;double&lt;/code&gt;: bilangan desimal juga, tapi lebih besar kapasistanya, contoh &lt;code&gt;2.31&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;string&lt;/code&gt;: kumpulan dari karakter yang membentuk teks, contoh &lt;code&gt;Hello World!&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String&lt;/code&gt;: kumpulan dari karakter yang membentuk teks, contoh &lt;code&gt;Hello World!&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;boolean&lt;/code&gt;: tipe data yang hanya bernilai &lt;code&gt;true&lt;/code&gt; dan &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;membuat-variabel&#34;&gt;Membuat Variabel&lt;/h2&gt;
 
-&lt;p&gt;Begini cara membuat variabel di Java:&lt;/p&gt;
+&lt;p&gt;Hal yang perlu diketahui dalam pembuatan variabel di java adalah cara penulisannya.&lt;/p&gt;
 
-&lt;p&gt;variabel kosong:&lt;/p&gt;
+&lt;p&gt;Formatnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;&amp;lt;tipe data&amp;gt; namaVariabel;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Contoh&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Membuat variabel kosong bertipe integer:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;int namaVariabel;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Membuat variabel dan langsung diisi:&lt;/p&gt;
+&lt;p&gt;Membuat variabel bertipe integer dan langsung diisi nilai:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;int namaVariabel = 19;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Dimana itu ditulis?&lt;/p&gt;
+&lt;p&gt;Membuat sekumpulan variabel yang tipe datanya sama:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;int a, b, c;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu, dimana itu ditulis?&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Di dalam fungsi &lt;code&gt;main()&lt;/code&gt;: variabel yang ditulis di dalam fungsi &lt;code&gt;main()&lt;/code&gt; dan
@@ -331,7 +343,7 @@ public class LuasSegitia {
 &lt;p&gt;Kita baru saja memahami variabel dan tipe data. Kalau anda belum paham,
 silahkan ditanyakan melalui komentar.&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya, silahkan pelajari tentang operator pada Java.&lt;/p&gt;
+&lt;p&gt;Selanjutnya, silahkan pelajari tentang &lt;a href=&#34;http://petanikode.com/pemrograman-java-operator/&#34;&gt;operator pada Java&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

@@ -51,9 +51,9 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;char&lt;/code&gt;: Tipe data karakter, contoh &lt;code&gt;Z&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;int&lt;/code&gt;: angka, contoh &lt;code&gt;29&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int&lt;/code&gt;: angka atau bilangan bulat, contoh &lt;code&gt;29&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;float&lt;/code&gt;: bilangan desimal, contoh &lt;code&gt;2.1&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;double&lt;/code&gt;: bilangan desimal juga, tapi lebih besar kapasistanya, contoh &lt;code&gt;2.31&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;double&lt;/code&gt;: bilangan desimal juga, tapi lebih besar kapasistanya, contoh &lt;code&gt;2.1&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;String&lt;/code&gt;: kumpulan dari karakter yang membentuk teks, contoh &lt;code&gt;Hello World!&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;boolean&lt;/code&gt;: tipe data yang hanya bernilai &lt;code&gt;true&lt;/code&gt; dan &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;

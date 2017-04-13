@@ -417,22 +417,590 @@ agar dapat digunakan untuk pemrograman Android.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Pemrograman java di lab (12): percabangan bersarang</title>
-      <link>http://petanikode.com/pemrograman-java-di-lab-12-percabangan-bersarang/</link>
-      <pubDate>Fri, 13 Nov 2015 15:59:00 +0000</pubDate>
+      <title>Belajar Pemrograman Java: Inilah 3 Bentuk Percabangan yang Harus Dipahami</title>
+      <link>http://petanikode.com/pemrograman-java-percabangan/</link>
+      <pubDate>Sun, 25 Oct 2015 18:33:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/pemrograman-java-di-lab-12-percabangan-bersarang/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Percabangan bersarang bisa juga disebut &lt;code&gt;if&lt;/code&gt; di dalam &lt;code&gt;if&lt;/code&gt;, merupakan sebuah percabangan yang mimiliki percabangan di dalamnya atau bisa kita sebut percabangan dalam percabangan. Percabangan bersarang digunakan saat menemukan kasus dengan banyak hal yang harus dipertimbangkan. Sebagai contoh, coba perhatikan flowchart berikut ini.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-6ZrqC9I8Nxs/VkBWekgFwUI/AAAAAAAACLk/tdhCo5np2lk/s1600/flowchart%2Bpercabangan%2Bbersarang%2Bjava.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-6ZrqC9I8Nxs/VkBWekgFwUI/AAAAAAAACLk/tdhCo5np2lk/s1600/flowchart%2Bpercabangan%2Bbersarang%2Bjava.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Flowchart di atas merupakan flowchart program kasir. Program di atas berfungsi untuk menentukan diskon dengan berbagai pertimbangan. Bila dituliskan dalam algoritma, kira-kira akan menjadi seperti berikut ini.&lt;br /&gt;&lt;pre&gt;Apakah anda punya kartu member?&lt;br /&gt;   - ya&lt;br /&gt;       * Apakah belanjaan anda lebih dari 500rb?&lt;br /&gt;           # ya : mendapatkan diskon 50rb&lt;br /&gt;           # tidak : tidak mendapatkan diskon&lt;br /&gt;       * Apakah belanjaan anda lebih dari 100rb?&lt;br /&gt;           # ya : mendapatkan diskon 15rb&lt;br /&gt;           # tidak: tidak mendapatkan diskon&lt;br /&gt;&amp;nbsp;  - tidak&lt;br /&gt;       * Apakah belanjaan anda lebih dari 100rb?&lt;br /&gt;           # ya : mendapatkan diskon 10rb&lt;br /&gt;           # tidak: tidak mendapatkan diskon&lt;/pre&gt;Bila sudah paham dengan algoritma dan flowchartnya, maka akan mudah membut kode programnya. Berikut adalah kode program yang dihasilkan dari algoritma di atas.&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/5e2974b064b571b5975e.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;Program di atas akan menghasilkan output seperti berikut ini.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-pj9MLeIwViI/VkWUtMt7meI/AAAAAAAACL0/LRbROotYp14/s1600/hasil%2Boutput%2Bprogram%2Bkasir%2Bdengan%2Bjava.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-pj9MLeIwViI/VkWUtMt7meI/AAAAAAAACL0/LRbROotYp14/s1600/hasil%2Boutput%2Bprogram%2Bkasir%2Bdengan%2Bjava.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Percabangan bersarang memang sedikit membingungkan, karena banyak kondisi yang harus dipertimbangkan. Pada program di atas, kita baru hanya menggunakan &lt;code&gt;if&lt;/code&gt; di dalam &lt;code&gt;if&lt;/code&gt; saja. Percabangan bersarang juga bisa dibuat dengan kombinasi &lt;code&gt;if&lt;/code&gt; dan &lt;code&gt;switch-case&lt;/code&gt;. Percabangan &lt;code&gt;if&lt;/code&gt; berada di dalam &lt;code&gt;case&lt;/code&gt; atau sebaliknya. Silahkan anda coba sendiri.&lt;br /&gt;&lt;br /&gt;Pembahasan tentang percabangan bersarang saya akhiri sampai di sini. Bila ada pertanyaan, silahkan kirimkan melalui komentar! Selamat berpikir.&lt;/p&gt;
+      <guid>http://petanikode.com/pemrograman-java-percabangan/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-RvCLtSJKtig/WOhpIb2ZUuI/AAAAAAAAEoE/ucr44ME4UwYCNIP5HhieepL_KexR9tifwCPcB/s1600/percabangan%2Brel%2Bkereta%2Bapi.jpg&#34; alt=&#34;Perbangan Java&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kalau kita perhatikan, alur pengeksekusian sebuah kode program dikerjakan satu per satu dari atas
+sampai ke bawah.&lt;/p&gt;
+
+&lt;p&gt;Baris demi baris dibaca, kemudian komputer mengerjakan apa yang diperintahkan.&lt;/p&gt;
+
+&lt;p&gt;Misalnya seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-K9oL9zetghQ/WOhpISQO-4I/AAAAAAAAEoE/anwCWCtzMPwFxM7wAH7k46Rj4Ri7xjEhwCPcB/s1600/alur%2Beksekusi%2Bprogram%2Btanpa%2Bflowchart.png&#34; alt=&#34;Alur porgram tanpa percabangan&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Alur programnya satu, tidak ada belokan atau percabangan.&lt;/p&gt;
+
+&lt;p&gt;Ngomong-ngomong apa itu percabangan?&lt;/p&gt;
+
+&lt;p&gt;Percabangan hanyalah sebuah istilah yang digunakan untuk menyebut
+alur program yang bercabang.&lt;/p&gt;
+
+&lt;p&gt;Percabangan juga dikenal dengan &amp;ldquo;Control Flow&amp;rdquo;, &amp;ldquo;Struktur Kondisi&amp;rdquo;,
+&amp;ldquo;Struktur IF&amp;rdquo;, &amp;ldquo;Decision&amp;rdquo;, dsb. Semuanya itu sama.&lt;/p&gt;
+
+&lt;p&gt;Pada diagram alur &lt;em&gt;(Flow Chart)&lt;/em&gt; seperti di atas, alurnya memang satu.&lt;/p&gt;
+
+&lt;p&gt;Tapi setelah kita menggunakan percabangan, alurnya akan bertambah menjadi seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-VdWpqvZZHFk/WOhuYZN8lxI/AAAAAAAAEos/Rston6k1KwMGagHld2CZoJE38SvZtXC-wCPcB/s1600/contoh-percabangan.png&#34; alt=&#34;Flowchart Percabangan&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu bagaimana cara menulis kode percabangan dalam Java?&lt;/p&gt;
+
+&lt;p&gt;Caranya: menggunakan kata kunci &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt;, &lt;code&gt;switch&lt;/code&gt;, dan &lt;code&gt;case&lt;/code&gt;, dan operator ternary.&lt;/p&gt;
+
+&lt;p&gt;Contoh format stuktur IF seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;if( suatu_kondisi ) {
+    // lakukan sesuatu kalau kondisi benar
+    // Lakukan ini juga
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;suatu_kondisi&lt;/code&gt; hanya bernilai &lt;code&gt;true&lt;/code&gt;/&lt;code&gt;false&lt;/code&gt; saja. Kita bisa gunakan operator
+relasi dan logika di sini.&lt;/p&gt;
+
+&lt;p&gt;Untuk lebih jelasnya, nanti akan kita bahas.&lt;/p&gt;
+
+&lt;p&gt;Sebelumnya, kamu perlu tahu dulu tiga bentuk percabangan pada Java:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Percabangan IF&lt;/li&gt;
+&lt;li&gt;Percabangan IF/ELSE&lt;/li&gt;
+&lt;li&gt;Percabangan IF/ELSE/IF atau SWITCH/CASE&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mari kita bahas satu per satu&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-percabangan-if&#34;&gt;1. Percabangan IF&lt;/h2&gt;
+
+&lt;p&gt;Percabangan ini hanya memiliki satu pilihan. Artinya, pilihan di dalam IF
+hanya akan dikerjakan kalau kondisinya benar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-U8SqJhBeFoc/WOh7pR4aSNI/AAAAAAAAEpM/_i52DJOZIm80Ux6fdnVWfmEHx8WdvQfHACPcB/s1600/percabangan-if-dalam-pemrograman.png&#34; alt=&#34;Percabangan IF&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tapi kalau salah&amp;hellip; tidak akan melakukan apa-apa. Alias lanjut eksekusi ke
+perintah berikutnya.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Pernahkah kalian belanja di toko, kemudian kalau belanja di atas sekian ribu
+dapat hadiah atau diskon.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Nah! Contoh kasus seperti itu, dapat kita selesaikan dengan menggunakan percabangan
+ini.&lt;/p&gt;
+
+&lt;p&gt;untuk lebih jelasnya&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;mari-kita-membuat-program-hadiah&#34;&gt;Mari Kita Membuat Program Hadiah&lt;/h3&gt;
+
+&lt;p&gt;Misalkan ada sebuah toko buku. Mereka memberikan hadiah berupa
+perlengkapan sekolah kepada pembeli yang belanja di atas Rp 100.000.&lt;/p&gt;
+
+&lt;p&gt;Maka programnya bisa kita buat seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
+
+public class Hadiah {
+
+    public static void main(String[] args) {
+
+        // membuat variabel belanja dan scanner
+        int belanja = 0;
+        Scanner scan = new Scanner(System.in);
+
+        // mengambil input
+        System.out.print(&amp;quot;Total Belanjaan: Rp &amp;quot;);
+        belanja = scan.nextInt();
+
+        // cek apakah dia belanja di atas 100000
+        if ( belanja &amp;gt; 100000 ) {
+            System.out.println(&amp;quot;Selamat, anda mendapatkan hadiah!&amp;quot;);
+        }
+
+        System.out.println(&amp;quot;Terima kasih...&amp;quot;);
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jalankan programnya dan perhatikanlah hasilnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-LGq9_8wC3I8/WOiZIi2nshI/AAAAAAAAEpw/gZtN9le-bfo-Thi4Ct8HWaDM1Dj4d5XsgCPcB/s1600/program%2Bdiskon%2Bdan%2Bhadiah%2Bdengan%2BJava.png&#34; alt=&#34;Program diskon dengan Java&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cobalah untuk memberikan nilai di bawah &lt;code&gt;100000&lt;/code&gt; dan perhatikan apa akan yang terjadi.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-percabangan-if-else&#34;&gt;2. Percabangan IF/ELSE&lt;/h2&gt;
+
+&lt;p&gt;Sedangkan percabangan IF/ELSE memiliki pilihan alternatif kalau kondisinya salah.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IF&lt;/strong&gt;: &amp;ldquo;Jika kondisi benar maka kerjakan ini, kalau tidak silahkan lanjut&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IF/ESLE&lt;/strong&gt;: &amp;ldquo;Jika kondisi benar maka kerjakan ini, kalau salah maka kerjakan yang itu,
+setelah itu lanjut&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-EBFXR8YanHg/ViyfSNX80-I/AAAAAAAACEI/BVBV3EX_r3Q/s1600/Percabangan%2Bdi%2Bpemrograman%2Bjava.png&#34; alt=&#34;Perbedaan percabangan IF dengan IF/ELSE&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Begitulah perbedaan IF dengan IF/ELSE.&lt;/p&gt;
+
+&lt;p&gt;Sekarang mari kita coba dalam kode program&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;program-cek-kelulusan&#34;&gt;Program Cek Kelulusan&lt;/h3&gt;
+
+&lt;p&gt;Misalkan, kalau nilai siswa lebih besar dari 70, maka ia dinyatakan lulus.
+Kalau tidak, maka dia gagal.&lt;/p&gt;
+
+&lt;p&gt;Programnya bisa kita buat seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
+
+public class CekKelulusan {
+
+    public static void main(String[] args) {
+
+        // membuat variabel dan Scanner
+        int nilai;
+        String nama;
+        Scanner scan = new Scanner(System.in);
+
+        // mengambil input
+        System.out.print(&amp;quot;Nama: &amp;quot;);
+        nama = scan.nextLine();
+        System.out.print(&amp;quot;Nilai: &amp;quot;);
+        nilai = scan.nextInt();
+
+        // cek apakah dia lulus atau tidak
+        if( nilai &amp;gt;= 70 ) {
+            System.out.println(&amp;quot;Selemat &amp;quot; + nama + &amp;quot;, anda lulus!&amp;quot;);
+        } else {
+            System.out.println(&amp;quot;Maaf &amp;quot; + nama + &amp;quot;, anda gagal&amp;quot;);
+        }
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-rLwFoNL9qKk/WO79-OlRsUI/AAAAAAAAEqc/8r_1s5gF0MkIFz3NhZqOs0ocTZeeUT_jgCPcB/s1600/Hasil%2Boutput%2Bprogram%2Bcekkelulusan%2Bjava.png&#34; alt=&#34;Hasil output program tes kelulusan&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cobalah untuk merubah nilai yang dimasukkan dan perhatikan apa yang
+akan terjadi.&lt;/p&gt;
+
+&lt;h3 id=&#34;percabangan-if-else-dengan-operator-ternary&#34;&gt;Percabangan IF/ELSE dengan Operator Ternary&lt;/h3&gt;
+
+&lt;p&gt;Selain menggunakan struktur seperti di atas, percahangan ini juga dapat menggunakan
+operator ternary.&lt;/p&gt;
+
+&lt;p&gt;Seperti yang sudah kita pelajari pada &lt;a href=&#34;http://petanikode.com/pemrograman-java-operator/&#34;&gt;pembahasan tentang operator&lt;/a&gt;. Operator ternary memiliki konsep yang sama seperti percabganan IF/ELSE.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-OKB4MDtGjE4/WObxiPfq-wI/AAAAAAAAEmQ/kR9Ldcc1hr88u90060rCff0Gvs4lDRfQgCPcB/s1600/operator%2Bternary%2Bdi%2Bjava.png&#34; alt=&#34;Ilustraisi operator ternary&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Contoh programnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class OperatorTernary {
+    public static void main(String[] args) {
+
+        boolean suka = true;
+        String jawaban;
+
+        // menggunakan operator ternary
+        jawaban = suka ? &amp;quot;iya&amp;quot; : &amp;quot;tidak&amp;quot;;
+
+        // menampilkan jawaban
+        System.out.println(jawaban);
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-percabangan-if-else-if-dan-switch-case&#34;&gt;3. Percabangan IF/ELSE/IF dan SWITCH/CASE&lt;/h2&gt;
+
+&lt;p&gt;Jika percabangan IF/ESLE hanya memiliki dua pilihan saja. Maka percahangan
+IF/ELSE/IF memiliki lebih dari dua pilihan.&lt;/p&gt;
+
+&lt;p&gt;Formatnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;if (suatu kondisi) {
+    // maka kerjakan ini
+    // kerjakan perintah ini juga
+    // …
+} else if (kondisi lain) {
+    // kerjakan ini
+    // kerjakan ini juga
+    // …
+} else if (kondisi yang lain lagi) {
+    // kerjakan perintah ini
+    // kerjakan ini juga
+    // …
+} esle {
+    // kerjakan ini kalau
+    // semua kondisi di atas
+    // tidak ada yang benar
+    // …
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Coba perhatikan contohnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-9uS-c73seec/VkBISDA0AXI/AAAAAAAACLU/AsWtctwfCN0/s1600/flowchart%2Bpercabangan%2Byang%2Bmemiliki%2Bbanyak%2Bpilihan%2Bkeputusan.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika nilainya lebih besar dari &lt;code&gt;90&lt;/code&gt;, maka grade-nya &amp;ldquo;A&amp;rdquo;.
+Sedangkan kalau lebih besar dari &lt;code&gt;80&lt;/code&gt;, maka &amp;ldquo;B+&amp;rdquo;. Lebih besar
+dari &lt;code&gt;70&lt;/code&gt;, maka &amp;ldquo;B&amp;rdquo;, dan seterusnya.&lt;/p&gt;
+
+&lt;p&gt;Lebih jelasnya, mari kita buat program.&lt;/p&gt;
+
+&lt;h3 id=&#34;program-hitunggrade&#34;&gt;Program HitungGrade&lt;/h3&gt;
+
+&lt;p&gt;Silahkan buat sebuah class baru bernama &lt;code&gt;HitungGrade&lt;/code&gt;, kemudian ikuti kode
+program berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
+
+public class HitungGrade {
+    public static void main(String[] args) {
+
+        // membuat variabel dan scanner
+        int nilai;
+        String grade;
+        Scanner scan = new Scanner(System.in);
+
+        // mengambil input
+        System.out.print(&amp;quot;Inputkan nilai: &amp;quot;);
+        nilai = scan.nextInt();
+
+        // higung gradenya
+        if ( nilai &amp;gt;= 90 ) {
+            grade = &amp;quot;A&amp;quot;;
+        } else if ( nilai &amp;gt;= 80 ){
+            grade = &amp;quot;B+&amp;quot;;
+        } else if ( nilai &amp;gt;= 70 ){
+            grade = &amp;quot;B&amp;quot;;
+        } else if ( nilai &amp;gt;= 60 ){
+            grade = &amp;quot;C+&amp;quot;;
+        } else if ( nilai &amp;gt;= 50 ){
+            grade = &amp;quot;C&amp;quot;;
+        } else if ( nilai &amp;gt;= 40 ){
+            grade = &amp;quot;D&amp;quot;;
+        } else {
+            grade = &amp;quot;E&amp;quot;;
+        }
+
+        // cetak hasilnya
+        System.out.println(&amp;quot;Grade: &amp;quot; + grade);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-fBW1OCJ8L_o/WO7_E4iXKTI/AAAAAAAAEqs/FsV0dkLWW_UL0P9GWTazQq2HTvEcx4YqQCPcB/s1600/Hasil%2Boutput%2Bprogram%2Bhitung%2Bgrader%2Bnilai.png&#34; alt=&#34;Hasil output program hitung grade&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;percabangan-switch-case&#34;&gt;Percabangan SWITCH/CASE&lt;/h3&gt;
+
+&lt;p&gt;Percabangan SWITCH/CASE sebenarnya adalah bentuk lain dari IF/ELSE/IF.&lt;/p&gt;
+
+&lt;p&gt;Bedanya, percabangan ini menggunakan kata kunci &lt;code&gt;switch&lt;/code&gt; dan &lt;code&gt;case&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Formatnya juga berbeda, tapi cara kerjanya sama.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;switch(variabel){
+    case 1:
+        // kerjakan kode ini
+        // kode ini juga
+        break;
+    case 2:
+        // kerjakan kode ini
+        // kode ini juga
+        break;
+    case 3:
+        // kerjakan kode ini
+        // kode ini juga
+        break;
+    default:
+        // kerjakan kode ini
+        // kode ini juga
+        break;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikan: &lt;code&gt;case 1&lt;/code&gt; artinya nilai &lt;code&gt;variabel&lt;/code&gt; yang akan dibandingkan, apakah nilainya
+sama dengan &lt;code&gt;1&lt;/code&gt; atau tidak.&lt;/p&gt;
+
+&lt;p&gt;Kalau iya, maka kerjakan kode yang ada di dalam &lt;code&gt;case 1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bisa juga betuknya berbeda, misalnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;switch (variabel) {
+    case &#39;A&#39;:
+        // lakukan sesuatu
+        break;
+    case &#39;B&#39;:
+        // lakukan ini
+        break;
+    default:
+        // lakukan ini
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perlu diperhatikan juga: di sana ada kata kunci &lt;code&gt;break&lt;/code&gt; dan &lt;code&gt;default&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;break&lt;/code&gt; artinya berhenti. Ini untuk memerintahkan komputer untuk berhenti
+mengecek &lt;code&gt;case&lt;/code&gt; yang lainnya.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;default&lt;/code&gt; artinya jika nilai variabel tidak ada yang sama dengan pilihan case di atas,
+maka kerjakan kode yang ada di dalam &lt;code&gt;default&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pilihan &lt;code&gt;default&lt;/code&gt; bisa juga tidak memiliki &lt;code&gt;break&lt;/code&gt;, karena dia adalah pilihan terakhir.
+Artinya pengecekan akan berakhir di situ.&lt;/p&gt;
+
+&lt;p&gt;Contoh program dengan percabangan SWITCH/CASE&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
+
+public class LampuLalulintas {
+    public static void main(String[] args) {
+
+        // membuat variabel dan Scanner
+        String lampu;
+        Scanner scan = new Scanner(System.in);
+
+        // mengambil input
+        System.out.print(&amp;quot;Inputkan nama warna: &amp;quot;);
+        lampu = scan.nextLine();
+
+        switch(lampu){
+            case &amp;quot;merah&amp;quot;:
+                System.out.println(&amp;quot;Lampu merah, berhenti!&amp;quot;);
+                break;
+            case &amp;quot;kuning&amp;quot;:
+                System.out.println(&amp;quot;Lampu kuning, harap hati-hati!&amp;quot;);
+                break;
+            case &amp;quot;hijau&amp;quot;:
+                System.out.println(&amp;quot;Lampu hijau, silahkan jalan!&amp;quot;);
+                break;
+            default:
+                System.out.println(&amp;quot;Warna lampu salah!&amp;quot;);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-ojFmHVyblYk/WO7_wHizYNI/AAAAAAAAEq8/huTDmNUAHfM5m-nJ2l50ieGZelChGKJ5wCPcB/s1600/hasil%2Boutput%2Bprogram%2Blampu%2Blalu%2Blintas%2Bswitch%2Bcase.png&#34; alt=&#34;Hasil output program lampu lalu lintas dengan percabangan switch case&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Eksperimen&lt;/strong&gt;: Cobalah untuk menghilangkan &lt;code&gt;break&lt;/code&gt; di salah satu &lt;code&gt;case&lt;/code&gt; dan
+perhatikanlah hasilnya.&lt;/p&gt;
+
+&lt;h2 id=&#34;percabangan-dalam-percabangan-nested&#34;&gt;Percabangan dalam Percabangan &lt;em&gt;(Nested)&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah tahu tiga bentuk dasar percabganan di Java. Selanjutnya, kita
+coba bahas percabangan yang ada di dalam perbangan (perabangan bersarang).&lt;/p&gt;
+
+&lt;p&gt;Sebenarnya pembahasan ini saya ingin pisahkan. Namun, baiknya digabungkan
+di sini aja.&lt;/p&gt;
+
+&lt;p&gt;Anggap saja pembahasan bonus :smile:.&lt;/p&gt;
+
+&lt;p&gt;Baiklah&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Jadi, percabangan itu bisa dibuat di dalam percabangan. Kadang teknik ini
+disebut juga &lt;em&gt;nested if&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh kasus:&lt;/p&gt;
+
+&lt;p&gt;Misalnya ada model bisinis seperti ini di sebuah toko. Ketika orang membayar di
+kasir, biasanya ditanya ada kartu member untuk mendapatkan diskon dan sebagainya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Apakah anda punya kartu member?
+   - ya
+       * Apakah belanjaan anda lebih dari 500rb?
+           # ya : mendapatkan diskon 50rb
+           # tidak : tidak mendapatkan diskon
+       * Apakah belanjaan anda lebih dari 100rb?
+           # ya : mendapatkan diskon 15rb
+           # tidak: tidak mendapatkan diskon
+   - tidak
+       * Apakah belanjaan anda lebih dari 100rb?
+           # ya : mendapatkan diskon 10rb
+           # tidak: tidak mendapatkan diskon
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Paham?&lt;/p&gt;
+
+&lt;p&gt;Kalau tidak, coba perhatikan flow chart-nya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://2.bp.blogspot.com/-6ZrqC9I8Nxs/VkBWekgFwUI/AAAAAAAACLk/tdhCo5np2lk/s1600/flowchart%2Bpercabangan%2Bbersarang%2Bjava.png&#34; alt=&#34;Flowchart percabangan bersarang&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Masih belum paham?&lt;/p&gt;
+
+&lt;p&gt;Kalau begitu mari kita coba dalam program.&lt;/p&gt;
+
+&lt;p&gt;Silahkan buat class baru bernama &lt;code&gt;Kasir&lt;/code&gt; dan ikuti kode program berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
+
+public class Kasir {
+    public static void main(String[] args) {
+        // deklarasi variabel dan Scanner
+        int belanjaan, diskon, bayar;
+        String kartu;
+        Scanner scan = new Scanner(System.in);
+
+        // mengambil input
+        System.out.print(&amp;quot;Apakah ada kartu member: &amp;quot;);
+        kartu = scan.nextLine();
+        System.out.print(&amp;quot;Total belanjaan: &amp;quot;);
+        belanjaan = scan.nextInt();
+
+        // proses
+        if (kartu.equalsIgnoreCase(&amp;quot;ya&amp;quot;)) {
+            if (belanjaan &amp;gt; 500000) {
+                diskon = 50000;
+            } else if (belanjaan &amp;gt; 100000) {
+                diskon = 15000;
+            } else {
+                diskon = 0;
+            }
+
+        } else {
+            if (belanjaan &amp;gt; 100000) {
+                diskon = 5000;
+            } else {
+                diskon = 0;
+            }
+        }
+
+        // total yang harus dibayar
+        bayar = belanjaan - diskon;
+
+        // output
+        System.out.println(&amp;quot;Total Bayar: Rp &amp;quot; + bayar);
+    }  
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-1H-uAWXBmxs/WO8GZByoXbI/AAAAAAAAErc/MDBuvrhyE9U670LjowqU6o8uAMlm30mlACPcB/s1600/Hasil%2Boutput%2Bprogram%2Bif%2Bbersarang.png&#34; alt=&#34;Hasil output program dengan percabangan bersarang&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cobalah untuk mengubah nilai yang dimasukkan dan perhatikan hasilnya.&lt;/p&gt;
+
+&lt;p&gt;Mungkin di sana ada yang perlu diperhatikan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fungsi &lt;code&gt;equalsIgnoreCase(&amp;quot;ya&amp;quot;)&lt;/code&gt; digunakan untuk membandingkan String dengan
+tidak memperdulikan huruf besar dan kecilnya.&lt;/li&gt;
+&lt;li&gt;Ada juga Fungsi &lt;code&gt;equals()&lt;/code&gt;, fungsinya sama. Tapi &lt;code&gt;equals()&lt;/code&gt; akan memperhatikan
+&lt;em&gt;case&lt;/em&gt; hurufnya.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kenapa tidak menggunakan operator &lt;code&gt;==&lt;/code&gt; atau &lt;code&gt;!=&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Di Java memang seperti itu.&lt;/p&gt;
+
+&lt;p&gt;Kalau kita ingin membandingkan nilai String, ya&amp;hellip; menggunakan fungsi yang
+dua tadi.&lt;/p&gt;
+
+&lt;p&gt;Tapi, kalau membandingkan selain String, maka bisa pakai operator &lt;code&gt;==&lt;/code&gt; atau
+&lt;code&gt;!=&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;menggunakan-operator-logika-dalam-percabangan&#34;&gt;Menggunakan Operator Logika dalam Percabangan&lt;/h2&gt;
+
+&lt;p&gt;Operator logika dalam percabangan sebenarnya bisa membuat percabangan menjadi
+lebih singkat.&lt;/p&gt;
+
+&lt;p&gt;Misal ada program &lt;em&gt;Tilang&lt;/em&gt; dengan logika seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class Tilang {
+    public static void main(String[] args) {
+        boolean SIM = false;
+        boolean STNK = true;
+
+        // cek apakah dia akan ditilang atau tidak
+        if(SIM == true){
+            if( STNK == true ) {
+                System.out.println(&amp;quot;Tidak ditilang!&amp;quot;);
+            }
+        } else {
+            System.out.println(&amp;quot;Anda ditilang!&amp;quot;);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikan: di sana kita menggunakan percabangan bersarang untuk mengecek,
+apakah dia ditilang atau tidak.&lt;/p&gt;
+
+&lt;p&gt;Hal ini sebenarnya bisa disingkat dengan operator logika, sehingga
+menjadi seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class Tilang {
+    public static void main(String[] args) {
+        boolean SIM = false;
+        boolean STNK = true;
+
+        // cek apakah dia akan ditilang atau tidak
+        if(SIM == true &amp;amp;&amp;amp; STNK == true){
+            System.out.println(&amp;quot;Tidak ditilang!&amp;quot;);
+        } else {
+            System.out.println(&amp;quot;Anda ditilang!&amp;quot;);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada kode di atas, kita menggunakan operator AND (&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Karena logikanya: Si pengendara tidak akan ditilang kalau punya SIM dan STNK.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah peljari beberapa macam bentuk percabagan dan pernak-perniknya,
+ringkasananya seperti ini:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Percabangan IF, hanya memiliki satu pilihan;&lt;/li&gt;
+&lt;li&gt;Percabangan IF/ELSE memiliki dua pilihan;&lt;/li&gt;
+&lt;li&gt;Percabangan dengan operator ternary adalah bentuk lain dari IF/ELSE;&lt;/li&gt;
+&lt;li&gt;Percabangan IF/ELSE/IF memiliki lebih dari dua pilihan;&lt;/li&gt;
+&lt;li&gt;Percabangan SWITCH/CASE adalah bentuk lain dari IF/ELSE/IF;&lt;/li&gt;
+&lt;li&gt;Percabangan bersarang adalah percabangan dalam Percabangan;&lt;/li&gt;
+&lt;li&gt;Penggunaan operator logika dalam percabangan bisa membuat percabangan menjadi
+lebih singkat.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Wah, ternyata banyak juga ya.&lt;/p&gt;
+
+&lt;p&gt;Intinya pahami yang tiga bentuk itu. Kemudian
+cobalah cari contoh kasus yang berbeda.&lt;/p&gt;
+
+&lt;p&gt;Semakin banyak latihan semakin mantap.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, silahkan pelajari tentang Perulangan dalam Java.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Pemrograman java di lab (11): Percabangan If/Else-If/Else dan Switch/Case</title>
-      <link>http://petanikode.com/pemrograman-java-di-lab-11-percabangan-if/else-if/else-dan-switch/case/</link>
-      <pubDate>Mon, 09 Nov 2015 14:37:00 +0000</pubDate>
+      <title>Pemrograman java di lab (8): Menggunakan pangkat</title>
+      <link>http://petanikode.com/pemrograman-java-di-lab-8-menggunakan-pangkat/</link>
+      <pubDate>Sun, 18 Oct 2015 08:00:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/pemrograman-java-di-lab-11-percabangan-if/else-if/else-dan-switch/case/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Percabangan &lt;code&gt;if-else-if&lt;/code&gt; meurpakan pengembangan dari percabangan &lt;code&gt;if-else&lt;/code&gt;. Percabangan ini memiliki lebih dari dua (banyak) pilihan keputusan. Sementara itu, percabangan &lt;code&gt;switch-case&lt;/code&gt; merupakan percabangan bentuk lain. Namun, pada hakikatnya sama seperti percabangan &lt;code&gt;if-else-if&lt;/code&gt;.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-9uS-c73seec/VkBISDA0AXI/AAAAAAAACLU/AsWtctwfCN0/s1600/flowchart%2Bpercabangan%2Byang%2Bmemiliki%2Bbanyak%2Bpilihan%2Bkeputusan.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-9uS-c73seec/VkBISDA0AXI/AAAAAAAACLU/AsWtctwfCN0/s1600/flowchart%2Bpercabangan%2Byang%2Bmemiliki%2Bbanyak%2Bpilihan%2Bkeputusan.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Percabangan If/Else-If/Else&lt;/h2&gt;Bentuk dasar percabangan &lt;code&gt;if-else-if&lt;/code&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;if (suatu kondisi) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // maka kerjakan ini&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // kerjakan perintah ini juga&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &amp;hellip;&lt;br /&gt;} else if (kondisi lain) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // kerjakan ini&lt;br /&gt;&amp;nbsp; &amp;nbsp; // kerjakan ini juga&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &amp;hellip;&lt;br /&gt;} else if (kondisi yang lain lagi) {&lt;br /&gt;&amp;nbsp; &amp;nbsp; // kerjakan perintah ini&lt;br /&gt;&amp;nbsp; &amp;nbsp; // kerjakan ini juga&lt;br /&gt;&amp;nbsp; &amp;nbsp; // &amp;hellip; &lt;br /&gt;} esle {&lt;br /&gt;&amp;nbsp; &amp;nbsp; // kerjakan ini kalau&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // semua kondisi di atas&lt;br /&gt;&amp;nbsp; &amp;nbsp; // tidak ada yang benar&lt;br /&gt;    // &amp;hellip;&lt;br /&gt;} &lt;/code&gt;&lt;/pre&gt;Jumlah &lt;code&gt;else-if&lt;/code&gt; tidak terbatas. Kita bisa membuat berapapun yang kita mau. Tapi, perlu diperhatikan. Jumlah &lt;code&gt;else-if&lt;/code&gt; bergantung dari kasus/masalah yang akan diselesaikan. Sebagai contoh, silahkan buat program untuk menghitung grade nilai.&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/2f90ec513c1264ca2f7b.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;Ketetuan nilai akhir pada program di atas diperoleh dari 20% dari nilai harian ditambah 30% nilai UTS dan ditambah 50% nilai UAS.&lt;br /&gt;&lt;pre&gt;nilaiAkhir = (nilaiHarian * &lt;sup&gt;20&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;) + (nilaiUts * &lt;sup&gt;30&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;) + (nilaiUas * &lt;sup&gt;50&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;)&lt;/pre&gt;atau sama dengan&lt;br /&gt;&lt;pre&gt;nilaiAkhir = (nilaiHarian * 0.2) + (nilaiUts * 0.3) + (nilaiUas * 0.5)&lt;/pre&gt;maka, hasil output program di atas akan seperti berikut ini.&lt;br /&gt;&lt;br /&gt;Input nilai Harian&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-0HILcLQ8f68/Vj4E3RBr6vI/AAAAAAAACKM/ZMqSwlRTkMY/s1600/Input%2Bnilai%2Bharian%2Bprogram%2Bgrade%2Bnilai.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-0HILcLQ8f68/Vj4E3RBr6vI/AAAAAAAACKM/ZMqSwlRTkMY/s1600/Input%2Bnilai%2Bharian%2Bprogram%2Bgrade%2Bnilai.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Input nilai UTS&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-lm3zFRf7pP8/Vj4E-Bv3iJI/AAAAAAAACKU/SA5e5b8xK4w/s1600/input%2Bnilai%2BUTS%2Bprogram%2Bgrade%2Bnilai.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-lm3zFRf7pP8/Vj4E-Bv3iJI/AAAAAAAACKU/SA5e5b8xK4w/s1600/input%2Bnilai%2BUTS%2Bprogram%2Bgrade%2Bnilai.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Input nilai UAS&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-RN39ZBxqtjY/Vj4FDOAMwzI/AAAAAAAACKc/4OGNZF-Zoks/s1600/input%2Bnilai%2BUAS%2Bprogram%2Bgrade%2Bnilai%2Bjava.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-RN39ZBxqtjY/Vj4FDOAMwzI/AAAAAAAACKc/4OGNZF-Zoks/s1600/input%2Bnilai%2BUAS%2Bprogram%2Bgrade%2Bnilai%2Bjava.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Output nilai akhir&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-QzwMvZYnaNA/Vj4FQ7K4g2I/AAAAAAAACKk/E2wLj8a7f2Y/s1600/Output%2Bnilai%2Bakhir%2Bprogram%2Bgrade%2Bjava.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-QzwMvZYnaNA/Vj4FQ7K4g2I/AAAAAAAACKk/E2wLj8a7f2Y/s1600/Output%2Bnilai%2Bakhir%2Bprogram%2Bgrade%2Bjava.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Output nilai Grade&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-RrdvwGVitVA/Vj4FVBvkbMI/AAAAAAAACKs/wJ7fzE1lh1g/s1600/output%2Bhasil%2Bgrade%2Bdari%2Bnilai.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-RrdvwGVitVA/Vj4FVBvkbMI/AAAAAAAACKs/wJ7fzE1lh1g/s1600/output%2Bhasil%2Bgrade%2Bdari%2Bnilai.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Percabangan Switch/Case&lt;/h2&gt;Percabangan &lt;code&gt;switch-case&lt;/code&gt; pada hakikatnya sama seperti percabangan &lt;code&gt;if-else-if&lt;/code&gt;. Percabangan ini juga memiliki banayak alternatif pilihan. Bentuk dasar percabangan &lt;code&gt;switch-case&lt;/code&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;switch(variabel){&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 1:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // kerjakan kode ini&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; // kode ini juga&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 2:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // kerjakan kode ini&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; // kode ini juga&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 3:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // kerjakan kode ini&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; // kode ini juga&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; default:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // kerjakan kode ini&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; // kode ini juga&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Percabangan &lt;code&gt;switch-case&lt;/code&gt; memiliki format yang berbeda dengan &lt;code&gt;if-else-if&lt;/code&gt;. Setiap kondisi di &lt;code&gt;switch-case&lt;/code&gt; diakhiri dengan titik dua (:) kemudian diikuti blok kode yang akan dikerjakan bila kondisinya benar. Setiap blok kode diakhiri dengan kata &lt;code&gt;break&lt;/code&gt;, fungsinya untuk menghentikan pengecekan kondisi berikutnya.&lt;br /&gt;&lt;br /&gt;Silahkan coba ikuti contoh program berikut. Sebuah program yang akan membandingkan inputan yang diberikan dengan case yang sudah ditentukan. Misalkan saya menginputkan &amp;ldquo;merah&amp;rdquo;, maka &lt;i&gt;case&lt;/i&gt; &amp;ldquo;merah&amp;rdquo; akan terpilih atau bernilai benar (true).&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/anonymous/13c7c4590d689992d9fb.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;Hasil output program di atas adalah sebagai berikut:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-zmGNir8SR1g/VkA8t2BATZI/AAAAAAAACK8/6D9pgOa3LDY/s1600/hasil%2Boutput%2Bprogram%2BLampuLalulintas%2Bdengna%2Bswitch-case%2Bjava.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-zmGNir8SR1g/VkA8t2BATZI/AAAAAAAACK8/6D9pgOa3LDY/s1600/hasil%2Boutput%2Bprogram%2BLampuLalulintas%2Bdengna%2Bswitch-case%2Bjava.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Cukup sekian pembahasan tentang &lt;code&gt;if-else-if&lt;/code&gt; dan &lt;code&gt;switch-case&lt;/code&gt;. Selanjutnya anda bisa berlatih dengan kasus lain. Selamat berpikir!&lt;/p&gt;
+      <guid>http://petanikode.com/pemrograman-java-di-lab-8-menggunakan-pangkat/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Pada contoh kasus &lt;a href=&#34;http://petanikode.blogspot.com/2015/10/pemrograman-java-di-lab-2-algoritma.html&#34; target=&#34;_blank&#34;&gt;program luas lingkaran&lt;/a&gt; kemarin, kita menggunakan pangkat dua untuk menghitung luas lingkaran. Pangkat dua dapat ditulis dengan membuat perkalian dengan variabel atau bilangan yang akan dipangkatkan dua. Contoh, &lt;code&gt;r&lt;sup&gt;2&lt;/sup&gt;&lt;/code&gt; dapat ditulis &lt;code&gt;r*r&lt;/code&gt;. Tapi, bagaiamana kalau pangkatnya banyak? misal &lt;code&gt;4&lt;sup&gt;112&lt;/sup&gt;&lt;/code&gt;. Tidak mungkin kita akan melakukan perkalian sebanyak itu dalam kode. Oleh karena itu, kita membutuhkan fungsi pangkat untuk menghitungnya.&lt;br /&gt;&lt;br /&gt;Java sudah menyediakan fungsi pangkat yang dapat digunakan kapan saja. Fungsi ini memiliki dua parameter, yaitu bilangan yang akan dipangkatkan dan pangkatnya.&lt;br /&gt;&lt;pre&gt;Math.pow(bilangan, pangkat);&lt;/pre&gt;Contoh program, silahkan buat kelas baru bernama &lt;i&gt;Pangkat&lt;/i&gt; di paket &lt;i&gt;pertemuan3&lt;/i&gt;. Kemudian ikuti kode berikut:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-Xh3_ALdPrug/ViJaw7ln3CI/AAAAAAAACDg/J4YeXknsEyc/s1600/program%2Bpemangkatan%2Bbilangan%2Bdi%2Bjava.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-Xh3_ALdPrug/ViJaw7ln3CI/AAAAAAAACDg/J4YeXknsEyc/s1600/program%2Bpemangkatan%2Bbilangan%2Bdi%2Bjava.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kode program di atas, akan menghasilkan output: 32, karena 2&lt;sup&gt;5&lt;/sup&gt; akan menghasilkan 32.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-LliT4M85udU/ViJbVl3k9CI/AAAAAAAACDo/5EEkMlk4bLk/s1600/output%2Bprogram%2Bpemangkatan%2Bdi%2Bjava.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-LliT4M85udU/ViJbVl3k9CI/AAAAAAAACDo/5EEkMlk4bLk/s1600/output%2Bprogram%2Bpemangkatan%2Bdi%2Bjava.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

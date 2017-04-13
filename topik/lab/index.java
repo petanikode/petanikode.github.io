@@ -1376,7 +1376,7 @@ padding: 16px;
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
         <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
             <br>
-        13 Nov · baca 2 menit
+        25 Oct · baca 9 menit
     </div>
     
 </div>
@@ -1384,30 +1384,30 @@ padding: 16px;
 
             <div class="post-content">
                 
-                <h2 class="post-title index-title"><a href="/pemrograman-java-di-lab-12-percabangan-bersarang/">Pemrograman java di lab (12): percabangan bersarang</a></h2>
-                <a href="/pemrograman-java-di-lab-12-percabangan-bersarang/">
+                <h2 class="post-title index-title"><a href="/pemrograman-java-percabangan/">Belajar Pemrograman Java: Inilah 3 Bentuk Percabangan yang Harus Dipahami</a></h2>
+                <a href="/pemrograman-java-percabangan/">
                     
-                    <amp-img src="http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png"
+                    <amp-img src="https://2.bp.blogspot.com/-RvCLtSJKtig/WOhpIb2ZUuI/AAAAAAAAEoE/ucr44ME4UwYCNIP5HhieepL_KexR9tifwCPcB/s1600/percabangan%2Brel%2Bkereta%2Bapi.jpg"
                         height="380"
                         width="720"
                         layout="responsive"
-                        alt=""
+                        alt="Belajar Pemrograman Java: 3 Bentuk Percabangan yang Harus Dipahami"
                         attribution="CC">
                     </amp-img>
                     
                 </a>
-                <a class="read-more" href="/pemrograman-java-di-lab-12-percabangan-bersarang/" id="read-more-button">
+                <a class="read-more" href="/pemrograman-java-percabangan/" id="read-more-button">
                 Selengkapnya…
                 </a>
                 
 
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f&t=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f&text=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang&body=Pemrograman%20java%20di%20lab%20%2812%29%3a%20percabangan%20bersarang:%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-12-percabangan-bersarang%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f&t=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f&text=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami&body=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami:%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 
@@ -1428,7 +1428,7 @@ padding: 16px;
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
         <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
             <br>
-        9 Nov · baca 3 menit
+        18 Oct · baca 1 menit
     </div>
     
 </div>
@@ -1436,10 +1436,10 @@ padding: 16px;
 
             <div class="post-content">
                 
-                <h2 class="post-title index-title"><a href="/pemrograman-java-di-lab-11-percabangan-if/else-if/else-dan-switch/case/">Pemrograman java di lab (11): Percabangan If/Else-If/Else dan Switch/Case</a></h2>
-                <a href="/pemrograman-java-di-lab-11-percabangan-if/else-if/else-dan-switch/case/">
+                <h2 class="post-title index-title"><a href="/pemrograman-java-di-lab-8-menggunakan-pangkat/">Pemrograman java di lab (8): Menggunakan pangkat</a></h2>
+                <a href="/pemrograman-java-di-lab-8-menggunakan-pangkat/">
                     
-                    <amp-img src="https://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png"
+                    <amp-img src="http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png"
                         height="380"
                         width="720"
                         layout="responsive"
@@ -1448,18 +1448,18 @@ padding: 16px;
                     </amp-img>
                     
                 </a>
-                <a class="read-more" href="/pemrograman-java-di-lab-11-percabangan-if/else-if/else-dan-switch/case/" id="read-more-button">
+                <a class="read-more" href="/pemrograman-java-di-lab-8-menggunakan-pangkat/" id="read-more-button">
                 Selengkapnya…
                 </a>
                 
 
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f&t=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f&text=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase&body=Pemrograman%20java%20di%20lab%20%2811%29%3a%20Percabangan%20If%2fElse-If%2fElse%20dan%20Switch%2fCase:%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-11-percabangan-if%2felse-if%2felse-dan-switch%2fcase%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f&t=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f&text=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat&body=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat:%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 

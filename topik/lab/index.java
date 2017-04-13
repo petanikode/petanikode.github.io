@@ -1376,58 +1376,6 @@ padding: 16px;
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
         <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
             <br>
-        25 Oct · baca 9 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/pemrograman-java-percabangan/">Belajar Pemrograman Java: Inilah 3 Bentuk Percabangan yang Harus Dipahami</a></h2>
-                <a href="/pemrograman-java-percabangan/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-RvCLtSJKtig/WOhpIb2ZUuI/AAAAAAAAEoE/ucr44ME4UwYCNIP5HhieepL_KexR9tifwCPcB/s1600/percabangan%2Brel%2Bkereta%2Bapi.jpg"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Belajar Pemrograman Java: 3 Bentuk Percabangan yang Harus Dipahami"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/pemrograman-java-percabangan/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <div>Bagikan:
-<ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f&t=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f&text=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami&body=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami:%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-</div>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
-            <br>
         18 Oct · baca 1 menit
     </div>
     
@@ -1468,13 +1416,61 @@ padding: 16px;
     </div>
     </div>
     
+    <div class="article-wrapper article-wrapper-index">
+    <div class="content">
+
+            <div class="post-header">
+    
+        <div class="author-foto pull-left">
+            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
+        </div>
+        <div>
+        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
+        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
+            <br>
+        17 Oct · baca 2 menit
+    </div>
+    
+</div>
+
+
+            <div class="post-content">
+                
+                <h2 class="post-title index-title"><a href="/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/">Pemrograman java di lab (7): Mengenal JOptionPane dan operator kondisi</a></h2>
+                <a href="/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/">
+                    
+                    <amp-img src="http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png"
+                        height="380"
+                        width="720"
+                        layout="responsive"
+                        alt=""
+                        attribution="CC">
+                    </amp-img>
+                    
+                </a>
+                <a class="read-more" href="/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/" id="read-more-button">
+                Selengkapnya…
+                </a>
+                
+
+                <div>Bagikan:
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f&t=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f&text=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi&body=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi:%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+</ul>
+</div>
+
+            </div>
+
+    </div>
+    </div>
+    
 
     <div class="pager">
     
-    
-        <a class="button button-primary pull-right" href="/topik/lab/index.java/page/2/">
-            Selanjutnya <i class="fa fa-caret-right"></i>
-        </a>
     
     </div>
 

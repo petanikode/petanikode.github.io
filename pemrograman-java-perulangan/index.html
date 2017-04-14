@@ -7,7 +7,7 @@
 
 <html amp lang="id-id" class="no-js">
 <head>
-    <title>Belajar Pemrograman Java: Inilah 3 Bentuk Percabangan yang Harus Dipahami</title>
+    <title>Belajar Pemrograman Java: Memahami Dua Jenis Perulangan dalam Java</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -20,8 +20,8 @@
 
 
 
-    <link rel="canonical" href="http://petanikode.com/pemrograman-java-percabangan/" />
-    <link rel="amphtml" href="http://petanikode.com/pemrograman-java-percabangan/" />
+    <link rel="canonical" href="http://petanikode.com/pemrograman-java-perulangan/" />
+    <link rel="amphtml" href="http://petanikode.com/pemrograman-java-perulangan/" />
 
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
     <meta content='/favicon.png' name='msapplication-TileImage'/>
@@ -48,14 +48,16 @@
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
 <meta name="author" content="Ardianta Pargo"/>
 
-<meta name="keywords" content="Belajar Pemrograman Java: Inilah 3 Bentuk Percabangan yang Harus Dipahami, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Kalau kita perhatikan, alur pengeksekusian sebuah kode program dikerjakan satu per satu dari atas sampai ke bawah.
-Baris demi baris dibaca, kemudian komputer mengerjakan apa yang diperintahkan.
-Misalnya seperti ini:
-Alur programnya satu, tidak ada belokan atau percabangan.
-Ngomong-ngomong apa itu percabangan?
-Percabangan hanyalah sebuah istilah yang digunakan untuk menyebut alur program yang bercabang.
-Percabangan juga dikenal dengan &ldquo;Control Flow&rdquo;, &ldquo;Struktur Kondisi&rdquo;, &ldquo;Struktur IF&rdquo;, &ldquo;Decision&rdquo;, dsb. Semuanya itu sama."/>
+<meta name="keywords" content="Belajar Pemrograman Java: Memahami Dua Jenis Perulangan dalam Java, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="Apa yang akan kita lakukan bila ingin menyuruh komputer mengerjakan perintah yang berulang-ulang?
+Misalkan kita ingin menyuruh komputer menampilkan teks Petani Kode sebanyak 5x.
+Maka kita bisa menyuruhnya seperti ini:
+System.out.println(&quot;Petani Kode&quot;); System.out.println(&quot;Petani Kode&quot;); System.out.println(&quot;Petani Kode&quot;); System.out.println(&quot;Petani Kode&quot;); System.out.println(&quot;Petani Kode&quot;);  Tapi&hellip; bagaimana kalau sebanyak 1000x, apa kita akan mampu mengetik kode sebanyak itu?
+Tentunya tidak.
+Karena itu, kita harus pakai perulangan.
+
+Contoh perulangan:
+for (int hitungan = 0; hitungan &lt;= 1000; hitungan&#43;&#43;) { System."/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -71,21 +73,23 @@ Percabangan juga dikenal dengan &ldquo;Control Flow&rdquo;, &ldquo;Struktur Kond
 <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
-    <meta property="og:title" content="Belajar Pemrograman Java: Inilah 3 Bentuk Percabangan yang Harus Dipahami" />
-    <meta property="og:description" content="Kalau kita perhatikan, alur pengeksekusian sebuah kode program dikerjakan satu per satu dari atas sampai ke bawah.
-Baris demi baris dibaca, kemudian komputer mengerjakan apa yang diperintahkan.
-Misalnya seperti ini:
-Alur programnya satu, tidak ada belokan atau percabangan.
-Ngomong-ngomong apa itu percabangan?
-Percabangan hanyalah sebuah istilah yang digunakan untuk menyebut alur program yang bercabang.
-Percabangan juga dikenal dengan &ldquo;Control Flow&rdquo;, &ldquo;Struktur Kondisi&rdquo;, &ldquo;Struktur IF&rdquo;, &ldquo;Decision&rdquo;, dsb. Semuanya itu sama." />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://petanikode.com/pemrograman-java-percabangan/" />
+    <meta property="og:title" content="Belajar Pemrograman Java: Memahami Dua Jenis Perulangan dalam Java" />
+    <meta property="og:description" content="Apa yang akan kita lakukan bila ingin menyuruh komputer mengerjakan perintah yang berulang-ulang?
+Misalkan kita ingin menyuruh komputer menampilkan teks Petani Kode sebanyak 5x.
+Maka kita bisa menyuruhnya seperti ini:
+System.out.println(&quot;Petani Kode&quot;); System.out.println(&quot;Petani Kode&quot;); System.out.println(&quot;Petani Kode&quot;); System.out.println(&quot;Petani Kode&quot;); System.out.println(&quot;Petani Kode&quot;);  Tapi&hellip; bagaimana kalau sebanyak 1000x, apa kita akan mampu mengetik kode sebanyak itu?
+Tentunya tidak.
+Karena itu, kita harus pakai perulangan.
 
-    <meta property="og:image" content="https://2.bp.blogspot.com/-RvCLtSJKtig/WOhpIb2ZUuI/AAAAAAAAEoE/ucr44ME4UwYCNIP5HhieepL_KexR9tifwCPcB/s1600/percabangan%2Brel%2Bkereta%2Bapi.jpg" />
+Contoh perulangan:
+for (int hitungan = 0; hitungan &lt;= 1000; hitungan&#43;&#43;) { System." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://petanikode.com/pemrograman-java-perulangan/" />
+
+    <meta property="og:image" content="http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png" />
 
     
-    <meta property="og:updated_time" content="2015-10-25 18:33:00 &#43;0000 UTC"/>
+    <meta property="og:updated_time" content="2016-01-03 18:28:00 &#43;0000 UTC"/>
     <meta content='id_ID' property='og:locale'/>
     <meta content='ms_MY' property='og:locale:alternate'/>
     <meta content='en_US' property='og:locale:alternate'/>
@@ -112,7 +116,7 @@ Percabangan juga dikenal dengan &ldquo;Control Flow&rdquo;, &ldquo;Struktur Kond
     <meta property="article:published_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
     
 
-    <meta property="article:modified_time" content="2015-10-25 18:33:00 &#43;0000 UTC" />
+    <meta property="article:modified_time" content="2016-01-03 18:28:00 &#43;0000 UTC" />
     <meta property="article:section" content="artikel" />
 
     
@@ -192,7 +196,7 @@ Percabangan juga dikenal dengan &ldquo;Control Flow&rdquo;, &ldquo;Struktur Kond
         "position": 2,
         "item": {
             "@id": "http:\/\/petanikode.com\/kategori\/pemrograman",
-            "name": "pemrograman"
+            "name": "Pemrograman"
             }
       },
       
@@ -219,18 +223,18 @@ Percabangan juga dikenal dengan &ldquo;Control Flow&rdquo;, &ldquo;Struktur Kond
   "author": {
     "name" : "Ardianta Pargo"
   },
-  "headline": "Belajar Pemrograman Java: Inilah 3 Bentuk Percabangan yang Harus Dipahami",
-  "description": "Kalau kita perhatikan, alur pengeksekusian sebuah kode program dikerjakan satu per satu dari atas sampai ke bawah.\nBaris demi baris dibaca, kemudian komputer mengerjakan apa yang diperintahkan.\nMisalnya seperti ini:\nAlur programnya satu, tidak ada belokan atau percabangan.\nNgomong-ngomong apa itu percabangan?\nPercabangan hanyalah sebuah istilah yang digunakan untuk menyebut alur program yang bercabang.\nPercabangan juga dikenal dengan \x26ldquo;Control Flow\x26rdquo;, \x26ldquo;Struktur Kondisi\x26rdquo;, \x26ldquo;Struktur IF\x26rdquo;, \x26ldquo;Decision\x26rdquo;, dsb. Semuanya itu sama.",
-  "wordCount":  1761 ,
-  "datePublished" : "2015-10-25T18:33:00",
-  "dateModified" : "2015-10-25T18:33:00",
+  "headline": "Belajar Pemrograman Java: Memahami Dua Jenis Perulangan dalam Java",
+  "description": "Apa yang akan kita lakukan bila ingin menyuruh komputer mengerjakan perintah yang berulang-ulang?\nMisalkan kita ingin menyuruh komputer menampilkan teks Petani Kode sebanyak 5x.\nMaka kita bisa menyuruhnya seperti ini:\nSystem.out.println(\x26quot;Petani Kode\x26quot;); System.out.println(\x26quot;Petani Kode\x26quot;); System.out.println(\x26quot;Petani Kode\x26quot;); System.out.println(\x26quot;Petani Kode\x26quot;); System.out.println(\x26quot;Petani Kode\x26quot;);  Tapi\x26hellip; bagaimana kalau sebanyak 1000x, apa kita akan mampu mengetik kode sebanyak itu?\nTentunya tidak.\nKarena itu, kita harus pakai perulangan.\n\nContoh perulangan:\nfor (int hitungan = 0; hitungan \x26lt;= 1000; hitungan\x2b\x2b) { System.",
+  "wordCount":  1239 ,
+  "datePublished" : "2016-01-03T18:28:00",
+  "dateModified" : "2016-01-03T18:28:00",
   "image" : {
       "@type": "ImageObject",
-      "url": "https:\/\/2.bp.blogspot.com\/-RvCLtSJKtig\/WOhpIb2ZUuI\/AAAAAAAAEoE\/ucr44ME4UwYCNIP5HhieepL_KexR9tifwCPcB\/s1600\/percabangan%2Brel%2Bkereta%2Bapi.jpg",
+      "url": "http:\/\/2.bp.blogspot.com\/-FXkb84tWS_Q\/VhUetgpL57I\/AAAAAAAAB6I\/fvNLQwpVTxI\/s1600\/Lab%2BJava%2BPetani%2BKode.png",
       "height" : 380,
       "width" : 720
     },
-  "mainEntityOfPage" : "http:\/\/petanikode.com\/pemrograman-java-percabangan\/",
+  "mainEntityOfPage" : "http:\/\/petanikode.com\/pemrograman-java-perulangan\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "petanikode.com",
@@ -244,7 +248,7 @@ Percabangan juga dikenal dengan &ldquo;Control Flow&rdquo;, &ldquo;Struktur Kond
 
   "review": {
     "@type": "Review",
-    "url": "http:\/\/petanikode.com\/pemrograman-java-percabangan\/",
+    "url": "http:\/\/petanikode.com\/pemrograman-java-perulangan\/",
     "author": {
       "@type": "Person",
       "name": "Ardianta Pargo",
@@ -255,8 +259,8 @@ Percabangan juga dikenal dengan &ldquo;Control Flow&rdquo;, &ldquo;Struktur Kond
       "name": "petanikode.com",
       "sameAs": "http://petanikode.com"
     },
-    "datePublished": "2015-10-25T18:33:00",
-    "description": "Kalau kita perhatikan, alur pengeksekusian sebuah kode program dikerjakan satu per satu dari atas sampai ke bawah.\nBaris demi baris dibaca, kemudian komputer mengerjakan apa yang diperintahkan.\nMisalnya seperti ini:\nAlur programnya satu, tidak ada belokan atau percabangan.\nNgomong-ngomong apa itu percabangan?\nPercabangan hanyalah sebuah istilah yang digunakan untuk menyebut alur program yang bercabang.\nPercabangan juga dikenal dengan \x26ldquo;Control Flow\x26rdquo;, \x26ldquo;Struktur Kondisi\x26rdquo;, \x26ldquo;Struktur IF\x26rdquo;, \x26ldquo;Decision\x26rdquo;, dsb. Semuanya itu sama.",
+    "datePublished": "2016-01-03T18:28:00",
+    "description": "Apa yang akan kita lakukan bila ingin menyuruh komputer mengerjakan perintah yang berulang-ulang?\nMisalkan kita ingin menyuruh komputer menampilkan teks Petani Kode sebanyak 5x.\nMaka kita bisa menyuruhnya seperti ini:\nSystem.out.println(\x26quot;Petani Kode\x26quot;); System.out.println(\x26quot;Petani Kode\x26quot;); System.out.println(\x26quot;Petani Kode\x26quot;); System.out.println(\x26quot;Petani Kode\x26quot;); System.out.println(\x26quot;Petani Kode\x26quot;);  Tapi\x26hellip; bagaimana kalau sebanyak 1000x, apa kita akan mampu mengetik kode sebanyak itu?\nTentunya tidak.\nKarena itu, kita harus pakai perulangan.\n\nContoh perulangan:\nfor (int hitungan = 0; hitungan \x26lt;= 1000; hitungan\x2b\x2b) { System.",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -1183,7 +1187,7 @@ padding: 16px;
     <article class="article block">
     <div class="article-wrapper">
         <div class="content">
-            <h1 class="post-title">Belajar Pemrograman Java: Inilah 3 Bentuk Percabangan yang Harus Dipahami</h1>
+            <h1 class="post-title">Belajar Pemrograman Java: Memahami Dua Jenis Perulangan dalam Java</h1>
 
             
                 <div class="post-header">
@@ -1193,68 +1197,60 @@ padding: 16px;
         </div>
         <div>
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
+        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
             <br>
-        25 October 2015 · 18:33
+        3 January 2016 · 18:28
     </div>
     
 </div>
 
                 
 
-<p><img src="https://2.bp.blogspot.com/-RvCLtSJKtig/WOhpIb2ZUuI/AAAAAAAAEoE/ucr44ME4UwYCNIP5HhieepL_KexR9tifwCPcB/s1600/percabangan%2Brel%2Bkereta%2Bapi.jpg" alt="Perbangan Java" /></p>
+<p>Apa yang akan kita lakukan bila ingin menyuruh komputer mengerjakan perintah
+yang berulang-ulang?</p>
 
-<p>Kalau kita perhatikan, alur pengeksekusian sebuah kode program dikerjakan satu per satu dari atas
-sampai ke bawah.</p>
+<p>Misalkan kita ingin menyuruh komputer menampilkan teks <code>Petani Kode</code> sebanyak 5x.</p>
 
-<p>Baris demi baris dibaca, kemudian komputer mengerjakan apa yang diperintahkan.</p>
+<p>Maka kita bisa menyuruhnya seperti ini:</p>
 
-<p>Misalnya seperti ini:</p>
+<pre><code class="language-java">System.out.println(&quot;Petani Kode&quot;);
+System.out.println(&quot;Petani Kode&quot;);
+System.out.println(&quot;Petani Kode&quot;);
+System.out.println(&quot;Petani Kode&quot;);
+System.out.println(&quot;Petani Kode&quot;);
+</code></pre>
 
-<p><img src="https://2.bp.blogspot.com/-K9oL9zetghQ/WOhpISQO-4I/AAAAAAAAEoE/anwCWCtzMPwFxM7wAH7k46Rj4Ri7xjEhwCPcB/s1600/alur%2Beksekusi%2Bprogram%2Btanpa%2Bflowchart.png" alt="Alur porgram tanpa percabangan" /></p>
+<p>Tapi&hellip; bagaimana kalau sebanyak 1000x, apa kita akan mampu mengetik kode
+sebanyak itu?</p>
 
-<p>Alur programnya satu, tidak ada belokan atau percabangan.</p>
+<p>Tentunya tidak.</p>
 
-<p>Ngomong-ngomong apa itu percabangan?</p>
+<p>Karena itu, kita harus pakai perulangan.</p>
 
-<p>Percabangan hanyalah sebuah istilah yang digunakan untuk menyebut
-alur program yang bercabang.</p>
+<p><a href="http://1.bp.blogspot.com/-Pab1ngEX31Y/VlToeaw3YnI/AAAAAAAACQM/te0QBK1U-VY/s1600/Flowchart%2Bperulangan%2B-%2Bpetani%2Bkode.png"><img src="http://1.bp.blogspot.com/-Pab1ngEX31Y/VlToeaw3YnI/AAAAAAAACQM/te0QBK1U-VY/s1600/Flowchart%2Bperulangan%2B-%2Bpetani%2Bkode.png" alt="" /></a></p>
 
-<p>Percabangan juga dikenal dengan &ldquo;Control Flow&rdquo;, &ldquo;Struktur Kondisi&rdquo;,
-&ldquo;Struktur IF&rdquo;, &ldquo;Decision&rdquo;, dsb. Semuanya itu sama.</p>
+<p>Contoh perulangan:</p>
 
-<p>Pada diagram alur <em>(Flow Chart)</em> seperti di atas, alurnya memang satu.</p>
-
-<p>Tapi setelah kita menggunakan percabangan, alurnya akan bertambah menjadi seperti ini.</p>
-
-<p><img src="https://4.bp.blogspot.com/-VdWpqvZZHFk/WOhuYZN8lxI/AAAAAAAAEos/Rston6k1KwMGagHld2CZoJE38SvZtXC-wCPcB/s1600/contoh-percabangan.png" alt="Flowchart Percabangan" /></p>
-
-<p>Lalu bagaimana cara menulis kode percabangan dalam Java?</p>
-
-<p>Caranya: menggunakan kata kunci <code>if</code>, <code>else</code>, <code>switch</code>, dan <code>case</code>, dan operator ternary.</p>
-
-<p>Contoh format stuktur IF seperti ini:</p>
-
-<pre><code class="language-java">if( suatu_kondisi ) {
-    // lakukan sesuatu kalau kondisi benar
-    // Lakukan ini juga
+<pre><code class="language-java">for (int hitungan = 0; hitungan &lt;= 1000; hitungan++) {
+    System.out.println(&quot;Petani Kode&quot;);
 }
 </code></pre>
 
-<p><code>suatu_kondisi</code> hanya bernilai <code>true</code>/<code>false</code> saja. Kita bisa gunakan operator
-relasi dan logika di sini.</p>
+<p>Sebelum masuk ke pembahasan lebih dalam, ada hal yang harus kalian ketahui
+terlebih dahulu.</p>
 
-<p>Untuk lebih jelasnya, nanti akan kita bahas.</p>
-
-<p>Sebelumnya, kamu perlu tahu dulu tiga bentuk percabangan pada Java:</p>
+<p>Perulangan dalam pemrograman dibagi manjadi dua jenis:</p>
 
 <ol>
-<li>Percabangan IF</li>
-<li>Percabangan IF/ELSE</li>
-<li>Percabangan IF/ELSE/IF atau SWITCH/CASE</li>
+<li><strong>Counted loop</strong>: Perulangan yang jumlah pengulangannya terhitung atau tentu.</li>
+<li><strong>Uncounted loop</strong>: Perulangan yang jumlah pengulangannya tidak terhitung
+atau tidak tentu.</li>
 </ol>
 
-<p>Mari kita bahas satu per satu&hellip;</p>
+<p><img src="https://3.bp.blogspot.com/-H5kHb8OE1M0/WPAzGFHXcLI/AAAAAAAAEtY/yGby7eMeA1Y23LqPpS9Zmxx6aJppZRcmACPcB/s1600/mindmap_perulangan.png" alt="Mind Map Perulangan" /></p>
+
+<p><em>Counted loop</em> terdiri dari perulangan <em>For</em> dan <em>For each</em>. Sedangkan
+<em>Uncounted loop</em> terdiri dari perulangan <em>While</em> dan <em>Do/While</em></p>
 
 <p><amp-ad
     data-ad-client='ca-pub-6279325630224392'
@@ -1265,534 +1261,419 @@ relasi dan logika di sini.</p>
     layout="responsive">
 </amp-ad></p>
 
-<h2 id="1-percabangan-if">1. Percabangan IF</h2>
+<h2 id="1-counted-loop">1. Counted Loop</h2>
 
-<p>Percabangan ini hanya memiliki satu pilihan. Artinya, pilihan di dalam IF
-hanya akan dikerjakan kalau kondisinya benar.</p>
+<p>Seperti yang sudah dijelaskan, perulangan ini memiliki jumlah pengulangan yang
+tentu dan terhitung.</p>
 
-<p><img src="https://2.bp.blogspot.com/-U8SqJhBeFoc/WOh7pR4aSNI/AAAAAAAAEpM/_i52DJOZIm80Ux6fdnVWfmEHx8WdvQfHACPcB/s1600/percabangan-if-dalam-pemrograman.png" alt="Percabangan IF" /></p>
+<p>Perulangan ini terdiri dari perulangan <em>For</em> dan <em>For each</em>.</p>
 
-<p>Tapi kalau salah&hellip; tidak akan melakukan apa-apa. Alias lanjut eksekusi ke
-perintah berikutnya.</p>
+<p>Mari kita bahas satu per satu&hellip;</p>
 
-<p>Contoh:</p>
+<h3 id="perulangan-for">Perulangan <em>For</em></h3>
 
-<blockquote>
-<p>Pernahkah kalian belanja di toko, kemudian kalau belanja di atas sekian ribu
-dapat hadiah atau diskon.</p>
-</blockquote>
+<p>Format penulisan perulangan <em>For</em> di java adalah sebagai berikut:</p>
 
-<p>Nah! Contoh kasus seperti itu, dapat kita selesaikan dengan menggunakan percabangan
-ini.</p>
+<pre><code class="language-java">for( int hitungan = 0; hitungan &lt;= 10; hitungan++ ){
+    // blok kode yang akan diulang
+}
+</code></pre>
 
-<p>untuk lebih jelasnya&hellip;</p>
+<p>Penjelasan:</p>
 
-<h3 id="mari-kita-membuat-program-hadiah">Mari Kita Membuat Program Hadiah</h3>
+<ul>
+<li>variabel <code>hitungan</code> tugasnya untuk menyimpan hitungan pengulangan.</li>
+<li><code>hitungan &lt;= 10</code> artinya selama nilai hitungannya lebih kecil atau sama dengan 10, maka
+pengulangan akan terus dilakukan. Dengan kata lain, perualangan ini akan mengulang
+sebanyak 10 kali.</li>
+<li><code>hitungan++</code> fungsinya untuk menambah satu (<code>+1</code>) nilai hitungan peda setiap pengulangan.</li>
+<li>Blok kode <em>For</em> dimulai dengan tanda &lsquo;<code>{</code>&rsquo; dan diakhiri dengan &lsquo;<code>}</code>&rsquo;.</li>
+</ul>
 
-<p>Misalkan ada sebuah toko buku. Mereka memberikan hadiah berupa
-perlengkapan sekolah kepada pembeli yang belanja di atas Rp 100.000.</p>
+<p>Mari kkita coba dalam contoh program&hellip;</p>
 
-<p>Maka programnya bisa kita buat seperti ini:</p>
+<h4 id="contoh-program-perulangan-for">Contoh Program Perulangan <em>For</em></h4>
 
-<pre><code class="language-java">import java.util.Scanner;
+<p>Silahkan buat class baru bernama <code>Bintang</code>, kemudian ikuti kode berikut:</p>
 
-public class Hadiah {
+<pre><code class="language-java">class Bintang{
+    public static void main(String[] args){
 
-    public static void main(String[] args) {
-
-        // membuat variabel belanja dan scanner
-        int belanja = 0;
-        Scanner scan = new Scanner(System.in);
-
-        // mengambil input
-        System.out.print(&quot;Total Belanjaan: Rp &quot;);
-        belanja = scan.nextInt();
-
-        // cek apakah dia belanja di atas 100000
-        if ( belanja &gt; 100000 ) {
-            System.out.println(&quot;Selamat, anda mendapatkan hadiah!&quot;);
+        for(int i=0; i &lt;= 5; i++){
+            System.out.println(&quot;*****&quot;);
         }
 
-        System.out.println(&quot;Terima kasih...&quot;);
+    }
+}
+</code></pre>
+
+<p>Hasil output:</p>
+
+<pre><code>*****
+*****
+*****
+*****
+*****
+*****
+</code></pre>
+
+<p>Mau lagi?</p>
+
+<p>Sekarang cobalah buat program untuk menampilkan nilai dari 1 sampai 10 dengan
+menggunakan perulangan.</p>
+
+<pre><code class="language-java">class CetakAngka{
+
+    public static void main(String[] argumen){
+
+        for(int i=0; i &lt;= 10; i++){
+            System.out.print( i + &quot; &quot; );
+        }
 
     }
 
 }
 </code></pre>
 
-<p>Jalankan programnya dan perhatikanlah hasilnya.</p>
+<p>Hasil output:</p>
 
-<p><img src="https://3.bp.blogspot.com/-LGq9_8wC3I8/WOiZIi2nshI/AAAAAAAAEpw/gZtN9le-bfo-Thi4Ct8HWaDM1Dj4d5XsgCPcB/s1600/program%2Bdiskon%2Bdan%2Bhadiah%2Bdengan%2BJava.png" alt="Program diskon dengan Java" /></p>
+<pre><code>0 1 2 3 4 5 6 7 8 9 10
+</code></pre>
 
-<p>Cobalah untuk memberikan nilai di bawah <code>100000</code> dan perhatikan apa akan yang terjadi.</p>
+<p>Coba kita lakukan sedikit eksperimen.</p>
 
-<h2 id="2-percabangan-if-else">2. Percabangan IF/ELSE</h2>
+<p>Buat sebuah program yang menampilkan bilangan ganjil saja.</p>
 
-<p>Sedangkan percabangan IF/ELSE memiliki pilihan alternatif kalau kondisinya salah.</p>
+<pre><code class="language-java">class CetakBilanganGanjil{
 
-<p><strong>IF</strong>: &ldquo;Jika kondisi benar maka kerjakan ini, kalau tidak silahkan lanjut&rdquo;</p>
+    public static void main(String[] argumen){
+        for(int i = 1; i &lt;= 20; i += 2){
+            System.out.print( i + &quot; &quot;);
+        }
+    }
 
-<p><strong>IF/ESLE</strong>: &ldquo;Jika kondisi benar maka kerjakan ini, kalau salah maka kerjakan yang itu,
-setelah itu lanjut&rdquo;</p>
+}
+</code></pre>
 
-<p><img src="http://1.bp.blogspot.com/-EBFXR8YanHg/ViyfSNX80-I/AAAAAAAACEI/BVBV3EX_r3Q/s1600/Percabangan%2Bdi%2Bpemrograman%2Bjava.png" alt="Perbedaan percabangan IF dengan IF/ELSE" /></p>
+<p>Hasil output:</p>
 
-<p>Begitulah perbedaan IF dengan IF/ELSE.</p>
+<pre><code>1 3 5 7 9 11 13 15 17 19
+</code></pre>
 
-<p>Sekarang mari kita coba dalam kode program&hellip;</p>
+<p>Perhatikan: di sana kita menggunakan <code>i += 2</code>, bukan <code>i++</code>.</p>
 
-<h3 id="program-cek-kelulusan">Program Cek Kelulusan</h3>
+<p>Apa maksudnya?</p>
 
-<p>Misalkan, kalau nilai siswa lebih besar dari 70, maka ia dinyatakan lulus.
-Kalau tidak, maka dia gagal.</p>
+<p>Maksudnya, nilai <code>i</code> akan ditambah dua (<code>+2</code>) di setiap pengulangan.</p>
 
-<p>Programnya bisa kita buat seperti ini:</p>
+<h3 id="perulangan-for-each">Perulangan <em>For Each</em></h3>
 
-<pre><code class="language-java">import java.util.Scanner;
+<p>Perulangan ini sebenarnya digunakan untuk menampilkan isi dari <em>array</em>.</p>
 
-public class CekKelulusan {
+<p>Apa itu <em>array</em>?</p>
 
+<p>Singkatnya, <em>array</em> itu variabel yang menyimpan lebih dari satu nilai dan
+memiliki indeks.</p>
+
+<p>Selengkapnya, nanti bisa di pelajari pada materi: <a href="/pemrograman-java-di-lab-15-mengenal-array/">Mengenal Array di Java</a>.</p>
+
+<p>Lanjut&hellip;</p>
+
+<p>Perulangan <em>For Each</em> pada Java, dilakukan juga dengan kata kunci <em>For</em>.</p>
+
+<p>Contohnya seperti ini:</p>
+
+<pre><code class="language-java">for ( int item : dataArray ) {
+    // blok kode yang diulang
+}
+</code></pre>
+
+<p>Penjelasan:</p>
+
+<ul>
+<li>variabel <code>item</code> akan menyimpan nilai dari <em>array</em></li>
+<li>Kita bisa baca seperti ini: &ldquo;Untuk setiap <code>item</code> dalam <code>dataArray</code>, maka lakukan
+perulangan&rdquo;</li>
+</ul>
+
+<h4 id="contoh-program-for-each">Contoh Program <em>For Each</em></h4>
+
+<p>Buat sebuah class baru bernama <code>PerulanganForeach</code>, kemudian ikuti kode berikut.</p>
+
+<pre><code class="language-java">public class PerulanganForeach {
     public static void main(String[] args) {
 
-        // membuat variabel dan Scanner
-        int nilai;
-        String nama;
-        Scanner scan = new Scanner(System.in);
+        // membuat array
+        int angka[] = {3,1,42,24,12};
 
-        // mengambil input
-        System.out.print(&quot;Nama: &quot;);
-        nama = scan.nextLine();
-        System.out.print(&quot;Nilai: &quot;);
-        nilai = scan.nextInt();
-
-        // cek apakah dia lulus atau tidak
-        if( nilai &gt;= 70 ) {
-            System.out.println(&quot;Selemat &quot; + nama + &quot;, anda lulus!&quot;);
-        } else {
-            System.out.println(&quot;Maaf &quot; + nama + &quot;, anda gagal&quot;);
+        // menggunakan perulangan For each untuk menampilkan angka
+        for( int x : angka ){
+            System.out.print(x + &quot; &quot;);
         }
 
     }
-
 }
 </code></pre>
 
 <p>Hasil outputnya:</p>
 
-<p><img src="https://3.bp.blogspot.com/-rLwFoNL9qKk/WO79-OlRsUI/AAAAAAAAEqc/8r_1s5gF0MkIFz3NhZqOs0ocTZeeUT_jgCPcB/s1600/Hasil%2Boutput%2Bprogram%2Bcekkelulusan%2Bjava.png" alt="Hasil output program tes kelulusan" /></p>
+<pre><code>3 1 42 24 12
+</code></pre>
 
-<p>Cobalah untuk merubah nilai yang dimasukkan dan perhatikan apa yang
-akan terjadi.</p>
+<h2 id="uncounted-loop">Uncounted Loop</h2>
 
-<h3 id="percabangan-if-else-dengan-operator-ternary">Percabangan IF/ELSE dengan Operator Ternary</h3>
+<p>Seperti yang sudah dijelaskan di awal tadi, perulangan ini tidak jelas jumlah
+pengulangannya.</p>
 
-<p>Selain menggunakan struktur seperti di atas, percahangan ini juga dapat menggunakan
-operator ternary.</p>
+<p>Tapi, tidak menutup kemungkinan juga, jumlah pengulangannya dapat ditentukan.</p>
 
-<p>Seperti yang sudah kita pelajari pada <a href="/pemrograman-java-operator/">pembahasan tentang operator</a>. Operator ternary memiliki konsep yang sama seperti percabganan IF/ELSE.</p>
+<p>Perulangan <em>uncounted loop</em> terdirid dari perulangan <em>While</em> dan <em>Do/While</em>.</p>
 
-<p><img src="https://3.bp.blogspot.com/-OKB4MDtGjE4/WObxiPfq-wI/AAAAAAAAEmQ/kR9Ldcc1hr88u90060rCff0Gvs4lDRfQgCPcB/s1600/operator%2Bternary%2Bdi%2Bjava.png" alt="Ilustraisi operator ternary" /></p>
+<p><img src="https://3.bp.blogspot.com/-nqIIOY3vCyM/WPAp9h0orPI/AAAAAAAAEsA/3-EK9wK7E08g02F8E7AoFF1kOzPurVniQCPcB/s1600/flow%2Bchart%2Bperulangan%2Bwhile%2Bdan%2Bdo%2Bwhile.png" alt="Flow Chart Perulangan While dan Do/While" /></p>
 
-<p>Contoh programnya:</p>
+<p>Mari kita bahas satu per satu&hellip;</p>
 
-<pre><code class="language-java">public class OperatorTernary {
-    public static void main(String[] args) {
+<h3 id="perulangan-while">Perulangan While</h3>
 
-        boolean suka = true;
-        String jawaban;
+<p><em>While</em> bisa kita artikan <em>selama</em>.</p>
 
-        // menggunakan operator ternary
-        jawaban = suka ? &quot;iya&quot; : &quot;tidak&quot;;
+<p>Cara kerja perulangan ini seperti percabangan, ia akan melakukan perulangan
+selama kondisinya bernilai <code>true</code>.</p>
 
-        // menampilkan jawaban
-        System.out.println(jawaban);
+<p>Struktur penulisan perulangan while:</p>
 
-    }
+<pre><code class="language-java">while ( kondisi ) {
+    // blok kode yang akan diulang
 }
 </code></pre>
 
-<h2 id="3-percabangan-if-else-if-dan-switch-case">3. Percabangan IF/ELSE/IF dan SWITCH/CASE</h2>
+<p>Penjelasan:</p>
 
-<p>Jika percabangan IF/ESLE hanya memiliki dua pilihan saja. Maka percahangan
-IF/ELSE/IF memiliki lebih dari dua pilihan.</p>
+<ul>
+<li><em>kondisi</em> bisa kita isi dengan perbandingan maupun variabel boolean. <em>Kondisi</em>
+ini hanya memiliki nilai <code>true</code> dan <code>flase</code>.</li>
+<li>Perulangan <code>while</code> akan berhenti sampai <em>kondisi</em> bernilai <code>false</code>.</li>
+</ul>
 
-<p>Formatnya seperti ini:</p>
+<p>Untuk lebih jelasnya, mari kita coba membuat program&hellip;</p>
 
-<pre><code class="language-java">if (suatu kondisi) {
-    // maka kerjakan ini
-    // kerjakan perintah ini juga
-    // …
-} else if (kondisi lain) {
-    // kerjakan ini
-    // kerjakan ini juga
-    // …
-} else if (kondisi yang lain lagi) {
-    // kerjakan perintah ini
-    // kerjakan ini juga
-    // …
-} esle {
-    // kerjakan ini kalau
-    // semua kondisi di atas
-    // tidak ada yang benar
-    // …
-}
-</code></pre>
+<h4 id="contoh-program-dengan-perulangan-while">Contoh Program dengan Perulangan While</h4>
 
-<p>Coba perhatikan contohnya:</p>
-
-<p><img src="http://3.bp.blogspot.com/-9uS-c73seec/VkBISDA0AXI/AAAAAAAACLU/AsWtctwfCN0/s1600/flowchart%2Bpercabangan%2Byang%2Bmemiliki%2Bbanyak%2Bpilihan%2Bkeputusan.png" alt="" /></p>
-
-<p>Jika nilainya lebih besar dari <code>90</code>, maka grade-nya &ldquo;A&rdquo;.
-Sedangkan kalau lebih besar dari <code>80</code>, maka &ldquo;B+&rdquo;. Lebih besar
-dari <code>70</code>, maka &ldquo;B&rdquo;, dan seterusnya.</p>
-
-<p>Lebih jelasnya, mari kita buat program.</p>
-
-<h3 id="program-hitunggrade">Program HitungGrade</h3>
-
-<p>Silahkan buat sebuah class baru bernama <code>HitungGrade</code>, kemudian ikuti kode
-program berikut.</p>
+<p>Program ini akan melakukan perulangan selama jawabannya tidak.</p>
 
 <pre><code class="language-java">import java.util.Scanner;
 
-public class HitungGrade {
+public class PerulanganWhile {
     public static void main(String[] args) {
 
         // membuat variabel dan scanner
-        int nilai;
-        String grade;
+        boolean running = true;
+        int counter = 0;
+        String jawab;
         Scanner scan = new Scanner(System.in);
 
-        // mengambil input
-        System.out.print(&quot;Inputkan nilai: &quot;);
-        nilai = scan.nextInt();
+        while( running ) {
+            System.out.println(&quot;Apakah anda ingin keluar?&quot;);
+            System.out.print(&quot;Jawab [ya/tidak]&gt; &quot;);
 
-        // higung gradenya
-        if ( nilai &gt;= 90 ) {
-            grade = &quot;A&quot;;
-        } else if ( nilai &gt;= 80 ){
-            grade = &quot;B+&quot;;
-        } else if ( nilai &gt;= 70 ){
-            grade = &quot;B&quot;;
-        } else if ( nilai &gt;= 60 ){
-            grade = &quot;C+&quot;;
-        } else if ( nilai &gt;= 50 ){
-            grade = &quot;C&quot;;
-        } else if ( nilai &gt;= 40 ){
-            grade = &quot;D&quot;;
-        } else {
-            grade = &quot;E&quot;;
+            jawab = scan.nextLine();
+
+            // cek jawabnnya, kalau ya maka berhenti mengulang
+            if( jawab.equalsIgnoreCase(&quot;ya&quot;) ){
+                running = false;
+            }
+
+            counter++;
         }
 
-        // cetak hasilnya
-        System.out.println(&quot;Grade: &quot; + grade);
+        System.out.println(&quot;Anda sudah melakukan perulangan sebanyak &quot; + counter + &quot; kali&quot;);
+
     }
 }
 </code></pre>
 
 <p>Hasil outputnya:</p>
 
-<p><img src="https://3.bp.blogspot.com/-fBW1OCJ8L_o/WO7_E4iXKTI/AAAAAAAAEqs/FsV0dkLWW_UL0P9GWTazQq2HTvEcx4YqQCPcB/s1600/Hasil%2Boutput%2Bprogram%2Bhitung%2Bgrader%2Bnilai.png" alt="Hasil output program hitung grade" /></p>
+<p><img src="https://3.bp.blogspot.com/-JfmFcjrI0jA/WPAvJhGuXCI/AAAAAAAAEss/P7LDcaWyO7Qywr8MrSV5U3gp7xEPZz6LwCPcB/s1600/Hasil%2Boutput%2Bprogram%2Bwhile.png" alt="Hasil output contoh program menggunakan perulangan while" /></p>
 
-<h3 id="percabangan-switch-case">Percabangan SWITCH/CASE</h3>
+<p>Di sana telah dilakukan perulangan sebanyak 4 kali. Bisa saja terjadi 10 kali.</p>
 
-<p>Percabangan SWITCH/CASE sebenarnya adalah bentuk lain dari IF/ELSE/IF.</p>
+<p>Itu targantung dari kondisinya.</p>
 
-<p>Bedanya, percabangan ini menggunakan kata kunci <code>switch</code> dan <code>case</code>.</p>
+<p>Kalau nilai variabel <code>running</code> bernilai <code>false</code>, maka perulangan berhenti.</p>
 
-<p>Formatnya juga berbeda, tapi cara kerjanya sama.</p>
+<p>Contoh kode <em>while</em> di atas dapat kita baca seperti ini: &ldquo;Lakukan perulangan
+selama nilai <code>running</code> bernilai <code>true</code>.&rdquo;</p>
 
-<pre><code class="language-java">switch(variabel){
-    case 1:
-        // kerjakan kode ini
-        // kode ini juga
-        break;
-    case 2:
-        // kerjakan kode ini
-        // kode ini juga
-        break;
-    case 3:
-        // kerjakan kode ini
-        // kode ini juga
-        break;
-    default:
-        // kerjakan kode ini
-        // kode ini juga
-        break;
+<p>Tidak menutup kemungkinan juga, perulangan ini dapat melakukan <em>counted loop</em>.</p>
+
+<p>Contohnya seperti ini:</p>
+
+<pre><code class="language-java">int i = 0;
+
+while ( i &lt;= 10 ){
+    // blok kode yang akan diulang
+    System.out.println('Perulangan ke-' + i);
+
+    // increment nilai i
+    i++;
 }
 </code></pre>
 
-<p>Perhatikan: <code>case 1</code> artinya nilai <code>variabel</code> yang akan dibandingkan, apakah nilainya
-sama dengan <code>1</code> atau tidak.</p>
+<p>Hasil outputnya:</p>
 
-<p>Kalau iya, maka kerjakan kode yang ada di dalam <code>case 1</code>.</p>
+<pre><code>Perulangan ke-0
+Perulangan ke-1
+Perulangan ke-2
+Perulangan ke-3
+Perulangan ke-4
+Perulangan ke-5
+Perulangan ke-6
+Perulangan ke-7
+Perulangan ke-8
+Perulangan ke-9
+Perulangan ke-10
+</code></pre>
 
-<p>Bisa juga betuknya berbeda, misalnya seperti ini:</p>
+<p><strong>Penting</strong>: pastikan melakukan <em>increment</em> (<code>i++</code>) terhadap variabel <em>counter</em>.
+Karena kalau tidak, perulangannya akan terus-menerus dilakukan sampai
+komputernya hang.</p>
 
-<pre><code class="language-java">switch (variabel) {
-    case 'A':
-        // lakukan sesuatu
-        break;
-    case 'B':
-        // lakukan ini
-        break;
-    default:
-        // lakukan ini
+<p><blockquote class="twitter-tweet" data-lang="en"><p lang="in" dir="ltr">ini yang akan terjadi saat kalian lupa menambahkan i++ di perulangan while 😄 <a href="https://t.co/35lCFOa3zn">pic.twitter.com/35lCFOa3zn</a></p>&mdash; Petani Kode (@petanikode) <a href="https://twitter.com/petanikode/status/852692611932372992">April 14, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h3 id="perulangan-do-while">Perulangan <em>Do/While</em></h3>
+
+<p>Cara kerja perulangan <em>Do/While</em> sebenarnya sama seperti perulangan <em>While</em>.</p>
+
+<p>Bedanya, <em>Do/While</em> melakukan satu kali perulangan dulu. Kemudian mengecek
+kondisinya.</p>
+
+<p><img src="https://2.bp.blogspot.com/-wL-NuySRPrs/WPAsXvsC3xI/AAAAAAAAEsU/rKVYj1mIGRgaZOAPXj-bOwxFcxvjFCvCQCPcB/s1600/flowchart_perulangan_do_while.png" alt="Flowchart perulangan do/while" /></p>
+
+<p>Struktur penulisannya seperti ini:</p>
+
+<pre><code class="language-java">do {
+    // blok kode yang akan diulang
+} while (kondisi);
+</code></pre>
+
+<p>Jadi kerjakan dulu (<code>Do</code>), baru di cek kondisinya <code>while( kondisi )</code>.
+Kalau <code>kondisi</code> bernilai <code>ture</code>, maka lanjutkan perulangan.</p>
+
+<h4 id="contoh-program-dengan-perulangan-do-while">Contoh Program dengan Perulangan <em>Do/While</em></h4>
+
+<pre><code class="language-java">public class PerulanganDoWhile {
+    public static void main(String[] args) {
+
+        // membuat variabel
+        int i = 0;
+
+        do {
+            System.out.println(&quot;perulangan ke-&quot; + i);
+            i++;
+        } while ( i &lt;= 10);
+
+    }
 }
 </code></pre>
 
-<p>Perlu diperhatikan juga: di sana ada kata kunci <code>break</code> dan <code>default</code>.</p>
+<p>Hasil outputnya:</p>
+
+<pre><code>perulangan ke-0
+perulangan ke-1
+perulangan ke-2
+perulangan ke-3
+perulangan ke-4
+perulangan ke-5
+perulangan ke-6
+perulangan ke-7
+perulangan ke-8
+perulangan ke-9
+perulangan ke-10
+</code></pre>
+
+<h2 id="parulangan-bersarang-nested-loop">Parulangan Bersarang <em>(Nested Loop)</em></h2>
+
+<p>Perulangan juga dapat bersarang. Perulangan bersarang maksudnya, perulangan
+dalam perulangan atau disebut juga <em>nested loop</em>.</p>
+
+<p>Contoh bentuk flow chart-nya seperti ini:</p>
+
+<p><img src="https://4.bp.blogspot.com/-2TNHnT8VfME/WPAxNGNxSbI/AAAAAAAAEtA/3b5GaKrDVvMhuAzjYpVr3cygt4jNAvsyQCPcB/s1600/perulangan_bersarang.png" alt="Flow Chart Perulangan Bersarang" /></p>
+
+<h3 id="contoh-program-perulangan-bersarang">Contoh Program Perulangan Bersarang</h3>
+
+<pre><code class="language-java">public class PerulanganBersarang {
+    public static void main(String[] args) {
+
+        // membuat variabel
+        int x, y;
+
+        // melakukan parulang sebnayan x dan y kali
+        for (x = 0; x &lt;= 5; x++){
+            for( y = 0; y &lt;= 3; y++){
+                System.out.format(&quot;Perulangan [x=%d, y=%d] %n&quot;, x, y);
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>Hasil outputnya:</p>
+
+<pre><code>Perulangan [x=0, y=0]
+Perulangan [x=0, y=1]
+Perulangan [x=0, y=2]
+Perulangan [x=0, y=3]
+Perulangan [x=1, y=0]
+Perulangan [x=1, y=1]
+Perulangan [x=1, y=2]
+Perulangan [x=1, y=3]
+Perulangan [x=2, y=0]
+Perulangan [x=2, y=1]
+Perulangan [x=2, y=2]
+Perulangan [x=2, y=3]
+Perulangan [x=3, y=0]
+Perulangan [x=3, y=1]
+Perulangan [x=3, y=2]
+Perulangan [x=3, y=3]
+Perulangan [x=4, y=0]
+Perulangan [x=4, y=1]
+Perulangan [x=4, y=2]
+Perulangan [x=4, y=3]
+Perulangan [x=5, y=0]
+Perulangan [x=5, y=1]
+Perulangan [x=5, y=2]
+Perulangan [x=5, y=3]
+</code></pre>
+
+<p>PS:</p>
 
 <ul>
-<li><code>break</code> artinya berhenti. Ini untuk memerintahkan komputer untuk berhenti
-mengecek <code>case</code> yang lainnya.</li>
-<li><code>default</code> artinya jika nilai variabel tidak ada yang sama dengan pilihan case di atas,
-maka kerjakan kode yang ada di dalam <code>default</code>.</li>
+<li>Perulangan bersarang sering digunakan pada <em>array</em> multi dimensi.</li>
+<li>Jenis perulangan di dalam perulangn bisa berbeda, misalnya di dalam perulangan
+<em>while</em> ada perulangan <em>for</em>.</li>
 </ul>
-
-<p>Pilihan <code>default</code> bisa juga tidak memiliki <code>break</code>, karena dia adalah pilihan terakhir.
-Artinya pengecekan akan berakhir di situ.</p>
-
-<p>Contoh program dengan percabangan SWITCH/CASE</p>
-
-<pre><code class="language-java">import java.util.Scanner;
-
-public class LampuLalulintas {
-    public static void main(String[] args) {
-
-        // membuat variabel dan Scanner
-        String lampu;
-        Scanner scan = new Scanner(System.in);
-
-        // mengambil input
-        System.out.print(&quot;Inputkan nama warna: &quot;);
-        lampu = scan.nextLine();
-
-        switch(lampu){
-            case &quot;merah&quot;:
-                System.out.println(&quot;Lampu merah, berhenti!&quot;);
-                break;
-            case &quot;kuning&quot;:
-                System.out.println(&quot;Lampu kuning, harap hati-hati!&quot;);
-                break;
-            case &quot;hijau&quot;:
-                System.out.println(&quot;Lampu hijau, silahkan jalan!&quot;);
-                break;
-            default:
-                System.out.println(&quot;Warna lampu salah!&quot;);
-        }
-    }
-}
-</code></pre>
-
-<p>Hasil outputnya:</p>
-
-<p><img src="https://3.bp.blogspot.com/-ojFmHVyblYk/WO7_wHizYNI/AAAAAAAAEq8/huTDmNUAHfM5m-nJ2l50ieGZelChGKJ5wCPcB/s1600/hasil%2Boutput%2Bprogram%2Blampu%2Blalu%2Blintas%2Bswitch%2Bcase.png" alt="Hasil output program lampu lalu lintas dengan percabangan switch case" /></p>
-
-<p><strong>Eksperimen</strong>: Cobalah untuk menghilangkan <code>break</code> di salah satu <code>case</code> dan
-perhatikanlah hasilnya.</p>
-
-<h2 id="percabangan-dalam-percabangan-nested">Percabangan dalam Percabangan <em>(Nested)</em></h2>
-
-<p>Kita sudah tahu tiga bentuk dasar percabganan di Java. Selanjutnya, kita
-coba bahas percabangan yang ada di dalam perbangan (perabangan bersarang).</p>
-
-<p>Sebenarnya pembahasan ini saya ingin pisahkan. Namun, baiknya digabungkan
-di sini aja.</p>
-
-<p>Anggap saja pembahasan bonus 😄.</p>
-
-<p>Baiklah&hellip;</p>
-
-<p>Jadi, percabangan itu bisa dibuat di dalam percabangan. Kadang teknik ini
-disebut juga <em>nested if</em>.</p>
-
-<p>Contoh kasus:</p>
-
-<p>Misalnya ada model bisinis seperti ini di sebuah toko. Ketika orang membayar di
-kasir, biasanya ditanya ada kartu member untuk mendapatkan diskon dan sebagainya.</p>
-
-<pre><code>Apakah anda punya kartu member?
-   - ya
-       * Apakah belanjaan anda lebih dari 500rb?
-           # ya : mendapatkan diskon 50rb
-           # tidak : tidak mendapatkan diskon
-       * Apakah belanjaan anda lebih dari 100rb?
-           # ya : mendapatkan diskon 15rb
-           # tidak: tidak mendapatkan diskon
-   - tidak
-       * Apakah belanjaan anda lebih dari 100rb?
-           # ya : mendapatkan diskon 10rb
-           # tidak: tidak mendapatkan diskon
-</code></pre>
-
-<p>Paham?</p>
-
-<p>Kalau tidak, coba perhatikan flow chart-nya:</p>
-
-<p><img src="http://2.bp.blogspot.com/-6ZrqC9I8Nxs/VkBWekgFwUI/AAAAAAAACLk/tdhCo5np2lk/s1600/flowchart%2Bpercabangan%2Bbersarang%2Bjava.png" alt="Flowchart percabangan bersarang" /></p>
-
-<p>Masih belum paham?</p>
-
-<p>Kalau begitu mari kita coba dalam program.</p>
-
-<p>Silahkan buat class baru bernama <code>Kasir</code> dan ikuti kode program berikut ini.</p>
-
-<pre><code class="language-java">import java.util.Scanner;
-
-public class Kasir {
-    public static void main(String[] args) {
-        // deklarasi variabel dan Scanner
-        int belanjaan, diskon, bayar;
-        String kartu;
-        Scanner scan = new Scanner(System.in);
-
-        // mengambil input
-        System.out.print(&quot;Apakah ada kartu member: &quot;);
-        kartu = scan.nextLine();
-        System.out.print(&quot;Total belanjaan: &quot;);
-        belanjaan = scan.nextInt();
-
-        // proses
-        if (kartu.equalsIgnoreCase(&quot;ya&quot;)) {
-            if (belanjaan &gt; 500000) {
-                diskon = 50000;
-            } else if (belanjaan &gt; 100000) {
-                diskon = 15000;
-            } else {
-                diskon = 0;
-            }
-
-        } else {
-            if (belanjaan &gt; 100000) {
-                diskon = 5000;
-            } else {
-                diskon = 0;
-            }
-        }
-
-        // total yang harus dibayar
-        bayar = belanjaan - diskon;
-
-        // output
-        System.out.println(&quot;Total Bayar: Rp &quot; + bayar);
-    }  
-}
-</code></pre>
-
-<p>Hasil outputnya:</p>
-
-<p><img src="https://3.bp.blogspot.com/-1H-uAWXBmxs/WO8GZByoXbI/AAAAAAAAErc/MDBuvrhyE9U670LjowqU6o8uAMlm30mlACPcB/s1600/Hasil%2Boutput%2Bprogram%2Bif%2Bbersarang.png" alt="Hasil output program dengan percabangan bersarang" /></p>
-
-<p>Cobalah untuk mengubah nilai yang dimasukkan dan perhatikan hasilnya.</p>
-
-<p>Mungkin di sana ada yang perlu diperhatikan:</p>
-
-<ul>
-<li>Fungsi <code>equalsIgnoreCase(&quot;ya&quot;)</code> digunakan untuk membandingkan String dengan
-tidak memperdulikan huruf besar dan kecilnya.</li>
-<li>Ada juga Fungsi <code>equals()</code>, fungsinya sama. Tapi <code>equals()</code> akan memperhatikan
-<em>case</em> hurufnya.</li>
-</ul>
-
-<p>Kenapa tidak menggunakan operator <code>==</code> atau <code>!=</code>?</p>
-
-<p>Di Java memang seperti itu.</p>
-
-<p>Kalau kita ingin membandingkan nilai String, ya&hellip; menggunakan fungsi yang
-dua tadi.</p>
-
-<p>Tapi, kalau membandingkan selain String, maka bisa pakai operator <code>==</code> atau
-<code>!=</code>.</p>
-
-<h2 id="menggunakan-operator-logika-dalam-percabangan">Menggunakan Operator Logika dalam Percabangan</h2>
-
-<p>Operator logika dalam percabangan sebenarnya bisa membuat percabangan menjadi
-lebih singkat.</p>
-
-<p>Misal ada program <em>Tilang</em> dengan logika seperti ini:</p>
-
-<pre><code class="language-java">public class Tilang {
-    public static void main(String[] args) {
-        boolean SIM = false;
-        boolean STNK = true;
-
-        // cek apakah dia akan ditilang atau tidak
-        if(SIM == true){
-            if( STNK == true ) {
-                System.out.println(&quot;Tidak ditilang!&quot;);
-            }
-        } else {
-            System.out.println(&quot;Anda ditilang!&quot;);
-        }
-    }
-}
-</code></pre>
-
-<p>Perhatikan: di sana kita menggunakan percabangan bersarang untuk mengecek,
-apakah dia ditilang atau tidak.</p>
-
-<p>Hal ini sebenarnya bisa disingkat dengan operator logika, sehingga
-menjadi seperti ini:</p>
-
-<pre><code class="language-java">public class Tilang {
-    public static void main(String[] args) {
-        boolean SIM = false;
-        boolean STNK = true;
-
-        // cek apakah dia akan ditilang atau tidak
-        if(SIM == true &amp;&amp; STNK == true){
-            System.out.println(&quot;Tidak ditilang!&quot;);
-        } else {
-            System.out.println(&quot;Anda ditilang!&quot;);
-        }
-    }
-}
-</code></pre>
-
-<p>Pada kode di atas, kita menggunakan operator AND (<code>&amp;&amp;</code>).</p>
-
-<p>Karena logikanya: Si pengendara tidak akan ditilang kalau punya SIM dan STNK.</p>
 
 <h2 id="apa-selanjutnya">Apa Selanjutnya?</h2>
 
-<p>Kita sudah peljari beberapa macam bentuk percabagan dan pernak-perniknya,
-ringkasananya seperti ini:</p>
+<p>Kita sudah pelajari konsep dasar perulangan dalam pemrograman Java.</p>
 
-<ol>
-<li>Percabangan IF, hanya memiliki satu pilihan;</li>
-<li>Percabangan IF/ELSE memiliki dua pilihan;</li>
-<li>Percabangan dengan operator ternary adalah bentuk lain dari IF/ELSE;</li>
-<li>Percabangan IF/ELSE/IF memiliki lebih dari dua pilihan;</li>
-<li>Percabangan SWITCH/CASE adalah bentuk lain dari IF/ELSE/IF;</li>
-<li>Percabangan bersarang adalah percabangan dalam Percabangan;</li>
-<li>Penggunaan operator logika dalam percabangan bisa membuat percabangan menjadi
-lebih singkat.</li>
-</ol>
+<p>Ada perulangan <em>Counted Loop</em> dan <em>Uncounted Loop</em>.</p>
 
-<p>Wah, ternyata banyak juga ya.</p>
+<p>Kalau ada yang ditanyakan, silahkan tuliskan di komentar.</p>
 
-<p>Intinya pahami yang tiga bentuk itu. Kemudian
-cobalah cari contoh kasus yang berbeda.</p>
-
-<p>Semakin banyak latihan semakin mantap.</p>
-
-<p>Ada pertanyaan?</p>
-
-<p>Silahkan tanyakan melalui komentar atau <a href="https://m.me/petanikode">PM Petani Kode</a>.</p>
-
-<p>Selanjutnya, silahkan pelajari tentang <a href="/pemrograman-java-perulangan/">Perulangan dalam Java</a>.</p>
-
-<p>Jika artikel ini bermanfaat, silahkan dibagikan 😄.</p>
+<p>Selanjutnya, silahkan pelajari tentang Array pada Java.</p>
 
                 <div class="post-footer">
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f&t=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f&text=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami&body=Belajar%20Pemrograman%20Java%3a%20Inilah%203%20Bentuk%20Percabangan%20yang%20Harus%20Dipahami:%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-percabangan%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fpetanikode.com%2fpemrograman-java-perulangan%2f&t=Belajar%20Pemrograman%20Java%3a%20Memahami%20Dua%20Jenis%20Perulangan%20dalam%20Java" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fpetanikode.com%2fpemrograman-java-perulangan%2f&text=Belajar%20Pemrograman%20Java%3a%20Memahami%20Dua%20Jenis%20Perulangan%20dalam%20Java%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-perulangan%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-perulangan%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=http%3a%2f%2fpetanikode.com%2fpemrograman-java-perulangan%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Belajar%20Pemrograman%20Java%3a%20Memahami%20Dua%20Jenis%20Perulangan%20dalam%20Java&body=Belajar%20Pemrograman%20Java%3a%20Memahami%20Dua%20Jenis%20Perulangan%20dalam%20Java:%20http%3a%2f%2fpetanikode.com%2fpemrograman-java-perulangan%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 
@@ -1887,7 +1768,7 @@ cobalah cari contoh kasus yang berbeda.</p>
     sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups"
     resizable
     frameborder="0"
-    src="https://cdn.rawgit.com/petanikode/disqusAMP/f92df3a8/disqus-amp.html?shortname=petanikode&url=http://petanikode.com/pemrograman-java-percabangan/">
+    src="https://cdn.rawgit.com/petanikode/disqusAMP/f92df3a8/disqus-amp.html?shortname=petanikode&url=http://petanikode.com/pemrograman-java-perulangan/">
     <div overflow tabindex=0 role=button aria-label="Disqus Comments"></div>
 </amp-iframe>
 

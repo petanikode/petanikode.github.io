@@ -10,6 +10,476 @@
     <atom:link href="http://petanikode.com/seri/belajar-pemrograman-java/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Belajar Pemrograman Java: Memahami Dua Jenis Perulangan dalam Java</title>
+      <link>http://petanikode.com/pemrograman-java-perulangan/</link>
+      <pubDate>Sun, 03 Jan 2016 18:28:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/pemrograman-java-perulangan/</guid>
+      <description>
+
+&lt;p&gt;Apa yang akan kita lakukan bila ingin menyuruh komputer mengerjakan perintah
+yang berulang-ulang?&lt;/p&gt;
+
+&lt;p&gt;Misalkan kita ingin menyuruh komputer menampilkan teks &lt;code&gt;Petani Kode&lt;/code&gt; sebanyak 5x.&lt;/p&gt;
+
+&lt;p&gt;Maka kita bisa menyuruhnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;System.out.println(&amp;quot;Petani Kode&amp;quot;);
+System.out.println(&amp;quot;Petani Kode&amp;quot;);
+System.out.println(&amp;quot;Petani Kode&amp;quot;);
+System.out.println(&amp;quot;Petani Kode&amp;quot;);
+System.out.println(&amp;quot;Petani Kode&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tapi&amp;hellip; bagaimana kalau sebanyak 1000x, apa kita akan mampu mengetik kode
+sebanyak itu?&lt;/p&gt;
+
+&lt;p&gt;Tentunya tidak.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, kita harus pakai perulangan.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-Pab1ngEX31Y/VlToeaw3YnI/AAAAAAAACQM/te0QBK1U-VY/s1600/Flowchart%2Bperulangan%2B-%2Bpetani%2Bkode.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-Pab1ngEX31Y/VlToeaw3YnI/AAAAAAAACQM/te0QBK1U-VY/s1600/Flowchart%2Bperulangan%2B-%2Bpetani%2Bkode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Contoh perulangan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;for (int hitungan = 0; hitungan &amp;lt;= 1000; hitungan++) {
+    System.out.println(&amp;quot;Petani Kode&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sebelum masuk ke pembahasan lebih dalam, ada hal yang harus kalian ketahui
+terlebih dahulu.&lt;/p&gt;
+
+&lt;p&gt;Perulangan dalam pemrograman dibagi manjadi dua jenis:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Counted loop&lt;/strong&gt;: Perulangan yang jumlah pengulangannya terhitung atau tentu.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Uncounted loop&lt;/strong&gt;: Perulangan yang jumlah pengulangannya tidak terhitung
+atau tidak tentu.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-H5kHb8OE1M0/WPAzGFHXcLI/AAAAAAAAEtY/yGby7eMeA1Y23LqPpS9Zmxx6aJppZRcmACPcB/s1600/mindmap_perulangan.png&#34; alt=&#34;Mind Map Perulangan&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Counted loop&lt;/em&gt; terdiri dari perulangan &lt;em&gt;For&lt;/em&gt; dan &lt;em&gt;For each&lt;/em&gt;. Sedangkan
+&lt;em&gt;Uncounted loop&lt;/em&gt; terdiri dari perulangan &lt;em&gt;While&lt;/em&gt; dan &lt;em&gt;Do/While&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-counted-loop&#34;&gt;1. Counted Loop&lt;/h2&gt;
+
+&lt;p&gt;Seperti yang sudah dijelaskan, perulangan ini memiliki jumlah pengulangan yang
+tentu dan terhitung.&lt;/p&gt;
+
+&lt;p&gt;Perulangan ini terdiri dari perulangan &lt;em&gt;For&lt;/em&gt; dan &lt;em&gt;For each&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mari kita bahas satu per satu&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;perulangan-for&#34;&gt;Perulangan &lt;em&gt;For&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Format penulisan perulangan &lt;em&gt;For&lt;/em&gt; di java adalah sebagai berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;for( int hitungan = 0; hitungan &amp;lt;= 10; hitungan++ ){
+    // blok kode yang akan diulang
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Penjelasan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;variabel &lt;code&gt;hitungan&lt;/code&gt; tugasnya untuk menyimpan hitungan pengulangan.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hitungan &amp;lt;= 10&lt;/code&gt; artinya selama nilai hitungannya lebih kecil atau sama dengan 10, maka
+pengulangan akan terus dilakukan. Dengan kata lain, perualangan ini akan mengulang
+sebanyak 10 kali.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hitungan++&lt;/code&gt; fungsinya untuk menambah satu (&lt;code&gt;+1&lt;/code&gt;) nilai hitungan peda setiap pengulangan.&lt;/li&gt;
+&lt;li&gt;Blok kode &lt;em&gt;For&lt;/em&gt; dimulai dengan tanda &amp;lsquo;&lt;code&gt;{&lt;/code&gt;&amp;rsquo; dan diakhiri dengan &amp;lsquo;&lt;code&gt;}&lt;/code&gt;&amp;rsquo;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mari kkita coba dalam contoh program&amp;hellip;&lt;/p&gt;
+
+&lt;h4 id=&#34;contoh-program-perulangan-for&#34;&gt;Contoh Program Perulangan &lt;em&gt;For&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;Silahkan buat class baru bernama &lt;code&gt;Bintang&lt;/code&gt;, kemudian ikuti kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class Bintang{
+    public static void main(String[] args){
+
+        for(int i=0; i &amp;lt;= 5; i++){
+            System.out.println(&amp;quot;*****&amp;quot;);
+        }
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;*****
+*****
+*****
+*****
+*****
+*****
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mau lagi?&lt;/p&gt;
+
+&lt;p&gt;Sekarang cobalah buat program untuk menampilkan nilai dari 1 sampai 10 dengan
+menggunakan perulangan.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class CetakAngka{
+
+    public static void main(String[] argumen){
+
+        for(int i=0; i &amp;lt;= 10; i++){
+            System.out.print( i + &amp;quot; &amp;quot; );
+        }
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;0 1 2 3 4 5 6 7 8 9 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Coba kita lakukan sedikit eksperimen.&lt;/p&gt;
+
+&lt;p&gt;Buat sebuah program yang menampilkan bilangan ganjil saja.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class CetakBilanganGanjil{
+
+    public static void main(String[] argumen){
+        for(int i = 1; i &amp;lt;= 20; i += 2){
+            System.out.print( i + &amp;quot; &amp;quot;);
+        }
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1 3 5 7 9 11 13 15 17 19
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikan: di sana kita menggunakan &lt;code&gt;i += 2&lt;/code&gt;, bukan &lt;code&gt;i++&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Apa maksudnya?&lt;/p&gt;
+
+&lt;p&gt;Maksudnya, nilai &lt;code&gt;i&lt;/code&gt; akan ditambah dua (&lt;code&gt;+2&lt;/code&gt;) di setiap pengulangan.&lt;/p&gt;
+
+&lt;h3 id=&#34;perulangan-for-each&#34;&gt;Perulangan &lt;em&gt;For Each&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Perulangan ini sebenarnya digunakan untuk menampilkan isi dari &lt;em&gt;array&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Apa itu &lt;em&gt;array&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;Singkatnya, &lt;em&gt;array&lt;/em&gt; itu variabel yang menyimpan lebih dari satu nilai dan
+memiliki indeks.&lt;/p&gt;
+
+&lt;p&gt;Selengkapnya, nanti bisa di pelajari pada materi: &lt;a href=&#34;http://petanikode.com/pemrograman-java-di-lab-15-mengenal-array/&#34;&gt;Mengenal Array di Java&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lanjut&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Perulangan &lt;em&gt;For Each&lt;/em&gt; pada Java, dilakukan juga dengan kata kunci &lt;em&gt;For&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contohnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;for ( int item : dataArray ) {
+    // blok kode yang diulang
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Penjelasan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;variabel &lt;code&gt;item&lt;/code&gt; akan menyimpan nilai dari &lt;em&gt;array&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Kita bisa baca seperti ini: &amp;ldquo;Untuk setiap &lt;code&gt;item&lt;/code&gt; dalam &lt;code&gt;dataArray&lt;/code&gt;, maka lakukan
+perulangan&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;contoh-program-for-each&#34;&gt;Contoh Program &lt;em&gt;For Each&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;Buat sebuah class baru bernama &lt;code&gt;PerulanganForeach&lt;/code&gt;, kemudian ikuti kode berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class PerulanganForeach {
+    public static void main(String[] args) {
+
+        // membuat array
+        int angka[] = {3,1,42,24,12};
+
+        // menggunakan perulangan For each untuk menampilkan angka
+        for( int x : angka ){
+            System.out.print(x + &amp;quot; &amp;quot;);
+        }
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;3 1 42 24 12
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;uncounted-loop&#34;&gt;Uncounted Loop&lt;/h2&gt;
+
+&lt;p&gt;Seperti yang sudah dijelaskan di awal tadi, perulangan ini tidak jelas jumlah
+pengulangannya.&lt;/p&gt;
+
+&lt;p&gt;Tapi, tidak menutup kemungkinan juga, jumlah pengulangannya dapat ditentukan.&lt;/p&gt;
+
+&lt;p&gt;Perulangan &lt;em&gt;uncounted loop&lt;/em&gt; terdirid dari perulangan &lt;em&gt;While&lt;/em&gt; dan &lt;em&gt;Do/While&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-nqIIOY3vCyM/WPAp9h0orPI/AAAAAAAAEsA/3-EK9wK7E08g02F8E7AoFF1kOzPurVniQCPcB/s1600/flow%2Bchart%2Bperulangan%2Bwhile%2Bdan%2Bdo%2Bwhile.png&#34; alt=&#34;Flow Chart Perulangan While dan Do/While&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mari kita bahas satu per satu&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;perulangan-while&#34;&gt;Perulangan While&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;While&lt;/em&gt; bisa kita artikan &lt;em&gt;selama&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cara kerja perulangan ini seperti percabangan, ia akan melakukan perulangan
+selama kondisinya bernilai &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Struktur penulisan perulangan while:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;while ( kondisi ) {
+    // blok kode yang akan diulang
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Penjelasan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;kondisi&lt;/em&gt; bisa kita isi dengan perbandingan maupun variabel boolean. &lt;em&gt;Kondisi&lt;/em&gt;
+ini hanya memiliki nilai &lt;code&gt;true&lt;/code&gt; dan &lt;code&gt;flase&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Perulangan &lt;code&gt;while&lt;/code&gt; akan berhenti sampai &lt;em&gt;kondisi&lt;/em&gt; bernilai &lt;code&gt;false&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Untuk lebih jelasnya, mari kita coba membuat program&amp;hellip;&lt;/p&gt;
+
+&lt;h4 id=&#34;contoh-program-dengan-perulangan-while&#34;&gt;Contoh Program dengan Perulangan While&lt;/h4&gt;
+
+&lt;p&gt;Program ini akan melakukan perulangan selama jawabannya tidak.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
+
+public class PerulanganWhile {
+    public static void main(String[] args) {
+
+        // membuat variabel dan scanner
+        boolean running = true;
+        int counter = 0;
+        String jawab;
+        Scanner scan = new Scanner(System.in);
+
+        while( running ) {
+            System.out.println(&amp;quot;Apakah anda ingin keluar?&amp;quot;);
+            System.out.print(&amp;quot;Jawab [ya/tidak]&amp;gt; &amp;quot;);
+
+            jawab = scan.nextLine();
+
+            // cek jawabnnya, kalau ya maka berhenti mengulang
+            if( jawab.equalsIgnoreCase(&amp;quot;ya&amp;quot;) ){
+                running = false;
+            }
+
+            counter++;
+        }
+
+        System.out.println(&amp;quot;Anda sudah melakukan perulangan sebanyak &amp;quot; + counter + &amp;quot; kali&amp;quot;);
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-JfmFcjrI0jA/WPAvJhGuXCI/AAAAAAAAEss/P7LDcaWyO7Qywr8MrSV5U3gp7xEPZz6LwCPcB/s1600/Hasil%2Boutput%2Bprogram%2Bwhile.png&#34; alt=&#34;Hasil output contoh program menggunakan perulangan while&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Di sana telah dilakukan perulangan sebanyak 4 kali. Bisa saja terjadi 10 kali.&lt;/p&gt;
+
+&lt;p&gt;Itu targantung dari kondisinya.&lt;/p&gt;
+
+&lt;p&gt;Kalau nilai variabel &lt;code&gt;running&lt;/code&gt; bernilai &lt;code&gt;false&lt;/code&gt;, maka perulangan berhenti.&lt;/p&gt;
+
+&lt;p&gt;Contoh kode &lt;em&gt;while&lt;/em&gt; di atas dapat kita baca seperti ini: &amp;ldquo;Lakukan perulangan
+selama nilai &lt;code&gt;running&lt;/code&gt; bernilai &lt;code&gt;true&lt;/code&gt;.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Tidak menutup kemungkinan juga, perulangan ini dapat melakukan &lt;em&gt;counted loop&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contohnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;int i = 0;
+
+while ( i &amp;lt;= 10 ){
+    // blok kode yang akan diulang
+    System.out.println(&#39;Perulangan ke-&#39; + i);
+
+    // increment nilai i
+    i++;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Perulangan ke-0
+Perulangan ke-1
+Perulangan ke-2
+Perulangan ke-3
+Perulangan ke-4
+Perulangan ke-5
+Perulangan ke-6
+Perulangan ke-7
+Perulangan ke-8
+Perulangan ke-9
+Perulangan ke-10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Penting&lt;/strong&gt;: pastikan melakukan &lt;em&gt;increment&lt;/em&gt; (&lt;code&gt;i++&lt;/code&gt;) terhadap variabel &lt;em&gt;counter&lt;/em&gt;.
+Karena kalau tidak, perulangannya akan terus-menerus dilakukan sampai
+komputernya hang.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;in&#34; dir=&#34;ltr&#34;&gt;ini yang akan terjadi saat kalian lupa menambahkan i++ di perulangan while 😄 &lt;a href=&#34;https://t.co/35lCFOa3zn&#34;&gt;pic.twitter.com/35lCFOa3zn&lt;/a&gt;&lt;/p&gt;&amp;mdash; Petani Kode (@petanikode) &lt;a href=&#34;https://twitter.com/petanikode/status/852692611932372992&#34;&gt;April 14, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;perulangan-do-while&#34;&gt;Perulangan &lt;em&gt;Do/While&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Cara kerja perulangan &lt;em&gt;Do/While&lt;/em&gt; sebenarnya sama seperti perulangan &lt;em&gt;While&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bedanya, &lt;em&gt;Do/While&lt;/em&gt; melakukan satu kali perulangan dulu. Kemudian mengecek
+kondisinya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-wL-NuySRPrs/WPAsXvsC3xI/AAAAAAAAEsU/rKVYj1mIGRgaZOAPXj-bOwxFcxvjFCvCQCPcB/s1600/flowchart_perulangan_do_while.png&#34; alt=&#34;Flowchart perulangan do/while&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Struktur penulisannya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;do {
+    // blok kode yang akan diulang
+} while (kondisi);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jadi kerjakan dulu (&lt;code&gt;Do&lt;/code&gt;), baru di cek kondisinya &lt;code&gt;while( kondisi )&lt;/code&gt;.
+Kalau &lt;code&gt;kondisi&lt;/code&gt; bernilai &lt;code&gt;ture&lt;/code&gt;, maka lanjutkan perulangan.&lt;/p&gt;
+
+&lt;h4 id=&#34;contoh-program-dengan-perulangan-do-while&#34;&gt;Contoh Program dengan Perulangan &lt;em&gt;Do/While&lt;/em&gt;&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class PerulanganDoWhile {
+    public static void main(String[] args) {
+
+        // membuat variabel
+        int i = 0;
+
+        do {
+            System.out.println(&amp;quot;perulangan ke-&amp;quot; + i);
+            i++;
+        } while ( i &amp;lt;= 10);
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;perulangan ke-0
+perulangan ke-1
+perulangan ke-2
+perulangan ke-3
+perulangan ke-4
+perulangan ke-5
+perulangan ke-6
+perulangan ke-7
+perulangan ke-8
+perulangan ke-9
+perulangan ke-10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;parulangan-bersarang-nested-loop&#34;&gt;Parulangan Bersarang &lt;em&gt;(Nested Loop)&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Perulangan juga dapat bersarang. Perulangan bersarang maksudnya, perulangan
+dalam perulangan atau disebut juga &lt;em&gt;nested loop&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh bentuk flow chart-nya seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-2TNHnT8VfME/WPAxNGNxSbI/AAAAAAAAEtA/3b5GaKrDVvMhuAzjYpVr3cygt4jNAvsyQCPcB/s1600/perulangan_bersarang.png&#34; alt=&#34;Flow Chart Perulangan Bersarang&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;contoh-program-perulangan-bersarang&#34;&gt;Contoh Program Perulangan Bersarang&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class PerulanganBersarang {
+    public static void main(String[] args) {
+
+        // membuat variabel
+        int x, y;
+
+        // melakukan parulang sebnayan x dan y kali
+        for (x = 0; x &amp;lt;= 5; x++){
+            for( y = 0; y &amp;lt;= 3; y++){
+                System.out.format(&amp;quot;Perulangan [x=%d, y=%d] %n&amp;quot;, x, y);
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Perulangan [x=0, y=0]
+Perulangan [x=0, y=1]
+Perulangan [x=0, y=2]
+Perulangan [x=0, y=3]
+Perulangan [x=1, y=0]
+Perulangan [x=1, y=1]
+Perulangan [x=1, y=2]
+Perulangan [x=1, y=3]
+Perulangan [x=2, y=0]
+Perulangan [x=2, y=1]
+Perulangan [x=2, y=2]
+Perulangan [x=2, y=3]
+Perulangan [x=3, y=0]
+Perulangan [x=3, y=1]
+Perulangan [x=3, y=2]
+Perulangan [x=3, y=3]
+Perulangan [x=4, y=0]
+Perulangan [x=4, y=1]
+Perulangan [x=4, y=2]
+Perulangan [x=4, y=3]
+Perulangan [x=5, y=0]
+Perulangan [x=5, y=1]
+Perulangan [x=5, y=2]
+Perulangan [x=5, y=3]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;PS:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Perulangan bersarang sering digunakan pada &lt;em&gt;array&lt;/em&gt; multi dimensi.&lt;/li&gt;
+&lt;li&gt;Jenis perulangan di dalam perulangn bisa berbeda, misalnya di dalam perulangan
+&lt;em&gt;while&lt;/em&gt; ada perulangan &lt;em&gt;for&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah pelajari konsep dasar perulangan dalam pemrograman Java.&lt;/p&gt;
+
+&lt;p&gt;Ada perulangan &lt;em&gt;Counted Loop&lt;/em&gt; dan &lt;em&gt;Uncounted Loop&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kalau ada yang ditanyakan, silahkan tuliskan di komentar.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, silahkan pelajari tentang Array pada Java.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Belajar Pemrograman Java: Inilah 3 Bentuk Percabangan yang Harus Dipahami</title>
       <link>http://petanikode.com/pemrograman-java-percabangan/</link>
       <pubDate>Sun, 25 Oct 2015 18:33:00 +0000</pubDate>
@@ -596,7 +1066,7 @@ cobalah cari contoh kasus yang berbeda.&lt;/p&gt;
 
 &lt;p&gt;Silahkan tanyakan melalui komentar atau &lt;a href=&#34;https://m.me/petanikode&#34;&gt;PM Petani Kode&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya, silahkan pelajari tentang Perulangan dalam Java.&lt;/p&gt;
+&lt;p&gt;Selanjutnya, silahkan pelajari tentang &lt;a href=&#34;http://petanikode.com/pemrograman-java-perulangan/&#34;&gt;Perulangan dalam Java&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Jika artikel ini bermanfaat, silahkan dibagikan :smile:.&lt;/p&gt;
 </description>

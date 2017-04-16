@@ -99,6 +99,9 @@ Masalahnya bagaimana kala datanya banyak, misalkan ada 100 data, pastinya capek 
     
     
     
+    	
+    	
+    
 
     <meta property="article:author" content="https://www.facebook.com/petanikode" />
     <meta property="article:publisher" content="https://www.facebook.com/petanikode" />
@@ -187,7 +190,7 @@ Masalahnya bagaimana kala datanya banyak, misalkan ada 100 data, pastinya capek 
         "position": 2,
         "item": {
             "@id": "http:\/\/petanikode.com\/kategori\/pemrograman",
-            "name": "pemrograman"
+            "name": "Pemrograman"
             }
       },
       
@@ -216,7 +219,7 @@ Masalahnya bagaimana kala datanya banyak, misalkan ada 100 data, pastinya capek 
   },
   "headline": "Belajar Pemrograman Java: Cara Menggunakan Array untuk Menyimpan Banyak Hal",
   "description": "Apa yang akan kita lakukan bila memiliki banyak data yang akan disimpan dalam vairabel?\nMisalkan kita ingin menyimpan nama-nama teman dalam variabel.\nMaka mungkin kita akan melakukannya seperti ini:\nString namaTeman1 = \x26quot;Linda\x26quot;; String namaTeman2 = \x26quot;Santi\x26quot;; String namaTeman3 = \x26quot;Susan\x26quot;; String namaTeman4 = \x26quot;Mila\x26quot;; String namaTeman5 = \x26quot;Ayu\x26quot;;  Hal ini sah-sah saja.\nAkan tetapi\x26hellip;\nMasalahnya bagaimana kala datanya banyak, misalkan ada 100 data, pastinya capek donk membuat variabel sebanyak itu.",
-  "wordCount":  648 ,
+  "wordCount":  999 ,
   "datePublished" : "2016-04-21T22:34:00",
   "dateModified" : "2016-04-21T22:34:00",
   "image" : {
@@ -1188,7 +1191,7 @@ padding: 16px;
         </div>
         <div>
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
+        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
             <br>
         21 April 2016 · 22:34
     </div>
@@ -1390,12 +1393,58 @@ perulangan ini dapat kita gunakan untuk menampilkan isi array.</p>
 
 <p><img src="https://4.bp.blogspot.com/--B8JIXhQjjU/Vxjj-XAAERI/AAAAAAAACvw/h3zXImrKeBg0pjgjAE5df7fi9iXETaQ5wCK4B/s1600/Array%2Bdua%2Bdimensi.png" alt="Contoh Array 2 Dimensi di Java" title="Contoh Array 2 Dimensi di Java" /></p>
 
-<h2 id="contoh-program-dengan-arrya-multi-dimensi">Contoh Program dengan Arrya Multi Dimensi</h2>
+<h2 id="contoh-program-array-multi-dimensi">Contoh Program Array Multi Dimensi</h2>
 
 <p>Biar makin mantap pemahaman kita tentang array multi dimensi, mari kita coba
 membuat sebuah program.</p>
 
-<p>Silahkan buat class baru bernama ``</p>
+<p>Silahkan buat class baru bernama <code>RuangKelas</code> kemudian ikuti kode berikut:</p>
+
+<pre><code class="language-java">import java.util.Scanner;
+
+public class RuangKelas {
+    public static void main(String[] args) {
+
+        // Membuat Array dan Scanner
+        String[][] meja = new String[2][3];
+        Scanner scan = new Scanner(System.in);
+
+        // mengisi setiap meja
+        for(int bar = 0; bar &lt; meja.length; bar++){
+            for(int kol = 0; kol &lt; meja[bar].length; kol++){
+                System.out.format(&quot;Siapa yang akan duduk di meja (%d,%d): &quot;, bar, kol);
+                meja[bar][kol] = scan.nextLine();
+            }
+        }
+
+        // menampilkan isi Array
+        System.out.println(&quot;-------------------------&quot;);
+        for(int bar = 0; bar &lt; meja.length; bar++){
+            for(int kol = 0; kol &lt; meja[bar].length; kol++){
+                System.out.format(&quot;| %s | \t&quot;, meja[bar][kol]);
+            }
+            System.out.println(&quot;&quot;);
+        }
+        System.out.println(&quot;-------------------------&quot;);
+    }
+}
+</code></pre>
+
+<p>Hasil outputnya:</p>
+
+<p><img src="https://2.bp.blogspot.com/-KdgwFPj1DOE/WPM-I_9okwI/AAAAAAAAExA/ELeXJHgmUno_wygnOdDWaiEcbmpacQnIwCPcB/s1600/Hasil%2Boutput%2Bprogram%2Barray%2B2d.png" alt="Hasil output cotoh program array 2d" /></p>
+
+<p>Pada program tersebut, kita menggunakan perulangan bersarang untuk <a href="/pemrograman-java-input-dan-output/">mengambil
+input dan menampilkan outputnya</a>.</p>
+
+<p>Karena array dua dimensi mirip seperti tabel, maka kita harus melakukan perulangan
+terhadap baris dan kolomnya.</p>
+
+<p>Lalu bagaimana dengan array 3D, 4D, 5D, dan seterusnya?</p>
+
+<p>Tentu saja kita harus membuat perulangan bersarang sebanyak dimensinya.</p>
+
+<p>Kalau tiga, ya buat tiga perulangan.</p>
 
 <h2 id="array-list">Array List</h2>
 
@@ -1421,6 +1470,72 @@ untuk menampung apapun.</p>
 
 <pre><code class="language-java"> ArrayList al = new ArrayList();
 </code></pre>
+
+<p>Mari kita coba&hellip;.</p>
+
+<h3 id="contoh-program-dengan-array-list">Contoh Program dengan Array List</h3>
+
+<p>Silahkan membuat class dengan nama <code>Doraemon</code>, kemudian ikuti kode berikut:</p>
+
+<pre><code class="language-java">import java.util.ArrayList;
+
+public class Doraemon {
+    public static void main(String[] args) {
+
+        // membuat objek array list
+        ArrayList kantongAjaib = new ArrayList();
+
+        // Mengisi kantong ajaib dengan 5 benda
+        kantongAjaib.add(&quot;Senter Pembesar&quot;);
+        kantongAjaib.add(532);
+        kantongAjaib.add(&quot;tikus&quot;);
+        kantongAjaib.add(1231234.132);
+        kantongAjaib.add(true);
+
+        // menghapus tikus dari kantong ajaib
+        kantongAjaib.remove(&quot;tikus&quot;);
+
+        // Menampilkan isi kantong ajaib
+        System.out.println(kantongAjaib);
+
+        // menampilkan banyak isi kantong ajaib
+        System.out.println(&quot;Kantong ajaib berisi &quot;+ kantongAjaib.size() +&quot; item&quot;);
+    }
+}
+</code></pre>
+
+<p>Hasil outputnya:</p>
+
+<p><img src="https://3.bp.blogspot.com/-7JRiE4HDFSY/WPNEa7eTnLI/AAAAAAAAExg/jrzHNYqskAAA-zZQvgCKif_2pVZhdq6pQCPcB/s1600/Hasil%2Boutput%2Bprogram%2Bdoraemon%2Bdengan%2Barray%2Blist.png" alt="Hasil output program array list" /></p>
+
+<p>Karena array list (<code>kantongAjaib</code>) merupakan sebuah objek yang terbuat dari class Array List,
+maka dia punya <em>method</em> (fungsi) untuk melakukan sesuatu.</p>
+
+<ul>
+<li>Fungsi <code>add()</code> untuk menambahkan sesuatu ke dalam Array List;</li>
+<li>Fungsi <code>remove()</code> untuk menghapus sesuatu ke dalam Array List;</li>
+<li>Fungsi <code>size()</code> untuk mengambil ukuran Array List;</li>
+<li>Fungsi <code>get(id)</code> untuk mengambil item dalam Array List berdasarkan id tertentu.</li>
+<li>dan masih banyak fungsi yang lainnya.</li>
+</ul>
+
+<h2 id="apa-selanjutnya">Apa Selanjutnya?</h2>
+
+<p>Kita telah memahami cara penggunaan Array dalam program Java.</p>
+
+<p>Berikut ini ringkasannya:</p>
+
+<ul>
+<li>Array adalah variabel yang bisa menyimpan banyak data;</li>
+<li>Array bisa multi dimensi;</li>
+<li>Array memiliki beberapa kekurangan, akan tetapi sudah ditutupi oleh array list.</li>
+</ul>
+
+<p>Selanjutnya, silahkan pelajari tentang Method atau Fungsi pada Java.</p>
+
+<p>Ada yang ditanyakan?</p>
+
+<p>Silahkan tuliskan di komentar.</p>
 
                 <div class="post-footer">
                 <div>Bagikan:

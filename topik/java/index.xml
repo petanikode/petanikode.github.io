@@ -367,12 +367,237 @@ agar dapat digunakan untuk pemrograman Android.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Pemrograman Java di Lab (15): Mengenal Array</title>
-      <link>http://petanikode.com/pemrograman-java-di-lab-15-mengenal-array/</link>
+      <title>Belajar Pemrograman Java: Cara Menggunakan Array untuk Menyimpan Banyak Hal</title>
+      <link>http://petanikode.com/pemrograman-java-array/</link>
       <pubDate>Thu, 21 Apr 2016 22:34:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/pemrograman-java-di-lab-15-mengenal-array/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Array memungkinkan kita menyimpan banyak data dalam satu variabel. Array memiliki indeks sebagai nomor yang digunakan untuk mengakses isinya. Indeks array dihitung mulai dari nol (&lt;code&gt;0&lt;/code&gt;).&lt;br /&gt;&lt;h2 id=&#34;cara-membuat-array-dan-mengisinya&#34;&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=2407178719979772668#cara-membuat-array-dan-mengisinya&#34; name=&#34;cara-membuat-array-dan-mengisinya&#34;&gt;&lt;/a&gt;Cara Membuat Array dan Mengisinya&lt;/h2&gt;Cara membuat sebuah array di java:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;String[] nama;&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;atau bisa juga&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;String[] nama = new String[5];&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;* angka &lt;code&gt;5&lt;/code&gt; adalah batas atau ukuran array&lt;br /&gt;Kemudian untuk mengisi datanya, lakukan dengan operator pengisian untuk masing-masing indeks.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;nama[0] = &amp;ldquo;Linda&amp;rdquo;;&lt;br /&gt;nama[1] = &amp;ldquo;Santi&amp;rdquo;;&lt;br /&gt;nama[2] = &amp;ldquo;Susan&amp;rdquo;;&lt;br /&gt;nama[3] = &amp;ldquo;Mila&amp;rdquo;;&lt;br /&gt;nama[4] = &amp;ldquo;Ayu&amp;rdquo;;&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Atau, untuk menghemat energi, bisa juga langsung mengisinya saat pembuatan. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;String[] nama = {&amp;ldquo;Linda&amp;rdquo;, &amp;ldquo;Santi&amp;rdquo;, &amp;ldquo;Susan&amp;rdquo;, &amp;ldquo;Mila&amp;rdquo;, &amp;ldquo;Ayu&amp;rdquo;};&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;perbedaan-array-dengan-variabel-biasa&#34;&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=2407178719979772668#perbedaan-array-dengan-variabel-biasa&#34; name=&#34;perbedaan-array-dengan-variabel-biasa&#34;&gt;&lt;/a&gt;Perbedaan Array dengan Variabel Biasa&lt;/h2&gt;Kita ingin menyimpan nama-nama teman dalam variabel. Hal yang munkin kita lakukan, tampa menggunakan array adalah sebagai berikut.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;String teman1 = &amp;ldquo;Deni&amp;rdquo;;&lt;br /&gt;String teman2 = &amp;ldquo;Dodi&amp;rdquo;;&lt;br /&gt;String teman3 = &amp;ldquo;Dewi&amp;rdquo;;&lt;br /&gt;String teman4 = &amp;ldquo;Desi&amp;rdquo;;&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Kita baru saja membuat empat variabel untuk menyimpan masing-masing nama teman. Hal ini sepertinya kurang efektif, karena harus membuat banyak variabel. Sedangkan, kalau menggunakan array, kita dapat membuatnya seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;String[] teman = {&amp;ldquo;Deni&amp;rdquo;, &amp;ldquo;Dodi&amp;rdquo;, &amp;ldquo;Dewi&amp;rdquo;, &amp;ldquo;Desi&amp;rdquo;};&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Cukup satu variabel untuk menyimpan nama-nama teman.&lt;br /&gt;&lt;h2 id=&#34;mengambil-data-dari-array&#34;&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=2407178719979772668#mengambil-data-dari-array&#34; name=&#34;mengambil-data-dari-array&#34;&gt;&lt;/a&gt;Mengambil Data dari Array&lt;/h2&gt;Pengambilan data dari variabel array, dilakukan dengan indeks sebagai kunci. Contoh, saya ingin mengambil nama &lt;code&gt;Dewi&lt;/code&gt; dari array &lt;code&gt;teman&lt;/code&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;System.out.println(teman[2]);&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Nama &lt;code&gt;Dewi&lt;/code&gt; berada di indeks ke-2, karena indeks array dihitung dari &lt;code&gt;0&lt;/code&gt;.&lt;br /&gt;&lt;h2 id=&#34;menggunakan-perulangan&#34;&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=2407178719979772668#menggunakan-perulangan&#34; name=&#34;menggunakan-perulangan&#34;&gt;&lt;/a&gt;Menggunakan Perulangan&lt;/h2&gt;Mengambil data satu per satu dari array mungkin cukup melelahkan, karena kita harus mengtik ulang nama arraynya dengan indeks yang berbeda. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;System.out.println(teman[0]);&lt;br /&gt;System.out.println(teman[1]);&lt;br /&gt;System.out.println(teman[2]);&lt;br /&gt;System.out.println(teman[3]);&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Bagaimana kalau data array-nya memiliki data sampai 1000, maka kita haru mengetik kode di atas ebanyak seribu kali. Kita dapat menggunakan perulangan untuk mengakses semua isi array. Contoh:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-pXqVRCPTKn0/Vxjjx7C66lI/AAAAAAAACvo/jwQlQIf84SoJLlK-PwdAfjFi-Gwqa5F3ACK4B/s1600/Contoh%2BArray%2Bdi%2BJava%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Contoh Array yang diakses dengan perulangan&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-pXqVRCPTKn0/Vxjjx7C66lI/AAAAAAAACvo/jwQlQIf84SoJLlK-PwdAfjFi-Gwqa5F3ACK4B/s1600/Contoh%2BArray%2Bdi%2BJava%2B-%2BPetani%2BKode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Atribut &lt;code&gt;length&lt;/code&gt; untuk mengabil panjang array. Perulangan akan dilakukan sampai panjang array.&lt;br /&gt;&lt;h2 id=&#34;array-dua-dimensi&#34;&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=2407178719979772668#array-dua-dimensi&#34; name=&#34;array-dua-dimensi&#34;&gt;&lt;/a&gt;Array Dua Dimensi&lt;/h2&gt;Array dua dimensi adalah array yang berada di dalam array. Array dapat juga memiliki banyak dimensi (lebih dari dua). Contoh array dua dimensi:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;String[][] kontak = {{&amp;ldquo;Lili&amp;rdquo;,&amp;ldquo;08111&amp;rdquo;}, {&amp;ldquo;Lala&amp;rdquo;,&amp;ldquo;08122&amp;rdquo;}, {&amp;ldquo;Maya&amp;rdquo;,&amp;ldquo;08133&amp;rdquo;}};&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Indek ke-0 pada array &lt;code&gt;kontak&lt;/code&gt; berisi array &lt;code&gt;{&amp;ldquo;lili&amp;rdquo;,&amp;ldquo;08111&amp;rdquo;}&lt;/code&gt;. Untuk mengakses semua elemen dalam array dua dimensi, kita membutuhkan perulangan bersarang. Contoh:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/--B8JIXhQjjU/Vxjj-XAAERI/AAAAAAAACvw/h3zXImrKeBg0pjgjAE5df7fi9iXETaQ5wCK4B/s1600/Array%2Bdua%2Bdimensi.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Contoh Array 2 Dimensi di Java&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/--B8JIXhQjjU/Vxjj-XAAERI/AAAAAAAACvw/h3zXImrKeBg0pjgjAE5df7fi9iXETaQ5wCK4B/s1600/Array%2Bdua%2Bdimensi.png&#34; title=&#34;Contoh Array 2 Dimensi di Java&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+      <guid>http://petanikode.com/pemrograman-java-array/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-mLQEXOE1N5A/WPMIXz2iqnI/AAAAAAAAEwE/aKOI7Cgx9aoFhSvFDyMSOFSYYjMYplcoACPcB/s1600/array-dalam-pemrograman.png&#34; alt=&#34;Cara menggunakan Array&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apa yang akan kita lakukan bila memiliki banyak data yang akan disimpan dalam vairabel?&lt;/p&gt;
+
+&lt;p&gt;Misalkan kita ingin menyimpan nama-nama teman dalam variabel.&lt;/p&gt;
+
+&lt;p&gt;Maka mungkin kita akan melakukannya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String namaTeman1 = &amp;quot;Linda&amp;quot;;
+String namaTeman2 = &amp;quot;Santi&amp;quot;;
+String namaTeman3 = &amp;quot;Susan&amp;quot;;
+String namaTeman4 = &amp;quot;Mila&amp;quot;;
+String namaTeman5 = &amp;quot;Ayu&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hal ini sah-sah saja.&lt;/p&gt;
+
+&lt;p&gt;Akan tetapi&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Masalahnya bagaimana kala datanya banyak, misalkan ada 100 data,
+pastinya capek donk membuat variabel sebanyak itu.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, kita bisa menyimpan itu semua dalam Array.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Apa itu Array?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Array adalah sebuah variabel yang bisa menyimpan banyak data dalam satu variabel.&lt;/p&gt;
+
+&lt;p&gt;Array menggunakan indeks untuk memudahkan akses terhadap data yang disimpannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-S515_Xifn20/WPL1deiMlOI/AAAAAAAAEvI/9UXBfcuiPR4Tyojj83Yf45bBkg2MLgPpACPcB/s1600/contoh-array.png&#34; alt=&#34;Contoh Array&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Indeks array selalu dimulai dari &lt;code&gt;0&lt;/code&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;dan perlu diketahui juga, indeks tidak selalu dalam bentuk angka.
+Bisa juga karakter atau teks.&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-membuat-array-di-java&#34;&gt;Cara Membuat Array di Java&lt;/h2&gt;
+
+&lt;p&gt;Cara membuat array kosong:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// cara pertama
+String[] nama;
+
+// cara kedua
+String nama[];
+
+// cara ketiga dengan kata kunci new
+String[] nama = new String[5];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Parhatikan&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Kita menggunakan kurung siku &lt;code&gt;[]&lt;/code&gt; untuk membuat array;&lt;/li&gt;
+&lt;li&gt;Kurung siku bisa diletakkan setelah tipe data atau nama array;&lt;/li&gt;
+&lt;li&gt;Angka &lt;code&gt;5&lt;/code&gt; dalam kurung artinya batas atau ukuran array-nya.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Array yang kosong siap diisi dengan data. Pastikan mengisinya dengan data
+yang sesuai dengan tipe datanya.&lt;/p&gt;
+
+&lt;p&gt;Kita bisa mengisinya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;nama[0] = &amp;quot;Linda&amp;quot;;
+nama[1] = &amp;quot;Santi&amp;quot;;
+nama[2] = &amp;quot;Susan&amp;quot;;
+nama[3] = &amp;quot;Mila&amp;quot;;
+nama[4] = &amp;quot;Ayu&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Atau kalau tidak mau repot, kita bisa membuat array sekaligus langsung
+mengisinya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String[] nama = {&amp;quot;Linda&amp;quot;, &amp;quot;Santi&amp;quot;, &amp;quot;Susan&amp;quot;, &amp;quot;Mila&amp;quot;, &amp;quot;Ayu&amp;quot;};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;mengambil-data-dari-array&#34;&gt;Mengambil Data dari Array&lt;/h2&gt;
+
+&lt;p&gt;Seperti yang sudah kita ketahui, array memiliki indeks untuk memudahkan
+kita mengakses datanya.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, kita bisa mengambil datanya dengan cara seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// membuat array
+String[] nama = {&amp;quot;Linda&amp;quot;, &amp;quot;Santi&amp;quot;, &amp;quot;Susan&amp;quot;, &amp;quot;Mila&amp;quot;, &amp;quot;Ayu&amp;quot;};
+
+// mengambil data array
+System.out.println(teman[2]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kira-kira apa hasil outputnya?&lt;/p&gt;
+
+&lt;p&gt;Yep! benar sekali, hasil outputnya adalah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Susan
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Karena &lt;code&gt;Susan&lt;/code&gt; terletak di indeks ke-2.&lt;/p&gt;
+
+&lt;h2 id=&#34;menggunakan-perulangan&#34;&gt;Menggunakan Perulangan&lt;/h2&gt;
+
+&lt;p&gt;Mengambil data satu per satu dari array mungkin cukup melelahkan, karena kita harus mengtik ulang nama array-nya dengan indeks yang berbeda.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;System.out.println(teman[0]);
+System.out.println(teman[1]);
+System.out.println(teman[2]);
+System.out.println(teman[3]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bagaimana kalau data array-nya sampai 1000,
+maka kita harus mengetik kode sebanyak seribu kali.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, disinilah peran perulangan.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-pXqVRCPTKn0/Vxjjx7C66lI/AAAAAAAACvo/jwQlQIf84SoJLlK-PwdAfjFi-Gwqa5F3ACK4B/s1600/Contoh%2BArray%2Bdi%2BJava%2B-%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-pXqVRCPTKn0/Vxjjx7C66lI/AAAAAAAACvo/jwQlQIf84SoJLlK-PwdAfjFi-Gwqa5F3ACK4B/s1600/Contoh%2BArray%2Bdi%2BJava%2B-%2BPetani%2BKode.png&#34; alt=&#34;Contoh Array yang diakses dengan perulangan&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Perhatikan&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Di sana kita menggunakan atribut &lt;code&gt;length&lt;/code&gt; untuk mengambil panjang array-nya.&lt;/p&gt;
+
+&lt;p&gt;Jadi, perulangan akan dilakukan sebanyak isi array-nya.&lt;/p&gt;
+
+&lt;h2 id=&#34;sekarang-mari-kita-latihan&#34;&gt;Sekarang Mari Kita Latihan&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buat class bernama &lt;code&gt;Buah&lt;/code&gt;, kemudian ikuti kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
+
+public class Buah {
+    public static void main(String[] args) {
+
+        // membuat array buah-buahan
+        String[] buah = new String[5];
+
+        // membuat scanner
+        Scanner scan = new Scanner(System.in);
+
+        // mengisi data ke array
+        for( int i = 0; i &amp;lt; buah.length; i++ ){
+            System.out.print(&amp;quot;Buah ke-&amp;quot; + i + &amp;quot;: &amp;quot;);
+            buah[i] = scan.nextLine();
+        }
+
+        System.out.println(&amp;quot;---------------------------&amp;quot;);
+
+        // menampilkan semua isi array
+        for( String b : buah ){
+            System.out.println(b);
+        }
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-Eu9sKzaEPhQ/WPL9CM8eOiI/AAAAAAAAEvk/PKKEamCynOoxHlwY9UV9iGzniKi-8j0SgCPcB/s1600/Hasil%2Boutput%2Bprogram%2Barray.png&#34; alt=&#34;Hasil output program array&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Perhatikan&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Di sana kita menggunakan perulangan &lt;em&gt;foreach&lt;/em&gt; untuk menampilkan isi array.&lt;/p&gt;
+
+&lt;p&gt;Seperti yang sudah kita pelajari pada materi &lt;a href=&#34;http://petanikode.com/pemrograman-java-perulangan/&#34;&gt;Perulangan di Java&lt;/a&gt;,
+perulangan ini dapat kita gunakan untuk menampilkan isi array.&lt;/p&gt;
+
+&lt;h2 id=&#34;array-multi-dimensi&#34;&gt;Array Multi Dimensi&lt;/h2&gt;
+
+&lt;p&gt;Array multi dimensi artinya array yang memiliki lebih dari satu dimensi.&lt;/p&gt;
+
+&lt;p&gt;Atau kita bisa sebut, array di dalam array.&lt;/p&gt;
+
+&lt;p&gt;Jumlah dimensinya tidak terbatas, tergantung kita mampunya sampai berapa :smile:.&lt;/p&gt;
+
+&lt;p&gt;Contoh berikut ini adalah array dua dimensi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String[][] kontak = {
+    {&amp;quot;Lili&amp;quot;,&amp;quot;08111&amp;quot;},
+    {&amp;quot;Lala&amp;quot;,&amp;quot;08122&amp;quot;},
+    {&amp;quot;Maya&amp;quot;,&amp;quot;08133&amp;quot;}
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Indek ke-&lt;code&gt;0&lt;/code&gt; pada array &lt;code&gt;kontak&lt;/code&gt; berisi array &lt;code&gt;{&amp;quot;lili&amp;quot;,&amp;quot;08111&amp;quot;}&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-PX_aCblKjWQ/WPMMC9XYrGI/AAAAAAAAEwc/gVmcSuIdx68ZyqZA9qzid-h_d_Qlq6MvACPcB/s1600/array%2Bdua%2Bdimensi.png&#34; alt=&#34;Array dua dimensi&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Contoh cara mengakses data dari array dua dimensi:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/--B8JIXhQjjU/Vxjj-XAAERI/AAAAAAAACvw/h3zXImrKeBg0pjgjAE5df7fi9iXETaQ5wCK4B/s1600/Array%2Bdua%2Bdimensi.png&#34; alt=&#34;Contoh Array 2 Dimensi di Java&#34; title=&#34;Contoh Array 2 Dimensi di Java&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;contoh-program-dengan-arrya-multi-dimensi&#34;&gt;Contoh Program dengan Arrya Multi Dimensi&lt;/h2&gt;
+
+&lt;p&gt;Biar makin mantap pemahaman kita tentang array multi dimensi, mari kita coba
+membuat sebuah program.&lt;/p&gt;
+
+&lt;p&gt;Silahkan buat class baru bernama ``&lt;/p&gt;
+
+&lt;h2 id=&#34;array-list&#34;&gt;Array List&lt;/h2&gt;
+
+&lt;p&gt;Array yang kita bahas di atas sebenarnya memiliki beberapa kekurangan,
+seperti:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tidak mampu menyimpan data dengan tipe yang berbeda.&lt;/li&gt;
+&lt;li&gt;Ukurannya tidak dinamis.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Maka dari itu, ada Array List yang menutupi kekurangan tersebut.&lt;/p&gt;
+
+&lt;p&gt;Array list merupakan sebuah class yang memungkinkan kita membuat sebuah objek
+untuk menampung apapun.&lt;/p&gt;
+
+&lt;p&gt;Untuk menggunakan Array List, kita harus mengimpornya terlebih dahulu.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.ArrayList;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, baru kita bisa membuat sebuah objek Array List seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt; ArrayList al = new ArrayList();
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

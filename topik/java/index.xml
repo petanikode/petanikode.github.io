@@ -367,241 +367,6 @@ agar dapat digunakan untuk pemrograman Android.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Belajar Pemrograman Java: Cara Menggunakan Array untuk Menyimpan Banyak Hal</title>
-      <link>http://petanikode.com/pemrograman-java-array/</link>
-      <pubDate>Thu, 21 Apr 2016 22:34:00 +0000</pubDate>
-      
-      <guid>http://petanikode.com/pemrograman-java-array/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-mLQEXOE1N5A/WPMIXz2iqnI/AAAAAAAAEwE/aKOI7Cgx9aoFhSvFDyMSOFSYYjMYplcoACPcB/s1600/array-dalam-pemrograman.png&#34; alt=&#34;Cara menggunakan Array&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apa yang akan kita lakukan bila memiliki banyak data yang akan disimpan dalam vairabel?&lt;/p&gt;
-
-&lt;p&gt;Misalkan kita ingin menyimpan nama-nama teman dalam variabel.&lt;/p&gt;
-
-&lt;p&gt;Maka mungkin kita akan melakukannya seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String namaTeman1 = &amp;quot;Linda&amp;quot;;
-String namaTeman2 = &amp;quot;Santi&amp;quot;;
-String namaTeman3 = &amp;quot;Susan&amp;quot;;
-String namaTeman4 = &amp;quot;Mila&amp;quot;;
-String namaTeman5 = &amp;quot;Ayu&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hal ini sah-sah saja.&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Masalahnya bagaimana kala datanya banyak, misalkan ada 100 data,
-pastinya capek donk membuat variabel sebanyak itu.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, kita bisa menyimpan itu semua dalam Array.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Apa itu Array?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Array adalah sebuah variabel yang bisa menyimpan banyak data dalam satu variabel.&lt;/p&gt;
-
-&lt;p&gt;Array menggunakan indeks untuk memudahkan akses terhadap data yang disimpannya.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-S515_Xifn20/WPL1deiMlOI/AAAAAAAAEvI/9UXBfcuiPR4Tyojj83Yf45bBkg2MLgPpACPcB/s1600/contoh-array.png&#34; alt=&#34;Contoh Array&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Indeks array selalu dimulai dari &lt;code&gt;0&lt;/code&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&amp;hellip;dan perlu diketahui juga, indeks tidak selalu dalam bentuk angka.
-Bisa juga karakter atau teks.&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-membuat-array-di-java&#34;&gt;Cara Membuat Array di Java&lt;/h2&gt;
-
-&lt;p&gt;Cara membuat array kosong:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// cara pertama
-String[] nama;
-
-// cara kedua
-String nama[];
-
-// cara ketiga dengan kata kunci new
-String[] nama = new String[5];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Parhatikan&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Kita menggunakan kurung siku &lt;code&gt;[]&lt;/code&gt; untuk membuat array;&lt;/li&gt;
-&lt;li&gt;Kurung siku bisa diletakkan setelah tipe data atau nama array;&lt;/li&gt;
-&lt;li&gt;Angka &lt;code&gt;5&lt;/code&gt; dalam kurung artinya batas atau ukuran array-nya.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Array yang kosong siap diisi dengan data. Pastikan mengisinya dengan data
-yang sesuai dengan tipe datanya.&lt;/p&gt;
-
-&lt;p&gt;Kita bisa mengisinya seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;nama[0] = &amp;quot;Linda&amp;quot;;
-nama[1] = &amp;quot;Santi&amp;quot;;
-nama[2] = &amp;quot;Susan&amp;quot;;
-nama[3] = &amp;quot;Mila&amp;quot;;
-nama[4] = &amp;quot;Ayu&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Atau kalau tidak mau repot, kita bisa membuat array sekaligus langsung
-mengisinya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String[] nama = {&amp;quot;Linda&amp;quot;, &amp;quot;Santi&amp;quot;, &amp;quot;Susan&amp;quot;, &amp;quot;Mila&amp;quot;, &amp;quot;Ayu&amp;quot;};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;mengambil-data-dari-array&#34;&gt;Mengambil Data dari Array&lt;/h2&gt;
-
-&lt;p&gt;Seperti yang sudah kita ketahui, array memiliki indeks untuk memudahkan
-kita mengakses datanya.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, kita bisa mengambil datanya dengan cara seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// membuat array
-String[] nama = {&amp;quot;Linda&amp;quot;, &amp;quot;Santi&amp;quot;, &amp;quot;Susan&amp;quot;, &amp;quot;Mila&amp;quot;, &amp;quot;Ayu&amp;quot;};
-
-// mengambil data array
-System.out.println(teman[2]);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kira-kira apa hasil outputnya?&lt;/p&gt;
-
-&lt;p&gt;Yep! benar sekali, hasil outputnya adalah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Susan
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Karena &lt;code&gt;Susan&lt;/code&gt; terletak di indeks ke-2.&lt;/p&gt;
-
-&lt;h2 id=&#34;menggunakan-perulangan&#34;&gt;Menggunakan Perulangan&lt;/h2&gt;
-
-&lt;p&gt;Mengambil data satu per satu dari array mungkin cukup melelahkan, karena kita harus mengtik ulang nama array-nya dengan indeks yang berbeda.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;System.out.println(teman[0]);
-System.out.println(teman[1]);
-System.out.println(teman[2]);
-System.out.println(teman[3]);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bagaimana kalau data array-nya sampai 1000,
-maka kita harus mengetik kode sebanyak seribu kali.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, disinilah peran perulangan.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-pXqVRCPTKn0/Vxjjx7C66lI/AAAAAAAACvo/jwQlQIf84SoJLlK-PwdAfjFi-Gwqa5F3ACK4B/s1600/Contoh%2BArray%2Bdi%2BJava%2B-%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-pXqVRCPTKn0/Vxjjx7C66lI/AAAAAAAACvo/jwQlQIf84SoJLlK-PwdAfjFi-Gwqa5F3ACK4B/s1600/Contoh%2BArray%2Bdi%2BJava%2B-%2BPetani%2BKode.png&#34; alt=&#34;Contoh Array yang diakses dengan perulangan&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Perhatikan&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;Di sana kita menggunakan atribut &lt;code&gt;length&lt;/code&gt; untuk mengambil panjang array-nya.&lt;/p&gt;
-
-&lt;p&gt;Jadi, perulangan akan dilakukan sebanyak isi array-nya.&lt;/p&gt;
-
-&lt;h2 id=&#34;sekarang-mari-kita-latihan&#34;&gt;Sekarang Mari Kita Latihan&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buat class bernama &lt;code&gt;Buah&lt;/code&gt;, kemudian ikuti kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
-
-public class Buah {
-    public static void main(String[] args) {
-
-        // membuat array buah-buahan
-        String[] buah = new String[5];
-
-        // membuat scanner
-        Scanner scan = new Scanner(System.in);
-
-        // mengisi data ke array
-        for( int i = 0; i &amp;lt; buah.length; i++ ){
-            System.out.print(&amp;quot;Buah ke-&amp;quot; + i + &amp;quot;: &amp;quot;);
-            buah[i] = scan.nextLine();
-        }
-
-        System.out.println(&amp;quot;---------------------------&amp;quot;);
-
-        // menampilkan semua isi array
-        for( String b : buah ){
-            System.out.println(b);
-        }
-
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasil outputnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-Eu9sKzaEPhQ/WPL9CM8eOiI/AAAAAAAAEvk/PKKEamCynOoxHlwY9UV9iGzniKi-8j0SgCPcB/s1600/Hasil%2Boutput%2Bprogram%2Barray.png&#34; alt=&#34;Hasil output program array&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Perhatikan&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;Di sana kita menggunakan perulangan &lt;em&gt;foreach&lt;/em&gt; untuk menampilkan isi array.&lt;/p&gt;
-
-&lt;p&gt;Seperti yang sudah kita pelajari pada materi &lt;a href=&#34;http://petanikode.com/pemrograman-java-perulangan/&#34;&gt;Perulangan di Java&lt;/a&gt;,
-perulangan ini dapat kita gunakan untuk menampilkan isi array.&lt;/p&gt;
-
-&lt;h2 id=&#34;array-multi-dimensi&#34;&gt;Array Multi Dimensi&lt;/h2&gt;
-
-&lt;p&gt;Array multi dimensi artinya array yang memiliki lebih dari satu dimensi.&lt;/p&gt;
-
-&lt;p&gt;Atau kita bisa sebut, array di dalam array.&lt;/p&gt;
-
-&lt;p&gt;Jumlah dimensinya tidak terbatas, tergantung kita mampunya sampai berapa :smile:.&lt;/p&gt;
-
-&lt;p&gt;Contoh berikut ini adalah array dua dimensi:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String[][] kontak = {
-    {&amp;quot;Lili&amp;quot;,&amp;quot;08111&amp;quot;},
-    {&amp;quot;Lala&amp;quot;,&amp;quot;08122&amp;quot;},
-    {&amp;quot;Maya&amp;quot;,&amp;quot;08133&amp;quot;}
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Indek ke-&lt;code&gt;0&lt;/code&gt; pada array &lt;code&gt;kontak&lt;/code&gt; berisi array &lt;code&gt;{&amp;quot;lili&amp;quot;,&amp;quot;08111&amp;quot;}&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-PX_aCblKjWQ/WPMMC9XYrGI/AAAAAAAAEwc/gVmcSuIdx68ZyqZA9qzid-h_d_Qlq6MvACPcB/s1600/array%2Bdua%2Bdimensi.png&#34; alt=&#34;Array dua dimensi&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Contoh cara mengakses data dari array dua dimensi:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/--B8JIXhQjjU/Vxjj-XAAERI/AAAAAAAACvw/h3zXImrKeBg0pjgjAE5df7fi9iXETaQ5wCK4B/s1600/Array%2Bdua%2Bdimensi.png&#34; alt=&#34;Contoh Array 2 Dimensi di Java&#34; title=&#34;Contoh Array 2 Dimensi di Java&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contoh-program-dengan-arrya-multi-dimensi&#34;&gt;Contoh Program dengan Arrya Multi Dimensi&lt;/h2&gt;
-
-&lt;p&gt;Biar makin mantap pemahaman kita tentang array multi dimensi, mari kita coba
-membuat sebuah program.&lt;/p&gt;
-
-&lt;p&gt;Silahkan buat class baru bernama ``&lt;/p&gt;
-
-&lt;h2 id=&#34;array-list&#34;&gt;Array List&lt;/h2&gt;
-
-&lt;p&gt;Array yang kita bahas di atas sebenarnya memiliki beberapa kekurangan,
-seperti:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Tidak mampu menyimpan data dengan tipe yang berbeda.&lt;/li&gt;
-&lt;li&gt;Ukurannya tidak dinamis.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Maka dari itu, ada Array List yang menutupi kekurangan tersebut.&lt;/p&gt;
-
-&lt;p&gt;Array list merupakan sebuah class yang memungkinkan kita membuat sebuah objek
-untuk menampung apapun.&lt;/p&gt;
-
-&lt;p&gt;Untuk menggunakan Array List, kita harus mengimpornya terlebih dahulu.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.ArrayList;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, baru kita bisa membuat sebuah objek Array List seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt; ArrayList al = new ArrayList();
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Pilihan Alternatif Java dan Symbolic Link yang Buntu</title>
       <link>http://petanikode.com/pilihan-alternatif-java-dan-symbolic-link-yang-buntu/</link>
       <pubDate>Wed, 06 Apr 2016 22:50:00 +0000</pubDate>
@@ -1703,6 +1468,737 @@ cobalah cari contoh kasus yang berbeda.&lt;/p&gt;
       
       <guid>http://petanikode.com/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Sebelumnya, kita telah &lt;a href=&#34;http://petanikode.blogspot.com/2015/10/pemrograman-java-di-lab-6-mengenal.html&#34; target=&#34;_blank&#34;&gt;berkenalan dengan operator&lt;/a&gt;. Sekarang kita akan coba mengenal &lt;i&gt;JOptionPane&lt;/i&gt; dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.&lt;br /&gt;&lt;h2&gt;JOptionPane&lt;/h2&gt;&lt;i&gt;JOptionPane&lt;/i&gt; merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. &lt;i&gt;JOptionPane&lt;/i&gt; bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.&lt;br /&gt;&lt;br /&gt;Sebelum menggunakan &lt;i&gt;JOptionPane&lt;/i&gt;, kita perlu mengimpornya ke dalam program:&lt;br /&gt;&lt;pre&gt;import javax.swing.JOptionPane;&lt;/pre&gt;Terdapat empat fungsi atau metode yang sering dipakai:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;&lt;code&gt;showConfirmDialog()&lt;/code&gt; : untuk menampilkan dialog konfirmasi&lt;/li&gt;&lt;li&gt;&lt;code&gt;showInputDialog()&lt;/code&gt; : untuk menampilkan dialog input&lt;/li&gt;&lt;li&gt;&lt;code&gt;showMessageDialog()&lt;/code&gt; : untuk menampilkan pesan/informasi&lt;/li&gt;&lt;li&gt;&lt;code&gt;showOptionDialog()&lt;/code&gt; : untuk menampilkan dialog pilihan&lt;/li&gt;&lt;/ol&gt;&lt;h2&gt;Operator Kondisi&lt;/h2&gt;Operator kondisi merupakan sebuah operator khusus untuk memeriksa kondisi tertentu. Bisa dibilang, oprator ini termasuk ke dalam operator logika atau operator untuk membuat implikasi. Operator ini disimbolkan dengan tanda tanya (?). Struktur operator kondisi:&lt;br /&gt;&lt;pre&gt;(kondisi) ? benar : salah;&lt;/pre&gt;Kalau kondisi bernilai &lt;code&gt;true&lt;/code&gt;, maka kode &lt;code&gt;benar&lt;/code&gt; akan dikerjakan. Tapi, kalau tidak atau bernilai &lt;code&gt;false&lt;/code&gt;, maka kode &lt;code&gt;salah&lt;/code&gt; akan dikerjkana.&lt;br /&gt;&lt;br /&gt;Sebagai contoh, kita akan membuat sebuah program baru dengan bahan &lt;i&gt;JOptionPane&lt;/i&gt; dan operator kondisi. Buatlah kelas baru bernama &lt;i&gt;OperatorKondisi&lt;/i&gt; di paket &lt;i&gt;pertemuan3&lt;/i&gt;. Kemudian ikuti kode berikut ini:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-pwf8JhORFbs/ViJKacf93QI/AAAAAAAACC0/Sbw711AF5j4/s1600/kode%2Bprogram%2Boperator%2Bkondisi%2Bdan%2BJOptionPane.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-pwf8JhORFbs/ViJKacf93QI/AAAAAAAACC0/Sbw711AF5j4/s1600/kode%2Bprogram%2Boperator%2Bkondisi%2Bdan%2BJOptionPane.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Program di atas, akan menghasilkan output seperti berikut ini:&lt;br /&gt;Dialog input,&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_0gjBZCAd0M/ViJL3GgzPkI/AAAAAAAACDQ/z3dkpg_k4dA/s1600/dialog%2Binput%2BJOptionPane.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-_0gjBZCAd0M/ViJL3GgzPkI/AAAAAAAACDQ/z3dkpg_k4dA/s1600/dialog%2Binput%2BJOptionPane.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;dialog output,&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-azlCzuPesBs/ViJLdsIkSPI/AAAAAAAACDI/6Fi73g6hFXQ/s1600/outpu%2Batau%2Bmessage%2Bdialog%2BJOptionPane.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-azlCzuPesBs/ViJLdsIkSPI/AAAAAAAACDI/6Fi73g6hFXQ/s1600/outpu%2Batau%2Bmessage%2Bdialog%2BJOptionPane.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Catatan&lt;/b&gt;: Dialog input &lt;i&gt;JOptionPane&lt;/i&gt; sama seperti &lt;a href=&#34;http://petanikode.blogspot.com/2015/10/pemrograman-java-di-lab-4-berkenalan.html&#34; target=&#34;_blank&#34;&gt;Scanner&lt;/a&gt;. Perbedaanya, Scanner dipkai untuk antarmuka teks atau &lt;i&gt;console&lt;/i&gt;. Sedangkan Dialog input &lt;i&gt;JOptionPane&lt;/i&gt; dipakai untuk antarmuka grafis (GUI). Pengguna komputer lebih senang dengan antarmuka grafis, karena mudah digunakan. Sedangkan antarmuka teks, sangat jarang dipakai pada pengguna komputer umum.&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html&#34;&gt;https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://www.herongyang.com/Swing/JOptionPane-Display-Option-Dialog-Box.html&#34;&gt;http://www.herongyang.com/Swing/JOptionPane-Display-Option-Dialog-Box.html&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html&#34;&gt;https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html&lt;/a&gt; &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;&amp;mdash;&lt;br /&gt;Sampai di sini, ada yang mau ditanyakan? siahkan kirim melalui komentar!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Belajar Pemrograman Java: Inilah 6 Jenis Operator yang Harus Kamu Ketahui</title>
+      <link>http://petanikode.com/pemrograman-java-operator/</link>
+      <pubDate>Sat, 17 Oct 2015 20:12:00 +0000</pubDate>
+      
+      <guid>http://petanikode.com/pemrograman-java-operator/</guid>
+      <description>
+
+&lt;p&gt;&lt;amp-img
+    width=&#34;720&#34;
+    height=&#34;380&#34;
+    alt=&#34;pemrograman java - input dan output&#34;
+    src=&#34;http://3.bp.blogspot.com/-VplNxe__W4E/WIIHJK5moxI/AAAAAAAADrs/DZ8jMlvWhP84EE2ZLNLS6YZFstFASVPbACK4B/s1600/pemrograman-java-petanikode.jpg&#34;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-img&gt;&lt;/p&gt;
+
+&lt;p&gt;Operator dalam pemrograman digunakan untuk melakukan operasi tertentu.&lt;/p&gt;
+
+&lt;p&gt;Misalkan kita ingin menjumlahkan nilai dari variabel &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt;, maka
+kita bisa lakukan dengan operator penjumlahan (&lt;code&gt;+&lt;/code&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;x + y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ada enam jenis kelompok operator dalam pemrograman Java:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Operator Artimatika;&lt;/li&gt;
+&lt;li&gt;Operator Penugasan;&lt;/li&gt;
+&lt;li&gt;Operator Pembanding;&lt;/li&gt;
+&lt;li&gt;Operator Logika;&lt;/li&gt;
+&lt;li&gt;Operator Bitwise;&lt;/li&gt;
+&lt;li&gt;dan Operator Ternary.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Bila digambarkan dalam mind map, akan terlihat seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-M10K9ZcEPIc/WOb6aBf7zWI/AAAAAAAAEmw/GaLW63U-FGIPyPjEU_7rxNxsranR6dqwACPcB/s1600/Mind%2BMap%2BOperator%2Bdi%2BJava.png&#34; alt=&#34;6 Jenis Operator dalam Java&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ukuran penuh dari mind map ini dapat kamu lihat di: &lt;a href=&#34;https://coggle.it/diagram/WOGCoOqtdwABC7kL&#34;&gt;coggle.it&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Apa saja perbedaan dari semua jenis operator tersebut?&lt;/p&gt;
+
+&lt;p&gt;Mari kita bahas, satu per satu&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-operator-aritmatika&#34;&gt;1. Operator Aritmatika&lt;/h2&gt;
+
+&lt;p&gt;Operator aritmatika digunakan untuk melakukan operasi aritmatika.&lt;/p&gt;
+
+&lt;p&gt;Operator ini terdiri dari:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Nama&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Simbol&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Penjumlahan&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Pengurangan&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Perkalian&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;*&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Pembagian&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;/&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Sisa Bagi&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Bagaimana cara pakainya?&lt;/p&gt;
+
+&lt;h3 id=&#34;mari-kita-coba-praktik&#34;&gt;Mari kita coba praktik&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;Buatlah kelas baru bernama &lt;em&gt;OperatorAritmatika&lt;/em&gt;,
+kemudian ikuti kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
+
+public class OperatorAritmatika {
+
+    public static void main(String[] args) {
+        int angka1;
+        int angka2;
+        int hasil;
+
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print(&amp;quot;Input angka-1: &amp;quot;);
+        angka1 = keyboard.nextInt();
+        System.out.print(&amp;quot;Input angka-2: &amp;quot;);
+        angka2 = keyboard.nextInt();
+
+        // penjumlahan
+        hasil = angka1 + angka2;
+        System.out.println(&amp;quot;Hasil = &amp;quot; + hasil);
+
+        System.out.print(&amp;quot;Input angka-1: &amp;quot;);
+        angka1 = keyboard.nextInt();
+        System.out.print(&amp;quot;Input angka-2: &amp;quot;);
+        angka2 = keyboard.nextInt();
+
+        // pengurangan
+        hasil = angka1 - angka2;
+        System.out.println(&amp;quot;Hasil = &amp;quot; + hasil);
+
+         System.out.print(&amp;quot;Input angka-1: &amp;quot;);
+        angka1 = keyboard.nextInt();
+        System.out.print(&amp;quot;Input angka-2: &amp;quot;);
+        angka2 = keyboard.nextInt();
+
+        // perkalian
+        hasil = angka1 * angka2;
+        System.out.println(&amp;quot;Hasil = &amp;quot; + hasil);
+
+
+        System.out.print(&amp;quot;Input angka-1: &amp;quot;);
+        angka1 = keyboard.nextInt();
+        System.out.print(&amp;quot;Input angka-2: &amp;quot;);
+        angka2 = keyboard.nextInt();
+
+        // Pembagian
+        hasil = angka1 / angka2;
+        System.out.println(&amp;quot;Hasil = &amp;quot; + hasil);
+
+        System.out.print(&amp;quot;Input angka-1: &amp;quot;);
+        angka1 = keyboard.nextInt();
+        System.out.print(&amp;quot;Input angka-2: &amp;quot;);
+        angka2 = keyboard.nextInt();
+
+        // Sisa Bagi
+        hasil = angka1 % angka2;
+        System.out.println(&amp;quot;Hasil = &amp;quot; + hasil);
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silahkan jalankan programnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-sTdKOiAGLrw/ViIY3VetPNI/AAAAAAAACBE/sYsiVTU82l0/s1600/Hasil%2Boutput%2Bprogram%2Boperator%2Baritmatika.png&#34;&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-sTdKOiAGLrw/ViIY3VetPNI/AAAAAAAACBE/sYsiVTU82l0/s1600/Hasil%2Boutput%2Bprogram%2Boperator%2Baritmatika.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mudah bukan&amp;hellip;?&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-ad
+    data-ad-client=&#39;ca-pub-6279325630224392&#39;
+    data-ad-slot=&#39;7044550664&#39;
+    width=&#39;720&#39;
+    height=&#39;380&#39;
+    type=&#39;adsense&#39;
+    layout=&#34;responsive&#34;&gt;
+&lt;/amp-ad&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;mau-laithan-lagi&#34;&gt;Mau laithan lagi?&lt;/h3&gt;
+
+&lt;p&gt;Semakin banyak latihan, semakin mantap.&lt;/p&gt;
+
+&lt;p&gt;Sekarang coba contoh kasus: Program menghitung keliling persegi panjang.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-aQDpPVSmbtM/ViIaSaDZvNI/AAAAAAAACBQ/gefP-C0_SYQ/s1600/Kode%2Bprogram%2Bkeliling%2Bpersegi%2Bpanjang.png&#34;&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-aQDpPVSmbtM/ViIaSaDZvNI/AAAAAAAACBQ/gefP-C0_SYQ/s1600/Kode%2Bprogram%2Bkeliling%2Bpersegi%2Bpanjang.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--
+### Tantangan pomodoro
+
+Tantangan ini saya namakan tangangan pomodoro, karena saya akan memberikan waktu 25 menit untuk mengerjakan program dengan rumus ini:
+
+&lt;div class=&#34;separator&#34;&gt;
+  &lt;a href=&#34;http://1.bp.blogspot.com/-nDV3RNpx8-4/ViIdX0MqFeI/AAAAAAAACBc/nsWexeDSOjc/s1600/Tantangan%2Bpomodoro%2Bdi%2Blab%2Bjava%2B-%2Bpetani%2Bkode.png&#34; imageanchor=&#34;1&#34;&gt;
+  &lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-nDV3RNpx8-4/ViIdX0MqFeI/AAAAAAAACBc/nsWexeDSOjc/s1600/Tantangan%2Bpomodoro%2Bdi%2Blab%2Bjava%2B-%2Bpetani%2Bkode.png&#34;&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+
+Agar lebih mudah, kita ganti `f(x)` menjadi `y`, sehingga terbentuk rumus berikut ini:
+
+```
+y = (2_x_x - 3_x - 2) / (x-2);_
+```
+
+_Selanjutnya, silahkan anda membuat kode sendiri. Cobalah masukkan nilai `x` dengan nilai seperti tabel pada gambar di atas. Contoh hasil outputnya akan seperti ini:
+[![](http://3.bp.blogspot.com/-RByAS7BMuCU/ViIex_oOjPI/AAAAAAAACBo/5y4PozNqnLs/s1600/output%2Btantangan%2Bfungsi%2Bkalkulus.png)](http://3.bp.blogspot.com/-RByAS7BMuCU/ViIex_oOjPI/AAAAAAAACBo/5y4PozNqnLs/s1600/output%2Btantangan%2Bfungsi%2Bkalkulus.png)
+Ada penambahan tanda kurung di dalam rumus. Itu menandakan bagian yang akan dihitung terlebih dahulu. Seperti dalam matematika, dalam pemrogramanan juga ada tingkatan operator.
+--&gt;
+
+&lt;h2 id=&#34;2-operator-penugasan&#34;&gt;2. Operator Penugasan&lt;/h2&gt;
+
+&lt;p&gt;Operator penugasan &lt;em&gt;(Assignment Operator)&lt;/em&gt; fungsinya untuk meberikan tugas pada
+variabel tertentu. Biasanya untuk mengisi nilai.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;int a = 10;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Variabel &lt;code&gt;a&lt;/code&gt; ditugaskan untuk menyimpan nilai &lt;code&gt;10&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Operator Penugasan terdiri dari:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Operator&lt;/th&gt;
+&lt;th&gt;Keterangan&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;=&lt;/td&gt;
+&lt;td&gt;Pemberian nilai&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;+=&lt;/td&gt;
+&lt;td&gt;Penambahan&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;-=&lt;/td&gt;
+&lt;td&gt;Pengurangan&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;*=&lt;/td&gt;
+&lt;td&gt;Perkalian&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;/=&lt;/td&gt;
+&lt;td&gt;Pembagian&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;%=&lt;/td&gt;
+&lt;td&gt;Sisa bagi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;mari-kita-coba&#34;&gt;Mari Kita Coba&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;Sekarang, buatlah sebuah kelas baru beranama &lt;em&gt;OperatorPenugasan&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kemudian ikuti kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class OperatorPenugasan {
+
+    public static void main(String[] args) {
+        int a;
+        int b;
+
+        // Pengisian nilai
+        a = 5;
+        b = 10;
+
+        // penambahan
+        b += a;
+        // sekarang b = 15
+        System.out.println(&amp;quot;Penambahan : &amp;quot; + b);
+
+        // pengurangan
+        b -= a;
+        // sekarang b = 10 (karena 15-5)
+        System.out.println(&amp;quot;Pengurangan : &amp;quot; + b);
+
+        // perkalian
+        b *= a;
+        // sekarang b = 50 (karena 10*5)
+        System.out.println(&amp;quot;Perkalian : &amp;quot; + b);
+
+        // Pembagian
+        b /= a;
+        // sekarang b=10
+        System.out.println(&amp;quot;Pembagian : &amp;quot; + b);
+
+        // Sisa bagi
+        b %= a;
+        // sekarang b=0
+        System.out.println(&amp;quot;Sisa Bagi: &amp;quot; + b);
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-xbCfZTUzBqQ/ViIxX2y80pI/AAAAAAAACB4/Y06qPdhwkNs/s1600/hasil%2Boutput%2Bprogram%2Boperator%2Bpenugasan%2Bjava.png&#34;&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-xbCfZTUzBqQ/ViIxX2y80pI/AAAAAAAACB4/Y06qPdhwkNs/s1600/hasil%2Boutput%2Bprogram%2Boperator%2Bpenugasan%2Bjava.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-operator-pambanding&#34;&gt;3. Operator Pambanding&lt;/h2&gt;
+
+&lt;p&gt;Sepeti namanya, tugas oprator ini untuk membandingkan.&lt;/p&gt;
+
+&lt;p&gt;Operator ini juga dikenal dengak opeartor relasi.&lt;/p&gt;
+
+&lt;p&gt;Nilai yang dihasilkan dari operator ini berupa boolean, yaitu: &lt;code&gt;true&lt;/code&gt;
+dan &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Operator ini terdiri dari:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Nama&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Simbol&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Lebih Besar&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Lebih Kecil&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;lt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Sama Dengan&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;==&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Tidak Sama dengan&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;!=&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Lebih Besar Sama dengan&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;gt;=&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Lebih Kecil Sama dengan&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;lt;=&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;boolean x = 10 &amp;lt; 12
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka &lt;code&gt;x&lt;/code&gt; akan bernilai &lt;em&gt;true&lt;/em&gt;, karena &lt;code&gt;10&lt;/code&gt; lebih kecil dari &lt;code&gt;12&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untuk lebih jelasnya&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;mari-kita-coba-dalam-kode&#34;&gt;Mari kita coba dalam kode&lt;/h3&gt;
+
+&lt;p&gt;Buatlah sebuah kelas baru bernama &lt;em&gt;OperatorPembanding&lt;/em&gt;. Kemudian ikuti kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class OperatorPembanding {
+
+    public static void main(String[] args) {
+        int nilaiA = 12;
+        int nilaiB = 4;
+        boolean hasil;
+
+        // apakah A lebih besar dari B?
+        hasil = nilaiA &amp;gt; nilaiB;
+        System.out.println(hasil);
+
+        // apakah A lebih kecil dari B?
+        hasil = nilaiA &amp;lt; nilaiB;
+        System.out.println(hasil);
+
+        // apakah A lebih besar samadengan B?
+        hasil = nilaiA &amp;gt;= nilaiB;
+        System.out.println(hasil);
+
+        // apakah A lebih kecil samadengan B?
+        hasil = nilaiA &amp;lt;= nilaiB;
+        System.out.println(hasil);
+
+        // apakah nilai A sama dengan B?
+        hasil = nilaiA == nilaiB;
+        System.out.println(hasil);
+
+        // apakah nilai A tidak samadengan B?
+        hasil = nilaiA != nilaiB;
+        System.out.println(hasil);
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kode program di atas, akan menghasilkan output seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/--FipqMwO8vk/ViI2QfhUtiI/AAAAAAAACCI/d-Rkn5aaIvo/s1600/hasil%2Boutput%2Boperator%2Bpembanding%2Bdi%2Bjava.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/--FipqMwO8vk/ViI2QfhUtiI/AAAAAAAACCI/d-Rkn5aaIvo/s1600/hasil%2Boutput%2Boperator%2Bpembanding%2Bdi%2Bjava.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-operator-logika&#34;&gt;4. Operator Logika&lt;/h2&gt;
+
+&lt;p&gt;Kalau kamu pernah belajar logika matematika, pasti tidak akan asing dengan operator
+ini.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Nama&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Simbol di Java&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Logika AND&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;amp;&amp;amp;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Logika OR&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;||&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Negasi/kebalikan&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Operator Logika digunakan untuk membandingkan dua penyataan atau lebih.&lt;/p&gt;
+
+&lt;p&gt;Misalnya seperti ini:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pernyataan 1: Petani Kode seorang programmer&lt;/li&gt;
+&lt;li&gt;Pernyattan 2: Petanikode menggunakan Linux&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Jika ditanya, apakah Petani Kode programmer yang menggunakan Linux?&lt;/p&gt;
+
+&lt;p&gt;Tentu kita akan cek dulu kebenarannya&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pernyataan 1: Petani Kode seorang programmer = &lt;code&gt;true&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Pernyattan 2: Petanikode menggunakan Linux = &lt;code&gt;true&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apa petanikode programmer dan menggunakan Linux?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Pertnyataan 1 &amp;amp;&amp;amp; Pernyataan 2 = true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bingung?&lt;/p&gt;
+
+&lt;p&gt;Coba cek lagi tabel kebenaran untuk logika AND.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Pernyatan 1&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Pernytaan 2&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Logika AND&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Masih bingung&amp;hellip;?&lt;/p&gt;
+
+&lt;p&gt;Sepertinya kamu harus buka lagi pelajarann logika matematika  :smile:.&lt;/p&gt;
+
+&lt;p&gt;Lalu bagaimana pengunaanya di program?&lt;/p&gt;
+
+&lt;h3 id=&#34;langsung-saja-dicoba-program-berikut&#34;&gt;Langsung Saja dicoba Program Berikut&lt;/h3&gt;
+
+&lt;p&gt;Buatlah sebuah kelas baru beranama &lt;em&gt;OperatorLogika&lt;/em&gt;. Kemudian ikuti kode berikut ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-XgnQDMlHkSY/ViI5nPhw98I/AAAAAAAACCU/0Xz2uftqtRs/s1600/kode%2Bprogram%2Boperator%2Blogika%2Bjava.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-XgnQDMlHkSY/ViI5nPhw98I/AAAAAAAACCU/0Xz2uftqtRs/s1600/kode%2Bprogram%2Boperator%2Blogika%2Bjava.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Silahkan jalankan dan perhatikan hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-_u_6adjdRdo/ViI6KTfPXSI/AAAAAAAACCc/nAv6omyBC0I/s1600/Hasil%2Boutput%2Bprogram%2Boperator%2Blogika%2Bjava.png&#34;&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-_u_6adjdRdo/ViI6KTfPXSI/AAAAAAAACCc/nAv6omyBC0I/s1600/Hasil%2Boutput%2Bprogram%2Boperator%2Blogika%2Bjava.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-operator-bitwise&#34;&gt;5. Operator Bitwise&lt;/h2&gt;
+
+&lt;p&gt;Operator bitwise merupkan operator yang digunakan untuk operasi bit (biner).&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Nama&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Simbol di Java&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;AND&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;amp;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;OR&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;|&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;XOR&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;^&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Negasi/kebalikan&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;~&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Left Shift&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;lt;&amp;lt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Right Shift&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;gt;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Left Shift (unsigned)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Right Shift (unsigned)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Operator ini berlaku untuk tipe data &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;long&lt;/code&gt;, &lt;code&gt;short&lt;/code&gt;, &lt;code&gt;char&lt;/code&gt;, dan &lt;code&gt;byte&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Operator ini akan menghitung dari bit-ke-bit.&lt;/p&gt;
+
+&lt;p&gt;Misalnya, kita punya variabel &lt;code&gt;a = 60&lt;/code&gt; dan &lt;code&gt;b = 13&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bila dibuat dalam bentuk biner, akan menjadi seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = 00111100
+b = 00001101
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian, dilakukan operasi bitwise&lt;/p&gt;
+
+&lt;p&gt;Operasi AND&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = 00111100
+b = 00001101
+a &amp;amp; b = 00001100
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Operasi OR&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = 00111100
+b = 00001101
+a | b = 00111101
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Operasi XOR&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = 00111100
+b = 00001101
+a ^ b = 00110001
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Opearsi NOT (Negasi/kebalikan)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = 00111100
+~a  = 11000011
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Konsepnya memang hampir sama dengan opeartor Logika. Bedanya, Bitwise
+digunakan untuk biner.&lt;/p&gt;
+
+&lt;p&gt;Untuk lebih jelasnya&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;mari-kita-coba-dalam-program&#34;&gt;Mari kita coba dalam program&lt;/h3&gt;
+
+&lt;p&gt;Buat kelas baru dengan nama &lt;code&gt;OperatorBitwise&lt;/code&gt;, kemudian ikuti isinya sebagai
+berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class OperatorBitwise {
+
+    public static void main(String[] args) {
+        int a = 60;	/* 60 = 0011 1100 */
+        int b = 13;	/* 13 = 0000 1101 */
+        int c = 0;
+
+        c = a &amp;amp; b;       /* 12 = 0000 1100 */
+        System.out.println(&amp;quot;a &amp;amp; b = &amp;quot; + c);
+
+        c = a | b;       /* 61 = 0011 1101 */
+        System.out.println(&amp;quot;a | b = &amp;quot; + c);
+
+        c = a ^ b;       /* 49 = 0011 0001 */
+        System.out.println(&amp;quot;a ^ b = &amp;quot; + c);
+
+        c = ~a;          /*-61 = 1100 0011 */
+        System.out.println(&amp;quot;~a = &amp;quot; + c);
+
+        c = a &amp;lt;&amp;lt; 2;     /* 240 = 1111 0000 */
+        System.out.println(&amp;quot;a &amp;lt;&amp;lt; 2 = &amp;quot; + c);
+
+        c = a &amp;gt;&amp;gt; 2;     /* 215 = 1111 */
+        System.out.println(&amp;quot;a &amp;gt;&amp;gt; 2  = &amp;quot; + c);
+
+        c = a &amp;gt;&amp;gt;&amp;gt; 2;     /* 215 = 0000 1111 */
+        System.out.println(&amp;quot;a &amp;gt;&amp;gt;&amp;gt; 2 = &amp;quot; + c);
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikanlah hasil outputnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-bNZH6_FtyGM/ViMrlcqFcrI/AAAAAAAACD4/lCAizcwuZek/s1600/Hasil%2Boutput%2Boperator%2Bbitwise%2Bjava.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-bNZH6_FtyGM/ViMrlcqFcrI/AAAAAAAACD4/lCAizcwuZek/s1600/Hasil%2Boutput%2Boperator%2Bbitwise%2Bjava.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-operator-ternary&#34;&gt;6. Operator Ternary&lt;/h2&gt;
+
+&lt;p&gt;Opertor ini unik, seperti membuat pertanyaan.&lt;/p&gt;
+
+&lt;p&gt;Simbolnya menggunakan tanda tanya (&lt;code&gt;?&lt;/code&gt;) dan titik-dua (&lt;code&gt;:&lt;/code&gt;) untuk memisah jawabannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-OKB4MDtGjE4/WObxiPfq-wI/AAAAAAAAEmQ/kR9Ldcc1hr88u90060rCff0Gvs4lDRfQgCPcB/s1600/operator%2Bternary%2Bdi%2Bjava.png&#34; alt=&#34;Operator Ternary di Java&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada contoh di atas, &amp;ldquo;Kamu suka aku&amp;rdquo; adalah pertanyaan atau kondisi yang akan
+diperiksa.&lt;/p&gt;
+
+&lt;p&gt;Kalau jawabannya benar, maka &lt;code&gt;iya&lt;/code&gt;. Sebaliknya akan &lt;code&gt;tidak&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lebih jelasnya, mari kita coba&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;program-dengan-operator-ternary&#34;&gt;Program dengan Operator Ternary&lt;/h3&gt;
+
+&lt;p&gt;Buatlah sebuah kelas baru dengan nama &lt;code&gt;OperatorTernary&lt;/code&gt;, kemudian ikuti kode
+berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class OperatorTernary {
+    public static void main(String[] args) {
+
+        boolean suka = true;
+        String jawaban;
+
+        // menggunakan operator ternary
+        jawaban = suka ? &amp;quot;iya&amp;quot; : &amp;quot;tidak&amp;quot;;
+
+        // menampilkan jawaban
+        System.out.println(jawaban);
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;iya
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang coba ganti nilai variabel &lt;code&gt;suka&lt;/code&gt; menjadi &lt;code&gt;false&lt;/code&gt;, lalu dijalankan
+lagi.&lt;/p&gt;
+
+&lt;p&gt;Pasti akan menghasilkan &lt;code&gt;tidak&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cara lain, dapat juga membuat kondisi seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;int suka = 8;
+
+String jawaban = (suka &amp;gt; 5) ? &amp;quot;iya&amp;quot; : &amp;quot;tidak&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah mempelajari berbagai jenis operator dalam pemrograman Java.&lt;/p&gt;
+
+&lt;p&gt;Ya, operator memang sangat erat kaitannya dengan ilmu matematika. Maka dari itu,
+programmer dituntut untuk bisa matematika.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, silahkan pelajari &lt;a href=&#34;http://petanikode.com/pemrograman-java-percabangan/&#34;&gt;konsep percabangan atau &lt;em&gt;control flow&lt;/em&gt; dalam Java&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kalau ada yang ditanyakan, silahkan tuliskan di komentar.&lt;/p&gt;
+
+&lt;p&gt;Kalau artikel ini bermanfaat, silahkan dibagikan.&lt;/p&gt;
 </description>
     </item>
     

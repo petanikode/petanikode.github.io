@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deploy on Petani Kode — Programmer Pengguna Linux</title>
-    <link>http://petanikode.com/topik/deploy/index.xml</link>
+    <link>https://petanikode.com/topik/deploy/index.xml</link>
     <description>Recent content in Deploy on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="http://petanikode.com/topik/deploy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://petanikode.com/topik/deploy/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cara Upload File ke Server FTP ala Git</title>
-      <link>http://petanikode.com/cara-upload-file-ke-server-ftp-ala-git/</link>
+      <link>https://petanikode.com/cara-upload-file-ke-server-ftp-ala-git/</link>
       <pubDate>Tue, 31 Jan 2017 12:09:55 +0800</pubDate>
       
-      <guid>http://petanikode.com/cara-upload-file-ke-server-ftp-ala-git/</guid>
+      <guid>https://petanikode.com/cara-upload-file-ke-server-ftp-ala-git/</guid>
       <description>
 
 &lt;p&gt;Ketika kita akan men-deploy atau &lt;em&gt;hosting&lt;/em&gt; sebuah web di server &lt;em&gt;shared hosting&lt;/em&gt;,
@@ -104,7 +104,7 @@ git commit -m &amp;quot;ini perubahan yang dilakukan&amp;quot;
 &lt;p&gt;Maka &lt;code&gt;git-ftp&lt;/code&gt; akan melakukan upload file-file yang sudah diubah dan menindih
 yang sudah ada di server.&lt;/p&gt;
 
-&lt;p&gt;Begitulah cara upload file seperti cara &lt;a href=&#34;http://petanikode.com/topik/git&#34;&gt;Git&lt;/a&gt;. Semoga bermanfaat.&lt;/p&gt;
+&lt;p&gt;Begitulah cara upload file seperti cara &lt;a href=&#34;https://petanikode.com/topik/git&#34;&gt;Git&lt;/a&gt;. Semoga bermanfaat.&lt;/p&gt;
 
 &lt;p&gt;Referensi: &lt;a href=&#34;https://git-ftp.github.io/&#34;&gt;git-ftp.github.io&lt;/a&gt;&lt;/p&gt;
 </description>

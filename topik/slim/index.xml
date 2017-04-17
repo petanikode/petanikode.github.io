@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slim on Petani Kode — Programmer Pengguna Linux</title>
-    <link>http://petanikode.com/topik/slim/index.xml</link>
+    <link>https://petanikode.com/topik/slim/index.xml</link>
     <description>Recent content in Slim on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="http://petanikode.com/topik/slim/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://petanikode.com/topik/slim/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cara Instal Slimframework di Linux dengan Composer</title>
-      <link>http://petanikode.com/cara-instal-slimframework-di-linux-dengan-composer/</link>
+      <link>https://petanikode.com/cara-instal-slimframework-di-linux-dengan-composer/</link>
       <pubDate>Wed, 25 Feb 2015 01:16:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/cara-instal-slimframework-di-linux-dengan-composer/</guid>
+      <guid>https://petanikode.com/cara-instal-slimframework-di-linux-dengan-composer/</guid>
       <description>
 
 &lt;p&gt;Slim merupakan sebuah &lt;em&gt;framework&lt;/em&gt; mikro untuk PHP. Slim bisa kita gunakan
-untuk membangun aplikasi web sederhana dan Rest &lt;a href=&#34;http://petanikode.com/topik/api&#34;&gt;API&lt;/a&gt;. Kali ini, saya akan
+untuk membangun aplikasi web sederhana dan Rest &lt;a href=&#34;https://petanikode.com/topik/api&#34;&gt;API&lt;/a&gt;. Kali ini, saya akan
 membawakan tutorial cara menginstal Slim di Linux. Slim yang akan diinstal
 adalah versi 2.0.&lt;/p&gt;
 
-&lt;p&gt;Pastikan &lt;a href=&#34;http://petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt; dan &lt;a href=&#34;http://petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt; sudah terinstal
+&lt;p&gt;Pastikan &lt;a href=&#34;https://petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt; dan &lt;a href=&#34;https://petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt; sudah terinstal
 di komputer teman-teman. Setelah itu ikuti langkah-langkah berikut ini.&lt;/p&gt;
 
 &lt;h2 id=&#34;membuat-direktori-proyek&#34;&gt;Membuat Direktori Proyek&lt;/h2&gt;

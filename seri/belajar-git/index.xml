@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Belajar Git on Petani Kode — Programmer Pengguna Linux</title>
-    <link>http://petanikode.com/seri/belajar-git/index.xml</link>
+    <link>https://petanikode.com/seri/belajar-git/index.xml</link>
     <description>Recent content in Belajar Git on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="http://petanikode.com/seri/belajar-git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://petanikode.com/seri/belajar-git/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Tutorial Git 07 - Percabangan</title>
-      <link>http://petanikode.com/tutorial-git-07---percabangan/</link>
+      <link>https://petanikode.com/tutorial-git-07---percabangan/</link>
       <pubDate>Mon, 27 Feb 2017 19:20:26 +0800</pubDate>
       
-      <guid>http://petanikode.com/tutorial-git-07---percabangan/</guid>
+      <guid>https://petanikode.com/tutorial-git-07---percabangan/</guid>
       <description>
 
 &lt;p&gt;Bayangkan anda sedang bekerja dengan tim pada suatu repositori Git.
@@ -293,10 +293,10 @@ dan diikuti dengan nama cabangnya.&lt;/p&gt;
     
     <item>
       <title>Tutorial Git 06 - Membatalkan Revisi</title>
-      <link>http://petanikode.com/tutorial-git-06---membatalkan-revisi/</link>
+      <link>https://petanikode.com/tutorial-git-06---membatalkan-revisi/</link>
       <pubDate>Tue, 21 Feb 2017 14:55:42 +0800</pubDate>
       
-      <guid>http://petanikode.com/tutorial-git-06---membatalkan-revisi/</guid>
+      <guid>https://petanikode.com/tutorial-git-06---membatalkan-revisi/</guid>
       <description>
 
 &lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/&#34;&gt;tutorial git 05&lt;/a&gt;,
@@ -551,16 +551,16 @@ bisa melakukannya dengan perintah:&lt;/p&gt;
 &lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&lt;/h2&gt;
 
 &lt;p&gt;OK, sekian dulu tutorial ke-6 ini. Rasanya agak kepanjangan. Terima kasih
-sudah membaca. Sampai jumpa di &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-07---percabangan/&#34;&gt;tutorial ke-7&lt;/a&gt;.&lt;/p&gt;
+sudah membaca. Sampai jumpa di &lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-07---percabangan/&#34;&gt;tutorial ke-7&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Tutorial Git 05 - Melihat Perbandingan Revisi</title>
-      <link>http://petanikode.com/tutorial-git-05---melihat-perbandingan-revisi/</link>
+      <link>https://petanikode.com/tutorial-git-05---melihat-perbandingan-revisi/</link>
       <pubDate>Thu, 16 Feb 2017 13:56:42 +0800</pubDate>
       
-      <guid>http://petanikode.com/tutorial-git-05---melihat-perbandingan-revisi/</guid>
+      <guid>https://petanikode.com/tutorial-git-05---melihat-perbandingan-revisi/</guid>
       <description>
 
 &lt;p&gt;Pada tutorial sebelumnya, kita sudah belajar cara melihat log revisi di repositori.
@@ -696,19 +696,19 @@ cara melihat perbandingan perubahan antar cabang.&lt;/p&gt;
 perbandingan perubahan apa saja yang telah dilakukan pada repositori. Selanjutnya, kita
 akan belajar membatalkan revisi.&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/&#34;&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Selanjutnya: &lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/&#34;&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Tutorial Git 04 - Melihat Log Revisi</title>
-      <link>http://petanikode.com/tutorial-git-04---melihat-log-revisi/</link>
+      <link>https://petanikode.com/tutorial-git-04---melihat-log-revisi/</link>
       <pubDate>Tue, 14 Feb 2017 08:56:09 +0800</pubDate>
       
-      <guid>http://petanikode.com/tutorial-git-04---melihat-log-revisi/</guid>
+      <guid>https://petanikode.com/tutorial-git-04---melihat-log-revisi/</guid>
       <description>
 
-&lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial sebelumnya&lt;/a&gt;, kita
+&lt;p&gt;Pada &lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial sebelumnya&lt;/a&gt;, kita
 sudah membuat dua revisi pada repositori &lt;code&gt;project-01&lt;/code&gt;. Sekarang bagaimana caranya
 kita melihat catatan log dari revisi-reivisi tersebut?&lt;/p&gt;
 
@@ -806,19 +806,19 @@ revisi apa saja yang dilakukan oleh orang tertentu dengan perintah berikut.&lt;/
 adalah &lt;code&gt;git log&lt;/code&gt;. Selanjutnya kita akan pelajari perintah &lt;code&gt;git diff&lt;/code&gt; untuk melihat
 perbandingan pada revisi.&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/&#34;&gt;Tutorial Git 05 - Melihat Perbandingan Revisi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Selanjutnya: &lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/&#34;&gt;Tutorial Git 05 - Melihat Perbandingan Revisi&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Tutorial Git 03 - Membuat Revisi</title>
-      <link>http://petanikode.com/tutorial-git-03---membuat-revisi/</link>
+      <link>https://petanikode.com/tutorial-git-03---membuat-revisi/</link>
       <pubDate>Mon, 13 Feb 2017 17:30:51 +0800</pubDate>
       
-      <guid>http://petanikode.com/tutorial-git-03---membuat-revisi/</guid>
+      <guid>https://petanikode.com/tutorial-git-03---membuat-revisi/</guid>
       <description>
 
-&lt;p&gt;Pada &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;tutorial git yang kedua&lt;/a&gt;,
+&lt;p&gt;Pada &lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;tutorial git yang kedua&lt;/a&gt;,
 kita sudah membuat repositori kosong. Belum ada apa-apa di sana. Sekarang coba
 tambahkan sebuah file baru. Sebagai contoh, saya akan menambahkan tiga file HTML
 kosong.&lt;/p&gt;
@@ -985,16 +985,16 @@ kita bisa kembali ke &lt;em&gt;checkpoint&lt;/em&gt; ini.&lt;/p&gt;
 
 &lt;p&gt;Sekian untuk tutorial ke-3 ini, mudah-mudahan bermanfaat.&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya: &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/&#34;&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Selanjutnya: &lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/&#34;&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Cara Instal Git di Windows</title>
-      <link>http://petanikode.com/cara-instal-git-di-windows/</link>
+      <link>https://petanikode.com/cara-instal-git-di-windows/</link>
       <pubDate>Fri, 10 Feb 2017 01:42:35 +0800</pubDate>
       
-      <guid>http://petanikode.com/cara-instal-git-di-windows/</guid>
+      <guid>https://petanikode.com/cara-instal-git-di-windows/</guid>
       <description>
 
 &lt;p&gt;Instalasi Git di Windows memang tidak seperti di Linux yang ketik perintah
@@ -1157,16 +1157,16 @@ layout=&#34;responsive&#34;&gt;
 
 &lt;p&gt;OK, meskipun Git sudah terinstal. Akan tetapi masih belum bisa dipakai. Karena
 kita belum melakukan konfigurasi &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt;. Cara konfigurasinya
-silahkan &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;baca di sni&lt;/a&gt;.&lt;/p&gt;
+silahkan &lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;baca di sni&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Tutorial Git 02 - Membuat Repositori</title>
-      <link>http://petanikode.com/tutorial-git-02---membuat-repositori/</link>
+      <link>https://petanikode.com/tutorial-git-02---membuat-repositori/</link>
       <pubDate>Thu, 09 Feb 2017 11:52:59 +0800</pubDate>
       
-      <guid>http://petanikode.com/tutorial-git-02---membuat-repositori/</guid>
+      <guid>https://petanikode.com/tutorial-git-02---membuat-repositori/</guid>
       <description>
 
 &lt;p&gt;Repositori &lt;em&gt;(repository)&lt;/em&gt; dalam bahasa indonesia artinya gudang. Repositori
@@ -1254,19 +1254,19 @@ ini&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Sekian dulu untuk tutorial kedua ini, Kita baru saja mengetahui cara pembuatan
 repositori dan tentang &lt;code&gt;.gitignore&lt;/code&gt;. Penggunaan &lt;code&gt;.gitignore&lt;/code&gt; memang belum dapat
 kita rasakan saat ini, karena kita belum membuat revisi apa pun. Karena itu,
-silahkan lanjutkan ke &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial ketiga &amp;lsquo;Membuat Revisi&amp;rsquo;&lt;/a&gt;.&lt;/p&gt;
+silahkan lanjutkan ke &lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial ketiga &amp;lsquo;Membuat Revisi&amp;rsquo;&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Tutorial Git 01 - Instalasi dan Persiapan</title>
-      <link>http://petanikode.com/tutorial-git-01---instalasi-dan-persiapan/</link>
+      <link>https://petanikode.com/tutorial-git-01---instalasi-dan-persiapan/</link>
       <pubDate>Wed, 08 Feb 2017 11:26:37 +0800</pubDate>
       
-      <guid>http://petanikode.com/tutorial-git-01---instalasi-dan-persiapan/</guid>
+      <guid>https://petanikode.com/tutorial-git-01---instalasi-dan-persiapan/</guid>
       <description>
 
-&lt;p&gt;Kita sudah mengenal Git pada &lt;a href=&#34;http://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/&#34;&gt;tulisan sebelumnya&lt;/a&gt;.
+&lt;p&gt;Kita sudah mengenal Git pada &lt;a href=&#34;https://petanikode.com/2017/02/apa-itu-git-dan-kenapa-penting-bagi-programmer/&#34;&gt;tulisan sebelumnya&lt;/a&gt;.
 Sekarang Kita akan melakukan instalasi dan persiapan.&lt;/p&gt;
 
 &lt;h2 id=&#34;instalasi-git&#34;&gt;Instalasi Git&lt;/h2&gt;
@@ -1286,7 +1286,7 @@ Sekarang Kita akan melakukan instalasi dan persiapan.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;yum install git
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Windows: &lt;a href=&#34;http://petanikode.com/2017/02/cara-instal-git-di-windows/&#34;&gt;Cara Instal Git di Windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Windows: &lt;a href=&#34;https://petanikode.com/2017/02/cara-instal-git-di-windows/&#34;&gt;Cara Instal Git di Windows&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Download Git&lt;/li&gt;
@@ -1312,7 +1312,7 @@ ini.&lt;/p&gt;
 git config --global user.email contoh@petanikode.com
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2016/03/3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux/&#34;&gt;3 Hal yang Perlu Dilakukan Setelah Instal Git di Linux&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Baca juga: &lt;a href=&#34;https://petanikode.com/2016/03/3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux/&#34;&gt;3 Hal yang Perlu Dilakukan Setelah Instal Git di Linux&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Kemudian periksa konfigurasinya dengan perintah:&lt;/p&gt;
 
@@ -1332,16 +1332,16 @@ layout=&#34;responsive&#34;&gt;
 &lt;p&gt;Konfigurasi &lt;code&gt;core.editor&lt;/code&gt; bersifat opsional. Sedangkan &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt; wajib.&lt;/p&gt;
 
 &lt;p&gt;Bagus, sekarang kita sudah melakukan konfigurasi awal. Selanjutnya kita bisa
-langsung &lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;membuat repositori&lt;/a&gt;.&lt;/p&gt;
+langsung &lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;membuat repositori&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Apa itu Git dan Kenapa Penting bagi Programmer?</title>
-      <link>http://petanikode.com/apa-itu-git-dan-kenapa-penting-bagi-programmer/</link>
+      <link>https://petanikode.com/apa-itu-git-dan-kenapa-penting-bagi-programmer/</link>
       <pubDate>Wed, 08 Feb 2017 09:08:36 +0800</pubDate>
       
-      <guid>http://petanikode.com/apa-itu-git-dan-kenapa-penting-bagi-programmer/</guid>
+      <guid>https://petanikode.com/apa-itu-git-dan-kenapa-penting-bagi-programmer/</guid>
       <description>
 
 &lt;p&gt;Git adalah salah satu sistem pengontrol versi &lt;em&gt;(Version Control System)&lt;/em&gt; pada
@@ -1433,14 +1433,14 @@ menggunakan Git.&lt;/p&gt;
 git berikut ini.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;Tutorial Git 01 - Instalasi dan Perisiapan&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;Tutorial Git 02 - Membuat Repositori&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;Tutorial Git 03 - Membuat Revisi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/&#34;&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/&#34;&gt;Tutorial Git 05 - Melihat Perbandingan Revisi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/&#34;&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/02/tutorial-git-07---percabangan/&#34;&gt;Tutorial Git 07 - Percabangan&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2017/03/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/&#34;&gt;Tutorial Git 08 - Perbedaan Git Checkout, Git Reset, dan Git Revert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;Tutorial Git 01 - Instalasi dan Perisiapan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-02---membuat-repositori/&#34;&gt;Tutorial Git 02 - Membuat Repositori&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;Tutorial Git 03 - Membuat Revisi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-04---melihat-log-revisi/&#34;&gt;Tutorial Git 04 - Melihat Log Revisi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/&#34;&gt;Tutorial Git 05 - Melihat Perbandingan Revisi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/&#34;&gt;Tutorial Git 06 - Membatalkan Revisi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2017/02/tutorial-git-07---percabangan/&#34;&gt;Tutorial Git 07 - Percabangan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2017/03/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/&#34;&gt;Tutorial Git 08 - Perbedaan Git Checkout, Git Reset, dan Git Revert&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Tutorial Git 09 - Menulis Ulang Sejarah&lt;/li&gt;
 &lt;li&gt;Tutorial Git 10 - Remote Repositori&lt;/li&gt;
 &lt;li&gt;Tutorial Git 11 - Git Tag&lt;/li&gt;

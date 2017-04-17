@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Phpmyadmin on Petani Kode — Programmer Pengguna Linux</title>
-    <link>http://petanikode.com/topik/phpmyadmin/index.xml</link>
+    <link>https://petanikode.com/topik/phpmyadmin/index.xml</link>
     <description>Recent content in Phpmyadmin on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="http://petanikode.com/topik/phpmyadmin/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://petanikode.com/topik/phpmyadmin/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Belajar Pemrograman Web di Linux: inilah 6 Alat yang Perlu Dipersiapkan</title>
-      <link>http://petanikode.com/pemrograman-web-di-linux/</link>
+      <link>https://petanikode.com/pemrograman-web-di-linux/</link>
       <pubDate>Sun, 09 Oct 2016 11:57:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/pemrograman-web-di-linux/</guid>
+      <guid>https://petanikode.com/pemrograman-web-di-linux/</guid>
       <description>
 
 &lt;p&gt;Pemrograman web yang akan saya bahas alah pemrograman web menggunakan HTML, Javascript,
@@ -126,10 +126,10 @@ Jangan lupa juga untuk mengatur hak akses direktori servernya agar user biasa be
     
     <item>
       <title>Solusi Error phpMyAdmin &#39;mbstring is missing&#39;</title>
-      <link>http://petanikode.com/solusi-error-phpmyadmin-mbstring-is-missing/</link>
+      <link>https://petanikode.com/solusi-error-phpmyadmin-mbstring-is-missing/</link>
       <pubDate>Tue, 26 Apr 2016 15:02:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/solusi-error-phpmyadmin-mbstring-is-missing/</guid>
+      <guid>https://petanikode.com/solusi-error-phpmyadmin-mbstring-is-missing/</guid>
       <description>&lt;p&gt;&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-0iFBzAJkiyk/Vx8UfFI-gEI/AAAAAAAACxM/R4q3xD4xj1sXrGpeD3HYMwcu31gG1zRfgCK4B/s1600/phpMyAdmin%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-0iFBzAJkiyk/Vx8UfFI-gEI/AAAAAAAACxM/R4q3xD4xj1sXrGpeD3HYMwcu31gG1zRfgCK4B/s1600/phpMyAdmin%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Masih segar, Ubuntu saya baru saja ditingkatkan &lt;i&gt;(upgrade)&lt;/i&gt; ke versi 16.04. Secara otomatis semua versi software-nya juga ditingkatkan. Tapi, peningkatan versi tidak selalu menjadi lebih baik. Kadang mendapat &lt;i&gt;bugs&lt;/i&gt; dan masalah baru. Seperti phpMyAdmin, terjadi &lt;i&gt;error&lt;/i&gt; karena menggunakan PHP 7. Pada versi sebelumnya menggunakan PHP 5.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-hCm0pO2WGNE/Vx8MYUuMqLI/AAAAAAAACww/ru4HEoVvEYgYMzi04n5rARbpXh5_81A2ACK4B/s1600/Pesan%2BError%2BphpMyAdmin%2B-%2Bmbstring%2Bextension%2Bis%2Bmissing.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-hCm0pO2WGNE/Vx8MYUuMqLI/AAAAAAAACww/ru4HEoVvEYgYMzi04n5rARbpXh5_81A2ACK4B/s1600/Pesan%2BError%2BphpMyAdmin%2B-%2Bmbstring%2Bextension%2Bis%2Bmissing.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Berdasarkan pesan error tersebut, kesalahanya ada pada konfigurasi PHP. Atur konfigurasi agar dapat me-load ekstensi.&lt;br /&gt;&lt;ol&gt;&lt;li&gt;buka file &lt;code&gt;/etc/php5/apache2/php.ini&lt;/code&gt; atau &lt;code&gt;/etc/php/7.0/apache2/php.ini&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Tambahkan&lt;br /&gt;&lt;pre&gt;&lt;code&gt;extension_dir = /usr/lib/php/20151012/&lt;/code&gt;&lt;/pre&gt;Lokasi &lt;code&gt;/usr/lib/php/20151012/&lt;/code&gt; adalah lokasi ekstensi PHP pada komputer saya.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-6-57E16go-8/Vx8MnQewQ_I/AAAAAAAACw4/3Ivzwbe9DlsGUUld1KkskL5Agy7s3-4EQCK4B/s1600/Konfigurasi%2BPHP.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-6-57E16go-8/Vx8MnQewQ_I/AAAAAAAACw4/3Ivzwbe9DlsGUUld1KkskL5Agy7s3-4EQCK4B/s1600/Konfigurasi%2BPHP.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Nyalakan ulang service apache2&lt;br /&gt;&lt;pre&gt;&lt;code&gt;sudo service apache2 restart&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;/ol&gt;Sekarang coba buka lagi phpMyAdmin. Kalau masih belum berhasil, instal ekstensi &lt;code&gt;php-mbstring&lt;/code&gt;. &lt;br /&gt;&lt;pre&gt;&lt;code&gt;sudo apt install php-mbstring&lt;/code&gt;&lt;/pre&gt;Referensi: &lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/q/12858772&#34;&gt;http://stackoverflow.com/q/12858772&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/mbstring.installation.php&#34;&gt;http://php.net/manual/en/mbstring.installation.php&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
 </description>
     </item>

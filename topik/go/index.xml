@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Petani Kode — Programmer Pengguna Linux</title>
-    <link>http://petanikode.com/topik/go/index.xml</link>
+    <link>https://petanikode.com/topik/go/index.xml</link>
     <description>Recent content in Go on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="http://petanikode.com/topik/go/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://petanikode.com/topik/go/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Download Ebook Dasar Pemrograman Golang</title>
-      <link>http://petanikode.com/download-ebook-dasar-pemrograman-golang/</link>
+      <link>https://petanikode.com/download-ebook-dasar-pemrograman-golang/</link>
       <pubDate>Sun, 26 Mar 2017 22:20:22 +0800</pubDate>
       
-      <guid>http://petanikode.com/download-ebook-dasar-pemrograman-golang/</guid>
+      <guid>https://petanikode.com/download-ebook-dasar-pemrograman-golang/</guid>
       <description>
 
 &lt;p&gt;Golang atau Go merupakan bahasa pemrograman open source yang dikembangkan di
@@ -82,10 +82,10 @@ selama tidak melanggar aturan lisensi &lt;a href=&#34;http://www.gnu.org/license
     
     <item>
       <title>Cara Replace String dalam Template Go</title>
-      <link>http://petanikode.com/cara-replace-string-dalam-template-go/</link>
+      <link>https://petanikode.com/cara-replace-string-dalam-template-go/</link>
       <pubDate>Fri, 20 Jan 2017 14:32:22 +0800</pubDate>
       
-      <guid>http://petanikode.com/cara-replace-string-dalam-template-go/</guid>
+      <guid>https://petanikode.com/cara-replace-string-dalam-template-go/</guid>
       <description>&lt;p&gt;Sebuah masalah kecil yang saya temukan ketika mengedit skrip &lt;a href=&#34;https://github.com/natefinch/blogimport&#34;&gt;Blogimport&lt;/a&gt;.
 Saya ingin memperbesar ukuran gambar &lt;em&gt;thumbnail&lt;/em&gt; dengan cara me-replace string yang ada di URL.&lt;/p&gt;
 
@@ -139,11 +139,11 @@ di Stack Overflow dan mendapatkan jawabannya.&lt;/p&gt;
     
     <item>
       <title>Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan</title>
-      <link>http://petanikode.com/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</link>
+      <link>https://petanikode.com/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</link>
       <pubDate>Sun, 15 Jan 2017 21:06:22 +0800</pubDate>
       
-      <guid>http://petanikode.com/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</guid>
-      <description>&lt;p&gt;Ada cerita menarik yang saya alami ketika &lt;a href=&#34;http://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi Petani Kode dari Blogger ke Hugo&lt;/a&gt;.
+      <guid>https://petanikode.com/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</guid>
+      <description>&lt;p&gt;Ada cerita menarik yang saya alami ketika &lt;a href=&#34;https://petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi Petani Kode dari Blogger ke Hugo&lt;/a&gt;.
 Waktu itu, ketika saya ingin mengimpor konten dari Blogger ke Hugo, ada sesuatu
 yang kurang dari skrip Go yang disediakan. Kekuarangnnya tidak mampu membuat
 atau mengambil gambar &lt;em&gt;(thumbnail)&lt;/em&gt; untuk setiap artikel.&lt;/p&gt;
@@ -246,7 +246,7 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 
 &lt;p&gt;Ketemu masalah lagi, gambar tidak bisa diperbesar. Karena tidak ada fungsi untuk &lt;em&gt;replace string&lt;/em&gt; pada template Go. Tidak lama kemudian, saya berhasil menyelesaikannya.&lt;/p&gt;
 
-&lt;p&gt;Baca juga: &lt;a href=&#34;http://petanikode.com/2017/01/cara-replace-string-dalam-template-go/&#34;&gt;Cara Replace String pada Template Go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Baca juga: &lt;a href=&#34;https://petanikode.com/2017/01/cara-replace-string-dalam-template-go/&#34;&gt;Cara Replace String pada Template Go&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Setelah semuanya beres, saya kemudian melakukan &lt;em&gt;pull request&lt;/em&gt; ke repositori milik Nate Finch. Saat ini masih belum di-reviw, diterima atau ditolak terserah Nate Finch. Saya hanya butuh untuk masalah saya saja. Namun, jika anda juga membutuhkannya bisa klon atau &lt;em&gt;fork&lt;/em&gt; &lt;a href=&#34;https://github.com/ardianta/blogimport&#34;&gt;repositori dari saya&lt;/a&gt;.&lt;/p&gt;
 

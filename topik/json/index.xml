@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Json on Petani Kode — Programmer Pengguna Linux</title>
-    <link>http://petanikode.com/topik/json/index.xml</link>
+    <link>https://petanikode.com/topik/json/index.xml</link>
     <description>Recent content in Json on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="http://petanikode.com/topik/json/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://petanikode.com/topik/json/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Penguraian (parshing) JSON dari URL Web Service dengan Python</title>
-      <link>http://petanikode.com/penguraian-parshing-json-dari-url-web-service-dengan-python/</link>
+      <link>https://petanikode.com/penguraian-parshing-json-dari-url-web-service-dengan-python/</link>
       <pubDate>Sat, 03 Sep 2016 04:30:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/penguraian-parshing-json-dari-url-web-service-dengan-python/</guid>
+      <guid>https://petanikode.com/penguraian-parshing-json-dari-url-web-service-dengan-python/</guid>
       <description>
 
 &lt;p&gt;Kita membutuhkan modul atau pustakan &lt;code&gt;urlib&lt;/code&gt; untuk mengambil JSON dari URL
@@ -97,10 +97,10 @@ modul &lt;code&gt;json&lt;/code&gt;. Begitulah cara penguraian JSON dari URL, te
     
     <item>
       <title>Eksperimen dengan API Simsimi</title>
-      <link>http://petanikode.com/eksperimen-dengan-api-simsimi/</link>
+      <link>https://petanikode.com/eksperimen-dengan-api-simsimi/</link>
       <pubDate>Fri, 02 Sep 2016 14:25:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/eksperimen-dengan-api-simsimi/</guid>
+      <guid>https://petanikode.com/eksperimen-dengan-api-simsimi/</guid>
       <description>
 
 &lt;p&gt;Kali ini saya akan mengajak teman-teman bereksperimen dengan API Simsimi.&lt;/p&gt;
@@ -124,7 +124,7 @@ di smarphone-nya.&lt;/p&gt;
 
 &lt;h2 id=&#34;1-mendapatkan-kunci-api&#34;&gt;1. Mendapatkan Kunci API&lt;/h2&gt;
 
-&lt;p&gt;Kunci &lt;a href=&#34;http://petanikode.com/topik/api&#34;&gt;API&lt;/a&gt; atau &lt;em&gt;API Key&lt;/em&gt;, merupakan kunci yang digunakan untuk
+&lt;p&gt;Kunci &lt;a href=&#34;https://petanikode.com/topik/api&#34;&gt;API&lt;/a&gt; atau &lt;em&gt;API Key&lt;/em&gt;, merupakan kunci yang digunakan untuk
 mengakses API Simsimi. Ada dua jenis kunci API &lt;em&gt;(API Key)&lt;/em&gt; yang disediakan
 oleh Simsimi. Pertama, kunci API percobaan (diberikan gratis selama 7 hari).
 Kedua, API Berbayar. Untuk mendapatkan kunci API, silakan mendaftar di
@@ -256,8 +256,8 @@ while(True):
 &lt;p&gt;Baca juga:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/penguraian-parshing-json-pada-python/&#34;&gt;Penguraian (parsing) JSON pada Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://petanikode.com/2016/09/penguraian-parshing-json-dari-url-web-service-dengan-python/&#34;&gt;Penguraian (parsing) JSON dari URL Web Service dengan Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2016/09/penguraian-parshing-json-pada-python/&#34;&gt;Penguraian (parsing) JSON pada Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2016/09/penguraian-parshing-json-dari-url-web-service-dengan-python/&#34;&gt;Penguraian (parsing) JSON dari URL Web Service dengan Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Hasilnya, ketika dijalankan:&lt;/p&gt;
@@ -276,10 +276,10 @@ while(True):
     
     <item>
       <title>Penguraian (Parshing) JSON pada Python</title>
-      <link>http://petanikode.com/penguraian-parshing-json-pada-python/</link>
+      <link>https://petanikode.com/penguraian-parshing-json-pada-python/</link>
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
-      <guid>http://petanikode.com/penguraian-parshing-json-pada-python/</guid>
+      <guid>https://petanikode.com/penguraian-parshing-json-pada-python/</guid>
       <description>&lt;p&gt;Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul atau pustakan &lt;code&gt;json&lt;/code&gt;. Selain itu, kita juga membutuhkan modul tambahan seperti &lt;code&gt;urlib&lt;/code&gt; bila JSON-nya diambil dari &lt;i&gt;web service&lt;/i&gt;. Oke, mari kita mulai dari hal yang sederhana.&lt;br /&gt;&lt;br /&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-captioned=&#34;&#34; data-instgrm-version=&#34;7&#34; style=&#34;background: #fff; border-radius: 3px; border: 0; box-shadow: 0 0 1px 0 rgba(0 , 0 , 0 , 0.5) , 0 1px 10px 0 rgba(0 , 0 , 0 , 0.15); margin: 1px; max-width: 658px; padding: 0; width: 99.375%;&#34;&gt;&lt;div style=&#34;padding: 8px;&#34;&gt;&lt;div style=&#34;background: #F8F8F8; line-height: 0; margin-top: 40px; padding: 28.1481481481% 0; text-align: center; width: 100%;&#34;&gt;&lt;div style=&#34;background: url(data:image/png; display: block; height: 44px; margin: 0 auto -44px; position: relative; top: -22px; width: 44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;margin: 8px 0 0 0; padding: 0 4px;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BJpb-wNjGAo/&#34; style=&#34;color: black; font-family: &amp;quot;arial&amp;quot; , sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none; word-wrap: break-word;&#34; target=&#34;_blank&#34;&gt;#json #stickynotes #postitnotes #programming #programmer&lt;/a&gt;&lt;/div&gt;&lt;div style=&#34;color: #c9c8cd; font-family: Arial,sans-serif; font-size: 14px; line-height: 17px; margin-bottom: 0; margin-top: 8px; overflow: hidden; padding: 8px 0 7px; text-align: center; text-overflow: ellipsis; white-space: nowrap;&#34;&gt;A photo posted by Petani Kode (@petanikode) on &lt;time datetime=&#34;2016-08-28T09:32:09+00:00&#34; style=&#34;font-family: Arial,sans-serif; font-size: 14px; line-height: 17px;&#34;&gt;Aug 28, 2016 at 2:32am PDT&lt;/time&gt;&lt;/div&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;script async=&#34;&#34; defer=&#34;&#34; src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;h2&gt;Membuat File JSON&lt;/h2&gt;Pertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: &lt;code&gt;petanikode.json&lt;/code&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;json js&#34;&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;nama&amp;rdquo; : &amp;ldquo;Petani Kode&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;url&amp;rdquo;&amp;nbsp; : &amp;ldquo;&lt;a href=&#34;http://petanikode.com&amp;quot;&#34;&gt;http://petanikode.com&amp;quot;&lt;/a&gt;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;media&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;facebook&amp;rdquo; : &amp;ldquo;petanikode&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;twitter&amp;rdquo;&amp;nbsp; : &amp;ldquo;@petanikode&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;instagram&amp;rdquo;: &amp;ldquo;@petanikode&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Percobaan di Iterpreter&lt;/h2&gt;Sebelum membuat kode, kita coba dulu mengurai JSON-nya melalui interpreter. Ketik &lt;code&gt;python&lt;/code&gt; pada terminal untuk masuk ke interpreter.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-Cy37z6S8XoU/V8ez7OSirAI/AAAAAAAADJ8/Rk5rvJFyTYoUXMGY6FSMwnKQSnvdDgBQgCK4B/s1600/Percobaan%2Bparsing%2Bfile%2BJSON%2Bdari%2Binterpreter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Percobaan Penguraian JSON di Interpreter&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-Cy37z6S8XoU/V8ez7OSirAI/AAAAAAAADJ8/Rk5rvJFyTYoUXMGY6FSMwnKQSnvdDgBQgCK4B/s1600/Percobaan%2Bparsing%2Bfile%2BJSON%2Bdari%2Binterpreter%2B-%2Bpetanikode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Pada percobaan di atas, kita menggunakan fungsi &lt;code&gt;open()&lt;/code&gt; untuk membuka file JSON. Kemudian, kita menggunakan fungsi &lt;code&gt;loads()&lt;/code&gt; dari modul &lt;code&gt;json&lt;/code&gt; untuk me-load data JSON. Data JSON disimpan pada variabel &lt;code&gt;data&lt;/code&gt; dalam bentuk &lt;i&gt;dictionary&lt;/i&gt;. Dengan demikian, kita bisa leluasa mengurai data JSON-nya.&lt;br /&gt;&lt;h2&gt;Meracik Kode untuk Mengurai JSON&lt;/h2&gt;Buat file skrip python dan letakkan di direktori yang sama dengan file JSON-nya. Berikut ini isi skripnya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py python&#34;&gt;import json&lt;br /&gt;&lt;br /&gt;# buka file JSON-nya dulu&lt;br /&gt;file_json = open(&amp;lsquo;petanikode.json&amp;rsquo;)&lt;br /&gt;&lt;br /&gt;# load file JSON dari file yang sudah dibuka&lt;br /&gt;data = json.loads(file_json.read())&lt;br /&gt;&lt;br /&gt;# cetak isi data&lt;br /&gt;print data &lt;/code&gt;&lt;/pre&gt;Hasil output dari kode di atas:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;{u&amp;rsquo;url&amp;rsquo;: u&amp;rsquo;&lt;a href=&#34;http://petanikode.com&#39;&#34;&gt;http://petanikode.com&#39;&lt;/a&gt;, u&amp;rsquo;nama&amp;rsquo;: u&amp;rsquo;Petani Kode&amp;rsquo;, u&amp;rsquo;media&amp;rsquo;: {u&amp;rsquo;twitter&amp;rsquo;: u&amp;rsquo;@petanikode&amp;rsquo;, u&amp;rsquo;facebook&amp;rsquo;: u&amp;rsquo;petanikode&amp;rsquo;, u&amp;rsquo;instagram&amp;rsquo;: u&amp;rsquo;@petanikode&amp;rsquo;}}&lt;/code&gt;&lt;/pre&gt;Selanjutnya, kita tinggal percantik saja hasil output-nya. Silahkan modifikasi lagi kodenya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python py&#34;&gt;import json&lt;br /&gt;&lt;br /&gt;# buka file JSON-nya dulu&lt;br /&gt;file_json = open(&amp;lsquo;petanikode.json&amp;rsquo;)&lt;br /&gt;&lt;br /&gt;# load file JSON dari file yang sudah dibuka&lt;br /&gt;data = json.loads(file_json.read())&lt;br /&gt;&lt;br /&gt;# cetak isi data&lt;br /&gt;print &amp;ldquo;nama \t: %s&amp;rdquo; % data[&amp;lsquo;nama&amp;rsquo;]&lt;br /&gt;print &amp;ldquo;url \t: %s&amp;rdquo; % data[&amp;lsquo;url&amp;rsquo;]&lt;br /&gt;&lt;br /&gt;print &amp;ldquo;Media Sosial &amp;ldquo;&lt;br /&gt;for sosial in data[&amp;lsquo;media&amp;rsquo;]:&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; print &amp;ldquo;\t%s \t: %s&amp;rdquo; % (sosial, data[&amp;lsquo;media&amp;rsquo;][sosial]) &lt;/code&gt;&lt;/pre&gt;Hasil outputnya:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-JnGCO8WfdgU/V8e5ad3PUkI/AAAAAAAADKM/QANlmwc00W0KajkvQCzL4IC_yCCNL_CcQCK4B/s1600/Hasil%2Bpenguraian%2Bfile%2BJSON%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Hasil Penguraian JSON&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-JnGCO8WfdgU/V8e5ad3PUkI/AAAAAAAADKM/QANlmwc00W0KajkvQCzL4IC_yCCNL_CcQCK4B/s1600/Hasil%2Bpenguraian%2Bfile%2BJSON%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Begitulah cara penguraian JSON pada Python. Sekian, tulisan pendek ini. Mudah-mudahan ada manfaatnya.&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://docs.python-guide.org/en/latest/scenarios/json/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://docs.python-guide.org/en/latest/scenarios/json/&#34;&gt;http://docs.python-guide.org/en/latest/scenarios/json/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>

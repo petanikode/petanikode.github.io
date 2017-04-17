@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Simsimi on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://petanikode.com/topik/simsimi/index.xml</link>
+    <link>https://www.petanikode.com/topik/simsimi/index.xml</link>
     <description>Recent content in Simsimi on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://petanikode.com/topik/simsimi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.petanikode.com/topik/simsimi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io</title>
-      <link>https://petanikode.com/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</link>
+      <link>https://www.petanikode.com/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</link>
       <pubDate>Fri, 09 Sep 2016 14:16:00 +0000</pubDate>
       
-      <guid>https://petanikode.com/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</guid>
+      <guid>https://www.petanikode.com/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</guid>
       <description>
 
 &lt;p&gt;Simsimi bisa kita pinjam otaknya untuk dipakai di bot Telegram. Tapi,
@@ -37,14 +37,14 @@ Hook.io dan API Simsimi berkomunikasi.&lt;/p&gt;
 &lt;p&gt;Baca Juga:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/&#34;&gt;Cara Membuat Bot Telegram dengan Layanan Hook.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2016/09/eksperimen-dengan-api-simsimi/&#34;&gt;Eksperimen dengan API Simsimi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/&#34;&gt;Cara Membuat Bot Telegram dengan Layanan Hook.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/2016/09/eksperimen-dengan-api-simsimi/&#34;&gt;Eksperimen dengan API Simsimi&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;bahan-bahan-yang-dibutuhkan&#34;&gt;Bahan-Bahan yang Dibutuhkan&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Token Bot Telegram (&lt;a href=&#34;https://petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/&#34;&gt;Cara mendapatkannya&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Token Bot Telegram (&lt;a href=&#34;https://www.petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/&#34;&gt;Cara mendapatkannya&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Akun Hook.io (&lt;a href=&#34;https://hook.io/ardianta?s&#34;&gt;Daftar di sini&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Kunci API Simsimi (&lt;a href=&#34;http://developer.simsimi.com/api&#34;&gt;Daftar di sini&lt;/a&gt;)&lt;/li&gt;
 &lt;/ol&gt;
@@ -146,10 +146,10 @@ Pada dasarnya hanya meneruskan request ke API Simsimi dan mengembalikan lagi ke 
     
     <item>
       <title>Eksperimen dengan API Simsimi</title>
-      <link>https://petanikode.com/eksperimen-dengan-api-simsimi/</link>
+      <link>https://www.petanikode.com/eksperimen-dengan-api-simsimi/</link>
       <pubDate>Fri, 02 Sep 2016 14:25:00 +0000</pubDate>
       
-      <guid>https://petanikode.com/eksperimen-dengan-api-simsimi/</guid>
+      <guid>https://www.petanikode.com/eksperimen-dengan-api-simsimi/</guid>
       <description>
 
 &lt;p&gt;Kali ini saya akan mengajak teman-teman bereksperimen dengan API Simsimi.&lt;/p&gt;
@@ -173,7 +173,7 @@ di smarphone-nya.&lt;/p&gt;
 
 &lt;h2 id=&#34;1-mendapatkan-kunci-api&#34;&gt;1. Mendapatkan Kunci API&lt;/h2&gt;
 
-&lt;p&gt;Kunci &lt;a href=&#34;https://petanikode.com/topik/api&#34;&gt;API&lt;/a&gt; atau &lt;em&gt;API Key&lt;/em&gt;, merupakan kunci yang digunakan untuk
+&lt;p&gt;Kunci &lt;a href=&#34;https://www.petanikode.com/topik/api&#34;&gt;API&lt;/a&gt; atau &lt;em&gt;API Key&lt;/em&gt;, merupakan kunci yang digunakan untuk
 mengakses API Simsimi. Ada dua jenis kunci API &lt;em&gt;(API Key)&lt;/em&gt; yang disediakan
 oleh Simsimi. Pertama, kunci API percobaan (diberikan gratis selama 7 hari).
 Kedua, API Berbayar. Untuk mendapatkan kunci API, silakan mendaftar di
@@ -305,8 +305,8 @@ while(True):
 &lt;p&gt;Baca juga:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2016/09/penguraian-parshing-json-pada-python/&#34;&gt;Penguraian (parsing) JSON pada Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2016/09/penguraian-parshing-json-dari-url-web-service-dengan-python/&#34;&gt;Penguraian (parsing) JSON dari URL Web Service dengan Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/2016/09/penguraian-parshing-json-pada-python/&#34;&gt;Penguraian (parsing) JSON pada Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/2016/09/penguraian-parshing-json-dari-url-web-service-dengan-python/&#34;&gt;Penguraian (parsing) JSON dari URL Web Service dengan Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Hasilnya, ketika dijalankan:&lt;/p&gt;

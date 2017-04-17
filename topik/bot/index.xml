@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bot on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://petanikode.com/topik/bot/index.xml</link>
+    <link>https://www.petanikode.com/topik/bot/index.xml</link>
     <description>Recent content in Bot on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://petanikode.com/topik/bot/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.petanikode.com/topik/bot/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Integarsi Bot Autoposting Telegram dengan Channel</title>
-      <link>https://petanikode.com/integarsi-bot-autoposting-telegram-dengan-channel/</link>
+      <link>https://www.petanikode.com/integarsi-bot-autoposting-telegram-dengan-channel/</link>
       <pubDate>Sun, 12 Feb 2017 22:44:49 +0800</pubDate>
       
-      <guid>https://petanikode.com/integarsi-bot-autoposting-telegram-dengan-channel/</guid>
+      <guid>https://www.petanikode.com/integarsi-bot-autoposting-telegram-dengan-channel/</guid>
       <description>
 
-&lt;p&gt;Pada tulisan &lt;a href=&#34;https://petanikode.com/2016/07/membuat-bot-telegram-tanpa-menulis-kode-program-coding/&#34;&gt;sebelumnya&lt;/a&gt;,
+&lt;p&gt;Pada tulisan &lt;a href=&#34;https://www.petanikode.com/2016/07/membuat-bot-telegram-tanpa-menulis-kode-program-coding/&#34;&gt;sebelumnya&lt;/a&gt;,
 Saya pernah membuat Bot Autoposting dari RSS Reddit. Sekarang bagaimana caranya
 agar kiriman &lt;em&gt;(post)&lt;/em&gt; dari bot tersebut diteruskan ke &lt;em&gt;Channel&lt;/em&gt;.&lt;/p&gt;
 
@@ -92,10 +92,10 @@ Channel-nya Petani Kode di Telegram &lt;a href=&#34;https:/t.me/petanikode&#34;&
     
     <item>
       <title>Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io</title>
-      <link>https://petanikode.com/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</link>
+      <link>https://www.petanikode.com/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</link>
       <pubDate>Fri, 09 Sep 2016 14:16:00 +0000</pubDate>
       
-      <guid>https://petanikode.com/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</guid>
+      <guid>https://www.petanikode.com/menerapkan-api-simsimi-untuk-kendali-bot-telegram-dengan-layanan-hook.io/</guid>
       <description>
 
 &lt;p&gt;Simsimi bisa kita pinjam otaknya untuk dipakai di bot Telegram. Tapi,
@@ -118,14 +118,14 @@ Hook.io dan API Simsimi berkomunikasi.&lt;/p&gt;
 &lt;p&gt;Baca Juga:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/&#34;&gt;Cara Membuat Bot Telegram dengan Layanan Hook.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://petanikode.com/2016/09/eksperimen-dengan-api-simsimi/&#34;&gt;Eksperimen dengan API Simsimi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/&#34;&gt;Cara Membuat Bot Telegram dengan Layanan Hook.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/2016/09/eksperimen-dengan-api-simsimi/&#34;&gt;Eksperimen dengan API Simsimi&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;bahan-bahan-yang-dibutuhkan&#34;&gt;Bahan-Bahan yang Dibutuhkan&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Token Bot Telegram (&lt;a href=&#34;https://petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/&#34;&gt;Cara mendapatkannya&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Token Bot Telegram (&lt;a href=&#34;https://www.petanikode.com/2016/09/cara-membuat-bot-telegram-dengan-layanan-hook.io/&#34;&gt;Cara mendapatkannya&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Akun Hook.io (&lt;a href=&#34;https://hook.io/ardianta?s&#34;&gt;Daftar di sini&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Kunci API Simsimi (&lt;a href=&#34;http://developer.simsimi.com/api&#34;&gt;Daftar di sini&lt;/a&gt;)&lt;/li&gt;
 &lt;/ol&gt;
@@ -227,10 +227,10 @@ Pada dasarnya hanya meneruskan request ke API Simsimi dan mengembalikan lagi ke 
     
     <item>
       <title>Cara Membuat Bot Telegram dengan Layanan Hook.io</title>
-      <link>https://petanikode.com/cara-membuat-bot-telegram-dengan-layanan-hook.io/</link>
+      <link>https://www.petanikode.com/cara-membuat-bot-telegram-dengan-layanan-hook.io/</link>
       <pubDate>Mon, 05 Sep 2016 05:00:00 +0000</pubDate>
       
-      <guid>https://petanikode.com/cara-membuat-bot-telegram-dengan-layanan-hook.io/</guid>
+      <guid>https://www.petanikode.com/cara-membuat-bot-telegram-dengan-layanan-hook.io/</guid>
       <description>
 
 &lt;p&gt;&lt;amp-img
@@ -241,8 +241,8 @@ Pada dasarnya hanya meneruskan request ke API Simsimi dan mengembalikan lagi ke 
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Pada &lt;a href=&#34;https://petanikode.com/2016/07/membuat-bot-telegram-tanpa-menulis-kode-program-coding/&#34;&gt;tulisan sebelumnya&lt;/a&gt;,
-saya sudah membahas cara membuat bot &lt;a href=&#34;https://petanikode.com/topik/telegram&#34;&gt;Telegram&lt;/a&gt; melalui &lt;a href=&#34;https://manybot.io/&#34;&gt;@manybot&lt;/a&gt;.
+&lt;p&gt;Pada &lt;a href=&#34;https://www.petanikode.com/2016/07/membuat-bot-telegram-tanpa-menulis-kode-program-coding/&#34;&gt;tulisan sebelumnya&lt;/a&gt;,
+saya sudah membahas cara membuat bot &lt;a href=&#34;https://www.petanikode.com/topik/telegram&#34;&gt;Telegram&lt;/a&gt; melalui &lt;a href=&#34;https://manybot.io/&#34;&gt;@manybot&lt;/a&gt;.
 Tapi hanya sekedar berfungsi untuk &lt;em&gt;auto posting&lt;/em&gt; dari &lt;em&gt;RSS feed,&lt;/em&gt; VK, Youtube dan &lt;em&gt;Twitter&lt;/em&gt;.
 Nah, sekarang kita akan coba membuat bot yang bisa kita kostum sendiri, tentunya dengan kode.&lt;/p&gt;
 
@@ -414,7 +414,7 @@ Kita bisa menentukan bagaimana tingkah laku Bot melalui kode. Saran untuk
 pengembangan selanjutnya, bisa ditambahkan kecerdasan buatan agar bot
 lebih bermanfaat. Misalnya, kecerdasan buatan untuk menganalisa cuaca dan
 tanaman yang harus ditanam pada musim tertentu. Atau bisa kita
-&lt;a href=&#34;https://petanikode.com/2016/09/eksperimen-dengan-api-simsimi/&#34;&gt;terapkan API Simsimi&lt;/a&gt;
+&lt;a href=&#34;https://www.petanikode.com/2016/09/eksperimen-dengan-api-simsimi/&#34;&gt;terapkan API Simsimi&lt;/a&gt;
 agar bot bisa berbicara seperti Simsimi.&lt;/p&gt;
 
 &lt;p&gt;Jangan lupa bergabung ke Channel Petani Kode di Telegram: &lt;a href=&#34;https://t.me/petanikode&#34;&gt;https://t.me/petanikode&lt;/a&gt;
@@ -426,10 +426,10 @@ untuk mendapatkan informasi terbaru.&lt;/p&gt;
     
     <item>
       <title>Membuat Bot Telegram Tanpa Menulis Kode Program (Coding)</title>
-      <link>https://petanikode.com/membuat-bot-telegram-tanpa-menulis-kode-program-coding/</link>
+      <link>https://www.petanikode.com/membuat-bot-telegram-tanpa-menulis-kode-program-coding/</link>
       <pubDate>Fri, 08 Jul 2016 14:09:00 +0000</pubDate>
       
-      <guid>https://petanikode.com/membuat-bot-telegram-tanpa-menulis-kode-program-coding/</guid>
+      <guid>https://www.petanikode.com/membuat-bot-telegram-tanpa-menulis-kode-program-coding/</guid>
       <description>
 
 &lt;p&gt;&lt;amp-img
@@ -638,7 +638,7 @@ layout=&#34;responsive&#34;&gt;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya silahkan baca: &lt;a href=&#34;https://petanikode.com/2017/02/integarsi-bot-autoposting-telegram-dengan-channel/&#34;&gt;Cara Itegrasi Bot dengan Channel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Selanjutnya silahkan baca: &lt;a href=&#34;https://www.petanikode.com/2017/02/integarsi-bot-autoposting-telegram-dengan-channel/&#34;&gt;Cara Itegrasi Bot dengan Channel&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Nah, bagi yang ingin mengakses Reddit tampa harus dialihkan ke &lt;i&gt;Internet Positif&lt;/i&gt; bisa menggunakan Bot ini.&lt;br&gt;&lt;br&gt;Contoh-contoh link RSS Feeds Reddit yang bisa anda gunakan:&lt;/p&gt;
 

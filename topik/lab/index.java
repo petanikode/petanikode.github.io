@@ -20,8 +20,8 @@
 
 
 
-    <link rel="canonical" href="https://petanikode.com/topik/lab/index.java/" />
-    <link rel="amphtml" href="https://petanikode.com/topik/lab/index.java/" />
+    <link rel="canonical" href="https://www.petanikode.com/topik/lab/index.java/" />
+    <link rel="amphtml" href="https://www.petanikode.com/topik/lab/index.java/" />
 
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
     <meta content='/favicon.png' name='msapplication-TileImage'/>
@@ -71,7 +71,7 @@
     <meta property="og:title" content="Lab.Java" />
     <meta property="og:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://petanikode.com/topik/lab/index.java/" />
+    <meta property="og:url" content="https://www.petanikode.com/topik/lab/index.java/" />
 
     <meta property="og:image" content="" />
 
@@ -117,7 +117,7 @@
         "@type": "WebSite",
         "name": "Petani Kode — Programmer Pengguna Linux",
         "alternateName": "Petanikode",
-        "url": "https:\/\/petanikode.com\/",
+        "url": "https:\/\/www.petanikode.com\/",
         "potentialAction": {
             "@type": "SearchAction",
             "target": "http://petanikode.com/topik/{search_term_string}",
@@ -131,7 +131,7 @@
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "petanikode.com",
-  "url": "https:\/\/petanikode.com\/"
+  "url": "https:\/\/www.petanikode.com\/"
   
   , "logo": "http:\/\/petanikode.com\/petanikode-logo-bg-cerah.png"
   , "address": "Gang H. Abdul Basit, Desa Sisik, Kecamtatan Pringgarata, Lombok Tengah"
@@ -176,7 +176,7 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-            "@id": "https:\/\/petanikode.com\/",
+            "@id": "https:\/\/www.petanikode.com\/",
             "name": "home"
             }
       },
@@ -207,7 +207,7 @@
       "height" : 380,
       "width" : 720
     },
-  "mainEntityOfPage" : "https:\/\/petanikode.com\/topik\/lab\/index.java\/",
+  "mainEntityOfPage" : "https:\/\/www.petanikode.com\/topik\/lab\/index.java\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "petanikode.com",
@@ -221,7 +221,7 @@
 
   "review": {
     "@type": "Review",
-    "url": "https:\/\/petanikode.com\/topik\/lab\/index.java\/",
+    "url": "https:\/\/www.petanikode.com\/topik\/lab\/index.java\/",
     "author": {
       "@type": "Person",
       "name": "Ardianta Pargo",
@@ -1103,7 +1103,7 @@ padding: 16px;
             </a>
         </li>
         <li class="hide-on-mobile">
-            <a href="https://petanikode.com/">
+            <a href="https://www.petanikode.com/">
                 Home
             </a>
         </li>
@@ -1130,7 +1130,7 @@ padding: 16px;
         <div class="site-wrapper">
             <div class="site-title">
 
-                    <a href="https://petanikode.com/">
+                    <a href="https://www.petanikode.com/">
                         <amp-img
                             src="http://2.bp.blogspot.com/-pJdBch_oQqw/V3y2tFqPZ4I/AAAAAAAAC9U/7ujD0ZwCPp8ONjjVN_Hsh7zKqg6z7SKjwCK4B/s1600/petanikode-logo-2016-withtext.png"
                             layout="responsive"
@@ -1195,11 +1195,11 @@ padding: 16px;
 
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&t=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&text=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method%20https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method&body=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method:%20https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&t=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&text=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method&body=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 
@@ -1247,11 +1247,11 @@ padding: 16px;
 
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f&t=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f&text=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat%20https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat&body=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat:%20https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f&t=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f&text=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat&body=Pemrograman%20java%20di%20lab%20%288%29%3a%20Menggunakan%20pangkat:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-8-menggunakan-pangkat%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 
@@ -1299,11 +1299,11 @@ padding: 16px;
 
                 <div>Bagikan:
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f&t=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f&text=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi%20https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi&body=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi:%20https%3a%2f%2fpetanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f&t=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f&text=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi&body=Pemrograman%20java%20di%20lab%20%287%29%3a%20Mengenal%20JOptionPane%20dan%20operator%20kondisi:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 </ul>
 </div>
 
@@ -1556,7 +1556,7 @@ padding: 16px;
 <footer class='footer-wrapper block-group'>
     <section class="footer">
     <div class="link-footer">
-        <a href="https://petanikode.com/">Home</a>
+        <a href="https://www.petanikode.com/">Home</a>
         <a href="/arsip">Arsip</a>
         <a href="/tentang-petani-kode">Tentang</a>
         <a href="/aturan">Aturan</a>
@@ -1575,7 +1575,7 @@ padding: 16px;
     </div>
 
     <div class='text-center'>
-    &copy; 2017 <a href="https://petanikode.com/">Petani Kode</a>. Made in Lombok using <a href='https://gohugo.io' target='_blank'>Hugo 0.18.1</a>.
+    &copy; 2017 <a href="https://www.petanikode.com/">Petani Kode</a>. Made in Lombok using <a href='https://gohugo.io' target='_blank'>Hugo 0.18.1</a>.
     </div>
     </section>
 </footer>

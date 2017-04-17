@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dompdf on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://petanikode.com/topik/dompdf/index.xml</link>
+    <link>https://www.petanikode.com/topik/dompdf/index.xml</link>
     <description>Recent content in Dompdf on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://petanikode.com/topik/dompdf/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.petanikode.com/topik/dompdf/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cara Menggunakan Dompdf di Codeigniter</title>
-      <link>https://petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</link>
+      <link>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</link>
       <pubDate>Sun, 19 Feb 2017 16:48:58 +0800</pubDate>
       
-      <guid>https://petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</guid>
+      <guid>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</guid>
       <description>
 
 &lt;p&gt;Dompdf merupakan salah satu pustaka PHP untuk membuat PDF.&lt;/p&gt;
@@ -24,12 +24,12 @@ Kita bisa menggunakan CSS di dalamnya.&lt;/p&gt;
 
 &lt;p&gt;Saat ini Dompdf mendukung CSS versi 2.1.&lt;/p&gt;
 
-&lt;p&gt;Untuk menggunakan Dompdf di &lt;a href=&#34;https://petanikode.com/topik/codeigniter&#34;&gt;Codeigniter&lt;/a&gt;,
+&lt;p&gt;Untuk menggunakan Dompdf di &lt;a href=&#34;https://www.petanikode.com/topik/codeigniter&#34;&gt;Codeigniter&lt;/a&gt;,
 silahkan ikuti langkah-langkah berikut ini.&lt;/p&gt;
 
 &lt;h2 id=&#34;1-aktifkan-autoload-composer&#34;&gt;1. Aktifkan Autoload Composer&lt;/h2&gt;
 
-&lt;p&gt;Kita akan menginstal Dompdf melalui &lt;a href=&#34;https://petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Kita akan menginstal Dompdf melalui &lt;a href=&#34;https://www.petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Karena itu, &lt;em&gt;autoload&lt;/em&gt; untuk Composer perlu diaktifkan.&lt;/p&gt;
 
@@ -56,7 +56,7 @@ Composer seperti ini.&lt;/p&gt;
     layout=&#34;responsive&#34;&gt;
 &lt;/amp-img&gt;&lt;/p&gt;
 
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://petanikode.com/cara-menggunakan-composer-pada-codeigniter/&#34;&gt;Cara Menggunakan Composer pada CodeIgniter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/cara-menggunakan-composer-pada-codeigniter/&#34;&gt;Cara Menggunakan Composer pada CodeIgniter&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;3-membuat-pustaka-sendiri&#34;&gt;3. Membuat Pustaka Sendiri&lt;/h2&gt;
 

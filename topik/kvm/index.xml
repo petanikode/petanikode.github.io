@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kvm on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://petanikode.com/topik/kvm/index.xml</link>
+    <link>https://www.petanikode.com/topik/kvm/index.xml</link>
     <description>Recent content in Kvm on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://petanikode.com/topik/kvm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.petanikode.com/topik/kvm/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Solusi error `KVM is missing` Android Studio</title>
-      <link>https://petanikode.com/solusi-error-kvm-is-missing-android-studio/</link>
+      <link>https://www.petanikode.com/solusi-error-kvm-is-missing-android-studio/</link>
       <pubDate>Wed, 13 Jan 2016 10:28:00 +0000</pubDate>
       
-      <guid>https://petanikode.com/solusi-error-kvm-is-missing-android-studio/</guid>
+      <guid>https://www.petanikode.com/solusi-error-kvm-is-missing-android-studio/</guid>
       <description>&lt;p&gt;Emulator Android Studio yang saya instal di Linux (Xubuntu 15.10) 32bit, tidak bisa dijalankan. Meskipun saya sudah memberikan argumen &lt;code&gt;-force-32bit&lt;/code&gt; dan menginstal KVM.&lt;br /&gt;&lt;blockquote&gt;emulator: ERROR: x86 emulation currently requires hardware acceleration!&lt;br /&gt;Please ensure KVM is properly installed and usable.&lt;br /&gt;CPU acceleration status: KVM is not installed on this machine (/dev/kvm is missing).&lt;/blockquote&gt;Itulah pesan error yang saya dapatkan saat mencoba menjalankan sebuah proyek.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-R9XvPzuNUbg/VpUCqrQMV6I/AAAAAAAACYg/jELyIgU9cHs/s1600/Pesan%2Berror%2B-%2BKVM%2Bbelum%2Bterinstal%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-R9XvPzuNUbg/VpUCqrQMV6I/AAAAAAAACYg/jELyIgU9cHs/s1600/Pesan%2Berror%2B-%2BKVM%2Bbelum%2Bterinstal%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Sepertinya masalah ini cukup sulit untuk diatasi. Tetapi, setelah membaca jawaban dari sebuah pertanyaan di &lt;a href=&#34;http://askubuntu.com/a/565013&#34; target=&#34;_blank&#34;&gt;askubuntu&lt;/a&gt;, masalah ini dapat saya atasi. Sekarang sudah bisa menjalankan emulatornya.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-KrvxPR2Bnig/VpUO8afCs1I/AAAAAAAACY8/H3XbqrKzdUs/s1600/Testing%2Bemulator%2Bandroid%2Bstudio%2BXubuntu%2B15.10%2B32bit%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-KrvxPR2Bnig/VpUO8afCs1I/AAAAAAAACY8/H3XbqrKzdUs/s1600/Testing%2Bemulator%2Bandroid%2Bstudio%2BXubuntu%2B15.10%2B32bit%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Solusinya ternyata hanya menyalakan teknologi virtualisasi melalui BIOS:&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-9BtBFthtP2A/VpUMB5ZsHEI/AAAAAAAACYw/CbOJQl-n1XM/s1600/Hidupkan%2Bfitur%2Bteknologi%2Bvirtial%2Bintel%2B-%2Bpetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-9BtBFthtP2A/VpUMB5ZsHEI/AAAAAAAACYw/CbOJQl-n1XM/s1600/Hidupkan%2Bfitur%2Bteknologi%2Bvirtial%2Bintel%2B-%2Bpetanikode.jpg&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>

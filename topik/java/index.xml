@@ -698,7 +698,7 @@ maka dia punya &lt;em&gt;method&lt;/em&gt; (fungsi) untuk melakukan sesuatu.&lt;
 &lt;li&gt;Fungsi &lt;code&gt;add()&lt;/code&gt; untuk menambahkan sesuatu ke dalam Array List;&lt;/li&gt;
 &lt;li&gt;Fungsi &lt;code&gt;remove()&lt;/code&gt; untuk menghapus sesuatu ke dalam Array List;&lt;/li&gt;
 &lt;li&gt;Fungsi &lt;code&gt;size()&lt;/code&gt; untuk mengambil ukuran Array List;&lt;/li&gt;
-&lt;li&gt;Fungsi &lt;code&gt;get(id)&lt;/code&gt; untuk mengambil item dalam Array List berdasarkan id tertentu.&lt;/li&gt;
+&lt;li&gt;Fungsi &lt;code&gt;get(id)&lt;/code&gt; untuk mengambil item dalam Array List berdasarkan id atau indeks tertentu.&lt;/li&gt;
 &lt;li&gt;dan masih banyak fungsi yang lainnya.&lt;/li&gt;
 &lt;/ul&gt;
 

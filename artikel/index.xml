@@ -7,8 +7,128 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 14 Apr 2017 14:10:20 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Apr 2017 10:56:07 +0800</lastBuildDate>
     <atom:link href="https://www.petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)</title>
+      <link>https://www.petanikode.com/cara-menambahkan-ssl-untuk-github-pages/</link>
+      <pubDate>Wed, 19 Apr 2017 10:56:07 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/cara-menambahkan-ssl-untuk-github-pages/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/https.png&#34; alt=&#34;Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada dasarnya Github telah memberikan SSL untuk setiap halaman github &lt;em&gt;(Github Pages)&lt;/em&gt;.
+Akan tetapi, untuk halaman github yang menggunakan domain sendiri tidak diberikan.&lt;/p&gt;
+
+&lt;p&gt;Contoh Halaman github dengan SSL:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://petanikode.github.io
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lihat, di sana &lt;code&gt;https&lt;/code&gt; menandakan SSL-nya aktif.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan untuk kostum domain, seperti &lt;code&gt;http://petanikode.com&lt;/code&gt; tidak diberikan
+SSL.&lt;/p&gt;
+
+&lt;h2 id=&#34;mengapa-menggunakan-ssl&#34;&gt;Mengapa Menggunakan SSL?&lt;/h2&gt;
+
+&lt;p&gt;Petani Kode memang sebuah halaman statis yang dibuat dengan Hugo.&lt;/p&gt;
+
+&lt;p&gt;Sepertinya SSL tidak terlalu dibutuhkan, karena tidak ada pemerosesan data
+melalui form yang akan dikirim ke database.&lt;/p&gt;
+
+&lt;p&gt;Tapi, menurut beberapa pakar SEO: menggunakan SSL/https di blog akan meningkatkan
+kepercayaan mesin pencari.&lt;/p&gt;
+
+&lt;p&gt;Saya percaya&amp;hellip; karena beru saja membaca: &lt;a href=&#34;https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html&#34;&gt;HTTPS as a ranking signal&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, petani kode harus menggunakan SSL :smile:.&lt;/p&gt;
+
+&lt;h2 id=&#34;mengaktifkan-ssl-cloudflare&#34;&gt;Mengaktifkan SSL Cloudflare&lt;/h2&gt;
+
+&lt;p&gt;Pertama pastikan pengaturan DNS-nya seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-DNS-Cloudflare.png&#34; alt=&#34;Konfigurasi DNS Cloudflare&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Artinya, website kita yang di Github akan melewati Cloudflare kemudian diteruskan
+ke Client.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu masuk ke &lt;strong&gt;Crypto&lt;/strong&gt;, kemudian atur SSL menjadi &lt;strong&gt;Full&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-SSL-Cloudflare.png&#34; alt=&#34;Pengaturan SSL Cloudflare&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ada empat pilihan: off, flexible, full, dan full (strict).&lt;/p&gt;
+
+&lt;p&gt;Perbedaanya seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/cloudflare_ssl_modes.png&#34; alt=&#34;Perbedaan pengaturan SSL Cloudflare&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sumber: &lt;a href=&#34;https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/&#34;&gt;blog.cloudflare.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-page-rules&#34;&gt;Membuat Page Rules&lt;/h2&gt;
+
+&lt;p&gt;Agar &lt;code&gt;http&lt;/code&gt; dialihkan ke &lt;code&gt;https&lt;/code&gt;, maka kita perlu membuat &lt;em&gt;page rules&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Silahkan masuk ke &lt;strong&gt;Page Rules&lt;/strong&gt;, kemudian tambahkan &lt;em&gt;rules&lt;/em&gt; seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-page-rules-untuk-https.png&#34; alt=&#34;Pengaturan Page Rules untuk HTTPS&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tambahkan juga &lt;em&gt;rules&lt;/em&gt; untuk cache-nya seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/pengaturan-page-rules-untuk-cache.png&#34; alt=&#34;Pengaturan Page Rules untuk Cache&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;menugbah-cname-dan-konfigurasi-hugo&#34;&gt;Menugbah CNAME dan Konfigurasi Hugo&lt;/h2&gt;
+
+&lt;p&gt;Karena kita ingin menggunakan alamat dengan &lt;code&gt;https&lt;/code&gt; maka perlu diubah Konfigurasinya.&lt;/p&gt;
+
+&lt;p&gt;Di Hugo, baseurl-nya diubah menjadi seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;baseurl = &amp;quot;https://www.petanikode.com/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sedangkana di repositori githubnya:&lt;/p&gt;
+
+&lt;p&gt;CNAME: &lt;a href=&#34;https://github.com/petanikode/petanikode.github.io/blob/master/CNAME&#34;&gt;petanikode.github.io/CNAME&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;www.petanikode.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;percobaan-dan-masalah&#34;&gt;Percobaan dan Masalah&lt;/h2&gt;
+
+&lt;p&gt;Saat melakukan percobaan, saya kira SSL-nya tidak bekerja dengan baik.&lt;/p&gt;
+
+&lt;p&gt;Terlihat di browser, ketika membuka  &lt;code&gt;https://www.petanikode.com&lt;/code&gt; warnya abu-abu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/SSL-masih-belum-aman.png&#34; alt=&#34;SSL Belum aman&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hal ini disebabkan karena ada beberapa link gambar yang masih menggunakan HTTP.&lt;/p&gt;
+
+&lt;p&gt;Kemudian Saya mencoba mencarinya di &lt;em&gt;page source&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/link-aset-yang-masih-menggunakan-http.png&#34; alt=&#34;Link aset yang masih menggunakan http&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah mengetahui, gambar atau &lt;em&gt;assets&lt;/em&gt; yang masih menggunakan &lt;code&gt;http&lt;/code&gt; selanjutnya
+tinggal mengubahnya menjadi &lt;code&gt;https&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pada Hugo, Konfigurasinya saya letakan di &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/mengubah-link-gambar-ke-https.png&#34; alt=&#34;Mengubah link gambar dari http menjadi https&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;dan akhirnya SSL sudah aktif.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/ssl-petanikode-sudah-aktif.png&#34; alt=&#34;SSL Petani kode sudah aktif&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Akan tetapi, ada satu lagi masalah yang muncul.&lt;/p&gt;
+
+&lt;p&gt;Semua komentar menghilang, karena link yang tersimpan di disqus adalah link versi
+sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Mungkin nanti akan saya perbaiki :smile:, yang penting sekarang sudah HTTPS.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Kumpulan 90&#43; Grup, Channel, dan Bot Telegram untuk Programmer</title>
@@ -2746,135 +2866,6 @@ akan berubah sesuai dengan nilai &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt
     frameborder=&#34;0&#34;
     src=&#34;https://codepen.io/ardianta/embed/BpXoyz/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;&gt;
 &lt;/amp-iframe&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Menggunakan Dompdf di Codeigniter</title>
-      <link>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</link>
-      <pubDate>Sun, 19 Feb 2017 16:48:58 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</guid>
-      <description>
-
-&lt;p&gt;Dompdf merupakan salah satu pustaka PHP untuk membuat PDF.&lt;/p&gt;
-
-&lt;p&gt;Dompdf membuat PDF dari HTML, sehingga lebih praktis. Selain itu juga,
-Kita bisa menggunakan CSS di dalamnya.&lt;/p&gt;
-
-&lt;p&gt;Saat ini Dompdf mendukung CSS versi 2.1.&lt;/p&gt;
-
-&lt;p&gt;Untuk menggunakan Dompdf di &lt;a href=&#34;https://www.petanikode.com/topik/codeigniter&#34;&gt;Codeigniter&lt;/a&gt;,
-silahkan ikuti langkah-langkah berikut ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-aktifkan-autoload-composer&#34;&gt;1. Aktifkan Autoload Composer&lt;/h2&gt;
-
-&lt;p&gt;Kita akan menginstal Dompdf melalui &lt;a href=&#34;https://www.petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, &lt;em&gt;autoload&lt;/em&gt; untuk Composer perlu diaktifkan.&lt;/p&gt;
-
-&lt;p&gt;Silahkan buka file &lt;code&gt;application/config/config.php&lt;/code&gt;, kemudian isi bagian &lt;em&gt;autoload&lt;/em&gt;
-Composer seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;2-instal-dompdf&#34;&gt;2. Instal Dompdf&lt;/h2&gt;
-
-&lt;p&gt;Selanjutnya kita instal &lt;code&gt;dompdf&lt;/code&gt; dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;composer require dompdf/dompdf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jalankan perintah tersebut di direktori proyeknya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;767&#34;
-    height=&#34;397&#34;
-    alt=&#34;Instal dompdf di proyek codeigniter&#34;
-    src=&#34;https://4.bp.blogspot.com/-s_nZmMzBxw4/WKloKD7bnsI/AAAAAAAAEDM/i43FYKNjq0UIDMEEpupojCfzFnekvkQdgCPcB/s1600/Instal%2Bdompdf%2Bdi%2Bproyek%2Bcodeigniter.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/cara-menggunakan-composer-pada-codeigniter/&#34;&gt;Cara Menggunakan Composer pada CodeIgniter&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-membuat-pustaka-sendiri&#34;&gt;3. Membuat Pustaka Sendiri&lt;/h2&gt;
-
-&lt;p&gt;Agar tidak menulis ulang kode yang sama disetiap penggunaan Dompdf,
-kita buat saja pustaka sendiri.&lt;/p&gt;
-
-&lt;p&gt;Silahkan buat file baru di direktori &lt;code&gt;application/libraries&lt;/code&gt;
-dengan nama &lt;code&gt;pdf.php&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Isinya seperti berikut ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;1560&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/f4bfa696ca9a040677e87f2cde4d5887&#34;&gt;
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Kode di atas merupakan &lt;em&gt;class exstends&lt;/em&gt; dari &lt;em&gt;class&lt;/em&gt; Dompdf.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-membuat-controller&#34;&gt;4. Membuat Controller&lt;/h2&gt;
-
-&lt;p&gt;Buat sebuah fungsi di dalam &lt;em&gt;Controller&lt;/em&gt; untuk menggunakan pustaka yang baru
-saja kita buat.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;public function laporan_pdf(){
-
-    $data = array(
-        &amp;quot;dataku&amp;quot; =&amp;gt; array(
-            &amp;quot;nama&amp;quot; =&amp;gt; &amp;quot;Petani Kode&amp;quot;,
-            &amp;quot;url&amp;quot; =&amp;gt; &amp;quot;http://petanikode.com&amp;quot;
-        )
-    );
-
-    $this-&amp;gt;load-&amp;gt;library(&#39;pdf&#39;);
-
-    $this-&amp;gt;pdf-&amp;gt;setPaper(&#39;A4&#39;, &#39;potrait&#39;);
-    $this-&amp;gt;pdf-&amp;gt;filename = &amp;quot;laporan-petanikode.pdf&amp;quot;;
-    $this-&amp;gt;pdf-&amp;gt;load_view(&#39;laporan_pdf&#39;, $data);
-
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;File view yang di-load bernama &lt;code&gt;laporan_pdf&lt;/code&gt;, berarti kita harus membuat
-file view bernama &lt;code&gt;laporan_pdf.php&lt;/code&gt; di &lt;code&gt;application/views&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;5-membuat-view&#34;&gt;5. Membuat View&lt;/h2&gt;
-
-&lt;p&gt;File: &lt;code&gt;application/views/laporan_pdf.php&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;pre&amp;gt;&amp;lt;?php print_r($dataku); ?&amp;gt;&amp;lt;/pre&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;6-percobaan&#34;&gt;6. Percobaan&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1123&#34;
-    height=&#34;583&#34;
-    alt=&#34;laporan-pdf-codeigniter-dengan-dompdf.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-kboJqCRNU4o/WKmUXJshcRI/AAAAAAAAEDw/EN3ddQNV6KAd7i8Am8rf2uyIluTFD-0eQCPcB/s1600/laporan-pdf-codeigniter-dengan-dompdf.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Begitulah cara menggunakan Dompdf di Codeigniter.&lt;/p&gt;
-
-&lt;p&gt;Selebihnya anda bisa bereksperiman sendiri.&lt;/p&gt;
-
-&lt;p&gt;Kalau masih belum jelas, bisa cek repositori ini &lt;a href=&#34;https://github.com/ardianta/codeigniter-dompdf&#34;&gt;codeigniter-dompdf&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

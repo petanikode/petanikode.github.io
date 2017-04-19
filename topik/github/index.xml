@@ -10,6 +10,126 @@
     <atom:link href="https://www.petanikode.com/topik/github/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)</title>
+      <link>https://www.petanikode.com/cara-menambahkan-ssl-untuk-github-pages/</link>
+      <pubDate>Wed, 19 Apr 2017 10:56:07 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/cara-menambahkan-ssl-untuk-github-pages/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/https.png&#34; alt=&#34;Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada dasarnya Github telah memberikan SSL untuk setiap halaman github &lt;em&gt;(Github Pages)&lt;/em&gt;.
+Akan tetapi, untuk halaman github yang menggunakan domain sendiri tidak diberikan.&lt;/p&gt;
+
+&lt;p&gt;Contoh Halaman github dengan SSL:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://petanikode.github.io
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lihat, di sana &lt;code&gt;https&lt;/code&gt; menandakan SSL-nya aktif.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan untuk kostum domain, seperti &lt;code&gt;http://petanikode.com&lt;/code&gt; tidak diberikan
+SSL.&lt;/p&gt;
+
+&lt;h2 id=&#34;mengapa-menggunakan-ssl&#34;&gt;Mengapa Menggunakan SSL?&lt;/h2&gt;
+
+&lt;p&gt;Petani Kode memang sebuah halaman statis yang dibuat dengan Hugo.&lt;/p&gt;
+
+&lt;p&gt;Sepertinya SSL tidak terlalu dibutuhkan, karena tidak ada pemerosesan data
+melalui form yang akan dikirim ke database.&lt;/p&gt;
+
+&lt;p&gt;Tapi, menurut beberapa pakar SEO: menggunakan SSL/https di blog akan meningkatkan
+kepercayaan mesin pencari.&lt;/p&gt;
+
+&lt;p&gt;Saya percaya&amp;hellip; karena beru saja membaca: &lt;a href=&#34;https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html&#34;&gt;HTTPS as a ranking signal&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, petani kode harus menggunakan SSL :smile:.&lt;/p&gt;
+
+&lt;h2 id=&#34;mengaktifkan-ssl-cloudflare&#34;&gt;Mengaktifkan SSL Cloudflare&lt;/h2&gt;
+
+&lt;p&gt;Pertama pastikan pengaturan DNS-nya seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-DNS-Cloudflare.png&#34; alt=&#34;Konfigurasi DNS Cloudflare&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Artinya, website kita yang di Github akan melewati Cloudflare kemudian diteruskan
+ke Client.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu masuk ke &lt;strong&gt;Crypto&lt;/strong&gt;, kemudian atur SSL menjadi &lt;strong&gt;Full&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-SSL-Cloudflare.png&#34; alt=&#34;Pengaturan SSL Cloudflare&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ada empat pilihan: off, flexible, full, dan full (strict).&lt;/p&gt;
+
+&lt;p&gt;Perbedaanya seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/cloudflare_ssl_modes.png&#34; alt=&#34;Perbedaan pengaturan SSL Cloudflare&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sumber: &lt;a href=&#34;https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/&#34;&gt;blog.cloudflare.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-page-rules&#34;&gt;Membuat Page Rules&lt;/h2&gt;
+
+&lt;p&gt;Agar &lt;code&gt;http&lt;/code&gt; dialihkan ke &lt;code&gt;https&lt;/code&gt;, maka kita perlu membuat &lt;em&gt;page rules&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Silahkan masuk ke &lt;strong&gt;Page Rules&lt;/strong&gt;, kemudian tambahkan &lt;em&gt;rules&lt;/em&gt; seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-page-rules-untuk-https.png&#34; alt=&#34;Pengaturan Page Rules untuk HTTPS&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tambahkan juga &lt;em&gt;rules&lt;/em&gt; untuk cache-nya seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/pengaturan-page-rules-untuk-cache.png&#34; alt=&#34;Pengaturan Page Rules untuk Cache&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;menugbah-cname-dan-konfigurasi-hugo&#34;&gt;Menugbah CNAME dan Konfigurasi Hugo&lt;/h2&gt;
+
+&lt;p&gt;Karena kita ingin menggunakan alamat dengan &lt;code&gt;https&lt;/code&gt; maka perlu diubah Konfigurasinya.&lt;/p&gt;
+
+&lt;p&gt;Di Hugo, baseurl-nya diubah menjadi seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;baseurl = &amp;quot;https://www.petanikode.com/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sedangkana di repositori githubnya:&lt;/p&gt;
+
+&lt;p&gt;CNAME: &lt;a href=&#34;https://github.com/petanikode/petanikode.github.io/blob/master/CNAME&#34;&gt;petanikode.github.io/CNAME&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;www.petanikode.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;percobaan-dan-masalah&#34;&gt;Percobaan dan Masalah&lt;/h2&gt;
+
+&lt;p&gt;Saat melakukan percobaan, saya kira SSL-nya tidak bekerja dengan baik.&lt;/p&gt;
+
+&lt;p&gt;Terlihat di browser, ketika membuka  &lt;code&gt;https://www.petanikode.com&lt;/code&gt; warnya abu-abu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/SSL-masih-belum-aman.png&#34; alt=&#34;SSL Belum aman&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hal ini disebabkan karena ada beberapa link gambar yang masih menggunakan HTTP.&lt;/p&gt;
+
+&lt;p&gt;Kemudian Saya mencoba mencarinya di &lt;em&gt;page source&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/link-aset-yang-masih-menggunakan-http.png&#34; alt=&#34;Link aset yang masih menggunakan http&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah mengetahui, gambar atau &lt;em&gt;assets&lt;/em&gt; yang masih menggunakan &lt;code&gt;http&lt;/code&gt; selanjutnya
+tinggal mengubahnya menjadi &lt;code&gt;https&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pada Hugo, Konfigurasinya saya letakan di &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/mengubah-link-gambar-ke-https.png&#34; alt=&#34;Mengubah link gambar dari http menjadi https&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;dan akhirnya SSL sudah aktif.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/ssl-petanikode-sudah-aktif.png&#34; alt=&#34;SSL Petani kode sudah aktif&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Akan tetapi, ada satu lagi masalah yang muncul.&lt;/p&gt;
+
+&lt;p&gt;Semua komentar menghilang, karena link yang tersimpan di disqus adalah link versi
+sebelumnya.&lt;/p&gt;
+
+&lt;p&gt;Mungkin nanti akan saya perbaiki :smile:, yang penting sekarang sudah HTTPS.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Bahaya! Password dan Token API Bisa Dicuri dengan Sangat Mudah di Github</title>
       <link>https://www.petanikode.com/bahaya-password-dan-token-api-bisa-dicuri-dengan-sangat-mudah-di-github/</link>
       <pubDate>Wed, 15 Feb 2017 20:12:19 +0800</pubDate>

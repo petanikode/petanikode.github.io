@@ -1212,7 +1212,7 @@ padding: 16px;
 ulang = 10
 
 for i in range(ulang):
-    print “Perulangan ke-”+str(i)
+    print &quot;Perulangan ke-&quot;+str(i)
 </code></pre>
 
 <p>Pertama kita menentukan banyak perulangannya sebanyak 10x</p>
@@ -1245,7 +1245,7 @@ Perulangan ke-9
 
 <pre><code class="language-python"># berkas: perulanganFor.py
 
-item = [‘kopi’,‘nasi’,‘teh’,‘jeruk’]
+item = ['kopi','nasi','teh','jeruk']
 
 for isi in item:
     print isi
@@ -1273,30 +1273,30 @@ jeruk
 
 <pre><code class="language-python"># berkas: perulanganWhile.py
 
-jawab = ‘ya’
+jawab = 'ya'
 hitung = 0
 
-while(jawab == ‘ya’):
+while(jawab == 'ya'):
     hitung += 1
-    jawab = raw_input(“Ulang lagi tidak? “)
+    jawab = raw_input(&quot;Ulang lagi tidak? &quot;)
 
-print “Total perulagan: “ + str(hitung)
+print &quot;Total perulagan: &quot; + str(hitung)
 </code></pre>
 
 <p>Atau bisa juga dengan bentuk yang seperti ini, dengan menggunakan kata kuci <code>break</code></p>
 
 <pre><code class="language-python"># berkas: perulanganWhile.py
 
-jawab = ‘ya’
+jawab = 'ya'
 hitung = 0
 
 while(True):
     hitung += 1
-    jawab = raw_input(“Ulang lagi tidak? “)
-    if jawab == ‘tidak’:
+    jawab = raw_input(&quot;Ulang lagi tidak? &quot;)
+    if jawab == 'tidak':
         break
 
-print “Total perulagan: “ + str(hitung)
+print &quot;Total perulagan: &quot; + str(hitung)
 </code></pre>
 
 <p>Pertama menentukan variabel untuk menghitung, dan menentukan kapan perulangan berhenti. kalau pengguna menjawab tidak maka perulangan akan terhenti.</p>
@@ -1305,15 +1305,12 @@ print “Total perulagan: “ + str(hitung)
 hitung = 0
 </code></pre>
 
-<p>Melakukan perulangan dengan <em>while</em>, kemudian menambah satu variabel</p>
+<p>Melakukan perulangan dengan <em>while</em>, kemudian menambah satu variabel <code>hitung</code>
+setiap kali mengulang. lalu menanyakan kepada pengguna, apakah mau berhenti mengulang atau tidak?</p>
 
-<p><samp>hitung</samp></p>
-
-<p>setiap kali mengulang. lalu menanyakan kepada pengguna, apakah mau berhenti mengulang atau tidak?</p>
-
-<pre><code class="language-python">while(jawab == ‘ya’):
+<pre><code class="language-python">while(jawab == 'ya'):
   hitung += 1
-  jawab = raw_input(“Ulang lagi tidak? “)
+  jawab = raw_input(&quot;Ulang lagi tidak? &quot;)
 </code></pre>
 
 <p>Setelah selesai mengulang, cetak berapa kali perulangan tersebut terjadi</p>

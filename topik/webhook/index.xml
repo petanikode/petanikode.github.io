@@ -42,7 +42,7 @@
 
 &lt;p&gt;Sebelumnya, perlu diketahui cara komunikasi bot dengan Hook.io dan API Simsimi.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-89RK3vsPeAw/V9FJ-fgPW5I/AAAAAAAADOY/D-R__QHvwzMdNNKsIaNkEU7rzT2hVep7gCK4B/s1600/API%2BSimsimi%2Bdan%2BBot%2BTelegram%2B-%2BPetani%2BKode.png&#34; alt=&#34;Cara komunikasi Bot Telegram dengan Hook.io dan API Simsimi&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-89RK3vsPeAw/V9FJ-fgPW5I/AAAAAAAADOY/D-R__QHvwzMdNNKsIaNkEU7rzT2hVep7gCK4B/s1600/API%2BSimsimi%2Bdan%2BBot%2BTelegram%2B-%2BPetani%2BKode.png&#34; alt=&#34;Cara komunikasi Bot Telegram dengan Hook.io dan API Simsimi&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Bot mengirim teks (pesan) ke Hook.io, kemudian Hook.io meneruskan request
 tersebut ke Simsimi.&lt;/p&gt;
@@ -90,13 +90,7 @@ balasannya ke Bot.&lt;/p&gt;
 
 &lt;p&gt;Sebagai contoh, saya membuat sebuah service bernama &lt;code&gt;iyan-chan&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img
-    width=&#34;930&#34;
-    height=&#34;567&#34;
-    alt=&#34;Pembuatan+Service+di+Hook.io.png&#34;
-    src=&#34;http://4.bp.blogspot.com/-hIasWFzSQzg/V9JFX8awRgI/AAAAAAAADOo/q6Jz2sW3op4pgk-47xQ_9AkNWNFU8xrrgCK4B/s1600/Pembuatan%2BService%2Bdi%2BHook.io.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-hIasWFzSQzg/V9JFX8awRgI/AAAAAAAADOo/q6Jz2sW3op4pgk-47xQ_9AkNWNFU8xrrgCK4B/s1600/Pembuatan%2BService%2Bdi%2BHook.io.png&#34; alt=&#34;Membuat Service di Hook.io&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Setelah selesai, kita akan memiliki server sendiri dengan alamat&lt;/p&gt;
 
@@ -261,7 +255,7 @@ balasan tersebut kita kirim kembali ke bot.&lt;/p&gt;
 
 &lt;p&gt;Silahkan chat dengan bot-nya &lt;a href=&#34;https://t.me/iyan_chan_bot&#34;&gt;@iyan_chan_bot&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-eNMhxjFRExs/V9JOMICTWNI/AAAAAAAADPM/Me9uiX9wm7ATgEOrAEoWArpcoRFyxq-mwCK4B/s1600/Percobaan%2Bbot%2Bdengan%2Bapi%2BSimsimi%2B-%2Bpetanikode.jpg&#34; alt=&#34;Demo Percobaan Bot Telegram dengan API Simsimi&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-eNMhxjFRExs/V9JOMICTWNI/AAAAAAAADPM/Me9uiX9wm7ATgEOrAEoWArpcoRFyxq-mwCK4B/s1600/Percobaan%2Bbot%2Bdengan%2Bapi%2BSimsimi%2B-%2Bpetanikode.jpg&#34; alt=&#34;Demo Percobaan Bot Telegram dengan API Simsimi&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Yohoo!, Bot sudah bisa merespon layaknya Simsimi.&lt;/p&gt;
 

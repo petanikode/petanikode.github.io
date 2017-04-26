@@ -308,7 +308,7 @@ balasan tersebut kita kirim kembali ke bot.&lt;/p&gt;
 
 &lt;p&gt;Langkah berikutnya menghubungkan Bot dengan Hook.io.&lt;/p&gt;
 
-&lt;p&gt;Kita biasa menggunakan URL berikut untuk melakukannya:&lt;/p&gt;
+&lt;p&gt;Kita bisa menggunakan URL berikut untuk melakukannya:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;https://api.telegram.org/bot&amp;lt;TOKEN&amp;gt;/setWebhook?url=https://hook.io/&amp;lt;hook-user&amp;gt;/&amp;lt;hook-name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;

@@ -544,7 +544,7 @@ balasannya ke Bot.&lt;/p&gt;
     src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/b67caece3b5ded0a4d958c9fed8adcac&#34;&gt;
 &lt;/amp-iframe&gt; --&gt;
 
-&lt;p&gt;Fungsi utama dari kode di atas adalah menerima dan meminta request.&lt;/p&gt;
+&lt;p&gt;Fungsi utama dari kode di atas adalah menerima dan membuat request.&lt;/p&gt;
 
 &lt;p&gt;Pertama kita akan menerima request dari bot, kemudian request tersebut
 diteruskan ke API Simsimi.&lt;/p&gt;

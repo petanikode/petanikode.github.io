@@ -373,7 +373,7 @@ sudah ditentukan&lt;/a&gt;.&lt;/p&gt;
 		// 404-Not found.
 		// 500-Server Error.
 
-        if(data.result == 509 || data.result == 400 || data.result == 401 || data.result == 404 || data.result == 500 ){
+        if(data.status == 509 || data.status == 400 || data.status == 401 || data.status == 404 || data.status == 500 ){
         	pesanBalasan = botName + &amp;quot; sedang tidur, silahkan hubungi kakak @ardiantapargo!&amp;quot;;
         } else {
         	pesanBalasan = data.respSentence;

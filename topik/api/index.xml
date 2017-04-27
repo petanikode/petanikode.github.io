@@ -496,6 +496,27 @@ Grup.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/menambahkan-bot-sebagai-admin.png&#34; alt=&#34;Menjadikan Bot sebagai administrator&#34; /&gt;&lt;/p&gt;
 
+&lt;p&gt;Atau jika kamu tidak memiliki akses administrator di Grup, silahkan matikan
+&lt;em&gt;privacy&lt;/em&gt; bot-nya.&lt;/p&gt;
+
+&lt;p&gt;Kirim perintah &lt;code&gt;/setprivacy&lt;/code&gt; ke &lt;a href=&#34;https://t.me/BotFather&#34;&gt;@botfather&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lalu pilih &lt;em&gt;Disable&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/non-aktifkan-privacy-bot.png&#34; alt=&#34;Menon-aktifkan privacy bot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Keterangan&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Enable: artinya bot hanya akan menerima pesan pada grup kalau di-mention
+atau dengan perintah &lt;code&gt;/&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Disable: artinya bot akan menerima semua pesan pada grup.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Perlu diketahui, paket gratis hook.io memiliki batasan 1000 request/bulan.&lt;/p&gt;
+
+&lt;p&gt;Jadi gunakan dengan bijak :smile:.&lt;/p&gt;
+
 &lt;h2 id=&#34;trik-agar-bot-tetap-hidup&#34;&gt;Trik Agar Bot Tetap Hidup&lt;/h2&gt;
 
 &lt;p&gt;Seperti yang kita ketahui, masa &lt;em&gt;trial&lt;/em&gt; API simsimi sampai 7 hari dengan batasan

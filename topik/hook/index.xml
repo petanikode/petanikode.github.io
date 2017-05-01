@@ -411,7 +411,7 @@ sudah ditentukan&lt;/a&gt;.&lt;/p&gt;
           .post(&#39;https://api.telegram.org/bot&#39; + hook.env.iyan_chan_bot + &#39;/sendMessage&#39;)
           .form({
                 &amp;quot;chat_id&amp;quot;: hook.params.message.chat.id,
-                &amp;quot;text&amp;quot;: pesanBalasan //hook.params.message.text
+                &amp;quot;text&amp;quot;: pesanBalasan 
         });
 
       }

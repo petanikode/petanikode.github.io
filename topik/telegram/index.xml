@@ -726,7 +726,7 @@ sudah ditentukan&lt;/a&gt;.&lt;/p&gt;
 
     var botName = &amp;quot;iyan&amp;quot;; // nama bot, silahkan ganti sesukanya
 
-    //var simiUrl = &#39;http://sandbox.api.simsimi.com/request.p?key=0858369d-3d2d-4bcd-86b0-eaf9d523d259&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=&#39;+hook.params.message.text;
+    //var simiUrl = &#39;http://sandbox.api.simsimi.com/request.p?key=&#39;+hook.env.simsimi_key+&#39;&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=&#39;+hook.params.message.text;
 
  	var simiUrlWeb = &#39;http://www.simsimi.com/getRealtimeReq?uuid=LUHzowu7l7tpHTCfe2RshB8aH0rwambBme2ZveDFAEr&amp;amp;lc=id&amp;amp;ft=1&amp;amp;reqText=&#39; + hook.params.message.text + &#39;&amp;amp;status=W&#39;;
 

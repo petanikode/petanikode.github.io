@@ -1565,7 +1565,7 @@ sudah ditentukan</a>.</p>
 
     var botName = &quot;iyan&quot;; // nama bot, silahkan ganti sesukanya
 
-    //var simiUrl = 'http://sandbox.api.simsimi.com/request.p?key=0858369d-3d2d-4bcd-86b0-eaf9d523d259&amp;lc=id&amp;ft=1.0&amp;text='+hook.params.message.text;
+    //var simiUrl = 'http://sandbox.api.simsimi.com/request.p?key='+hook.env.simsimi_key+'&amp;lc=id&amp;ft=1.0&amp;text='+hook.params.message.text;
 
  	var simiUrlWeb = 'http://www.simsimi.com/getRealtimeReq?uuid=LUHzowu7l7tpHTCfe2RshB8aH0rwambBme2ZveDFAEr&amp;lc=id&amp;ft=1&amp;reqText=' + hook.params.message.text + '&amp;status=W';
 

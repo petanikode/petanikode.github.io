@@ -10,146 +10,6 @@
     <atom:link href="https://www.petanikode.com/topik/pemrograman-web/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Cara Melindungi Web dari Serangan XSS pada Framework CodeIgniter</title>
-      <link>https://www.petanikode.com/serangan-xss-codeigniter/</link>
-      <pubDate>Fri, 23 Dec 2016 05:13:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/serangan-xss-codeigniter/</guid>
-      <description>&lt;p&gt;XSS merupakan singkatan yang digunakan untuk istilah &lt;em&gt;cross site scripting&lt;/em&gt;.
-XSS merupakan salah satu jenis serangan injeksi code &lt;em&gt;(code injection attack)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;XSS dilakukan oleh penyerang dengan cara memasukkan kode HTML atau client script code lainnya ke suatu situs.
-Serangan ini akan seolah-olah datang dari situs tersebut.&lt;/p&gt;
-
-&lt;p&gt;Akibat serangan ini antara lain penyerang dapat mem-bypass keamanan di sisi klien,
-mendapatkan informasi sensitif, atau menyimpan aplikasi berbahaya.&lt;/p&gt;
-
-&lt;p&gt;Alasan singkatan yang digunakan XSS bukan CSS karena CSS sudah digunakan untuk &lt;em&gt;cascade style sheet&lt;/em&gt;. – &lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34;&gt;id.wikipedia.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Masih bingung?&lt;/p&gt;
-
-&lt;p&gt;Saya akan perjelas lagi dengan cerita.&lt;/p&gt;
-
-&lt;p&gt;Begini ceritanya,&lt;/p&gt;
-
-&lt;p&gt;Ada sebuah form dan di sana kita diminta untuk mengisi &lt;em&gt;nama&lt;/em&gt;, &lt;em&gt;nip&lt;/em&gt;, dan &lt;em&gt;jabatan&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi, karena ada seorang yang usil. Dia tidak mengisi &lt;em&gt;nama&lt;/em&gt;,
-melainkan mengisi kode HTML dan Javascript.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-RaTvgUtLC_0/WEAYT6jwX_I/AAAAAAAADeY/eD26N9ib44UY0fK8qDymlxWfeEgMQRi3wCK4B/s1600/Percobaan%2Bserangan%2BXSS%2Bmelalui%2BForm.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-RaTvgUtLC_0/WEAYT6jwX_I/AAAAAAAADeY/eD26N9ib44UY0fK8qDymlxWfeEgMQRi3wCK4B/s1600/Percobaan%2Bserangan%2BXSS%2Bmelalui%2BForm.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Maka yang akan tersimpan ke dalam database adalah skrip di atas.&lt;/p&gt;
-
-&lt;p&gt;Secara otomatis, ketika data ditampilkan, browser akan mengekekusi skrip tersebut.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-mKxLOdBzrJ0/WEAYdrVSV7I/AAAAAAAADeg/fNvZ-TPt-OY4bS6-tHDb2favPObm6V9MgCK4B/s1600/Serangan%2Bsukses%2B1%2B-%2Bhacked%2Bby%2Bpetani%2Bkode.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-mKxLOdBzrJ0/WEAYdrVSV7I/AAAAAAAADeg/fNvZ-TPt-OY4bS6-tHDb2favPObm6V9MgCK4B/s1600/Serangan%2Bsukses%2B1%2B-%2Bhacked%2Bby%2Bpetani%2Bkode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Si admin sepertinya akan panik.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_S5JiF6GTVc/WEAYmOKIzYI/AAAAAAAADeo/qjKNEKZgWtE1GapgZMS9v1z9RZI3j_38wCK4B/s1600/hasil%2Bhacking%2BXSS.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-_S5JiF6GTVc/WEAYmOKIzYI/AAAAAAAADeo/qjKNEKZgWtE1GapgZMS9v1z9RZI3j_38wCK4B/s1600/hasil%2Bhacking%2BXSS.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah, itulah salah satu bentuk serangan XSS.
-Penyerang sangant leluasa memasukan skrip ke website kita.&lt;/p&gt;
-
-&lt;p&gt;Lalu, bagaimana cara mengatasi ini di CodeIgniter?&lt;/p&gt;
-
-&lt;p&gt;CodeIgniter sebenarnya sudah menyediakan fitur &lt;em&gt;Global XSS Filtering&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Cara mengaktifkannya, tinggal mengganti nilai &lt;code&gt;FALSE&lt;/code&gt; menjadi &lt;code&gt;TRUE&lt;/code&gt; pada &lt;code&gt;application/config/config.php&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-_C7i3mJy-1A/WECD4J7ifrI/AAAAAAAADe8/s1JFRU96nycO-rwguskQdqIHeNrpIOMGwCK4B/s1600/Global%2BXSS%2BFiltering.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-_C7i3mJy-1A/WECD4J7ifrI/AAAAAAAADe8/s1JFRU96nycO-rwguskQdqIHeNrpIOMGwCK4B/s1600/Global%2BXSS%2BFiltering.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Dengan demikian, semua input dari pengguna atau penyerang akan dikonversi dulu
-sebelum di simpan ke database.&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi fitur ini sudah tidak tersedia lagi.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The &amp;lsquo;global_xss_filtering&amp;rsquo; setting is DEPRECATED and kept solely for backwards-compatibility purposes. XSS escaping should be performed on output, not input!&lt;/p&gt;
-
-&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/input.html?highlight=xss#xss-filtering&#34;&gt;dokumentasi CI&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Sepertinya pengembang CI sudah menyadari, kalau XSS itu masalah pada output, bukan input.&lt;/p&gt;
-
-&lt;p&gt;Cara mengatasi XSS yang lain adalah dengan melakukan validasi input (&lt;code&gt;xss_clean&lt;/code&gt;).
-Namun, seperti yang disebutkan tadi. XSS masalah pada output bukan input.&lt;/p&gt;
-
-&lt;p&gt;Lalu bagaimana?&lt;/p&gt;
-
-&lt;p&gt;Mau tidak mau, kita harus merubah dulu data yang akan ditampilkan agar
-tidak dieksekusi oleh browser.&lt;/p&gt;
-
-&lt;p&gt;Misalnya seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;echo htmlentities($data-&amp;gt;nama, ENT_QUOTES, &#39;UTF-8&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;fungsi &lt;code&gt;htmlentities()&lt;/code&gt; akan merubah kode html menjadi bentuk yang tidak akan dieksekusi.&lt;/p&gt;
-
-&lt;p&gt;Kita harus mengetik fungsi tersebut setiap mau menampilkan data.&lt;/p&gt;
-
-&lt;p&gt;Karena terasa cukup panjang, sebaiknya dijadikan &lt;em&gt;helper&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Buatlah sebuah &lt;em&gt;helper&lt;/em&gt; pada direktori &lt;code&gt;application/helpers&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Berikan nama &lt;code&gt;xss_helper.php&lt;/code&gt;, kemudian isi kodenya seperti berikut ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-oF2kSVvYF2I/WECIbBIH7jI/AAAAAAAADfI/fBgAJyXYRhcbifZ6G9BOd2GrmUEn-AG4ACK4B/s1600/XSS%2BHelper%2BCodeIgniter.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-oF2kSVvYF2I/WECIbBIH7jI/AAAAAAAADfI/fBgAJyXYRhcbifZ6G9BOd2GrmUEn-AG4ACK4B/s1600/XSS%2BHelper%2BCodeIgniter.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-function cetak($str){
-    echo htmlentities($str, ENT_QUOTES, &#39;UTF-8&#39;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu,masukan helper ini ke dalam &lt;em&gt;autoload&lt;/em&gt;. Buka,
-&lt;code&gt;application/config/autoload.php&lt;/code&gt;, kemudian tambahkan &lt;code&gt;xss&lt;/code&gt; pada &lt;em&gt;autoload helper&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;/*
-| -------------------------------------------------------------------
-| Auto-load Helper Files
-| -------------------------------------------------------------------
-| Prototype:
-|
-| $autoload[&#39;helper&#39;] = array(&#39;url&#39;, &#39;file&#39;);
-*/
-$autoload[&#39;helper&#39;] = array(&#39;url&#39;,&#39;cookie&#39;,&#39;form&#39;,&#39;xss&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang fungsi &lt;code&gt;echo&lt;/code&gt;, kita ganti dengan fungsi &lt;code&gt;cetak()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Cara penggunaanya, tinggal kita panggil fungsi &lt;code&gt;cetak()&lt;/code&gt; pada tempat atau
-&lt;em&gt;view&lt;/em&gt; yang mungkin bisa terkena XSS.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;?php foreach($pejabat as $pjb){?&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;nama) ?&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;nip) ?&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;jabatan) ?&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;?php } ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka, teks akan ditampilkan apa adanya, tidak lagi dieksekusi oleh browser. 😊&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-D3P_TkOCiQw/WECJoF0hhBI/AAAAAAAADfQ/c6BaAuc_Kts7vgmSjZrrdHRO7vyoV5NEwCK4B/s1600/Hasil%2Boutput%2BXSS%2Bfiltering.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-D3P_TkOCiQw/WECJoF0hhBI/AAAAAAAADfQ/c6BaAuc_Kts7vgmSjZrrdHRO7vyoV5NEwCK4B/s1600/Hasil%2Boutput%2BXSS%2Bfiltering.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Referensi:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34;&gt;https://id.wikipedia.org/wiki/XSS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&#34;&gt;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.htmlentities.php&#34;&gt;http://php.net/manual/en/function.htmlentities.php&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/security.html&#34;&gt;https://www.codeigniter.com/userguide3/libraries/security.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&#34;&gt;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Helper CodeIgniter untuk Membuat Tanggal dalam Bahasa Indonesia</title>
       <link>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</link>
       <pubDate>Thu, 22 Dec 2016 18:21:00 +0000</pubDate>
@@ -286,6 +146,16 @@ $autoload[&#39;helper&#39;] = array(&#39;url&#39;,&#39;cookie&#39;,&#39;form&#39
       
       <guid>https://www.petanikode.com/cara-mengganti-bahasa-validator-html5-ke-dalam-bahasa-indonesia/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://4.bp.blogspot.com/-dNNJvns8P_Y/V3d-ZGdAKRI/AAAAAAAAC5s/28FqVj0Ho3E7CyeXhwv1bmra0VaaADSkwCLcB/s1600/html5-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-dNNJvns8P_Y/V3d-ZGdAKRI/AAAAAAAAC5s/28FqVj0Ho3E7CyeXhwv1bmra0VaaADSkwCLcB/s1600/html5-petanikode.png&#34; /&gt;&lt;/a&gt;HTML5 memiliki validator form untuk memvalidasi inputan. Misalnya, jika ada field yang masih kosong, maka validator akan membertahukan; kalau data masih kososng. Namun, bahasa yang digunakan adalah bahasa inggris. Bagaimana jika kita ingin merubahnya ke bahasa indonesia?&lt;br /&gt;&lt;h2&gt;Fungsi Javascript&lt;/h2&gt;Kita membutuhkan fungsi Javascript untuk mengganti bahasa yang digunakan validator HTML5. Fungsi yang dapat digunakan berdasarkan jawaban yang saya temukan di Stack Overflow adalah &lt;code&gt;setCustomValidit()&lt;/code&gt;. Fungsi ini kita jalankan ketika input field dalam status &lt;i&gt;invalid&lt;/i&gt; (tidak valid). Sebelumnya kita memerlukan JQuery untuk mempermudah pemilihan elemen.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;$(&amp;lsquo;form input[type=text]&amp;lsquo;).on(&amp;lsquo;change invalid&amp;rsquo;, function() {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; var textfield = $(this).get(0);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // hapus dulu pesan yang sudah ada&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; textfield.setCustomValidity(&amp;ldquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (!textfield.validity.valid) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; textfield.setCustomValidity(&amp;lsquo;Tidak boleh kosong!&amp;rsquo;);&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Kode diatas hanya menyeleksi elemen &lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;. Bila dalam form terdapat elemen lain seperti &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;, maka perlu ditambahkan pada &lt;i&gt;selector&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;$(&amp;lsquo;form input[type=text], form textarea&amp;rsquo;).on(&amp;lsquo;change invalid&amp;rsquo;, function() {&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;hellip; &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Demo&lt;/h2&gt;&lt;iframe allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34; height=&#34;300&#34; src=&#34;//jsfiddle.net/Ardianta/a49yzzmw/2/embedded/result,js,html/&#34; width=&#34;100%&#34;&gt;&lt;/iframe&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://stackoverflow.com/a/10754847&#34; target=&#34;_blank&#34;&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Konversi String Mata Uang (Currency) menjadi Integer di PHP</title>
+      <link>https://www.petanikode.com/cara-konversi-string-mata-uang-currency-menjadi-integer-di-php/</link>
+      <pubDate>Wed, 27 Jul 2016 04:00:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/cara-konversi-string-mata-uang-currency-menjadi-integer-di-php/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Setiap aplikasi penjualan, pasti menyimpan nilai mata uang di database-nya. Tipe data yang digunakan bisa bermacam-macam. Bisa menggunakan &lt;i&gt;String&lt;/i&gt; atau &lt;i&gt;Varchar&lt;/i&gt;, &lt;i&gt;Integer&lt;/i&gt;, &lt;i&gt;Float&lt;/i&gt; atau &lt;i&gt;Double&lt;/i&gt;, &lt;i&gt;BigInt&lt;/i&gt;, dkk. Pada kesempatan kali ini, saya akan berbagi cara mengkonversi tipe data (Mata Uang) &lt;i&gt;String&lt;/i&gt; menjadi &lt;i&gt;Integer&lt;/i&gt;.&lt;br /&gt;&lt;h2&gt;1. Manipulasi String&lt;/h2&gt;Sebelum kita mengubah data &lt;i&gt;string&lt;/i&gt; mata uang, kita perlu memanipulasinya terlebih dahulu. Tujuannya untuk menghilangkan simbol dan tanda baca yang ada di dalam &lt;i&gt;string&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Misalkan, sebuah data mata uang bentuknya seperti ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$harga = &amp;ldquo;Rp 450.000&amp;rdquo;;&lt;br /&gt;?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Bagaiaman cara memanipulasi &lt;i&gt;string&lt;/i&gt; tersebut menjadi &lt;code&gt;&amp;ldquo;450000&amp;rdquo;&lt;/code&gt;? Kita bisa memanfaatkan fungsi &lt;i&gt;regular expression&lt;/i&gt; untuk melakukannya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$harga_str = preg_replace(&amp;ldquo;/[^0-9]/&amp;ldquo;, &amp;ldquo;&amp;rdquo;, $harga);&lt;br /&gt;var_dump($harga_str);&lt;br /&gt;?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasil output-nya: &lt;code&gt;string(6) &amp;ldquo;450000&amp;rdquo;&lt;/code&gt;&lt;br /&gt;&lt;h2&gt;2. Konversi Ke Integer&lt;/h2&gt;Setelah kita berhasil memanipulasi string mata uang menjadi sebuah string (angka). Sekarang kita konversi tipe datanya ke dalam bentuk Integer. Caranya dengan menambahkan &lt;code&gt;(int)&lt;/code&gt; di depan variabel atau data &lt;i&gt;string&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$harga_str = preg_replace(&amp;ldquo;/[^0-9]/&amp;ldquo;, &amp;ldquo;&amp;rdquo;, $harga);&lt;br /&gt;var_dump($harga_str);&lt;br /&gt;$harga_int = (int) $harga_str;&lt;br /&gt;var_dump($harga_int);&lt;br /&gt;?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasil Output-nya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;string(6) &amp;ldquo;450000&amp;rdquo;&lt;br /&gt;int(450000)&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Konversi tipe data string mata uang ke dalam integer membutuhkan dua langkah. Pertama, hilangkan dulu simbol dan tanda bacanya dengan fungsi &lt;i&gt;regular expression&lt;/i&gt;. Kedua, konversi tipe data hasil dari &lt;i&gt;regular expression&lt;/i&gt; menjadi &lt;i&gt;integer&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Selamat mencoba!&lt;/p&gt;
 </description>
     </item>
     

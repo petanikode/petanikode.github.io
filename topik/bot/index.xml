@@ -451,35 +451,37 @@ sudah ditentukan&lt;/a&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;module[&#39;exports&#39;] = function iyanChanBot(hook) {
 
-
 	var request = require(&#39;request&#39;);
 
     var botName = &amp;quot;iyan&amp;quot;; // nama bot, silahkan ganti sesukanya
 
-    //var simiUrl = &#39;http://sandbox.api.simsimi.com/request.p?key=&#39;+hook.env.simsimi_key+&#39;&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=&#39;+hook.params.message.text;
+    //var simiUrl = &#39;http://sandbox.api.simsimi.com/request.p?key=0858369d-3d2d-4bcd-86b0-eaf9d523d259&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=&#39;+hook.params.message.text;
 
- 	var simiUrlWeb = &#39;http://www.simsimi.com/getRealtimeReq?uuid=LUHzowu7l7tpHTCfe2RshB8aH0rwambBme2ZveDFAEr&amp;amp;lc=id&amp;amp;ft=1&amp;amp;reqText=&#39; + hook.params.message.text + &#39;&amp;amp;status=W&#39;;
+ 	var simiUrlWeb = &#39;http://www.simsimi.com/getRealtimeReq?uuid=h4yA3s9wL3QPPZkPY8CfVtb3kcGYZEhZjtmGjXtT1vL&amp;amp;lc=id&amp;amp;ft=1&amp;amp;reqText=&#39; + hook.params.message.text + &#39;&amp;amp;status=W&#39;;
+
+  	// untuk menyimpan pesan balasan dari Simsimi
+  	var pesanBalasan = &amp;quot;&amp;quot;;
 
     // tampilkan pesan dari Telegram ke Logs
   	console.log(&amp;quot;Telegram: &amp;quot; + hook.params.message.text);
 
   	request(simiUrlWeb, function (error, response, body) {
+
+      console.log(response);      
+
       if (!error &amp;amp;&amp;amp; response.statusCode == 200) {
          var data = JSON.parse(body);
          console.log(data);
-
-        var pesanBalasan = &amp;quot;&amp;quot;;
 
         // 400-Bad Request.
 		// 401-Unauthorized.
 		// 404-Not found.
 		// 500-Server Error.
 
-        if(data.status == 509 || data.status == 400 || data.status == 401 || data.status == 404 || data.status == 500 ){
+        if ( data.status == 509 || data.status == 400 || data.status == 401 || data.status == 404 || data.status == 500){
         	pesanBalasan = botName + &amp;quot; sedang tidur, silahkan hubungi kakak @ardiantapargo!&amp;quot;;
         } else {
         	pesanBalasan = data.respSentence;
-
           	pesanBalasan = data.respSentence.replace(/simisimi/g, botName);
   	        pesanBalasan = data.respSentence.replace(/simsimi/g, botName);
             pesanBalasan = data.respSentence.replace(/Simsimi/g, botName);      	  
@@ -488,14 +490,22 @@ sudah ditentukan&lt;/a&gt;.&lt;/p&gt;
   			pesanBalasan = data.respSentence.replace(/simi/g, botName);
         }
 
-         request
+      } else {
+      	// kalau request ke Simsimi gagal
+        pesanBalasan = botName + &amp;quot; sedang tidur, silahkan hubungi kakak @ardiantapargo!&amp;quot;;
+
+      }
+
+
+      //kirim balasan ke Telegram
+      request
           .post(&#39;https://api.telegram.org/bot&#39; + hook.env.iyan_chan_bot + &#39;/sendMessage&#39;)
           .form({
                 &amp;quot;chat_id&amp;quot;: hook.params.message.chat.id,
-                &amp;quot;text&amp;quot;: pesanBalasan 
+                &amp;quot;text&amp;quot;: pesanBalasan //hook.params.message.text
         });
 
-      }
+
     });
 };
 &lt;/code&gt;&lt;/pre&gt;
@@ -503,6 +513,15 @@ sudah ditentukan&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Simpan kodenya dan &lt;em&gt;run&lt;/em&gt; lagi servernya.&lt;/p&gt;
 
 &lt;p&gt;Selamat mencoba.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Catatan&lt;/strong&gt; [Mei 2017]: Token yang didapatkan dari Web simsimi sepertinya tidak bertahan lama.
+Saya tidak tahu persis berapa lama masa token tersebut. Sepertinya mengikuti masa
+&lt;em&gt;Cookie&lt;/em&gt; pada browser.&lt;/p&gt;
+
+&lt;p&gt;Pada eksperimen yang saya lakukan di bot &lt;a href=&#34;https://t.me/iyan_chan_bot&#34;&gt;@iyan_chan_bot&lt;/a&gt;,
+ bot-nya sempat mati. Tapi bisa kembali hidup dengan mengganti tokennya dengan yang baru.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
 

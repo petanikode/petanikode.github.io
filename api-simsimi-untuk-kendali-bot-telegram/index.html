@@ -230,7 +230,7 @@ Baiklah, mari kita mulai membuat bot Telegram dengan kecerdasan Simsimi." />
   },
   "headline": "Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io",
   "description": "Simsimi bisa kita pinjam otaknya untuk mengendalikan bot Telegram.\nKita bisa mengakses kecerdasan Simsimi dengan API Key\/Kunci API\/Token.\nAda dua kunci API\/Token yang diberikan oleh simsimi:\n Kunci Trial (gratis) Kunci Berbayar  Kunci trial hanya berlaku 7 hari dengan batasan 100 request\/hari.\nKalau melewati batas itu, Simsimi tidak mau merespon.\nTapi tenang saja, ada triknya.\nNanti saya kasih tahu dibagian akhir panduan ini :smile:.\nBaiklah, mari kita mulai membuat bot Telegram dengan kecerdasan Simsimi.",
-  "wordCount":  1138 ,
+  "wordCount":  1221 ,
   "datePublished" : "2016-09-09T14:16:00",
   "dateModified" : "2016-09-09T14:16:00",
   "image" : {
@@ -1560,35 +1560,37 @@ sudah ditentukan</a>.</p>
 
 <pre><code class="language-javascript">module['exports'] = function iyanChanBot(hook) {
 
-
 	var request = require('request');
 
     var botName = &quot;iyan&quot;; // nama bot, silahkan ganti sesukanya
 
-    //var simiUrl = 'http://sandbox.api.simsimi.com/request.p?key='+hook.env.simsimi_key+'&amp;lc=id&amp;ft=1.0&amp;text='+hook.params.message.text;
+    //var simiUrl = 'http://sandbox.api.simsimi.com/request.p?key=0858369d-3d2d-4bcd-86b0-eaf9d523d259&amp;lc=id&amp;ft=1.0&amp;text='+hook.params.message.text;
 
- 	var simiUrlWeb = 'http://www.simsimi.com/getRealtimeReq?uuid=LUHzowu7l7tpHTCfe2RshB8aH0rwambBme2ZveDFAEr&amp;lc=id&amp;ft=1&amp;reqText=' + hook.params.message.text + '&amp;status=W';
+ 	var simiUrlWeb = 'http://www.simsimi.com/getRealtimeReq?uuid=h4yA3s9wL3QPPZkPY8CfVtb3kcGYZEhZjtmGjXtT1vL&amp;lc=id&amp;ft=1&amp;reqText=' + hook.params.message.text + '&amp;status=W';
+
+  	// untuk menyimpan pesan balasan dari Simsimi
+  	var pesanBalasan = &quot;&quot;;
 
     // tampilkan pesan dari Telegram ke Logs
   	console.log(&quot;Telegram: &quot; + hook.params.message.text);
 
   	request(simiUrlWeb, function (error, response, body) {
+
+      console.log(response);      
+
       if (!error &amp;&amp; response.statusCode == 200) {
          var data = JSON.parse(body);
          console.log(data);
-
-        var pesanBalasan = &quot;&quot;;
 
         // 400-Bad Request.
 		// 401-Unauthorized.
 		// 404-Not found.
 		// 500-Server Error.
 
-        if(data.status == 509 || data.status == 400 || data.status == 401 || data.status == 404 || data.status == 500 ){
+        if ( data.status == 509 || data.status == 400 || data.status == 401 || data.status == 404 || data.status == 500){
         	pesanBalasan = botName + &quot; sedang tidur, silahkan hubungi kakak @ardiantapargo!&quot;;
         } else {
         	pesanBalasan = data.respSentence;
-
           	pesanBalasan = data.respSentence.replace(/simisimi/g, botName);
   	        pesanBalasan = data.respSentence.replace(/simsimi/g, botName);
             pesanBalasan = data.respSentence.replace(/Simsimi/g, botName);      	  
@@ -1597,14 +1599,22 @@ sudah ditentukan</a>.</p>
   			pesanBalasan = data.respSentence.replace(/simi/g, botName);
         }
 
-         request
+      } else {
+      	// kalau request ke Simsimi gagal
+        pesanBalasan = botName + &quot; sedang tidur, silahkan hubungi kakak @ardiantapargo!&quot;;
+
+      }
+
+
+      //kirim balasan ke Telegram
+      request
           .post('https://api.telegram.org/bot' + hook.env.iyan_chan_bot + '/sendMessage')
           .form({
                 &quot;chat_id&quot;: hook.params.message.chat.id,
-                &quot;text&quot;: pesanBalasan 
+                &quot;text&quot;: pesanBalasan //hook.params.message.text
         });
 
-      }
+
     });
 };
 </code></pre>
@@ -1612,6 +1622,15 @@ sudah ditentukan</a>.</p>
 <p>Simpan kodenya dan <em>run</em> lagi servernya.</p>
 
 <p>Selamat mencoba.</p>
+
+<blockquote>
+<p><strong>Catatan</strong> [Mei 2017]: Token yang didapatkan dari Web simsimi sepertinya tidak bertahan lama.
+Saya tidak tahu persis berapa lama masa token tersebut. Sepertinya mengikuti masa
+<em>Cookie</em> pada browser.</p>
+
+<p>Pada eksperimen yang saya lakukan di bot <a href="https://t.me/iyan_chan_bot">@iyan_chan_bot</a>,
+ bot-nya sempat mati. Tapi bisa kembali hidup dengan mengganti tokennya dengan yang baru.</p>
+</blockquote>
 
 <h2 id="akhir-kata">Akhir Kata&hellip;</h2>
 

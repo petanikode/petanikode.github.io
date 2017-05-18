@@ -7,8 +7,160 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 19 Apr 2017 10:56:07 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 May 2017 00:07:50 +0800</lastBuildDate>
     <atom:link href="https://www.petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-di-linux/</link>
+      <pubDate>Fri, 19 May 2017 00:07:50 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-di-linux/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kotlin merupakan bahasa pemrograman yang berjalan di atas JVM (Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript. Kotlin dikembangkan  oleh JetBrains.&lt;/p&gt;
+
+&lt;p&gt;Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa pemrograman Android
+dan akan mulai digunakan pada Android Studio 3.0. Karena itu, kita perlu mempelajari Kotlin agar tidak ketinggalan.&lt;/p&gt;
+
+&lt;h2 id=&#34;persiapan-alat-dan-bahan&#34;&gt;Persiapan Alat dan Bahan&lt;/h2&gt;
+
+&lt;p&gt;Adapun alat-alat penting yang harus dipersiapkan untuk
+belajar kotlin adalah sebagai berikut:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Java SDK (&lt;a href=&#34;https://www.petanikode.com/pemrograman-java-di-linux/#2-jdk-java-development-kit&#34;&gt;Cara instal Java SDK di Linux&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Teks Editor/IDE&lt;/li&gt;
+&lt;li&gt;Kotlin&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;instalasi-kotlin-di-linux&#34;&gt;Instalasi Kotlin di Linux&lt;/h2&gt;
+
+&lt;p&gt;Hal pertama yang harus kita lakukan adalah menginstal Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita membutuhkan sdkman untuk menginstal kotlin di linux.&lt;/p&gt;
+
+&lt;p&gt;Silahkan install sdkman dengan perintah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl -s https://get.sdkman.io | bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buka terminal baru dan ketik perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bash ~/.sdkman/bin/sdkman-init.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Periksa versi sdkman yang terinstal dengan perintah &lt;code&gt;sdk version&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/versi-sdkman.png&#34; alt=&#34;Versi SDKman&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu baru kita bisa instal Kotlin dengan sdkman.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sdk install kotlin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tunggulah beberapa saat, kotlin akan segera terinstal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/instalasi-kotlin.png&#34; alt=&#34;Instalasi Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-program-pertama&#34;&gt;Membuat Program pertama&lt;/h2&gt;
+
+&lt;p&gt;Sekarang mari kita coba membuat program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ikuti kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;){
+	println(&amp;quot;Hello, World!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simpan dengan nama &lt;code&gt;hello.kt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita kompilasi kode tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc hello.kt -include-runtime -d hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Argumen &lt;code&gt;-include-runtime&lt;/code&gt; fungsinya agar program dapat dieksekusi. Sedangkan
+argumen &lt;code&gt;-d&lt;/code&gt; untuk menentukan target outputnya. Pada contoh di atas hasil kompilasinya
+akan berupa file jar.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita bisa eksekusi programnya dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlin hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -jar hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan pesan &lt;code&gt;Hello, World!&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin-hello-world.png&#34; alt=&#34;kotlin hello world&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-skrip-kotlin&#34;&gt;Membuat Skrip Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Pada program di atas, kita harus kompilasi dulu untuk dapat dijalankan.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan skrip kotlin tidak perlu dikompilasi. Skrip kotlin disimpan dengan
+ekstensi &lt;code&gt;.kts&lt;/code&gt; &lt;em&gt;(kotlin script)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, silahkan buat kode berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;println(&amp;quot;Hello, ini adalah skrip kotlin&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;kemudian simpan dengan nama &lt;code&gt;hello.kts&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu eksekusi/jalankan skrip tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc -script hello.kts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/skrip-kotlin.png&#34; alt=&#34;Eksekusi skrip kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuka-repl&#34;&gt;Membuka REPL&lt;/h2&gt;
+
+&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell (console).&lt;/p&gt;
+
+&lt;p&gt;Untuk membuka mode interaktif dari kotlin, kita bisa menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc-jvm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka mode interaktif akan terbuka.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/repl-kotlin.png&#34; alt=&#34;Mode interaktif kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Di sana kita bisa mengetikan perintah dan fungsi-fungsi kotlin. kemudian
+kotlin akan langsung mengeksekusinya.&lt;/p&gt;
+
+&lt;p&gt;Untuk keluar dari mode interaktif bisa dilakukan dengan mengetik perintah
+&lt;code&gt;:quit&lt;/code&gt; atau menekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;D&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mode interaktif ini dapat kita gunakan untuk mencoba-coba, eksperimen,
+dan sebagainya.&lt;/p&gt;
+
+&lt;!-- @TODO: Kompilasi Kotlin ke Javascript --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Eclipse --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Intellij IDEA --&gt;
+
+&lt;h1 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h1&gt;
+
+&lt;p&gt;Kita sudah melakukan persiapan alat-alat untuk pemrograman Kotlin di Linux.&lt;/p&gt;
+
+&lt;p&gt;Kita juga sudah mengenal cara membuat, cara kompilasi, dan cara menjalankan program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Jika ada yang ditanyakan, silahkan tuliskan di komentar.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)</title>
@@ -2769,108 +2921,6 @@ bisa melakukannya dengan perintah:&lt;/p&gt;
 
 &lt;p&gt;OK, sekian dulu tutorial ke-6 ini. Rasanya agak kepanjangan. Terima kasih
 sudah membaca. Sampai jumpa di &lt;a href=&#34;https://www.petanikode.com/2017/02/tutorial-git-07---percabangan/&#34;&gt;tutorial ke-7&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Animasi Gambar dengan Javascript</title>
-      <link>https://www.petanikode.com/animasi-gambar-dengan-javascript/</link>
-      <pubDate>Tue, 21 Feb 2017 08:53:16 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/animasi-gambar-dengan-javascript/</guid>
-      <description>
-
-&lt;p&gt;Saya sempat mengira, kalau animasi stiker di facebook menggunakan gif,
-ternyata bukan.&lt;/p&gt;
-
-&lt;p&gt;Animasi tersebut menggunakan javascript dengan mengubah
-posisi backgound.&lt;/p&gt;
-
-&lt;p&gt;Coba saja klik kanan pada stikernya, kemudian pilih &lt;a href=&#34;https://www.petanikode.com/2016/01/7-manfaat-inspect-element-bagi-web-developer/&#34;&gt;inspect element&lt;/a&gt;,
-maka kita akan mendapatkan kode seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;980&#34;
-    height=&#34;312&#34;
-    alt=&#34;inspect+element+stiker+facebook.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-SQfVn7m_aEc/WKuRWlddqjI/AAAAAAAAEFE/zhbfkLT-7tgQByj-tSOYzJz4rXntrpmbQCPcB/s1600/inspect%2Belement%2Bstiker%2Bfacebook.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Terlihat pada kode di atas, stikernya menggunakan backgound image.
-Ketika kita membuka backgound tersebut, kita akan mendapatkan gambar seperti
-berikut ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;animasi-gambar-dengan-javascript.jpg&#34;
-    src=&#34;https://2.bp.blogspot.com/-JaGQH_Fd7IA/WKuP-C-aNaI/AAAAAAAAEEs/5ZaEEc3eyIAk-gX28-t60Ea8GMDd6r9IACPcB/s1600/animasi-gambar-dengan-javascript.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang, bagaimana kalau kita coba membuatnya.&lt;/p&gt;
-
-&lt;h2 id=&#34;kode-html&#34;&gt;Kode HTML&lt;/h2&gt;
-
-&lt;p&gt;Buat kode HTML untuk menampilkan stikernya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;460&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/932578dbdaddd72cf36289923892101c&#34;&gt;
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kode-css&#34;&gt;Kode CSS&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.sticker {
-    position: relative;
-    height: 80px;
-    width: 80px;
-    background: url(burung.png);
-    background-size: 320px 320px;
-    cursor: default;
-    background-position: 0px 0px;
-    image-rendering: -webkit-optimize-contrast;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pada kode CSS di atas, terdapat background bernama &lt;code&gt;burung.png&lt;/code&gt;. Silahkan download
-&lt;a href=&#34;https://2.bp.blogspot.com/-BBx70tsKzTQ/WKuUWrml-lI/AAAAAAAAEFk/EhAj_uISOV85dK1GHt1TuikfN2zAC9kVACPcB/s1600/burung.png&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;javascript&#34;&gt;Javascript&lt;/h2&gt;
-
-&lt;p&gt;Javascript fungsinya untuk membuat animasi, mengubah posisi background.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;610&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/abb5cf78e609202e614c34cc6fa6bad9&#34;&gt;
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada kode di atas kita menggunakan fungsi &lt;code&gt;setInterval()&lt;/code&gt; untuk melakukan animasi
-dengan waktu 100 milidetik. Setiap rentang waktu tersebut, posisi background
-akan berubah sesuai dengan nilai &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;350&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://codepen.io/ardianta/embed/BpXoyz/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;&gt;
-&lt;/amp-iframe&gt;&lt;/p&gt;
 </description>
     </item>
     

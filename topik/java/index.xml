@@ -10,6 +10,158 @@
     <atom:link href="https://www.petanikode.com/topik/java/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-di-linux/</link>
+      <pubDate>Fri, 19 May 2017 00:07:50 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-di-linux/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kotlin merupakan bahasa pemrograman yang berjalan di atas JVM (Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript. Kotlin dikembangkan  oleh JetBrains.&lt;/p&gt;
+
+&lt;p&gt;Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa pemrograman Android
+dan akan mulai digunakan pada Android Studio 3.0. Karena itu, kita perlu mempelajari Kotlin agar tidak ketinggalan.&lt;/p&gt;
+
+&lt;h2 id=&#34;persiapan-alat-dan-bahan&#34;&gt;Persiapan Alat dan Bahan&lt;/h2&gt;
+
+&lt;p&gt;Adapun alat-alat penting yang harus dipersiapkan untuk
+belajar kotlin adalah sebagai berikut:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Java SDK (&lt;a href=&#34;https://www.petanikode.com/pemrograman-java-di-linux/#2-jdk-java-development-kit&#34;&gt;Cara instal Java SDK di Linux&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Teks Editor/IDE&lt;/li&gt;
+&lt;li&gt;Kotlin&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;instalasi-kotlin-di-linux&#34;&gt;Instalasi Kotlin di Linux&lt;/h2&gt;
+
+&lt;p&gt;Hal pertama yang harus kita lakukan adalah menginstal Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita membutuhkan sdkman untuk menginstal kotlin di linux.&lt;/p&gt;
+
+&lt;p&gt;Silahkan install sdkman dengan perintah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl -s https://get.sdkman.io | bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buka terminal baru dan ketik perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bash ~/.sdkman/bin/sdkman-init.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Periksa versi sdkman yang terinstal dengan perintah &lt;code&gt;sdk version&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/versi-sdkman.png&#34; alt=&#34;Versi SDKman&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu baru kita bisa instal Kotlin dengan sdkman.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sdk install kotlin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tunggulah beberapa saat, kotlin akan segera terinstal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/instalasi-kotlin.png&#34; alt=&#34;Instalasi Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-program-pertama&#34;&gt;Membuat Program pertama&lt;/h2&gt;
+
+&lt;p&gt;Sekarang mari kita coba membuat program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ikuti kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;){
+	println(&amp;quot;Hello, World!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simpan dengan nama &lt;code&gt;hello.kt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita kompilasi kode tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc hello.kt -include-runtime -d hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Argumen &lt;code&gt;-include-runtime&lt;/code&gt; fungsinya agar program dapat dieksekusi. Sedangkan
+argumen &lt;code&gt;-d&lt;/code&gt; untuk menentukan target outputnya. Pada contoh di atas hasil kompilasinya
+akan berupa file jar.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita bisa eksekusi programnya dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlin hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -jar hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan pesan &lt;code&gt;Hello, World!&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin-hello-world.png&#34; alt=&#34;kotlin hello world&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-skrip-kotlin&#34;&gt;Membuat Skrip Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Pada program di atas, kita harus kompilasi dulu untuk dapat dijalankan.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan skrip kotlin tidak perlu dikompilasi. Skrip kotlin disimpan dengan
+ekstensi &lt;code&gt;.kts&lt;/code&gt; &lt;em&gt;(kotlin script)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, silahkan buat kode berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;println(&amp;quot;Hello, ini adalah skrip kotlin&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;kemudian simpan dengan nama &lt;code&gt;hello.kts&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu eksekusi/jalankan skrip tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc -script hello.kts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/skrip-kotlin.png&#34; alt=&#34;Eksekusi skrip kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuka-repl&#34;&gt;Membuka REPL&lt;/h2&gt;
+
+&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell (console).&lt;/p&gt;
+
+&lt;p&gt;Untuk membuka mode interaktif dari kotlin, kita bisa menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc-jvm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka mode interaktif akan terbuka.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/repl-kotlin.png&#34; alt=&#34;Mode interaktif kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Di sana kita bisa mengetikan perintah dan fungsi-fungsi kotlin. kemudian
+kotlin akan langsung mengeksekusinya.&lt;/p&gt;
+
+&lt;p&gt;Untuk keluar dari mode interaktif bisa dilakukan dengan mengetik perintah
+&lt;code&gt;:quit&lt;/code&gt; atau menekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;D&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mode interaktif ini dapat kita gunakan untuk mencoba-coba, eksperimen,
+dan sebagainya.&lt;/p&gt;
+
+&lt;!-- @TODO: Kompilasi Kotlin ke Javascript --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Eclipse --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Intellij IDEA --&gt;
+
+&lt;h1 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h1&gt;
+
+&lt;p&gt;Kita sudah melakukan persiapan alat-alat untuk pemrograman Kotlin di Linux.&lt;/p&gt;
+
+&lt;p&gt;Kita juga sudah mengenal cara membuat, cara kompilasi, dan cara menjalankan program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Jika ada yang ditanyakan, silahkan tuliskan di komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Kenapa Bahasa Pemrograman Java Kurang Cocok untuk Pemula?</title>
       <link>https://www.petanikode.com/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/</link>
       <pubDate>Sat, 21 Jan 2017 16:45:00 +0000</pubDate>
@@ -1814,16 +1966,6 @@ cobalah cari contoh kasus yang berbeda.&lt;/p&gt;
       
       <guid>https://www.petanikode.com/pemrograman-java-di-lab-8-menggunakan-pangkat/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Pada contoh kasus &lt;a href=&#34;http://petanikode.blogspot.com/2015/10/pemrograman-java-di-lab-2-algoritma.html&#34; target=&#34;_blank&#34;&gt;program luas lingkaran&lt;/a&gt; kemarin, kita menggunakan pangkat dua untuk menghitung luas lingkaran. Pangkat dua dapat ditulis dengan membuat perkalian dengan variabel atau bilangan yang akan dipangkatkan dua. Contoh, &lt;code&gt;r&lt;sup&gt;2&lt;/sup&gt;&lt;/code&gt; dapat ditulis &lt;code&gt;r*r&lt;/code&gt;. Tapi, bagaiamana kalau pangkatnya banyak? misal &lt;code&gt;4&lt;sup&gt;112&lt;/sup&gt;&lt;/code&gt;. Tidak mungkin kita akan melakukan perkalian sebanyak itu dalam kode. Oleh karena itu, kita membutuhkan fungsi pangkat untuk menghitungnya.&lt;br /&gt;&lt;br /&gt;Java sudah menyediakan fungsi pangkat yang dapat digunakan kapan saja. Fungsi ini memiliki dua parameter, yaitu bilangan yang akan dipangkatkan dan pangkatnya.&lt;br /&gt;&lt;pre&gt;Math.pow(bilangan, pangkat);&lt;/pre&gt;Contoh program, silahkan buat kelas baru bernama &lt;i&gt;Pangkat&lt;/i&gt; di paket &lt;i&gt;pertemuan3&lt;/i&gt;. Kemudian ikuti kode berikut:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-Xh3_ALdPrug/ViJaw7ln3CI/AAAAAAAACDg/J4YeXknsEyc/s1600/program%2Bpemangkatan%2Bbilangan%2Bdi%2Bjava.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-Xh3_ALdPrug/ViJaw7ln3CI/AAAAAAAACDg/J4YeXknsEyc/s1600/program%2Bpemangkatan%2Bbilangan%2Bdi%2Bjava.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kode program di atas, akan menghasilkan output: 32, karena 2&lt;sup&gt;5&lt;/sup&gt; akan menghasilkan 32.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-LliT4M85udU/ViJbVl3k9CI/AAAAAAAACDo/5EEkMlk4bLk/s1600/output%2Bprogram%2Bpemangkatan%2Bdi%2Bjava.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-LliT4M85udU/ViJbVl3k9CI/AAAAAAAACDo/5EEkMlk4bLk/s1600/output%2Bprogram%2Bpemangkatan%2Bdi%2Bjava.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Pemrograman java di lab (7): Mengenal JOptionPane dan operator kondisi</title>
-      <link>https://www.petanikode.com/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/</link>
-      <pubDate>Sat, 17 Oct 2015 21:34:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Sebelumnya, kita telah &lt;a href=&#34;http://petanikode.blogspot.com/2015/10/pemrograman-java-di-lab-6-mengenal.html&#34; target=&#34;_blank&#34;&gt;berkenalan dengan operator&lt;/a&gt;. Sekarang kita akan coba mengenal &lt;i&gt;JOptionPane&lt;/i&gt; dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.&lt;br /&gt;&lt;h2&gt;JOptionPane&lt;/h2&gt;&lt;i&gt;JOptionPane&lt;/i&gt; merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. &lt;i&gt;JOptionPane&lt;/i&gt; bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.&lt;br /&gt;&lt;br /&gt;Sebelum menggunakan &lt;i&gt;JOptionPane&lt;/i&gt;, kita perlu mengimpornya ke dalam program:&lt;br /&gt;&lt;pre&gt;import javax.swing.JOptionPane;&lt;/pre&gt;Terdapat empat fungsi atau metode yang sering dipakai:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;&lt;code&gt;showConfirmDialog()&lt;/code&gt; : untuk menampilkan dialog konfirmasi&lt;/li&gt;&lt;li&gt;&lt;code&gt;showInputDialog()&lt;/code&gt; : untuk menampilkan dialog input&lt;/li&gt;&lt;li&gt;&lt;code&gt;showMessageDialog()&lt;/code&gt; : untuk menampilkan pesan/informasi&lt;/li&gt;&lt;li&gt;&lt;code&gt;showOptionDialog()&lt;/code&gt; : untuk menampilkan dialog pilihan&lt;/li&gt;&lt;/ol&gt;&lt;h2&gt;Operator Kondisi&lt;/h2&gt;Operator kondisi merupakan sebuah operator khusus untuk memeriksa kondisi tertentu. Bisa dibilang, oprator ini termasuk ke dalam operator logika atau operator untuk membuat implikasi. Operator ini disimbolkan dengan tanda tanya (?). Struktur operator kondisi:&lt;br /&gt;&lt;pre&gt;(kondisi) ? benar : salah;&lt;/pre&gt;Kalau kondisi bernilai &lt;code&gt;true&lt;/code&gt;, maka kode &lt;code&gt;benar&lt;/code&gt; akan dikerjakan. Tapi, kalau tidak atau bernilai &lt;code&gt;false&lt;/code&gt;, maka kode &lt;code&gt;salah&lt;/code&gt; akan dikerjkana.&lt;br /&gt;&lt;br /&gt;Sebagai contoh, kita akan membuat sebuah program baru dengan bahan &lt;i&gt;JOptionPane&lt;/i&gt; dan operator kondisi. Buatlah kelas baru bernama &lt;i&gt;OperatorKondisi&lt;/i&gt; di paket &lt;i&gt;pertemuan3&lt;/i&gt;. Kemudian ikuti kode berikut ini:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-pwf8JhORFbs/ViJKacf93QI/AAAAAAAACC0/Sbw711AF5j4/s1600/kode%2Bprogram%2Boperator%2Bkondisi%2Bdan%2BJOptionPane.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-pwf8JhORFbs/ViJKacf93QI/AAAAAAAACC0/Sbw711AF5j4/s1600/kode%2Bprogram%2Boperator%2Bkondisi%2Bdan%2BJOptionPane.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Program di atas, akan menghasilkan output seperti berikut ini:&lt;br /&gt;Dialog input,&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_0gjBZCAd0M/ViJL3GgzPkI/AAAAAAAACDQ/z3dkpg_k4dA/s1600/dialog%2Binput%2BJOptionPane.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-_0gjBZCAd0M/ViJL3GgzPkI/AAAAAAAACDQ/z3dkpg_k4dA/s1600/dialog%2Binput%2BJOptionPane.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;dialog output,&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-azlCzuPesBs/ViJLdsIkSPI/AAAAAAAACDI/6Fi73g6hFXQ/s1600/outpu%2Batau%2Bmessage%2Bdialog%2BJOptionPane.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-azlCzuPesBs/ViJLdsIkSPI/AAAAAAAACDI/6Fi73g6hFXQ/s1600/outpu%2Batau%2Bmessage%2Bdialog%2BJOptionPane.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Catatan&lt;/b&gt;: Dialog input &lt;i&gt;JOptionPane&lt;/i&gt; sama seperti &lt;a href=&#34;http://petanikode.blogspot.com/2015/10/pemrograman-java-di-lab-4-berkenalan.html&#34; target=&#34;_blank&#34;&gt;Scanner&lt;/a&gt;. Perbedaanya, Scanner dipkai untuk antarmuka teks atau &lt;i&gt;console&lt;/i&gt;. Sedangkan Dialog input &lt;i&gt;JOptionPane&lt;/i&gt; dipakai untuk antarmuka grafis (GUI). Pengguna komputer lebih senang dengan antarmuka grafis, karena mudah digunakan. Sedangkan antarmuka teks, sangat jarang dipakai pada pengguna komputer umum.&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html&#34;&gt;https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://www.herongyang.com/Swing/JOptionPane-Display-Option-Dialog-Box.html&#34;&gt;http://www.herongyang.com/Swing/JOptionPane-Display-Option-Dialog-Box.html&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html&#34;&gt;https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html&lt;/a&gt; &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;&amp;mdash;&lt;br /&gt;Sampai di sini, ada yang mau ditanyakan? siahkan kirim melalui komentar!&lt;/p&gt;
 </description>
     </item>
     

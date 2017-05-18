@@ -10,6 +10,158 @@
     <atom:link href="https://www.petanikode.com/seri/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-di-linux/</link>
+      <pubDate>Fri, 19 May 2017 00:07:50 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-di-linux/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kotlin merupakan bahasa pemrograman yang berjalan di atas JVM (Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript. Kotlin dikembangkan  oleh JetBrains.&lt;/p&gt;
+
+&lt;p&gt;Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa pemrograman Android
+dan akan mulai digunakan pada Android Studio 3.0. Karena itu, kita perlu mempelajari Kotlin agar tidak ketinggalan.&lt;/p&gt;
+
+&lt;h2 id=&#34;persiapan-alat-dan-bahan&#34;&gt;Persiapan Alat dan Bahan&lt;/h2&gt;
+
+&lt;p&gt;Adapun alat-alat penting yang harus dipersiapkan untuk
+belajar kotlin adalah sebagai berikut:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Java SDK (&lt;a href=&#34;https://www.petanikode.com/pemrograman-java-di-linux/#2-jdk-java-development-kit&#34;&gt;Cara instal Java SDK di Linux&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Teks Editor/IDE&lt;/li&gt;
+&lt;li&gt;Kotlin&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;instalasi-kotlin-di-linux&#34;&gt;Instalasi Kotlin di Linux&lt;/h2&gt;
+
+&lt;p&gt;Hal pertama yang harus kita lakukan adalah menginstal Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita membutuhkan sdkman untuk menginstal kotlin di linux.&lt;/p&gt;
+
+&lt;p&gt;Silahkan install sdkman dengan perintah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl -s https://get.sdkman.io | bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buka terminal baru dan ketik perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bash ~/.sdkman/bin/sdkman-init.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Periksa versi sdkman yang terinstal dengan perintah &lt;code&gt;sdk version&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/versi-sdkman.png&#34; alt=&#34;Versi SDKman&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu baru kita bisa instal Kotlin dengan sdkman.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sdk install kotlin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tunggulah beberapa saat, kotlin akan segera terinstal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/instalasi-kotlin.png&#34; alt=&#34;Instalasi Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-program-pertama&#34;&gt;Membuat Program pertama&lt;/h2&gt;
+
+&lt;p&gt;Sekarang mari kita coba membuat program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ikuti kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;){
+	println(&amp;quot;Hello, World!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simpan dengan nama &lt;code&gt;hello.kt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita kompilasi kode tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc hello.kt -include-runtime -d hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Argumen &lt;code&gt;-include-runtime&lt;/code&gt; fungsinya agar program dapat dieksekusi. Sedangkan
+argumen &lt;code&gt;-d&lt;/code&gt; untuk menentukan target outputnya. Pada contoh di atas hasil kompilasinya
+akan berupa file jar.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita bisa eksekusi programnya dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlin hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -jar hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan pesan &lt;code&gt;Hello, World!&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin-hello-world.png&#34; alt=&#34;kotlin hello world&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-skrip-kotlin&#34;&gt;Membuat Skrip Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Pada program di atas, kita harus kompilasi dulu untuk dapat dijalankan.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan skrip kotlin tidak perlu dikompilasi. Skrip kotlin disimpan dengan
+ekstensi &lt;code&gt;.kts&lt;/code&gt; &lt;em&gt;(kotlin script)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, silahkan buat kode berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;println(&amp;quot;Hello, ini adalah skrip kotlin&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;kemudian simpan dengan nama &lt;code&gt;hello.kts&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu eksekusi/jalankan skrip tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc -script hello.kts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/skrip-kotlin.png&#34; alt=&#34;Eksekusi skrip kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuka-repl&#34;&gt;Membuka REPL&lt;/h2&gt;
+
+&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell (console).&lt;/p&gt;
+
+&lt;p&gt;Untuk membuka mode interaktif dari kotlin, kita bisa menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc-jvm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka mode interaktif akan terbuka.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/repl-kotlin.png&#34; alt=&#34;Mode interaktif kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Di sana kita bisa mengetikan perintah dan fungsi-fungsi kotlin. kemudian
+kotlin akan langsung mengeksekusinya.&lt;/p&gt;
+
+&lt;p&gt;Untuk keluar dari mode interaktif bisa dilakukan dengan mengetik perintah
+&lt;code&gt;:quit&lt;/code&gt; atau menekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;D&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mode interaktif ini dapat kita gunakan untuk mencoba-coba, eksperimen,
+dan sebagainya.&lt;/p&gt;
+
+&lt;!-- @TODO: Kompilasi Kotlin ke Javascript --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Eclipse --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Intellij IDEA --&gt;
+
+&lt;h1 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h1&gt;
+
+&lt;p&gt;Kita sudah melakukan persiapan alat-alat untuk pemrograman Kotlin di Linux.&lt;/p&gt;
+
+&lt;p&gt;Kita juga sudah mengenal cara membuat, cara kompilasi, dan cara menjalankan program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Jika ada yang ditanyakan, silahkan tuliskan di komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)</title>
       <link>https://www.petanikode.com/cara-menambahkan-ssl-untuk-github-pages/</link>
       <pubDate>Wed, 19 Apr 2017 10:56:07 +0800</pubDate>
@@ -2650,103 +2802,6 @@ layout=&#34;responsive&#34;&gt;
 &lt;p&gt;OK, meskipun Git sudah terinstal. Akan tetapi masih belum bisa dipakai. Karena
 kita belum melakukan konfigurasi &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt;. Cara konfigurasinya
 silahkan &lt;a href=&#34;https://www.petanikode.com/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;baca di sni&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Git 02 - Membuat Repositori</title>
-      <link>https://www.petanikode.com/tutorial-git-02---membuat-repositori/</link>
-      <pubDate>Thu, 09 Feb 2017 11:52:59 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-git-02---membuat-repositori/</guid>
-      <description>
-
-&lt;p&gt;Repositori &lt;em&gt;(repository)&lt;/em&gt; dalam bahasa indonesia artinya gudang. Repositori
-merupakan istilah yang digunakan untuk direktori proyek yang menggunakan Git.
-Jika kita memiliki sebuah direktori dengan nama &lt;code&gt;proyek-01&lt;/code&gt; dan di dalamnya
-sudah menggunakan git, maka kita sudah punya repositori bernama &lt;code&gt;proyek-01&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-repositori&#34;&gt;Membuat Repositori&lt;/h2&gt;
-
-&lt;p&gt;Pembuatan repositori dapat dilakukan dengan perintah &lt;code&gt;git init nama-dir&lt;/code&gt;.
-Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init proyek-01
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perintah tersebut akan membuat direktori bernama &lt;code&gt;proyek-01&lt;/code&gt;. Kalau direktorinya
-sudah ada, maka Git akan melakukan inisialisasi di dalam direktori tersebut.&lt;/p&gt;
-
-&lt;p&gt;Perintah &lt;code&gt;git init&lt;/code&gt; akan membuat sebuah direktori bernama &lt;code&gt;.git&lt;/code&gt; di dalam
-proyek kita. Direktori ini digunakan Git sebagai database untuk menyimpan
-perubahan yang kita lakukan.&lt;/p&gt;
-
-&lt;p&gt;Hati-hati! Kalau kita menghapus direktori ini, maka semua rekaman yang dilakukan
-oleh Git akan hilang.&lt;/p&gt;
-
-&lt;h2 id=&#34;contoh-contoh-lain&#34;&gt;Contoh-contoh lain&lt;/h2&gt;
-
-&lt;p&gt;Perintah berikut ini akan membuat repositori pada direktori saat ini &lt;em&gt;(working directory)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;655&#34;
-    height=&#34;157&#34;
-    alt=&#34;Membuat+repositori+git.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-IAgZktRDWBQ/WKF1raoDB4I/AAAAAAAAD3I/Uy29jWo73WARH2mV9v0rI-57tWnIlLRIACPcB/s1600/Membuat%2Brepositori%2Bgit.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Perintah berikut ini akan membuat repositori pada direktori &lt;code&gt;/var/www/html/proyekweb/&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init /var/www/html/proyekweb
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;gitignore&#34;&gt;.gitignore&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;.gitignore&lt;/code&gt; merupakan sebuah file yang berisi daftar nama-nama file dan direktori
-yang akan diabaikan oleh Git.&lt;/p&gt;
-
-&lt;p&gt;Perubahan apapun yang kita lakukan terhadap file
-dan direktori yang sudah masuk ke dalam daftar &lt;code&gt;.gitignore&lt;/code&gt; tidak akan dicatat oleh
-Git.&lt;/p&gt;
-
-&lt;p&gt;Cara mengunakan &lt;code&gt;.gitignore&lt;/code&gt;, buat saja sebuah file bernama &lt;code&gt;.gitignore&lt;/code&gt; dalam
-root direktori proyek/repositori.&lt;/p&gt;
-
-&lt;p&gt;File: &lt;code&gt;.gitignore&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/vendor/
-/upload/
-/cache
-test.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pada contoh file &lt;code&gt;.gitignore&lt;/code&gt; di atas, saya memasukan direktori &lt;code&gt;vendor&lt;/code&gt;, &lt;code&gt;upload&lt;/code&gt;,
-&lt;code&gt;cache&lt;/code&gt; dan file &lt;code&gt;test.php&lt;/code&gt;. File dan direktori tersebut akan diabaikan oleh Git.&lt;/p&gt;
-
-&lt;p&gt;Pembuatan file &lt;code&gt;.gitignore&lt;/code&gt; sebaiknya dilakukan di awal pembuatan repositori.&lt;/p&gt;
-
-&lt;p&gt;Contoh &lt;code&gt;.gitignore&lt;/code&gt; pada proyek-proyek tertentu, bisa dilihat di &lt;a href=&#34;https://github.com/github/gitignore&#34;&gt;repositori
-ini&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
-
-&lt;p&gt;Sekian dulu untuk tutorial kedua ini, Kita baru saja mengetahui cara pembuatan
-repositori dan tentang &lt;code&gt;.gitignore&lt;/code&gt;. Penggunaan &lt;code&gt;.gitignore&lt;/code&gt; memang belum dapat
-kita rasakan saat ini, karena kita belum membuat revisi apa pun. Karena itu,
-silahkan lanjutkan ke &lt;a href=&#34;https://www.petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial ketiga &amp;lsquo;Membuat Revisi&amp;rsquo;&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

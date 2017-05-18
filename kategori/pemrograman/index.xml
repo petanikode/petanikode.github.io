@@ -10,6 +10,158 @@
     <atom:link href="https://www.petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-di-linux/</link>
+      <pubDate>Fri, 19 May 2017 00:07:50 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-di-linux/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kotlin merupakan bahasa pemrograman yang berjalan di atas JVM (Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript. Kotlin dikembangkan  oleh JetBrains.&lt;/p&gt;
+
+&lt;p&gt;Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa pemrograman Android
+dan akan mulai digunakan pada Android Studio 3.0. Karena itu, kita perlu mempelajari Kotlin agar tidak ketinggalan.&lt;/p&gt;
+
+&lt;h2 id=&#34;persiapan-alat-dan-bahan&#34;&gt;Persiapan Alat dan Bahan&lt;/h2&gt;
+
+&lt;p&gt;Adapun alat-alat penting yang harus dipersiapkan untuk
+belajar kotlin adalah sebagai berikut:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Java SDK (&lt;a href=&#34;https://www.petanikode.com/pemrograman-java-di-linux/#2-jdk-java-development-kit&#34;&gt;Cara instal Java SDK di Linux&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Teks Editor/IDE&lt;/li&gt;
+&lt;li&gt;Kotlin&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;instalasi-kotlin-di-linux&#34;&gt;Instalasi Kotlin di Linux&lt;/h2&gt;
+
+&lt;p&gt;Hal pertama yang harus kita lakukan adalah menginstal Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita membutuhkan sdkman untuk menginstal kotlin di linux.&lt;/p&gt;
+
+&lt;p&gt;Silahkan install sdkman dengan perintah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl -s https://get.sdkman.io | bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buka terminal baru dan ketik perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bash ~/.sdkman/bin/sdkman-init.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Periksa versi sdkman yang terinstal dengan perintah &lt;code&gt;sdk version&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/versi-sdkman.png&#34; alt=&#34;Versi SDKman&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu baru kita bisa instal Kotlin dengan sdkman.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sdk install kotlin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tunggulah beberapa saat, kotlin akan segera terinstal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/instalasi-kotlin.png&#34; alt=&#34;Instalasi Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-program-pertama&#34;&gt;Membuat Program pertama&lt;/h2&gt;
+
+&lt;p&gt;Sekarang mari kita coba membuat program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ikuti kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;){
+	println(&amp;quot;Hello, World!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simpan dengan nama &lt;code&gt;hello.kt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita kompilasi kode tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc hello.kt -include-runtime -d hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Argumen &lt;code&gt;-include-runtime&lt;/code&gt; fungsinya agar program dapat dieksekusi. Sedangkan
+argumen &lt;code&gt;-d&lt;/code&gt; untuk menentukan target outputnya. Pada contoh di atas hasil kompilasinya
+akan berupa file jar.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita bisa eksekusi programnya dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlin hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -jar hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan pesan &lt;code&gt;Hello, World!&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin-hello-world.png&#34; alt=&#34;kotlin hello world&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-skrip-kotlin&#34;&gt;Membuat Skrip Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Pada program di atas, kita harus kompilasi dulu untuk dapat dijalankan.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan skrip kotlin tidak perlu dikompilasi. Skrip kotlin disimpan dengan
+ekstensi &lt;code&gt;.kts&lt;/code&gt; &lt;em&gt;(kotlin script)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, silahkan buat kode berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;println(&amp;quot;Hello, ini adalah skrip kotlin&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;kemudian simpan dengan nama &lt;code&gt;hello.kts&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu eksekusi/jalankan skrip tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc -script hello.kts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/skrip-kotlin.png&#34; alt=&#34;Eksekusi skrip kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuka-repl&#34;&gt;Membuka REPL&lt;/h2&gt;
+
+&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell (console).&lt;/p&gt;
+
+&lt;p&gt;Untuk membuka mode interaktif dari kotlin, kita bisa menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc-jvm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka mode interaktif akan terbuka.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/repl-kotlin.png&#34; alt=&#34;Mode interaktif kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Di sana kita bisa mengetikan perintah dan fungsi-fungsi kotlin. kemudian
+kotlin akan langsung mengeksekusinya.&lt;/p&gt;
+
+&lt;p&gt;Untuk keluar dari mode interaktif bisa dilakukan dengan mengetik perintah
+&lt;code&gt;:quit&lt;/code&gt; atau menekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;D&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mode interaktif ini dapat kita gunakan untuk mencoba-coba, eksperimen,
+dan sebagainya.&lt;/p&gt;
+
+&lt;!-- @TODO: Kompilasi Kotlin ke Javascript --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Eclipse --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Intellij IDEA --&gt;
+
+&lt;h1 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h1&gt;
+
+&lt;p&gt;Kita sudah melakukan persiapan alat-alat untuk pemrograman Kotlin di Linux.&lt;/p&gt;
+
+&lt;p&gt;Kita juga sudah mengenal cara membuat, cara kompilasi, dan cara menjalankan program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Jika ada yang ditanyakan, silahkan tuliskan di komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Kumpulan 90&#43; Grup, Channel, dan Bot Telegram untuk Programmer</title>
       <link>https://www.petanikode.com/kumpulan-group-channel-bot-telegram/</link>
       <pubDate>Fri, 14 Apr 2017 14:10:20 +0800</pubDate>
@@ -2460,178 +2612,6 @@ sebagai admin dalam &lt;em&gt;Channel&lt;/em&gt; tersebut.&lt;/p&gt;
 
 &lt;p&gt;Itulah cara mengintegarsikan Bot dengan &lt;em&gt;Channel&lt;/em&gt;. O ya! jangan lupa ikuti
 Channel-nya Petani Kode di Telegram &lt;a href=&#34;https:/t.me/petanikode&#34;&gt;@petanikode&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Instal Git di Windows</title>
-      <link>https://www.petanikode.com/cara-instal-git-di-windows/</link>
-      <pubDate>Fri, 10 Feb 2017 01:42:35 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/cara-instal-git-di-windows/</guid>
-      <description>
-
-&lt;p&gt;Instalasi Git di Windows memang tidak seperti di Linux yang ketik perintah
-langsung terinstal. Kita harus menguduh dulu, kemudian melakukan ritual
-&lt;em&gt;next&amp;gt;next&amp;gt;finish&lt;/em&gt;. Tapi dalam ritual tersebut, ada pilihan
-yang harus diperhatikan agar perintah &lt;code&gt;git&lt;/code&gt; dapat dikenali di CMD.&lt;/p&gt;
-
-&lt;p&gt;Baiklah, kali ini saya numpang &lt;em&gt;screenshot&lt;/em&gt; di laptop teman yang menggunakan
-windows untuk pembuatan tutorial ini. Silahkan disimak ya :smile:.&lt;/p&gt;
-
-&lt;h2 id=&#34;unduh-git&#34;&gt;Unduh Git&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka website resminya Git (&lt;a href=&#34;https://git-scm.com/&#34;&gt;git-scm.com&lt;/a&gt;).
-Kemudian unduh Git sesuai dengan arsitektur komputer kita. Kalau menggunakan
-64bit, unduh yang 64bit. Begitu juga kalau menggunakan 32bit.&lt;/p&gt;
-
-&lt;h2 id=&#34;ritual-instal&#34;&gt;Ritual Instal&lt;/h2&gt;
-
-&lt;p&gt;Baiklah, mari kita mulai ritual instalnya. Silahkan klik 2x file instaler Git yang sudah diunduh.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;836&#34;
-height=&#34;268&#34;
-alt=&#34;1.+Buka+file+instaler+Git.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-GJG55D0dDUE/WJyvgHq7V6I/AAAAAAAAD0Y/1eNFR16HwmoDXixtJfQ5HRMZ_hCelqD0gCPcB/s1600/1.%2BBuka%2Bfile%2Binstaler%2BGit.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Maka akan muncul infomasi lisensi Git, klik &lt;em&gt;Next &amp;gt;&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;2.+Informasi+tentang+git.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-NzbswuR4CgU/WJyvgMeY3cI/AAAAAAAAD0Y/aa_6vg_W7Q0l7cf20FkatIkU0dXGAJXtACPcB/s1600/2.%2BInformasi%2Btentang%2Bgit.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya menentukan lokasi instalasi. Biarkan saja apa adanya, kemudian klik
-&lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;3.+Lokasi+instal.JPG&#34;
-src=&#34;https://2.bp.blogspot.com/-Ye-09zmjGXY/WJyvgKQWTxI/AAAAAAAAD0Y/hbIXryc1LBkUOaXOOlP92ynIwdVGAZs9gCPcB/s1600/3.%2BLokasi%2Binstal.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan komoponen, biarkan saja seperti ini kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;4.+Pemilihan+komponen.JPG&#34;
-src=&#34;https://2.bp.blogspot.com/-ywOWK8HlXtY/WJyvgBmH9YI/AAAAAAAAD0Y/IoJbYkEjw0oIQYxLR3Jf7AvbDhwbDneoQCPcB/s1600/4.%2BPemilihan%2Bkomponen.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemlilihan direktori start menu, klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;5.+pembuatan+start+menu.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-iGNC1QrWtDg/WJyvgHelUtI/AAAAAAAAD0Y/fJKy0-mD6MgikbyjrjD4FDabTfPynbCiwCPcB/s1600/5.%2Bpembuatan%2Bstart%2Bmenu.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pengaturan &lt;em&gt;PATH Environment&lt;/em&gt;. Pilih yang tengah agar perintah &lt;code&gt;git&lt;/code&gt;
-dapat di kenali di &lt;em&gt;Command Prompt&lt;/em&gt; (CMD). Setelah itu klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;6.+Path+environment.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-79ZG8B-IzCA/WJyvgLBQbjI/AAAAAAAAD0Y/u87asmJOm9UcFAT0Q87pM8xgcW82kkOOwCPcB/s1600/6.%2BPath%2Benvironment.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya konversi &lt;em&gt;line ending&lt;/em&gt;. Biarkan saja seperti ini, kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;7.+konversi+line+ending.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-3ZL1Ea4exvo/WJyvgLEi3NI/AAAAAAAAD0Y/3jSy13aPLkAqkaZ5CrFQbmfCNb6m8kniQCPcB/s1600/7.%2Bkonversi%2Bline%2Bending.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan emulator terminal. Pilih saja yang bawah, kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;8.+Pemilihan+emulator+terminal.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-wuVBFyFlmjo/WJyvgNkAcvI/AAAAAAAAD0Y/UDKA-JsD3UIuv2sDOEkdwd_X_gRG8uX3QCPcB/s1600/8.%2BPemilihan%2Bemulator%2Bterminal.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan opsi ekstra. Klik saja &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;9.+Konfigurasi+Opsi+Ekstra.JPG&#34;
-src=&#34;https://1.bp.blogspot.com/-5oq7fAHTb7Q/WJyvgMQFc6I/AAAAAAAAD0Y/-5KmjFlMrsMkIsrPjoja277tQDaA_nr5ACPcB/s1600/9.%2BKonfigurasi%2BOpsi%2BEkstra.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan opsi ekspreimental, langsung saja klik &lt;em&gt;Install&lt;/em&gt; untuk memaulai instalasi.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;10.+Opsi+ekperimental.JPG&#34;
-src=&#34;https://2.bp.blogspot.com/-lrAn-7lh7jY/WJyvgMm0PiI/AAAAAAAAD0Y/sEhM1irdMPkvv3v615R5JhIcIDNUJxArQCPcB/s1600/10.%2BOpsi%2Bekperimental.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Tunggu beberapa saat, instalasi sedang dilakukan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;11.+Installing.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-1jecFYkwTzg/WJyvgJt9g5I/AAAAAAAAD0Y/5DG8OAc44Zk31_VjHz3mXybB3kThzHcbwCPcB/s1600/11.%2BInstalling.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah selesai, kita bisa langsung klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;12.+Finish.JPG&#34;
-src=&#34;https://1.bp.blogspot.com/-lCGee-56K5Y/WJyvgAbeLGI/AAAAAAAAD0Y/fNaJIaZKf2cqMFuV_5occ6y4oAi7_vaawCPcB/s1600/12.%2BFinish.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selamat, Git sudah terinstal di Windows. Untuk mencobanya, silahkan buka CMD atau
-PowerShell, kemudian ketik perintah &lt;code&gt;git --version&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;745&#34;
-height=&#34;204&#34;
-alt=&#34;13.+Percobaan.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-JMZtMOkESYQ/WJyvgOEh_TI/AAAAAAAAD0Y/4Mtf48YbMUwVtQ9jbJc_TYHe2MymmooAQCPcB/s1600/13.%2BPercobaan.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;OK, meskipun Git sudah terinstal. Akan tetapi masih belum bisa dipakai. Karena
-kita belum melakukan konfigurasi &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt;. Cara konfigurasinya
-silahkan &lt;a href=&#34;https://www.petanikode.com/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;baca di sni&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

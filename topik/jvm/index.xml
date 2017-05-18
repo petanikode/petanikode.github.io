@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jvm on Petani Kode — Programmer Pengguna Linux</title>
+    <link>https://www.petanikode.com/topik/jvm/index.xml</link>
+    <description>Recent content in Jvm on Petani Kode — Programmer Pengguna Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <atom:link href="https://www.petanikode.com/topik/jvm/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-di-linux/</link>
+      <pubDate>Fri, 19 May 2017 00:07:50 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-di-linux/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kotlin merupakan bahasa pemrograman yang berjalan di atas JVM (Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript. Kotlin dikembangkan  oleh JetBrains.&lt;/p&gt;
+
+&lt;p&gt;Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa pemrograman Android
+dan akan mulai digunakan pada Android Studio 3.0. Karena itu, kita perlu mempelajari Kotlin agar tidak ketinggalan.&lt;/p&gt;
+
+&lt;h2 id=&#34;persiapan-alat-dan-bahan&#34;&gt;Persiapan Alat dan Bahan&lt;/h2&gt;
+
+&lt;p&gt;Adapun alat-alat penting yang harus dipersiapkan untuk
+belajar kotlin adalah sebagai berikut:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Java SDK (&lt;a href=&#34;https://www.petanikode.com/pemrograman-java-di-linux/#2-jdk-java-development-kit&#34;&gt;Cara instal Java SDK di Linux&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Teks Editor/IDE&lt;/li&gt;
+&lt;li&gt;Kotlin&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;instalasi-kotlin-di-linux&#34;&gt;Instalasi Kotlin di Linux&lt;/h2&gt;
+
+&lt;p&gt;Hal pertama yang harus kita lakukan adalah menginstal Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita membutuhkan sdkman untuk menginstal kotlin di linux.&lt;/p&gt;
+
+&lt;p&gt;Silahkan install sdkman dengan perintah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl -s https://get.sdkman.io | bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buka terminal baru dan ketik perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bash ~/.sdkman/bin/sdkman-init.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Periksa versi sdkman yang terinstal dengan perintah &lt;code&gt;sdk version&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/versi-sdkman.png&#34; alt=&#34;Versi SDKman&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu baru kita bisa instal Kotlin dengan sdkman.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sdk install kotlin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tunggulah beberapa saat, kotlin akan segera terinstal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/instalasi-kotlin.png&#34; alt=&#34;Instalasi Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-program-pertama&#34;&gt;Membuat Program pertama&lt;/h2&gt;
+
+&lt;p&gt;Sekarang mari kita coba membuat program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ikuti kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;){
+	println(&amp;quot;Hello, World!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simpan dengan nama &lt;code&gt;hello.kt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita kompilasi kode tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc hello.kt -include-runtime -d hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Argumen &lt;code&gt;-include-runtime&lt;/code&gt; fungsinya agar program dapat dieksekusi. Sedangkan
+argumen &lt;code&gt;-d&lt;/code&gt; untuk menentukan target outputnya. Pada contoh di atas hasil kompilasinya
+akan berupa file jar.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita bisa eksekusi programnya dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlin hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -jar hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan pesan &lt;code&gt;Hello, World!&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin-hello-world.png&#34; alt=&#34;kotlin hello world&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-skrip-kotlin&#34;&gt;Membuat Skrip Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Pada program di atas, kita harus kompilasi dulu untuk dapat dijalankan.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan skrip kotlin tidak perlu dikompilasi. Skrip kotlin disimpan dengan
+ekstensi &lt;code&gt;.kts&lt;/code&gt; &lt;em&gt;(kotlin script)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, silahkan buat kode berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;println(&amp;quot;Hello, ini adalah skrip kotlin&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;kemudian simpan dengan nama &lt;code&gt;hello.kts&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu eksekusi/jalankan skrip tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc -script hello.kts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/skrip-kotlin.png&#34; alt=&#34;Eksekusi skrip kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuka-repl&#34;&gt;Membuka REPL&lt;/h2&gt;
+
+&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell (console).&lt;/p&gt;
+
+&lt;p&gt;Untuk membuka mode interaktif dari kotlin, kita bisa menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc-jvm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka mode interaktif akan terbuka.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/repl-kotlin.png&#34; alt=&#34;Mode interaktif kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Di sana kita bisa mengetikan perintah dan fungsi-fungsi kotlin. kemudian
+kotlin akan langsung mengeksekusinya.&lt;/p&gt;
+
+&lt;p&gt;Untuk keluar dari mode interaktif bisa dilakukan dengan mengetik perintah
+&lt;code&gt;:quit&lt;/code&gt; atau menekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;D&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mode interaktif ini dapat kita gunakan untuk mencoba-coba, eksperimen,
+dan sebagainya.&lt;/p&gt;
+
+&lt;!-- @TODO: Kompilasi Kotlin ke Javascript --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Eclipse --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Intellij IDEA --&gt;
+
+&lt;h1 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h1&gt;
+
+&lt;p&gt;Kita sudah melakukan persiapan alat-alat untuk pemrograman Kotlin di Linux.&lt;/p&gt;
+
+&lt;p&gt;Kita juga sudah mengenal cara membuat, cara kompilasi, dan cara menjalankan program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Jika ada yang ditanyakan, silahkan tuliskan di komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

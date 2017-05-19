@@ -2135,7 +2135,7 @@ karena akan membantu sekali dalam mempelajari python.&lt;/p&gt;
 
 &lt;p&gt;Lalu, kita bisa cari tahu cara penggunaan fungsi-fungsi tersebut dengan &lt;code&gt;help()&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Misalkan saya ingin tahu cara penggunaan fungsi &lt;code&gt;pow()&lt;/code&gt;, maka kita harus memberikan
+&lt;p&gt;Misalkan kita ingin cari tahu cara penggunaan fungsi &lt;code&gt;pow()&lt;/code&gt;, maka kita harus memberikan
 perintah &lt;code&gt;help(math.pow)&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;Help on built-in function pow in module math:
@@ -2193,7 +2193,15 @@ mode interaktif ditutup, program akan hilang.&lt;/p&gt;
 
 &lt;p&gt;Kita sudah mengetahui cara memerogram python di Linux.&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya silahkan melakukan eksperimen sendiri agar semakin paham.&lt;/p&gt;
+&lt;p&gt;Silahkan melakukan eksperimen sendiri agar semakin paham.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya silahkan pelajari tentang:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Aturan Penulisan Sintaks Python&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/pemrograman-python-variabel/&#34;&gt;Variabel dan Tipe Data dalam Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mengambil Input dan Menampilkan Output&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Kalau ada pertanyaan, silahkan sampaikan melalui komentar.&lt;/p&gt;
 </description>

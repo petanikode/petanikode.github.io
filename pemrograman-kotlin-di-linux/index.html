@@ -219,7 +219,7 @@ Persiapan Alat dan Bahan Adapun alat-alat penting yang harus dipersiapkan untuk 
   },
   "headline": "Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan",
   "description": "Kotlin merupakan bahasa pemrograman yang berjalan di atas JVM (Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript. Kotlin dikembangkan oleh JetBrains.\nPada acara Google IO\x26rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa pemrograman Android dan akan mulai digunakan pada Android Studio 3.0. Karena itu, kita perlu mempelajari Kotlin agar tidak ketinggalan.\nPersiapan Alat dan Bahan Adapun alat-alat penting yang harus dipersiapkan untuk belajar kotlin adalah sebagai berikut:\n Java SDK (Cara instal Java SDK di Linux) Teks Editor\/IDE Kotlin  Instalasi Kotlin di Linux Hal pertama yang harus kita lakukan adalah menginstal Kotlin.",
-  "wordCount":  392 ,
+  "wordCount":  414 ,
   "datePublished" : "2017-05-19T00:07:50",
   "dateModified" : "2017-05-19T00:07:50",
   "image" : {
@@ -1262,8 +1262,11 @@ belajar kotlin adalah sebagai berikut:</p>
 <pre><code class="language-bash">kotlinc hello.kt -include-runtime -d hello.jar
 </code></pre>
 
-<p>Argumen <code>-include-runtime</code> fungsinya agar program dapat dieksekusi. Sedangkan
-argumen <code>-d</code> untuk menentukan target outputnya. Pada contoh di atas hasil kompilasinya
+<p>Argumen <code>-include-runtime</code> fungsinya agar program dapat dieksekusi.
+Jika ingin mengkompilasi menjadi library, maka argumen ini tidak diperlukan.</p>
+
+<p>Sedangkan argumen <code>-d</code> untuk menentukan target outputnya.
+Pada contoh di atas hasil kompilasinya
 akan berupa file jar.</p>
 
 <p>Selanjutnya kita bisa eksekusi programnya dengan perintah:</p>
@@ -1305,7 +1308,8 @@ ekstensi <code>.kts</code> <em>(kotlin script)</em>.</p>
 
 <h2 id="membuka-repl">Membuka REPL</h2>
 
-<p>REPL <em>(Read–Eval–Print Loop)</em> bisa kita sebut sebagai mode interaktif atau shell (console).</p>
+<p>REPL <em>(Read–Eval–Print Loop)</em> bisa kita sebut sebagai mode interaktif atau shell (console).
+REPL <em>(Read–Eval–Print Loop)</em> Linuxsa kita sebut sebagai mode interaktif atau shell (console).</p>
 
 <p>Untuk membuka mode interaktif dari kotlin, kita bisa menggunakan perintah</p>
 

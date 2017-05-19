@@ -83,8 +83,11 @@ belajar kotlin adalah sebagai berikut:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc hello.kt -include-runtime -d hello.jar
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Argumen &lt;code&gt;-include-runtime&lt;/code&gt; fungsinya agar program dapat dieksekusi. Sedangkan
-argumen &lt;code&gt;-d&lt;/code&gt; untuk menentukan target outputnya. Pada contoh di atas hasil kompilasinya
+&lt;p&gt;Argumen &lt;code&gt;-include-runtime&lt;/code&gt; fungsinya agar program dapat dieksekusi.
+Jika ingin mengkompilasi menjadi library, maka argumen ini tidak diperlukan.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan argumen &lt;code&gt;-d&lt;/code&gt; untuk menentukan target outputnya.
+Pada contoh di atas hasil kompilasinya
 akan berupa file jar.&lt;/p&gt;
 
 &lt;p&gt;Selanjutnya kita bisa eksekusi programnya dengan perintah:&lt;/p&gt;
@@ -126,7 +129,8 @@ ekstensi &lt;code&gt;.kts&lt;/code&gt; &lt;em&gt;(kotlin script)&lt;/em&gt;.&lt;
 
 &lt;h2 id=&#34;membuka-repl&#34;&gt;Membuka REPL&lt;/h2&gt;
 
-&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell (console).&lt;/p&gt;
+&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell (console).
+REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; Linuxsa kita sebut sebagai mode interaktif atau shell (console).&lt;/p&gt;
 
 &lt;p&gt;Untuk membuka mode interaktif dari kotlin, kita bisa menggunakan perintah&lt;/p&gt;
 

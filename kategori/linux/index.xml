@@ -10,6 +10,162 @@
     <atom:link href="https://www.petanikode.com/kategori/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-di-linux/</link>
+      <pubDate>Fri, 19 May 2017 00:07:50 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-di-linux/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kotlin merupakan bahasa pemrograman yang berjalan di atas JVM (Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript. Kotlin dikembangkan  oleh JetBrains.&lt;/p&gt;
+
+&lt;p&gt;Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa pemrograman Android
+dan akan mulai digunakan pada Android Studio 3.0. Karena itu, kita perlu mempelajari Kotlin agar tidak ketinggalan.&lt;/p&gt;
+
+&lt;h2 id=&#34;persiapan-alat-dan-bahan&#34;&gt;Persiapan Alat dan Bahan&lt;/h2&gt;
+
+&lt;p&gt;Adapun alat-alat penting yang harus dipersiapkan untuk
+belajar kotlin adalah sebagai berikut:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Java SDK (&lt;a href=&#34;https://www.petanikode.com/pemrograman-java-di-linux/#2-jdk-java-development-kit&#34;&gt;Cara instal Java SDK di Linux&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Teks Editor/IDE&lt;/li&gt;
+&lt;li&gt;Kotlin&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;instalasi-kotlin-di-linux&#34;&gt;Instalasi Kotlin di Linux&lt;/h2&gt;
+
+&lt;p&gt;Hal pertama yang harus kita lakukan adalah menginstal Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita membutuhkan sdkman untuk menginstal kotlin di linux.&lt;/p&gt;
+
+&lt;p&gt;Silahkan install sdkman dengan perintah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl -s https://get.sdkman.io | bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buka terminal baru dan ketik perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bash ~/.sdkman/bin/sdkman-init.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Periksa versi sdkman yang terinstal dengan perintah &lt;code&gt;sdk version&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/versi-sdkman.png&#34; alt=&#34;Versi SDKman&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu baru kita bisa instal Kotlin dengan sdkman.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sdk install kotlin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tunggulah beberapa saat, kotlin akan segera terinstal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/instalasi-kotlin.png&#34; alt=&#34;Instalasi Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-program-pertama&#34;&gt;Membuat Program pertama&lt;/h2&gt;
+
+&lt;p&gt;Sekarang mari kita coba membuat program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ikuti kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;){
+	println(&amp;quot;Hello, World!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simpan dengan nama &lt;code&gt;hello.kt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita kompilasi kode tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc hello.kt -include-runtime -d hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Argumen &lt;code&gt;-include-runtime&lt;/code&gt; fungsinya agar program dapat dieksekusi.
+Jika ingin mengkompilasi menjadi library, maka argumen ini tidak diperlukan.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan argumen &lt;code&gt;-d&lt;/code&gt; untuk menentukan target outputnya.
+Pada contoh di atas hasil kompilasinya
+akan berupa file jar.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita bisa eksekusi programnya dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlin hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;java -jar hello.jar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan pesan &lt;code&gt;Hello, World!&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin-hello-world.png&#34; alt=&#34;kotlin hello world&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-skrip-kotlin&#34;&gt;Membuat Skrip Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Pada program di atas, kita harus kompilasi dulu untuk dapat dijalankan.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan skrip kotlin tidak perlu dikompilasi. Skrip kotlin disimpan dengan
+ekstensi &lt;code&gt;.kts&lt;/code&gt; &lt;em&gt;(kotlin script)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, silahkan buat kode berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;println(&amp;quot;Hello, ini adalah skrip kotlin&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;kemudian simpan dengan nama &lt;code&gt;hello.kts&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu eksekusi/jalankan skrip tersebut dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc -script hello.kts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan menghasilkan output seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/skrip-kotlin.png&#34; alt=&#34;Eksekusi skrip kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuka-repl&#34;&gt;Membuka REPL&lt;/h2&gt;
+
+&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell (console).
+REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; Linuxsa kita sebut sebagai mode interaktif atau shell (console).&lt;/p&gt;
+
+&lt;p&gt;Untuk membuka mode interaktif dari kotlin, kita bisa menggunakan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc-jvm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka mode interaktif akan terbuka.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/repl-kotlin.png&#34; alt=&#34;Mode interaktif kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Di sana kita bisa mengetikan perintah dan fungsi-fungsi kotlin. kemudian
+kotlin akan langsung mengeksekusinya.&lt;/p&gt;
+
+&lt;p&gt;Untuk keluar dari mode interaktif bisa dilakukan dengan mengetik perintah
+&lt;code&gt;:quit&lt;/code&gt; atau menekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;D&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mode interaktif ini dapat kita gunakan untuk mencoba-coba, eksperimen,
+dan sebagainya.&lt;/p&gt;
+
+&lt;!-- @TODO: Kompilasi Kotlin ke Javascript --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Eclipse --&gt;
+
+&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Intellij IDEA --&gt;
+
+&lt;h1 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h1&gt;
+
+&lt;p&gt;Kita sudah melakukan persiapan alat-alat untuk pemrograman Kotlin di Linux.&lt;/p&gt;
+
+&lt;p&gt;Kita juga sudah mengenal cara membuat, cara kompilasi, dan cara menjalankan program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Jika ada yang ditanyakan, silahkan tuliskan di komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>7 (Bahasa) Pemrograman yang Dapat Dilakukan Langsung di Ubuntu</title>
       <link>https://www.petanikode.com/7-bahasa-pemrograman-yang-dapat-dilakukan-langsung-di-ubuntu/</link>
       <pubDate>Sat, 12 Nov 2016 13:23:00 +0000</pubDate>
@@ -1866,6 +2022,180 @@ informasi tentang proyek. Berkas ini seperti berkas &lt;code&gt;dpr&lt;/code&gt;
 &lt;p&gt;Sepertinya pengenalan ini terlalu panjang. Mudah-mudahan saja ada manfaatnya.&lt;/p&gt;
 
 &lt;p&gt;Referensi: &lt;a href=&#34;http://wiki.freepascal.org/Lazarus_Tutorial&#34;&gt;http://wiki.freepascal.org/Lazarus_Tutorial&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Pemrograman Python di Linux: Pengenalan dan Persiapan Awal yang Harus dilakukan</title>
+      <link>https://www.petanikode.com/pemrograman-python-di-linux/</link>
+      <pubDate>Sun, 16 Feb 2014 19:03:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-python-di-linux/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz4/skLB5P8yBXY/s1600/python-programming.png&#34; alt=&#34;Pemrograman Python&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hello kawan-kawan, pada kesempatan ini kita akan mempelajari pemrograman Python
+di Linux.&lt;/p&gt;
+
+&lt;p&gt;Sebelumnya, mari kita kenalan dulu dengan Python.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-itu-python&#34;&gt;Apa itu Python?&lt;/h2&gt;
+
+&lt;p&gt;Python merupakan bahasa pemrograman tingkat tinggi yang diracik oleh &lt;a href=&#34;http://id.wikipedia.org/wiki/Guido_van_Rossum&#34;&gt;Guido van Rossum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Python bisa kita gunakan untuk membuat berbagai macam program, seperti:
+program CLI, Program GUI (desktop), Program Mobile, Aplikasi Web, IoT, dsb.&lt;/p&gt;
+
+&lt;p&gt;Python juga dikenal dengan bahasa pemrograman yang mudah dipelajari, karena
+struktur sintaknya rapi dan mudah dipahami.&lt;/p&gt;
+
+&lt;h2 id=&#34;persiapan-alat-untuk-pemrograman-python&#34;&gt;Persiapan Alat untuk Pemrograman Python&lt;/h2&gt;
+
+&lt;p&gt;Apa saja alat-alat yang harus dipersiapkan untuk memrogram python?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Teks Editor/IDE&lt;/li&gt;
+&lt;li&gt;Python
+
+&lt;ul&gt;
+&lt;li&gt;Sebagian besar distro Linux sudah menyediakan Python, jadi tidak perlu diinstal.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/5-langkah-instalasi-python-di-windows/&#34;&gt;Instalasi Python di Windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Periksa versi Python yang terinstal di komputer anda dengan perintah &lt;code&gt;python --version&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;petanikode@imajinasi ~ $ python --version
+Python 2.7.12
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;mengenal-mode-interaktif-repl&#34;&gt;Mengenal Mode Interaktif (REPL)&lt;/h2&gt;
+
+&lt;p&gt;Mode interaktif merupakan fasilitas/fitur yang disediakan oleh Python sebagai tempat
+menulis kode secara interaktif.&lt;/p&gt;
+
+&lt;p&gt;Fitur ini juga dikenal dengan Shell, Console, REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt;, interpreter, dsb.&lt;/p&gt;
+
+&lt;p&gt;Cara membuka mode interaktif adalah dengan mengetik perintah &lt;code&gt;python&lt;/code&gt; pada terminal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-xc44Nrr1x_E/UwCQECvPDyI/AAAAAAAAAQY/nWYR78hVzw4/s1600/intepreter+python+di+linux.png&#34; alt=&#34;Mode interaktif&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;untuk keluar dari mode interaktif tekan &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;d&lt;/code&gt; atau ketik perintah &lt;code&gt;exit()&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Tanda &lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;, artinya python siap menerima perintah.&lt;/p&gt;
+
+&lt;p&gt;Terdapat juga tanda &lt;code&gt;...&lt;/code&gt; yang berarti &lt;em&gt;secondary prompt&lt;/em&gt; atau &lt;em&gt;sub prompt&lt;/em&gt;,
+biasanya muncul saat membuat blok kode dan menulis perintah tunggal dalam beberapa baris.&lt;/p&gt;
+
+&lt;p&gt;Mari kita coba memberikan perintah &lt;code&gt;print&lt;/code&gt;, perintah ini berfungsi untuk mencetak teks ke layar.&lt;/p&gt;
+
+&lt;p&gt;Cobalah tulis &lt;code&gt;print &amp;quot;Hello World&amp;quot;&lt;/code&gt; kemudian tekan &lt;code&gt;Enter&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-vPL_6LHXiWg/UwCTN6-4c5I/AAAAAAAAAQk/V_4eK0TT7dg/s1600/Pemerograman+python+-+hello+world.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-vPL_6LHXiWg/UwCTN6-4c5I/AAAAAAAAAQk/V_4eK0TT7dg/s1600/Pemerograman+python+-+hello+world.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Perintah yang kita tulis langsung dikerjakan dan ditampilkan hasilnya.&lt;/p&gt;
+
+&lt;p&gt;Inilah mode interaktif, setiap kode atau perintah yang diketik akan direspon langsung oleh python.&lt;/p&gt;
+
+&lt;p&gt;Kita bisa memanfaatkan mode interaktif ini untuk:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Uji coba suatu fungsi&lt;/li&gt;
+&lt;li&gt;Eksperimen modul tertentu&lt;/li&gt;
+&lt;li&gt;Kalkulator&lt;/li&gt;
+&lt;li&gt;Mencari bantuan tentang fungsi tertentu&lt;/li&gt;
+&lt;li&gt;dll.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hal yang perlu kita coba adalah mencari bantuan tentang fungsi tertentu,
+karena akan membantu sekali dalam mempelajari python.&lt;/p&gt;
+
+&lt;p&gt;Ada dua fungsi yang digunakan untuk mencari bantuan:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;fungsi &lt;code&gt;dir()&lt;/code&gt; untuk melihat fungsi apa saja yang tersedia pada sebuah modul&lt;/li&gt;
+&lt;li&gt;fungsi &lt;code&gt;help()&lt;/code&gt; untuk membuka dokumentasi suatu fungsi&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Sebgai contoh, kita akan coba mencari tahu tentang penggunaan modul &lt;code&gt;math&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita impor dulu modulnya ke mode interaktif:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; import math
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu kita bisa melihat-lihat, fungsi apa saja yang tersedia di modul tersebut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; dir(math)
+[&#39;__doc__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;acos&#39;, &#39;acosh&#39;, &#39;asin&#39;, &#39;asinh&#39;, &#39;atan&#39;, &#39;atan2&#39;, &#39;atanh&#39;, &#39;ceil&#39;, &#39;copysign&#39;, &#39;cos&#39;, &#39;cosh&#39;, &#39;degrees&#39;, &#39;e&#39;, &#39;erf&#39;, &#39;erfc&#39;, &#39;exp&#39;, &#39;expm1&#39;, &#39;fabs&#39;, &#39;factorial&#39;, &#39;floor&#39;, &#39;fmod&#39;, &#39;frexp&#39;, &#39;fsum&#39;, &#39;gamma&#39;, &#39;hypot&#39;, &#39;isinf&#39;, &#39;isnan&#39;, &#39;ldexp&#39;, &#39;lgamma&#39;, &#39;log&#39;, &#39;log10&#39;, &#39;log1p&#39;, &#39;modf&#39;, &#39;pi&#39;, &#39;pow&#39;, &#39;radians&#39;, &#39;sin&#39;, &#39;sinh&#39;, &#39;sqrt&#39;, &#39;tan&#39;, &#39;tanh&#39;, &#39;trunc&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu, kita bisa cari tahu cara penggunaan fungsi-fungsi tersebut dengan &lt;code&gt;help()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Misalkan saya ingin tahu cara penggunaan fungsi &lt;code&gt;pow()&lt;/code&gt;, maka kita harus memberikan
+perintah &lt;code&gt;help(math.pow)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;Help on built-in function pow in module math:
+
+pow(...)
+    pow(x, y)
+
+    Return x**y (x to the power of y).
+(END)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;*untuk keluar dari dokumentasi tekan &lt;code&gt;q&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, baru saya bisa pakai dan coba fungsinya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-s1ya5BzGqzM/WR6KWFUp0AI/AAAAAAAAEyc/PlF1ySkGN3AUowNMQ5J36DDB5EHbEA8IQCK4B/s1600/melihat-bantuan-dan-dokumentasi-fungsi-python.png&#34; alt=&#34;Melihat bantuan dan dokumentasi python&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;menulis-skrip-python&#34;&gt;Menulis Skrip Python&lt;/h2&gt;
+
+&lt;p&gt;Program yang kita tulis dalam mode interaktif tidak bisa disimpan. Setelah
+mode interaktif ditutup, program akan hilang.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, kita harus membuat skrip.&lt;/p&gt;
+
+&lt;p&gt;Silahkan gunakan teks editor untuk menulis skrip seperti di bawah ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-Zhlvc5eK0Ig/UwCYWzbrWPI/AAAAAAAAAQ0/iuMrwUXPAN8/s1600/hello_world.py+-+gedit_001.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu simpan dengan nama &lt;code&gt;hello_world.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-_i9Unyu7DZw/UwCYnYGOW2I/AAAAAAAAAQ8/lbupDV2Pb5E/s1600/Menyimpan+script+python.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian untuk menjalankan skripnya, gunakan perintah berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;python nama_skrip.py
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pastikan berada dalam direktori tempat skrip tersebut disimpan.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-b2ZezqSOi2o/UwCZkQZ6cSI/AAAAAAAAARI/h0ZfTEW3sTU/s1600/python+-+hello_world.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-b2ZezqSOi2o/UwCZkQZ6cSI/AAAAAAAAARI/h0ZfTEW3sTU/s1600/python+-+hello_world.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;alur-kerja&#34;&gt;Alur kerja&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-EJOje0g-zPk/VCQHukqT-UI/AAAAAAAAAt4/44AaDYCw1M0/s1600/cara%2Bkerja%2Bpemrograman%2Bpython.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-EJOje0g-zPk/VCQHukqT-UI/AAAAAAAAAt4/44AaDYCw1M0/s1600/cara%2Bkerja%2Bpemrograman%2Bpython.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Membuat skrip python dengan teks &lt;em&gt;editor&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Skrip python diterjemahkan ke dalam kode biner oleh (&lt;em&gt;intepreter&lt;/em&gt;) python, sehingga komputer dapat mengerti arti perintah tersebut.&lt;/li&gt;
+&lt;li&gt;Komputer mengerjakan perintah tersebut.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- @TODO: ## Pemrograman Python Menggunakan PyCharm --&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah mengetahui cara memerogram python di Linux.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya silahkan melakukan eksperimen sendiri agar semakin paham.&lt;/p&gt;
+
+&lt;p&gt;Kalau ada pertanyaan, silahkan sampaikan melalui komentar.&lt;/p&gt;
 </description>
     </item>
     

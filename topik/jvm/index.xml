@@ -10,6 +10,316 @@
     <atom:link href="https://www.petanikode.com/topik/jvm/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Belajar Pemrograman Kotlin: Cara Mengambil Input dan Menampilkan Output</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-input-dan-output/</link>
+      <pubDate>Sat, 20 May 2017 18:01:48 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-input-dan-output/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bukan program komputer namanya kalau tidak memiliki input dan output.
+Input dan output merupakan komponen wajib setiap program komputer.&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan ini, kita akan belajar cara mengambil input dan Menampilkan output
+untuk program berbasis teks.&lt;/p&gt;
+
+&lt;p&gt;Kotlin telah menyediakan beberapa fungsi untuk mengambil input dan menampilkan output,
+diantaranya &lt;code&gt;println()&lt;/code&gt;, &lt;code&gt;print()&lt;/code&gt;, &lt;code&gt;readLine()&lt;/code&gt;, &lt;code&gt;Scanner()&lt;/code&gt;, dll.&lt;/p&gt;
+
+&lt;p&gt;Mari kita bahas semuanya&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;menampilkan-output-dengan-fungsi-println-print&#34;&gt;Menampilkan Output dengan Fungsi println/print&lt;/h2&gt;
+
+&lt;p&gt;Fungsi &lt;code&gt;println()&lt;/code&gt; dan &lt;code&gt;print()&lt;/code&gt; digunakan untuk menampilkan teks atau kalimat.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;){
+    println(&amp;quot;Kalimat yang akan ditampilkan&amp;quot;)
+    print(&amp;quot;kata yang akan ditampilkan&amp;quot;)
+    println(&amp;quot;Hello World&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Teks yang ingin ditampilkan harus diapit dengan tanda petik ganda (&lt;code&gt;&amp;quot;...&amp;quot;&lt;/code&gt;)
+atau tanda petik tunggal untuk satu karakter.&lt;/p&gt;
+
+&lt;p&gt;Kita juga bisa menggunakan tanda petik tiga:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;print(&amp;quot;&amp;quot;&amp;quot;Contoh Kalimat&amp;quot;&amp;quot;&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Apa bedanya &lt;code&gt;print()&lt;/code&gt; dengan &lt;code&gt;println()&lt;/code&gt;?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;print()&lt;/code&gt; untuk menampilkan teks apa adanya.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;println()&lt;/code&gt; untuk menampilkan teks dalam satu baris.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sebenarnya sama saja seperti fungsi &lt;code&gt;System.out.print()&lt;/code&gt; dan
+&lt;code&gt;System.out.println()&lt;/code&gt; pada java.&lt;/p&gt;
+
+&lt;p&gt;Pada Kotlin, fungsi tersebut disederhanakan dan ditingkatkan kemampuannya.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;String Template&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;String Template merupakan template untuk menampilkan teks.&lt;/p&gt;
+
+&lt;p&gt;Jika pada Java kita menggunakan tanda plus (&lt;code&gt;+&lt;/code&gt;) untuk menggabungkan String,
+maka di Kotlin&amp;hellip; kita menggunakan String template dengan simbol dolar (&lt;code&gt;$&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Java:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;System.out.println(&amp;quot;Nama: &amp;quot; + nama);
+System.out.println(&amp;quot;Umur: &amp;quot; + umur + &amp;quot; tahun&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kotlin:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;println(&amp;quot;Nama: $nama&amp;quot;)
+println(&amp;quot;Umur: $umur tahun&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mana yang lebih sederhana?&lt;/p&gt;
+
+&lt;p&gt;Tentunya kotlin.&lt;/p&gt;
+
+&lt;p&gt;Simbol dolar maksudnya untuk mengambil nilai dari variabel dan menampilkannya
+ke dalam teks.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;){
+
+	val nama = &amp;quot;Reza&amp;quot;
+	val usia = 13
+	val alamat = &amp;quot;Bandung&amp;quot;
+
+	val template = &amp;quot;&amp;quot;&amp;quot;
+	nama: $nama
+	usia: $usia tahun
+	alamat: $alamat
+
+	Reza 5 tahun lagi akan berusia ${usia + 5} tahun
+	&amp;quot;&amp;quot;&amp;quot;
+
+	println(template)
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada contoh di atas kita menggunakan &lt;code&gt;${...}&lt;/code&gt; untuk melakukan operasi di dalam
+template string.&lt;/p&gt;
+
+&lt;p&gt;Kita juga bisa memanggil fungsi di sana.&lt;/p&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-io/string-template.png&#34; alt=&#34;Hasil input tanpa variabel&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasil outputnya agak masuk ke dalam &lt;em&gt;(indent)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untuk mengatasi ini, kita bisa menggunakan method &lt;code&gt;trimIndent()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;val template = &amp;quot;&amp;quot;&amp;quot;
+nama: $nama
+usia: $usia tahun
+alamat: $alamat
+
+Reza 5 tahun lagi akan berusia ${usia + 5} tahun
+&amp;quot;&amp;quot;&amp;quot;.trimIndent()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu bagaimana kalau kita ingin menampilkan simbol dolar pada String template?&lt;/p&gt;
+
+&lt;p&gt;Gampang.&lt;/p&gt;
+
+&lt;p&gt;Kita harus menggunakan dua dolar.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;val uangku = 48
+println(&amp;quot;uangku sebanyak $$uangku&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;uangku sebanyak $48
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;mengambil-input-dari-keyboard&#34;&gt;Mengambil Input dari Keyboard&lt;/h2&gt;
+
+&lt;p&gt;Pengguna komputer berinteraksi dengan program menggunakan keyboard
+dan perangkat masukan lainnya.&lt;/p&gt;
+
+&lt;p&gt;Melalui perantara keyboard, pengguna dapat memasukan data ke program.
+Kemudian program memperosesnya menjadi sebuah informasi.&lt;/p&gt;
+
+&lt;p&gt;Ada tiga cara mengambil input dari keyboard:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Menggunakan fungsi &lt;code&gt;readLine()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Menggunakan class &lt;code&gt;Scanner&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Menggunakan class &lt;code&gt;BufferedReader&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mari kita coba satu per satu&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;mengambil-input-dengan-fungsi-readline&#34;&gt;Mengambil Input dengan Fungsi &lt;code&gt;readLine()&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Fungsi ini akan mengembalikan nilai &lt;em&gt;String&lt;/em&gt; yang &lt;em&gt;Nullable&lt;/em&gt; (&lt;code&gt;String?&lt;/code&gt;).
+Artinya, nilai bisa &lt;em&gt;String&lt;/em&gt; atau bisa &lt;em&gt;null&lt;/em&gt; (kosong).&lt;/p&gt;
+
+&lt;p&gt;Hal ini untuk mengurangi terjadinya error &lt;code&gt;NullPointerException&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;p&gt;Mengambil input dan tidak menyimpannya ke dalam variabel.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;){
+    println(&amp;quot;Tekan Enter untuk melanjutkan...&amp;quot;)
+    readLine()
+    println(&amp;quot;Terima kasih&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-io/input-tanpa-variabel.png&#34; alt=&#34;Hasil input tanpa variabel&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mengambil input dan menyimpannya ke dalam variabel.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;){
+    // mengambil input
+    print(&amp;quot;Inputkan nama: &amp;quot;)
+    val nama = readLine()
+    print(&amp;quot;Inputkan umur: &amp;quot;)
+    val umur = readLine()
+
+    // menampilkan output
+    println(&amp;quot;Namaku $nama saat ini berusia $umur tahun&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil outputnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-io/input-dengan-variabel.png&#34; alt=&#34;Hasil input tanpa variabel&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika kita ingin melakukan operasi terhadap data yang diinputkan, maka kita harus
+mengubah tipe datanya.&lt;/p&gt;
+
+&lt;p&gt;Misalkan, inputan &lt;code&gt;umur&lt;/code&gt; ingin kita tambahkan dengan &lt;code&gt;2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kita bisa menggunakan fungsi &lt;code&gt;Integer.valueOf()&lt;/code&gt; atau method &lt;code&gt;toInt()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// cara 1
+var umurbaru = Integer.valueOf(umur) + 2
+// cara 2
+var umurbaru = umur!!.toInt() + 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tanda &lt;code&gt;!!&lt;/code&gt; artinya mengizinkan &lt;code&gt;NullPointerException&lt;/code&gt; jika variabel &lt;code&gt;umur&lt;/code&gt;
+bernilai &lt;code&gt;null&lt;/code&gt;.
+Pembahasan lebih mendalam tentang ini,
+bisa dibaca di &amp;ldquo;&lt;a href=&#34;https://kotlinlang.org/docs/reference/null-safety.html&#34;&gt;Apa itu Null Safety?&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;h3 id=&#34;mengambil-input-dengan-class-scanner&#34;&gt;Mengambil Input dengan Class &lt;code&gt;Scanner&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Class Scanner bisa juga kita gunakan pada Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita harus mengimpor dulu Class Scanner dari paket &lt;code&gt;java.util&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu baru kita bisa membuat objek Scanner.&lt;/p&gt;
+
+&lt;p&gt;Contohnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.Scanner;
+
+fun main(args: Array&amp;lt;String&amp;gt;) {
+    // membuat objek scanner
+    val input = Scanner(System.`in`)
+
+    // mengambil input
+    print(&amp;quot;Nama: &amp;quot;)
+    val nama = input.nextLine()
+    print(&amp;quot;Umur: &amp;quot;)
+    val umur = input.nextInt()
+
+    // menampilkan isi variabel nama dan umur
+    println(&amp;quot;Nama kamu adalah $nama dan usianya $umur tahun&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil output:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-io/input-scanner.png&#34; alt=&#34;Hasil input dengan class Scanner&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Perlu diperhatikan&lt;/strong&gt;: tanda petik yang digunakan pada &lt;code&gt;System.`in`&lt;/code&gt; merupakan
+tanda petik terbalik &lt;em&gt;(back quote)&lt;/em&gt;, bukan tanda petik biasa.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-io/tilde.jpg&#34; alt=&#34;Tombol tidle untuk tanda petik terbalik (backquote)&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sumber: computerhope.com&lt;/p&gt;
+
+&lt;h3 id=&#34;mengambil-input-class-bufferedreader&#34;&gt;Mengambil Input Class &lt;code&gt;BufferedReader&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Selain menggunakan Class Scanner, kita juga bisa mengambil input dengan
+Class &lt;code&gt;BufferedReader&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Class &lt;code&gt;BufferedReader&lt;/code&gt; tidak bisa bekerja sendirian, dia juga butuh Class
+&lt;code&gt;InputStreamReader&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita harus mengimpor dua Class tersebut dari paket &lt;code&gt;java.io&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.io.InputStreamReader;
+import java.io.BufferedReader;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, baru kita bisa menggunakannya.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.io.InputStreamReader;
+import java.io.BufferedReader;
+
+fun main(args: Array&amp;lt;String&amp;gt;) {
+    // membuat objek BufferedReader
+    val input = BufferedReader(InputStreamReader(System.`in`))
+
+    // mengambil input
+    print(&amp;quot;input nama: &amp;quot;)
+    val namaku = input.readLine()
+
+    // menampilkan output
+    println(&amp;quot;namaku adalah $namaku&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil output:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-io/input-bufferedreader.png&#34; alt=&#34;Hasil input dengan class BufferedReader&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Itulah tiga cara mengambil input dari keyboard.&lt;/p&gt;
+
+&lt;p&gt;Mudah bukan?&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah mempelajari berbagai cara mengambil input dan menampilkan input pada
+Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya silahkan perlajari tentang variabel, operator, control flow, dsb.&lt;/p&gt;
+
+&lt;p&gt;Ada pertanyaan?&lt;/p&gt;
+
+&lt;p&gt;Silahkan kirimkan melalui komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan</title>
       <link>https://www.petanikode.com/pemrograman-kotlin-di-linux/</link>
       <pubDate>Fri, 19 May 2017 00:07:50 +0800</pubDate>
@@ -19,10 +329,22 @@
 
 &lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Kotlin merupakan bahasa pemrograman yang berjalan di atas JVM (Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript. Kotlin dikembangkan  oleh JetBrains.&lt;/p&gt;
+&lt;p&gt;Kotlin merupakan bahasa pemrograman yang berjalan di atas JVM
+(Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript.
+Kotlin dikembangkan  oleh JetBrains.&lt;/p&gt;
 
-&lt;p&gt;Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa pemrograman Android
-dan akan mulai digunakan pada Android Studio 3.0. Karena itu, kita perlu mempelajari Kotlin agar tidak ketinggalan.&lt;/p&gt;
+&lt;p&gt;Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa pemrograman
+untuk pengembangan aplikasi Android dan akan mulai digunakan pada Android Studio 3.0.&lt;/p&gt;
+
+&lt;p&gt;Kotlin dianggap lebih mudah dan menyenangkan daripada Java, karena sintaksnya
+lebih sederhana.&lt;/p&gt;
+
+&lt;p&gt;![Sintak Kotlin]()&lt;/p&gt;
+
+&lt;p&gt;Mudah diketik, mudah dipahami, dan menyenangkan&amp;hellip; membuat
+programmer menjadi lebih produktif.&lt;/p&gt;
+
+&lt;p&gt;Untuk tahu lebih lanjut, mari kita mulai belajar&amp;hellip;&lt;/p&gt;
 
 &lt;h2 id=&#34;persiapan-alat-dan-bahan&#34;&gt;Persiapan Alat dan Bahan&lt;/h2&gt;
 
@@ -39,7 +361,8 @@ belajar kotlin adalah sebagai berikut:&lt;/p&gt;
 
 &lt;p&gt;Hal pertama yang harus kita lakukan adalah menginstal Kotlin.&lt;/p&gt;
 
-&lt;p&gt;Pertama kita membutuhkan sdkman untuk menginstal kotlin di linux.&lt;/p&gt;
+&lt;p&gt;Pertama kita membutuhkan sdkman untuk menginstal kotlin di linux.
+sdkman ini semacam manajemen paket seperti &lt;code&gt;apt&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Silahkan install sdkman dengan perintah ini:&lt;/p&gt;
 
@@ -55,7 +378,9 @@ belajar kotlin adalah sebagai berikut:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/versi-sdkman.png&#34; alt=&#34;Versi SDKman&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Setelah itu baru kita bisa instal Kotlin dengan sdkman.&lt;/p&gt;
+&lt;p&gt;Setelah itu, baru kita bisa instal Kotlin dengan sdkman.&lt;/p&gt;
+
+&lt;p&gt;Ketik perintah berikut:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sdk install kotlin
 &lt;/code&gt;&lt;/pre&gt;
@@ -64,7 +389,7 @@ belajar kotlin adalah sebagai berikut:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/instalasi-kotlin.png&#34; alt=&#34;Instalasi Kotlin&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;membuat-program-pertama&#34;&gt;Membuat Program pertama&lt;/h2&gt;
+&lt;h2 id=&#34;membuat-program-pertama-hello-world&#34;&gt;Membuat Program Pertama (Hello World)&lt;/h2&gt;
 
 &lt;p&gt;Sekarang mari kita coba membuat program kotlin.&lt;/p&gt;
 
@@ -103,12 +428,17 @@ akan berupa file jar.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin-hello-world.png&#34; alt=&#34;kotlin hello world&#34; /&gt;&lt;/p&gt;
 
+&lt;p&gt;Gampang kan?&lt;/p&gt;
+
 &lt;h2 id=&#34;membuat-skrip-kotlin&#34;&gt;Membuat Skrip Kotlin&lt;/h2&gt;
 
-&lt;p&gt;Pada program di atas, kita harus kompilasi dulu untuk dapat dijalankan.&lt;/p&gt;
+&lt;p&gt;Skrip Kotlin merupakan program yang bisa langsung dieksekusi tanpa harus
+dikompilasi menjadi bentuk lain (&lt;code&gt;.class&lt;/code&gt;, &lt;code&gt;.js&lt;/code&gt; dan &lt;code&gt;.jar&lt;/code&gt;).&lt;/p&gt;
 
-&lt;p&gt;Sedangkan skrip kotlin tidak perlu dikompilasi. Skrip kotlin disimpan dengan
-ekstensi &lt;code&gt;.kts&lt;/code&gt; &lt;em&gt;(kotlin script)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Ini salah satu kelebihan Kotlin di bandingkan Java.&lt;/p&gt;
+
+&lt;p&gt;Untuk membuat skrip Kotlin, kita harus menyimpan kode kotlin-nya dengan ekstensi
+&lt;code&gt;.kts&lt;/code&gt; &lt;em&gt;(kotlin script)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Sebagai contoh, silahkan buat kode berikut.&lt;/p&gt;
 
@@ -128,10 +458,9 @@ ekstensi &lt;code&gt;.kts&lt;/code&gt; &lt;em&gt;(kotlin script)&lt;/em&gt;.&lt;
 
 &lt;h2 id=&#34;membuka-repl&#34;&gt;Membuka REPL&lt;/h2&gt;
 
-&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell (console).
-REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; Linuxsa kita sebut sebagai mode interaktif atau shell (console).&lt;/p&gt;
+&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell (console).&lt;/p&gt;
 
-&lt;p&gt;Untuk membuka mode interaktif dari kotlin, kita bisa menggunakan perintah&lt;/p&gt;
+&lt;p&gt;Untuk membuka mode interaktif dari kotlin gunakan perintah:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kotlinc-jvm
 &lt;/code&gt;&lt;/pre&gt;
@@ -143,23 +472,163 @@ REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; Linuxsa kita sebut sebagai 
 &lt;p&gt;Di sana kita bisa mengetikan perintah dan fungsi-fungsi kotlin. kemudian
 kotlin akan langsung mengeksekusinya.&lt;/p&gt;
 
-&lt;p&gt;Untuk keluar dari mode interaktif bisa dilakukan dengan mengetik perintah
-&lt;code&gt;:quit&lt;/code&gt; atau menekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;D&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Untuk keluar dari mode interaktif, ketik perintah
+&lt;code&gt;:quit&lt;/code&gt; atau tekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;D&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Mode interaktif ini dapat kita gunakan untuk mencoba-coba, eksperimen,
 dan sebagainya.&lt;/p&gt;
 
-&lt;!-- @TODO: Kompilasi Kotlin ke Javascript --&gt;
+&lt;h2 id=&#34;pemrograman-kotlin-menggunakan-intellij-idea&#34;&gt;Pemrograman Kotlin Menggunakan Intellij IDEA&lt;/h2&gt;
+
+&lt;p&gt;Jika kalian merasa kesulitan memrogram kotlin dengan teks editor dan mengkompilasi
+secara manual, maka pakailah IDE (Integreted Development Environment).&lt;/p&gt;
+
+&lt;p&gt;Saya sarankan menggunakan IDE Intellij IDEA, karena resmi mendukung untuk
+pemrograman Kotlin tanpa harus menginstal plugin tambahan.&lt;/p&gt;
+
+&lt;h3 id=&#34;instalasi-intellij-di-linux&#34;&gt;Instalasi Intellij di Linux&lt;/h3&gt;
+
+&lt;p&gt;Silahkan download Intellij yang versi komunitas di &lt;a href=&#34;https://www.jetbrains.com/idea/download/&#34;&gt;website resminya&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/download-intellij.png&#34; alt=&#34;Download Intellij&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, buka file manager sebagai &lt;em&gt;root&lt;/em&gt; kemudian ekstrak file arsip
+Intellij ke direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/ekstrak-intellij.png&#34; alt=&#34;Ekstrak Intellij&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, tutup file manager dan buka lagi sebagai user biasa.
+Lalu, jalankan program &lt;code&gt;/opt/bin/idea-IC-171.4424.56/bin/idea.sh&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/eksekusi-idea.png&#34; alt=&#34;Menjalankan idea pertama kali&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka akan terbuka wizard untuk instalasi Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Silahkan pilih &lt;strong&gt;Do not import settings&lt;/strong&gt;, kemudian klik &lt;strong&gt;OK&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/1.impor-config.png&#34; alt=&#34;Impor Konfigurasi&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya klik &lt;strong&gt;Accept&lt;/strong&gt; pada persetujuan JetBrains.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/2.persetujuan.png&#34; alt=&#34;Persetujuan JetBrains&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pilih tema yang kamu sukai, lalu klik &lt;strong&gt;Next&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/3.tema-idea.png&#34; alt=&#34;Pemilihan Tema IDE&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya jangan lupa centang &lt;strong&gt;Create Desktop entry for&amp;hellip;&lt;/strong&gt; agar
+ada ikon di menu &lt;em&gt;launcher&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/4.launcher.png&#34; alt=&#34;Menu Launcher&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya centang &lt;strong&gt;Create Script&amp;hellip;&lt;/strong&gt; agar perintah &lt;code&gt;idea&lt;/code&gt; dikenali di Terminal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/5.skrip-launcher.png&#34; alt=&#34;Skrip Launcher&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemilihan plugin yang akan diinstal. Langsung saja klik &lt;strong&gt;Next&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/6.plugin.png&#34; alt=&#34;Pemilihan Plugin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya pemilihan featured plugin yang akan diinstal dari internet,
+karena saya tidak online jadi tidak ada yang muncul.&lt;/p&gt;
+
+&lt;p&gt;Silahkan langsung lanjutkan dengan mengelik &lt;strong&gt;Start using Intellij&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/7.featured-plugin.png&#34; alt=&#34;Featured Plugin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selesai, Maka kita akan disambut dengan jendela Welcome dari Intellij.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/8.welcome.png&#34; alt=&#34;Jendela Welcome Intellij&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silahkan klik &lt;strong&gt;Create new Project&lt;/strong&gt; jika ingin langsung membuat Proyek&lt;/p&gt;
+
+&lt;h3 id=&#34;membuat-proyek-di-intellij&#34;&gt;Membuat Proyek di Intellij&lt;/h3&gt;
+
+&lt;p&gt;Selain membuat proyek melalui jendela Welcome, kita juga bisa membuat proyek
+melalui menu &lt;em&gt;File-&amp;gt;New Project&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/membuat-proyek.png&#34; alt=&#34;Membuat Proyek Kotlin di Intellij&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya silahkan berikan nama proyeknya &lt;code&gt;hello-dunia&lt;/code&gt;, kemudian klik &lt;strong&gt;Finish&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/nama-proyek.png&#34; alt=&#34;Nama Proyek&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, silahkan buat file kotlin dengan mengklik kanan pada &lt;code&gt;src&lt;/code&gt; kemudian
+pilih &lt;strong&gt;New-&amp;gt;Kotlin File/Class&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/membuat-file-kotlin.png&#34; alt=&#34;Membuat File Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Isi nama filenya dengan &lt;code&gt;main&lt;/code&gt;, setelah itu klik &lt;strong&gt;OK&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/nama-file-kotlin.png&#34; alt=&#34;Memberikan nama file&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka akan tercipa file bernama &lt;code&gt;main.kt&lt;/code&gt;, silahkan isi dengan kode berikut.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/menulis-kode-kotlin.png&#34; alt=&#34;Menulis kode kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, silahkan jalankan programnya melalui menu &lt;strong&gt;Run-&amp;gt;Run &amp;lsquo;MainKt&amp;rsquo;&lt;/strong&gt;
+atau tekan tombol &lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;F10&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/menjalankan-program.png&#34; alt=&#34;Menjalankan program kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka hasil outputnya akan langsung ditampilkan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/hasil-output.png&#34; alt=&#34;Hasil output program kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tinggal klik, tanpa harus kompilasi secara menual melalui terminal.&lt;/p&gt;
+
+&lt;p&gt;Mudah bukan&amp;hellip;?&lt;/p&gt;
 
 &lt;!-- @TODO: Pemrograman Kotlin Menggunakan Eclipse --&gt;
 
-&lt;!-- @TODO: Pemrograman Kotlin Menggunakan Intellij IDEA --&gt;
+&lt;!-- ### Pemrograman Kotlin Menggunakan Eclipse
 
-&lt;h1 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h1&gt;
+Pertama kita akan mencoba melakukan pemrograman Kotlin menggunakan Eclipse.
 
-&lt;p&gt;Kita sudah melakukan persiapan alat-alat untuk pemrograman Kotlin di Linux.&lt;/p&gt;
+Pastikan sudah menginstal eclipse:
+
+```bash
+sudo apt install eclipse
+```
+
+Silahkan buka eclipse, kemudian masuk ke menu _Help -&gt; Eclipse Marketplace…_
+
+
+### Pemrograman Kotlin Menggunakan Netbeans
+
+Untuk melakukan pemrograman Kotlin dengan IDE Netbeans, kita harus menginstal
+Plug-in tambahkan untuk Kotlin.
+
+Pertama download dulu Plugin-nya di [plugins.netbeans.org](http://plugins.netbeans.org/plugin/68590/kotlin).
+
+![Download Plugins kotlin untuk netbeans]()
+
+Pilih sesuai dengan versi Netbeans Anda.
+
+Setelah itu, buka Netbeans dan masuk ke menu _Tools&gt;Plug-in_
+dan buka Tab __Downloaded__.
+
+![Menambahkan Plugins Netbeans]()
+
+Klik __Add Plugins...__, kemudian cari plugins yang telah di-download tadi.
+
+![Menambahkan Plugins Kotlin]()
+
+Selesai, sekarang kita bisa memrogram Kotlin di dalam Netbeans.
+
+### Membuat Proyek Kotlin di Netbeans
+
+ --&gt;
+
+&lt;!-- @TODO: Kompilasi Kotlin ke Javascript --&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah mempersiapkan alat-alat yang diperlukan untuk pemrograman Kotlin di Linux.&lt;/p&gt;
 
 &lt;p&gt;Kita juga sudah mengenal cara membuat, cara kompilasi, dan cara menjalankan program kotlin.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, anda bisa pelajari &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-input-dan-output&#34;&gt;cara mengambil input dan menampilkan output di Kotlin&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Jika ada yang ditanyakan, silahkan tuliskan di komentar.&lt;/p&gt;
 </description>

@@ -334,7 +334,7 @@ Kotlin.&lt;/p&gt;
 (Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript.
 Kotlin dikembangkan  oleh JetBrains.&lt;/p&gt;
 
-&lt;p&gt;Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa pemrograman
+&lt;p&gt;Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa
 untuk pengembangan aplikasi Android dan akan mulai digunakan pada Android Studio 3.0.&lt;/p&gt;
 
 &lt;p&gt;Kotlin dianggap lebih mudah dan menyenangkan daripada Java, karena sintaksnya
@@ -459,7 +459,7 @@ dikompilasi menjadi bentuk lain (&lt;code&gt;.class&lt;/code&gt;, &lt;code&gt;.j
 
 &lt;h2 id=&#34;membuka-repl&#34;&gt;Membuka REPL&lt;/h2&gt;
 
-&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell (console).&lt;/p&gt;
+&lt;p&gt;REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt; bisa kita sebut sebagai mode interaktif atau shell &lt;em&gt;(console)&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Untuk membuka mode interaktif dari kotlin gunakan perintah:&lt;/p&gt;
 
@@ -482,7 +482,7 @@ dan sebagainya.&lt;/p&gt;
 &lt;h2 id=&#34;pemrograman-kotlin-menggunakan-intellij-idea&#34;&gt;Pemrograman Kotlin Menggunakan Intellij IDEA&lt;/h2&gt;
 
 &lt;p&gt;Jika kalian merasa kesulitan memrogram kotlin dengan teks editor dan mengkompilasi
-secara manual, maka pakailah IDE (Integreted Development Environment).&lt;/p&gt;
+secara manual, maka pakailah IDE &lt;em&gt;(Integreted Development Environment)&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Saya sarankan menggunakan IDE Intellij IDEA, karena resmi mendukung untuk
 pemrograman Kotlin tanpa harus menginstal plugin tambahan.&lt;/p&gt;

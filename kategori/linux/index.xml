@@ -20,7 +20,7 @@
 &lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kotlin merupakan bahasa pemrograman yang berjalan di atas JVM
-(Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript.
+&lt;em&gt;(Java Virtual Machine)&lt;/em&gt; dan juga bisa dikompilasi ke dalam Javascript.
 Kotlin dikembangkan  oleh JetBrains.&lt;/p&gt;
 
 &lt;p&gt;Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa
@@ -2214,13 +2214,9 @@ struktur sintaknya rapi dan mudah dipahami.&lt;/p&gt;
 &lt;p&gt;Apa saja alat-alat yang harus dipersiapkan untuk memrogram python?&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Teks Editor/IDE&lt;/li&gt;
-&lt;li&gt;Python
-
-&lt;ul&gt;
-&lt;li&gt;Sebagian besar distro Linux sudah menyediakan Python, jadi tidak perlu diinstal.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/5-langkah-instalasi-python-di-windows/&#34;&gt;Instalasi Python di Windows&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Teks Editor/IDE&lt;/strong&gt;: digunakan untuk menulis kode.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Python&lt;/strong&gt;: Sebagian besar distro Linux sudah menyediakan Python, jadi tidak perlu diinstal.
+Jika anda menggunakan Windows, silahkan baca &lt;a href=&#34;https://www.petanikode.com/5-langkah-instalasi-python-di-windows/&#34;&gt;Cara Installl Python di Windows&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Periksa versi Python yang terinstal di komputer anda dengan perintah &lt;code&gt;python --version&lt;/code&gt;.&lt;/p&gt;
@@ -2346,7 +2342,29 @@ mode interaktif ditutup, program akan hilang.&lt;/p&gt;
 &lt;li&gt;Komputer mengerjakan perintah tersebut.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;!-- @TODO: ## Pemrograman Python Menggunakan PyCharm --&gt;
+&lt;!-- ## Pemrograman Python Menggunakan PyCharm
+
+PyCharm merupakan IDE terbaik untuk pemrograman python. PyCharm ini dibuat oleh
+JetBrains.
+
+Ada dua vari PyCharm:
+
+1. Versi Profesional (_Trial_ 30 hari)
+2. Versi Komunitas (Gratis)
+
+Pada panduan ini, kita akan menggunakan PyCharm versi Komunitas.
+
+Silahkan download di [website JetBrains](https://www.jetbrains.com/pycharm/download/).
+
+![Download PyCharm]()
+
+Setelah itu, buka file manager dengan akses `root`, kemudian
+ekstrak file arsip PyCharm yang sudah didownload ke direktori
+`/opt`.
+
+![Ekstrak Arsip PyCharm]()
+
+### Membuat Proyek Python di PyCharm --&gt;
 
 &lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
 

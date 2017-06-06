@@ -7,11 +7,262 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 24 May 2017 21:40:27 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Jun 2017 21:32:08 +0800</lastBuildDate>
     <atom:link href="https://www.petanikode.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Bagaimana Cara Saya Memanfaatkan Bulan Ramadhan untuk Belajar Pemrograman?</title>
+      <title>Belajar Pemrograman Kotlin: Variabel dan Tipe Data</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-variabel/</link>
+      <pubDate>Tue, 06 Jun 2017 21:32:08 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-variabel/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apa itu variabel dan tipe data?&lt;/p&gt;
+
+&lt;p&gt;Variabel merupakan sebuah wadah untuk menyimpan nilai yang akan diproses.
+Sedangkan tipe data adalah jenis nilainya.&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan ini, kita akan mempelajari cara penggunaan variabel di Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Silahkan disimak&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-membuat-variabel-di-kotlin&#34;&gt;Cara Membuat Variabel di Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Pembuatan variabel di Kotlin tidak teralalu formal seperti di Java.&lt;/p&gt;
+
+&lt;p&gt;Pada Kotlin, kita boleh tidak menentukan/menyebutkan tipe datanya.
+Karena Kotlin sudah mampu mengenali tipe data dari nilai yang akan
+kita berikan.&lt;/p&gt;
+
+&lt;p&gt;Pembuatan variabel diawali dengan kata kunci &lt;code&gt;var&lt;/code&gt; dan &lt;code&gt;val&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh membuat variabel dengan tipe data:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// membuat variabel kosong (Wajib menyebut tipe data)
+var namaLengkap: String
+
+// membuat variabel dan langsung diisi
+// (tidak wajib menyebut tipe data, karena sudah punya nilai)
+var alamat: String = &amp;quot;Mataram&amp;quot;
+var tanggalLahir = &amp;quot;05-11-1993&amp;quot; as String
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Contoh membuat variabel tanpa menyebutkan tipe datanya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var namaBarang = &amp;quot;Hardisk Eksternal&amp;quot;
+var harga = 800000
+var berat = 1.38
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada contoh di atas, tipe datanya ditentukan otomatis sesuai dengan nilai yang
+kita berikan.&lt;/p&gt;
+
+&lt;h3 id=&#34;variabel-imutable-dan-mutable&#34;&gt;Variabel &lt;em&gt;Imutable&lt;/em&gt; dan &lt;em&gt;Mutable&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Berdasarkan sifatnya, variabel dalam kotlin dibagi menjadi dua jenis.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Imutable: &lt;em&gt;read only&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Mutable: &lt;em&gt;read and write&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Imutable&lt;/strong&gt; artinya hanya sekali pakai, vairabel ini seperti konstanta.
+Variabel &lt;em&gt;imutable&lt;/em&gt; tidak bisa diisi ulang lagi nilainya alias &lt;em&gt;read only&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pembuatan variabel &lt;em&gt;imutable&lt;/em&gt; menggunakan kata kunci &lt;em&gt;val&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;val tanggalLahir = &amp;quot;12-02-1995&amp;quot;
+val jenisKelamin = &amp;quot;Pria&amp;quot;
+
+// jika kita coba isi ulang nilainya, maka akan terjadi error
+// karena variabel ini bersifat imutable
+jenisKelamin = &amp;quot;Perempuan&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sedangkan variabel &lt;strong&gt;mutable&lt;/strong&gt; adalah variabel yang bisa diisi lagi nilainya.&lt;/p&gt;
+
+&lt;p&gt;Pembuatan variabel &lt;em&gt;mutable&lt;/em&gt; menggunakan kata kunci &lt;code&gt;var&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var jabatan = &amp;quot;Programmer&amp;quot;
+
+// isi ulang nilainya
+jabatan = &amp;quot;Project Manager&amp;quot;
+
+println(jabatan) // output: Project Manager
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;aturan-menulis-variabel-di-kotlin&#34;&gt;Aturan Menulis Variabel di Kotlin&lt;/h3&gt;
+
+&lt;p&gt;Ada beberapa aturan penulisan variabel di Kotlin yang sebaiknya ditaati
+agar valid dan tidak error.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Variabel kosong yang belum diberikan nilai wajib disebutkan tipe datanya.&lt;/li&gt;
+&lt;li&gt;Penulisan nama variabel menggunakan &lt;a href=&#34;https://www.petanikode.com/gaya-penulisan-case-dalam-pemrograman&#34;&gt;gaya CamelCase&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Nama variabel tidak boleh diawali dengan angka dan simbol&lt;/li&gt;
+&lt;li&gt;Nama variabel tidak boleh menggunakan simbol, kecuali garis bawah atau &lt;em&gt;underscore&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Tipe data diawali dengan huruf kapital&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- ## Cara Menghapus Variabel --&gt;
+
+&lt;h3 id=&#34;contoh-program&#34;&gt;Contoh Program&lt;/h3&gt;
+
+&lt;p&gt;Agar tidak hanya paham teori saja, mari kita coba membuat sebuah program
+dengan memanfaatkan variabel.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ikuti kode berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;) {
+
+    // teks sambutan
+    println(&amp;quot;---------------------------------&amp;quot;)
+    println(&amp;quot;Selamat datang di program biodata&amp;quot;)
+    println(&amp;quot;Silahkan inputkan data pribadimu&amp;quot;)
+    println(&amp;quot;---------------------------------&amp;quot;)
+
+    // mengambil input dan mengisinya ke variabel
+    print(&amp;quot;Nama lengkap: &amp;quot;)
+    var namaLengkap = readLine()
+    print(&amp;quot;Jenis Kelamin: &amp;quot;)
+    var jenisKelamin = readLine()
+    print(&amp;quot;Hobi: &amp;quot;)
+    var hobi = readLine()
+
+    // menampilkan output
+    var templateBio = &amp;quot;&amp;quot;&amp;quot;
+    +------------------------------------------+
+    | BIO DATA PROGRAMMER        
+    +------------------------------------------+
+    | Nama lengkap: $namaLengkap
+    | Jenis kelamin: $jenisKelamin
+    | Hobi: $hobi
+    &amp;quot;&amp;quot;&amp;quot;
+
+    println(templateBio)
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;tipe-data&#34;&gt;Tipe data&lt;/h2&gt;
+
+&lt;p&gt;Seperti yang dikatakan di awal tadi, tipe data merupakan jenis nilai yang akan
+kita simpan dalam variabel.&lt;/p&gt;
+
+&lt;p&gt;Ada beberapa jenis tipe data dalam Kotlin:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Int&lt;/code&gt; (Integer): bilangan bulat, contoh &lt;code&gt;12&lt;/code&gt;, &lt;code&gt;1_000&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String&lt;/code&gt;: teks, contoh &lt;code&gt;&amp;quot;belajar kotlin asik&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Float&lt;/code&gt;: bilangan pecahan, contoh &lt;code&gt;21.23&lt;/code&gt;, &lt;code&gt;1.3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Double&lt;/code&gt;: bilangan pecahan juga, tapi punya ukuran penyimpanan yang lebih besar dari Float.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Boolean&lt;/code&gt;: tipe data yang hanya bernilai &lt;code&gt;true&lt;/code&gt; dan &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Char&lt;/code&gt;: karakter, contoh &lt;code&gt;&#39;A&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Unit&lt;/code&gt;: Tipe data yang hanya punya satu nilai, yaitu: objek &lt;code&gt;Unit&lt;/code&gt;. Tipe data ini mirip
+seperti &lt;code&gt;void&lt;/code&gt; pada Java.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;null-safety&#34;&gt;Null Safety&lt;/h2&gt;
+
+&lt;p&gt;Apa kalian pernah menjumpai error &lt;code&gt;NullPointerException&lt;/code&gt; pada Java?&lt;/p&gt;
+
+&lt;p&gt;Saya sering menemukannya dan cukup sulit diatasi.&lt;/p&gt;
+
+&lt;p&gt;Kotlin berusaha memberikan sebuah trobosan untuk mengatasi error ini.
+Seperti yang dituliskan pada dokumentasinya.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Kotlin&amp;rsquo;s type system is aimed at eliminating the danger of null
+references from code, also known as the &lt;a href=&#34;http://en.wikipedia.org/wiki/Tony_Hoare#Apologies_and_retractions&#34;&gt;The Billion Dollar Mistake&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Kotlin berusaha untuk mengeliminasi terjadinya &lt;code&gt;NullPointerException&lt;/code&gt; agar
+programmer semakin bahagia dan tidak galau lagi karena error ini. :smile:&lt;/p&gt;
+
+&lt;p&gt;Maka jangan heran ketika kita mencoba mengisi sebuah variabel dengan nilai &lt;code&gt;null&lt;/code&gt;,
+kotlin akan langsung menolaknya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var username: String = &amp;quot;petanikode&amp;quot;
+username = null // maka akan terjadi error
+
+// error: null can not be a value of username non-null type String
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu bagaimana cara agar kita bisa menyimpan nilai &lt;code&gt;null&lt;/code&gt; dalam variabel &lt;code&gt;username&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Gampang.&lt;/p&gt;
+
+&lt;p&gt;Caranya dengan menambahkan tanda tanya (&lt;code&gt;?&lt;/code&gt;) pada akhir tipe data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var username: String? = &amp;quot;petanikode&amp;quot;
+username = null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang vairabel &lt;code&gt;username&lt;/code&gt; sudah mampu menampung nilai &lt;code&gt;null&lt;/code&gt; dan juga &lt;code&gt;String&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;konversi-tipe-data&#34;&gt;Konversi Tipe Data&lt;/h2&gt;
+
+&lt;p&gt;Konversi tipe data perlu kita lakukan untuk mendapakan hasil yang akurat.&lt;/p&gt;
+
+&lt;p&gt;Misalnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;&amp;gt;&amp;gt;&amp;gt; var a = 14
+&amp;gt;&amp;gt;&amp;gt; var b = 3
+&amp;gt;&amp;gt;&amp;gt; var c = a / b
+&amp;gt;&amp;gt;&amp;gt; println(c)
+4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kenapa &lt;code&gt;14/3&lt;/code&gt; hasilnya &lt;code&gt;4&lt;/code&gt;, seharusnya &lt;code&gt;4.66&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Karena mereka adalah pembagian integer.&lt;/p&gt;
+
+&lt;p&gt;Nah, agar mendapatkan nilai yang lebih akurat, kita harus konversi dulu
+nilai yang akan dibagi.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var a = 14
+var b = 3
+var c = a.toFloat() / b.toFloat()
+println(c) // output: 4.6666665
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Method &lt;code&gt;.toFloat()&lt;/code&gt; adalah method/fungsi untuk mengubah nilai ke dalam tipe
+&lt;em&gt;float&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Terdapat juga method yang lainnya:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.toInt()&lt;/code&gt; untuk mengubah ke integer;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.toString()&lt;/code&gt; untuk mengubah ke String;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.toDouble()&lt;/code&gt; untuk mengubah ke Double;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.toLong()&lt;/code&gt; untuk mengubah ke long integer;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.toShort()&lt;/code&gt; untuk mengubah ke short integer;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.toChar()&lt;/code&gt; untuk mengubah ke Char atau karakter.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Selain menggunakan method-method tersebut, kita juga bisa menggunakan method
+dari Java seperti &lt;code&gt;Integer.valueOf()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah mengetahi cara pembuatan variabel di Kotiln. Selanjutnya
+silahkan pelajari tentang operator.&lt;/p&gt;
+
+&lt;p&gt;Ada pertanyaan?&lt;/p&gt;
+
+&lt;p&gt;Silahkan kirimkan melalui komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bagaimana Saya Memanfaatkan Bulan Ramadhan untuk Belajar Pemrograman?</title>
       <link>https://www.petanikode.com/belajar-pemrograman-di-bulan-ramadhan/</link>
       <pubDate>Wed, 24 May 2017 21:40:27 +0800</pubDate>
       
@@ -209,7 +460,8 @@ atau tanda petik tunggal untuk satu karakter.&lt;/p&gt;
 &lt;p&gt;String Template merupakan template untuk menampilkan teks.&lt;/p&gt;
 
 &lt;p&gt;Jika pada Java kita menggunakan tanda plus (&lt;code&gt;+&lt;/code&gt;) untuk menggabungkan String,
-maka di Kotlin&amp;hellip; kita menggunakan String template dengan simbol dolar (&lt;code&gt;$&lt;/code&gt;).&lt;/p&gt;
+maka di Kotlin&amp;hellip; selain menggunakan tanda plus, kita juga bisa menggunakan
+String template dengan simbol dolar (&lt;code&gt;$&lt;/code&gt;).&lt;/p&gt;
 
 &lt;p&gt;Java:&lt;/p&gt;
 
@@ -221,6 +473,7 @@ System.out.println(&amp;quot;Umur: &amp;quot; + umur + &amp;quot; tahun&amp;quot
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;println(&amp;quot;Nama: $nama&amp;quot;)
 println(&amp;quot;Umur: $umur tahun&amp;quot;)
+println(&amp;quot;Umur saya &amp;quot; + nama + &amp;quot; tahun&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Mana yang lebih sederhana?&lt;/p&gt;
@@ -2757,288 +3010,6 @@ ini dan itu.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.quora.com/What-is-polyglot-programming&#34;&gt;https://www.quora.com/What-is-polyglot-programming&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=4748029&#34;&gt;https://news.ycombinator.com/item?id=4748029&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Git 07 - Percabangan</title>
-      <link>https://www.petanikode.com/tutorial-git-07---percabangan/</link>
-      <pubDate>Mon, 27 Feb 2017 19:20:26 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-git-07---percabangan/</guid>
-      <description>
-
-&lt;p&gt;Bayangkan anda sedang bekerja dengan tim pada suatu repositori Git.
-Repositori ini dikerjakan secara bersama-sama.&lt;/p&gt;
-
-&lt;p&gt;Kadang&amp;hellip; akan terjadi konflik, karena kode yang kita tulis berbeda
-dengan yang lain.&lt;/p&gt;
-
-&lt;p&gt;Misalnya, Si A menulis kode untuk fitur X dengan algoritma yang ia ketahui.
-Sedangkan si B menulis dengan algoritma yang berbeda.&lt;/p&gt;
-
-&lt;p&gt;Lalu mereka melakukan &lt;em&gt;commit&lt;/em&gt;, dan kode sumber jadi berantakan. Anggota tim yang
-lain menjadi pusing.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;697&#34;
-    height=&#34;464&#34;
-    alt=&#34;konflik pada repositori git&#34;
-    src=&#34;https://2.bp.blogspot.com/-DEigCiYJJfY/WLMaWoeoONI/AAAAAAAAELQ/qvDUmoiDWQMElIHdl8y4qkT0ZsjDk6TzQCPcB/s1600/konflik-branch-repositori-git.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Agar tidak terjadi hal yang seperti ini, kita harus membuat cabang &lt;em&gt;(branch)&lt;/em&gt;
-tersendiri.&lt;/p&gt;
-
-&lt;p&gt;Misalnya, si A akan mengerjakan fitur X, maka dia harus membuat cabang
-sendiri. Si A akan bebas melakukan apapun di cabangnya tanpa menggangu
-cabang utama &lt;em&gt;(master)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-membuat-cabang-baru&#34;&gt;Cara Membuat Cabang Baru&lt;/h2&gt;
-
-&lt;p&gt;Perintah untuk membuat cabang adalah &lt;code&gt;git branch&lt;/code&gt;, kemudian diikuti dengan
-nama cabangnya.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git branch fitur_register
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka Git akan membuat cabang bernama &lt;code&gt;fitur_register&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;697&#34;
-    height=&#34;376&#34;
-    alt=&#34;percabganan-di-repositori-git.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-A8Ps8Hfz-Wg/WLMdwfZK7WI/AAAAAAAAELg/n2TAtUoTztIa_mk2ldClsO0Vy_5dJuJgQCPcB/s1600/percabganan-di-repositori-git.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang setiap orang memiliki cabangnya masing-masing. Mereka bebas bereksperimen.&lt;/p&gt;
-
-&lt;p&gt;Untuk melihat cabang apa saja yang ada di repositori, gunakan perintah &lt;code&gt;git branch&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git branch
-  halaman_login
-* master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tanda bintang (&lt;code&gt;*&lt;/code&gt;) artinya cabang yang sedang aktif atau Kita sedang berada di sana.&lt;/p&gt;
-
-&lt;h2 id=&#34;latihan&#34;&gt;Latihan&lt;/h2&gt;
-
-&lt;p&gt;Untuk memantapkan pemahaman tentang percabangan Git, mari kita coba
-praktik.&lt;/p&gt;
-
-&lt;p&gt;Pada repositori, buatlah sebuah cabang baru.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch halaman_login
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, pindah ke cabang yang baru saja kita buat dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout halaman_login
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Lalu tambahkan file &lt;code&gt;login.html&lt;/code&gt;, isinya terserah anda.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;655&#34;
-    height=&#34;413&#34;
-    alt=&#34;pembuatan+branch+dan+eksperimen+di+branch.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-qk6qZNyJR1c/WLMiYx_zUnI/AAAAAAAAEL4/ogG3XTLt4jARb5VT-3TlA8gsOcHEZMtWwCPcB/s1600/pembuatan%2Bbranch%2Bdan%2Beksperimen%2Bdi%2Bbranch.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Tips: Jangan lupa untuk menggunakan printah &lt;code&gt;git status&lt;/code&gt; untuk melihat
-status repositori.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Kita sudah menambahkan file &lt;code&gt;login.html&lt;/code&gt;. Selanjutnya kita lakukan &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add login.html
-git commit -m &amp;quot;membuat file login.html&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bagus! revisi kita pada cabang &lt;code&gt;halaman_login&lt;/code&gt; sudah disimpan. Sekarang
-coba kembali ke cabang &lt;code&gt;master&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Apakah anda menemukan file &lt;code&gt;login.html&lt;/code&gt;?&lt;/p&gt;
-
-&lt;p&gt;Pasti tidak!&lt;/p&gt;
-
-&lt;p&gt;Sekarang kembali lagi ke cabang &lt;code&gt;halaman_login&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout halaman_login
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Cek lagi, apakah sekarang file &lt;code&gt;login.html&lt;/code&gt; sudah ada?&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;project-01/
-├── index.html
-└── login.html
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ternyata ada. Yep! kita bisa mengambil kesimpulan, kalau perubahan
-pada cabang &lt;code&gt;halaman_login&lt;/code&gt; tidak akan berpengaruh di cabang &lt;code&gt;master&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;menggabungkan-cabang&#34;&gt;Menggabungkan Cabang&lt;/h2&gt;
-
-&lt;p&gt;Anggaplah kita sudah selesai membuat fitur login di cabang &lt;code&gt;halaman_login&lt;/code&gt;.
-Sekarang kita ingin Menggabungkannya denga cabang &lt;code&gt;master&lt;/code&gt; (utama).&lt;/p&gt;
-
-&lt;p&gt;Pertama, kita harus pindah dulu ke cabang master.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, barulah kita bisa menggabungkan dengan perintah &lt;code&gt;git merge&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git merge halaman_login
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang lihat, file &lt;code&gt;login.html&lt;/code&gt; sudah ada di cabang &lt;code&gt;master&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;614&#34;
-    height=&#34;350&#34;
-    alt=&#34;penggabungan cabang git&#34;
-    src=&#34;https://1.bp.blogspot.com/-hEKLHRiPiU8/WLP9cNapCzI/AAAAAAAAEMk/v5L1F61DiWQiveuB6FNMB_m3GiWl58ObwCPcB/s1600/penggabungan%2Bcabang%2Bgit.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Hati-hati! kadang sering terjadi bentrok ketika menggabungkan cabang.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=486 height=657
-    layout=&#34;responsive&#34;
-    data-tweetid=&#34;835947140383821824&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;mengatasi-bentrok&#34;&gt;Mengatasi Bentrok&lt;/h2&gt;
-
-&lt;p&gt;Bentrok biasanya terjadi jika ada dua orang yang mengedit file yang sama.&lt;/p&gt;
-
-&lt;p&gt;Kenapa bisa begitu, &amp;lsquo;kan mereka sudah punya cabang masing-masing?&lt;/p&gt;
-
-&lt;p&gt;Bisa jadi, di cabang yang mereka kerjakan ada file yang sama dengan
-cabang lain. Kemudian, saat digabungkan terjadi bentrok.&lt;/p&gt;
-
-&lt;p&gt;Mengatasi bentrok adalah tugas dari pemilik atau pengelola repostiri.
-Dia harus bertindak adil, kode mana yang harus diambil.&lt;/p&gt;
-
-&lt;p&gt;Biasanya akan ada proses diskusi dulu dalam mengambil keputusan.&lt;/p&gt;
-
-&lt;p&gt;Baiklah, sekarang kita akan coba membuat bentrokan :smile:.&lt;/p&gt;
-
-&lt;p&gt;Pindah dulu ke branch &lt;code&gt;halaman_login&lt;/code&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout halaman_login
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setela itu, edit file &lt;code&gt;login.html&lt;/code&gt; atau &lt;code&gt;index.html&lt;/code&gt;, karena kedua file tersebut
-ada di kedua cabang yang akan kita gabungkan.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git diff
-diff --git a/login.html b/login.html
-index 23a3f5c..eea5658 100644
---- a/login.html
-+++ b/login.html
-@@ -1 +1 @@
--di sini berisi kode untuk halaman login
-+&amp;lt;p&amp;gt;di sini berisi kode untuk halaman login&amp;lt;p&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, lakukan &lt;em&gt;commit&lt;/em&gt; lagi:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add login.html
-git commit -m &amp;quot;ubah isi login.html&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Selanjutnya pindah ke cabang &lt;code&gt;master&lt;/code&gt; dan lakukan perubahan juga di cabang ini.
-Ubah file yang sama seperti di cabang &lt;code&gt;halaman_login&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, lakukan &lt;em&gt;commit&lt;/em&gt; di cabang &lt;code&gt;master&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add login.html
-git commit -m &amp;quot;ubah isi login.html di cabang master&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Terakhir, coba gabungkan cabang &lt;code&gt;halaman_login&lt;/code&gt; dengan cabang &lt;code&gt;master&lt;/code&gt;,
-maka akan terjadi bentrok.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git merge halaman_login
-Auto-merging login.html
-CONFLICT (content): Merge conflict in login.html
-Automatic merge failed; fix conflicts and then commit the result.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nah, kita disuruh perbaiki kode yang bentrok. Sekarang buka &lt;code&gt;login.html&lt;/code&gt;
-dengan teks editor.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;589&#34;
-    height=&#34;269&#34;
-    alt=&#34;kode+yang+bentrok.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-WU41K9x2aN0/WLQBmbmc42I/AAAAAAAAEM8/-Y5sfmgLtHcufrRScaZHhOWdwvhBeLdmQCPcB/s1600/kode%2Byang%2Bbentrok.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kedua kode cabang dipisahkan dengan tanda &lt;code&gt;======&lt;/code&gt;. Sekarang..
-tugas kita adalah memperbaikinya.&lt;/p&gt;
-
-&lt;p&gt;Silahkan eliminasi salah satu dari kode tersebut.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;589&#34;
-    height=&#34;199&#34;
-    alt=&#34;Eliminasi+kode+yang+bentrok.png&#34;
-    src=&#34;https://2.bp.blogspot.com/-VBYWI4fCPd8/WLQCg9MDyJI/AAAAAAAAENQ/DI_SKIVd-yclfzHJNGBX4o330Yur63kuwCPcB/s1600/Eliminasi%2Bkode%2Byang%2Bbentrok.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu lakukan &lt;em&gt;commit&lt;/em&gt; untuk menyimpan perubahan ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add login.html
-git commit -m &amp;quot;perbaiki konflik&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bagus! bentrokan antar ormas programmer sudah beres :smile:.&lt;/p&gt;
-
-&lt;h2 id=&#34;menghapus-cabang&#34;&gt;Menghapus Cabang&lt;/h2&gt;
-
-&lt;p&gt;Cabang yang sudah mati atau tidak ada pengembangan lagi, sebaiknya dihapus.&lt;/p&gt;
-
-&lt;p&gt;Agar repositori kita bersih dan rapi.&lt;/p&gt;
-
-&lt;p&gt;Cara menghapus cabang, gunakan perintah &lt;code&gt;git branch&lt;/code&gt; dengan argumen &lt;code&gt;-d&lt;/code&gt;
-dan diikuti dengan nama cabangnya.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch -d halaman_login
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;Sekian tutorial ini. Semoga ada manfaatnya.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/&#34;&gt;help.github.com&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

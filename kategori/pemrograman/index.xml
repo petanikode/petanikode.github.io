@@ -10,7 +10,258 @@
     <atom:link href="https://www.petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Bagaimana Cara Saya Memanfaatkan Bulan Ramadhan untuk Belajar Pemrograman?</title>
+      <title>Belajar Pemrograman Kotlin: Variabel dan Tipe Data</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-variabel/</link>
+      <pubDate>Tue, 06 Jun 2017 21:32:08 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-variabel/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apa itu variabel dan tipe data?&lt;/p&gt;
+
+&lt;p&gt;Variabel merupakan sebuah wadah untuk menyimpan nilai yang akan diproses.
+Sedangkan tipe data adalah jenis nilainya.&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan ini, kita akan mempelajari cara penggunaan variabel di Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Silahkan disimak&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-membuat-variabel-di-kotlin&#34;&gt;Cara Membuat Variabel di Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Pembuatan variabel di Kotlin tidak teralalu formal seperti di Java.&lt;/p&gt;
+
+&lt;p&gt;Pada Kotlin, kita boleh tidak menentukan/menyebutkan tipe datanya.
+Karena Kotlin sudah mampu mengenali tipe data dari nilai yang akan
+kita berikan.&lt;/p&gt;
+
+&lt;p&gt;Pembuatan variabel diawali dengan kata kunci &lt;code&gt;var&lt;/code&gt; dan &lt;code&gt;val&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh membuat variabel dengan tipe data:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// membuat variabel kosong (Wajib menyebut tipe data)
+var namaLengkap: String
+
+// membuat variabel dan langsung diisi
+// (tidak wajib menyebut tipe data, karena sudah punya nilai)
+var alamat: String = &amp;quot;Mataram&amp;quot;
+var tanggalLahir = &amp;quot;05-11-1993&amp;quot; as String
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Contoh membuat variabel tanpa menyebutkan tipe datanya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var namaBarang = &amp;quot;Hardisk Eksternal&amp;quot;
+var harga = 800000
+var berat = 1.38
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada contoh di atas, tipe datanya ditentukan otomatis sesuai dengan nilai yang
+kita berikan.&lt;/p&gt;
+
+&lt;h3 id=&#34;variabel-imutable-dan-mutable&#34;&gt;Variabel &lt;em&gt;Imutable&lt;/em&gt; dan &lt;em&gt;Mutable&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Berdasarkan sifatnya, variabel dalam kotlin dibagi menjadi dua jenis.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Imutable: &lt;em&gt;read only&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Mutable: &lt;em&gt;read and write&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Imutable&lt;/strong&gt; artinya hanya sekali pakai, vairabel ini seperti konstanta.
+Variabel &lt;em&gt;imutable&lt;/em&gt; tidak bisa diisi ulang lagi nilainya alias &lt;em&gt;read only&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pembuatan variabel &lt;em&gt;imutable&lt;/em&gt; menggunakan kata kunci &lt;em&gt;val&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;val tanggalLahir = &amp;quot;12-02-1995&amp;quot;
+val jenisKelamin = &amp;quot;Pria&amp;quot;
+
+// jika kita coba isi ulang nilainya, maka akan terjadi error
+// karena variabel ini bersifat imutable
+jenisKelamin = &amp;quot;Perempuan&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sedangkan variabel &lt;strong&gt;mutable&lt;/strong&gt; adalah variabel yang bisa diisi lagi nilainya.&lt;/p&gt;
+
+&lt;p&gt;Pembuatan variabel &lt;em&gt;mutable&lt;/em&gt; menggunakan kata kunci &lt;code&gt;var&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var jabatan = &amp;quot;Programmer&amp;quot;
+
+// isi ulang nilainya
+jabatan = &amp;quot;Project Manager&amp;quot;
+
+println(jabatan) // output: Project Manager
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;aturan-menulis-variabel-di-kotlin&#34;&gt;Aturan Menulis Variabel di Kotlin&lt;/h3&gt;
+
+&lt;p&gt;Ada beberapa aturan penulisan variabel di Kotlin yang sebaiknya ditaati
+agar valid dan tidak error.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Variabel kosong yang belum diberikan nilai wajib disebutkan tipe datanya.&lt;/li&gt;
+&lt;li&gt;Penulisan nama variabel menggunakan &lt;a href=&#34;https://www.petanikode.com/gaya-penulisan-case-dalam-pemrograman&#34;&gt;gaya CamelCase&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Nama variabel tidak boleh diawali dengan angka dan simbol&lt;/li&gt;
+&lt;li&gt;Nama variabel tidak boleh menggunakan simbol, kecuali garis bawah atau &lt;em&gt;underscore&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Tipe data diawali dengan huruf kapital&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- ## Cara Menghapus Variabel --&gt;
+
+&lt;h3 id=&#34;contoh-program&#34;&gt;Contoh Program&lt;/h3&gt;
+
+&lt;p&gt;Agar tidak hanya paham teori saja, mari kita coba membuat sebuah program
+dengan memanfaatkan variabel.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ikuti kode berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;fun main(args: Array&amp;lt;String&amp;gt;) {
+
+    // teks sambutan
+    println(&amp;quot;---------------------------------&amp;quot;)
+    println(&amp;quot;Selamat datang di program biodata&amp;quot;)
+    println(&amp;quot;Silahkan inputkan data pribadimu&amp;quot;)
+    println(&amp;quot;---------------------------------&amp;quot;)
+
+    // mengambil input dan mengisinya ke variabel
+    print(&amp;quot;Nama lengkap: &amp;quot;)
+    var namaLengkap = readLine()
+    print(&amp;quot;Jenis Kelamin: &amp;quot;)
+    var jenisKelamin = readLine()
+    print(&amp;quot;Hobi: &amp;quot;)
+    var hobi = readLine()
+
+    // menampilkan output
+    var templateBio = &amp;quot;&amp;quot;&amp;quot;
+    +------------------------------------------+
+    | BIO DATA PROGRAMMER        
+    +------------------------------------------+
+    | Nama lengkap: $namaLengkap
+    | Jenis kelamin: $jenisKelamin
+    | Hobi: $hobi
+    &amp;quot;&amp;quot;&amp;quot;
+
+    println(templateBio)
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;tipe-data&#34;&gt;Tipe data&lt;/h2&gt;
+
+&lt;p&gt;Seperti yang dikatakan di awal tadi, tipe data merupakan jenis nilai yang akan
+kita simpan dalam variabel.&lt;/p&gt;
+
+&lt;p&gt;Ada beberapa jenis tipe data dalam Kotlin:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Int&lt;/code&gt; (Integer): bilangan bulat, contoh &lt;code&gt;12&lt;/code&gt;, &lt;code&gt;1_000&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String&lt;/code&gt;: teks, contoh &lt;code&gt;&amp;quot;belajar kotlin asik&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Float&lt;/code&gt;: bilangan pecahan, contoh &lt;code&gt;21.23&lt;/code&gt;, &lt;code&gt;1.3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Double&lt;/code&gt;: bilangan pecahan juga, tapi punya ukuran penyimpanan yang lebih besar dari Float.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Boolean&lt;/code&gt;: tipe data yang hanya bernilai &lt;code&gt;true&lt;/code&gt; dan &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Char&lt;/code&gt;: karakter, contoh &lt;code&gt;&#39;A&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Unit&lt;/code&gt;: Tipe data yang hanya punya satu nilai, yaitu: objek &lt;code&gt;Unit&lt;/code&gt;. Tipe data ini mirip
+seperti &lt;code&gt;void&lt;/code&gt; pada Java.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;null-safety&#34;&gt;Null Safety&lt;/h2&gt;
+
+&lt;p&gt;Apa kalian pernah menjumpai error &lt;code&gt;NullPointerException&lt;/code&gt; pada Java?&lt;/p&gt;
+
+&lt;p&gt;Saya sering menemukannya dan cukup sulit diatasi.&lt;/p&gt;
+
+&lt;p&gt;Kotlin berusaha memberikan sebuah trobosan untuk mengatasi error ini.
+Seperti yang dituliskan pada dokumentasinya.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Kotlin&amp;rsquo;s type system is aimed at eliminating the danger of null
+references from code, also known as the &lt;a href=&#34;http://en.wikipedia.org/wiki/Tony_Hoare#Apologies_and_retractions&#34;&gt;The Billion Dollar Mistake&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Kotlin berusaha untuk mengeliminasi terjadinya &lt;code&gt;NullPointerException&lt;/code&gt; agar
+programmer semakin bahagia dan tidak galau lagi karena error ini. :smile:&lt;/p&gt;
+
+&lt;p&gt;Maka jangan heran ketika kita mencoba mengisi sebuah variabel dengan nilai &lt;code&gt;null&lt;/code&gt;,
+kotlin akan langsung menolaknya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var username: String = &amp;quot;petanikode&amp;quot;
+username = null // maka akan terjadi error
+
+// error: null can not be a value of username non-null type String
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu bagaimana cara agar kita bisa menyimpan nilai &lt;code&gt;null&lt;/code&gt; dalam variabel &lt;code&gt;username&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Gampang.&lt;/p&gt;
+
+&lt;p&gt;Caranya dengan menambahkan tanda tanya (&lt;code&gt;?&lt;/code&gt;) pada akhir tipe data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var username: String? = &amp;quot;petanikode&amp;quot;
+username = null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang vairabel &lt;code&gt;username&lt;/code&gt; sudah mampu menampung nilai &lt;code&gt;null&lt;/code&gt; dan juga &lt;code&gt;String&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;konversi-tipe-data&#34;&gt;Konversi Tipe Data&lt;/h2&gt;
+
+&lt;p&gt;Konversi tipe data perlu kita lakukan untuk mendapakan hasil yang akurat.&lt;/p&gt;
+
+&lt;p&gt;Misalnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;&amp;gt;&amp;gt;&amp;gt; var a = 14
+&amp;gt;&amp;gt;&amp;gt; var b = 3
+&amp;gt;&amp;gt;&amp;gt; var c = a / b
+&amp;gt;&amp;gt;&amp;gt; println(c)
+4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kenapa &lt;code&gt;14/3&lt;/code&gt; hasilnya &lt;code&gt;4&lt;/code&gt;, seharusnya &lt;code&gt;4.66&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Karena mereka adalah pembagian integer.&lt;/p&gt;
+
+&lt;p&gt;Nah, agar mendapatkan nilai yang lebih akurat, kita harus konversi dulu
+nilai yang akan dibagi.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var a = 14
+var b = 3
+var c = a.toFloat() / b.toFloat()
+println(c) // output: 4.6666665
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Method &lt;code&gt;.toFloat()&lt;/code&gt; adalah method/fungsi untuk mengubah nilai ke dalam tipe
+&lt;em&gt;float&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Terdapat juga method yang lainnya:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.toInt()&lt;/code&gt; untuk mengubah ke integer;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.toString()&lt;/code&gt; untuk mengubah ke String;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.toDouble()&lt;/code&gt; untuk mengubah ke Double;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.toLong()&lt;/code&gt; untuk mengubah ke long integer;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.toShort()&lt;/code&gt; untuk mengubah ke short integer;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.toChar()&lt;/code&gt; untuk mengubah ke Char atau karakter.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Selain menggunakan method-method tersebut, kita juga bisa menggunakan method
+dari Java seperti &lt;code&gt;Integer.valueOf()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah mengetahi cara pembuatan variabel di Kotiln. Selanjutnya
+silahkan pelajari tentang operator.&lt;/p&gt;
+
+&lt;p&gt;Ada pertanyaan?&lt;/p&gt;
+
+&lt;p&gt;Silahkan kirimkan melalui komentar.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bagaimana Saya Memanfaatkan Bulan Ramadhan untuk Belajar Pemrograman?</title>
       <link>https://www.petanikode.com/belajar-pemrograman-di-bulan-ramadhan/</link>
       <pubDate>Wed, 24 May 2017 21:40:27 +0800</pubDate>
       
@@ -208,7 +459,8 @@ atau tanda petik tunggal untuk satu karakter.&lt;/p&gt;
 &lt;p&gt;String Template merupakan template untuk menampilkan teks.&lt;/p&gt;
 
 &lt;p&gt;Jika pada Java kita menggunakan tanda plus (&lt;code&gt;+&lt;/code&gt;) untuk menggabungkan String,
-maka di Kotlin&amp;hellip; kita menggunakan String template dengan simbol dolar (&lt;code&gt;$&lt;/code&gt;).&lt;/p&gt;
+maka di Kotlin&amp;hellip; selain menggunakan tanda plus, kita juga bisa menggunakan
+String template dengan simbol dolar (&lt;code&gt;$&lt;/code&gt;).&lt;/p&gt;
 
 &lt;p&gt;Java:&lt;/p&gt;
 
@@ -220,6 +472,7 @@ System.out.println(&amp;quot;Umur: &amp;quot; + umur + &amp;quot; tahun&amp;quot
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;println(&amp;quot;Nama: $nama&amp;quot;)
 println(&amp;quot;Umur: $umur tahun&amp;quot;)
+println(&amp;quot;Umur saya &amp;quot; + nama + &amp;quot; tahun&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Mana yang lebih sederhana?&lt;/p&gt;
@@ -2858,116 +3111,6 @@ libaray, serta terminal emulator. menurut kalian manakah yang paling bagus?&lt;/
 &lt;li&gt;&lt;a href=&#34;https://hyper.is&#34;&gt;hyper.is&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&#34;&gt;plugins.jetbrains.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Git 04 - Melihat Log Revisi</title>
-      <link>https://www.petanikode.com/tutorial-git-04---melihat-log-revisi/</link>
-      <pubDate>Tue, 14 Feb 2017 08:56:09 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-git-04---melihat-log-revisi/</guid>
-      <description>
-
-&lt;p&gt;Pada &lt;a href=&#34;https://www.petanikode.com/2017/02/tutorial-git-03---membuat-revisi/&#34;&gt;tutorial sebelumnya&lt;/a&gt;, kita
-sudah membuat dua revisi pada repositori &lt;code&gt;project-01&lt;/code&gt;. Sekarang bagaimana caranya
-kita melihat catatan log dari revisi-reivisi tersebut?&lt;/p&gt;
-
-&lt;p&gt;Git sudah menyediakan perintah &lt;code&gt;git log&lt;/code&gt; untuk melihat catatan log perubahan
-pada respositori. Contoh penggunaannya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka kita akan melihat log perubahan apa saja yang sudah dilakukan dalam repositori.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;655&#34;
-    height=&#34;285&#34;
-    alt=&#34;Log+revisi+yang+sudah+dibuat.png&#34;
-    src=&#34;https://1.bp.blogspot.com/-BEp5Qadw3U0/WKJkMIVKV4I/AAAAAAAAD50/p7u0PSctYIkLDOnV_zLMhN29ZwIlImv2ACPcB/s1600/Log%2Brevisi%2Byang%2Bsudah%2Bdibuat.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada gambar di atas, terdapat dua revisi perubahan yang telah dilakuan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;log-yang-lebih-pendek&#34;&gt;Log yang Lebih Pendek&lt;/h2&gt;
-
-&lt;p&gt;Untuk menampilkan log yang lebih pendek, kita bisa menambahkan argumen &lt;code&gt;--oneline&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log --oneline
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;06f735a ditambahkan isi
-cf08ca0 commit pertama
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;log-pada-nomer-revisi-commit&#34;&gt;Log pada Nomer Revisi/&lt;em&gt;Commit&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Untuk melihat log pada revisi tertentu, kita bisa memasukan nomer revisi/commit.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log cf08ca0837cf26f1c595be36bb3a6b815e311be1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;commit cf08ca0837cf26f1c595be36bb3a6b815e311be1
-Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
-Date:   Mon Feb 13 18:08:56 2017 +0800
-
-    commit pertama
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;log-pada-file-tertentu&#34;&gt;Log pada File Tertentu&lt;/h2&gt;
-
-&lt;p&gt;Untuk melihat revisi pada file tertentu, kita dapat memasukan nama filenya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log index.html
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka akan menghasilkan output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;commit 06f735af7724558164c87f6b1ce3ca7778eb1c1b
-Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
-Date:   Mon Feb 13 18:26:50 2017 +0800
-
-    ditambahkan isi
-
-commit cf08ca0837cf26f1c595be36bb3a6b815e311be1
-Author: Ardianta Pargo &amp;lt;ardianta_pargo@yahoo.co.id&amp;gt;
-Date:   Mon Feb 13 18:08:56 2017 +0800
-
-    commit pertama
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Karena file &lt;code&gt;index.html&lt;/code&gt; sudah direvisi sebanyak dua kali.&lt;/p&gt;
-
-&lt;h2 id=&#34;log-revisi-yang-dilakukan-oleh-author-tertentu&#34;&gt;Log Revisi yang dilakukan oleh Author Tertentu&lt;/h2&gt;
-
-&lt;p&gt;Misalkan dalam repositori dikerjakan oleh banyak orang. Maka kita dapat melihat
-revisi apa saja yang dilakukan oleh orang tertentu dengan perintah berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log --author=&#39;Petani Kode&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
-
-&lt;p&gt;Itulah beberapa cara melihat log revisi pada repositori. Perintah yang digunakan
-adalah &lt;code&gt;git log&lt;/code&gt;. Selanjutnya kita akan pelajari perintah &lt;code&gt;git diff&lt;/code&gt; untuk melihat
-perbandingan pada revisi.&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya: &lt;a href=&#34;https://www.petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/&#34;&gt;Tutorial Git 05 - Melihat Perbandingan Revisi&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

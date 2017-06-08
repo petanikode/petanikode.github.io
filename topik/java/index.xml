@@ -1355,17 +1355,178 @@ maka dia punya &lt;em&gt;method&lt;/em&gt; (fungsi) untuk melakukan sesuatu.&lt;
       <pubDate>Wed, 06 Apr 2016 22:50:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pilihan-alternatif-java-dan-symbolic-link-yang-buntu/</guid>
-      <description>&lt;p&gt;Ketika saya bermain-main dengan perintah &lt;code&gt;update-alternative&lt;/code&gt; untuk menambahakan &lt;a href=&#34;http://www.petanikode.com/2016/04/cara-mengatasi-jdk-yang-lebih-dari-satu.html&#34; target=&#34;_blank&#34;&gt;pilihan alternatif java&lt;/a&gt;, malah terjadi error. Hal ini disebabkan karena saya salah memasukkan &lt;i&gt;symbolic link&lt;/i&gt; ketika menambahkan pilihan alternatif. Berikut ini perintah salah yang menyebabkan masalah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo update-alternative &amp;ndash;install &lt;span style=&#34;color: red;&#34;&gt;/etc/alternatives/java&lt;/span&gt; java /opt/jdk1.8.0_77/bin/java&lt;/code&gt;&lt;/pre&gt;Perhatikan teks yang berwarna merah. Tesk tersebut merupakan &lt;i&gt;symbolic link&lt;/i&gt; yang berlokasi di &lt;code&gt;/etc/alternatives&lt;/code&gt;. Symbolic link yang seharusnya dimasukkan adalah &lt;code&gt;/usr/bin/java&lt;/code&gt;. Akibatnya, error:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;petanikode@imajinasi:~$ &lt;b&gt;sudo update-alternatives &amp;ndash;config java&lt;/b&gt;&lt;br /&gt;update-alternatives: error: cannot stat file &amp;lsquo;/etc/alternatives/java&amp;rsquo;: Too many levels of symbolic links&lt;/code&gt;&lt;/pre&gt;Tidak dapat memilih alternatif java, karena symbolic link java yang berada di &lt;code&gt;/etc/alternatives&lt;/code&gt; buntu &lt;i&gt;(broken)&lt;/i&gt;. Berikut ini cara saya mengatasinya:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Hapus &lt;i&gt;symbolic link&lt;/i&gt; yang buntu tadi&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo rm /etc/alternatives/java&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Buat &lt;i&gt;symbolic link&lt;/i&gt; java dari JDK yang sudah terinstal&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/bin/java /etc/alternatives/java&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Hapus pilihan alternatif yang menyebabkan error tadi&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo update-alternative &amp;ndash;remove java /opt/jdk1.8.0_77/bin/java&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Coba pilih alternatif lagi&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo update-aternative &amp;ndash;config java&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;/ol&gt;Selanjutnya kita bisa tambahkan lagi alternatif java-nya dengan perintah yang benar. Silahkan baca caranya di: &lt;a href=&#34;http://www.petanikode.com/2016/04/cara-mengatasi-jdk-yang-lebih-dari-satu.html&#34; target=&#34;_blank&#34;&gt;Cara Mengatasi JDK yang Lebih dari Satu di Linux&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;Mengapa perintah yang salah di atas tadi bisa menyebabkan error? Mungkin karna &lt;i&gt;symbolic link&lt;/i&gt; yang ada di direktori &lt;code&gt;/etc/alternatives/&lt;/code&gt; adalah &lt;i&gt;link&lt;/i&gt; yang dipakai untuk menyambungkan &lt;i&gt;symbolic link&lt;/i&gt; &lt;code&gt;/usr/bin/java&lt;/code&gt; dengan java di JDK-nya yang asli. Berikut ini ilustrasi hubungan antar link dan file asli.&lt;a href=&#34;http://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;File java yang berada di dalam JDK pilihan alternatif merupakan file asli. Sedangkan, yang berada di luar adalah file link yang saling menyambung hingga ke file asli.&lt;br /&gt;&lt;br /&gt;Ketika kita mengetik perintah &lt;code&gt;java&lt;/code&gt; di terminal, file yang eksekusi adalah &lt;i&gt;symbolic link&lt;/i&gt; yang berada di &lt;code&gt;/usr/bin/java&lt;/code&gt;. File ini tersambung sampai ke file asli.&lt;a href=&#34;http://2.bp.blogspot.com/-PUncbwsFVE4/VwUhEeTdCQI/AAAAAAAACp0/fI9GjK-vlRscOdTqyflM5Rtff90F6m64w/s1600/Hubungan%2Bsymbolic%2Blink%2Bsampai%2Bke%2Bfile%2Basli.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-PUncbwsFVE4/VwUhEeTdCQI/AAAAAAAACp0/fI9GjK-vlRscOdTqyflM5Rtff90F6m64w/s1600/Hubungan%2Bsymbolic%2Blink%2Bsampai%2Bke%2Bfile%2Basli.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Ternyata masalah kecil ini menambah pengalaman dan pengetahuan saya. Syukuri setiap masalah yang dihadapi. Di balik masalah selalu ada hikmah yang tersembunyi.&lt;/p&gt;
+      <description>&lt;p&gt;Ketika saya bermain-main dengan perintah &lt;code&gt;update-alternative&lt;/code&gt; untuk
+menambahakan &lt;a href=&#34;https://www.petanikode.com/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/&#34;&gt;pilihan alternatif java&lt;/a&gt;, malah terjadi error.&lt;/p&gt;
+
+&lt;p&gt;Hal ini disebabkan karena saya salah memasukkan &lt;em&gt;symbolic link&lt;/em&gt; ketika
+menambahkan pilihan alternatif.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini perintah salah yang menyebabkan masalah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo update-alternative --install &lt;span style=&#34;color: red;&#34;&gt;/etc/alternatives/java&lt;/span&gt; java /opt/jdk1.8.0_77/bin/java&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikan teks yang berwarna merah. Teks tersebut merupakan &lt;em&gt;symbolic link&lt;/em&gt;
+yang berlokasi di &lt;code&gt;/etc/alternatives&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Symbolic link yang seharusnya dimasukkan adalah &lt;code&gt;/usr/bin/java&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Akibatnya, error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;petanikode@imajinasi:~$ sudo update-alternatives --config java
+update-alternatives: error: cannot stat file &#39;/etc/alternatives/java&#39;: Too many levels of symbolic links
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tidak dapat memilih alternatif java, karena symbolic link java yang berada
+di &lt;code&gt;/etc/alternatives&lt;/code&gt; buntu &lt;em&gt;(broken)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini cara saya mengatasinya:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Hapus &lt;em&gt;symbolic link&lt;/em&gt; yang buntu tadi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  sudo rm /etc/alternatives/java
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Buat &lt;em&gt;symbolic link&lt;/em&gt; java dari JDK yang sudah terinstal&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/bin/java /etc/alternatives/java
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Hapus pilihan alternatif yang menyebabkan error tadi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  sudo update-alternative --remove java /opt/jdk1.8.0_77/bin/java
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Coba pilih alternatif lagi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  sudo update-aternative --config java
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Selanjutnya kita bisa tambahkan lagi alternatif java-nya dengan perintah yang benar.
+Silahkan baca caranya di: &lt;a href=&#34;https://www.petanikode.com/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/&#34;&gt;Cara Mengatasi JDK yang Lebih dari Satu di Linux&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mengapa perintah yang salah di atas tadi bisa menyebabkan error?&lt;/p&gt;
+
+&lt;p&gt;Mungkin karna &lt;em&gt;symbolic link&lt;/em&gt; yang ada di direktori &lt;code&gt;/etc/alternatives/&lt;/code&gt;
+adalah &lt;em&gt;link&lt;/em&gt; yang dipakai untuk menyambungkan &lt;em&gt;symbolic link&lt;/em&gt; &lt;code&gt;/usr/bin/java&lt;/code&gt;
+dengan java di JDK-nya yang asli.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini ilustrasi hubungan antar link dan file asli.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;File java yang berada di dalam JDK pilihan alternatif merupakan file asli.
+Sedangkan, yang berada di luar adalah file link yang saling menyambung hingga ke file asli.&lt;/p&gt;
+
+&lt;p&gt;Ketika kita mengetik perintah &lt;code&gt;java&lt;/code&gt; di terminal, file yang eksekusi
+adalah &lt;em&gt;symbolic link&lt;/em&gt; yang berada di &lt;code&gt;/usr/bin/java&lt;/code&gt;.
+File ini tersambung sampai ke file asli.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-PUncbwsFVE4/VwUhEeTdCQI/AAAAAAAACp0/fI9GjK-vlRscOdTqyflM5Rtff90F6m64w/s1600/Hubungan%2Bsymbolic%2Blink%2Bsampai%2Bke%2Bfile%2Basli.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-PUncbwsFVE4/VwUhEeTdCQI/AAAAAAAACp0/fI9GjK-vlRscOdTqyflM5Rtff90F6m64w/s1600/Hubungan%2Bsymbolic%2Blink%2Bsampai%2Bke%2Bfile%2Basli.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ternyata masalah kecil ini menambah pengalaman dan pengetahuan saya.&lt;/p&gt;
+
+&lt;p&gt;Syukuri setiap masalah yang dihadapi. Di balik masalah selalu ada hikmah yang tersembunyi. :smile:&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Cara Mengatasi JDK yang Lebih dari Satu di Linux</title>
+      <title>Cara Mengatasi JDK yang Lebih dari Satu di Linux agar tidak Bentrok</title>
       <link>https://www.petanikode.com/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/</link>
       <pubDate>Tue, 05 Apr 2016 22:49:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-TlxFSzn2BzM/VwOQ3IRECxI/AAAAAAAACo4/nmj3R3qUhMAqMy7FuBZanJHQVrszb2Xiw/s1600/Instal%2BJDK%2BLebih%2Bdari%2BSatu%2Bdi%2BLinux.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-TlxFSzn2BzM/VwOQ3IRECxI/AAAAAAAACo4/nmj3R3qUhMAqMy7FuBZanJHQVrszb2Xiw/s1600/Instal%2BJDK%2BLebih%2Bdari%2BSatu%2Bdi%2BLinux.png&#34; /&gt;&lt;/a&gt;Saya menginstal lebih dari satu JDK di Linux (Xubuntu). Ada Open JDK 8, Open JDK 7, dan Oracle JDK 8. Awalnya saya hanya punya Open JDK 8. Kemudian setelah mengintal &lt;i&gt;Gradle&lt;/i&gt;, Open JDK 7 juga ikut tersintal. Selain itu, saya juga menginstal Oracle JDK 8 Secara manual di direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;br /&gt;&lt;br /&gt;Saat ini JDK yang sedang aktif digunakan adalah Open JDK 7. Beberapa IDE tidak mendukung bila menggunakan Open JDK 7. Seperti Android Studio, tidak dapat dibuka karena JDK-nya masih versi 7. Berikut ini pesan Error-nya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;petanikode@imajinasi:/opt/android-studio/bin$ &lt;b&gt;bash studio.sh&lt;/b&gt; &lt;br /&gt;&lt;br /&gt;JDK Required: &amp;lsquo;tools.jar&amp;rsquo; seems to be not in Studio classpath.&lt;br /&gt;Please ensure JAVA_HOME points to JDK rather than JRE.&lt;/code&gt;&lt;/pre&gt;Bagaimanakah cara mengganti lagi ke Open JDK 8? Apakah harus instal ulang Open JDK 8 dan menghapus OpenJDK 7? Itu tidak perlu dilakukan, karena Linux sudah menyediakan sebuah perintah untuk memilih alternatif JDK. Perintah tersebut adalah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo update-alternatives &amp;ndash;config java&lt;/code&gt;&lt;/pre&gt;Berikut ini tampilan outputnya di komputer saya:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-cG43izUiip0/VwJ0fa6UsKI/AAAAAAAACoI/7slZ-6hjwese84APex-UiPuio44nVOVJg/s1600/Ganti%2BAlternatif%2BJava%2BJDK.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-cG43izUiip0/VwJ0fa6UsKI/AAAAAAAACoI/7slZ-6hjwese84APex-UiPuio44nVOVJg/s1600/Ganti%2BAlternatif%2BJava%2BJDK.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Saya pilih nomer &lt;code&gt;2&lt;/code&gt;, karena pilihan tersebut untuk memilih Open JDK 8. Setelah itu, ketika saya memeriksa versinya&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;petanikode@imajinasi:~$ &lt;b&gt;java -version&lt;/b&gt;&lt;br /&gt;openjdk version &amp;ldquo;1.8.0_72-internal&amp;rdquo;&lt;br /&gt;OpenJDK Runtime Environment (build 1.8.0_72-internal-b15)&lt;br /&gt;OpenJDK 64-Bit Server VM (build 25.72-b15, mixed mode)&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Sekarang saya menggunakan Open JDK 8 dan Android Studio dapat berjalan dengan lancar.&lt;br /&gt;&lt;br /&gt;Sementara untuk Oracle JDK yang saya instal secara manual &lt;i&gt;(copy-paste)&lt;/i&gt; di direktori &lt;code&gt;/opt&lt;/code&gt; tidak terdaftar dalam pilihan alternatif. Untuk menambahkanya, ketik perintah berikut ini.&lt;br /&gt;&lt;pre&gt;sudo update-alternatives &amp;ndash;install /usr/bin/java java &lt;span style=&#34;color: #cc0000;&#34;&gt;/opt/jdk1.8.0_77/bin/java&lt;/span&gt; &lt;span style=&#34;color: blue;&#34;&gt;1080&lt;/span&gt;&lt;/pre&gt;Teks yang berwarna merah adalah lokasi saya menginstal Oracle JDK dan teks yang berwarna biru adalalah prioritas. Nilai prioritas &lt;code&gt;1080&lt;/code&gt; akan menjadikan Oracle JDK berada pada posisi teratas di pilihan alternatif, karena prioritas pilihan teratas adalah &lt;code&gt;1071&lt;/code&gt; (pada komputer saya). Berikut ini hasilnya:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-JMGRIdE5TMA/VwKLKZJL31I/AAAAAAAACoY/4T8GjvtdmeAnx4CQc4CFf5k2HVL1QtkmA/s1600/Daftar%2Bpilihan%2Balternatif%2BJDK%2Bdi%2BLinux.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-JMGRIdE5TMA/VwKLKZJL31I/AAAAAAAACoY/4T8GjvtdmeAnx4CQc4CFf5k2HVL1QtkmA/s1600/Daftar%2Bpilihan%2Balternatif%2BJDK%2Bdi%2BLinux.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Cek lagi versi java yang dipakai:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;petanikode@imajinasi:~$ &lt;b&gt;java -version&lt;/b&gt;&lt;br /&gt;java version &amp;ldquo;1.8.0_77&amp;rdquo;&lt;br /&gt;Java&amp;trade; SE Runtime Environment (build 1.8.0_77-b03)&lt;br /&gt;Java HotSpot&amp;trade; 64-Bit Server VM (build 25.77-b03, mixed mode)&lt;/code&gt;&lt;/pre&gt;Sekrang java yang dipakai adalah java dari Oracle JDK. Untuk menghapus Oracle JDK dari pilihan alternatif, ketik perintah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo update-alternatives &amp;ndash;remove java &lt;span style=&#34;color: #cc0000;&#34;&gt;/opt/jdk1.8.0_77/bin/java&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;Begitulah cara saya mengatasi JDK yang lebih dari satu di Linux. Tak maslah, berapapun JDK yang diinstal, asalkan mengerti menggunakan perintah &lt;code&gt;update-alternatives&lt;/code&gt;, kita bisa mengaturnya sesuai selera.&lt;br /&gt;&lt;br /&gt;Baca juga: &lt;a href=&#34;http://www.petanikode.com/2016/04/pilihan-alternatif-java-dan-symbolic.html&#34; target=&#34;_blank&#34;&gt;Pilihan Alternatif Java dan Symbolic Link yang Buntu &lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-TlxFSzn2BzM/VwOQ3IRECxI/AAAAAAAACo4/nmj3R3qUhMAqMy7FuBZanJHQVrszb2Xiw/s1600/Instal%2BJDK%2BLebih%2Bdari%2BSatu%2Bdi%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Saya menginstal lebih dari satu JDK di Linux (Xubuntu).
+Ada Open JDK 8, Open JDK 7, dan Oracle JDK 8. A&lt;/p&gt;
+
+&lt;p&gt;walnya saya hanya punya Open JDK 8. Kemudian setelah mengintal &lt;em&gt;Gradle&lt;/em&gt;,
+Open JDK 7 juga ikut tersintal.&lt;/p&gt;
+
+&lt;p&gt;Selain itu, saya juga menginstal Oracle JDK 8 Secara manual di direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Saat ini JDK yang sedang aktif digunakan adalah Open JDK 7.&lt;/p&gt;
+
+&lt;p&gt;Beberapa IDE tidak mendukung bila menggunakan Open JDK 7.
+Seperti Android Studio, tidak dapat dibuka karena JDK-nya masih versi 7.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini pesan Error-nya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;petanikode@imajinasi:/opt/android-studio/bin$ bash studio.sh
+
+JDK Required: &#39;tools.jar&#39; seems to be not in Studio classpath.
+Please ensure JAVA_HOME points to JDK rather than JRE.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bagaimanakah cara mengganti lagi ke Open JDK 8?&lt;/p&gt;
+
+&lt;p&gt;Apakah harus instal ulang Open JDK 8 dan menghapus OpenJDK 7?&lt;/p&gt;
+
+&lt;p&gt;Itu tidak perlu dilakukan, karena Linux sudah menyediakan sebuah
+perintah untuk memilih alternatif JDK.&lt;/p&gt;
+
+&lt;p&gt;Perintah tersebut adalah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo update-alternatives --config java
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut ini tampilan di komputer saya:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-cG43izUiip0/VwJ0fa6UsKI/AAAAAAAACoI/7slZ-6hjwese84APex-UiPuio44nVOVJg/s1600/Ganti%2BAlternatif%2BJava%2BJDK.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-cG43izUiip0/VwJ0fa6UsKI/AAAAAAAACoI/7slZ-6hjwese84APex-UiPuio44nVOVJg/s1600/Ganti%2BAlternatif%2BJava%2BJDK.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tinggal pilih nomer &lt;code&gt;2&lt;/code&gt; untuk memilih Open JDK 8.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, ketika saya memeriksa versinya&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;petanikode@imajinasi:~$ java -version
+openjdk version &amp;quot;1.8.0_72-internal&amp;quot;
+OpenJDK Runtime Environment (build 1.8.0_72-internal-b15)
+OpenJDK 64-Bit Server VM (build 25.72-b15, mixed mode)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang saya menggunakan Open JDK 8 dan Android Studio dapat berjalan
+dengan lancar.&lt;/p&gt;
+
+&lt;p&gt;Sementara untuk Oracle JDK yang saya instal secara manual &lt;em&gt;(copy-paste)&lt;/em&gt; di
+direktori &lt;code&gt;/opt&lt;/code&gt; tidak terdaftar dalam pilihan alternatif.&lt;/p&gt;
+
+&lt;p&gt;Untuk menambahkanya, ketik perintah berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo update-alternatives --install /usr/bin/java java &lt;span style=&#34;color: #cc0000;&#34;&gt;/opt/jdk1.8.0_77/bin/java&lt;/span&gt; &lt;span style=&#34;color: blue;&#34;&gt;1080&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Teks yang berwarna merah adalah lokasi saya menginstal Oracle JDK dan teks yang
+berwarna biru adalalah prioritas.&lt;/p&gt;
+
+&lt;p&gt;Nilai prioritas &lt;code&gt;1080&lt;/code&gt; akan menjadikan Oracle JDK berada pada posisi teratas di
+pilihan alternatif, karena prioritas pilihan teratas adalah &lt;code&gt;1071&lt;/code&gt;
+(pada komputer saya).&lt;/p&gt;
+
+&lt;p&gt;Berikut ini hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-JMGRIdE5TMA/VwKLKZJL31I/AAAAAAAACoY/4T8GjvtdmeAnx4CQc4CFf5k2HVL1QtkmA/s1600/Daftar%2Bpilihan%2Balternatif%2BJDK%2Bdi%2BLinux.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-JMGRIdE5TMA/VwKLKZJL31I/AAAAAAAACoY/4T8GjvtdmeAnx4CQc4CFf5k2HVL1QtkmA/s1600/Daftar%2Bpilihan%2Balternatif%2BJDK%2Bdi%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Cek lagi versi java yang dipakai:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;petanikode@imajinasi:~$ java -version
+java version &amp;quot;1.8.0_77&amp;quot;
+Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
+Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekrang java yang dipakai adalah java dari Oracle JDK.&lt;/p&gt;
+
+&lt;p&gt;Untuk menghapus Oracle JDK dari pilihan alternatif, ketik perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo update-alternatives --remove java &lt;span style=&#34;color: #cc0000;&#34;&gt;/opt/jdk1.8.0_77/bin/java&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Begitulah cara saya mengatasi JDK yang lebih dari satu di Linux.
+Tak maslah, berapapun JDK yang diinstal, asalkan mengerti menggunakan
+perintah &lt;code&gt;update-alternatives&lt;/code&gt;, kita bisa mengaturnya sesuai selera.&lt;/p&gt;
+
+&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/pilihan-alternatif-java-dan-symbolic-link-yang-buntu/&#34;&gt;Pilihan Alternatif Java dan Symbolic Link yang Buntu&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

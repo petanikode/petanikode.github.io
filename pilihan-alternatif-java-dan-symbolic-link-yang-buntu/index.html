@@ -49,10 +49,13 @@
 <meta name="author" content="Ardianta Pargo"/>
 
 <meta name="keywords" content="Pilihan Alternatif Java dan Symbolic Link yang Buntu, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error. Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif. Berikut ini perintah salah yang menyebabkan masalah:
-sudo update-alternative &ndash;install /etc/alternatives/java java /opt/jdk1.8.0_77/bin/javaPerhatikan teks yang berwarna merah. Tesk tersebut merupakan symbolic link yang berlokasi di /etc/alternatives. Symbolic link yang seharusnya dimasukkan adalah /usr/bin/java. Akibatnya, error:
-petanikode@imajinasi:~$ sudo update-alternatives &ndash;config java
-update-alternatives: error: cannot stat file &lsquo;/etc/alternatives/java&rsquo;: Too many levels of symbolic linksTidak dapat memilih alternatif java, karena symbolic link java yang berada di /etc/alternatives buntu (broken)."/>
+<meta name="description" content="Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error.
+Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif.
+Berikut ini perintah salah yang menyebabkan masalah:
+sudo update-alternative --install /etc/alternatives/java java /opt/jdk1.8.0_77/bin/java Perhatikan teks yang berwarna merah. Teks tersebut merupakan symbolic link yang berlokasi di /etc/alternatives.
+Symbolic link yang seharusnya dimasukkan adalah /usr/bin/java.
+Akibatnya, error:
+petanikode@imajinasi:~$ sudo update-alternatives --config java update-alternatives: error: cannot stat file &#39;/etc/alternatives/java&#39;: Too many levels of symbolic links  Tidak dapat memilih alternatif java, karena symbolic link java yang berada di /etc/alternatives buntu (broken)."/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -69,10 +72,13 @@ update-alternatives: error: cannot stat file &lsquo;/etc/alternatives/java&rsquo
 
     
     <meta property="og:title" content="Pilihan Alternatif Java dan Symbolic Link yang Buntu" />
-    <meta property="og:description" content="Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error. Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif. Berikut ini perintah salah yang menyebabkan masalah:
-sudo update-alternative &ndash;install /etc/alternatives/java java /opt/jdk1.8.0_77/bin/javaPerhatikan teks yang berwarna merah. Tesk tersebut merupakan symbolic link yang berlokasi di /etc/alternatives. Symbolic link yang seharusnya dimasukkan adalah /usr/bin/java. Akibatnya, error:
-petanikode@imajinasi:~$ sudo update-alternatives &ndash;config java
-update-alternatives: error: cannot stat file &lsquo;/etc/alternatives/java&rsquo;: Too many levels of symbolic linksTidak dapat memilih alternatif java, karena symbolic link java yang berada di /etc/alternatives buntu (broken)." />
+    <meta property="og:description" content="Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error.
+Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif.
+Berikut ini perintah salah yang menyebabkan masalah:
+sudo update-alternative --install /etc/alternatives/java java /opt/jdk1.8.0_77/bin/java Perhatikan teks yang berwarna merah. Teks tersebut merupakan symbolic link yang berlokasi di /etc/alternatives.
+Symbolic link yang seharusnya dimasukkan adalah /usr/bin/java.
+Akibatnya, error:
+petanikode@imajinasi:~$ sudo update-alternatives --config java update-alternatives: error: cannot stat file &#39;/etc/alternatives/java&#39;: Too many levels of symbolic links  Tidak dapat memilih alternatif java, karena symbolic link java yang berada di /etc/alternatives buntu (broken)." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://www.petanikode.com/pilihan-alternatif-java-dan-symbolic-link-yang-buntu/" />
 
@@ -183,7 +189,7 @@ update-alternatives: error: cannot stat file &lsquo;/etc/alternatives/java&rsquo
         "position": 2,
         "item": {
             "@id": "https:\/\/www.petanikode.com\/kategori\/pemrograman",
-            "name": "pemrograman"
+            "name": "Pemrograman"
             }
       },
       
@@ -211,8 +217,8 @@ update-alternatives: error: cannot stat file &lsquo;/etc/alternatives/java&rsquo
     "name" : "Ardianta Pargo"
   },
   "headline": "Pilihan Alternatif Java dan Symbolic Link yang Buntu",
-  "description": "Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error. Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif. Berikut ini perintah salah yang menyebabkan masalah:\nsudo update-alternative \x26ndash;install \/etc\/alternatives\/java java \/opt\/jdk1.8.0_77\/bin\/javaPerhatikan teks yang berwarna merah. Tesk tersebut merupakan symbolic link yang berlokasi di \/etc\/alternatives. Symbolic link yang seharusnya dimasukkan adalah \/usr\/bin\/java. Akibatnya, error:\npetanikode@imajinasi:~$ sudo update-alternatives \x26ndash;config java\nupdate-alternatives: error: cannot stat file \x26lsquo;\/etc\/alternatives\/java\x26rsquo;: Too many levels of symbolic linksTidak dapat memilih alternatif java, karena symbolic link java yang berada di \/etc\/alternatives buntu (broken).",
-  "wordCount":  277 ,
+  "description": "Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error.\nHal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif.\nBerikut ini perintah salah yang menyebabkan masalah:\nsudo update-alternative --install \/etc\/alternatives\/java java \/opt\/jdk1.8.0_77\/bin\/java Perhatikan teks yang berwarna merah. Teks tersebut merupakan symbolic link yang berlokasi di \/etc\/alternatives.\nSymbolic link yang seharusnya dimasukkan adalah \/usr\/bin\/java.\nAkibatnya, error:\npetanikode@imajinasi:~$ sudo update-alternatives --config java update-alternatives: error: cannot stat file \x27\/etc\/alternatives\/java\x27: Too many levels of symbolic links  Tidak dapat memilih alternatif java, karena symbolic link java yang berada di \/etc\/alternatives buntu (broken).",
+  "wordCount":  284 ,
   "datePublished" : "2016-04-06T22:50:00",
   "dateModified" : "2016-04-06T22:50:00",
   "image" : {
@@ -247,7 +253,7 @@ update-alternatives: error: cannot stat file &lsquo;/etc/alternatives/java&rsquo
       "sameAs": "http://petanikode.com"
     },
     "datePublished": "2016-04-06T22:50:00",
-    "description": "Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error. Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif. Berikut ini perintah salah yang menyebabkan masalah:\nsudo update-alternative \x26ndash;install \/etc\/alternatives\/java java \/opt\/jdk1.8.0_77\/bin\/javaPerhatikan teks yang berwarna merah. Tesk tersebut merupakan symbolic link yang berlokasi di \/etc\/alternatives. Symbolic link yang seharusnya dimasukkan adalah \/usr\/bin\/java. Akibatnya, error:\npetanikode@imajinasi:~$ sudo update-alternatives \x26ndash;config java\nupdate-alternatives: error: cannot stat file \x26lsquo;\/etc\/alternatives\/java\x26rsquo;: Too many levels of symbolic linksTidak dapat memilih alternatif java, karena symbolic link java yang berada di \/etc\/alternatives buntu (broken).",
+    "description": "Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error.\nHal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif.\nBerikut ini perintah salah yang menyebabkan masalah:\nsudo update-alternative --install \/etc\/alternatives\/java java \/opt\/jdk1.8.0_77\/bin\/java Perhatikan teks yang berwarna merah. Teks tersebut merupakan symbolic link yang berlokasi di \/etc\/alternatives.\nSymbolic link yang seharusnya dimasukkan adalah \/usr\/bin\/java.\nAkibatnya, error:\npetanikode@imajinasi:~$ sudo update-alternatives --config java update-alternatives: error: cannot stat file \x27\/etc\/alternatives\/java\x27: Too many levels of symbolic links  Tidak dapat memilih alternatif java, karena symbolic link java yang berada di \/etc\/alternatives buntu (broken).",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -1176,18 +1182,90 @@ padding: 16px;
                 <div class="post-header">
     
         <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
+            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
         </div>
         <div>
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
+        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
             <br>
         6 April 2016 · 22:50
     </div>
     
 </div>
 
-                <p>Ketika saya bermain-main dengan perintah <code>update-alternative</code> untuk menambahakan <a href="http://www.petanikode.com/2016/04/cara-mengatasi-jdk-yang-lebih-dari-satu.html" target="_blank">pilihan alternatif java</a>, malah terjadi error. Hal ini disebabkan karena saya salah memasukkan <i>symbolic link</i> ketika menambahkan pilihan alternatif. Berikut ini perintah salah yang menyebabkan masalah:<br /><pre><code class="bash">sudo update-alternative &ndash;install <span style="color: red;">/etc/alternatives/java</span> java /opt/jdk1.8.0_77/bin/java</code></pre>Perhatikan teks yang berwarna merah. Tesk tersebut merupakan <i>symbolic link</i> yang berlokasi di <code>/etc/alternatives</code>. Symbolic link yang seharusnya dimasukkan adalah <code>/usr/bin/java</code>. Akibatnya, error:<br /><pre><code class="bash">petanikode@imajinasi:~$ <b>sudo update-alternatives &ndash;config java</b><br />update-alternatives: error: cannot stat file &lsquo;/etc/alternatives/java&rsquo;: Too many levels of symbolic links</code></pre>Tidak dapat memilih alternatif java, karena symbolic link java yang berada di <code>/etc/alternatives</code> buntu <i>(broken)</i>. Berikut ini cara saya mengatasinya:<br /><ol><li>Hapus <i>symbolic link</i> yang buntu tadi<br /><pre><code class="bash">sudo rm /etc/alternatives/java</code></pre></li><li>Buat <i>symbolic link</i> java dari JDK yang sudah terinstal<br /><pre><code class="bash">sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/bin/java /etc/alternatives/java</code></pre></li><li>Hapus pilihan alternatif yang menyebabkan error tadi<br /><pre><code class="bash">sudo update-alternative &ndash;remove java /opt/jdk1.8.0_77/bin/java</code></pre></li><li>Coba pilih alternatif lagi<br /><pre><code class="bash">sudo update-aternative &ndash;config java</code></pre></li></ol>Selanjutnya kita bisa tambahkan lagi alternatif java-nya dengan perintah yang benar. Silahkan baca caranya di: <a href="http://www.petanikode.com/2016/04/cara-mengatasi-jdk-yang-lebih-dari-satu.html" target="_blank">Cara Mengatasi JDK yang Lebih dari Satu di Linux</a>.<br /><br />Mengapa perintah yang salah di atas tadi bisa menyebabkan error? Mungkin karna <i>symbolic link</i> yang ada di direktori <code>/etc/alternatives/</code> adalah <i>link</i> yang dipakai untuk menyambungkan <i>symbolic link</i> <code>/usr/bin/java</code> dengan java di JDK-nya yang asli. Berikut ini ilustrasi hubungan antar link dan file asli.<a href="http://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png" /></a><br />File java yang berada di dalam JDK pilihan alternatif merupakan file asli. Sedangkan, yang berada di luar adalah file link yang saling menyambung hingga ke file asli.<br /><br />Ketika kita mengetik perintah <code>java</code> di terminal, file yang eksekusi adalah <i>symbolic link</i> yang berada di <code>/usr/bin/java</code>. File ini tersambung sampai ke file asli.<a href="http://2.bp.blogspot.com/-PUncbwsFVE4/VwUhEeTdCQI/AAAAAAAACp0/fI9GjK-vlRscOdTqyflM5Rtff90F6m64w/s1600/Hubungan%2Bsymbolic%2Blink%2Bsampai%2Bke%2Bfile%2Basli.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-PUncbwsFVE4/VwUhEeTdCQI/AAAAAAAACp0/fI9GjK-vlRscOdTqyflM5Rtff90F6m64w/s1600/Hubungan%2Bsymbolic%2Blink%2Bsampai%2Bke%2Bfile%2Basli.png" /></a><br />Ternyata masalah kecil ini menambah pengalaman dan pengetahuan saya. Syukuri setiap masalah yang dihadapi. Di balik masalah selalu ada hikmah yang tersembunyi.</p>
+                <p>Ketika saya bermain-main dengan perintah <code>update-alternative</code> untuk
+menambahakan <a href="/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/">pilihan alternatif java</a>, malah terjadi error.</p>
+
+<p>Hal ini disebabkan karena saya salah memasukkan <em>symbolic link</em> ketika
+menambahkan pilihan alternatif.</p>
+
+<p>Berikut ini perintah salah yang menyebabkan masalah:</p>
+
+<pre><code>sudo update-alternative --install <span style="color: red;">/etc/alternatives/java</span> java /opt/jdk1.8.0_77/bin/java</code></pre>
+
+<p>Perhatikan teks yang berwarna merah. Teks tersebut merupakan <em>symbolic link</em>
+yang berlokasi di <code>/etc/alternatives</code>.</p>
+
+<p>Symbolic link yang seharusnya dimasukkan adalah <code>/usr/bin/java</code>.</p>
+
+<p>Akibatnya, error:</p>
+
+<pre><code class="language-bash">petanikode@imajinasi:~$ sudo update-alternatives --config java
+update-alternatives: error: cannot stat file '/etc/alternatives/java': Too many levels of symbolic links
+</code></pre>
+
+<p>Tidak dapat memilih alternatif java, karena symbolic link java yang berada
+di <code>/etc/alternatives</code> buntu <em>(broken)</em>.</p>
+
+<p>Berikut ini cara saya mengatasinya:</p>
+
+<ol>
+<li><p>Hapus <em>symbolic link</em> yang buntu tadi</p>
+
+<pre><code class="language-bash">  sudo rm /etc/alternatives/java
+</code></pre></li>
+
+<li><p>Buat <em>symbolic link</em> java dari JDK yang sudah terinstal</p>
+
+<pre><code class="language-bash">  sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/bin/java /etc/alternatives/java
+</code></pre></li>
+
+<li><p>Hapus pilihan alternatif yang menyebabkan error tadi</p>
+
+<pre><code class="language-bash">  sudo update-alternative --remove java /opt/jdk1.8.0_77/bin/java
+</code></pre></li>
+
+<li><p>Coba pilih alternatif lagi</p>
+
+<pre><code class="language-bash">  sudo update-aternative --config java
+</code></pre></li>
+</ol>
+
+<p>Selanjutnya kita bisa tambahkan lagi alternatif java-nya dengan perintah yang benar.
+Silahkan baca caranya di: <a href="/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/">Cara Mengatasi JDK yang Lebih dari Satu di Linux</a>.</p>
+
+<p>Mengapa perintah yang salah di atas tadi bisa menyebabkan error?</p>
+
+<p>Mungkin karna <em>symbolic link</em> yang ada di direktori <code>/etc/alternatives/</code>
+adalah <em>link</em> yang dipakai untuk menyambungkan <em>symbolic link</em> <code>/usr/bin/java</code>
+dengan java di JDK-nya yang asli.</p>
+
+<p>Berikut ini ilustrasi hubungan antar link dan file asli.</p>
+
+<p><a href="http://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png"><img src="https://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png" alt="" /></a></p>
+
+<p>File java yang berada di dalam JDK pilihan alternatif merupakan file asli.
+Sedangkan, yang berada di luar adalah file link yang saling menyambung hingga ke file asli.</p>
+
+<p>Ketika kita mengetik perintah <code>java</code> di terminal, file yang eksekusi
+adalah <em>symbolic link</em> yang berada di <code>/usr/bin/java</code>.
+File ini tersambung sampai ke file asli.</p>
+
+<p><a href="http://2.bp.blogspot.com/-PUncbwsFVE4/VwUhEeTdCQI/AAAAAAAACp0/fI9GjK-vlRscOdTqyflM5Rtff90F6m64w/s1600/Hubungan%2Bsymbolic%2Blink%2Bsampai%2Bke%2Bfile%2Basli.png"><img src="https://2.bp.blogspot.com/-PUncbwsFVE4/VwUhEeTdCQI/AAAAAAAACp0/fI9GjK-vlRscOdTqyflM5Rtff90F6m64w/s1600/Hubungan%2Bsymbolic%2Blink%2Bsampai%2Bke%2Bfile%2Basli.png" alt="" /></a></p>
+
+<p>Ternyata masalah kecil ini menambah pengalaman dan pengetahuan saya.</p>
+
+<p>Syukuri setiap masalah yang dihadapi. Di balik masalah selalu ada hikmah yang tersembunyi. 😄</p>
 
                 <div class="post-footer">
                 <div>Bagikan:

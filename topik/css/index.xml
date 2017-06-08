@@ -659,12 +659,125 @@ selanjutnya kita akan pelajari satuan-satuan yang digunakan pada RWD.&lt;/p&gt;
     </item>
     
     <item>
-      <title>6 Nilai Warna yang Valid dalam CSS</title>
-      <link>https://www.petanikode.com/6-nilai-warna-yang-valid-dalam-css/</link>
+      <title>Tutorial CSS: 6 Jenis Nilai Warna yang Valid dalam CSS</title>
+      <link>https://www.petanikode.com/tutorial-css-warna/</link>
       <pubDate>Sat, 22 Oct 2016 22:23:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/6-nilai-warna-yang-valid-dalam-css/</guid>
-      <description>&lt;p&gt;Nilai warna dalam CSS dapat kita berikan dengan berbagai cara. Salah satunya dengan menuliskan nama warna dalam bahasa inggris. Misalnya, warna teks untuk paragraf adalah merah, maka kita bisa berikan &lt;code&gt;color:red&lt;/code&gt;. Selain menggunakan nama warna, terdapat juga cara lain yang valid seperti fungsi &lt;code&gt;rgb()&lt;/code&gt;, kode heksa, dsb. &lt;br /&gt;&lt;h2&gt;1. Nama warna&lt;/h2&gt;Nama warna merupakan cara yang sering digunakan, karena lebih mudah mengingatnya. Misalnya, saya suka warna hijau &lt;i&gt;(teal)&lt;/i&gt;, maka nanti dalam CSS-nya bisa langsung kita tulis &lt;code&gt;teal&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;header {&lt;br /&gt;&amp;nbsp; &amp;nbsp; background: teal; &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;2. Kode Heksadesimal&lt;/h2&gt;Kode heksadesmial merupakan kode yang menggunakan bilangan heksa desmial, memiliki nilai dari &lt;code&gt;0&lt;/code&gt; sampai &lt;code&gt;f&lt;/code&gt; (16 dalam desimal). Kode heksa demsial diawali dengan tanda pagar (&lt;code&gt;#&lt;/code&gt;), kemudian diikuti kode heksanya. Kode ini dapat terdiri dari 3 digit atau 6 digit bilangan. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;#0011ff (6 digit)&lt;br /&gt;#01f (3 digit)&lt;/code&gt;&lt;/pre&gt;Setiap angka dalam kode heksa desimal menentukan nilai warna dalam RGB (&lt;code&gt;#RRGGBB&lt;/code&gt; atau &lt;code&gt;#RGB&lt;/code&gt;). Misalnya untuk yang enam digit, dua angka di depan adalah untuk nilai warna merah, dua angka berikutnya untuk warna hijua, dan dua angka terakhir untuk warna biru.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-uJxloO6zsjg/WAtj44D3HiI/AAAAAAAADWA/HWwSTgdoKYoVS4A-2lbynLjH7C3162cDgCK4B/s1600/nilai%2Bwarna%2Bdengan%2Bkode%2BHeksa.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-uJxloO6zsjg/WAtj44D3HiI/AAAAAAAADWA/HWwSTgdoKYoVS4A-2lbynLjH7C3162cDgCK4B/s1600/nilai%2Bwarna%2Bdengan%2Bkode%2BHeksa.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;3. Fungsi RGB&lt;/h2&gt;Fungsi RGB memiliki tiga parameter, yaitu nilai untuk merah &lt;i&gt;(red)&lt;/i&gt;, hijau &lt;i&gt;(green)&lt;/i&gt;, dan biru &lt;i&gt;(blue)&lt;/i&gt;. Nilai yang diberikan pada parameter tersebut dimulai dari angka &lt;code&gt;0&lt;/code&gt;~&lt;code&gt;255&lt;/code&gt;. Semakin besar nilai yang diberikan, semakin kuat nilai warna tersebut. Contoh penggunaan fungsi RGB.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;h2 {&lt;br /&gt;&amp;nbsp; &amp;nbsp; color: rgb(88, 255, 21); &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Pada contoh diatas, nilai paramter kedua &lt;i&gt;(green)&lt;/i&gt; diberikan maksimal, maka nanti hasilnya warna hijau akan menjadi warna dominan.&lt;br /&gt;&lt;h2&gt;4. Fungsi RGBA&lt;/h2&gt;Fungsi ini sama seperti fungsi RGB, tapi ada penambahan A dibelakangnya. Huruf A artinya &lt;i&gt;Alpha&lt;/i&gt;. Nilai &lt;i&gt;alpha&lt;/i&gt; ini akan menjadi nilai transparansi dari warnanya. Nilai &lt;i&gt;alpha&lt;/i&gt; dapat diberikan dari &lt;code&gt;0.0&lt;/code&gt;~&lt;code&gt;1.0&lt;/code&gt;. Semakin mendekati angka satu,&amp;nbsp; warnanya akan semakin terang dan semakin mendekati angka nol, warnanya akan semakin menghilang. Contoh penggunaan fungsi RGBA.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;p {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; background: rgba(40,23,11,0.7);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Pada contoh di atas, nilai &lt;i&gt;alpha&lt;/i&gt; yang diberikan adalah &lt;code&gt;0.7&lt;/code&gt;, atau sama dengan &lt;code&gt;70%&lt;/code&gt;.&lt;br /&gt;&lt;h2&gt;5. Fungsi HSL&lt;/h2&gt;HSL merupakan singkatan dari &lt;i&gt;Hue&lt;/i&gt;, &lt;i&gt;Saturation, &lt;/i&gt;&lt;i&gt;Lightness&lt;/i&gt;. Nilai H &lt;i&gt;(hue)&lt;/i&gt; yang diberikan pada fungsi ini dimulai dari &lt;code&gt;0&lt;/code&gt;~&lt;code&gt;360&lt;/code&gt;, karena palet warna HSL bentuknya seperti tabung, sehingga yang digunakan adalah nilai derajat dari tutup tabungnya. Sedangkan untuk nilai S dan L menggunakan persen, dari &lt;code&gt;0%&lt;/code&gt;~&lt;code&gt;100%&lt;/code&gt;.&lt;br /&gt;&lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/HSL_color_solid_cylinder_alpha_lowgamma.png/640px-HSL_color_solid_cylinder_alpha_lowgamma.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/HSL_color_solid_cylinder_alpha_lowgamma.png/640px-HSL_color_solid_cylinder_alpha_lowgamma.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Contoh penggunaan fungsi HSL dalam CSS:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;h3 {&lt;br /&gt;&amp;nbsp; &amp;nbsp; background: hsl(324, 70%, 40%); &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;6. Fungsi HSLA&lt;/h2&gt;Seperti fungsi RGB, fungsi HSL juga memiliki nilai &lt;i&gt;alpha&lt;/i&gt; untuk menyatakan nilai transparansi warna. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;h2 {&lt;br /&gt;&amp;nbsp; &amp;nbsp; background: hsla(267, 80%, 45%, 0.6); &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;Itulah 6 nilai warna yang valid dalam CSS. Manakah cara yang paling sering kalian gunakan?&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://www.w3schools.com/cssref/css_colors_legal.asp&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.w3schools.com/cssref/css_colors_legal.asp&#34;&gt;http://www.w3schools.com/cssref/css_colors_legal.asp&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+      <guid>https://www.petanikode.com/tutorial-css-warna/</guid>
+      <description>
+
+&lt;p&gt;Nilai warna dalam CSS dapat kita berikan dengan berbagai cara.
+Salah satunya dengan menuliskan nama warna dalam bahasa inggris.&lt;/p&gt;
+
+&lt;p&gt;Misalnya, warna teks untuk paragraf adalah merah, maka kita bisa
+berikan &lt;code&gt;color:red&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Selain menggunakan nama warna, terdapat juga cara lain yang valid
+seperti fungsi &lt;code&gt;rgb()&lt;/code&gt;, kode heksa, dsb.&lt;/p&gt;
+
+&lt;p&gt;Mari kita bahas semuanya&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-nama-warna&#34;&gt;1. Nama warna&lt;/h2&gt;
+
+&lt;p&gt;Nama warna merupakan cara yang sering digunakan, karena lebih mudah mengingatnya.
+Misalnya, saya suka warna hijau &lt;em&gt;(teal)&lt;/em&gt;, maka nanti dalam CSS-nya bisa langsung kita tulis &lt;code&gt;teal&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;header {
+    background: teal;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-kode-heksadesimal&#34;&gt;2. Kode Heksadesimal&lt;/h2&gt;
+
+&lt;p&gt;Kode heksadesmial merupakan kode yang menggunakan bilangan heksa desmial,
+memiliki nilai dari &lt;code&gt;0&lt;/code&gt; sampai &lt;code&gt;f&lt;/code&gt; (16 dalam desimal).&lt;/p&gt;
+
+&lt;p&gt;Kode heksa demsial diawali dengan tanda pagar (&lt;code&gt;#&lt;/code&gt;),
+kemudian diikuti kode heksanya. Kode ini dapat terdiri dari 3 digit
+atau 6 digit bilangan.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#0011ff (6 digit)
+#01f (3 digit)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setiap angka dalam kode heksa desimal menentukan nilai warna dalam RGB
+(&lt;code&gt;#RRGGBB&lt;/code&gt; atau &lt;code&gt;#RGB&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Misalnya untuk yang enam digit, dua angka di depan adalah untuk nilai
+warna merah, dua angka berikutnya untuk warna hijua, dan dua angka terakhir untuk warna biru.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-uJxloO6zsjg/WAtj44D3HiI/AAAAAAAADWA/HWwSTgdoKYoVS4A-2lbynLjH7C3162cDgCK4B/s1600/nilai%2Bwarna%2Bdengan%2Bkode%2BHeksa.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-uJxloO6zsjg/WAtj44D3HiI/AAAAAAAADWA/HWwSTgdoKYoVS4A-2lbynLjH7C3162cDgCK4B/s1600/nilai%2Bwarna%2Bdengan%2Bkode%2BHeksa.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-fungsi-rgb&#34;&gt;3. Fungsi RGB&lt;/h2&gt;
+
+&lt;p&gt;Fungsi RGB memiliki tiga parameter, yaitu nilai untuk merah &lt;em&gt;(red)&lt;/em&gt;,
+hijau &lt;em&gt;(green)&lt;/em&gt;, dan biru &lt;em&gt;(blue)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nilai yang diberikan pada parameter tersebut dimulai dari angka &lt;code&gt;0&lt;/code&gt;~&lt;code&gt;255&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Semakin besar nilai yang diberikan, semakin kuat nilai warna tersebut.&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan fungsi RGB.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;h2 {
+    color: rgb(88, 255, 21);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada contoh diatas, nilai paramter kedua &lt;em&gt;(green)&lt;/em&gt; diberikan maksimal,
+maka nanti hasilnya warna hijau akan menjadi warna dominan.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-fungsi-rgba&#34;&gt;4. Fungsi RGBA&lt;/h2&gt;
+
+&lt;p&gt;Fungsi ini sama seperti fungsi RGB, tapi ada penambahan A dibelakangnya.
+Huruf A artinya &lt;em&gt;Alpha&lt;/em&gt;. Nilai &lt;em&gt;alpha&lt;/em&gt; ini akan menjadi nilai transparansi dari warnanya.&lt;/p&gt;
+
+&lt;p&gt;Nilai &lt;em&gt;alpha&lt;/em&gt; dapat diberikan dari &lt;code&gt;0.0&lt;/code&gt;~&lt;code&gt;1.0&lt;/code&gt;. Semakin mendekati angka satu,
+warnanya akan semakin terang dan semakin mendekati angka nol, warnanya akan
+semakin menghilang. Contoh penggunaan fungsi RGBA.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p {
+    background: rgba(40,23,11,0.7);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada contoh di atas, nilai &lt;em&gt;alpha&lt;/em&gt; yang diberikan adalah &lt;code&gt;0.7&lt;/code&gt;, atau sama dengan &lt;code&gt;70%&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-fungsi-hsl&#34;&gt;5. Fungsi HSL&lt;/h2&gt;
+
+&lt;p&gt;HSL merupakan singkatan dari &lt;em&gt;Hue&lt;/em&gt;, &lt;em&gt;Saturation,&lt;/em&gt; &lt;em&gt;Lightness&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nilai H &lt;em&gt;(hue)&lt;/em&gt; yang diberikan pada fungsi ini dimulai dari &lt;code&gt;0&lt;/code&gt;~&lt;code&gt;360&lt;/code&gt;, karena palet warna HSL bentuknya seperti tabung, sehingga yang digunakan adalah nilai derajat dari tutup tabungnya.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan untuk nilai S dan L menggunakan persen, dari &lt;code&gt;0%&lt;/code&gt;~&lt;code&gt;100%&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/HSL_color_solid_cylinder_alpha_lowgamma.png/640px-HSL_color_solid_cylinder_alpha_lowgamma.png&#34;&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/HSL_color_solid_cylinder_alpha_lowgamma.png/640px-HSL_color_solid_cylinder_alpha_lowgamma.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Contoh penggunaan fungsi HSL dalam CSS:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;h3 {
+    background: hsl(324, 70%, 40%);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;6-fungsi-hsla&#34;&gt;6. Fungsi HSLA&lt;/h2&gt;
+
+&lt;p&gt;Seperti fungsi RGB, fungsi HSL juga memiliki nilai &lt;em&gt;alpha&lt;/em&gt; untuk menyatakan
+nilai transparansi warna.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;h2 {
+    background: hsla(267, 80%, 45%, 0.6);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Itulah 6 nilai warna yang valid dalam CSS.
+Manakah cara yang paling sering kalian gunakan?&lt;/p&gt;
+
+&lt;p&gt;Referensi: &lt;a href=&#34;http://www.w3schools.com/cssref/css_colors_legal.asp&#34;&gt;w3schools&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

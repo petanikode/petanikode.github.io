@@ -218,7 +218,7 @@ PyGTK adalah pustaka GTK&#43; yang sudah diracik khusus untuk Python." />
   },
   "headline": "Pemrograman PyGTK: Pengenalan dan Persiapan alat Tempurnya",
   "description": "Aplikasi dengan antarmuka grafis (GUI) lebih disukai pengguna, karena mudah dioperasikan.\nPada kesempatan ini, kita akan belajar membuat aplikasi berbasis GUI dengan bahasa pemrograman python dan pustaka PyGTK.\nApa itu GTK\x2b dan PyGTK? GTK\x2b (GIMP Toolkit) merupakan pustaka yang digunakan untuk membangun antarmuka grafis. GTK\x2b adalah bagian dari proyek GNU.\nGTK\x2b sendiri merupakan pustaka yang digunakan untuk bahasa C, sedangkan untuk python kita menggunakan PyGTK.\nPyGTK adalah pustaka GTK\x2b yang sudah diracik khusus untuk Python.",
-  "wordCount":  530 ,
+  "wordCount":  559 ,
   "datePublished" : "2014-09-07T10:40:00",
   "dateModified" : "2014-09-07T10:40:00",
   "image" : {
@@ -1291,7 +1291,7 @@ gtk.main()
 <p>Jika berhasil muncul seperti gambar di atas, berarti program PyGTK pertama
 kita berhasil&hellip; 😄</p>
 
-<h3 id="penjelasan-method-window">Penjelasan Method Window</h3>
+<h3 id="penjelasan-method">Penjelasan Method</h3>
 
 <p>Class <code>gtk.Window()</code> memiliki beberapa method untuk mengatur konfigurasi jendela,
 berikut ini penjelasannnya:</p>
@@ -1301,9 +1301,15 @@ berikut ini penjelasannnya:</p>
 <li><code>.set_position(gtk.WIN_POS_CENTER)</code> untuk menentukan posisi muncul jendela. <code>gtk.WIN_POS_CENTER</code>
 artinya posisi munculnya di tengah-tengah layar.</li>
 <li><code>.set_title()</code> untuk memberikan judul jendela.</li>
-<li><code>.connect(&quot;destroy&quot;, gtk.main_quit)</code> untuk menghubungkan event <code>&quot;destroy&quot;</code> dengan
+<li><code>.connect(&quot;destroy&quot;, gtk.main_quit)</code> untuk menghubungkan sinyal <code>&quot;destroy&quot;</code> dengan
 fungsi <code>main_quit</code>. Artinya, ketika tombol <em>close</em> diklik&hellip; aplikasi akan langsung keluar.</li>
+<li><code>.show()</code> untuk menampilkan jendela.</li>
 </ul>
+
+<p>Selain method dari class <code>Window()</code> ada satu hal lagi yang perlu diperhatikan
+yaitu fungsi <code>gtk.main()</code>.</p>
+
+<p><code>gtk.main()</code> adalah <em>main loop</em> (perulangan utama) yang menjaga jendela tetap terbuka.</p>
 
 <h2 id="membuat-jendela-dengan-class">Membuat Jendela dengan Class</h2>
 

@@ -716,6 +716,134 @@ Kotlin.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Belajar Pemrograman Kotlin: Sintaks Dasar Kotlin</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-sintaks/</link>
+      <pubDate>Fri, 19 May 2017 02:30:41 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-sintaks/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah kita menganl dan &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-di-linux/&#34;&gt;mempersiapkan peralatan untuk pemrograman Kotlin&lt;/a&gt;,
+selanjutnya kita pelajari aturan dasar penulisan sintaks Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Agar tidak tersesesat dalam perjalanan mempelajari kotlin :smile:&lt;/p&gt;
+
+&lt;p&gt;Baiklah, langsung saja kita mulai&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;struktur-program&#34;&gt;Struktur Program&lt;/h2&gt;
+
+&lt;p&gt;Struktur program Kotlin lebih sederhana dan mudah dipahami daripada Java.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/persiapan-kotlin/sintaks-kotlin.png&#34; alt=&#34;Struktur kode program kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Struktur kode program pada gambar di atas adalah struktur yang paling sederhana.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;package hello&lt;/code&gt; artinya kita membuat sebuah paket bernama &lt;code&gt;hello&lt;/code&gt;.
+Paket dalam kotlin bersifat opsional (boleh ditulis boleh tidak).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fun main(){...}&lt;/code&gt; adalah fungsi utama program;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;args: Array&amp;lt;String&amp;gt;&lt;/code&gt; adalah variabel yang menyimpan argumen;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;println()&lt;/code&gt; statement atau fungsi untuk menampilkan teks ke layar;&lt;/li&gt;
+&lt;li&gt;Titik koma (&lt;code&gt;;&lt;/code&gt;) pada kotlin bersifat opsional.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;gaya-case&#34;&gt;Gaya Case&lt;/h2&gt;
+
+&lt;p&gt;Kotlin menggunakan gaya penulisan CamelCase seperti Java.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var namaVariabel = &amp;quot;nilai&amp;quot;;
+var akuCintaKamu = true;
+class PetaniKode {...}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada gaya penulisan CamelCase, nama variabel biasanya diawali dengan huruf kecil.
+Kemudian, kalau terdiri dari lebih dari satu suku kata&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;suku kata berikutnya diawali dengan huruf kapital.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var jenisKelamin: String;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu, nama &lt;em&gt;class&lt;/em&gt; biasanya menggunakan huruf kapital.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class Robot {
+    ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;(baca juga: &lt;a href=&#34;https://www.petanikode.com/gaya-penulisan-case-dalam-pemrograman/&#34;&gt;4 Macam Gaya Penulisan Case dalam Pemrograman&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;penulisan-komentar&#34;&gt;Penulisan Komentar&lt;/h2&gt;
+
+&lt;p&gt;Penulisan komentar di kotlin sama seperti di Java, yaitu dengan dua cara:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Menggunakan garis miring ganda (&lt;code&gt;//&lt;/code&gt;) untuk komentar satu baris;&lt;/li&gt;
+&lt;li&gt;Menggunakan garis miring bintang (&lt;code&gt;/*&lt;/code&gt;) untuk komentar lebih dari satu baris.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// ini komentar
+
+println(&amp;quot;yoi!&amp;quot;)
+
+/*
+    ini juga komentar
+    yang tidak akan dieksekusi oleh komputer.
+ */
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;blok-kode&#34;&gt;Blok Kode&lt;/h2&gt;
+
+&lt;p&gt;Blok kode merupakan kumpulan dari statement-statement. Blok kode biasanya
+dibungkus dengan kurung kurawal (&lt;code&gt;{...}&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Contoh Blok kode:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// blok kode if
+if( a == 1 ){
+    println(&amp;quot;A sama dengan 1&amp;quot;)
+    println(&amp;quot;Gue benar kan...&amp;quot;)
+}
+
+// blok kode if/else
+if( hari == &amp;quot;jumat&amp;quot; ){
+    println(&amp;quot;Pergi jumatan&amp;quot;)
+    println(&amp;quot;Hari jum&#39;at barokah...&amp;quot;)
+} else {
+    println(&amp;quot;Hari biasa&amp;quot;)
+}
+
+// blok kode when
+when {
+    &amp;quot;orange&amp;quot; in items -&amp;gt; println(&amp;quot;bikin jus&amp;quot;)
+    &amp;quot;apple&amp;quot; in items -&amp;gt; println(&amp;quot;pake apel juga boleh&amp;quot;)
+}
+
+// blok kode perulangan for
+for (item in items) {
+    println(item)
+    println(&amp;quot;sudah diprint...&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa selanjutnya&amp;hellip;?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah mengetahui struktur dasar penulisan sintaks Kotlin.
+Selengkapnya bisa dibaca di &lt;a href=&#34;https://kotlinlang.org/docs/reference/basic-syntax.html&#34;&gt;dokumentasi Kotlin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kalau ada pertanyaan, silahkan sampaikan melalui komentar.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, silahkan pelajari tentang &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-input-dan-output&#34;&gt;cara mengambil input&lt;/a&gt; dan &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-variabel&#34;&gt;variabel&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan</title>
       <link>https://www.petanikode.com/pemrograman-kotlin-di-linux/</link>
       <pubDate>Fri, 19 May 2017 00:07:50 +0800</pubDate>
@@ -2870,147 +2998,6 @@ kemudian menghapus catatan sejarah commit beikutnya.&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/4114122&#34;&gt;http://stackoverflow.com/a/4114122&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.atlassian.com/git/tutorials/undoing-changes&#34;&gt;https://www.atlassian.com/git/tutorials/undoing-changes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Apa itu Polyglot Programmer?</title>
-      <link>https://www.petanikode.com/apa-itu-polyglot-programmer/</link>
-      <pubDate>Tue, 28 Feb 2017 18:30:02 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/apa-itu-polyglot-programmer/</guid>
-      <description>
-
-&lt;p&gt;Sejak saya kuliah di jurusan Teknik Informatika, saya diajari berbagai
-bahasa pemrograman. Karena kurikulum kampus yang kurang konsisten.&lt;/p&gt;
-
-&lt;p&gt;Awalnya diajari bahasa pemrograman &lt;a href=&#34;https://www.petanikode.com/topik/pascal&#34;&gt;Pascal&lt;/a&gt;, lalu di semester
-beikutnya Assembly, &lt;a href=&#34;https://www.petanikode.com/topik/sql&#34;&gt;SQL&lt;/a&gt;, &lt;a href=&#34;https://www.petanikode.com/topik/html&#34;&gt;HTML&lt;/a&gt;, &lt;a href=&#34;https://www.petanikode.com/topik/css&#34;&gt;CSS&lt;/a&gt;,
-&lt;a href=&#34;https://www.petanikode.com/topik/javascript&#34;&gt;Js&lt;/a&gt;, &lt;a href=&#34;https://www.petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt;, &lt;a href=&#34;https://www.petanikode.com/topik/java&#34;&gt;Java&lt;/a&gt;, dan &lt;a href=&#34;https://www.petanikode.com/topik/visual-basic&#34;&gt;VB&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pusing!!&lt;/p&gt;
-
-&lt;p&gt;Terlalu banyak yang dipelajari!&lt;/p&gt;
-
-&lt;p&gt;Mungkin itulah yang akan terucap di pikiran.&lt;/p&gt;
-
-&lt;p&gt;Tapi saya mengikutinya dengan penuh antusias, karena saya cukup tertarik dengan
-bahasa-bahasa tersebut.&lt;/p&gt;
-
-&lt;p&gt;Secara tidak sadar&amp;hellip;, saya sudah menjadi &lt;em&gt;Polyglot Programmer&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Polyglot Programmer&lt;/em&gt; merupakan sebutan untuk programmer yang menguasai banyak
- bahasa pemrograman.&lt;/p&gt;
-
-&lt;h2 id=&#34;kelebihan-dan-kekurangan-polyglot-programmer&#34;&gt;Kelebihan dan Kekurangan Polyglot Programmer&lt;/h2&gt;
-
-&lt;p&gt;Kelebihan:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Menguasai lebih dari satu bahasa (jelas!)&lt;/li&gt;
-&lt;li&gt;Terbuka dan tidak fanatik pada satu bahasa&lt;/li&gt;
-&lt;li&gt;Suka Belajar Hal yang Baru&lt;/li&gt;
-&lt;li&gt;Bisa bekerja dengan berbagai bahasa pemrograman&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kekurangan:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Membutuhkan Banyak Waktu&lt;/li&gt;
-&lt;li&gt;Kurang Fokus pada satu bahasa&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ada lagi?&lt;/p&gt;
-
-&lt;p&gt;Tambahkan di komentar ya!&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;bisakah-kita-menjadi-polyglot-programmer&#34;&gt;Bisakah Kita Menjadi Polyglot Programmer?&lt;/h2&gt;
-
-&lt;p&gt;Yep! Tentu saja bisa.&lt;/p&gt;
-
-&lt;p&gt;Tepi untuk menjadi &lt;em&gt;Polyglot Programmer&lt;/em&gt; membutuhkan jam terbang yang lebih
-banyak.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;690&#34; height=&#34;330&#34; layout=&#34;responsive&#34;
-data-tweetid=&#34;836124110597939200&#34; data-cards=&#34;hidden&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;Pelajari bahasa pemrograman dengan cepat, setidaknya bisa menguasai satu bahasa
-dalam satu tahun.&lt;/p&gt;
-
-&lt;h2 id=&#34;polyglot-programmer-di-indonesia&#34;&gt;Polyglot Programmer di Indonesia&lt;/h2&gt;
-
-&lt;p&gt;Di indonesia sendiri banyak yang jadi &lt;em&gt;Polyglot Programmer&lt;/em&gt;. Perhatikan saja
-kurikulum pemrograman di kampus-kampus.&lt;/p&gt;
-
-&lt;p&gt;Kebanyakan diracik untuk menghasilkan &lt;em&gt;Polyglot Programmer&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Selain itu juga&amp;hellip;, lowongan pekerjaan menentukan persyaratan yang harus mahir
-ini dan itu.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Menguasai Bahasa PHP, JAVA, Ruby&lt;/li&gt;
-&lt;li&gt;Menguasai SQL dan NoSQL&lt;/li&gt;
-&lt;li&gt;Menguasai Server Linux dan Windoes&lt;/li&gt;
-&lt;li&gt;Bisa bekerja di bawah tekanan&lt;/li&gt;
-&lt;li&gt;Mahir menggunakan Framework Laravel&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;tips-menjadi-polyglot-programmer&#34;&gt;Tips Menjadi Polyglot Programmer&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Kuasai Konsep dasar Pemrograman
-
-&lt;ul&gt;
-&lt;li&gt;Variabel dan Tipe data&lt;/li&gt;
-&lt;li&gt;Operator&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Control Flow&lt;/em&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Percabangan&lt;/li&gt;
-&lt;li&gt;Perulangan&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Prosedur dan Fungsi&lt;/li&gt;
-&lt;li&gt;Penjebakan Error &lt;em&gt;(Try/Catch)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Class dan Objek (OOP)&lt;/li&gt;
-&lt;li&gt;Menggunakan Library&lt;/li&gt;
-&lt;li&gt;Mengakses Jaringan (API, Web service, Soket, dll)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Kuasai dulu satu bahasa pemrograman secara mendalam&lt;/li&gt;
-&lt;li&gt;Berpikir seperti seorang &lt;em&gt;Polyglot Programmer&lt;/em&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Tidak ada yang instan&lt;/li&gt;
-&lt;li&gt;Berpikir terbuka dan tidak fanatik&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Banyak-banyak latihan dan praktik&lt;/li&gt;
-&lt;li&gt;Baca tutorial, langsung coba&lt;/li&gt;
-&lt;li&gt;Tulis blog agar tidak lupa yang dipelajari&lt;/li&gt;
-&lt;li&gt;Ajari orang lain&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Itulah tips untuk menjadi &lt;em&gt;Polyglot Programmer&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Apakah kalian termasuk &lt;em&gt;Polyglot Programmer&lt;/em&gt;?&lt;/p&gt;
-
-&lt;p&gt;Referensi:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=mgf2ofYx8OE&#34;&gt;https://www.youtube.com/watch?v=mgf2ofYx8OE&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.quora.com/What-is-polyglot-programming&#34;&gt;https://www.quora.com/What-is-polyglot-programming&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=4748029&#34;&gt;https://news.ycombinator.com/item?id=4748029&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

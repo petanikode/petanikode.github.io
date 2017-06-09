@@ -573,6 +573,134 @@ Kotlin.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Belajar Pemrograman Kotlin: Sintaks Dasar Kotlin</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-sintaks/</link>
+      <pubDate>Fri, 19 May 2017 02:30:41 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-sintaks/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://petanikode.com/img/persiapan-kotlin/kotlin.png&#34; alt=&#34;Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah kita menganl dan &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-di-linux/&#34;&gt;mempersiapkan peralatan untuk pemrograman Kotlin&lt;/a&gt;,
+selanjutnya kita pelajari aturan dasar penulisan sintaks Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Agar tidak tersesesat dalam perjalanan mempelajari kotlin :smile:&lt;/p&gt;
+
+&lt;p&gt;Baiklah, langsung saja kita mulai&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;struktur-program&#34;&gt;Struktur Program&lt;/h2&gt;
+
+&lt;p&gt;Struktur program Kotlin lebih sederhana dan mudah dipahami daripada Java.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/persiapan-kotlin/sintaks-kotlin.png&#34; alt=&#34;Struktur kode program kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Struktur kode program pada gambar di atas adalah struktur yang paling sederhana.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;package hello&lt;/code&gt; artinya kita membuat sebuah paket bernama &lt;code&gt;hello&lt;/code&gt;.
+Paket dalam kotlin bersifat opsional (boleh ditulis boleh tidak).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fun main(){...}&lt;/code&gt; adalah fungsi utama program;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;args: Array&amp;lt;String&amp;gt;&lt;/code&gt; adalah variabel yang menyimpan argumen;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;println()&lt;/code&gt; statement atau fungsi untuk menampilkan teks ke layar;&lt;/li&gt;
+&lt;li&gt;Titik koma (&lt;code&gt;;&lt;/code&gt;) pada kotlin bersifat opsional.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;gaya-case&#34;&gt;Gaya Case&lt;/h2&gt;
+
+&lt;p&gt;Kotlin menggunakan gaya penulisan CamelCase seperti Java.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var namaVariabel = &amp;quot;nilai&amp;quot;;
+var akuCintaKamu = true;
+class PetaniKode {...}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada gaya penulisan CamelCase, nama variabel biasanya diawali dengan huruf kecil.
+Kemudian, kalau terdiri dari lebih dari satu suku kata&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;suku kata berikutnya diawali dengan huruf kapital.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;var jenisKelamin: String;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu, nama &lt;em&gt;class&lt;/em&gt; biasanya menggunakan huruf kapital.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class Robot {
+    ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;(baca juga: &lt;a href=&#34;https://www.petanikode.com/gaya-penulisan-case-dalam-pemrograman/&#34;&gt;4 Macam Gaya Penulisan Case dalam Pemrograman&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;penulisan-komentar&#34;&gt;Penulisan Komentar&lt;/h2&gt;
+
+&lt;p&gt;Penulisan komentar di kotlin sama seperti di Java, yaitu dengan dua cara:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Menggunakan garis miring ganda (&lt;code&gt;//&lt;/code&gt;) untuk komentar satu baris;&lt;/li&gt;
+&lt;li&gt;Menggunakan garis miring bintang (&lt;code&gt;/*&lt;/code&gt;) untuk komentar lebih dari satu baris.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// ini komentar
+
+println(&amp;quot;yoi!&amp;quot;)
+
+/*
+    ini juga komentar
+    yang tidak akan dieksekusi oleh komputer.
+ */
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;blok-kode&#34;&gt;Blok Kode&lt;/h2&gt;
+
+&lt;p&gt;Blok kode merupakan kumpulan dari statement-statement. Blok kode biasanya
+dibungkus dengan kurung kurawal (&lt;code&gt;{...}&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Contoh Blok kode:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// blok kode if
+if( a == 1 ){
+    println(&amp;quot;A sama dengan 1&amp;quot;)
+    println(&amp;quot;Gue benar kan...&amp;quot;)
+}
+
+// blok kode if/else
+if( hari == &amp;quot;jumat&amp;quot; ){
+    println(&amp;quot;Pergi jumatan&amp;quot;)
+    println(&amp;quot;Hari jum&#39;at barokah...&amp;quot;)
+} else {
+    println(&amp;quot;Hari biasa&amp;quot;)
+}
+
+// blok kode when
+when {
+    &amp;quot;orange&amp;quot; in items -&amp;gt; println(&amp;quot;bikin jus&amp;quot;)
+    &amp;quot;apple&amp;quot; in items -&amp;gt; println(&amp;quot;pake apel juga boleh&amp;quot;)
+}
+
+// blok kode perulangan for
+for (item in items) {
+    println(item)
+    println(&amp;quot;sudah diprint...&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa selanjutnya&amp;hellip;?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah mengetahui struktur dasar penulisan sintaks Kotlin.
+Selengkapnya bisa dibaca di &lt;a href=&#34;https://kotlinlang.org/docs/reference/basic-syntax.html&#34;&gt;dokumentasi Kotlin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kalau ada pertanyaan, silahkan sampaikan melalui komentar.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, silahkan pelajari tentang &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-input-dan-output&#34;&gt;cara mengambil input&lt;/a&gt; dan &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-variabel&#34;&gt;variabel&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan</title>
       <link>https://www.petanikode.com/pemrograman-kotlin-di-linux/</link>
       <pubDate>Fri, 19 May 2017 00:07:50 +0800</pubDate>

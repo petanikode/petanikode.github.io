@@ -186,6 +186,11 @@ gtk.main()
 
 &lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-RrkkI7-DoHY/VAu8s1tRIaI/AAAAAAAAAmg/MXfKzfAMRFM/s1600/Program%2Bpertama%2Bpygtk%2B-%2Bjendela.png&#34; alt=&#34;Jendela GTK+ dengan Class Turunan&#34; /&gt;&lt;/p&gt;
 
+&lt;p&gt;Cara manakah yang kamu suka?&lt;/p&gt;
+
+&lt;p&gt;Kalau saya lebih suka yang menggunakan class, karena lebih sederhana dan mudah
+dikelola.&lt;/p&gt;
+
 &lt;h2 id=&#34;menambahkan-ikon&#34;&gt;Menambahkan Ikon&lt;/h2&gt;
 
 &lt;p&gt;Untuk menambahkan ikon, kita menggunakan method &lt;code&gt;.set_icon_from_file()&lt;/code&gt;.&lt;/p&gt;
@@ -216,7 +221,11 @@ gtk.main()
 
 &lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
 
-&lt;p&gt;Selanjutnya kita akan coba &lt;a href=&#34;https://www.petanikode.com/pemrograman-pygtk-tombol/&#34;&gt;membuat tombol dan label&lt;/a&gt; dalam jendela.&lt;/p&gt;
+&lt;p&gt;Kita sudah tahu cara membuat jendela dengan PyGTK, selanjutnya kita akan coba &lt;a href=&#34;https://www.petanikode.com/pemrograman-pygtk-tombol/&#34;&gt;membuat tombol dan label&lt;/a&gt; di dalamnya.&lt;/p&gt;
+
+&lt;p&gt;Sekian tutorial PyGTK pertama ini&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Kalau ada yang ditanyakan, silahakan sampaikan melalui komentar.&lt;/p&gt;
 </description>
     </item>
     

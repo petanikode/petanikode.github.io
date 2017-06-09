@@ -199,7 +199,10 @@ dikelola.&lt;/p&gt;
 
 &lt;h2 id=&#34;menambahkan-ikon&#34;&gt;Menambahkan Ikon&lt;/h2&gt;
 
-&lt;p&gt;Untuk menambahkan ikon, kita menggunakan method &lt;code&gt;.set_icon_from_file()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Untuk menambahkan ikon, kita menggunakan method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;.set_icon_from_file(&amp;quot;path/ikon.png&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Jangan lupa juga untuk menambahkan file ikonnya &lt;code&gt;petanikode.png&lt;/code&gt;. Letakkan
 file tersebut satu direktori dengan skrip python-nya.&lt;/p&gt;

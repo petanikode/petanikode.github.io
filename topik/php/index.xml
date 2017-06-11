@@ -10,6 +10,719 @@
     <atom:link href="https://www.petanikode.com/topik/php/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tutorial PHP dan MySQL: Membuat Aplikasi CRUD [Studi Kasus Pendaftaran Siswa Baru]</title>
+      <link>https://www.petanikode.com/tutorial-php-mysql/</link>
+      <pubDate>Sat, 10 Jun 2017 17:42:42 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-php-mysql/</guid>
+      <description>
+
+&lt;p&gt;PHP sering dijodohkan dengan MySQL untuk membangun aplikasi web. MySQL berperan
+sebagai tempat menyimpan data (basis data) sedangkan PHP adalah program yang
+mengelola data tersebut.&lt;/p&gt;
+
+&lt;p&gt;Sebenarnya PHP tidak hanya bisa dijodohkan dengan MySQL saja. PHP juga bisa
+dijodohkan dengan SQLite, PostgreSQL, MongoDB, Ms. Access, dsb.&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan ini, kita akan belajar menggunakan PHP dan MySQL untuk membuat
+aplikasi sederhana.&lt;/p&gt;
+
+&lt;h2 id=&#34;bagaimana-php-dan-mysql-dihubungkan&#34;&gt;Bagaimana PHP dan MySQL dihubungkan?&lt;/h2&gt;
+
+&lt;p&gt;PHP dan MySQL dapat saling berhubungan melalui perantara API &lt;em&gt;(Application Programming
+Interface)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/php-mysql.png&#34; alt=&#34;PHP dan MySQL&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ada tiga jenis API MySQL yang disediakan di PHP:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;mysql&lt;/code&gt; API ini sudah tidak didukung/dikembangkan lagi (kadalwarsa).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mysqli&lt;/code&gt; &lt;em&gt;(mysql improvement)&lt;/em&gt; peningkatan dari API &lt;code&gt;mysql&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;PDO &lt;em&gt;(PHP Data Object)&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;API yang pertama sudah tidak didukung lagi sejak PHP versi 5.5.x dan digantikan
+dengan &lt;code&gt;mysqli&lt;/code&gt; yang lebih canggih. Karena &lt;code&gt;mysqli&lt;/code&gt; dapat digunakan secara
+&lt;a href=&#34;https://www.petanikode.com/topik/OOP&#34;&gt;OOP&lt;/a&gt; dan prosedural.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan API PDO digunakan untuk menghubungkan PHP dengan vendor database
+yang lainnya. Jadi tidak hanya untuk MySQL saja.&lt;/p&gt;
+
+&lt;p&gt;Pada tutorial ini, kita akan belajar cara menghubungkan PHP dan MySQL menggunakan
+API &lt;code&gt;mysqli&lt;/code&gt; secara prosedural.&lt;/p&gt;
+
+&lt;h2 id=&#34;menyiapkan-database&#34;&gt;Menyiapkan Database&lt;/h2&gt;
+
+&lt;p&gt;Pertama, mari kita membuat database bernama &lt;code&gt;pendaftaran_siswa&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/membuat-database.png&#34; alt=&#34;Membuat database di phpmyadmin&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE DATABASE `pendaftaran_siswa`;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, buatlah tabel di dalam database tersbut dengan nama &lt;code&gt;calon_siswa&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/membuat-tabel.png&#34; alt=&#34;Membuat tabel calon_siswa&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikan tipe data kolomnya seperti ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/membuat-kolom.png&#34; alt=&#34;Membuat Kolom di tabel calon_siswa&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu klik &lt;strong&gt;Save&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE TABLE `pendaftaran_siswa`.`calon_siswa` (
+    `id` INT NOT NULL AUTO_INCREMENT ,  
+    `nama` VARCHAR(64) NOT NULL ,  
+    `alamat` VARCHAR(255) NOT NULL ,  
+    `jenis_kelamin` VARCHAR(16) NOT NULL ,  
+    `agama` VARCHAR(16) NOT NULL ,  
+    `sekolah_asal` VARCHAR(64) NOT NULL ,    
+    PRIMARY KEY  (`id`)
+) ENGINE = InnoDB;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian kita coba isi dengan sebuah data, klik &lt;strong&gt;Insert&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/tabel-siswa.png&#34; alt=&#34;Tabel calon siswa&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silahkan isi seperti berikut:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/insert-data.png&#34; alt=&#34;Insert data ke tabel siswa&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Klik &lt;strong&gt;Go&lt;/strong&gt; untuk menyimpan.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;INSERT INTO `calon_siswa` (`id`, `nama`, `alamat`, `jenis_kelamin`, `agama`, `sekolah_asal`) VALUES (NULL, &#39;Lia&#39;, &#39;Jl. Mangga No. 3, Mataram&#39;, &#39;perempuan&#39;, &#39;islam&#39;, &#39;SMPN 32 Ampenan&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;membuat-proyek-baru&#34;&gt;Membuat Proyek Baru&lt;/h2&gt;
+
+&lt;p&gt;Setelah itu buat proyek/direktori baru di direktori &lt;code&gt;htdocs&lt;/code&gt; atau &lt;code&gt;/var/www/html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir /var/www/html/pendaftaran-siswa
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Buat file-file PHP yang diperlukan&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;touch /var/www/html/pendaftaran-siswa/{config.php,index.php,list-siswa.php,form-daftar.php,proses-pendaftaran.php,form-edit.php,proses-edit.php,hapus.php}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan terbuat delapan file PHP kosong.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/struktur-direktori-proyek.png&#34; alt=&#34;Struktur direktori proyek PHP&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Keterangan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;config.php&lt;/code&gt; &amp;mdash; untuk menyimpan konfigurasi database;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;index.php&lt;/code&gt; &amp;mdash; halaman utama;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list-siswa.php&lt;/code&gt; &amp;mdash; halaman untuk menampilkan data siswa;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;form-daftar.php&lt;/code&gt; &amp;mdash; halaman formulir pendaftaran;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;proses-pendaftaran.php&lt;/code&gt; &amp;mdash; skrip yang memproses pendaftaran;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;form-edit.php&lt;/code&gt; &amp;mdash; form untuk edit data siswa;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;proses-edit.php&lt;/code&gt; &amp;mdash; skrip untuk memproses edit/update;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hapus.php&lt;/code&gt; &amp;mdash; skrip untuk menghapus data dari database;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;cara-membuat-koneksi-ke-dabase-mysql&#34;&gt;Cara Membuat Koneksi ke Dabase MySQL&lt;/h2&gt;
+
+&lt;p&gt;Buka file &lt;code&gt;config.php&lt;/code&gt;, silahkan isi dengan kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+$server = &amp;quot;localhost&amp;quot;;
+$user = &amp;quot;root&amp;quot;;
+$password = &amp;quot;kopi&amp;quot;;
+$nama_database = &amp;quot;pendaftaran_siswa&amp;quot;;
+
+$db = mysqli_connect($server, $user, $password, $nama_database);
+
+if( !$db ){
+    die(&amp;quot;Gagal terhubung dengan database: &amp;quot; . mysqli_connect_error());
+}
+
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk menghubungkan PHP dengan MySQL, kita menggunakan fungsi &lt;code&gt;mysqli_connect()&lt;/code&gt;
+dengan parameter alamat server, user, password, dan nama database.&lt;/p&gt;
+
+&lt;p&gt;Silahkan isi password sesuai dengan yang dibuat di servernya. Jika tidak
+menggunakan passsword, maka dikosongkan saja.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$password = &amp;quot;&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika koneksi gagal, variabel &lt;code&gt;$db&lt;/code&gt; akan bernilai &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Karena itu, kita bisa mengeceknya dengan ekspresi &lt;code&gt;if&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;if( !$db ){
+    die(&amp;quot;Gagal terhubung dengan database: &amp;quot; . mysqli_connect_error());
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Berikut ini tampilan saat koneksinya gagal, karena password-nya salah.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/koneksi-database-gagal.png&#34; alt=&#34;Koneksi PHP dengan MySQL Gagal&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-halaman-indeks&#34;&gt;Membuat Halaman Indeks&lt;/h2&gt;
+
+&lt;p&gt;Rencananya kita akan menaruh dua link di halaman indeks. Link pertama
+untuk menuju ke formulir pendaftaran dan link yang kedua untuk menuju
+ke halaman data siswa yang sudah mendaftar.&lt;/p&gt;
+
+&lt;p&gt;Gamabarannya seperti ini&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/rancangan-halaman.png&#34; alt=&#34;Rancangan halaman sistem pendaftaran siswa&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang, silahkan isi file &lt;code&gt;index.php&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+	&amp;lt;title&amp;gt;Pendaftaran Siswa Baru | SMK Coding&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+	&amp;lt;header&amp;gt;
+		&amp;lt;h3&amp;gt;Pendaftaran Siswa Baru&amp;lt;/h3&amp;gt;
+		&amp;lt;h1&amp;gt;SMK Coding&amp;lt;/h1&amp;gt;
+	&amp;lt;/header&amp;gt;
+
+	&amp;lt;h4&amp;gt;Menu&amp;lt;/h4&amp;gt;
+	&amp;lt;nav&amp;gt;
+		&amp;lt;ul&amp;gt;
+			&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;form-daftar.php&amp;quot;&amp;gt;Daftar Baru&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+			&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;list-siswa.php&amp;quot;&amp;gt;Pendaftar&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+		&amp;lt;/ul&amp;gt;
+	&amp;lt;/nav&amp;gt;
+
+	&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tampilannya awalnya akan menjadi seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/tampilan-awal.png&#34; alt=&#34;Tampilan halaman utama pendaftaran siswa&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-menampilkan-data-tabel-mysql&#34;&gt;Cara Menampilkan Data Tabel MySQL&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka &lt;code&gt;list-siswa.php&lt;/code&gt; dan isi dengan kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php include(&amp;quot;config.php&amp;quot;); ?&amp;gt;
+
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+	&amp;lt;title&amp;gt;Pendaftaran Siswa Baru | SMK Coding&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+	&amp;lt;header&amp;gt;
+		&amp;lt;h3&amp;gt;Siswa yang sudah mendaftar&amp;lt;/h3&amp;gt;
+	&amp;lt;/header&amp;gt;
+
+	&amp;lt;nav&amp;gt;
+		&amp;lt;a href=&amp;quot;form-daftar.php&amp;quot;&amp;gt;[+] Tambah Baru&amp;lt;/a&amp;gt;
+	&amp;lt;/nav&amp;gt;
+
+	&amp;lt;br&amp;gt;
+
+	&amp;lt;table border=&amp;quot;1&amp;quot;&amp;gt;
+	&amp;lt;thead&amp;gt;
+		&amp;lt;tr&amp;gt;
+			&amp;lt;th&amp;gt;No&amp;lt;/th&amp;gt;
+			&amp;lt;th&amp;gt;Nama&amp;lt;/th&amp;gt;
+			&amp;lt;th&amp;gt;Alamat&amp;lt;/th&amp;gt;
+			&amp;lt;th&amp;gt;Jenis Kelamin&amp;lt;/th&amp;gt;
+			&amp;lt;th&amp;gt;Agama&amp;lt;/th&amp;gt;
+			&amp;lt;th&amp;gt;Sekolah Asal&amp;lt;/th&amp;gt;
+			&amp;lt;th&amp;gt;Tindakan&amp;lt;/th&amp;gt;
+		&amp;lt;/tr&amp;gt;
+	&amp;lt;/thead&amp;gt;
+	&amp;lt;tbody&amp;gt;
+
+		&amp;lt;?php
+		$sql = &amp;quot;SELECT * FROM calon_siswa&amp;quot;;
+		$query = mysqli_query($db, $sql);
+
+		while($siswa = mysqli_fetch_array($query)){
+			echo &amp;quot;&amp;lt;tr&amp;gt;&amp;quot;;
+
+			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;nama&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;alamat&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;jenis_kelamin&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;agama&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;sekolah_asal&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+
+			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;;
+			echo &amp;quot;&amp;lt;a href=&#39;form-edit.php?id=&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&#39;&amp;gt;Edit&amp;lt;/a&amp;gt; | &amp;quot;;
+			echo &amp;quot;&amp;lt;a href=&#39;hapus.php?id=&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&#39;&amp;gt;Hapus&amp;lt;/a&amp;gt;&amp;quot;;
+			echo &amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+
+			echo &amp;quot;&amp;lt;/tr&amp;gt;&amp;quot;;
+		}
+		?&amp;gt;
+
+	&amp;lt;/tbody&amp;gt;
+	&amp;lt;/table&amp;gt;
+
+	&amp;lt;p&amp;gt;Total: &amp;lt;?php echo mysqli_num_rows($query) ?&amp;gt;&amp;lt;/p&amp;gt;
+
+	&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pertama kita membutuhkan koneksi ke database, maka kita harus mengimpor
+file &lt;code&gt;config.php&lt;/code&gt; agar variabel &lt;code&gt;$db&lt;/code&gt; dapat dibaca.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php include(&amp;quot;config.php&amp;quot;); ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, kita melakukan query untuk mengambil data siswa pada tabel
+&lt;code&gt;calon_siswa&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$sql = &amp;quot;SELECT * FROM calon_siswa&amp;quot;;
+$query = mysqli_query($db, $sql);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil dari query tersetbut, kemudian kita ubah menjadi array dengan fungsi
+&lt;code&gt;mysqli_fetch_array()&lt;/code&gt; dan hasilnya disimpan dalam variabel &lt;code&gt;$siswa&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$siswa = mysqli_fetch_array($query)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perulangan &lt;code&gt;while&lt;/code&gt; akan mengulang selama masih ada isi dalam tabel. Kemudain,
+selama perulangan&amp;hellip;kita tampilkan datanya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;while($siswa = mysqli_fetch_array($query)){
+    echo &amp;quot;&amp;lt;tr&amp;gt;&amp;quot;;
+
+    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;nama&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;alamat&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;jenis_kelamin&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;agama&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;sekolah_asal&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+
+    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;;
+    echo &amp;quot;&amp;lt;a href=&#39;form-edit.php?id=&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&#39;&amp;gt;Edit&amp;lt;/a&amp;gt; | &amp;quot;;
+    echo &amp;quot;&amp;lt;a href=&#39;hapus.php?id=&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&#39;&amp;gt;Hapus&amp;lt;/a&amp;gt;&amp;quot;;
+    echo &amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
+
+    echo &amp;quot;&amp;lt;/tr&amp;gt;&amp;quot;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikan array &lt;code&gt;$siswa&lt;/code&gt;, indeksnya sesuai dengan nama kolom pada database dan
+bersifat &lt;em&gt;case sensitive&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Terakhir, kita menampilkan total data yang ada di dalam tabel dengan fungsi
+&lt;code&gt;mysqli_num_rows()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;echo mysqli_num_rows($query);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/list-siswa.png&#34; alt=&#34;menampilkan data dari database&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gampang kaaan&amp;hellip;! :smile:&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-menambahkan-data-ke-tabel-mysql&#34;&gt;Cara Menambahkan Data ke Tabel MySQL&lt;/h2&gt;
+
+&lt;p&gt;Ada dua file yang kita butuhkan untuk menambahkan data ke MySQL.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;form-daftar.php&lt;/code&gt; halaman untuk form input;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;proses-pendaftaran.php&lt;/code&gt; skrip untuk memproses data yang diinputkan.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Sebenarnya bisa saja dibuat dalam satu file, tapi biar lebih mudah
+dipahami&amp;hellip;kita buat terpisah saja.&lt;/p&gt;
+
+&lt;p&gt;Silahkan buka file &lt;code&gt;form-daftar.php&lt;/code&gt; dan isi dengan kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+	&amp;lt;title&amp;gt;Formulir Pendaftaran Siswa Baru | SMK Coding&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+	&amp;lt;header&amp;gt;
+		&amp;lt;h3&amp;gt;Formulir Pendaftaran Siswa Baru&amp;lt;/h3&amp;gt;
+	&amp;lt;/header&amp;gt;
+
+	&amp;lt;form action=&amp;quot;proses-pendaftaran.php&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;
+
+		&amp;lt;fieldset&amp;gt;
+
+		&amp;lt;p&amp;gt;
+			&amp;lt;label for=&amp;quot;nama&amp;quot;&amp;gt;Nama: &amp;lt;/label&amp;gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;nama&amp;quot; placeholder=&amp;quot;nama lengkap&amp;quot; /&amp;gt;
+		&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;
+			&amp;lt;label for=&amp;quot;alamat&amp;quot;&amp;gt;Alamat: &amp;lt;/label&amp;gt;
+			&amp;lt;textarea name=&amp;quot;alamat&amp;quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+		&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;
+			&amp;lt;label for=&amp;quot;jenis_kelamin&amp;quot;&amp;gt;Jenis Kelamin: &amp;lt;/label&amp;gt;
+			&amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;laki-laki&amp;quot;&amp;gt; Laki-laki&amp;lt;/label&amp;gt;
+			&amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;perempuan&amp;quot;&amp;gt; Perempuan&amp;lt;/label&amp;gt;
+		&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;
+			&amp;lt;label for=&amp;quot;agama&amp;quot;&amp;gt;Agama: &amp;lt;/label&amp;gt;
+			&amp;lt;select name=&amp;quot;agama&amp;quot;&amp;gt;
+				&amp;lt;option&amp;gt;Islam&amp;lt;/option&amp;gt;
+				&amp;lt;option&amp;gt;Kristen&amp;lt;/option&amp;gt;
+				&amp;lt;option&amp;gt;Hindu&amp;lt;/option&amp;gt;
+				&amp;lt;option&amp;gt;Budha&amp;lt;/option&amp;gt;
+				&amp;lt;option&amp;gt;Atheis&amp;lt;/option&amp;gt;
+			&amp;lt;/select&amp;gt;
+		&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;
+			&amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;Daftar&amp;quot; name=&amp;quot;daftar&amp;quot; /&amp;gt;
+		&amp;lt;/p&amp;gt;
+
+		&amp;lt;/fieldset&amp;gt;
+
+	&amp;lt;/form&amp;gt;
+
+	&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikan pada tag pembuka &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;, di sana kita menggunakan atribut
+&lt;code&gt;action&lt;/code&gt; dan &lt;code&gt;method&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form action=&amp;quot;proses-pendaftaran.php&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;
+    ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Atribut &lt;code&gt;action&lt;/code&gt; digunakan untuk menentukan skrip mana yang akan memproses
+data inputan. Sedangkan atribut &lt;code&gt;method&lt;/code&gt; untuk menentukan
+metode pengiriman datanya.&lt;/p&gt;
+
+&lt;p&gt;Perhatikan juga pada input-nya, disana ada atribut &lt;code&gt;name&lt;/code&gt;. Atribut ini
+untuk menentukan kunci indeks dari array &lt;code&gt;$_POST&lt;/code&gt; dan &lt;code&gt;$_GET&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/formulir-pendaftaran.png&#34; alt=&#34;Formulir Pendaftaran Siswa Baru&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya silahkan isi file &lt;code&gt;proses-pendaftaran.php&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+include(&amp;quot;config.php&amp;quot;);
+
+// cek apakah tombol daftar sudah diklik atau blum?
+if(isset($_POST[&#39;daftar&#39;])){
+
+	// ambil data dari formulir
+	$nama = $_POST[&#39;nama&#39;];
+	$alamat = $_POST[&#39;alamat&#39;];
+	$jk = $_POST[&#39;jenis_kelamin&#39;];
+	$agama = $_POST[&#39;agama&#39;];
+	$sekolah = $_POST[&#39;sekolah_asal&#39;];
+
+	// buat query
+	$sql = &amp;quot;INSERT INTO calon_siswa (nama, alamat, jenis_kelamin, agama, sekolah_asal) VALUE (&#39;$nama&#39;, &#39;$alamat&#39;, &#39;$jk&#39;, &#39;$agama&#39;, &#39;$sekolah&#39;)&amp;quot;;
+	$query = mysqli_query($db, $sql);
+
+	// apakah query simpan berhasil?
+	if( $query ) {
+		// kalau berhasil alihkan ke halaman index.php dengan status=sukses
+		header(&#39;Location: index.php?status=sukses&#39;);
+	} else {
+		// kalau gagal alihkan ke halaman indek.php dengan status=gagal
+		header(&#39;Location: index.php?status=gagal&#39;);
+	}
+
+
+} else {
+	die(&amp;quot;Akses dilarang...&amp;quot;);
+}
+
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pertama kita ambil data yang dikirim dari formulir, semuanya tersimpan
+pada variabel &lt;code&gt;$_POST&lt;/code&gt;. Karena tadi kita menggunakan method &lt;code&gt;POST&lt;/code&gt; pada form.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/input-formulir-pendaftaran.png&#34; alt=&#34;Input data di formulir pendaftaran&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, kita buat query penyimpanan.&lt;/p&gt;
+
+&lt;p&gt;Lalu melakukan pengecekan, apakah query-nya berhasil atau gagal.&lt;/p&gt;
+
+&lt;p&gt;Untuk menampilkan pesan berhasil dan gagal pada halaman &lt;code&gt;index.php&lt;/code&gt;, silahkan
+tambahkan kode berikut di bawah tag &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt; pada file &lt;code&gt;index.php&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php if(isset($_GET[&#39;status&#39;])): ?&amp;gt;
+	&amp;lt;p&amp;gt;
+		&amp;lt;?php
+			if($_GET[&#39;status&#39;] == &#39;sukses&#39;){
+				echo &amp;quot;Pendaftaran siswa baru berhasil!&amp;quot;;
+			} else {
+				echo &amp;quot;Pendaftaran gagal!&amp;quot;;
+			}
+		?&amp;gt;
+	&amp;lt;/p&amp;gt;
+&amp;lt;?php endif; ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/pesan-penyimpanan.png&#34; alt=&#34;Pesan Penyimpanan Sukses pada index&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang kita sudah punya dua data.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/hasil-pendaftaran.png&#34; alt=&#34;Siswa yang sudah mendaftar&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;menghapus-data-dari-tabel-mysql&#34;&gt;Menghapus Data dari Tabel MySQL&lt;/h2&gt;
+
+&lt;p&gt;Kita membutuhkan &lt;code&gt;id&lt;/code&gt; untuk menentukan data yang akan dihapus. Karena itu,
+kita mengirimkan &lt;code&gt;id&lt;/code&gt; melalui &lt;em&gt;query string&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://localhost/pendaftaran-siswa/hapus.php?id=1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Query string-nya adalah &lt;code&gt;?id=1&lt;/code&gt;. Query string akan tersimpan dalam
+variabel &lt;code&gt;$_GET&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untuk lebih jelasnya, silahkan buka file &lt;code&gt;hapus.php&lt;/code&gt; dan isi dengan kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+include(&amp;quot;config.php&amp;quot;);
+
+if( isset($_GET[&#39;id&#39;]) ){
+
+	// ambil id dari query string
+	$id = $_GET[&#39;id&#39;];
+
+	// buat query hapus
+	$sql = &amp;quot;DELETE FROM calon_siswa WHERE id=$id&amp;quot;;
+	$query = mysqli_query($db, $sql);
+
+	// apakah query hapus berhasil?
+	if( $query ){
+		header(&#39;Location: list-siswa.php&#39;);
+	} else {
+		die(&amp;quot;gagal menghapus...&amp;quot;);
+	}
+
+} else {
+	die(&amp;quot;akses dilarang...&amp;quot;);
+}
+
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang coba klik link &lt;em&gt;hapus&lt;/em&gt;, maka datanya akan langsung terhapus.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/list-siswa.png&#34; alt=&#34;Data sudah terhapus&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebenarnya cara ini kurang aman, karena kita tidak meberikan dialog konfirmasi
+kepada user. Misalnya seperti mananyakan &amp;lsquo;Apakah yakin akan menghapus?&amp;rsquo;&lt;/p&gt;
+
+&lt;h2 id=&#34;update-data-di-tabel-mysql&#34;&gt;Update Data di Tabel MySQL&lt;/h2&gt;
+
+&lt;p&gt;Konsep update data hampir sama seperti menghapus.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita ambil &lt;code&gt;id&lt;/code&gt; data yang akan di-edit. Setelah itu kita melakukan
+query untuk mengambil data dari database dan menampilkannya ke dalam form.&lt;/p&gt;
+
+&lt;p&gt;Setelah di-edit, selanjutnya melakukan query update untuk menyimpan perubahan.&lt;/p&gt;
+
+&lt;p&gt;Untuk lebih jelasnya, silahkan buka file &lt;code&gt;form-edit.php&lt;/code&gt; dan isi dengan kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+include(&amp;quot;config.php&amp;quot;);
+
+// kalau tidak ada id di query string
+if( !isset($_GET[&#39;id&#39;]) ){
+	header(&#39;Location: list-siswa.php&#39;);
+}
+
+//ambil id dari query string
+$id = $_GET[&#39;id&#39;];
+
+// buat query untuk ambil data dari database
+$sql = &amp;quot;SELECT * FROM calon_siswa WHERE id=$id&amp;quot;;
+$query = mysqli_query($db, $sql);
+$siswa = mysqli_fetch_assoc($query);
+
+// jika data yang di-edit tidak ditemukan
+if( mysqli_num_rows($query) &amp;lt; 1 ){
+	die(&amp;quot;data tidak ditemukan...&amp;quot;);
+}
+
+?&amp;gt;
+
+
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+	&amp;lt;title&amp;gt;Formulir Edit Siswa | SMK Coding&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+
+&amp;lt;body&amp;gt;
+	&amp;lt;header&amp;gt;
+		&amp;lt;h3&amp;gt;Formulir Edit Siswa&amp;lt;/h3&amp;gt;
+	&amp;lt;/header&amp;gt;
+
+	&amp;lt;form action=&amp;quot;proses-edit.php&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;
+
+		&amp;lt;fieldset&amp;gt;
+
+			&amp;lt;input type=&amp;quot;hidden&amp;quot; name=&amp;quot;id&amp;quot; value=&amp;quot;&amp;lt;?php echo $siswa[&#39;id&#39;] ?&amp;gt;&amp;quot; /&amp;gt;
+
+		&amp;lt;p&amp;gt;
+			&amp;lt;label for=&amp;quot;nama&amp;quot;&amp;gt;Nama: &amp;lt;/label&amp;gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;nama&amp;quot; placeholder=&amp;quot;nama lengkap&amp;quot; value=&amp;quot;&amp;lt;?php echo $siswa[&#39;nama&#39;] ?&amp;gt;&amp;quot; /&amp;gt;
+		&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;
+			&amp;lt;label for=&amp;quot;alamat&amp;quot;&amp;gt;Alamat: &amp;lt;/label&amp;gt;
+			&amp;lt;textarea name=&amp;quot;alamat&amp;quot;&amp;gt;&amp;lt;?php echo $siswa[&#39;alamat&#39;] ?&amp;gt;&amp;lt;/textarea&amp;gt;
+		&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;
+			&amp;lt;label for=&amp;quot;jenis_kelamin&amp;quot;&amp;gt;Jenis Kelamin: &amp;lt;/label&amp;gt;
+			&amp;lt;?php $jk = $siswa[&#39;jenis_kelamin&#39;]; ?&amp;gt;
+			&amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;laki-laki&amp;quot; &amp;lt;?php echo ($jk == &#39;laki-laki&#39;) ? &amp;quot;checked&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt; Laki-laki&amp;lt;/label&amp;gt;
+			&amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;perempuan&amp;quot; &amp;lt;?php echo ($jk == &#39;perempuan&#39;) ? &amp;quot;checked&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt; Perempuan&amp;lt;/label&amp;gt;
+		&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;
+			&amp;lt;label for=&amp;quot;agama&amp;quot;&amp;gt;Agama: &amp;lt;/label&amp;gt;
+			&amp;lt;?php $agama = $siswa[&#39;agama&#39;]; ?&amp;gt;
+			&amp;lt;select name=&amp;quot;agama&amp;quot;&amp;gt;
+				&amp;lt;option &amp;lt;?php echo ($agama == &#39;Islam&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Islam&amp;lt;/option&amp;gt;
+				&amp;lt;option &amp;lt;?php echo ($agama == &#39;Kristen&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Kristen&amp;lt;/option&amp;gt;
+				&amp;lt;option &amp;lt;?php echo ($agama == &#39;Hindu&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Hindu&amp;lt;/option&amp;gt;
+				&amp;lt;option &amp;lt;?php echo ($agama == &#39;Budha&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Budha&amp;lt;/option&amp;gt;
+				&amp;lt;option &amp;lt;?php echo ($agama == &#39;Atheis&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Atheis&amp;lt;/option&amp;gt;
+			&amp;lt;/select&amp;gt;
+		&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;
+			&amp;lt;label for=&amp;quot;sekolah_asal&amp;quot;&amp;gt;Sekolah Asal: &amp;lt;/label&amp;gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;sekolah_asal&amp;quot; placeholder=&amp;quot;nama sekolah&amp;quot; value=&amp;quot;&amp;lt;?php echo $siswa[&#39;sekolah_asal&#39;] ?&amp;gt;&amp;quot; /&amp;gt;
+		&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;
+			&amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;Simpan&amp;quot; name=&amp;quot;simpan&amp;quot; /&amp;gt;
+		&amp;lt;/p&amp;gt;
+
+		&amp;lt;/fieldset&amp;gt;
+
+
+	&amp;lt;/form&amp;gt;
+
+	&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ada beberapa hal yang perlu diperhatikan dalam kode tersebut.&lt;/p&gt;
+
+&lt;p&gt;Pertama kita perlu membuat input id dengan tipe &lt;em&gt;hidden&lt;/em&gt; untuk menyimpan
+id data yang akan di-update.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;input type=&amp;quot;hidden&amp;quot; name=&amp;quot;id&amp;quot; value=&amp;quot;&amp;lt;?php echo $siswa[&#39;id&#39;] ?&amp;gt;&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk input radio dan select, kita menggunakan operator ternary agar
+bisa membuat atribut &lt;code&gt;checked&lt;/code&gt; dan &lt;code&gt;selected&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;p&amp;gt;
+    &amp;lt;label for=&amp;quot;jenis_kelamin&amp;quot;&amp;gt;Jenis Kelamin: &amp;lt;/label&amp;gt;
+    &amp;lt;?php $jk = $siswa[&#39;jenis_kelamin&#39;]; ?&amp;gt;
+    &amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;laki-laki&amp;quot; &amp;lt;?php echo ($jk == &#39;laki-laki&#39;) ? &amp;quot;checked&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt; Laki-laki&amp;lt;/label&amp;gt;
+    &amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;perempuan&amp;quot; &amp;lt;?php echo ($jk == &#39;perempuan&#39;) ? &amp;quot;checked&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt; Perempuan&amp;lt;/label&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+    &amp;lt;label for=&amp;quot;agama&amp;quot;&amp;gt;Agama: &amp;lt;/label&amp;gt;
+    &amp;lt;?php $agama = $siswa[&#39;agama&#39;]; ?&amp;gt;
+    &amp;lt;select name=&amp;quot;agama&amp;quot;&amp;gt;
+        &amp;lt;option &amp;lt;?php echo ($agama == &#39;Islam&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Islam&amp;lt;/option&amp;gt;
+        &amp;lt;option &amp;lt;?php echo ($agama == &#39;Kristen&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Kristen&amp;lt;/option&amp;gt;
+        &amp;lt;option &amp;lt;?php echo ($agama == &#39;Hindu&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Hindu&amp;lt;/option&amp;gt;
+        &amp;lt;option &amp;lt;?php echo ($agama == &#39;Budha&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Budha&amp;lt;/option&amp;gt;
+        &amp;lt;option &amp;lt;?php echo ($agama == &#39;Atheis&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Atheis&amp;lt;/option&amp;gt;
+    &amp;lt;/select&amp;gt;
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ketika kita lihat dari &lt;a href=&#34;https://www.petanikode.com/7-manfaat-inspect-element-bagi-web-developer/&#34;&gt;inspect elements&lt;/a&gt;&amp;hellip;maka akan tampil seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/inspect-element-edit.png&#34; alt=&#34;Inspect element form edit&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, silahkan isi file &lt;code&gt;proses-edit.php&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+
+include(&amp;quot;config.php&amp;quot;);
+
+// cek apakah tombol daftar sudah diklik atau blum?
+if(isset($_POST[&#39;simpan&#39;])){
+
+	// ambil data dari formulir
+	$id = $_POST[&#39;id&#39;];
+	$nama = $_POST[&#39;nama&#39;];
+	$alamat = $_POST[&#39;alamat&#39;];
+	$jk = $_POST[&#39;jenis_kelamin&#39;];
+	$agama = $_POST[&#39;agama&#39;];
+	$sekolah = $_POST[&#39;sekolah_asal&#39;];
+
+	// buat query update
+	$sql = &amp;quot;UPDATE calon_siswa SET nama=&#39;$nama&#39;, alamat=&#39;$alamat&#39;, jenis_kelamin=&#39;$jk&#39;, agama=&#39;$agama&#39;, sekolah_asal=&#39;$sekolah&#39; WHERE id=$id&amp;quot;;
+	$query = mysqli_query($db, $sql);
+
+	// apakah query update berhasil?
+	if( $query ) {
+		// kalau berhasil alihkan ke halaman list-siswa.php
+		header(&#39;Location: list-siswa.php&#39;);
+	} else {
+		// kalau gagal tampilkan pesan
+		die(&amp;quot;Gagal menyimpan perubahan...&amp;quot;);
+	}
+
+
+} else {
+	die(&amp;quot;Akses dilarang...&amp;quot;);
+}
+
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Silahkan simpan dan cobalah untuk mengedit data.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/edit-nama.png&#34; alt=&#34;Hasil update data&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;*Nama &lt;strong&gt;Lia&lt;/strong&gt; diupdate menjadi &lt;strong&gt;Priscili Ayuliani&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Terima kasih sudah mengikuti tutorial ini sampai akhir.&lt;/p&gt;
+
+&lt;p&gt;Kalau ada yang belum jelas, silahkan diskusikan melalui komentar.&lt;/p&gt;
+
+&lt;p&gt;Selamat belajar :smile:&lt;/p&gt;
+
+&lt;!-- ## Apa selanjutnya?
+
+- Membuat Fitur Pencarian
+- Membuat Pagination
+- Membuat Fitur Upload
+- Mencegah Serangan SQL Injection
+- CRUD dengan AJAX
+- Tutorial PHP dan MySQL: Menggunakan Session untuk Membuat Login/Register --&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Menggunakan Dompdf di Codeigniter</title>
       <link>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</link>
       <pubDate>Sun, 19 Feb 2017 16:48:58 +0800</pubDate>
@@ -1142,16 +1855,6 @@ kamu perlu persiapkan 6 alat ini:&lt;/p&gt;
       
       <guid>https://www.petanikode.com/masalah-syntaxerror-unterminated-string-literal-pada-javascript/</guid>
       <description>&lt;p&gt;Sebuah masalah kecil saya temukan pada proyek yang sudah jadi. Bisa dibilang, web tersebut sudah jadi dan siap di-hosting. Tapi ternyata ada sedikit error yang membuat salah satu fitur tidak bekerja.&lt;br /&gt;&lt;br /&gt;Jadi ceritanya, saya ingin menampilkan detail produk dengan modal. Data produknya diambil dari parameter yang dikirim ke dalam fungsi &lt;code&gt;detail()&lt;/code&gt;.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-Vtvwu6jLgFA/V9f5aHCTa9I/AAAAAAAADR8/8c0MGMRVuOsHvPi9eeIxsS6BW-rjVLh5QCK4B/s1600/Menampilkan%2BDetail%2BProduk%2Bdengan%2BModal.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Detail produk pada modal&#34; border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-Vtvwu6jLgFA/V9f5aHCTa9I/AAAAAAAADR8/8c0MGMRVuOsHvPi9eeIxsS6BW-rjVLh5QCK4B/s1600/Menampilkan%2BDetail%2BProduk%2Bdengan%2BModal.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kode fungsi &lt;code&gt;detail()&lt;/code&gt; untuk menampilkan modal produk:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;javascript js&#34;&gt;function detail(data){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; console.log(data);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#myModalLabel&amp;rdquo;).html(data.nama);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#gambar-produk&amp;rdquo;).attr(&amp;ldquo;src&amp;rdquo;, data.foto);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#harga&amp;rdquo;).html(data.harga);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#keterangan&amp;rdquo;).html(data.keterangan);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#modal-detail-produk&amp;rdquo;).modal(&amp;lsquo;show&amp;rsquo;);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Parameter &lt;code&gt;data&lt;/code&gt; berupa objek yang diambil dari &lt;i&gt;event&lt;/i&gt; &lt;i&gt;onclick&lt;/i&gt; elemen. Berikut ini kode HTML elemenya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;div class=&amp;ldquo;panel panel-default&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;panel-body&amp;rdquo;&amp;gt;&amp;lt;img src=&amp;ldquo;&lt;a href=&#34;http://localhost/tangsi/assets/tjc/img/produk/6nzxid5jljt9.jpg&amp;quot;&#34;&gt;http://localhost/tangsi/assets/tjc/img/produk/6nzxid5jljt9.jpg&amp;quot;&lt;/a&gt; class=&amp;ldquo;img-responsive&amp;rdquo; style=&amp;ldquo;width:100%&amp;rdquo; alt=&amp;ldquo;Image&amp;rdquo; onclick=&amp;ldquo;detail({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lsquo;id&amp;rsquo;: &amp;lsquo;6nzxid5jljt9&amp;rsquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lsquo;nama&amp;rsquo;: &amp;lsquo;Continous Form&amp;rsquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lsquo;harga&amp;rsquo;: &amp;ldquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lsquo;jenis&amp;rsquo;: &amp;lsquo;barang&amp;rsquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lsquo;keterangan&amp;rsquo;: &amp;lsquo;&amp;lt;p&amp;gt;1ply / 2ply / 3ply Model Faktur / Wartel&amp;lt;/p&amp;gt;&amp;rsquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lsquo;foto&amp;rsquo;: &amp;lsquo;&lt;a href=&#34;http://localhost/tangsi/assets/tjc/img/produk/6nzxid5jljt9.jpg&#39;&#34;&gt;http://localhost/tangsi/assets/tjc/img/produk/6nzxid5jljt9.jpg&#39;&lt;/a&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; })&amp;rdquo;&amp;gt;&amp;lt;/div&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;panel-footer&amp;rdquo;&amp;gt;Continous Form&amp;lt;/div&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;Atribut &lt;code&gt;&amp;lsquo;keterangan&amp;rsquo;&lt;/code&gt; pada objek &lt;code&gt;data&lt;/code&gt; tersebut isinya berupa HTML. Masalah mulai timbul ketika kode HTML-nya semakin kompleks. Contohnya seperti ini.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-FEvzTQS4c_Y/V9f8fWC4TZI/AAAAAAAADSI/nxjwMA-2Ez8rf6Xps26v1GNxo1wewTluwCK4B/s1600/Kesalahan%2Boutput%2BHTML.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-FEvzTQS4c_Y/V9f8fWC4TZI/AAAAAAAADSI/nxjwMA-2Ez8rf6Xps26v1GNxo1wewTluwCK4B/s1600/Kesalahan%2Boutput%2BHTML.png&#34; /&gt;&lt;/a&gt; Dari gambar di atas, saya dapat mengetahui penyebab timbulnya error &lt;i&gt;&amp;ldquo;SyntaxError: unterminated string literal.&amp;rdquo;&lt;/i&gt; Kode HTML tersebut dihasilkan dari sebuah printah PHP.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-kB4eI1Qc9K8/V9gA0JHFAxI/AAAAAAAADSU/FMGXTby-gZg8zaewx4-ti9Kso8Y2I7e1gCK4B/s1600/sumber%2Bmasalah%2Bada%2Bdi%2Bkode%2BPHP.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-kB4eI1Qc9K8/V9gA0JHFAxI/AAAAAAAADSU/FMGXTby-gZg8zaewx4-ti9Kso8Y2I7e1gCK4B/s1600/sumber%2Bmasalah%2Bada%2Bdi%2Bkode%2BPHP.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Berdasarkan penelusuran saya, sebuah jawaban di Stack Overflow memberikan kode untuk menghilangkan white space di kode HTML dengan PHP. Berikut ini kodenya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$output = str_replace(array(&amp;rdquo;\r\n&amp;rdquo;, &amp;ldquo;\r&amp;rdquo;), &amp;ldquo;\n&amp;rdquo;, $output);&lt;br /&gt;$lines = explode(&amp;rdquo;\n&amp;rdquo;, $output);&lt;br /&gt;$new_lines = array();&lt;br /&gt;&lt;br /&gt;foreach ($lines as $i =&amp;gt; $line) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if(!empty($line))&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $new_lines[] = trim($line);&lt;br /&gt;}&lt;br /&gt;echo implode($new_lines);&lt;/code&gt;&lt;/pre&gt;Kode tersebut bisa saya terapkan pada proses &lt;i&gt;input&lt;/i&gt; dan &lt;i&gt;edit&lt;/i&gt; data produk. Karena pada input dan edit produk untuk keterangan saya menggunakan &lt;a href=&#34;http://www.petanikode.com/2016/08/menggunakan-tinymce-pada-proyek-web.html&#34;&gt;TinyMCE&lt;/a&gt;. Selain itu juga dengan meletakkan di &lt;i&gt;input&lt;/i&gt; dan &lt;i&gt;edit&lt;/i&gt;, akan hemat ruang di database.&lt;br /&gt;&lt;br /&gt;Selanjutnya, kode di atas saya modifikasi menjadi sebuah fungsi yang saya taruh di &lt;i&gt;Controller Produk&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-CajJB2k7haw/V9gFeuOfVsI/AAAAAAAADSg/D35NT6AjqIomqt3ZGQgTgJAKP15Ct6aYwCK4B/s1600/Penerapan%2Bkode%2BPHP%2Buntuk%2Bmenghilangkan%2Bwhitespace%2Bdi%2Bcodeigniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Penerapan Kode untuk menghilangkan whitespace di Codeigniter&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-CajJB2k7haw/V9gFeuOfVsI/AAAAAAAADSg/D35NT6AjqIomqt3ZGQgTgJAKP15Ct6aYwCK4B/s1600/Penerapan%2Bkode%2BPHP%2Buntuk%2Bmenghilangkan%2Bwhitespace%2Bdi%2Bcodeigniter.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Hasilnya:&lt;br /&gt;&lt;br /&gt;Sebelum menerapkan kode: &lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-4WtpbkTg1Cw/V9gF58ksvKI/AAAAAAAADSo/afUPUXxVeSAKBKJNC0VO7yztqOJ1b9mnACK4B/s1600/Sebelum%2Bmenghilangkan%2Bwhitespace.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-4WtpbkTg1Cw/V9gF58ksvKI/AAAAAAAADSo/afUPUXxVeSAKBKJNC0VO7yztqOJ1b9mnACK4B/s1600/Sebelum%2Bmenghilangkan%2Bwhitespace.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Setelah kode diterapkan:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-eURnLuzPsj0/V9gGDMMTLrI/AAAAAAAADSw/0yE_ENEgSis_6krTU57JMIITZcHW-PSdQCK4B/s1600/Setelah%2Bmenghilangkan%2Bwhitespace.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-eURnLuzPsj0/V9gGDMMTLrI/AAAAAAAADSw/0yE_ENEgSis_6krTU57JMIITZcHW-PSdQCK4B/s1600/Setelah%2Bmenghilangkan%2Bwhitespace.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/5258632/2658551&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/a/5258632/2658551&#34;&gt;http://stackoverflow.com/a/5258632/2658551&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/508279/2658551&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/a/508279/2658551&#34;&gt;http://stackoverflow.com/a/508279/2658551&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Menghapus dan Mengubah Nama Direktori dengan PHP</title>
-      <link>https://www.petanikode.com/cara-menghapus-dan-mengubah-nama-direktori-dengan-php/</link>
-      <pubDate>Tue, 13 Sep 2016 15:24:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/cara-menghapus-dan-mengubah-nama-direktori-dengan-php/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Rasanya kurang lengkap, bila saya hanya memperkenalkan dua fungsi untuk operasi&amp;nbsp; file sistem di PHP. Pada &lt;a href=&#34;http://www.petanikode.com/2016/09/membuat-dan-menampilkan-isi-direktori.html&#34; target=&#34;_blank&#34;&gt;terbitan sebelumnya&lt;/a&gt;, saya sudah membahas fungsi &lt;code&gt;mkdir()&lt;/code&gt; dan &lt;code&gt;scandir()&lt;/code&gt;. Kali ini saya akan membahas fungsi &lt;code&gt;rename()&lt;/code&gt; dan &lt;code&gt;rmdir()&lt;/code&gt;. &lt;br /&gt;&lt;h2&gt;Menghapus direktori&lt;/h2&gt;Menghapus direktori dapat dilakukan dengan fungsi &lt;code&gt;rmdir()&lt;/code&gt;. Fungsi ini memiliki parameter berupa string. Parameter tersebut adalah nama direktori yang ingin dihapus. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php rmdir(&amp;ldquo;nama_dir&amp;rdquo;); ?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Fungsi tersebut akan menghasilkan error apabila direktorinya tidak ditemukan. Untuk mengatasi ini, kita bisa menggunakan fungsi &lt;code&gt;is_dir()&lt;/code&gt; untuk mengecek direktorinya ada atau tidak.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$nama_dir = &amp;ldquo;petanikode&amp;rdquo;;&lt;br /&gt;&lt;br /&gt;if( is_dir($nama_dir) ) {&lt;br /&gt;&amp;nbsp; &amp;nbsp; rmdir($nama_dir); &lt;br /&gt;} else {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; echo &amp;ldquo;Direktori tidak ditemukan&amp;rdquo;; &lt;br /&gt;}&lt;br /&gt;?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Percobaan:&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-iNbyhRtAH1w/V9ek2zq-VQI/AAAAAAAADRQ/Ne5EXYZ5ulk3Ib6cZzUhFLsM3Gri4S5wACK4B/s1600/Percobaan%2Bpenghapusan%2Bdirektori%2Bdengan%2Bphp.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-iNbyhRtAH1w/V9ek2zq-VQI/AAAAAAAADRQ/Ne5EXYZ5ulk3Ib6cZzUhFLsM3Gri4S5wACK4B/s1600/Percobaan%2Bpenghapusan%2Bdirektori%2Bdengan%2Bphp.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Mengubah Nama&lt;/h2&gt;Kita dapat merubah nama direktori dengan fungsi &lt;code&gt;rename()&lt;/code&gt;. Fungsi ini tidak hanya untuk merubah nama direktori, merubah nama file juga dapat menggunakan fungsi ini. Ada dua parameter yang perlu diberikan kepada fungsi ini. Pertama adalah nama file atau direktori yang akan dirubah namanya. Kedua nama barunya. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php rename(&amp;ldquo;petanikode&amp;rdquo;, &amp;ldquo;petani_kode_baru&amp;rdquo;); ?&amp;gt;&lt;/code&gt;&lt;/pre&gt;Percobaan:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-gJXpnYQNh38/V9enQyzUe1I/AAAAAAAADRc/CuGvcEvjBjEh6b4wE1vgwEeuO7yP4ltZQCK4B/s1600/Percobaan%2Brename%2Bdirektori%2Bdengan%2BPHP%2B-%2BPetani%2Bkode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-gJXpnYQNh38/V9enQyzUe1I/AAAAAAAADRc/CuGvcEvjBjEh6b4wE1vgwEeuO7yP4ltZQCK4B/s1600/Percobaan%2Brename%2Bdirektori%2Bdengan%2BPHP%2B-%2BPetani%2Bkode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Begitulah cara menghapus dan mengubah nama direktori dengan PHP. Selamat mencoba!&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.rmdir.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.rmdir.php&#34;&gt;http://php.net/manual/en/function.rmdir.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.rename.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.rename.php&#34;&gt;http://php.net/manual/en/function.rename.php&lt;/a&gt;&lt;/a&gt;&amp;nbsp;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://www.w3schools.com/php/func_filesystem_rename.asp&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.w3schools.com/php/func_filesystem_rename.asp&#34;&gt;http://www.w3schools.com/php/func_filesystem_rename.asp&lt;/a&gt;&lt;/a&gt; &lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
 </description>
     </item>
     

@@ -726,6 +726,10 @@ if(isset($_POST[&#39;simpan&#39;])){
 
 &lt;p&gt;*Nama &lt;strong&gt;Lia&lt;/strong&gt; diupdate menjadi &lt;strong&gt;Priscili Ayuliani&lt;/strong&gt;.&lt;/p&gt;
 
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Source code&lt;/strong&gt; dari tutorial ini tersedia di github: &lt;a href=&#34;https://github.com/petanikode/tutorial-php-mysql&#34;&gt;https://github.com/petanikode/tutorial-php-mysql&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
 
 &lt;p&gt;Terima kasih sudah mengikuti tutorial ini sampai akhir.&lt;/p&gt;

@@ -214,7 +214,7 @@ Bagaimana PHP dan MySQL dihubungkan? PHP dan MySQL dapat saling berhubungan mela
   },
   "headline": "Tutorial PHP dan MySQL: Membuat Aplikasi CRUD [Studi Kasus Pendaftaran Siswa Baru]",
   "description": "PHP sering dijodohkan dengan MySQL untuk membangun aplikasi web. MySQL berperan sebagai tempat menyimpan data (basis data) sedangkan PHP adalah program yang mengelola data tersebut.\nSebenarnya PHP tidak hanya bisa dijodohkan dengan MySQL saja. PHP juga bisa dijodohkan dengan SQLite, PostgreSQL, MongoDB, Ms. Access, dsb.\nPada kesempatan ini, kita akan belajar menggunakan PHP dan MySQL untuk membuat aplikasi sederhana.\nBagaimana PHP dan MySQL dihubungkan? PHP dan MySQL dapat saling berhubungan melalui perantara API (Application Programming Interface).",
-  "wordCount":  1920 ,
+  "wordCount":  1995 ,
   "datePublished" : "2017-06-10T17:42:42",
   "dateModified" : "2017-06-10T17:42:42",
   "image" : {
@@ -1801,8 +1801,31 @@ if( mysqli_num_rows($query) &lt; 1 ){
 
 <p>Ada beberapa hal yang perlu diperhatikan dalam kode tersebut.</p>
 
-<p>Pertama kita perlu membuat input id dengan tipe <em>hidden</em> untuk menyimpan
-id data yang akan di-update.</p>
+<p>Pertama kita mengubah data dari hasil query menjadi array dengan menggunakan
+fungsi <code>mysqli_fetch_assoc()</code>.</p>
+
+<p>Kenapa menggunakan fungsi tersebut?</p>
+
+<p>Karena data yang akan kita ambil adalah satu baris dan agar indeks array-nya
+menggunakan nama kolom.</p>
+
+<p>Contoh hasilnya seperti ini:</p>
+
+<pre><code class="language-php">Array
+(
+    [id] =&gt; 1
+    [nama] =&gt; Lia
+    [alamat] =&gt; Jl. Mangga No. 3, Mataram
+    [jenis_kelamin] =&gt; perempuan
+    [agama] =&gt; Islam
+    [sekolah_asal] =&gt; SMPN 32 Ampenan
+)
+</code></pre>
+
+<p>Kemudian data tersebut kita tampilkan untuk menjadi nilai default pada form.</p>
+
+<p>Jangan lupa untuk membuat input <code>id</code> dengan tipe <em>hidden</em> untuk menyimpan
+<code>id</code> data yang akan di-update.</p>
 
 <pre><code class="language-php">&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;&lt;?php echo $siswa['id'] ?&gt;&quot; /&gt;
 </code></pre>

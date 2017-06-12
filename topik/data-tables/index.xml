@@ -10,12 +10,581 @@
     <atom:link href="https://www.petanikode.com/topik/data-tables/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Cara Menggunakan Plug-in Data Tables</title>
-      <link>https://www.petanikode.com/cara-menggunakan-plug-in-data-tables/</link>
+      <title>Cara Menggunakan Plug-in Data Tables untuk Membuat Tabel Dinamis</title>
+      <link>https://www.petanikode.com/tutorial-jquery-data-tables/</link>
       <pubDate>Sat, 27 Aug 2016 19:14:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menggunakan-plug-in-data-tables/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-XDBDRg6WpU4/V8Foghm8DMI/AAAAAAAADJo/lkE48jPiXLMMnmFX5mByqLnBl3UpObYCgCK4B/s1600/Data%2BTables%2B-%2BPetani%2BKode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-XDBDRg6WpU4/V8Foghm8DMI/AAAAAAAADJo/lkE48jPiXLMMnmFX5mByqLnBl3UpObYCgCK4B/s1600/Data%2BTables%2B-%2BPetani%2BKode.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Salah satu plug-in yang digunakan pada AdminLTE adalah Data Tables. Data Tables merupakan sebuah plug-in JQuery untuk memanipulasi data dalam tabel HTML. Data Tables memungkinkan kita melakukan pencarian di tabel, membuat pagination, menampilkan data sebanyak yang kita mau, mengambil data dari ajax, dsb.&lt;br /&gt;&lt;h2&gt;1. Menyisipkan Data Tables&lt;/h2&gt;Plug-in Data Tables yang saya gunakan pada tulisan ini adalah versi online melalui CDN. Bila anda ingin menggunakan versi offline, silahkan di-download dulu Data Tables-nya di &lt;a href=&#34;https://datatables.net/download/index&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://datatables.net/download/index&#34;&gt;https://datatables.net/download/index&lt;/a&gt;&lt;/a&gt;. Berikut ini cara menyisipkan Data Tables melalui CDN. &lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;https://code.jquery.com/jquery-3.1.0.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;https://code.jquery.com/jquery-3.1.0.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt; &lt;br /&gt;&amp;lt;script src=&amp;ldquo;//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js&amp;rdquo;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;Penting: JQuery harus berada di atas&amp;nbsp; Data Tables&lt;br /&gt;&lt;h2&gt;2. Kode HTML&lt;/h2&gt;Kode HTML berupa elemen tabel biasa yang diberikan ID unik. ID tersebut fungsinya untuk memilih tabel saat menerapkan Data Tables. Kode Tabel ini saya ambil dari web resmi data tables.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;table id=&amp;ldquo;tabel-data&amp;rdquo; class=&amp;ldquo;table table-striped table-bordered&amp;rdquo; width=&amp;ldquo;100%&amp;rdquo; cellspacing=&amp;ldquo;0&amp;rdquo;&amp;gt;&lt;br /&gt;        &amp;lt;thead&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Name&amp;lt;/th&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Position&amp;lt;/th&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Office&amp;lt;/th&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Age&amp;lt;/th&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Start date&amp;lt;/th&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Salary&amp;lt;/th&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;        &amp;lt;/thead&amp;gt;&lt;br /&gt;        &amp;lt;tfoot&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Name&amp;lt;/th&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Position&amp;lt;/th&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Office&amp;lt;/th&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Age&amp;lt;/th&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Start date&amp;lt;/th&amp;gt;&lt;br /&gt;                &amp;lt;th&amp;gt;Salary&amp;lt;/th&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;        &amp;lt;/tfoot&amp;gt;&lt;br /&gt;        &amp;lt;tbody&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Tiger Nixon&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;System Architect&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;61&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/04/25&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$320,800&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Garrett Winters&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Accountant&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Tokyo&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;63&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/07/25&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$170,750&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Ashton Cox&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Junior Technical Author&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;66&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2009/01/12&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$86,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Cedric Kelly&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Senior Javascript Developer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;22&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2012/03/29&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$433,060&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Airi Satou&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Accountant&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Tokyo&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;33&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2008/11/28&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$162,700&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Brielle Williamson&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Integration Specialist&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;61&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2012/12/02&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$372,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Herrod Chandler&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Sales Assistant&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;59&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2012/08/06&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$137,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Rhona Davidson&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Integration Specialist&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Tokyo&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;55&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2010/10/14&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$327,900&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Colleen Hurst&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Javascript Developer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;39&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2009/09/15&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$205,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Sonya Frost&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;23&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2008/12/13&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$103,600&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Jena Gaines&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Office Manager&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;30&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2008/12/19&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$90,560&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Quinn Flynn&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Support Lead&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;22&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2013/03/03&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$342,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Charde Marshall&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Regional Director&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;36&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2008/10/16&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$470,600&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Haley Kennedy&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Senior Marketing Designer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;43&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2012/12/18&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$313,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Tatyana Fitzpatrick&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Regional Director&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;19&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2010/03/17&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$385,750&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Michael Silva&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Marketing Designer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;66&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2012/11/27&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$198,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Paul Byrd&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Chief Financial Officer (CFO)&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;64&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2010/06/09&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$725,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Gloria Little&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Systems Administrator&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;59&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2009/04/10&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$237,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Bradley Greer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;41&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2012/10/13&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$132,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Dai Rios&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Personnel Lead&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;35&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2012/09/26&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$217,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Jenette Caldwell&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Development Lead&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;30&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/09/03&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$345,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Yuri Berry&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Chief Marketing Officer (CMO)&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;40&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2009/06/25&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$675,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Caesar Vance&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Pre-Sales Support&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;21&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/12/12&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$106,450&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Doris Wilder&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Sales Assistant&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Sidney&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;23&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2010/09/20&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$85,600&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Angelica Ramos&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Chief Executive Officer (CEO)&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;47&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2009/10/09&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$1,200,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Gavin Joyce&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Developer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;42&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2010/12/22&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$92,575&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Jennifer Chang&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Regional Director&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Singapore&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;28&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2010/11/14&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$357,650&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Brenden Wagner&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;28&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/06/07&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$206,850&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Fiona Green&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Chief Operating Officer (COO)&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;48&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2010/03/11&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$850,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Shou Itou&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Regional Marketing&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Tokyo&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;20&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/08/14&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$163,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Michelle House&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Integration Specialist&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Sidney&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;37&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/06/02&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$95,400&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Suki Burks&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Developer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;53&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2009/10/22&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$114,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Prescott Bartlett&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Technical Author&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;27&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/05/07&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$145,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Gavin Cortez&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Team Leader&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;22&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2008/10/26&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$235,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Martena Mccray&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Post-Sales support&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;46&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/03/09&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$324,050&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Unity Butler&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Marketing Designer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;47&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2009/12/09&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$85,675&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Howard Hatfield&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Office Manager&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;51&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2008/12/16&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$164,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Hope Fuentes&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Secretary&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;41&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2010/02/12&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$109,850&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Vivian Harrell&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Financial Controller&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;62&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2009/02/14&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$452,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Timothy Mooney&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Office Manager&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;37&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2008/12/11&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$136,200&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Jackson Bradshaw&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Director&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;65&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2008/09/26&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$645,750&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Olivia Liang&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Support Engineer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Singapore&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;64&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/02/03&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$234,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Bruno Nash&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;38&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/05/03&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$163,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Sakura Yamamoto&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Support Engineer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Tokyo&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;37&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2009/08/19&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$139,575&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Thor Walton&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Developer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;61&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2013/08/11&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$98,540&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Finn Camacho&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Support Engineer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;47&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2009/07/07&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$87,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Serge Baldwin&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Data Coordinator&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Singapore&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;64&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2012/04/09&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$138,575&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Zenaida Frank&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;63&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2010/01/04&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$125,250&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Zorita Serrano&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;56&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2012/06/01&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$115,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Jennifer Acosta&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Junior Javascript Developer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;43&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2013/02/01&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$75,650&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Cara Stevens&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Sales Assistant&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;46&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/12/06&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$145,600&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Hermione Butler&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Regional Director&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;47&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/03/21&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$356,250&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Lael Greer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Systems Administrator&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;21&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2009/02/27&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$103,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Jonas Alexander&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Developer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;30&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2010/07/14&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$86,500&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Shad Decker&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Regional Director&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;51&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2008/11/13&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$183,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Michael Bruce&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Javascript Developer&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Singapore&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;29&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/06/27&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$183,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;            &amp;lt;tr&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Donna Snider&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;Customer Support&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;27&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;2011/01/25&amp;lt;/td&amp;gt;&lt;br /&gt;                &amp;lt;td&amp;gt;$112,000&amp;lt;/td&amp;gt;&lt;br /&gt;            &amp;lt;/tr&amp;gt;&lt;br /&gt;        &amp;lt;/tbody&amp;gt;&lt;br /&gt;    &amp;lt;/table&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;3. Persiapan Data Tables&lt;/h2&gt;Kita akan menerapkan Data Tables saat web di-load.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html js&#34;&gt;&amp;lt;script&amp;gt;&lt;br /&gt;&amp;nbsp; $(document).ready(function(){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;lsquo;#tabel-data&amp;rsquo;).DataTable();&lt;br /&gt;&amp;nbsp; });&lt;br /&gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;Perhatikan &lt;code&gt;#tabel-data&lt;/code&gt;, kata kunci tersebut untuk memilih tabel dengan ID &lt;code&gt;tabel-data&lt;/code&gt;. Kemudian, &lt;i&gt;method&lt;/i&gt; &lt;code&gt;.DataTable()&lt;/code&gt; fungsinya untuk menerapkan Data Tables pada tabel yang dipilih.&lt;br /&gt;&lt;h2&gt;4. Demo Hasil &lt;/h2&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/qonuzu/3/embed?output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;5. Menggunakan Tema Bootstrap&lt;/h2&gt;Untuk menggunakan tema Bootstrap, kita perlu menyisipkan CSS Boostrap dan CSS Tema Data Tabels untuk Bootstrap. Selain itu, ada juga Javascript Data Tables untuk Bootstrap. Silahkan ditambahkan.&lt;br /&gt;&lt;br /&gt;CSS Bootstrap Data Tables:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;&lt;a href=&#34;https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css&amp;quot;&#34;&gt;https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css&amp;quot;&lt;/a&gt; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;Javascript Data Tables untuk Bootstrap:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js&amp;quot;&amp;gt;&#34;&gt;https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js&amp;quot;&amp;gt;&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;6. Demo Setelah Menggunakan Bootstrap&lt;/h2&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/qonuzu/1/embed?output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?3.39.14&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;https://datatables.net/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://datatables.net/&#34;&gt;https://datatables.net/&lt;/a&gt;&lt;/a&gt; &lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://datatables.net/examples/styling/bootstrap.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://datatables.net/examples/styling/bootstrap.html&#34;&gt;https://datatables.net/examples/styling/bootstrap.html&lt;/a&gt;&lt;/a&gt;&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
+      <guid>https://www.petanikode.com/tutorial-jquery-data-tables/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-XDBDRg6WpU4/V8Foghm8DMI/AAAAAAAADJo/lkE48jPiXLMMnmFX5mByqLnBl3UpObYCgCK4B/s1600/Data%2BTables%2B-%2BPetani%2BKode.jpg&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-XDBDRg6WpU4/V8Foghm8DMI/AAAAAAAADJo/lkE48jPiXLMMnmFX5mByqLnBl3UpObYCgCK4B/s1600/Data%2BTables%2B-%2BPetani%2BKode.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Data Tables merupakan sebuah plug-in jQuery untuk memanipulasi data dalam tabel HTML.&lt;/p&gt;
+
+&lt;p&gt;Data Tables memungkinkan kita melakukan membuat tabel dengan fitur pencarian,
+membuat pagination, menampilkan data sebanyak yang kita mau, mengambil data dari ajax, dsb.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-menyisipkan-data-tables&#34;&gt;1. Menyisipkan Data Tables&lt;/h2&gt;
+
+&lt;p&gt;Plug-in Data Tables yang saya gunakan pada tulisan ini adalah versi online
+melalui CDN. Bila anda ingin menggunakan versi offline, silahkan di-download
+dulu Data Tables-nya di &lt;a href=&#34;https://datatables.net/download/index&#34;&gt;https://datatables.net/download/index&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini cara menyisipkan Data Tables melalui CDN.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script src=&amp;quot;https://code.jquery.com/jquery-3.1.0.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika anda menggunakan yang offline, maka isi nilai &lt;code&gt;src&lt;/code&gt; dengan alamat path-nya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script src=&amp;quot;js/jquery-3.1.0.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;js/jquery.dataTables.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Penting&lt;/strong&gt;: Penyisipan jQuery harus berada di atas Data Tables, karena
+Data Tables membutuhkan jQuery dulu baru bisa digunakan.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-kode-html&#34;&gt;2. Kode HTML&lt;/h2&gt;
+
+&lt;p&gt;Kode HTML berupa elemen tabel biasa yang diberikan ID unik.
+ID tersebut fungsinya untuk memilih tabel saat menerapkan Data Tables.&lt;/p&gt;
+
+&lt;p&gt;Kode Tabel ini saya ambil dari web resmi data tables.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;table id=&amp;quot;tabel-data&amp;quot; class=&amp;quot;table table-striped table-bordered&amp;quot; width=&amp;quot;100%&amp;quot; cellspacing=&amp;quot;0&amp;quot;&amp;gt;
+    &amp;lt;thead&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;th&amp;gt;Name&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;Position&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;Office&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;Age&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;Start date&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;Salary&amp;lt;/th&amp;gt;
+        &amp;lt;/tr&amp;gt;
+    &amp;lt;/thead&amp;gt;
+    &amp;lt;tfoot&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;th&amp;gt;Name&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;Position&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;Office&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;Age&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;Start date&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;Salary&amp;lt;/th&amp;gt;
+        &amp;lt;/tr&amp;gt;
+    &amp;lt;/tfoot&amp;gt;
+    &amp;lt;tbody&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Tiger Nixon&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;System Architect&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;61&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/04/25&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$320,800&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Garrett Winters&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Accountant&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Tokyo&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;63&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/07/25&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$170,750&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Ashton Cox&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Junior Technical Author&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;66&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2009/01/12&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$86,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Cedric Kelly&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Senior Javascript Developer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;22&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2012/03/29&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$433,060&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Airi Satou&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Accountant&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Tokyo&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;33&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2008/11/28&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$162,700&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Brielle Williamson&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Integration Specialist&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;61&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2012/12/02&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$372,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Herrod Chandler&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Sales Assistant&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;59&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2012/08/06&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$137,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Rhona Davidson&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Integration Specialist&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Tokyo&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;55&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2010/10/14&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$327,900&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Colleen Hurst&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Javascript Developer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;39&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2009/09/15&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$205,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Sonya Frost&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;23&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2008/12/13&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$103,600&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Jena Gaines&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Office Manager&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;30&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2008/12/19&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$90,560&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Quinn Flynn&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Support Lead&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;22&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2013/03/03&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$342,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Charde Marshall&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Regional Director&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;36&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2008/10/16&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$470,600&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Haley Kennedy&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Senior Marketing Designer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;43&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2012/12/18&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$313,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Tatyana Fitzpatrick&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Regional Director&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;19&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2010/03/17&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$385,750&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Michael Silva&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Marketing Designer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;66&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2012/11/27&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$198,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Paul Byrd&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Chief Financial Officer (CFO)&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;64&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2010/06/09&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$725,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Gloria Little&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Systems Administrator&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;59&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2009/04/10&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$237,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Bradley Greer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;41&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2012/10/13&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$132,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Dai Rios&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Personnel Lead&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;35&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2012/09/26&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$217,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Jenette Caldwell&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Development Lead&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;30&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/09/03&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$345,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Yuri Berry&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Chief Marketing Officer (CMO)&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;40&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2009/06/25&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$675,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Caesar Vance&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Pre-Sales Support&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;21&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/12/12&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$106,450&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Doris Wilder&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Sales Assistant&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Sidney&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;23&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2010/09/20&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$85,600&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Angelica Ramos&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Chief Executive Officer (CEO)&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;47&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2009/10/09&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$1,200,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Gavin Joyce&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Developer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;42&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2010/12/22&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$92,575&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Jennifer Chang&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Regional Director&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Singapore&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;28&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2010/11/14&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$357,650&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Brenden Wagner&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;28&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/06/07&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$206,850&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Fiona Green&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Chief Operating Officer (COO)&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;48&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2010/03/11&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$850,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Shou Itou&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Regional Marketing&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Tokyo&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;20&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/08/14&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$163,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Michelle House&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Integration Specialist&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Sidney&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;37&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/06/02&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$95,400&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Suki Burks&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Developer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;53&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2009/10/22&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$114,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Prescott Bartlett&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Technical Author&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;27&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/05/07&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$145,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Gavin Cortez&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Team Leader&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;22&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2008/10/26&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$235,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Martena Mccray&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Post-Sales support&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;46&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/03/09&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$324,050&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Unity Butler&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Marketing Designer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;47&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2009/12/09&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$85,675&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Howard Hatfield&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Office Manager&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;51&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2008/12/16&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$164,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Hope Fuentes&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Secretary&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;41&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2010/02/12&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$109,850&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Vivian Harrell&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Financial Controller&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;62&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2009/02/14&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$452,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Timothy Mooney&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Office Manager&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;37&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2008/12/11&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$136,200&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Jackson Bradshaw&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Director&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;65&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2008/09/26&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$645,750&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Olivia Liang&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Support Engineer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Singapore&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;64&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/02/03&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$234,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Bruno Nash&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;38&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/05/03&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$163,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Sakura Yamamoto&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Support Engineer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Tokyo&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;37&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2009/08/19&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$139,575&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Thor Walton&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Developer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;61&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2013/08/11&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$98,540&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Finn Camacho&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Support Engineer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;47&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2009/07/07&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$87,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Serge Baldwin&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Data Coordinator&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Singapore&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;64&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2012/04/09&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$138,575&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Zenaida Frank&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;63&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2010/01/04&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$125,250&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Zorita Serrano&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Software Engineer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;56&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2012/06/01&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$115,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Jennifer Acosta&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Junior Javascript Developer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;43&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2013/02/01&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$75,650&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Cara Stevens&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Sales Assistant&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;46&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/12/06&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$145,600&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Hermione Butler&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Regional Director&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;47&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/03/21&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$356,250&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Lael Greer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Systems Administrator&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;London&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;21&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2009/02/27&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$103,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Jonas Alexander&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Developer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;San Francisco&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;30&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2010/07/14&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$86,500&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Shad Decker&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Regional Director&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Edinburgh&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;51&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2008/11/13&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$183,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Michael Bruce&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Javascript Developer&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Singapore&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;29&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/06/27&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$183,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;Donna Snider&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Customer Support&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;New York&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;27&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;2011/01/25&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;$112,000&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+    &amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-persiapan-data-tables&#34;&gt;3. Persiapan Data Tables&lt;/h2&gt;
+
+&lt;p&gt;Kita akan menerapkan Data Tables saat web di-load.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script&amp;gt;
+    $(document).ready(function(){
+        $(&#39;#tabel-data&#39;).DataTable();
+    });
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perhatikan &lt;code&gt;#tabel-data&lt;/code&gt;, kata kunci tersebut untuk memilih tabel dengan ID
+&lt;code&gt;tabel-data&lt;/code&gt;. Kemudian, &lt;em&gt;method&lt;/em&gt; &lt;code&gt;.DataTable()&lt;/code&gt; fungsinya untuk menerapkan
+Data Tables pada tabel yang dipilih.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-demo-hasil&#34;&gt;4. Demo Hasil&lt;/h2&gt;
+
+&lt;p&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/qonuzu/3/embed?output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-menggunakan-tema-bootstrap&#34;&gt;5. Menggunakan Tema Bootstrap&lt;/h2&gt;
+
+&lt;p&gt;Untuk menggunakan tema Bootstrap, kita perlu menyisipkan CSS Boostrap dan
+CSS Tema Data Tabels untuk Bootstrap.&lt;/p&gt;
+
+&lt;p&gt;Selain itu, ada juga Javascript Data Tables untuk Bootstrap.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ditambahkan.&lt;/p&gt;
+
+&lt;p&gt;CSS Bootstrap Data Tables:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&amp;quot; /&amp;gt;
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Javascript Data Tables untuk Bootstrap:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script src=&amp;quot;https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;6-demo-setelah-menggunakan-bootstrap&#34;&gt;6. Demo Setelah Menggunakan Bootstrap&lt;/h2&gt;
+
+&lt;p&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/qonuzu/1/embed?output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?4.0.4&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?4.0.4&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://datatables.net/&#34;&gt;https://datatables.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://datatables.net/examples/styling/bootstrap.html&#34;&gt;https://datatables.net/examples/styling/bootstrap.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

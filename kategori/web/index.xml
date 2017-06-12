@@ -627,8 +627,31 @@ if( mysqli_num_rows($query) &amp;lt; 1 ){
 
 &lt;p&gt;Ada beberapa hal yang perlu diperhatikan dalam kode tersebut.&lt;/p&gt;
 
-&lt;p&gt;Pertama kita perlu membuat input id dengan tipe &lt;em&gt;hidden&lt;/em&gt; untuk menyimpan
-id data yang akan di-update.&lt;/p&gt;
+&lt;p&gt;Pertama kita mengubah data dari hasil query menjadi array dengan menggunakan
+fungsi &lt;code&gt;mysqli_fetch_assoc()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kenapa menggunakan fungsi tersebut?&lt;/p&gt;
+
+&lt;p&gt;Karena data yang akan kita ambil adalah satu baris dan agar indeks array-nya
+menggunakan nama kolom.&lt;/p&gt;
+
+&lt;p&gt;Contoh hasilnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;Array
+(
+    [id] =&amp;gt; 1
+    [nama] =&amp;gt; Lia
+    [alamat] =&amp;gt; Jl. Mangga No. 3, Mataram
+    [jenis_kelamin] =&amp;gt; perempuan
+    [agama] =&amp;gt; Islam
+    [sekolah_asal] =&amp;gt; SMPN 32 Ampenan
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian data tersebut kita tampilkan untuk menjadi nilai default pada form.&lt;/p&gt;
+
+&lt;p&gt;Jangan lupa untuk membuat input &lt;code&gt;id&lt;/code&gt; dengan tipe &lt;em&gt;hidden&lt;/em&gt; untuk menyimpan
+&lt;code&gt;id&lt;/code&gt; data yang akan di-update.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;input type=&amp;quot;hidden&amp;quot; name=&amp;quot;id&amp;quot; value=&amp;quot;&amp;lt;?php echo $siswa[&#39;id&#39;] ?&amp;gt;&amp;quot; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;

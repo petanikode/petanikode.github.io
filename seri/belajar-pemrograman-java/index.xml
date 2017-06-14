@@ -2332,7 +2332,7 @@ bukan isi dari variabel &lt;code&gt;usia&lt;/code&gt;.&lt;/p&gt;
 seperti &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;switch&lt;/code&gt;, dll.&lt;/li&gt;
 &lt;li&gt;Nama variabel boleh menggunakan huruf, angka (0-9), garis bawah &lt;em&gt;(underscore)&lt;/em&gt;,
 dan symbol dollar ($), namun penggunaan garis bawah dan symbol lebih baik dihindari.&lt;/li&gt;
-&lt;li&gt;Nama variabel harus diawali dengan huruf kecil, karena Java menggunakan gaya CamelCase.&lt;/li&gt;
+&lt;li&gt;Nama variabel harus diawali dengan huruf kecil, karena Java menggunakan &lt;a href=&#34;https://www.petanikode.com/gaya-penulisan-case-dalam-pemrograman/&#34;&gt;gaya CamelCase&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Apabila nama variabel lebih dari 1 suku kata, maka kata ke-2 dituliskan
 dengan diawali dengan huruf besar dan seterusnya, contoh &lt;code&gt;namaVariabel&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -2374,7 +2374,7 @@ Deskripsi:
 
 &lt;p&gt;Nah, sudah jelas kan?&lt;/p&gt;
 
-&lt;p&gt;Sekarang kita tinggal kita &lt;em&gt;coding&lt;/em&gt; saja.&lt;/p&gt;
+&lt;p&gt;Sekarang kita tinggal &lt;em&gt;coding&lt;/em&gt; saja.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
     width=&#34;591&#34;

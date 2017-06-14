@@ -10,6 +10,543 @@
     <atom:link href="https://www.petanikode.com/kategori/web/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Mengenal HTML5 Canvas untuk Pemrograman Grafis dan Game</title>
+      <link>https://www.petanikode.com/tutorial-html-canvas/</link>
+      <pubDate>Thu, 15 Jun 2017 06:50:24 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-html-canvas/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/html5-canvas.png&#34; alt=&#34;Menggambar dengan kode di HTML5 Canvas&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebelum kedatangan HTML5, Game dan elemen multimedia lainnya disajikan
+dalam browser menggunakan flash.&lt;/p&gt;
+
+&lt;p&gt;Banyak game berbasis flash yang bisa dimainkan melalui browser. Flash
+juga digunakan untuk memutar video.&lt;/p&gt;
+
+&lt;p&gt;Seingat saya dulu&amp;hellip;tanpa flash player, kita tidak bisa memutar video di Youtube.&lt;/p&gt;
+
+&lt;p&gt;Namun semuanya berubah setelah kedatangan HTML5&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/flash-html.jpg&#34; alt=&#34;Flash Player HTML5 Meme&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;HTML5 membawa banyak elemen baru yang menggantikan tugas flash dalam browser.
+Salah satunya adalah &lt;em&gt;canvas&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-itu-canvas&#34;&gt;Apa itu Canvas?&lt;/h2&gt;
+
+&lt;p&gt;Dalam dunia nyata, &lt;em&gt;canvas&lt;/em&gt; sering digunakan untuk menggambar dan melukis.
+Biasanya menggunakan pensil dan cat.&lt;/p&gt;
+
+&lt;p&gt;Dalam pemrograman, &lt;em&gt;canvas&lt;/em&gt; adalah elemen yang bisa digambar dengan kode.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Canvas&lt;/em&gt;&lt;/strong&gt; adalah elemen baru di HTML5 untuk menggambar &lt;em&gt;(render)&lt;/em&gt; grafik,
+image, dan teks.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;cara-membuat-canvas-di-html&#34;&gt;Cara Membuat Canvas di HTML&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Canvas&lt;/em&gt; dapat dibuat dengan tag &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt;, jangan lupa juga untuk memberikan
+ukuran tinggi dan lebarnya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;canvas id=&amp;quot;myCanvas&amp;quot; width=&amp;quot;640&amp;quot; height=&amp;quot;480&amp;quot; style=&amp;quot;border:1px solid #000000;&amp;quot;&amp;gt;
+&amp;lt;/canvas&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kita berikan sedikit style &lt;code&gt;style=&amp;quot;border:1px solid #000000;&amp;quot;&lt;/code&gt; untuk membuat garis tepi.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita harus menggunakan DOM API untuk
+memanipulasi &lt;em&gt;canvas&lt;/em&gt;, biasanya dilakukan seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fungsi &lt;code&gt;document.getElementById(&amp;quot;myCanvas&amp;quot;)&lt;/code&gt; untuk memilih elemen HTML dengan id
+&lt;code&gt;myCanvas&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya variabel &lt;code&gt;ctx&lt;/code&gt; (konteks) adalah objek dari &lt;em&gt;canvas&lt;/em&gt; yang bisa
+kita manfaatkan untuk menggambar.&lt;/p&gt;
+
+&lt;p&gt;Contoh kode lengkapnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charsetgoyang dombret=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;Tutorial HTML 5 Canvas&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+
+        &amp;lt;canvas id=&amp;quot;myCanvas&amp;quot; width=&amp;quot;640&amp;quot; height=&amp;quot;480&amp;quot; style=&amp;quot;border:1px solid #000000;&amp;quot;&amp;gt;
+        &amp;lt;/canvas&amp;gt;
+
+        &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+            var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+            var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+        &amp;lt;/script&amp;gt;
+
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang kita punya &lt;em&gt;canvas&lt;/em&gt; kosong yang siap untuk digambar&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/html5-canvas-awal.png&#34; alt=&#34;Membuat Canvas di HTML5&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Siapkan imajinasimu dan mulailah menggamabar dengan kode :smile:.&lt;/p&gt;
+
+&lt;h2 id=&#34;menggambar-di-canvas&#34;&gt;Menggambar di Canvas&lt;/h2&gt;
+
+&lt;p&gt;Jika pada dunia nyata kita menggunakan pensil untuk menggambar,
+maka di &lt;em&gt;canvas&lt;/em&gt; HTML5 menggunakan objek &lt;code&gt;ctx&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Objek &lt;code&gt;ctx&lt;/code&gt; bisa kita anggap sebagai pensil. Objek ini memiliki beberapa
+&lt;em&gt;method&lt;/em&gt; untuk menggambar di &lt;em&gt;canvas&lt;/em&gt; seperti &lt;code&gt;fillRect()&lt;/code&gt;, &lt;code&gt;arc()&lt;/code&gt;, &lt;code&gt;fillText()&lt;/code&gt;, dsb.&lt;/p&gt;
+
+&lt;p&gt;Nah untuk menggambar dengan method-method tersebut, kita harus menentukan
+koordinat titik &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt;-nya.&lt;/p&gt;
+
+&lt;p&gt;Karena canvas terdiri dari kumpulan piksel yang membentuk diagram kartesius.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/diagram-kartesius-canvas.png&#34; alt=&#34;Diagram Kartesius Canvas&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;cara-menggambar-titik-pada-canvas&#34;&gt;Cara Menggambar Titik pada Canvas&lt;/h3&gt;
+
+&lt;p&gt;Pertama kita akan coba menggambar sebuah titik.&lt;/p&gt;
+
+&lt;p&gt;Dalam seni rupa, titik adalah bagian terkecil dari sebuah objek yang menempati
+suatu ruang. Sedangkan dalam ilmu matematika geometri, titik adalah objek &lt;code&gt;0&lt;/code&gt;-dimensi yang
+tidak memiliki panjang, lebar, dan tinggi.&lt;/p&gt;
+
+&lt;p&gt;Tapi dalam komputer titik adalah ukuran 1 piksel dari layar.&lt;/p&gt;
+
+&lt;p&gt;Untuk menggambar titik pada canvas, kita dapat menggunakan method &lt;code&gt;fillRect()&lt;/code&gt;
+dengan ukuran 1x1 piksel.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ctx.fillRect(x,y,1,1);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Variabel &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt; kita ganti dengan nilai koordinatnya, misalkan kita ingin
+menggambar titik pada titik (10,10).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ctx.fillRect(10,10,1,1);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mari kita coba dalam kode:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;Tutorial HTML 5 Canvas&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+
+        &amp;lt;canvas id=&amp;quot;myCanvas&amp;quot; width=&amp;quot;640&amp;quot; height=&amp;quot;480&amp;quot; style=&amp;quot;border:1px solid #000000;&amp;quot;&amp;gt;
+        &amp;lt;/canvas&amp;gt;
+
+        &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+            var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+            var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+            // gambar titik pada koordinat (10,10) dengan ukuran 1x1 px
+            ctx.fillRect(10,10,1,1);
+        &amp;lt;/script&amp;gt;
+
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/gambar-titik-pada-canvas.png&#34; alt=&#34;Hasil menggambar titik pada canvas&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;(Lakukan pembesaran sampai 500% untuk melihatnya)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;cara-menggambar-garis-pada-canvas&#34;&gt;Cara Menggambar Garis pada Canvas&lt;/h3&gt;
+
+&lt;p&gt;Garis adalah kumpulan dari titik-titik yang saling berhubungan.
+Ada empat fungsi yang kita butuhkan untuk membuat garis.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;ctx.beginPath()&lt;/code&gt; untuk membuat garis baru.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctx.moveTo(x,y)&lt;/code&gt; untuk menentukan titik awal.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctx.lineTo(x,y)&lt;/code&gt; untuk menentukan titik akhir.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctx.stroke()&lt;/code&gt; untuk menggambar garisnya.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mari kita coba&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Misalkan kita ingin menggambar garis dari titik &lt;code&gt;(10,10)&lt;/code&gt; sampai titik &lt;code&gt;(50,50)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;Tutorial HTML 5 Canvas&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+
+        &amp;lt;canvas id=&amp;quot;myCanvas&amp;quot; width=&amp;quot;640&amp;quot; height=&amp;quot;480&amp;quot; style=&amp;quot;border:1px solid #000000;&amp;quot;&amp;gt;
+        &amp;lt;/canvas&amp;gt;
+
+        &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+            var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+            var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+            ctx.beginPath(); // mulai menggmabar
+            ctx.moveTo(10,10);
+            ctx.lineTo(50,50);
+            ctx.stroke();
+        &amp;lt;/script&amp;gt;
+
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/hasil-gambar-garis-di-canvas.png&#34; alt=&#34;Menggambar Garis pada Canvas&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;cara-menggambar-persegi-pada-canvas&#34;&gt;Cara Menggambar Persegi pada Canvas&lt;/h3&gt;
+
+&lt;p&gt;Ada tiga fungsi yang digunakan untuk menggambar persegi pada &lt;em&gt;canvas&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;ctx.strokeRect(x,y,w,h)&lt;/code&gt; persegi dengan garis &lt;em&gt;(outline)&lt;/em&gt; saja.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctx.fillRect(x,y,w,h)&lt;/code&gt; persegi dengan polesan warna (default-nya hitam).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctx.clearRect(x,y,w,h)&lt;/code&gt; persegi transparan untuk menghapus.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Seperti biasa, kita harus memberikan titik koordinat &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt;. Sementara
+nilai &lt;code&gt;w&lt;/code&gt; dan &lt;code&gt;h&lt;/code&gt; untuk lebar dan tingginya.&lt;/p&gt;
+
+&lt;p&gt;Mari kita coba:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;Tutorial HTML 5 Canvas&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+
+        &amp;lt;canvas id=&amp;quot;myCanvas&amp;quot; width=&amp;quot;640&amp;quot; height=&amp;quot;480&amp;quot; style=&amp;quot;border:1px solid #000000;&amp;quot;&amp;gt;
+        &amp;lt;/canvas&amp;gt;
+
+        &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+            var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+            var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+            ctx.strokeRect(10,10,100,100);
+            ctx.fillRect(120,10,100,100);
+
+        &amp;lt;/script&amp;gt;
+
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/hasil-gambar-persegi-di-canvas.png&#34; alt=&#34;Menggambar Persegi pada Canvas&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu bagaimana contoh yang &lt;code&gt;clearRect()&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Method &lt;code&gt;clearRect()&lt;/code&gt; digunakan untuk menghapus gambar.&lt;/p&gt;
+
+&lt;p&gt;Contohnya: Kita ingin menhapus pada titik &lt;code&gt;(5,5)&lt;/code&gt; sampai &lt;code&gt;(20,20)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+ctx.strokeRect(10,10,100,100);
+ctx.clearRect(5,5,20,20);
+ctx.fillRect(120,10,100,100);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/hasil-gambar-clearrect.png&#34; alt=&#34;Menggambar Persegi ClaerRect pada Canvas&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;cara-menggambar-segitiga-pada-canvas&#34;&gt;Cara Menggambar Segitiga pada Canvas&lt;/h3&gt;
+
+&lt;p&gt;Segitiga tidak memiliki method tesendiri seperti persegi &lt;em&gt;(rectangle)&lt;/em&gt;.
+Namun, bukan berarti kita tidak bisa menggambarnya.&lt;/p&gt;
+
+&lt;p&gt;Segitiga dapat digambar menggunakan fungsi/method dari garis.&lt;/p&gt;
+
+&lt;p&gt;Contohnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+
+ctx.beginPath(); // mulai menggmabar
+ctx.moveTo(100, 100); // titik awal
+ctx.lineTo(100, 300); // titik ke-2
+ctx.lineTo(300, 300); // titik ke-3
+ctx.closePath(); // titik ke-3 ke titik awal
+
+// buat garis
+ctx.stroke();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/hasil-gambar-segitiga-di-canvas.png&#34; alt=&#34;Menggambar Segitiga pada Canvas&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Perhatikan&lt;/strong&gt;: di sana ada fungsi &lt;code&gt;ctx.closePath()&lt;/code&gt;, tugasnya untuk menggambar
+garis dari titik terakhir ke titik awal.&lt;/p&gt;
+
+&lt;p&gt;Pertama gambar garis dari titik awal ke titik ke-2:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ctx.moveTo(100, 100);
+ctx.lineTo(100, 300);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/titik-awal-ke-2.png&#34; alt=&#34;Gambar garis dari titik awal ke titik ke-2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu buat garis dari titik ke-2 menuju ke titik 3:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ctx.lineTo(300, 300);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/titik-2-3.png&#34; alt=&#34;Gambar garis dari titik ke-2 menuju titik ke-3&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Terakhir, buat garis dari titik ke-3 menuju ke titik awal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ctx.closePath();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/closePath.png&#34; alt=&#34;Gambar garis dari titik ke-3 ke titik awal&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka jadilah segitiga&amp;hellip; :smile:&lt;/p&gt;
+
+&lt;h3 id=&#34;cara-menggambar-lingkaran-pada-canvas&#34;&gt;Cara Menggambar Lingkaran pada Canvas&lt;/h3&gt;
+
+&lt;p&gt;Lingkaran digambar dengan method &lt;code&gt;arc()&lt;/code&gt;. Method ini memiliki 5 parameter
+yang wajib diberikan.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ctx.arc(x, y, r, sudutAwal, sudutAkhir, arah);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Paramter:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;x&lt;/code&gt; untuk menentukan koordinat &lt;code&gt;x&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt; untuk menentukan koordinat &lt;code&gt;y&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;r&lt;/code&gt; untuk menentukan jari-jari lingkaran;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudutAwal&lt;/code&gt; sudut awal dengan satuan radian (&lt;code&gt;0&lt;/code&gt; radian dimulai dari arah jam 3);&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudutAkhir&lt;/code&gt; sudut akhir dengan satuan radian;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;arah&lt;/code&gt; (opsional) untuk menentukan arah menggambar lingkaran:
+
+&lt;ul&gt;
+&lt;li&gt;jika diberikan nilai &lt;code&gt;true&lt;/code&gt; maka akan menggambar berlawanan dengan arah jarum jam.&lt;/li&gt;
+&lt;li&gt;jika &lt;code&gt;false&lt;/code&gt; maka akan menggambar searah dengan jarum jam.&lt;/li&gt;
+&lt;li&gt;Nilai default-nya adalah &lt;code&gt;false&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Paham&amp;hellip;?&lt;/p&gt;
+
+&lt;p&gt;Mari kita coba:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2*Math.PI);
+ctx.stroke();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/hasil-gambar-lingkaran-di-canvas.png&#34; alt=&#34;Hasil menggmabar lingkaran pada canvas&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Penjelasan&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Pertama kita mulai menggmabar dengan &lt;code&gt;beginPath()&lt;/code&gt;, gunakan selalu fungsi ini
+untuk mulai menggmabar.&lt;/p&gt;
+
+&lt;p&gt;Kedua menggmabar lingkaran dengan fungsi &lt;code&gt;arc()&lt;/code&gt; dengan parameter yang ditentukan.
+Lingkaran digambar pada titik &lt;code&gt;(95, 50)&lt;/code&gt; dengan ukuran jari-jari &lt;code&gt;40&lt;/code&gt; piksel.&lt;/p&gt;
+
+&lt;p&gt;Mulai digambar dari arah jam 3 (&lt;code&gt;0&lt;/code&gt; radian) menuju kembali ke arah jam 3 (&lt;code&gt;2*π&lt;/code&gt; radian).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Circle_radians.gif/300px-Circle_radians.gif&#34; alt=&#34;Animasi Radian&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gampang kan?&lt;/p&gt;
+
+&lt;h3 id=&#34;cara-meyisipkan-teks-pada-canvas&#34;&gt;Cara Meyisipkan Teks pada Canvas&lt;/h3&gt;
+
+&lt;p&gt;Ada dua fungsi untuk membuat teks:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;strokeText()&lt;/code&gt; untuk teks dengan garis luar &lt;em&gt;(outline)&lt;/em&gt; saja.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fillText()&lt;/code&gt; untuk teks dengan warna (default hitam).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Fungsi tersebut memiliki tiga parameter yang wajib diberikan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ctx.fillText(&amp;quot;Teks yang akan dibuat&amp;quot;, x, y);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mari kita coba:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+ctx.font = &amp;quot;30px arial&amp;quot;;
+ctx.fillText(&amp;quot;Terima kasih sudah berkunjung ke:&amp;quot;,10,50);
+
+ctx.font = &amp;quot;64px Arial&amp;quot;;
+ctx.strokeText(&amp;quot;PETANIKODE.com&amp;quot;,10,120);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/hasil-gambar-teks-di-canvas.png&#34; alt=&#34;Hasil menggmabar teks pada canvas&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;cara-me-render-gambar-pada-canvas&#34;&gt;Cara Me-render Gambar pada Canvas&lt;/h3&gt;
+
+&lt;p&gt;Terakhir, kita akan coba me-render gambar ke canvas. Untuk melakukannya,
+kita membutuhkan sebuah gambar dan menggunakan fungsi &lt;code&gt;drawImage()&lt;/code&gt; untuk
+merender-nya ke canvas.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;drawImage(img, x, y);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kita akan menggunakan gambar dari W3Schools: &lt;a href=&#34;https://www.w3schools.com/html/img_the_scream.jpg&#34;&gt;img_the_scream.jpg&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pertama silahkan buat elemen &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p&amp;gt;Gambar yang akan di-render:&amp;lt;/p&amp;gt;
+&amp;lt;img id=&amp;quot;scream&amp;quot; src=&amp;quot;https://www.w3schools.com/html/img_the_scream.jpg&amp;quot; alt=&amp;quot;The Scream&amp;quot; width=&amp;quot;220&amp;quot; height=&amp;quot;277&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian buat tombol render:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p&amp;gt;&amp;lt;button onclick=&amp;quot;renderImage()&amp;quot;&amp;gt;Render Image&amp;lt;/button&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Terakhir membuat fungsi &lt;code&gt;renderImage()&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function renderImage() {
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    // ambil gambar dari elemen &amp;lt;img&amp;gt;
+    var img = document.getElementById(&amp;quot;scream&amp;quot;);
+
+    // render ke Canvas
+    ctx.drawImage(img,10,10);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kode lengkap:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;Tutorial HTML 5 Canvas&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+
+        &amp;lt;p&amp;gt;Gambar yang akan di-render:&amp;lt;/p&amp;gt;
+        &amp;lt;img id=&amp;quot;scream&amp;quot; src=&amp;quot;https://www.w3schools.com/html/img_the_scream.jpg&amp;quot; alt=&amp;quot;The Scream&amp;quot; width=&amp;quot;220&amp;quot; height=&amp;quot;277&amp;quot;&amp;gt;
+
+        &amp;lt;p&amp;gt;&amp;lt;button onclick=&amp;quot;renderImage()&amp;quot;&amp;gt;Render Image&amp;lt;/button&amp;gt;&amp;lt;/p&amp;gt;
+
+        &amp;lt;canvas id=&amp;quot;myCanvas&amp;quot; width=&amp;quot;640&amp;quot; height=&amp;quot;480&amp;quot; style=&amp;quot;border:1px solid #000000;&amp;quot;&amp;gt;
+        &amp;lt;/canvas&amp;gt;
+
+
+        &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+        function renderImage() {
+            var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+            var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+            // ambil gambar dari elemen &amp;lt;img&amp;gt;
+            var img = document.getElementById(&amp;quot;scream&amp;quot;);
+
+            // render ke Canvas
+            ctx.drawImage(img,10,10);
+        }
+        &amp;lt;/script&amp;gt;
+
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/render-image-ke-canvas.png&#34; alt=&#34;Hasil me-render image ke canvas&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mudah bukan&amp;hellip;?&lt;/p&gt;
+
+&lt;h2 id=&#34;pemrograman-game-berbasis-html5&#34;&gt;Pemrograman Game Berbasis HTML5&lt;/h2&gt;
+
+&lt;p&gt;Ilmu di atas tidaklah cukup untuk membuat game berbasis HTML5 dari nol,
+karena hanya pengenalan saja. Kita harus pelajari ilmu yang lainnya,
+seperti:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cara Membuat Animasi di Canvas;&lt;/li&gt;
+&lt;li&gt;Cara Membuat Gravitasi dan Menerapkan Elemen Fisika Lainnya;&lt;/li&gt;
+&lt;li&gt;Cara Memutar Audio untuk Game;&lt;/li&gt;
+&lt;li&gt;Logika Game dan sistem Poin;&lt;/li&gt;
+&lt;li&gt;Logika Kode untuk Benturan &lt;em&gt;(Collision)&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;dan sebagainya.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bila kamu tidak ingin membuat semua itu dari nol, gunakanlah &lt;em&gt;Game Engine&lt;/em&gt;.
+Karena sudah dibuatkan di sana dan kita tinggal pakai saja.&lt;/p&gt;
+
+&lt;p&gt;Daftar Game Engine berbasis HTML5 dapat dilihat di: &lt;a href=&#34;https://html5gameengine.com/&#34;&gt;html5gameengine.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;pemrograman-grafis-atau-grafika-komputer&#34;&gt;Pemrograman Grafis atau Grafika Komputer&lt;/h2&gt;
+
+&lt;p&gt;Nah, buat kamu yang tertarik ke pemrograman grafis, bisa coba-coba ide
+eksperimen berikut:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Membuat Aplikasi &lt;em&gt;Painting&lt;/em&gt; Berbasis HTML5;&lt;/li&gt;
+&lt;li&gt;Membuat Photoshop sendiri;&lt;/li&gt;
+&lt;li&gt;Menerapkan algoritma grafika komputer seperti algoritma membuat garis;&lt;/li&gt;
+&lt;li&gt;Pengolahan Citra dan &lt;em&gt;Computer Vision&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;Membuat Diagram Interaktif;&lt;/li&gt;
+&lt;li&gt;dan sebagainya.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Terima kasih sudah menyimak artikel ini sampai akhir. Selamat belajar
+dan berimajinasi dengan kode.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CommitStrip &amp;ndash; &lt;a href=&#34;http://www.commitstrip.com/en/2015/07/15/a-brief-history-of-flash/&#34;&gt;A Brief History of Flash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;W3schools &amp;ndash; &lt;a href=&#34;https://www.w3schools.com/html/html5_canvas.asp&#34;&gt;HTML5 Canvas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Wikipedia &amp;ndash; &lt;a href=&#34;https://id.wikipedia.org/wiki/Titik_(geometri)&#34;&gt;Titik (geometri)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Wikipedia &amp;ndash; &lt;a href=&#34;https://id.wikipedia.org/wiki/Radian&#34;&gt;Radian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Kirupa &amp;ndash; &lt;a href=&#34;https://www.kirupa.com/html5/drawing_triangles_on_the_canvas.htm&#34;&gt;Drawing Triangles on the Canvas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- FB cap:  Karena menggambar tidak harus menggunakan pensil, tapi juga
+ bisa menggunakan kode. :smile:
+
+Mari kita pelajari caranya...
+ --&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutorial PHP dan MySQL: Membuat Aplikasi CRUD [Studi Kasus Pendaftaran Siswa Baru]</title>
       <link>https://www.petanikode.com/tutorial-php-mysql/</link>
       <pubDate>Sat, 10 Jun 2017 17:42:42 +0000</pubDate>
@@ -2723,193 +3260,6 @@ Saya tidak pernah belajar bahasa pemrograman Go sama sekali.&lt;/p&gt;
     layout=&#34;responsive&#34;
     alt=&#34;Ekspor kontent blog&#34;&gt;&lt;/amp-img&gt;
 Selanjutnya, kita bisa pindahkan semua file &lt;em&gt;markdown&lt;/em&gt; ini ke direktori &lt;em&gt;content&lt;/em&gt; di Hugo.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Migrasi Petani Kode dari Blogger ke Hugo</title>
-      <link>https://www.petanikode.com/migrasi-petani-kode-dari-blogger-ke-hugo/</link>
-      <pubDate>Wed, 11 Jan 2017 22:06:22 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/migrasi-petani-kode-dari-blogger-ke-hugo/</guid>
-      <description>
-
-&lt;p&gt;Tercatat pada tanggal 11 Januari 2017, website Petani Kode mulai dikembangkan
-dengan mesin &lt;em&gt;(engine)&lt;/em&gt; Hugo. Hugo adalah salah satu mesin generator web statis
-yang berusia cukup muda.&lt;/p&gt;
-
-&lt;p&gt;Hugo ditulis dengan bahasa pemrograman Go dan diklaim
-&lt;a href=&#34;https://www.youtube.com/watch?v=CdiDYZ51a2o&#34;&gt;lebih cepat&lt;/a&gt; dari mesin sejenisnya
- seperti &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt;, &lt;a href=&#34;https://middlemanapp.com/&#34;&gt;Middleman&lt;/a&gt;,
-&lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt;, dsb.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/2017/01/5-alasan-petani-kode-migrasi-ke-hugo/&#34;&gt;5 Alasan Petani Kode Migrasi ke Hugo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pengembangan website Petani Kode berlangsung cukup cepat. Meskipun bahasa
-pemrograman Go belum pernah saya pelajari dan pahami. Namun, berkat kerja
-keras dan semangat website ini bisa jadi dalam waktu sekejap. Ya, karena di
-Hugo kita tidak menulis kode Go, melainkan hanya bermain pada template Go.&lt;/p&gt;
-
-&lt;p&gt;Kesulitan saya rasakan ketika belum paham fungsi dan variabel dalam template Go.
-Namun, itu bukanlah kendala. Karena Hugo sudah menyediakan
-&lt;a href=&#34;https://gohugo.io/overview/introduction/&#34;&gt;dokumentasi&lt;/a&gt; dan
-&lt;a href=&#34;http://discuss.gohugo.io&#34;&gt;forum disksui&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Saya tidak sadar sudah menulis kode CSS hampir 700 baris. Template ini jadi
-dalam waktu dua setengah hari. Template ini menerapkan &lt;a href=&#34;https://www.petanikode.com/topik/amp&#34;&gt;AMP&lt;/a&gt; yang
-dikembangkan dari temlpate &lt;a href=&#34;https://gohugo-amp.gohugohq.com/&#34;&gt;AMP Starter&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;proses-migrasi&#34;&gt;Proses Migrasi&lt;/h2&gt;
-
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Pembuatan Template Hugo (11~13 Januari)&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://www.petanikode.com/2017/01/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/&#34;&gt;Impor Artikel dari Blogger ke Hugo&lt;/a&gt; (13~14 Januari)&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://www.petanikode.com/2017/01/cara-hosting-hugo-di-github/&#34;&gt;Deploy ke domain utama petanikode.com&lt;/a&gt; (15~17 Januari)&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://www.petanikode.com/2017/01/cara-redirect-domain-dengan-cloudflare/&#34;&gt;Redirect link lama ke link baru&lt;/a&gt; (17 Januari)&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Edit Artikel (18 Januari [1%])&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;sebelum-dan-sesudah-migrasi&#34;&gt;Sebelum dan Sesudah Migrasi&lt;/h2&gt;
-
-&lt;p&gt;Tabel perbandingan:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Item&lt;/th&gt;
-&lt;th&gt;Sebelum&lt;/th&gt;
-&lt;th&gt;Sesudah&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Hosting&lt;/td&gt;
-&lt;td&gt;Blogger&lt;/td&gt;
-&lt;td&gt;Gitlab&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Hosting Gambar&lt;/td&gt;
-&lt;td&gt;Google/Blogger&lt;/td&gt;
-&lt;td&gt;Google, Dropbox, Flickr, dll&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;DNS&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://member.idwebhost.com/aff.php?aff=7137&#34;&gt;Idwebhost&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Cloudflare&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Engine&lt;/td&gt;
-&lt;td&gt;Blogger&lt;/td&gt;
-&lt;td&gt;Hugo&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Template Engine&lt;/td&gt;
-&lt;td&gt;XML Blogger&lt;/td&gt;
-&lt;td&gt;Go Template, Ace&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Format Artikel&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;Markdown, HTML&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Font&lt;/td&gt;
-&lt;td&gt;Open Sans, Roboto, Merriweather, Font-awesome&lt;/td&gt;
-&lt;td&gt;Merriweather, Open Sans, Font-awesome&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Font Provider&lt;/td&gt;
-&lt;td&gt;Google Font, Wordpress, CDN Bootstrap&lt;/td&gt;
-&lt;td&gt;Google Font, CDN Bootstrap&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Sistem Komentar&lt;/td&gt;
-&lt;td&gt;Disqus, Blogger, Facebook&lt;/td&gt;
-&lt;td&gt;Disqus&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Petani Kode memilih hosting di Gitlab karena di sana bisa membuat &lt;em&gt;private&lt;/em&gt; repositori dan langsung terintegaris dengan CI. Sedangkan di Github, tidak bisa membuat repositori &lt;em&gt;private&lt;/em&gt; kalau menggunakan akun gratis. Kemudian, saya juga pernah mencoba di Bitbucket. Akan tetapi terbatas dengan deploy, minimal 5x deploy per hari.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: (01 Februari 2017) Petani kode migrasi ke Github, karena sering gagal
-melakukan build di CI Gitlab.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Item&lt;/th&gt;
-&lt;th&gt;Github&lt;/th&gt;
-&lt;th&gt;Gitlab&lt;/th&gt;
-&lt;th&gt;Bitbucket&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Maksimal Ruang Repositori&lt;/td&gt;
-&lt;td&gt;1GB&lt;/td&gt;
-&lt;td&gt;10Gb&lt;/td&gt;
-&lt;td&gt;10GB&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Private Repository&lt;/td&gt;
-&lt;td&gt;premium&lt;/td&gt;
-&lt;td&gt;ya&lt;/td&gt;
-&lt;td&gt;ya&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Dukungan HTTPS&lt;/td&gt;
-&lt;td&gt;github.io&lt;/td&gt;
-&lt;td&gt;ya&lt;/td&gt;
-&lt;td&gt;ya&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Pages&lt;/td&gt;
-&lt;td&gt;Github pages&lt;/td&gt;
-&lt;td&gt;Gitlab Pages&lt;/td&gt;
-&lt;td&gt;Aerobatic&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Sebelum migrasi, penulisan artikel dilakukan dengan membuka Blogger. Namun setelah migrasi, penulisan artikel bisa dilakukan di teks editor mana saja. Rasanya seperti menulis kode, dan kalau ingin diterbitkan tinggal melakukan &lt;em&gt;push&lt;/em&gt; ke repositori git.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-src=&#34;https://1.bp.blogspot.com/-z2_QdrUKmfE/WHx5QoVkwRI/AAAAAAAADok/AtwB9HQYNV4cxVuOFLlwgYCch_gi41rjQCK4B/s1600/tulisartikel-blogger-dan-hugo.jpg&#34;
-width=&#34;720&#34;
-height=&#34;380&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Perbandingan skor kecepatan, &lt;a href=&#34;https://gtmetrix.com/compare/iHmjKf5p/OF52WEdH&#34;&gt;analisis gtmetrix&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-src=&#34;http://i.imgur.com/gyQ5t6a.png&#34;
-width=&#34;1016&#34;
-height=&#34;570&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Validasi AMP&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-src=&#34;http://i.imgur.com/5sv5CXW.jpg&#34;
-width=&#34;720&#34;
-height=&#34;380&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 </description>
     </item>
     

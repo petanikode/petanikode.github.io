@@ -130,7 +130,7 @@ dengan ukuran 1x1 piksel.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Variabel &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt; kita ganti dengan nilai koordinatnya, misalkan kita ingin
-menggambar titik pada titik (10,10).&lt;/p&gt;
+menggambar titik pada koordinat &lt;code&gt;(10,10)&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ctx.fillRect(10,10,1,1);
 &lt;/code&gt;&lt;/pre&gt;

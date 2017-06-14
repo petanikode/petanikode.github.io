@@ -688,7 +688,7 @@ bisa membuat atribut &lt;code&gt;checked&lt;/code&gt; dan &lt;code&gt;selected&l
 
 include(&amp;quot;config.php&amp;quot;);
 
-// cek apakah tombol daftar sudah diklik atau blum?
+// cek apakah tombol simpan sudah diklik atau blum?
 if(isset($_POST[&#39;simpan&#39;])){
 
 	// ambil data dari formulir

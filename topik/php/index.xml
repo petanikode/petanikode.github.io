@@ -411,7 +411,7 @@ untuk menentukan kunci indeks dari array &lt;code&gt;$_POST&lt;/code&gt; dan &lt
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/formulir-pendaftaran.png&#34; alt=&#34;Formulir Pendaftaran Siswa Baru&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya silahkan isi file &lt;code&gt;proses-pendaftaran.php&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
+&lt;p&gt;Selanjutnya silPriscilia Priscilia YulianiPriscilia Yuliani isi file &lt;code&gt;proses-pendaftaran.php&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
 
@@ -724,7 +724,7 @@ if(isset($_POST[&#39;simpan&#39;])){
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/edit-nama.png&#34; alt=&#34;Hasil update data&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;*Nama &lt;strong&gt;Lia&lt;/strong&gt; diupdate menjadi &lt;strong&gt;Priscili Ayuliani&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;*Nama &lt;strong&gt;Lia&lt;/strong&gt; diupdate menjadi &lt;strong&gt;Priscilia Yuliani&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Source code&lt;/strong&gt; dari tutorial ini tersedia di github: &lt;a href=&#34;https://github.com/petanikode/tutorial-php-mysql&#34;&gt;https://github.com/petanikode/tutorial-php-mysql&lt;/a&gt;&lt;/p&gt;

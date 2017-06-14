@@ -31,7 +31,7 @@ juga digunakan untuk memutar video.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/flash-html.jpg&#34; alt=&#34;Flash Player HTML5 Meme&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;HTML5 membawa banyak elemen baru yang menggantikan tugas flash dalam browser.
+&lt;p&gt;HTML5 membawa banyak elemen baru yang menggantikan tugas Flash dalam browser.
 Salah satunya adalah &lt;em&gt;canvas&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;apa-itu-canvas&#34;&gt;Apa itu Canvas?&lt;/h2&gt;
@@ -168,7 +168,7 @@ menggambar titik pada titik (10,10).&lt;/p&gt;
 
 &lt;h3 id=&#34;cara-menggambar-garis-pada-canvas&#34;&gt;Cara Menggambar Garis pada Canvas&lt;/h3&gt;
 
-&lt;p&gt;Garis adalah kumpulan dari titik-titik yang saling berhubungan.
+&lt;p&gt;Garis adalah kumpulan dari titik-titik yang saling terhubung.
 Ada empat fungsi yang kita butuhkan untuk membuat garis.&lt;/p&gt;
 
 &lt;ol&gt;
@@ -447,7 +447,7 @@ merender-nya ke canvas.&lt;/p&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Kode lengkap:&lt;/p&gt;
+&lt;p&gt;Kode lengkapnya:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
 &amp;lt;html&amp;gt;

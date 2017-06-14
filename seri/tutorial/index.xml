@@ -411,6 +411,14 @@ ctx.strokeText(&amp;quot;PETANIKODE.com&amp;quot;,10,120);
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/hasil-gambar-teks-di-canvas.png&#34; alt=&#34;Hasil menggmabar teks pada canvas&#34; /&gt;&lt;/p&gt;
 
+&lt;p&gt;Ada pengisian atribut &lt;code&gt;font&lt;/code&gt; pada kode di atas.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ctx.font = &amp;quot;64px Arial&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fungsinya untuk menentukan jenis font serta ukurannya. Nilainya seperti
+nilai atribut &lt;code&gt;font&lt;/code&gt; pada CSS.&lt;/p&gt;
+
 &lt;h3 id=&#34;cara-me-render-gambar-pada-canvas&#34;&gt;Cara Me-render Gambar pada Canvas&lt;/h3&gt;
 
 &lt;p&gt;Terakhir, kita akan coba me-render gambar ke canvas. Untuk melakukannya,

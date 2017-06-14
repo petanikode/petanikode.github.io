@@ -724,7 +724,7 @@ if(isset($_POST[&#39;simpan&#39;])){
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/edit-nama.png&#34; alt=&#34;Hasil update data&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;*Nama &lt;strong&gt;Lia&lt;/strong&gt; diupdate menjadi &lt;strong&gt;Priscilia Yuliani&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;*Nama &lt;strong&gt;Lia&lt;/strong&gt; di-update menjadi &lt;strong&gt;Priscilia Yuliani&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Source code&lt;/strong&gt; dari tutorial ini tersedia di github: &lt;a href=&#34;https://github.com/petanikode/tutorial-php-mysql&#34;&gt;https://github.com/petanikode/tutorial-php-mysql&lt;/a&gt;&lt;/p&gt;

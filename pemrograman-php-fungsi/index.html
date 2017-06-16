@@ -212,7 +212,7 @@ function namaFungsi(){ ... }  Kode intruksi dapat di tulis di dalam kurung kuraw
   },
   "headline": "Tutorial Pemrograman PHP: Prosedur dan Fungsi",
   "description": "Banyak fungsi build-in dari php yang sering kita gunakan, seperti print(), print_r(), unset(), dll. Kita juga dapat membuat fungsi sendiri sesuai keinginan dan kebutuhan.\n\nFungsi adalah sekumpulan intruksi yang dibungkus dalam sebuah blok. Fungsi dapat digunakan kapan saja, sesuai kebutuhan. Fungsi di PHP dapat dibuat dngan kata kunci function diikuti dengan nama fungsinya. Contoh:\nfunction namaFungsi(){ ... }  Kode intruksi dapat di tulis di dalam kurung kurawal ({.",
-  "wordCount":  565 ,
+  "wordCount":  537 ,
   "datePublished" : "2015-03-11T19:33:00",
   "dateModified" : "2015-03-11T19:33:00",
   "image" : {
@@ -1195,7 +1195,7 @@ padding: 16px;
 
 <p>Fungsi adalah sekumpulan intruksi yang dibungkus dalam sebuah blok. Fungsi dapat digunakan kapan saja, sesuai kebutuhan. Fungsi di PHP dapat dibuat dngan kata kunci <code>function</code> diikuti dengan nama fungsinya. Contoh:</p>
 
-<pre><code>function namaFungsi(){
+<pre><code class="language-php">function namaFungsi(){
 ...
 }
 </code></pre>
@@ -1211,7 +1211,7 @@ echo &quot;Senang berkenalan dengan anda&lt;br/&gt;&quot;;
 
 <p>Fungsi yang sudah dibuat tidak akan menghasilkan apapun kalau tidak dipanggil. Kita dapat memanggil fungsi dengan menuliskan namanya. Contoh:</p>
 
-<pre><code>perknalan();
+<pre><code class="language-php">perknalan();
 </code></pre>
 
 <p>Jadi, kode lengkapnya seperti ini:</p>
@@ -1238,11 +1238,11 @@ perkenalan();
 
 <p><a href="http://3.bp.blogspot.com/-1y4-C_3IUMo/VQAlU3fyEwI/AAAAAAAABgk/mN2EI5SQAL4/s1600/output%2Bfungsi%2Bperkenalan.png"><img src="http://3.bp.blogspot.com/-1y4-C_3IUMo/VQAlU3fyEwI/AAAAAAAABgk/mN2EI5SQAL4/s1600/output%2Bfungsi%2Bperkenalan.png" alt="" /></a></p>
 
-<h1 id="fungsi-dengan-parameter-fungsi-dengan-parameter">[](#fungsi-dengan-parameter)Fungsi dengan parameter</h1>
+<h2 id="fungsi-dengan-parameter">Fungsi dengan parameter</h2>
 
 <p>Supaya intruksi yang di dalam fungsi lebih dinamis, kita dapat menggunakan parameter untuk memasukkan sebuah nilai ke dalam fungsi. Nilai tersebut akan diolah di dalam fungsi. Misalkan, pada contoh fungsi yang tadi, tidak mungkin nama yang dicetak adalah <em>ardianta</em> saja dan salam yang dipakai tidak selalu <em>assalamualaikum</em>. Maka, kita dapat memodifikasinya menjadi seperti ini:</p>
 
-<pre><code>&lt;?php
+<pre><code class="language-php">&lt;?php
 // mmbuat fungsi
 function perkenalan($nama, $salam){
 echo $salam.&quot;, &quot;;
@@ -1266,7 +1266,7 @@ perkenalan($saya, $ucapanSalam);
 
 <p><a href="http://1.bp.blogspot.com/-ijTlKsYY1m4/VQAlgKCdieI/AAAAAAAABgs/Fq9qcbWiUwc/s1600/output%2Bfungsi%2Bdngan%2Bparameter.png"><img src="http://1.bp.blogspot.com/-ijTlKsYY1m4/VQAlgKCdieI/AAAAAAAABgs/Fq9qcbWiUwc/s1600/output%2Bfungsi%2Bdngan%2Bparameter.png" alt="" /></a></p>
 
-<h1 id="paramter-dengan-nilai-default-paramter-dengan-nilai-default">[](#paramter-dengan-nilai-default)Paramter dengan nilai default</h1>
+<h2 id="paramter-dengan-nilai-default">Paramter dengan nilai default</h2>
 
 <p>Nilai <em>default</em> dapat kita berikan di parameter. Nilai <em>default</em> berfungsi untuk mengisi nilai sebuah parameter, kalau parameter tersebut tidak diisi nilainya. Misalnya, saya lupa mengisi parameter <em>salam</em>, maka program akan <em>error</em>. Oleh karena itu, kita perlu memberikan nilai <em>default</em> supaya tidak <em>error</em>. contoh:</p>
 
@@ -1294,7 +1294,7 @@ perkenalan($saya);
 
 <p><a href="http://3.bp.blogspot.com/-RBpZvatAD-4/VQAlqcDxBzI/AAAAAAAABg0/Ex0XkTbyMws/s1600/parameter%2Bdefault%2Bfungsi%2Bdi%2Bphp.png"><img src="http://3.bp.blogspot.com/-RBpZvatAD-4/VQAlqcDxBzI/AAAAAAAABg0/Ex0XkTbyMws/s1600/parameter%2Bdefault%2Bfungsi%2Bdi%2Bphp.png" alt="" /></a></p>
 
-<h1 id="fungsi-yang-megembalikan-nilai-fungsi-yang-megembalikan-nilai">[](#fungsi-yang-megembalikan-nilai)Fungsi yang megembalikan nilai</h1>
+<h2 id="fungsi-yang-megembalikan-nilai">Fungsi yang megembalikan nilai</h2>
 
 <p>Hasil pengolahan nilai dari fungsi mungkin saja kita butuhkan untuk pemrosesan berikutnya. Oleh karena itu, kita harus membuat fungsi yang dapat mengembalikan nilai. Pengembalian nilai di fungsi dapat menggunakan kata kunci <code>return</code>. Contoh:</p>
 
@@ -1313,11 +1313,11 @@ echo &quot;Umur saya adalah &quot;. hitungUmur(1994, 2015) .&quot; tahun&quot;;
 
 <p><a href="http://2.bp.blogspot.com/-pz-LBoHVcXQ/VQAl3YAGdqI/AAAAAAAABg8/CYCK_Njq5u8/s1600/fungsi%2Bdengan%2Bnilai%2Bkembalian.png"><img src="http://2.bp.blogspot.com/-pz-LBoHVcXQ/VQAl3YAGdqI/AAAAAAAABg8/CYCK_Njq5u8/s1600/fungsi%2Bdengan%2Bnilai%2Bkembalian.png" alt="" /></a></p>
 
-<h1 id="memangil-fungsi-di-dalam-fungsi-memangil-fungsi-di-dalam-fungsi">[](#memangil-fungsi-di-dalam-fungsi)Memangil fungsi di dalam fungsi</h1>
+<h2 id="memangil-fungsi-di-dalam-fungsi">Memangil fungsi di dalam fungsi</h2>
 
 <p>Fungsi yang sudah kita buat, dapat juga dipanggil di dalam fungsi lain. Contoh:</p>
 
-<pre><code>&lt;?php
+<pre><code class="language-php">&lt;?php
 // membuat fungsi
 function hitungUmur($thn_lahir, $thn_sekarang){
 $umur = $thn_sekarang - $thn_lahir;
@@ -1343,11 +1343,11 @@ perkenalan(&quot;Ardianta&quot;);
 
 <p><a href="http://4.bp.blogspot.com/-Nspns0PQ_Ek/VQAmAenDD9I/AAAAAAAABhE/8A7RneI-SGw/s1600/memanggil%2Bfungsi%2Bdi%2Bdalam%2Bfungsi.png"><img src="http://4.bp.blogspot.com/-Nspns0PQ_Ek/VQAmAenDD9I/AAAAAAAABhE/8A7RneI-SGw/s1600/memanggil%2Bfungsi%2Bdi%2Bdalam%2Bfungsi.png" alt="" /></a></p>
 
-<h1 id="fungsi-rekursif-fungsi-rekursif">[](#fungsi-rekursif)Fungsi rekursif</h1>
+<h2 id="fungsi-rekursif">Fungsi rekursif</h2>
 
 <p>Fungsi rekursif adalah fungsi yang memanggil dirinya sendiri. Fungsi ini biasanya digunakan untuk menyelesaikan masalah sepeti faktorial, bilangan fibbonaci, pemrograman dinamis, dll. Contoh fungsi rekursif:</p>
 
-<pre><code>&lt;?php
+<pre><code class="language-php">&lt;?php
 
 function faktorial($angka) {
 if ($angka &lt; 2) {
@@ -1368,7 +1368,7 @@ echo &quot;faktorial 5 adalah &quot; . faktorial(5);
 
 <p><a href="http://2.bp.blogspot.com/-KRYcEad1QJ4/VQAmIptAHuI/AAAAAAAABhM/0VPSg1iaMXY/s1600/fungsi%2Brekursif%2Bdi%2Bphp.png"><img src="http://2.bp.blogspot.com/-KRYcEad1QJ4/VQAmIptAHuI/AAAAAAAABhM/0VPSg1iaMXY/s1600/fungsi%2Brekursif%2Bdi%2Bphp.png" alt="" /></a></p>
 
-<p>Panduan membuat fungsi di php ini, saya akhiri sampai di sini. Sebenarnya, masih ada lagi yang pelu di bahas tentang fungsi. Insa&rsquo;allah saya akan membahasnya di tulisan berikutnya.</p>
+<!-- @TODO: Perbaiki dan tambahkan dengan meteri variabel global dan lokal -->
 
                 <div class="post-footer">
                 <div>Bagikan:

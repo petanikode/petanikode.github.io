@@ -10,12 +10,133 @@
     <atom:link href="https://www.petanikode.com/topik/xml/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Pengantar XML</title>
-      <link>https://www.petanikode.com/pengantar-xml/</link>
+      <title>Apa itu XML dan Kenapa Penting dalam Pemrograman?</title>
+      <link>https://www.petanikode.com/tutorial-xml-dasar/</link>
       <pubDate>Fri, 27 Feb 2015 17:47:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pengantar-xml/</guid>
-      <description>&lt;p&gt;XML (&lt;i&gt;Extensible Markup Language&lt;/i&gt;) adalah bahasa markah ekstensi yang berasal dari &lt;i&gt;Standard Generalized Markup Language&lt;/i&gt; (SGML). XML seperti HTML, tapi di XML, kita dapat membuat tag sendiri. XML digunakan untuk mengirim atau membawa data, sedangkan HTML digunakan untuk menampilkan data. XML biasanya digunakan untuk membuat API (&lt;i&gt;Aplication Programming Interface&lt;/i&gt;). Contoh teknologi yang menggunakan XML adalah &lt;a href=&#34;http://imtkj.blogspot.com/2014/09/serunya-membaca-blog-melalui-thunderbird.html&#34; rel=&#34;dofollow&#34; target=&#34;_blank&#34;&gt;RSS feed&lt;/a&gt;.&lt;/p&gt; &lt;a href=&#34;http://2.bp.blogspot.com/-4k_rsR13uZg/VPA2_2KZIxI/AAAAAAAABcU/JjlSi8unuIw/s1600/xml.jpg&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-4k_rsR13uZg/VPA2_2KZIxI/AAAAAAAABcU/JjlSi8unuIw/s1600/xml.jpg&#34; alt=&#34;XML&#34;/&gt;&lt;/a&gt; &lt;p&gt;Mari kita membuat sebuah berkas XML. Gunakan teks editor yang anda sukai. Kemudian buatlah berkas baru bernama &lt;samp&gt;kartu_nama.xml&lt;/samp&gt;. Dalam berkas ini, silahkan isi data diri anda.&lt;/p&gt; &lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34;?&amp;gt;&lt;br /&gt;&amp;lt;kartuNama&amp;gt;&lt;br /&gt;    &amp;lt;nama&amp;gt;&lt;br /&gt;        &amp;lt;awal&amp;gt;Ardianta&amp;lt;/awal&amp;gt;&lt;br /&gt;        &amp;lt;akhir&amp;gt;Pargo&amp;lt;/akhir&amp;gt;&lt;br /&gt;    &amp;lt;/nama&amp;gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;jenisKelamin&amp;gt;Laki-laki&amp;lt;/jenisKelamin&amp;gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;alamat&amp;gt;&lt;br /&gt;        &amp;lt;dusun&amp;gt;Sisik Goak&amp;lt;/dusun&amp;gt;&lt;br /&gt;        &amp;lt;desa&amp;gt;Sisik&amp;lt;/desa&amp;gt;&lt;br /&gt;        &amp;lt;kecamatan&amp;gt;Pringgarata&amp;lt;/kecamatan&amp;gt;&lt;br /&gt;        &amp;lt;kabupaten&amp;gt;Lombok Tengah&amp;lt;/kabupaten&amp;gt;&lt;br /&gt;    &amp;lt;/alamat&amp;gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;ponsel&amp;gt;087866866694&amp;lt;/ponsel&amp;gt;&lt;br /&gt;    &amp;lt;surel&amp;gt;ardianta_pargo@yahoo.co.id&amp;lt;/surel&amp;gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;sosialMedia&amp;gt;&lt;br /&gt;        &amp;lt;facebook&amp;gt;ardianta.pargo&amp;lt;/facebook&amp;gt;&lt;br /&gt;        &amp;lt;twitter&amp;gt;@ArdiantaPargo&amp;lt;/twitter&amp;gt;&lt;br /&gt;    &amp;lt;/sosialMedia&amp;gt;&lt;br /&gt;    &amp;lt;situsWeb&amp;gt;http://petanikode.blogspot.com&amp;lt;/situsWeb&amp;gt;&lt;br /&gt;&amp;lt;/kartuNama&amp;gt;&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-B3nnSYI7sOw/VOyUpOpPH7I/AAAAAAAABbY/BPWXZnIsbWg/s1600/kartu_nama_dalam_XML.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-B3nnSYI7sOw/VOyUpOpPH7I/AAAAAAAABbY/BPWXZnIsbWg/s1600/kartu_nama_dalam_XML.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Cobalah buka dengan pramban web, maka akan mendapatkan tempilan seperti ini:&lt;/p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-NIHLzB9OQxY/VOyUxVDPbaI/AAAAAAAABbg/LuXCKuyoMzg/s1600/tampilan_kartu_nama_XML_di_pramban_web.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-NIHLzB9OQxY/VOyUxVDPbaI/AAAAAAAABbg/LuXCKuyoMzg/s1600/tampilan_kartu_nama_XML_di_pramban_web.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Tampilannya asalnya memang seperti itu, karena tidak ada kode CSS yang mempengaruhi. XML dirancang untuk membawa data, jadi XML tidak berfokus pada tampilan. Bagian yang perlu anda pahami di XML: bagian deklarasi, elemen, tag, dan atribut.&lt;/p&gt; &lt;a href=&#34;http://3.bp.blogspot.com/-smMcFFni5NI/VPA2arAIDaI/AAAAAAAABcM/FFoV819nS9M/s1600/Bagian-bagian%2Bxml.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-smMcFFni5NI/VPA2arAIDaI/AAAAAAAABcM/FFoV819nS9M/s1600/Bagian-bagian%2Bxml.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Bagian deklarasi berfungsi untuk mengumumkan versi dokumen XML yang digunakan. Bagian deklarasi juga memiliki atribut yang lain seperti &lt;i&gt;encode&lt;/i&gt; untuk menentukan &lt;i&gt;encode&lt;/i&gt; karakter yang digunakan. Atribut adalah properti-properti yang melengkapi sebuah elemen. Sedangkan elemen adalah bagian dari XML yang terdiri dari tag pembuka, isi, dan tag penutup. Elemen yang tidak memiliki tag penutup seperti &lt;code&gt;&amp;lt;hr&amp;gt;&lt;/code&gt; dapat ditutup dengan menambahkan garis miring dibelakangnya: &lt;code&gt;&amp;lt;hr/&amp;gt;&lt;/code&gt;. Semua elemen di XML wajib ditutup.&lt;/p&gt; &lt;p&gt;Tulisan ini saya akhiri sampai di sini. Masih banyak hal yang perlu di bahas mengenai XML. Tapi, agar tulisan ini tidak terlalu panjang, insya&#39;allah saya akan membahasnya di tulisan yang lain. Selanjutnya anda bisa belajar &lt;a href=&#34;http://petanikode.blogspot.com/2015/02/mengurai-dokumen-xml-dengan-dom-api-di.html&#34; rel=&#34;dofollow&#34;&gt;mengurai dokumen XML di python&lt;/a&gt; atau bahasa pemrograman yang lain.&lt;/p&gt;
+      <guid>https://www.petanikode.com/tutorial-xml-dasar/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-4k_rsR13uZg/VPA2_2KZIxI/AAAAAAAABcU/JjlSi8unuIw/s1600/xml.jpg&#34;&gt;&lt;img src=&#34;http://2.bp.blogspot.com/-4k_rsR13uZg/VPA2_2KZIxI/AAAAAAAABcU/JjlSi8unuIw/s1600/xml.jpg&#34; alt=&#34;XML&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Saat pertama kali mendengar kata XML, mungkin anda akan bertanya-tanya&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Apa itu XML dan apa bedanya dengan HTML?&lt;/p&gt;
+
+&lt;p&gt;Kenapa kita harus belajar XML?&lt;/p&gt;
+
+&lt;p&gt;Baiklah mari kita coba cari tahu jawabannya dari sumber-sumber terpercaya.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-itu-xml-dan-apa-bedanya-dengan-html&#34;&gt;Apa itu XML dan Apa Bedanya dengan HTML?&lt;/h2&gt;
+
+&lt;p&gt;Menurut W3Schools:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;XML &lt;em&gt;(eXtensible Markup Language)&lt;/em&gt; adalah sebuah bahasa &lt;em&gt;markup&lt;/em&gt; seperti HTML
+yang didesain untuk menyimpan dan mengantarkan data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Perbedaanya dengan HTML:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;XML didesain untuk menyimpan dan membawa data;&lt;/li&gt;
+&lt;li&gt;Sedangkan HTML didesain untuk menampilkan data;&lt;/li&gt;
+&lt;li&gt;Tag pada XML bisa diciptakan sendiri, sedangkan HTML sudah ada tag-nya.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ngomong-ngomong data apa sih yang di maksud dan akan dibawa ke mana?&lt;/p&gt;
+
+&lt;p&gt;Begini&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Misalkan kita ingin mengirim padi dari Pulau Jawa ke Pulau Lombok.
+Padi akan dikirim melalui laut.&lt;/p&gt;
+
+&lt;p&gt;Apa yang akan kita lakukan?&lt;/p&gt;
+
+&lt;p&gt;Tentunya memasukan padi ke dalam karung dan dikemas agar tidak rusak.
+Kemudian ditata sedemikian rupa agar nanti mudah melakukan bongkar muat.&lt;/p&gt;
+
+&lt;p&gt;Kita anggap padi adalah datanya, maka XML di sini adalah aktifitas dari mengemas
+dan menata padinya.&lt;/p&gt;
+
+&lt;!-- ![Gambar mengirim data dengan XML vs telanjang] --&gt;
+
+&lt;p&gt;Jika dalam pemrograman data disimpan dalam variabel, maka untuk mengirim data
+itu ke aplikasi lain&amp;hellip;kita harus mengemasnya dengan XML.&lt;/p&gt;
+
+&lt;h2 id=&#34;contoh-penerapan-xml&#34;&gt;Contoh Penerapan XML&lt;/h2&gt;
+
+&lt;p&gt;Ada beberapa contoh penerapan XML dalam pemrograman yang pernah saya temukan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;XML digunakan untuk membawa data pada API serpti SOAP;&lt;/li&gt;
+&lt;li&gt;XML digunakan untuk membentuk struktur form pada pemrograman desktop
+seperti delphi, lazarus, vb, gtk, dll;&lt;/li&gt;
+&lt;li&gt;XML digunakan untuk membuat layout aplikasi android;&lt;/li&gt;
+&lt;li&gt;XML bertugas untuk membentuk struktur proyek pada java yang menggunakan Maven;&lt;/li&gt;
+&lt;li&gt;XML digunakan sebagai format file SVG, DOCX, dsb.&lt;/li&gt;
+&lt;li&gt;dan masih banyak lagi contoh penerapan XML.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;contoh-dokumen-xml&#34;&gt;Contoh Dokumen XML&lt;/h2&gt;
+
+&lt;!-- @TODO: perbaiki contoh ini --&gt;
+
+&lt;p&gt;Mari kita membuat sebuah berkas XML.
+Gunakan teks editor yang anda sukai.
+Kemudian buatlah berkas baru bernama &lt;code&gt;kartu_nama.xml&lt;/code&gt;.
+Dalam berkas ini, silahkan isi data diri anda.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;
+&amp;lt;kartuNama&amp;gt;
+    &amp;lt;nama&amp;gt;
+        &amp;lt;awal&amp;gt;Petani&amp;lt;/awal&amp;gt;
+        &amp;lt;akhir&amp;gt;Kode&amp;lt;/akhir&amp;gt;
+    &amp;lt;/nama&amp;gt;
+
+    &amp;lt;jenisKelamin&amp;gt;Laki-laki&amp;lt;/jenisKelamin&amp;gt;
+
+    &amp;lt;alamat&amp;gt;
+        &amp;lt;dusun&amp;gt;Melati&amp;lt;/dusun&amp;gt;
+        &amp;lt;desa&amp;gt;Konoha&amp;lt;/desa&amp;gt;
+        &amp;lt;kecamatan&amp;gt;Cakra&amp;lt;/kecamatan&amp;gt;
+        &amp;lt;kabupaten&amp;gt;Mataram&amp;lt;/kabupaten&amp;gt;
+    &amp;lt;/alamat&amp;gt;
+
+    &amp;lt;ponsel&amp;gt;081234567890&amp;lt;/ponsel&amp;gt;
+    &amp;lt;surel&amp;gt;info@petanikode.com&amp;lt;/surel&amp;gt;
+
+    &amp;lt;sosialMedia&amp;gt;
+        &amp;lt;facebook&amp;gt;petanikode&amp;lt;/facebook&amp;gt;
+        &amp;lt;twitter&amp;gt;@petanikode&amp;lt;/twitter&amp;gt;
+    &amp;lt;/sosialMedia&amp;gt;
+
+    &amp;lt;situsWeb&amp;gt;https://www.petanikode.com&amp;lt;/situsWeb&amp;gt;
+&amp;lt;/kartuNama&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-B3nnSYI7sOw/VOyUpOpPH7I/AAAAAAAABbY/BPWXZnIsbWg/s1600/kartu_nama_dalam_XML.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-B3nnSYI7sOw/VOyUpOpPH7I/AAAAAAAABbY/BPWXZnIsbWg/s1600/kartu_nama_dalam_XML.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Cobalah buka dengan pramban web, maka akan mendapatkan tempilan seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-NIHLzB9OQxY/VOyUxVDPbaI/AAAAAAAABbg/LuXCKuyoMzg/s1600/tampilan_kartu_nama_XML_di_pramban_web.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-NIHLzB9OQxY/VOyUxVDPbaI/AAAAAAAABbg/LuXCKuyoMzg/s1600/tampilan_kartu_nama_XML_di_pramban_web.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tampilannya asalnya memang seperti itu, karena tidak ada kode CSS yang mempengaruhi. XML dirancang untuk membawa data, jadi XML tidak berfokus pada tampilan. Bagian yang perlu anda pahami di XML: bagian deklarasi, elemen, tag, dan atribut.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-smMcFFni5NI/VPA2arAIDaI/AAAAAAAABcM/FFoV819nS9M/s1600/Bagian-bagian%2Bxml.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-smMcFFni5NI/VPA2arAIDaI/AAAAAAAABcM/FFoV819nS9M/s1600/Bagian-bagian%2Bxml.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagian deklarasi berfungsi untuk mengumumkan versi dokumen XML yang digunakan. Bagian deklarasi juga memiliki atribut yang lain seperti &lt;em&gt;encode&lt;/em&gt; untuk menentukan &lt;em&gt;encode&lt;/em&gt; karakter yang digunakan. Atribut adalah properti-properti yang melengkapi sebuah elemen. Sedangkan elemen adalah bagian dari XML yang terdiri dari tag pembuka, isi, dan tag penutup. Elemen yang tidak memiliki tag penutup seperti &lt;code&gt;&amp;lt;hr&amp;gt;&lt;/code&gt; dapat ditutup dengan menambahkan garis miring dibelakangnya: &lt;code&gt;&amp;lt;hr/&amp;gt;&lt;/code&gt;. Semua elemen di XML wajib ditutup.&lt;/p&gt;
+
+&lt;p&gt;Tulisan ini saya akhiri sampai di sini. Masih banyak hal yang perlu di bahas mengenai XML. Tapi, agar tulisan ini tidak terlalu panjang, insya&amp;rsquo;allah saya akan membahasnya di tulisan yang lain. Selanjutnya anda bisa belajar &lt;a href=&#34;http://petanikode.blogspot.com/2015/02/mengurai-dokumen-xml-dengan-dom-api-di.html&#34;&gt;mengurai dokumen XML di python&lt;/a&gt; atau bahasa pemrograman yang lain.
+&amp;lt;!&amp;ndash;&lt;/p&gt;
+
+&lt;h2 id=&#34;istilah-istilah-dalam-xml&#34;&gt;Istilah-istilah dalam XML&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tag&lt;/li&gt;
+&lt;li&gt;Elemen&lt;/li&gt;
+&lt;li&gt;Atribut &amp;ndash;&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

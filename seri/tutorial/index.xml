@@ -771,18 +771,18 @@ var c = a.toFloat() / b.toFloat()
 println(c) // output: 4.6666665
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Method &lt;code&gt;.toFloat()&lt;/code&gt; adalah method/fungsi untuk mengubah nilai ke dalam tipe
+&lt;p&gt;Method &lt;code&gt;toFloat()&lt;/code&gt; adalah method/fungsi untuk mengubah nilai ke dalam tipe
 &lt;em&gt;float&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Terdapat juga method yang lainnya:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;.toInt()&lt;/code&gt; untuk mengubah ke integer;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.toString()&lt;/code&gt; untuk mengubah ke String;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.toDouble()&lt;/code&gt; untuk mengubah ke Double;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.toLong()&lt;/code&gt; untuk mengubah ke long integer;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.toShort()&lt;/code&gt; untuk mengubah ke short integer;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.toChar()&lt;/code&gt; untuk mengubah ke Char atau karakter.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;toInt()&lt;/code&gt; untuk mengubah ke integer;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;toString()&lt;/code&gt; untuk mengubah ke String;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;toDouble()&lt;/code&gt; untuk mengubah ke Double;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;toLong()&lt;/code&gt; untuk mengubah ke long integer;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;toShort()&lt;/code&gt; untuk mengubah ke short integer;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;toChar()&lt;/code&gt; untuk mengubah ke Char atau karakter.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Selain menggunakan method-method tersebut, kita juga bisa menggunakan method
@@ -3007,10 +3007,10 @@ dan diikuti dengan nama cabangnya.&lt;/p&gt;
     
     <item>
       <title>Tutorial Dasar SASS untuk Pemula</title>
-      <link>https://www.petanikode.com/tutorial-dasar-sass-untuk-pemula/</link>
+      <link>https://www.petanikode.com/tutorial-sass-untuk-pemula/</link>
       <pubDate>Fri, 24 Feb 2017 15:28:09 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-dasar-sass-untuk-pemula/</guid>
+      <guid>https://www.petanikode.com/tutorial-sass-untuk-pemula/</guid>
       <description>
 
 &lt;p&gt;Setelah mahir CSS, selanjutnya kita bisa coba SASS. SASS singkatan dari

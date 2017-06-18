@@ -10,6 +10,186 @@
     <atom:link href="https://www.petanikode.com/seri/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Pemrograman Android dengan Kotlin pada Android Studio 2.2</title>
+      <link>https://www.petanikode.com/pemrograman-android-dengan-kotlin/</link>
+      <pubDate>Sun, 18 Jun 2017 17:13:53 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-android-dengan-kotlin/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/android-kotlin.png&#34; alt=&#34;Pemrograman Android dengan Menggunakan Bahasa Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Android Studio yang saya gunakan masih versi 2.2 dan rasanya agak malas mencoba
+Android Studio yang versi 3.0, karana masih tahap &lt;em&gt;preview&lt;/em&gt;.&lt;/p&gt;
+
+&lt;!-- @TODO update jika android 3.0 sudah resmi dirilis --&gt;
+
+&lt;p&gt;Tapi saya ingin segera mencoba &lt;em&gt;coding&lt;/em&gt; aplikasi android dengan Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Bagaimana caranya?&lt;/p&gt;
+
+&lt;p&gt;Gampang.&lt;/p&gt;
+
+&lt;p&gt;Kita hanya perlu menginstal plugin Kotlin dan melakan sedikit konfigurasi.&lt;/p&gt;
+
+&lt;p&gt;Mari kita coba&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;buat-proyek-baru&#34;&gt;Buat Proyek Baru&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka Android Studio dan buat proyek Baru.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/1.buat-proyek-android.png&#34; alt=&#34;Membuat proyek baru di android studio&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu tentukan minimum SDK-nya,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/2.pilih-sdk.png&#34; alt=&#34;Memilih minimum SDK untuk Aplikasi Android&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian pilih &lt;em&gt;Activity&lt;/em&gt; yang ingin digunakan. Pilih saja &lt;strong&gt;Empty Activity&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/3.pilih-activity.png&#34; alt=&#34;Memilih minimum Activity Awal&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, pada pemberian nama Activity, biarkan saja apa adanya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/4.nama-activity.png&#34; alt=&#34;Memberikan nama Activity&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Klik &lt;strong&gt;Finish&lt;/strong&gt;, dan proyek baru kita akan langsung dibuat.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita akan melakukan instalasi plugin Kotlin.&lt;/p&gt;
+
+&lt;h2 id=&#34;instalasi-plugin-kotlin-di-android-studio&#34;&gt;Instalasi Plugin Kotlin di Android Studio&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka menu &lt;strong&gt;File&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Settings&lt;/strong&gt; atau tekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;Alt&lt;/code&gt;+&lt;code&gt;s&lt;/code&gt;,
+kemudian masuk ke &lt;strong&gt;Plugins&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/settings-plugin.png&#34; alt=&#34;Setting Plugin android stdio&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cari plugin dengan kata kunci &amp;ldquo;kotlin&amp;rdquo;. Kalau tidak ketemu, klik &lt;strong&gt;&amp;ldquo;Search in repositories&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;(Tindakan ini membutuhkan koneksi internet, pastikan komputer kamu terhubung dengan internet)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah ketemu, silahkan pilih &lt;strong&gt;&amp;ldquo;Kotlin&amp;rdquo;&lt;/strong&gt; &lt;em&gt;(Languages)&lt;/em&gt;, kemudian klik install.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/install-plugin.png&#34; alt=&#34;Install Plugin kotlin di android stdio&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggulah beberapa saat&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Setelah selesai diinstal, kita akan diminta untuk me-restart Android Studio.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/restart-android-studio.png&#34; alt=&#34;restart android stdio&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silahkan di-restart dan mari kita mulai membuat aplikasi Android dengan Kotlin.&lt;/p&gt;
+
+&lt;h2 id=&#34;konfigurasi-proyek-kotlin&#34;&gt;Konfigurasi Proyek Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Kita belum dapat menggunakan Kotlin pada proyek yang baru saja kita buat,
+karena masih menggunakan Java.&lt;/p&gt;
+
+&lt;p&gt;Oleh karena itu, Kita perlu melakukan sedikit konfigurasi untuk memberitahu Android Studio
+bahwa kita ingin pakai Kotlin pada proyek ini.&lt;/p&gt;
+
+&lt;p&gt;Silahkan buka menu &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Kotlin&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Configure Kotlin in Project&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/menu-konfigurasi-kotlin.png&#34; alt=&#34;Menu konfigurasi proyek kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian pilih versi kompilator Kotlin yang ingin digunakan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/pilih-compiler.png&#34; alt=&#34;Menentukan versi kompilator kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, akan muncul pesan notifikasi bila konfigurasi berhasil.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/konfigurasi-sukses.png&#34; alt=&#34;Pesan Konfigurasi kotlin sukses&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;konversi-kode-java-menjadi-kotlin&#34;&gt;Konversi Kode Java Menjadi Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka kode &lt;code&gt;MainActivity.java&lt;/code&gt;, Kemudian masuk ke menu &lt;strong&gt;Help&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Find Actions&lt;/strong&gt;
+atau tekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;A&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/find-action.png&#34; alt=&#34;Fitur Find Actions Android Studio&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, silahkan cari aksi dengan kata kunci &lt;strong&gt;&lt;em&gt;&amp;ldquo;Convert Java to&amp;rdquo;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/konversi-file-java-ke-kotlin.png&#34; alt=&#34;Cari Aksi untuk konversi Java ke Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada hasil yang muncul, tekan Enter pada &lt;strong&gt;&lt;em&gt;&amp;ldquo;Covert Java File to Kotlin File&amp;rdquo;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tunggu beberapa detik, dan file &lt;code&gt;MainActivity.java&lt;/code&gt; akan segera berubah menjadi
+&lt;code&gt;MainActivity.kt&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/main-activity-kotlin.png&#34; alt=&#34;Hasil konversi ke Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;MainActivity.java&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.petanikode.cobakotlin;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;MainActivity.kt&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-kotlin&#34;&gt;package com.petanikode.cobakotlin
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah berhasil dikonversi, jangan lupa untuk &lt;code&gt;sync&lt;/code&gt; proyeknya untuk
+memastikan proyek kita sudah lengkap dan dapat berjalan dengan baik.&lt;/p&gt;
+
+&lt;p&gt;Masuk ke &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Android&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Sync Project with Gradle Files&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tunggu beberapa saat sampai selesai&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;uji-coba-aplikasi-android-dengan-kotlin&#34;&gt;Uji coba Aplikasi Android dengan Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Kita tidak melakukan perubahan apapun pada aplikasi pertama ini. Silahkan
+langsung saja di-run!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/uji-coba-app-android-kotlin.png&#34; alt=&#34;Ujicoba aplikasi Android dengan Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bila aplikasi berhasil tampil pada emulator seperti pada gambar di atas&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Maka Selamat!  Aplikasi pertama kita berhasil di-deploy tanpa error :smile:.&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Terima kasih sudah mengikuti tutorial ini sampai akhir.&lt;/p&gt;
+
+&lt;p&gt;Pemrograman Android dengan kotlin memang masih baru. Saya sering mendapatkan
+error dan belum tahu cara mengatasinya.&lt;/p&gt;
+
+&lt;p&gt;Mungkin sebaiknya kita tunggu saja Android Studio 3.0 yang sepenuhnya mendukung
+Kotlin tanpa plugin.&lt;/p&gt;
+
+&lt;p&gt;Untuk saat ini kita pakai &lt;a href=&#34;https://www.petanikode.com/topik/java&#34;&gt;Java&lt;/a&gt; saja&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dokumentasi Kotlin &amp;mdash; &lt;a href=&#34;https://kotlinlang.org/docs/tutorials/kotlin-android.html&#34;&gt;Getting started with Android and Kotlin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Medium Juan Ignacio Saravia &amp;mdash; &lt;a href=&#34;https://android.jlelse.eu/learn-kotlin-while-developing-an-android-app-part-1-e0f51fc1a8b3&#34;&gt;Keddit — Part 1: Configuring Android Studio with Kotlin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Mengenal HTML5 Canvas untuk Pemrograman Grafis dan Game</title>
       <link>https://www.petanikode.com/tutorial-html-canvas/</link>
       <pubDate>Thu, 15 Jun 2017 06:50:24 +0800</pubDate>
@@ -3500,108 +3680,6 @@ bisa melakukannya dengan perintah:&lt;/p&gt;
 
 &lt;p&gt;OK, sekian dulu tutorial ke-6 ini. Rasanya agak kepanjangan. Terima kasih
 sudah membaca. Sampai jumpa di &lt;a href=&#34;https://www.petanikode.com/2017/02/tutorial-git-07---percabangan/&#34;&gt;tutorial ke-7&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Animasi Gambar dengan Javascript</title>
-      <link>https://www.petanikode.com/animasi-gambar-dengan-javascript/</link>
-      <pubDate>Tue, 21 Feb 2017 08:53:16 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/animasi-gambar-dengan-javascript/</guid>
-      <description>
-
-&lt;p&gt;Saya sempat mengira, kalau animasi stiker di facebook menggunakan gif,
-ternyata bukan.&lt;/p&gt;
-
-&lt;p&gt;Animasi tersebut menggunakan javascript dengan mengubah
-posisi backgound.&lt;/p&gt;
-
-&lt;p&gt;Coba saja klik kanan pada stikernya, kemudian pilih &lt;a href=&#34;https://www.petanikode.com/2016/01/7-manfaat-inspect-element-bagi-web-developer/&#34;&gt;inspect element&lt;/a&gt;,
-maka kita akan mendapatkan kode seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;980&#34;
-    height=&#34;312&#34;
-    alt=&#34;inspect+element+stiker+facebook.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-SQfVn7m_aEc/WKuRWlddqjI/AAAAAAAAEFE/zhbfkLT-7tgQByj-tSOYzJz4rXntrpmbQCPcB/s1600/inspect%2Belement%2Bstiker%2Bfacebook.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Terlihat pada kode di atas, stikernya menggunakan backgound image.
-Ketika kita membuka backgound tersebut, kita akan mendapatkan gambar seperti
-berikut ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;animasi-gambar-dengan-javascript.jpg&#34;
-    src=&#34;https://2.bp.blogspot.com/-JaGQH_Fd7IA/WKuP-C-aNaI/AAAAAAAAEEs/5ZaEEc3eyIAk-gX28-t60Ea8GMDd6r9IACPcB/s1600/animasi-gambar-dengan-javascript.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang, bagaimana kalau kita coba membuatnya.&lt;/p&gt;
-
-&lt;h2 id=&#34;kode-html&#34;&gt;Kode HTML&lt;/h2&gt;
-
-&lt;p&gt;Buat kode HTML untuk menampilkan stikernya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;460&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/932578dbdaddd72cf36289923892101c&#34;&gt;
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kode-css&#34;&gt;Kode CSS&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.sticker {
-    position: relative;
-    height: 80px;
-    width: 80px;
-    background: url(burung.png);
-    background-size: 320px 320px;
-    cursor: default;
-    background-position: 0px 0px;
-    image-rendering: -webkit-optimize-contrast;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pada kode CSS di atas, terdapat background bernama &lt;code&gt;burung.png&lt;/code&gt;. Silahkan download
-&lt;a href=&#34;https://2.bp.blogspot.com/-BBx70tsKzTQ/WKuUWrml-lI/AAAAAAAAEFk/EhAj_uISOV85dK1GHt1TuikfN2zAC9kVACPcB/s1600/burung.png&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;javascript&#34;&gt;Javascript&lt;/h2&gt;
-
-&lt;p&gt;Javascript fungsinya untuk membuat animasi, mengubah posisi background.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;610&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/abb5cf78e609202e614c34cc6fa6bad9&#34;&gt;
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada kode di atas kita menggunakan fungsi &lt;code&gt;setInterval()&lt;/code&gt; untuk melakukan animasi
-dengan waktu 100 milidetik. Setiap rentang waktu tersebut, posisi background
-akan berubah sesuai dengan nilai &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;350&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://codepen.io/ardianta/embed/BpXoyz/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;&gt;
-&lt;/amp-iframe&gt;&lt;/p&gt;
 </description>
     </item>
     

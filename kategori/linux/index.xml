@@ -284,29 +284,6 @@ sudo apt install eclipse
 Silahkan buka eclipse, kemudian masuk ke menu _Help -&gt; Eclipse Marketplace…_
 
 
-### Pemrograman Kotlin Menggunakan Netbeans
-
-Untuk melakukan pemrograman Kotlin dengan IDE Netbeans, kita harus menginstal
-Plug-in tambahkan untuk Kotlin.
-
-Pertama download dulu Plugin-nya di [plugins.netbeans.org](http://plugins.netbeans.org/plugin/68590/kotlin).
-
-![Download Plugins kotlin untuk netbeans]()
-
-Pilih sesuai dengan versi Netbeans Anda.
-
-Setelah itu, buka Netbeans dan masuk ke menu _Tools&gt;Plug-in_
-dan buka Tab __Downloaded__.
-
-![Menambahkan Plugins Netbeans]()
-
-Klik __Add Plugins...__, kemudian cari plugins yang telah di-download tadi.
-
-![Menambahkan Plugins Kotlin]()
-
-Selesai, sekarang kita bisa memrogram Kotlin di dalam Netbeans.
-
-### Membuat Proyek Kotlin di Netbeans
 
  --&gt;
 
@@ -318,7 +295,7 @@ Selesai, sekarang kita bisa memrogram Kotlin di dalam Netbeans.
 
 &lt;p&gt;Kita juga sudah mengenal cara membuat, cara kompilasi, dan cara menjalankan program kotlin.&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya, anda bisa pelajari &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-input-dan-output&#34;&gt;cara mengambil input dan menampilkan output di Kotlin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Selanjutnya, kamu bisa pelajari &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-input-dan-output&#34;&gt;cara mengambil input dan menampilkan output di Kotlin&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Jika ada yang ditanyakan, silahkan tuliskan di komentar.&lt;/p&gt;
 </description>

@@ -7,8 +7,186 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 18 Jun 2017 17:13:53 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 19 Jun 2017 13:51:39 +0800</lastBuildDate>
     <atom:link href="https://www.petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Belajar Pemrograman Kotlin Menggunakan Netbeans</title>
+      <link>https://www.petanikode.com/pemrograman-kotlin-menggunakan-netbeans/</link>
+      <pubDate>Mon, 19 Jun 2017 13:51:39 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-kotlin-menggunakan-netbeans/</guid>
+      <description>
+
+&lt;p&gt;Pada tulisan sebelumnya kita sudah &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-di-linux/&#34;&gt;belajar pemrograman Kotlin&lt;/a&gt; menggunakan
+Intellij dan kompilasi secara manual melalui terminal.&lt;/p&gt;
+
+&lt;p&gt;Pemrograman Kotlin memang resmi didukung pada Intellij. Namun, bisa juga dilakukan
+di Netbeans dan Eclipse.&lt;/p&gt;
+
+&lt;p&gt;Bagaimana caranya?&lt;/p&gt;
+
+&lt;p&gt;Mari kita bahas&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalasi-maven-untuk-pemrograman-kotlin-di-netbeans&#34;&gt;Instalasi Maven untuk Pemrograman Kotlin di Netbeans&lt;/h2&gt;
+
+&lt;p&gt;Maven meruapakan program untuk manajemen proyek Java yang bertugas mengurus
+segala keperluan &lt;em&gt;library&lt;/em&gt; pada proyek.&lt;/p&gt;
+
+&lt;p&gt;Maven dibutuhkan untuk men-download semua &lt;em&gt;library&lt;/em&gt; yang diperlukan oleh Kotlin
+agar dapat digunakan pada Netbeans.&lt;/p&gt;
+
+&lt;p&gt;Install Maven di Linux dengan perintah ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install maven
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, coba periksa versi Maven yang terinstal dengan perintah &lt;code&gt;mvn -version&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/versi-maven.png&#34; alt=&#34;Periksa Versi Maven yang terinstall&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalasi-plugin-kotlin-untuk-netbeans&#34;&gt;Instalasi Plugin Kotlin untuk Netbeans&lt;/h2&gt;
+
+&lt;p&gt;Untuk melakukan pemrograman Kotlin dengan IDE Netbeans, kita harus menginstal
+Plugin tambahan untuk Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Silahkan download plugin-nya di &lt;a href=&#34;http://plugins.netbeans.org/plugin/68590/kotlin&#34;&gt;plugins.netbeans.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/download-plugin-kotlin.png&#34; alt=&#34;Download Plugins kotlin untuk netbeans&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pilih sesuai dengan versi Netbeans yang kamu gunakan (saya sendiri menggunakan versi 8.1).&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, buka Netbeans dan masuk ke menu &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Plugins&lt;/strong&gt;
+dan buka Tab &lt;strong&gt;Downloaded&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/plugins-netbeans.png&#34; alt=&#34;Menambahkan Plugins Netbeans&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Klik &lt;strong&gt;Add Plugins&amp;hellip;&lt;/strong&gt;, kemudian cari plugins yang telah di-download tadi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/tambah-plugin.png&#34; alt=&#34;Menambahkan Plugins Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu klik &lt;strong&gt;install&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/install-plugin-kotlin.png&#34; alt=&#34;Install Plugins Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka akan keluar jendela seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/plugin-installer.png&#34; alt=&#34;Install Plugins Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sepertinya terjadi masalah. Tombol &lt;em&gt;Next&lt;/em&gt; tidak aktif.&lt;/p&gt;
+
+&lt;p&gt;Tenang&amp;hellip; jangan panik!&lt;/p&gt;
+
+&lt;p&gt;Itu disebabkan karena ada plugin yang belum terinstal untuk melengkapi Kotlin.
+Cara mengatasinya, silahkan masuk ke &lt;strong&gt;Plugins&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Settings&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/plugins-settings.png&#34; alt=&#34;Setting Plugins Netbeans&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Aktifkan semua &lt;em&gt;Update Center&lt;/em&gt;, kemudian masuk ke tab &lt;strong&gt;Update&lt;/strong&gt; untuk meng-update
+plugin.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/update-plugin.png&#34; alt=&#34;Setting Plugins Netbeans&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Centang semuanya lalu klik &lt;strong&gt;Update&lt;/strong&gt; dan tunggulah&amp;hellip; &lt;em&gt;(pastikan koneksi internetmu stabil dan cukup cepat)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah selesai meng-update, sekarang kembali lagi ke tab &lt;strong&gt;Downloaded&lt;/strong&gt; untuk
+menginstal plugin Kotlin.&lt;/p&gt;
+
+&lt;p&gt;Sekarang tombol &lt;em&gt;Next&lt;/em&gt; sudah aktif, langsung saja diklik.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/plugin-installer-kotlin.png&#34; alt=&#34;Instalasi Plugins Netbeans&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, terima persetujuan &lt;em&gt;&amp;ldquo;License Agreement&amp;rdquo;&lt;/em&gt; kemudian klik &lt;strong&gt;Install&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/persetujuan-plugin.png&#34; alt=&#34;Persetujuan Lisensi Plugin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggulah beberapa saat. Netbeans sedang men-download plugin&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/netbeans-download-plugin.png&#34; alt=&#34;Netbeans Download Plugin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Di tengah proses download, kita akan diminta untuk verifikasi sertifikat.
+Langsung saja klik &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/verifikasi-sertifikat.png&#34; alt=&#34;Verifikasi Sertifikat&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah instalasi plugin selesai, kita akan diminta untuk me-restart Netbeans.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/install-plugin-selesai.png&#34; alt=&#34;Instalasi Plugin Selesai&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selesai, sekarang kita bisa memrogram Kotlin di dalam Netbeans.&lt;/p&gt;
+
+&lt;h3 id=&#34;membuat-proyek-kotlin-di-netbeans&#34;&gt;Membuat Proyek Kotlin di Netbeans&lt;/h3&gt;
+
+&lt;p&gt;Buka menu &lt;strong&gt;File&lt;/strong&gt;-&amp;gt;&lt;strong&gt;New Project&amp;hellip;&lt;/strong&gt; untuk membuat proyek baru di Netbeans.
+Setelah itu, pilih &lt;strong&gt;Maven&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Java Application&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/membuat-proyek-kotlin-netbeans.png&#34; alt=&#34;Membuat Proyek Kotlin di Netbeans&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikan nama proyeknya seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/nama-proyek.png&#34; alt=&#34;Memberikan nama proyek&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka sekarang kita punya proyek baru, tapi kode-nya masih kosong.&lt;/p&gt;
+
+&lt;p&gt;Silahkan tambahkan file kotlin dengan klik kanan pada &lt;em&gt;source package&lt;/em&gt;, kemudian
+pilih &lt;strong&gt;New&amp;hellip;&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Kotlin File&amp;hellip;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/tambah-file-kotlin.png&#34; alt=&#34;Menambahkan file kotlin di proyek&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berikan nama filenya dengan &lt;code&gt;Main&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/nama-file.png&#34; alt=&#34;Memberikan nama file kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, isi kode &lt;code&gt;Main.kt&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-kotlin&#34;&gt;package com.petanikode.hello.kotlin
+
+fun main(args: Array&amp;lt;String&amp;gt;) {
+    println(&amp;quot;Hello World!&amp;quot;)
+    println(&amp;quot;Coding Kotlin dari Netbeans&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kode kotlin-nya akan terdeteksi error!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/kode-kotlin.png&#34; alt=&#34;Kode Kotlin di Netbeans&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tenang&amp;hellip;jangan panik!&lt;/p&gt;
+
+&lt;p&gt;Ini terjadi karena kita beru pertama kali menulis kotlin di Netbeans. Karena itu,
+silahkan lakukan &lt;em&gt;Clean and Build&lt;/em&gt; dulu.&lt;/p&gt;
+
+&lt;p&gt;Klik kanan pada proyeknya, lalu pilih &lt;strong&gt;Clean and Build&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/clean-and-build.png&#34; alt=&#34;Kode Kotlin di Netbeans&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka Maven akan men-download semua &lt;em&gt;library&lt;/em&gt; yang diperlukan.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;in&#34; dir=&#34;ltr&#34;&gt;lagi nyoba compile kotlin di netbeans &lt;a href=&#34;https://t.co/vGRE2j0qSA&#34;&gt;pic.twitter.com/vGRE2j0qSA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Petani Kode (@petanikode) &lt;a href=&#34;https://twitter.com/petanikode/status/874186872947326977&#34;&gt;June 12, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Tunggulah beberapa saat&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Setelah selesai, coba &lt;strong&gt;&lt;em&gt;Run&lt;/em&gt;&lt;/strong&gt; programnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/run-program-kotlin-netbeans.png&#34; alt=&#34;Run Program Kotlin di Netbeans&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berhasil! Program pertama kita sudah bisa dikompilasi di Netbeans.&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Bagaimana, mudah bukan&amp;hellip;?&lt;/p&gt;
+
+&lt;p&gt;Pemrograman Kotlin di Netbeans sepertinya sedikit merepotkan, karena banyak
+yang harus di-download.&lt;/p&gt;
+
+&lt;p&gt;Sebaiknya gunakan Intellij saja yang sudah resmi mendukung untuk pemrograman
+kotlin.&lt;/p&gt;
+
+&lt;!-- Buat yang ingin PDKT sama Kotlin tapi masih malu-malu nginstall Intellij (ciee),
+coba pakai Netbeans :D --&gt;
+</description>
+    </item>
     
     <item>
       <title>Pemrograman Android dengan Kotlin pada Android Studio 2.2</title>
@@ -2577,29 +2755,6 @@ sudo apt install eclipse
 Silahkan buka eclipse, kemudian masuk ke menu _Help -&gt; Eclipse Marketplace…_
 
 
-### Pemrograman Kotlin Menggunakan Netbeans
-
-Untuk melakukan pemrograman Kotlin dengan IDE Netbeans, kita harus menginstal
-Plug-in tambahkan untuk Kotlin.
-
-Pertama download dulu Plugin-nya di [plugins.netbeans.org](http://plugins.netbeans.org/plugin/68590/kotlin).
-
-![Download Plugins kotlin untuk netbeans]()
-
-Pilih sesuai dengan versi Netbeans Anda.
-
-Setelah itu, buka Netbeans dan masuk ke menu _Tools&gt;Plug-in_
-dan buka Tab __Downloaded__.
-
-![Menambahkan Plugins Netbeans]()
-
-Klik __Add Plugins...__, kemudian cari plugins yang telah di-download tadi.
-
-![Menambahkan Plugins Kotlin]()
-
-Selesai, sekarang kita bisa memrogram Kotlin di dalam Netbeans.
-
-### Membuat Proyek Kotlin di Netbeans
 
  --&gt;
 
@@ -2611,7 +2766,7 @@ Selesai, sekarang kita bisa memrogram Kotlin di dalam Netbeans.
 
 &lt;p&gt;Kita juga sudah mengenal cara membuat, cara kompilasi, dan cara menjalankan program kotlin.&lt;/p&gt;
 
-&lt;p&gt;Selanjutnya, anda bisa pelajari &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-input-dan-output&#34;&gt;cara mengambil input dan menampilkan output di Kotlin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Selanjutnya, kamu bisa pelajari &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-input-dan-output&#34;&gt;cara mengambil input dan menampilkan output di Kotlin&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Jika ada yang ditanyakan, silahkan tuliskan di komentar.&lt;/p&gt;
 </description>
@@ -3672,228 +3827,6 @@ perlu nginstal deh :smile:.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&#34;&gt;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/WebAssembly&#34;&gt;https://en.wikipedia.org/wiki/WebAssembly&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
-      <link>https://www.petanikode.com/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</link>
-      <pubDate>Tue, 14 Mar 2017 17:36:45 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</guid>
-      <description>
-
-&lt;p&gt;Seperti yang kita ketahui, istilah card memang sering dipakai pada Material Design.
-Sedangkan Bootstrap versi 3 tidak memiliki komponen card. Mungkin saja akan
-ditambahkan pada versi ke-4. Kita tunggu saja.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, kita akan belajar cara modifikasi komponen panel Bootstrap
-untuk dijadikan Card.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini tampilan hasil akhir yang akan kita buat:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;panel bootstrap sebagai card&#34;
-    src=&#34;https://1.bp.blogspot.com/-0EKCQDsPHPs/WMfRU8kIjYI/AAAAAAAAEZM/9bX9E4TSGTg_Z0VbrROgBRTUtWiEKPrdQCK4B/s1600/panel-bootstrap-sebagai-card.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;mempersiapkan-grid-layout&#34;&gt;Mempersiapkan Grid Layout&lt;/h2&gt;
-
-&lt;p&gt;Pertama, kita siapkan dulu grid layout dengan empat kolom.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
-    &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;menambahkan-panel&#34;&gt;Menambahkan Panel&lt;/h2&gt;
-
-&lt;p&gt;Nah selanjutnya, kita buat panelnya. Ada empat item yang ingin kita tampilkan:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Gambar Artikel&lt;/li&gt;
-&lt;li&gt;Label&lt;/li&gt;
-&lt;li&gt;Judul Artikel&lt;/li&gt;
-&lt;li&gt;Penulis&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Maka kode panelnya akan seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default&amp;quot;&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
-        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
-        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
-        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
-        &amp;lt;/h3&amp;gt;
-
-        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
-            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nah silahkan masukan kode panel di atas ke dalam kode sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Demo hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/BWdoEM/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Agar tinggi card terlihat sama, gunakan ukuran gambar artikel yang sama. Rekomendasi
-ukuran 700x350 px.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kode-css&#34;&gt;Kode CSS&lt;/h2&gt;
-
-&lt;p&gt;Terlihat pada hasil demo di atas, tampilannya masih belum rapi. Karena menggunakan
-style dari Bootstrap.&lt;/p&gt;
-
-&lt;p&gt;Tugas kita selanjutnya adalah membuat kode CSS sendiri untuk mengatur komponen
-panel tersebut.&lt;/p&gt;
-
-&lt;p&gt;Seperti yang terlihat pada kode panel di atas, terdapat
-&lt;em&gt;class&lt;/em&gt; yang harus kita buat.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;.post-body&lt;/code&gt;: untuk mengatur agar tinggi card sejajar&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-thumb&lt;/code&gt;: untuk mengatur tampilan gambar artikel&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-title&lt;/code&gt;: judul artikel&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-author&lt;/code&gt; dan &lt;code&gt;.author-photo&lt;/code&gt; untuk nama dan foto penulisya&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Mari kita buat kodenya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/* tinggi card */
-.post-body {
-    height: 215px;
-    position: relative;
-    padding: 20px 15px 0;
-}
-
-/* untuk menghilangkan padding pada .panel-heading */
-.post-thumb {
-    padding: 0
-}
-
-/* mengatur font dan link judul artikel*/
-.post-title a {
-    color: rgba(0,0,0,0.7);
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 1.5em;
-    letter-spacing: 0.01rem;
-}
-.post-title a:hover { text-decoration: none }
-
-/* posisi author selalu di bawah */
-.post-author {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    font-size: 13px;
-}
-
-.post-author .author-photo {
-    margin-right: 10px;
-    border-radius: 50%;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Demo hasil setelah ditambahkan CSS:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/OpjMbe/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Terlihat cukup bagus.&lt;/p&gt;
-
-&lt;p&gt;Silahkan lakukan kreasi sesukamu.&lt;/p&gt;
-
-&lt;h2 id=&#34;bonus-efek-bayangan-ketika-card-disentuh&#34;&gt;Bonus: Efek Bayangan Ketika Card disentuh&lt;/h2&gt;
-
-&lt;p&gt;Baiklah, sebagai bonus, kita tambahkan efek bayangan ketika card-nya disentuh
-pointer. Efek ini akan membuat card terlihat lebih keren :smile:.&lt;/p&gt;
-
-&lt;p&gt;Tambahkan kode CSS berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.card:hover {
-    box-shadow: 0px 2px 20px rgba(0,0,0,0.2);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, gunakan class &lt;code&gt;.card&lt;/code&gt; pada panel:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default card&amp;quot;&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
-        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
-        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
-        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
-        &amp;lt;/h3&amp;gt;
-
-        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
-            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka hasilnya akan seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/PpKZKr/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Bagaimana, mudah bukan?&lt;/p&gt;
-
-&lt;p&gt;Selamat berkreasi.&lt;/p&gt;
 </description>
     </item>
     

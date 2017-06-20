@@ -109,7 +109,7 @@ maka di &lt;em&gt;canvas&lt;/em&gt; HTML5 menggunakan objek &lt;code&gt;ctx&lt;/
 &lt;p&gt;Nah untuk menggambar dengan method-method tersebut, kita harus menentukan
 koordinat titik &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt;-nya.&lt;/p&gt;
 
-&lt;p&gt;Karena canvas terdiri dari kumpulan piksel yang membentuk diagram kartesius.&lt;/p&gt;
+&lt;p&gt;Karena canvas terdiri dari kumpulan piksel yang membentuk diagram kartesius terbalik.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/diagram-kartesius-canvas.png&#34; alt=&#34;Diagram Kartesius Canvas&#34; /&gt;&lt;/p&gt;
 
@@ -504,6 +504,7 @@ karena hanya pengenalan saja. Kita harus pelajari ilmu yang lainnya,
 seperti:&lt;/p&gt;
 
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/tutorial-html-canvas-random/&#34;&gt;Membuat objek secara acak di Canvas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Cara Membuat Animasi di Canvas;&lt;/li&gt;
 &lt;li&gt;Cara Membuat Gravitasi dan Menerapkan Elemen Fisika Lainnya;&lt;/li&gt;
 &lt;li&gt;Cara Memutar Audio untuk Game;&lt;/li&gt;
@@ -535,6 +536,9 @@ eksperimen berikut:&lt;/p&gt;
 
 &lt;p&gt;Terima kasih sudah menyimak artikel ini sampai akhir. Selamat belajar
 dan berimajinasi dengan kode.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya silahkan pelajari tentang &amp;ldquo;&lt;a href=&#34;https://www.petanikode.com/tutorial-html-canvas-random/&#34;&gt;Cara Menggambar Menggunakan
+Perulangan dan Fungsi Random pada Canvas&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
 

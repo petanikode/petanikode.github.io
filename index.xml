@@ -7,8 +7,463 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 19 Jun 2017 13:51:39 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Jun 2017 04:03:51 +0800</lastBuildDate>
     <atom:link href="https://www.petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Menggambar Objek dengan Perulangan dan Fungsi Random di HTML5 Canvas</title>
+      <link>https://www.petanikode.com/tutorial-html-canvas-random/</link>
+      <pubDate>Tue, 20 Jun 2017 04:03:51 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-html-canvas-random/</guid>
+      <description>
+
+&lt;p&gt;Pada artikel &lt;a href=&#34;https://www.petanikode.com/tutorial-html-canvas/&#34;&gt;pengenalan HTML5 Canvas&lt;/a&gt; sebelumnya, kita sudah belajar cara
+menggamabar objek-objek dasar seperti titik, garis, persegi, lingkaran, dan segitiga.&lt;/p&gt;
+
+&lt;p&gt;Obejek digambar hanya sekali saja.&lt;/p&gt;
+
+&lt;p&gt;Bagaiaman kalau kita ingin menggambar banyak objek dan digambar secara acak?&lt;/p&gt;
+
+&lt;p&gt;Untuk menjawab pertanyaan ini, kita harus menggunakan perulangan dan fungsi &lt;code&gt;random()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lebih jelasnya, mari kita bahas&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;menggambar-objek-dengan-perulangan&#34;&gt;Menggambar Objek dengan Perulangan&lt;/h2&gt;
+
+&lt;p&gt;Pada contoh di artikel sebelumnya, kita sudah pernah menggamabar persegi dua kali.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    ctx.strokeRect(10,10,100,100);
+    ctx.fillRect(120,10,100,100);
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dengan hasil seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/hasil-gambar-persegi-di-canvas.png&#34; alt=&#34;Menggambar dua persegi di HTML5 Canvas&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu bagaimana kalau kita ingin menggambar 10 persegi?&lt;/p&gt;
+
+&lt;p&gt;Kita bisa saja mengetik ulang fungsi untuk menggambarnya sebanyak &lt;code&gt;10x&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ctx.strokeRect(10,10,100,100);
+ctx.strokeRect(110,10,100,100);
+ctx.strokeRect(210,10,100,100);
+ctx.strokeRect(310,10,100,100);
+ctx.strokeRect(410,10,100,100);
+ctx.strokeRect(510,10,100,100);
+ctx.strokeRect(610,10,100,100);
+ctx.strokeRect(710,10,100,100);
+ctx.strokeRect(810,10,100,100);
+ctx.strokeRect(910,10,100,100);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Terus kalau mau gambar sebanyak &lt;code&gt;1000x&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Apa mampu mengetik kode sebanyaka &lt;code&gt;1000&lt;/code&gt; baris?&lt;/p&gt;
+
+&lt;p&gt;Pasti capek ngetik 1000 baris dengan nilai &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt; yang berbeda-beda.&lt;/p&gt;
+
+&lt;p&gt;karena itu, kita harus menggunakan perulangan.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Contoh&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Kita akan menggmabar 5 persegi dengan nilai &lt;code&gt;x&lt;/code&gt; bertambah &lt;code&gt;10&lt;/code&gt; di setiap kali
+perulangan dan &lt;code&gt;y&lt;/code&gt; tetap.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(x = 10; x &amp;lt;= 50; x+=10){
+        ctx.strokeRect(x, 10, 10, 10);
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kita akan menggmbar persegi dengan ukuran &lt;code&gt;10x10&lt;/code&gt; pada titik &lt;code&gt;y=10&lt;/code&gt; dan &lt;code&gt;x&lt;/code&gt; berubah-ubah.&lt;/p&gt;
+
+&lt;p&gt;Setiap perulangan nilai x akan bertambah &lt;code&gt;10&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;perulangan ke 1, nilai x = 10 dan y = 10
+perulangan ke 2, nilai x = 20 dan y = 10
+perulangan ke 3, nilai x = 30 dan y = 10
+perulangan ke 4, nilai x = 40 dan y = 10
+perulangan ke 5, nilai x = 50 dan y = 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kalau kita nyatakan dalam persamaan matematika:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;y = 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;*ingat-ingat kembali pelajaran matematika (persamaan garis lurus, fungsi, dan aljabar linier) :smile:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-5persegi.png&#34; alt=&#34;Menggambar 5 persegi dengan perulangan&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang coba gambar sebanyak &lt;code&gt;50x&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(x = 10; x &amp;lt;= 500; x+=10){
+        ctx.strokeRect(x, 10, 10, 10);
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-50persegi.png&#34; alt=&#34;Menggambar 50 persegi dengan perulangan&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sudah paham sekarang&amp;hellip;?&lt;/p&gt;
+
+&lt;p&gt;Lalu bagaimana kalau nilai &lt;code&gt;y&lt;/code&gt;-nya sekarang yang berubah-ubah.&lt;/p&gt;
+
+&lt;p&gt;Gampang, kita tinggal ubah menjadi seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(y = 10; y &amp;lt;= 500; y+=10){
+        ctx.strokeRect(10, y, 10, 10);
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-50persegi-y.png&#34; alt=&#34;Menggambar 50 persegi dengan titik y berubah-ubah&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Masih mau lagi?&lt;/p&gt;
+
+&lt;p&gt;Mari kita coba kedua-duanya berubah (nilai &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt; berubah).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(i = 10; i &amp;lt;= 500; i+=10){
+        ctx.strokeRect(i, i, 10, 10);
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nilai &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt; kita ambil dari variabel &lt;code&gt;i&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-persegi-xy.png&#34; alt=&#34;Menggambar 50 persegi dengan titik y=x&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gambar garis seperti di atas dapat dinyatakan dengan persamaan matematika:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;y = x
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;menggunakan-perulangan-bersarang&#34;&gt;Menggunakan Perulangan Bersarang&lt;/h3&gt;
+
+&lt;p&gt;Perulangan bersarang &lt;em&gt;(nested loop)&lt;/em&gt; artinya perulangan dalam perulangan.&lt;/p&gt;
+
+&lt;p&gt;Sekarang mari kita coba menggambar persegi sebanyak &lt;code&gt;40&lt;/code&gt; ke arah &lt;code&gt;x&lt;/code&gt; (horizontal)
+dan &lt;code&gt;40&lt;/code&gt; ka arah &lt;code&gt;y&lt;/code&gt; (vertikal) dengan perulangan bersarang.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(x = 10; x &amp;lt;= 400; x+=10){
+        for(y = 10; y &amp;lt;= 400; y+=10){
+            ctx.strokeRect(x, y, 10, 10);
+        }
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka banyak persegi yang akan digambar adalah &lt;code&gt;40x40&lt;/code&gt; atau &lt;code&gt;1600&lt;/code&gt; buat persegi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-persegi-40x40.png&#34; alt=&#34;Persegi 1600 biji&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang bagaimana kalau nilai &lt;code&gt;y&lt;/code&gt; pada perulangan ke-2 kita set nilai awalnya
+adalah &lt;code&gt;x&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(x = 10; x &amp;lt;= 400; x+=10){
+        for(y = x; y &amp;lt;= 400; y+=10){
+            ctx.strokeRect(x, y, 10, 10);
+        }
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-persegi-40x40-2.png&#34; alt=&#34;Persegi 800 biji&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya saya akan memperlihatkan hasil kreasi saya yang bisa kamu ikuti
+dan silahkan pikirkan bagaimana gambarnya bisa terbentuk :smile:.&lt;/p&gt;
+
+&lt;p&gt;Kode:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(x = 10; x &amp;lt;= 400; x+=10){
+        for(y = 10; y &amp;lt;= 400; y+=10){
+
+            if((y*x) % 200 != 0){
+                ctx.strokeRect(x, y, 10, 10);
+            } else {
+                ctx.fillRect(x, y, 10, 10);
+            }
+
+        }
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;* operator &lt;code&gt;%&lt;/code&gt; fungsinya untuk menghitung sisa bagi.&lt;/p&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/eksperimen1.png&#34; alt=&#34;Eksperimen 1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kode:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(x = 10; x &amp;lt;= 400; x+=10){
+        for(y = 10; y &amp;lt;= 400; y+=10){
+
+            if((y*x) % 21 == 0){
+                ctx.strokeRect(x, y, 10, 10);
+            } else {
+                ctx.fillRect(x, y, 10, 10);
+            }
+        }
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasil:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/eksperimen2.png&#34; alt=&#34;Eksperimen 2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Itu saja ya&amp;hellip;agar tutorial ini tidak kepanjangan.&lt;/p&gt;
+
+&lt;p&gt;Silahkan lanjutkan berkresi sendiri!&lt;/p&gt;
+
+&lt;h2 id=&#34;menggambar-objek-dengan-fungsi-math-random&#34;&gt;Menggambar Objek dengan Fungsi Math.random()&lt;/h2&gt;
+
+&lt;p&gt;Fungsi &lt;code&gt;random()&lt;/code&gt; adalah fungsi yang menghasilkan nilai acak dari &lt;code&gt;0,0&lt;/code&gt; sampai &lt;code&gt;1,0&lt;/code&gt;.
+Fungsi ini akan kita manfaatkan untuk menentukan nilai &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt; agar objek
+yang kita gambar diletakkan secara acak di &lt;em&gt;canvas&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini contoh nilai yang dihasilkan oleh fungsi &lt;code&gt;random()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/fungsi-random.png&#34; alt=&#34;Fungsi random di console javascript&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Karena fungsi &lt;code&gt;random()&lt;/code&gt; menghasilkan nilai &lt;code&gt;0,xxx&lt;/code&gt; maka kita harus
+mengubahnya menjadi bilangan desimal &lt;em&gt;(integer)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Caranya kita bisa memanfaatkan fungsi &lt;code&gt;floor()&lt;/code&gt; untuk melakukan pembulatan nilai.&lt;/p&gt;
+
+&lt;p&gt;Misalnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Math.floor(Math.random() * 5)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka nilai acak yang akan kita dapatkan adalah dari &lt;code&gt;0&lt;/code&gt; sampai &lt;code&gt;5&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sekarang mari kita coba menggambar titik pada &lt;em&gt;canvas&lt;/em&gt; dengan nilai &lt;code&gt;x&lt;/code&gt;
+dan &lt;code&gt;y&lt;/code&gt; acak dari &lt;code&gt;0&lt;/code&gt; sampai panjang canvas-nya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(i = 0; i &amp;lt; canvas.width; i++){
+        for(j = 0; j &amp;lt; canvas.height; j++){
+
+            // isi nilai titik dengan bilangan acak
+            var x = Math.floor(Math.random() * canvas.width);
+            var y = Math.floor(Math.random() * canvas.height);
+
+            // gambar titknya
+            ctx.fillRect(x, y, 1,1);
+
+        }
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-titik-random.png&#34; alt=&#34;Hasil gambar titik dengan bilangan random&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mantap! Sepertinya titiknya terlalu banyak.&lt;/p&gt;
+
+&lt;p&gt;Coba kita gambar titik sebanyak &lt;code&gt;1000&lt;/code&gt; atau &lt;code&gt;10x10&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(i = 0; i &amp;lt; 100; i++){
+        for(j = 0; j &amp;lt; 100; j++){
+
+            // isi nilai titik dengan bilangan acak
+            var x = Math.floor(Math.random() * canvas.width);
+            var y = Math.floor(Math.random() * canvas.height);
+
+            // gambar titknya
+            ctx.fillRect(x, y, 1,1);
+
+        }
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-titik-random-1000.png&#34; alt=&#34;Hasil gambar titik dengan bilangan random&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita modifikasi kodenya.&lt;/p&gt;
+
+&lt;p&gt;Silahkan perbesar ukuran perseginya menjadi &lt;code&gt;10x10&lt;/code&gt; dan gambar sebanyak &lt;code&gt;200&lt;/code&gt; kali.
+Kita pakai dua persegi, yaitu &lt;code&gt;strokeRect()&lt;/code&gt; sebanyak &lt;code&gt;100&lt;/code&gt; dan &lt;code&gt;fillRect()&lt;/code&gt; sebanyak &lt;code&gt;100&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(i = 0; i &amp;lt; 10; i++){
+        for(j = 0; j &amp;lt; 10; j++){
+
+            // isi nilai titik dengan bilangan acak
+            var x = Math.floor(Math.random() * canvas.width);
+            var y = Math.floor(Math.random() * canvas.height);
+
+            // gambar perseginya
+            ctx.fillRect(x, y, 10,10);
+
+        }
+    }
+
+    for(i = 0; i &amp;lt; 10; i++){
+        for(j = 0; j &amp;lt; 10; j++){
+
+            // isi nilai titik dengan bilangan acak
+            var x = Math.floor(Math.random() * canvas.width);
+            var y = Math.floor(Math.random() * canvas.height);
+
+            // gambar perseginya
+            ctx.strokeRect(x, y, 10,10);
+
+        }
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-persegi-random.png&#34; alt=&#34;Gambar persegi dengan fungsi random&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba juga untuk berkreasi dengan lingkaran.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(i = 0; i &amp;lt; 10; i++){
+        for(j = 0; j &amp;lt; 10; j++){
+
+            // isi nilai titik dengan bilangan acak
+            var x = Math.floor(Math.random() * canvas.width);
+            var y = Math.floor(Math.random() * canvas.height);
+
+            // gambar lingkaran
+            ctx.beginPath();
+            ctx.arc(x, y, 20, 0, 2*Math.PI);
+            ctx.stroke();
+
+        }
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-lingkaran-random.png&#34; alt=&#34;Gambar lingkaran dengan fungsi random&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba juga jari-jarinya kita kasih acak, misal dari &lt;code&gt;5&lt;/code&gt; sampai &lt;code&gt;30&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+    for(i = 0; i &amp;lt; 10; i++){
+        for(j = 0; j &amp;lt; 10; j++){
+
+            // isi nilai titik dengan bilangan acak
+            var x = Math.floor(Math.random() * canvas.width);
+            var y = Math.floor(Math.random() * canvas.height);
+
+            // jari-jari random dari 5 sampai 30
+            var r = Math.floor( Math.random() * (30 - 5) + 5 );
+
+            // gambar lingkaran
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, 2*Math.PI);
+            ctx.stroke();
+
+        }
+    }
+
+
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-lingkaran-random-r.png&#34; alt=&#34;Gambar lingkaran dengan fungsi random&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Begitulah cara menggambar objek dengan perulangan dan fungsi random. Fungsi
+random kadang digunakan dalam Game untuk menggambar objek dalam posisi acak.&lt;/p&gt;
+
+&lt;p&gt;Misal pada Game Flappy Bird, pipa penghalangnya diletakkan secara acak dengan
+fungsi random.&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan selanjutnya mungkin kita akan bahas tentang warna dan animasi.&lt;/p&gt;
+
+&lt;p&gt;Terima kasih sudah mengikuti tutorial ini. Kalau ada pertanyaan atau tambahan
+silahkan sampaikan di komentar.&lt;/p&gt;
+
+&lt;p&gt;Selamat berkerasi dan berimajinasi dengan kode.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mozilla Developer Network &amp;mdash; &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random&#34;&gt;Math.random()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Wikipedia &amp;mdash; &lt;a href=&#34;https://id.wikipedia.org/wiki/Persamaan_garis&#34;&gt;Persamaan garis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Belajar Pemrograman Kotlin Menggunakan Netbeans</title>
@@ -468,7 +923,7 @@ maka di &lt;em&gt;canvas&lt;/em&gt; HTML5 menggunakan objek &lt;code&gt;ctx&lt;/
 &lt;p&gt;Nah untuk menggambar dengan method-method tersebut, kita harus menentukan
 koordinat titik &lt;code&gt;x&lt;/code&gt; dan &lt;code&gt;y&lt;/code&gt;-nya.&lt;/p&gt;
 
-&lt;p&gt;Karena canvas terdiri dari kumpulan piksel yang membentuk diagram kartesius.&lt;/p&gt;
+&lt;p&gt;Karena canvas terdiri dari kumpulan piksel yang membentuk diagram kartesius terbalik.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/diagram-kartesius-canvas.png&#34; alt=&#34;Diagram Kartesius Canvas&#34; /&gt;&lt;/p&gt;
 
@@ -863,6 +1318,7 @@ karena hanya pengenalan saja. Kita harus pelajari ilmu yang lainnya,
 seperti:&lt;/p&gt;
 
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/tutorial-html-canvas-random/&#34;&gt;Membuat objek secara acak di Canvas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Cara Membuat Animasi di Canvas;&lt;/li&gt;
 &lt;li&gt;Cara Membuat Gravitasi dan Menerapkan Elemen Fisika Lainnya;&lt;/li&gt;
 &lt;li&gt;Cara Memutar Audio untuk Game;&lt;/li&gt;
@@ -894,6 +1350,9 @@ eksperimen berikut:&lt;/p&gt;
 
 &lt;p&gt;Terima kasih sudah menyimak artikel ini sampai akhir. Selamat belajar
 dan berimajinasi dengan kode.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya silahkan pelajari tentang &amp;ldquo;&lt;a href=&#34;https://www.petanikode.com/tutorial-html-canvas-random/&#34;&gt;Cara Menggambar Menggunakan
+Perulangan dan Fungsi Random pada Canvas&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
 
@@ -3642,191 +4101,6 @@ dulu program berbasis teks (console).&lt;/p&gt;
 &lt;/amp-twitter&gt;&lt;/p&gt;
 
 &lt;p&gt;Bagaimana, apakah kamu sudah menentukan bahasa pemrograman yang akan dipelajari?&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Apa itu WebAssembly?</title>
-      <link>https://www.petanikode.com/apa-itu-webassembly/</link>
-      <pubDate>Wed, 15 Mar 2017 11:49:13 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/apa-itu-webassembly/</guid>
-      <description>
-
-&lt;p&gt;Saat pertama kali mendengar kata WebAssembly, saya kira kita akan membuat web dengan
-bahasa assembly. Ternyata bukan.&lt;/p&gt;
-
-&lt;p&gt;Sekitar dua minggu yang lalu saya mendapatkan kiriman link milis melalui channel
-&lt;a href=&#34;https://t.me/reddit_programming/1280&#34;&gt;@reddit_programming&lt;/a&gt; tentang pengumuman WebAssembly.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;WebAssembly akan segera tersedia di Firefox dan Google Chrome bulan ini&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;dan benar saja, Firefox dan Google Chrome merilis versi terbarunya.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.lombokfoss.com/2017/03/firefox-52-rilis-dengan-dukungan-webassembly.html&#34;&gt;Firefox 52 Rilis dengan Dukungan WebAssembly dan Peningkatan Sync&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.lombokfoss.com/2017/03/google-chrome-57-rilis-dengan-dukungan.html&#34;&gt;Google Chrome 57 Rilis dengan Dukungan WebAssembly dan Spesifikasi CSS Gird Baru&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Lalu apa sebenarnya WebAssembly itu?&lt;/p&gt;
-
-&lt;p&gt;Menurut Wikipedia:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;WebAssembly&lt;/strong&gt; atau disingkat wasm adalah sebuah eksperimen untuk menggunakan
-bahasa tingkat bawah pada browser. Proyek ini masih dalam
-tahapan pengembangan yang digarap oleh orang-orang dari Firefox, Webkit (Chromium),
-Google Chrome, Microsoft Edge, dan W3C.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;763&#34;
-    height=&#34;417&#34;
-    alt=&#34;kerjasama google, yahoo, microsoft, webkit, dan w3c untuk membangun webassembly&#34;
-    src=&#34;https://1.bp.blogspot.com/-35sqWt0WdsQ/WMktYpy3rWI/AAAAAAAAEaU/6byqD4vYzgQ75KNdYEcwmdqwYFjgKBonQCPcB/s1600/kerjasama%2Buntuk%2Bmembangun%2Bwebassembly.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Jadi, nanti aplikasi yang menggunakan bahasa pemrograman dari tingkat bawah
-seperti C dan C++ akan bisa berjalan di browser layaknya javascript. :open_mouth:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=686 height=657
-    layout=&#34;responsive&#34;
-    data-tweetid=&#34;841952471450808321&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;Sedangkan menurut Eric Elliott, seorang peteran javascript:&lt;/p&gt;
-
-&lt;p&gt;WebAssembly adalah:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Sebuah bahasa baru: Kode WebAssembly merupakan representasi dari AST
-&lt;em&gt;(Abstract Syntax Tree)&lt;/em&gt; dalam format &lt;em&gt;binary&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;Sebuah peningkatan performa untuk javascript.&lt;/li&gt;
-&lt;li&gt;Peningkatan untuk browser: Browser akan mampu mengeksekusi format &lt;em&gt;binary&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;seblum-webassembly&#34;&gt;Seblum WebAssembly&lt;/h2&gt;
-
-&lt;p&gt;Sebelum datangnya WebAssembly beberapa perusahaan sudah berusaha untuk membuat
-sesuatu agar program yang dibuat dari bahasa pemrograman selain javascript
-bisa berjalan dengan mulus di browser.&lt;/p&gt;
-
-&lt;p&gt;Mereka melakuannya dengan cara mereka sendiri,&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Firefox membuat turunan javascript bernama &lt;a href=&#34;http://asmjs.org/&#34;&gt;asm.js&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Microsoft membuat &lt;a href=&#34;https://www.typescriptlang.org/&#34;&gt;typescript&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Google membuat &lt;a href=&#34;https://developer.chrome.com/native-client&#34;&gt;NaCl&lt;/a&gt; (Native Client).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kini mereka semua bersatu membangun WebAssembly. WebAssembly sendiri dibangun
-dari asm.js dan NaCl.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;roadmap-pengembangan-webassembly&#34;&gt;Roadmap Pengembangan WebAssembly&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;April 2015 - Pembentukan tim dan komunitas WebAssembly&lt;/li&gt;
-&lt;li&gt;Juni 2015 - Publikasi pengumuman pertama&lt;/li&gt;
-&lt;li&gt;Maret 2016 - Implementasi fitur inti&lt;/li&gt;
-&lt;li&gt;Oktober 2016 - Versi Preview diluncurkan&lt;/li&gt;
-&lt;li&gt;Februari 2017 - Pemilihan logo resmi&lt;/li&gt;
-&lt;li&gt;Maret 2017 - Beberapa web browser sepakat mulai menggunakan WebAssembly dan
-versi preview berakhir.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Untuk agenda selanjutnya, dapat dipantau di: &lt;a href=&#34;http://webassembly.org/roadmap/&#34;&gt;http://webassembly.org/roadmap/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contoh-kode-webassembly&#34;&gt;Contoh Kode WebAssembly&lt;/h2&gt;
-
-&lt;p&gt;Berikut ini contoh kode yang saya ambil dari Wikipedia:&lt;/p&gt;
-
-&lt;p&gt;program_faktorial.c&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int factorial(int n) {
-    if (n == 0)
-        return 1;
-    else
-        return n * factorial(n-1);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah dikompilasi menjadi WASM:&lt;/p&gt;
-
-&lt;p&gt;program_faktorial.wasm&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;get_local 0
-i64.const 0
-i64.eq
-if i64
-    i64.const 1
-else
-    get_local 0
-    get_local 0
-    i64.const 1
-    i64.sub
-    call 0
-    i64.mul
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;WASM binary (heksadesimal)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;20 00
-42 00
-51
-04 7e
-42 01
-05
-20 00
-20 00
-42 01
-7d
-10 00
-7e
-0b
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;demo-webassembly&#34;&gt;Demo WebAssembly&lt;/h2&gt;
-
-&lt;p&gt;Untuk mengecek browsermu sudah mendukung WebAssembly atau tidak, coba buka
-demo berikut ini:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://webassembly.org/demo/Tanks/&#34;&gt;Game Thanks!&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://s3.amazonaws.com/mozilla-games/ZenGarden/EpicZenGarden.html&#34;&gt;Epic Zen Garden&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kalau belum bisa, maka browsernya harus di-update ke versi terakhir saat ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-youtube width=&#34;480&#34;
-     height=&#34;270&#34;
-     layout=&#34;responsive&#34;
-     data-videoid=&#34;TwuIRcpeUWE&#34;&gt;
- &lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah sedikit hal yang saya ketahui tentang WebAssembly.&lt;/p&gt;
-
-&lt;p&gt;Kedepan mungkin akan lebih banyak lagi game dan aplikasi yang di-porting ke Web dengan
-WebAssembly. Misalnya, nanti kita bisa buka Photoshop di browser. Jadi tidak
-perlu nginstal deh :smile:.&lt;/p&gt;
-
-&lt;p&gt;Referensi:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://webassembly.org&#34;&gt;http://webassembly.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&#34;&gt;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/WebAssembly&#34;&gt;https://en.wikipedia.org/wiki/WebAssembly&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

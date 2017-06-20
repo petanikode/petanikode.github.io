@@ -31,14 +31,14 @@ pre[class*="language-"] {
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
 	text-shadow: none;
-	background: #f8f8f8;
+	background: #A4C639;
 	/*background: #b3d4fc; */
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
 	text-shadow: none;
-	background: #f8f8f8;
+	background: #A4C639;
 	/*background: #b3d4fc;*/
 }
 

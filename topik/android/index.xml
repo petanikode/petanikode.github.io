@@ -476,14 +476,14 @@ menginstal JDK.&lt;/p&gt;
 
 &lt;h2 id=&#34;3-install-android-sdk&#34;&gt;3. Install Android SDK&lt;/h2&gt;
 
-&lt;p&gt;Android SDK adalah penting yang harus di persiapkan dalam pemrograman Android.
-Karena Android SDK menyediakan API Android yang kita perlukan.&lt;/p&gt;
+&lt;p&gt;Android SDK adalah peralatan penting yang harus di persiapkan dalam pemrograman Android.
+Karena Android SDK menyediakan API dan tools yang kita perlukan untuk pembuatan aplikasi.&lt;/p&gt;
 
 &lt;p&gt;Silahkan baca &lt;a href=&#34;https://www.petanikode.com/cara-instal-android-sdk-dan-ndk&#34;&gt;Cara Install Android SDK dan NDK di Linux&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;4-update-android-sdk&#34;&gt;4. Update Android SDK&lt;/h2&gt;
 
-&lt;p&gt;Setelah Andoir SDK terinstal, lakukan update untuk mendapatkan API versi terbaru.&lt;/p&gt;
+&lt;p&gt;Setelah Android SDK terinstal, lakukan update untuk mendapatkan API versi terbaru.&lt;/p&gt;
 
 &lt;p&gt;Gunakan perintah berikut untuk membuka update manager Android SDK.&lt;/p&gt;
 
@@ -501,7 +501,7 @@ Karena Android SDK menyediakan API Android yang kita perlukan.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;android avd
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;6-install-plug-in-adt&#34;&gt;6. Install Plug-in ADT&lt;/h2&gt;
+&lt;h2 id=&#34;6-install-plugin-adt&#34;&gt;6. Install Plugin ADT&lt;/h2&gt;
 
 &lt;p&gt;ADT &lt;em&gt;(Android Development Tool)&lt;/em&gt; merupakan plug-in yang diperlukan di Eclipse
 agar dapat digunakan untuk pemrograman Android.&lt;/p&gt;

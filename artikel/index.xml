@@ -105,6 +105,22 @@ bahwa kita ingin pakai Kotlin pada proyek ini.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/konfigurasi-sukses.png&#34; alt=&#34;Pesan Konfigurasi kotlin sukses&#34; /&gt;&lt;/p&gt;
 
+&lt;h2 id=&#34;konversi-kode-java-menjadi-kotlin&#34;&gt;Konversi Kode Java Menjadi Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka kode &lt;code&gt;MainActivity.java&lt;/code&gt;, Kemudian masuk ke menu &lt;strong&gt;Help&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Find Actions&lt;/strong&gt;
+atau tekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;A&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/find-action.png&#34; alt=&#34;Fitur Find Actions Android Studio&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, silahkan cari aksi dengan kata kunci &lt;strong&gt;&lt;em&gt;&amp;ldquo;Convert Java to&amp;rdquo;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/konversi-file-java-ke-kotlin.png&#34; alt=&#34;Cari Aksi untuk konversi Java ke Kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada hasil yang muncul, tekan Enter pada &lt;strong&gt;&lt;em&gt;&amp;ldquo;Covert Java File to Kotlin File&amp;rdquo;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tunggu beberapa detik, dan file &lt;code&gt;MainActivity.java&lt;/code&gt; akan segera berubah menjadi
+&lt;code&gt;MainActivity.kt&lt;/code&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;menambahkan-kotlin-ekstension-pada-proyek-aplikasi&#34;&gt;Menambahkan Kotlin Ekstension pada Proyek Aplikasi&lt;/h2&gt;
 
 &lt;p&gt;Silahkan buka file &lt;code&gt;build.gradle&lt;/code&gt; (app), kemudian tambahkan kode berikut.&lt;/p&gt;

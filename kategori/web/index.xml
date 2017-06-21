@@ -3158,7 +3158,7 @@ github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/
       <description>
 
 &lt;p&gt;Hari ini saya baru berkenalan dengan Vue.js. Saya sudah mendengar tentang
-Vue.js dari beberapa teman dan forum. Tapi, saya belum pernah mulai mencobanya.&lt;/p&gt;
+Vue.js dari beberapa teman dan forum. Tapi, saya belum berani untuk mulai mencobanya.&lt;/p&gt;
 
 &lt;p&gt;Awalnya saya ingin membuat sebuah alat untuk kebutuhan saya sendiri, yaitu alat
 yang bisa membuat tag &lt;code&gt;amp-img&lt;/code&gt; secara otmatis melalui url gambar. Karena masih
@@ -3170,7 +3170,9 @@ kemudian berpikir untuk membuat alatnya agar bisa otomatis.&lt;/p&gt;
 
 &lt;p&gt;Mungkin saya bisa menggunakan &lt;a href=&#34;https://www.petanikode.com/topik/jquer&#34;&gt;JQuery&lt;/a&gt; atau &lt;a href=&#34;https://www.petanikode.com/topik/javascript&#34;&gt;Javascript&lt;/a&gt; murni.
 Namun, sepertinya JQuery sudah mulai ketingalan zaman dan kalau menggunakan js murni nanti
-kodenya mungkin akan banyak. Kemudian saya ingin menggunakan &lt;a href=&#34;https://www.petanikode.com/topik/angularjs&#34;&gt;Angularjs&lt;/a&gt;,
+kodenya mungkin akan banyak.&lt;/p&gt;
+
+&lt;p&gt;Kemudian saya ingin menggunakan &lt;a href=&#34;https://www.petanikode.com/topik/angularjs&#34;&gt;Angularjs&lt;/a&gt;,
 tapi saya belum mendalami Angular. Akhirnya saya mencoba Vuejs.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
@@ -3233,12 +3235,16 @@ kode berikut.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Kode di atas akan menghasilkan output &lt;code&gt;Hello Vue!&lt;/code&gt;. Terilhat lebih mudah dari
-Angular. Hmm, mungkin nanti saya akan mulai suka dan jatuh cinta dengan Vuejs. :heart_eyes:&lt;/p&gt;
+Angular.&lt;/p&gt;
+
+&lt;p&gt;Hmm, mungkin nanti saya akan mulai suka dan jatuh cinta dengan Vuejs. :heart_eyes:&lt;/p&gt;
 
 &lt;h2 id=&#34;vue-model&#34;&gt;Vue Model&lt;/h2&gt;
 
 &lt;p&gt;Setelah itu, saya berkenalan dengan Vue Model. Karena sebelumnya saya mencari di
-Google tentang &lt;em&gt;event onchange&lt;/em&gt; di Vue, malah dikasi Vue Model. &lt;em&gt;Event onchange&lt;/em&gt;
+Google tentang &lt;em&gt;event onchange&lt;/em&gt; di Vue, malah dikasi Vue Model.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Event onchange&lt;/em&gt;
 saya butuhkan agar nanti ketika paste url, langsung dibuat tag &lt;code&gt;amp-img&lt;/code&gt;-nya.&lt;/p&gt;
 
 &lt;p&gt;Untuk membuat model Vue dari komponen form seperti input, kita tinggal buat atribut
@@ -3247,8 +3253,9 @@ saya butuhkan agar nanti ketika paste url, langsung dibuat tag &lt;code&gt;amp-i
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;input v-model=&amp;quot;src&amp;quot; type=&amp;quot;text&amp;quot; placeholder=&amp;quot;http://example.com/image.jpg&amp;quot; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Nama model yang saya buat di atas adalah &lt;code&gt;src&lt;/code&gt;. Model ini untuk menampung url gambar.
-Kemudian untuk mengambil nilai dari model tersebut caranya seperti ini.&lt;/p&gt;
+&lt;p&gt;Nama model yang saya buat di atas adalah &lt;code&gt;src&lt;/code&gt;. Model ini untuk menampung url gambar.&lt;/p&gt;
+
+&lt;p&gt;Kemudian untuk mengambil nilai dari model tersebut caranya seperti ini.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;textarea rows=&amp;quot;8&amp;quot;&amp;gt;
 &amp;amp;lt;amp-img
@@ -3297,8 +3304,9 @@ Saya membutuhkan sebuah fungsi. Karena mungkin di Vue belum ada fungsi tersebut.
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Pada kode di atas, saya membuat sebuah fungsi bernama &lt;code&gt;getImageData()&lt;/code&gt;. Isi
-dari fungsi tersebut untuk mengambil tinggi, lebar, dan nama file gambar.
-Fungsi ini saya dapatkan dari &lt;a href=&#34;http://stackoverflow.com/a/11442850/2658551&#34;&gt;Stack Overflow&lt;/a&gt;.
+dari fungsi tersebut untuk mengambil tinggi, lebar, dan nama file gambar.&lt;/p&gt;
+
+&lt;p&gt;Fungsi ini saya dapatkan dari &lt;a href=&#34;http://stackoverflow.com/a/11442850/2658551&#34;&gt;Stack Overflow&lt;/a&gt;.
 Lalu fungsi ini saya panggil pada &lt;em&gt;event keyup&lt;/em&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;input v-on:keyup=&amp;quot;getImageData()&amp;quot; v-model=&amp;quot;src&amp;quot; type=&amp;quot;text&amp;quot; placeholder=&amp;quot;http://example.com/image.jpg&amp;quot; /&amp;gt;
@@ -3306,9 +3314,16 @@ Lalu fungsi ini saya panggil pada &lt;em&gt;event keyup&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;selesai&#34;&gt;Selesai&lt;/h2&gt;
 
-&lt;p&gt;Semua yang saya butuhkan sudah tercapai. Programnya bisa berjalan sesuai harapan.
-Apakah itu saja? Ya benar cuma itu saja. Sebanarnya banyak error yang saya dapatkan,
-tapi saya tidak akan ceritakan di sini hehehe :smile:.&lt;/p&gt;
+&lt;p&gt;Semua yang saya butuhkan sudah tercapai.&lt;/p&gt;
+
+&lt;p&gt;Programnya bisa berjalan sesuai harapan.&lt;/p&gt;
+
+&lt;p&gt;Apakah itu saja?&lt;/p&gt;
+
+&lt;p&gt;Ya benar cuma itu saja.&lt;/p&gt;
+
+&lt;p&gt;Sebanarnya banyak error yang saya dapatkan,
+tapi saya tidak ingin menceritakan di sini hehehe :smile:.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-twitter width=486 height=657
     layout=&#34;responsive&#34;
@@ -3323,7 +3338,9 @@ tapi saya tidak akan ceritakan di sini hehehe :smile:.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Artikel ini bukan tutorial yang dapat anda ikuti. Melaikan hanya untuk berbagi
-pengalaman saja. Terima kasih sudah membaca.&lt;/p&gt;
+pengalaman saja.&lt;/p&gt;
+
+&lt;p&gt;Terima kasih sudah membaca.&lt;/p&gt;
 
 &lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/&#34;&gt;Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan&lt;/a&gt;&lt;/p&gt;
 

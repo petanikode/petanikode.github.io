@@ -10,6 +10,225 @@
     <atom:link href="https://www.petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Pemrograman Android dengan Kotlin Extensions (Lebih Cepat!)</title>
+      <link>https://www.petanikode.com/pemrograman-android-kotlin-extensions/</link>
+      <pubDate>Wed, 21 Jun 2017 16:52:41 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-android-kotlin-extensions/</guid>
+      <description>
+
+&lt;p&gt;Pada tulisan sebelumnya, kita telah berhasil &lt;a href=&#34;https://www.petanikode.com/pemrograman-android-dengan-kotlin&#34;&gt;menginstal plugin
+Kotlin pada Android Studio 2.x&lt;/a&gt;,
+sehingga kita dapat menggunakan kotlin di sana.&lt;/p&gt;
+
+&lt;p&gt;Pemrograman Android dengan Kotlin memang masih baru.&lt;/p&gt;
+
+&lt;p&gt;Kemarin saya mencoba membuat kode untuk &lt;em&gt;event listener&lt;/em&gt; &lt;code&gt;onClick()&lt;/code&gt;,
+tapi malah error. Aplikasi tidak bisa dibuka dan langsung menutup dirinya.&lt;/p&gt;
+
+&lt;p&gt;Pesan error pun tidak ditapilkan di Android Studio.&lt;/p&gt;
+
+&lt;p&gt;Namun, masalah ini sudah terpecahkan oleh &lt;em&gt;Kotlin Extension&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-itu-kotlin-extensions&#34;&gt;Apa itu &lt;em&gt;Kotlin Extensions&lt;/em&gt;?&lt;/h2&gt;
+
+&lt;p&gt;Pernah menggunakan fungsi &lt;code&gt;findViewById()&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Fungsi ini tugasnya untuk memilih komponen yang ada di layout
+untuk dijadikan objek pada Java.
+Mirip seperti fungsi &lt;code&gt;getElementById()&lt;/code&gt; pada Javascript.&lt;/p&gt;
+
+&lt;p&gt;Pada Kotlin, kita tidak lagi menggunakan fungsi &lt;code&gt;findViewById()&lt;/code&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Karena menurut mereka (Dok. Kotlin):&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Fungsi tersebut berpotensi menimbulkan &lt;em&gt;bugs&lt;/em&gt; dan membuat kode jadi susah dibaca&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;(Pantes saja aplikasi saya error dan tidak bisa dibuka :smile:)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Kotlin memberikan terobosan dengan &lt;em&gt;plugin Kotlin Extensions&lt;/em&gt;,
+sehingga programmer tidak lagi menghabiskan energi dan
+waktunya untuk mengetik fungsi &lt;code&gt;findViewById()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;in&#34; dir=&#34;ltr&#34;&gt;Kotlin membuatnya jadi lebih sederhana&amp;hellip; no more findViewById() 👨‍💻 &lt;a href=&#34;https://t.co/31D53qHu03&#34;&gt;pic.twitter.com/31D53qHu03&lt;/a&gt;&lt;/p&gt;&amp;mdash; Petani Kode (@petanikode) &lt;a href=&#34;https://twitter.com/petanikode/status/877467306921664513&#34;&gt;June 21, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagaimana cara menggunakan &lt;em&gt;Kotlin Extensions&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;Mari kita bahas dengan praktik&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-proyek-aplikasi-android&#34;&gt;Membuat Proyek Aplikasi Android&lt;/h2&gt;
+
+&lt;p&gt;Kita gunakan saja proyek yang kemarin. Bila kamu sudah punya proyeknya, silahkan
+langsung lompat ke &lt;a href=&#34;#menambahkan-kotlin-ekstension-pada-proyek-aplikasi&#34;&gt;cara menambahkan kotlin extension di proyek android&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tapi kalau belum, sialkan dibuat.&lt;/p&gt;
+
+&lt;p&gt;Buka Android Studio dan buat proyek baru.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/1.buat-proyek-android.png&#34; alt=&#34;Membuat proyek baru di android studio&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu tentukan minimum SDK-nya,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/2.pilih-sdk.png&#34; alt=&#34;Memilih minimum SDK untuk Aplikasi Android&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian pilih &lt;em&gt;Activity&lt;/em&gt; yang ingin digunakan. Pilih saja &lt;strong&gt;Empty Activity&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/3.pilih-activity.png&#34; alt=&#34;Memilih Jenis Activity Awal&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, pada pemberian nama Activity, biarkan saja apa adanya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/4.nama-activity.png&#34; alt=&#34;Memberikan nama Activity&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Klik &lt;strong&gt;Finish&lt;/strong&gt;, dan proyek baru kita akan langsung dibuat.&lt;/p&gt;
+
+&lt;h2 id=&#34;konfigurasi-proyek-kotlin&#34;&gt;Konfigurasi Proyek Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Kita belum dapat menggunakan Kotlin pada proyek yang baru saja kita buat,
+karena masih menggunakan Java.&lt;/p&gt;
+
+&lt;p&gt;Oleh karena itu, Kita perlu melakukan sedikit konfigurasi untuk memberitahu Android Studio
+bahwa kita ingin pakai Kotlin pada proyek ini.&lt;/p&gt;
+
+&lt;p&gt;Silahkan buka menu &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Kotlin&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Configure Kotlin in Project&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/menu-konfigurasi-kotlin.png&#34; alt=&#34;Menu konfigurasi proyek kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian pilih versi kompilator Kotlin yang ingin digunakan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/pilih-compiler.png&#34; alt=&#34;Menentukan versi kompilator kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, akan muncul pesan notifikasi bila konfigurasi berhasil.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/konfigurasi-sukses.png&#34; alt=&#34;Pesan Konfigurasi kotlin sukses&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;menambahkan-kotlin-ekstension-pada-proyek-aplikasi&#34;&gt;Menambahkan Kotlin Ekstension pada Proyek Aplikasi&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka file &lt;code&gt;build.gradle&lt;/code&gt; (app), kemudian tambahkan kode berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;apply plugin: &#39;kotlin-android-extensions&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tambahkan dibagian atas:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin-ext/add-kotlin-extension.png&#34; alt=&#34;Menambahkan plugin android extensions pada proyek android&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu lakukan &lt;code&gt;sync&lt;/code&gt; proyek agar tidak error. Buka menu &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Android&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Sync Project with Gradle Files&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;menggunakan-kotlin-extension&#34;&gt;Menggunakan &lt;em&gt;Kotlin Extension&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Setelah proses &lt;code&gt;sync&lt;/code&gt; selesai, sekarang kita bisa menggunakan
+&lt;em&gt;Kotlin Extensions&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Silahkan buka file &lt;code&gt;MainActivity.kt&lt;/code&gt;, tambahkan kode berikut untuk mengimpor
+libaray dari &lt;em&gt;Kotlin Extensions&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-kotlin&#34;&gt;import kotlinx.android.synthetic.main.activity_main.*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Artinya kita akan mengimpor semua komponen di &lt;code&gt;activity_main.xml&lt;/code&gt; dan langsung
+dijadikan objek tanpa harus menggunakan fungsi &lt;code&gt;findViewById()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, kita coba buat fungsi untuk meng-handle &lt;em&gt;event onClick&lt;/em&gt;
+bernama &lt;code&gt;ucapSalam()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;File &lt;code&gt;MainActivity.kt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-kotlin&#34;&gt;package com.petanikode.cobakotlin
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+
+    fun ucapSalam(v: View?): Unit {
+        welcome_msg.setText(&amp;quot;Selamat datang di Kotlin!&amp;quot;)
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buka &lt;code&gt;activity_main.xml&lt;/code&gt; kemudian tambahkan sebuah &lt;code&gt;Button&lt;/code&gt;
+dan isi properti &lt;code&gt;onClick&lt;/code&gt; dengan nama fungsinya, yaitu: &lt;code&gt;ucapSalam&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin-ext/event-onclick.png&#34; alt=&#34;Properti untuk event onClick Button&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu &lt;code&gt;TextView&lt;/code&gt; di atasnya, kita ganti &lt;code&gt;id&lt;/code&gt;-nya menjadi &lt;code&gt;welcome_msg&lt;/code&gt;.
+Kode lengkap layout-nya seperti ini:&lt;/p&gt;
+
+&lt;p&gt;File &lt;code&gt;activity_main.xml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;RelativeLayout xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    xmlns:tools=&amp;quot;http://schemas.android.com/tools&amp;quot;
+    android:id=&amp;quot;@+id/activity_main&amp;quot;
+    android:layout_width=&amp;quot;match_parent&amp;quot;
+    android:layout_height=&amp;quot;match_parent&amp;quot;
+    android:paddingBottom=&amp;quot;@dimen/activity_vertical_margin&amp;quot;
+    android:paddingLeft=&amp;quot;@dimen/activity_horizontal_margin&amp;quot;
+    android:paddingRight=&amp;quot;@dimen/activity_horizontal_margin&amp;quot;
+    android:paddingTop=&amp;quot;@dimen/activity_vertical_margin&amp;quot;
+    tools:context=&amp;quot;com.petanikode.cobakotlin.MainActivity&amp;quot;&amp;gt;
+
+    &amp;lt;TextView
+        android:layout_width=&amp;quot;wrap_content&amp;quot;
+        android:layout_height=&amp;quot;wrap_content&amp;quot;
+        android:text=&amp;quot;Hello World!&amp;quot;
+        android:id=&amp;quot;@+id/welcome_msg&amp;quot; /&amp;gt;
+
+    &amp;lt;Button
+        android:text=&amp;quot;Button&amp;quot;
+        android:layout_width=&amp;quot;wrap_content&amp;quot;
+        android:layout_height=&amp;quot;wrap_content&amp;quot;
+        android:layout_below=&amp;quot;@+id/welcome_msg&amp;quot;
+        android:layout_alignParentStart=&amp;quot;true&amp;quot;
+        android:layout_marginTop=&amp;quot;52dp&amp;quot;
+        android:id=&amp;quot;@+id/button&amp;quot;
+        android:onClick=&amp;quot;ucapSalam&amp;quot; /&amp;gt;
+
+
+&amp;lt;/RelativeLayout&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang coba jalankan aplikasinya&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin-ext/hasil-running-aplikasi.png&#34; alt=&#34;Aplikasi Android dengan Kotlin Extensions&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berhasil dan tidak ada error! :smile:&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Kode Kotlin terlihat lebih sederhana dan mudah dipahami daripada Java.&lt;/p&gt;
+
+&lt;p&gt;Ditambah lagi dengan &lt;em&gt;Kotlin Extensions&lt;/em&gt; yang membuat kita hemat waktu dan tenaga,
+sehingga dapat membuat aplikasi android dengan lebih cepat.&lt;/p&gt;
+
+&lt;p&gt;Terima kasih sudah mengikuti tutorial ini sampai akhir. Selamat
+bereksperimen dengan Kotlin dan Android.&lt;/p&gt;
+
+&lt;p&gt;Ada kesulitan?&lt;/p&gt;
+
+&lt;p&gt;Tanyakan di komentar!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dok. Kotlin &amp;mdash; &lt;a href=&#34;https://kotlinlang.org/docs/tutorials/android-plugin.html&#34;&gt;Kotlin Android Extensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;StackOverflow &amp;mdash; &lt;a href=&#34;https://stackoverflow.com/q/40885426/2658551&#34;&gt;Kotlin in xml onClick not work&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Menggambar Objek dengan Perulangan dan Fungsi Random di HTML5 Canvas</title>
       <link>https://www.petanikode.com/tutorial-html-canvas-random/</link>
       <pubDate>Tue, 20 Jun 2017 04:03:51 +0800</pubDate>
@@ -3891,219 +4110,6 @@ yang lengkap dan tersetruktur.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Download&lt;/strong&gt;: &lt;a href=&#34;https://www.gitbook.com/download/pdf/book/srin/dasar-tizen&#34;&gt;PDF&lt;/a&gt; |
 &lt;a href=&#34;https://www.gitbook.com/download/epub/book/srin/dasar-tizen&#34;&gt;ePub&lt;/a&gt; |
 &lt;a href=&#34;https://www.gitbook.com/download/mobi/book/srin/dasar-tizen&#34;&gt;Mobi&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Git 08 - Perbedaan Git checkout, Git Reset, dan Git Revert</title>
-      <link>https://www.petanikode.com/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/</link>
-      <pubDate>Sun, 05 Mar 2017 21:37:21 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/</guid>
-      <description>
-
-&lt;p&gt;Pada &lt;a href=&#34;https://www.petanikode.com/2017/02/tutorial-git-06---membatalkan-revisi/&#34;&gt;tutorial ke-6&lt;/a&gt;,
-kita sudah mebahas cara membatalkan revisi menggunakan
-perintah &lt;code&gt;git checkout&lt;/code&gt;, &lt;code&gt;git reset&lt;/code&gt;, dan &lt;code&gt;git revert&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sekilas, tiga perintah tersebut melakukan hal yang sama. Akan tetapi
-ada perbedaanya.&lt;/p&gt;
-
-&lt;p&gt;Apa itu?&lt;/p&gt;
-
-&lt;p&gt;Mari kita bahas&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;git-checkout&#34;&gt;Git Checkout&lt;/h2&gt;
-
-&lt;p&gt;Perintah &lt;code&gt;git checkout&lt;/code&gt; seperti mesin waktu, kita bisa kembalikan kondisi
-file proyek seperti waktu yang dituju.&lt;/p&gt;
-
-&lt;p&gt;Misalnya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout 06f735af7724558164c87f6b1ce3ca7778eb1c1b
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka semua file akan dikembalikan seperti keadaan pada nomer commit tersebut.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;614&#34;
-    height=&#34;350&#34;
-    alt=&#34;git checkout ke masa lalu&#34;
-    src=&#34;https://2.bp.blogspot.com/-cqKubTJzwY0/WLvNhaOsuaI/AAAAAAAAEO4/lRrl0Gcc44MfwvbS7ng7NPn5flIZ9CERwCPcB/s1600/git-checkout-masa-lalu.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi, ini bersifat temporer (sementara). Pengembalian ini tidak disimpan dalam
-database Git.&lt;/p&gt;
-
-&lt;p&gt;Kita bisa sebut perintah &lt;code&gt;git checkout&lt;/code&gt; sebagai perintah untuk mengecek kondisi
-file di setiap commit.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Tips: Untuk kembali dari masa lalu gunakan perintah: &lt;code&gt;git checkout master&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Selain itu juga, perintah ini digunakan untuk berpindah dan membuat cabang.
-Ini bisa kita gunakan untuk membuat perubahan baru berdasarkan kode di masa lalu.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;p&gt;Misalnya kita ingin membuat cabang baru berdasarkan kondisi kode di masa lalu,
-maka kita bisa menggunakan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout -b nama_cabang &amp;lt;nomer_commit&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka nanti cabang baru akan terbentuk dari commit sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;614&#34;
-    height=&#34;350&#34;
-    alt=&#34;membuat cabang baru dari commit masa lalu&#34;
-    src=&#34;https://4.bp.blogspot.com/-ygY_7uRflA4/WLvKgowOChI/AAAAAAAAEOg/pv6WngsMPYkYjGXuV2FOVHLNJnfsYiLawCPcB/s1600/membuat%2Bcabang%2Bbaru%2Bdari%2Bcommit%2Bmasa%2Blalu.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Cara ini bisa kita ibaratkan seperti menulis cerita baru dengan plot yang berbeda.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;git-reset&#34;&gt;Git Reset&lt;/h2&gt;
-
-&lt;p&gt;Perintah &lt;code&gt;git reset&lt;/code&gt; sering disebut sebagai perintah berbahaya yang dapat
-menghancurkan catatan sejarah perubahan.&lt;/p&gt;
-
-&lt;p&gt;Hati-hati! Perintah ini membuat kita tidak bisa kembali lagi ke masa depan.
-Mau tidak mau, kita harus menulis ulang sejarah.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;614&#34;
-    height=&#34;350&#34;
-    alt=&#34;dampak+git+reset.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-BRpPbv9rlKo/WLvVCr4npTI/AAAAAAAAEPY/5TTifioVF-0LccoQx9gIYc_a8A5fB9LogCPcB/s1600/dampak%2Bgit%2Breset.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Perintah ini memiliki tiga argumen atau opsi utama, yaitu &lt;code&gt;--soft&lt;/code&gt;, &lt;code&gt;--mixed&lt;/code&gt;,
-dan &lt;code&gt;--hard&lt;/code&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--soft&lt;/code&gt; akan mengebalikan dengan kondisi file dalam keadaan &lt;em&gt;staged&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--mixed&lt;/code&gt; akan mengebalikan dengan kondisi file dalam keadaan &lt;em&gt;modified&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--hard&lt;/code&gt; akan mengebalikan dengan kondisi file dalam keadaan &lt;em&gt;commited&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Contoh penggunaan:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git reset --soft 06f735af7724558164c87f6b1ce3ca7778eb1c1b
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka kita akan dikebalikan dengan file dalam keadaan &lt;em&gt;staged&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;756&#34;
-    height=&#34;126&#34;
-    alt=&#34;git+reset+soft.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-5jKtdcZ_sos/WLvXebQAN2I/AAAAAAAAEPw/NXRWEMwzxSkskIFOHwuK64I8RdND_l9MwCPcB/s1600/git%2Breset%2Bsoft.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Coba periksa catatan perubahan dengan perintah &lt;code&gt;git log&lt;/code&gt;, pasti ada yang hilang
-dan kita tidak akan bisa kembali lagi ke masa depan. Ini seperti melakukan Re:Zero :smile:.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Hati-hati!&lt;/strong&gt; Jangan lakukan git reset pada repositori yang sudah di bagikan
-ke publik, karena dapat merusaknya.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;git-revert&#34;&gt;Git Revert&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Revert&lt;/em&gt; artinya mengembalikan. Perintah ini lebih aman daripada &lt;code&gt;git reset&lt;/code&gt;, karena
-tidak akan menghapus catatan sejarah revisi.&lt;/p&gt;
-
-&lt;p&gt;Revert akan akan mengambil kondisi file yang ada di masa lalu, kemudian
-menggabungkannya dengan commit terakhir.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;614&#34;
-    height=&#34;350&#34;
-    alt=&#34;Git revert&#34;
-    src=&#34;https://1.bp.blogspot.com/-p1Hts6bga0Q/WLvqvSAOYHI/AAAAAAAAEQc/eQzgyZfu5OoEN0jkS1FPX2AGN1-za7M-wCPcB/s1600/git-revert-petanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Masih belum paham?&lt;/p&gt;
-
-&lt;p&gt;Mari kita coba lakukan sedikit eskperimen&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Sebelumnya, berikut ini adalah kondisi repositori yang dijadikan bahan percobaan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;871&#34;
-    height=&#34;445&#34;
-    alt=&#34;kondisi+repositori+project-01.png&#34;
-    src=&#34;https://1.bp.blogspot.com/-Xq9vrpX-DiY/WLvz0ryEXzI/AAAAAAAAEQw/PjaEZEW1Z6IV-qvFLI0iDASf3jE4oo-2wCPcB/s1600/kondisi%2Brepositori%2Bproject-01.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Ada empat commit di sana, kemudian kita ingin melakukan revert ke commit ke-2.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;735&#34;
-    height=&#34;141&#34;
-    alt=&#34;terjadi+konflik+saat+revert.png&#34;
-    src=&#34;https://2.bp.blogspot.com/-JpdZvMkefLo/WLv3zxl30GI/AAAAAAAAERI/XbtMbUuU9Bs7wq82vb-HxveMKPJdNx1RgCPcB/s1600/terjadi%2Bkonflik%2Bsaat%2Brevert.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Terjadi error, karena ada file yang bentrok.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;735&#34;
-    height=&#34;397&#34;
-    alt=&#34;file index.html bentrok karena di-revert&#34;
-    src=&#34;https://4.bp.blogspot.com/-OhP1eD7X0fU/WLv5K1FI2xI/AAAAAAAAERg/Az4Ek5l8GDEPkQVHXh9o2rVHqg4jXy7pQCPcB/s1600/file%2Bindex%2Bbentrok%2Bkarena%2Bdi-revert.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Silahkan atasi konflik ini, setelah itu lakukan commit.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;735&#34;
-    height=&#34;397&#34;
-    alt=&#34;commit+hasil+dari+revert.png&#34;
-    src=&#34;https://1.bp.blogspot.com/-foxxXQs_L-8/WLv4x8N2qUI/AAAAAAAAERY/u_RE3k-wlFUB5SeHBNrxglm7pQlk-XWQgCPcB/s1600/commit%2Bhasil%2Bdari%2Brevert.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah, sekarang kita sudah punya lima catatan revisi/commit di dalam repositori.&lt;/p&gt;
-
-&lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Perintah &lt;code&gt;git checkout&lt;/code&gt; mengembalikan file dalam kondisi sebelumnya, tapi bersifat
-sementara.&lt;/li&gt;
-&lt;li&gt;Perintah &lt;code&gt;git reset&lt;/code&gt;, akan mengembalikan file ke kondisi sebelumnya,
-kemudian menghapus catatan sejarah commit beikutnya.&lt;/li&gt;
-&lt;li&gt;Perintah &lt;code&gt;git revert&lt;/code&gt; mengembalikan file dengan tidak menghapus sejarah commit.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kira-kira seperti itulah perbedaan perintah &lt;code&gt;git checkout&lt;/code&gt;, &lt;code&gt;git reset&lt;/code&gt;, dan
-&lt;code&gt;git revert&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Referensi:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/4114122&#34;&gt;http://stackoverflow.com/a/4114122&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.atlassian.com/git/tutorials/undoing-changes&#34;&gt;https://www.atlassian.com/git/tutorials/undoing-changes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

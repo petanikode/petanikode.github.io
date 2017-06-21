@@ -7,8 +7,227 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 20 Jun 2017 04:03:51 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 21 Jun 2017 16:52:41 +0800</lastBuildDate>
     <atom:link href="https://www.petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Pemrograman Android dengan Kotlin Extensions (Lebih Cepat!)</title>
+      <link>https://www.petanikode.com/pemrograman-android-kotlin-extensions/</link>
+      <pubDate>Wed, 21 Jun 2017 16:52:41 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-android-kotlin-extensions/</guid>
+      <description>
+
+&lt;p&gt;Pada tulisan sebelumnya, kita telah berhasil &lt;a href=&#34;https://www.petanikode.com/pemrograman-android-dengan-kotlin&#34;&gt;menginstal plugin
+Kotlin pada Android Studio 2.x&lt;/a&gt;,
+sehingga kita dapat menggunakan kotlin di sana.&lt;/p&gt;
+
+&lt;p&gt;Pemrograman Android dengan Kotlin memang masih baru.&lt;/p&gt;
+
+&lt;p&gt;Kemarin saya mencoba membuat kode untuk &lt;em&gt;event listener&lt;/em&gt; &lt;code&gt;onClick()&lt;/code&gt;,
+tapi malah error. Aplikasi tidak bisa dibuka dan langsung menutup dirinya.&lt;/p&gt;
+
+&lt;p&gt;Pesan error pun tidak ditapilkan di Android Studio.&lt;/p&gt;
+
+&lt;p&gt;Namun, masalah ini sudah terpecahkan oleh &lt;em&gt;Kotlin Extension&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-itu-kotlin-extensions&#34;&gt;Apa itu &lt;em&gt;Kotlin Extensions&lt;/em&gt;?&lt;/h2&gt;
+
+&lt;p&gt;Pernah menggunakan fungsi &lt;code&gt;findViewById()&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Fungsi ini tugasnya untuk memilih komponen yang ada di layout
+untuk dijadikan objek pada Java.
+Mirip seperti fungsi &lt;code&gt;getElementById()&lt;/code&gt; pada Javascript.&lt;/p&gt;
+
+&lt;p&gt;Pada Kotlin, kita tidak lagi menggunakan fungsi &lt;code&gt;findViewById()&lt;/code&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Karena menurut mereka (Dok. Kotlin):&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Fungsi tersebut berpotensi menimbulkan &lt;em&gt;bugs&lt;/em&gt; dan membuat kode jadi susah dibaca&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;(Pantes saja aplikasi saya error dan tidak bisa dibuka :smile:)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Kotlin memberikan terobosan dengan &lt;em&gt;plugin Kotlin Extensions&lt;/em&gt;,
+sehingga programmer tidak lagi menghabiskan energi dan
+waktunya untuk mengetik fungsi &lt;code&gt;findViewById()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;in&#34; dir=&#34;ltr&#34;&gt;Kotlin membuatnya jadi lebih sederhana&amp;hellip; no more findViewById() 👨‍💻 &lt;a href=&#34;https://t.co/31D53qHu03&#34;&gt;pic.twitter.com/31D53qHu03&lt;/a&gt;&lt;/p&gt;&amp;mdash; Petani Kode (@petanikode) &lt;a href=&#34;https://twitter.com/petanikode/status/877467306921664513&#34;&gt;June 21, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagaimana cara menggunakan &lt;em&gt;Kotlin Extensions&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;Mari kita bahas dengan praktik&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-proyek-aplikasi-android&#34;&gt;Membuat Proyek Aplikasi Android&lt;/h2&gt;
+
+&lt;p&gt;Kita gunakan saja proyek yang kemarin. Bila kamu sudah punya proyeknya, silahkan
+langsung lompat ke &lt;a href=&#34;#menambahkan-kotlin-ekstension-pada-proyek-aplikasi&#34;&gt;cara menambahkan kotlin extension di proyek android&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tapi kalau belum, sialkan dibuat.&lt;/p&gt;
+
+&lt;p&gt;Buka Android Studio dan buat proyek baru.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/1.buat-proyek-android.png&#34; alt=&#34;Membuat proyek baru di android studio&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu tentukan minimum SDK-nya,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/2.pilih-sdk.png&#34; alt=&#34;Memilih minimum SDK untuk Aplikasi Android&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian pilih &lt;em&gt;Activity&lt;/em&gt; yang ingin digunakan. Pilih saja &lt;strong&gt;Empty Activity&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/3.pilih-activity.png&#34; alt=&#34;Memilih Jenis Activity Awal&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, pada pemberian nama Activity, biarkan saja apa adanya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/4.nama-activity.png&#34; alt=&#34;Memberikan nama Activity&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Klik &lt;strong&gt;Finish&lt;/strong&gt;, dan proyek baru kita akan langsung dibuat.&lt;/p&gt;
+
+&lt;h2 id=&#34;konfigurasi-proyek-kotlin&#34;&gt;Konfigurasi Proyek Kotlin&lt;/h2&gt;
+
+&lt;p&gt;Kita belum dapat menggunakan Kotlin pada proyek yang baru saja kita buat,
+karena masih menggunakan Java.&lt;/p&gt;
+
+&lt;p&gt;Oleh karena itu, Kita perlu melakukan sedikit konfigurasi untuk memberitahu Android Studio
+bahwa kita ingin pakai Kotlin pada proyek ini.&lt;/p&gt;
+
+&lt;p&gt;Silahkan buka menu &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Kotlin&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Configure Kotlin in Project&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/menu-konfigurasi-kotlin.png&#34; alt=&#34;Menu konfigurasi proyek kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian pilih versi kompilator Kotlin yang ingin digunakan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/pilih-compiler.png&#34; alt=&#34;Menentukan versi kompilator kotlin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, akan muncul pesan notifikasi bila konfigurasi berhasil.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/konfigurasi-sukses.png&#34; alt=&#34;Pesan Konfigurasi kotlin sukses&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;menambahkan-kotlin-ekstension-pada-proyek-aplikasi&#34;&gt;Menambahkan Kotlin Ekstension pada Proyek Aplikasi&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka file &lt;code&gt;build.gradle&lt;/code&gt; (app), kemudian tambahkan kode berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;apply plugin: &#39;kotlin-android-extensions&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tambahkan dibagian atas:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin-ext/add-kotlin-extension.png&#34; alt=&#34;Menambahkan plugin android extensions pada proyek android&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu lakukan &lt;code&gt;sync&lt;/code&gt; proyek agar tidak error. Buka menu &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Android&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Sync Project with Gradle Files&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;menggunakan-kotlin-extension&#34;&gt;Menggunakan &lt;em&gt;Kotlin Extension&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Setelah proses &lt;code&gt;sync&lt;/code&gt; selesai, sekarang kita bisa menggunakan
+&lt;em&gt;Kotlin Extensions&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Silahkan buka file &lt;code&gt;MainActivity.kt&lt;/code&gt;, tambahkan kode berikut untuk mengimpor
+libaray dari &lt;em&gt;Kotlin Extensions&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-kotlin&#34;&gt;import kotlinx.android.synthetic.main.activity_main.*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Artinya kita akan mengimpor semua komponen di &lt;code&gt;activity_main.xml&lt;/code&gt; dan langsung
+dijadikan objek tanpa harus menggunakan fungsi &lt;code&gt;findViewById()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, kita coba buat fungsi untuk meng-handle &lt;em&gt;event onClick&lt;/em&gt;
+bernama &lt;code&gt;ucapSalam()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;File &lt;code&gt;MainActivity.kt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-kotlin&#34;&gt;package com.petanikode.cobakotlin
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+
+    fun ucapSalam(v: View?): Unit {
+        welcome_msg.setText(&amp;quot;Selamat datang di Kotlin!&amp;quot;)
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buka &lt;code&gt;activity_main.xml&lt;/code&gt; kemudian tambahkan sebuah &lt;code&gt;Button&lt;/code&gt;
+dan isi properti &lt;code&gt;onClick&lt;/code&gt; dengan nama fungsinya, yaitu: &lt;code&gt;ucapSalam&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin-ext/event-onclick.png&#34; alt=&#34;Properti untuk event onClick Button&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lalu &lt;code&gt;TextView&lt;/code&gt; di atasnya, kita ganti &lt;code&gt;id&lt;/code&gt;-nya menjadi &lt;code&gt;welcome_msg&lt;/code&gt;.
+Kode lengkap layout-nya seperti ini:&lt;/p&gt;
+
+&lt;p&gt;File &lt;code&gt;activity_main.xml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;RelativeLayout xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    xmlns:tools=&amp;quot;http://schemas.android.com/tools&amp;quot;
+    android:id=&amp;quot;@+id/activity_main&amp;quot;
+    android:layout_width=&amp;quot;match_parent&amp;quot;
+    android:layout_height=&amp;quot;match_parent&amp;quot;
+    android:paddingBottom=&amp;quot;@dimen/activity_vertical_margin&amp;quot;
+    android:paddingLeft=&amp;quot;@dimen/activity_horizontal_margin&amp;quot;
+    android:paddingRight=&amp;quot;@dimen/activity_horizontal_margin&amp;quot;
+    android:paddingTop=&amp;quot;@dimen/activity_vertical_margin&amp;quot;
+    tools:context=&amp;quot;com.petanikode.cobakotlin.MainActivity&amp;quot;&amp;gt;
+
+    &amp;lt;TextView
+        android:layout_width=&amp;quot;wrap_content&amp;quot;
+        android:layout_height=&amp;quot;wrap_content&amp;quot;
+        android:text=&amp;quot;Hello World!&amp;quot;
+        android:id=&amp;quot;@+id/welcome_msg&amp;quot; /&amp;gt;
+
+    &amp;lt;Button
+        android:text=&amp;quot;Button&amp;quot;
+        android:layout_width=&amp;quot;wrap_content&amp;quot;
+        android:layout_height=&amp;quot;wrap_content&amp;quot;
+        android:layout_below=&amp;quot;@+id/welcome_msg&amp;quot;
+        android:layout_alignParentStart=&amp;quot;true&amp;quot;
+        android:layout_marginTop=&amp;quot;52dp&amp;quot;
+        android:id=&amp;quot;@+id/button&amp;quot;
+        android:onClick=&amp;quot;ucapSalam&amp;quot; /&amp;gt;
+
+
+&amp;lt;/RelativeLayout&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang coba jalankan aplikasinya&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin-ext/hasil-running-aplikasi.png&#34; alt=&#34;Aplikasi Android dengan Kotlin Extensions&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berhasil dan tidak ada error! :smile:&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Kode Kotlin terlihat lebih sederhana dan mudah dipahami daripada Java.&lt;/p&gt;
+
+&lt;p&gt;Ditambah lagi dengan &lt;em&gt;Kotlin Extensions&lt;/em&gt; yang membuat kita hemat waktu dan tenaga,
+sehingga dapat membuat aplikasi android dengan lebih cepat.&lt;/p&gt;
+
+&lt;p&gt;Terima kasih sudah mengikuti tutorial ini sampai akhir. Selamat
+bereksperimen dengan Kotlin dan Android.&lt;/p&gt;
+
+&lt;p&gt;Ada kesulitan?&lt;/p&gt;
+
+&lt;p&gt;Tanyakan di komentar!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dok. Kotlin &amp;mdash; &lt;a href=&#34;https://kotlinlang.org/docs/tutorials/android-plugin.html&#34;&gt;Kotlin Android Extensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;StackOverflow &amp;mdash; &lt;a href=&#34;https://stackoverflow.com/q/40885426/2658551&#34;&gt;Kotlin in xml onClick not work&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Menggambar Objek dengan Perulangan dan Fungsi Random di HTML5 Canvas</title>
@@ -3814,293 +4033,6 @@ dengan bahasa Golang.&lt;/p&gt;
 
 &lt;p&gt;Ebook Dasar Pemrograman Golang gratis untuk disebarluaskan secara bebas,
 selama tidak melanggar aturan lisensi &lt;a href=&#34;http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html&#34;&gt;GNU LGPL 2.1&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cara Memilih Bahasa Pemrograman yang Tepat untuk Pemula</title>
-      <link>https://www.petanikode.com/cara-memilih-bahasa-pemrograman/</link>
-      <pubDate>Fri, 24 Mar 2017 20:07:11 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/cara-memilih-bahasa-pemrograman/</guid>
-      <description>
-
-&lt;p&gt;Saya mau belajar pemrograman, tapi bingung mau belajar bahasa pemrograman
-yang mana?&lt;/p&gt;
-
-&lt;p&gt;Apa bahasa pemrograman yang harus saya pelajari pertama kali?&lt;/p&gt;
-
-&lt;p&gt;Apa bahasa yang cocok untuk pemula?&lt;/p&gt;
-
-&lt;p&gt;Pertanyaan ini memang akan selalu muncul&amp;hellip; karena itu, saya membuat tulisan ini.&lt;/p&gt;
-
-&lt;p&gt;Banyak yang bingung memilih bahasa pemrograman untuk dipelajari, karena
-begitu banyak pilihan.&lt;/p&gt;
-
-&lt;p&gt;Ada juga yang takut salah pilih.&lt;/p&gt;
-
-&lt;p&gt;Maunya sih pelajari semuanya, tapi itu bukanlah yang terbaik.&lt;/p&gt;
-
-&lt;p&gt;Emangnya mau&amp;hellip; terus-terusan belajar bahasa pemrograman dan gak menghasilkan
-apa-apa.&lt;/p&gt;
-
-&lt;h2 id=&#34;memilih-bahasa-pemrograman-berdasarkan-popularitas&#34;&gt;Memilih Bahasa Pemrograman Berdasarkan Popularitas&lt;/h2&gt;
-
-&lt;p&gt;Mungkin kamu sering membaca artikel yang membahas tentang bahasa pemrograman
-terpopuler, terbaik, tercepat, dan pokoknya paling wow.&lt;/p&gt;
-
-&lt;p&gt;Ambil contoh dari hasil survey Stack Overflow:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;615&#34;
-    height=&#34;352&#34;
-    alt=&#34;bahasa pemrograman terpopuler di tahun 2017 menurut stackoverflow&#34;
-    src=&#34;https://4.bp.blogspot.com/-TKz_-na4WAI/WNsZ2QZrNyI/AAAAAAAAEfI/bgzZ1sUWa1wGBIEm4qPZW4_VhVGn9yPBACPcB/s1600/bahasa-pemrograman-terpopuler-menurut-stackoverflow-2017.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Javascript memang sangat populer saat ini, karena bisa digunakan di mana-mana.&lt;/p&gt;
-
-&lt;p&gt;Sesungguhnya ini bukan patokan memilih bahasa pemrograman. Karena setiap bahasa
-pemrograman memiliki kekurangan dan kelibihan masing-masing.&lt;/p&gt;
-
-&lt;p&gt;Memilih bahasa pemrograman berdasarkan popularitas memang ada untungnya:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Banyak panduan dan tutorial&lt;/li&gt;
-&lt;li&gt;Banyak digunakan di perusahaan&lt;/li&gt;
-&lt;li&gt;Banyak Komunitas&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Selain itu, kalian juga perlu pertimbangkan:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Apakah akan tetap populer selamanya, apa 10 tahun ke depan masih populer?&lt;/li&gt;
-&lt;li&gt;Apakah mudah bagi saya untuk mengerti sintaknya?&lt;/li&gt;
-&lt;li&gt;Banyak yang pakai berarti banyak persaingan kalau cari kerja&lt;/li&gt;
-&lt;li&gt;Apakah saya nyaman menggunakan bahasa pemrograman ini?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Sejujurnya, saya tidak begitu nyaman ngoding dengan Java. Meskipun Java
-begitu populer dan banyak digunakan.&lt;/p&gt;
-
-&lt;p&gt;Jadi, kamu juga harus pertimbangkan agar tidak bosan mempelajarinya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;apa-bahasa-pemrograman-yang-harus-dipelajari-pertama-kali&#34;&gt;Apa Bahasa Pemrograman yang Harus dipelajari Pertama Kali?&lt;/h2&gt;
-
-&lt;p&gt;Beberapa waktu yang lalu, Petani Kode menerbitkan sebuah pertanyaan:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-facebook width=&#34;500&#34;
-      height=&#34;500&#34;
-      layout=&#34;responsive&#34;
-      data-href=&#34;https://www.facebook.com/petanikode/posts/629780907205506:0&#34;&gt;
-&lt;/amp-facebook&gt;&lt;/p&gt;
-
-&lt;p&gt;Ternyata jawabannya macem-macem. Ada yang jawab Java, C, C++, Javascript, Pascal,
-PHP, dsb.&lt;/p&gt;
-
-&lt;p&gt;Saya sendiri, menjawab Pascal.&lt;/p&gt;
-
-&lt;p&gt;Karena kurikulum di kampus waktu itu mengajari Pascal. Mau tidak mau,
-Pascal harus diterima menjadi bahasa pemrograman pertama.&lt;/p&gt;
-
-&lt;p&gt;Pascal mungkin pilihan terbaik yang diberikan kampus, karena pascal bahasa
-yang terstruktur dan cocok untuk dipakai belajar algoritma.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Saran saya&lt;/strong&gt;: Jangan memilih Java sebagai bahasa pertama, karena &lt;a href=&#34;https://www.petanikode.com/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/&#34;&gt;Java kurang cocok
-untuk Pemula&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pilihlah bahasa prosedural dulu, seperti C, C++, Pascal, Python, Ruby, Go, dsb.&lt;/p&gt;
-
-&lt;p&gt;Nanti, kalau sudah paham dan mengusai salah satu bahasa tersebut, baru bisa coba
-belajar Java.&lt;/p&gt;
-
-&lt;h2 id=&#34;bagaimana-cara-memilih-bahasa-pemrograman-yang-tepat&#34;&gt;Bagaimana Cara Memilih Bahasa Pemrograman yang Tepat?&lt;/h2&gt;
-
-&lt;p&gt;Ketika disuruh memilih &lt;em&gt;&amp;ldquo;Mau tinggal di Arab atau Jepang?&amp;rdquo;&lt;/em&gt;
-Maka tentu kita akan mempelajari bahasa yang digunakan di sana.
-Sangat tidak tepat kalau kita pilih tinggal di Jepang, tapi mempelajari bahasa arab.&lt;/p&gt;
-
-&lt;p&gt;Begitu juga dengan memilih bahasa pemrograman. Kalian harus tentukan dulu
-tujuannya.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;Saya ingin belajar cara &amp;hellip;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Rekomendasi pakai bahasa&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat aplikasi iPhone&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Swift&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat aplikasi Android&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Java&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat website&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Javascript, CSS, HTML5&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat aplikasi desktop untuk windows&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;C#&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat game 2D/3D&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Javascript, C#, atau C++&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat program Arduino/micro-controller/robot&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;C&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat program komputasi untuk matematika dan analisis data&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Julia, Python, R, or Matlab&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;hellip; membuat automation dan scripting&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Banyak (Python, Ruby, Bash, Powershell, AutoHotKey&amp;hellip;)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Masih bingung pilih yang mana?&lt;/p&gt;
-
-&lt;p&gt;Mari kita coba dengan alat bantu&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;bahasa-pemrograman-terbaik-untuk-saya&#34;&gt;Bahasa Pemrograman Terbaik untuk Saya&lt;/h2&gt;
-
-&lt;p&gt;Ada sebuah alat yang dibuat oleh Codementor, namanya &lt;a href=&#34;http://bestprogramminglanguagefor.me&#34;&gt;bestprogramminglanguagefor.me&lt;/a&gt;.
-Silahkan dibuka, kemudian tentukan tujuannya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1139&#34;
-    height=&#34;440&#34;
-    alt=&#34;Pilih tujuan belajar bahasa pemrograman&#34;
-    src=&#34;https://4.bp.blogspot.com/-R_U7U60pQhI/WNUnfMJRlCI/AAAAAAAAEdg/C88kiwSv_Doth0JIpUhyYw6jqHaFaQGYQCPcB/s1600/Pilih%2Btujuan%2Bbelajar%2Bbahasa%2Bpemrograman.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Ada empat tujuan yang ditawarkan alat ini.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Menjadi Programmer profesional&lt;/li&gt;
-&lt;li&gt;Membangun Startup&lt;/li&gt;
-&lt;li&gt;Bersenang-senang&lt;/li&gt;
-&lt;li&gt;Punya skill tambahan&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Nah silahkan pilih, sebagai contoh saya ingin menjadi game developer yang
-profesional. Maka nanti hasil akhirnya, akan disarankan memilih C#
-(tergantung dari pilihan yang diambil).&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;725&#34;
-    height=&#34;604&#34;
-    alt=&#34;Saran bahasa pemrograman terbaik untuk saya&#34;
-    src=&#34;https://3.bp.blogspot.com/-PNIwDtRZpO0/WNUo1tzmhsI/AAAAAAAAEd8/2NY3-9SRkx0-bh_rDf-7dlmF6fOCq9dEgCPcB/s1600/Saran%2Bbahasa%2Bpemrograman%2Bterbaik%2Buntuk%2Bsaya.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Coba juga alat bantu yang lain: &lt;a href=&#34;http://choosing-a-language.techboss.co/&#34;&gt;Choosing a language&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;tips-tips-memilih-bahasa-pemrograman&#34;&gt;Tips-tips Memilih Bahasa Pemrograman&lt;/h2&gt;
-
-&lt;p&gt;Beberapa waktu yang lalu, Petani Kode membuat kultwit tentang
-kiat-kiat memilih bahasa pemrograman. Berikut ini rangkumannya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
-  height=&#34;330&#34;
-  layout=&#34;responsive&#34;
-  data-tweetid=&#34;824230986774786050&#34;
-  data-cards=&#34;hidden&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;Jangan sibuk memilih bahasanya, fokuslah belajar konsepnya. Karena setiap
-bahasa pemrograman memiki konsep dasar yang sama.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
-  height=&#34;330&#34;
-  layout=&#34;responsive&#34;
-  data-tweetid=&#34;824232508422135808&#34;
-  data-cards=&#34;hidden&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
-  height=&#34;330&#34;
-  layout=&#34;responsive&#34;
-  data-tweetid=&#34;824233108853690369&#34;
-  data-cards=&#34;hidden&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
-  height=&#34;330&#34;
-  layout=&#34;responsive&#34;
-  data-tweetid=&#34;824236821861109760&#34;
-  data-cards=&#34;hidden&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;Karena kamu belum belajar konsep pemrograman berorientasikan objek atau OOP,
-maka disarankan pelajari bahasa yang terstruktur dulu.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
-  height=&#34;330&#34;
-  layout=&#34;responsive&#34;
-  data-tweetid=&#34;824237560943677440&#34;
-  data-cards=&#34;hidden&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
-  height=&#34;330&#34;
-  layout=&#34;responsive&#34;
-  data-tweetid=&#34;824240509518430208&#34;
-  data-cards=&#34;hidden&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;Jangan langsung mulai belajar dari pemrograman GUI/Desktop. Karena kamu perlu tahu
-dulu program berbasis teks (console).&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
-  height=&#34;330&#34;
-  layout=&#34;responsive&#34;
-  data-tweetid=&#34;824242367926444038&#34;
-  data-cards=&#34;hidden&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;Pilih bahasa pemrograman yang tidak hanya digunakan pada satu platform.&lt;/p&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Akhir kata:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;390&#34;
-  height=&#34;330&#34;
-  layout=&#34;responsive&#34;
-  data-tweetid=&#34;836124110597939200&#34;
-  data-cards=&#34;hidden&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;Bagaimana, apakah kamu sudah menentukan bahasa pemrograman yang akan dipelajari?&lt;/p&gt;
 </description>
     </item>
     

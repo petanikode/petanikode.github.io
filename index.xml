@@ -43,7 +43,7 @@ getaran pada web yang bertujuan memberikan umpan balik pada kejadian tertentu.&l
 
 &lt;p&gt;Menurut penjelasan MDN &lt;em&gt;(Mozilla Developer Network)&lt;/em&gt; getaran itu sendiri
 didefinisikan sebagai pola dari gelombang pulsa on-off yang memiliki panjang
-dalam bentuk integer. Panjang gelombang tersebut menentukan lama getarananya.&lt;/p&gt;
+dalam bentuk &lt;em&gt;integer&lt;/em&gt;. Panjang gelombang tersebut menentukan lama getarananya.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/contoh-gelombang-pulsa.png&#34; alt=&#34;Contoh Gelombang Pulsa Getearan&#34; /&gt;&lt;/p&gt;
 
@@ -67,7 +67,9 @@ Bentuk sintaksnya seperti ini:&lt;/p&gt;
 
 &lt;p&gt;Lalu bagaiaman kalau membuat lebih dari satu kali getaran?&lt;/p&gt;
 
-&lt;p&gt;Gampang! kita tinggal membuat pola dari pulsa getarannya.&lt;/p&gt;
+&lt;p&gt;Gampang!&lt;/p&gt;
+
+&lt;p&gt;Kita tinggal membuat pola dari pulsa getarannya.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate([1000, 500, 1000]);
 &lt;/code&gt;&lt;/pre&gt;
@@ -158,7 +160,7 @@ atau scan QR Code berikut:&lt;/p&gt;
 &lt;p&gt;Apakah terjadi getaran atau tidak?&lt;/p&gt;
 
 &lt;p&gt;Kalau tidak, berarti browser-nya tidak mendukung. Coba gunakan Google Chrome
-vaersi terbaru.&lt;/p&gt;
+versi terbaru.&lt;/p&gt;
 
 &lt;p&gt;Berikut ini daftar versi browser yang mendukung:&lt;/p&gt;
 

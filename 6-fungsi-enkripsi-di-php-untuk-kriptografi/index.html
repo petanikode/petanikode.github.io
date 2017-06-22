@@ -768,14 +768,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -788,6 +801,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1195,28 +1209,30 @@ padding: 16px;
                 <p><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png" /></a></div>Enkripsi merupakan proses mengubah teks polos <i>(plain text)</i> menjadi bentuk lain (kode sandi atau <i>hash</i>). Enkripsi bertujuan untuk melindungi informasi rahasia seperti kata sandi atau <i>password</i>. PHP menyediakan beberapa fungsi untuk melakukan enkripsi, diantaranya: <code>password_hash()</code>, <code>crypt()</code>, <code>md5()</code>, <code>hash()</code>, <code>sha1()</code>, dan <code>base64_encode()</code>.<br /><h3>1. Fungsi password_hash()</h3>Fungsi ini akan menghasilkan sebuah kode sandi <i>(hash)</i> baru dengan algoritma <i>one-way hashing</i>. Contoh penggunaan:<br /><pre><code class="php">&lt;?php echo password_hash(&ldquo;PetaniKode&rdquo;, PASSWORD_DEFAULT); ?&gt;</code></pre>akan menghasilkan kode acak yang berubah-ubah:<br /><pre>$2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2</pre>Sepertinya fungsi ini sangat cocok untuk mengenkripsi password. Karena kode yang dihasilkan selalu berubah. Oleh sebab itu, fungsi ini juga dibantu oleh fungsi <code>password_verify()</code> untuk memverifikasi kode sandi. Contoh penerapan:<br /><br /><script src="https://gist.github.com/ardianta/ca93a579e734f8f58754.js"></script><br /><h3>2. Fungsi crypt()</h3>Fungsi ini menghasilkan kode sandi yang lebih pendek daripada fungsi <code>password<em>hash()</code>. Contoh:<br /><pre><code class="php">&lt;?php echo crypt(&ldquo;petanikode&rdquo;, &ldquo;garam&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>gabeK4a28MgJs</pre>Bila diperhatikan, susuan karakter yang dihasilkan mirip seperti karakter yang digunakan di alamat URL video youtube. Mungkin saja youtube juga menggunakan algoritma yang sama dengan fungsi ini.<br /><br />Pada contoh diatas, fungsi diberikan dua parameter. Parameter pertama adalah teks yang akan dienkripsi. Sementara, parameter kedua adalah <i>salt</i> (garam). &lt;a href=&ldquo;<a href="https://en.wikipedia.org/wiki/Salt">https://en.wikipedia.org/wiki/Salt</a></em>%28cryptography%29&rdquo; target=&rdquo;_blank&rdquo;&gt;Garam</a> adalah sebuah data acak yang dimasukkan ke dalam fungsi enkripsi.<br /><h3>3. Fungsi md5()</h3>Fungsi ini menghasilkan kode sandi sepanjang 32 karakter. Contoh:<br /><pre><code class="php">&lt;?php echo md5(&ldquo;petanikode&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>37ebda33c177743169404948552319df</pre>Bila ditambahkan garam, hasilnya akan berubah. Contoh:<br /><pre><code class="php">&lt;?php echo md5(&ldquo;petanikode&rdquo;, &ldquo;g4r4m&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>7��3�wt1i@IHU#�</pre><h3>4. Fungsi hash()</h3>Fungsi ini akan menciptkan sebuah kode sandi dengan algoritma tertentu. Contoh:<br /><pre><code class="php">&lt;?php echo hash(&ldquo;md5&rdquo;, &ldquo;petanikode&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>37ebda33c177743169404948552319df</pre>Pada contoh di atas, parameter <code>&ldquo;md5&rdquo;</code> adalah nama algortima yang digunakan. Sementara, <code>&ldquo;petanikode&rdquo;</code> adalah teks yang akan dienkripsi.<br /><br />Bila ingin mengetahui nama-nama algoritma yang bisa dipakai fungsi ini. Silahkan coba contoh kode yang diberikan dari <a href="http://php.net/manual/en/function.hash.php#104987" target="_blank">web dokumentasinya</a>:<br /><pre><code class="php">&lt;?php<br />$data = &ldquo;hello&rdquo;;<br /><br />foreach (hash_algos() as $v) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $r = hash($v, $data, false);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf(&ldquo;%-12s %3d %s\n&rdquo;, $v, strlen($r), $r);<br />}<br />?&gt;</code></pre>maka akan menghasilkan:<script src="http://pastebin.com/embed_js.php?i=6sFRTVGq"></script><br /><h3>5. Fungsi sha1()</h3>Fungsi ini akan menghasilkan kode sandi sepanjang 40 karakter. Mirip seperti fungsi <code>md5()</code>. Contoh:<br /><pre><code class="php">&lt;?php echo sha1(&ldquo;petanikode&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>2e71f75dee7cb3e4b8e2e6ef8b8b5e0eab8f78a2</pre>Seperti halnya fungsi <code>md5()</code>, fungsi ini juga akan menciptakan karakter aneh, bila ditambahkan garam. Contoh:<br /><pre><code class="php">&lt;?php echo sha1(&ldquo;petanikode&rdquo;, &ldquo;ga12am&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>.q�]�|�����^��</pre><h3>6. Fungsi base64_encode()</h3>Fungsi ini menghasilkan kode sandi dari teks yang diinputkan. Contoh:<br /><pre><code class="php">&lt;?php echo base64_encode(&ldquo;Petani kode&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>UGV0YW5pIGtvZGU=</pre>Sementara, untuk dekripsi atau dekode dapat menggunakan fungsi <code>base64_decode()</code>. Contoh:<br /><pre><code class="php">&lt;?php echo base64_decode(&ldquo;UGV0YW5pIGtvZGU=&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>Petani kode</pre><h3>Kesimpulan </h3>Itulah enam fungsi untuk melakukan enkripsi di PHP. Setiap fungsi memiliki algoritmanya masing-masing. Anda juga bisa meracik sendiri fungsi enkripsi dengan memanfaatkan fungsi-fungsi di atas. Penambahan <i>salt</i> (garam) pada fungsi bertujuan agar password atau kode sandi tidak mudah dipecahkan.<br /><br />Sepertinya, masih ada lagi fungsi lain yang belum disebutkan. Hmm&hellip; ada yang mau menambahkan?<br /><br />&mdash;<br />Referensi:<br /><a href="http://www.w3schools.com/php/func_string_crypt.asp" target="_blank"><a href="http://www.w3schools.com/php/func_string_crypt.asp">http://www.w3schools.com/php/func_string_crypt.asp</a></a><br /><a href="http://php.net/manual/en/refs.crypto.php" target="_blank"><a href="http://php.net/manual/en/refs.crypto.php">http://php.net/manual/en/refs.crypto.php</a></a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f&t=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f&text=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi%20https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi&body=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi:%20https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f&t=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f&text=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi%20https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f&description=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f&title=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi&body=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi:%20https%3a%2f%2fwww.petanikode.com%2f6-fungsi-enkripsi-di-php-untuk-kriptografi%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/enkripsi">Enkripsi</a>
-                  
-                    #<a href="/topik/kriptografi">Kriptografi</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/enkripsi">Enkripsi</a>
+                      
+                        #<a href="/topik/kriptografi">Kriptografi</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

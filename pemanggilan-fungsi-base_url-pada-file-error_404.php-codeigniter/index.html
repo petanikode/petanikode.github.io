@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,28 +1207,30 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" imageanchor="1"><img alt="CodeIgniter - Petani Kode" border="0" src="https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" title="" /></a><br />Ketika saya memodifikasi halaman <i>error 404</i> CodeIgniter, fungsi <code>base_url()</code> tidak bisa dipanggil. Mungkin saja fungsi ini tidak dikenali di sini. Fungsi <code>base_url()</code> saya butuhkan untuk meyisipkan kode CSS yang ada di direktori <code>assets</code>. Pesan Error-nya:<br /><pre><code>Call to undefined function base_url() in the error_404 page</code></pre>Solusi dari masalah ini sangat sederhana. Kita tidak harus menggunakan fungsi <code>base_url()</code> untuk mendapatkan <i>base url</i>. Kita bisa menggunakan fungsi <code>config_item()</code> dengan parameter <code>&lsquo;base_url&rsquo;</code>. Contoh:<br /><pre><code class="php html">&lt;?php echo config_item(&lsquo;base_url&rsquo;); ?&gt;</code></pre>Penggunaan untuk menyisipkan Kode CSS:<br /><pre><code class="php html">&lt;link rel=&ldquo;stylesheet&rdquo; href=&rdquo;&lt;?php echo config_item(&lsquo;base_url&rsquo;) ?&gt;/assets/AdminLTE/bootstrap/css/bootstrap.min.css&rdquo;&gt;</code></pre>Selain untuk menyisipkan <i>assets</i>, kita juga bisa memanfaatkan fungsi ini untuk membuat link ke halaman <i>home</i>.<br /><pre><code class="html php js">&lt;body class=&ldquo;bg-info&rdquo;&gt;<br />&nbsp;&nbsp; &nbsp;&lt;div class=&ldquo;container&rdquo;&gt;<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;row&rdquo;&gt;<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;col-md-6 col-md-offset-3&rdquo; style=&ldquo;margin-top:16%&rdquo;&gt;<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;box box-warning animated shake&rdquo;&gt;<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;box-body&rdquo;&gt;<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;h2&gt;&lt;i class=&ldquo;fa fa-warning&rdquo;&gt;&lt;/i&gt; 404 Tidak ditemukan&lt;/h2&gt;<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;p&gt;Halaman yang anda minta tidak ditemukan&lt;/p&gt;<br /><br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&ldquo;javascript:window.history.go(-1)&rdquo;&gt;Kembali ke Halaman Sebelumnya&lt;/a&gt; |<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&rdquo;&lt;?php echo config_item(&lsquo;base_url&rsquo;) ?&gt;&ldquo;&gt;Kembali ke Home&lt;/a&gt;<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />&nbsp;&nbsp; &nbsp;&lt;/div&gt;<br />&lt;/body&gt;</code></pre>Hasilnya:<br /><a href="http://2.bp.blogspot.com/-AcNceI4TWgM/V4uluhbu0WI/AAAAAAAADDE/5ynfbzKw1G4af2mXjrH2UYLpWVelRY7VwCK4B/s1600/modifikasi%2Bhalaman%2B404%2Bcodeigniter.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-AcNceI4TWgM/V4uluhbu0WI/AAAAAAAADDE/5ynfbzKw1G4af2mXjrH2UYLpWVelRY7VwCK4B/s1600/modifikasi%2Bhalaman%2B404%2Bcodeigniter.png" /></a><br /><br /></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f&t=Pemanggilan%20fungsi%20base_url%28%29%20pada%20File%20error_404.php%20CodeIgniter" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f&text=Pemanggilan%20fungsi%20base_url%28%29%20pada%20File%20error_404.php%20CodeIgniter%20https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemanggilan%20fungsi%20base_url%28%29%20pada%20File%20error_404.php%20CodeIgniter&body=Pemanggilan%20fungsi%20base_url%28%29%20pada%20File%20error_404.php%20CodeIgniter:%20https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f&t=Pemanggilan%20fungsi%20base_url%28%29%20pada%20File%20error_404.php%20CodeIgniter" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f&text=Pemanggilan%20fungsi%20base_url%28%29%20pada%20File%20error_404.php%20CodeIgniter%20https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f&description=Pemanggilan%20fungsi%20base_url%28%29%20pada%20File%20error_404.php%20CodeIgniter" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f&title=Pemanggilan%20fungsi%20base_url%28%29%20pada%20File%20error_404.php%20CodeIgniter" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Pemanggilan%20fungsi%20base_url%28%29%20pada%20File%20error_404.php%20CodeIgniter&body=Pemanggilan%20fungsi%20base_url%28%29%20pada%20File%20error_404.php%20CodeIgniter:%20https%3a%2f%2fwww.petanikode.com%2fpemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/codeigniter">CodeIgniter</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/codeigniter">CodeIgniter</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

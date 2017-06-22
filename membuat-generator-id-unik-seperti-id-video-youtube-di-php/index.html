@@ -762,14 +762,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -782,6 +795,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1189,26 +1203,28 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" /></a>Dalam sebuah tabel di database, seringkali kita membuat kolom bernama <i>id</i> sebagai <i>primary key</i>. Kadang kolom tersebut kita berikan fungsi <i>auto increment</i> agar otomatis terisi dengan angka. Namun, kali ini kita coba menggunakan karakter yang di-generate dari nilai waktu per milidetik.<br /><h2>1. Mengambil Niali Unik dari Fungsi Waktu</h2>Kita dapat menggunakan fungsi <code>microtime()</code> atau fungsi <code>time()</code> untuk mendapatkan nilai unik. Nilai ini, senantiasa akan berubah terus, seiring dengan perubahan waktu.<br /><a href="http://2.bp.blogspot.com/-ubClV7hDPm4/V5YdDqUnzlI/AAAAAAAADFA/gXW70RE2lVUtkQkfBE9N-GUsNePX-ViFwCK4B/s1600/Fungsi%2Bmicrotime%2Bphp.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-ubClV7hDPm4/V5YdDqUnzlI/AAAAAAAADFA/gXW70RE2lVUtkQkfBE9N-GUsNePX-ViFwCK4B/s1600/Fungsi%2Bmicrotime%2Bphp.png" /></a><br />Dari percobaan di atas, fungsi <code>microtime()</code> mengembalikan nilai unik setiap kali dipanggil. Sementara itu, fungsi <code>time()</code> akan mengembalikan nilai unik setiap detik.<br /><a href="http://4.bp.blogspot.com/-dXT_-41NNR8/V5YdvmbBeoI/AAAAAAAADFI/YHLS6g10orIrB_1sz_oxBt7ATHJskq53gCK4B/s1600/fungsi%2Btime%2Bdi%2Bphp.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-dXT_-41NNR8/V5YdvmbBeoI/AAAAAAAADFI/YHLS6g10orIrB_1sz_oxBt7ATHJskq53gCK4B/s1600/fungsi%2Btime%2Bdi%2Bphp.png" /></a><br />Saya sarankan menggunakan fungsi <code>microtime()</code>, karena fungsi ini mengembalikan nilai unik per milidetik.<br /><h2>2. Konversi Nilai Unik</h2>Sebenarnya, kita bisa saja menggunakan nilai kembalian dari <code>microtime()</code> dan <code>time()</code> untuk membuat <i>id</i> unik. Tapi, karena kita ingin membuat <i>id</i> serpeti YouTube, maka kita harus lakukan konversi ke dalam bentuk lain. Kita bisa menggunakan fungsi <code>base_convert()</code> untuk membuatnya.<a href="http://4.bp.blogspot.com/-G_veE3liy8M/V5Yfgmblb_I/AAAAAAAADFY/sxYkIQAnfhouz0NLAI8lkspUWkL-UXSlgCK4B/s1600/Konversi%2Bbasis%2Bnilai%2Bunik.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-G_veE3liy8M/V5Yfgmblb_I/AAAAAAAADFY/sxYkIQAnfhouz0NLAI8lkspUWkL-UXSlgCK4B/s1600/Konversi%2Bbasis%2Bnilai%2Bunik.png" /></a><br />Fungsi<code> base_convert()</code> Sebenarnya untuk mengubah basis dari sebuah nilai. Pada contoh di atas, parameter angka <code>10</code> merupakan panjang nilai yang dihasilkan. Sedangkan angka <code>36</code> adalah basisnya.<br /><br />Contoh lain, panjang <code>8</code> dengan basis <code>16</code> (bilangan heksadesimal):<br /><a href="http://4.bp.blogspot.com/-j7Nw2jOzi14/V5YhNv6dPAI/AAAAAAAADFk/lhhAMuGfnYkR2Kah5Pmr2XAu1tfWRZ6wACK4B/s1600/Konversi%2Bbasis%2Bke%2Bbilangan%2Bheksadesimal.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-j7Nw2jOzi14/V5YhNv6dPAI/AAAAAAAADFk/lhhAMuGfnYkR2Kah5Pmr2XAu1tfWRZ6wACK4B/s1600/Konversi%2Bbasis%2Bke%2Bbilangan%2Bheksadesimal.png" /></a><br /><h2>3. Kode Generator</h2>Kita sudah dapat apa yang kita inginkan, sekarang kita buat kode generatornya. Pada generator ini kita gunakan basis <code>36</code> dengan panjang <code>10</code>.<br /><pre><code class="php">&lt;?php<br />$id = base_convert(microtime(false), 10, 36);<br />?&gt;</code></pre>Kita bisa manfaatkan variabel tersebut untuk penyimpanan ke tabel database. Contoh:<br /><pre><code class="php mysql sql">&lt;?php<br />$id = base_convert(microtime(false), 10, 36);<br /><br />mysqli_query($koneksi, &ldquo;INSERT INTO video (id, judul, url) VALUE (&lsquo;$id&rsquo;,&lsquo;Petani Kode - Intro&rsquo;,&lsquo;petani-kode.mp4&rsquo;)&rdquo;);<br />?&gt;</code></pre>Basis <code>36</code> maksudnya: &lsquo;<code>abcdefghijklmnopqrstuvwxyz0123456789</code>&rsquo; = <code>36</code> karater.<br /><h2>Kesimpulan</h2>Id unik untuk primary key seperti YouTube dibuat dari konversi nilai unik dari fungsi <code>microtime()</code> atau <code>time()</code> ke dalam bentuk basis <code>36</code>. Konversi basis dari sebuah nilai menggunakan fungsi <code>base_convert()</code>.<br /><br />Referensi: <a href="http://stackoverflow.com/questions/3990820/how-can-i-make-short-random-unique-keys-like-youtube-video-ids-in-php" target="_blank">Stack Overflow</a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f&t=Membuat%20Generator%20id%20Unik%20seperti%20id%20Video%20YouTube%20di%20PHP" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f&text=Membuat%20Generator%20id%20Unik%20seperti%20id%20Video%20YouTube%20di%20PHP%20https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Membuat%20Generator%20id%20Unik%20seperti%20id%20Video%20YouTube%20di%20PHP&body=Membuat%20Generator%20id%20Unik%20seperti%20id%20Video%20YouTube%20di%20PHP:%20https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f&t=Membuat%20Generator%20id%20Unik%20seperti%20id%20Video%20YouTube%20di%20PHP" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f&text=Membuat%20Generator%20id%20Unik%20seperti%20id%20Video%20YouTube%20di%20PHP%20https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f&description=Membuat%20Generator%20id%20Unik%20seperti%20id%20Video%20YouTube%20di%20PHP" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f&title=Membuat%20Generator%20id%20Unik%20seperti%20id%20Video%20YouTube%20di%20PHP" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Membuat%20Generator%20id%20Unik%20seperti%20id%20Video%20YouTube%20di%20PHP&body=Membuat%20Generator%20id%20Unik%20seperti%20id%20Video%20YouTube%20di%20PHP:%20https%3a%2f%2fwww.petanikode.com%2fmembuat-generator-id-unik-seperti-id-video-youtube-di-php%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

@@ -782,14 +782,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -802,6 +815,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1209,32 +1223,34 @@ padding: 16px;
                 <p>Saya menghabiskan cukup banyak waktu untuk mengatasi masalah ini. Sampai-sampai mencari di Google, tapi tidak dapat solusi. Ceritanya, saya sedang mengerjakan sebuah proyek dengan Admin LTE. Kemudian saya menggunakan Select2 untuk element <code>&lt;select&gt;</code>. Akan tetapi, tampilannya tidak seperti yang diharapkan.<br /><br />Kode HTML:<br /><pre><code class="html">&lt;div class=&ldquo;form-group&rdquo;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;label for=&ldquo;kabupaten&rdquo;&gt;Kabupaten/Kota&lt;/label&gt;<br />&nbsp;&nbsp;&nbsp; &lt;select name=&ldquo;kabupaten&rdquo; class=&ldquo;select2 form-control&rdquo;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option selected disabled&gt;Pilih Kabupaten&hellip;&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&ldquo;5201&rdquo;&gt;Kab. Lombok Barat&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&ldquo;5202&rdquo;&gt;Kab. Lombok Tengah&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&ldquo;5203&rdquo;&gt;Kab. Lombok Timur&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&ldquo;5204&rdquo;&gt;Kab. Sumbawa&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&ldquo;5205&rdquo;&gt;Kab. Dompu&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&ldquo;5206&rdquo;&gt;Kab. Bima&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&ldquo;5207&rdquo;&gt;Kab. Sumbawa Barat&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&ldquo;5208&rdquo;&gt;Kab. Lombok Utara&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&ldquo;5271&rdquo;&gt;Kota Mataram&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&ldquo;5272&rdquo;&gt;Kota Bima&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp; &lt;/select&gt;<br />&lt;/div&gt;<br /><br />&lt;div class=&ldquo;form-group&rdquo;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;label for=&ldquo;kecamatan&rdquo;&gt;Kecamatan&lt;/label&gt;<br />&nbsp;&nbsp;&nbsp; &lt;select name=&ldquo;kecamatan&rdquo; class=&ldquo;form-control select2&rdquo;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option selected disabled&gt;Pilih Kecamatan&hellip;&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp; &lt;/select&gt;<br />&lt;/div&gt;<br /><br />&lt;div class=&ldquo;form-group&rdquo;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;label for=&ldquo;desa&rdquo;&gt;Desa/Kelurahan&lt;/label&gt;<br />&nbsp;&nbsp;&nbsp; &lt;select name=&ldquo;desa&rdquo; class=&ldquo;form-control select2&rdquo;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option selected disabled&gt;Pilih Desa&hellip;&lt;/option&gt;<br />&nbsp;&nbsp;&nbsp; &lt;/select&gt;<br />&lt;/div&gt;</code></pre>Tampilanya: <br /><a href="http://1.bp.blogspot.com/-eRdPeHmZQ1k/V4SZacZlbII/AAAAAAAADAM/lBPFmtR_UEsUwbvV5CJ4fRlH_3abo4A7wCK4B/s1600/Tampilan%2BSelect2%2Byang%2Btidak%2Bsesui.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-eRdPeHmZQ1k/V4SZacZlbII/AAAAAAAADAM/lBPFmtR_UEsUwbvV5CJ4fRlH_3abo4A7wCK4B/s1600/Tampilan%2BSelect2%2Byang%2Btidak%2Bsesui.png" /></a><br />Tampilan yang saya inginkan agar seperti di dokumentasi Admin LTE.<br /><a href="http://3.bp.blogspot.com/-oi08U7JTMEc/V4SaJHj4Q4I/AAAAAAAADAY/_gGOyqhOD5wihda0KcsJEHgx0HYr4yEEACK4B/s1600/Tampilan%2BSelect2%2Bdi%2Bdokumentasi%2BAdmin%2BLTE.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-oi08U7JTMEc/V4SaJHj4Q4I/AAAAAAAADAY/_gGOyqhOD5wihda0KcsJEHgx0HYr4yEEACK4B/s1600/Tampilan%2BSelect2%2Bdi%2Bdokumentasi%2BAdmin%2BLTE.png" /></a><br />Setelah saya periksa kode sumber (HTML) dokumentasi Admin LTE, saya menemukan solusinya. Ternyata urutan penyisipan kode CSS-nya salah.<br /><pre><code class="html">&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/AdminLTE/bootstrap/css/bootstrap.min.css&rdquo; /&gt;<br />&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/AdminLTE/dist/css/AdminLTE.min.css&rdquo; /&gt;<br />&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/AdminLTE/dist/css/skins/_all-skins.min.css&rdquo; /&gt;<br /><br />&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/AdminLTE/plugins/select2/select2.min.css&rdquo; /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/font-awesome/css/font-awesome.min.css&rdquo; /&gt;<br /><br />&lt;script src=&ldquo;assets/AdminLTE/plugins/jQuery/jQuery-2.2.0.min.js&rdquo;&gt;&lt;/script&gt;</code></pre>Pada penyisipan kode CSS di atas, saya menyisipkan kode CSS Select2 di bawah kode CSS AdminLTE. Ternyata urutan ini mempengaruhi hasilnya. Urutan yang benar, sesui yang di dokumentasi:<br /><ol><li>Kode CSS Bootstrap</li><li>Kode CSS Select2</li><li>Kode CSS Admin LTE</li><li>Kode CSS Skin Admin LTE </li></ol><pre><code class="html">&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/AdminLTE/bootstrap/css/bootstrap.min.css&rdquo; /&gt;</code><code class="html"><code class="html">&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/AdminLTE/plugins/select2/select2.min.css&rdquo; /&gt;</code><br />&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/AdminLTE/dist/css/AdminLTE.min.css&rdquo; /&gt;<br />&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/AdminLTE/dist/css/skins/_all-skins.min.css&rdquo; /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/font-awesome/css/font-awesome.min.css&rdquo; /&gt;</code></pre>Ternyata untuk masalah sekecil ini, saya membutuhkan waktu untuk menyelesaikannya.<br /><a href="http://2.bp.blogspot.com/-soBAjMWV0w4/V4Secl4x6sI/AAAAAAAADAk/Qz6wCwG08-Iljr8HTE1011U2NtR2qyejwCK4B/s1600/Tampilan%2BSelect2%2Bdi%2BAdmin%2BLTE%2Byang%2Bbenar.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-soBAjMWV0w4/V4Secl4x6sI/AAAAAAAADAk/Qz6wCwG08-Iljr8HTE1011U2NtR2qyejwCK4B/s1600/Tampilan%2BSelect2%2Bdi%2BAdmin%2BLTE%2Byang%2Bbenar.png" /></a><br />Tampilan di atas, ukuran lebarnya 100%. Artinya kita harus menambahkan kode CSS lagi untuk mengaturnya. Kalau tidak, nanti tampilannya akan seperti di bawah ini.<br /><a href="http://4.bp.blogspot.com/-jCj1-WRbQZQ/V4SgKd6MnKI/AAAAAAAADAw/DQc6wrZWVKkBA3XPOar70j9xAyvQSNm1wCK4B/s1600/Tampilan%2Blebar%2BSelect2%2Btidak%2B100%2Bpersen.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-jCj1-WRbQZQ/V4SgKd6MnKI/AAAAAAAADAw/DQc6wrZWVKkBA3XPOar70j9xAyvQSNm1wCK4B/s1600/Tampilan%2Blebar%2BSelect2%2Btidak%2B100%2Bpersen.png" /></a><br />Oleh karena itu, tambahkan sedikit kode CSS untuk mengaturnya:<br /><pre><code class="html css">&lt;style&gt;.select2 { width: 100% !important }&lt;/style&gt;</code></pre>Atau bisa juga dengan <i>inline css</i> pada elemen Select2.<br /><br />Referensi: <a href="https://almsaeedstudio.com/themes/AdminLTE/pages/forms/advanced.html" target="_blank">Dokumentasi Admin LTE</a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f&t=Kesalahan%20Penyisipan%20CSS%20Select2%20di%20Admin%20LTE%20yang%20Saya%20Lakukan" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f&text=Kesalahan%20Penyisipan%20CSS%20Select2%20di%20Admin%20LTE%20yang%20Saya%20Lakukan%20https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Kesalahan%20Penyisipan%20CSS%20Select2%20di%20Admin%20LTE%20yang%20Saya%20Lakukan&body=Kesalahan%20Penyisipan%20CSS%20Select2%20di%20Admin%20LTE%20yang%20Saya%20Lakukan:%20https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f&t=Kesalahan%20Penyisipan%20CSS%20Select2%20di%20Admin%20LTE%20yang%20Saya%20Lakukan" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f&text=Kesalahan%20Penyisipan%20CSS%20Select2%20di%20Admin%20LTE%20yang%20Saya%20Lakukan%20https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f&description=Kesalahan%20Penyisipan%20CSS%20Select2%20di%20Admin%20LTE%20yang%20Saya%20Lakukan" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f&title=Kesalahan%20Penyisipan%20CSS%20Select2%20di%20Admin%20LTE%20yang%20Saya%20Lakukan" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Kesalahan%20Penyisipan%20CSS%20Select2%20di%20Admin%20LTE%20yang%20Saya%20Lakukan&body=Kesalahan%20Penyisipan%20CSS%20Select2%20di%20Admin%20LTE%20yang%20Saya%20Lakukan:%20https%3a%2f%2fwww.petanikode.com%2fkesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/css">CSS</a>
-                  
-                    #<a href="/topik/html">HTML</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/bootstrap">Bootstrap</a>
-                  
-                    #<a href="/topik/admin-lte">Admin LTE</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/css">CSS</a>
+                      
+                        #<a href="/topik/html">HTML</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/bootstrap">Bootstrap</a>
+                      
+                        #<a href="/topik/admin-lte">Admin LTE</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

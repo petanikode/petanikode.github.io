@@ -774,14 +774,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -794,6 +807,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1201,34 +1215,36 @@ padding: 16px;
                 <p>Ada dua jenis warna pilihan navbar yang ditawarkan Bootstrap. Warna putih (<code>navbar-default</code>) dan warna hitam (<code>navbar-inverse</code>). Selain dari dua warna tersebut, kita harus memodifikasinya sendiri. Pada kesempatan ini, saya akan berbagi cara cepat memodifikasi navbar Bootstrap tampa menulis kode.<br /><h2>1. Menggunakan Generator</h2>Ada sebuah generator canggih yang dibuat oleh <a href="http://smarchal.com/">Samuel Marchal</a>. Generator ini dapat diakses melalui alamat link: <a href="http://work.smarchal.com/twbscolor/">http://work.smarchal.com/twbscolor/</a>.<br /><a href="http://4.bp.blogspot.com/-oU_a7c_9ZB4/V460LXkihEI/AAAAAAAADEM/g4J3PH01rcYC8QlABJh_m2WIKoANvoS2wCK4B/s1600/Generator%2BNavbar%2BBootstrap.png" imageanchor="1"><img alt="Generator Navbar Bootstrap" border="0" src="https://4.bp.blogspot.com/-oU_a7c_9ZB4/V460LXkihEI/AAAAAAAADEM/g4J3PH01rcYC8QlABJh_m2WIKoANvoS2wCK4B/s1600/Generator%2BNavbar%2BBootstrap.png" title="" /></a><br />Kita dapat menentukan warna navbar bootstrap sesui selera. Kemudian akan diberikan kode CSS, LESS, SCSS, dan SASS yang dapat kita gunakan langsung.<br /><h2>2. Modifikasi nama kelas</h2>Generator akan memberikan nama kelas <code>.navbar-default</code>. Agar tidak bentrok dengan nama asli yang di Bootstrap, kita ganti saja, misalnya menjadi <code>.navbar-teal</code>. Penggantian nama ini sifatnya opsional, bisa juga tidak dilakukan. Namun, Saya lakukan agar struktur kode di proyek menjadi lebih rapi dan terbaca jelas.<br /><br />Dengan memanfaatkan <i>Find and Replace</i> di teks editor Atom, saya bisa dengan cepat merubah namanya.<br /><a href="http://2.bp.blogspot.com/-hZF1uRUZ9YQ/V462X5jy80I/AAAAAAAADEY/4WiKNA-p5IUvH-U9QQ2e-DhVAdwLvDbGACK4B/s1600/Ganti%2Bnama%2Bclass%2Bdefault%2Bnavbar%2Bbootstrap.png" imageanchor="1"><img alt="Ganti nama kelas navbar bootstrap" border="0" src="https://2.bp.blogspot.com/-hZF1uRUZ9YQ/V462X5jy80I/AAAAAAAADEY/4WiKNA-p5IUvH-U9QQ2e-DhVAdwLvDbGACK4B/s1600/Ganti%2Bnama%2Bclass%2Bdefault%2Bnavbar%2Bbootstrap.png" title="" /></a><br /><h2>3. Uji Coba</h2>Saya menggunakan codeply untuk mencoba, dan berikut ini hasilnya:<br /><div data-codeply="3yJfZjAjfE"></div><h2>4. Sedikit modifikasi lagi</h2>Masih ada sedikit kekurangan dari kode CSS yang diberikan generator. Coba saja letakkan pointer di atas <i>navbar</i>, tampilannya tidak cocok. Oleh karena itu, kita perlu modifikasi sedikit kode CSS-nya.<br /><pre><code class="css">.nav &gt; li &gt; a:focus, .nav &gt; li &gt; a:hover {<br />&nbsp;&nbsp;&nbsp; text-decoration: none;<br />&nbsp;&nbsp;&nbsp; background-color: rgba(255,255,255,0.1);<br />}</code></pre>Hasilnya:<br /><script src="http://codeply.com/js/embed.js"></script><br /><div data-codeply="OXsuLLMwR4"></div><h2>Kesimpulan</h2>Generator yang dibuat oleh Samuel ini dapat membantu kita dengan cepat memodifikasi <i>navbar</i> Bootstrap. Namun ada sedikit kekurangan, generator ini belum mampu membuat kode untuk <i>hover</i> (ketika disentuh pointer).</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f&t=Cara%20Cepat%20Modifikasi%20Navbar%20Bootstrap%20tanpa%20Menulis%20Kode" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f&text=Cara%20Cepat%20Modifikasi%20Navbar%20Bootstrap%20tanpa%20Menulis%20Kode%20https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Cara%20Cepat%20Modifikasi%20Navbar%20Bootstrap%20tanpa%20Menulis%20Kode&body=Cara%20Cepat%20Modifikasi%20Navbar%20Bootstrap%20tanpa%20Menulis%20Kode:%20https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f&t=Cara%20Cepat%20Modifikasi%20Navbar%20Bootstrap%20tanpa%20Menulis%20Kode" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f&text=Cara%20Cepat%20Modifikasi%20Navbar%20Bootstrap%20tanpa%20Menulis%20Kode%20https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f&description=Cara%20Cepat%20Modifikasi%20Navbar%20Bootstrap%20tanpa%20Menulis%20Kode" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f&title=Cara%20Cepat%20Modifikasi%20Navbar%20Bootstrap%20tanpa%20Menulis%20Kode" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Cara%20Cepat%20Modifikasi%20Navbar%20Bootstrap%20tanpa%20Menulis%20Kode&body=Cara%20Cepat%20Modifikasi%20Navbar%20Bootstrap%20tanpa%20Menulis%20Kode:%20https%3a%2f%2fwww.petanikode.com%2fcara-cepat-modifikasi-navbar-bootstrap-tanpa-menulis-kode%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/less">LESS</a>
-                  
-                    #<a href="/topik/scss">SCSS</a>
-                  
-                    #<a href="/topik/css">CSS</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/sass">SASS</a>
-                  
-                    #<a href="/topik/bootstrap">Bootstrap</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/less">LESS</a>
+                      
+                        #<a href="/topik/scss">SCSS</a>
+                      
+                        #<a href="/topik/css">CSS</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/sass">SASS</a>
+                      
+                        #<a href="/topik/bootstrap">Bootstrap</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

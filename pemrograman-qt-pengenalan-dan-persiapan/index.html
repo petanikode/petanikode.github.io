@@ -778,14 +778,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -798,6 +811,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1205,26 +1219,28 @@ padding: 16px;
                 <p><p>Assalamualaikum wr. wb., Selamat datang di panduan instalasi Qt di linux. Di tulisan ini saya akan membahas langkah-langkah instalasi Qt di linux. Qt yang akan diinstal adalah Qt versi 5.4.0. Versi ini merupakan versi terakhir saat ini.</p> <a href="http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png" imageanchor="1" ><img border="0" src="http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png" /></a> <p>Sedikit informasi distro linux yang saya gunakan di tulisan ini:</p><pre><code class="bash">ardianta@imajinasi:~$ <b>hostnamectl </b><br />   Static hostname: imajinasi<br />         Icon name: computer-laptop<br />           Chassis: laptop<br />           Boot ID: baf18095a96a40fcbd9fc497141c1c41<br />  Operating System: Ubuntu 14.10<br />            Kernel: Linux 3.16.0-30-generic<br />      Architecture: i686</code></pre> <h2>Unduh Qt</h2><p>Qt yang akan dipakai adalah Qt <i>Open Source</i>. Qt <i>Open Source</i> dapat diunduh di situs resminya (<a href="http://download.qt.io/archive/qt/5.4/5.4.0/">qt.io</a>). Silahkan mengunduh berkas instalator sesui dengan prosesor yang Anda gunakan.</p><p><ul><li>Berkas: <samp><a href="http://download.qt.io/archive/qt/5.4/5.4.0/qt-opensource-linux-x86-5.4.0.run.mirrorlist" target="_blank">qt-opensource-linux-x86-5.4.0.run</a></samp> | 32bit</li><li>Berkas: <samp><a href="http://download.qt.io/archive/qt/5.4/5.4.0/qt-opensource-linux-x64-5.4.0.run.mirrorlist" target="_blank">qt-opensource-linux-x64-5.4.0.run</a></samp> | 64bit</li></ul></p> <a href="http://3.bp.blogspot.com/-b_NpXKlm9Oo/VNg_e9womuI/AAAAAAAABRQ/mCbcfrhMxfI/s1600/unduh%2Bqt%2Bopensource.png" imageanchor="1" ><img border="0" src="http://3.bp.blogspot.com/-b_NpXKlm9Oo/VNg_e9womuI/AAAAAAAABRQ/mCbcfrhMxfI/s1600/unduh%2Bqt%2Bopensource.png" title="Unduh Qt Open Source di cermin server jepang"/></a> <h2>Instalasi Qt</h2><p>Setelah diunduh, mari kita mulai menginstal Qt. Pertama, Berikan hak akses untuk mengekseskusi berkas instalator dengan printah <code>chmod</code>. Kemudian eksekusi berkas instalator dengan akun <samp>root</samp> atau <samp>sudo</samp>.</p> <a href="http://1.bp.blogspot.com/-SSHZhgSNm0o/VNhKEstVCcI/AAAAAAAABRg/DgyKIZGntJw/s1600/instalasi%2BQt.png" imageanchor="1" ><img border="0" src="http://1.bp.blogspot.com/-SSHZhgSNm0o/VNhKEstVCcI/AAAAAAAABRg/DgyKIZGntJw/s1600/instalasi%2BQt.png" /></a> <p>Kemudian, jendela instalasi Qt akan muncul, klik <i>Next</i>.</p><a href="http://1.bp.blogspot.com/-2NPv1nlgaUE/VNhKg99npII/AAAAAAAABRo/XaBlSrAzuBM/s1600/1%2BQt%2BSetup.png" imageanchor="1" ><img border="0" src="http://1.bp.blogspot.com/-2NPv1nlgaUE/VNhKg99npII/AAAAAAAABRo/XaBlSrAzuBM/s1600/1%2BQt%2BSetup.png" /></a> <p>Menentukan lokasi instalasi Qt, klik saja <i>Next</i>.</p><a href="http://1.bp.blogspot.com/-OQ93y6bCrxM/VNhK1O8kwbI/AAAAAAAABRw/mwAJ0fdD_I0/s1600/2%2BLokasi%2Bberkas%2BQt.png" imageanchor="1" ><img border="0" src="http://1.bp.blogspot.com/-OQ93y6bCrxM/VNhK1O8kwbI/AAAAAAAABRw/mwAJ0fdD_I0/s1600/2%2BLokasi%2Bberkas%2BQt.png" /></a> <p>Memilih komponen yang akan diinstal, klik saja <i>Next</i>.</p><a href="http://4.bp.blogspot.com/-5cT0_m8_FrI/VNhLArgpwPI/AAAAAAAABR4/SrPakfVRA1w/s1600/3%2BKomponen%2Byang%2Bakan%2Bdiinstal.png" imageanchor="1" ><img border="0" src="http://4.bp.blogspot.com/-5cT0_m8_FrI/VNhLArgpwPI/AAAAAAAABR4/SrPakfVRA1w/s1600/3%2BKomponen%2Byang%2Bakan%2Bdiinstal.png" /></a> <p>Persetujuan lisensi, pilih &lsquo;<i>I have read and agree&hellip;</i>,&rsquo; kemudian klik <i>Next</i></p><a href="http://1.bp.blogspot.com/-4W1KRFdTgTs/VNhLNC69YRI/AAAAAAAABSA/Fq84_ii4lnI/s1600/4%2BPersetujuan.png" imageanchor="1" ><img border="0" src="http://1.bp.blogspot.com/-4W1KRFdTgTs/VNhLNC69YRI/AAAAAAAABSA/Fq84_ii4lnI/s1600/4%2BPersetujuan.png" /></a> <p>Qt siap diinstal, klik tombol <i>Install</i> untuk memulai instalasi.</p><a href="http://4.bp.blogspot.com/-JVAEAVP1MMU/VNhLdID4ipI/AAAAAAAABSI/fwPXdod7oo4/s1600/5%2BInstalasi%2Bsiap.png" imageanchor="1" ><img border="0" src="http://4.bp.blogspot.com/-JVAEAVP1MMU/VNhLdID4ipI/AAAAAAAABSI/fwPXdod7oo4/s1600/5%2BInstalasi%2Bsiap.png" /></a> <p>Tunggu sampai instalasi selesai, kemudian klik <i>Next</i>.</p><a href="http://3.bp.blogspot.com/-UzTIFZ-KzZI/VNhLt3WekXI/AAAAAAAABSQ/gL3f1V8E39w/s1600/6%2Binstalasi%2Bselesai.png" imageanchor="1" ><img border="0" src="http://3.bp.blogspot.com/-UzTIFZ-KzZI/VNhLt3WekXI/AAAAAAAABSQ/gL3f1V8E39w/s1600/6%2Binstalasi%2Bselesai.png" /></a> <p>Alhamdulillah, instalasi selesai, klik <i>Finish</i></p><a href="http://1.bp.blogspot.com/-0U1KqdjuBss/VNhL53ytgbI/AAAAAAAABSY/OuUFKhtZg-w/s1600/7%2BFinish.png" imageanchor="1" ><img border="0" src="http://1.bp.blogspot.com/-0U1KqdjuBss/VNhL53ytgbI/AAAAAAAABSY/OuUFKhtZg-w/s1600/7%2BFinish.png" /></a> <p>Cobalah membuka Qt melalui <i>Menu</i> -&gt; <i>Development</i>.</p><a href="http://2.bp.blogspot.com/-tPwoxzj-A68/VNhMbDep9oI/AAAAAAAABSk/8nDSqcGsOj4/s1600/Qt%2Bdi%2BXubuntu.png" imageanchor="1" ><img border="0" src="http://2.bp.blogspot.com/-tPwoxzj-A68/VNhMbDep9oI/AAAAAAAABSk/8nDSqcGsOj4/s1600/Qt%2Bdi%2BXubuntu.png" /></a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f&t=Panduan%20Instalasi%20Qt%20di%20Linux" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f&text=Panduan%20Instalasi%20Qt%20di%20Linux%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Panduan%20Instalasi%20Qt%20di%20Linux&body=Panduan%20Instalasi%20Qt%20di%20Linux:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f&t=Panduan%20Instalasi%20Qt%20di%20Linux" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f&text=Panduan%20Instalasi%20Qt%20di%20Linux%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f&description=Panduan%20Instalasi%20Qt%20di%20Linux" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f&title=Panduan%20Instalasi%20Qt%20di%20Linux" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Panduan%20Instalasi%20Qt%20di%20Linux&body=Panduan%20Instalasi%20Qt%20di%20Linux:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-qt-pengenalan-dan-persiapan%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/c&#43;&#43;">C&#43;&#43;</a>
-                  
-                    #<a href="/topik/qt">Qt</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/c&#43;&#43;">C&#43;&#43;</a>
+                      
+                        #<a href="/topik/qt">Qt</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

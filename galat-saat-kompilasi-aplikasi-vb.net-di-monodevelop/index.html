@@ -768,14 +768,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -788,6 +801,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1195,30 +1209,32 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-OvIYRpBhWXc/VRlkOIu91sI/AAAAAAAABkE/65-a0jzWt0w/s1600/Pemrograman%2BVB-NET%2Bdi%2Blinux%2Bmenggunakan%2BMonoDevelop.png" imageanchor="1" ><img border="0" src="http://2.bp.blogspot.com/-OvIYRpBhWXc/VRlkOIu91sI/AAAAAAAABkE/65-a0jzWt0w/s1600/Pemrograman%2BVB-NET%2Bdi%2Blinux%2Bmenggunakan%2BMonoDevelop.png" alt="Pemrograman VB.NET di linux menggunakan MonoDevelop"/></a> <p>Saya sedang coba-coba membuat sebuah aplikasi VB.NET di MonoDevelop. Tapi, saat dikompilasi atau dijalankan, Saya mendapatkan galat (<i>Error</i>). Pesan galatnya sebagai berikut:</p> <a href="http://4.bp.blogspot.com/-mNkZhRIQ0vE/VRleSZGj6oI/AAAAAAAABjo/L-SGDsO_YG4/s1600/kompilasi%2Bvb-net%2Berror%2Bdi%2Bmonodevelop.png" imageanchor="1" ><img border="0" src="http://4.bp.blogspot.com/-mNkZhRIQ0vE/VRleSZGj6oI/AAAAAAAABjo/L-SGDsO_YG4/s1600/kompilasi%2Bvb-net%2Berror%2Bdi%2Bmonodevelop.png" alt="Visual Basic .NET compiler not found (Mono 3.2.8)" title="Visual Basic .NET compiler not found (Mono 3.2.8)"/></a> <p>Untunglah saya menemukan solusinya di <a href="http://askubuntu.com/questions/3818/vb-net-programming-in-ubuntu" target="blank">askubuntu.com</a>. Ternyata cukup menginstal kompilator VB.NET-nya:</p> <pre><code class="bash">sudo apt-get install mono-vbnc</code></pre> Setelah itu, coba kompilasi aplikasinya lagi. Berhasil!  <a href="http://1.bp.blogspot.com/-wFa2eDdwyB8/VRlfZM6kfUI/AAAAAAAABj0/dP069Eksl3M/s1600/berhasil%2Bkompilasi%2Bvb-net%2Bdi%2Bmonodevelop%2Blinux.png" imageanchor="1" ><img border="0" src="http://1.bp.blogspot.com/-wFa2eDdwyB8/VRlfZM6kfUI/AAAAAAAABj0/dP069Eksl3M/s1600/berhasil%2Bkompilasi%2Bvb-net%2Bdi%2Bmonodevelop%2Blinux.png" alt="Pemrograman VB.NET di linux menggunakan MonoDevelop"/></a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f&t=Galat%20saat%20kompilasi%20aplikasi%20VB.NET%20di%20MonoDevelop" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f&text=Galat%20saat%20kompilasi%20aplikasi%20VB.NET%20di%20MonoDevelop%20https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Galat%20saat%20kompilasi%20aplikasi%20VB.NET%20di%20MonoDevelop&body=Galat%20saat%20kompilasi%20aplikasi%20VB.NET%20di%20MonoDevelop:%20https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f&t=Galat%20saat%20kompilasi%20aplikasi%20VB.NET%20di%20MonoDevelop" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f&text=Galat%20saat%20kompilasi%20aplikasi%20VB.NET%20di%20MonoDevelop%20https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f&description=Galat%20saat%20kompilasi%20aplikasi%20VB.NET%20di%20MonoDevelop" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f&title=Galat%20saat%20kompilasi%20aplikasi%20VB.NET%20di%20MonoDevelop" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Galat%20saat%20kompilasi%20aplikasi%20VB.NET%20di%20MonoDevelop&body=Galat%20saat%20kompilasi%20aplikasi%20VB.NET%20di%20MonoDevelop:%20https%3a%2f%2fwww.petanikode.com%2fgalat-saat-kompilasi-aplikasi-vb.net-di-monodevelop%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/visual-basic">Visual Basic</a>
-                  
-                    #<a href="/topik/.net">.NET</a>
-                  
-                    #<a href="/topik/basic">Basic</a>
-                  
-                    #<a href="/topik/pemrograman-gui">Pemrograman GUI</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/visual-basic">Visual Basic</a>
+                      
+                        #<a href="/topik/.net">.NET</a>
+                      
+                        #<a href="/topik/basic">Basic</a>
+                      
+                        #<a href="/topik/pemrograman-gui">Pemrograman GUI</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,30 +1207,32 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" imageanchor="1"><img alt="CodeIgniter - Petani Kode" border="0" src="https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" title="" /></a>Kadang pengguna (selanjutnya kita sebut <i>user</i>) sering lupa username-nya, sebagai alternatif <i>user</i> kadang memasukan alamat email-nya di halaman login. Karena <i>user</i> lebih mengingat alamat email daripada <i>username</i> yang telah ia daftarkan. Oleh karena itu, kita perlu membuat sistem login yang mampu menerima <i>username</i> dan alamat <i>email</i>. Sehingga <i>user</i> dapat memilih, mau login dengan <i>username</i> atau <i>email</i>.<br /><h2>Model User</h2>Sebenarnya, inti dari membuat login yang dapat menerima <i>username</i> dan <i>password</i> adalah permainan <i>query</i> saja. Kita akan membuat sebuah query untuk mencari <i>user</i> dengan logika <i>clause</i> <i>where</i> kira-kira begini: temukan <code>user</code> dengan username <code>petanikode</code> atau alamat <code>petanikode@ladang.com</code> dan password-nya <code>petanitanamkode</code>. Query tersebut dapat kita buat dalam model <i>User</i>, kira-kira bentuknya seperti berikut ini.<br /><pre><code class="php codeigniter">&lt;?php<br /><br />class User extends CI_Model {<br /><br />public function cek_user($username, $password) {<br />&nbsp;&nbsp;&nbsp; $this-&gt;db-&gt;where(&ldquo;email = &lsquo;$username&rsquo; or username = &lsquo;$username&rsquo;&rdquo;);<br />&nbsp;&nbsp;&nbsp; $this-&gt;db-&gt;where(&lsquo;password&rsquo;, md5($password));<br />&nbsp;&nbsp;&nbsp; $query = $this-&gt;db-&gt;get(&lsquo;user&rsquo;);<br />&nbsp;&nbsp;&nbsp; return $query-&gt;row_array();<br />&nbsp; }<br />}</code></pre><h2>Controller Login</h2><i>Controller</i> login akan mengecek <i>username</i> atau <i>email</i> dan <i>password</i> yang diinputkan <i>user</i> kemudian mencocokannya dengan data yang ada di <i>database</i>. Jika cocok, maka login berhasil. Berikut ini kode <i>Controller login</i>.<br /><pre><code class="php codeigniter">&lt;?php<br />class Login extends CI_Controller {<br />&nbsp;&nbsp;&nbsp; public function index() { <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $this-&gt;load-&gt;view(&lsquo;halaman_login&rsquo;); <br />&nbsp;&nbsp;&nbsp; } <br /><br />&nbsp;&nbsp;&nbsp; public function proses_login() { <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $user = $this-&gt;input-&gt;post(&lsquo;username&rsquo;); <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pass = $this-&gt;input-&gt;post(&lsquo;password&rsquo;); <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $login = $this-&gt;user-&gt;cek_user($user, $pass); <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (!empty($login)) { <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // login berhasil <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $this-&gt;session-&gt;set_userdata($login); <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; redirect(base_url()); <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } else { <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // login gagal <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $this-&gt;session-&gt;set_flashdata(&lsquo;gagal&rsquo;, &lsquo;Username atau Password Salah!&rsquo;); <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; redirect(base_url(&lsquo;login&rsquo;)); <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />&nbsp;&nbsp;&nbsp; } <br />}</code></pre>Jika login berhasil, <i>user</i> akan dialihkan ke halaman utama. Nanti di halaman utama dilakukan pengecekan <i>session</i> agar halaman tersebut dapat dilihat oleh <i>user</i> yang sudah login saja.<br /><h2>VIew Login</h2>Dalam <i>method</i> <code>index()</code> <i>controller Login</i>, kita me-load <i>view</i> <code>halaman_login.php</code>, berikut ini kode <code>halaman_login.php</code>.<br /><pre><code class="html">&lt;form action=&rdquo;&lt;?php echo base_url(&lsquo;login/proses-login&rsquo;) ?&gt;&rdquo; method=&ldquo;post&rdquo;&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;form-group has-feedback&rdquo;&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type=&ldquo;text&rdquo; class=&ldquo;form-control&rdquo; placeholder=&ldquo;Username atau Email&rdquo; name=&ldquo;username&rdquo; required id=&ldquo;username&rdquo;&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class=&ldquo;glyphicon glyphicon-user form-control-feedback&rdquo;&gt;&lt;/span&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;form-group has-feedback&rdquo;&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type=&ldquo;password&rdquo; class=&ldquo;form-control&rdquo; placeholder=&ldquo;Password&rdquo; name=&ldquo;password&rdquo; required&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class=&ldquo;glyphicon glyphicon-lock form-control-feedback&rdquo;&gt;&lt;/span&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;row&rdquo;&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;col-xs-8&rdquo;&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;checkbox icheck&rdquo;&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type=&ldquo;checkbox&rdquo;&gt; Ingat Saya <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/label&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!&ndash; /.col &ndash;&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;col-xs-4&rdquo;&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button type=&ldquo;submit&rdquo; class=&ldquo;btn btn-primary btn-block btn-flat&rdquo;&gt;Masuk&lt;/button&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!&ndash; /.col &ndash;&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; <br />&nbsp;&nbsp;&nbsp; &lt;/form&gt;</code></pre>Halaman login menggunakan AdminLTE yang sudah diberikan sedikit CSS, berikut ini tampilannya.<a href="http://2.bp.blogspot.com/-Rh-26KVaqa0/V0myHUN5m2I/AAAAAAAAC2M/sVdReDRINH0mliOLCzANd-igHTeZF7AwgCK4B/s1600/Contoh%2BHalaman%2BLogin%2BCodeIgniter%2Bdengan%2BAdminLTE.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-Rh-26KVaqa0/V0myHUN5m2I/AAAAAAAAC2M/sVdReDRINH0mliOLCzANd-igHTeZF7AwgCK4B/s1600/Contoh%2BHalaman%2BLogin%2BCodeIgniter%2Bdengan%2BAdminLTE.png" /></a><br /><h2>Kesimpulan</h2>Pembuatan sistem login yang dapat menerima <i>username</i> dan alamat <i>email</i> pada CodeIgniter dilakukan dengan memanipulasi <i>query</i> pada model. Logika <i>clause</i> <i>where</i> yang digunakan adalah <i>username or email and password</i>.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f&t=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f&text=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter%20https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter&body=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter:%20https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f&t=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f&text=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter%20https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f&description=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f&title=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter&body=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter:%20https%3a%2f%2fwww.petanikode.com%2fcara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/codeigniter">CodeIgniter</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/framework">Framework</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/codeigniter">CodeIgniter</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/framework">Framework</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

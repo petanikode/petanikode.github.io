@@ -768,14 +768,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -788,6 +801,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1195,30 +1209,32 @@ padding: 16px;
                 <p>Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul atau pustakan <code>json</code>. Selain itu, kita juga membutuhkan modul tambahan seperti <code>urlib</code> bila JSON-nya diambil dari <i>web service</i>. Oke, mari kita mulai dari hal yang sederhana.<br /><br /><blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style="background: #fff; border-radius: 3px; border: 0; box-shadow: 0 0 1px 0 rgba(0 , 0 , 0 , 0.5) , 0 1px 10px 0 rgba(0 , 0 , 0 , 0.15); margin: 1px; max-width: 658px; padding: 0; width: 99.375%;"><div style="padding: 8px;"><div style="background: #F8F8F8; line-height: 0; margin-top: 40px; padding: 28.1481481481% 0; text-align: center; width: 100%;"><div style="background: url(data:image/png; display: block; height: 44px; margin: 0 auto -44px; position: relative; top: -22px; width: 44px;"></div></div><div style="margin: 8px 0 0 0; padding: 0 4px;"><a href="https://www.instagram.com/p/BJpb-wNjGAo/" style="color: black; font-family: &quot;arial&quot; , sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none; word-wrap: break-word;" target="_blank">#json #stickynotes #postitnotes #programming #programmer</a></div><div style="color: #c9c8cd; font-family: Arial,sans-serif; font-size: 14px; line-height: 17px; margin-bottom: 0; margin-top: 8px; overflow: hidden; padding: 8px 0 7px; text-align: center; text-overflow: ellipsis; white-space: nowrap;">A photo posted by Petani Kode (@petanikode) on <time datetime="2016-08-28T09:32:09+00:00" style="font-family: Arial,sans-serif; font-size: 14px; line-height: 17px;">Aug 28, 2016 at 2:32am PDT</time></div></div></blockquote><script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script><br /><h2>Membuat File JSON</h2>Pertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: <code>petanikode.json</code><br /><pre><code class="json js">{<br />&nbsp;&nbsp;&nbsp; &ldquo;nama&rdquo; : &ldquo;Petani Kode&rdquo;,<br />&nbsp;&nbsp;&nbsp; &ldquo;url&rdquo;&nbsp; : &ldquo;<a href="http://petanikode.com&quot;">http://petanikode.com&quot;</a>,<br />&nbsp;&nbsp;&nbsp; &ldquo;media&rdquo;: {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ldquo;facebook&rdquo; : &ldquo;petanikode&rdquo;,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ldquo;twitter&rdquo;&nbsp; : &ldquo;@petanikode&rdquo;,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ldquo;instagram&rdquo;: &ldquo;@petanikode&rdquo;<br />&nbsp;&nbsp;&nbsp; }<br />}</code></pre><h2>Percobaan di Iterpreter</h2>Sebelum membuat kode, kita coba dulu mengurai JSON-nya melalui interpreter. Ketik <code>python</code> pada terminal untuk masuk ke interpreter.<br /><a href="http://4.bp.blogspot.com/-Cy37z6S8XoU/V8ez7OSirAI/AAAAAAAADJ8/Rk5rvJFyTYoUXMGY6FSMwnKQSnvdDgBQgCK4B/s1600/Percobaan%2Bparsing%2Bfile%2BJSON%2Bdari%2Binterpreter%2B-%2Bpetanikode.png" imageanchor="1"><img alt="Percobaan Penguraian JSON di Interpreter" border="0" src="https://4.bp.blogspot.com/-Cy37z6S8XoU/V8ez7OSirAI/AAAAAAAADJ8/Rk5rvJFyTYoUXMGY6FSMwnKQSnvdDgBQgCK4B/s1600/Percobaan%2Bparsing%2Bfile%2BJSON%2Bdari%2Binterpreter%2B-%2Bpetanikode.png" title="" /></a><br />Pada percobaan di atas, kita menggunakan fungsi <code>open()</code> untuk membuka file JSON. Kemudian, kita menggunakan fungsi <code>loads()</code> dari modul <code>json</code> untuk me-load data JSON. Data JSON disimpan pada variabel <code>data</code> dalam bentuk <i>dictionary</i>. Dengan demikian, kita bisa leluasa mengurai data JSON-nya.<br /><h2>Meracik Kode untuk Mengurai JSON</h2>Buat file skrip python dan letakkan di direktori yang sama dengan file JSON-nya. Berikut ini isi skripnya.<br /><pre><code class="py python">import json<br /><br /># buka file JSON-nya dulu<br />file_json = open(&lsquo;petanikode.json&rsquo;)<br /><br /># load file JSON dari file yang sudah dibuka<br />data = json.loads(file_json.read())<br /><br /># cetak isi data<br />print data </code></pre>Hasil output dari kode di atas:<br /><pre><code class="bash">{u&rsquo;url&rsquo;: u&rsquo;<a href="http://petanikode.com'">http://petanikode.com'</a>, u&rsquo;nama&rsquo;: u&rsquo;Petani Kode&rsquo;, u&rsquo;media&rsquo;: {u&rsquo;twitter&rsquo;: u&rsquo;@petanikode&rsquo;, u&rsquo;facebook&rsquo;: u&rsquo;petanikode&rsquo;, u&rsquo;instagram&rsquo;: u&rsquo;@petanikode&rsquo;}}</code></pre>Selanjutnya, kita tinggal percantik saja hasil output-nya. Silahkan modifikasi lagi kodenya.<br /><pre><code class="python py">import json<br /><br /># buka file JSON-nya dulu<br />file_json = open(&lsquo;petanikode.json&rsquo;)<br /><br /># load file JSON dari file yang sudah dibuka<br />data = json.loads(file_json.read())<br /><br /># cetak isi data<br />print &ldquo;nama \t: %s&rdquo; % data[&lsquo;nama&rsquo;]<br />print &ldquo;url \t: %s&rdquo; % data[&lsquo;url&rsquo;]<br /><br />print &ldquo;Media Sosial &ldquo;<br />for sosial in data[&lsquo;media&rsquo;]:<br />&nbsp;&nbsp;&nbsp; print &ldquo;\t%s \t: %s&rdquo; % (sosial, data[&lsquo;media&rsquo;][sosial]) </code></pre>Hasil outputnya:<br /><a href="http://2.bp.blogspot.com/-JnGCO8WfdgU/V8e5ad3PUkI/AAAAAAAADKM/QANlmwc00W0KajkvQCzL4IC_yCCNL_CcQCK4B/s1600/Hasil%2Bpenguraian%2Bfile%2BJSON%2Bdi%2BLinux%2B-%2BPetani%2BKode.png" imageanchor="1"><img alt="Hasil Penguraian JSON" border="0" src="https://2.bp.blogspot.com/-JnGCO8WfdgU/V8e5ad3PUkI/AAAAAAAADKM/QANlmwc00W0KajkvQCzL4IC_yCCNL_CcQCK4B/s1600/Hasil%2Bpenguraian%2Bfile%2BJSON%2Bdi%2BLinux%2B-%2BPetani%2BKode.png" title="" /></a><br />Begitulah cara penguraian JSON pada Python. Sekian, tulisan pendek ini. Mudah-mudahan ada manfaatnya.<br /><br />Referensi: <a href="http://docs.python-guide.org/en/latest/scenarios/json/" target="_blank"><a href="http://docs.python-guide.org/en/latest/scenarios/json/">http://docs.python-guide.org/en/latest/scenarios/json/</a></a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f&t=Penguraian%20%28Parshing%29%20JSON%20pada%20Python" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f&text=Penguraian%20%28Parshing%29%20JSON%20pada%20Python%20https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Penguraian%20%28Parshing%29%20JSON%20pada%20Python&body=Penguraian%20%28Parshing%29%20JSON%20pada%20Python:%20https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f&t=Penguraian%20%28Parshing%29%20JSON%20pada%20Python" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f&text=Penguraian%20%28Parshing%29%20JSON%20pada%20Python%20https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f&description=Penguraian%20%28Parshing%29%20JSON%20pada%20Python" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f&title=Penguraian%20%28Parshing%29%20JSON%20pada%20Python" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Penguraian%20%28Parshing%29%20JSON%20pada%20Python&body=Penguraian%20%28Parshing%29%20JSON%20pada%20Python:%20https%3a%2f%2fwww.petanikode.com%2fpenguraian-parshing-json-pada-python%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/pemrograman">Pemrograman</a>
-                  
-                    #<a href="/topik/python">Python</a>
-                  
-                    #<a href="/topik/json">JSON</a>
-                  
-                    #<a href="/topik/api">API</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/pemrograman">Pemrograman</a>
+                      
+                        #<a href="/topik/python">Python</a>
+                      
+                        #<a href="/topik/json">JSON</a>
+                      
+                        #<a href="/topik/api">API</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

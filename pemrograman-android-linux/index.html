@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,28 +1207,30 @@ padding: 16px;
                 <p><a href="https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png" /></a>Pemrograman Android begitu populer saat ini. Banyak programer yang tertarik mempelajari pemrograman Android. Pemrograman Android dapat dilakukan di berbagai platform, salah satunya di sistem operasi Linux. Linux merupakan sistem operasi bebas terbuka dan gratis.<br /><br />Pada kesempatan ini, saya akan membahas persiapan yang dilakukan sebelum memulai pemrograman Android dengan Android Studio.<br /><h2>1. Instal JDK</h2>JDK <i>(Java Development Kit)</i> merupakan bahan dasar yang kita butuhkan untuk pemrograman java. JDK menyediakan kompilator, mesin virtual, dan pustaka <i>(library)</i>.<br /><br />Ada dua jenis JDK di Linux, yaitu Open JDK dan Oracle JDK. Perbedaan Open JDK dan Oracle JDK dapat dibaca <a href="http://javapapers.com/java/oracle-jdk-vs-openjdk-and-java-jdk-development-process/" target="_blank">di sini</a>. Pada persiapan ini, kita akan menginstal Open JDK saja. Ketik perintah berikut untuk menginstal.<br /><pre><code class="bash">sudo apt-get install openjdk-8-jdk</code></pre><h2>2. Instal Android Studio</h2>Android Studio merupakan mesin yang kita butuhkan untuk membuat atau mengembangkan aplikasi Android . Android studio yang digunakan dalam persiapan ini adalah Android Studio 2. Silahkan download Android Studio untuk sistem operasi Linux di <a href="http://developer.android.com/sdk/index.html" target="_blank">Website Developer Android</a>.<br /><div class="separator"></div><a href="http://3.bp.blogspot.com/-sFnqha7T9m4/VwzcDpAOsYI/AAAAAAAACqI/WvN3ZVqJ5C0PkMJK0rKYfz6Ih66S7ZM0wCK4B/s1600/Download%2BAndroid%2BStudio.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-sFnqha7T9m4/VwzcDpAOsYI/AAAAAAAACqI/WvN3ZVqJ5C0PkMJK0rKYfz6Ih66S7ZM0wCK4B/s1600/Download%2BAndroid%2BStudio.png" /></a><br />Setelah itu, buka file manager sebagai user root:<br /><pre><code class="bash">sudo thunar</code></pre>kemudian ekstrak arsip zip Android Studio ke direktori <code>/opt</code>.<br /><a href="http://3.bp.blogspot.com/-CVDuqiW_ObE/Vwzf29CxwLI/AAAAAAAACqc/vkuBtq8rPIwmrWg4KxSuQAPYx-FC2qI1gCK4B/s1600/Instal%2BAndroid%2BStudio%2Bdi%2Bdirektori%2Bopt.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-CVDuqiW_ObE/Vwzf29CxwLI/AAAAAAAACqc/vkuBtq8rPIwmrWg4KxSuQAPYx-FC2qI1gCK4B/s1600/Instal%2BAndroid%2BStudio%2Bdi%2Bdirektori%2Bopt.png" /></a><br />Tambahkan Android Studio di menu sistem anda. Gunakan aplikasi menu editor. di Linux (Xubuntu) yang saya gunakan menu editornya sudah tersedia. Klik kanan pada menu kemudian pilih <i>Edit Applications</i>.<br /><a href="http://1.bp.blogspot.com/-xSsZc71coWE/Vwzg-9ULFJI/AAAAAAAACqo/Mo7Vbb1ArIoseBopTo6Rnxtv6gBQol3pgCK4B/s1600/Mendaftarkan%2BAndroid%2BStudio%2Bdi%2BMenu%2BAplikasi.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-xSsZc71coWE/Vwzg-9ULFJI/AAAAAAAACqo/Mo7Vbb1ArIoseBopTo6Rnxtv6gBQol3pgCK4B/s1600/Mendaftarkan%2BAndroid%2BStudio%2Bdi%2BMenu%2BAplikasi.png" /></a><br /><h2>3. Instal Android SDK</h2>Android SDK hampir sama persis dengan JDK. Android SDK menyediakan API, Library, Emulator, dan beberapa peralatan yang diperlukan untuk membuat aplikasi. <a href="http://2016/04/cara-instal-android-sdk-dan-android-ndk.html" target="_blank">Cara instal Android SDK</a> sudah saya bahas di tulisan sebelumnya.<br /><h2>4. Update API Android SDK</h2>Android SDK yang beru terinstal masih membutuhkan beberapa komponen lain untuk dapat digunakan. Oleh karena itu, kita perlu melakukan update. Ketik perintah berikut id terminal.<br /><pre><code class="bash">android update sdk</code></pre>Instal API dan Image Android yang anda butuhkan. Update API Android SDK membutuhkan koneksi internet yang cepat dan stabil. Jika semuanya diinstal, akan memakan banyak ruang (kira-kira sampai 40GB).<br /><a href="https://2.bp.blogspot.com/-_kUBCAT1Iuk/Vwzml6XJqrI/AAAAAAAACq0/VHBI8qxrDRMdO5YXtHsWnbPjyx7D9O9kACLcB/s1600/Update%2BAPI%2BAndroid%2BSDK.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-_kUBCAT1Iuk/Vwzml6XJqrI/AAAAAAAACq0/VHBI8qxrDRMdO5YXtHsWnbPjyx7D9O9kACLcB/s1600/Update%2BAPI%2BAndroid%2BSDK.png" /></a><br /><h2>5. Buat Emulator</h2>Emulator kita perlukan untuk men-debug aplikasi. Bila anda memiliki ponsel bersistem operasi android, anda bisa menggunakan ponsel tersebut.<br /><br />Cara membuat emulator, ketik perintah berikut:<br /><pre><code class="bash">android avd</code></pre>Klik tombol <i>Create</i> untuk membuat emulator baru.<br /><a href="http://3.bp.blogspot.com/-Zc-2QS9C13o/Vwzpp4z18bI/AAAAAAAACrE/KW5rQ8mpS4UroY3_sztEk6yMRnNw1b6CwCK4B/s1600/Membuat%2Bemulator%2Bandroid.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-Zc-2QS9C13o/Vwzpp4z18bI/AAAAAAAACrE/KW5rQ8mpS4UroY3_sztEk6yMRnNw1b6CwCK4B/s1600/Membuat%2Bemulator%2Bandroid.png" /></a><br />Nilai <i>SD Card</i> dapat dikosongkan bila tidak bisa membuatnya.<br /><h2>6. Uji Coba</h2>Buat sebuah proyek baru <i>(Hello World)</i>, kemudian coba jalankan.<br /><a href="https://2.bp.blogspot.com/-vrTozLMQh30/Vw8grg8mrzI/AAAAAAAACrQ/W56BQBQ4jlYsZFNVVTGkBlLGzKcHtbflwCLcB/s1600/Test%2BProyek%2BAndroid%2BStudio.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-vrTozLMQh30/Vw8grg8mrzI/AAAAAAAACrQ/W56BQBQ4jlYsZFNVVTGkBlLGzKcHtbflwCLcB/s1600/Test%2BProyek%2BAndroid%2BStudio.png" /></a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f&t=Persiapan%20Pemrograman%20Android%20di%20Linux%20Menggunakan%20Android%20Studio" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f&text=Persiapan%20Pemrograman%20Android%20di%20Linux%20Menggunakan%20Android%20Studio%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Persiapan%20Pemrograman%20Android%20di%20Linux%20Menggunakan%20Android%20Studio&body=Persiapan%20Pemrograman%20Android%20di%20Linux%20Menggunakan%20Android%20Studio:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f&t=Persiapan%20Pemrograman%20Android%20di%20Linux%20Menggunakan%20Android%20Studio" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f&text=Persiapan%20Pemrograman%20Android%20di%20Linux%20Menggunakan%20Android%20Studio%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f&description=Persiapan%20Pemrograman%20Android%20di%20Linux%20Menggunakan%20Android%20Studio" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f&title=Persiapan%20Pemrograman%20Android%20di%20Linux%20Menggunakan%20Android%20Studio" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Persiapan%20Pemrograman%20Android%20di%20Linux%20Menggunakan%20Android%20Studio&body=Persiapan%20Pemrograman%20Android%20di%20Linux%20Menggunakan%20Android%20Studio:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-linux%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/android-studio">Android Studio</a>
-                  
-                    #<a href="/topik/mobile-programming">Mobile Programming</a>
-                  
-                    #<a href="/topik/android">Android</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/android-studio">Android Studio</a>
+                      
+                        #<a href="/topik/mobile-programming">Mobile Programming</a>
+                      
+                        #<a href="/topik/android">Android</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

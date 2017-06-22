@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,30 +1207,32 @@ padding: 16px;
                 <p><a href="http://4.bp.blogspot.com/-vRUklKdzFEU/Vzahq5aQO1I/AAAAAAAACzU/QUsx7qcPXXYOwA70m9QXrdT8Dz9700yUACK4B/s1600/MathJax%2B-%2BPetani%2BKode%2B-%2BTulis%2Brumus%2Bmatematika%2Bdalam%2BHTML.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-vRUklKdzFEU/Vzahq5aQO1I/AAAAAAAACzU/QUsx7qcPXXYOwA70m9QXrdT8Dz9700yUACK4B/s1600/MathJax%2B-%2BPetani%2BKode%2B-%2BTulis%2Brumus%2Bmatematika%2Bdalam%2BHTML.png" /></a>Ketika membaca halaman wikipedia yang memiliki rumus, kita temuakan rumus tersebut dibuat dalam bentuk gamabar. Contoh, coba cek <a href="https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms" target="_blank">halaman ini</a>. Nah, di HTML sendiri ada sebuah tag untuk menuliskan rumus matematika. Akan tetapi cukup memakan waktu membuatnya, karena menuliskan tag yang lebih panjang. Oleh karena itu, kita bisa memanfaatkan kode LaTeX dalam HTML dengan pustaka javascript MathJax.<br /><br />MathJax merupakan pustaka <i>(library)</i> <i>open source</i> untuk menampilkan hasil kode LaTeX, MathML, dan Notasi AsciiMath ke dalam HTML. MathJax diklaim dapat bekerja di semua browser.<br /><h2>Cara Menggunakan MathJax</h2>Pertama kita perlu inisialisasi dulu di dalam tag <code>&lt;head&gt;</code> atau di akhir tag <code>&lt;body&gt;</code>.<br /><pre><code class="html">&lt;script type=&ldquo;text/x-mathjax-config&rdquo;&gt;<br />MathJax.Hub.Config({<br />&nbsp; tex2jax: {inlineMath: [[&lsquo;$&rsquo;,&lsquo;$&rsquo;], [&rsquo;\(&lsquo;,&rsquo;\)&lsquo;]]}<br />});<br />&lt;/script&gt;<br />&lt;script type=&ldquo;text/javascript&rdquo; async<br />&nbsp; src=&ldquo;<a href="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;">https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;</a><br />&lt;/script&gt;</code></pre>Selanjutnya, untuk menuliskan sebuah rumus, kita dapat menggunakan perintah LaTeX yang diapit dengan tanda dolar (<code>$</code>). Contoh:<br /><pre class="latex"><code>$f(x)=\sqrt{x^2 + 5y^4}$</code></pre>Akan menghasilkan:<br />$f(x)=\sqrt{x^2 + 5y^4}$<br /><br />Kode Lengkap:<br /><a class="jsbin-embed" href="http://jsbin.com/pohixaxuce/embed?html,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script><br /><br />Referensi:<br /><ul><li><a href="http://www.cs.tut.fi/~jkorpela/math/" target="_blank"><a href="http://www.cs.tut.fi/~jkorpela/math/">http://www.cs.tut.fi/~jkorpela/math/</a></a></li><li><a href="http://docs.mathjax.org/en/latest/index.html" target="_blank"><a href="http://docs.mathjax.org/en/latest/index.html">http://docs.mathjax.org/en/latest/index.html</a></a></li></ul><script type="text/x-mathjax-config">MathJax.Hub.Config({   tex2jax: {inlineMath: [[&lsquo;$&rsquo;,&lsquo;$&rsquo;], [&rsquo;\(&lsquo;,&rsquo;\)&lsquo;]]} }); </script><br /><script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f&t=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f&text=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML%20https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML&body=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f&t=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f&text=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML%20https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f&description=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f&title=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML&body=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-mathjax%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/matematika">Matematika</a>
-                  
-                    #<a href="/topik/html">HTML</a>
-                  
-                    #<a href="/topik/latex">LaTeX</a>
-                  
-                    #<a href="/topik/javascript">Javascript</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/matematika">Matematika</a>
+                      
+                        #<a href="/topik/html">HTML</a>
+                      
+                        #<a href="/topik/latex">LaTeX</a>
+                      
+                        #<a href="/topik/javascript">Javascript</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

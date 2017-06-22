@@ -780,14 +780,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -800,6 +813,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1207,30 +1221,32 @@ padding: 16px;
                 <p>Sebuah masalah kecil saya temukan pada proyek yang sudah jadi. Bisa dibilang, web tersebut sudah jadi dan siap di-hosting. Tapi ternyata ada sedikit error yang membuat salah satu fitur tidak bekerja.<br /><br />Jadi ceritanya, saya ingin menampilkan detail produk dengan modal. Data produknya diambil dari parameter yang dikirim ke dalam fungsi <code>detail()</code>.<br /><a href="http://1.bp.blogspot.com/-Vtvwu6jLgFA/V9f5aHCTa9I/AAAAAAAADR8/8c0MGMRVuOsHvPi9eeIxsS6BW-rjVLh5QCK4B/s1600/Menampilkan%2BDetail%2BProduk%2Bdengan%2BModal.png" imageanchor="1"><img alt="Detail produk pada modal" border="0" src="https://1.bp.blogspot.com/-Vtvwu6jLgFA/V9f5aHCTa9I/AAAAAAAADR8/8c0MGMRVuOsHvPi9eeIxsS6BW-rjVLh5QCK4B/s1600/Menampilkan%2BDetail%2BProduk%2Bdengan%2BModal.png" title="" /></a><br />Kode fungsi <code>detail()</code> untuk menampilkan modal produk:<br /><pre><code class="javascript js">function detail(data){<br />&nbsp;&nbsp;&nbsp; console.log(data);<br />&nbsp;&nbsp;&nbsp; $(&ldquo;#myModalLabel&rdquo;).html(data.nama);<br />&nbsp;&nbsp;&nbsp; $(&ldquo;#gambar-produk&rdquo;).attr(&ldquo;src&rdquo;, data.foto);<br />&nbsp;&nbsp;&nbsp; $(&ldquo;#harga&rdquo;).html(data.harga);<br />&nbsp;&nbsp;&nbsp; $(&ldquo;#keterangan&rdquo;).html(data.keterangan);<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; $(&ldquo;#modal-detail-produk&rdquo;).modal(&lsquo;show&rsquo;);<br />}</code></pre>Parameter <code>data</code> berupa objek yang diambil dari <i>event</i> <i>onclick</i> elemen. Berikut ini kode HTML elemenya:<br /><pre><code class="html">&lt;div class=&ldquo;panel panel-default&rdquo;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;panel-body&rdquo;&gt;&lt;img src=&ldquo;<a href="http://localhost/tangsi/assets/tjc/img/produk/6nzxid5jljt9.jpg&quot;">http://localhost/tangsi/assets/tjc/img/produk/6nzxid5jljt9.jpg&quot;</a> class=&ldquo;img-responsive&rdquo; style=&ldquo;width:100%&rdquo; alt=&ldquo;Image&rdquo; onclick=&ldquo;detail({<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lsquo;id&rsquo;: &lsquo;6nzxid5jljt9&rsquo;,<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lsquo;nama&rsquo;: &lsquo;Continous Form&rsquo;,<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lsquo;harga&rsquo;: &ldquo;,<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lsquo;jenis&rsquo;: &lsquo;barang&rsquo;,<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lsquo;keterangan&rsquo;: &lsquo;&lt;p&gt;1ply / 2ply / 3ply Model Faktur / Wartel&lt;/p&gt;&rsquo;,<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lsquo;foto&rsquo;: &lsquo;<a href="http://localhost/tangsi/assets/tjc/img/produk/6nzxid5jljt9.jpg'">http://localhost/tangsi/assets/tjc/img/produk/6nzxid5jljt9.jpg'</a><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; })&rdquo;&gt;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp; &lt;div class=&ldquo;panel-footer&rdquo;&gt;Continous Form&lt;/div&gt;<br />&lt;/div&gt;</code></pre>Atribut <code>&lsquo;keterangan&rsquo;</code> pada objek <code>data</code> tersebut isinya berupa HTML. Masalah mulai timbul ketika kode HTML-nya semakin kompleks. Contohnya seperti ini.<br /><a href="http://3.bp.blogspot.com/-FEvzTQS4c_Y/V9f8fWC4TZI/AAAAAAAADSI/nxjwMA-2Ez8rf6Xps26v1GNxo1wewTluwCK4B/s1600/Kesalahan%2Boutput%2BHTML.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-FEvzTQS4c_Y/V9f8fWC4TZI/AAAAAAAADSI/nxjwMA-2Ez8rf6Xps26v1GNxo1wewTluwCK4B/s1600/Kesalahan%2Boutput%2BHTML.png" /></a> Dari gambar di atas, saya dapat mengetahui penyebab timbulnya error <i>&ldquo;SyntaxError: unterminated string literal.&rdquo;</i> Kode HTML tersebut dihasilkan dari sebuah printah PHP.<br /><a href="http://4.bp.blogspot.com/-kB4eI1Qc9K8/V9gA0JHFAxI/AAAAAAAADSU/FMGXTby-gZg8zaewx4-ti9Kso8Y2I7e1gCK4B/s1600/sumber%2Bmasalah%2Bada%2Bdi%2Bkode%2BPHP.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-kB4eI1Qc9K8/V9gA0JHFAxI/AAAAAAAADSU/FMGXTby-gZg8zaewx4-ti9Kso8Y2I7e1gCK4B/s1600/sumber%2Bmasalah%2Bada%2Bdi%2Bkode%2BPHP.png" /></a><br />Berdasarkan penelusuran saya, sebuah jawaban di Stack Overflow memberikan kode untuk menghilangkan white space di kode HTML dengan PHP. Berikut ini kodenya:<br /><pre><code class="php">&lt;?php<br />$output = str_replace(array(&rdquo;\r\n&rdquo;, &ldquo;\r&rdquo;), &ldquo;\n&rdquo;, $output);<br />$lines = explode(&rdquo;\n&rdquo;, $output);<br />$new_lines = array();<br /><br />foreach ($lines as $i =&gt; $line) {<br />&nbsp;&nbsp;&nbsp; if(!empty($line))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $new_lines[] = trim($line);<br />}<br />echo implode($new_lines);</code></pre>Kode tersebut bisa saya terapkan pada proses <i>input</i> dan <i>edit</i> data produk. Karena pada input dan edit produk untuk keterangan saya menggunakan <a href="http://www.petanikode.com/2016/08/menggunakan-tinymce-pada-proyek-web.html">TinyMCE</a>. Selain itu juga dengan meletakkan di <i>input</i> dan <i>edit</i>, akan hemat ruang di database.<br /><br />Selanjutnya, kode di atas saya modifikasi menjadi sebuah fungsi yang saya taruh di <i>Controller Produk</i>.<br /><a href="http://4.bp.blogspot.com/-CajJB2k7haw/V9gFeuOfVsI/AAAAAAAADSg/D35NT6AjqIomqt3ZGQgTgJAKP15Ct6aYwCK4B/s1600/Penerapan%2Bkode%2BPHP%2Buntuk%2Bmenghilangkan%2Bwhitespace%2Bdi%2Bcodeigniter.png" imageanchor="1"><img alt="Penerapan Kode untuk menghilangkan whitespace di Codeigniter" border="0" src="https://4.bp.blogspot.com/-CajJB2k7haw/V9gFeuOfVsI/AAAAAAAADSg/D35NT6AjqIomqt3ZGQgTgJAKP15Ct6aYwCK4B/s1600/Penerapan%2Bkode%2BPHP%2Buntuk%2Bmenghilangkan%2Bwhitespace%2Bdi%2Bcodeigniter.png" title="" /></a><br />Hasilnya:<br /><br />Sebelum menerapkan kode: <br /><a href="http://2.bp.blogspot.com/-4WtpbkTg1Cw/V9gF58ksvKI/AAAAAAAADSo/afUPUXxVeSAKBKJNC0VO7yztqOJ1b9mnACK4B/s1600/Sebelum%2Bmenghilangkan%2Bwhitespace.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-4WtpbkTg1Cw/V9gF58ksvKI/AAAAAAAADSo/afUPUXxVeSAKBKJNC0VO7yztqOJ1b9mnACK4B/s1600/Sebelum%2Bmenghilangkan%2Bwhitespace.png" /></a><br />Setelah kode diterapkan:<br /><a href="http://2.bp.blogspot.com/-eURnLuzPsj0/V9gGDMMTLrI/AAAAAAAADSw/0yE_ENEgSis_6krTU57JMIITZcHW-PSdQCK4B/s1600/Setelah%2Bmenghilangkan%2Bwhitespace.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-eURnLuzPsj0/V9gGDMMTLrI/AAAAAAAADSw/0yE_ENEgSis_6krTU57JMIITZcHW-PSdQCK4B/s1600/Setelah%2Bmenghilangkan%2Bwhitespace.png" /></a><br /><br />Referensi:<br /><ul><li><a href="http://stackoverflow.com/a/5258632/2658551" target="_blank"><a href="http://stackoverflow.com/a/5258632/2658551">http://stackoverflow.com/a/5258632/2658551</a></a></li><li><a href="http://stackoverflow.com/a/508279/2658551" target="_blank"><a href="http://stackoverflow.com/a/508279/2658551">http://stackoverflow.com/a/508279/2658551</a></a></li></ul></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f&t=Masalah%20%60SyntaxError%3a%20unterminated%20string%20literal%60%20pada%20Javascript" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f&text=Masalah%20%60SyntaxError%3a%20unterminated%20string%20literal%60%20pada%20Javascript%20https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Masalah%20%60SyntaxError%3a%20unterminated%20string%20literal%60%20pada%20Javascript&body=Masalah%20%60SyntaxError%3a%20unterminated%20string%20literal%60%20pada%20Javascript:%20https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f&t=Masalah%20%60SyntaxError%3a%20unterminated%20string%20literal%60%20pada%20Javascript" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f&text=Masalah%20%60SyntaxError%3a%20unterminated%20string%20literal%60%20pada%20Javascript%20https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f&description=Masalah%20%60SyntaxError%3a%20unterminated%20string%20literal%60%20pada%20Javascript" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f&title=Masalah%20%60SyntaxError%3a%20unterminated%20string%20literal%60%20pada%20Javascript" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Masalah%20%60SyntaxError%3a%20unterminated%20string%20literal%60%20pada%20Javascript&body=Masalah%20%60SyntaxError%3a%20unterminated%20string%20literal%60%20pada%20Javascript:%20https%3a%2f%2fwww.petanikode.com%2fmasalah-syntaxerror-unterminated-string-literal-pada-javascript%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/codeigniter">CodeIgniter</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/javascript">Javascript</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/codeigniter">CodeIgniter</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/javascript">Javascript</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

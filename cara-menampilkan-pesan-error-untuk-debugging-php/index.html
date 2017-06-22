@@ -762,14 +762,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -782,6 +795,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1189,26 +1203,28 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" /></a>Server Apache untuk PHP yang terinstal di Linux yang saya gunakan otomatis diset mode produksi. Server produksi <i>(production server)</i> merupakan server yang digunakan setelah aplikasi web selesai dikembangkan atau sudah siap dipakai. Hal ini membuat saya kesulitan men-debug aplikasi web yang sedang dikembangkan.<br /><br />Setiap terjadi <i>error</i> pada skrip PHP, <i>browser</i> tidak menampilkan apa-apa <i>(blank)</i>. Oleh karena itu, kita perlu merubah mode produksi ke dalam mode pengembangan <i>(development)</i>. Silahkan simak caranya, sebagai berikut.<br /><h2>1. Buka File Konfigurasi Server</h2>Silahkan buka file konfigurasi server yang ada di <code>/etc/php5/apache2/php.ini</code> dengan teks editor. Jangan lupa, membukanya sebagai root. Sebagai contoh, saya menggunakan gedit untuk membukanya, maka perintahnya:<br /><pre><code class="bash">sudo gedit /etc/php5/apache2/php.ini</code></pre><h2>2. Ubah Nilai</h2>Ubahlah nilai-nilai konfigurasi error-nya menjadi seperti berikut ini.<br /><pre>error_reporting = E_ALL<br />display_errors = On<br />display_startup_errors = On<br />track_errors = On</pre><h2>3. Restart Service</h2>Nyalakan kembali service apache2 dengan perintah<br /><pre><code class="bash">sudo service apache2 restart</code></pre><a href="https://2.bp.blogspot.com/-nqG5_91BQiw/VvYIJtjlEFI/AAAAAAAACjw/0wQL8D_x410F24m0NaDxS2FsIcXvXLkEg/s1600/Error%2Bditampilkan.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-nqG5_91BQiw/VvYIJtjlEFI/AAAAAAAACjw/0wQL8D_x410F24m0NaDxS2FsIcXvXLkEg/s1600/Error%2Bditampilkan.png" /></a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f&t=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f&text=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP%20https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP&body=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP:%20https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f&t=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f&text=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP%20https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f&description=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f&title=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP&body=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP:%20https%3a%2f%2fwww.petanikode.com%2fcara-menampilkan-pesan-error-untuk-debugging-php%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/apache">Apache</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/apache">Apache</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

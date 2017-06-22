@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,28 +1207,30 @@ padding: 16px;
                 <p>Pomodoro merupakan sebuah teknik yang memanfaatkan waktu 25 menit untuk fokus mengerjakan sesuatu. Pomodoro dapat diterapkan untuk berbagai jenis pekerjaan. Pomodoro akan mencegah kita melakukan pekerjaan multitasking dan membantu fokus.<a href="http://3.bp.blogspot.com/-zNt91vEhpxc/V6W4q8GoR7I/AAAAAAAADGY/TR55AVngJowZ1XZqpilvaND5fE7vJm1KACK4B/s1600/4975166968_793305a326_b.jpg" imageanchor="1"><img alt="pomodoro timer" border="0" src="https://3.bp.blogspot.com/-zNt91vEhpxc/V6W4q8GoR7I/AAAAAAAADGY/TR55AVngJowZ1XZqpilvaND5fE7vJm1KACK4B/s1600/4975166968_793305a326_b.jpg" title="" /></a><br />Pada kesempatan ini, kita akan membuat program Timer Pomodoro. Timer ini mulai menghitung mundur mulai dari 25 menit.<br /><h2>1. Impor Pustaka yang Diperlukan</h2>Pada pembuatan program ini, kita memerlukan dua pustaka. Yaitu time dan sys (sistem). Pustaka time kita perlukan untuk melakukan perulangan per detik. Sedangkan pustaka sys untuk menampilkan ke konsol (CLI).<br /><pre><code class="python">import time<br />import sys</code></pre><h2>2. Deklarasi Variabel Awal</h2>Ada dua variabel awal yang kita butuhkan:<br /><pre><code class="python">menit = 60 # detik<br />pomodoro = 25</code></pre><h2>3. Perulangan Per Detik</h2>Inilah kunci dari program timer pomodoro:<br /><pre><code class="python">for sisa in range(pomodoro * menit, 0, -1):<br />&nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;\r&rdquo;)<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; menit = menit - 1<br />&nbsp;&nbsp;&nbsp; if menit &lt;= 0:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; pomodoro = pomodoro - 1<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; menit = 60<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; if menit &lt;= 9:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;[{:2d}:0{:1d}] Pomodoroing&hellip;!&ldquo;.format(pomodoro-1, menit))<br />&nbsp;&nbsp;&nbsp; else:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;[{:2d}:{:1d}] Pomodoroing&hellip;!&ldquo;.format(pomodoro-1, menit))&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; sys.stdout.flush()<br />&nbsp;&nbsp;&nbsp; time.sleep(1)</code></pre><h2>4. Pesan Ketika Waktu Habis</h2><pre><code class="python">sys.stdout.write(&ldquo;Selesai!\n&rdquo;)</code></pre>Selain menggunakan pesan tertulis, kita juga dapat menggunakan suara untuk menandakan waktu sudah habis.<br /><h2>5. Kode Lengkap: pomodoro.py</h2><pre><code class="python">import time<br />import sys<br /><br />menit = 60<br />pomodoro = 25<br /><br /><br />for sisa in range(pomodoro * menit, 0, -1):<br />&nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;\r&rdquo;)<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; menit = menit - 1<br />&nbsp;&nbsp;&nbsp; if menit &lt;= 0:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; pomodoro = pomodoro - 1<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; menit = 60<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; if menit &lt;= 9:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;[{:2d}:0{:1d}] Pomodoroing&hellip;!&ldquo;.format(pomodoro-1, menit))<br />&nbsp;&nbsp;&nbsp; else:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;[{:2d}:{:1d}] Pomodoroing&hellip;!&ldquo;.format(pomodoro-1, menit))&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; sys.stdout.flush()<br />&nbsp;&nbsp;&nbsp; time.sleep(1)<br /><br />sys.stdout.write(&ldquo;Selesai!\n&rdquo;)</code></pre><h2>6. Demo dalam Timelapse</h2><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/eaIk_ZEPiy4" width="560"></iframe></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f&t=Membuat%20Program%20Pomodoro%20Timer%20Berbasis%20CLI%20dengan%20Python" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f&text=Membuat%20Program%20Pomodoro%20Timer%20Berbasis%20CLI%20dengan%20Python%20https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Membuat%20Program%20Pomodoro%20Timer%20Berbasis%20CLI%20dengan%20Python&body=Membuat%20Program%20Pomodoro%20Timer%20Berbasis%20CLI%20dengan%20Python:%20https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f&t=Membuat%20Program%20Pomodoro%20Timer%20Berbasis%20CLI%20dengan%20Python" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f&text=Membuat%20Program%20Pomodoro%20Timer%20Berbasis%20CLI%20dengan%20Python%20https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f&description=Membuat%20Program%20Pomodoro%20Timer%20Berbasis%20CLI%20dengan%20Python" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f&title=Membuat%20Program%20Pomodoro%20Timer%20Berbasis%20CLI%20dengan%20Python" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Membuat%20Program%20Pomodoro%20Timer%20Berbasis%20CLI%20dengan%20Python&body=Membuat%20Program%20Pomodoro%20Timer%20Berbasis%20CLI%20dengan%20Python:%20https%3a%2f%2fwww.petanikode.com%2fmembuat-program-pomodoro-timer-berbasis-cli-dengan-python%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/pemrograman">Pemrograman</a>
-                  
-                    #<a href="/topik/python">Python</a>
-                  
-                    #<a href="/topik/pomodoro">Pomodoro</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/pemrograman">Pemrograman</a>
+                      
+                        #<a href="/topik/python">Python</a>
+                      
+                        #<a href="/topik/pomodoro">Pomodoro</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

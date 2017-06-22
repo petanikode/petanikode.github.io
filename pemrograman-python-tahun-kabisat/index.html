@@ -760,14 +760,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -780,6 +793,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1187,24 +1201,26 @@ padding: 16px;
                 <p>Menurut artikel di <a href="https://id.wikipedia.org/wiki/Tahun_kabisat" target="_blank">wikipedia</a> Tahun kabisat (bahasa Inggris: <i>Leap year</i>) adalah tahun yang mengalami penambahan satu hari dengan tujuan untuk menyesuaikan penanggalan dengan tahun astronomi. Dalam satu tahun tidak secara persis terdiri dari 365 hari, tetapi 365 hari 5 jam 48 menit 45,1814 detik. Jika hal ini tidak dihiraukan, maka setiap 4 tahun akan kekurangan hampir 1 hari (tepatnya 23 jam 15 menit 0,7256 detik).<br /><br />Maka untuk mengkompensasi hal ini, setiap 4 tahun sekali (tahun yang bisa dibagi 4), diberi 1 hari ekstra: 29 Februari. Tetapi karena 5 jam 48 menit 45,1814 detik kurang dari 6 jam, maka tahun-tahun yang bisa dibagi 100 (seperti tahun 1900), bukan tahun kabisat, kecuali bisa dibagi dengan 400 (seperti tahun 2000).<br /><h2>Algoritma Tahun Kabisat</h2><ol><li>Jika angka tahun itu habis dibagi 400, maka tahun itu sudah pasti tahun kabisat.</li><li>Jika angka tahun itu tidak habis dibagi 400 tetapi habis dibagi 100, maka tahun itu sudah pasti <b>bukan</b> merupakan tahun kabisat.</li><li>Jika angka tahun itu tidak habis dibagi 400, tidak habis dibagi 100  akan tetapi habis dibagi 4, maka tahun itu merupakan tahun kabisat.</li><li>Jika angka tahun tidak habis dibagi 400, tidak habis dibagi 100, dan tidak habis dibagi 4, maka tahun tersebut <b>bukan</b> merupakan tahun kabisat.</li></ol>Bentuk Pseudocodenya:<br /><pre><code class="python">if year modulo 4 is 0<br />then<br />    if year modulo 100 is 0<br />    then<br />       if year modulo 400 is 0<br />       then<br />           is_leap_year<br />       else<br />           not_leap_year<br />    else is_leap_year<br />else not_leap_year<br /></code></pre><h2>Kode Tahun Kabisat dalam Python</h2>Mari kita coba menuliskan kode tahun kabisat berdasarkan algoritma di atas. Sepertinya tidak sulit, karena hanya menggunakan struktur if/else dan operator modulo. Modulo artinya sisa bagi, misalnya 5 modulo 2 akan menghasilkan 1 (karena sisa 1). Kalau 5 habis dibagi maka hasil modulonya adalah 0 (nol). Operator modulo di python menggunakan simbol persen (<code>%</code>).<br /><pre><code class="python">tahun = input(&ldquo;Input tahun: &ldquo;)<br /><br />if (tahun % 4) == 0:<br />&nbsp;&nbsp;&nbsp; if (tahun % 100) == 0:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (tahun % 400) == 0:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print &ldquo;Tahun Kabisat&rdquo;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; else:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print &ldquo;Bukan Tahun Kabisat&rdquo;<br />&nbsp;&nbsp;&nbsp; else:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print &ldquo;Tahun Kabisat&rdquo;<br />else:<br />&nbsp;&nbsp;&nbsp; print &ldquo;Bukan Tahun Kabisat&rdquo;</code></pre>Pada kode di atas, kita melakukan pengecekan pertama dengan modulo 4. Apakah tahunnya habis dibagi 4? kalau iya cek lagi. Apakah tahunya habis dibagi 100? Kalau&nbsp; ya berarti tahun kabisat. Tapi kalau tidak, cek lagi. Apakah tahunya habis dibagi 400? Kalau ya, berarti tahun kabisat.<br /><h2>Percobaan Program</h2><a href="http://1.bp.blogspot.com/-zE4Cv-wHLGM/V9fFCCNX6UI/AAAAAAAADRs/Az3raiKY27ADhN0D2p5IuNGhl4BhzMkcwCK4B/s1600/Percobaan%2Bprogram%2Btahun%2Bkabisat%2Bdengan%2BPython.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-zE4Cv-wHLGM/V9fFCCNX6UI/AAAAAAAADRs/Az3raiKY27ADhN0D2p5IuNGhl4BhzMkcwCK4B/s1600/Percobaan%2Bprogram%2Btahun%2Bkabisat%2Bdengan%2BPython.png" /></a><br />Sumber referensi: <a href="https://id.wikipedia.org/wiki/Tahun_kabisat" target="_blank"><a href="https://id.wikipedia.org/wiki/Tahun_kabisat">https://id.wikipedia.org/wiki/Tahun_kabisat</a></a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f&t=Menghitung%20Tahun%20Kabisat%20dengan%20Python" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f&text=Menghitung%20Tahun%20Kabisat%20dengan%20Python%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Menghitung%20Tahun%20Kabisat%20dengan%20Python&body=Menghitung%20Tahun%20Kabisat%20dengan%20Python:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f&t=Menghitung%20Tahun%20Kabisat%20dengan%20Python" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f&text=Menghitung%20Tahun%20Kabisat%20dengan%20Python%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f&description=Menghitung%20Tahun%20Kabisat%20dengan%20Python" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f&title=Menghitung%20Tahun%20Kabisat%20dengan%20Python" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Menghitung%20Tahun%20Kabisat%20dengan%20Python&body=Menghitung%20Tahun%20Kabisat%20dengan%20Python:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-tahun-kabisat%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/python">Python</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/python">Python</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

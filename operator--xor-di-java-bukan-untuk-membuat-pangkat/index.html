@@ -776,14 +776,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -796,6 +809,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1203,28 +1217,30 @@ padding: 16px;
                 <p><a href="https://2.bp.blogspot.com/-P_5MSHpv9zA/VyKK4CjK9ZI/AAAAAAAACxk/Ptclg7VEuNQija-Acz8opEyp71ejcFQcwCLcB/s1600/Matematika%2BJava%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-P_5MSHpv9zA/VyKK4CjK9ZI/AAAAAAAACxk/Ptclg7VEuNQija-Acz8opEyp71ejcFQcwCLcB/s1600/Matematika%2BJava%2B-%2BPetani%2BKode.png" /></a><br />Sebuah kekeliruan saya temukan ketika memeriksa kode program milik teman. Dia mengimplementasikan rumus berikut ke dalam kode java.<br /><pre><code>y = x<sup>2</sup> + 3<br /></code></pre>Potongan kode program yang dia tulis.<br /><pre><code class="java">int x = 3;<br />int y = x^2 + 3;<br /></code></pre>Hasilnya pun <code>6</code>; tidak sesuai harapan. Seharusnya menghasilkan <code>12</code>.<br /><br />Operator <code>^</code> <i>(Exclusive Or)</i> disingkat <code>xor</code>, merupakan operator <i>bitwise</i>. Operator <i>bitwise</i> merupakan operator untuk memanipulasi bilangan biner.<br />Contoh konversi bilangan desimal ke biner (8bit):<br /><ul><li><code>0 = 0000 0000</code></li><li><code>1 = 0000 0001</code></li><li><code>2 = 0000 0010</code></li><li><code>3 = 0000 0011</code></li><li><code>4 = 0000 0100</code></li><li><code>5 = 0000 0101</code></li><li><code>6 = 0000 0110</code></li><li><code>7 = 0000 0111</code></li><li><code>8 = 0000 1000</code></li><li><code>9 = 0000 1001</code></li><li><code>10 = 0000 1010</code></li></ul>Kita tinjau lagi perhitungan kode di atas:<br /><pre><code>y = x^2 + 3<br />y = 3^2 + 3<br />y = 6<br /></code></pre>Pada operasi <code>3^2</code> akan menghasilkan <code>1</code> (<code>0000 0001</code>). Kemudian ditambah <code>3</code> akan menghasilkan <code>6</code>. Mengapa bisa menghasilkan <code>6</code>, bukannya <code>1 + 3 = 4</code>. Aneh ‘kan?<br /><br />Operator bitwise xor akan menhasilkan bilangan biner. Oleh sebab itu, penjumlahan yang dilakukan pada operasi di atas adalah penjumlahan bilangan biner, bukan penjumlahan bilangan desimal. Jadi <code>1 + 3 = 6</code> itu sama dengan <code>00000001 + 00000011 = 000000110</code>.<br /><h2 id="memahami-operator-^-(xor)"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#memahami-operator-^-(xor)" name="memahami-operator-^-(xor)"></a>Memahami operator ^ (xor)</h2>Jadi, megnapa <code>3^2</code> menghasilkan <code>1</code>? Silahkan tinjau lagi pelajaran logika matematika (<code>xor</code>).<br /><table border="1" cellpadding="10" class="table table-responsive table bordered" style="max-width: 100%; width: 100%;"><thead><tr> <th style="text-align: center;">a</th> <th style="text-align: center;">b</th> <th style="text-align: center;">a or b</th> <th style="text-align: center;">a xor b</th> </tr></thead> <tbody><tr> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> <td style="text-align: center;">0</td> </tr><tr> <td style="text-align: center;">1</td> <td style="text-align: center;">0</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> </tr><tr> <td style="text-align: center;">0</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> </tr><tr> <td style="text-align: center;">0</td> <td style="text-align: center;">0</td> <td style="text-align: center;">0</td> <td style="text-align: center;">0</td> </tr></tbody> </table>Sehingga,<br /><pre><code>  3 = 0000 0011<br />  2 = 0000 0010<br />&mdash;&mdash;&mdash;&mdash;&mdash; ^ (xor)<br />3^2 = 0000 0001<br /></code></pre><h2 id="bagaimana-membuat-pangkat-di-java?"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#bagaimana-membuat-pangkat-di-java?" name="bagaimana-membuat-pangkat-di-java?"></a>Bagaimana membuat pangkat di Java?</h2>Pangkat dapat dibuat dengan fungsi     <code>Math.pow()</code>. Fungsi ini memiliki dua parameter. Parameter pertama adalah bilangan yang akan dipangkatkan. Parameter kedua adalah bilangan pangkatnya. Contoh: 3<sup>2</sup>.<br /><pre><code class="java">Math.pow(3, 2);<br /></code></pre>Akan menghasilkan <code>9</code>.<br /><h2 id="kesimpulan"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#kesimpulan" name="kesimpulan"></a>Kesimpulan</h2>Operator <i>bitwise</i> ^ (xor) bukan operator untuk pemangkatan. Operator <i>bitwise</i> ^ (xor) digunakan untuk operasi bilangan biner.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f&t=Operator%20%5e%20%28xor%29%20di%20Java%20bukan%20untuk%20Membuat%20Pangkat" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f&text=Operator%20%5e%20%28xor%29%20di%20Java%20bukan%20untuk%20Membuat%20Pangkat%20https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Operator%20%5e%20%28xor%29%20di%20Java%20bukan%20untuk%20Membuat%20Pangkat&body=Operator%20%5e%20%28xor%29%20di%20Java%20bukan%20untuk%20Membuat%20Pangkat:%20https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f&t=Operator%20%5e%20%28xor%29%20di%20Java%20bukan%20untuk%20Membuat%20Pangkat" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f&text=Operator%20%5e%20%28xor%29%20di%20Java%20bukan%20untuk%20Membuat%20Pangkat%20https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f&description=Operator%20%5e%20%28xor%29%20di%20Java%20bukan%20untuk%20Membuat%20Pangkat" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f&title=Operator%20%5e%20%28xor%29%20di%20Java%20bukan%20untuk%20Membuat%20Pangkat" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Operator%20%5e%20%28xor%29%20di%20Java%20bukan%20untuk%20Membuat%20Pangkat&body=Operator%20%5e%20%28xor%29%20di%20Java%20bukan%20untuk%20Membuat%20Pangkat:%20https%3a%2f%2fwww.petanikode.com%2foperator--xor-di-java-bukan-untuk-membuat-pangkat%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/pemrograman">Pemrograman</a>
-                  
-                    #<a href="/topik/java">Java</a>
-                  
-                    #<a href="/topik/matematika">Matematika</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/pemrograman">Pemrograman</a>
+                      
+                        #<a href="/topik/java">Java</a>
+                      
+                        #<a href="/topik/matematika">Matematika</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

@@ -773,14 +773,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -793,6 +806,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1426,26 +1440,28 @@ bereksperimen dengan Kotlin dan Android.</p>
 </ul>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f&t=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f&text=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29&body=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f&t=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f&text=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f&description=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f&title=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29&body=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-kotlin-extensions%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/kotlin">Kotlin</a>
-                  
-                    #<a href="/topik/android">Android</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/kotlin">Kotlin</a>
+                      
+                        #<a href="/topik/android">Android</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

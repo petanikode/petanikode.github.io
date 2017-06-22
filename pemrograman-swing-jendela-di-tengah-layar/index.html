@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,26 +1207,28 @@ padding: 16px;
                 <p>Pada pemrograman GUI dengan <i>Java Swing</i>, kita sering membuat jendela dengan JFrame. Namun, selalu tampil di pojok kiri atas layar. Pojok kiri atas adalah titik (<code>0</code>,<code>0</code>) dalam koordinat layar (x,y). Pada kesempatan ini saya akan berbagi trik, agar setiap jendela yang dibuat dengan <i>JFrame</i> tampil di tengah-tengah layar.<br /><h2>1. Komposisi Pustaka</h2>Ada dua pustaka yang diperlukan untuk membuat jendela <i>JFrame</i> tampil di tengah-tengah. Silahkan diimpor:<br /><pre><code class="java">import java.awt.Dimension;<br />import java.awt.Toolkit;</code></pre><h2>2. Kode Agar Tampil di Tengah</h2>Letakan kode berikut di dalam konstruktor <i>JFrame</i>.<br /><pre><code class="java">Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();<br />this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);</code></pre>Pertama kita ambil ukuran layar dengan <i>Toolkit</i>, kemudian ukuran tersebut dibuat menjadi objek dimensi. Kedua, membagi dua ukuran lebar dan tinggi layar dan dikurangi ukuran <i>JFrame</i>. Kata kunci <code>this</code> pada kode di atas merefrensi pada <i>JFrame</i> (<code>this</code> itu JFrame-nya). Hasil bagi dua dan pengurangan adalah titik tengah dan itu kita pakai sebagai lokasi awal <i>JFrame</i>.<br /><h2>3. Kode Lengkap</h2><pre><code class="java"><span style="background-color: #b6d7a8;">import java.awt.Dimension;<br />import java.awt.Toolkit;</span><br /><br />public class JendelaPercobaan extends javax.swing.JFrame {<br /><br />&nbsp;&nbsp;&nbsp; // konstruktor<br />&nbsp;&nbsp;&nbsp; public JendelaPercobaan() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="background-color: #b6d7a8;">initComponents();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);</span><br />&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp; @SuppressWarnings(&ldquo;unchecked&rdquo;)<br />&nbsp;&nbsp;&nbsp; // &lt;editor-fold defaultstate=&ldquo;collapsed&rdquo; desc=&ldquo;Generated Code&rdquo;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; private void initComponents() {<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jLabel1 = new javax.swing.JLabel();<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jLabel1.setText(&ldquo;www.petanikode.com&rdquo;);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; getContentPane().setLayout(layout);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; layout.setHorizontalGroup(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addGroup(layout.createSequentialGroup()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addGap(138, 138, 138)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addComponent(jLabel1)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addContainerGap(143, Short.MAX_VALUE))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; layout.setVerticalGroup(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addGroup(layout.createSequentialGroup()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addGap(134, 134, 134)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addComponent(jLabel1)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addContainerGap(149, Short.MAX_VALUE))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pack();<br />&nbsp;&nbsp;&nbsp; }// &lt;/editor-fold&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br /><br />&nbsp;&nbsp;&nbsp; public static void main(String args[]) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Set the Nimbus look and feel <em>/<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&lt;editor-fold defaultstate=&ldquo;collapsed&rdquo; desc=&rdquo; Look and feel setting code (optional) &ldquo;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /</em> If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * For details see <a href="http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html">http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html</a> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>/<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (&ldquo;Nimbus&rdquo;.equals(info.getName())) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; javax.swing.UIManager.setLookAndFeel(info.getClassName());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (ClassNotFoundException ex) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.util.logging.Logger.getLogger(JendelaPercobaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (InstantiationException ex) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.util.logging.Logger.getLogger(JendelaPercobaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (IllegalAccessException ex) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.util.logging.Logger.getLogger(JendelaPercobaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (javax.swing.UnsupportedLookAndFeelException ex) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.util.logging.Logger.getLogger(JendelaPercobaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&lt;/editor-fold&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /</em> Create and display the form */<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.awt.EventQueue.invokeLater(new Runnable() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public void run() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new JendelaPercobaan().setVisible(true);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp; // Variables declaration - do not modify&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; private javax.swing.JLabel jLabel1;<br />&nbsp;&nbsp;&nbsp; // End of variables declaration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />}</code></pre><h2>4. Uji Coba</h2><a href="http://4.bp.blogspot.com/-oK3kCCbzHY0/V5tur3iPgKI/AAAAAAAAAAQ/R3HSbAw1p5Uvj8AMnm9A02kUKzjnFpoMgCK4B/s1600/Jendela%2BJFrame%2Btampil%2Bdi%2Btengah%2Blayar%2B-%2Bpetanikode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-oK3kCCbzHY0/V5tur3iPgKI/AAAAAAAAAAQ/R3HSbAw1p5Uvj8AMnm9A02kUKzjnFpoMgCK4B/s1600/Jendela%2BJFrame%2Btampil%2Bdi%2Btengah%2Blayar%2B-%2Bpetanikode.png" /></a><br /><br />Referensi: <a href="http://stackoverflow.com/a/2442610" target="_blank">Stack Overflow</a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f&t=Trik%20Agar%20Jendela%20JFrame%20Tampil%20di%20Tengah%20Layar" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f&text=Trik%20Agar%20Jendela%20JFrame%20Tampil%20di%20Tengah%20Layar%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Trik%20Agar%20Jendela%20JFrame%20Tampil%20di%20Tengah%20Layar&body=Trik%20Agar%20Jendela%20JFrame%20Tampil%20di%20Tengah%20Layar:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f&t=Trik%20Agar%20Jendela%20JFrame%20Tampil%20di%20Tengah%20Layar" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f&text=Trik%20Agar%20Jendela%20JFrame%20Tampil%20di%20Tengah%20Layar%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f&description=Trik%20Agar%20Jendela%20JFrame%20Tampil%20di%20Tengah%20Layar" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f&title=Trik%20Agar%20Jendela%20JFrame%20Tampil%20di%20Tengah%20Layar" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Trik%20Agar%20Jendela%20JFrame%20Tampil%20di%20Tengah%20Layar&body=Trik%20Agar%20Jendela%20JFrame%20Tampil%20di%20Tengah%20Layar:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-swing-jendela-di-tengah-layar%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/java">Java</a>
-                  
-                    #<a href="/topik/swing">Swing</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/java">Java</a>
+                      
+                        #<a href="/topik/swing">Swing</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

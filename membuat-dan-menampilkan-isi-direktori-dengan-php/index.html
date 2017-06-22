@@ -762,14 +762,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -782,6 +795,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1189,26 +1203,28 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" /></a>Pada kesempatan ini, saya akan mengajak teman-teman mengenal dua fungsi yang mungkin dibutuhkan untuk melakukan operasi pada file sistem. Fungsi pertama <code>mkdir()</code> untuk membuat direktori, mirip seperti perintah <code>mkdir</code> pada Linux dan <code>md</code> pada CMD Windows. Fungsi kedua <code>scandir()</code> untuk menampilkan direktori, mirip seperti perintah <code>ls</code> dan <code>dir</code> pada terminal ataupun CMD.<br /><h2>Membuat direktori</h2>Mari kita mulai percobaan pertama, membuat direktori denga fungsi <code>mkdir()</code>. Fungsi ini dapat kita berikan parameter berupa <i>string</i> yang akan menjadi nama direktorinya. Direktori akan dibuat pada lokasi skrip PHP itu berada dan juga bisa di lokasi <i>(path)</i> tertentu. Fungsi <code>mkdir()</code> akan mengembalikan nilai <code>true</code> apabila berhasil membuat direktori dan <code>false</code> apabila gagal.<br /><br />Contoh:<br /><pre><code class="html php">&lt;?php mkdir(&ldquo;contoh_direktori&rdquo;); ?&gt;</code></pre>Contoh pembuatan di path tertentu:<br /><pre><code class="html php">&lt;?php mkdir(&ldquo;./ini_direktori/contoh/saja&rdquo;, 0777, true); ?&gt;</code></pre>Parameter <code>0777</code> adalah kode hak akses direktori dan nilai <code>true</code> pada parameter terakhir fungsinya untuk mengizinkan pembuatan direktori secara rekursif.<br /><a href="http://2.bp.blogspot.com/-Hk90zBrPQD0/V8rXrdlcYGI/AAAAAAAADMI/I2HJWtwYCusToQF3ehrng7hh_ivSK4GSACK4B/s1600/hasil%2Bpercobaan%2Bpembuatan%2Bdirektori.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-Hk90zBrPQD0/V8rXrdlcYGI/AAAAAAAADMI/I2HJWtwYCusToQF3ehrng7hh_ivSK4GSACK4B/s1600/hasil%2Bpercobaan%2Bpembuatan%2Bdirektori.png" /></a><br /><h2>Melihat isi Direktori</h2>Setelah kita mengetahui cara membuat direktori, selanjutnya kita akan coba fungsi <code>scandir()</code> untuk melihat direktori. Fungsi ini mengembalikan hasil berupa <i>array</i>.<br /><br />Contoh:<br /><pre><code class="php">&lt;?php<br />$dir = scandir(&ldquo;ini_direktori&rdquo;);<br />print_r($dir);<br />?&gt;</code></pre>Akan menghasilkan output:<br /><pre><code class="bash">Array<br />(<br />    [0] =&gt; .<br />    [1] =&gt; ..<br />    [2] =&gt; contoh<br />)</code></pre>Terdapat satu isi, berupa direktori (pada indeks ke-2). Sedangkan indeks ke-0 dan 1 adalah link yang mengarah ke direktori itu sendiri dan direktori di atasnya.<br /><pre><code class="bash">.  = direktori itu sendiri<br />.. = direktori di atasnya</code></pre>Selanjutnya, kita bisa menampilkan isi dari hasil fungsi <code>scandir()</code> dengan perulangan.<br /><a href="http://4.bp.blogspot.com/-WFCPusboujc/V8rgbKX76AI/AAAAAAAADMY/KctE0YT0uB4Vlpxz-6DxrjxddkL46eQIgCK4B/s1600/hasil%2Bscandir.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-WFCPusboujc/V8rgbKX76AI/AAAAAAAADMY/KctE0YT0uB4Vlpxz-6DxrjxddkL46eQIgCK4B/s1600/hasil%2Bscandir.png" /></a><br />Isinya ada 6 direktori. Karena sebelumnya, saya sudah membuat 6 direktori dengan perulangan.<br /><br /><blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style="background: #fff; border-radius: 3px; border: 0; box-shadow: 0 0 1px 0 rgba(0 , 0 , 0 , 0.5) , 0 1px 10px 0 rgba(0 , 0 , 0 , 0.15); margin: 1px; max-width: 658px; padding: 0; width: 99.375%;"><div style="padding: 8px;"><div style="background: #F8F8F8; line-height: 0; margin-top: 40px; padding: 50.0% 0; text-align: center; width: 100%;"><div style="background: url(data:image/png; display: block; height: 44px; margin: 0 auto -44px; position: relative; top: -22px; width: 44px;"></div></div><div style="margin: 8px 0 0 0; padding: 0 4px;"><a href="https://www.instagram.com/p/BJ5KW3EDw7Q/" style="color: black; font-family: &quot;arial&quot; , sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none; word-wrap: break-word;" target="_blank">Berani coba!?</a></div><div style="color: #c9c8cd; font-family: Arial,sans-serif; font-size: 14px; line-height: 17px; margin-bottom: 0; margin-top: 8px; overflow: hidden; padding: 8px 0 7px; text-align: center; text-overflow: ellipsis; white-space: nowrap;">A photo posted by Petani Kode (@petanikode) on <time datetime="2016-09-03T12:06:00+00:00" style="font-family: Arial,sans-serif; font-size: 14px; line-height: 17px;">Sep 3, 2016 at 5:06am PDT</time></div></div></blockquote><script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script><br /><h2>Kesimpulan</h2>Pembuatan direktori dengan PHP dilakukan dengan fungsi <code>mkdir()</code> dan untuk melihat isi direkotri dilakukan dengan fungsi <code>scandir()</code>. Dua fungsi tersebut dapat diterapkan pada pembuatan sistem manajemen file berbasis web. <br /><br />Referensi:<br /><ul><li><a href="http://php.net/manual/en/function.mkdir.php" target="_blank"><a href="http://php.net/manual/en/function.mkdir.php">http://php.net/manual/en/function.mkdir.php</a></a></li><li><a href="http://php.net/manual/en/function.scandir.php" target="_blank"><a href="http://php.net/manual/en/function.scandir.php">http://php.net/manual/en/function.scandir.php</a></a> </li></ul></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f&t=Membuat%20dan%20Menampilkan%20isi%20Direktori%20dengan%20PHP" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f&text=Membuat%20dan%20Menampilkan%20isi%20Direktori%20dengan%20PHP%20https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Membuat%20dan%20Menampilkan%20isi%20Direktori%20dengan%20PHP&body=Membuat%20dan%20Menampilkan%20isi%20Direktori%20dengan%20PHP:%20https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f&t=Membuat%20dan%20Menampilkan%20isi%20Direktori%20dengan%20PHP" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f&text=Membuat%20dan%20Menampilkan%20isi%20Direktori%20dengan%20PHP%20https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f&description=Membuat%20dan%20Menampilkan%20isi%20Direktori%20dengan%20PHP" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f&title=Membuat%20dan%20Menampilkan%20isi%20Direktori%20dengan%20PHP" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Membuat%20dan%20Menampilkan%20isi%20Direktori%20dengan%20PHP&body=Membuat%20dan%20Menampilkan%20isi%20Direktori%20dengan%20PHP:%20https%3a%2f%2fwww.petanikode.com%2fmembuat-dan-menampilkan-isi-direktori-dengan-php%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

@@ -770,14 +770,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -790,6 +803,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1197,28 +1211,30 @@ padding: 16px;
                 <p><br /><a href="http://4.bp.blogspot.com/-0iFBzAJkiyk/Vx8UfFI-gEI/AAAAAAAACxM/R4q3xD4xj1sXrGpeD3HYMwcu31gG1zRfgCK4B/s1600/phpMyAdmin%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-0iFBzAJkiyk/Vx8UfFI-gEI/AAAAAAAACxM/R4q3xD4xj1sXrGpeD3HYMwcu31gG1zRfgCK4B/s1600/phpMyAdmin%2B-%2BPetani%2BKode.png" /></a>Masih segar, Ubuntu saya baru saja ditingkatkan <i>(upgrade)</i> ke versi 16.04. Secara otomatis semua versi software-nya juga ditingkatkan. Tapi, peningkatan versi tidak selalu menjadi lebih baik. Kadang mendapat <i>bugs</i> dan masalah baru. Seperti phpMyAdmin, terjadi <i>error</i> karena menggunakan PHP 7. Pada versi sebelumnya menggunakan PHP 5.<br /><a href="http://3.bp.blogspot.com/-hCm0pO2WGNE/Vx8MYUuMqLI/AAAAAAAACww/ru4HEoVvEYgYMzi04n5rARbpXh5_81A2ACK4B/s1600/Pesan%2BError%2BphpMyAdmin%2B-%2Bmbstring%2Bextension%2Bis%2Bmissing.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-hCm0pO2WGNE/Vx8MYUuMqLI/AAAAAAAACww/ru4HEoVvEYgYMzi04n5rARbpXh5_81A2ACK4B/s1600/Pesan%2BError%2BphpMyAdmin%2B-%2Bmbstring%2Bextension%2Bis%2Bmissing.png" /></a><br />Berdasarkan pesan error tersebut, kesalahanya ada pada konfigurasi PHP. Atur konfigurasi agar dapat me-load ekstensi.<br /><ol><li>buka file <code>/etc/php5/apache2/php.ini</code> atau <code>/etc/php/7.0/apache2/php.ini</code></li><li>Tambahkan<br /><pre><code>extension_dir = /usr/lib/php/20151012/</code></pre>Lokasi <code>/usr/lib/php/20151012/</code> adalah lokasi ekstensi PHP pada komputer saya.<br /><a href="http://3.bp.blogspot.com/-6-57E16go-8/Vx8MnQewQ_I/AAAAAAAACw4/3Ivzwbe9DlsGUUld1KkskL5Agy7s3-4EQCK4B/s1600/Konfigurasi%2BPHP.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-6-57E16go-8/Vx8MnQewQ_I/AAAAAAAACw4/3Ivzwbe9DlsGUUld1KkskL5Agy7s3-4EQCK4B/s1600/Konfigurasi%2BPHP.png" /></a></li><li>Nyalakan ulang service apache2<br /><pre><code>sudo service apache2 restart</code></pre></li></ol>Sekarang coba buka lagi phpMyAdmin. Kalau masih belum berhasil, instal ekstensi <code>php-mbstring</code>. <br /><pre><code>sudo apt install php-mbstring</code></pre>Referensi: <br /><ul><li><a href="http://stackoverflow.com/q/12858772">http://stackoverflow.com/q/12858772</a></li><li><a href="http://php.net/manual/en/mbstring.installation.php">http://php.net/manual/en/mbstring.installation.php</a></li></ul></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f&t=Solusi%20Error%20phpMyAdmin%20%27mbstring%20is%20missing%27" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f&text=Solusi%20Error%20phpMyAdmin%20%27mbstring%20is%20missing%27%20https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Solusi%20Error%20phpMyAdmin%20%27mbstring%20is%20missing%27&body=Solusi%20Error%20phpMyAdmin%20%27mbstring%20is%20missing%27:%20https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f&t=Solusi%20Error%20phpMyAdmin%20%27mbstring%20is%20missing%27" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f&text=Solusi%20Error%20phpMyAdmin%20%27mbstring%20is%20missing%27%20https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f&description=Solusi%20Error%20phpMyAdmin%20%27mbstring%20is%20missing%27" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f&title=Solusi%20Error%20phpMyAdmin%20%27mbstring%20is%20missing%27" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Solusi%20Error%20phpMyAdmin%20%27mbstring%20is%20missing%27&body=Solusi%20Error%20phpMyAdmin%20%27mbstring%20is%20missing%27:%20https%3a%2f%2fwww.petanikode.com%2fsolusi-error-phpmyadmin-mbstring-is-missing%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/database">Database</a>
-                  
-                    #<a href="/topik/phpmyadmin">phpMyAdmin</a>
-                  
-                    #<a href="/topik/mysql">MySQL</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/database">Database</a>
+                      
+                        #<a href="/topik/phpmyadmin">phpMyAdmin</a>
+                      
+                        #<a href="/topik/mysql">MySQL</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

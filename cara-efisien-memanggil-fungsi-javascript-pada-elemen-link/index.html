@@ -768,14 +768,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -788,6 +801,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1195,28 +1209,30 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png" imageanchor="1"><amp-img alt="Belajar Pemrograman Javascript" border="0" height="380" layout="responsive" src="https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png" width="720"></amp-img></a> <br />Link merupakan elemen yang dibuat dengan tag <code>&lt;a&gt;</code>. Link berfungsi menghubungkan halaman-halaman web. Link sering juga dipakai untuk memanggil fungsi Javascript. Contoh:<br /><pre><code class="html">&lt;a href=&ldquo;#&rdquo; onclick=&ldquo;namaFungsi()&rdquo;&gt;Sebuah Link&lt;/a&gt;<br /></code></pre>Nilai pagar (<code>#</code>) pada atribut <i>href</i> artinya link tidak akan menuju ke mana-mana. Sementara atribut <i>onclick</i> berfungsi untuk memanggil fungsi apa yang akan dikerjakan saat link ini diklik.<br /><br />Cara di atas, saya rasa masih kurang tepat. Karena setiap mengklik link, kita akan dibawa ke <i>top page</i>. Berbeda dengan cara ini:<br /><pre><code class="html">&lt;a href=&ldquo;javascript: namaFungsi()&rdquo;&gt;Sebuah Link&lt;/a&gt;<br /></code></pre>Cara diatas lebih efisien, karena langsung memanggil fungsinya di dalam atribut <i>href</i>. Jadi, cukup mengerjakan satu pekerjaan saja. Tidak seperti cara yang pertama.<br /><iframe allowfullscreen="allowfullscreen" frameborder="0" height="300" src="//jsfiddle.net/Ardianta/ct6ku19v/embedded/html,result/" width="100%"></iframe><br />Kedua cara itu menghasilkan hasil yang sama, namun manakah yang lebih efisien? Menurut saya, cara ke-2 lebih efisien daripada cara yang pertama. Karena, memanggil langsung fungsinya tanpa harus menuju ke <i>top page</i> (halaman atas). Bagaimana menurutmu?<br /><br /><b>Update: 02 Januari 2017</b><br />Tambahkan tanda seru (<code>!</code>) setelah tanda pagar (<code>#</code>) agar tidak menuju ke <i>top page</i>. Contoh:<br /><pre><code class="html">&lt;a href=&ldquo;#!&rdquo; onclick=&ldquo;namaFungsi()&rdquo;&gt;Sebuah Link&lt;/a&gt;</code></pre></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f&t=Cara%20Efisien%20Memanggil%20Fungsi%20Javascript%20pada%20Elemen%20Link" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f&text=Cara%20Efisien%20Memanggil%20Fungsi%20Javascript%20pada%20Elemen%20Link%20https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Cara%20Efisien%20Memanggil%20Fungsi%20Javascript%20pada%20Elemen%20Link&body=Cara%20Efisien%20Memanggil%20Fungsi%20Javascript%20pada%20Elemen%20Link:%20https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f&t=Cara%20Efisien%20Memanggil%20Fungsi%20Javascript%20pada%20Elemen%20Link" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f&text=Cara%20Efisien%20Memanggil%20Fungsi%20Javascript%20pada%20Elemen%20Link%20https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f&description=Cara%20Efisien%20Memanggil%20Fungsi%20Javascript%20pada%20Elemen%20Link" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f&title=Cara%20Efisien%20Memanggil%20Fungsi%20Javascript%20pada%20Elemen%20Link" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Cara%20Efisien%20Memanggil%20Fungsi%20Javascript%20pada%20Elemen%20Link&body=Cara%20Efisien%20Memanggil%20Fungsi%20Javascript%20pada%20Elemen%20Link:%20https%3a%2f%2fwww.petanikode.com%2fcara-efisien-memanggil-fungsi-javascript-pada-elemen-link%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/html">HTML</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/javascript">Javascript</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/html">HTML</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/javascript">Javascript</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

@@ -776,14 +776,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -796,6 +809,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1203,30 +1217,32 @@ padding: 16px;
                 <p>Ada masalah yang membuat saya bingung, posisi titik tengah Google maps selalu berada di pojok kiri atas. Pada <a href="http://petanikode.blogspot.com/2016/07/mengatasi-google-map-yang-tidak-tampil-di-modal.html" target="_blank">masalah sebelumnya</a>, Google Maps tidak bisa ditampilkan karena di letakkan di dalam modal. Meskipun saya sudah set titik tengahnya pada <i>trigger event</i> <i>&lsquo;resize&rsquo;</i>, namun tetap saja posisinya berada di pojok kiri atas.<br /><a href="http://3.bp.blogspot.com/-GaKzQ0vn74w/V4tcFbrY6ZI/AAAAAAAADCc/qebSxRzUKbQaBD058qIvpKosnZ6xylnRgCK4B/s1600/Posisi%2BTitik%2BTengah%2Byang%2Bsalah.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-GaKzQ0vn74w/V4tcFbrY6ZI/AAAAAAAADCc/qebSxRzUKbQaBD058qIvpKosnZ6xylnRgCK4B/s1600/Posisi%2BTitik%2BTengah%2Byang%2Bsalah.png" />&nbsp;</a><br />Setelah digeser:<br /><a href="http://1.bp.blogspot.com/-bnYLd04IfFI/V4tcmk65yWI/AAAAAAAADCk/-1xH-mBYhrwHlBKqwC-adIC4bf5KX2fYgCK4B/s1600/Posisi%2BTitik%2Btengah%2Byang%2Bdiinginkan.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-bnYLd04IfFI/V4tcmk65yWI/AAAAAAAADCk/-1xH-mBYhrwHlBKqwC-adIC4bf5KX2fYgCK4B/s1600/Posisi%2BTitik%2Btengah%2Byang%2Bdiinginkan.png" /></a><br />Kode yang mengatasi saat <i>trigger event</i> &ldquo;resize&rdquo; atau modal-nya ditampilkan:<br /><pre><code class="js">$(&ldquo;#modal-peta&rdquo;).on(&ldquo;shown.bs.modal&rdquo;, function() {<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp; google.maps.event.trigger(peta, &ldquo;resize&rdquo;, function() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; peta.setCenter(peta.getCenter());<br />&nbsp;&nbsp;&nbsp;&nbsp; });<br /><br />});</code></pre>Ternyata ada yang salah dengan kode tersebut. Setelah saya telusuri dengan kata kunci <i>&ldquo;Google Maps center top left&rdquo;</i> di Google, saya menemukan jawabanya. Memanggil fungsi di dalam <i>event trigger &ldquo;resize&rdquo;</i> mungkin tidak bisa. Berdasarkan beberapa jawaban di Stackoverflow mengatakan, pemanggilan fungsi <i>trigger &ldquo;resize&rdquo;</i> sendiri tidak bisa mengganti posisi tengah peta. Oleh karena itu disarankan kodenya dibuat seperti berikut ini.<br /><pre><code class="js">$(&ldquo;#modal-peta&rdquo;).on(&ldquo;shown.bs.modal&rdquo;, function() {<br /><br />&nbsp;&nbsp;&nbsp; // ambil dulu titik tengahnya<br />&nbsp;&nbsp;&nbsp; var tengah = peta.getCenter();<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; // resize<br />&nbsp;&nbsp;&nbsp; google.maps.event.trigger(peta, &ldquo;resize&rdquo;);<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; // set ulang titik tengah<br />&nbsp;&nbsp;&nbsp; peta.setCenter(tengah);<br /><br />});</code></pre>Hasilnya:<br /><a href="http://4.bp.blogspot.com/-poCubPPfjjI/V4tgURrxQaI/AAAAAAAADC0/O5EidXojz6Izf4TtAjT0uZkqjJXQzMwewCK4B/s1600/Selection_014.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-poCubPPfjjI/V4tgURrxQaI/AAAAAAAADC0/O5EidXojz6Izf4TtAjT0uZkqjJXQzMwewCK4B/s1600/Selection_014.png" /></a><br /><br />Referensi: <a href="http://stackoverflow.com/a/8559243">http://stackoverflow.com/a/8559243</a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f&t=Mengatasi%20Malsalah%20Posisi%20Titik%20Tengah%20Peta%20%28Google%20Maps%29" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f&text=Mengatasi%20Malsalah%20Posisi%20Titik%20Tengah%20Peta%20%28Google%20Maps%29%20https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Mengatasi%20Malsalah%20Posisi%20Titik%20Tengah%20Peta%20%28Google%20Maps%29&body=Mengatasi%20Malsalah%20Posisi%20Titik%20Tengah%20Peta%20%28Google%20Maps%29:%20https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f&t=Mengatasi%20Malsalah%20Posisi%20Titik%20Tengah%20Peta%20%28Google%20Maps%29" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f&text=Mengatasi%20Malsalah%20Posisi%20Titik%20Tengah%20Peta%20%28Google%20Maps%29%20https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f&description=Mengatasi%20Malsalah%20Posisi%20Titik%20Tengah%20Peta%20%28Google%20Maps%29" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f&title=Mengatasi%20Malsalah%20Posisi%20Titik%20Tengah%20Peta%20%28Google%20Maps%29" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Mengatasi%20Malsalah%20Posisi%20Titik%20Tengah%20Peta%20%28Google%20Maps%29&body=Mengatasi%20Malsalah%20Posisi%20Titik%20Tengah%20Peta%20%28Google%20Maps%29:%20https%3a%2f%2fwww.petanikode.com%2fmengatasi-malsalah-posisi-titik-tengah-peta-google-maps%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/google-maps">Google Maps</a>
-                  
-                    #<a href="/topik/javascript">Javascript</a>
-                  
-                    #<a href="/topik/api">API</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/google-maps">Google Maps</a>
+                      
+                        #<a href="/topik/javascript">Javascript</a>
+                      
+                        #<a href="/topik/api">API</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

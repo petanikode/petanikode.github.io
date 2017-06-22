@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,26 +1207,28 @@ padding: 16px;
                 <p><a href="https://4.bp.blogspot.com/-dNNJvns8P_Y/V3d-ZGdAKRI/AAAAAAAAC5s/28FqVj0Ho3E7CyeXhwv1bmra0VaaADSkwCLcB/s1600/html5-petanikode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-dNNJvns8P_Y/V3d-ZGdAKRI/AAAAAAAAC5s/28FqVj0Ho3E7CyeXhwv1bmra0VaaADSkwCLcB/s1600/html5-petanikode.png" /></a><br />Atribut <code>min</code> dan <code>max</code> merupakan atribut untuk menentukan nilai terkecil dan terbesar yang boleh diinputkan pada form. Atribut ini berfungsi untuk membatasi nilai input, misalnya tidak boleh menginput angka negatif, angka lebih dari 10, tanggal kurang dari tahun 2000, dsb.<br /><h2>Tidak Boleh Input Angka Negatif</h2>Agar tidak bisa menginputkan anka negatfi, maka kita perlu batasi nilai minimanya menjadi nol (0).<br /><pre><code clsas="html">&lt;input type=&ldquo;number&rdquo; min=&ldquo;0&rdquo; /&gt;</code></pre>Kode di atas akan menghasilkan:<br /><input min="0" type="number" /><br /><h2>Hanya Terima Angka dari 1 sampai 5</h2>Nilai yang boleh diinputkan dari 1 sampai 5, maka kita hanya perlu menentukan nilai terkecilnya 1 dan terbesar 5.<br /><pre><code clsas="html">&lt;input type=&ldquo;number&rdquo; min=&ldquo;1&rdquo; max=&ldquo;5&rdquo; /&gt;</code></pre>Kode di atas akan menghasilkan:<br /><input max="5" min="1" type="number" /><br /><h2>Tanggal Diatas Tahun 2000</h2>Agar tanggal yang dinputkan diatas tahun 2000, maka kita perlu mengatur batas bawahnya <i>(min)</i> menjadi 2000-12-30.<br /><pre><code clsas="html">&lt;input type=&ldquo;date&rdquo; min=&ldquo;2000-12-30&rdquo; /&gt;</code></pre>Kode di atas akan menghasilkan:<br /><input min="2000-12-30" type="date" /><br /><b>Catatan:</b> Input dengan tipe &ldquo;date&rdquo; belum didukung di Firefox.<br /><br />Demo:<br /><a class="jsbin-embed" href="http://jsbin.com/heqegi/1/embed?html,output">Atribut Min-Max &ndash; Petani Kode on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.36.10"></script><br /><h2>Kesimpulan</h2>Atribut <code>min</code> dan <code>max</code> dapat membatasi nilai input di form. Atribut ini menerima nilai berupa angka dan tanggal.<br /><br />Referensi: <a href="http://www.w3schools.com/tags/att_input_min.asp" target="_blank"><a href="http://www.w3schools.com/tags/att_input_min.asp">http://www.w3schools.com/tags/att_input_min.asp</a></a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f&t=Tutorial%20HTML%3a%20Cara%20Membatasi%20Nilai%20Input%20Maksimum%20dan%20Minimum%20pada%20Form" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f&text=Tutorial%20HTML%3a%20Cara%20Membatasi%20Nilai%20Input%20Maksimum%20dan%20Minimum%20pada%20Form%20https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Tutorial%20HTML%3a%20Cara%20Membatasi%20Nilai%20Input%20Maksimum%20dan%20Minimum%20pada%20Form&body=Tutorial%20HTML%3a%20Cara%20Membatasi%20Nilai%20Input%20Maksimum%20dan%20Minimum%20pada%20Form:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f&t=Tutorial%20HTML%3a%20Cara%20Membatasi%20Nilai%20Input%20Maksimum%20dan%20Minimum%20pada%20Form" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f&text=Tutorial%20HTML%3a%20Cara%20Membatasi%20Nilai%20Input%20Maksimum%20dan%20Minimum%20pada%20Form%20https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f&description=Tutorial%20HTML%3a%20Cara%20Membatasi%20Nilai%20Input%20Maksimum%20dan%20Minimum%20pada%20Form" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f&title=Tutorial%20HTML%3a%20Cara%20Membatasi%20Nilai%20Input%20Maksimum%20dan%20Minimum%20pada%20Form" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Tutorial%20HTML%3a%20Cara%20Membatasi%20Nilai%20Input%20Maksimum%20dan%20Minimum%20pada%20Form&body=Tutorial%20HTML%3a%20Cara%20Membatasi%20Nilai%20Input%20Maksimum%20dan%20Minimum%20pada%20Form:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-html-atribut-min-max%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/html5">HTML5</a>
-                  
-                    #<a href="/topik/html">HTML</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/html5">HTML5</a>
+                      
+                        #<a href="/topik/html">HTML</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

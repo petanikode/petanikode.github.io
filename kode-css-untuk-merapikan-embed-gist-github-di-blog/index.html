@@ -772,14 +772,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -792,6 +805,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1199,32 +1213,34 @@ padding: 16px;
                 <p>Saya mencoba memajang kode yang ada di Gist Github ke blog. Namun, kodenya terlalu panjang dan memakan banyak tempat. Seharusnya kode ini ditampilkan setinggi 500px, agar pembaca tidak capek melalkukan <i>scroll</i>.<br /><div class="separator"><a href="http://3.bp.blogspot.com/-7u7PnzZxyYw/Vfw9ie8oWsI/AAAAAAAAB1c/_mhpqRvkdxI/s1600/Kode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2BGist%2Bdi%2Bblog%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-7u7PnzZxyYw/Vfw9ie8oWsI/AAAAAAAAB1c/_mhpqRvkdxI/s1600/Kode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2BGist%2Bdi%2Bblog%2BPetani%2BKode.png" /></a></div>Berikut kode CSS untuk merapikannya:<br /><br /><script src="https://gist.github.com/ardianta/fc3beb2d591fc52692de.js"></script>Pada blogger, kode CSS tersebut dapat ditambahkan pada <i>Template Designer&gt;Advenced&gt;Add CSS</i><br /><div class="separator"><a href="http://1.bp.blogspot.com/-MjIHgYZ58co/VfwwSLK33tI/AAAAAAAAB08/jYj7DQ7VjMw/s1600/Penambahan%2Bkode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2Bgist.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-MjIHgYZ58co/VfwwSLK33tI/AAAAAAAAB08/jYj7DQ7VjMw/s1600/Penambahan%2Bkode%2BCSS%2Buntuk%2Bmerapikan%2Bembed%2Bgist.png" /></a></div>Sebenarnya, kita hanya perlu menambahkan <code>max-height: 500px</code> saja, agar kotak kode ditampilkan maksimal setinggi <samp>500px</samp>. Namun, kode CSS di atas adalah hasil <i>fork</i> dan modifikasi yang saya lakukan untuk blog ini. Jadi, anda juga bisa mem-<i>fork</i> dan memodifikasinya sesuka hati.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f&t=Kode%20CSS%20untuk%20merapikan%20embed%20Gist%20Github%20di%20blog" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f&text=Kode%20CSS%20untuk%20merapikan%20embed%20Gist%20Github%20di%20blog%20https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Kode%20CSS%20untuk%20merapikan%20embed%20Gist%20Github%20di%20blog&body=Kode%20CSS%20untuk%20merapikan%20embed%20Gist%20Github%20di%20blog:%20https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f&t=Kode%20CSS%20untuk%20merapikan%20embed%20Gist%20Github%20di%20blog" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f&text=Kode%20CSS%20untuk%20merapikan%20embed%20Gist%20Github%20di%20blog%20https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f&description=Kode%20CSS%20untuk%20merapikan%20embed%20Gist%20Github%20di%20blog" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f&title=Kode%20CSS%20untuk%20merapikan%20embed%20Gist%20Github%20di%20blog" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Kode%20CSS%20untuk%20merapikan%20embed%20Gist%20Github%20di%20blog&body=Kode%20CSS%20untuk%20merapikan%20embed%20Gist%20Github%20di%20blog:%20https%3a%2f%2fwww.petanikode.com%2fkode-css-untuk-merapikan-embed-gist-github-di-blog%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/blog">Blog</a>
-                  
-                    #<a href="/topik/css">CSS</a>
-                  
-                    #<a href="/topik/gist">Gist</a>
-                  
-                    #<a href="/topik/blogger">Blogger</a>
-                  
-                    #<a href="/topik/github">github</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/blog">Blog</a>
+                      
+                        #<a href="/topik/css">CSS</a>
+                      
+                        #<a href="/topik/gist">Gist</a>
+                      
+                        #<a href="/topik/blogger">Blogger</a>
+                      
+                        #<a href="/topik/github">github</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

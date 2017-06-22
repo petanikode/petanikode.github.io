@@ -764,14 +764,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -784,6 +797,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1191,26 +1205,28 @@ padding: 16px;
                 <p>Saat mengikuti <a href="http://petanikode.blogspot.com/2015/01/pertemuan-pertama-praktikum-bebas.html">praktikum bebas</a>, Saya mendapatkan galat ketika inisialisasi atau mempersiapkan <i>framework Yii</i> di <i>server</i> lokal linux. Tidak seperti di XAMPP (Windows), perintah <code>init</code> dapat berjalan untuk inisialisasi <i>Yii</i>. Tetapi di Linux, perintah <code>init</code> digunakan untuk inisialisasi sistem, bukan untuk inisialisasi framework Yii.</p> <a href="http://2.bp.blogspot.com/-0zn6xuMT9As/VLjIB4flnkI/AAAAAAAABGY/DhpteCeDxTc/s1600/Yii%2Bframework%2Bdi%2Blinux%2Bubuntu.jpg" imageanchor="1" ><img border="0" src="http://2.bp.blogspot.com/-0zn6xuMT9As/VLjIB4flnkI/AAAAAAAABGY/DhpteCeDxTc/s1600/Yii%2Bframework%2Bdi%2Blinux%2Bubuntu.jpg" /></a> <p>Perintah untuk inisialisasi Yii di linux adalah <code>php init</code>. Tapi, peintah ini tidak dapat dijalankan. Karena ada sesuatu yang belum di install.</p> <a href="http://2.bp.blogspot.com/-l0QXwHD9sPM/VLjKLmqH4vI/AAAAAAAABGk/G5urzItvCeQ/s1600/error.png" imageanchor="1" ><img border="0" src="http://2.bp.blogspot.com/-l0QXwHD9sPM/VLjKLmqH4vI/AAAAAAAABGk/G5urzItvCeQ/s1600/error.png" /></a> <p>Perintah <code>php init</code> berfungsi untuk mengekseskusi berkas php yang bernama <code>init</code>. Berkas ini tersimpan di direktori <i>framework Yii</i>.</p> <a href="http://3.bp.blogspot.com/-WQxuct673PU/VLjMEBIHU7I/AAAAAAAABGw/MVSS7Al2SLA/s1600/isi%2Bberkas%2Binit.png" imageanchor="1" ><img border="0" src="http://3.bp.blogspot.com/-WQxuct673PU/VLjMEBIHU7I/AAAAAAAABGw/MVSS7Al2SLA/s1600/isi%2Bberkas%2Binit.png" /></a> <p>Di dalam berkas tersebut, terdapat perintah untuk memangil sebuah ekstensi bernama <code>mcrypt</code>. Ekstensi ini belum tepasang di Linux (Xubuntu) yang saya gunakan. Dengan demikian, solusi untuk permasalahan ini adalah memasang <code>mcrypt</code>. <code>mcrypt</code> adalah sebuah program untuk melakukan enkripsi. Untuk instalasi <code>mcrypt</code> di Ubuntu gunakan perintah di bawah ini.</p> <pre><code class="bash">sudo apt-get install mcrypt</code></pre><p><a href="http://4.bp.blogspot.com/-fr2WbZilmqo/VLjOImO4PHI/AAAAAAAABG8/bJtkfngEdl4/s1600/install%2Bmcrypt.png" imageanchor="1" ><img border="0" src="http://4.bp.blogspot.com/-fr2WbZilmqo/VLjOImO4PHI/AAAAAAAABG8/bJtkfngEdl4/s1600/install%2Bmcrypt.png" /></a></p> <p>Setelah itu, jalankan perintah ini:</p> <pre><code class="bash">sudo php5enmod mcrypt</code></pre> <p><a href="http://3.bp.blogspot.com/-sGutyQDf-mM/VLjOt7FIu5I/AAAAAAAABHE/ttWSP5yh4b4/s1600/mod.png" imageanchor="1" ><img border="0" src="http://3.bp.blogspot.com/-sGutyQDf-mM/VLjOt7FIu5I/AAAAAAAABHE/ttWSP5yh4b4/s1600/mod.png" /></a></p> <p>Sekarang cobalah inisialisasi ulang <i>framework Yii</i>, jalankan lagi peintah <code>php init</code>. Bila tidak berhasil, cobalah <i>restart</i> ulang <i>server</i> dengan perintah  <code>sudo service apache2 restart</code>.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f&t=Solusi%20galat%20saat%20inisialisasi%20Framework%20Yii%20di%20Linux" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f&text=Solusi%20galat%20saat%20inisialisasi%20Framework%20Yii%20di%20Linux%20https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Solusi%20galat%20saat%20inisialisasi%20Framework%20Yii%20di%20Linux&body=Solusi%20galat%20saat%20inisialisasi%20Framework%20Yii%20di%20Linux:%20https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f&t=Solusi%20galat%20saat%20inisialisasi%20Framework%20Yii%20di%20Linux" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f&text=Solusi%20galat%20saat%20inisialisasi%20Framework%20Yii%20di%20Linux%20https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f&description=Solusi%20galat%20saat%20inisialisasi%20Framework%20Yii%20di%20Linux" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f&title=Solusi%20galat%20saat%20inisialisasi%20Framework%20Yii%20di%20Linux" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Solusi%20galat%20saat%20inisialisasi%20Framework%20Yii%20di%20Linux&body=Solusi%20galat%20saat%20inisialisasi%20Framework%20Yii%20di%20Linux:%20https%3a%2f%2fwww.petanikode.com%2fsolusi-galat-saat-inisialisasi-framework-yii-di-linux%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/yii">yii</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/yii">yii</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

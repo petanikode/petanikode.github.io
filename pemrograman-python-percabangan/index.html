@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,24 +1207,26 @@ padding: 16px;
                 <p><a href="http://1.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz8/4sG6fkp4XvM/s1600/python-programming.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz8/4sG6fkp4XvM/s1600/python-programming.png" /></a>  <br />Pada kondisi tertentu, kita sering dihadapi dengan pilihan-pilihan. Misalnya, saat pergi ke suatu tempat, terdapat banyak jalan menuju tempat tersebut. Manakah jalan yang akan dipilih? Kita akan berpikir dan mempertimbangkan pilihan yang akan diambil. Apakah melalui jalan <samp>x</samp> lebih cepat sampai dari pada jalan <samp>y</samp>, ataukah sebaliknya?<br /><a href="http://2.bp.blogspot.com/-wV3QNpotnSY/VNCQ9-DDbaI/AAAAAAAABJw/rErIu_mbEFo/s1600/struktur%2Bpemilihan%2Bdi%2Bpython.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-wV3QNpotnSY/VNCQ9-DDbaI/AAAAAAAABJw/rErIu_mbEFo/s1600/struktur%2Bpemilihan%2Bdi%2Bpython.png" /></a>  <br />Kita dapat membuat komputer berpikir seperti di atas dengan kode pemilihan. Ada tiga model kode pemilihan di python: (i) <code>if</code>, dipakai saat pilihan kondisinya ada satu, (ii) <code>if-else</code>, dipakai saat pilihan kondisinya ada dua, dan (iii) <code>if-elif-else</code> dipakai saat pilihan kondisinya lebih dari dua.<br /><h2>1. Struktur if</h2>Struktur pemilihan ini dipakai saat ada satu pilihan keputusan atau kondisi. Misalnya, kalau ada gempa maka lari keluar dari bangunan; kalau tidak ada gempa maka tidak melakukan apa-apa. Kita akan lari keluar dari bangunan kalau kondisinya terjadi gempa saja.<br /><br /><pre><code class="python">if <i>kondisi == &ldquo;gempa&rdquo;</i>:<br />   # lari<br />   # keluar dari bangunan<br />   # selamatkan diri<br /></code></pre>Kode yang berada di bawah <code>if kondisi == &ldquo;gempa&rdquo;:</code> akan dikerjakan apabila benar, variabel <samp>kondisi</samp> bernilai <samp>&ldquo;gempa&rdquo;</samp>. Tapi, apabila variabel <samp>kondisi</samp> tidak bernilai <samp>&ldquo;gempa&rdquo;</samp> maka kode yang berada di bawah <code>if</code> tidak akan dikerjakan. Perhatikanlah cara penulisan kode yang di bawah <code>if</code>, kode-kode tersebut ditulis sejajar dan diberikan <kbd>tab</kbd> atau <kbd>spasi</kbd> 2x. Bila tidak diberikan <i>tab</i> atau spasi 2x, maka akan dianggap berada di luar blok kode <code>if</code> oleh python.<br /><a href="http://2.bp.blogspot.com/-IvvxP1MHybo/VEHNk05_LJI/AAAAAAAAA0M/oNySjaotx-Y/s1600/struktur%2Bif%2Bpython.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-IvvxP1MHybo/VEHNk05_LJI/AAAAAAAAA0M/oNySjaotx-Y/s1600/struktur%2Bif%2Bpython.png" width="100%" /></a><br /><h3>Contoh program</h3><pre><code class="python">#adzan.py<br />adzan_magrib = True<br /><br />if adzan_magrib:<br />   print(&ldquo;Saatnya berbuka&rdquo;)<br /></code></pre><b>Pernjelasan</b>: kalau variabel <code>adzan_magrib</code> berniai <code>True</code> Maka tampilkan ke monitor <code>Saatnya berbuka</code>. <br /><br /><pre><code class="python"># penilaian.py<br /><br />nilai = 8<br /><br />if nilai &lt; 7:<br />   print(&ldquo;Anda tidak lulus&rdquo;)<br /></code></pre><b>Pernjelasan</b>: kalau <code>nilai</code> lebih kecil dari <code>7</code> adalah benar (<i>True</i>) maka cetak <code>Anda tidak lulus</code>.  <br /><h2>2. Struktur if-else</h2>Struktur pemilihan ini digunakan saat memiliki dua keputusan. Keputusan pertama berada di blok <code>if</code> dan keputusan kedua ada di dalam blok <code>else</code>. Kode yang berada di blok <code>else</code> akan dikerjakan apabila kondisi yang ada di kode <code>if</code> bernilai salah. Contoh:<br /><pre><code class="python">adzan_magrib = False<br />if adzan_magrib:<br />   print(&ldquo;Saatnya Berbuka puasa&rdquo;)<br />else:<br />   print(&ldquo;belum saatnya berbuka&rdquo;)<br /></code></pre><h2>3. Struktur if-elif-else</h2>Sturktur <code>elif</code> (<i>else if</i>) digunakan apabila terdapat banyak pilihan kondisi. Kalu semua kondisi yang berada di kode <code>if</code> dan <code>elif</code> tidak ada yang benar, maka kode yang ada di blok <code>else</code> akan dikerjakan.<br /><pre><code class="python">nilai = 80<br /><br />if nilai &gt;= 90:<br />   print(&ldquo;Grade: A&rdquo;)<br />elif nilai &gt;= 80:<br />   print(&ldquo;Grade: B+&ldquo;)<br />elif nilai &gt;= 70:<br />   print(&ldquo;Grade: B&rdquo;)<br />elif nilai &gt;= 60:<br />   print(&ldquo;Grade: C+&ldquo;)<br />elif nilai &gt;= 50:<br />   print(&ldquo;Grade: C&rdquo;)<br />elif nilai &gt;= 40:<br />   print(&ldquo;Grade: D&rdquo;)<br />elif nilai &gt;= 30:<br />   print(&ldquo;Grade: E&rdquo;)<br />elif nilai &gt;= 20:<br />   print(&ldquo;Grade: F&rdquo;)<br />else:<br />   print(&ldquo;Tidak memiliki grade&rdquo;)<br /><br /></code></pre>Perhatikanlah contoh di atas, apakah yang akan terjadi? keputusan manakah yang akan diambil? Semua kondisi akan diperiksa berdasarkan data yang tersimpan di variabel <i>nilai</i>. Keputusan yang diambil adalah &ldquo;Grade: B+&ldquo;, karena kondisinya sudah <i>True </i>(80 &gt;= 80).<br /><a href="http://3.bp.blogspot.com/-tR2ZBsqByQA/VNCfOP8V8cI/AAAAAAAABKA/KdwFUJFAwyY/s1600/program%2Bhitung%2Bgrade%2Bdi%2Bpython.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-tR2ZBsqByQA/VNCfOP8V8cI/AAAAAAAABKA/KdwFUJFAwyY/s1600/program%2Bhitung%2Bgrade%2Bdi%2Bpython.png" /></a>  <br /><h2>Kesimpulan</h2>Struktur pemilihan membuat komputer dapat berpikir dan mengambil keputusan berdasarkan pertimbangan atau perbandingan yang ada. Tiga struktur pemilihan di atas, penggunaanya berbeda-beda. Tergantung dari kasusnya, bila pilihannya hanya ada satu, maka pakailah yang bentuk pertama; bila hanya ada dua pilihan, maka pakailah yang bentuk kedua; bila pilihannya lebih dari dua, maka pakailah yang bentuk ketiga.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f&t=Belajar%20Pemrograman%20Python%3a%20Memahami%20Percabangan%20untuk%20Membuat%20Logika%20Program" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f&text=Belajar%20Pemrograman%20Python%3a%20Memahami%20Percabangan%20untuk%20Membuat%20Logika%20Program%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Belajar%20Pemrograman%20Python%3a%20Memahami%20Percabangan%20untuk%20Membuat%20Logika%20Program&body=Belajar%20Pemrograman%20Python%3a%20Memahami%20Percabangan%20untuk%20Membuat%20Logika%20Program:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f&t=Belajar%20Pemrograman%20Python%3a%20Memahami%20Percabangan%20untuk%20Membuat%20Logika%20Program" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f&text=Belajar%20Pemrograman%20Python%3a%20Memahami%20Percabangan%20untuk%20Membuat%20Logika%20Program%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f&description=Belajar%20Pemrograman%20Python%3a%20Memahami%20Percabangan%20untuk%20Membuat%20Logika%20Program" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f&title=Belajar%20Pemrograman%20Python%3a%20Memahami%20Percabangan%20untuk%20Membuat%20Logika%20Program" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Belajar%20Pemrograman%20Python%3a%20Memahami%20Percabangan%20untuk%20Membuat%20Logika%20Program&body=Belajar%20Pemrograman%20Python%3a%20Memahami%20Percabangan%20untuk%20Membuat%20Logika%20Program:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-percabangan%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/python">Python</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/python">Python</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

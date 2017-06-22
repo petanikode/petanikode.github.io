@@ -772,14 +772,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -792,6 +805,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1199,34 +1213,36 @@ padding: 16px;
                 <p><a href="http://3.bp.blogspot.com/-F7W0AvOk1Fw/VENOXBvOgQI/AAAAAAAAA00/6ew3EOYvxAE/s1600/tutorial-membaut-tab-jquery.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-F7W0AvOk1Fw/VENOXBvOgQI/AAAAAAAAA00/6ew3EOYvxAE/s1600/tutorial-membaut-tab-jquery.png" /></a>  <br />Tab yang akan dibuat nantinya dapat dimanfaatkan untuk <i>widget</i> blog. Tab ini berisi informasi akun media sosial, seperti <i>like box facebook</i>, <i>google+</i>, <i>twitter</i>, dan lain-lain. Menggunakan tab dapat menghemat ruang atau tempat. Dalam satu <i>widget</i> saja, kita dapat menyimpan lebih dari satu informasi.<br /><h2>Desain Tab</h2>Agar dapat mengetahui bagaimana tab yang akan dibuat, Saya mendesainnya terlebih dahulu. Desain akan mempermudah kita dalam membuat kodenya.  <a href="http://4.bp.blogspot.com/-68Qdz4WVw7U/Uxxqhc3TbUI/AAAAAAAAAfc/9YlTCwmoS4I/s1600/Desain+gadget+blog+-++tab+jquery.png" imageanchor="1"><img alt="Desain gadget blog dengan Inkscape" border="0" src="http://4.bp.blogspot.com/-68Qdz4WVw7U/Uxxqhc3TbUI/AAAAAAAAAfc/9YlTCwmoS4I/s1600/Desain+gadget+blog+-++tab+jquery.png" title="Desain gadget blog dengan Inkscape" /></a><br /><h2>Membuat Kode HTML, CSS, dan jQuery</h2>Membuat tab seperti desain di atas, dapat menggunakan kode HTML dan CSS saja. Namun, untuk membuat tab hidup atau berfungsi, maka perlu menambahkan skrip jQuery. Pustaka jQuery yang digunakan dalam tab ini adalah <a href="http://code.jquery.com/jquery-2.1.0.min.js" target="_blank">jquery-2.1.0.min.js</a>.<br /><h3>Kode HTML</h3><pre><code class="html">&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&nbsp; &nbsp;&lt;title&gt;JQuery tabs&lt;/title&gt;<br />&nbsp; &nbsp;&lt;script type=&lsquo;text/javascript&rsquo; src=&lsquo;jquery.js&rsquo;&gt;&lt;/script&gt;<br />&nbsp; &nbsp;&lt;script type=&lsquo;text/javascript&rsquo; src=&lsquo;jqtab.js&rsquo;&gt;&lt;/script&gt;<br />&nbsp; &nbsp;&lt;link rel=&ldquo;stylesheet&rdquo; type=&ldquo;text/css&rdquo; href=&ldquo;style.css&rdquo; /&gt;<br />&lt;/head&gt;<br /><br />&lt;body&gt;<br />&nbsp; &nbsp;&lt;div class=&lsquo;sc-btn&rsquo;&gt;<br />&nbsp; &nbsp; &nbsp; &lt;a href=&lsquo;javascript:void(0)&rsquo; name=&lsquo;fb&rsquo; class=&lsquo;aktif&rsquo;&gt;fb&lt;/a&gt;<br />&nbsp; &nbsp; &nbsp; &lt;a href=&lsquo;javascript:void(0)&rsquo; name=&lsquo;tw&rsquo; class=&lsquo;non-aktif&rsquo;&gt;tw&lt;/a&gt;<br />&nbsp; &nbsp; &nbsp; &lt;a href=&lsquo;javascript:void(0)&rsquo; name=&lsquo;gp&rsquo; class=&lsquo;non-aktif&rsquo;&gt;g+&lt;/a&gt;<br />&nbsp; &nbsp; &nbsp; &lt;a href=&lsquo;javascript:void(0)&rsquo; name=&lsquo;rss&rsquo; class=&lsquo;non-aktif&rsquo;&gt;rss&lt;/a&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />&nbsp; &nbsp;&lt;/div&gt;<br />&nbsp; &nbsp;&lt;div class=&lsquo;isi&rsquo;&gt;<br />&nbsp; &nbsp; &nbsp; &lt;div name=&lsquo;fb&rsquo;&gt;fesbuk&lt;/div&gt;<br />&nbsp; &nbsp; &nbsp; &lt;div name=&lsquo;tw&rsquo;&gt;twitter&lt;/div&gt;<br />&nbsp; &nbsp; &nbsp; &lt;div name=&lsquo;gp&rsquo;&gt;google+&lt;/div&gt;<br />&nbsp; &nbsp; &nbsp; &lt;div name=&lsquo;rss&rsquo;&gt;rss feed&lt;/div&gt;<br />&nbsp; &nbsp;&lt;/div&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</code></pre>Terdapat dua tag <code>div</code> khusus di dalam kode di atas. Tag <code>div</code> yang pertama dengan kelas <code>.sc-btn</code> berfungsi untuk menampung tombol-tombol sosial media, dalam tag <code>div</code> ini terdapat tombol berupa link. Sedangkan tag <code>div</code> dengan kelas <code>.isi</code> berfungsi untuk menampung isi tab. Terdapat juga empat tag <code>div</code> di dalam tag <code>div</code> isi.<br /><br />Untuk menghubungkan tombol dengan <code>div</code> isi, maka harus diberkan atribut nama yang sama antara elemen tombol dan elemen isi (<code>div</code> isi). Contohnya <code>&lt;a href=&lsquo;javascript:void(0)&rsquo; name=&lsquo;fb&rsquo; class=&lsquo;aktif&rsquo;&gt;fb&lt;/a&gt;</code> akan berhubungnan dengan div <code>&nbsp;&lt;div name=&lsquo;fb&rsquo;&gt;fesbuk&lt;/div&gt;</code> karena memiliki atribut nama yang sama yaitu <code>fb</code><br /><a href="http://4.bp.blogspot.com/-Z5gqwPkF6XA/UxyPhzgAHQI/AAAAAAAAAf8/OtXXQteSwI0/s1600/jQuery+tab+-+kode+pada+geany+linux.png" imageanchor="1"><img alt="Tampilan naskah kode HTML di Geany IDE (Linux)" border="0" src="http://4.bp.blogspot.com/-Z5gqwPkF6XA/UxyPhzgAHQI/AAAAAAAAAf8/OtXXQteSwI0/s1600/jQuery+tab+-+kode+pada+geany+linux.png" title="Tampilan naskah kode HTML di Geany IDE (Linux)" /></a>  <br /><h3>Kode CSS</h3>Kode CSS berfungsi untuk merapikan tampilan elemen. Memperbaiki tata letak, memberikan warna dan sebagainya.<br /><pre><code class="css">.sc-btn a{<br />   background: silver;<br />   padding: 5px;<br />   margin-right:5px;<br /> }<br />.non-aktif{<br />&nbsp;  opacity: 0.5;<br /> }<br />.aktif{<br />&nbsp;  opacity: 1.0;<br />} <br />.aktif:before{<br />&nbsp;  content: &ldquo;&rdquo;;<br />   position:absolute;<br />&nbsp;  width:0;<br />&nbsp;  border-width: 0 8px 8px 8px;<br />&nbsp;  border-style: solid;<br />&nbsp;  border-color: #bbb transparent;<br />&nbsp;  margin-top: 26px;<br />&nbsp;  margin-left: 0px;}<br />.isi {<br />&nbsp;  margin-top: 13px;<br />&nbsp;  border-top: 1px solid #bbb;<br /> }</code></pre>Kelas <code>.sc-btn</code> berfungsi untuk menata posisi dan tampilan tombol. Kelas <code>.non-aktif</code> berfungsi untuk menata tampilan tombol saat tidak aktif. Kelas <code>.aktif</code> berfungsi untuk menata tampilan tombol saat aktif, sementara <code>.aktif:before</code> berfungsi untuk membuat bentuk segitiga sebagai penunjuk tombol yang sedang aktif. Kelas <code>.isi</code> untuk menata letak elemen <code>div</code> isi.<br /><a href="http://1.bp.blogspot.com/-_QGelkxRmBw/Uxx_gMDRY6I/AAAAAAAAAfs/VB6E5e915AQ/s1600/JQuery+tabs+tutorial-+Chromium.png" imageanchor="1"><img alt="penampakan jQuery tab" border="0" src="http://1.bp.blogspot.com/-_QGelkxRmBw/Uxx_gMDRY6I/AAAAAAAAAfs/VB6E5e915AQ/s1600/JQuery+tabs+tutorial-+Chromium.png" title="penampakan jQuery tab" /></a>  <br /><h3>Kode jQuery</h3>Skrip jQuery untuk membuat tab menjadi berfungsi.<br /><pre><code class="javascript">$(document).ready(function(){<br />    // sembunyikan semua div isi<br />    $(&lsquo;.isi div&rsquo;).hide();<br /> <br />    // tampilkan hanya div isi pada anak pertama<br />    $(&lsquo;.isi div:first&rsquo;).show();<br /> <br />    // saat tombol diklik <br />    $(&lsquo;.sc-btn a&rsquo;).click(function(){<br /> <br />     // isi attribut class sema tombol dengan nilai &lsquo;non-aktif&rsquo;<br /> $(&lsquo;.sc-btn a&rsquo;).attr(&lsquo;class&rsquo;,&lsquo;non-aktif&rsquo;);<br /> <br /> // isi attribut class tombol yang sedang aktif dengan nilai &lsquo;aktif&rsquo;<br /> $(this).attr(&lsquo;class&rsquo;,&lsquo;aktif&rsquo;);<br /> <br /> // buat variabel isi, untuk menampung identitas div isi<br /> var isi = &lsquo;.isi div[name=&ldquo;&rsquo; + this.name + &lsquo;&rdquo;]&rsquo;;<br /> <br /> // sembunyikan semua div isi<br /> $(&lsquo;.isi div&rsquo;).hide();<br /> <br /> // tampilkan div isi dengan identitas yang telah didapatkan<br /> $(isi).slideDown(&lsquo;fast&rsquo;);<br /> <br />    });<br /> <br />});</code></pre><h3>Hasil</h3><br /><iframe allowfullscreen="allowfullscreen" frameborder="0" height="300" src="//jsfiddle.net/Ardianta/n6BcT/embedded/result,js,html,css/" width="100%"></iframe><br /><br />Semua kode-kode di atas dapat diunduh di <a href="https://code.google.com/p/jqtab/source/browse/">Google Code</a>.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f&t=Panduan%20Membuat%20tab%20dengan%20jQuery" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f&text=Panduan%20Membuat%20tab%20dengan%20jQuery%20https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Panduan%20Membuat%20tab%20dengan%20jQuery&body=Panduan%20Membuat%20tab%20dengan%20jQuery:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f&t=Panduan%20Membuat%20tab%20dengan%20jQuery" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f&text=Panduan%20Membuat%20tab%20dengan%20jQuery%20https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f&description=Panduan%20Membuat%20tab%20dengan%20jQuery" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f&title=Panduan%20Membuat%20tab%20dengan%20jQuery" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Panduan%20Membuat%20tab%20dengan%20jQuery&body=Panduan%20Membuat%20tab%20dengan%20jQuery:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-jquery-membuat-tab%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/pemrograman">Pemrograman</a>
-                  
-                    #<a href="/topik/css">CSS</a>
-                  
-                    #<a href="/topik/html">HTML</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/javascript">Javascript</a>
-                  
-                    #<a href="/topik/jquery">jQuery</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/pemrograman">Pemrograman</a>
+                      
+                        #<a href="/topik/css">CSS</a>
+                      
+                        #<a href="/topik/html">HTML</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/javascript">Javascript</a>
+                      
+                        #<a href="/topik/jquery">jQuery</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

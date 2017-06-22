@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,28 +1207,30 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png" /></a>   <br />Pada antarmuka grafis (GUI), tombol merupakan komponen penting penyusun antarmuka.Tombol dipakai untuk menjalankan fungsi atau aksi tertentu. Pada kesempatan ini, saya akan membahas langkah-langkah atau proses dalam pembuatan tombol di PyGTK.<br /><h2>1. Membuat Tombol</h2>Tombol dibuat dengan membuat objek dari kelas <code>Button()</code>. Contoh:<br /><pre><code class="python">tombol = gtk.Button(&ldquo;Sebuah Tombol&rdquo;)</code></pre><h2>2. Membuat Kontainer</h2>Kontainer kita perlukan untuk membungkus atau menampung tombol dan komponen-komponen lainnya. Apabila tidak menggunakan kontainer, bisa jadi akan berantakan. Pembuatan kontainer dapat dilakukan dengan membuat objek dari kelas-kelas kontainer, seperti <code>Fixed()</code> untuk kontainer <i>fixed</i>. Contoh:<br /><pre><code class="python">kontainer = gtk.Fixed()</code></pre><h2>3. Menambahkan tombol ke kontainer</h2>Setelah membuat kontainer, selanjutnya kita tambahkan komponen ke dalamnya. Penambahan komponen ke kontainer dapat dilakukan dengan fungsi <code>put()</code>. Contoh:<br /><pre><code class="python">kontainer.put(tombol, 20, 30)</code></pre>Tombol akan diletakkan pada posisi koordinat x=20 dan y=30.<br /><h2>4. Menambahkan kontainer ke jendela</h2>Semua komponen sudah dimasukkan ke dalam kontainer. Selanjutnya, kita masukkan kontainer ke dalam jendela agar dapat ditampilkan. Hal ini dapat dilakukan dengan fungsi <code>add()</code>. Contoh:<br /><pre><code class="python">jendela.add(kontainer)</code></pre><h2>5. Tampilkan semua komponen</h2>Terakhir, setelah semua komponen dimasukan ke jendela, kita tampilkan semuanya dengan fungsi&nbsp; <code>show_all()</code>. Contoh:<br /><pre><code class="python">jendela.show_all()</code></pre><h2>6. Contoh Lengkap</h2><pre><code class="python">import gtk<br /><br />class Aplikasi(gtk.Window):<br />&nbsp; def <strong>init</strong>(self):<br />&nbsp; &nbsp; super(Aplikasi, self).<strong>init</strong>()<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.set_title(&ldquo;Tombol&rdquo;)<br />&nbsp; &nbsp; self.set_size_request(250,150)<br />&nbsp; &nbsp; self.set_position(gtk.WIN_POS_CENTER)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; tbl1 = gtk.Button(&ldquo;Tombol 1&rdquo;)<br />&nbsp; &nbsp; tbl1.set_sensitive(False) # non-aktifkan tombol<br />&nbsp; &nbsp; tbl2 = gtk.Button(&ldquo;Tombol 2&rdquo;)<br />&nbsp; &nbsp; tbl3 = gtk.Button(stock=gtk.STOCK_CLOSE) <br />&nbsp; &nbsp; tbl4 = gtk.Button(&ldquo;Tombol 4&rdquo;)<br />&nbsp; &nbsp; tbl4.set_size_request(80,40) # set ukuran tombol<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; kontainer = gtk.Fixed() # membuat kontainer<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; kontainer.put(tbl1, 20, 30)<br />&nbsp; &nbsp; kontainer.put(tbl2, 100, 30)<br />&nbsp; &nbsp; kontainer.put(tbl3, 20, 80)<br />&nbsp; &nbsp; kontainer.put(tbl4, 100, 80)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.connect(&ldquo;destroy&rdquo;, gtk.main_quit)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.add(kontainer)<br />&nbsp; &nbsp; self.show_all()<br /><br />Aplikasi()<br />gtk.main()<br /></code></pre>Hasilnya:<br /><a href="http://4.bp.blogspot.com/-J3vvBeX2_HM/VNjnE2a3-aI/AAAAAAAABTE/c1bjRWUtcMY/s1600/Membuat%2Btombol%2Bdi%2Bpygtk.png"><img border="0" src="https://4.bp.blogspot.com/-J3vvBeX2_HM/VNjnE2a3-aI/AAAAAAAABTE/c1bjRWUtcMY/s1600/Membuat%2Btombol%2Bdi%2Bpygtk.png" /></a>   <br />Terdapat  empat tombol yang telah dibuat. Salah satunya tidak aktif dan ada juga  yang memiliki gambar ikon. Tombol nomor 4 memiliki ukuran yang lebih  besar, karena ukuran awalnya sudah dirubah.<br /><br />Referensi: <br /><ul><li><a href="http://zetcode.com/gui/pygtk/firststeps/" target="blank">zetcode.com</a></li><li><a href="http://www.pygtk.org/pygtk2reference/class-gtkbutton.html" target="_blank"><a href="http://www.pygtk.org/pygtk2reference/class-gtkbutton.html">http://www.pygtk.org/pygtk2reference/class-gtkbutton.html</a> </a></li></ul></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f&t=Pemrograman%20PyGTK%3a%20Membuat%20Tombol%20dan%20Label%20Teks" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f&text=Pemrograman%20PyGTK%3a%20Membuat%20Tombol%20dan%20Label%20Teks%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20PyGTK%3a%20Membuat%20Tombol%20dan%20Label%20Teks&body=Pemrograman%20PyGTK%3a%20Membuat%20Tombol%20dan%20Label%20Teks:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f&t=Pemrograman%20PyGTK%3a%20Membuat%20Tombol%20dan%20Label%20Teks" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f&text=Pemrograman%20PyGTK%3a%20Membuat%20Tombol%20dan%20Label%20Teks%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f&description=Pemrograman%20PyGTK%3a%20Membuat%20Tombol%20dan%20Label%20Teks" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f&title=Pemrograman%20PyGTK%3a%20Membuat%20Tombol%20dan%20Label%20Teks" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20PyGTK%3a%20Membuat%20Tombol%20dan%20Label%20Teks&body=Pemrograman%20PyGTK%3a%20Membuat%20Tombol%20dan%20Label%20Teks:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-tombol-dan-label%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/python">Python</a>
-                  
-                    #<a href="/topik/gtk">GTK</a>
-                  
-                    #<a href="/topik/pygtk">PyGTK</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/python">Python</a>
+                      
+                        #<a href="/topik/gtk">GTK</a>
+                      
+                        #<a href="/topik/pygtk">PyGTK</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

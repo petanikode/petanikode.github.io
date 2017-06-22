@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,24 +1207,26 @@ padding: 16px;
                 <p><br /><a href="http://2.bp.blogspot.com/-9QQYr5MVtVQ/VmqU_UzDkRI/AAAAAAAACQw/TOIHJOGMY5g/s1600/fungsi%2Btime%2Bsleep%2Bpada%2Bpemrograman%2Bpython%2B-%2Bpetani%2Bkode.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-9QQYr5MVtVQ/VmqU_UzDkRI/AAAAAAAACQw/TOIHJOGMY5g/s1600/fungsi%2Btime%2Bsleep%2Bpada%2Bpemrograman%2Bpython%2B-%2Bpetani%2Bkode.png" /></a><br />Python memiliki sebuah modul waktu <i>(time)</i>. Banyak fungsi-fungsi yang berkaitan tentang waktu yang dapat digunakan dengan modul tersebut. Salah satunya adalah fungsi <code>sleep()</code>. Fungsi ini berguna untuk menunda waktu eksekusi. Fungsi ini membawa parameter berupa angka yang menyatakan detik (lama) penundaan.<br /><br />Misalkan, ingin menunda selama 5 detik:<br /><pre><code class="python">time.sleep(5)</code></pre>Fungsi ini dapat digunakan mengimpor modul <i>time.</i> Contoh program, berhitung sampai sepuluh. Lama penundaan perhitungan adalah 0.5 detik:<br /><pre><code class="python">import time<br /><br />for i in range(10):<br />    time.sleep(0.5)<br />    print &ldquo;Berhitung: &ldquo; + str(i +1)<br /></code></pre>Maka, hasil outputnya akan seperti berikut ini:<br /><a href="http://3.bp.blogspot.com/-y8QlXdQH1Ww/VkyOF-5hAyI/AAAAAAAACOg/6oGREJQQGtk/s1600/Hasil%2Boutput%2Bprogram.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-y8QlXdQH1Ww/VkyOF-5hAyI/AAAAAAAACOg/6oGREJQQGtk/s1600/Hasil%2Boutput%2Bprogram.png" /></a><br />Penundaan pengeksekusian kode <span style="background-color: #d9ead3;"><code>print &ldquo;Berhitung: &ldquo; + str(i+1)</code></span> selama setengah detik (0.5). Agar lebih menarik, modifikasi program di atas menjadi seperti berikut ini:<br /><pre><code class="python">import time<br /><br />print &ldquo;Apakah anda yakin akan meluncurkan roket?\n&rdquo;<br />raw_input(&ldquo;Tekan [Enter] untuk memulai&hellip;&ldquo;)<br /><br />for i in range(10, 0, -1):<br />&nbsp;&nbsp;&nbsp;&nbsp;time.sleep(1)<br />&nbsp;&nbsp;&nbsp;&nbsp;print str(i)<br /><br />print &ldquo;Buuzzzzssss!!!!&rdquo;<br />print &ldquo;Roket meluncur!!!&rdquo;</code></pre>Hasil outputnya akan menjadi seperti berikut ini:<br /><a href="http://2.bp.blogspot.com/-BE5xVBYo78Y/VkyYPfkfoPI/AAAAAAAACOw/gVT0ytNnDo0/s1600/roket_petanikode.gif" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-BE5xVBYo78Y/VkyYPfkfoPI/AAAAAAAACOw/gVT0ytNnDo0/s1600/roket_petanikode.gif" /></a><br />Selain untuk membuat program roket seperti di atas, kita juga bisa memanfaatkan fungsi <code>time.sleep()</code> untuk membuat animasi, membuat program pomodoro, membuat program jam digital, dan hal-hal keren lainnya. Silahkan berkreasi sendiri, selamat berimajinasi!</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f&t=Manfaat%20fungsi%20time.sleep%28%29%20pada%20pemrograman%20Python" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f&text=Manfaat%20fungsi%20time.sleep%28%29%20pada%20pemrograman%20Python%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Manfaat%20fungsi%20time.sleep%28%29%20pada%20pemrograman%20Python&body=Manfaat%20fungsi%20time.sleep%28%29%20pada%20pemrograman%20Python:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f&t=Manfaat%20fungsi%20time.sleep%28%29%20pada%20pemrograman%20Python" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f&text=Manfaat%20fungsi%20time.sleep%28%29%20pada%20pemrograman%20Python%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f&description=Manfaat%20fungsi%20time.sleep%28%29%20pada%20pemrograman%20Python" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f&title=Manfaat%20fungsi%20time.sleep%28%29%20pada%20pemrograman%20Python" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Manfaat%20fungsi%20time.sleep%28%29%20pada%20pemrograman%20Python&body=Manfaat%20fungsi%20time.sleep%28%29%20pada%20pemrograman%20Python:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-fungsi-sleep%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/python">Python</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/python">Python</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

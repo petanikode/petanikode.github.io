@@ -760,14 +760,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -780,6 +793,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1187,24 +1201,26 @@ padding: 16px;
                 <p><a href="http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png" /></a><br />Saya berencana akan melakukan instal ulang dalam waktu dekat ini. Karena ada beberapa kerusakan yang saya temukan di Distro Linux yang sedang saya pakai. Sebelum melakukan itu, ada baiknya mencatat dulu konfigurasi server yang sedang berjalan. Supaya nanti mudah mengonfigurasi lagi.<br /><br />Server Apache dan <a href="http://www.petanikode.com/2015/02/pemrograman-php-di-linux.html" target="_blank">PHP di Linux</a> tidak seperti server XAMPP di Windows. Server Apache dan PHP di linux bermasalah dengan hak akses direktori. Sehingga, kalau kita membuat <a href="http://www.petanikode.com/2015/09/memahami-skrip-php-untuk-upload-file.html" target="_blank">skrip upload file</a> akan selalu gagal. Karena kita tidak diberikan akses untuk menulis di direktori <code>/tmp</code>.<br /><br />Permasalahan ini bisa diatasi dengan membuat direktori baru sebagai ganti atau alternatif direktori <code>/tmp</code>. Direktori ini saya namakan <code>tmp_upload</code> yang berlokasi di <code>/var/www/</code>.<br /><pre><code class="bash">sudo mkdir /var/www/tmp_upload</code></pre>Kemudian memberikan hak akses dengan nomer kode <code>777</code>. Artinya semua orang bisa mengakses, menulis, dan mengeksekusi sesutu dalam direktori ini. Nomer kode <code>777</code>, tidak disarankan digunakan pada server produksi <i>(production server)</i>.<br /><pre><code class="bash">sudo chmod 777 -R /var/www/tmp_upload</code></pre>Setelah itu, Barulah kita konfigurasi server php melalui berkas <code>php.ini</code> yang terletak di <code>/etc/php5/apache2/php.ini</code>.<br /><pre><code class="bash">sudo nano /etc/php5/apache2/php.ini</code></pre>Nilai-nilai yang diubah:<br /><pre><code class="bash">file_uploads = On<br />upload_tmp_dir = /var/www/tmp_upload<br />upload_max_filesize = 1024M<br />max_file_uploads = 20 </code></pre>Konfigurasi lengkapnya, saya simpan di gist github.<br /><br /><script src="https://gist.github.com/ardianta/72a17e4a39b631c31303.js"></script><br />Jangan lupa, menghidupkan ulang layanan <code>apache2</code> setelah dikonfigurasi.<br /><pre><code class="bash">sudo service apache2 restart</code></pre>Semoga bermanfaat.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f&t=Konfigurasi%20server%20PHP%20di%20Linux%20agar%20bisa%20upload%20file" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f&text=Konfigurasi%20server%20PHP%20di%20Linux%20agar%20bisa%20upload%20file%20https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Konfigurasi%20server%20PHP%20di%20Linux%20agar%20bisa%20upload%20file&body=Konfigurasi%20server%20PHP%20di%20Linux%20agar%20bisa%20upload%20file:%20https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f&t=Konfigurasi%20server%20PHP%20di%20Linux%20agar%20bisa%20upload%20file" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f&text=Konfigurasi%20server%20PHP%20di%20Linux%20agar%20bisa%20upload%20file%20https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f&description=Konfigurasi%20server%20PHP%20di%20Linux%20agar%20bisa%20upload%20file" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f&title=Konfigurasi%20server%20PHP%20di%20Linux%20agar%20bisa%20upload%20file" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Konfigurasi%20server%20PHP%20di%20Linux%20agar%20bisa%20upload%20file&body=Konfigurasi%20server%20PHP%20di%20Linux%20agar%20bisa%20upload%20file:%20https%3a%2f%2fwww.petanikode.com%2fkonfigurasi-server-php-di-linux-agar-bisa-upload-file%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

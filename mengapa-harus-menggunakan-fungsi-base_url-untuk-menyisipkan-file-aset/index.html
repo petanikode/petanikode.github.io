@@ -772,14 +772,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -792,6 +805,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1199,30 +1213,32 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" /></a>Ketika saya menjadi tutor di sebuah praktikum web, waktu itu kami mempelajari <a href="http://www.petanikode.com/search/label/CodeIgniter">CodeIgniter</a>. Saya menemukan sedikit kasus, terkait tentang penyisipan file aset. Mengapa harus menggunakan fungsi <code>base_url()</code>? Itulah pertanyaan yang diajukan dari salah satu peserta praktikum.<br /><br />Kemudian saya menjawabnya dengan memperlihatkan demo. Bagaimana penyisipan yang menggunakan fungsi <code>base_url()</code> dan bagaimana yang tanpa fungsi <code>base_url()</code>.<br /><br />Penyisipan file aset dengan fungsi <code>base_url()</code>:<br /><pre><code class="html php">&lt;link rel=&ldquo;stylesheet&rdquo; href=&rdquo;&lt;?php echo base_url(&lsquo;assets/bootstrap/bootstrap.min.css&rsquo;) ?&gt;&rdquo; /&gt;</code></pre>atau<br /><pre><code class="html php">&lt;link rel=&ldquo;stylesheet&rdquo; href=&rdquo;&lt;?php echo base_url() ?&gt;assets/bootstrap/bootstrap.min.css&rdquo; /&gt;</code></pre><br />Penyisipan file aset tanpa fungsi <code>base_url()</code>:<br /><pre><code class="html">&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/bootstrap/bootstrap.min.css&rdquo; /&gt;</code></pre><br />Hasil Kedua-duanya bisa, file asetnya berhasil di sisipkan. Tapi, ternyata opini saya salah. Penyisipan file aset tanpa menggunakan fungsi <code>base_url()</code> hanya akan valid pada halaman <i>index (root)</i>. Begitu membuka halaman yang lain, alamat URL asetnya berubah. Contoh, saya membuka URL:<br /><pre><code class="html"><a href="http://localhost/proyek/index.php/register">http://localhost/proyek/index.php/register</a></code></pre>Maka yang akan terjadi adalah, alamat URL asetnya akan berubah menjadi.<br /><pre><code class="html"><a href="http://localhost/proyek/index.php/register/assets/bootstrap/css/bootstrap.min.css">http://localhost/proyek/index.php/register/assets/bootstrap/css/bootstrap.min.css</a></code></pre>Lihat, file asetnya tidak akan pernah ditemukan. Lalu, bagaimana kalau penyisipannya seperti ini.<br /><pre><code class="html">&lt;link rel=&ldquo;stylesheet&rdquo; href=&rdquo;<span style="color: red;">/</span>assets/bootstrap/bootstrap.min.css&rdquo; /&gt;</code></pre>Perhatikan garis miring (/) di depan <i>assets</i>. Garis miring tersebut menyatakan <i>root</i> dari web. Sementara root dari web yang sedang dikerjakan adalah <code><a href="http://localhost/">http://localhost/</a></code>, maka nanti akan membentuk URL seperti berikut ini: <br /><pre><code class="html"><a href="http://localhost/assets/bootstrap/css/bootstrap.min.css">http://localhost/assets/bootstrap/css/bootstrap.min.css</a></code></pre>Cara seperti ini, mungkin akan bekerja bila webnya sudah di-hosting dan diletakan pada <i>root</i>. Namun, saat ini kita sedang bekerja di <code>localhost</code>. Jadi, sebaiknya kita gunakan fungsi <code>base_url()</code> untuk penyisipan file aset agar di <code>localhost</code> dan di server <i>hosting</i> bisa bekerja. Bagaimana menurutmu?</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f&t=Mengapa%20Harus%20Menggunakan%20Fungsi%20base_url%28%29%20untuk%20Menyisipkan%20File%20Aset%3f" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f&text=Mengapa%20Harus%20Menggunakan%20Fungsi%20base_url%28%29%20untuk%20Menyisipkan%20File%20Aset%3f%20https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Mengapa%20Harus%20Menggunakan%20Fungsi%20base_url%28%29%20untuk%20Menyisipkan%20File%20Aset%3f&body=Mengapa%20Harus%20Menggunakan%20Fungsi%20base_url%28%29%20untuk%20Menyisipkan%20File%20Aset%3f:%20https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f&t=Mengapa%20Harus%20Menggunakan%20Fungsi%20base_url%28%29%20untuk%20Menyisipkan%20File%20Aset%3f" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f&text=Mengapa%20Harus%20Menggunakan%20Fungsi%20base_url%28%29%20untuk%20Menyisipkan%20File%20Aset%3f%20https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f&description=Mengapa%20Harus%20Menggunakan%20Fungsi%20base_url%28%29%20untuk%20Menyisipkan%20File%20Aset%3f" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f&title=Mengapa%20Harus%20Menggunakan%20Fungsi%20base_url%28%29%20untuk%20Menyisipkan%20File%20Aset%3f" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Mengapa%20Harus%20Menggunakan%20Fungsi%20base_url%28%29%20untuk%20Menyisipkan%20File%20Aset%3f&body=Mengapa%20Harus%20Menggunakan%20Fungsi%20base_url%28%29%20untuk%20Menyisipkan%20File%20Aset%3f:%20https%3a%2f%2fwww.petanikode.com%2fmengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/codeigniter">CodeIgniter</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/framework">Framework</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/codeigniter">CodeIgniter</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/framework">Framework</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

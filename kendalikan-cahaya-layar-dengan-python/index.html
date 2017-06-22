@@ -764,14 +764,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -784,6 +797,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1191,24 +1205,26 @@ padding: 16px;
                 <p>Ada sebuah laptop yang bersistem operasi Kali Linux. Tombol FN-nya tidak berfungsi untuk mengatur cahaya layar. Driver VGA yang dipakai ialah intel. Sepertinya Kali Linux belum mampu bekerja dengan baik di laptop ini.<br /><a href="http://4.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz4/skLB5P8yBXY/s1600/python-programming.png" imageanchor="1"><img alt="logo python" border="0" src="http://4.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz4/skLB5P8yBXY/s1600/python-programming.png" /></a><br />Mencari-cari solusi di internet, akhirnya saya menemukan perintah untuk mengatur cahaya. Berikut ini perintahnya:<br /><pre><code class="bash">echo 5 &gt; /sys/class/backlight/intel_backlight/brightness</code></pre>Seperti yang kita lihat, perintah di atas berfungsi untuk mengubah nilai file <i>brightness</i> yang berada di direktori <i>/sys/class/backlight/intel_backlight/</i>. Setiap nilai file itu berubah, cahaya layar pun berubah. Sepertinya file ini lah yang mengendalikan cahaya layar.<br /><br />Jadi, kita hanya perlu merubah nilainya dengan program. Kemudian program itu dieksekusi saat tombol kombinasi FN ditekan. Berikut ini dua program yang saya buat untuk memanipulasi nilainya:<br /><br />Kode program untuk menambahkan cahaya<br /><br /><script src="https://gist.github.com/ardianta/ae0024360d08f48fec57.js"></script><br />Kode program untuk mengurangi cahaya<br /><br /><script src="https://gist.github.com/ardianta/7e9e2a5497684e3d3279.js"></script><br />Perlu di perhatikan, <code>intel_backlight</code> adalah driver yang dipakai laptop. Bisa jadi, berbeda laptop berbeda juga drivernya. Pengeksekusian program membutuhkan akses root. Kalau di Kali Linux, tinggal dieksekusi saja.<br /><pre>python kurangiCahaya.py</pre>Supaya peraktis, buat saja tombol pintasannya. Jadi, setiap kali tombol itu ditekan. Maka kode di atas diekseskusi.<br /><div class="separator"><a href="http://3.bp.blogspot.com/-8njnO-mUJ_Y/VgUu5uz3s5I/AAAAAAAAB3Q/7XfY8nEdZ0c/s1600/Pengaturan%2Btombol%2Bpintasan%2BXFCE.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-8njnO-mUJ_Y/VgUu5uz3s5I/AAAAAAAAB3Q/7XfY8nEdZ0c/s1600/Pengaturan%2Btombol%2Bpintasan%2BXFCE.png" /></a></div><br /></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f&t=Kendalikan%20cahaya%20layar%20dengan%20python" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f&text=Kendalikan%20cahaya%20layar%20dengan%20python%20https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Kendalikan%20cahaya%20layar%20dengan%20python&body=Kendalikan%20cahaya%20layar%20dengan%20python:%20https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f&t=Kendalikan%20cahaya%20layar%20dengan%20python" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f&text=Kendalikan%20cahaya%20layar%20dengan%20python%20https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f&description=Kendalikan%20cahaya%20layar%20dengan%20python" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f&title=Kendalikan%20cahaya%20layar%20dengan%20python" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Kendalikan%20cahaya%20layar%20dengan%20python&body=Kendalikan%20cahaya%20layar%20dengan%20python:%20https%3a%2f%2fwww.petanikode.com%2fkendalikan-cahaya-layar-dengan-python%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/python">Python</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/python">Python</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

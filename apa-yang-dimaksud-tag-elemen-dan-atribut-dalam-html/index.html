@@ -764,14 +764,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -784,6 +797,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1191,28 +1205,30 @@ padding: 16px;
                 <p><a href="http://4.bp.blogspot.com/W7AY9ekgzOOEhAhE-XFS_B8RAlvJiUQD64bIBio8UfA=s0" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/W7AY9ekgzOOEhAhE-XFS_B8RAlvJiUQD64bIBio8UfA=s0" /></a><br />Tag, elemen, dan atribut, marupakan tiga hal dasar yang harus anda pahami saat belajar HTML. Karena tiga hal dasar tersebut yang membentuk dokumen HTML. Mari kita bahas, satu persatu.<br /><h2>Apa itu tag?</h2>Tag, bisa kita katakan sebagai sebuah penanda. Penanda awalan dan akhiran sebuah elemen. Tag diapit dengan kurung siku (&lt;&hellip;&gt; ). Contoh: <code>&lt;p&gt;</code>, <code>&lt;/a&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;head&gt;</code>, dan sebagainya. Tag HTML terdiri dari tag pembuka dan tag penutup. Tag penutup, cirinya ada garis miring didepan nama tag, contoh: <code>&lt;/p&gt;</code>, <code>&lt;/i&gt;</code>, <code>&lt;/div&gt;</code>, dsb. Sedangkan tag pembuka tidak memiliki garis miring. Jadi, pasangan tag pembuka dan tag penutup akan membentuk suatu elemen.<br /><img alt="enter image description here" src="http://2.bp.blogspot.com/-hS1UPYnlsUI/UwW7d0zx5pI/AAAAAAAAAZQ/XaZIEtRtGBM/s1600/Tag+HTML.png" title="" /><br /><br />Jangan lupa untuk selalu menutup tag HTML. Meskipun ada juga tag HTML yang tidak memiliki pasangan seperti <code>&lt;hr&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;input&gt;</code> dsb. Namun, kita bisa menutupnya dengan menambahkan garis miring setelah nama tag, contoh: <code>&lt;hr/&gt;</code>, <code>&lt;br/&gt;</code>, <code>&lt;img/&gt;</code>, <code>&lt;link/&gt;</code>, dsb. Walaupun tampa garis miring, tag tersebut tetap valid, tapi tidak dalam XHTML (XML + HTML).<br /><h2>Apa itu elemen?</h2>Kode HTML dari tag pembuka sampai dengan tag penutup, disebut satu elemen. Elemen HTML dapat dibuat bersarang <i>(nested)</i>. Artinya, elemen dapat berada di dalam elemen. Contoh:<br /><pre><code class="html">&lt;head&gt;<br />    &lt;title&gt;Petani Kode&lt;/title&gt;<br />&lt;/head&gt;</code></pre>&nbsp;Pada contoh di atas, elemen <i>title</i> berada di dalam elemen <i>head</i>. Elemen yang tidak dapat dibuat bersarang adalah elemen yang tidak memiliki tag penutup. Karena elemen yang tidak memiliki pasangan penutup tidak bisa menjadi induk elemen yang lainnya.<br /><br />Bila elemen digambarkan dalam bentuk persegi, maka akan terlihat seperti gambar berikut ini:<br /><img alt="Struktur elemen HTML bersarang" src="http://3.bp.blogspot.com/-WjWWEhgrJkY/UwW80bDoVuI/AAAAAAAAAZc/fs73hUIgysA/s400/Struktur+HTML.png" title="" width="100%" /><br /><h2>Apa itu atribut?</h2>Atribut  adalah bagian dari elemen yang melengkapi elemen tersebut. Bila  diibaratkan seperti seragam sekolah, atributnya adalah dasi, ikat pinggang,  topi, papan nama, dan sebagainya. Atribut tersebut memiliki ciri-ciri atau nilai. Misalnya, ikat pinggang berwarna hitam, dasi berwarna biru, warna seragam putih, dan sebagainya. Begitu juga dengan atribut di HTML. Atribut dapat kita buat dalam elemen manapun. Letak penulisan atribut berada di dalam tag pembuka. Format penulisannya <code>nama-atribut=&ldquo;nilainya&rdquo;</code>. Nilai atribut dapat anda apit dengan petik ganda maupun tunggal. Contoh:<br /><pre><code class="html">&lt;a href=&rsquo;<span class="hljs-value"><a href="http://petanikode.com'">http://petanikode.com'</a></span>&gt;Petanikode.com&lt;/a&gt;</code></pre>Pada contoh di atas, terdapat atribut <code>href</code>. Atribut href berfungsi untuk menentukan alamat link pada elemen <code>a</code> <i>(hyperlink)</i>.<br /><h2>Kesimpulan</h2>Tag merupakan penanda yang menandakan awalan dan akhiran sebuah elemen HTML. Atribut merupakan pelengkap sebuah elemen. Tag, elemen, dan atribut merupakan tiga unsur yang membentuk dokumen HTML.<br /><br />&mdash;<br />Bagiamana menurutmu? Ada tambahan?</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f&t=Apa%20yang%20dimaksud%20tag%2c%20elemen%2c%20dan%20atribut%20dalam%20HTML%3f" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f&text=Apa%20yang%20dimaksud%20tag%2c%20elemen%2c%20dan%20atribut%20dalam%20HTML%3f%20https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Apa%20yang%20dimaksud%20tag%2c%20elemen%2c%20dan%20atribut%20dalam%20HTML%3f&body=Apa%20yang%20dimaksud%20tag%2c%20elemen%2c%20dan%20atribut%20dalam%20HTML%3f:%20https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f&t=Apa%20yang%20dimaksud%20tag%2c%20elemen%2c%20dan%20atribut%20dalam%20HTML%3f" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f&text=Apa%20yang%20dimaksud%20tag%2c%20elemen%2c%20dan%20atribut%20dalam%20HTML%3f%20https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f&description=Apa%20yang%20dimaksud%20tag%2c%20elemen%2c%20dan%20atribut%20dalam%20HTML%3f" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f&title=Apa%20yang%20dimaksud%20tag%2c%20elemen%2c%20dan%20atribut%20dalam%20HTML%3f" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Apa%20yang%20dimaksud%20tag%2c%20elemen%2c%20dan%20atribut%20dalam%20HTML%3f&body=Apa%20yang%20dimaksud%20tag%2c%20elemen%2c%20dan%20atribut%20dalam%20HTML%3f:%20https%3a%2f%2fwww.petanikode.com%2fapa-yang-dimaksud-tag-elemen-dan-atribut-dalam-html%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/html-5">HTML 5</a>
-                  
-                    #<a href="/topik/html">HTML</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/html-5">HTML 5</a>
+                      
+                        #<a href="/topik/html">HTML</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

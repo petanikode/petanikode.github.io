@@ -768,14 +768,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -788,6 +801,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1195,26 +1209,28 @@ padding: 16px;
                 <p><a href="https://1.bp.blogspot.com/-PjrKIc2ihB4/VvYTNTAxOFI/AAAAAAAACkM/Xa2GGbYQtbs0bg6R_OWxbXySReL4QvXnQ/s1600/Git%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-PjrKIc2ihB4/VvYTNTAxOFI/AAAAAAAACkM/Xa2GGbYQtbs0bg6R_OWxbXySReL4QvXnQ/s1600/Git%2BPetani%2BKode.png" /></a><br />Setelah menginstal Git, Git belum dapat digunakan, karena belum dikonfigurasi. Silahkan simak tiga hal berikut ini untuk mengkonfigurasi Git di Linux.<br /><h2>1. Set Identitas</h2>Isilah identitas anda yang akan digunakan setiap melakukan <i>commit</i>. Silahkan ketik perintah berikut ini di terminal.<br />Set nama:<br /><pre><code class="bash">git config &ndash;global user.name &ldquo;Petani Kode&rdquo;</code></pre>Set email:<br /><pre><code class="bash">git config &ndash;global user.email contoh@petanikode.com</code></pre><h2>2. Set Teks Editor</h2>Tentukan teks editor yang ingin anda gunakan. Sebagai contoh, saya menggunakan teks editor <i>atom</i>. Maka perintahnya,<br /><pre><code class="bash">git config &ndash;global core.editor atom</code></pre><h2>3. Periksa Konfigurasi</h2>Periksalah konfigurasi yang baru saja dilakukan dengan perintah:<br /><pre><code class="bash">git config &ndash;list</code></pre>Berikut ini hasil konfigurasi Git pada komputer saya.<br /><a href="http://1.bp.blogspot.com/-Lc0x4c4UFOM/VvYTsGHo1WI/AAAAAAAACkU/Bl3n__Da8hETuwWU52ZvR9C5NYywPINuQ/s1600/Konfigurasi%2Bgit%2Badmin%2Bpetani%2Bkode.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-Lc0x4c4UFOM/VvYTsGHo1WI/AAAAAAAACkU/Bl3n__Da8hETuwWU52ZvR9C5NYywPINuQ/s1600/Konfigurasi%2Bgit%2Badmin%2Bpetani%2Bkode.png" /></a><br />Itulah tiga hal yang perlu dilakukan setelah instal Git di Linux. Konfigurasi lebih lengkap, silahkan baca <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup" target="_blank">di sini</a>.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f&t=3%20Hal%20yang%20Perlu%20Dilakukan%20Setelah%20Instal%20Git%20di%20Linux" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f&text=3%20Hal%20yang%20Perlu%20Dilakukan%20Setelah%20Instal%20Git%20di%20Linux%20https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=3%20Hal%20yang%20Perlu%20Dilakukan%20Setelah%20Instal%20Git%20di%20Linux&body=3%20Hal%20yang%20Perlu%20Dilakukan%20Setelah%20Instal%20Git%20di%20Linux:%20https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f&t=3%20Hal%20yang%20Perlu%20Dilakukan%20Setelah%20Instal%20Git%20di%20Linux" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f&text=3%20Hal%20yang%20Perlu%20Dilakukan%20Setelah%20Instal%20Git%20di%20Linux%20https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f&description=3%20Hal%20yang%20Perlu%20Dilakukan%20Setelah%20Instal%20Git%20di%20Linux" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f&title=3%20Hal%20yang%20Perlu%20Dilakukan%20Setelah%20Instal%20Git%20di%20Linux" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=3%20Hal%20yang%20Perlu%20Dilakukan%20Setelah%20Instal%20Git%20di%20Linux&body=3%20Hal%20yang%20Perlu%20Dilakukan%20Setelah%20Instal%20Git%20di%20Linux:%20https%3a%2f%2fwww.petanikode.com%2f3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/git">git</a>
-                  
-                    #<a href="/topik/linux">linux</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/git">git</a>
+                      
+                        #<a href="/topik/linux">linux</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

@@ -762,14 +762,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -782,6 +795,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1189,26 +1203,28 @@ padding: 16px;
                 <p>Terkadang informasi perlu disajikan dalam bentuk tabel. Contohnya saya ingin memberikan informasi tentang jadwal pelajaran melalui web. Sangat tidak elegan jika saya membuat tabel di <i>Libre Office</i> lalu saya foto dan di tempel di web. Oleh karena itu, kita perlu membuat tabel di HTML.</p> <a href="http://1.bp.blogspot.com/-WYU8YAW-48M/VEDSK4SGFXI/AAAAAAAAAw4/gOoABMTgtwo/s1600/HTML.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-WYU8YAW-48M/VEDSK4SGFXI/AAAAAAAAAw4/gOoABMTgtwo/s1600/HTML.png" /></a> <p>Membuat tabel di HTML dapat menggunakan tag <code>&lt;table&gt;</code>. Tag ini memiliki anak yaitu tag <code>&lt;tr&gt;</code> (<i>table row</i>) untuk membuat baris, tag <code>&lt;td&gt;</code> (<i>table data</i>) Untuk membuat kolom, dan tag <code>&lt;th&gt;</code> (<i>table header</i>) untuk membuat kepala tabel.</p> <h2>Struktur penulisan tag &lt;table&gt;</h2> <pre><code class="html">&lt;table&gt;<br />&nbsp; &lt;tr&gt;&lt;td&gt;Baris 1 kolom 1&lt;/td&gt;&lt;td&gt;baris 1 kolom 2&lt;/td&gt;&lt;/tr&gt;<br />&nbsp; &lt;tr&gt;&lt;td&gt;Baris 2 kolom 1&lt;/td&gt;&lt;td&gt;baris 2 kolom 2&lt;/td&gt;&lt;/tr&gt;<br />&lt;/table&gt;</code></pre> <p>Hasil dari kode di atas:</p><div class="well"><table><tbody><tr><td>Baris 1 kolom 1</td><td>baris 1 kolom 2</td></tr><tr><td>Baris 2 kolom 1</td><td>baris 2 kolom 2</td></tr></tbody></table></div> <p>Tabel di atas tidak terlihat seperti tabel karena tidak ada garis. Untuk membuat garis kita perlu menambahkan atribut <code>border</code> Sehingga menjadi seperti ini:</p> <pre><code class="html">&lt;table border='1'&gt;<br />&nbsp; &lt;tr&gt;&lt;td&gt;Baris 1 kolom 1&lt;/td&gt;&lt;td&gt;baris 1 kolom 2&lt;/td&gt;&lt;/tr&gt;<br />&nbsp; &lt;tr&gt;&lt;td&gt;Baris 2 kolom 1&lt;/td&gt;&lt;td&gt;baris 2 kolom 2&lt;/td&gt;&lt;/tr&gt;<br />&lt;/table&gt;</code></pre> <p>Hasilnya:</p><table border="1" class="table table-bordered"><tbody><tr><td>Baris 1 kolom 1</td><td>baris 1 kolom 2</td></tr><tr><td>Baris 2 kolom 1</td><td>baris 2 kolom 2</td></tr></tbody></table> <h2>Membuat tabel jadwal pelajaran</h2> <pre><code class="html">&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&nbsp; &lt;title&gt;Jadwal Pelajaran&lt;/title&gt;<br />&lt;/head&gt;<br /><br />&lt;body&gt;<br />&nbsp; &lt;table border="1"&gt;<br />&nbsp; &nbsp; &nbsp;&lt;tr&gt;&lt;th&gt;No&lt;/th&gt;&lt;th&gt;Senin&lt;/th&gt;&lt;th&gt;Selasa&lt;/th&gt;&lt;th&gt;Rabu&lt;/th&gt;&lt;/tr&gt;<br />&nbsp; &nbsp; &nbsp;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;HTML&lt;/td&gt;&lt;td&gt;PHP&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;/tr&gt;<br /><div>&nbsp; &nbsp; &nbsp;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;CSS&lt;/td&gt;&lt;td&gt;AJAX&lt;/td&gt;&lt;td&gt;C++&lt;/td&gt;&lt;/tr&gt;<br />&nbsp; &nbsp; &nbsp;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;JavaScript&lt;/td&gt;&lt;td&gt;JQuery&lt;/td&gt;&lt;td&gt;Java&lt;/td&gt;&lt;/tr&gt;</div>&nbsp; &lt;/table&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</code></pre> <p>Hasil:</p><table border="1" class="table table-bordered"><tbody><tr><th>No</th><th>Senin</th><th>Selasa</th><th>Rabu</th></tr><tr><td>1</td><td>HTML</td><td>PHP</td><td>Python</td></tr><tr><td>2</td><td>CSS</td><td>AJAX</td><td>C++</td></tr><tr><td>3</td><td>JavaScript</td><td>JQuery</td><td>Java</td></tr></tbody></table> <h2>Menggabungkan sel tabel</h2><p>Untuk menggabungkan sel tabel kita bisa menambahkan atribut <code>rowspan</code> dan <code>colspan</code> di tag <code>&lt;td&gt;</code> atau <code>&lt;th&gt;</code>. <code>rowspan</code> berfungsi menggabungkan sel menjadi satu baris dan <code>colspan</code> untuk menggabungkan beberapa sel menjadi satu kolom.</p> <a href="http://2.bp.blogspot.com/-Zr3Mn8TC46g/VEPJ0we0QuI/AAAAAAAAA1c/m_42iXDstgw/s1600/tabel-html-rowspan-colspan.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-Zr3Mn8TC46g/VEPJ0we0QuI/AAAAAAAAA1c/m_42iXDstgw/s1600/tabel-html-rowspan-colspan.png" /></a> <p>Untuk lebih jelasnya perhatikan contoh berikut:</p> <pre><code class="html">&lt;table border="1"&gt;<br />&nbsp; &lt;tr&gt;&lt;th rowspan="2"&gt;Bulan&lt;/th&gt;&lt;th colspan="2"&gt;Hasil Panen&lt;/th&gt;&lt;/tr&gt;<br />&nbsp; &lt;tr&gt;&lt;th&gt;Padi&lt;/th&gt;&lt;th&gt;Kacang&lt;/th&gt;&lt;/tr&gt;<br />&nbsp; &lt;tr&gt;&lt;td&gt;Januari&lt;/td&gt;&lt;td&gt;500 Kg&lt;/td&gt;&lt;td&gt;231 Kg&lt;/td&gt;&lt;/tr&gt;<br />&nbsp; &lt;tr&gt;&lt;td&gt;Februari&lt;/td&gt;&lt;td&gt;342 Kg&lt;/td&gt;&lt;td&gt;423 Kg&lt;/td&gt;&lt;/tr&gt;<br />&nbsp; &lt;tr&gt;&lt;td&gt;Maret&lt;/td&gt;&lt;td&gt;432 Kg&lt;/td&gt;&lt;td&gt;124 Kg&lt;/td&gt;&lt;/tr&gt;<br />&nbsp; &lt;tr&gt;&lt;td&gt;April&lt;/td&gt;&lt;td&gt;453 Kg&lt;/td&gt;&lt;td&gt;523 Kg&lt;/td&gt;&lt;/tr&gt;<br />&lt;/table&gt;</code></pre> <p>Hasil:</p><table border="1" class="table table-bordered"><tbody><tr><th rowspan="2">Bulan</th><th colspan="2">Hasil Panen</th></tr><tr><th>Padi</th><th>Kacang</th></tr><tr><td>Januari</td><td>500 Kg</td><td>231 Kg</td></tr><tr><td>Februari</td><td>342 Kg</td><td>423 Kg</td></tr><tr><td>Maret</td><td>432 Kg</td><td>124 Kg</td></tr><tr><td>April</td><td>453 Kg</td><td>523 Kg</td></tr></tbody></table> <h2>Tabel sebagai layout</h2> <p>Tabel juga digunakan untuk membuat layout (tata letak) web. Jaman dahulu, sebelum diperkenalkannya CSS, banyak website menggunakan tabel sebagai layout. Sekarang pembuatan layout menggunakan tabel sudah banyak ditinggalkan, karena kurang efisien.</p> <a href="http://2.bp.blogspot.com/-iUY-THu6ifc/VEPPZIFM6mI/AAAAAAAAA1s/17hhvnpnS94/s1600/tabel-html-layout.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-iUY-THu6ifc/VEPPZIFM6mI/AAAAAAAAA1s/17hhvnpnS94/s1600/tabel-html-layout.png" /></a> <p>Berikut ini adalah contoh penggunaan tabel sebagai layout:</p><pre><code class="html">&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&nbsp; &lt;title&gt;Tabel sebagai layout&lt;/title&gt;<br />&lt;/head&gt;<br /><br />&lt;body&gt;<br />&nbsp; &lt;table border="1"&gt;<br />&nbsp; &nbsp; &lt;tr&gt;&lt;td colspan="2"&gt;&lt;h1&gt;Judul Website&lt;/h1&gt;&lt;/td&gt; &lt;/tr&gt;<br />&nbsp; &nbsp; &lt;tr&gt;&lt;td width="25%"&gt;Menu:<br />&nbsp; &nbsp; &nbsp; &lt;ul&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;li&gt;Login&lt;/li&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;li&gt;Daftar&lt;/li&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;li&gt;Cari&lt;/li&gt;<br />&nbsp; &nbsp; &nbsp;&lt;/ul&gt;<br />&nbsp; &lt;/td&gt;<br />&nbsp; &lt;td width="75%"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.&lt;/td&gt; &lt;/tr&gt;<br />&lt;tr&gt;&lt;td colspan="2"&gt;&amp;copy; 2014 Petani Kode, web ini dibuat dengan software open source&lt;/td&gt;&lt;/tr&gt;<br />&nbsp; &lt;/table&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</code></pre> <p>Hasil:</p><table border="1" class="table table-bordered"><tbody><tr><td colspan="2"><h1>Judul Website</h1></td> </tr><tr><td width="25%">Menu:<br /><ul><li>Login</li><li>Daftar</li><li>Cari</li></ul></td> <td width="75%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.</td> </tr><tr><td colspan="2">© 2014 Petani Kode, web ini dibuat dengan software open source</td></tr></tbody></table> <p>Membuat tabel terkadang hasilnya tidak sesuai seperti yang diinginkan. Cobalah periksa penulisan kode HTML-nya, sudah benar atau tidak.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f&t=Tutorial%20HTML%3a%20Cara%20Membuat%20Tabel" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f&text=Tutorial%20HTML%3a%20Cara%20Membuat%20Tabel%20https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Tutorial%20HTML%3a%20Cara%20Membuat%20Tabel&body=Tutorial%20HTML%3a%20Cara%20Membuat%20Tabel:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f&t=Tutorial%20HTML%3a%20Cara%20Membuat%20Tabel" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f&text=Tutorial%20HTML%3a%20Cara%20Membuat%20Tabel%20https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f&description=Tutorial%20HTML%3a%20Cara%20Membuat%20Tabel" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f&title=Tutorial%20HTML%3a%20Cara%20Membuat%20Tabel" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Tutorial%20HTML%3a%20Cara%20Membuat%20Tabel&body=Tutorial%20HTML%3a%20Cara%20Membuat%20Tabel:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-html-cara-membuat-tabel%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/html5">HTML5</a>
-                  
-                    #<a href="/topik/html">HTML</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/html5">HTML5</a>
+                      
+                        #<a href="/topik/html">HTML</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

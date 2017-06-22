@@ -762,14 +762,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -782,6 +795,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1189,24 +1203,26 @@ padding: 16px;
                 <p>Instalasi python di windows sangat gampang. Langkah-langkanya sama seperti menginstal software-software lain, <i>next-next-finish</i>. Python yang akan di instal dalam panduan ini adalah python versi 3. Download di situs resmi python (<a href="http://python.org/" target="_blank">python.org</a>).<br /><h2>1. Eksekusi python-3.msi python</h2>Python-3.4.2.msi adalah file instalator python. File ini akan melakukan instalasi ke sistem windows. Klik ganda untuk mengeksekusinya.<br /><div class="separator"><a href="http://3.bp.blogspot.com/-yu4hrGCOmG4/VheGWN_OVhI/AAAAAAAAB8I/DCKef5730n8/s1600/1.%2BKlik%2Bganda%2Bsetup%2Bpython.PNG" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-yu4hrGCOmG4/VheGWN_OVhI/AAAAAAAAB8I/DCKef5730n8/s1600/1.%2BKlik%2Bganda%2Bsetup%2Bpython.PNG" /></a></div><h2>2. Pilih pengguna</h2>Setelah diinstal, siapa yang boleh memakai python. Pilih saja <i>&lsquo;Install for all users&rsquo;</i> agar bisa dipakai untuk semua user di komputernya.<br /><div class="separator"><a href="http://4.bp.blogspot.com/-ejcTMNiIBSk/VheGWGVL-GI/AAAAAAAAB8A/agVdYOYQ7kw/s1600/2.%2BPilih%2Binstall%2Buntuk%2Bsemua%2Buser.PNG" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/-ejcTMNiIBSk/VheGWGVL-GI/AAAAAAAAB8A/agVdYOYQ7kw/s1600/2.%2BPilih%2Binstall%2Buntuk%2Bsemua%2Buser.PNG" /></a></div><h2>3. Lokasi instal</h2>Tentukan dimana lokasi python akan diinstal. Biarkan saja di <i>&lsquo;C:\python34\&rsquo;</i>, kemudian klik <i>next</i>.<br /><div class="separator"><a href="http://4.bp.blogspot.com/-5nxFrMF4Q5c/VheGWD9NeVI/AAAAAAAAB8E/XV6X8feE3eA/s1600/3.%2BLokasi%2Binstalasi.PNG" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/-5nxFrMF4Q5c/VheGWD9NeVI/AAAAAAAAB8E/XV6X8feE3eA/s1600/3.%2BLokasi%2Binstalasi.PNG" /></a></div><h2>4. Kostumisasi</h2>Menentukan fitur-fitur yang akan diinstal. Jangan lupa untuk mengaktifkan <i>&lsquo;Add python.exe to path&rsquo;</i> agar python bisa diakses langsung dari CMD <i>(Command Prompt)</i>.<br /><div class="separator"><a href="http://4.bp.blogspot.com/-L4EfJkuTvI4/VheGW67CMnI/AAAAAAAAB8U/KBbC-9RnBpE/s1600/4.%2BPilih%2Bfitur%2Bdan%2Baktifkan%2Bke%2Blingkungan%2Bpath.PNG" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/-L4EfJkuTvI4/VheGW67CMnI/AAAAAAAAB8U/KBbC-9RnBpE/s1600/4.%2BPilih%2Bfitur%2Bdan%2Baktifkan%2Bke%2Blingkungan%2Bpath.PNG" /></a></div>Setelah diaktifkan, akan menjadi seperti ini:<br /><div class="separator"><a href="http://3.bp.blogspot.com/-2jKsppa26iE/VheGXOhtx5I/AAAAAAAAB8Y/InrxoKPlyLg/s1600/5.%2BAktifkan%2Bfitur%2Badd%2Bto%2Benv%2Bpath.PNG" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-2jKsppa26iE/VheGXOhtx5I/AAAAAAAAB8Y/InrxoKPlyLg/s1600/5.%2BAktifkan%2Bfitur%2Badd%2Bto%2Benv%2Bpath.PNG" /></a></div><h2>5. Setelah itu, klik <i>finish</i> untuk menyelesaikan.</h2><div class="separator"><a href="http://3.bp.blogspot.com/-rcZUJ6ZsSdI/VheGXKh99yI/AAAAAAAAB8c/uuBc-1DJGW8/s1600/6.%2BFinish.PNG" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-rcZUJ6ZsSdI/VheGXKh99yI/AAAAAAAAB8c/uuBc-1DJGW8/s1600/6.%2BFinish.PNG" /></a></div><h2>Uji coba python</h2>Uji coba python shell yang terinstal, masuk ke manu kemudian cari <i>python shell</i>.<br /><div class="separator"><a href="http://2.bp.blogspot.com/-zmK0oQzUeHA/VheGX_hmeRI/AAAAAAAAB8s/e6UBzT4nLpg/s1600/Uji%2Bcoba%2Bshell%2Bpython.PNG" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-zmK0oQzUeHA/VheGX_hmeRI/AAAAAAAAB8s/e6UBzT4nLpg/s1600/Uji%2Bcoba%2Bshell%2Bpython.PNG" /></a></div>Uji coba python dari CMD, ketik perintah <i>&lsquo;python&rsquo;</i> untuk masuk ke python shell.<br /><div class="separator"><a href="http://2.bp.blogspot.com/-oGojAXihIw0/VheGXn6V13I/AAAAAAAAB8k/p_s3_srGTPo/s1600/Uji%2Bcoba%2Bshell%2Bpython%2Bdi%2BCMD.PNG" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-oGojAXihIw0/VheGXn6V13I/AAAAAAAAB8k/p_s3_srGTPo/s1600/Uji%2Bcoba%2Bshell%2Bpython%2Bdi%2BCMD.PNG" /></a></div></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f&t=Belajar%20Pemrograman%20Python%3a%20Cara%20Install%20Python%20di%20Windows" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f&text=Belajar%20Pemrograman%20Python%3a%20Cara%20Install%20Python%20di%20Windows%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Belajar%20Pemrograman%20Python%3a%20Cara%20Install%20Python%20di%20Windows&body=Belajar%20Pemrograman%20Python%3a%20Cara%20Install%20Python%20di%20Windows:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f&t=Belajar%20Pemrograman%20Python%3a%20Cara%20Install%20Python%20di%20Windows" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f&text=Belajar%20Pemrograman%20Python%3a%20Cara%20Install%20Python%20di%20Windows%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f&description=Belajar%20Pemrograman%20Python%3a%20Cara%20Install%20Python%20di%20Windows" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f&title=Belajar%20Pemrograman%20Python%3a%20Cara%20Install%20Python%20di%20Windows" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Belajar%20Pemrograman%20Python%3a%20Cara%20Install%20Python%20di%20Windows&body=Belajar%20Pemrograman%20Python%3a%20Cara%20Install%20Python%20di%20Windows:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-python-di-windows%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/python">Python</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/python">Python</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

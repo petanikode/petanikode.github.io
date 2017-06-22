@@ -772,14 +772,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -792,6 +805,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1199,32 +1213,34 @@ padding: 16px;
                 <p><a href="http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png" /></a>Ketika saya menggunakan modal untuk menampilkan peta (Google Maps), petanya tidak mau tampil. Entah mengapa? setelah ukuran layarnya di-resize, petanya bisa tampil. Mungkin karena <i>div</i> di dalam <i>modal</i> bersifat dinamis atau responsif.<br /><a href="http://4.bp.blogspot.com/-NlWODsxclOY/V3DZfEGN23I/AAAAAAAAC4E/pA6aTwOWRe0-NrQ3BVKbMPmkWEUtSoUyACK4B/s1600/Peta%2BGoogle%2BPada%2BModal%2BBootstrap%2BAdmin%2BLTE%2B-%2Bpetanikode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-NlWODsxclOY/V3DZfEGN23I/AAAAAAAAC4E/pA6aTwOWRe0-NrQ3BVKbMPmkWEUtSoUyACK4B/s1600/Peta%2BGoogle%2BPada%2BModal%2BBootstrap%2BAdmin%2BLTE%2B-%2Bpetanikode.png" /></a><br />Peta kosong, hanya ada warna abu-abu. Solusi dari masalah ini saya temukan di Stackoverflow. <a href="http://stackoverflow.com/users/1416944/marcok" target="_blank">MarcoK</a> memberikan penjelasan jawaban atas masalah ini.<br /><br />Google Maps memang akan menampilkan area abu-abu <i>(grey)</i> kalau ditempatkan di elemen dinamis. Oleh karna itu, kita perlu memanggil fungsi <i>&ldquo;resize&rdquo;</i> ketika animasi modal sudah selesai.<br /><br />Bootstrap 3: <br /><pre><code class="js">$(&ldquo;#modal-peta&rdquo;).on(&ldquo;shown.bs.modal&rdquo;, function () {<br />&nbsp; &nbsp; &nbsp; google.maps.event.trigger(peta, &ldquo;resize&rdquo;);<br />});</code></pre>Bootstrap 2:<br /><pre><code class="js">$(&lsquo;#modal-peta&rsquo;).on(&lsquo;shown&rsquo;, function () {<br />&nbsp;&nbsp;&nbsp;&nbsp; google.maps.event.trigger(peta, &ldquo;resize&rdquo;);<br />});</code></pre><code>#modal-peta</code> adalah nama <i>id</i> dari elemen <i>modal</i> tempat peta tersebut ditampilkan dan variabel <code>peta</code> adalah variabel objek dari peta (Google Maps). Kode di atas, ditulis dalam fungsi <code>initialize()</code> atau persiapan peta, <a href="/2016/06/tutorial-google-maps-api-menampilkan.html">lihat tutorial sebelumnya</a>.<br /><a href="http://2.bp.blogspot.com/-cGottAA3EMA/V3bfLaX40RI/AAAAAAAAC5Q/vfa--VFwx08qepZ1zB4g0IB6LqXIIqbmwCK4B/s1600/Peta%2BGoogle%2BMaps%2Bdalam%2BModal%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-cGottAA3EMA/V3bfLaX40RI/AAAAAAAAC5Q/vfa--VFwx08qepZ1zB4g0IB6LqXIIqbmwCK4B/s1600/Peta%2BGoogle%2BMaps%2Bdalam%2BModal%2B-%2BPetani%2BKode.png" /></a><br /><br />Referensi: <a href="http://stackoverflow.com/a/11743005" target="_blank"><a href="http://stackoverflow.com/a/11743005">http://stackoverflow.com/a/11743005</a></a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f&t=Mengatasi%20Peta%20%28Google%20Map%29%20yang%20tidak%20Ditampilkan%20di%20Modal" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f&text=Mengatasi%20Peta%20%28Google%20Map%29%20yang%20tidak%20Ditampilkan%20di%20Modal%20https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Mengatasi%20Peta%20%28Google%20Map%29%20yang%20tidak%20Ditampilkan%20di%20Modal&body=Mengatasi%20Peta%20%28Google%20Map%29%20yang%20tidak%20Ditampilkan%20di%20Modal:%20https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f&t=Mengatasi%20Peta%20%28Google%20Map%29%20yang%20tidak%20Ditampilkan%20di%20Modal" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f&text=Mengatasi%20Peta%20%28Google%20Map%29%20yang%20tidak%20Ditampilkan%20di%20Modal%20https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f&description=Mengatasi%20Peta%20%28Google%20Map%29%20yang%20tidak%20Ditampilkan%20di%20Modal" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f&title=Mengatasi%20Peta%20%28Google%20Map%29%20yang%20tidak%20Ditampilkan%20di%20Modal" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Mengatasi%20Peta%20%28Google%20Map%29%20yang%20tidak%20Ditampilkan%20di%20Modal&body=Mengatasi%20Peta%20%28Google%20Map%29%20yang%20tidak%20Ditampilkan%20di%20Modal:%20https%3a%2f%2fwww.petanikode.com%2fmengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/html">HTML</a>
-                  
-                    #<a href="/topik/bootstrap">Bootstrap</a>
-                  
-                    #<a href="/topik/google-maps">Google Maps</a>
-                  
-                    #<a href="/topik/javascript">Javascript</a>
-                  
-                    #<a href="/topik/api">API</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/html">HTML</a>
+                      
+                        #<a href="/topik/bootstrap">Bootstrap</a>
+                      
+                        #<a href="/topik/google-maps">Google Maps</a>
+                      
+                        #<a href="/topik/javascript">Javascript</a>
+                      
+                        #<a href="/topik/api">API</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

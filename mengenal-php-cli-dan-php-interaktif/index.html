@@ -764,14 +764,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -784,6 +797,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1191,28 +1205,30 @@ padding: 16px;
                 <p>Pada tutorial dan buku pemrograman PHP yang beredar, tidak banyak yang membahas tentang PHP CLI dan PHP interaktif. PHP sendiri merupakan sebuah bahasa pemrograman yang lebih fokus untuk pengembangan web. Karena itu, jarang sekali digunakan di lingkungan CLI <i>(Command Line)</i>.<br /><br />Bagi yang belajar pemrograman PHP menggunakan XAMPP atau LAMPP, kemungkinan jarang menggunakan PHP CLI atau PHP interaktif. Tetapi, bagi yang <a href="http://www.petanikode.com/2016/10/persiapan-pemrograman-web-di-linux.html">menggunakan paket terpisah</a> (apache2, php, mysql), kemungkinan sering bermain dengan PHP CLI dan PHP interaktif.<br /><h2>Apa itu PHP CLI?</h2>PHP CLI <i>(Command Line Interface)</i> merupakan PHP yang berjalan di <i>Command Line</i>. PHP CLI memungkinkan kita membangun aplikasi <i>shell</i> dengan PHP. Pertama kali diknalkan pada PHP versi 4.2.0 sebagai percobaan <i>(eksperimental)</i>. Salah satu contoh aplikasi <i>shell</i> yang berjalan di <i>Command Line</i> adalah <a href="http://www.petanikode.com/search/label/Composer">Composer</a>. Composer sendiri merupakan manajemen paket untuk PHP, seperti <code>apt</code> pada Linux.<br /><h2>Cara Menggunakan PHP CLI </h2>Cara menggunakan PHP CLI dapat kita baca melalui manualnya. Manual dapat kita buka dengan perintah <code>man php</code>.<br /><a href="http://1.bp.blogspot.com/-149dXYXOuY4/WBR5cv5YntI/AAAAAAAADWg/EVvffhSLL9EsM_ljsdwDrvyJeB4iYHp5wCK4B/s1600/PHP%2BCLI%2B-%2BPetani%2BKode.png" imageanchor="1"><img alt="Manual PHP CLI di Linux" border="0" src="https://1.bp.blogspot.com/-149dXYXOuY4/WBR5cv5YntI/AAAAAAAADWg/EVvffhSLL9EsM_ljsdwDrvyJeB4iYHp5wCK4B/s1600/PHP%2BCLI%2B-%2BPetani%2BKode.png" title="" /></a><br /><h3>Contoh perintah-perintah dasar </h3>Menampilkan bantuan:<br /><pre><code class="php bash">php -h</code></pre>Mengeksekusi sebuah skrip: <br /><pre><code class="php bash">php -f nama-skrip.php</code></pre>atau<br /><pre><code class="php bash">php nama-skrip.php</code></pre>Membuat Server:<br /><pre><code class="php bash">php -S localhost:8000</code></pre>Menampilkan informasi PHP:<br /><pre><code class="php bash">php -i</code></pre>Menampilkan versi PHP:<br /><pre><code class="php bash">php -v</code></pre>Eksekusi fungsi bawaan PHP:<br /><pre><code class="php bash">php -r &lsquo;echo &ldquo;Sekarang tanggal &rdquo; . Date(&ldquo;d/m/Y&rdquo;) .&rdquo;\n&rdquo;;&rsquo;</code></pre><br />Hasil output dari eksekusi melalui PHP CLI berupa teks polos <i>(plain text)</i>. Jadi, meskipun kita mencetak tag HTML, hasilnya akan ditampilkan apa adanya.<br /><h2>PHP Interaktif</h2>Salah satu ciri dari bahasa skrip <i>(scripting)</i> adalah memiliki konsol untuk menjalankan atau mengeksekusi sebuah fungsi secara interaktif. Cara masuk ke mode PHP interaktif adalah dengan mengetik perintah <code>php -a</code> pada terminal.<br /><a href="http://2.bp.blogspot.com/-5J4H59AWzec/WBR__m9xq4I/AAAAAAAADWw/QmDrDYoBQ40NBlahY6kY4BFhxcGRGqzyQCK4B/s1600/Mode%2BPHP%2BInteraktif%2Bdi%2BLinux%2BPetani%2BKode.png" imageanchor="1"><img alt="PHP interaktif" border="0" src="https://2.bp.blogspot.com/-5J4H59AWzec/WBR__m9xq4I/AAAAAAAADWw/QmDrDYoBQ40NBlahY6kY4BFhxcGRGqzyQCK4B/s1600/Mode%2BPHP%2BInteraktif%2Bdi%2BLinux%2BPetani%2BKode.png" title="" /></a>Dalam mode interaktif, kita dapat mengetik perintah-perintah atau fungsi PHP secara langsung. Kemudian akan mendapatkan hasil output saat itu juga. Setiap perintah harus diakhiri dengan titik koma (<code>;</code>). Kalau tidak, maka akan terjadi error. Berbeda dengan konsol milik javascript yang boleh tidak memakai titik koma.<br /><h2>Kesimpulan</h2>PHP CLI merupakan PHP yang dijalankan melalui <i>Command Line</i>. Sedangkan PHP Interaktif merupakan sebuah konsol PHP yang memungkinkan kita menjalankan fungsi atau perintah PHP secara interaktif. PHP CLI dan PHP interaktif sering digunakan untuk menguji sebuah kode skrip maupun fungsi.<br /><br />Referensi:<br /><ul><li><a href="http://php.net/manual/en/features.commandline.php" target="_blank"><a href="http://php.net/manual/en/features.commandline.php">http://php.net/manual/en/features.commandline.php</a></a></li><li><a href="http://www.php-cli.com/" target="_blank"><a href="http://www.php-cli.com/">http://www.php-cli.com/</a> </a></li></ul></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f&t=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f&text=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif%20https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif&body=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif:%20https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f&t=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f&text=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif%20https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f&description=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f&title=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif&body=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif:%20https%3a%2f%2fwww.petanikode.com%2fmengenal-php-cli-dan-php-interaktif%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/linux">Linux</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/linux">Linux</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

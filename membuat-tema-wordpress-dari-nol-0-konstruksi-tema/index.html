@@ -770,14 +770,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -790,6 +803,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1197,32 +1211,34 @@ padding: 16px;
                 <p><a href="http://4.bp.blogspot.com/-lQWmaK4Lh_c/Vr7maUTW_cI/AAAAAAAACfs/yrkHWMhC3gY/s1600/membuat%2Btema%2Bwordpress%2Bdari%2Bnol%2B-%2Bpetanikode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-lQWmaK4Lh_c/Vr7maUTW_cI/AAAAAAAACfs/yrkHWMhC3gY/s1600/membuat%2Btema%2Bwordpress%2Bdari%2Bnol%2B-%2Bpetanikode.png" /></a><br />Hi, saya sedang belajar membuat tema wordpress dari nol dan ingin membagikan apa yang telah dipelajari. Mungkin postingan ini cocok disebut catatan belajar.<br /><h2>Persiapan dan peralatan</h2>Sebelum memulai, pastikan sudah menginstal wordpress dan alat-alat untuk membuat temanya.<br /><ol><li>Text editor (untuk menulis kode tema)</li><li>Web browser (untuk menampilkan hasilnya)</li></ol><h2>Konstruksi awal tema</h2>Semua tema wordpress terletak di direktori <code>wp-content/themes</code>. Di sanalah kita akan meletakan tema yang akan dibuat. Buatlah sebuah direktori baru di sana. Sebagai contoh, saya membuat sebuah direktori bernama <i>petanikode</i>.<br /><a href="http://2.bp.blogspot.com/-l6ULxULklIc/Vr7XzagQbHI/AAAAAAAACfE/oLDxdhEqPVE/s1600/direktori%2Btema%2Bwordpress%2Bpetanikode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-l6ULxULklIc/Vr7XzagQbHI/AAAAAAAACfE/oLDxdhEqPVE/s1600/direktori%2Btema%2Bwordpress%2Bpetanikode.png" /></a><br />Kita akan meletakan semua file tema di dalam direktori tersebut. Pada tahapan awal pembuatan tema ini, kita buat dulu dua file penting, yaitu:<br /><ol><li><code>index.php</code>; dan</li><li><code>style.css</code></li></ol>File <code>index.php</code> adalah file utama yang akan diaksess saat website dibuka. Sementara itu, file <code>style.css</code> berisi kode CSS untuk menghias dan mengatur tampilan tema. Letakkan kedua file tersebut di dalam direktori <i>petanikode</i>. Karena, akan menjadi fondasi awal tema kita.<br /><br />Isi file <code>index.php</code>:<br /><pre><code class="html">&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />&nbsp;&nbsp;&nbsp; &lt;head&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;Tema Wp pertama&lt;/title&gt;<br />&nbsp;&nbsp;&nbsp; &lt;/head&gt; <br /><br />&lt;body&gt;<br />&nbsp;&nbsp;&nbsp; &lt;h1&gt;Hello world, ini adalah tema Wordpress perama saya&lt;/h1&gt;<br />&nbsp;&nbsp;&nbsp; &lt;p&gt;dibuat dari nol dengan penuh semangat&lt;p&gt;&nbsp;<br />&lt;/body&gt;<br />&lt;html&gt;</code></pre>dan isi file <code>style.css</code>:<br /><pre><code class="css">/<em><br />Theme Name: Petani Kode<br />Author: Ardianta Pargo<br />Author URI: <a href="https://twitter.com/ArdiantaPargo">https://twitter.com/ArdiantaPargo</a><br />Version: 0.1<br />Description: Tema ini untuk belajar membuat tema dari nol. Saat ini isinya masih sedikit karena masih dasar. Insa&rsquo;allah nanti akan menjadi makin banyak.<br /></em>/</code></pre><h2>Ujicoba tema baru</h2>Masuk ke <i>wp-admin&gt;appearance&gt;themes</i>, di sana kita akan menemukan sebuah tema misterius. Tema yang baru saja kita buat. Silahkan aktifkan tema tersebut.<br /><a href="http://4.bp.blogspot.com/-1l3wgA5v3Yc/Vr7aHi1dG1I/AAAAAAAACfQ/iPJ8hLTeDVk/s1600/Tema%2Bwordpress%2Bbaru%2Bpetani%2Bkode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-1l3wgA5v3Yc/Vr7aHi1dG1I/AAAAAAAACfQ/iPJ8hLTeDVk/s1600/Tema%2Bwordpress%2Bbaru%2Bpetani%2Bkode.png" /></a><br />Setelah itu, coba buka website wordpress-nya.<br /><a href="http://2.bp.blogspot.com/-ulOVXZtukFY/Vr7brmur-GI/AAAAAAAACfc/2FOj77K9GGo/s1600/Tema%2Bwordpress%2Bpertama%2Bsaya%2Bdibuat%2Bdari%2Bnol.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-ulOVXZtukFY/Vr7brmur-GI/AAAAAAAACfc/2FOj77K9GGo/s1600/Tema%2Bwordpress%2Bpertama%2Bsaya%2Bdibuat%2Bdari%2Bnol.png" /></a>Hore! selamat. Tema pertama kita sudah bisa digunakan. Ini adalah tampilan awal. Tentu, ini bukan hasil akhir yang kita inginkan. Kedepan insa&rsquo;allah akan kita kembangkan bersama. Cukup ini saja dulu. <a href="http://www.petanikode.com/2016/02/membuat-tema-wordpress-dari-nol-1-fondasi-halaman-utama.html" target="_blank">[bersambung&hellip;]</a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f&t=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%280%29%20konstruksi%20tema" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f&text=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%280%29%20konstruksi%20tema%20https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%280%29%20konstruksi%20tema&body=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%280%29%20konstruksi%20tema:%20https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f&t=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%280%29%20konstruksi%20tema" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f&text=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%280%29%20konstruksi%20tema%20https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f&description=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%280%29%20konstruksi%20tema" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f&title=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%280%29%20konstruksi%20tema" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%280%29%20konstruksi%20tema&body=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%280%29%20konstruksi%20tema:%20https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-0-konstruksi-tema%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/wordpress">Wordpress</a>
-                  
-                    #<a href="/topik/css">CSS</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/framework">Framework</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/wordpress">Wordpress</a>
+                      
+                        #<a href="/topik/css">CSS</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/framework">Framework</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

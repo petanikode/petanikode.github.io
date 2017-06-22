@@ -776,14 +776,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -796,6 +809,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1203,32 +1217,34 @@ padding: 16px;
                 <p><a href="http://4.bp.blogspot.com/-lQWmaK4Lh_c/Vr7maUTW_cI/AAAAAAAACfs/yrkHWMhC3gY/s1600/membuat%2Btema%2Bwordpress%2Bdari%2Bnol%2B-%2Bpetanikode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-lQWmaK4Lh_c/Vr7maUTW_cI/AAAAAAAACfs/yrkHWMhC3gY/s1600/membuat%2Btema%2Bwordpress%2Bdari%2Bnol%2B-%2Bpetanikode.png" /></a><br />Pada <a href="http://www.petanikode.com/2016/02/membuat-tema-wordpress-dari-nol.html" target="_blank">tutorial sebelumnya</a>, kita telah membuat konstruksi file awal. Ada dua file yang telah dibuat, <code>index.php</code> dan <code>style.css</code>. Sekarang kita fokus pada file <code>index.php</code>. Isinya adalah sebuah HTML percobaan <i>(hello world)</i>. Sekarang kita akan menggantinya.<br /><br />File <code>index.php</code> merupakan file utama tema. File ini yang bertanggung jawab menampilkan halaman utama. Silahkan ganti semua isi file <code>index.php</code> menjadi seperti berikut ini:<br /><br /><script src="https://gist.github.com/ardianta/d3bf48bd9401ff05f742.js"></script><br />Kemudian coba buka lagi website wordpress-nya:<br /><a href="http://2.bp.blogspot.com/-GoTgMg5qGmw/Vr77gh4fymI/AAAAAAAACf8/C1v9iGWKE74/s1600/Hasil%2Bpembuatan%2Bfondasi%2Bhalaman%2Butama.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-GoTgMg5qGmw/Vr77gh4fymI/AAAAAAAACf8/C1v9iGWKE74/s1600/Hasil%2Bpembuatan%2Bfondasi%2Bhalaman%2Butama.png" /></a><br />Kita telah berhasil menampilkan judul website <i>(header)</i>, artikel <i>(post)</i>, dan <i>footer</i>. Artikelnya cuma ada satu, karena saya belum menambahkannya. Bila ada artikel yang lain, maka akan ditampilkan juga di sana. Tampilannya saat ini masih polos <i>(plain)</i> karena kita belum menambahkan kode CSS.<br /><h2>Penjelasan kode</h2>Dalam kode index.php terdapat beberapa fungsi yang kita panggil. Fungsi-fungsi tersebut adalah fungsi wordpress. Rupanya wordpress sudah menyediakan fungsi PHP yang dapat kita pakai. Mari kita bahas maksud fungsi-fungsi tersebut.<br /><blockquote class="tr_bq"><b>Catatan:</b> <b>&hellip;</b> (titik-titik-titik) artinya ada kode lain di sana</blockquote><pre><code class="html php">&nbsp;&lt;!DOCTYPE html&gt;<br />&nbsp;&lt;html &lt;?php <span style="background-color: #b6d7a8;">language_attributes()</span>; ?&gt;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;head&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;meta charset=&rdquo;&lt;?php <span style="background-color: #b6d7a8;">bloginfo(&lsquo;charset&rsquo;)</span>; ?&gt;&rdquo; /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;meta name=&ldquo;viewport&rdquo; content=&ldquo;width=device-width, initial-scale=1&rdquo;/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;&lt;?php <span style="background-color: #b6d7a8;">bloginfo(&lsquo;name&rsquo;)</span>; ?&gt;&lt;/title&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;?php <span style="background-color: #b6d7a8;">wp_head()</span>; ?&gt;<br />&nbsp;&nbsp;&nbsp; &lt;/head&gt;<br />&hellip;</code></pre>Terdapat tiga fungsi PHP yang dipanggil di bagian <i>(head)</i> ini:<br /><ol><li><code>language_attributs()</code> berfungsi untuk mendapatkan atribut bahasa. Pada wordpress yang saya gunakan, fungsi ini mengembalikan nilai en-US.</li><li><code>bloginfo()</code> berfungsi untuk menampilkan informasi tentang website/blog. Pada potongan kode di atas, fungsi ini dipanggil dua kali dengna parameter berbeda. Fungsi ini akan menghasilkan nilai sesuai parameter yang diminta. Sebagai contoh, <code>bloginfo(&lsquo;name&rsquo;)</code> akan menghasilkan judul website yaitu <code>Petani Kode</code>.</li><li><code>wp_head()</code> berfungsi untuk memanggil komponen head yang lainnya, seperti tag meta, link css, kode css, javascript, dsb.</li></ol>Selanjugnya bagian body,<br /><pre><code class="html php">&hellip;<br />&lt;body &lt;?php <span style="background-color: #b6d7a8;">body_class()</span>; ?&gt; &gt;<br /><br />&nbsp;&nbsp;&nbsp; &lt;div class=&rdquo;<span style="background-color: #ffe599;">container</span>&ldquo;&gt;<br />&nbsp; &nbsp; &hellip;<br />&nbsp; &nbsp; &lt;/div&gt;&lt;!&ndash; /container &ndash;&gt;<br /><br />&nbsp;&nbsp;&nbsp; &lt;?php <span style="background-color: #b6d7a8;">wp_footer()</span>; ?&gt;<br />&lt;/body&gt;<br />&hellip;</code></pre>pada potongan kode di atas, terdapat dua fungsi PHP yang dipanggil dan sebuah kelas <i>continter</i>. Fungsi pertama <code>body_class()</code> untuk memanggil kelas-kelas yang dibutuhkan tag body. Kemudian fungsi <code>wp_footer()</code> fungsinya hampir mirip dengan <code>wp_head()</code>, namun <code>wp_footer()</code> disertai <i>navbar</i> (warna hitam di atas) dan dikhususkan untuk memanggil javascript. Karena kepercayaan beberapa programmer, memanggil javascrip di akhir dokumen HTML membuatnya lebih cepat di-download.<br /><pre><code class="html php">&hellip;<br />&lt;header class=&ldquo;site-header&rdquo;&gt;<br />    &lt;h1&gt;&lt;a href=&rdquo;&lt;?php echo <span style="background-color: #b6d7a8;">home_url()</span> ?&gt;&ldquo;&gt;&lt;?php <span style="background-color: #b6d7a8;">bloginfo(&lsquo;name&rsquo;)</span>; ?&gt;&lt;/a&gt;&lt;/h1&gt;<br />    &lt;h5&gt;&lt;?php <span style="background-color: #b6d7a8;">bloginfo(&lsquo;description&rsquo;)</span>; ?&gt;&lt;/h5&gt;<br />&lt;/header&gt;<br />&hellip;</code></pre>Pada potongan kode di atas ada dua fungsi PHP yang di panggil. Fungsi <code>home_url()</code> untuk mendapatkan link <i>home</i>. Kemudian fungsi <code>bloginfo()</code>, sudah dijelaskan sebelumnya.<br /><pre><code class="html php">&hellip; <br />&lt;?php <br />if(<span style="background-color: #b6d7a8;">have_posts()</span>) :<br />  while (<span style="background-color: #b6d7a8;">have_posts()</span>) : <span style="background-color: #b6d7a8;">the_post()</span>; ?&gt;<br /><br />&nbsp;&nbsp;  &lt;article class=&rdquo;<span style="background-color: #ffe599;">post</span>&ldquo;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;  &lt;h2&gt;&lt;a href=&rdquo;&lt;?php <span style="background-color: #b6d7a8;">the_permalink()</span> ?&gt;&ldquo;&gt;&lt;?php <span style="background-color: #b6d7a8;">the_title()</span>; ?&gt;&lt;/a&gt;&lt;/h2&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;?php <span style="background-color: #b6d7a8;">the_content()</span>; ?&gt;<br />&nbsp;&nbsp;  &lt;/article&gt;<br /><br />&nbsp; &lt;?php endwhile;<br /><br />else:<br />&nbsp; echo &ldquo;&lt;p&gt;Tidak ada artikel&lt;/p&gt;&rdquo;;<br />endif;<br />?&gt;<br />&hellip;</code></pre>Potongan kode di atas merupakan potongan kode untuk menampilkan artikel. Ada lima fungsi PHP yang dipanggil di sana.<br /><ol><li><code>have_posts()</code> merupakan fungsi untuk mengecek, apakah ada artikel (post) atau tidak. Fungsi ini mengembalikan nilai trude dan false.</li><li><code>the_post()</code> fungsi untuk membuat iterasi (perulangan);</li><li><code>the_permalink()</code> fungsi untuk mendapatkan link (permanen) artikel;</li><li><code>the_title()</code> fungsi untuk mendapatkan judul artikel; dan</li><li><code>the_content()</code> fungsi untuk mendpatkan isi artikel.</li></ol>Selain lima fungsi tersebut, di bagian artikel ini juga terdapat sebuah kelas post. Kelas ini kita butuhkan untuk memberikan<i> style CSS</i>.<br /><br />Terakhir, bagian footer.<br /><pre><code class="html php">&hellip; <br />&lt;footer class=&rdquo;<span style="background-color: #ffe599;">site-footer</span>&ldquo;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;div class=&rdquo;<span style="background-color: #ffe599;">attrib</span>&ldquo;&gt;Copyright &amp;copy; &lt;?php echo <span style="background-color: #b6d7a8;">date(&lsquo;Y&rsquo;)</span>; ?&gt; &lt;a href=&rdquo;&lt;?php <span style="background-color: #b6d7a8;">echo home_url()</span>; ?&gt;&ldquo;&gt;&lt;?php <span style="background-color: #b6d7a8;">bloginfo(&lsquo;name&rsquo;)</span>; ?&gt;&lt;/a&gt; | Developed by &lt;a href=&ldquo;<a href="http://ardianta.tumblr.com&quot;&gt;Ardianta">http://ardianta.tumblr.com&quot;&gt;Ardianta</a> Pargo&lt;/a&gt;&lt;/div&gt;<br />&lt;/footer&gt;<br />&hellip;</code></pre>Salah satu fungsi yang perlu saya jelaskan pada potongan kode di atas adalah <code>date()</code>, karena fungsi-fungsi yang lainya sudah dijelaskan sebelumnya. Fungsi <code>date()</code> merupakan fungsi PHP untuk mendapatkan tanggal. Parameter <i>Y</i> (<i>y</i> kapital) akan menghasilkan nilai tahun sekarang.<br /><br />Selain fungsi, pada bagian footer ini juga terdapat dua kelas yang akan kita butuhkan nanti pada pembuatan kode CSS.&nbsp; Saya kira cukup sekian tutorial ini. Cukup banyak fungsi yang harus diingat. [bersambung&hellip;]<br /><br />Referensi: <a href="https://codex.wordpress.org/Function_Reference/">https://codex.wordpress.org/Function_Reference/</a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f&t=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f&text=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama%20https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama&body=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama:%20https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f&t=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f&text=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama%20https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f&description=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f&title=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama&body=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama:%20https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/blog">Blog</a>
-                  
-                    #<a href="/topik/wordpress">Wordpress</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/framework">Framework</a>
-                  
-                    #<a href="/topik/php">PHP</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/blog">Blog</a>
+                      
+                        #<a href="/topik/wordpress">Wordpress</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/framework">Framework</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

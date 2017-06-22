@@ -774,14 +774,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -794,6 +807,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1201,26 +1215,28 @@ padding: 16px;
                 <p><a href="http://4.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz4/skLB5P8yBXY/s1600/python-programming.png" imageanchor="1"><img alt="logo python" border="0" src="http://4.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz4/skLB5P8yBXY/s1600/python-programming.png" /></a><br />Fungsi <code>range()</code> merupakan fungsi yang menghasilkan list. Fungsi ini akan menciptakan sebuah list baru dengan rentang nilai tertentu. Contoh:<br /><br /><b>1. list dari 0 sampai 10</b><br /><pre><code class="py">range(10)</code></pre>akan menghasilkan:<br /><pre><code class="py">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre><b>2. list dari 4 sampai 12</b><br /><pre><code class="py">range(4, 12)</code></pre>akan menghasilkan:<br /><pre><code class="py">[4, 5, 6, 7, 8, 9, 10, 11]</code></pre><b>3. list dari 10 sampai 50 dengan interval 5</b><br /><pre><code class="py">range(10,50,5)</code></pre>akan menghasilkan:<br /><pre><code class="py">[10, 15, 20, 25, 30, 35, 40, 45]</code></pre>Dari contoh-contoh di atas, dapat kita pahami arti parameter yang diberikan untuk fungsi ini. Parameter pertama adalah batas bawah; parameter kedua adalah batas atas; dan parameter ketiga adalah nilai interval. <br /><pre>range(<span style="color: #e69138;">batas bawah</span>, <span style="color: #cc0000;">batas atas</span>, <span style="color: #3d85c6;">interval</span>)</pre><h3>Fungsi range di perulangan for</h3>Fungsi <code>range()</code> sering digunakan sebagai <i>counter</i> pada perulangan for. <i>Counter</i> adalah sebuah variabel yang menyimpan hitungan—berapa kali mengulang—perulangan. Contoh:<br /><pre><code class="py">for nomer in range(10):<br />&nbsp;&nbsp;&nbsp; print &ldquo;petani-&rdquo; + str(nomer)</code></pre>akan menghasilkan:<br /><pre>petani-0<br />petani-1<br />petani-2<br />petani-3<br />petani-4<br />petani-5<br />petani-6<br />petani-7<br />petani-8<br />petani-9</pre>Jadi, itulah beberapa manfaat dan cara menggunakan fungsi <code>range()</code>. <i>Range</i> dengan satu parameter akan menghasilkan list dengan rentang parameter itu. Sedangkan <i>range</i> dengan dua parameter akan menghasilkan list dengan rentang dari parameter pertama sampai parameter kedua. Kemudian, <i>range</i> yang menggunakan tiga parameter akan menghasilkan list dengan rentang dari parameter pertama sampai parameter kedua dengan jarak interval parameter ketiga.<br /><br />Bagaimana menurutmu, ada tambahan?</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f&t=Fungsi%20range%28%29%20di%20pemrograman%20python" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f&text=Fungsi%20range%28%29%20di%20pemrograman%20python%20https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Fungsi%20range%28%29%20di%20pemrograman%20python&body=Fungsi%20range%28%29%20di%20pemrograman%20python:%20https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f&t=Fungsi%20range%28%29%20di%20pemrograman%20python" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f&text=Fungsi%20range%28%29%20di%20pemrograman%20python%20https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f&description=Fungsi%20range%28%29%20di%20pemrograman%20python" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f&title=Fungsi%20range%28%29%20di%20pemrograman%20python" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Fungsi%20range%28%29%20di%20pemrograman%20python&body=Fungsi%20range%28%29%20di%20pemrograman%20python:%20https%3a%2f%2fwww.petanikode.com%2ffungsi-range-di-pemrograman-python%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/pemrograman">Pemrograman</a>
-                  
-                    #<a href="/topik/python">Python</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/pemrograman">Pemrograman</a>
+                      
+                        #<a href="/topik/python">Python</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

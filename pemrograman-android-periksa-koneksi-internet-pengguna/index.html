@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,30 +1207,32 @@ padding: 16px;
                 <p><a href="https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png" /></a>Pengembangan aplikasi yang membutuhkan koneksi internet untuk operasinya, perlu melakukan pengecekan terlebih dahulu. Contoh sebuah aplikasi yang menreapkan <i>API Google Maps</i>, membutuhkan koneksi internet untuk menampilkan peta. Akan tetapi, tidak dilakukan pengecekan koneksi internet. Aplikasi pun gagal menampilkan peta dan tampa pesan umpan balik.<br /><br />Pengecekan koneksi internet akan membantu kita membuat umpan balik ke pengguna aplikasi. Misalkan, ketika user ingin menampilkan peta <i>Google Map,</i> periksa terlebih dahulu koneksi internetnya. Kalau ada koneksi, izinkan untuk membuka <i>activity Google Map</i>.<br /><br />Berikut ini fungsi atau <i>method</i> yang dapat digunakan untuk memeriksa koneksi internet ponsel pengguna aplikasi.<br /><pre><code class="java">private boolean adaInternet(){<br />        ConnectivityManager koneksi = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);<br />        return koneksi.getActiveNetworkInfo() != null;<br />}</code></pre>Ketika anda mengetik kode fungsi di atas di Android Studio, maka akan otomatis pustakanya diimpor.<br /><pre><code class="java">import android.content.Context;<br />import android.net.ConnectivityManager;</code></pre>Jangan lupa, tambahkan juga dua baris kode ini ke dalam <i>AndroidManifest.xml</i>:<br /><pre><code class="xml">&lt;uses-permission android:name=&ldquo;android.permission.ACCESS_WIFI_STATE&rdquo; /&gt;<br />&lt;uses-permission android:name=&ldquo;android.permission.ACCESS_NETWORK_STATE&rdquo; /&gt;</code></pre>Setelah itu, untuk menggunkan fungsi yang dibuat tadi, kita dapat memanfaatkan <i>event</i> tombol diklik atau <i>event</i> yang lainnya. Contoh,<br /><pre><code class="java">Button btn = (Button) findViewById(R.id.button);<br /><br />btn.setOnClickListener(new View.OnClickListener() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Override<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public void onClick(View view) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(adaInternet()){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // tampilkan peta<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toast.makeText(getActivity(), &ldquo;Terhubung ke internet&rdquo;, Toast.LENGTH_LONG).show();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }else{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // tampilkan pesan<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toast.makeText(getActivity(), &ldquo;Tidak ada koneksi internet&rdquo;, Toast.LENGTH_LONG).show();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });</code></pre>Hasilnya akan ditampilkan pesan <i>(Toast)</i> &ldquo;Terhubung ke internet&rdquo; bila ponsel terhubung ke interet. Sedangkan kalau tidak, akan ditampilkan pesan &ldquo;Tidak ada koneksi internet&rdquo;.<br /><br />Referensi: <a href="http://stackoverflow.com/a/9570292" target="_blank"><a href="http://stackoverflow.com/a/9570292">http://stackoverflow.com/a/9570292</a></a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f&t=Pemrograman%20Android%3a%20Periksa%20Koneksi%20Internet%20Pengguna" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f&text=Pemrograman%20Android%3a%20Periksa%20Koneksi%20Internet%20Pengguna%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20Android%3a%20Periksa%20Koneksi%20Internet%20Pengguna&body=Pemrograman%20Android%3a%20Periksa%20Koneksi%20Internet%20Pengguna:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f&t=Pemrograman%20Android%3a%20Periksa%20Koneksi%20Internet%20Pengguna" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f&text=Pemrograman%20Android%3a%20Periksa%20Koneksi%20Internet%20Pengguna%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f&description=Pemrograman%20Android%3a%20Periksa%20Koneksi%20Internet%20Pengguna" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f&title=Pemrograman%20Android%3a%20Periksa%20Koneksi%20Internet%20Pengguna" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20Android%3a%20Periksa%20Koneksi%20Internet%20Pengguna&body=Pemrograman%20Android%3a%20Periksa%20Koneksi%20Internet%20Pengguna:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-android-periksa-koneksi-internet-pengguna%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/android-studio">Android Studio</a>
-                  
-                    #<a href="/topik/google-maps">Google Maps</a>
-                  
-                    #<a href="/topik/android">Android</a>
-                  
-                    #<a href="/topik/api">API</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/android-studio">Android Studio</a>
+                      
+                        #<a href="/topik/google-maps">Google Maps</a>
+                      
+                        #<a href="/topik/android">Android</a>
+                      
+                        #<a href="/topik/api">API</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

@@ -775,14 +775,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -795,6 +808,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1202,30 +1216,32 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png" /></a> <br />Beberapa komponen antarmuka grafis (GUI) perlu penjelasan tambahan agar pengguna mengerti fungsinya. Penjelasan tambahan dapat kita buat berupa pesan tips. Pesan tips di antarmuka dikenal dengan istilah <i>tooltips</i>. Pesan tips <i>(tooltips)</i> akan tampil ketika pointer menyentuh <i>(hover)</i> komponen tertentu.<br /><br />Pesan tips dapat kita buat dengan <i>metod</i> atau fungsi <code>set_tooltip_text()</code>. Fungsi ini dipakai pada objek komponen yang akan ditambahkan pesan tips. Perhatikanlah contoh berikut ini:<br /><pre><code class="python"># tooltip.py<br />import gtk<br /><br />class Aplikasi(gtk.Window):<br /><br />&nbsp; def <strong>init</strong>(self):<br />&nbsp; &nbsp; super(Aplikasi, self).<strong>init</strong>()<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.set_title(&ldquo;Tooltips&rdquo;)<br />&nbsp; &nbsp; self.set_size_request(250,200)<br />&nbsp; &nbsp; self.set_position(gtk.WIN_POS_CENTER)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.connect(&ldquo;destroy&rdquo;, gtk.main_quit)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.kontainer = gtk.Fixed()<br />&nbsp; &nbsp; self.add(self.kontainer)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; tombol = gtk.Button(&ldquo;Sebuah Tombol&rdquo;)<br />&nbsp; &nbsp; tombol.set_size_request(100,35)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.kontainer.put(tombol,50,50)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.set_tooltip_text(&ldquo;Ini jendela&rdquo;)<br />&nbsp; &nbsp; tombol.set_tooltip_text(&ldquo;Ini adalah sebuat tombol&rdquo;)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.show_all()<br />&nbsp; &nbsp;<br />Aplikasi()<br />gtk.main()<br /></code></pre>Saat dijalankan, pesan tips akan tampil ketika pointer melewati komponen yang sudah diberikan pesan tips.<br /><a href="http://2.bp.blogspot.com/-kZJZI-WDazQ/VAv6jQopV8I/AAAAAAAAAng/7QOFEdUT2Vo/s1600/Tooltips_016.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-kZJZI-WDazQ/VAv6jQopV8I/AAAAAAAAAng/7QOFEdUT2Vo/s1600/Tooltips_016.png" /></a>  <br /><br />Pesan tips dapat diberikan pada komponen yang dapat disentuh pointer, bukan komponen yang tidak terlihat <i>(background)</i>. Pakailah<i> </i>pesan tips pada komponen yang membutuhkan informasi tambahan agar antarmuka yang kita buat lebih mudah dipahami.<br /><br /><br />Referensi: <a href="http://zetcode.com/gui/pygtk/firststeps/">zetcode.com</a></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f&t=Pemrograman%20PyGTK%3a%20Membuat%20Pesan%20Tips%20%28Tooltips%29" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f&text=Pemrograman%20PyGTK%3a%20Membuat%20Pesan%20Tips%20%28Tooltips%29%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20PyGTK%3a%20Membuat%20Pesan%20Tips%20%28Tooltips%29&body=Pemrograman%20PyGTK%3a%20Membuat%20Pesan%20Tips%20%28Tooltips%29:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f&t=Pemrograman%20PyGTK%3a%20Membuat%20Pesan%20Tips%20%28Tooltips%29" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f&text=Pemrograman%20PyGTK%3a%20Membuat%20Pesan%20Tips%20%28Tooltips%29%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f&description=Pemrograman%20PyGTK%3a%20Membuat%20Pesan%20Tips%20%28Tooltips%29" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f&title=Pemrograman%20PyGTK%3a%20Membuat%20Pesan%20Tips%20%28Tooltips%29" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20PyGTK%3a%20Membuat%20Pesan%20Tips%20%28Tooltips%29&body=Pemrograman%20PyGTK%3a%20Membuat%20Pesan%20Tips%20%28Tooltips%29:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-pygtk-membuat-pesan-tips-tooltips%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/python">Python</a>
-                  
-                    #<a href="/topik/gtk">GTK</a>
-                  
-                    #<a href="/topik/pemrograman-gui">Pemrograman GUI</a>
-                  
-                    #<a href="/topik/pygtk">PyGTK</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/python">Python</a>
+                      
+                        #<a href="/topik/gtk">GTK</a>
+                      
+                        #<a href="/topik/pemrograman-gui">Pemrograman GUI</a>
+                      
+                        #<a href="/topik/pygtk">PyGTK</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

@@ -776,14 +776,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -796,6 +809,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1203,32 +1217,34 @@ padding: 16px;
                 <p><a href="http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png" /></a><br /><i>Marker</i> berfungsi sebagai penanda sebuah lokasi atau titik dalam peta. Pada kesempatan ini, kita akan coba membuat sebuah marker di Google Maps. Anda bisa menggunakan <a href="http://jsbin.com/bejiduz/3/edit" target="_blank">contoh kode sebelumnya</a> untuk uji coba.<br /><h2>Objek <i>Marker</i></h2>Seperti halnya peta, <i>marker</i> juga merupakan sebuah objek yang dapat dibuat dengan kode berikut ini.<br /><pre><code class="js">var marker = new google.maps.Marker({<br />&nbsp;&nbsp;&nbsp; position: new google.maps.LatLng(-8.5830695,116.3202515),<br />&nbsp;&nbsp;&nbsp; map: peta<br />});</code></pre>Pada kode pembuatan marker di atas, terdapat dua properti penting yaitu <code>position</code> dan <code>map</code>. Properti <code>position</code> berfungsi untuk menentukan titik atau posisi <i>marker</i> pada peta. Sementara itu, properti <code>map</code> berfungsi untuk meletakkan <i>marker</i> pada peta. Karena sebelumnya kita sudah membuat objek peta, maka kita tinggal menggunakan saja.<br /><br />Kode Lengkapnya:<br /><a class="jsbin-embed" href="http://jsbin.com/raluzez/7/embed?html">JS Bin on jsbin.com</a><br /><br />Hasil output:<br /><a class="jsbin-embed" href="http://jsbin.com/raluzez/7/embed?output">JS Bin on jsbin.com</a><br /><h2>Animasi <i>Marker</i></h2>Animasi <i>marker</i> dapat dibuat dengan menambahkan properti <code>animation</code>, contoh:<br /><pre><code class="js">var marker=new google.maps.Marker({<br />&nbsp;&nbsp;&nbsp; position: new google.maps.LatLng(-8.5830695,116.3202515),<br />&nbsp;&nbsp;&nbsp; map: peta,<br />&nbsp;&nbsp;&nbsp; animation: google.maps.Animation.BOUNCE<br />});</code></pre>Maka akan menghasilkan:<br /><a class="jsbin-embed" href="http://jsbin.com/raluzez/8/embed">JS Bin on jsbin.com</a><br /><h2>Kostum Ikon</h2>Kita bisa mengganti ikon bawaan <i>marker</i> sesui dengan selera kita. Gunakan properti <code>icon</code> dengan nilai alamat URL gambar ikon. Contoh:<br /><pre><code class="js">var marker=new google.maps.Marker({<br />&nbsp;&nbsp;&nbsp; position: new google.maps.LatLng(-8.623592, 116.222123),<br />&nbsp;&nbsp;&nbsp; map: peta,<br />&nbsp;&nbsp;&nbsp; icon: &ldquo;<a href="http://www.petanikode.com/favicon.ico&quot;">http://www.petanikode.com/favicon.ico&quot;</a><br />});</code></pre>Format ikon tidak harus <i>&rsquo;.ico&rsquo;</i>, format gambar seperti <i>jpg</i>, <i>png</i>, dan <i>gif</i> juga diterima. Kode diatas akan menghasilkan output:<br /><a class="jsbin-embed" href="http://jsbin.com/raluzez/9/embed">JS Bin on jsbin.com</a><br /><h2>Taruh Marker ketika Peta Diklik</h2>Bagaimana kalau, <i>marker</i> dibuat ketika peta diklik? Hal ini dapat dilakukan dengan menambahkan <i>event listerner</i> pada peta. Kemudian memanggil fungsi pembuat <i>marker</i>. Sebelumnya kita buat dulu fungsi pembuat <i>marker</i> bernama <code>taruhMarker()</code>.<br /><pre><code class="js">function taruhMarker(peta, posisiTitik){<br />&nbsp;&nbsp;&nbsp; // membuat Marker<br />&nbsp;&nbsp;&nbsp; var marker = new google.maps.Marker({<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: posisiTitik,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map: peta<br />&nbsp;&nbsp;&nbsp; });<br />}</code></pre>Letakkan fungsi <code>taruhMarker()</code> di atas fungsi <code>initialize()</code>. Kemudian tambahkan event listerner pada fungsi <code>initialize()</code> atau persiapan peta.<br /><pre><code class="js">google.maps.event.addListener(peta, &lsquo;click&rsquo;, function(event) {<br />&nbsp;&nbsp;&nbsp; taruhMarker(this, event.latLng);<br />});</code></pre>Kode lengkap dan hasil output:<br /><a class="jsbin-embed" href="http://jsbin.com/raluzez/12/embed?html,output">JS Bin on jsbin.com</a><br /><h2>Taruh Hanya Satu Marker</h2>Hasil output di atas menampilkan lebih dari satu <i>marker</i>. Setiap kali peta diklik, <i>marker</i> akan senantiasa bertambah. Agar hanya ada satu marker saja yang ditaruh di peta, maka kita perlu membuatkan pengecekan kondisi (apakah sudah ada <i>marker</i> atau tidak?) pada fungsi <code>taruhMarker()</code>. Sebelumnya, buatlah objek atau variabel <i>marker</i> menjadi global agar dapat dicek.<br /><pre><code class="js">var marker;<br />function taruhMarker(peta, posisiTitik){<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; if( marker ){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // pindahkan marker<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; marker.setPosition(posisiTitik);<br />&nbsp;&nbsp;&nbsp; } else {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // buat marker baru<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; marker = new google.maps.Marker({<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: posisiTitik,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; map: peta<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; <br />}</code></pre>Kode lengkap dan demo hasil:<br /><a class="jsbin-embed" href="http://jsbin.com/raluzez/14/embed?html,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.36.9"></script><br /><h2>Penutup</h2>Nah!, sekian dulu tutorial ini. Terima kasih sudah membaca. Selemat menunaikan ibadah puasa.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f&t=Tutorial%20Google%20Maps%20API%20-%20Pembuatan%20Marker%20untuk%20Menandai%20Lokasi" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f&text=Tutorial%20Google%20Maps%20API%20-%20Pembuatan%20Marker%20untuk%20Menandai%20Lokasi%20https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Tutorial%20Google%20Maps%20API%20-%20Pembuatan%20Marker%20untuk%20Menandai%20Lokasi&body=Tutorial%20Google%20Maps%20API%20-%20Pembuatan%20Marker%20untuk%20Menandai%20Lokasi:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f&t=Tutorial%20Google%20Maps%20API%20-%20Pembuatan%20Marker%20untuk%20Menandai%20Lokasi" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f&text=Tutorial%20Google%20Maps%20API%20-%20Pembuatan%20Marker%20untuk%20Menandai%20Lokasi%20https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f&description=Tutorial%20Google%20Maps%20API%20-%20Pembuatan%20Marker%20untuk%20Menandai%20Lokasi" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f&title=Tutorial%20Google%20Maps%20API%20-%20Pembuatan%20Marker%20untuk%20Menandai%20Lokasi" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Tutorial%20Google%20Maps%20API%20-%20Pembuatan%20Marker%20untuk%20Menandai%20Lokasi&body=Tutorial%20Google%20Maps%20API%20-%20Pembuatan%20Marker%20untuk%20Menandai%20Lokasi:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/html">HTML</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
-                    #<a href="/topik/google-maps">Google Maps</a>
-                  
-                    #<a href="/topik/javascript">Javascript</a>
-                  
-                    #<a href="/topik/api">API</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/html">HTML</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                        #<a href="/topik/google-maps">Google Maps</a>
+                      
+                        #<a href="/topik/javascript">Javascript</a>
+                      
+                        #<a href="/topik/api">API</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

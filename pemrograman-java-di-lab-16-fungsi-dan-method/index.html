@@ -766,14 +766,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -786,6 +799,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1193,28 +1207,30 @@ padding: 16px;
                 <p><img alt="Pemrograman Java di Lab Petani Kode" src="https://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png" /><br />Fungsi dan <i>Method</i> merupakan bagian dari program yang bertugas melakukan operasi tertentu. Pada teknik pemrograman prosedural seperti pemrograman Pascal, C, C++, PHP, dsb. Program dibentuk dari kumpulan fungsi atau prosedur yang saling bekerja sama. Fungsi-fungsi tersebut akan dipanggil pada fungsi <code>main</code>. Fungsi <code>main</code> merupakan fungsi utama dalam sebuah program.<br /><a href="http://3.bp.blogspot.com/-LMvdR9YOW-U/VxnanA7PSJI/AAAAAAAACwE/rw65mXoukjoYuJ9yaeo8ershV1L82ixggCK4B/s1600/Program%2BKalkulator%2Bdibuat%2Bdari%2Bsekumpulan%2Bfungsi.png" imageanchor="1"><img alt="Ilustrasi komponen program yang dibangun dari fungsi-fungsi" border="0" src="https://3.bp.blogspot.com/-LMvdR9YOW-U/VxnanA7PSJI/AAAAAAAACwE/rw65mXoukjoYuJ9yaeo8ershV1L82ixggCK4B/s1600/Program%2BKalkulator%2Bdibuat%2Bdari%2Bsekumpulan%2Bfungsi.png" title="" /></a><br />Pada pemrograman Java, Fungsi atau prosedur dikenal dengan method (metode). Java sepenuhnya menerapkan paradigma pemrograman berorientasi objek (PBO), dalam bahasa inggris disebut OOP <i>(Object Oriented Programming)</i>.<br /><br />Pada pertemuan pertama praktikum ini, kita memandang <i>class</i> Java sebagai sebuah program. Di dalam kelas java tedapat atribut dan <i>method</i>. Atribut merupakan sebuah variabel dan <i>method</i> merupakan sebuah fungsi untuk melakukan operasi tertentu terhadap atribut.<br /><h2 id="membuat-fungsi-atau-method"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#membuat-fungsi-atau-method" name="membuat-fungsi-atau-method"></a>Membuat Fungsi atau Method</h2>Fungsi atau method, harus dibuat di dalam <i>class</i>, format dasarnya:<br /><pre><code class="java">static TypeDataKembalian namaMethod(){<br />    // statemen atau kode fungsi<br />}<br /></code></pre>Contoh:<br /><pre><code class="java">static void ucapSalam(){<br />    System.out.println(&ldquo;Assalamualaykum&rdquo;);<br />}<br /></code></pre>Kita menggunakan kata kunci <code>static</code> agar fungsi dapat dipanggil di dalam fungsi <i>main</i>. Tipe data <code>void</code> artinya kosong, fungsi tersebut tidak mengebalikan nilai apa-apa.<br /><h2 id="memanggil-fungsi"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#memanggil-fungsi" name="memanggil-fungsi"></a>Memanggil Fungsi</h2>Fungsi dapat dipanggil dari fungsi <code>main</code> atau dari fungsi yang lain. Contoh pemanggilan fungsi dalam dalam funsgi <code>main</code>.<br /><pre><code class="java">public static void main(String[] args){<br />    ucapSalam();<br />}<br /></code></pre>Akan menghasilkan output:<br /><pre><code>Assalamualaykum</code></pre><h2 id="fungsi-dengan-parameter">Fungsi dengan Parameter</h2>Parameter merupakan variabel yang akan diolah atau diproses di dalam fungsi. Contoh fungsi yang memiliki parameter:<br /><pre><code class="java">static void ucapin(String ucapan){<br />    System.out.println(ucapan);<br />}<br /></code></pre>Pemanggilannya:<br /><pre><code class="java">ucapin(&ldquo;Hallo!&rdquo;);<br />ucapin(&ldquo;Selamat datang di pemrograman Java&rdquo;);<br />ucapin(&ldquo;Saya kira ini bagian terakhir&rdquo;);<br />ucapin(&ldquo;Sampai jumpa lagi, ya!&rdquo;);<br /></code></pre>Hasil outputnya:<br /><pre><code>Hallo!<br />Selamat datang di pemrograman Java<br />Saya kira ini bagian terakhir<br />Sampai jumpa lagi, ya!<br /></code></pre>Tipe data dari parameter harus dituliskan. Untuk parameter yang lebih dari satu, dipisah dengan tanda koma (<code>,</code>). Contoh:<br /><pre><code class="java">static void ucapin(String ucapan, String kepada){<br />    //&hellip;<br />}<br /></code></pre><div id="fungsi-yang-mengembalikan-nilai"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#fungsi-yang-mengembalikan-nilai" name="fungsi-yang-mengembalikan-nilai"></a><a href="http://4.bp.blogspot.com/-3LilJsKfgRM/VxnbVspOUDI/AAAAAAAACwQ/t6RCz2U4PJg8lvvkBmexayJWHOnsaEbwQCK4B/s1600/Contoh%2BFungsi%2Bdi%2BJava.png"><img alt="Contoh Fungsi pada Java" border="0" src="https://4.bp.blogspot.com/-3LilJsKfgRM/VxnbVspOUDI/AAAAAAAACwQ/t6RCz2U4PJg8lvvkBmexayJWHOnsaEbwQCK4B/s1600/Contoh%2BFungsi%2Bdi%2BJava.png" title="" /></a> </div><h2 id="fungsi-yang-mengembalikan-nilai">Fungsi yang Mengembalikan Nilai</h2>Setelah data yang diinputkan melalui parameter diproses, fungsi harus mengembalikan nilai agar dapat diolah di proses selanjutnya. Pengembalian nilai pada fungsi menggunakan kata kunci <code>return</code>. Jangan lupa juga untuk menuliskan tipe data kembaliannya. Contoh fungsi yang mengembalikan nilai:<br /><pre><code class="java">static int luasPersegi(int sisi){<br />    int luas = sisi * sisi;<br />    return luas;<br />}<br /></code></pre>Fungsi <code>luasPersegi()</code> akan mengembalikan nilai berupa <i>integer</i> (<code>int</code>) dari hasil rumus <code>luas</code> (persegi). Contoh pemanggilanya:<br /><pre><code class="java">System.out.println(&ldquo;Luas Persegi dengan panjang sisi 5 adalah &rdquo; + luasPersegi(5));<br /></code></pre>Hasil Output:<br /><pre><code>Luas Persegi dengan panjang sisi 5 adalah 25</code></pre><h2 id="pemanggilan-fungsi-di-fungsi-lain"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#pemanggilan-fungsi-di-fungsi-lain" name="pemanggilan-fungsi-di-fungsi-lain"></a>Pemanggilan Fungsi di Fungsi Lain</h2>Fungsi-fungsi dapat saling memanggil untuk memproses data. Contoh, sebuah program Kalkulator Bangun Ruang memiliki fungsi-fungsi: <code>luasPersegi()</code>, <code>luasPersegiPanjang()</code>, <code>luasSegitiga()</code>, <code>luasBalok()</code>, <code>luasKubus()</code> dsb. Fungsi-fungsi tersebut dapat saling membantu, contoh fungsi <code>luasKubus()</code> membutuhkan fungsi <code>luasPersegi()</code>.<br />Rumus<br /><pre><code>Luas Kubus = 6 * luasPersegi;<br />Luas Persegi = sisi * sisi;<br /></code></pre>Maka Bentuk programnya bisa seperti ini:<br /><pre><code class="java">public class BangunRuang {<br /><br />    public static void main(String[] args) {<br /><br />        int s = 12;<br />        int luas = luasKubus(s);<br /><br />        System.out.println(luas);<br /><br />    }<br /><br />    static int luasPersegi(int sisi){<br />        return sisi * sisi;<br />    }<br /><br />    static int luasKubus(int sisi){<br />        return 6 * luasPersegi(sisi);<br />    }<br /><br />}<br /></code></pre>Hasil output<br /><pre><code>864<br /></code></pre>Itulah beberapa hal seputar fungsi atau method di Java. Jika anda membaca dan mengikuti serial artikel ini dari <a href="http://www.petanikode.com/2015/10/pemrograman-java-di-lab-1-berkenalan.html" target="_blank">awal</a>, saya kira anda sudah menguasai teknik dasar pemrograman java. Sekian dulu, mungkin artikel ini masih punya lanjutan. Ditunggu saja, ya!</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&t=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&text=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method&body=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&t=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&text=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&description=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f&title=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method&body=Pemrograman%20Java%20di%20Lab%20%2816%29%3a%20Fungsi%20dan%20Method:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-java-di-lab-16-fungsi-dan-method%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/lab.java">Lab.java</a>
-                  
-                    #<a href="/topik/pemrograman">Pemrograman</a>
-                  
-                    #<a href="/topik/java">Java</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/lab.java">Lab.java</a>
+                      
+                        #<a href="/topik/pemrograman">Pemrograman</a>
+                      
+                        #<a href="/topik/java">Java</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

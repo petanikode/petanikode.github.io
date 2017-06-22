@@ -776,14 +776,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -796,6 +809,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1203,26 +1217,28 @@ padding: 16px;
                 <p><a href="http://3.bp.blogspot.com/-Hyqh5hLq9jg/V07h3ZpVj_I/AAAAAAAAC2c/phYr-ot51sUoL-7T5gobAFf5XUCg9YvRwCK4B/s1600/Petanikode%2B-%2B116592-thewallpaper.jpg" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-Hyqh5hLq9jg/V07h3ZpVj_I/AAAAAAAAC2c/phYr-ot51sUoL-7T5gobAFf5XUCg9YvRwCK4B/s1600/Petanikode%2B-%2B116592-thewallpaper.jpg" /></a>Fungsi rekursif dalam pemrograman merupakan fungsi yang memanggil dirinya sendiri. Fungsi rekursif sering saya bayangkan seperti perulangan. Karena tingkah lakunya yang mengulang-ulang setiap pemanggilan dirinya. Berikut ini contoh sederhana fungsi rekursif.<br /><br />Python:<br /><pre><code class="python">def fungsiRekursif():<br />&nbsp;&nbsp;&nbsp; print(&ldquo;Hello, ini fungsi rekursif&rdquo;)<br />&nbsp;&nbsp;&nbsp; fungsiRekursif()</code></pre>Javascript:<br /><pre><code class="js">function fungsiRekursif(){<br />&nbsp; &nbsp; console.log(&ldquo;Hello, ini fungsi rekursif&rdquo;);<br />&nbsp; &nbsp; fungsiRekursif(); <br />}</code></pre><br />Dua contoh fungsi di atas akan menampilkan teks <code>&ldquo;Hello, ini fungsi rekursif&rdquo;</code> terus menerus, karena memanggil dirinya sendiri tampa henti. Fungsi rekursif dapat menyelesaikan beberapa persoalan seperti perhitungan bilangan <i>fibbonaci</i> dan faktorial. Berikut ini animasi fungsi rekursif dalam menghitung faktorial dari <code>5</code>.<br /><br /><iframe allowtransparency="true" frameborder="0" height="433" scrolling="no" src="https://web.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fpetanikode%2Fposts%2F507089246141340&amp;width=500" style="border: none; overflow: hidden;" width="500"></iframe><br /><br />Fungsi rekursif untuk faktorial mungkin cukup membingungkan. Animasi di atas dapat kita jabarkan menjadi seperti berikut ini.<br /><pre><code class="python">faktorial(5) = 5 * faktorial(4)<br />faktorial(4) = 4 * faktorial(3)<br />faktorial(3) = 3 * faktorial(2)<br />faktorial(2) = 2 * faktorial(1)<br />faktorial(1) = 1</code></pre>Maka <code>faktorial(5) = 5 * 4 * 3 * 2 * 1</code>, akan menghasilkan <code>120</code>.<br /><br />Cara lain yang lebih mudah memahami fungsi rekursif adalah dengan membayangkan sebuah lukisan seperti berikut ini: (sumber: <a href="http://s.id/3dG" target="_blank"><a href="http://s.id/3dG">http://s.id/3dG</a></a>)<br /><a href="http://3.bp.blogspot.com/-Hyqh5hLq9jg/V07h3ZpVj_I/AAAAAAAAC2c/phYr-ot51sUoL-7T5gobAFf5XUCg9YvRwCK4B/s1600/Petanikode%2B-%2B116592-thewallpaper.jpg" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-Hyqh5hLq9jg/V07h3ZpVj_I/AAAAAAAAC2c/phYr-ot51sUoL-7T5gobAFf5XUCg9YvRwCK4B/s1600/Petanikode%2B-%2B116592-thewallpaper.jpg" /></a><br />Sebuah lukisan dilukis oleh seorang pelukis yang dilukis oleh seorang pelukis yang dilukis oleh seorang pelukis&hellip; (sumber: <a href="http://programmers.stackexchange.com/a/93852" target="_blank"><a href="http://programmers.stackexchange.com/a/93852">http://programmers.stackexchange.com/a/93852</a></a>).<br /><br />Ada satu lagi. Video yang mengulang dirinya sendiri: (sumber: <a href="http://penjee.com/" target="_blank">penjee.com</a>)<br /><div class="separator" style="clear: both; text-align: center;"><a href="https://blog.penjee.com/wp-content/uploads/2015/06/visual-animation-recursion.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blog.penjee.com/wp-content/uploads/2015/06/visual-animation-recursion.gif" /></a></div>Saya kira, dari contoh animasi dan lukisan di atas, kita dapat memahami cara kerja fungsi rekursif. Sekian tulisan pendek ini, kalau ada yang kurang, silahkan ditambahkan.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f&t=Memahami%20Cara%20Kerja%20Fungsi%20Rekursif" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f&text=Memahami%20Cara%20Kerja%20Fungsi%20Rekursif%20https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Memahami%20Cara%20Kerja%20Fungsi%20Rekursif&body=Memahami%20Cara%20Kerja%20Fungsi%20Rekursif:%20https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f&t=Memahami%20Cara%20Kerja%20Fungsi%20Rekursif" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f&text=Memahami%20Cara%20Kerja%20Fungsi%20Rekursif%20https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f&description=Memahami%20Cara%20Kerja%20Fungsi%20Rekursif" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f&title=Memahami%20Cara%20Kerja%20Fungsi%20Rekursif" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Memahami%20Cara%20Kerja%20Fungsi%20Rekursif&body=Memahami%20Cara%20Kerja%20Fungsi%20Rekursif:%20https%3a%2f%2fwww.petanikode.com%2fmemahami-cara-kerja-fungsi-rekursif%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/pemrograman">Pemrograman</a>
-                  
-                    #<a href="/topik/javascript">Javascript</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/pemrograman">Pemrograman</a>
+                      
+                        #<a href="/topik/javascript">Javascript</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

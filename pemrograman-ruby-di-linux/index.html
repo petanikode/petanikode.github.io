@@ -760,14 +760,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -780,6 +793,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1187,24 +1201,26 @@ padding: 16px;
                 <p><i></i><br /><a href="http://4.bp.blogspot.com/-VHddteWl858/VJ-QaaxliaI/AAAAAAAAA7U/YzLS19hJ_1M/s1600/ruby-petani-kode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-VHddteWl858/VJ-QaaxliaI/AAAAAAAAA7U/YzLS19hJ_1M/s1600/ruby-petani-kode.png" /></a>  <br />Salah satu bahasa pemrograman yang tengah populer saat ini adalah Ruby. Ruby merupakan bahasa skrip seperti Python. Artinya, Ruby tak perlu dikompilasi untuk menjalankannya. Ruby dibuat oleh programmer asal Jepang, bernama <span class="st">Yukihiro Matsumoto</span>. Oke, cukup sekian perkenalanya, lebih lengkapnya bisa dilihat di <a href="https://www.ruby-lang.org/id/">ruby-lang.org</a>. Kita langsung saja ke persiapan.<br /><h2>1. Teks Editor</h2>Peralatan pertama yang dibutuhkan untuk memrogram Ruby di Linux adalah Teks Editor. Teks editor digunakan untuk menulis kode. Pada Linux itu sendiri sudah disediakan berbagai macam teks editor. Rekomendasi dari Saya, bisa menggunakan: Gedit, Geany, Atom, Codelite, dsb.<br /><h2>2. Instalasi Ruby di Ubuntu</h2>Gunakan perintah berikut ini untuk menginstal Ruby di Ubuntu:<br /><pre><code class="bash">sudo apt-get install ruby-full</code></pre><a href="http://3.bp.blogspot.com/-0YpxPMKrbvg/VJ7nvwBR2EI/AAAAAAAAA6A/EpUguHjxRto/s1600/instalasi_ruby.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-0YpxPMKrbvg/VJ7nvwBR2EI/AAAAAAAAA6A/EpUguHjxRto/s1600/instalasi_ruby.png" /></a><br /><h2>3. Uji Coba Ruby</h2>Setelah install ruby, saatnya mencobanya. Perintah pertama:<br /><pre><code class="ruby">ruby -e &ldquo;puts &lsquo;Hallo Ruby, salam kenal&rsquo;&rdquo;</code></pre>Argumen <code>-e</code> untuk menyuruh ruby mengerjakah satu baris perintah. Perintah kedua, mengecek versi ruby yang terinstall<br /><pre><code class="bash">ruby -v</code></pre><a href="http://2.bp.blogspot.com/-MWJOKa1jYv0/VJ7oyzXvWUI/AAAAAAAAA6M/N6gQOGsf5uM/s1600/Ruby-hello_world.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-MWJOKa1jYv0/VJ7oyzXvWUI/AAAAAAAAA6M/N6gQOGsf5uM/s1600/Ruby-hello_world.png" /></a><br /><h2>4. Percobaan Ruby Interaktif</h2>Ruby juga memiliki modus interaktif seperti python. Untuk masuk ke modus ini, dapat menggunakan perintah <code>irb</code> (<i>Interactive Ruby</i>). Maka akan mendapatkan tampilan seperti ini:<br /><pre><code class="ruby">irb(main):001:0&gt;</code></pre>Dengan demikian, ruby telah siap menerima perintah anda. Menulis kode di modus interaktif, ibarat berbicara langsung dengan Ruby.<br /><a href="http://3.bp.blogspot.com/-zCx62z9Bdm4/VJ9ZI7BOqWI/AAAAAAAAA6c/uAVPE5dK0B4/s1600/modus_interaktif_ruby.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-zCx62z9Bdm4/VJ9ZI7BOqWI/AAAAAAAAA6c/uAVPE5dK0B4/s1600/modus_interaktif_ruby.png" /></a><br />Setiap perintah yang saya ketik, langsung dijawab oleh ruby. Selain itu, ruby juga pandai berhitung (lihat gambar di atas). Eksperimen selanjutnya, mencoba mencetak teks dengan tanda petik dua dan tanda petik satu<br /><pre><code class="ruby">irb(main):011:0&gt; puts &ldquo; Aku \n Sekarang \n Belajar \n Ruby&rdquo;<br /> Aku <br /> Sekarang <br /> Belajar <br /> Ruby<br />=&gt; nil<br />irb(main):012:0&gt; puts &lsquo; Aku \n Sekarang \n Belajar \n Ruby&rsquo;<br /> Aku \n Sekarang \n Belajar \n Ruby<br />=&gt; nil<br /></code></pre>Coba lagi, main-main dengan ruby<br /><pre><code class="ruby">irb(main):013:0&gt; print &ldquo;Nama saya &ldquo;, nama<br />Nama saya Ardianta=&gt; nil<br />irb(main):014:0&gt; puts &ldquo;Nama saya &ldquo;, nama<br />Nama saya <br />Ardianta<br />=&gt; nil<br />irb(main):015:0&gt; puts &lsquo;Nama saya&rsquo;, nama<br />Nama saya<br />Ardianta<br />=&gt; nil<br />irb(main):016:0&gt; puts &ldquo;Nama saya&rdquo; + nama<br />Nama sayaArdianta<br />=&gt; nil<br /></code><br /></pre>Ada perbedaan antara teks yang dicetak dengan tanda petik satu dan dua. Tanda petik satu akan mencetak teks sesui seperti apa yang diketikkan, sedangkan teks yang dicetak menggunakan tanda petik dua akan diolah terlebih dahulu. Pertahtikan contoh ini:<br /><pre><code class="ruby">irb(main):001:0&gt; mod = &ldquo;asyik dan seru&rdquo;<br />=&gt; &ldquo;asyik dan seru&rdquo;<br />irb(main):002:0&gt; puts &lsquo;belajar ruby itu #{mod}&rsquo;<br />belajar ruby itu #{mod}<br />=&gt; nil<br />irb(main):003:0&gt; puts &ldquo;belajar ruby itu #{mod}&rdquo;<br />belajar ruby itu asyik dan seru<br />=&gt; nil<br /></code></pre><h2>5. Penulisan Skrip Ruby</h2>Ruby modus interaktif sepertinya menyenangkan. Kita dapat mengetahui langsung, galat dari perintah yang ditulis.<br /><pre><code class="ruby">irb(main):017:0&gt; echo &ldquo;AAAAAAAAAAA!&rdquo;<br />NoMethodError: undefined method <code>echo' for main:Object&lt;br /&gt; from (irb):17&lt;br /&gt; from /usr/bin/irb:11:in</code>&lt;main&gt;&lsquo;<br /></code></pre>Tapi apa boleh buat, ruby interaktif digunakan untuk mecoba (uji coba) kode perintah tertentu. Untuk membuat program yang kompleks, kita harus menulis skrip ruby seperti bahasa pemrograman lain. Skrip ini disimpan dengnan ekstensi <samp>.rb</samp>, contoh: <samp>salam_kenal.rb</samp>.<br /><a href="http://4.bp.blogspot.com/-r3u5v_Q6Uw8/VJ9lO0E-pQI/AAAAAAAAA64/9FtSowihXJQ/s1600/salam_kenal.rb%2B-%2BMousepad_029.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-r3u5v_Q6Uw8/VJ9lO0E-pQI/AAAAAAAAA64/9FtSowihXJQ/s1600/salam_kenal.rb%2B-%2BMousepad_029.png" /></a>  <br />Menjalankannya melalui terminal, perintahnya:<br /><pre><code class="bash">ruby nama_file.rb</code></pre><a href="http://4.bp.blogspot.com/-1PXp2bu1VPs/VJ9mfjKtA_I/AAAAAAAAA7E/eHo76TYZNfk/s1600/Menjalankan%2Bscript%2Bruby.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-1PXp2bu1VPs/VJ9mfjKtA_I/AAAAAAAAA7E/eHo76TYZNfk/s1600/Menjalankan%2Bscript%2Bruby.png" /></a><br /><br />Nah! Itulah perkenalan dan persiapan dasar pemrograman Ruby di Linux. Selanjutnya kita bisa pelajari bagaiaman aturan sintak Ruby, Variabel dan tipe data, Struktur Kondisi, dsb.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f&t=Pemrograman%20Ruby%20di%20Linux%3a%20Sebuah%20Perkenalan%20dan%20Persiapan" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f&text=Pemrograman%20Ruby%20di%20Linux%3a%20Sebuah%20Perkenalan%20dan%20Persiapan%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Pemrograman%20Ruby%20di%20Linux%3a%20Sebuah%20Perkenalan%20dan%20Persiapan&body=Pemrograman%20Ruby%20di%20Linux%3a%20Sebuah%20Perkenalan%20dan%20Persiapan:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f&t=Pemrograman%20Ruby%20di%20Linux%3a%20Sebuah%20Perkenalan%20dan%20Persiapan" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f&text=Pemrograman%20Ruby%20di%20Linux%3a%20Sebuah%20Perkenalan%20dan%20Persiapan%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f&description=Pemrograman%20Ruby%20di%20Linux%3a%20Sebuah%20Perkenalan%20dan%20Persiapan" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f&title=Pemrograman%20Ruby%20di%20Linux%3a%20Sebuah%20Perkenalan%20dan%20Persiapan" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20Ruby%20di%20Linux%3a%20Sebuah%20Perkenalan%20dan%20Persiapan&body=Pemrograman%20Ruby%20di%20Linux%3a%20Sebuah%20Perkenalan%20dan%20Persiapan:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-ruby-di-linux%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/ruby">Ruby</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/ruby">Ruby</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

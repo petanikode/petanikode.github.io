@@ -764,14 +764,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -784,6 +797,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1191,26 +1205,28 @@ padding: 16px;
                 <p><p>Sebuah &lsquo;mainan&rsquo; bagus bernama django. Saya sangat tertarik mempelajarinya. Django adalah <i>framework</i> untuk membuat web dengan bahasa pemrograman python. Di tulisan ini saya ingin membahas cara instalasi django di linux. Nantinya, ‒insa&rsquo;allah‒ akan dibahas teknik pengembangan web menggunakan django.</p> <a href="http://3.bp.blogspot.com/-c253GPChUUw/VNxxpZ2CBRI/AAAAAAAABVo/tHENuy_1gdk/s1600/django.png" imageanchor="1" ><img border="0" src="http://3.bp.blogspot.com/-c253GPChUUw/VNxxpZ2CBRI/AAAAAAAABVo/tHENuy_1gdk/s1600/django.png" /></a> <p>Ada beberapa cara melakukan instalasi django. Bisa melalui <samp>pip</samp> atau <samp>easy_install</samp> atau dengan <samp>setuptools</samp>. Di tulisan ini, Saya akan menggunakan <samp>setuptools</samp>. Pastikan Anda sudah menginstal <samp>setuptools</samp>.</p> <pre><code class="bash">sudo apt-get install python-setuptools</code></pre> <h2>Unduh django</h2><p>Django dapat diunduh di situs resminya <a href="https://www.djangoproject.com/download/">djangoproject.com</a>. Django yang dipakai di tulisan ini adalah django versi <samp>1.7.4</samp>. Versi ini merupakan versi mutakhir saat ini. Silahkan unduh django versi <samp>1.7.4</samp> dengan wget.</p> <pre><code class="bash">wget <a href="https://www.djangoproject.com/m/releases/1.7/Django-1.7.4.tar.gz">https://www.djangoproject.com/m/releases/1.7/Django-1.7.4.tar.gz</a></code></pre> <p><a href="http://2.bp.blogspot.com/-VOe9pI9k_wc/VNxoP-0wgsI/AAAAAAAABVM/A8_UVhVccBI/s1600/Unduh%2Bdjango.png" imageanchor="1" ><img border="0" src="http://2.bp.blogspot.com/-VOe9pI9k_wc/VNxoP-0wgsI/AAAAAAAABVM/A8_UVhVccBI/s1600/Unduh%2Bdjango.png" /></a></p> <h2>Instalasi django</h2><p>Setelah paket django diunduh, sekarang ekstrak paket tersebut dengan perintah:</p><pre><code class="bash">tar -zxvf Django-1.7.4.tar.gz</code></pre> <p>Kemudian masuk ke direktori django:</p><pre><code class="bash">cd Django-1.7.4</code></pre> <p>Lakukan instalasi django dengan menjalanakn skrip <samp>setup.py</samp> dengan user <i>root</i> atau <i>sudo</i>.</p><pre><code class="bash">sudo python setup.py install</code></pre> <p><a href="http://2.bp.blogspot.com/-dmlJJV74G78/VNxtmEcwRjI/AAAAAAAABVc/IKsdnLBuc28/s1600/instalasi%2Bdjango.png" imageanchor="1" ><img border="0" src="http://2.bp.blogspot.com/-dmlJJV74G78/VNxtmEcwRjI/AAAAAAAABVc/IKsdnLBuc28/s1600/instalasi%2Bdjango.png" /></a></p> <p>Bila mendapatkan pesan seperti di bawah ini, maka instalasi berhasil.<p><pre><code>Installed /usr/local/lib/python2.7/dist-packages/Django-1.7.4-py2.7.egg<br />Processing dependencies for Django==1.7.4<br />Finished processing dependencies for Django==1.7.4</code></pre> <p>Untuk menguji django yang sudah diinstal, masuk ke <i>shell</i> python. Kemudian ketik <code>import django</code> dan <code>django.VERSION</code>:</p> <pre><code class="bash">&gt;&gt;&gt; import django<br />&gt;&gt;&gt; django.VERSION<br />(1, 7, 4, &lsquo;final&rsquo;, 0)<br />&gt;&gt;&gt;</code></pre></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f&t=Instalasi%20django%20di%20linux" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f&text=Instalasi%20django%20di%20linux%20https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Instalasi%20django%20di%20linux&body=Instalasi%20django%20di%20linux:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f&t=Instalasi%20django%20di%20linux" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f&text=Instalasi%20django%20di%20linux%20https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f&description=Instalasi%20django%20di%20linux" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f&title=Instalasi%20django%20di%20linux" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Instalasi%20django%20di%20linux&body=Instalasi%20django%20di%20linux:%20https%3a%2f%2fwww.petanikode.com%2ftutorial-django-persiapan%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/django">Django</a>
-                  
-                    #<a href="/topik/python">Python</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/django">Django</a>
+                      
+                        #<a href="/topik/python">Python</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

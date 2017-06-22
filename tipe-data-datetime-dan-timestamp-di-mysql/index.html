@@ -760,14 +760,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -780,6 +793,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1187,24 +1201,26 @@ padding: 16px;
                 <p>Beberapa hari yang lalu, saya melakukan downgrade sistem operasi, dari versi <code>15.10</code> ke <code>14.04</code>. Secara otomatis, versi server MySQL-nya juga ikut di-downgrade, dari versi <code>5.6.27</code> ke  versi <code>5.5.47</code>. Pada versi yang lebih lama (<code>5.5.47</code>), tipe data <i>Datetime</i> dengan nilai <i>default current_timestamp</i> tidak diterima. Ketika saya mengimpor dari cadangan database, terjadi error.<br /><pre><code class="bash sh">$ mysql -u root -p &lt; db_27_feb_2016.sql  <br />Enter password:  <br />ERROR 1067 (42000) at line 41: Invalid default value for &lsquo;tanggal&rsquo;</code></pre>Saya pun mencoba menelusuri ke baris 41 dari file SQL cadangan. Ternyata benar, di sana terdapat tipe data <i>datetime</i> dengan nilai <i>default current_timestamp</i>.<br /><a href="http://2.bp.blogspot.com/-l7VxSj8eYiM/Vt08p3RPCoI/AAAAAAAAChw/oRkXWqm08VE/s1600/Tipe%2Bdata%2Bdatetime%2Bdengan%2Bnilai%2Bdefault%2Btimestamp.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-l7VxSj8eYiM/Vt08p3RPCoI/AAAAAAAAChw/oRkXWqm08VE/s1600/Tipe%2Bdata%2Bdatetime%2Bdengan%2Bnilai%2Bdefault%2Btimestamp.png" /></a><br />Berdasarkan tangkapan layar di atas, di sana terdapat kode SQL untuk membuat tabel artikel. Tabel ini merupakan tabel untuk proyek <a href="https://github.com/petanikode/praktikum-blog" target="_blank">praktikum blog</a> yang saya buat dulu. Saya mengganti semua tipe data <i>datetime</i> yang bernilai <i>default current_timestamp</i> ke <i>timestamp</i> dan mencoba mengimpor lagi.<code class="bash"> </code><br /><pre><code class="bash">ERROR 1064 (42000) at line 1866: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &lsquo;STATS_PERSISTENT=0&rsquo; at line 11</code></pre>Fuh!, Error apa lagi ini? Sepertinya, ini masalah perbedaan versi saja. Tapi yang penting, sebagian dari database penting yang saya butuhkan sudah diimpor.<br /><br />Sepertinya ini sebuah kesalahan saya yang tidak memperhatikan tipe data dan nilai <i>default</i> saat membuat database dulu. Jadi, menurut saya, sebaiknya tidak menggunakan nilai <i>default current_timestamp</i> pada tipe data <i>datetime</i> dan tipe data <i>datetime</i> cocoknya digunakan untuk menyimpan data seperti tanggal lahir yang datanya diinputkan secara manual. Sementara untuk data yang tidak diinputkan langsung seperti tanggal log, tanggal terbit artikel, tanggal status, dsb sebaiknya menggunakan tipe data <i>timestamp</i> dengan nilai default <i>current_timestamp</i>.</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f&t=Tipe%20Data%20Datetime%20dan%20Timestamp%20di%20MySQL" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f&text=Tipe%20Data%20Datetime%20dan%20Timestamp%20di%20MySQL%20https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Tipe%20Data%20Datetime%20dan%20Timestamp%20di%20MySQL&body=Tipe%20Data%20Datetime%20dan%20Timestamp%20di%20MySQL:%20https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f&t=Tipe%20Data%20Datetime%20dan%20Timestamp%20di%20MySQL" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f&text=Tipe%20Data%20Datetime%20dan%20Timestamp%20di%20MySQL%20https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f&description=Tipe%20Data%20Datetime%20dan%20Timestamp%20di%20MySQL" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f&title=Tipe%20Data%20Datetime%20dan%20Timestamp%20di%20MySQL" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Tipe%20Data%20Datetime%20dan%20Timestamp%20di%20MySQL&body=Tipe%20Data%20Datetime%20dan%20Timestamp%20di%20MySQL:%20https%3a%2f%2fwww.petanikode.com%2ftipe-data-datetime-dan-timestamp-di-mysql%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/mysql">MySQL</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/mysql">MySQL</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

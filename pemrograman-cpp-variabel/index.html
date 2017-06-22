@@ -758,14 +758,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -778,6 +791,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1185,24 +1199,26 @@ padding: 16px;
                 <p><a href="http://4.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1Q/yapb5BuF8Ts/s1600/cpp.png" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1Q/yapb5BuF8Ts/s1600/cpp.png" /></a>  <br /><h2>Apa itu Variabel dan Tipe Data?</h2><div>Variabel merupakan sebuah nama lokasi penyimpanan di memori. Variabel berperan sebagai wadah, tempat menyimpan data sementara. Data yang tersimpan di dalam variabel memiliki jenis yang beragam. Jenis-jenis data itu, disebut tipe data. Pada umumnya tipe data di permograman C++, dikelompokkan menjadi lima macam, tipe data teks, angka atau bilangan, <i>boolean</i>, <i>pointer</i>, dan <i>void</i>. Tipe data teks terdiri dari <i>string</i> dan <i>char</i>. Sementara tipe data angka terdiri dari<i> int (integer)</i>, <i>float</i>, <i>double</i>, dsb.<br /><h2>Program Variabel</h2></div><div>Setelah memahami apa itu variabel dan tipe data, mari kita mencoba membuat program dengan memanfaatkan variabel. Variabel dalam pemrograman C++ dapat dibuat di dalam fungsi <code>main()</code> atau pun di luar. Penulisan atau pembuatan variabel diawali dengan menulis tipe data terlebih dahulu, kemudian diikuti nama variabelnya </div><h3>1. Kode Program</h3>Buatlah sebuah file baru dengan nama <code>variabel.cpp</code>, kemudian isi dengan kode program berikut ini:<br /><pre><code class="cpp">#include &lt;iostream&gt;<br /><br />using namespace std;<br /><br />int main(){<br />&nbsp;<br />&nbsp; <i><span style="color: #999999;">// deklarasi tipe data variabel</span></i><br />&nbsp; string nama;<br />&nbsp; int umur;<br />&nbsp; char jenisKelamin;<br />&nbsp;<br />&nbsp;<i><span style="color: #666666;"> </span><span style="color: #999999;">// &mdash;&mdash; proses input &mdash;&mdash;</span></i><br />&nbsp; cout &lt;&lt; &ldquo;Siapakah namamu?&rdquo; &lt;&lt; endl;<br />&nbsp; cout &lt;&lt; &ldquo;jawab: &ldquo;;<br />&nbsp; <i><span style="color: #999999;">// menyimpan data ke variabel</span></i><br />&nbsp; getline(cin,nama);<br />&nbsp;<br />&nbsp; cout &lt;&lt; &ldquo;Berapa umurmu?&rdquo; &lt;&lt; endl;<br />&nbsp; cout &lt;&lt; &ldquo;jawab: &ldquo;;<br />&nbsp; <i><span style="color: #999999;">// menyimpan data ke variabel</span></i><br />&nbsp; cin &gt;&gt; umur;<br />&nbsp;<br />&nbsp; cout &lt;&lt; &ldquo;Jenis kelamin [L/P]: &ldquo;;<br />&nbsp; <i><span style="color: #999999;">// menyimpan data ke variabel</span></i><br />&nbsp; cin &gt;&gt; jenisKelamin;<br />&nbsp;<br />&nbsp;<i><span style="color: #666666;"> </span><span style="color: #999999;">// &mdash;&mdash; proses output &mdash;&mdash;</span></i><br />&nbsp; cout &lt;&lt; &ldquo;Salam kenal, &rdquo; &lt;&lt; nama &lt;&lt; &ldquo; Sekarang engkau berusia &ldquo;;<br />&nbsp; cout &lt;&lt; umur &lt;&lt; &ldquo; dan kau berjenis kelamin &ldquo;&lt;&lt; jenisKelamin;<br />&nbsp;<br />&nbsp; return 0;<br /><br />}</code></pre><h3>2. Kompilasi </h3>Kompilasi program dengan perintah ini:<br /><pre><code class="bash">g++ variabel.cpp -o variabel</code></pre>Kemudian eksekusi dengan perintah ini:<br /><pre><code class="bash">./variabel</code></pre>Hasilnya:<br /><a href="http://1.bp.blogspot.com/-CbExTiJpkfg/VAl3P2vll-I/AAAAAAAAAmQ/H-w0OfK8mDQ/s1600/variabel-tipedata-cpp.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-CbExTiJpkfg/VAl3P2vll-I/AAAAAAAAAmQ/H-w0OfK8mDQ/s400/variabel-tipedata-cpp.png" /></a><br /><h2>Kesimpulan</h2><div>Variabel sangat berguna untuk menampung data sementara di memori. Jenis data yang tersimpan pada variabel disebut tipe data. Secara umum, tipe data pada C++ dikelompokkan menjadi lima yaitu: angka (<i>integer</i>, <i>float</i>), teks (<i>char</i>, <i>string</i>), <i>boolean</i>, <i>void</i> dan <i>pointer</i>.</div></p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f&t=Belajar%20Pemrograman%20C%2b%2b%3a%20Variabel%20dan%20Tipe%20Data" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f&text=Belajar%20Pemrograman%20C%2b%2b%3a%20Variabel%20dan%20Tipe%20Data%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Belajar%20Pemrograman%20C%2b%2b%3a%20Variabel%20dan%20Tipe%20Data&body=Belajar%20Pemrograman%20C%2b%2b%3a%20Variabel%20dan%20Tipe%20Data:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f&t=Belajar%20Pemrograman%20C%2b%2b%3a%20Variabel%20dan%20Tipe%20Data" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f&text=Belajar%20Pemrograman%20C%2b%2b%3a%20Variabel%20dan%20Tipe%20Data%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f&description=Belajar%20Pemrograman%20C%2b%2b%3a%20Variabel%20dan%20Tipe%20Data" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f&title=Belajar%20Pemrograman%20C%2b%2b%3a%20Variabel%20dan%20Tipe%20Data" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Belajar%20Pemrograman%20C%2b%2b%3a%20Variabel%20dan%20Tipe%20Data&body=Belajar%20Pemrograman%20C%2b%2b%3a%20Variabel%20dan%20Tipe%20Data:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-cpp-variabel%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/cpp">cpp</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/cpp">cpp</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

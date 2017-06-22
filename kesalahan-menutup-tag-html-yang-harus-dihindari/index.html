@@ -762,14 +762,27 @@ tr:hover {background-color: #fafafa}
 	margin-top: 64px;
 }
 
+.artikel-footer {
+    background: whitesmoke;
+    padding: 16px;
+    font-family: "Open sans";
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/* Share button ------------*/
 ul.share-buttons{
   list-style: none;
   padding: 0;
-  display: inline;
+  margin: 4px 0;
 }
 
 ul.share-buttons li{
   display: inline;
+  margin-right: 4px;
 }
 
 ul.share-buttons .sr-only {
@@ -782,6 +795,7 @@ ul.share-buttons .sr-only {
   width: 1px;
   overflow: hidden;
 }
+/* end share button ----------*/
 
 .pager { margin-top: 64px; }
 
@@ -1189,26 +1203,28 @@ padding: 16px;
                 <p><img alt="enter image description here" src="http://2.bp.blogspot.com/-WYU8YAW-48M/VEDSK4SGFXI/AAAAAAAAAw0/LMPNMvBWtks/s1600/HTML.png" title="" /><br />Pemula HTML sering melakukan kesalahan ini. Mungkin karena tidak terlalu paham dengan struktur dokumen HTML. Sehingga dia tidak tahu cara menutup tag dengan benar. <br /><br /><blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="5" style="background: #FFF; border-radius: 3px; border: 0; box-shadow: 0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width: 658px; padding: 0; width: -webkit-calc(100% - 2px); width: 99.375%; width: calc(100% - 2px);"><div style="padding: 8px;"><div style="background: #F8F8F8; line-height: 0; margin-top: 40px; padding: 50.0% 0; text-align: center; width: 100%;"><div style="background: url(data:image/png; display: block; height: 44px; margin: 0 auto -44px; position: relative; top: -22px; width: 44px;"></div></div><div style="margin: 8px 0 0 0; padding: 0 4px;"><a href="https://instagram.com/p/8p_WN2pZ32/" style="color: black; font-family: Arial,sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none; word-wrap: break-word;" target="_blank">Cara menulis tag #HTML yang benar dan yang salah</a></div><div style="color: #c9c8cd; font-family: Arial,sans-serif; font-size: 14px; line-height: 17px; margin-bottom: 0; margin-top: 8px; overflow: hidden; padding: 8px 0 7px; text-align: center; text-overflow: ellipsis; white-space: nowrap;">A photo posted by Ardianta Pargo (@ardiantapargo) on <time datetime="2015-10-10T11:53:04+00:00" style="font-family: Arial,sans-serif; font-size: 14px; line-height: 17px;">Oct 10, 2015 at 4:53am PDT</time></div></div></blockquote><script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script><br />Pada gambar di atas, terdapat tiga tag yang mengapit kata <i>memasak</i>. Tag <code>&lt;i&gt;</code> untuk membuat teks menjadi miring, tag <code>&lt;b&gt;</code> untuk membuat teks menjadi tebal, dan tag <code>&lt;u&gt;</code> untuk membuat garis bawah pada teks. Bila di baca, susuan tag tersebut akan menjadi <i>ibu memasak ubi</i>:<br /><pre><code class="html">&lt;i&gt;&lt;b&gt;&lt;u&gt;memasak&lt;/u&gt;&lt;/b&gt;&lt;/i&gt;</code></pre>Itulah penulisan yang benar, tag <code>&lt;u&gt;</code> ditutup terlebih dahulu. Kemudian menutup tag <code>&lt;b&gt;</code> dan <code>&lt;/i&gt;</code>. Sedangkan penutupan tag yang salah akan dibaca <i>ibu memasak ibu</i>:<br /><pre><code class="html">&lt;i&gt;&lt;b&gt;&lt;u&gt;memasak&lt;/i&gt;&lt;/b&gt;&lt;/u&gt;</code></pre><h2>Tips agar tidak salah menulis</h2>Segeralah tutup tag yang baru saja dibuat agar nanti tidak lupa menutupnya. Isi atau kontent yang di dalam tag bisa diisi belakangan.<br /><br />Itu saja, ada yang mau menambahkan?</p>
 
                 <div class="post-footer">
-                <div>Bagikan:
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f&t=Kesalahan%20menutup%20tag%20HTML%20yang%20harus%20dihindari" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f&text=Kesalahan%20menutup%20tag%20HTML%20yang%20harus%20dihindari%20https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Kesalahan%20menutup%20tag%20HTML%20yang%20harus%20dihindari&body=Kesalahan%20menutup%20tag%20HTML%20yang%20harus%20dihindari:%20https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f&t=Kesalahan%20menutup%20tag%20HTML%20yang%20harus%20dihindari" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f&text=Kesalahan%20menutup%20tag%20HTML%20yang%20harus%20dihindari%20https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f&description=Kesalahan%20menutup%20tag%20HTML%20yang%20harus%20dihindari" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f&title=Kesalahan%20menutup%20tag%20HTML%20yang%20harus%20dihindari" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Kesalahan%20menutup%20tag%20HTML%20yang%20harus%20dihindari&body=Kesalahan%20menutup%20tag%20HTML%20yang%20harus%20dihindari:%20https%3a%2f%2fwww.petanikode.com%2fkesalahan-menutup-tag-html-yang-harus-dihindari%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
-</div>
 
-                <p>Topik:
-                  
-                    #<a href="/topik/html">HTML</a>
-                  
-                    #<a href="/topik/pemrograman-web">Pemrograman Web</a>
-                  
 
-                </p>
+                    <div>Topik:
+                      
+                        #<a href="/topik/html">HTML</a>
+                      
+                        #<a href="/topik/pemrograman-web">Pemrograman Web</a>
+                      
+                    </div>
+                    </div>
+
                 
-<hr>
 <p><b>Artikel Terkait:</b></p>
 
 

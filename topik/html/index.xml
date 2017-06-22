@@ -10,6 +10,193 @@
     <atom:link href="https://www.petanikode.com/topik/html/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Mengenal HTML5 Vibration API untuk Membuat Getaran di HP</title>
+      <link>https://www.petanikode.com/tutorial-html-vibrations/</link>
+      <pubDate>Thu, 22 Jun 2017 06:35:29 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-html-vibrations/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/html5-vibration-api.png&#34; alt=&#34;HTML5 Vibration API&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Artikel kali ini terinspirasi dari pembicaraan teman-teman di &lt;a href=&#34;https://web.facebook.com/groups/PojokProgrammer/permalink/1452404194817147/&#34;&gt;grup Pojok Programmer&lt;/a&gt;
+tentang link download palsu yang mengarahkan ke link iklan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/diskusi-getaran.png&#34; alt=&#34;Diskusi getaran di web&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebagian halaman web menggunakan getaran untuk mengambil perhatian dari pengunjungnya,
+terutama halaman web yang penuh dengan iklan.&lt;/p&gt;
+
+&lt;p&gt;Membaca komentar-komentar mereka membuat saya teratrik ingin tahu
+cara membuat getaran di web.&lt;/p&gt;
+
+&lt;p&gt;Langsunga saja saya menuju ke Google dan memasukan kata kunci &lt;em&gt;&amp;ldquo;js vibrate phone&amp;rdquo;&lt;/em&gt;
+dan hasilnya ternya menggunakan &lt;strong&gt;HTML5 Vibration API&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/googling-js-vibrate.png&#34; alt=&#34;Googling tentang HTML5 vibration API&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-itu-html5-vibration-api&#34;&gt;Apa itu HTML5 Vibration API?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;HTML5 Vibration API&lt;/strong&gt; adalah API &lt;em&gt;(Application Programming Interface)&lt;/em&gt; untuk membuat
+getaran pada web yang bertujuan memberikan umpan balik terhadap aksi tertentu.&lt;/p&gt;
+
+&lt;p&gt;Menurut penjelasan MDN &lt;em&gt;(Mozilla Developer Network)&lt;/em&gt; getaran itu sendiri
+didefinisikan sebagai pola dari gelombang pulsa on-off yang memiliki panjang
+dalam bentuk integer. Panjang gelombang tersebut menentukan lama getarananya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/contoh-gelombang-pulsa.png&#34; alt=&#34;Contoh Gelombang Pulsa Getearan&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada contoh gelombang pulsa di atas, getaran akan mulai &lt;em&gt;(on)&lt;/em&gt; selama &lt;code&gt;200 ms&lt;/code&gt; (milidetik).
+Setelah itu diam selama &lt;code&gt;250 ms&lt;/code&gt;, kemudian lanjut lagi selama &lt;code&gt;1000 ms&lt;/code&gt; atau &lt;code&gt;1&lt;/code&gt; detik.&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-menggunakan-html5-vibration-api&#34;&gt;Cara Menggunakan HTML5 Vibration API&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;HTML5 Vibration API&lt;/strong&gt; menyediakan fungsi &lt;code&gt;vibrate()&lt;/code&gt; untuk membuat getaran.
+Bentuk sintaksnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(pola);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nilai paramter &lt;code&gt;pola&lt;/code&gt; dapat kita isi dengan nilai panjang getarannya.&lt;/p&gt;
+
+&lt;p&gt;Misalnya kita ingin membuat getaran selama &lt;code&gt;1&lt;/code&gt; detik:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(1000);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu bagaiaman kalau membuat lebih dari satu kali getaran?&lt;/p&gt;
+
+&lt;p&gt;Gampang! kita tinggal membuat pola dari pulsa getarannya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate([1000, 500, 1000]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Artinya gelombang akan dimulai selama &lt;code&gt;1000 ms&lt;/code&gt; (1 detik), kemudian berhenti
+selama &lt;code&gt;500 ms&lt;/code&gt;. Setelah itu bergetar lagi selama &lt;code&gt;1000 ms&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untuk menghentikan getaran, kita bisa memberikan nilai nol (&lt;code&gt;0&lt;/code&gt;) kepada
+fungsi &lt;code&gt;vibrate()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oke paham! Cukup sudah teorinya.&lt;/p&gt;
+
+&lt;h3 id=&#34;mari-kita-bereksperimen&#34;&gt;Mari kita bereksperimen&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;Silahkan buat file HTML baru, dan simpan di direktori &lt;code&gt;htdocs&lt;/code&gt; atau &lt;code&gt;/var/www/html&lt;/code&gt;.
+Kemudian isi dengan kode ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+	&amp;lt;title&amp;gt;Tutorial HTML5 Vibration API&amp;lt;/title&amp;gt;
+
+	&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+
+	&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+        // fungsi ini akan kita panggil saat tombol diklik
+		function buatGetaran(pola){
+			var getaran = window.navigator.vibrate(pola);
+
+            // tampilkan hasilnya ke console
+            // kalau true berarti browser mendukung untuk membuat getaran
+            // tapi kalau false browser tidak mendukung
+			console.log(getaran);
+		}
+	&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+	&amp;lt;p&amp;gt;Coba klik tombol berikut:&amp;lt;/p&amp;gt;
+	&amp;lt;button onclick=&amp;quot;buatGetaran(1000)&amp;quot;&amp;gt;Bergetar!!!&amp;lt;/button&amp;gt;
+
+    &amp;lt;button onclick=&amp;quot;buatGetaran([1000, 500, 1000])&amp;quot;&amp;gt;Bergetar 2x!!!&amp;lt;/button&amp;gt;
+
+    &amp;lt;button onclick=&amp;quot;buatGetaran([200, 500, 300, 100, 400])&amp;quot;&amp;gt;Bergetar 3x!!!&amp;lt;/button&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kenapa harus simpan di &lt;code&gt;htdocs&lt;/code&gt;, kan gak ada PHP-nya?&lt;/p&gt;
+
+&lt;p&gt;Karena nanti agar bisa kita coba melalui HP.&lt;/p&gt;
+
+&lt;h3 id=&#34;percobaan-di-browser-desktop&#34;&gt;Percobaan di browser Desktop&lt;/h3&gt;
+
+&lt;p&gt;Sebelum mencoba di HP, kita coba dulu di browser desktop (menggunakan google chrome).&lt;/p&gt;
+
+&lt;p&gt;Jangan lupa sambil membuka &lt;em&gt;console&lt;/em&gt; javascript pada &lt;a href=&#34;https://www.petanikode.com/manfaat-inspect-element-bagi-web-developer/&#34;&gt;inspect element&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/percobaan-getaran-desktop.png&#34; alt=&#34;Percobaan hasil output getaran&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasilnya &lt;code&gt;true&lt;/code&gt;, berarti browser kita mendukung untuk membuat
+getaran.&lt;/p&gt;
+
+&lt;p&gt;Tapi kok tidak terjadi getaran?&lt;/p&gt;
+
+&lt;p&gt;Ya iya lah, perangkat keras &lt;em&gt;(hardware)&lt;/em&gt; komputer atau laptopnya tidak mendukung.&lt;/p&gt;
+
+&lt;h3 id=&#34;percobaan-di-handphone&#34;&gt;Percobaan di &lt;em&gt;Handphone&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Percobaan saya lakukan dengan &lt;em&gt;tethering&lt;/em&gt; WiFi dari HP ke Laptop, bisa juga sebaliknya.&lt;/p&gt;
+
+&lt;p&gt;Laptop sebagai server web, dan HP sebagai client atau pengunjung web.
+Berarti kita harus tahu IP dari laptopnya, barulah kita buka melalui browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/percobaan-getaran-di-hp.jpg&#34; alt=&#34;Percobaan Getaran di HP&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba klik tombolnya!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Live Demo&lt;/strong&gt; bisa dicek di link ini: &lt;a href=&#34;https://goo.gl/8SPWt8&#34;&gt;https://goo.gl/8SPWt8&lt;/a&gt;
+atau scan QR Code berikut:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://chart.googleapis.com/chart?cht=qr&amp;amp;chs=150x150&amp;amp;choe=UTF-8&amp;amp;chld=H&amp;amp;chl=https://goo.gl/8SPWt8&#34; alt=&#34;QR Code Live Demo&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Apakah terjadi getaran atau tidak?&lt;/p&gt;
+
+&lt;p&gt;Kalau tidak, berarti browser-nya tidak mendukung. Coba gunakan Google Chrome
+vaersi terbaru.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini daftar versi browser yang mendukung:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/daftar-versi-browser-yang-mendukung-getaran.png&#34; alt=&#34;Daftar versi browser yang mendukung getaran&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sumber: &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate#Browser_compatibility&#34;&gt;developer.mozilla.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ide-eksperimen-selanjutnya&#34;&gt;Ide Eksperimen Selanjutnya&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Buat getaran kalau gagal login.&lt;/li&gt;
+&lt;li&gt;Integrasikan dengan GPS, misal buat getaran saat berada di lokasi tertentu.&lt;/li&gt;
+&lt;li&gt;Buat getaran berdasarkan gelombang audio.&lt;/li&gt;
+&lt;li&gt;Terapkan di Game, misal buat getaran saat terjadi benturan dalam Game.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ada ide lagi?&lt;/p&gt;
+
+&lt;p&gt;Tambahkan di komentar!&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Bagaimana?&lt;/p&gt;
+
+&lt;p&gt;Menyenangkan bukan bermain HTML5 Vibration API&amp;hellip;:smile:
+Selanjutnya silahkan lakukan eksperimen sendiri yang lebih kreatif dan keren.&lt;/p&gt;
+
+&lt;p&gt;Terima kasih sudah menyimak artikel ini sampai akhir.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mozilla Developer Network &amp;mdash; &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API&#34;&gt;Vibration API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;W3.org &amp;mdash; &lt;a href=&#34;https://www.w3.org/TR/vibration/&#34;&gt;Vibration API (Second Edition)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Menggambar Objek dengan Perulangan dan Fungsi Random di HTML5 Canvas</title>
       <link>https://www.petanikode.com/tutorial-html-canvas-random/</link>
       <pubDate>Tue, 20 Jun 2017 04:03:51 +0800</pubDate>
@@ -2187,16 +2374,6 @@ CSS Tema Data Tabels untuk Bootstrap.&lt;/p&gt;
       
       <guid>https://www.petanikode.com/tutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;i&gt;Marker&lt;/i&gt; berfungsi sebagai penanda sebuah lokasi atau titik dalam peta. Pada kesempatan ini, kita akan coba membuat sebuah marker di Google Maps. Anda bisa menggunakan &lt;a href=&#34;http://jsbin.com/bejiduz/3/edit&#34; target=&#34;_blank&#34;&gt;contoh kode sebelumnya&lt;/a&gt; untuk uji coba.&lt;br /&gt;&lt;h2&gt;Objek &lt;i&gt;Marker&lt;/i&gt;&lt;/h2&gt;Seperti halnya peta, &lt;i&gt;marker&lt;/i&gt; juga merupakan sebuah objek yang dapat dibuat dengan kode berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker = new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: new google.maps.LatLng(-8.5830695,116.3202515),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Pada kode pembuatan marker di atas, terdapat dua properti penting yaitu &lt;code&gt;position&lt;/code&gt; dan &lt;code&gt;map&lt;/code&gt;. Properti &lt;code&gt;position&lt;/code&gt; berfungsi untuk menentukan titik atau posisi &lt;i&gt;marker&lt;/i&gt; pada peta. Sementara itu, properti &lt;code&gt;map&lt;/code&gt; berfungsi untuk meletakkan &lt;i&gt;marker&lt;/i&gt; pada peta. Karena sebelumnya kita sudah membuat objek peta, maka kita tinggal menggunakan saja.&lt;br /&gt;&lt;br /&gt;Kode Lengkapnya:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/7/embed?html&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Hasil output:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/7/embed?output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Animasi &lt;i&gt;Marker&lt;/i&gt;&lt;/h2&gt;Animasi &lt;i&gt;marker&lt;/i&gt; dapat dibuat dengan menambahkan properti &lt;code&gt;animation&lt;/code&gt;, contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker=new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: new google.maps.LatLng(-8.5830695,116.3202515),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; animation: google.maps.Animation.BOUNCE&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Maka akan menghasilkan:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/8/embed&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kostum Ikon&lt;/h2&gt;Kita bisa mengganti ikon bawaan &lt;i&gt;marker&lt;/i&gt; sesui dengan selera kita. Gunakan properti &lt;code&gt;icon&lt;/code&gt; dengan nilai alamat URL gambar ikon. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker=new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: new google.maps.LatLng(-8.623592, 116.222123),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; icon: &amp;ldquo;&lt;a href=&#34;http://www.petanikode.com/favicon.ico&amp;quot;&#34;&gt;http://www.petanikode.com/favicon.ico&amp;quot;&lt;/a&gt;&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Format ikon tidak harus &lt;i&gt;&amp;rsquo;.ico&amp;rsquo;&lt;/i&gt;, format gambar seperti &lt;i&gt;jpg&lt;/i&gt;, &lt;i&gt;png&lt;/i&gt;, dan &lt;i&gt;gif&lt;/i&gt; juga diterima. Kode diatas akan menghasilkan output:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/9/embed&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Taruh Marker ketika Peta Diklik&lt;/h2&gt;Bagaimana kalau, &lt;i&gt;marker&lt;/i&gt; dibuat ketika peta diklik? Hal ini dapat dilakukan dengan menambahkan &lt;i&gt;event listerner&lt;/i&gt; pada peta. Kemudian memanggil fungsi pembuat &lt;i&gt;marker&lt;/i&gt;. Sebelumnya kita buat dulu fungsi pembuat &lt;i&gt;marker&lt;/i&gt; bernama &lt;code&gt;taruhMarker()&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;function taruhMarker(peta, posisiTitik){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // membuat Marker&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; var marker = new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: posisiTitik,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; });&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Letakkan fungsi &lt;code&gt;taruhMarker()&lt;/code&gt; di atas fungsi &lt;code&gt;initialize()&lt;/code&gt;. Kemudian tambahkan event listerner pada fungsi &lt;code&gt;initialize()&lt;/code&gt; atau persiapan peta.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;google.maps.event.addListener(peta, &amp;lsquo;click&amp;rsquo;, function(event) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; taruhMarker(this, event.latLng);&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Kode lengkap dan hasil output:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/12/embed?html,output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Taruh Hanya Satu Marker&lt;/h2&gt;Hasil output di atas menampilkan lebih dari satu &lt;i&gt;marker&lt;/i&gt;. Setiap kali peta diklik, &lt;i&gt;marker&lt;/i&gt; akan senantiasa bertambah. Agar hanya ada satu marker saja yang ditaruh di peta, maka kita perlu membuatkan pengecekan kondisi (apakah sudah ada &lt;i&gt;marker&lt;/i&gt; atau tidak?) pada fungsi &lt;code&gt;taruhMarker()&lt;/code&gt;. Sebelumnya, buatlah objek atau variabel &lt;i&gt;marker&lt;/i&gt; menjadi global agar dapat dicek.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker;&lt;br /&gt;function taruhMarker(peta, posisiTitik){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if( marker ){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // pindahkan marker&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; marker.setPosition(posisiTitik);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; } else {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // buat marker baru&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; marker = new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: posisiTitik,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; });&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Kode lengkap dan demo hasil:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/14/embed?html,output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?3.36.9&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;h2&gt;Penutup&lt;/h2&gt;Nah!, sekian dulu tutorial ini. Terima kasih sudah membaca. Selemat menunaikan ibadah puasa.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Google Maps API - Menampilkan Peta di dalam Web</title>
-      <link>https://www.petanikode.com/tutorial-google-maps-api---menampilkan-peta-di-dalam-web/</link>
-      <pubDate>Fri, 24 Jun 2016 09:37:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-google-maps-api---menampilkan-peta-di-dalam-web/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Di tengah-tengah kesibukan mengerjakan proyek, akhirnya saya menyempatkan diri untuk mem-posting sesuatu. Pada kesempatan ini kita akan mempelajari Google Maps API. Karena kebetulan, pada proyek yang sedang saya kerjakan menggunakan Google Map. Saya akan menggunakan referensi yang sahih dan dapat dipercaya, &lt;a href=&#34;http://www.w3schools.com/googleapi/default.asp&#34; target=&#34;_blank&#34;&gt;W3Schools&lt;/a&gt; dan &lt;a href=&#34;https://developers.google.com/maps/&#34; target=&#34;_blank&#34;&gt;Google Developer&lt;/a&gt;. Baiklah mari kita mulai.&lt;br /&gt;&lt;h2&gt;Apa itu Google Maps API?&lt;/h2&gt;Google Maps API &lt;i&gt;(Application Programming Interface)&lt;/i&gt; merupakan sebuah API yang disediakan oleh Google untuk menggunakan peta Google &lt;i&gt;(Google Map)&lt;/i&gt; dalam aplikasi yang kita bangun. Google Maps API memungkinkan kita memodifikasi peta dan informasi yang ada di dalamnya.&lt;br /&gt;&lt;br /&gt;Google Maps API dikelompokkan berdasarkan platform: Web, Android, dan iOS. Pada kesempatan ini kita akan menggunakan Google Maps API untuk Web. Sedangkan untuk Android dan iOS, mungkin (insa&amp;rsquo;allah) saya akan bahas nanti.&lt;br /&gt;&lt;h2&gt;Menampilkan Peta&lt;/h2&gt;Ada beberapa langkah yang dilakukan untuk menampilkan peta di dalam Web:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Menyisipkan &lt;i&gt;library&lt;/i&gt; API Google Map&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;script src=&amp;ldquo;&lt;a href=&#34;http://maps.googleapis.com/maps/api/js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#34;&gt;http://maps.googleapis.com/maps/api/js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Membuat sebuah fungsi &lt;code&gt;initialize()&lt;/code&gt; untuk mempersiapkan peta.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;function initialize() { &amp;hellip; }&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Membuat properti peta dalam bentuk objek&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var propertiPeta = {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; center:new google.maps.LatLng(-8.5830695,116.3202515),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; zoom:9,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mapTypeId:google.maps.MapTypeId.ROADMAP&lt;br /&gt;};&lt;/code&gt;&lt;/pre&gt;Letakkan kode di atas dalam fungsi &lt;code&gt;initialize()&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Membuat objek Peta&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var peta = new google.maps.Map(document.getElementById(&amp;ldquo;googleMap&amp;rdquo;), propertiPeta);&lt;/code&gt;&lt;/pre&gt;Letakkan kode di atas dalam fungsi &lt;code&gt;initialize()&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Menampilkan peta ketika jendela &lt;i&gt;(window)&lt;/i&gt; di-load&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;google.maps.event.addDomListener(window, &amp;lsquo;load&amp;rsquo;, initialize);&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;li&gt;Membuat tag &lt;i&gt;div&lt;/i&gt; sebagai kontainer untuk menampilkan peta&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;div id=&amp;ldquo;googleMap&amp;rdquo; style=&amp;ldquo;width:100%;height:380px;&amp;rdquo;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;/ol&gt;Kode Lengkapnya dan demo hasil:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/bejiduz/embed?html,output&#34;&gt;Tutorial Google Map - Petani Kode on jsbin.com&lt;/a&gt;&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?3.35.13&#34;&gt;&lt;/script&gt;&lt;br /&gt;Dalam pembuatan properti peta, kita bisa menentukan posisi peta atau titik koordinat mula-mula, skala &lt;i&gt;(zoom)&lt;/i&gt;, tipe peta, dsb. Sementara untuk tag &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; untuk menampilkan peta, atribut &lt;i&gt;id&lt;/i&gt;-nya harus sesui dengan &lt;i&gt;id&lt;/i&gt; yang dipilih saat pembuatan peta (nomer 4).&lt;br /&gt;&lt;br /&gt;Ada baiknya juga kita perhatikan level zoom yang digunakan. Berdasarkan dokumentasi di &lt;a href=&#34;https://developers.google.com/maps/documentation/javascript/tutorial#zoom-levels&#34; target=&#34;_blank&#34;&gt;Google Developer&lt;/a&gt;, berikut ini nilai level zoom dan kegunaanya.&lt;br /&gt;&lt;ul&gt;&lt;li&gt;0: Bumi (smua peta ditampilkan)&lt;/li&gt;&lt;li&gt;1: Peta Dunia&lt;/li&gt;&lt;li&gt;5: Landmass/continent&lt;/li&gt;&lt;li&gt;10: Kota&lt;/li&gt;&lt;li&gt;15: Jalan&lt;/li&gt;&lt;li&gt;20: Bangunan &lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;Penutup&lt;/h2&gt;Sekian tutorial singkat Google Maps API ini, semoga bermanfaat dan mudah-mudahan saya diberikan kesehatan untuk melanjutkan tutorial ini.&lt;/p&gt;
 </description>
     </item>
     

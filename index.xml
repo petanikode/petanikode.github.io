@@ -7,8 +7,195 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 21 Jun 2017 16:52:41 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 22 Jun 2017 06:35:29 +0800</lastBuildDate>
     <atom:link href="https://www.petanikode.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mengenal HTML5 Vibration API untuk Membuat Getaran di HP</title>
+      <link>https://www.petanikode.com/tutorial-html-vibrations/</link>
+      <pubDate>Thu, 22 Jun 2017 06:35:29 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-html-vibrations/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/html5-vibration-api.png&#34; alt=&#34;HTML5 Vibration API&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Artikel kali ini terinspirasi dari pembicaraan teman-teman di &lt;a href=&#34;https://web.facebook.com/groups/PojokProgrammer/permalink/1452404194817147/&#34;&gt;grup Pojok Programmer&lt;/a&gt;
+tentang link download palsu yang mengarahkan ke link iklan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/diskusi-getaran.png&#34; alt=&#34;Diskusi getaran di web&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebagian halaman web menggunakan getaran untuk mengambil perhatian dari pengunjungnya,
+terutama halaman web yang penuh dengan iklan.&lt;/p&gt;
+
+&lt;p&gt;Membaca komentar-komentar mereka membuat saya teratrik ingin tahu
+cara membuat getaran di web.&lt;/p&gt;
+
+&lt;p&gt;Langsunga saja saya menuju ke Google dan memasukan kata kunci &lt;em&gt;&amp;ldquo;js vibrate phone&amp;rdquo;&lt;/em&gt;
+dan hasilnya ternya menggunakan &lt;strong&gt;HTML5 Vibration API&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/googling-js-vibrate.png&#34; alt=&#34;Googling tentang HTML5 vibration API&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-itu-html5-vibration-api&#34;&gt;Apa itu HTML5 Vibration API?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;HTML5 Vibration API&lt;/strong&gt; adalah API &lt;em&gt;(Application Programming Interface)&lt;/em&gt; untuk membuat
+getaran pada web yang bertujuan memberikan umpan balik terhadap aksi tertentu.&lt;/p&gt;
+
+&lt;p&gt;Menurut penjelasan MDN &lt;em&gt;(Mozilla Developer Network)&lt;/em&gt; getaran itu sendiri
+didefinisikan sebagai pola dari gelombang pulsa on-off yang memiliki panjang
+dalam bentuk integer. Panjang gelombang tersebut menentukan lama getarananya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/contoh-gelombang-pulsa.png&#34; alt=&#34;Contoh Gelombang Pulsa Getearan&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada contoh gelombang pulsa di atas, getaran akan mulai &lt;em&gt;(on)&lt;/em&gt; selama &lt;code&gt;200 ms&lt;/code&gt; (milidetik).
+Setelah itu diam selama &lt;code&gt;250 ms&lt;/code&gt;, kemudian lanjut lagi selama &lt;code&gt;1000 ms&lt;/code&gt; atau &lt;code&gt;1&lt;/code&gt; detik.&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-menggunakan-html5-vibration-api&#34;&gt;Cara Menggunakan HTML5 Vibration API&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;HTML5 Vibration API&lt;/strong&gt; menyediakan fungsi &lt;code&gt;vibrate()&lt;/code&gt; untuk membuat getaran.
+Bentuk sintaksnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(pola);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nilai paramter &lt;code&gt;pola&lt;/code&gt; dapat kita isi dengan nilai panjang getarannya.&lt;/p&gt;
+
+&lt;p&gt;Misalnya kita ingin membuat getaran selama &lt;code&gt;1&lt;/code&gt; detik:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(1000);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu bagaiaman kalau membuat lebih dari satu kali getaran?&lt;/p&gt;
+
+&lt;p&gt;Gampang! kita tinggal membuat pola dari pulsa getarannya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate([1000, 500, 1000]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Artinya gelombang akan dimulai selama &lt;code&gt;1000 ms&lt;/code&gt; (1 detik), kemudian berhenti
+selama &lt;code&gt;500 ms&lt;/code&gt;. Setelah itu bergetar lagi selama &lt;code&gt;1000 ms&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untuk menghentikan getaran, kita bisa memberikan nilai nol (&lt;code&gt;0&lt;/code&gt;) kepada
+fungsi &lt;code&gt;vibrate()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oke paham! Cukup sudah teorinya.&lt;/p&gt;
+
+&lt;h3 id=&#34;mari-kita-bereksperimen&#34;&gt;Mari kita bereksperimen&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;Silahkan buat file HTML baru, dan simpan di direktori &lt;code&gt;htdocs&lt;/code&gt; atau &lt;code&gt;/var/www/html&lt;/code&gt;.
+Kemudian isi dengan kode ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+	&amp;lt;title&amp;gt;Tutorial HTML5 Vibration API&amp;lt;/title&amp;gt;
+
+	&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+
+	&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+        // fungsi ini akan kita panggil saat tombol diklik
+		function buatGetaran(pola){
+			var getaran = window.navigator.vibrate(pola);
+
+            // tampilkan hasilnya ke console
+            // kalau true berarti browser mendukung untuk membuat getaran
+            // tapi kalau false browser tidak mendukung
+			console.log(getaran);
+		}
+	&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+	&amp;lt;p&amp;gt;Coba klik tombol berikut:&amp;lt;/p&amp;gt;
+	&amp;lt;button onclick=&amp;quot;buatGetaran(1000)&amp;quot;&amp;gt;Bergetar!!!&amp;lt;/button&amp;gt;
+
+    &amp;lt;button onclick=&amp;quot;buatGetaran([1000, 500, 1000])&amp;quot;&amp;gt;Bergetar 2x!!!&amp;lt;/button&amp;gt;
+
+    &amp;lt;button onclick=&amp;quot;buatGetaran([200, 500, 300, 100, 400])&amp;quot;&amp;gt;Bergetar 3x!!!&amp;lt;/button&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kenapa harus simpan di &lt;code&gt;htdocs&lt;/code&gt;, kan gak ada PHP-nya?&lt;/p&gt;
+
+&lt;p&gt;Karena nanti agar bisa kita coba melalui HP.&lt;/p&gt;
+
+&lt;h3 id=&#34;percobaan-di-browser-desktop&#34;&gt;Percobaan di browser Desktop&lt;/h3&gt;
+
+&lt;p&gt;Sebelum mencoba di HP, kita coba dulu di browser desktop (menggunakan google chrome).&lt;/p&gt;
+
+&lt;p&gt;Jangan lupa sambil membuka &lt;em&gt;console&lt;/em&gt; javascript pada &lt;a href=&#34;https://www.petanikode.com/manfaat-inspect-element-bagi-web-developer/&#34;&gt;inspect element&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/percobaan-getaran-desktop.png&#34; alt=&#34;Percobaan hasil output getaran&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasilnya &lt;code&gt;true&lt;/code&gt;, berarti browser kita mendukung untuk membuat
+getaran.&lt;/p&gt;
+
+&lt;p&gt;Tapi kok tidak terjadi getaran?&lt;/p&gt;
+
+&lt;p&gt;Ya iya lah, perangkat keras &lt;em&gt;(hardware)&lt;/em&gt; komputer atau laptopnya tidak mendukung.&lt;/p&gt;
+
+&lt;h3 id=&#34;percobaan-di-handphone&#34;&gt;Percobaan di &lt;em&gt;Handphone&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Percobaan saya lakukan dengan &lt;em&gt;tethering&lt;/em&gt; WiFi dari HP ke Laptop, bisa juga sebaliknya.&lt;/p&gt;
+
+&lt;p&gt;Laptop sebagai server web, dan HP sebagai client atau pengunjung web.
+Berarti kita harus tahu IP dari laptopnya, barulah kita buka melalui browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/percobaan-getaran-di-hp.jpg&#34; alt=&#34;Percobaan Getaran di HP&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba klik tombolnya!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Live Demo&lt;/strong&gt; bisa dicek di link ini: &lt;a href=&#34;https://goo.gl/8SPWt8&#34;&gt;https://goo.gl/8SPWt8&lt;/a&gt;
+atau scan QR Code berikut:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://chart.googleapis.com/chart?cht=qr&amp;amp;chs=150x150&amp;amp;choe=UTF-8&amp;amp;chld=H&amp;amp;chl=https://goo.gl/8SPWt8&#34; alt=&#34;QR Code Live Demo&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Apakah terjadi getaran atau tidak?&lt;/p&gt;
+
+&lt;p&gt;Kalau tidak, berarti browser-nya tidak mendukung. Coba gunakan Google Chrome
+vaersi terbaru.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini daftar versi browser yang mendukung:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/daftar-versi-browser-yang-mendukung-getaran.png&#34; alt=&#34;Daftar versi browser yang mendukung getaran&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sumber: &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate#Browser_compatibility&#34;&gt;developer.mozilla.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ide-eksperimen-selanjutnya&#34;&gt;Ide Eksperimen Selanjutnya&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Buat getaran kalau gagal login.&lt;/li&gt;
+&lt;li&gt;Integrasikan dengan GPS, misal buat getaran saat berada di lokasi tertentu.&lt;/li&gt;
+&lt;li&gt;Buat getaran berdasarkan gelombang audio.&lt;/li&gt;
+&lt;li&gt;Terapkan di Game, misal buat getaran saat terjadi benturan dalam Game.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ada ide lagi?&lt;/p&gt;
+
+&lt;p&gt;Tambahkan di komentar!&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Bagaimana?&lt;/p&gt;
+
+&lt;p&gt;Menyenangkan bukan bermain HTML5 Vibration API&amp;hellip;:smile:
+Selanjutnya silahkan lakukan eksperimen sendiri yang lebih kreatif dan keren.&lt;/p&gt;
+
+&lt;p&gt;Terima kasih sudah menyimak artikel ini sampai akhir.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mozilla Developer Network &amp;mdash; &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API&#34;&gt;Vibration API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;W3.org &amp;mdash; &lt;a href=&#34;https://www.w3.org/TR/vibration/&#34;&gt;Vibration API (Second Edition)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Pemrograman Android dengan Kotlin Extensions (Lebih Cepat!)</title>
@@ -3978,77 +4165,6 @@ mencantumkan tanggal di link-nya.&lt;/p&gt;
 dan ditingkatkan kualitasnya.&lt;/p&gt;
 
 &lt;p&gt;Semoga dengan begini, tidak ada lagi yang tersesat ke halaman &lt;code&gt;error 404&lt;/code&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Download Ebook Dasar Pemrograman Golang</title>
-      <link>https://www.petanikode.com/download-ebook-dasar-pemrograman-golang/</link>
-      <pubDate>Sun, 26 Mar 2017 22:20:22 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/download-ebook-dasar-pemrograman-golang/</guid>
-      <description>
-
-&lt;p&gt;Golang atau Go merupakan bahasa pemrograman open source yang dikembangkan di
-Google oleh Robert Griesemer, Rob Pike, dan Ken Thompson pada tahun 2007 dan
-mulai diperkenalkan di kalangan publik pada tahun 2009.&lt;/p&gt;
-
-&lt;p&gt;Go saat ini memegang rekor menjadi bahasa pemrograman yang perkembangannya
-paling cepat dalam sejarah.&lt;/p&gt;
-
-&lt;p&gt;Kurang dari tujuh tahun, mampu menjadi bahasa pemrograman kelas atas.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;p&gt;Go banyak dilirik oleh para developer karena kelebihan-kelebihan yang
-dimilikinya.&lt;/p&gt;
-
-&lt;p&gt;Sudah banyak perusahaan besar yang menggunakan bahasa ini
-untuk produk-produk mereka hingga di level production.&lt;/p&gt;
-
-&lt;p&gt;Kamu bisa melihatnya di
-&lt;a href=&#34;https://github.com/golang/go/wiki/GoUsers&#34;&gt;GoUsers&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Nah, buat kamu yang tertarik belajar bahasa pemrograman Go. Kamu bisa
-baca buku karangan &lt;strong&gt;Noval Agung Prayogo&lt;/strong&gt; ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;download ebook dasar pemrograman golang&#34;
-    src=&#34;https://3.bp.blogspot.com/-1v2sFj7i5a4/WNfZEXpsCPI/AAAAAAAAEeo/YVjMmBn9PIwLOZQOjX_6X859dZ38iPAmACK4B/s1600/ebook-dasar-pemrograman-golang.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Download&lt;/strong&gt;: &lt;a href=&#34;https://www.gitbook.com/download/pdf/book/novalagung/dasarpemrogramangolang&#34;&gt;PDF&lt;/a&gt;
- | &lt;a href=&#34;https://www.gitbook.com/download/epub/book/novalagung/dasarpemrogramangolang&#34;&gt;ePub&lt;/a&gt; |
- &lt;a href=&#34;https://www.gitbook.com/download/mobi/book/novalagung/dasarpemrogramangolang&#34;&gt;Mobi&lt;/a&gt; |
- &lt;a href=&#34;https://www.gitbook.com/read/book/novalagung/dasarpemrogramangolang&#34;&gt;Baca Online&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;sinopsis&#34;&gt;Sinopsis&lt;/h2&gt;
-
-&lt;p&gt;Buku ini merupakan salah satu dari sekian banyak referensi yang bisa
-digunakan untuk belajar pemrograman Golang. Hal yang disampaikan disini
-benar-benar dasar, dengan pembelajaran mulai dari 0.
-Diharapkan dengan adanya buku ini kawan-kawan bisa lebih paham dalam
-memahami seperti apa sih Golang itu.&lt;/p&gt;
-
-&lt;p&gt;Source code contoh-contoh program bisa &lt;a href=&#34;https://github.com/novalagung/dasarpemrogramangolang&#34;&gt;diunduh di Github&lt;/a&gt;.
-Dianjurkan untuk tidak copy-paste dari source code dalam belajar,
-usahakan untuk menulis sendiri kode program, agar cepat terbiasa
-dengan bahasa Golang.&lt;/p&gt;
-
-&lt;h2 id=&#34;lisensi&#34;&gt;Lisensi&lt;/h2&gt;
-
-&lt;p&gt;Ebook Dasar Pemrograman Golang gratis untuk disebarluaskan secara bebas,
-selama tidak melanggar aturan lisensi &lt;a href=&#34;http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html&#34;&gt;GNU LGPL 2.1&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

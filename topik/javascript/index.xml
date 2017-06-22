@@ -10,6 +10,193 @@
     <atom:link href="https://www.petanikode.com/topik/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Mengenal HTML5 Vibration API untuk Membuat Getaran di HP</title>
+      <link>https://www.petanikode.com/tutorial-html-vibrations/</link>
+      <pubDate>Thu, 22 Jun 2017 06:35:29 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-html-vibrations/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/html5-vibration-api.png&#34; alt=&#34;HTML5 Vibration API&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Artikel kali ini terinspirasi dari pembicaraan teman-teman di &lt;a href=&#34;https://web.facebook.com/groups/PojokProgrammer/permalink/1452404194817147/&#34;&gt;grup Pojok Programmer&lt;/a&gt;
+tentang link download palsu yang mengarahkan ke link iklan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/diskusi-getaran.png&#34; alt=&#34;Diskusi getaran di web&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebagian halaman web menggunakan getaran untuk mengambil perhatian dari pengunjungnya,
+terutama halaman web yang penuh dengan iklan.&lt;/p&gt;
+
+&lt;p&gt;Membaca komentar-komentar mereka membuat saya teratrik ingin tahu
+cara membuat getaran di web.&lt;/p&gt;
+
+&lt;p&gt;Langsunga saja saya menuju ke Google dan memasukan kata kunci &lt;em&gt;&amp;ldquo;js vibrate phone&amp;rdquo;&lt;/em&gt;
+dan hasilnya ternya menggunakan &lt;strong&gt;HTML5 Vibration API&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/googling-js-vibrate.png&#34; alt=&#34;Googling tentang HTML5 vibration API&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-itu-html5-vibration-api&#34;&gt;Apa itu HTML5 Vibration API?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;HTML5 Vibration API&lt;/strong&gt; adalah API &lt;em&gt;(Application Programming Interface)&lt;/em&gt; untuk membuat
+getaran pada web yang bertujuan memberikan umpan balik terhadap aksi tertentu.&lt;/p&gt;
+
+&lt;p&gt;Menurut penjelasan MDN &lt;em&gt;(Mozilla Developer Network)&lt;/em&gt; getaran itu sendiri
+didefinisikan sebagai pola dari gelombang pulsa on-off yang memiliki panjang
+dalam bentuk integer. Panjang gelombang tersebut menentukan lama getarananya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/contoh-gelombang-pulsa.png&#34; alt=&#34;Contoh Gelombang Pulsa Getearan&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada contoh gelombang pulsa di atas, getaran akan mulai &lt;em&gt;(on)&lt;/em&gt; selama &lt;code&gt;200 ms&lt;/code&gt; (milidetik).
+Setelah itu diam selama &lt;code&gt;250 ms&lt;/code&gt;, kemudian lanjut lagi selama &lt;code&gt;1000 ms&lt;/code&gt; atau &lt;code&gt;1&lt;/code&gt; detik.&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-menggunakan-html5-vibration-api&#34;&gt;Cara Menggunakan HTML5 Vibration API&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;HTML5 Vibration API&lt;/strong&gt; menyediakan fungsi &lt;code&gt;vibrate()&lt;/code&gt; untuk membuat getaran.
+Bentuk sintaksnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(pola);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nilai paramter &lt;code&gt;pola&lt;/code&gt; dapat kita isi dengan nilai panjang getarannya.&lt;/p&gt;
+
+&lt;p&gt;Misalnya kita ingin membuat getaran selama &lt;code&gt;1&lt;/code&gt; detik:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(1000);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu bagaiaman kalau membuat lebih dari satu kali getaran?&lt;/p&gt;
+
+&lt;p&gt;Gampang! kita tinggal membuat pola dari pulsa getarannya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate([1000, 500, 1000]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Artinya gelombang akan dimulai selama &lt;code&gt;1000 ms&lt;/code&gt; (1 detik), kemudian berhenti
+selama &lt;code&gt;500 ms&lt;/code&gt;. Setelah itu bergetar lagi selama &lt;code&gt;1000 ms&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untuk menghentikan getaran, kita bisa memberikan nilai nol (&lt;code&gt;0&lt;/code&gt;) kepada
+fungsi &lt;code&gt;vibrate()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oke paham! Cukup sudah teorinya.&lt;/p&gt;
+
+&lt;h3 id=&#34;mari-kita-bereksperimen&#34;&gt;Mari kita bereksperimen&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;Silahkan buat file HTML baru, dan simpan di direktori &lt;code&gt;htdocs&lt;/code&gt; atau &lt;code&gt;/var/www/html&lt;/code&gt;.
+Kemudian isi dengan kode ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+	&amp;lt;title&amp;gt;Tutorial HTML5 Vibration API&amp;lt;/title&amp;gt;
+
+	&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+
+	&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+        // fungsi ini akan kita panggil saat tombol diklik
+		function buatGetaran(pola){
+			var getaran = window.navigator.vibrate(pola);
+
+            // tampilkan hasilnya ke console
+            // kalau true berarti browser mendukung untuk membuat getaran
+            // tapi kalau false browser tidak mendukung
+			console.log(getaran);
+		}
+	&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+	&amp;lt;p&amp;gt;Coba klik tombol berikut:&amp;lt;/p&amp;gt;
+	&amp;lt;button onclick=&amp;quot;buatGetaran(1000)&amp;quot;&amp;gt;Bergetar!!!&amp;lt;/button&amp;gt;
+
+    &amp;lt;button onclick=&amp;quot;buatGetaran([1000, 500, 1000])&amp;quot;&amp;gt;Bergetar 2x!!!&amp;lt;/button&amp;gt;
+
+    &amp;lt;button onclick=&amp;quot;buatGetaran([200, 500, 300, 100, 400])&amp;quot;&amp;gt;Bergetar 3x!!!&amp;lt;/button&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kenapa harus simpan di &lt;code&gt;htdocs&lt;/code&gt;, kan gak ada PHP-nya?&lt;/p&gt;
+
+&lt;p&gt;Karena nanti agar bisa kita coba melalui HP.&lt;/p&gt;
+
+&lt;h3 id=&#34;percobaan-di-browser-desktop&#34;&gt;Percobaan di browser Desktop&lt;/h3&gt;
+
+&lt;p&gt;Sebelum mencoba di HP, kita coba dulu di browser desktop (menggunakan google chrome).&lt;/p&gt;
+
+&lt;p&gt;Jangan lupa sambil membuka &lt;em&gt;console&lt;/em&gt; javascript pada &lt;a href=&#34;https://www.petanikode.com/manfaat-inspect-element-bagi-web-developer/&#34;&gt;inspect element&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/percobaan-getaran-desktop.png&#34; alt=&#34;Percobaan hasil output getaran&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasilnya &lt;code&gt;true&lt;/code&gt;, berarti browser kita mendukung untuk membuat
+getaran.&lt;/p&gt;
+
+&lt;p&gt;Tapi kok tidak terjadi getaran?&lt;/p&gt;
+
+&lt;p&gt;Ya iya lah, perangkat keras &lt;em&gt;(hardware)&lt;/em&gt; komputer atau laptopnya tidak mendukung.&lt;/p&gt;
+
+&lt;h3 id=&#34;percobaan-di-handphone&#34;&gt;Percobaan di &lt;em&gt;Handphone&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Percobaan saya lakukan dengan &lt;em&gt;tethering&lt;/em&gt; WiFi dari HP ke Laptop, bisa juga sebaliknya.&lt;/p&gt;
+
+&lt;p&gt;Laptop sebagai server web, dan HP sebagai client atau pengunjung web.
+Berarti kita harus tahu IP dari laptopnya, barulah kita buka melalui browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/percobaan-getaran-di-hp.jpg&#34; alt=&#34;Percobaan Getaran di HP&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba klik tombolnya!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Live Demo&lt;/strong&gt; bisa dicek di link ini: &lt;a href=&#34;https://goo.gl/8SPWt8&#34;&gt;https://goo.gl/8SPWt8&lt;/a&gt;
+atau scan QR Code berikut:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://chart.googleapis.com/chart?cht=qr&amp;amp;chs=150x150&amp;amp;choe=UTF-8&amp;amp;chld=H&amp;amp;chl=https://goo.gl/8SPWt8&#34; alt=&#34;QR Code Live Demo&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Apakah terjadi getaran atau tidak?&lt;/p&gt;
+
+&lt;p&gt;Kalau tidak, berarti browser-nya tidak mendukung. Coba gunakan Google Chrome
+vaersi terbaru.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini daftar versi browser yang mendukung:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/daftar-versi-browser-yang-mendukung-getaran.png&#34; alt=&#34;Daftar versi browser yang mendukung getaran&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sumber: &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate#Browser_compatibility&#34;&gt;developer.mozilla.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ide-eksperimen-selanjutnya&#34;&gt;Ide Eksperimen Selanjutnya&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Buat getaran kalau gagal login.&lt;/li&gt;
+&lt;li&gt;Integrasikan dengan GPS, misal buat getaran saat berada di lokasi tertentu.&lt;/li&gt;
+&lt;li&gt;Buat getaran berdasarkan gelombang audio.&lt;/li&gt;
+&lt;li&gt;Terapkan di Game, misal buat getaran saat terjadi benturan dalam Game.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ada ide lagi?&lt;/p&gt;
+
+&lt;p&gt;Tambahkan di komentar!&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Bagaimana?&lt;/p&gt;
+
+&lt;p&gt;Menyenangkan bukan bermain HTML5 Vibration API&amp;hellip;:smile:
+Selanjutnya silahkan lakukan eksperimen sendiri yang lebih kreatif dan keren.&lt;/p&gt;
+
+&lt;p&gt;Terima kasih sudah menyimak artikel ini sampai akhir.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mozilla Developer Network &amp;mdash; &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API&#34;&gt;Vibration API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;W3.org &amp;mdash; &lt;a href=&#34;https://www.w3.org/TR/vibration/&#34;&gt;Vibration API (Second Edition)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Menggambar Objek dengan Perulangan dan Fungsi Random di HTML5 Canvas</title>
       <link>https://www.petanikode.com/tutorial-html-canvas-random/</link>
       <pubDate>Tue, 20 Jun 2017 04:03:51 +0800</pubDate>
@@ -3430,16 +3617,6 @@ CSS Tema Data Tabels untuk Bootstrap.&lt;/p&gt;
       
       <guid>https://www.petanikode.com/menggunakan-tinymce-pada-proyek-web/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-XAy-W-FPBjE/V6yVPMlUFiI/AAAAAAAADIc/JldlRfv85lw3EAE3UM4iDOHYcMtAniAtQCK4B/s1600/TinyMCE%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-XAy-W-FPBjE/V6yVPMlUFiI/AAAAAAAADIc/JldlRfv85lw3EAE3UM4iDOHYcMtAniAtQCK4B/s1600/TinyMCE%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;Pada sebuah proyek yang saya kerjakan, terdapat fitur yang harus menggunakan teks editor untuk menginputkan nilainya. Karena &lt;i&gt;deadline&lt;/i&gt; proyek ini begitu cepat. Saya tidak punya banyak waktu untuk membuat teks editor berbasis &lt;a href=&#34;http://www.petanikode.com/search/label/HTML&#34;&gt;HTML&lt;/a&gt;. Karena itu, cara tercepat ialah menggunakan teks editor yang sudah ada, yaitu TinyMCE. Nah, pada kesempatan ini, saya akan berbagi cara menerapkan TinyMCE dalam Web.&lt;br /&gt;&lt;h2&gt;1. Download TinyMCE&lt;/h2&gt;Silahkan men-download TinyMCE pada website resminya: &lt;a href=&#34;https://www.tinymce.com/&#34; target=&#34;_blank&#34;&gt;tinymce.com&lt;/a&gt;. Setelah itu, ekstrak ke dalam direktori &lt;i&gt;assets&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-Y54liFO88Bg/V6yKfDEwswI/AAAAAAAADIM/aYHzrGUqQkIp7lLrGdAW4_2aaS1e6as1QCK4B/s1600/Penaruhan%2BTinyMCE%2Bpada%2Bproyek%2B%2Bweb.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Lokasi TinyMCE pada proyek web&#34; border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-Y54liFO88Bg/V6yKfDEwswI/AAAAAAAADIM/aYHzrGUqQkIp7lLrGdAW4_2aaS1e6as1QCK4B/s1600/Penaruhan%2BTinyMCE%2Bpada%2Bproyek%2B%2Bweb.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;2. Kode HTML (Form)&lt;/h2&gt;Berikut ini kode form yang sudah saya persiapkan. Pada intinya, TinyMCE hanya akan berpengaruh pada elemen &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;div class=&amp;ldquo;panel panel-default&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;lt;form action=&amp;rdquo;&amp;lt;?php echo site_url(&amp;lsquo;admin/produk/tambah_produk&amp;rsquo;) ?&amp;gt;&amp;rdquo; method=&amp;ldquo;post&amp;rdquo; enctype=&amp;ldquo;multipart/form-data&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;panel-body&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;row&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;col-md-4&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;nama-barang&amp;rdquo;&amp;gt;Nama&amp;lt;/label&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;input type=&amp;ldquo;text&amp;rdquo; class=&amp;ldquo;form-control&amp;rdquo; name=&amp;ldquo;nama_barang&amp;rdquo; placeholder=&amp;ldquo;Nama Produk&amp;hellip;&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;nama-barang&amp;rdquo;&amp;gt;Harga&amp;lt;/label&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;input type=&amp;ldquo;text&amp;rdquo; class=&amp;ldquo;form-control&amp;rdquo; name=&amp;ldquo;harga_barang&amp;rdquo; id=&amp;ldquo;harga-barang&amp;rdquo; placeholder=&amp;ldquo;Harga&amp;hellip;&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;nama-barang&amp;rdquo;&amp;gt;Jenis&amp;lt;/label&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;span class=&amp;ldquo;check&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label&amp;gt;&amp;lt;input type=&amp;ldquo;radio&amp;rdquo; name=&amp;ldquo;jenis&amp;rdquo; value=&amp;ldquo;barang&amp;rdquo;&amp;gt; Barang&amp;lt;/label&amp;gt;&amp;amp;nbsp;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label&amp;gt;&amp;lt;input type=&amp;ldquo;radio&amp;rdquo; name=&amp;ldquo;jenis&amp;rdquo; value=&amp;ldquo;jasa&amp;rdquo;&amp;gt; Jasa&amp;lt;/label&amp;gt;&amp;amp;nbsp;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label&amp;gt;&amp;lt;input type=&amp;ldquo;radio&amp;rdquo; name=&amp;ldquo;jenis&amp;rdquo; value=&amp;ldquo;paket&amp;rdquo;&amp;gt; Paket&amp;lt;/label&amp;gt;&amp;amp;nbsp;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label&amp;gt;&amp;lt;input type=&amp;ldquo;radio&amp;rdquo; name=&amp;ldquo;jenis&amp;rdquo; value=&amp;ldquo;promo&amp;rdquo;&amp;gt; Promo&amp;lt;/label&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/span&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; Kolom ke-2/deskripsi dan keterangan &amp;ndash;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;col-md-8&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;nama-barang&amp;rdquo;&amp;gt;Keterangan/Spesifikasi&amp;lt;/label&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;textarea name=&amp;ldquo;keterangan&amp;rdquo; class=&amp;ldquo;form-control&amp;rdquo; rows=&amp;ldquo;15&amp;rdquo; placeholder=&amp;ldquo;Keterangan atau spesifikasi&amp;hellip;&amp;rdquo;&amp;gt;&amp;lt;/textarea&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;nama-barang&amp;rdquo;&amp;gt;Foto/Gambar&amp;lt;/label&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;input type=&amp;ldquo;file&amp;rdquo; name=&amp;ldquo;gambar_barang&amp;rdquo; placeholder=&amp;ldquo;Foto&amp;hellip;&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;button type=&amp;ldquo;submit&amp;rdquo; class=&amp;ldquo;btn btn-success&amp;rdquo;&amp;gt;&amp;lt;i class=&amp;ldquo;fa fa-send&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt; Simpan&amp;lt;/button&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt;&amp;lt;!&amp;ndash; panel body &amp;ndash;&amp;gt;&lt;br /&gt;&amp;lt;/form&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;3. Sisipkan Kode Javascript TinyMCE&lt;/h2&gt;Penyisipan file &lt;a href=&#34;http://www.petanikode.com/search/label/Javascript&#34;&gt;Javascript&lt;/a&gt; TinyMCE harus diletakkan sebelum kode persiapan, atau dengan kata lain sisipkan dulu TinyMCE, baru setelah itu dipersiapkan. Penyisipan TinyMCE bisa di dalam tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; maupun diakhir (sebelum) penutup body (&lt;code&gt;&amp;lt;/body&amp;gt;&lt;/code&gt;).&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html js&#34;&gt;&amp;lt;script src=&amp;rdquo;&amp;lt;?php echo base_url()?&amp;gt;assets/tinymce/js/tinymce/tinymce.min.js&amp;rdquo;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;Abaikan kode PHP-nya, karena saya menggunakan CodeIgniter di proyek ini. Bila anda tidak menggunakan &lt;a href=&#34;http://www.petanikode.com/search/label/CodeIgniter&#34;&gt;CodeIgniter&lt;/a&gt;, silahkan sesuikan dengan lokasi &lt;i&gt;(path)&lt;/i&gt; TinyMCE-nya.&lt;br /&gt;&lt;h2&gt;4. Kode persiapan&lt;/h2&gt;Pada kode persiapan, kita bisa mengatur bagaiaman TinyMCE ditampilkan. Serta mau ditampilkan di elemen yang mana.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html js&#34;&gt;&amp;lt;script type=&amp;lsquo;text/javascript&amp;rsquo;&amp;gt; &lt;br /&gt;tinymce.init({ selector:&amp;lsquo;textarea&amp;rsquo;, menubar:&amp;ldquo;, theme: &amp;lsquo;modern&amp;rsquo;});&lt;br /&gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;Pada kode persiapan di atas, saya memilih semua elemen &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;, karena hanya ada satu elemen &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt; dalam form. Selain itu, saya menghilangkan &lt;i&gt;menubar&lt;/i&gt; dan mengatur temanya menggunakana &lt;i&gt;modern&lt;/i&gt;. Informasi lebih lengkap dengan kode persiapan, mungkin bisa dibaca di &lt;a href=&#34;https://www.tinymce.com/docs/&#34; target=&#34;_blank&#34;&gt;dokumentasi TinyMCE&lt;/a&gt;.&lt;br /&gt;&lt;h2&gt;5. Demo&lt;/h2&gt;&lt;script src=&#34;http://codeply.com/js/embed.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;div data-codeply=&#34;lI1tLlQCl6&#34;&gt;&lt;/div&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Memindahkan Nilai dari Elemen Select dengan JQuery</title>
-      <link>https://www.petanikode.com/tutorial-jquery-form-select/</link>
-      <pubDate>Mon, 08 Aug 2016 04:29:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-jquery-form-select/</guid>
-      <description>&lt;p&gt;Misalkan, ada sebuah input yang otomatis diisi ketika salah satu opsi pada elemen &lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt; dipilih. Nilainya diambil dari atribut &lt;code&gt;&amp;lt;option&amp;gt;&lt;/code&gt;. Kurang lebih ilustrasinya seperti gambar berikut ini.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-_ocnLT3PLhA/V6dIVztJriI/AAAAAAAADHQ/yUb5dtuQ0Zgeb22FyX-k0GuLnd9y6x4vwCK4B/s1600/Memindahkan%2Bnilai%2Bdari%2Belmen%2Bselect%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Memindahkan nilai dari elemen Select dengan JQuery&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-_ocnLT3PLhA/V6dIVztJriI/AAAAAAAADHQ/yUb5dtuQ0Zgeb22FyX-k0GuLnd9y6x4vwCK4B/s1600/Memindahkan%2Bnilai%2Bdari%2Belmen%2Bselect%2B-%2Bpetanikode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Lalu, dari mana dapat nilai &lt;i&gt;lama tanam&lt;/i&gt;, &lt;i&gt;berat&lt;/i&gt;, dan &lt;i&gt;harga&lt;/i&gt;? Sedangkan kita hanya bisa menyimpan nilai pada &lt;code&gt;&amp;lt;option&amp;gt;&lt;/code&gt; dalam atribut &lt;code&gt;value&lt;/code&gt;. Dalam kasus ini, kita bisa mengakalinya dengan membuat atribut kostum (atribut buatan).&lt;br /&gt;&lt;h2&gt;1. Kode HTML&lt;/h2&gt;Kita akan membuat sebuah elemen &lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt; dengan &lt;code&gt;5&lt;/code&gt; opsi. Sebenarnya opsinya bisa dibuat dengan perulangan dan datanya diambil dari &lt;i&gt;database&lt;/i&gt;. Tapi, karena kita tidak menggunakan &lt;i&gt;database&lt;/i&gt; jadi langsung saja kita buat dalam kode.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;Pilih Benih&lt;br /&gt;&amp;lt;select id=&amp;ldquo;benih&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;option lama=&amp;ldquo;6 bulan&amp;rdquo; berat=&amp;ldquo;1kg&amp;rdquo; harga=&amp;ldquo;Rp 45.000&amp;rdquo;&amp;gt;Kacang&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;option lama=&amp;ldquo;5 bulan&amp;rdquo; berat=&amp;ldquo;100kg&amp;rdquo; harga=&amp;ldquo;Rp 700.000&amp;rdquo;&amp;gt;Padi&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;option lama=&amp;ldquo;4 bulan&amp;rdquo; berat=&amp;ldquo;2kg&amp;rdquo; harga=&amp;ldquo;Rp 10.000&amp;rdquo;&amp;gt;Semangka&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;option lama=&amp;ldquo;5 bulan&amp;rdquo; berat=&amp;ldquo;3kg&amp;rdquo; harga=&amp;ldquo;Rp 80.000&amp;rdquo;&amp;gt;Semangka&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;option lama=&amp;ldquo;3 bulan&amp;rdquo; berat=&amp;ldquo;4kg&amp;rdquo; harga=&amp;ldquo;Rp 4.500&amp;rdquo;&amp;gt;Timun&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;lt;/select&amp;gt;&lt;br /&gt;&amp;lt;br&amp;gt;&lt;br /&gt;Lama tanam &amp;lt;input type=&lt;code&gt;&amp;ldquo;text&amp;rdquo; id=&amp;ldquo;lama-tanam&amp;rdquo; /&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;Berat &amp;lt;input type=&amp;ldquo;text&amp;rdquo; id=&amp;ldquo;berat&amp;rdquo; /&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;Harga &amp;lt;input type=&amp;ldquo;text&amp;rdquo; id=&amp;ldquo;harga&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;/code&gt;&lt;/pre&gt;Pada kode diatas, kita membuat kostum atribut: &lt;code&gt;lama&lt;/code&gt;, &lt;code&gt;berat&lt;/code&gt;, dan &lt;code&gt;harga&lt;/code&gt;. Atribut-atribut ini sebenarnya tidak ada dalam HTML. Lalu bagaiaman cara mengambil nilai-nilai dari kostum atribut tersebut?&lt;br /&gt;&lt;h2&gt;2. Kode Javascript/JQuery&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;$(&amp;ldquo;#benih&amp;rdquo;).on(&amp;ldquo;change&amp;rdquo;, function(){&lt;br /&gt;&lt;br /&gt;&amp;nbsp; // ambil nilai&lt;br /&gt;&amp;nbsp; var lama = $(&amp;ldquo;#benih option:selected&amp;rdquo;).attr(&amp;ldquo;lama&amp;rdquo;);&lt;br /&gt;&amp;nbsp; var berat = $(&amp;ldquo;#benih option:selected&amp;rdquo;).attr(&amp;ldquo;berat&amp;rdquo;);&lt;br /&gt;&amp;nbsp; var harga = $(&amp;ldquo;#benih option:selected&amp;rdquo;).attr(&amp;ldquo;harga&amp;rdquo;);&lt;br /&gt;&amp;nbsp; &lt;br /&gt;&amp;nbsp; // pindahkan nilai ke input&lt;br /&gt;&amp;nbsp; $(&amp;ldquo;#lama-tanam&amp;rdquo;).val(lama);&lt;br /&gt;&amp;nbsp; $(&amp;ldquo;#berat&amp;rdquo;).val(berat);&lt;br /&gt;&amp;nbsp; $(&amp;ldquo;#harga&amp;rdquo;).val(harga);&lt;br /&gt;&amp;nbsp; &lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Ada dua hal yang dilakukan dalam kode di atas. Pertama mengambil nilai dari opsi yang terpilih. Kedua memindahkannya ke input &lt;i&gt;field&lt;/i&gt;. &lt;br /&gt;&lt;h2&gt;3. Demo&lt;/h2&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/zevokop/1/embed?output,html,js&#34;&gt;Petanikode - Memindahkan nilai elemen select on jsbin.com&lt;/a&gt;&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?3.39.10&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
     </item>
     

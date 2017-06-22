@@ -10,6 +10,193 @@
     <atom:link href="https://www.petanikode.com/kategori/web/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Mengenal HTML5 Vibration API untuk Membuat Getaran di HP</title>
+      <link>https://www.petanikode.com/tutorial-html-vibrations/</link>
+      <pubDate>Thu, 22 Jun 2017 06:35:29 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-html-vibrations/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/html5-vibration-api.png&#34; alt=&#34;HTML5 Vibration API&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Artikel kali ini terinspirasi dari pembicaraan teman-teman di &lt;a href=&#34;https://web.facebook.com/groups/PojokProgrammer/permalink/1452404194817147/&#34;&gt;grup Pojok Programmer&lt;/a&gt;
+tentang link download palsu yang mengarahkan ke link iklan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/diskusi-getaran.png&#34; alt=&#34;Diskusi getaran di web&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sebagian halaman web menggunakan getaran untuk mengambil perhatian dari pengunjungnya,
+terutama halaman web yang penuh dengan iklan.&lt;/p&gt;
+
+&lt;p&gt;Membaca komentar-komentar mereka membuat saya teratrik ingin tahu
+cara membuat getaran di web.&lt;/p&gt;
+
+&lt;p&gt;Langsunga saja saya menuju ke Google dan memasukan kata kunci &lt;em&gt;&amp;ldquo;js vibrate phone&amp;rdquo;&lt;/em&gt;
+dan hasilnya ternya menggunakan &lt;strong&gt;HTML5 Vibration API&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/googling-js-vibrate.png&#34; alt=&#34;Googling tentang HTML5 vibration API&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-itu-html5-vibration-api&#34;&gt;Apa itu HTML5 Vibration API?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;HTML5 Vibration API&lt;/strong&gt; adalah API &lt;em&gt;(Application Programming Interface)&lt;/em&gt; untuk membuat
+getaran pada web yang bertujuan memberikan umpan balik terhadap aksi tertentu.&lt;/p&gt;
+
+&lt;p&gt;Menurut penjelasan MDN &lt;em&gt;(Mozilla Developer Network)&lt;/em&gt; getaran itu sendiri
+didefinisikan sebagai pola dari gelombang pulsa on-off yang memiliki panjang
+dalam bentuk integer. Panjang gelombang tersebut menentukan lama getarananya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/contoh-gelombang-pulsa.png&#34; alt=&#34;Contoh Gelombang Pulsa Getearan&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada contoh gelombang pulsa di atas, getaran akan mulai &lt;em&gt;(on)&lt;/em&gt; selama &lt;code&gt;200 ms&lt;/code&gt; (milidetik).
+Setelah itu diam selama &lt;code&gt;250 ms&lt;/code&gt;, kemudian lanjut lagi selama &lt;code&gt;1000 ms&lt;/code&gt; atau &lt;code&gt;1&lt;/code&gt; detik.&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-menggunakan-html5-vibration-api&#34;&gt;Cara Menggunakan HTML5 Vibration API&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;HTML5 Vibration API&lt;/strong&gt; menyediakan fungsi &lt;code&gt;vibrate()&lt;/code&gt; untuk membuat getaran.
+Bentuk sintaksnya seperti ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(pola);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nilai paramter &lt;code&gt;pola&lt;/code&gt; dapat kita isi dengan nilai panjang getarannya.&lt;/p&gt;
+
+&lt;p&gt;Misalnya kita ingin membuat getaran selama &lt;code&gt;1&lt;/code&gt; detik:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(1000);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu bagaiaman kalau membuat lebih dari satu kali getaran?&lt;/p&gt;
+
+&lt;p&gt;Gampang! kita tinggal membuat pola dari pulsa getarannya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate([1000, 500, 1000]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Artinya gelombang akan dimulai selama &lt;code&gt;1000 ms&lt;/code&gt; (1 detik), kemudian berhenti
+selama &lt;code&gt;500 ms&lt;/code&gt;. Setelah itu bergetar lagi selama &lt;code&gt;1000 ms&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untuk menghentikan getaran, kita bisa memberikan nilai nol (&lt;code&gt;0&lt;/code&gt;) kepada
+fungsi &lt;code&gt;vibrate()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;window.navigator.vibrate(0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oke paham! Cukup sudah teorinya.&lt;/p&gt;
+
+&lt;h3 id=&#34;mari-kita-bereksperimen&#34;&gt;Mari kita bereksperimen&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;Silahkan buat file HTML baru, dan simpan di direktori &lt;code&gt;htdocs&lt;/code&gt; atau &lt;code&gt;/var/www/html&lt;/code&gt;.
+Kemudian isi dengan kode ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+	&amp;lt;title&amp;gt;Tutorial HTML5 Vibration API&amp;lt;/title&amp;gt;
+
+	&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+
+	&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+        // fungsi ini akan kita panggil saat tombol diklik
+		function buatGetaran(pola){
+			var getaran = window.navigator.vibrate(pola);
+
+            // tampilkan hasilnya ke console
+            // kalau true berarti browser mendukung untuk membuat getaran
+            // tapi kalau false browser tidak mendukung
+			console.log(getaran);
+		}
+	&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+	&amp;lt;p&amp;gt;Coba klik tombol berikut:&amp;lt;/p&amp;gt;
+	&amp;lt;button onclick=&amp;quot;buatGetaran(1000)&amp;quot;&amp;gt;Bergetar!!!&amp;lt;/button&amp;gt;
+
+    &amp;lt;button onclick=&amp;quot;buatGetaran([1000, 500, 1000])&amp;quot;&amp;gt;Bergetar 2x!!!&amp;lt;/button&amp;gt;
+
+    &amp;lt;button onclick=&amp;quot;buatGetaran([200, 500, 300, 100, 400])&amp;quot;&amp;gt;Bergetar 3x!!!&amp;lt;/button&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kenapa harus simpan di &lt;code&gt;htdocs&lt;/code&gt;, kan gak ada PHP-nya?&lt;/p&gt;
+
+&lt;p&gt;Karena nanti agar bisa kita coba melalui HP.&lt;/p&gt;
+
+&lt;h3 id=&#34;percobaan-di-browser-desktop&#34;&gt;Percobaan di browser Desktop&lt;/h3&gt;
+
+&lt;p&gt;Sebelum mencoba di HP, kita coba dulu di browser desktop (menggunakan google chrome).&lt;/p&gt;
+
+&lt;p&gt;Jangan lupa sambil membuka &lt;em&gt;console&lt;/em&gt; javascript pada &lt;a href=&#34;https://www.petanikode.com/manfaat-inspect-element-bagi-web-developer/&#34;&gt;inspect element&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/percobaan-getaran-desktop.png&#34; alt=&#34;Percobaan hasil output getaran&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasilnya &lt;code&gt;true&lt;/code&gt;, berarti browser kita mendukung untuk membuat
+getaran.&lt;/p&gt;
+
+&lt;p&gt;Tapi kok tidak terjadi getaran?&lt;/p&gt;
+
+&lt;p&gt;Ya iya lah, perangkat keras &lt;em&gt;(hardware)&lt;/em&gt; komputer atau laptopnya tidak mendukung.&lt;/p&gt;
+
+&lt;h3 id=&#34;percobaan-di-handphone&#34;&gt;Percobaan di &lt;em&gt;Handphone&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Percobaan saya lakukan dengan &lt;em&gt;tethering&lt;/em&gt; WiFi dari HP ke Laptop, bisa juga sebaliknya.&lt;/p&gt;
+
+&lt;p&gt;Laptop sebagai server web, dan HP sebagai client atau pengunjung web.
+Berarti kita harus tahu IP dari laptopnya, barulah kita buka melalui browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/percobaan-getaran-di-hp.jpg&#34; alt=&#34;Percobaan Getaran di HP&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba klik tombolnya!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Live Demo&lt;/strong&gt; bisa dicek di link ini: &lt;a href=&#34;https://goo.gl/8SPWt8&#34;&gt;https://goo.gl/8SPWt8&lt;/a&gt;
+atau scan QR Code berikut:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://chart.googleapis.com/chart?cht=qr&amp;amp;chs=150x150&amp;amp;choe=UTF-8&amp;amp;chld=H&amp;amp;chl=https://goo.gl/8SPWt8&#34; alt=&#34;QR Code Live Demo&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Apakah terjadi getaran atau tidak?&lt;/p&gt;
+
+&lt;p&gt;Kalau tidak, berarti browser-nya tidak mendukung. Coba gunakan Google Chrome
+vaersi terbaru.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini daftar versi browser yang mendukung:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-getaran/daftar-versi-browser-yang-mendukung-getaran.png&#34; alt=&#34;Daftar versi browser yang mendukung getaran&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sumber: &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate#Browser_compatibility&#34;&gt;developer.mozilla.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ide-eksperimen-selanjutnya&#34;&gt;Ide Eksperimen Selanjutnya&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Buat getaran kalau gagal login.&lt;/li&gt;
+&lt;li&gt;Integrasikan dengan GPS, misal buat getaran saat berada di lokasi tertentu.&lt;/li&gt;
+&lt;li&gt;Buat getaran berdasarkan gelombang audio.&lt;/li&gt;
+&lt;li&gt;Terapkan di Game, misal buat getaran saat terjadi benturan dalam Game.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ada ide lagi?&lt;/p&gt;
+
+&lt;p&gt;Tambahkan di komentar!&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Bagaimana?&lt;/p&gt;
+
+&lt;p&gt;Menyenangkan bukan bermain HTML5 Vibration API&amp;hellip;:smile:
+Selanjutnya silahkan lakukan eksperimen sendiri yang lebih kreatif dan keren.&lt;/p&gt;
+
+&lt;p&gt;Terima kasih sudah menyimak artikel ini sampai akhir.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mozilla Developer Network &amp;mdash; &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API&#34;&gt;Vibration API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;W3.org &amp;mdash; &lt;a href=&#34;https://www.w3.org/TR/vibration/&#34;&gt;Vibration API (Second Edition)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Menggambar Objek dengan Perulangan dan Fungsi Random di HTML5 Canvas</title>
       <link>https://www.petanikode.com/tutorial-html-canvas-random/</link>
       <pubDate>Tue, 20 Jun 2017 04:03:51 +0800</pubDate>
@@ -3581,93 +3768,6 @@ height=&#34;836&#34;
 sandbox=&#34;allow-scripts allow-same-origin&#34;
 src=&#34;https://asciinema.org/api/asciicasts/100278?&amp;speed=2&#34;
 layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>5 Alasan Petani Kode Migrasi ke Hugo</title>
-      <link>https://www.petanikode.com/5-alasan-petani-kode-migrasi-ke-hugo/</link>
-      <pubDate>Wed, 18 Jan 2017 22:06:22 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/5-alasan-petani-kode-migrasi-ke-hugo/</guid>
-      <description>
-
-&lt;p&gt;Minggu ini, Petani Kode melakukan migrasi dari Blogger ke Hugo.
-Proses migrasi berjalan dengan lancar, meskipun masih banyak yang belum dikerjakan.
-Ada beberapa alasan, kenapa Petani Kode melakukan migrasi ke Hugo.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-template-blogger-masih-menggunakan-xml&#34;&gt;1. Template Blogger Masih menggunakan XML&lt;/h2&gt;
-
-&lt;p&gt;Salah satu produk Google yang jarang diperbaharui adalah Blogger. Buktinya,
-ketika Google memperkenalkan konsep &lt;em&gt;Material Design&lt;/em&gt;, berbagai produknya kemudian
-menerapkan material desain. Google Analytic, Adsense, Photo, Drive, GMail, dsb.
-Lalu, bagaimana dengan Blogger? tampilannya masih begitu-begitu saja sejak tahun 2012. Aplikasi Androidnya juga kurang bagus.&lt;/p&gt;
-
-&lt;p&gt;Begitu juga dengan template engine-nya, masih menggunakan XML.
-XML membuat saya cukup lelah membuat template. Karena tidak bisa dibuat secara
-offline. Selain itu juga, dokumentasinya kurang lengkap.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-menulis-di-blogger-kurang-efisien&#34;&gt;2. Menulis di Blogger Kurang Efisien&lt;/h2&gt;
-
-&lt;p&gt;Menurut Saya sebagai programmer yang terbiasa menulis di teks editor,
-menulis di Blogger itu kurang efisien. Karena ketika kita menulis di sana, lalu melakukan &lt;em&gt;preview&lt;/em&gt; kita akan membuka tab baru dan men-download hasil &lt;em&gt;preview&lt;/em&gt;.
-Berapa waktu dan kuota yang dihabiskan?&lt;/p&gt;
-
-&lt;p&gt;Dulu saya pernah mencoba menulis draf artikel dalam bentuk teks, html,
-&lt;em&gt;markdown&lt;/em&gt;,  dan dokumen. Namun, ketika ingin diterbitkan, harus disunting
-lagi di Blogger. Berbeda dengan Hugo, kita bisa menulis di teks editor mana saja
-dengan format &lt;em&gt;markdown&lt;/em&gt; dan HTML. Sublime, Atom, Vim, mau pakai yang mana?&lt;/p&gt;
-
-&lt;p&gt;Saya pilih Atom, karena bisa lihat preview-nya langsung.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;675&#34;
-width=&#34;1245&#34;
-alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
-src=&#34;https://2.bp.blogspot.com/-5K1vDdxvIOE/WIAa-PInq_I/AAAAAAAADqQ/2hNl6Vmw_Po5NHOCQ5Kn__0iBefttOHHACPcB/s1600/Nulis%2Bartikel%2Bdi%2BAtom%2Buntuk%2BHugo.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-amp-susah-valid&#34;&gt;3. AMP Susah Valid&lt;/h2&gt;
-
-&lt;p&gt;Validator AMP sangat ketat dalam menilai web. Kita dilarang keras menggunakan
-Javascript. Karena Javascript katanya dapat memperlambat web. Sementara,
-di Blogger banyak menggunakan Javascript; dan parahnya lagi, di sana untuk &lt;em&gt;load&lt;/em&gt;
-widget-nya pakai Javascript.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;380&#34;
-width=&#34;720&#34;
-alt=&#34;Validasi AMP&#34;
-src=&#34;http://i.imgur.com/5sv5CXW.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada Hugo, saya tidak menggunakan Javascript. Kecuali Javascript bawaan AMP.
-Hasilnya pun valid tanpa error.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;486&#34; height=&#34;657&#34;
-    layout=&#34;responsive&#34;
-    data-tweetid=&#34;821021406854946816&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-agar-terbiasa-menggunakan-git&#34;&gt;4. Agar Terbiasa Menggunakan Git&lt;/h2&gt;
-
-&lt;p&gt;Saya harus melakukan &lt;em&gt;push&lt;/em&gt; atau upload ke server repository git untuk &lt;em&gt;update&lt;/em&gt; konten. Karena Hugo sebuah generator web statis. Oleh sebab itu, ini bisa jadi sarana untuk latihan git agar terbiasa.&lt;/p&gt;
-
-&lt;h2 id=&#34;5-ingin-mencoba-teknologi-baru&#34;&gt;5. Ingin Mencoba Teknologi Baru&lt;/h2&gt;
-
-&lt;p&gt;Hugo memang baru, dibangun dengan bahasa pemrograman Go. Versi Hugo saat tulisan
-ini dibut adalah 0.18. Meski belum mencapai versi 1.0, tidak ada salahnya untuk dicoba.&lt;/p&gt;
-
-&lt;p&gt;Ketika mengembangkan Petani Kode, saya sedikit kesulitan,
-karena hasil pencarian Google hanya mengarah ke dokumentasi Hugo, Forum Hugo,
-dan Isu Hugo di Github. Sangat jarang ke Stack Overflow. Namun, itu bukanlah kendala.&lt;/p&gt;
-
-&lt;p&gt;Bahkan saya sampai dusuruh nulis kode dengan bahasa pemrograman Go. Sedangkan
-Saya tidak pernah belajar bahasa pemrograman Go sama sekali.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/&#34;&gt;Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Itulah lima alasan Petani Kode migrasi ke Hugo.&lt;/p&gt;
 </description>
     </item>
     

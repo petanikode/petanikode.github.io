@@ -215,7 +215,7 @@ Alasan Saya ingin Membuat Tema Baru  Kode tema yang digunakan saat ini masih ber
   },
   "headline": "Cara Membuat Tema Hugo dari Nol (Meracik ulang Tema Petani Kode)",
   "description": "Saat ini Saya sedang menggunakan Hugo versi 0.18 dan berencana untuk meng-upgrade ke versi 0.24. Kabar baiknya, Beb sudah merilis versi 0.24 dua hari yang lalu.\nSelain melakukan upgrade ke mesin terbaru, saya juga berencana meracik ulang tema Petani Kode. Karena saya rasa tema ini cukup berantakan, baik dari segi kode dan performa.\nAlasan Saya ingin Membuat Tema Baru  Kode tema yang digunakan saat ini masih berantakan. Kode CSS-nya masih murni ditulis dari nol dan saya ingin mencoba bereksperimen dengan SASS di Hugo.",
-  "wordCount":  527 ,
+  "wordCount":  579 ,
   "datePublished" : "2017-06-23T14:21:09",
   "dateModified" : "2017-06-23T14:21:09",
   "image" : {
@@ -1251,6 +1251,27 @@ hasil modifikasi dari tema <a href="https://themes.gohugo.io/gohugo-amp/">AMP St
 Tapi sebelumnya, kita harus paham dulu dengan struktur direktori tersebut.</p>
 
 <h2 id="struktur-direktori-tema-hugo">Struktur Direktori Tema Hugo</h2>
+
+<p>Berikut ini struktur direktori tema Hugo:</p>
+
+<pre><code>kacang/
+├── archetypes
+│   └── default.md
+├── layouts
+│   ├── 404.html
+│   ├── _default
+│   │   ├── list.html
+│   │   └── single.html
+│   ├── index.html
+│   └── partials
+│       ├── footer.html
+│       └── header.html
+├── LICENSE.md
+├── static
+│   ├── css
+│   └── js
+└── theme.toml
+</code></pre>
 
 <p>Ada tiga direktori yang dibuatkan oleh Hugo:</p>
 

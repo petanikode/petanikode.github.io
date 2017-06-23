@@ -61,6 +61,27 @@ Tapi sebelumnya, kita harus paham dulu dengan struktur direktori tersebut.&lt;/p
 
 &lt;h2 id=&#34;struktur-direktori-tema-hugo&#34;&gt;Struktur Direktori Tema Hugo&lt;/h2&gt;
 
+&lt;p&gt;Berikut ini struktur direktori tema Hugo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;kacang/
+├── archetypes
+│   └── default.md
+├── layouts
+│   ├── 404.html
+│   ├── _default
+│   │   ├── list.html
+│   │   └── single.html
+│   ├── index.html
+│   └── partials
+│       ├── footer.html
+│       └── header.html
+├── LICENSE.md
+├── static
+│   ├── css
+│   └── js
+└── theme.toml
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Ada tiga direktori yang dibuatkan oleh Hugo:&lt;/p&gt;
 
 &lt;ol&gt;

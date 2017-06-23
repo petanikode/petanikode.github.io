@@ -57,7 +57,7 @@ hasil modifikasi dari tema &lt;a href=&#34;https://themes.gohugo.io/gohugo-amp/&
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tema-hugo/tema-baru.png&#34; alt=&#34;Tema Baru di Hugo&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Hugo membuatkankan kita struktur direktori temanya dan tinggal dimodifikasi saja.
+&lt;p&gt;Hugo sudah membuatkankan kita struktur direktori temanya dan tinggal dimodifikasi saja.
 Tapi sebelumnya, kita harus paham dulu dengan struktur direktori tersebut.&lt;/p&gt;
 
 &lt;h2 id=&#34;struktur-direktori-tema-hugo&#34;&gt;Struktur Direktori Tema Hugo&lt;/h2&gt;
@@ -95,17 +95,17 @@ Tapi sebelumnya, kita harus paham dulu dengan struktur direktori tersebut.&lt;/p
 
 &lt;h3 id=&#34;archetype&#34;&gt;Archetype&lt;/h3&gt;
 
-&lt;p&gt;Jika blog kita memiliki beberapa jenis konten, misalnya ada artikel, portifolio,
+&lt;p&gt;Jika blog kita memiliki beberapa jenis konten, misalnya ada artikel, portofolio,
 podcast, dll. maka kita harus membuatkan &lt;code&gt;archetype&lt;/code&gt; untuk masing-masing jenis
 konten tersebut.&lt;/p&gt;
 
 &lt;p&gt;Di dalam direktori &lt;code&gt;archetype&lt;/code&gt; terdapat file &lt;code&gt;default.md&lt;/code&gt; yang merupakan
-&lt;code&gt;archetype&lt;/code&gt; default yang akan digunakan ketika kita membuat konen
+&lt;code&gt;archetype&lt;/code&gt; default yang akan digunakan ketika kita membuat konten
 dengan perintah &lt;code&gt;hugo new&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;layouts&#34;&gt;Layouts&lt;/h3&gt;
 
-&lt;p&gt;Direktori layout menyimpan file-file HTML yang merupakan struktur dasra dari tema.&lt;/p&gt;
+&lt;p&gt;Direktori layout menyimpan file-file HTML yang merupakan struktur dasar dari tema.&lt;/p&gt;
 
 &lt;p&gt;Terdapat dua direktori penting di dalamnya:&lt;/p&gt;
 

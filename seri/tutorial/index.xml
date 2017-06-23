@@ -10,6 +10,168 @@
     <atom:link href="https://www.petanikode.com/seri/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cara Membuat Tema Hugo dari Nol (Meracik ulang Tema Petani Kode)</title>
+      <link>https://www.petanikode.com/membuat-tema-hugo/</link>
+      <pubDate>Fri, 23 Jun 2017 14:21:09 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/membuat-tema-hugo/</guid>
+      <description>
+
+&lt;p&gt;Saat ini Saya sedang menggunakan Hugo versi 0.18 dan berencana untuk
+meng-upgrade ke versi 0.24. Kabar baiknya, &lt;a href=&#34;https://github.com/bep&#34;&gt;Beb&lt;/a&gt; sudah merilis &lt;a href=&#34;https://github.com/gohugoio/hugo/releases/tag/v0.24&#34;&gt;versi 0.24&lt;/a&gt; dua
+hari yang lalu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tema-hugo/hugo-v0.24.png&#34; alt=&#34;Rilis Hugo versi 0.24&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selain melakukan upgrade ke mesin terbaru, saya juga berencana meracik
+ulang tema Petani Kode. Karena saya rasa tema ini cukup berantakan,
+baik dari segi kode dan performa.&lt;/p&gt;
+
+&lt;h2 id=&#34;alasan-saya-ingin-membuat-tema-baru&#34;&gt;Alasan Saya ingin Membuat Tema Baru&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Kode tema yang digunakan saat ini masih berantakan.&lt;/li&gt;
+&lt;li&gt;Kode CSS-nya masih murni ditulis dari nol dan saya ingin mencoba bereksperimen dengan &lt;a href=&#34;https://www.petanikode.com/topik/sass&#34;&gt;SASS&lt;/a&gt; di Hugo.&lt;/li&gt;
+&lt;li&gt;Penerapan AMP masih salah dan banyak yang tidak valid.&lt;/li&gt;
+&lt;li&gt;Tema yang digunakan saat ini, tampilannya hanya bisa terlihat sempurna kalau terhubung dengan internet, sedangkan
+kalau digunakan secara offline tampilannya barantakan. Hal ini disebabkan karena
+saya menggunakan CDN &lt;em&gt;(Content Delivery Network)&lt;/em&gt; dan font dari Google.&lt;/li&gt;
+&lt;li&gt;Ingin belajar membuat tema dari nol, karena tema yang digunakan saat ini merupakan
+hasil modifikasi dari tema &lt;a href=&#34;https://themes.gohugo.io/gohugo-amp/&#34;&gt;AMP Starter&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;membuat-tema-baru-di-hugo&#34;&gt;Membuat Tema Baru di Hugo&lt;/h2&gt;
+
+&lt;p&gt;Hugo sudah menyediakan perintah untuk membuat tema baru:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hugo new theme [name]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sebagai contoh, saya akan membuat tema bernama &lt;code&gt;kacang&lt;/code&gt; (karena saat ini lagi musim tanam kacang :smile:).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hugo new theme kacang
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka akan ada direktori baru di dalam direktori &lt;code&gt;themes&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tema-hugo/tema-baru.png&#34; alt=&#34;Tema Baru di Hugo&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hugo membuatkankan kita struktur direktori temanya dan tinggal dimodifikasi saja.
+Tapi sebelumnya, kita harus paham dulu dengan struktur direktori tersebut.&lt;/p&gt;
+
+&lt;h2 id=&#34;struktur-direktori-tema-hugo&#34;&gt;Struktur Direktori Tema Hugo&lt;/h2&gt;
+
+&lt;p&gt;Ada tiga direktori yang dibuatkan oleh Hugo:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;archetype&lt;/code&gt; &amp;mdash; direktori yang berisi template konten;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;layouts&lt;/code&gt; &amp;mdash; direktori yang berisi layout temanya;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;static&lt;/code&gt; &amp;mdash; direktori untuk menyimpan file statis seperti css, javascript, gambar, dsb.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Biar lebih jelas, mari kita bahas satu-persatu&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;archetype&#34;&gt;Archetype&lt;/h3&gt;
+
+&lt;p&gt;Jika blog kita memiliki beberapa jenis konten, misalnya ada artikel, portifolio,
+podcast, dll. maka kita harus membuatkan &lt;code&gt;archetype&lt;/code&gt; untuk masing-masing jenis
+konten tersebut.&lt;/p&gt;
+
+&lt;p&gt;Di dalam direktori &lt;code&gt;archetype&lt;/code&gt; terdapat file &lt;code&gt;default.md&lt;/code&gt; yang merupakan
+&lt;code&gt;archetype&lt;/code&gt; default yang akan digunakan ketika kita membuat konen
+dengan perintah &lt;code&gt;hugo new&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;layouts&#34;&gt;Layouts&lt;/h3&gt;
+
+&lt;p&gt;Direktori layout menyimpan file-file HTML yang merupakan struktur dasra dari tema.&lt;/p&gt;
+
+&lt;p&gt;Terdapat dua direktori penting di dalamnya:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;_default&lt;/code&gt; berisi struktur HTML untuk halaman konten. Ada dua isinya:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;list.html&lt;/code&gt; file HTML untuk menampilkan daftar konten.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;single.html&lt;/code&gt; file HTML untuk menampilkan satu konten.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tema-hugo/list-single.png&#34; alt=&#34;List vs Single&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;partials&lt;/code&gt; berisi bagian-bagian kecil dari struktur HTML.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tema-hugo/partial.png&#34; alt=&#34;Partials&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Partials&lt;/code&gt; memungkinkan kita memecah kode-kode layout menjadi bagian kecil,
+sehingga lebih efisien.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Kemudian ada juga file HTML:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;404.html&lt;/code&gt; file HTML untuk halaman error 404 not found.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;index.html&lt;/code&gt; file HTML untuk halaman indeks atau homepage.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;static&#34;&gt;Static&lt;/h3&gt;
+
+&lt;p&gt;Direktori ini menyimpan file-file statis seperti CSS, Javascript, Gambar,
+dan sebagainya.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-halaman-home&#34;&gt;Membuat Halaman Home&lt;/h2&gt;
+
+&lt;p&gt;Hal pertama yang harus kita lakukan adalah membuat halaman utamanya, yaitu
+halaman homepage.&lt;/p&gt;
+
+&lt;p&gt;Layout untuk halaman homepage ditentukan oleh file &lt;code&gt;layouts/index.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Silahkan isi file &lt;code&gt;index.html&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+        &amp;lt;title&amp;gt;{{ .Title }}&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+
+        &amp;lt;h1&amp;gt;Hello World!&amp;lt;/h1&amp;gt;
+        &amp;lt;p&amp;gt;Selamat datang di &amp;lt;b&amp;gt;{{ .Title }}&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;
+
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ini hanya untuk percobaan saja.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu silahkan jalankan server hugo dengan menggunakan tema tersebut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo server -t kacang
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tema-hugo/percobaan-tema-kacang.png&#34; alt=&#34;Hasil percobaan tema kacang&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berhasil&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya kita tinggal modifikasi saja sesuai selera.&lt;/p&gt;
+
+&lt;p&gt;Untuk referensi nama-nama variabel Hugo, bisa dibaca di &lt;a href=&#34;http://gohugo.io/templates/overview/&#34;&gt;dokumentasi Hugo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Pengembangan tema ini mungkin akan saya lanjutkan di tulisan terpisah.
+Karena saya belum membuat rancangan dan desainnya.&lt;/p&gt;
+
+&lt;p&gt;Sekarang yang terpenting sudah tahu cara memulainya :smile:.&lt;/p&gt;
+
+&lt;p&gt;Terima kasih sudah membaca sampai akhir.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;: Dok. Hugo &amp;mdash; &lt;a href=&#34;http://gohugo.io/themes/creation/&#34;&gt;Creating a Theme&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Mengenal HTML5 Vibration API untuk Membuat Getaran di HP</title>
       <link>https://www.petanikode.com/tutorial-html-vibrations/</link>
       <pubDate>Thu, 22 Jun 2017 06:35:29 +0800</pubDate>
@@ -3501,228 +3663,6 @@ perlu nginstal deh :smile:.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&#34;&gt;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/WebAssembly&#34;&gt;https://en.wikipedia.org/wiki/WebAssembly&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
-      <link>https://www.petanikode.com/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</link>
-      <pubDate>Tue, 14 Mar 2017 17:36:45 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</guid>
-      <description>
-
-&lt;p&gt;Seperti yang kita ketahui, istilah card memang sering dipakai pada Material Design.
-Sedangkan Bootstrap versi 3 tidak memiliki komponen card. Mungkin saja akan
-ditambahkan pada versi ke-4. Kita tunggu saja.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, kita akan belajar cara modifikasi komponen panel Bootstrap
-untuk dijadikan Card.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini tampilan hasil akhir yang akan kita buat:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;panel bootstrap sebagai card&#34;
-    src=&#34;https://1.bp.blogspot.com/-0EKCQDsPHPs/WMfRU8kIjYI/AAAAAAAAEZM/9bX9E4TSGTg_Z0VbrROgBRTUtWiEKPrdQCK4B/s1600/panel-bootstrap-sebagai-card.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;mempersiapkan-grid-layout&#34;&gt;Mempersiapkan Grid Layout&lt;/h2&gt;
-
-&lt;p&gt;Pertama, kita siapkan dulu grid layout dengan empat kolom.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
-    &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;menambahkan-panel&#34;&gt;Menambahkan Panel&lt;/h2&gt;
-
-&lt;p&gt;Nah selanjutnya, kita buat panelnya. Ada empat item yang ingin kita tampilkan:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Gambar Artikel&lt;/li&gt;
-&lt;li&gt;Label&lt;/li&gt;
-&lt;li&gt;Judul Artikel&lt;/li&gt;
-&lt;li&gt;Penulis&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Maka kode panelnya akan seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default&amp;quot;&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
-        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
-        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
-        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
-        &amp;lt;/h3&amp;gt;
-
-        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
-            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nah silahkan masukan kode panel di atas ke dalam kode sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Demo hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/BWdoEM/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Agar tinggi card terlihat sama, gunakan ukuran gambar artikel yang sama. Rekomendasi
-ukuran 700x350 px.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kode-css&#34;&gt;Kode CSS&lt;/h2&gt;
-
-&lt;p&gt;Terlihat pada hasil demo di atas, tampilannya masih belum rapi. Karena menggunakan
-style dari Bootstrap.&lt;/p&gt;
-
-&lt;p&gt;Tugas kita selanjutnya adalah membuat kode CSS sendiri untuk mengatur komponen
-panel tersebut.&lt;/p&gt;
-
-&lt;p&gt;Seperti yang terlihat pada kode panel di atas, terdapat
-&lt;em&gt;class&lt;/em&gt; yang harus kita buat.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;.post-body&lt;/code&gt;: untuk mengatur agar tinggi card sejajar&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-thumb&lt;/code&gt;: untuk mengatur tampilan gambar artikel&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-title&lt;/code&gt;: judul artikel&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-author&lt;/code&gt; dan &lt;code&gt;.author-photo&lt;/code&gt; untuk nama dan foto penulisya&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Mari kita buat kodenya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/* tinggi card */
-.post-body {
-    height: 215px;
-    position: relative;
-    padding: 20px 15px 0;
-}
-
-/* untuk menghilangkan padding pada .panel-heading */
-.post-thumb {
-    padding: 0
-}
-
-/* mengatur font dan link judul artikel*/
-.post-title a {
-    color: rgba(0,0,0,0.7);
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 1.5em;
-    letter-spacing: 0.01rem;
-}
-.post-title a:hover { text-decoration: none }
-
-/* posisi author selalu di bawah */
-.post-author {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    font-size: 13px;
-}
-
-.post-author .author-photo {
-    margin-right: 10px;
-    border-radius: 50%;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Demo hasil setelah ditambahkan CSS:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/OpjMbe/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Terlihat cukup bagus.&lt;/p&gt;
-
-&lt;p&gt;Silahkan lakukan kreasi sesukamu.&lt;/p&gt;
-
-&lt;h2 id=&#34;bonus-efek-bayangan-ketika-card-disentuh&#34;&gt;Bonus: Efek Bayangan Ketika Card disentuh&lt;/h2&gt;
-
-&lt;p&gt;Baiklah, sebagai bonus, kita tambahkan efek bayangan ketika card-nya disentuh
-pointer. Efek ini akan membuat card terlihat lebih keren :smile:.&lt;/p&gt;
-
-&lt;p&gt;Tambahkan kode CSS berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.card:hover {
-    box-shadow: 0px 2px 20px rgba(0,0,0,0.2);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, gunakan class &lt;code&gt;.card&lt;/code&gt; pada panel:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default card&amp;quot;&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
-        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
-        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
-        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
-        &amp;lt;/h3&amp;gt;
-
-        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
-            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka hasilnya akan seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/PpKZKr/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Bagaimana, mudah bukan?&lt;/p&gt;
-
-&lt;p&gt;Selamat berkreasi.&lt;/p&gt;
 </description>
     </item>
     

@@ -10,18 +10,27 @@
     <atom:link href="https://www.petanikode.com/seri/belajar-html/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Pengenalan HTML untuk Pemula</title>
+      <title>Belajar HTML: Pengenalan Dasar HTML untuk Pemula</title>
       <link>https://www.petanikode.com/tutorial-html-dasar/</link>
       <pubDate>Thu, 06 Feb 2014 14:16:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-html-dasar/</guid>
       <description>
 
-&lt;p&gt;Apakah Anda ingin membuat website sendiri? kalau ya, maka Anda harus mempelajari HTML. Karena HTML merupakan bahan dasar pembuatan web.&lt;/p&gt;
+&lt;p&gt;HTML adalah bahasa pertama yang harus dipelajari bila kamu ingin menjadi
+seorang Web Developer, karena HTML merupakan bahan dasar untuk membuat web.&lt;/p&gt;
+
+&lt;!-- @TODO tambahkan link &#34;ingin menjadi web developer&#34; ke /roadmap-untuk-menjadi-web-develoepr --&gt;
+
+&lt;!-- HTML dirancang untuk mengatur struktur dasar dari halaman web. --&gt;
 
 &lt;h2 id=&#34;apa-itu-html&#34;&gt;Apa itu HTML?&lt;/h2&gt;
 
 &lt;p&gt;HTML atau &lt;em&gt;Hyper Text Markup Language&lt;/em&gt; merupakan sebuah bahasa &lt;a href=&#34;http://kbbi.web.id/markah&#34;&gt;markah&lt;/a&gt; untuk membuat halaman web. Padanan HTML dalam bahasa indonesia adalah Bahasa Markah Hiper Teks (BMHT).&lt;/p&gt;
+
+&lt;!-- @TODO Sejarah HTML --&gt;
+
+&lt;!-- @TODO Persiapan Alat-alat untuk Belajar HTML --&gt;
 
 &lt;h2 id=&#34;membuat-file-html&#34;&gt;Membuat file HTML&lt;/h2&gt;
 

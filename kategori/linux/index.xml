@@ -2190,47 +2190,141 @@ informasi tentang proyek. Berkas ini seperti berkas &lt;code&gt;dpr&lt;/code&gt;
     </item>
     
     <item>
-      <title>Pemrograman Python di Linux: Pengenalan dan Persiapan Awal yang Harus dilakukan</title>
-      <link>https://www.petanikode.com/pemrograman-python-di-linux/</link>
+      <title>Belajar Pemrograman Python: Pengenalan Dasar Python dan Persiapan Awal</title>
+      <link>https://www.petanikode.com/belajar-pemrograman-python/</link>
       <pubDate>Sun, 16 Feb 2014 19:03:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-python-di-linux/</guid>
+      <guid>https://www.petanikode.com/belajar-pemrograman-python/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz4/skLB5P8yBXY/s1600/python-programming.png&#34; alt=&#34;Pemrograman Python&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/python.png&#34; alt=&#34;Pemrograman Python&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Hello kawan-kawan, pada kesempatan ini kita akan mempelajari pemrograman Python
-di Linux.&lt;/p&gt;
+&lt;!--
+Pengunjung ingin tahu bagaimana cara pemrograman python menggunakan Linux
+ --&gt;
 
-&lt;p&gt;Sebelumnya, mari kita kenalan dulu dengan Python.&lt;/p&gt;
+&lt;p&gt;Mau belajar bahasa pemrograman python, tapi masih bingung mulainya dari mana?&lt;/p&gt;
+
+&lt;p&gt;Tenang&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Karena di artikel ini kita akan membahas persiapan awalnya sampai tuntas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Apa itu Python dan kenapa belajar Python?&lt;/li&gt;
+&lt;li&gt;Apa saja alat-alat yang diperlukan untuk belajar python?&lt;/li&gt;
+&lt;li&gt;Bagaimana cara membuat program python?&lt;/li&gt;
+&lt;li&gt;Apa yang harus dipelajari selanjutnya?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mari kita bahas semuanya&amp;hellip;&lt;/p&gt;
 
 &lt;h2 id=&#34;apa-itu-python&#34;&gt;Apa itu Python?&lt;/h2&gt;
 
 &lt;p&gt;Python merupakan bahasa pemrograman tingkat tinggi yang diracik oleh &lt;a href=&#34;http://id.wikipedia.org/wiki/Guido_van_Rossum&#34;&gt;Guido van Rossum&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Python bisa kita gunakan untuk membuat berbagai macam program, seperti:
-program CLI, Program GUI (desktop), Program Mobile, Aplikasi Web, IoT, dsb.&lt;/p&gt;
+&lt;p&gt;Python banyak digunakan untuk membuat berbagai macam program, seperti:
+program CLI, &lt;a href=&#34;https://www.petanikode.com/kategori/desktop&#34;&gt;Program GUI (desktop)&lt;/a&gt;,
+&lt;a href=&#34;https://www.petanikode.com/kategori/mobile&#34;&gt;Aplikasi Mobile&lt;/a&gt;, &lt;a href=&#34;https://www.petanikode.com/kategori/web&#34;&gt;Web&lt;/a&gt;, IoT, &lt;a href=&#34;https://www.petanikode.com/kategori/game&#34;&gt;Game&lt;/a&gt;, Program
+untuk Hacking, dsb.&lt;/p&gt;
 
 &lt;p&gt;Python juga dikenal dengan bahasa pemrograman yang mudah dipelajari, karena
 struktur sintaknya rapi dan mudah dipahami.&lt;/p&gt;
 
-&lt;h2 id=&#34;persiapan-alat-untuk-pemrograman-python&#34;&gt;Persiapan Alat untuk Pemrograman Python&lt;/h2&gt;
+&lt;p&gt;(Python sangat bagus untuk pemula yang belum pernah &lt;em&gt;coding&lt;/em&gt;)&lt;/p&gt;
 
-&lt;p&gt;Apa saja alat-alat yang harus dipersiapkan untuk memrogram python?&lt;/p&gt;
+&lt;h3 id=&#34;kenapa-belajar-python&#34;&gt;Kenapa belajar Python?&lt;/h3&gt;
+
+&lt;p&gt;Pernah melihat meme ini?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/meme-python.png&#34; alt=&#34;Hello World java, c++, python&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Python memang sangat sederhana dibandingkan bahasa yang lainnya.
+Tidak perlu ini dan itu untuk membuat program &lt;a href=&#34;https://www.petanikode.com/sejarah-dan-asal-usul-hello-world/&#34;&gt;Hello World!&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Langsung saja dengan &lt;code&gt;print &amp;quot;Hello World!&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bahkan tagline di websitenya menjelaskan, kalau python akan membuatmu
+bekerja lebih cepat dan efektif.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Python is a programming language that lets you work quickly and integrate systems more effectively&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Jadi kenapa belajar Python?&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Teks Editor/IDE&lt;/strong&gt;: digunakan untuk menulis kode.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Python&lt;/strong&gt;: Sebagian besar distro Linux sudah menyediakan Python, jadi tidak perlu diinstal.
-Jika anda menggunakan Windows, silahkan baca &lt;a href=&#34;https://www.petanikode.com/5-langkah-instalasi-python-di-windows/&#34;&gt;Cara Installl Python di Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cepat dan efektif;&lt;/li&gt;
+&lt;li&gt;Mudah dipelajari;&lt;/li&gt;
+&lt;li&gt;Banyak digunakan di perusahaan besar;&lt;/li&gt;
+&lt;li&gt;Sekedar ingin tahu saja.&lt;/li&gt;
+&lt;li&gt;&amp;hellip;(tambahkan sendiri)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Periksa versi Python yang terinstal di komputer anda dengan perintah &lt;code&gt;python --version&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;persiapan-alat-untuk-belajar-pemrograman-python&#34;&gt;Persiapan Alat untuk Belajar Pemrograman Python&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;petanikode@imajinasi~$ python --version
+&lt;p&gt;Apa saja alat-alat yang harus dipersiapkan untuk belajar pemrograman python?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Python&lt;/strong&gt;: Interpreter yang menerjemahkan bahasa python ke
+bahasa mesin, sehingga program bisa dijalankan.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Teks Editor/IDE&lt;/strong&gt;: Program yang digunakan untuk menulis kode.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;bagaiaman-cara-install-python&#34;&gt;Bagaiaman cara install Python?&lt;/h3&gt;
+
+&lt;p&gt;Bagi pengguna Linux, Python tidak perlu diinstal. Karena Sebagian besar distro
+Linux sudah menyediakannya secara default.&lt;/p&gt;
+
+&lt;p&gt;Untuk mengeceknya, silahkan ketik perintah &lt;code&gt;python --version&lt;/code&gt; di terminal.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ python --version
 Python 2.7.12
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;mengenal-mode-interaktif-repl&#34;&gt;Mengenal Mode Interaktif (REPL)&lt;/h2&gt;
+&lt;p&gt;Bagi pengguna Windows, silahkan baca &lt;a href=&#34;https://www.petanikode.com/5-langkah-instalasi-python-di-windows/&#34;&gt;Cara Installs Python di Windows&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;python-versi-2-vs-python-versi-3&#34;&gt;Python Versi 2 vs Python Versi 3&lt;/h3&gt;
+
+&lt;p&gt;Ada dua versi Python yang beredar saat ini, yaitu versi 2 dan 3.&lt;/p&gt;
+
+&lt;p&gt;Apa perbedaanya?&lt;/p&gt;
+
+&lt;p&gt;Python versi 2 merupakan versi yang banyak digunakan saat ini, baik dilingkungan
+produksi dan pengembangan.&lt;/p&gt;
+
+&lt;p&gt;Sementara Python versi 3 adalah pengembangan lanjutan dari versi 2. Python 3
+memiliki lebih banyak fitur dibandingkan Python 2.&lt;/p&gt;
+
+&lt;p&gt;Untuk membuka Python 2 kita hanya menggunakan perintah &lt;code&gt;python&lt;/code&gt; saja,
+sedangkan Python 3 menggunakan perintah
+&lt;code&gt;python3&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/python2-python3.png&#34; alt=&#34;Python 2 dan Python 3&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Manakah yang harus saya pilih?&lt;/p&gt;
+
+&lt;p&gt;Untuk yang baru belajar saya sarankan menggunakan versi 2. Sementara untuk
+yang sudah mahir, bisa mencoba yang versi 3.&lt;/p&gt;
+
+&lt;h3 id=&#34;teks-editor-ide-untuk-menulis-kode&#34;&gt;Teks Editor/IDE untuk Menulis Kode&lt;/h3&gt;
+
+&lt;p&gt;Teks editor yang digunakan untuk menulis prgram python bisa apa saja. Bahkan
+Notepad pun bisa.&lt;/p&gt;
+
+&lt;p&gt;Pada Linux, banyak sekali pilihan teks editor yang bisa digunakan.&lt;/p&gt;
+
+&lt;p&gt;Silahkan baca-baca di sini:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/teks-editor-cli-linux/&#34;&gt;6 Teks Editor Berbasis Teks (CLI) di Linux untuk Menulis Kode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Selain teks editor, kita juga bisa menggunakan IDE &lt;em&gt;(Integereted Development Environtment)&lt;/em&gt;.
+Namun, nanti kita akan bahas belakangan.&lt;/p&gt;
+
+&lt;p&gt;Untuk saat ini kita pakai teks editor saja dulu, biar lebih paham konsep pemrograman.&lt;/p&gt;
+
+&lt;h2 id=&#34;mengenal-mode-interaktif-python&#34;&gt;Mengenal Mode Interaktif Python&lt;/h2&gt;
 
 &lt;p&gt;Mode interaktif merupakan fasilitas/fitur yang disediakan oleh Python sebagai tempat
 menulis kode secara interaktif.&lt;/p&gt;
@@ -2263,10 +2357,10 @@ biasanya muncul saat membuat blok kode dan menulis perintah tunggal dalam bebera
 &lt;p&gt;Kita bisa memanfaatkan mode interaktif ini untuk:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Uji coba suatu fungsi&lt;/li&gt;
-&lt;li&gt;Eksperimen modul tertentu&lt;/li&gt;
-&lt;li&gt;Kalkulator&lt;/li&gt;
-&lt;li&gt;Mencari bantuan tentang fungsi tertentu&lt;/li&gt;
+&lt;li&gt;Uji coba suatu fungsi;&lt;/li&gt;
+&lt;li&gt;Eksperimen modul tertentu;&lt;/li&gt;
+&lt;li&gt;Kalkulator;&lt;/li&gt;
+&lt;li&gt;Mencari bantuan tentang fungsi tertentu;&lt;/li&gt;
 &lt;li&gt;dll.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2276,8 +2370,8 @@ karena akan membantu sekali dalam mempelajari python.&lt;/p&gt;
 &lt;p&gt;Ada dua fungsi yang digunakan untuk mencari bantuan:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;fungsi &lt;code&gt;dir()&lt;/code&gt; untuk melihat fungsi apa saja yang tersedia pada sebuah modul&lt;/li&gt;
-&lt;li&gt;fungsi &lt;code&gt;help()&lt;/code&gt; untuk membuka dokumentasi suatu fungsi&lt;/li&gt;
+&lt;li&gt;fungsi &lt;code&gt;dir()&lt;/code&gt; untuk melihat fungsi apa saja yang tersedia pada sebuah modul;&lt;/li&gt;
+&lt;li&gt;fungsi &lt;code&gt;help()&lt;/code&gt; untuk membuka dokumentasi suatu fungsi.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Sebgai contoh, kita akan coba mencari tahu tentang penggunaan modul &lt;code&gt;math&lt;/code&gt;.&lt;/p&gt;
@@ -2328,16 +2422,16 @@ mode interaktif ditutup, program akan hilang.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-_i9Unyu7DZw/UwCYnYGOW2I/AAAAAAAAAQ8/lbupDV2Pb5E/s1600/Menyimpan+script+python.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Kemudian untuk menjalankan skripnya, gunakan perintah berikut:&lt;/p&gt;
+&lt;p&gt;Kemudian menjalankan skripnya, gunakan perintah berikut:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;python nama_skrip.py
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Pastikan berada dalam direktori tempat skrip tersebut disimpan.&lt;/p&gt;
+&lt;p&gt;Pastikan mengetik perintah tersebut pada direktori tempat menyimpan skripnya.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-b2ZezqSOi2o/UwCZkQZ6cSI/AAAAAAAAARI/h0ZfTEW3sTU/s1600/python+-+hello_world.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-b2ZezqSOi2o/UwCZkQZ6cSI/AAAAAAAAARI/h0ZfTEW3sTU/s1600/python+-+hello_world.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;alur-kerja&#34;&gt;Alur kerja&lt;/h2&gt;
+&lt;h2 id=&#34;alur-kerja-pembuatan-program-python&#34;&gt;Alur Kerja Pembuatan Program Python&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-EJOje0g-zPk/VCQHukqT-UI/AAAAAAAAAt4/44AaDYCw1M0/s1600/cara%2Bkerja%2Bpemrograman%2Bpython.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-EJOje0g-zPk/VCQHukqT-UI/AAAAAAAAAt4/44AaDYCw1M0/s1600/cara%2Bkerja%2Bpemrograman%2Bpython.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -2347,33 +2441,126 @@ mode interaktif ditutup, program akan hilang.&lt;/p&gt;
 &lt;li&gt;Komputer mengerjakan perintah tersebut.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;!-- ## Pemrograman Python Menggunakan PyCharm
+&lt;h2 id=&#34;pemrograman-python-menggunakan-pycharm&#34;&gt;Pemrograman Python Menggunakan PyCharm&lt;/h2&gt;
 
-PyCharm merupakan IDE terbaik untuk pemrograman python. PyCharm ini dibuat oleh
-JetBrains.
+&lt;p&gt;PyCharm merupakan IDE terbaik untuk pemrograman python.
+PyCharm dibuat oleh JetBrains.&lt;/p&gt;
 
-Ada dua vari PyCharm:
+&lt;p&gt;Ada dua versi PyCharm:&lt;/p&gt;
 
-1. Versi Profesional (_Trial_ 30 hari)
-2. Versi Komunitas (Gratis)
+&lt;ol&gt;
+&lt;li&gt;Versi Profesional (&lt;em&gt;Trial&lt;/em&gt; 30 hari) &amp;ndash; Memiliki fitur lebih banyak untuk pemrograman python dan web.&lt;/li&gt;
+&lt;li&gt;Versi Komunitas (Gratis dan &lt;em&gt;opensource&lt;/em&gt;) &amp;ndash; Fiturnya standar untuk pemrograman python.&lt;/li&gt;
+&lt;/ol&gt;
 
-Pada panduan ini, kita akan menggunakan PyCharm versi Komunitas.
+&lt;p&gt;Pada panduan ini, kita akan menggunakan PyCharm versi Komunitas.&lt;/p&gt;
 
-Silahkan download di [website JetBrains](https://www.jetbrains.com/pycharm/download/).
+&lt;h3 id=&#34;instalasi-pycharm-di-linux&#34;&gt;Instalasi PyCharm di Linux&lt;/h3&gt;
 
-![Download PyCharm]()
+&lt;p&gt;Pertama, pastikan komputermu sudah terinstal JDK (Java Development Kit) atau JRE.
+Karena PyCharm terbuat dari Java dan dia membutuhkan JRE untuk berjalan.&lt;/p&gt;
 
-Setelah itu, buka file manager dengan akses `root`, kemudian
-ekstrak file arsip PyCharm yang sudah didownload ke direktori
-`/opt`.
+&lt;p&gt;Silahkan baca &lt;a href=&#34;https://www.petanikode.com/pemrograman-java-di-linux/#2-jdk-java-development-kit&#34;&gt;Cara Instal JDK dan JRE di Linux&lt;/a&gt;.&lt;/p&gt;
 
-![Ekstrak Arsip PyCharm]()
+&lt;p&gt;Setelah itu&amp;hellip;&lt;/p&gt;
 
-### Membuat Proyek Python di PyCharm --&gt;
+&lt;p&gt;Silahkan download PyCharm di &lt;a href=&#34;https://www.jetbrains.com/pycharm/download/&#34;&gt;website JetBrains&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/download-pycharm.png&#34; alt=&#34;Download PyCharm&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Kita sudah mengetahui cara memerogram python di Linux.&lt;/p&gt;
+&lt;p&gt;Pastikan men-download yang versi komunitas.&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, ikuti langkah-langkah berikut untuk menginstalnya:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Buka File manager sebagai &lt;code&gt;root&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/buka-file-manager-sebagai-root.png&#34; alt=&#34;Buka File Manager Sebagai Root&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Cari File PyCharm yang sudah didownload tadi, kemudian ekstrak ke direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/ekstrak-pycharm.png&#34; alt=&#34;Ekstrak PyCharm&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada gambar di atas, Saya menggunakan &lt;code&gt;F3&lt;/code&gt; untuk memecah tampilan (tergantung dari file manager yang kamu gunakan).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Buka kembali File Manager sebagai user biasa. Kemudian masuk ke &lt;code&gt;/opt//opt/pycharm-community-2017.1.2/bin&lt;/code&gt;
+dan klik ganda pada file &lt;code&gt;pycharm.sh&lt;/code&gt;, lalu pilih &lt;strong&gt;run&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/eksekusi-pycharm.png&#34; alt=&#34;Ekseskusi PyCharm Petama Kali&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Tunguglah sebentar, maka akan terbuka jendela baru. Pilih &lt;strong&gt;Don not import settings&lt;/strong&gt;,
+kemudian klik &lt;strong&gt;OK&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/impor-settings.png&#34; alt=&#34;Import Settings&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Jendela sambutan akan terbuka, silahkan centang &amp;ldquo;Enable opening file&amp;hellip;&amp;rdquo;
+agar perintah &lt;code&gt;charm&lt;/code&gt; dikenali di terminal. Setelah itu klik &lt;strong&gt;Ok&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/sambutan-awal-pycharm.png&#34; alt=&#34;Jendela sambutan PyCharm&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Masukkan Password bila anda diminta, setelah itu klik &lt;strong&gt;OK&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Selesai&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Coba periksa di menu, apakah sudah ada PyCharm atau tidak?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/menu-pycharm.png&#34; alt=&#34;Menu PyCharm&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;membuat-proyek-python-di-pycharm&#34;&gt;Membuat Proyek Python di PyCharm&lt;/h3&gt;
+
+&lt;p&gt;Untuk membuat proyek baru, kita bisa klik &lt;em&gt;&amp;ldquo;Create new Project&amp;rdquo;&lt;/em&gt;
+pada jendela sambutan &lt;em&gt;(welcome)&lt;/em&gt; PyCharm.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/jendela-sambutan-pycharm.png&#34; alt=&#34;Jendela sambutan pycharm&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, kita akan diminta untuk mengisi nama proyeknya dan memilih
+versi Python yang akan digunakan.&lt;/p&gt;
+
+&lt;p&gt;Isi saja nama proyeknya dengan &lt;code&gt;hello-world&lt;/code&gt; dan gunakan Python 2.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/nama-proyek-python.png&#34; alt=&#34;Nama proyek dan versi Python&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka kita akan langsung di bawah ke area kerja PyCharm.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/proyek-baru-pycharm.png&#34; alt=&#34;Proyek baru di Pycharm&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, silahkan tambahkan file python dengan klik kanan pada
+direktori proyek kemudian pilih &lt;strong&gt;New&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Python File&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/membuat-file-python.png&#34; alt=&#34;Membuat File Python di PyCharm&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, berikan nama filenya dengan &lt;code&gt;program-pertama&lt;/code&gt; dan klik Ok.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/nama-file-python.png&#34; alt=&#34;Memberikan nama file Python di PyCharm&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, silahkan tulis kode program-nya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print &amp;quot;Hello dunia&amp;quot;
+print &amp;quot;Selamat datang di pemrograman Python&amp;quot;
+print &amp;quot;Saya belajar Python dengan PyCharm&amp;quot;
+print &amp;quot;Salam, Petani Kode&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian buka menu &lt;strong&gt;Run&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Run&amp;hellip;&lt;/strong&gt; atau tekan tombol &lt;code&gt;Alt&lt;/code&gt;+&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;F10&lt;/code&gt;.
+Kalau muncul pilihan, pilih saja &lt;code&gt;program-pertama&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/run-program-python.png&#34; alt=&#34;menjalankan program python di pycharm&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selamat&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Program pertama kita di PyCharm sudah berhasil dieksekusi.&lt;/p&gt;
+
+&lt;p&gt;Begitulah cara membuat program di IDE PyCharm, lebih mudah bukan?&lt;/p&gt;
+
+&lt;p&gt;Kita tidak perlu membuka terminal untuk mengekseskusi program Python.&lt;/p&gt;
+
+&lt;p&gt;Mana yang menurutmu lebih enak?&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya-yang-harus-dipelajari&#34;&gt;Apa Selanjutnya yang Harus dipelajari?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah mengetahui cara memerogram python di Linux baik menggunakan teks
+editor dan IDE Pycharm.&lt;/p&gt;
 
 &lt;p&gt;Silahkan melakukan eksperimen sendiri agar semakin paham.&lt;/p&gt;
 

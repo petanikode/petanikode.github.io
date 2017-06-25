@@ -73,7 +73,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://www.petanikode.com/topik/lab/index.java/" />
 
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="/images/petanikode-programmer.png" />
 
     
     <meta property="og:updated_time" content="2016-04-22 20:31:00 &#43;0000 UTC"/>

@@ -2483,7 +2483,7 @@ Karena PyCharm terbuat dari Java dan dia membutuhkan JRE untuk berjalan.&lt;/p&g
 
 &lt;p&gt;Pada gambar di atas, Saya menggunakan &lt;code&gt;F3&lt;/code&gt; untuk memecah tampilan (tergantung dari file manager yang kamu gunakan).&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Buka kembali File Manager sebagai user biasa. Kemudian masuk ke &lt;code&gt;/opt//opt/pycharm-community-2017.1.2/bin&lt;/code&gt;
+&lt;li&gt;&lt;p&gt;Buka kembali File Manager sebagai user biasa. Kemudian masuk ke &lt;code&gt;/opt/pycharm-community-2017.1.2/bin&lt;/code&gt;
 dan klik ganda pada file &lt;code&gt;pycharm.sh&lt;/code&gt;, lalu pilih &lt;strong&gt;run&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/eksekusi-pycharm.png&#34; alt=&#34;Ekseskusi PyCharm Petama Kali&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2493,7 +2493,7 @@ kemudian klik &lt;strong&gt;OK&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/impor-settings.png&#34; alt=&#34;Import Settings&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Jendela sambutan akan terbuka, silahkan centang &amp;ldquo;Enable opening file&amp;hellip;&amp;rdquo;
+&lt;li&gt;&lt;p&gt;Jendela sambutan akan terbuka, silahkan centang &lt;strong&gt;&lt;em&gt;&amp;ldquo;Enable opening file&amp;hellip;&amp;rdquo;&lt;/em&gt;&lt;/strong&gt;
 agar perintah &lt;code&gt;charm&lt;/code&gt; dikenali di terminal. Setelah itu klik &lt;strong&gt;Ok&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/sambutan-awal-pycharm.png&#34; alt=&#34;Jendela sambutan PyCharm&#34; /&gt;&lt;/p&gt;
@@ -2551,7 +2551,7 @@ Kalau muncul pilihan, pilih saja &lt;code&gt;program-pertama&lt;/code&gt;.&lt;/p
 
 &lt;p&gt;Program pertama kita di PyCharm sudah berhasil dieksekusi.&lt;/p&gt;
 
-&lt;p&gt;Begitulah cara membuat program di IDE PyCharm, lebih mudah bukan?&lt;/p&gt;
+&lt;p&gt;Begitulah cara membuat program python menggunakan IDE PyCharm, lebih mudah bukan?&lt;/p&gt;
 
 &lt;p&gt;Kita tidak perlu membuka terminal untuk mengekseskusi program Python.&lt;/p&gt;
 
@@ -2559,7 +2559,7 @@ Kalau muncul pilihan, pilih saja &lt;code&gt;program-pertama&lt;/code&gt;.&lt;/p
 
 &lt;h2 id=&#34;apa-selanjutnya-yang-harus-dipelajari&#34;&gt;Apa Selanjutnya yang Harus dipelajari?&lt;/h2&gt;
 
-&lt;p&gt;Kita sudah mengetahui cara memerogram python di Linux baik menggunakan teks
+&lt;p&gt;Kita sudah mengetahui cara memerogram Python di Linux baik menggunakan teks
 editor dan IDE Pycharm.&lt;/p&gt;
 
 &lt;p&gt;Silahkan melakukan eksperimen sendiri agar semakin paham.&lt;/p&gt;

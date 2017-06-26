@@ -2241,8 +2241,6 @@ struktur sintaknya rapi dan mudah dipahami.&lt;/p&gt;
 &lt;p&gt;Python memang sangat sederhana dibandingkan bahasa yang lainnya.
 Tidak perlu ini dan itu untuk membuat program &lt;a href=&#34;https://www.petanikode.com/sejarah-dan-asal-usul-hello-world/&#34;&gt;Hello World!&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Langsung saja dengan &lt;code&gt;print &amp;quot;Hello World!&amp;quot;&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;Bahkan tagline di websitenya menjelaskan, kalau python akan membuatmu
 bekerja lebih cepat dan efektif.&lt;/p&gt;
 
@@ -2281,7 +2279,7 @@ Linux sudah menyediakannya secara default.&lt;/p&gt;
 Python 2.7.12
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Bagi pengguna Windows, silahkan baca &lt;a href=&#34;https://www.petanikode.com/5-langkah-instalasi-python-di-windows/&#34;&gt;Cara Installs Python di Windows&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Bagi pengguna Windows, silahkan baca &lt;a href=&#34;https://www.petanikode.com/5-langkah-instalasi-python-di-windows/&#34;&gt;Cara Install Python di Windows&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;python-versi-2-vs-python-versi-3&#34;&gt;Python Versi 2 vs Python Versi 3&lt;/h3&gt;
 
@@ -2308,7 +2306,7 @@ yang sudah mahir, bisa mencoba yang versi 3.&lt;/p&gt;
 
 &lt;h3 id=&#34;teks-editor-ide-untuk-menulis-kode&#34;&gt;Teks Editor/IDE untuk Menulis Kode&lt;/h3&gt;
 
-&lt;p&gt;Teks editor yang digunakan untuk menulis prgram python bisa apa saja. Bahkan
+&lt;p&gt;Teks editor yang digunakan untuk menulis program python bisa apa saja. Bahkan
 Notepad pun bisa.&lt;/p&gt;
 
 &lt;p&gt;Pada Linux, banyak sekali pilihan teks editor yang bisa digunakan.&lt;/p&gt;
@@ -2329,7 +2327,7 @@ Namun, nanti kita akan bahas belakangan.&lt;/p&gt;
 &lt;p&gt;Mode interaktif merupakan fasilitas/fitur yang disediakan oleh Python sebagai tempat
 menulis kode secara interaktif.&lt;/p&gt;
 
-&lt;p&gt;Fitur ini juga dikenal dengan Shell, Console, REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt;, interpreter, dsb.&lt;/p&gt;
+&lt;p&gt;Fitur ini juga dikenal juga dengan Shell, Console, REPL &lt;em&gt;(Read–Eval–Print Loop)&lt;/em&gt;, interpreter, dsb.&lt;/p&gt;
 
 &lt;p&gt;Cara membuka mode interaktif adalah dengan mengetik perintah &lt;code&gt;python&lt;/code&gt; pada terminal.&lt;/p&gt;
 
@@ -2403,7 +2401,7 @@ pow(...)
 
 &lt;p&gt;*untuk keluar dari dokumentasi tekan &lt;code&gt;q&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Setelah itu, baru saya bisa pakai dan coba fungsinya.&lt;/p&gt;
+&lt;p&gt;Setelah itu, baru kita bisa pakai dan coba fungsinya.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-s1ya5BzGqzM/WR6KWFUp0AI/AAAAAAAAEyc/PlF1ySkGN3AUowNMQ5J36DDB5EHbEA8IQCK4B/s1600/melihat-bantuan-dan-dokumentasi-fungsi-python.png&#34; alt=&#34;Melihat bantuan dan dokumentasi python&#34; /&gt;&lt;/p&gt;
 
@@ -2422,7 +2420,7 @@ mode interaktif ditutup, program akan hilang.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-_i9Unyu7DZw/UwCYnYGOW2I/AAAAAAAAAQ8/lbupDV2Pb5E/s1600/Menyimpan+script+python.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Kemudian menjalankan skripnya, gunakan perintah berikut:&lt;/p&gt;
+&lt;p&gt;Kemudian untuk menjalankan skripnya, gunakan perintah berikut:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;python nama_skrip.py
 &lt;/code&gt;&lt;/pre&gt;
@@ -2498,7 +2496,7 @@ agar perintah &lt;code&gt;charm&lt;/code&gt; dikenali di terminal. Setelah itu k
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/sambutan-awal-pycharm.png&#34; alt=&#34;Jendela sambutan PyCharm&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Masukkan Password bila anda diminta, setelah itu klik &lt;strong&gt;OK&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;Masukkan Password bila diminta, setelah itu klik &lt;strong&gt;OK&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Selesai&amp;hellip;&lt;/p&gt;
@@ -2514,10 +2512,12 @@ pada jendela sambutan &lt;em&gt;(welcome)&lt;/em&gt; PyCharm.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/jendela-sambutan-pycharm.png&#34; alt=&#34;Jendela sambutan pycharm&#34; /&gt;&lt;/p&gt;
 
+&lt;p&gt;Atau bisa juga dilakukan melalui menu &lt;strong&gt;File&lt;/strong&gt;-&amp;gt;&lt;strong&gt;New Project&lt;/strong&gt;.&lt;/p&gt;
+
 &lt;p&gt;Setelah itu, kita akan diminta untuk mengisi nama proyeknya dan memilih
 versi Python yang akan digunakan.&lt;/p&gt;
 
-&lt;p&gt;Isi saja nama proyeknya dengan &lt;code&gt;hello-world&lt;/code&gt; dan gunakan Python 2.&lt;/p&gt;
+&lt;p&gt;Isi saja nama proyeknya dengan &lt;code&gt;hello-world&lt;/code&gt; dan gunakan Python versi 2 (&lt;code&gt;python2.7&lt;/code&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/nama-proyek-python.png&#34; alt=&#34;Nama proyek dan versi Python&#34; /&gt;&lt;/p&gt;
 
@@ -2526,7 +2526,7 @@ versi Python yang akan digunakan.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/proyek-baru-pycharm.png&#34; alt=&#34;Proyek baru di Pycharm&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Selanjutnya, silahkan tambahkan file python dengan klik kanan pada
-direktori proyek kemudian pilih &lt;strong&gt;New&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Python File&lt;/strong&gt;.&lt;/p&gt;
+direktori proyek, kemudian pilih &lt;strong&gt;New&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Python File&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/membuat-file-python.png&#34; alt=&#34;Membuat File Python di PyCharm&#34; /&gt;&lt;/p&gt;
 
@@ -2553,13 +2553,13 @@ Kalau muncul pilihan, pilih saja &lt;code&gt;program-pertama&lt;/code&gt;.&lt;/p
 
 &lt;p&gt;Begitulah cara membuat program python menggunakan IDE PyCharm, lebih mudah bukan?&lt;/p&gt;
 
-&lt;p&gt;Kita tidak perlu membuka terminal untuk mengekseskusi program Python.&lt;/p&gt;
+&lt;p&gt;Kita tidak perlu membuka terminal untuk mengekseskusi programnya.&lt;/p&gt;
 
 &lt;p&gt;Mana yang menurutmu lebih enak?&lt;/p&gt;
 
 &lt;h2 id=&#34;apa-selanjutnya-yang-harus-dipelajari&#34;&gt;Apa Selanjutnya yang Harus dipelajari?&lt;/h2&gt;
 
-&lt;p&gt;Kita sudah mengetahui cara memerogram Python di Linux baik menggunakan teks
+&lt;p&gt;Kita sudah mengetahui cara memrogram Python di Linux baik menggunakan teks
 editor dan IDE Pycharm.&lt;/p&gt;
 
 &lt;p&gt;Silahkan melakukan eksperimen sendiri agar semakin paham.&lt;/p&gt;

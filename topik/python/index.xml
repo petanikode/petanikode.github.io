@@ -993,7 +993,83 @@ pengalaman sahur kode dua tahun yang lalu.&lt;/p&gt;
       <pubDate>Fri, 09 Oct 2015 17:47:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-python-di-windows/</guid>
-      <description>&lt;p&gt;Instalasi python di windows sangat gampang. Langkah-langkanya sama seperti menginstal software-software lain, &lt;i&gt;next-next-finish&lt;/i&gt;. Python yang akan di instal dalam panduan ini adalah python versi 3. Download di situs resmi python (&lt;a href=&#34;http://python.org/&#34; target=&#34;_blank&#34;&gt;python.org&lt;/a&gt;).&lt;br /&gt;&lt;h2&gt;1. Eksekusi python-3.msi python&lt;/h2&gt;Python-3.4.2.msi adalah file instalator python. File ini akan melakukan instalasi ke sistem windows. Klik ganda untuk mengeksekusinya.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-yu4hrGCOmG4/VheGWN_OVhI/AAAAAAAAB8I/DCKef5730n8/s1600/1.%2BKlik%2Bganda%2Bsetup%2Bpython.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-yu4hrGCOmG4/VheGWN_OVhI/AAAAAAAAB8I/DCKef5730n8/s1600/1.%2BKlik%2Bganda%2Bsetup%2Bpython.PNG&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2&gt;2. Pilih pengguna&lt;/h2&gt;Setelah diinstal, siapa yang boleh memakai python. Pilih saja &lt;i&gt;&amp;lsquo;Install for all users&amp;rsquo;&lt;/i&gt; agar bisa dipakai untuk semua user di komputernya.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-ejcTMNiIBSk/VheGWGVL-GI/AAAAAAAAB8A/agVdYOYQ7kw/s1600/2.%2BPilih%2Binstall%2Buntuk%2Bsemua%2Buser.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-ejcTMNiIBSk/VheGWGVL-GI/AAAAAAAAB8A/agVdYOYQ7kw/s1600/2.%2BPilih%2Binstall%2Buntuk%2Bsemua%2Buser.PNG&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2&gt;3. Lokasi instal&lt;/h2&gt;Tentukan dimana lokasi python akan diinstal. Biarkan saja di &lt;i&gt;&amp;lsquo;C:\python34\&amp;rsquo;&lt;/i&gt;, kemudian klik &lt;i&gt;next&lt;/i&gt;.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-5nxFrMF4Q5c/VheGWD9NeVI/AAAAAAAAB8E/XV6X8feE3eA/s1600/3.%2BLokasi%2Binstalasi.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-5nxFrMF4Q5c/VheGWD9NeVI/AAAAAAAAB8E/XV6X8feE3eA/s1600/3.%2BLokasi%2Binstalasi.PNG&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2&gt;4. Kostumisasi&lt;/h2&gt;Menentukan fitur-fitur yang akan diinstal. Jangan lupa untuk mengaktifkan &lt;i&gt;&amp;lsquo;Add python.exe to path&amp;rsquo;&lt;/i&gt; agar python bisa diakses langsung dari CMD &lt;i&gt;(Command Prompt)&lt;/i&gt;.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-L4EfJkuTvI4/VheGW67CMnI/AAAAAAAAB8U/KBbC-9RnBpE/s1600/4.%2BPilih%2Bfitur%2Bdan%2Baktifkan%2Bke%2Blingkungan%2Bpath.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-L4EfJkuTvI4/VheGW67CMnI/AAAAAAAAB8U/KBbC-9RnBpE/s1600/4.%2BPilih%2Bfitur%2Bdan%2Baktifkan%2Bke%2Blingkungan%2Bpath.PNG&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Setelah diaktifkan, akan menjadi seperti ini:&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-2jKsppa26iE/VheGXOhtx5I/AAAAAAAAB8Y/InrxoKPlyLg/s1600/5.%2BAktifkan%2Bfitur%2Badd%2Bto%2Benv%2Bpath.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-2jKsppa26iE/VheGXOhtx5I/AAAAAAAAB8Y/InrxoKPlyLg/s1600/5.%2BAktifkan%2Bfitur%2Badd%2Bto%2Benv%2Bpath.PNG&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2&gt;5. Setelah itu, klik &lt;i&gt;finish&lt;/i&gt; untuk menyelesaikan.&lt;/h2&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-rcZUJ6ZsSdI/VheGXKh99yI/AAAAAAAAB8c/uuBc-1DJGW8/s1600/6.%2BFinish.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-rcZUJ6ZsSdI/VheGXKh99yI/AAAAAAAAB8c/uuBc-1DJGW8/s1600/6.%2BFinish.PNG&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;h2&gt;Uji coba python&lt;/h2&gt;Uji coba python shell yang terinstal, masuk ke manu kemudian cari &lt;i&gt;python shell&lt;/i&gt;.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-zmK0oQzUeHA/VheGX_hmeRI/AAAAAAAAB8s/e6UBzT4nLpg/s1600/Uji%2Bcoba%2Bshell%2Bpython.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-zmK0oQzUeHA/VheGX_hmeRI/AAAAAAAAB8s/e6UBzT4nLpg/s1600/Uji%2Bcoba%2Bshell%2Bpython.PNG&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Uji coba python dari CMD, ketik perintah &lt;i&gt;&amp;lsquo;python&amp;rsquo;&lt;/i&gt; untuk masuk ke python shell.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-oGojAXihIw0/VheGXn6V13I/AAAAAAAAB8k/p_s3_srGTPo/s1600/Uji%2Bcoba%2Bshell%2Bpython%2Bdi%2BCMD.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-oGojAXihIw0/VheGXn6V13I/AAAAAAAAB8k/p_s3_srGTPo/s1600/Uji%2Bcoba%2Bshell%2Bpython%2Bdi%2BCMD.PNG&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;/p&gt;
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/python.png&#34; alt=&#34;Pemrograman Python&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instalasi python di Windows sangat gampang. Langkah-langkanya sama seperti
+menginstal software Windows pada umumnya, &lt;em&gt;next-next-finish&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tapi ada konfigurasi yang harus dipilih ditengah-tengah proses instalasi,
+agar perintah Python dapat dikenali di CMD.&lt;/p&gt;
+
+&lt;p&gt;Python yang akan di instal dalam panduan ini adalah python versi 3.
+Download di situs resmi python (&lt;a href=&#34;https://www.python.org/downloads/windows/&#34;&gt;python.org&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/python/website-python.png&#34; alt=&#34;Download Python&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-buka-file-python-3-msi&#34;&gt;1. Buka File python-3.msi&lt;/h2&gt;
+
+&lt;p&gt;Setelah download selesai, kita akan mendapatkan file &lt;code&gt;python-3.4.2.msi&lt;/code&gt;.
+File &lt;code&gt;python-3.4.2.msi&lt;/code&gt; adalah file instalator python.
+File ini akan melakukan instalasi ke sistem windows.&lt;/p&gt;
+
+&lt;p&gt;Klik ganda untuk mengeksekusinya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-yu4hrGCOmG4/VheGWN_OVhI/AAAAAAAAB8I/DCKef5730n8/s1600/1.%2BKlik%2Bganda%2Bsetup%2Bpython.PNG&#34; alt=&#34;Instaltor Python - Python-3.4.2.msi&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-pilih-pengguna&#34;&gt;2. Pilih Pengguna&lt;/h2&gt;
+
+&lt;p&gt;Pada tahapan ini kita akan diminta untuk memilih siapa saja yang boleh memakai python.&lt;/p&gt;
+
+&lt;p&gt;Pilih saja &lt;em&gt;&amp;lsquo;Install for all users&amp;rsquo;&lt;/em&gt; agar bisa dipakai untuk semua user di komputernya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-ejcTMNiIBSk/VheGWGVL-GI/AAAAAAAAB8A/agVdYOYQ7kw/s1600/2.%2BPilih%2Binstall%2Buntuk%2Bsemua%2Buser.PNG&#34; alt=&#34;Pemilihan pengguna Python&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-lokasi-instalasi&#34;&gt;3. Lokasi Instalasi&lt;/h2&gt;
+
+&lt;p&gt;Tentukan lokasi python akan diinstal.
+Biarkan saja di &lt;code&gt;C:\python34\&lt;/code&gt;, kemudian klik &lt;em&gt;next&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-5nxFrMF4Q5c/VheGWD9NeVI/AAAAAAAAB8E/XV6X8feE3eA/s1600/3.%2BLokasi%2Binstalasi.PNG&#34; alt=&#34;Menentukan Lokasi instalasi&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-kostumisasi&#34;&gt;4. Kostumisasi&lt;/h2&gt;
+
+&lt;p&gt;Pada tahapan ini, kita akan menentukan fitur-fitur yang akan diinstal.&lt;/p&gt;
+
+&lt;p&gt;Jangan lupa untuk mengaktifkan &lt;strong&gt;&lt;em&gt;&amp;lsquo;Add python.exe to path&amp;rsquo;&lt;/em&gt;&lt;/strong&gt; agar perintah
+&lt;code&gt;python&lt;/code&gt; dikenali pada CMD &lt;em&gt;(Command Prompt)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-L4EfJkuTvI4/VheGW67CMnI/AAAAAAAAB8U/KBbC-9RnBpE/s1600/4.%2BPilih%2Bfitur%2Bdan%2Baktifkan%2Bke%2Blingkungan%2Bpath.PNG&#34; alt=&#34;Kostumisasi Python&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah diaktifkan, akan menjadi seperti ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-2jKsppa26iE/VheGXOhtx5I/AAAAAAAAB8Y/InrxoKPlyLg/s1600/5.%2BAktifkan%2Bfitur%2Badd%2Bto%2Benv%2Bpath.PNG&#34; alt=&#34;Kostumisasi Python 2&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-selesai&#34;&gt;5. Selesai&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Klik &lt;em&gt;finish&lt;/em&gt; untuk menyelesaikan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-2jKsppa26iE/VheGXOhtx5I/AAAAAAAAB8Y/InrxoKPlyLg/s1600/5.%2BAktifkan%2Bfitur%2Badd%2Bto%2Benv%2Bpath.PNG&#34; alt=&#34;Instalasi Python Selesai&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;uji-coba-python&#34;&gt;Uji coba python&lt;/h2&gt;
+
+&lt;p&gt;Pertama, kita coba dulu membuka &lt;strong&gt;Python Shell&lt;/strong&gt;. Silahkan masuk ke manu
+kemudian cari &lt;strong&gt;&lt;em&gt;Python Shell&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://2.bp.blogspot.com/-zmK0oQzUeHA/VheGX_hmeRI/AAAAAAAAB8s/e6UBzT4nLpg/s1600/Uji%2Bcoba%2Bshell%2Bpython.PNG&#34; alt=&#34;Python Shell&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian kita coba Python dari CMD, ketik perintah &lt;code&gt;python&lt;/code&gt; untuk masuk ke
+&lt;em&gt;Python Shell&lt;/em&gt; dari CMD.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://2.bp.blogspot.com/-oGojAXihIw0/VheGXn6V13I/AAAAAAAAB8k/p_s3_srGTPo/s1600/Uji%2Bcoba%2Bshell%2Bpython%2Bdi%2BCMD.PNG&#34; alt=&#34;Membuka Python Shell dari CMD&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berhasil&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah berhasil menginstal Python di Windows, selanjutnya silahkan
+pelajari &lt;a href=&#34;https://www.petanikode.com/belajar-pemrograman-python&#34;&gt;dasar-dasar pemrograman Python&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

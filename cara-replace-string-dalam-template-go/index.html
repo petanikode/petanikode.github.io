@@ -216,7 +216,7 @@ https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXp
   },
   "headline": "Cara Replace String dalam Template Go",
   "description": "Sebuah masalah kecil yang saya temukan ketika mengedit skrip Blogimport. Saya ingin memperbesar ukuran gambar thumbnail dengan cara me-replace string yang ada di URL.\nMisalnya, dari URL ini:\nhttps:\/\/2.bp.blogspot.com\/-DEeRanrBa6s\/WGWGwA2qW5I\/AAAAAAAADg4\/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B\/s72-c\/pemrograman%2Bjavascript%2B-%2Bpetanikode.png  Menjadi seperti ini:\nhttps:\/\/2.bp.blogspot.com\/-DEeRanrBa6s\/WGWGwA2qW5I\/AAAAAAAADg4\/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B\/s1600\/pemrograman%2Bjavascript%2B-%2Bpetanikode.png  Nah, di sana saya ingin merubah s72-c agar menjadi s1600. Pada template Hugo, saya bisa melakukannya seperti ini:\n{{ replace .Media.ThumbnailUrl \x27s72-c\x27 \x27s1600\x27 }}  Namun, Go belum memiliki fungsi replace seperti Hugo. Setelah bolak-balik Google dan Stack Overflow, saya akhirnya membuat sebuah pertanyaan baru di Stack Overflow dan mendapatkan jawabannya.",
-  "wordCount":  155 ,
+  "wordCount":  835 ,
   "datePublished" : "2017-01-20T14:32:22",
   "dateModified" : "2017-01-20T14:32:22",
   "image" : {
@@ -1309,7 +1309,255 @@ di Stack Overflow dan mendapatkan jawabannya.</p>
 <pre><code class="language-Go">{{ replace .Media.ThumbnailUrl 's72-c' 's1600' }}
 </code></pre>
 
-<p>Contoh kode lengkapnya dapat anda lihat <a href="https://github.com/ardianta/blogimport/blob/master/main.go">di sini</a>.</p>
+<p>Contoh kode lengkapnya dapat juga di lihat <a href="https://github.com/ardianta/blogimport/blob/master/main.go">di sini</a>.</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;encoding/xml&quot;
+	&quot;flag&quot;
+	&quot;fmt&quot;
+	&quot;log&quot;
+	&quot;io/ioutil&quot;
+	&quot;os&quot;
+	&quot;path/filepath&quot;
+	&quot;strings&quot;
+	&quot;text/template&quot;
+	&quot;time&quot;
+	&quot;unicode&quot;
+)
+
+
+
+type Date time.Time
+
+func (d Date) String() string {
+	return time.Time(d).Format(&quot;2006-01-02T15:04:05Z&quot;)
+}
+
+func (d *Date) UnmarshalXML(dec *xml.Decoder, start xml.StartElement) error {
+	var v string
+    dec.DecodeElement(&amp;v, &amp;start)
+    t, err := time.Parse(&quot;2006-01-02T15:04:05.000-07:00&quot;, v)
+    if err != nil {
+    	return err
+    }
+    *d = Date(t)
+    return nil
+}
+
+type Draft bool
+
+func (d *Draft) UnmarshalXML(dec *xml.Decoder, start xml.StartElement) error {
+	var v string
+    dec.DecodeElement(&amp;v, &amp;start)
+    switch v {
+    case &quot;yes&quot;:
+    	*d = true
+    	return nil
+    case &quot;no&quot;:
+    	*d = false
+    	return nil
+    }
+    return fmt.Errorf(&quot;Unknown value for draft boolean: %s&quot;, v)
+}
+
+type AuthorImage struct{
+	Src string `xml:&quot;src,attr&quot;`
+}
+
+type Author struct {
+	Name string `xml:&quot;name&quot;`
+	Uri string `xml:&quot;uri&quot;`
+	Image AuthorImage `xml:&quot;image&quot;`
+}
+
+type Export struct {
+	XMLName xml.Name `xml:&quot;feed&quot;`
+	Entries []Entry `xml:&quot;entry&quot;`
+}
+
+
+type Media struct {
+    ThumbnailUrl string `xml:&quot;url,attr&quot;`
+}
+
+type Entry struct {
+	ID string `xml:&quot;id&quot;`
+	Published Date `xml:&quot;published&quot;`
+	Updated Date `xml:&quot;updated&quot;`
+	Draft Draft `xml:&quot;control&gt;draft&quot;`
+	Title string `xml:&quot;title&quot;`
+	Content string `xml:&quot;content&quot;`
+	Tags Tags `xml:&quot;category&quot;`
+	Author Author `xml:&quot;author&quot;`
+	Media Media `xml:&quot;thumbnail&quot;`
+	Extra string
+}
+
+type Tag struct {
+	Name string `xml:&quot;term,attr&quot;`
+	Scheme string `xml:&quot;scheme,attr&quot;`
+}
+
+type Tags []Tag
+
+func (t Tags) TomlString() string {
+	names := []string{}
+	for _, t := range t {
+		if t.Scheme == &quot;http://www.blogger.com/atom/ns#&quot; {
+			names = append(names, fmt.Sprintf(&quot;%q&quot;, t.Name))
+		}
+	}
+	return strings.Join(names, &quot;, &quot;)
+}
+
+var templ = `+++
+title = &quot;{{ .Title }}&quot;
+date = {{ .Published }}
+updated = {{ .Updated }}{{ with .Tags.TomlString }}
+tags = [{{ . }}]{{ end }}{{ if .Draft }}
+draft = true{{ end }}
+blogimport = true {{ with .Extra }}
+{{.}}{{ end }}
+[author]
+	name = &quot;{{ .Author.Name }}&quot;
+	uri = &quot;{{ .Author.Uri }}&quot;
+	image = &quot;{{ .Author.Image.Src }}&quot;
+[image]
+	src = &quot;{{ resizeImage .Media.ThumbnailUrl }}&quot;
+	link = &quot;&quot;
+	thumblink = &quot;{{ .Media.ThumbnailUrl }}&quot;
+	alt = &quot;&quot;
+	title = &quot;&quot;
+	author = &quot;&quot;
+	license = &quot;&quot;
+	licenseLink = &quot;&quot;
++++
+{{ .Content }}
+`
+
+var t = template.Must(template.New(&quot;&quot;).Funcs(funcMap).Parse(templ))
+
+// maps the the function into template
+var funcMap = template.FuncMap{
+        &quot;resizeImage&quot;: resizeImage,
+}
+
+// Resize image of thumbnail to larger size (scale to 1600)
+func resizeImage(url string) string {
+    return strings.Replace(url, &quot;s72-c&quot;, &quot;s1600&quot;, -1)
+}
+
+func main() {
+	log.SetFlags(0)
+
+	extra := flag.String(&quot;extra&quot;, &quot;&quot;, &quot;additional metadata to set in frontmatter&quot;)
+	flag.Parse()
+
+	args := flag.Args()
+
+	if len(args) != 2 {
+		log.Printf(&quot;Usage: %s [options] &lt;xmlfile&gt; &lt;targetdir&gt;&quot;, os.Args[0])
+		log.Println(&quot;options:&quot;)
+		flag.PrintDefaults()
+		os.Exit(1)
+	}
+
+	dir := args[1]
+
+	info, err := os.Stat(dir)
+	if os.IsNotExist(err) {
+		err = os.MkdirAll(dir, 0755)
+	}
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if !info.IsDir(){
+		log.Fatal(&quot;Second argument is not a directory.&quot;)
+ 	}
+
+
+	b, err := ioutil.ReadFile(args[0])
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	exp := Export{}
+
+	err = xml.Unmarshal(b, &amp;exp)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if len(exp.Entries) &lt; 1 {
+		log.Fatal(&quot;No blog entries found!&quot;)
+	}
+
+	count := 0
+	drafts := 0
+	for _, entry := range exp.Entries {
+		isPost := false
+		for _, tag := range entry.Tags {
+			if tag.Name == &quot;http://schemas.google.com/blogger/2008/kind#post&quot; &amp;&amp;
+				tag.Scheme == &quot;http://schemas.google.com/g/2005#kind&quot; {
+				isPost = true
+				break
+			}
+		}
+		if !isPost {
+			continue
+		}
+		if extra != nil {
+			entry.Extra = *extra
+		}
+		if err := writeEntry(entry, dir); err != nil {
+			log.Fatalf(&quot;Failed writing post %q to disk:\n%s&quot;, entry.Title, err)
+		}
+		if entry.Draft {
+			drafts++
+		} else {
+			count++
+		}
+	}
+	log.Printf(&quot;Wrote %d published posts to disk.&quot;, count)
+	log.Printf(&quot;Wrote %d drafts to disk.&quot;, drafts)
+}
+
+var delim = []byte(&quot;+++\n&quot;)
+
+func writeEntry(e Entry, dir string) error {
+	filename := filepath.Join(dir, makePath(e.Title)+&quot;.md&quot;)
+	f, err := os.OpenFile(filename, os.O_CREATE | os.O_TRUNC | os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	return t.Execute(f, e)
+}
+
+
+// Take a string with any characters and replace it so the string could be used in a path.
+// E.g. Social Media -&gt; social-media
+func makePath(s string) string {
+	return unicodeSanitize(strings.ToLower(strings.Replace(strings.TrimSpace(s), &quot; &quot;, &quot;-&quot;, -1)))
+}
+
+func unicodeSanitize(s string) string {
+	source := []rune(s)
+	target := make([]rune, 0, len(source))
+
+	for _, r := range source {
+		if unicode.IsLetter(r) || unicode.IsDigit(r) || r == '.' || r == '_' || r == '-' {
+			target = append(target, r)
+		}
+	}
+
+	return string(target)
+}
+</code></pre>
 
                 <div class="post-footer">
                     <div class="artikel-footer">

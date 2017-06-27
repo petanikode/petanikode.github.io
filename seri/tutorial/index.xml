@@ -862,9 +862,9 @@ perulangan ke 4, nilai x = 40 dan y = 10
 perulangan ke 5, nilai x = 50 dan y = 10
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Kalau kita nyatakan dalam persamaan matematika:&lt;/p&gt;
+&lt;p&gt;Kalau kita nyatakan dalam persamaan garis lurus matematika:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;y = 10
+&lt;pre&gt;&lt;code&gt;y = 10 (nilai y tetap 10)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;em&gt;*ingat-ingat kembali pelajaran matematika (persamaan garis lurus, fungsi, dan aljabar linier) :smile:&lt;/em&gt;&lt;/p&gt;
@@ -953,7 +953,7 @@ dan &lt;code&gt;40&lt;/code&gt; ka arah &lt;code&gt;y&lt;/code&gt; (vertikal) de
 &amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Maka banyak persegi yang akan digambar adalah &lt;code&gt;40x40&lt;/code&gt; atau &lt;code&gt;1600&lt;/code&gt; buat persegi.&lt;/p&gt;
+&lt;p&gt;Maka banyak persegi yang akan digambar adalah &lt;code&gt;1600&lt;/code&gt; buah persegi.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/html-canvas/random/gambar-persegi-40x40.png&#34; alt=&#34;Persegi 1600 biji&#34; /&gt;&lt;/p&gt;
 
@@ -1082,7 +1082,7 @@ dan &lt;code&gt;y&lt;/code&gt; acak dari &lt;code&gt;0&lt;/code&gt; sampai panja
 
 &lt;p&gt;Mantap! Sepertinya titiknya terlalu banyak.&lt;/p&gt;
 
-&lt;p&gt;Coba kita gambar titik sebanyak &lt;code&gt;1000&lt;/code&gt; atau &lt;code&gt;10x10&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Coba kita gambar titik sebanyak &lt;code&gt;10000&lt;/code&gt; atau &lt;code&gt;100x100&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
     var canvas = document.getElementById(&amp;quot;myCanvas&amp;quot;);

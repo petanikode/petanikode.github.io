@@ -7,8 +7,167 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 23 Jun 2017 14:21:09 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jun 2017 15:41:28 +0800</lastBuildDate>
     <atom:link href="https://www.petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Kenapa Saya Menggunakan Linux untuk Pemrograman? [Ini 5 alasannya]</title>
+      <link>https://www.petanikode.com/menggunakan-linux-untuk-pemrograman/</link>
+      <pubDate>Tue, 27 Jun 2017 15:41:28 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/menggunakan-linux-untuk-pemrograman/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/linux/alasan/linux-untuk-programmer.png&#34; alt=&#34;Linux untuk Programmer&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika kalian bertanya, kenapa saya menggunakan Linux untuk pemrograman?&lt;/p&gt;
+
+&lt;p&gt;Saya jadi ingin menceritakan, bagaimana saya dari awal mulai tertarik dan
+menyukai Linux sampai saat ini.&lt;/p&gt;
+
+&lt;p&gt;Tapi sepertinya akan membutuhkan waktu yang panjang&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Mungkin lain kali saja, (insya&amp;rsquo;allah) di tulisan yang berbeda.&lt;/p&gt;
+
+&lt;p&gt;Balik lagi ke pertanyaan, kenapa saya menggunakan Linux untuk pemrograman?&lt;/p&gt;
+
+&lt;p&gt;Ada beberapa alasannya:&lt;/p&gt;
+
+&lt;h2 id=&#34;1-saya-tidak-suka-virus&#34;&gt;1. Saya Tidak Suka Virus&lt;/h2&gt;
+
+&lt;p&gt;Hal yang paling saya tidak suka saat menggunakan Windows adalah Virus. Setiap
+terkena, wajib install ulang dan konfigurasi ulang semuanya dari awal.&lt;/p&gt;
+
+&lt;p&gt;Saya tidak suka menggunakan Anti Virus, karena memori laptop saya tidak cukup
+banyak dan akan membuatnya terasa berat.&lt;/p&gt;
+
+&lt;p&gt;Sementara di Linux, saya merasa sangat nyaman dan terbebas dari Virus.&lt;/p&gt;
+
+&lt;p&gt;Hingga saat ini, laptop saya tidak pernah virusan lagi. Bahkan banyak teman-teman
+saya yang minta dihapusin virus dari laptop saya.
+Mungkin mereka kira Linux kebal dari segala virus.&lt;/p&gt;
+
+&lt;p&gt;Padahal itu salah.&lt;/p&gt;
+
+&lt;p&gt;Linux juga bisa terkena virus, bahkan belakangan ini berdar kabar kalau Virus
+Ransomware sudah menyerang beberapa server hosting yang menggunakan Linux.&lt;/p&gt;
+
+&lt;p&gt;Meskipun begitu, sampai saat ini komputer saya masih aman-aman saja.
+Karena saya tidak menggunakan Wine, Kernel selalui ter-update, dan tidak menginstal
+sembarang software. Apalagi software &lt;em&gt;closed source&lt;/em&gt; yang tidak jelas asal-uslunya.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-lingkungan-development-di-sistem-nix-lebih-bagus&#34;&gt;2. Lingkungan Development di Sistem *Nix Lebih Bagus&lt;/h2&gt;
+
+&lt;p&gt;Ini menurut pendapat saya pribadi, tapi pendapat ini sebenarnya sudah didukung
+sendiri oleh Microsoft dan Apple (cieee :smile:).&lt;/p&gt;
+
+&lt;p&gt;Microsoft sepertinya mengakui, kalau lingkungan &lt;em&gt;coding&lt;/em&gt; di sistem *nix (Linux dan Unix)
+itu lebih bagus. Buktinya, mereka menyertakan Ubuntu dalam Windows 10 untuk keperluan
+Developmen (pemrograman).&lt;/p&gt;
+
+&lt;p&gt;Kabar baiknya, Microsoft juga sangat suka berkontribusi ke proyek &lt;em&gt;open source&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/linux/alasan/microsoft-love-linux.jpg&#34; alt=&#34;Microsoft love linux&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sementara untuk Mac, ya Mac OS bahan dasarnya dari Unix. Mac juga enak dipake ngoding
+dan UI-nya bagus. Tapi sayangnya saya tidak punya cukup banyak uang untuk membelinya.
+Akhirnya tetap bertahan menggunakan Linux.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-mengurangi-main-game-dan-perbanyak-belajar-coding&#34;&gt;3. Mengurangi Main Game dan Perbanyak Belajar &lt;em&gt;Coding&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Saya memang seorang pecandu Game. Waktu luang banyak saya habiskan untuk bermain Game.
+Bahkan dulu rela berjalan berkilo-kilo untuk pergi main PS (karena waktu itu belum banyak
+yang punya PS)&lt;/p&gt;
+
+&lt;p&gt;Prinsip saya, &amp;ldquo;Kalau belum tamat, belum mau berhenti main&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Prinsip tersebut yang membuat saya terus-terusan bermain Game.&lt;/p&gt;
+
+&lt;p&gt;Lalu, setelah punya rasa ketertarikan untuk belajar komputer, minat saya terhadap
+Game mulai berkurang&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Di kampus tempat saya kuliah, banyak sekali Gamer berkeliaran. Dulu pernah
+ukut-ikutan bermain game online saat masih pake &lt;em&gt;dual boot&lt;/em&gt; (Windows dan Ubuntu).&lt;/p&gt;
+
+&lt;p&gt;Tapi semuanya berubah, setelah 100% pakai Linux&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Game tidak lagi bisa diinstal di Laptop saya, sekarang fokusnya oprek Linux dan
+belajar &lt;em&gt;Coding&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bahkan sekarang punya ketertarikan untuk belajar Game Programming. Sedikit
+demi sedikit, saya mulai belajar pemrograman grafis dengan OpenGL, SDL, &lt;a href=&#34;https://www.petanikode.com/topik/html5&#34;&gt;HTML5&lt;/a&gt; Canvas,
+dan juga Game Engine.&lt;/p&gt;
+
+&lt;p&gt;Ini screenshot, saya lagi belajar Godot:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/linux/alasan/belajar-godot.png&#34; alt=&#34;Belajar Godot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kabar baiknya, sekarang Game Engine Unity sudah mulai didukung di Linux.
+Meskipun sudah ada Godot Engine yang &lt;em&gt;open source&lt;/em&gt; dan siap bersaing dengannya.&lt;/p&gt;
+
+&lt;p&gt;Kita tunggu saja perkembangannya&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Saat ini saya kebanyakan menggunakan Linux untuk pemrograman &lt;a href=&#34;https://www.petanikode.com/topik/web&#34;&gt;Web&lt;/a&gt; dan desain.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-penasaran-dengan-linux&#34;&gt;4. Penasaran dengan Linux&lt;/h2&gt;
+
+&lt;p&gt;Saya sering punya rasa penasaran yang tinggi terhadap sesuatu yang baru dan belum pernah
+saya ketahui. Karena itu, saya menggunakan Linux.&lt;/p&gt;
+
+&lt;p&gt;Waktu saya pakai Windows, Saya menganggap Linux adalah sesuatu yang sulit dipelajari.
+Tapi ternyata tidak.&lt;/p&gt;
+
+&lt;p&gt;Walaupun pada awalnya banyak mendapatkan error dan masalah, saya bisa bertahan
+hingga saat ini.&lt;/p&gt;
+
+&lt;p&gt;Meskipun sadah lama menggunakan Linux, rasa pensaran saya masih ada. Terutama
+tentang pengembangan dan kernel Linux.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bagaimana kernel bekerja?&lt;/li&gt;
+&lt;li&gt;Bagaimana cara &lt;em&gt;compile&lt;/em&gt; kernel?&lt;/li&gt;
+&lt;li&gt;Bagaimana cara bikin distro linux sendiri?&lt;/li&gt;
+&lt;li&gt;Bagaimana Google mengembangkan Kernel Linux menjadi Android?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sampai saat ini, saya belum paham, karena belum mencobanya.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-berhenti-membajak&#34;&gt;5. Berhenti Membajak&lt;/h2&gt;
+
+&lt;p&gt;Pembajakan software mungkin saudah menjadi hal yang biasa di negara kita.
+Mau install ini, mau install itu&amp;hellip; tinggal cari saja crack-nya.&lt;/p&gt;
+
+&lt;p&gt;Tapi kalau terus-terusan melakukan ini, kapan mau maju?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Selama masih ada yang membuang sampah ke sungai dan merusak alam, bajir akan
+terus terjadi.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Kira-kira seperti itulah perumpamaannya.&lt;/p&gt;
+
+&lt;p&gt;Saya tidak punya kuasa untuk menghentikan mereka yang membuang samapah di sungai
+dan merusak alam. Karena itu, saya memilih untuk tidak ikutan membuang sampah dan merusak alam.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-version=&#34;7&#34; style=&#34; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&#34;&gt;&lt;div style=&#34;padding:8px;&#34;&gt; &lt;div style=&#34; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&#34;&gt; &lt;div style=&#34; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BSzsm6Gg7oE/&#34; style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&#34; target=&#34;\_blank&#34;&gt;A post shared by Petani Kode (@petanikode)&lt;/a&gt; on &lt;time style=&#34; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&#34; datetime=&#34;2017-04-13T01:52:24+00:00&#34;&gt;Apr 12, 2017 at 6:52pm PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async defer src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Untuk saat ini, itulah 5 alasan saya menggunakan Linux untuk pemrograman.&lt;/p&gt;
+
+&lt;p&gt;Jika kalian menggangap saya &amp;ldquo;Linux Fans Boy&amp;rdquo;, &amp;ldquo;Maniak Linux&amp;rdquo;, &amp;ldquo;Fanatik Linux&amp;rdquo;, dll.
+Semua itu tidaklah benar, karena saya punya rasa ketertarikan terhadap banyak hal
+termasuk juga Windows. Buktinya blog ini tidak bisa fokus membahas satu hal.&lt;/p&gt;
+
+&lt;p&gt;Bisa jadi saat ini saya masih pakai Linux, mungkin 5 atau 10 tahun mendatang saya sudah
+pakai Mac OS (ngimpi :smile:).&lt;/p&gt;
+
+&lt;p&gt;Apa kamu juga tertarik menggunakan Linux atau sudah menggunakan Linux?&lt;/p&gt;
+
+&lt;p&gt;Mari berbagi di komentar&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Cara Membuat Tema Hugo dari Nol (Meracik ulang Tema Petani Kode)</title>
@@ -3953,281 +4112,6 @@ tinggal mengubahnya menjadi &lt;code&gt;https&lt;/code&gt;.&lt;/p&gt;
 sebelumnya.&lt;/p&gt;
 
 &lt;p&gt;Mungkin nanti akan saya perbaiki :smile:, yang penting sekarang sudah HTTPS.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Kumpulan 90&#43; Grup, Channel, dan Bot Telegram untuk Programmer</title>
-      <link>https://www.petanikode.com/kumpulan-group-channel-bot-telegram/</link>
-      <pubDate>Fri, 14 Apr 2017 14:10:20 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/kumpulan-group-channel-bot-telegram/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-rorz92zrYMc/WPFq0WrRElI/AAAAAAAAEuk/gLlO5F-6LogaUn9Lpn6jtPhooBR0sNguACLcB/s1600/kumpulan-grup-channel-bot-telegram-untuk-programmer.png&#34; alt=&#34;Kumpulan 90+ Grup, Channel, dan Bot Telegram untuk Programmer&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Bisa dikatakan, Telegram telah menjadi sarang baru bagi programmer.
-Kalau dulu banyak ngumpul di IRC, sekarang di Telegram.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini daftar grup, channel, dan bot Telegram untuk programmer yang
-saya kumpulkan dari berbagai sumber:&lt;/p&gt;
-
-&lt;h2 id=&#34;grup-pemrograman-indonesia&#34;&gt;Grup Pemrograman Indonesia&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/PHPIDforStudent&#34;&gt;PHP Indonesia&lt;/a&gt; &amp;mdash; Grup ini sering mengadakan kulgram (kuliah di telegram).&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/JVMUserGrup&#34;&gt;JVM User Grup&lt;/a&gt; &amp;mdash; Grup ini merupakan ekspansi dari grup Forum Java Programmer Indonesia di Facebook.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/jugindonesia&#34;&gt;JUG Indonesia&lt;/a&gt; &amp;mdash; Grup kumpulan para pegiat Java di Indonesia.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/KotlinID&#34;&gt;Kotlin Indonesia&lt;/a&gt; &amp;mdash; Kotlin User Group Indonesia&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/RubyID&#34;&gt;Ruby Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi seputar bahasa pemrograman Ruby.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/pythonID&#34;&gt;Python ID&lt;/a&gt; &amp;mdash; Grup Programmer Python Indonesia.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/surabayadotpy&#34;&gt;Surabaya.py&lt;/a&gt; &amp;mdash; Grup diskusi Python regional Surabaya.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/elixir_id&#34;&gt;Exilir ID&lt;/a&gt; &amp;mdash; Elixir Indonesia&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/golangID&#34;&gt;Golang Indonesia&lt;/a&gt; &amp;mdash; Grup Programmer Go atau Golang Indonesia.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/PascalID&#34;&gt;Pascal Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi seputar bahasa pemrograman Pascal.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/swiftID&#34;&gt;Swift Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi seputar bahasa pemrograman Swift.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/nodejsid&#34;&gt;Nodejs Indonesia&lt;/a&gt; &amp;mdash; Indonesian NodeJs Developer Community.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/FrontEndID&#34;&gt;Frontend Developer Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi seputar Front End.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/botphp&#34;&gt;Telegram Bot PHP - Indonesia&lt;/a&gt; &amp;mdash; Grup ini untuk diskusi tentang pembuatan bot telegram menggunakan bahasa pemrograman PHP.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/kppdi&#34;&gt;KPPDI&lt;/a&gt; &amp;mdash; Komunitas Pemrograman Pascal Delphi Indonesia&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/kulgramfg&#34;&gt;Female Geek&lt;/a&gt; &amp;mdash; Grup khusus untuk perempuan, kalau mau gabung silahkan PM admin mereka
-melalui &lt;a href=&#34;https://www.facebook.com/femalegeek/&#34;&gt;FP Female Geek&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;framework-dan-library&#34;&gt;Framework dan Library&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/laravelindonesia&#34;&gt;Laravel Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi, berita terbaru, dan segala tentang Laravel Framework.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/codeigniterindonesia&#34;&gt;Codeigniter Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi framework CodeIgniter.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/symfonyid&#34;&gt;Symfony Framework Indonesia&lt;/a&gt; &amp;mdash; Grup ini adalah tempat belajar, berdiskusi dan saling membantu bagi pengguna Framework Symfony, terutama versi 2 ke atas.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/RailsID&#34;&gt;RailsID&lt;/a&gt; &amp;mdash; Grup diskusi seputar framework Ruby on Rails (RoR).&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/DjangoID&#34;&gt;Django Indonseia&lt;/a&gt; &amp;mdash; Grup diskusi seputar framework Django&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/vuejsid&#34;&gt;Vue.js Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi seputar Vue.js&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/dotnetusergroup&#34;&gt;.Net Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi seputar framework .Net.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/flaskid&#34;&gt;Flask ID&lt;/a&gt; &amp;mdash; Diskusi Pengguna Flask / Python Indonesia&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/polymer_id&#34;&gt;Polymer Indonesia&lt;/a&gt; &amp;mdash; Diskusi seputar library Polymer&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/reactnative_id&#34;&gt;React Native ID&lt;/a&gt; &amp;mdash; React Native Indonesia&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/AngularID&#34;&gt;Angular Indonesia&lt;/a&gt; &amp;mdash; Grup Angular Indonesia&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/YiiFrameworkIndonesia&#34;&gt;Yii Framework Indonesia&lt;/a&gt; &amp;mdash; Grup Yii Framework Indonesia&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;android-developer&#34;&gt;Android Developer&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/androiddevelopernasional&#34;&gt;Android Developer Nasional&lt;/a&gt; &amp;mdash; Grup developer android nasional.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/androidDevBdg&#34;&gt;ADB (Android Developer Bandung)&lt;/a&gt; &amp;mdash; Komunitas Android Developer Bandung&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/AndroidSemarang&#34;&gt;Semarang Android Developer&lt;/a&gt; &amp;mdash; Buat kamu yang berdomisili di Semarang, bisa ikut grup ini.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/YogyakartaAndroidComunity&#34;&gt;Yogyakarta Android Community&lt;/a&gt; &amp;mdash; Komunitas Andoird Developer Yogyakarta&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/BelajarBarengAndroid&#34;&gt;#BelajarBareng Jakarta&lt;/a&gt; &amp;mdash; Belajar Bareng Android Jakarta&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;lain-lain&#34;&gt;Lain-lain&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/TIAdevcommunity&#34;&gt;Tech in Asia Dev Community&lt;/a&gt; &amp;mdash; Grup Developer Tech in Asia&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/sinaudev&#34;&gt;SinauDev - Sinau Development&lt;/a&gt; &amp;mdash; Sinau Development. Sinau Development adalah wadah sarana belajar bersama terkait hardware and software development.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/bigdataID&#34;&gt;Big Data Indonseia&lt;/a&gt; &amp;mdash; Big Data Indonesia : hadoop world, ambari, spark, hive, hbase, kafka etc&amp;hellip; elasticsearch user also welcome!&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/VimID&#34;&gt;Vim Indonesia&lt;/a&gt; &amp;mdash; Tempat diskusi dan ngobrol Vim. Baru belajar atau sudah pakai vim boleh.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/IDDevOps&#34;&gt;IDDevOps&lt;/a&gt; &amp;mdash; DevOps adalah grup yang khusus membahas mengenai deployment app ke server&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/dockerid&#34;&gt;Docker.id&lt;/a&gt; &amp;mdash; Grup diskusi seputar teknologi Docker&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/kongkowITMedan&#34;&gt;Kongkow IT Medan&lt;/a&gt; &amp;mdash; Grup diskusi seputar IT&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/electronatom&#34;&gt;Electron Atom&lt;/a&gt; &amp;mdash; Electron Desktop User Grup&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/odooindonesia&#34;&gt;Odoo-OpenERP Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi seputar Odoo-OpenERP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/startupindonesia&#34;&gt;Startup Indonesia on Telegram&lt;/a&gt; &amp;mdash; Startup Indonesia adalah tempat berkumpulnya para pelaku bisnis rintisan (Startup) bisnis yang baru dirintis dan memiliki visi jauh ke depan.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/StreetStyleAnalyst&#34;&gt;Street Style Analyst&lt;/a&gt; &amp;mdash; Room trader FX n stock (Pure TA)
-analisa simpel menggunakan trendline dan fibo, dan juga screening menggunakan AFL.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/LokerKhususIT&#34;&gt;Lowongan Kerja IT&lt;/a&gt; &amp;mdash; Grup lowongan kerja IT&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/freelancerID&#34;&gt;Freelancer Indonesia&lt;/a&gt; &amp;mdash; Tempat berbagi info, kenalan, kerjaan, tips &amp;amp; curhatan (terutama revisi, invoice &amp;amp; sinyal) bagi para freelancer Indonesia.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/devilzc0de&#34;&gt;Devilzc0de&lt;/a&gt; &amp;mdash; Devilzc0der - Belajar, Bermain, Bercengkrama&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://telegram.me/joinchat/BJudzD9kFnYEJ1ob6gFVDQ&#34;&gt;Mikrotik Indonesia&lt;/a&gt; &amp;mdash; The biggest Mikrotik User Forum in Indonesia.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/belajarkonfig&#34;&gt;belajarkonfig.com&lt;/a&gt; &amp;mdash; group sharing &amp;amp; belajar konfig networking devices&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/ServerlessTech&#34;&gt;ServerLess (AWS, Firebase, Azure, Bluemix, etc)&lt;/a&gt; &amp;mdash; All about server less tech.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/pojokprogrammerr&#34;&gt;Pojok Programmer&lt;/a&gt; &amp;mdash; Tempat bercanda ria ala programmer.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;linux-dan-opensource&#34;&gt;Linux dan Opensource&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/GNULinuxIndonesia&#34;&gt;Belajar GNU/Linux Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi seputar Linux.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/BlankOnLinux&#34;&gt;BlankOn Linux&lt;/a&gt; &amp;mdash; Grup diskusi pengembang BlankOn.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/KaliLinuxID&#34;&gt;Kali Linux Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi seputar Kali Linux.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://telegram.me/joinchat/ABpxeD2F4kwRKrOb1cdl8Q&#34;&gt;UbuntuJogja&lt;/a&gt; &amp;mdash; Komunitas Ubuntu Jogja&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/GPG_Indonesia&#34;&gt;Grup Pengguna Gentoo Indonesia&lt;/a&gt; &amp;mdash; Tempat ngacaprak gajebo mengenai Gentoo dan anak cucunya&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/BelajarLibreOfficeIndonesia&#34;&gt;Belajar LibreOffice Indonesia&lt;/a&gt; &amp;mdash; Grup Khusus Membahas Tentang LibreOffice.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://telegram.me/joinchat/ABmLmjyoTGP0Y27LNVkumw&#34;&gt;IGN-Umum&lt;/a&gt; &amp;mdash; Grup untuk diskusi tentang IGOS Nusantara (IGN Desktop, IGN Server, IGN-ARM, IGN-SDK, IGN-Wrt, dkk).&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/raspberrypi_id&#34;&gt;Raspberry PI Indonesia&lt;/a&gt; &amp;mdash; Komunitas Raspberry PI Indonesia.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/cikaranglinux&#34;&gt;Cikarang Linux User Group&lt;/a&gt; &amp;mdash; CLUG adalah komunitas pengguna GNU/Linux di Cikarang.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/elementaryID&#34;&gt;Elementary OS Indonesia&lt;/a&gt; &amp;mdash; Komunitas pengguna elementary OS di Indonesia.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/FedoraID&#34;&gt;Fedora Indonesia&lt;/a&gt; &amp;mdash; Komunitas pengguna Fedora Linux di Indonesia.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/RemasterGNULinuxIndonesia&#34;&gt;Remaster GNU/Linux Indonesia&lt;/a&gt; &amp;mdash; Grup Remaster Linux Indonesia.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/dracosindo&#34;&gt;Dracos Linux Indonesia&lt;/a&gt; &amp;mdash; Grup diskusi dracos linux.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;channel-telegram-indonesia&#34;&gt;Channel Telegram Indonesia&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/petanikode&#34;&gt;Petani Kode&lt;/a&gt; &amp;mdash; Channel Resmi Petani Kode :smile:.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/kabarlinux&#34;&gt;Kabar Linux&lt;/a&gt; &amp;mdash; Channel Kabar seputar Linux dan open source.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/linuxkudotcom&#34;&gt;Linuxku.com&lt;/a&gt; &amp;mdash; Channel dari blog linuxku.com.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/lombokfoss&#34;&gt;Lombok FOSS&lt;/a&gt; &amp;mdash; Channel pengguna Linux dari Lombok.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/otodidak_ngoding&#34;&gt;Otodidak Pemrograman&lt;/a&gt; &amp;mdash; Channel belajar pemrograman secara otodidak.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/frontend_dev_news&#34;&gt;Front-end Developer News&lt;/a&gt; &amp;mdash; Channel informasi Front-end.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/idwikipedia&#34;&gt;Wikipedia Bahasa Indonesia&lt;/a&gt; &amp;mdash; Channel Wikipedia Bahasa Indonesia.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/botkoleksi&#34;&gt;Koleksi Bot&lt;/a&gt; &amp;mdash; Channel info koleksi Bot Telegram.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/belajarnetworking&#34;&gt;Belajar Networking&lt;/a&gt; &amp;mdash; Channel yang membahas seputar jaringan komputer.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/LokerDeveloper&#34;&gt;Loker Developer/Programmer&lt;/a&gt; &amp;mdash; Channel ini adalah channel yang dikhususkan untuk berbagi atau mencari lowongan kerja sebagai Programmer / Developer.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/linuxsec&#34;&gt;LinuxSec.Org&lt;/a&gt; &amp;mdash; Official LinuxSec.Org Telegram Channel&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/situsali&#34;&gt;Situsali.com&lt;/a&gt; &amp;mdash; Informasi serta berbagi pengetahuan mengenai GNU/Linux, FLOSS dan Pemrograman.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/pegelblogs&#34;&gt;PegelBlogs&lt;/a&gt; &amp;mdash; Blog anak-anak Pegelinux&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;grup-internasional&#34;&gt;Grup Internasional&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/theprogrammingartgroup&#34;&gt;The Art of Programming&lt;/a&gt; &amp;mdash; This is the international group for the channel &amp;ldquo;The Art of Programming&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/letstalkprogramming&#34;&gt;Let&amp;rsquo;s Talk Programming &amp;amp; Development&lt;/a&gt; &amp;mdash; On-topic group about programming, development and everything inbetween.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/joinchat/AAAAAEFs51MT1z2bWDhZBQ&#34;&gt;Android&lt;/a&gt; &amp;mdash; Grup Android Internasional.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/joinchat/AAAAAEI7auDV7fUlhQpKbw&#34;&gt;PHP&lt;/a&gt; &amp;mdash; Grup PHP Internasional.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/joinchat/AAAAAEI6mgRpU8Ook_LZiQ&#34;&gt;Python&lt;/a&gt; &amp;mdash; A python group chat&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/joinchat/AAAAAEEU-CGtxqPvZzRXug&#34;&gt;Javascript&lt;/a&gt; &amp;mdash; Grup Javascript&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/javascriptgroup&#34;&gt;Javascript Party&lt;/a&gt; &amp;mdash; a JS group to share great things and discuss about this fabulous language.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/nairobijs&#34;&gt;Nairobi JS Telegram&lt;/a&gt; &amp;mdash; Nairobi JS Comminity&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/joinchat/AAAAAEHS8_F0yoL401QNuQ&#34;&gt;Java&lt;/a&gt; &amp;mdash; Java programming community&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/programminginc&#34;&gt;Programming in C/C++&lt;/a&gt; &amp;mdash; International group of C/C++ programming&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/joinchat/AAAAAD_cJVeMzHBQMtxB5w&#34;&gt;C/C++&lt;/a&gt; &amp;mdash; C/C++ Comminity&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/joinchat/AAAAAEHGFQmBITbYfSSmrA&#34;&gt;IOS/Swift&lt;/a&gt; &amp;mdash; IOS/Swift Developers&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/vuejsgroup&#34;&gt;Vuejs&lt;/a&gt; &amp;mdash; Vuejs Community&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/angularDevelopers&#34;&gt;Angular Developers&lt;/a&gt; &amp;mdash; Angular JS Developers&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://telegram.me/joinchat/BlvnFT3YhdpVtdUjgUYMdw&#34;&gt;r/linux&lt;/a&gt; &amp;mdash; Grub subreddit r/linux (unofficial)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/devRant&#34;&gt;devRant&lt;/a&gt; &amp;mdash; DevRant Community&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/geeksChat&#34;&gt;Geek Chat&lt;/a&gt; &amp;mdash; Chatroom for Geek&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://telegram.me/joinchat/BmPxGDvkRmOSeiWO2ZRKGw&#34;&gt;Laravel&lt;/a&gt; &amp;mdash; Laravel Community&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/mozillian&#34;&gt;Mozillian&lt;/a&gt; &amp;mdash; Mozillians general discussing channel&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/joinchat/AAAAAEIxawINNSiXmEMdGg&#34;&gt;Anbox&lt;/a&gt; &amp;mdash; Android in a Box&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/BotDevelopment&#34;&gt;Bot Development&lt;/a&gt; &amp;mdash; Group bot developer&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/tgbotchat&#34;&gt;Telegram Bots Development&lt;/a&gt; &amp;mdash; There are simple rules on this group: No Spam &amp;amp; Don&amp;rsquo;t Test Bots &amp;amp; English Only&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/luatelegrambot&#34;&gt;Lua Telegram Bot Dev&lt;/a&gt; &amp;mdash; Official group for discussions and inspiration around Lua Telegram Bots.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/pwrtelegramgroup&#34;&gt;PWRTelegram API Group&lt;/a&gt; &amp;mdash; Development group for the @PWRTelegram API and @MadelineProto!&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/originalpython&#34;&gt;Original Python&lt;/a&gt; &amp;mdash; Discuss and ask questions about Python!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/linux_group&#34;&gt;GNU/Linux&lt;/a&gt; &amp;mdash; News, discussions and help for all GNU/Linux Distributions!&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/plasmamobile&#34;&gt;KDE Plasma Mobile&lt;/a&gt; &amp;mdash; KDE Plasma Mobile Community&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/fedora&#34;&gt;Fedora&lt;/a&gt; &amp;mdash; A group chat for Fedora users.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/reactos&#34;&gt;ReactOS&lt;/a&gt; &amp;mdash; ReactOS&amp;rsquo;s Witnesses chat&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/joinchat/AAAAAEE-U9p37fqAsU9Hbg&#34;&gt;Sailfish OS Fan Club&lt;/a&gt; &amp;mdash; Fanclub for all things related to Sailfish OS&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/gentoogram&#34;&gt;Gentoogram - Gentoo Chat&lt;/a&gt; &amp;mdash; Mainly Gentoo-focused, but all operating systems are welcome!&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/libreoffice&#34;&gt;LibreOffice&lt;/a&gt; &amp;mdash; A LibreOffice group chat&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/solusproject&#34;&gt;Solus Project&lt;/a&gt; &amp;mdash; Unofficial Solus Project Discussion.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/Antergos&#34;&gt;Antergos&lt;/a&gt; &amp;mdash; The official telegram group for the Antergos project.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/archlinuxgroup&#34;&gt;Arch Linux&lt;/a&gt; &amp;mdash; The group for discussing everything about Arch Linux.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://telegram.me/joinchat/BvwFzD3ymNYJBuT9bFiZkA&#34;&gt;/r/LMR&lt;/a&gt; &amp;mdash; A LMR group chat based on /r/linuxmasterrace.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/ircdebianmobile&#34;&gt;#Debian-Mobile&lt;/a&gt; &amp;mdash; Telegram side of &amp;lsquo;#debian-mobile&amp;rsquo; on irc.debian.org.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/Manjaro&#34;&gt;Manjaro&lt;/a&gt; &amp;mdash; a telegram group for manjaro users.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;channel-internasional&#34;&gt;Channel Internasional&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/reddit_programming&#34;&gt;Reddit Programming&lt;/a&gt; &amp;mdash; I will send you newest post from subreddit /r/programming&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/theprogrammingart&#34;&gt;The Art of Programming&lt;/a&gt; &amp;mdash; A channel with programming news and tips and tricks, nice for beginners but also for experienced programmers.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/githubtrending&#34;&gt;GitHub Trending&lt;/a&gt; &amp;mdash; Trending repositories on GitHub today&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/unnikkedga&#34;&gt;unnikked.ga&lt;/a&gt; &amp;mdash; unnikked.ga blog&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/dailygo&#34;&gt;The Daily Go&lt;/a&gt; &amp;mdash; We provide you daily Golang contents&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/AndroidPortal&#34;&gt;Android Portal&lt;/a&gt; &amp;mdash; All about Android&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/Laravel&#34;&gt;Laravel&lt;/a&gt; &amp;mdash; Laravel Channel&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/laravelnews&#34;&gt;Laravel News&lt;/a&gt; &amp;mdash; Laravel News&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/awesomeprogrammer&#34;&gt;Awesome Programmer&lt;/a&gt; &amp;mdash; A curated list of amazingly channels and groups about programming in Telegram.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/programmerjokes&#34;&gt;Programmer Jokes&lt;/a&gt;  &amp;mdash; This channel will serve you daily programmer jokes&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/fullstackbroadcast&#34;&gt;Fullstack&amp;rsquo;s Broadcast&lt;/a&gt; &amp;mdash; Daily news about web development, web design and other cool web stuff.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/techbinder&#34;&gt;Syra&amp;rsquo;s Techbinder&lt;/a&gt; &amp;mdash; News and resources on programming and technology.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/xkcdchannel&#34;&gt;xkcd&lt;/a&gt; &amp;mdash; The latest xkcd comics&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/javaebooks&#34;&gt;Programming eBooks&lt;/a&gt; &amp;mdash; This channel is for Programmers, Coders, Software Engineers, Scientists, Creators and for many others.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/packtpubfreelearning&#34;&gt;PacktPub Free Learning&lt;/a&gt; &amp;mdash; Get notified when a new free book is avaiable on packtpub.com.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/fullstackbroadcast&#34;&gt;Fullstack&amp;rsquo;s Broadcast&lt;/a&gt; &amp;mdash; Daily news about web development, web design and other cool web stuff.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/linuxgram&#34;&gt;Linuxgram&lt;/a&gt; &amp;mdash; News and information from the Linux world&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/dailycpp&#34;&gt;Daily C++&lt;/a&gt; &amp;mdash; The best channel about C++ News!&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/bestofdevRant&#34;&gt;The best of devRant :/&lt;/a&gt; &amp;mdash; The best Rants (&amp;amp; Memes) you can find on devRant.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/dailyandroid&#34;&gt;Daily Android&lt;/a&gt; &amp;mdash; Daily news for Android developers and enthusiasts.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/dotnetdaily&#34;&gt;.NET daily&lt;/a&gt; &amp;mdash; Recommended for developers who want to learn .Net or improve .Net Skill.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/aspnetvnext&#34;&gt;ASP.NET 5&lt;/a&gt; &amp;mdash; ASP.NET Channel&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/thedevs&#34;&gt;The Dev&lt;/a&gt; &amp;mdash; Developers&amp;rsquo; feed&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/hwebdev&#34;&gt;Helpful Web Development&lt;/a&gt; &amp;mdash; Only relevant materials for web developers&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/tghippotech&#34;&gt;HippoTech&lt;/a&gt; &amp;mdash; High-quality articles on technology, programming, marketing and future-looking news, with a pinch of humour.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/techrss&#34;&gt;Tech RSS&lt;/a&gt; &amp;mdash; RSS Feeds from TechCrunch, TheVerge, Hackaday, Lua.Space, YCombinator Hacker News.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/webdev_eng&#34;&gt;Web Dev (frontend, news, blogs)&lt;/a&gt; &amp;mdash; Web Devevelopment news feed.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://telegram.me/itsecalert&#34;&gt;IT Security Alerts&lt;/a&gt; &amp;mdash; This channel posts IT security related topics and especially alerts.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/hacking_group_channel&#34;&gt;Hacker Feed&lt;/a&gt; &amp;mdash; Just a random guy posting some cool writeups, videos, podcasts about information security.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://telegram.me/joinchat/AAJprzwULzg-pzAbBeKjhg&#34;&gt;Anon Free-Library v2.0&lt;/a&gt; &amp;mdash; Free Security eBooks&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/fedoranews&#34;&gt;Fedora Project News&lt;/a&gt; &amp;mdash; This channel is for official news relating to the Fedora Project&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/parrotsec&#34;&gt;parrotsec&lt;/a&gt; &amp;mdash; Parrot News&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/linuxgaming&#34;&gt;Linux &amp;amp; SteamOS Gaming&lt;/a&gt; &amp;mdash; For fans of Linux, SteamOS and gaming&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/linuxmint&#34;&gt;Linux Mint&lt;/a&gt; &amp;ndash; Linux Mint Preferences&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/geekschannel&#34;&gt;Telegram Geeks&lt;/a&gt; &amp;mdash;  Join the Telegram Army!&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/pythontelegrambotchannel&#34;&gt;python-telegram-bot&lt;/a&gt; &amp;mdash; The official channel for python-telegram-bot library.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/GeekJokes&#34;&gt;Geek Jokes&lt;/a&gt; &amp;mdash; This channel will serve you daily Geek Jokes. Feel free to laugh :)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/TGAdm&#34;&gt;Admin Life&lt;/a&gt; &amp;mdash; Daily posts about IT guys life.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/daniilgentili&#34;&gt;Daniil Gentili&amp;rsquo;s news channel&lt;/a&gt; &amp;mdash; Official channel for news regarding @danogentili&amp;rsquo;s projects.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/tgcliupdates&#34;&gt;telegram-cli&lt;/a&gt; &amp;mdash; Telegram CLI Updates&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/rezhajulio&#34;&gt;Rezha Julio&amp;rsquo;s Channel&lt;/a&gt; &amp;mdash; Curated articles about Technology, Software Crafting and Self-Improvement.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/pythondaily&#34;&gt;Python Daily&lt;/a&gt; &amp;mdash; Python Daily Channel&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/botcube&#34;&gt;BotCube&lt;/a&gt; &amp;mdash; Bots, messaging apps, conversational interfaces, AI &amp;amp; ML — hot reviews &amp;amp; insights from industry experts.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/htmlacademy&#34;&gt;HTML Academy&lt;/a&gt; &amp;mdash; Курсы для каждого, кто хочет окунуться в мир вёрстки и программирования. Интерактивные задания помогут освоить веб-технологии и создать сайт, а интенсивные курсы подготовят к старту карьеры.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/ubuntubuzz&#34;&gt;Ubuntubuzz&lt;/a&gt; &amp;mdash; Official Telegram channel from ubuntubuzz.com. UbuntuBuzz delivers Ubuntu GNU/Linux-related articles in reviews and tutorials. It has also a free magazine called UbuntuBuzz Magazine.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;bot-telegram-untuk-programmer&#34;&gt;Bot Telegram untuk Programmer&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/GitHubBot&#34;&gt;Github&lt;/a&gt; &amp;mdash; Bot ini dapat diintegrasikan dengan Github.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/rextester_bot&#34;&gt;Rextester&lt;/a&gt; &amp;mdash; Bot for executing snippets of code.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/TechCrunchBot&#34;&gt;TechCrunch&lt;/a&gt; &amp;mdash; Bot untuk melihat informasi dari Tehch Crunch.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/trello_bot&#34;&gt;Trello&lt;/a&gt; &amp;mdash; Bot yang bisa diintegrasikan dengan Trello.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/integram_bot&#34;&gt;Integram&lt;/a&gt; &amp;mdash; Bot yang menyediakan integrasi ke berbagai aplikasi.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/WhoisRobot&#34;&gt;WhoisRobot&lt;/a&gt; &amp;mdash; a simple domain whois lookup tool&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/CarikBot&#34;&gt;Carik&lt;/a&gt; &amp;mdash; Carik Funny Assistant&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/TheFeedReaderBot&#34;&gt;Feed Reader Bot&lt;/a&gt; &amp;mdash; Feed Reader Bot monitors websites, Facebook/Youtube/Twitter accounts, and sends messages when new posts are made.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/RGBrobot&#34;&gt;RGBRobot&lt;/a&gt; &amp;mdash; Simply open any of your chats and type @RGBrobot + Hex-Code
-in the message field. Then tap on the picture to send.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/ReddBot&#34;&gt;Reddit Bot&lt;/a&gt; &amp;mdash; Get Reddit Posts&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/IFTTT&#34;&gt;IFTTT&lt;/a&gt; &amp;mdash; Link your Telegram groups or channels to more than 360 other services.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/DriveItBot&#34;&gt;DriveIt&lt;/a&gt; &amp;mdash; Bot to upload/backup files from Telegram to your Google Drive.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/sysadmbot&#34;&gt;SysAdmin Tools&lt;/a&gt; &amp;mdash; This tool is offered by BlueiTech that provides Cloud Servers, Cloud VPS, Dedicated Servers.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/ShortUrlBot&#34;&gt;Short URL GOO.GL&lt;/a&gt; &amp;mdash; This Robot will help you to shorten URL, based on Google URL Shortener goo.gl, bit.ly and AdF.ly.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/it_tool_bot&#34;&gt;IT Tool&lt;/a&gt; &amp;mdash; Tools for Admin&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/APIDebugBot&#34;&gt;APIDebugBot&lt;/a&gt; &amp;mdash; This bot can help you debug your own bots and help you understand how the bot API works. This bot works in groups too.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/kbbibot&#34;&gt;KBBI Bot&lt;/a&gt; &amp;mdash; Kamus Besar Bahasa Indonesia Bot dengan metode inline bot.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/BotFather&#34;&gt;BotFather&lt;/a&gt; &amp;mdash; BotFather is the one bot to rule them all. Use it to create new bot accounts and manage your existing bots.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;PS&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;Jika kamu punya informasi Grup, Channel, dan Bot Telegram seputar pemrograman
-yang belum terdaftar di atas, mohon berikan info ya, agar bisa ditambahkan: &lt;a href=&#34;https://m.me/petanikode&#34;&gt;PM Petani Kode&lt;/a&gt;
-atau buat &lt;em&gt;pull request&lt;/em&gt; pada &lt;a href=&#34;https://github.com/hendisantika/List-All-Programming-Telegram-Group&#34;&gt;repositori ini&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/awesomeprogrammer&#34;&gt;Awesome Programmer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hendisantika/List-All-Programming-Telegram-Group&#34;&gt;Awesome Telegram Group&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

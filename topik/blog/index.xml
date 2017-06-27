@@ -314,14 +314,14 @@ dan ditingkatkan kualitasnya.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Cara Hosting Hugo di Github</title>
+      <title>Cara Hosting/Deploy Hugo di Github</title>
       <link>https://www.petanikode.com/cara-hosting-hugo-di-github/</link>
       <pubDate>Mon, 30 Jan 2017 20:14:28 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-hosting-hugo-di-github/</guid>
       <description>
 
-&lt;p&gt;Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu
+&lt;p&gt;&lt;em&gt;Hosting/deploy&lt;/em&gt; Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu
 mengunggah file yang ada di direktori &lt;code&gt;public&lt;/code&gt; saja.&lt;/p&gt;
 
 &lt;p&gt;Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:&lt;/p&gt;
@@ -330,7 +330,7 @@ mengunggah file yang ada di direktori &lt;code&gt;public&lt;/code&gt; saja.&lt;/
 &lt;li&gt;Hosting ke direktori &lt;code&gt;doc&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Hosting ke cabang &lt;code&gt;gh-pages&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Hosting ke halaman personal/organisasi&lt;/li&gt;
-&lt;li&gt;Hosting Github dengan Continuous Integration (CI)&lt;/li&gt;
+&lt;li&gt;Hosting Github dengan &lt;em&gt;Continuous Integration&lt;/em&gt; (CI)&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.&lt;/p&gt;
@@ -356,8 +356,12 @@ mengunggah file yang ada di direktori &lt;code&gt;public&lt;/code&gt; saja.&lt;/
 &lt;p&gt;Pertama, repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt; fungsinya untuk menyimpan konten dari Web
 (semua file Hugo).&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/hugo/repo-konten-hugo.png&#34; alt=&#34;Repositori Konten Hugo&#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Sementara repositori &lt;code&gt;username.github.io&lt;/code&gt; untuk menyimpan file yang ada di &lt;code&gt;public&lt;/code&gt;
 atau hasil &lt;em&gt;render&lt;/em&gt; dari Hugo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/hugo/repo-hasil-render-hugo.png&#34; alt=&#34;Repositori Hasil render Hugo&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nama repositori anda tidak harus &lt;code&gt;kontent-web-hugo&lt;/code&gt;,
 Anda bisa menggunakan nama selain itu.&lt;/p&gt;

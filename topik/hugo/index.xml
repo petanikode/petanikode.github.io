@@ -442,8 +442,9 @@ dan ditingkatkan kualitasnya.&lt;/p&gt;
       <description>
 
 &lt;p&gt;Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu
-mengunggah file yang ada di direktori &lt;code&gt;public&lt;/code&gt; saja. Ada empat cara hosting
-Hugo di Github yang diberikan pada dokumentasi, diantaranya:&lt;/p&gt;
+mengunggah file yang ada di direktori &lt;code&gt;public&lt;/code&gt; saja.&lt;/p&gt;
+
+&lt;p&gt;Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Hosting ke direktori &lt;code&gt;doc&lt;/code&gt;&lt;/li&gt;
@@ -452,10 +453,18 @@ Hugo di Github yang diberikan pada dokumentasi, diantaranya:&lt;/p&gt;
 &lt;li&gt;Hosting Github dengan Continuous Integration (CI)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang. Kita
-membutuhkan dua repositori untuk melakukan cara ini.&lt;/p&gt;
+&lt;p&gt;Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.&lt;/p&gt;
 
-&lt;h2 id=&#34;1-membuat-repositori&#34;&gt;1. Membuat Repositori&lt;/h2&gt;
+&lt;p&gt;Kita membutuhkan dua repositori untuk melakukan cara ini.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Repositori untuk menyimpan konten.&lt;/li&gt;
+&lt;li&gt;Repositori untuk menyimpan hasil render.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mari kita mulai&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-membuat-repositori-di-github&#34;&gt;1. Membuat Repositori di Github&lt;/h2&gt;
 
 &lt;p&gt;Buatlah dua repositori di Github dengan nama seperti berikut ini.&lt;/p&gt;
 
@@ -464,9 +473,13 @@ membutuhkan dua repositori untuk melakukan cara ini.&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;username.github.io&lt;/code&gt; atau &lt;code&gt;organisasi.github.io&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Pertama, repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt; fungsinya untuk menyimpan konten dari Web.
-Sementara repositori &lt;code&gt;username.github.io&lt;/code&gt; untuk menyimpan file yang ada di &lt;code&gt;public&lt;/code&gt;
-atau hasil &lt;em&gt;render&lt;/em&gt; dari Hugo. Nama repositori anda tidak harus &lt;code&gt;kontent-web-hugo&lt;/code&gt;,
+&lt;p&gt;Pertama, repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt; fungsinya untuk menyimpan konten dari Web
+(semua file Hugo).&lt;/p&gt;
+
+&lt;p&gt;Sementara repositori &lt;code&gt;username.github.io&lt;/code&gt; untuk menyimpan file yang ada di &lt;code&gt;public&lt;/code&gt;
+atau hasil &lt;em&gt;render&lt;/em&gt; dari Hugo.&lt;/p&gt;
+
+&lt;p&gt;Nama repositori anda tidak harus &lt;code&gt;kontent-web-hugo&lt;/code&gt;,
 Anda bisa menggunakan nama selain itu.&lt;/p&gt;
 
 &lt;h2 id=&#34;2-persiapkan-repositori-lokal&#34;&gt;2. Persiapkan Repositori Lokal&lt;/h2&gt;

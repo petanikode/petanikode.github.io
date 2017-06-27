@@ -219,7 +219,7 @@ Kita membutuhkan dua repositori untuk melakukan cara ini." />
   },
   "headline": "Cara Hosting Hugo di Github",
   "description": "Hosting\/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu mengunggah file yang ada di direktori public saja.\nAda empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:\n Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal\/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.\nKita membutuhkan dua repositori untuk melakukan cara ini.",
-  "wordCount":  489 ,
+  "wordCount":  498 ,
   "datePublished" : "2017-01-30T20:14:28",
   "dateModified" : "2017-01-30T20:14:28",
   "image" : {
@@ -1297,11 +1297,19 @@ git push -u origin master
 
 <h2 id="4-membuat-submodul">4. Membuat Submodul</h2>
 
-<p>Submodul ini merupakan repositori anak dari repositori <code>kontent-web-hugo</code>.
-Repositori ini akan menggunakan repositori <code>username.github.io</code> sebagai
+<p>Submodul ini merupakan repositori anak dari repositori <code>kontent-web-hugo</code>.</p>
+
+<p>Repositori ini akan menggunakan repositori <code>username.github.io</code> sebagai
 repositori remote-nya.</p>
 
-<pre><code>git submodule add -b master https://github.com/{username}/{username}.github.io.git public
+<p>HTTP:</p>
+
+<pre><code class="language-bash">git submodule add -b master https://github.com/{username}/{username}.github.io.git public
+</code></pre>
+
+<p>SSH:</p>
+
+<pre><code class="language-bash">git submodule add -b master git@github.com:{username}/{username}.github.io.git public
 </code></pre>
 
 <h2 id="5-membuat-skrip-deploy-sh">5. Membuat Skrip <code>deploy.sh</code></h2>

@@ -406,11 +406,19 @@ git push -u origin master
 
 &lt;h2 id=&#34;4-membuat-submodul&#34;&gt;4. Membuat Submodul&lt;/h2&gt;
 
-&lt;p&gt;Submodul ini merupakan repositori anak dari repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt;.
-Repositori ini akan menggunakan repositori &lt;code&gt;username.github.io&lt;/code&gt; sebagai
+&lt;p&gt;Submodul ini merupakan repositori anak dari repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Repositori ini akan menggunakan repositori &lt;code&gt;username.github.io&lt;/code&gt; sebagai
 repositori remote-nya.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git submodule add -b master https://github.com/{username}/{username}.github.io.git public
+&lt;p&gt;HTTP:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule add -b master https://github.com/{username}/{username}.github.io.git public
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;SSH:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule add -b master git@github.com:{username}/{username}.github.io.git public
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;5-membuat-skrip-deploy-sh&#34;&gt;5. Membuat Skrip &lt;code&gt;deploy.sh&lt;/code&gt;&lt;/h2&gt;

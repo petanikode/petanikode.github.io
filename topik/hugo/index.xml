@@ -543,8 +543,8 @@ repositori remote-nya.&lt;/p&gt;
 
 &lt;h2 id=&#34;5-membuat-skrip-deploy-sh&#34;&gt;5. Membuat Skrip &lt;code&gt;deploy.sh&lt;/code&gt;&lt;/h2&gt;
 
-&lt;p&gt;Sebenarnya kita bisa langsung unggah semua file yang ada di direktori &lt;code&gt;public&lt;/code&gt;
-dengan perintah&lt;/p&gt;
+&lt;p&gt;Sebenarnya kita bisa langsung upload semua file yang ada di direktori &lt;code&gt;public&lt;/code&gt;
+dengan perintah:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd public
 git add .
@@ -553,10 +553,11 @@ git push -u origin master
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Agar kita tidak mengetik perintah di atas terus-menerus setiap mau deploy, maka
-kita memerlukan skrip. Untungnya Hugo sudah menyediakannya. Silahkan ditambahkan
-skrip ini di direktori Hugo-nya.&lt;/p&gt;
+kita memerlukan skrip.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;#!/bin/bash
+&lt;p&gt;Untungnya Hugo sudah menyediakannya. Silahkan ditambahkan skrip ini di direktori Hugo-nya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 
 echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
 
@@ -584,13 +585,13 @@ cd ..
 
 &lt;p&gt;Berikan hak akses eksekusi untuk skrip ini.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;chmod +x deploy.sh
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;chmod +x deploy.sh
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Nah, kita bisa melakukan deploy dengan skrip tersebut. Setiap kali kita ingin
 meng-update ke Github, kita cukup menjalankan skrip itu saja. Contohnya:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;./deploy.sh &amp;quot;tes deploy web hugo ke github&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./deploy.sh &amp;quot;tes deploy web hugo ke github&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Tuggulah beberapa saat, website kita akan segera mengudara di &lt;code&gt;username.github.io&lt;/code&gt;.&lt;/p&gt;

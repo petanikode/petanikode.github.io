@@ -3874,7 +3874,9 @@ cd ..
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Nah, kita bisa melakukan deploy dengan skrip tersebut. Setiap kali kita ingin
-meng-update ke Github, kita cukup menjalankan skrip itu saja. Contohnya:&lt;/p&gt;
+meng-update ke Github, kita cukup menjalankan skrip itu saja.&lt;/p&gt;
+
+&lt;p&gt;Contohnya:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./deploy.sh &amp;quot;tes deploy web hugo ke github&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;

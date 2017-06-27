@@ -482,6 +482,10 @@ Anda bisa menggunakan nama selain itu.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote add origin git@github.com:{username}/{nama-repo}.git
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;Atau kalau tidak mau repot, URL-nya bisa di-copy dari repo githubnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/hugo/url-repo.png&#34; alt=&#34;URL Repositori Github&#34; /&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;3-upload-ke-github&#34;&gt;3. Upload ke Github&lt;/h2&gt;
 
 &lt;p&gt;Repositori lokal sudah dipersiapkan, sekarang kita upload dulu ke github.&lt;/p&gt;

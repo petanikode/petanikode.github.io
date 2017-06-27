@@ -473,7 +473,7 @@ meng-update ke Github, kita cukup menjalankan skrip itu saja.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/hugo/deploy-hugo.png&#34; alt=&#34;deploy Hugo ke Github&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Contohnya:&lt;/p&gt;
+&lt;p&gt;Kita juga bisa menambahkan pesan commit-nya:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./deploy.sh &amp;quot;tes deploy web hugo ke github&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;

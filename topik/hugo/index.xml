@@ -919,25 +919,26 @@ yang berusia cukup muda.&lt;/p&gt;
 &lt;p&gt;Pengembangan website Petani Kode berlangsung cukup cepat. Meskipun bahasa
 pemrograman Go belum pernah saya pelajari dan pahami. Namun, berkat kerja
 keras dan semangat website ini bisa jadi dalam waktu sekejap. Ya, karena di
-Hugo kita tidak menulis kode Go, melainkan hanya bermain pada template Go.&lt;/p&gt;
+Hugo kita tidak menulis kode Go, melainkan hanya bermain pada template Go yang
+mirip-mirp seperti template engine pada umumnya.&lt;/p&gt;
 
 &lt;p&gt;Kesulitan saya rasakan ketika belum paham fungsi dan variabel dalam template Go.
 Namun, itu bukanlah kendala. Karena Hugo sudah menyediakan
-&lt;a href=&#34;https://gohugo.io/overview/introduction/&#34;&gt;dokumentasi&lt;/a&gt; dan
-&lt;a href=&#34;http://discuss.gohugo.io&#34;&gt;forum disksui&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://gohugo.io/overview/introduction/&#34;&gt;dokumentasi&lt;/a&gt; yang lengkap dan
+&lt;a href=&#34;http://discuss.gohugo.io&#34;&gt;forum disksui&lt;/a&gt; tempat bertanya.&lt;/p&gt;
 
-&lt;p&gt;Saya tidak sadar sudah menulis kode CSS hampir 700 baris. Template ini jadi
-dalam waktu dua setengah hari. Template ini menerapkan &lt;a href=&#34;https://www.petanikode.com/topik/amp&#34;&gt;AMP&lt;/a&gt; yang
-dikembangkan dari temlpate &lt;a href=&#34;https://gohugo-amp.gohugohq.com/&#34;&gt;AMP Starter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Saya tidak sadar sudah menulis kode CSS hampir 700 baris. Tema ini jadi
+dalam waktu dua setengah hari. Tema ini menerapkan &lt;a href=&#34;https://www.petanikode.com/topik/amp&#34;&gt;AMP&lt;/a&gt; yang
+dikembangkan dari tema &lt;a href=&#34;https://gohugo-amp.gohugohq.com/&#34;&gt;AMP Starter&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;proses-migrasi&#34;&gt;Proses Migrasi&lt;/h2&gt;
 
 &lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Pembuatan Template Hugo (11~13 Januari)&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;//membuat-tema-hugo/&#34;&gt;Pembuatan tema Hugo&lt;/a&gt; (11~13 Januari)&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://www.petanikode.com/2017/01/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/&#34;&gt;Impor Artikel dari Blogger ke Hugo&lt;/a&gt; (13~14 Januari)&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://www.petanikode.com/2017/01/cara-hosting-hugo-di-github/&#34;&gt;Deploy ke domain utama petanikode.com&lt;/a&gt; (15~17 Januari)&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://www.petanikode.com/2017/01/cara-redirect-domain-dengan-cloudflare/&#34;&gt;Redirect link lama ke link baru&lt;/a&gt; (17 Januari)&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Edit Artikel (18 Januari [21%])&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Edit Artikel (18 Januari [21%]) &amp;mdash; &lt;em&gt;dalam proses memperbaiki dan peningkatan kualitas&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;sebelum-dan-sesudah-migrasi&#34;&gt;Sebelum dan Sesudah Migrasi&lt;/h2&gt;
@@ -1058,7 +1059,9 @@ melakukan build di CI Gitlab.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Sebelum migrasi, penulisan artikel dilakukan dengan membuka Blogger. Namun setelah migrasi, penulisan artikel bisa dilakukan di teks editor mana saja. Rasanya seperti menulis kode, dan kalau ingin diterbitkan tinggal melakukan &lt;em&gt;push&lt;/em&gt; ke repositori git.&lt;/p&gt;
+&lt;p&gt;Sebelum migrasi, penulisan artikel dilakukan dengan membuka Blogger. N
+amun setelah migrasi, penulisan artikel bisa dilakukan di teks editor mana saja.
+Rasanya seperti menulis kode, dan kalau ingin diterbitkan tinggal melakukan &lt;em&gt;push&lt;/em&gt; ke repositori git.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img
 src=&#34;https://1.bp.blogspot.com/-z2_QdrUKmfE/WHx5QoVkwRI/AAAAAAAADok/AtwB9HQYNV4cxVuOFLlwgYCch_gi41rjQCK4B/s1600/tulisartikel-blogger-dan-hugo.jpg&#34;

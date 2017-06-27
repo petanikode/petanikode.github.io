@@ -219,7 +219,7 @@ Kita membutuhkan dua repositori untuk melakukan cara ini." />
   },
   "headline": "Cara Hosting Hugo di Github",
   "description": "Hosting\/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu mengunggah file yang ada di direktori public saja.\nAda empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:\n Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal\/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.\nKita membutuhkan dua repositori untuk melakukan cara ini.",
-  "wordCount":  475 ,
+  "wordCount":  489 ,
   "datePublished" : "2017-01-30T20:14:28",
   "dateModified" : "2017-01-30T20:14:28",
   "image" : {
@@ -1255,10 +1255,11 @@ Anda bisa menggunakan nama selain itu.</p>
 
 <h2 id="2-persiapkan-repositori-lokal">2. Persiapkan Repositori Lokal</h2>
 
-<p>Buatlah repositori baru di dalam proyek hugo. Lakukan inisialisasi git.
-Silahkan ikuti perintah berikut ini.</p>
+<p>Buatlah repositori baru di dalam proyek hugo dengan melakukan inisialisasi git.</p>
 
-<p>masuk ke direktori Hugo:</p>
+<p>Silahkan ikuti perintah berikut ini.</p>
+
+<p>Masuk ke direktori Hugo:</p>
 
 <pre><code class="language-bash">cd kontent-web-hugo
 </code></pre>
@@ -1268,14 +1269,21 @@ Silahkan ikuti perintah berikut ini.</p>
 <pre><code class="language-bash">git init
 </code></pre>
 
-<p>Hapus direktori <code>public</code>, tenang nanti kita bisa buat lagi dengan perntah <code>hugo</code>.</p>
+<p>Hapus direktori <code>public</code>&hellip; tenang nanti kita bisa buat lagi dengan perntah <code>hugo</code>.</p>
 
 <pre><code class="language-bash">rm -rf public
 </code></pre>
 
 <p>Tambahkan repositori <em>remote</em> (github):</p>
 
+<p>Untuk yang menggunakan HTTP:</p>
+
 <pre><code class="language-bash">git remote add origin https://github.com/{username}/{nama-repo}.git
+</code></pre>
+
+<p>Untuk yang menggunakan SSH:</p>
+
+<pre><code class="language-bash">git remote add origin git@github.com:{username}/{nama-repo}.git
 </code></pre>
 
 <h2 id="3-upload-ke-github">3. Upload ke Github</h2>

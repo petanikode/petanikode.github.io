@@ -484,10 +484,11 @@ Anda bisa menggunakan nama selain itu.&lt;/p&gt;
 
 &lt;h2 id=&#34;2-persiapkan-repositori-lokal&#34;&gt;2. Persiapkan Repositori Lokal&lt;/h2&gt;
 
-&lt;p&gt;Buatlah repositori baru di dalam proyek hugo. Lakukan inisialisasi git.
-Silahkan ikuti perintah berikut ini.&lt;/p&gt;
+&lt;p&gt;Buatlah repositori baru di dalam proyek hugo dengan melakukan inisialisasi git.&lt;/p&gt;
 
-&lt;p&gt;masuk ke direktori Hugo:&lt;/p&gt;
+&lt;p&gt;Silahkan ikuti perintah berikut ini.&lt;/p&gt;
+
+&lt;p&gt;Masuk ke direktori Hugo:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd kontent-web-hugo
 &lt;/code&gt;&lt;/pre&gt;
@@ -497,14 +498,21 @@ Silahkan ikuti perintah berikut ini.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Hapus direktori &lt;code&gt;public&lt;/code&gt;, tenang nanti kita bisa buat lagi dengan perntah &lt;code&gt;hugo&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Hapus direktori &lt;code&gt;public&lt;/code&gt;&amp;hellip; tenang nanti kita bisa buat lagi dengan perntah &lt;code&gt;hugo&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rm -rf public
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Tambahkan repositori &lt;em&gt;remote&lt;/em&gt; (github):&lt;/p&gt;
 
+&lt;p&gt;Untuk yang menggunakan HTTP:&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote add origin https://github.com/{username}/{nama-repo}.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk yang menggunakan SSH:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote add origin git@github.com:{username}/{nama-repo}.git
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;3-upload-ke-github&#34;&gt;3. Upload ke Github&lt;/h2&gt;

@@ -799,6 +799,160 @@ agar dapat digunakan untuk pemrograman Android.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Pemrograman Android: Cara Periksa Konektivitas Internet Pengguna</title>
+      <link>https://www.petanikode.com/pemrograman-android-periksa-konektivitas-internet/</link>
+      <pubDate>Sat, 16 Apr 2016 00:51:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-android-periksa-konektivitas-internet/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pengembangan aplikasi yang membutuhkan koneksi internet untuk operasinya,
+perlu melakukan pengecekan terlebih dahulu.&lt;/p&gt;
+
+&lt;p&gt;Contoh sebuah aplikasi yang menreapkan &lt;em&gt;API Google Maps&lt;/em&gt;,
+membutuhkan koneksi internet untuk menampilkan peta.&lt;/p&gt;
+
+&lt;p&gt;Akan tetapi, tidak dilakukan pengecekan koneksi internet.
+Aplikasi pun gagal menampilkan peta dan tampa pesan umpan balik.&lt;/p&gt;
+
+&lt;p&gt;Pengecekan koneksi internet akan membantu kita membuat umpan balik ke pengguna aplikasi.&lt;/p&gt;
+
+&lt;p&gt;Misalkan, ketika user ingin menampilkan peta &lt;em&gt;Google Map&lt;/em&gt;, periksa terlebih
+dahulu koneksi internetnya. Kalau ada koneksi, izinkan untuk membuka &lt;em&gt;activity Google Map&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini fungsi atau &lt;em&gt;method&lt;/em&gt; yang dapat digunakan untuk memeriksa
+koneksi internet pengguna.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;private boolean adaInternet(){
+    ConnectivityManager koneksi = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+    return koneksi.getActiveNetworkInfo() != null;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ketika anda mengetik kode fungsi di atas di Android Studio,
+maka akan otomatis pustakanya diimpor.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import android.content.Context;
+import android.net.ConnectivityManager;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jangan lupa, tambahkan juga dua baris kode ini ke dalam &lt;em&gt;AndroidManifest.xml&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_WIFI_STATE&amp;quot; /&amp;gt;
+&amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, untuk menggunkan fungsi yang dibuat tadi,
+kita dapat memanfaatkan &lt;em&gt;event&lt;/em&gt; tombol diklik atau &lt;em&gt;event&lt;/em&gt; yang lainnya.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Button btn = (Button) findViewById(R.id.button);
+
+btn.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        if(adaInternet()){
+        // tampilkan peta
+        Toast.makeText(getActivity(), &amp;quot;Terhubung ke internet&amp;quot;, Toast.LENGTH_LONG).show();
+        }else{
+        // tampilkan pesan
+        Toast.makeText(getActivity(), &amp;quot;Tidak ada koneksi internet&amp;quot;, Toast.LENGTH_LONG).show();
+        }
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya akan ditampilkan pesan &lt;em&gt;(Toast)&lt;/em&gt; &amp;ldquo;Terhubung ke internet&amp;rdquo;
+bila ponsel terhubung ke interet.&lt;/p&gt;
+
+&lt;p&gt;Sedangkan kalau tidak, akan ditampilkan pesan &amp;ldquo;Tidak ada koneksi internet&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Referensi: &lt;a href=&#34;http://stackoverflow.com/a/9570292&#34;&gt;http://stackoverflow.com/a/9570292&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Persiapan Pemrograman Android di Linux Menggunakan Android Studio</title>
+      <link>https://www.petanikode.com/pemrograman-android-linux/</link>
+      <pubDate>Thu, 14 Apr 2016 14:23:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-android-linux/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pemrograman Android begitu populer saat ini. Banyak programer yang tertarik mempelajari pemrograman Android. Pemrograman Android dapat dilakukan di berbagai platform, salah satunya di sistem operasi Linux. Linux merupakan sistem operasi bebas terbuka dan gratis.&lt;/p&gt;
+
+&lt;p&gt;Pada kesempatan ini, saya akan membahas persiapan yang dilakukan sebelum memulai pemrograman Android dengan Android Studio.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-instal-jdk&#34;&gt;1. Instal JDK&lt;/h2&gt;
+
+&lt;p&gt;JDK &lt;em&gt;(Java Development Kit)&lt;/em&gt; merupakan bahan dasar yang kita butuhkan untuk pemrograman java. JDK menyediakan kompilator, mesin virtual, dan pustaka &lt;em&gt;(library)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ada dua jenis JDK di Linux, yaitu Open JDK dan Oracle JDK. Perbedaan Open JDK dan Oracle JDK dapat dibaca &lt;a href=&#34;http://javapapers.com/java/oracle-jdk-vs-openjdk-and-java-jdk-development-process/&#34;&gt;di sini&lt;/a&gt;. Pada persiapan ini, kita akan menginstal Open JDK saja. Ketik perintah berikut untuk menginstal.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install openjdk-8-jdk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-install-android-studio&#34;&gt;2. Install Android Studio&lt;/h2&gt;
+
+&lt;p&gt;Android Studio merupakan mesin yang kita butuhkan untuk membuat atau mengembangkan aplikasi Android . Android studio yang digunakan dalam persiapan ini adalah Android Studio 2. Silahkan download Android Studio untuk sistem operasi Linux di &lt;a href=&#34;http://developer.android.com/sdk/index.html&#34;&gt;Website Developer Android&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-sFnqha7T9m4/VwzcDpAOsYI/AAAAAAAACqI/WvN3ZVqJ5C0PkMJK0rKYfz6Ih66S7ZM0wCK4B/s1600/Download%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-sFnqha7T9m4/VwzcDpAOsYI/AAAAAAAACqI/WvN3ZVqJ5C0PkMJK0rKYfz6Ih66S7ZM0wCK4B/s1600/Download%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, buka file manager sebagai user root:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo thunar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;kemudian ekstrak arsip zip Android Studio ke direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-CVDuqiW_ObE/Vwzf29CxwLI/AAAAAAAACqc/vkuBtq8rPIwmrWg4KxSuQAPYx-FC2qI1gCK4B/s1600/Instal%2BAndroid%2BStudio%2Bdi%2Bdirektori%2Bopt.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-CVDuqiW_ObE/Vwzf29CxwLI/AAAAAAAACqc/vkuBtq8rPIwmrWg4KxSuQAPYx-FC2qI1gCK4B/s1600/Instal%2BAndroid%2BStudio%2Bdi%2Bdirektori%2Bopt.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tambahkan Android Studio di menu sistem anda. Gunakan aplikasi menu editor. di Linux (Xubuntu) yang saya gunakan menu editornya sudah tersedia. Klik kanan pada menu kemudian pilih &lt;em&gt;Edit Applications&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-xSsZc71coWE/Vwzg-9ULFJI/AAAAAAAACqo/Mo7Vbb1ArIoseBopTo6Rnxtv6gBQol3pgCK4B/s1600/Mendaftarkan%2BAndroid%2BStudio%2Bdi%2BMenu%2BAplikasi.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-xSsZc71coWE/Vwzg-9ULFJI/AAAAAAAACqo/Mo7Vbb1ArIoseBopTo6Rnxtv6gBQol3pgCK4B/s1600/Mendaftarkan%2BAndroid%2BStudio%2Bdi%2BMenu%2BAplikasi.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-instal-android-sdk&#34;&gt;3. Instal Android SDK&lt;/h2&gt;
+
+&lt;p&gt;Android SDK hampir sama persis dengan JDK. Android SDK menyediakan API, Library, Emulator, dan beberapa peralatan yang diperlukan untuk membuat aplikasi. &lt;a href=&#34;https://www.petanikode.com/2016/04/cara-instal-android-sdk-dan-android-ndk.html&#34;&gt;Cara instal Android SDK&lt;/a&gt; sudah saya bahas di tulisan sebelumnya.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-update-api-android-sdk&#34;&gt;4. Update API Android SDK&lt;/h2&gt;
+
+&lt;p&gt;Android SDK yang beru terinstal masih membutuhkan beberapa komponen lain untuk dapat digunakan. Oleh karena itu, kita perlu melakukan update. Ketik perintah berikut id terminal.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;android update sdk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Instal API dan Image Android yang anda butuhkan. Update API Android SDK membutuhkan koneksi internet yang cepat dan stabil. Jika semuanya diinstal, akan memakan banyak ruang (kira-kira sampai 40GB).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-_kUBCAT1Iuk/Vwzml6XJqrI/AAAAAAAACq0/VHBI8qxrDRMdO5YXtHsWnbPjyx7D9O9kACLcB/s1600/Update%2BAPI%2BAndroid%2BSDK.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-_kUBCAT1Iuk/Vwzml6XJqrI/AAAAAAAACq0/VHBI8qxrDRMdO5YXtHsWnbPjyx7D9O9kACLcB/s1600/Update%2BAPI%2BAndroid%2BSDK.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-buat-emulator&#34;&gt;5. Buat Emulator&lt;/h2&gt;
+
+&lt;p&gt;Emulator kita perlukan untuk men-debug aplikasi. Bila anda memiliki ponsel bersistem operasi android, anda bisa menggunakan ponsel tersebut.&lt;/p&gt;
+
+&lt;p&gt;Cara membuat emulator, ketik perintah berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;android avd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Klik tombol &lt;em&gt;Create&lt;/em&gt; untuk membuat emulator baru.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-Zc-2QS9C13o/Vwzpp4z18bI/AAAAAAAACrE/KW5rQ8mpS4UroY3_sztEk6yMRnNw1b6CwCK4B/s1600/Membuat%2Bemulator%2Bandroid.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-Zc-2QS9C13o/Vwzpp4z18bI/AAAAAAAACrE/KW5rQ8mpS4UroY3_sztEk6yMRnNw1b6CwCK4B/s1600/Membuat%2Bemulator%2Bandroid.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nilai &lt;em&gt;SD Card&lt;/em&gt; dapat dikosongkan bila tidak bisa membuatnya.&lt;/p&gt;
+
+&lt;h2 id=&#34;6-uji-coba&#34;&gt;6. Uji Coba&lt;/h2&gt;
+
+&lt;p&gt;Buat sebuah proyek baru &lt;em&gt;(Hello World)&lt;/em&gt;, kemudian coba jalankan.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-vrTozLMQh30/Vw8grg8mrzI/AAAAAAAACrQ/W56BQBQ4jlYsZFNVVTGkBlLGzKcHtbflwCLcB/s1600/Test%2BProyek%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-vrTozLMQh30/Vw8grg8mrzI/AAAAAAAACrQ/W56BQBQ4jlYsZFNVVTGkBlLGzKcHtbflwCLcB/s1600/Test%2BProyek%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Instal Android SDK dan NDK untuk Pemrograman Android di Linux</title>
       <link>https://www.petanikode.com/cara-instal-android-sdk-dan-ndk/</link>
       <pubDate>Sun, 03 Apr 2016 17:13:00 +0000</pubDate>
@@ -926,6 +1080,16 @@ This program built for x86_64-pc-linux-gnu
 &lt;/ul&gt;
 
 &lt;!-- Baca juga: &lt;ul&gt;&lt;br /&gt;&lt;li&gt;Persiapan Pemrograman Android di Linux Menggunakan Android Studio&lt;/li&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;li&gt;Persiapan Pemrograman Android di Linux Menggunakan Qt Creator&lt;/li&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/ul&gt; --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cara Mengaktifkan Developer Options Ponsel Android</title>
+      <link>https://www.petanikode.com/cara-mengaktifkan-developer-options-ponsel-android/</link>
+      <pubDate>Mon, 28 Mar 2016 15:41:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/cara-mengaktifkan-developer-options-ponsel-android/</guid>
+      <description>&lt;p&gt;Pada versi Android 4.2 ke atas, fitur &lt;i&gt;Developer Options&lt;/i&gt; disembunyikan. &lt;i&gt;Developer Options&lt;/i&gt; memungkinkan kita menjadikan ponsel sebagai &lt;i&gt;emulator&lt;/i&gt; untuk men-debug aplikasi. Berikut ini cara mengaktifkan &lt;i&gt;Developer Options&lt;/i&gt; pada Ponsel Android.&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Buka &lt;i&gt;Settings&lt;/i&gt;, kemudian masuk ke menu &lt;i&gt;About Phone&lt;/i&gt;&lt;/li&gt;&lt;li&gt;Pada bagian versi, ketuk tujuh kali (7x)&lt;a href=&#34;https://2.bp.blogspot.com/-9GMxh6g-cSI/Vvjc__ZC8rI/AAAAAAAACko/lgxvUx2vKGwW3TY2Mfdd9oeeYMbRDIHsA/s1600/Enable%2BDeveloper%2BOptions%2BPonsel%2BAndroid%2B-%2BPetani%2BKode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-9GMxh6g-cSI/Vvjc__ZC8rI/AAAAAAAACko/lgxvUx2vKGwW3TY2Mfdd9oeeYMbRDIHsA/s1600/Enable%2BDeveloper%2BOptions%2BPonsel%2BAndroid%2B-%2BPetani%2BKode.jpg&#34; /&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Hingga keluar pesan&lt;a href=&#34;http://2.bp.blogspot.com/-o6fQ3SvXPtM/VvjdrYi-QLI/AAAAAAAACk0/rddBvBBOEK0OMQpVkUwSbUQ4C3jfss6IQ/s1600/nowdeveloper-100361671-large.idge.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-o6fQ3SvXPtM/VvjdrYi-QLI/AAAAAAAACk0/rddBvBBOEK0OMQpVkUwSbUQ4C3jfss6IQ/s1600/nowdeveloper-100361671-large.idge.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;Sekarang fitur &lt;i&gt;Developer Options&lt;/i&gt; sudah aktif, silahkan lihat di &lt;i&gt;Settings&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-HtMZ1_fL54c/VvjfDhQqoWI/AAAAAAAAClE/lyPuz2CFwa4VVJ5ZJ6GphG-DPtTGBmEVw/s1600/Pengaturan%2BDeveloper%2BOptions.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-HtMZ1_fL54c/VvjfDhQqoWI/AAAAAAAAClE/lyPuz2CFwa4VVJ5ZJ6GphG-DPtTGBmEVw/s1600/Pengaturan%2BDeveloper%2BOptions.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://www.ubergizmo.com/how-to/enable-android-developer-options/&#34; target=&#34;_blank&#34;&gt;ubergizmo.com&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

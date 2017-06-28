@@ -688,5 +688,67 @@ track_errors = On
 </description>
     </item>
     
+    <item>
+      <title>Konfigurasi server PHP di Linux agar bisa upload file</title>
+      <link>https://www.petanikode.com/konfigurasi-server-php-di-linux-agar-bisa-upload-file/</link>
+      <pubDate>Mon, 11 Jan 2016 17:39:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/konfigurasi-server-php-di-linux-agar-bisa-upload-file/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Saya berencana akan melakukan instal ulang dalam waktu dekat ini.
+Karena ada beberapa kerusakan yang saya temukan di Distro Linux yang sedang saya pakai.&lt;/p&gt;
+
+&lt;p&gt;Sebelum melakukan itu, ada baiknya mencatat dulu konfigurasi server yang sedang berjalan.
+Supaya nanti mudah mengonfigurasi lagi.&lt;/p&gt;
+
+&lt;p&gt;Server Apache dan &lt;a href=&#34;https://www.petanikode.com/2015/02/pemrograman-php-di-linux.html&#34;&gt;PHP di Linux&lt;/a&gt; tidak seperti server XAMPP di Windows.
+Server Apache dan PHP di linux memiliki hak akses direktori yang harus dipatuhi.
+Sehingga, kalau kita membuat &lt;a href=&#34;https://www.petanikode.com/pemrograman-php-upload-file/&#34;&gt;skrip upload file&lt;/a&gt; akan selalu gagal. Karena kita tidak diberikan akses untuk menulis di direktori &lt;code&gt;/tmp&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Permasalahan ini bisa diatasi dengan membuat direktori baru sebagai ganti
+atau alternatif direktori &lt;code&gt;/tmp&lt;/code&gt;. Direktori ini saya namakan &lt;code&gt;tmp_upload&lt;/code&gt;
+yang berlokasi di &lt;code&gt;/var/www/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo mkdir /var/www/tmp_upload
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian memberikan hak akses dengan nomer kode &lt;code&gt;777&lt;/code&gt;.
+Artinya semua orang bisa mengakses, menulis, dan mengeksekusi sesutu dalam direktori ini.
+Nomer kode &lt;code&gt;777&lt;/code&gt;, tidak disarankan digunakan pada server produksi &lt;em&gt;(production server)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo chmod 777 -R /var/www/tmp_upload
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, Barulah kita konfigurasi server php melalui berkas &lt;code&gt;php.ini&lt;/code&gt;
+yang terletak di &lt;code&gt;/etc/php5/apache2/php.ini&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo nano /etc/php5/apache2/php.ini
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk PHP7:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo nano /etc/php/7.0/apache2/php.ini
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nilai-nilai yang diubah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;file_uploads = On
+upload_tmp_dir = /var/www/tmp_upload
+upload_max_filesize = 1024M
+max_file_uploads = 20
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Konfigurasi lengkapnya: cek di &lt;a href=&#34;https://gist.github.com/ardianta/72a17e4a39b631c31303&#34;&gt;gist.github.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Jangan lupa, menghidupkan ulang layanan &lt;code&gt;apache2&lt;/code&gt; setelah dikonfigurasi.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service apache2 restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Semoga bermanfaat.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

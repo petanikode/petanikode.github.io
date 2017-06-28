@@ -214,7 +214,7 @@ Teknologi yang pupuler saat ini menurut survey stackoverflow." />
   },
   "headline": "Pemrograman C di Linux: Pengenalan dan Persiapan",
   "description": "Sebenarnya sudah lama sekali artikel ini tersimpan dalam tumpukan draf di blog ini. Tidak terbit-terbit sampai menjadi fosil. Oleh karena itu, dari pada disimpan terus, lebih baik saya terbitkan saja apa adanya.\n\nBahasa pemrograman C memang bahasa yang cukup tua dan tidak begitu populer saat ini. Tetapi tidak ada salahnya kita pelajari, karena bahasa yang populer saat ini berasal dari bahasa C.\n\nTeknologi yang pupuler saat ini menurut survey stackoverflow.",
-  "wordCount":  318 ,
+  "wordCount":  316 ,
   "datePublished" : "2016-07-21T12:11:00",
   "dateModified" : "2016-07-21T12:11:00",
   "image" : {
@@ -1283,14 +1283,13 @@ lebih baik saya terbitkan saja apa adanya.</p>
 
 <h3 id="2-kompilator-gcc">2. Kompilator GCC</h3>
 
-<p>Kompilator fungsinya untuk mengubah kode bahasa C ke dalam program yang siap dieksekusi. Silahkan instal kompilator C di Linux dengan perintah:</p>
+<p>Kompilator adalah program yang berfungsi untuk menerjemahkan bahasa C menjadi
+bahasa mesin, shingga dapat dieksekusi oleh komputer.</p>
+
+<p>Kompilator C di Linux bernama GCC <em>(GNU C Compiler)</em>. Untuk menginstal
+GCC, silahkan ketik perintah berikut.</p>
 
 <pre><code>sudo apt install  gcc
-</code></pre>
-
-<p>Atau, kalau mau yang lebih lengkap dengan build tools-nya ketik:</p>
-
-<pre><code>sudo apt install build-essential
 </code></pre>
 
 <h2 id="percobaan-pemrograman-c-di-linux">Percobaan Pemrograman C di Linux</h2>
@@ -1314,7 +1313,8 @@ int main(){
 <pre><code>gcc kode_program.c -o output_hasil
 </code></pre>
 
-<p><code>kode_program.c</code> adalah nama file kodenya, sedangkan <code>output_hasil</code> adalah nama file hasilnya. Nanti hasilnya akan berupa file <em>executable</em>.</p>
+<p><code>kode_program.c</code> adalah nama file kodenya, sedangkan <code>output_hasil</code> adalah
+nama file hasilnya. Nanti hasilnya akan berupa file <em>executable</em>.</p>
 
 <p><a href="http://4.bp.blogspot.com/-CdTViktbhTo/V4jAGWHwNQI/AAAAAAAADBQ/hwCJyL3Qxt0G-VUPcbJmlSCKN2FV0ts1QCK4B/s1600/Kompilasi%2BKode%2BProgram%2BC%2Bdi%2BLinux%2B-%2BPetani%2BKode.png"><img src="https://4.bp.blogspot.com/-CdTViktbhTo/V4jAGWHwNQI/AAAAAAAADBQ/hwCJyL3Qxt0G-VUPcbJmlSCKN2FV0ts1QCK4B/s1600/Kompilasi%2BKode%2BProgram%2BC%2Bdi%2BLinux%2B-%2BPetani%2BKode.png" alt="Kompilasi kode program C di Linux" /></a></p>
 
@@ -1330,6 +1330,8 @@ int main(){
 <p><a href="http://2.bp.blogspot.com/-s_vN4ovkEEQ/V4jA6Tm-VxI/AAAAAAAADBc/e6cTEj1miKgM5UeU7jlfxas2gnA8LazSgCK4B/s1600/Eksekusi%2Bprogram%2BC%2Bdi%2BLinux.png"><img src="https://2.bp.blogspot.com/-s_vN4ovkEEQ/V4jA6Tm-VxI/AAAAAAAADBc/e6cTEj1miKgM5UeU7jlfxas2gnA8LazSgCK4B/s1600/Eksekusi%2Bprogram%2BC%2Bdi%2BLinux.png" alt="Cara eksekusi program di Linux" /></a></p>
 
 <p>Tampilannya ke samping karena lupa dikasih <em>Enter</em>.</p>
+
+<!-- @TODO Pemrograman C menggunakan IDE semacam codeblock atau codelite -->
 
 <h2 id="kesimpulan">Kesimpulan</h2>
 

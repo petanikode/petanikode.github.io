@@ -349,14 +349,13 @@ lebih baik saya terbitkan saja apa adanya.&lt;/p&gt;
 
 &lt;h3 id=&#34;2-kompilator-gcc&#34;&gt;2. Kompilator GCC&lt;/h3&gt;
 
-&lt;p&gt;Kompilator fungsinya untuk mengubah kode bahasa C ke dalam program yang siap dieksekusi. Silahkan instal kompilator C di Linux dengan perintah:&lt;/p&gt;
+&lt;p&gt;Kompilator adalah program yang berfungsi untuk menerjemahkan bahasa C menjadi
+bahasa mesin, shingga dapat dieksekusi oleh komputer.&lt;/p&gt;
+
+&lt;p&gt;Kompilator C di Linux bernama GCC &lt;em&gt;(GNU C Compiler)&lt;/em&gt;. Untuk menginstal
+GCC, silahkan ketik perintah berikut.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo apt install  gcc
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Atau, kalau mau yang lebih lengkap dengan build tools-nya ketik:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt install build-essential
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;percobaan-pemrograman-c-di-linux&#34;&gt;Percobaan Pemrograman C di Linux&lt;/h2&gt;
@@ -380,7 +379,8 @@ int main(){
 &lt;pre&gt;&lt;code&gt;gcc kode_program.c -o output_hasil
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;code&gt;kode_program.c&lt;/code&gt; adalah nama file kodenya, sedangkan &lt;code&gt;output_hasil&lt;/code&gt; adalah nama file hasilnya. Nanti hasilnya akan berupa file &lt;em&gt;executable&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;kode_program.c&lt;/code&gt; adalah nama file kodenya, sedangkan &lt;code&gt;output_hasil&lt;/code&gt; adalah
+nama file hasilnya. Nanti hasilnya akan berupa file &lt;em&gt;executable&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-CdTViktbhTo/V4jAGWHwNQI/AAAAAAAADBQ/hwCJyL3Qxt0G-VUPcbJmlSCKN2FV0ts1QCK4B/s1600/Kompilasi%2BKode%2BProgram%2BC%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-CdTViktbhTo/V4jAGWHwNQI/AAAAAAAADBQ/hwCJyL3Qxt0G-VUPcbJmlSCKN2FV0ts1QCK4B/s1600/Kompilasi%2BKode%2BProgram%2BC%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34; alt=&#34;Kompilasi kode program C di Linux&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -396,6 +396,8 @@ int main(){
 &lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-s_vN4ovkEEQ/V4jA6Tm-VxI/AAAAAAAADBc/e6cTEj1miKgM5UeU7jlfxas2gnA8LazSgCK4B/s1600/Eksekusi%2Bprogram%2BC%2Bdi%2BLinux.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-s_vN4ovkEEQ/V4jA6Tm-VxI/AAAAAAAADBc/e6cTEj1miKgM5UeU7jlfxas2gnA8LazSgCK4B/s1600/Eksekusi%2Bprogram%2BC%2Bdi%2BLinux.png&#34; alt=&#34;Cara eksekusi program di Linux&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Tampilannya ke samping karena lupa dikasih &lt;em&gt;Enter&lt;/em&gt;.&lt;/p&gt;
+
+&lt;!-- @TODO Pemrograman C menggunakan IDE semacam codeblock atau codelite --&gt;
 
 &lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
 

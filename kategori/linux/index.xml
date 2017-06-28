@@ -1157,6 +1157,94 @@ Manakah teks editor favoritmu?&lt;/p&gt;
     </item>
     
     <item>
+      <title>Pemrograman C di Linux: Pengenalan dan Persiapan</title>
+      <link>https://www.petanikode.com/pemrograman-c-di-linux/</link>
+      <pubDate>Thu, 21 Jul 2016 12:11:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/pemrograman-c-di-linux/</guid>
+      <description>
+
+&lt;p&gt;Sebenarnya sudah lama sekali artikel ini tersimpan dalam tumpukan draf di blog ini.
+Tidak terbit-terbit sampai menjadi fosil. Oleh karena itu, dari pada disimpan terus,
+lebih baik saya terbitkan saja apa adanya.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-2LstJXFflxY/V4jGRp5vy3I/AAAAAAAADBs/0yZMqbWfSCwaOUlUkcWqMmH7LaGUC4tKwCK4B/s1600/the-c-programming-language-petanikode.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-2LstJXFflxY/V4jGRp5vy3I/AAAAAAAADBs/0yZMqbWfSCwaOUlUkcWqMmH7LaGUC4tKwCK4B/s1600/the-c-programming-language-petanikode.png&#34; alt=&#34;Belajar Pemrograman C di Linux - The C Programming Language&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bahasa pemrograman C memang bahasa yang cukup tua dan tidak begitu populer saat ini. Tetapi tidak ada salahnya kita pelajari, karena bahasa yang populer saat ini berasal dari bahasa C.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-W1LIhdOXPaQ/V4i5ij6wOlI/AAAAAAAADBA/OFzhePd8l70wWNJk8G8RBfHLpZgyiUaJACK4B/s1600/Teknologi%2Byang%2Bpopuler%2Bsaat%2Bini%2Bmenurut%2Bsurvey%2BStack%2BOverflow%2B2016.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-W1LIhdOXPaQ/V4i5ij6wOlI/AAAAAAAADBA/OFzhePd8l70wWNJk8G8RBfHLpZgyiUaJACK4B/s1600/Teknologi%2Byang%2Bpopuler%2Bsaat%2Bini%2Bmenurut%2Bsurvey%2BStack%2BOverflow%2B2016.png&#34; alt=&#34;Teknologi yang populer saat ini menurut survery stackoverflow 2016&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Teknologi yang pupuler saat ini menurut &lt;a href=&#34;http://stackoverflow.com/research/developer-survey-2016&#34;&gt;survey stackoverflow&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;persiapan-pemrograman-c-di-linux&#34;&gt;Persiapan Pemrograman C di Linux&lt;/h2&gt;
+
+&lt;p&gt;Ada dua peralatan yang harus dipersiapkan untuk memrogram C di Linux, diantaranya:&lt;/p&gt;
+
+&lt;h3 id=&#34;1-teks-editor&#34;&gt;1. Teks Editor&lt;/h3&gt;
+
+&lt;p&gt;Anda bebas menggunakan teks editor apa pun. Teks editor digunakan untuk menulis kode program C. Rekomendasi dari saya, bisa pakai Gedit, Geany, Mousepad, Kate, Atom, dsb.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-Cu_mejkU9Jc/V5BKdu5g3QI/AAAAAAAADEo/V1LJyiQh3aIoc29vcWfLc04Yl9xhYKGdgCK4B/s1600/Teks%2Beditor%2BAtom.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-Cu_mejkU9Jc/V5BKdu5g3QI/AAAAAAAADEo/V1LJyiQh3aIoc29vcWfLc04Yl9xhYKGdgCK4B/s1600/Teks%2Beditor%2BAtom.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;2-kompilator-gcc&#34;&gt;2. Kompilator GCC&lt;/h3&gt;
+
+&lt;p&gt;Kompilator adalah program yang berfungsi untuk menerjemahkan bahasa C menjadi
+bahasa mesin, shingga dapat dieksekusi oleh komputer.&lt;/p&gt;
+
+&lt;p&gt;Kompilator C di Linux bernama GCC &lt;em&gt;(GNU C Compiler)&lt;/em&gt;. Untuk menginstal
+GCC, silahkan ketik perintah berikut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt install  gcc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;percobaan-pemrograman-c-di-linux&#34;&gt;Percobaan Pemrograman C di Linux&lt;/h2&gt;
+
+&lt;p&gt;Percobaan kita lakukan dengan membuat sebuah program sederhana. Program yang sangat populer untuk mencoba-coba, namanya &lt;em&gt;Hello World!&lt;/em&gt;. Silahkan buat kode di bawah ini dengan teks editor, kemudian simpan dengan nama &lt;code&gt;hello_world.c&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main(){
+    printf(&amp;quot;Hello World!&amp;quot;);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simpan di tempat yang sudah anda tentukan. Setelah itu buka terminal dan arahkan ke direktori tempat anda menyimpan kode tersebut.&lt;/p&gt;
+
+&lt;h3 id=&#34;cara-kompilasi&#34;&gt;Cara Kompilasi&lt;/h3&gt;
+
+&lt;p&gt;Berikut ini perintah untuk mengompilasi kode program bahasa C di Linux:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gcc kode_program.c -o output_hasil
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;kode_program.c&lt;/code&gt; adalah nama file kodenya, sedangkan &lt;code&gt;output_hasil&lt;/code&gt; adalah
+nama file hasilnya. Nanti hasilnya akan berupa file &lt;em&gt;executable&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-CdTViktbhTo/V4jAGWHwNQI/AAAAAAAADBQ/hwCJyL3Qxt0G-VUPcbJmlSCKN2FV0ts1QCK4B/s1600/Kompilasi%2BKode%2BProgram%2BC%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-CdTViktbhTo/V4jAGWHwNQI/AAAAAAAADBQ/hwCJyL3Qxt0G-VUPcbJmlSCKN2FV0ts1QCK4B/s1600/Kompilasi%2BKode%2BProgram%2BC%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34; alt=&#34;Kompilasi kode program C di Linux&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;cara-eksekusi-program&#34;&gt;Cara Eksekusi Program&lt;/h3&gt;
+
+&lt;p&gt;Berikut ini perintah untuk mengeksekusi atau menjalankan program di Linux:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./nama_program
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pastikan anda berada dalam direktori tempat program tersebut berada dan diberikan hak aksess untuk mengeksekusi.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-s_vN4ovkEEQ/V4jA6Tm-VxI/AAAAAAAADBc/e6cTEj1miKgM5UeU7jlfxas2gnA8LazSgCK4B/s1600/Eksekusi%2Bprogram%2BC%2Bdi%2BLinux.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-s_vN4ovkEEQ/V4jA6Tm-VxI/AAAAAAAADBc/e6cTEj1miKgM5UeU7jlfxas2gnA8LazSgCK4B/s1600/Eksekusi%2Bprogram%2BC%2Bdi%2BLinux.png&#34; alt=&#34;Cara eksekusi program di Linux&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tampilannya ke samping karena lupa dikasih &lt;em&gt;Enter&lt;/em&gt;.&lt;/p&gt;
+
+&lt;!-- @TODO Pemrograman C menggunakan IDE semacam codeblock atau codelite --&gt;
+
+&lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
+
+&lt;p&gt;Pemrograman C di Linux membutuhkan dua alat, yaitu teks editor dan kompilator. Kompilasi kode program C dilakukan melalui terminal atau bisa juga melalui &lt;a href=&#34;https://www.petanikode.com/topik/IDE&#34;&gt;IDE&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Pemrograman Android di Linux dengan Eclipse</title>
       <link>https://www.petanikode.com/pemrograman-android-di-linux-dengan-eclipse/</link>
       <pubDate>Thu, 28 Apr 2016 06:54:00 +0000</pubDate>

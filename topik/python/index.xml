@@ -968,6 +968,79 @@ pengalaman sahur kode dua tahun yang lalu.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Memahami Cara Kerja Fungsi Rekursif</title>
+      <link>https://www.petanikode.com/memahami-cara-kerja-fungsi-rekursif/</link>
+      <pubDate>Wed, 01 Jun 2016 21:13:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/memahami-cara-kerja-fungsi-rekursif/</guid>
+      <description>&lt;p&gt;Fungsi rekursif dalam pemrograman merupakan fungsi yang memanggil dirinya sendiri.
+Fungsi rekursif sering saya bayangkan seperti perulangan. Karena tingkah lakunya
+yang mengulang-ulang setiap pemanggilan dirinya.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini contoh sederhana fungsi rekursif.&lt;/p&gt;
+
+&lt;p&gt;Python:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def fungsiRekursif():
+    print(&amp;quot;Hello, ini fungsi rekursif&amp;quot;)
+    fungsiRekursif()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Javascript:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function fungsiRekursif(){
+    console.log(&amp;quot;Hello, ini fungsi rekursif&amp;quot;);
+    fungsiRekursif();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dua contoh fungsi di atas akan menampilkan teks &lt;code&gt;&amp;quot;Hello, ini fungsi rekursif&amp;quot;&lt;/code&gt;
+terus menerus, karena memanggil dirinya sendiri tampa henti.&lt;/p&gt;
+
+&lt;p&gt;Fungsi rekursif dapat menyelesaikan beberapa persoalan seperti perhitungan
+bilangan &lt;em&gt;fibbonaci&lt;/em&gt; dan faktorial.&lt;/p&gt;
+
+&lt;p&gt;Berikut ini animasi fungsi rekursif dalam menghitung faktorial dari &lt;code&gt;5&lt;/code&gt;.&lt;/p&gt;
+
+&lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; height=&#34;433&#34; scrolling=&#34;no&#34; src=&#34;https://web.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fpetanikode%2Fposts%2F507089246141340&amp;amp;width=500&#34; style=&#34;border: none; overflow: hidden;&#34; width=&#34;500&#34;&gt;
+&lt;/iframe&gt;
+
+&lt;p&gt;Fungsi rekursif untuk faktorial mungkin cukup membingungkan.
+Animasi di atas dapat kita jabarkan menjadi seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;faktorial(5) = 5 * faktorial(4)
+faktorial(4) = 4 * faktorial(3)
+faktorial(3) = 3 * faktorial(2)
+faktorial(2) = 2 * faktorial(1)
+faktorial(1) = 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka &lt;code&gt;faktorial(5) = 5 * 4 * 3 * 2 * 1&lt;/code&gt;, akan menghasilkan &lt;code&gt;120&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cara lain yang lebih mudah memahami fungsi rekursif adalah dengan
+membayangkan sebuah lukisan seperti berikut ini:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-Hyqh5hLq9jg/V07h3ZpVj_I/AAAAAAAAC2c/phYr-ot51sUoL-7T5gobAFf5XUCg9YvRwCK4B/s1600/Petanikode%2B-%2B116592-thewallpaper.jpg&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-Hyqh5hLq9jg/V07h3ZpVj_I/AAAAAAAAC2c/phYr-ot51sUoL-7T5gobAFf5XUCg9YvRwCK4B/s1600/Petanikode%2B-%2B116592-thewallpaper.jpg&#34; alt=&#34;Lukisan Rekursif&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(sumber: &lt;a href=&#34;http://s.id/3dG&#34;&gt;http://s.id/3dG&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Sebuah lukisan dilukis oleh seorang pelukis yang dilukis oleh seorang pelukis
+yang dilukis oleh seorang pelukis&amp;hellip; (sumber: &lt;a href=&#34;http://programmers.stackexchange.com/a/93852&#34;&gt;http://programmers.stackexchange.com/a/93852&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Ada satu lagi. Video yang mengulang dirinya sendiri:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://blog.penjee.com/wp-content/uploads/2015/06/visual-animation-recursion.gif&#34; alt=&#34;Fungsi Rekursif Video&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(sumber: &lt;a href=&#34;http://penjee.com/&#34;&gt;penjee.com&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Saya kira, dari contoh animasi dan lukisan di atas,
+kita dapat memahami cara kerja fungsi rekursif.&lt;/p&gt;
+
+&lt;p&gt;Sekian tulisan pendek ini, kalau ada yang kurang, silahkan ditambahkan.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Manfaat fungsi time.sleep() pada pemrograman Python</title>
       <link>https://www.petanikode.com/pemrograman-python-fungsi-sleep/</link>
       <pubDate>Fri, 11 Dec 2015 17:24:00 +0000</pubDate>
@@ -1090,105 +1163,6 @@ pelajari &lt;a href=&#34;https://www.petanikode.com/belajar-pemrograman-python&#
       
       <guid>https://www.petanikode.com/fungsi-range-di-pemrograman-python/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz4/skLB5P8yBXY/s1600/python-programming.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;logo python&#34; border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz4/skLB5P8yBXY/s1600/python-programming.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Fungsi &lt;code&gt;range()&lt;/code&gt; merupakan fungsi yang menghasilkan list. Fungsi ini akan menciptakan sebuah list baru dengan rentang nilai tertentu. Contoh:&lt;br /&gt;&lt;br /&gt;&lt;b&gt;1. list dari 0 sampai 10&lt;/b&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py&#34;&gt;range(10)&lt;/code&gt;&lt;/pre&gt;akan menghasilkan:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py&#34;&gt;[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]&lt;/code&gt;&lt;/pre&gt;&lt;b&gt;2. list dari 4 sampai 12&lt;/b&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py&#34;&gt;range(4, 12)&lt;/code&gt;&lt;/pre&gt;akan menghasilkan:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py&#34;&gt;[4, 5, 6, 7, 8, 9, 10, 11]&lt;/code&gt;&lt;/pre&gt;&lt;b&gt;3. list dari 10 sampai 50 dengan interval 5&lt;/b&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py&#34;&gt;range(10,50,5)&lt;/code&gt;&lt;/pre&gt;akan menghasilkan:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py&#34;&gt;[10, 15, 20, 25, 30, 35, 40, 45]&lt;/code&gt;&lt;/pre&gt;Dari contoh-contoh di atas, dapat kita pahami arti parameter yang diberikan untuk fungsi ini. Parameter pertama adalah batas bawah; parameter kedua adalah batas atas; dan parameter ketiga adalah nilai interval. &lt;br /&gt;&lt;pre&gt;range(&lt;span style=&#34;color: #e69138;&#34;&gt;batas bawah&lt;/span&gt;, &lt;span style=&#34;color: #cc0000;&#34;&gt;batas atas&lt;/span&gt;, &lt;span style=&#34;color: #3d85c6;&#34;&gt;interval&lt;/span&gt;)&lt;/pre&gt;&lt;h3&gt;Fungsi range di perulangan for&lt;/h3&gt;Fungsi &lt;code&gt;range()&lt;/code&gt; sering digunakan sebagai &lt;i&gt;counter&lt;/i&gt; pada perulangan for. &lt;i&gt;Counter&lt;/i&gt; adalah sebuah variabel yang menyimpan hitungan—berapa kali mengulang—perulangan. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py&#34;&gt;for nomer in range(10):&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; print &amp;ldquo;petani-&amp;rdquo; + str(nomer)&lt;/code&gt;&lt;/pre&gt;akan menghasilkan:&lt;br /&gt;&lt;pre&gt;petani-0&lt;br /&gt;petani-1&lt;br /&gt;petani-2&lt;br /&gt;petani-3&lt;br /&gt;petani-4&lt;br /&gt;petani-5&lt;br /&gt;petani-6&lt;br /&gt;petani-7&lt;br /&gt;petani-8&lt;br /&gt;petani-9&lt;/pre&gt;Jadi, itulah beberapa manfaat dan cara menggunakan fungsi &lt;code&gt;range()&lt;/code&gt;. &lt;i&gt;Range&lt;/i&gt; dengan satu parameter akan menghasilkan list dengan rentang parameter itu. Sedangkan &lt;i&gt;range&lt;/i&gt; dengan dua parameter akan menghasilkan list dengan rentang dari parameter pertama sampai parameter kedua. Kemudian, &lt;i&gt;range&lt;/i&gt; yang menggunakan tiga parameter akan menghasilkan list dengan rentang dari parameter pertama sampai parameter kedua dengan jarak interval parameter ketiga.&lt;br /&gt;&lt;br /&gt;Bagaimana menurutmu, ada tambahan?&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Perbedaan Perulangan While dan Do/While</title>
-      <link>https://www.petanikode.com/perbedaan-perulangan-while-dan-do-while/</link>
-      <pubDate>Sat, 12 Sep 2015 23:16:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/perbedaan-perulangan-while-dan-do-while/</guid>
-      <description>
-
-&lt;p&gt;Apakah perbedaan perulangan &lt;em&gt;while&lt;/em&gt; dengan &lt;em&gt;do/while&lt;/em&gt;?&lt;/p&gt;
-
-&lt;p&gt;Keduanya sama-sama perulangan yang tidak tentu &lt;em&gt;(uncounted loop)&lt;/em&gt;.
-Akan tetapi memiliki beberapa perbedaan, baik dari segi penggunaan,
-penulisan kode, dan langkah kerja.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;701&#34;
-    height=&#34;389&#34;
-    alt=&#34;Perbedaan+perulangan+while-do+dan+do-while.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-T1A0TERvMLA/VfOgVNaFLJI/AAAAAAAABxM/uOH4NleCvik/s1600/Perbedaan%2Bperulangan%2Bwhile-do%2Bdan%2Bdo-while.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;perulangan-while-vs-do-while&#34;&gt;Perulangan While vs Do/While&lt;/h2&gt;
-
-&lt;p&gt;Perulangan &lt;em&gt;while&lt;/em&gt; akan melakukan perulangan kalau kondisi (syarat) terpenuhi.&lt;/p&gt;
-
-&lt;p&gt;Sedangkan &lt;em&gt;do/while&lt;/em&gt; melakukan perulangan dulu, kemudian memeriksa kondisinya
-atau sayaratnya.&lt;/p&gt;
-
-&lt;p&gt;Kalau kondisi terpenuhi, maka &lt;em&gt;do/while&lt;/em&gt; akan melanjutkan
-perulangan. Sebaliknya, dia akan berhenti &lt;em&gt;(break)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Contoh kode dalam Javascript:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var bensin = 9;
-
-// perulangan while-do
-while(bensin &amp;gt; 0){
-    console.log(&amp;quot;Masih ada bensin, nyalakan mesin!&amp;quot;);
-    bensin--;
-}
-
-// perulangan do-while
-do{
-    console.log(&amp;quot;Nyalakan mesin!&amp;quot;);
-    bensin--;
-} while(bensin &amp;gt; 0)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasil outputnya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Masih ada bensin, nyalakan mesin!
-Masih ada bensin, nyalakan mesin!
-Masih ada bensin, nyalakan mesin!
-Masih ada bensin, nyalakan mesin!
-Masih ada bensin, nyalakan mesin!
-Masih ada bensin, nyalakan mesin!
-Masih ada bensin, nyalakan mesin!
-Masih ada bensin, nyalakan mesin!
-Masih ada bensin, nyalakan mesin!
-Nyalakan mesin!
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Berdasarkan contoh di atas, kita dapat pahami&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;Perulangan &lt;em&gt;do/while&lt;/em&gt; mencoba menyalakan mesin.
-Sedangkan bensinnya sudah dihabiskan oleh &lt;em&gt;while&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, perulangan &lt;em&gt;do/while&lt;/em&gt; hanya mengulang
-satu kali. Kalau bensin ada (&lt;code&gt;bensin &amp;gt; 0&lt;/code&gt;), maka &lt;em&gt;do/while&lt;/em&gt; akan
-melanjutkan perulangan.&lt;/p&gt;
-
-&lt;p&gt;Contoh dengan bahasa pemrograman python:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;bensin = 9
-
-# Perulangan while-do
-while(bensin &amp;gt; 0):
-    print &amp;quot;Masih ada bensin, nyalakan mesin!&amp;quot;
-    bensin = bensin - 1
-
-#perulangan do-while
-while(True):
-    print &amp;quot;Nyalakan mesin!&amp;quot;
-    bensin = bensin - 1
-    # periksa bensin
-    if(bensin &amp;lt; 0):
-        break
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;kapankah-waktu-yang-tepat-menggunakan-while-dan-do-while&#34;&gt;Kapankah Waktu yang Tepat Menggunakan &lt;em&gt;while&lt;/em&gt; dan &lt;em&gt;do/while&lt;/em&gt;?&lt;/h2&gt;
-
-&lt;p&gt;Tergantung dari kasusnya. Bila syarat perulangannya tidak berkaitan
-dengan hasil hitung pada blok kode yang diulang, maka pakailah &lt;em&gt;while&lt;/em&gt;.
-Tetapi, bila syarat perulangannya berkaitan dengan hasil perhitungan di
-blok kode yang diulang, maka pakailah &lt;em&gt;do/while&lt;/em&gt;.&lt;/p&gt;
 </description>
     </item>
     

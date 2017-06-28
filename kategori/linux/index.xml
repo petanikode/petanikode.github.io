@@ -1371,7 +1371,7 @@ export PATH=$PATH:$ANDROID_HOME/Sdk/tools:$ANDROID_HOME/Sdk/platform-tools
 
 &lt;p&gt;Sekarang kita coba, silahkan ketik perintah  &lt;code&gt;android --help&lt;/code&gt; di terminal.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;petanikode@imajinasi:~$ android --help
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;petanikode@imajinasi:~$ android --help
 
 Usage:
 android [global options] action [action options]

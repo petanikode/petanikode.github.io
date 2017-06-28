@@ -549,5 +549,70 @@ Kalau pengalihan berhasil berarti konfigurasi sudah benar.&lt;/p&gt;
 </description>
     </item>
     
+    <item>
+      <title>Cara Menampilkan Pesan Error untuk Debugging PHP</title>
+      <link>https://www.petanikode.com/cara-menampilkan-pesan-error-untuk-debugging-php/</link>
+      <pubDate>Sat, 26 Mar 2016 12:15:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/cara-menampilkan-pesan-error-untuk-debugging-php/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Secara default, konfigurasi yang akan diberikan pada server Apache di Linux adalah
+mode &lt;em&gt;production&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Server produksi &lt;em&gt;(production server)&lt;/em&gt; merupakan server yang digunakan setelah
+web selesai dikembangkan atau sudah siap dipakai.&lt;/p&gt;
+
+&lt;p&gt;Server produksi tidak akan menampilkan apa-apa kalau terjadi error. Karena itu,
+kita harus mengubahnya ke dalam mode &lt;em&gt;development&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Silahkan simak caranya, sebagai berikut.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-buka-file-konfigurasi-server&#34;&gt;1. Buka File Konfigurasi Server&lt;/h2&gt;
+
+&lt;p&gt;Silahkan buka file konfigurasi server yang ada di &lt;code&gt;/etc/php5/apache2/php.ini&lt;/code&gt; dengan teks editor. Jangan lupa, membukanya sebagai root.&lt;/p&gt;
+
+&lt;p&gt;Sebagai contoh, saya menggunakan gedit untuk membukanya, maka perintahnya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo gedit /etc/php5/apache2/php.ini
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk PHP7:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo gedit /etc/php/7.0/apache2/php.ini
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-ubah-nilai-konfigurasi-ke-mode-development&#34;&gt;2. Ubah Nilai Konfigurasi ke Mode Development&lt;/h2&gt;
+
+&lt;p&gt;Ubahlah nilai-nilai konfigurasi error-nya menjadi seperti berikut ini.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;error_reporting = E_ALL
+display_errors = On
+display_startup_errors = On
+track_errors = On
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-hidupkan-ulang-service&#34;&gt;3. Hidupkan Ulang Service&lt;/h2&gt;
+
+&lt;p&gt;Nyalakan kembali service apache2 dengan perintah&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service apache2 restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekarang coba buka sebuah file PHP yang memiliki error melalui &lt;code&gt;localhost&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-nqG5_91BQiw/VvYIJtjlEFI/AAAAAAAACjw/0wQL8D_x410F24m0NaDxS2FsIcXvXLkEg/s1600/Error%2Bditampilkan.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-nqG5_91BQiw/VvYIJtjlEFI/AAAAAAAACjw/0wQL8D_x410F24m0NaDxS2FsIcXvXLkEg/s1600/Error%2Bditampilkan.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Itulah cara mengubah konfigurasi server Apache dari mode &lt;em&gt;production&lt;/em&gt; ke mode
+&lt;em&gt;development&lt;/em&gt; agar bisa menampilkan pesan Error untuk &lt;em&gt;debugging&lt;/em&gt; PHP.&lt;/p&gt;
+
+&lt;p&gt;Semoga bermanfaat.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

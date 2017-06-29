@@ -18,15 +18,15 @@
       <guid>https://www.petanikode.com/tutorial-dasar-mongodb/</guid>
       <description>
 
-&lt;p&gt;Ada beberapa kendala dalam database SQL yang pernah saya temukan, seperti
+&lt;p&gt;Ada beberapa kekurangan dalam database SQL yang pernah saya temukan, seperti
 skema database yang kaku &lt;em&gt;(fixed)&lt;/em&gt;, susah membuat query untuk tabel dengan
-relasi yang kompleks, serangan SQL Injection, susah diperbesar sekalanya, dsb.&lt;/p&gt;
+relasi yang kompleks, susah diperbesar sekalanya, dsb.&lt;/p&gt;
 
 &lt;p&gt;Database NoSQL &lt;em&gt;(Not Only SQL)&lt;/em&gt; hadir untuk menutupi kekurangan-kekurangan tersebut.
 Selain itu, NoSQL sudah menjadi tuntutan teknologi yang harus dipelajari dalam
 pengembangan software modern masa kini.&lt;/p&gt;
 
-&lt;p&gt;Contohnya sekarang lagi populer yang namanya MEAN stack (MongoDB, ExpressJs, AngularJS,
+&lt;p&gt;Contohnya, sekarang lagi populer yang namanya MEAN stack (MongoDB, ExpressJs, AngularJS,
 dan NodeJS).&lt;/p&gt;
 
 &lt;p&gt;Pada artikel ini, kita akan belajar MongoDB yang

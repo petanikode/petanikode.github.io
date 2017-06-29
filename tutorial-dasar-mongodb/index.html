@@ -216,7 +216,7 @@ Pada artikel ini, kita akan belajar MongoDB yang merupakan salah satu database N
   },
   "headline": "Belajar MongoDB: Pengenalan Dasar MongoDB untuk Pemula ",
   "description": "Ada beberapa kekurangan dalam database SQL yang pernah saya temukan, seperti skema database yang kaku (fixed), susah membuat query untuk tabel dengan relasi yang kompleks, susah diperbesar sekalanya, dsb.\nDatabase NoSQL (Not Only SQL) hadir untuk menutupi kekurangan-kekurangan tersebut. Selain itu, NoSQL sudah menjadi tuntutan teknologi yang harus dipelajari dalam pengembangan software modern masa kini.\nContohnya, sekarang lagi populer yang namanya MEAN stack (MongoDB, ExpressJs, AngularJS, dan NodeJS).\nPada artikel ini, kita akan belajar MongoDB yang merupakan salah satu database NoSQL paling populer.",
-  "wordCount":  1272 ,
+  "wordCount":  1296 ,
   "datePublished" : "2017-06-28T08:15:00",
   "dateModified" : "2017-06-28T08:15:00",
   "image" : {
@@ -1607,6 +1607,21 @@ sudah habis 😄.</p>
 <pre><code class="language-javascript">db.koleksi.remove({})
 </code></pre>
 
+<h2 id="menhapus-dabase-dan-koleksi">Menhapus Dabase dan Koleksi</h2>
+
+<p>Bila kita ingin menghapus database dan koleksi, kita bisa menggunakan
+method <code>drop()</code> dan <code>dropDatabase()</code>.</p>
+
+<p>Menghapus koleksi:</p>
+
+<pre><code class="language-javascript">db.koleksi.drop();
+</code></pre>
+
+<p>Menghapus database:</p>
+
+<pre><code class="language-javascript">db.dropDatabase();
+</code></pre>
+
 <h2 id="menggunakan-robo-3t">Menggunakan Robo 3T</h2>
 
 <p>Robo 3T (sebelumnya bernama Robomongo) adalah salah satu <em>tools</em> berbasis GUI
@@ -1895,7 +1910,7 @@ var disqus_config = function () {
                    </div>
                    <div class="recent-title">
                    <a href="/tutorial-dasar-mongodb/">Belajar MongoDB: Pengenalan Dasar MongoDB untuk Pemula </a><br>
-                    28 Jun 2017 · baca 6 menit
+                    28 Jun 2017 · baca 7 menit
                     </div>
 
                 </li>

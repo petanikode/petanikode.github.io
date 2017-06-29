@@ -361,6 +361,21 @@ sudah habis :smile:.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.koleksi.remove({})
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h2 id=&#34;menhapus-dabase-dan-koleksi&#34;&gt;Menhapus Dabase dan Koleksi&lt;/h2&gt;
+
+&lt;p&gt;Bila kita ingin menghapus database dan koleksi, kita bisa menggunakan
+method &lt;code&gt;drop()&lt;/code&gt; dan &lt;code&gt;dropDatabase()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Menghapus koleksi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.koleksi.drop();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Menghapus database:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.dropDatabase();
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;menggunakan-robo-3t&#34;&gt;Menggunakan Robo 3T&lt;/h2&gt;
 
 &lt;p&gt;Robo 3T (sebelumnya bernama Robomongo) adalah salah satu &lt;em&gt;tools&lt;/em&gt; berbasis GUI

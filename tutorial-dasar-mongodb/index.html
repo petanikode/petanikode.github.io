@@ -216,7 +216,7 @@ Pada artikel ini, kita akan belajar MongoDB yang merupakan salah satu database N
   },
   "headline": "Belajar MongoDB: Pengenalan Dasar MongoDB untuk Pemula ",
   "description": "Ada beberapa kekurangan dalam database SQL yang pernah saya temukan, seperti skema database yang kaku (fixed), susah membuat query untuk tabel dengan relasi yang kompleks, susah diperbesar sekalanya, dsb.\nDatabase NoSQL (Not Only SQL) hadir untuk menutupi kekurangan-kekurangan tersebut. Selain itu, NoSQL sudah menjadi tuntutan teknologi yang harus dipelajari dalam pengembangan software modern masa kini.\nContohnya, sekarang lagi populer yang namanya MEAN stack (MongoDB, ExpressJs, AngularJS, dan NodeJS).\nPada artikel ini, kita akan belajar MongoDB yang merupakan salah satu database NoSQL paling populer.",
-  "wordCount":  1296 ,
+  "wordCount":  1303 ,
   "datePublished" : "2017-06-28T08:15:00",
   "dateModified" : "2017-06-28T08:15:00",
   "image" : {
@@ -1457,7 +1457,12 @@ MongoDB menggunakan istilah koleksi untuk menggantikan tabel.</p>
 <p>Koleksi berisi kumpulan dokumen atau data dalam format JSON.
 Kalau di SQL kita menyebutnya dengan record/baris.</p>
 
-<p>Koleksi akan otomatis dibuat ketika kita melakukan insert data.</p>
+<p>Koleksi bisa dibuat dengan perintah:</p>
+
+<pre><code class="language-javascript">db.createCollections(&quot;nama_koleksi&quot;)
+</code></pre>
+
+<p>atau bisa juga otomatis dibuat ketika kita melakukan insert data.</p>
 
 <h2 id="insert-data">Insert Data</h2>
 

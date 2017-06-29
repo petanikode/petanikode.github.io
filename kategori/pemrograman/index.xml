@@ -96,8 +96,8 @@ beru tidak masalah.&lt;/p&gt;
 &lt;h2 id=&#34;cara-mengoperasikan-mongodb&#34;&gt;Cara Mengoperasikan MongoDB&lt;/h2&gt;
 
 &lt;p&gt;Ada beberapa perintah yang disediakan MongoDB untuk mengoperasikannya,
-seperti perintah &lt;code&gt;mongod&lt;/code&gt; untuk membuat server dan &lt;code&gt;mongo&lt;/code&gt; untuk masuk ke
-&lt;em&gt;Shell&lt;/em&gt; MongoDB.&lt;/p&gt;
+seperti perintah &lt;code&gt;mongod&lt;/code&gt; &lt;em&gt;(MongoDB Daemon)&lt;/em&gt; untuk membuat server dan
+&lt;code&gt;mongo&lt;/code&gt; untuk masuk ke &lt;em&gt;Shell&lt;/em&gt; MongoDB.&lt;/p&gt;
 
 &lt;h3 id=&#34;menghidupkan-dan-mematikan-server-mongodb&#34;&gt;Menghidupkan dan Mematikan Server MongoDB&lt;/h3&gt;
 

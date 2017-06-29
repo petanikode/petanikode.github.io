@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://www.petanikode.com/tutorial-dasar-mongodb/</loc>
+        <lastmod>2017-06-28T08:15:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://www.petanikode.com/menggunakan-linux-untuk-pemrograman/</loc>
         <lastmod>2017-06-27T15:41:28+08:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -1330,13 +1337,6 @@
     </url>
     
     <url>
-        <loc>https://www.petanikode.com/instalasi-mongodb-di-linux/</loc>
-        <lastmod>2015-03-09T08:15:00+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://www.petanikode.com/pemrograman-javascript-dasar/</loc>
         <lastmod>2015-03-08T15:44:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -1644,7 +1644,7 @@
     
     <url>
         <loc>https://www.petanikode.com/artikel/</loc>
-        <lastmod>2017-06-27T15:41:28+08:00</lastmod>
+        <lastmod>2017-06-28T08:15:00+00:00</lastmod>
         <priority>0</priority>
     </url>
     
@@ -1866,7 +1866,7 @@
     
     <url>
         <loc>https://www.petanikode.com/kategori/database/</loc>
-        <lastmod>2017-06-10T17:42:42+00:00</lastmod>
+        <lastmod>2017-06-28T08:15:00+00:00</lastmod>
         <priority>0</priority>
     </url>
     
@@ -2124,7 +2124,7 @@
     
     <url>
         <loc>https://www.petanikode.com/kategori/</loc>
-        <lastmod> 2017-06-28T17:51:50&#43;08:00 </lastmod>
+        <lastmod> 2017-06-29T11:06:24&#43;08:00 </lastmod>
         <priority>0</priority>
     </url>
     
@@ -2214,7 +2214,7 @@
     
     <url>
         <loc>https://www.petanikode.com/topik/mongodb/</loc>
-        <lastmod>2015-03-09T08:15:00+00:00</lastmod>
+        <lastmod>2017-06-28T08:15:00+00:00</lastmod>
         <priority>0</priority>
     </url>
     
@@ -2256,7 +2256,7 @@
     
     <url>
         <loc>https://www.petanikode.com/topik/nosql/</loc>
-        <lastmod>2015-03-09T08:15:00+00:00</lastmod>
+        <lastmod>2017-06-28T08:15:00+00:00</lastmod>
         <priority>0</priority>
     </url>
     
@@ -2292,7 +2292,7 @@
     
     <url>
         <loc>https://www.petanikode.com/kategori/pemrograman/</loc>
-        <lastmod>2017-06-27T15:41:28+08:00</lastmod>
+        <lastmod>2017-06-28T08:15:00+00:00</lastmod>
         <priority>0</priority>
     </url>
     
@@ -2322,7 +2322,7 @@
     
     <url>
         <loc>https://www.petanikode.com/</loc>
-        <lastmod>2017-06-27T15:41:28+08:00</lastmod>
+        <lastmod>2017-06-28T08:15:00+00:00</lastmod>
         <priority>0</priority>
     </url>
     
@@ -2436,7 +2436,7 @@
     
     <url>
         <loc>https://www.petanikode.com/seri/</loc>
-        <lastmod> 2017-06-28T17:51:50&#43;08:00 </lastmod>
+        <lastmod> 2017-06-29T11:06:24&#43;08:00 </lastmod>
         <priority>0</priority>
     </url>
     
@@ -2466,7 +2466,7 @@
     
     <url>
         <loc>https://www.petanikode.com/topik/sql/</loc>
-        <lastmod>2016-12-10T15:53:00+00:00</lastmod>
+        <lastmod>2017-06-28T08:15:00+00:00</lastmod>
         <priority>0</priority>
     </url>
     
@@ -2544,19 +2544,19 @@
     
     <url>
         <loc>https://www.petanikode.com/topik/</loc>
-        <lastmod> 2017-06-28T17:51:50&#43;08:00 </lastmod>
-        <priority>0</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.petanikode.com/seri/tutorial/</loc>
-        <lastmod>2017-06-27T15:41:28+08:00</lastmod>
+        <lastmod> 2017-06-29T11:06:24&#43;08:00 </lastmod>
         <priority>0</priority>
     </url>
     
     <url>
         <loc>https://www.petanikode.com/kategori/tutorial/</loc>
         <lastmod>2016-10-22T22:23:00+00:00</lastmod>
+        <priority>0</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.petanikode.com/seri/tutorial/</loc>
+        <lastmod>2017-06-27T15:41:28+08:00</lastmod>
         <priority>0</priority>
     </url>
     

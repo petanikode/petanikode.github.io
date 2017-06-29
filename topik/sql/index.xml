@@ -10,6 +10,465 @@
     <atom:link href="https://www.petanikode.com/topik/sql/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Belajar MongoDB: Pengenalan Dasar MongoDB untuk Pemula </title>
+      <link>https://www.petanikode.com/tutorial-dasar-mongodb/</link>
+      <pubDate>Wed, 28 Jun 2017 08:15:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-dasar-mongodb/</guid>
+      <description>
+
+&lt;p&gt;Ada beberapa kendala dalam database SQL yang pernah saya temukan, seperti
+skema database yang kaku &lt;em&gt;(fixed)&lt;/em&gt;, susah membuat query untuk tabel dengan
+relasi yang kompleks, serangan SQL Injection, susah diperbesar sekalanya, dsb.&lt;/p&gt;
+
+&lt;p&gt;Database NoSQL &lt;em&gt;(Not Only SQL)&lt;/em&gt; hadir untuk menutupi kekurangan-kekurangan tersebut.
+Selain itu, NoSQL sudah menjadi tuntutan teknologi yang harus dipelajari dalam
+pengembangan software modern masa kini.&lt;/p&gt;
+
+&lt;p&gt;Contohnya sekarang lagi populer yang namanya MEAN stack (MongoDB, ExpressJs, AngularJS,
+dan NodeJS).&lt;/p&gt;
+
+&lt;p&gt;Pada artikel ini, kita akan belajar MongoDB yang
+merupakan salah satu database NoSQL paling populer.&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-itu-mongodb&#34;&gt;Apa itu MongoDB?&lt;/h2&gt;
+
+&lt;p&gt;MongoDB adalah salah satu jenis database NoSQL yang berbasis
+dokumen dengan fomat JSON.&lt;/p&gt;
+
+&lt;p&gt;Pada database SQL, data disimpan dalam bentuk tabel.
+Sedangkan pada MongoDB data disimpan dalam bentuk dokumen dengan format JSON.&lt;/p&gt;
+
+&lt;p&gt;Contoh data di MongoDB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+   &amp;quot;_id&amp;quot; : ObjectId(&amp;quot;54c955492b7c8eb21818bd09&amp;quot;),
+   &amp;quot;alamat&amp;quot; : {
+      &amp;quot;street&amp;quot; : &amp;quot;2 Avenue&amp;quot;,
+      &amp;quot;zipcode&amp;quot; : &amp;quot;10075&amp;quot;,
+      &amp;quot;building&amp;quot; : &amp;quot;1480&amp;quot;,
+      &amp;quot;coord&amp;quot; : [ -73.9557413, 40.7720266 ]
+   },
+   &amp;quot;borough&amp;quot; : &amp;quot;Manhattan&amp;quot;,
+   &amp;quot;cuisine&amp;quot; : &amp;quot;Italian&amp;quot;,
+   &amp;quot;grades&amp;quot; : [
+      {
+         &amp;quot;date&amp;quot; : ISODate(&amp;quot;2014-10-01T00:00:00Z&amp;quot;),
+         &amp;quot;grade&amp;quot; : &amp;quot;A&amp;quot;,
+         &amp;quot;score&amp;quot; : 11
+      },
+      {
+         &amp;quot;date&amp;quot; : ISODate(&amp;quot;2014-01-16T00:00:00Z&amp;quot;),
+         &amp;quot;grade&amp;quot; : &amp;quot;B&amp;quot;,
+         &amp;quot;score&amp;quot; : 17
+      }
+   ],
+   &amp;quot;name&amp;quot; : &amp;quot;Vella&amp;quot;,
+   &amp;quot;restaurant_id&amp;quot; : &amp;quot;41704620&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Untuk lebih jelasnya, kita langsung saja bereksperimen&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalasi-mongodb-di-linux&#34;&gt;Instalasi MongoDB di Linux&lt;/h2&gt;
+
+&lt;p&gt;Jika kita ingin menggunakan MongoDB versi terbaru, maka kita harus men-download
+versi terakhir di website reseminya (&lt;a href=&#34;https://www.mongodb.com/download-center?jmp=petanikode.com&#34;&gt;mongodb.com&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/website-mongodb.png&#34; alt=&#34;Website MongoDB&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tapi, jika ingin menggunakan versi lama yang ada di repositori,
+kita bisa menginstalnya dengan perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install mongodb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu, untuk memastikan sudah terinstal dengan benar, coba
+ketik perintah &lt;code&gt;mongo --version&lt;/code&gt; atau &lt;code&gt;mongod --version&lt;/code&gt; untuk memeriksa versinya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/versi-mongodb.png&#34; alt=&#34;Versi mongodb yang terinstall&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk keperluan belajar dasar, ktia bisa pakai yang mana saja. Versi lama atau versi
+beru tidak masalah.&lt;/p&gt;
+
+&lt;p&gt;Pada panduan ini, saya menggunakan versi yang lama.&lt;/p&gt;
+
+&lt;h2 id=&#34;cara-mengoperasikan-mongodb&#34;&gt;Cara Mengoperasikan MongoDB&lt;/h2&gt;
+
+&lt;p&gt;Ada beberapa perintah yang disediakan MongoDB untuk mengoperasikannya,
+seperti perintah &lt;code&gt;mongod&lt;/code&gt; untuk membuat server dan &lt;code&gt;mongo&lt;/code&gt; untuk masuk ke
+&lt;em&gt;Shell&lt;/em&gt; MongoDB.&lt;/p&gt;
+
+&lt;h3 id=&#34;menghidupkan-dan-mematikan-server-mongodb&#34;&gt;Menghidupkan dan Mematikan Server MongoDB&lt;/h3&gt;
+
+&lt;p&gt;Kita bisa menghudupkan dan mematikan server MongoDB dengan perintah
+&lt;code&gt;service&lt;/code&gt; di Ubuntu dan keluarga Debian lainnya.&lt;/p&gt;
+
+&lt;p&gt;Menyalakan server MongoDB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service mongodb start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mematikan server MongoDB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service mongodb stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Menyalakan ulang server MongoDB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service mongodb restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Selain itu, kita juga bisa menggunakan perintah &lt;code&gt;mongod&lt;/code&gt; dengan syarat
+harus ditentukan &lt;code&gt;dbpath&lt;/code&gt;-nya.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;p&gt;Matikan dulu server yang sudah berjalan:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service mongodb stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu buat direktori baru untuk menyimpan dokumen database-nya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p cobamongo/db
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah itu jalankan servernya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mongod --dbpath cobamongo/db/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika muncul seperti ini,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/menjalankan-server-mongodb.png&#34; alt=&#34;Menjalankan server mongodb&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;berarti server MongoDB sudah hidup dan siap menerima koneksi dari alamat
+&lt;code&gt;127.0.0.1&lt;/code&gt; (localhost).&lt;/p&gt;
+
+&lt;p&gt;Untuk mematikannya, tinggal tekan saja tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;c&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untuk selanjutnya, kita akan menggunakan server yang berjalan secara background.
+Jadi silahkan nyalakan kembali servernya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service mongodb start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;mengakses-server-mongodb&#34;&gt;Mengakses Server MongoDB&lt;/h3&gt;
+
+&lt;p&gt;Kalau tadi kita menggunakan perintah &lt;code&gt;mongod&lt;/code&gt; untuk menyalakan server, maka
+untuk mengakses servernya, kita gunakan perintah &lt;code&gt;mongo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Perintah &lt;code&gt;mongo&lt;/code&gt; adalah program &lt;em&gt;client&lt;/em&gt; untuk membuka &lt;em&gt;Shell&lt;/em&gt; MongoDB.&lt;/p&gt;
+
+&lt;p&gt;Pastikan servernya hidup, dan cobalah untuk mengetik perintah:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mongo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mongo 192.169.1.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika server-nya berada di tempat lain dengan IP &lt;code&gt;192.169.1.1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Karena server-nya berada di localhost, jadi kita bisa langsung ketik &lt;code&gt;mongo&lt;/code&gt; saja.&lt;/p&gt;
+
+&lt;p&gt;Kalau muncul seperti ini, berarti kita berhasil masuk ke &lt;em&gt;Shell&lt;/em&gt; atau server
+MongoDB:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/shell-mongodb.png&#34; alt=&#34;Shell MongoDB&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Secara &lt;em&gt;default&lt;/em&gt;, database yang kita gunakan adalah &lt;code&gt;test&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untuk melihat database yang sedang aktif, gunakan perintah &lt;code&gt;db&lt;/code&gt; pada &lt;em&gt;Shell&lt;/em&gt; MongoDB.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/melihat-database-aktif.png&#34; alt=&#34;Melihat database yang sedang aktif di server&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sedangkan untuk melihat daftar database, gunakan perintah &lt;code&gt;show dbs&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/melihat-daftar-database.png&#34; alt=&#34;Melihat daftar database di server&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Saat ini, di server hanya ada databse &lt;code&gt;admin&lt;/code&gt; dan &lt;code&gt;local&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untuk keluar dari &lt;em&gt;Shell&lt;/em&gt; MongoDB, tekan &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;c&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;membuat-database-dan-koleksi-baru&#34;&gt;Membuat Database dan Koleksi Baru&lt;/h2&gt;
+
+&lt;p&gt;Mari kita buat Database baru bernama &lt;code&gt;tokobuku&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Silahkan ketik perintah &lt;code&gt;use tokobuku&lt;/code&gt; untuk membuat dan menggunakan database &lt;code&gt;tokobuku&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/membuat-database-tokobuku.png&#34; alt=&#34;Membuat database tokobuku&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Database ini belum tersimpan, karena masih kosong.&lt;/p&gt;
+
+&lt;p&gt;Selanjutnya, mari kita coba buat sebuah koleksi &lt;em&gt;(collection)&lt;/em&gt;.
+MongoDB menggunakan istilah koleksi untuk menggantikan tabel.&lt;/p&gt;
+
+&lt;p&gt;Koleksi berisi kumpulan dokumen atau data dalam format JSON.
+Kalau di SQL kita menyebutnya dengan record/baris.&lt;/p&gt;
+
+&lt;p&gt;Koleksi akan otomatis dibuat ketika kita melakukan insert data.&lt;/p&gt;
+
+&lt;h2 id=&#34;insert-data&#34;&gt;Insert Data&lt;/h2&gt;
+
+&lt;p&gt;Insert data dapat kita lakukan dengan perintah berikut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.koleksi.insert(&amp;lt;data&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.koleksi.save(&amp;lt;data&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Keterangan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;koleksi&lt;/code&gt; adalah nama koleksi yang akan dibuat;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;data&amp;gt;&lt;/code&gt; adalah data yang akan kita simpan dalam koleksi tersebut
+dengan format JSON.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sebagai contoh, kita akan membuat koleksi bernama &lt;code&gt;buku&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Javascript&#34;&gt;db.buku.insert({
+    judul: &amp;quot;Belajar MongoDB&amp;quot;,
+    sinopsis: &amp;quot;Panduan MongoDB untuk Pemula&amp;quot;,
+    pengarang: &amp;quot;Petani Kode&amp;quot;
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka kita akan memiliki satu koleksi dan satu data di dalamnya.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/insert-data.png&#34; alt=&#34;Insert data MongoDB&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba tambahkan lagi data baru.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Javascript&#34;&gt;db.buku.insert({
+    judul: &amp;quot;Pemrograman Javascript dan MongoDB&amp;quot;,
+    sinopsis: &amp;quot;Panduan Pemrograman Js dan MongoDB&amp;quot;,
+    pengarang: &amp;quot;Petani Kode&amp;quot;,
+    harga: 98000
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka sekarang kita punya dua data dalam koleksi &lt;code&gt;buku&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kita bisa melihatnya dengan fungsi &lt;code&gt;count()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;&amp;gt; db.buku.count()
+2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;menampilkan-data&#34;&gt;Menampilkan Data&lt;/h2&gt;
+
+&lt;p&gt;Untuk menampilkan data yang sudah ditambahkan, kita bisa menggunakan
+method &lt;code&gt;find()&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.koleksi.find()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/menampilkan-data.png&#34; alt=&#34;Menampilkan data MongoDB&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kita juga bisa menambahkan fungsi &lt;code&gt;pretty()&lt;/code&gt; agar ditampilkan dengan rapi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/menampilkan-data-pretty.png&#34; alt=&#34;Menampilkan data MongoDB dengan fungsi pretty&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Coba juga untuk menampilkan buku yang memiliki harga &lt;code&gt;98000&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.buku.find({ harga: 98000 })
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka, buku yang hanya berharga &lt;code&gt;98000&lt;/code&gt; saja yang akan ditampilkan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/menampilkan-buku-harga.png&#34; alt=&#34;Menampilkan data berdasarkan harga&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Paham&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Tapi apa itu &lt;code&gt;&amp;quot;_id&amp;quot;&lt;/code&gt; dan &lt;code&gt;ObjectId(&amp;quot;5953ce71b8a47ea66328158f&amp;quot;)&lt;/code&gt;, kenapa selalu
+ada di setiap data?&lt;/p&gt;
+
+&lt;p&gt;Atribut &lt;code&gt;_id&lt;/code&gt; bisa dibilang seperti &lt;em&gt;Primary Key&lt;/em&gt;. Atribut ini
+akan otomatis dibuat oleh MongoDB disetiap pengisian data.&lt;/p&gt;
+
+&lt;h2 id=&#34;mengubah-data&#34;&gt;Mengubah Data&lt;/h2&gt;
+
+&lt;p&gt;Untuk mengubah data, kita bisa menggunakan fungsi &lt;code&gt;update()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.koleksi.update(&amp;lt;query&amp;gt;, &amp;lt;data baru&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Keterangan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;query&amp;gt;&lt;/code&gt; adalah kata kunci data yang akan kita ubah, sama seperti &lt;code&gt;WHERE&lt;/code&gt;
+dalam SQL.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;data baru&amp;gt;&lt;/code&gt; adalah data barunya.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sekarang, mari kita coba mengubah harga bukunya dari &lt;code&gt;98000&lt;/code&gt; menjadi &lt;code&gt;75000&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.buku.update(
+    {
+        judul: &amp;quot;Pemrograman Javascript dan MongoDB&amp;quot;
+    },
+    {
+        judul: &amp;quot;Pemrograman Javascript dan MongoDB&amp;quot;,
+        sinopsis: &amp;quot;Panduan Pemrograman Js dan MongoDB&amp;quot;,
+        pengarang: &amp;quot;Petani Kode&amp;quot;,
+        harga: 75000
+    }
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka hasilnya, semua buku yang berjudul &lt;code&gt;&amp;quot;Pemrograman Javascript dan MongoDB&amp;quot;&lt;/code&gt;
+akan diturunkan harganya menjadi &lt;code&gt;75000&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/update-data.png&#34; alt=&#34;Update Data&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;menghapus-data&#34;&gt;Menghapus Data&lt;/h2&gt;
+
+&lt;p&gt;Untuk menghapus data, kita bisa menggunakan perintah &lt;code&gt;remove()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.koleksi.remove(&amp;lt;query&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sama seperti update data, penghapusan data juga memiliki &lt;code&gt;&amp;lt;query&amp;gt;&lt;/code&gt; untuk
+menentukan data yang akan dihapus.&lt;/p&gt;
+
+&lt;p&gt;Contoh:&lt;/p&gt;
+
+&lt;p&gt;Kita akan menghapus buku yang berjudul &lt;code&gt;&amp;quot;Belajar MongoDB&amp;quot;&lt;/code&gt;, karena stoknya
+sudah habis :smile:.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.buku.remove({judul: &amp;quot;Belajar MongoDB&amp;quot;})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maka data buku yang berjudul &lt;code&gt;&amp;quot;Belajar MongoDB&amp;quot;&lt;/code&gt; sudah tiada.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/hapus-data.png&#34; alt=&#34;Update Data&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Untuk menghapus semua data dalam koleksi, kita bisa kosongkan nilai query-nya.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;db.koleksi.remove({})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;menggunakan-robo-3t&#34;&gt;Menggunakan Robo 3T&lt;/h2&gt;
+
+&lt;p&gt;Robo 3T (sebelumnya bernama Robomongo) adalah salah satu &lt;em&gt;tools&lt;/em&gt; berbasis GUI
+untuk memanajemen database MongoDB. &lt;em&gt;Tools&lt;/em&gt; ini &lt;em&gt;opensource&lt;/em&gt; dengan lisensi GPL-3.0
+dan tersedia untuk semua jenis sistem operasi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/robomongo.png&#34; alt=&#34;Robomongo&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;instalasi-dan-menggunakan-robo-3t&#34;&gt;Instalasi dan Menggunakan Robo 3T&lt;/h3&gt;
+
+&lt;p&gt;Pertama silahkan download Robo 3T di website resminya (&lt;a href=&#34;https://robomongo.org/download&#34;&gt;robomongo.org&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/download-robo3t.png&#34; alt=&#34;Download Robo3T&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, ekstrak dan coba jalankan file &lt;code&gt;bin/robo3t&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/menjalankan-robo3t.png&#34; alt=&#34;Menjalankan Robo3T&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka jendela EULA akan muncul, silahkan klik &lt;strong&gt;&lt;em&gt;&amp;ldquo;I Agree&amp;rdquo;&lt;/em&gt;&lt;/strong&gt; kemudian klik &lt;strong&gt;&lt;em&gt;Finish&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/eula-robo3t.png&#34; alt=&#34;EULA Robo3T&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka kita jendela baru &lt;em&gt;MongoDB Connection&lt;/em&gt; akan terbuka. Silahkan buat koneksi,
+klik &lt;em&gt;Create&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/mongodb-connection.png&#34; alt=&#34;Jendela MongoDB Connection&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Silahkan isi nama koneksinya dengan apa saja yang kamu sukai, kemudian
+klik &lt;strong&gt;&lt;em&gt;Test&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/membuat-koneksi.png&#34; alt=&#34;Membuat Koneksi MongoDB&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kalau muncul jendela seperti ini, berarti koneksi berhasil.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/koneksi-berhasil.png&#34; alt=&#34;Koneksi berhasil&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu, silahkan klik &lt;strong&gt;&lt;em&gt;Save&lt;/em&gt;&lt;/strong&gt; untuk menyimpan koneksi.
+Maka sekarang kita punya satu koneksi.&lt;/p&gt;
+
+&lt;p&gt;Silahkan klik &lt;strong&gt;&lt;em&gt;Connect&lt;/em&gt;&lt;/strong&gt; untuk mulai membuka database MongoDB dari Robo 3T.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/koneksi-terbuat.png&#34; alt=&#34;Koneksi yang sudah dibuat&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Berhasil&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/db-robo3t.png&#34; alt=&#34;Database MongoDB di Robo 3T&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekarang kita bisa mengelola database MongoDB tanpa harus menggunakan &lt;em&gt;Shell&lt;/em&gt;
+di Terminal.&lt;/p&gt;
+
+&lt;h3 id=&#34;membuat-menu-robo-3t&#34;&gt;Membuat Menu Robo 3T&lt;/h3&gt;
+
+&lt;p&gt;Robo 3T yang kita jalankan tadi adalah &lt;em&gt;portable&lt;/em&gt;. Untuk
+mengintegrasikan dengan sistem, silahkan taruh direktori Robo 3T di dalam
+direktori &lt;code&gt;/opt&lt;/code&gt;, lalu buatkan &lt;em&gt;shortcut&lt;/em&gt; pada menu.&lt;/p&gt;
+
+&lt;p&gt;Gunakan perintah ini untuk memindahkannya:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo mv ~/Downloads/robo3t-1.1.1-linux-x86_64-c93c6b0/ /opt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;atau&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo cp ~/Downloads/robo3t-1.1.1-linux-x86_64-c93c6b0/ /opt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lalu tambahkan menu launcher di Menu Editor.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/menambahkan-menu-robo3t.png&#34; alt=&#34;Menambahkan Launcher Robo 3T&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maka sekarang, kita sudah punya menu Robo 3T yang bisa kita buka kapan saja.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/mongodb/menu-robo3t.png&#34; alt=&#34;Menu Launcher Robo 3T&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
+
+&lt;p&gt;Kita sudah mengetahui dasar-dasar MongoDB dan sudah mencoba
+dua cara dalam mengelola database MongoDB, yaitu menggunakan
+&lt;em&gt;Shell&lt;/em&gt; di terminal dan Robo 3T.&lt;/p&gt;
+
+&lt;p&gt;Menggunakan Robo 3T memang lebih mudah, tinggal klik-klik saja.
+Tapi pengetahuan tentang &lt;em&gt;Shell&lt;/em&gt; juga tidak kalah pentingnya,
+karena akan banyak berguna dalam pemrograman.&lt;/p&gt;
+
+&lt;p&gt;Sepajutnya mungkin bisa mencoba ide eksperimen berikut:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Menghubungkan Python dengan MongoDB dan Membuat aplikasi CRUD;&lt;/li&gt;
+&lt;li&gt;Menghubungkan PHP dengan MongoDB dan Membuat aplikasi CRUD;&lt;/li&gt;
+&lt;li&gt;Menghubungkan Javascript dengan MongoDB dan Membuat aplikasi CRUD;&lt;/li&gt;
+&lt;li&gt;Menghubungkan Ruby dengan MongoDB dan Membuat aplikasi CRUD.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Terima kasih sudah mengikuti panduan ini sampai akhir, saya harap
+semuanya bisa dipahami.&lt;/p&gt;
+
+&lt;p&gt;Ada pertanyaan?&lt;/p&gt;
+
+&lt;p&gt;Sampaikan di kolom komentar!&lt;/p&gt;
+
+&lt;p&gt;Referensi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dok. MongoDB &amp;mdash; &lt;a href=&#34;https://docs.mongodb.com/getting-started/shell/&#34;&gt;Getting Started With MongoDB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cara Termudah Menyimpan Graf pada Database Relasional</title>
       <link>https://www.petanikode.com/cara-menyimpan-graf-dalam-database/</link>
       <pubDate>Sat, 10 Dec 2016 15:53:00 +0000</pubDate>

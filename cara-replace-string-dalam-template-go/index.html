@@ -1020,61 +1020,6 @@ padding: 16px;
     </style>
 
 
-        
-    <meta property="og:title" content="Cara Replace String dalam Template Go" />
-    <meta property="og:description" content="Sebuah masalah kecil yang saya temukan ketika mengedit skrip Blogimport. Saya ingin memperbesar ukuran gambar thumbnail dengan cara me-replace string yang ada di URL.
-Misalnya, dari URL ini:
-https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s72-c/pemrograman%2Bjavascript%2B-%2Bpetanikode.png  Menjadi seperti ini:
-https://2.bp.blogspot.com/-DEeRanrBa6s/WGWGwA2qW5I/AAAAAAAADg4/feGUc-g9rXc9B7hXpKr0ecG9UOMXU3_VQCK4B/s1600/pemrograman%2Bjavascript%2B-%2Bpetanikode.png  Nah, di sana saya ingin merubah s72-c agar menjadi s1600. Pada template Hugo, saya bisa melakukannya seperti ini:
-{{ replace .Media.ThumbnailUrl &#39;s72-c&#39; &#39;s1600&#39; }}  Namun, Go belum memiliki fungsi replace seperti Hugo. Setelah bolak-balik Google dan Stack Overflow, saya akhirnya membuat sebuah pertanyaan baru di Stack Overflow dan mendapatkan jawabannya." />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.petanikode.com/cara-replace-string-dalam-template-go/" />
-
-    <meta property="og:image" content="https://3.bp.blogspot.com/-tHAcqs4Bv1o/WIAVwWJzaLI/AAAAAAAADps/sBBGZxVxmcI66poCB-Mj0AEzIkDeDG8KQCPcB/s1600/go-gopher-petanikode.png" />
-
-    
-    <meta property="og:updated_time" content="2017-01-20 14:32:22 &#43;0800 WITA"/>
-    <meta content='id_ID' property='og:locale'/>
-    <meta content='ms_MY' property='og:locale:alternate'/>
-    <meta content='en_US' property='og:locale:alternate'/>
-
-    <meta content='152759108115365' property='fb:app_id'/>
-    <meta content='petanikode' property='fb:pages'/>
-    <meta content='143461015837500' property='fb:pages'/>
-    <meta content='ardianta.pargo' property='fb:profile_id'/>
-
-    
-
-    
-    
-    
-    
-
-    <meta property="article:author" content="https://www.facebook.com/petanikode" />
-    <meta property="article:publisher" content="https://www.facebook.com/petanikode" />
-
-    
-    <meta property="article:published_time" content="2017-01-20 14:32:22 &#43;0800 WITA" />
-    
-
-    <meta property="article:modified_time" content="2017-01-20 14:32:22 &#43;0800 WITA" />
-    <meta property="article:section" content="artikel" />
-
-    
-    	<meta property="article:tag" content="Go" />
-    
-    	<meta property="article:tag" content="Template" />
-    
-
-    
-    <meta property="fb:admins" content="ardianta.pargo" />
-
-    
-    <meta content='summary_large_image' name='twitter:card'/>
-    <meta content='@petanikode' name='twitter:site'/>
-    <meta content='@ardiantapargo' name='twitter:creator'/>
-    
-
 
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CShadows+Into+Light' rel='stylesheet' type='text/css'>

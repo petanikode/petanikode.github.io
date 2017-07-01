@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Framework on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/framework/index.xml</link>
+    <link>https://www.petanikode.com/topik/framework/</link>
     <description>Recent content in Framework on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/framework/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Mar 2017 17:36:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/framework/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
@@ -15,220 +18,12 @@
       <pubDate>Tue, 14 Mar 2017 17:36:45 +0800</pubDate>
       
       <guid>https://www.petanikode.com/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</guid>
-      <description>
+      <description>Seperti yang kita ketahui, istilah card memang sering dipakai pada Material Design. Sedangkan Bootstrap versi 3 tidak memiliki komponen card. Mungkin saja akan ditambahkan pada versi ke-4. Kita tunggu saja.
+Pada kesempatan ini, kita akan belajar cara modifikasi komponen panel Bootstrap untuk dijadikan Card.
+Berikut ini tampilan hasil akhir yang akan kita buat:
 
-&lt;p&gt;Seperti yang kita ketahui, istilah card memang sering dipakai pada Material Design.
-Sedangkan Bootstrap versi 3 tidak memiliki komponen card. Mungkin saja akan
-ditambahkan pada versi ke-4. Kita tunggu saja.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, kita akan belajar cara modifikasi komponen panel Bootstrap
-untuk dijadikan Card.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini tampilan hasil akhir yang akan kita buat:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;panel bootstrap sebagai card&#34;
-    src=&#34;https://1.bp.blogspot.com/-0EKCQDsPHPs/WMfRU8kIjYI/AAAAAAAAEZM/9bX9E4TSGTg_Z0VbrROgBRTUtWiEKPrdQCK4B/s1600/panel-bootstrap-sebagai-card.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;mempersiapkan-grid-layout&#34;&gt;Mempersiapkan Grid Layout&lt;/h2&gt;
-
-&lt;p&gt;Pertama, kita siapkan dulu grid layout dengan empat kolom.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
-    &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;menambahkan-panel&#34;&gt;Menambahkan Panel&lt;/h2&gt;
-
-&lt;p&gt;Nah selanjutnya, kita buat panelnya. Ada empat item yang ingin kita tampilkan:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Gambar Artikel&lt;/li&gt;
-&lt;li&gt;Label&lt;/li&gt;
-&lt;li&gt;Judul Artikel&lt;/li&gt;
-&lt;li&gt;Penulis&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Maka kode panelnya akan seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default&amp;quot;&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
-        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
-        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
-        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
-        &amp;lt;/h3&amp;gt;
-
-        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
-            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nah silahkan masukan kode panel di atas ke dalam kode sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Demo hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/BWdoEM/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Agar tinggi card terlihat sama, gunakan ukuran gambar artikel yang sama. Rekomendasi
-ukuran 700x350 px.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kode-css&#34;&gt;Kode CSS&lt;/h2&gt;
-
-&lt;p&gt;Terlihat pada hasil demo di atas, tampilannya masih belum rapi. Karena menggunakan
-style dari Bootstrap.&lt;/p&gt;
-
-&lt;p&gt;Tugas kita selanjutnya adalah membuat kode CSS sendiri untuk mengatur komponen
-panel tersebut.&lt;/p&gt;
-
-&lt;p&gt;Seperti yang terlihat pada kode panel di atas, terdapat
-&lt;em&gt;class&lt;/em&gt; yang harus kita buat.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;.post-body&lt;/code&gt;: untuk mengatur agar tinggi card sejajar&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-thumb&lt;/code&gt;: untuk mengatur tampilan gambar artikel&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-title&lt;/code&gt;: judul artikel&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-author&lt;/code&gt; dan &lt;code&gt;.author-photo&lt;/code&gt; untuk nama dan foto penulisya&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Mari kita buat kodenya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/* tinggi card */
-.post-body {
-    height: 215px;
-    position: relative;
-    padding: 20px 15px 0;
-}
-
-/* untuk menghilangkan padding pada .panel-heading */
-.post-thumb {
-    padding: 0
-}
-
-/* mengatur font dan link judul artikel*/
-.post-title a {
-    color: rgba(0,0,0,0.7);
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 1.5em;
-    letter-spacing: 0.01rem;
-}
-.post-title a:hover { text-decoration: none }
-
-/* posisi author selalu di bawah */
-.post-author {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    font-size: 13px;
-}
-
-.post-author .author-photo {
-    margin-right: 10px;
-    border-radius: 50%;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Demo hasil setelah ditambahkan CSS:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/OpjMbe/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Terlihat cukup bagus.&lt;/p&gt;
-
-&lt;p&gt;Silahkan lakukan kreasi sesukamu.&lt;/p&gt;
-
-&lt;h2 id=&#34;bonus-efek-bayangan-ketika-card-disentuh&#34;&gt;Bonus: Efek Bayangan Ketika Card disentuh&lt;/h2&gt;
-
-&lt;p&gt;Baiklah, sebagai bonus, kita tambahkan efek bayangan ketika card-nya disentuh
-pointer. Efek ini akan membuat card terlihat lebih keren :smile:.&lt;/p&gt;
-
-&lt;p&gt;Tambahkan kode CSS berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.card:hover {
-    box-shadow: 0px 2px 20px rgba(0,0,0,0.2);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, gunakan class &lt;code&gt;.card&lt;/code&gt; pada panel:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default card&amp;quot;&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
-        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
-        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
-        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
-        &amp;lt;/h3&amp;gt;
-
-        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
-            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka hasilnya akan seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/PpKZKr/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Bagaimana, mudah bukan?&lt;/p&gt;
-
-&lt;p&gt;Selamat berkreasi.&lt;/p&gt;
-</description>
+Mempersiapkan Grid Layout Pertama, kita siapkan dulu grid layout dengan empat kolom.
+&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt; &amp;lt;!</description>
     </item>
     
     <item>
@@ -237,127 +32,13 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
       <pubDate>Sun, 19 Feb 2017 16:48:58 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</guid>
-      <description>
-
-&lt;p&gt;Dompdf merupakan salah satu pustaka PHP untuk membuat PDF.&lt;/p&gt;
-
-&lt;p&gt;Dompdf membuat PDF dari HTML, sehingga lebih praktis. Selain itu juga,
-Kita bisa menggunakan CSS di dalamnya.&lt;/p&gt;
-
-&lt;p&gt;Saat ini Dompdf mendukung CSS versi 2.1.&lt;/p&gt;
-
-&lt;p&gt;Untuk menggunakan Dompdf di &lt;a href=&#34;https://www.petanikode.com/topik/codeigniter&#34;&gt;Codeigniter&lt;/a&gt;,
-silahkan ikuti langkah-langkah berikut ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-aktifkan-autoload-composer&#34;&gt;1. Aktifkan Autoload Composer&lt;/h2&gt;
-
-&lt;p&gt;Kita akan menginstal Dompdf melalui &lt;a href=&#34;https://www.petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, &lt;em&gt;autoload&lt;/em&gt; untuk Composer perlu diaktifkan.&lt;/p&gt;
-
-&lt;p&gt;Silahkan buka file &lt;code&gt;application/config/config.php&lt;/code&gt;, kemudian isi bagian &lt;em&gt;autoload&lt;/em&gt;
-Composer seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;2-instal-dompdf&#34;&gt;2. Instal Dompdf&lt;/h2&gt;
-
-&lt;p&gt;Selanjutnya kita instal &lt;code&gt;dompdf&lt;/code&gt; dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;composer require dompdf/dompdf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jalankan perintah tersebut di direktori proyeknya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;767&#34;
-    height=&#34;397&#34;
-    alt=&#34;Instal dompdf di proyek codeigniter&#34;
-    src=&#34;https://4.bp.blogspot.com/-s_nZmMzBxw4/WKloKD7bnsI/AAAAAAAAEDM/i43FYKNjq0UIDMEEpupojCfzFnekvkQdgCPcB/s1600/Instal%2Bdompdf%2Bdi%2Bproyek%2Bcodeigniter.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/cara-menggunakan-composer-pada-codeigniter/&#34;&gt;Cara Menggunakan Composer pada CodeIgniter&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-membuat-pustaka-sendiri&#34;&gt;3. Membuat Pustaka Sendiri&lt;/h2&gt;
-
-&lt;p&gt;Agar tidak menulis ulang kode yang sama disetiap penggunaan Dompdf,
-kita buat saja pustaka sendiri.&lt;/p&gt;
-
-&lt;p&gt;Silahkan buat file baru di direktori &lt;code&gt;application/libraries&lt;/code&gt;
-dengan nama &lt;code&gt;pdf.php&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Isinya seperti berikut ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;1560&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/f4bfa696ca9a040677e87f2cde4d5887&#34;&gt;
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Kode di atas merupakan &lt;em&gt;class exstends&lt;/em&gt; dari &lt;em&gt;class&lt;/em&gt; Dompdf.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-membuat-controller&#34;&gt;4. Membuat Controller&lt;/h2&gt;
-
-&lt;p&gt;Buat sebuah fungsi di dalam &lt;em&gt;Controller&lt;/em&gt; untuk menggunakan pustaka yang baru
-saja kita buat.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;public function laporan_pdf(){
-
-    $data = array(
-        &amp;quot;dataku&amp;quot; =&amp;gt; array(
-            &amp;quot;nama&amp;quot; =&amp;gt; &amp;quot;Petani Kode&amp;quot;,
-            &amp;quot;url&amp;quot; =&amp;gt; &amp;quot;http://petanikode.com&amp;quot;
-        )
-    );
-
-    $this-&amp;gt;load-&amp;gt;library(&#39;pdf&#39;);
-
-    $this-&amp;gt;pdf-&amp;gt;setPaper(&#39;A4&#39;, &#39;potrait&#39;);
-    $this-&amp;gt;pdf-&amp;gt;filename = &amp;quot;laporan-petanikode.pdf&amp;quot;;
-    $this-&amp;gt;pdf-&amp;gt;load_view(&#39;laporan_pdf&#39;, $data);
-
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;File view yang di-load bernama &lt;code&gt;laporan_pdf&lt;/code&gt;, berarti kita harus membuat
-file view bernama &lt;code&gt;laporan_pdf.php&lt;/code&gt; di &lt;code&gt;application/views&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;5-membuat-view&#34;&gt;5. Membuat View&lt;/h2&gt;
-
-&lt;p&gt;File: &lt;code&gt;application/views/laporan_pdf.php&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;pre&amp;gt;&amp;lt;?php print_r($dataku); ?&amp;gt;&amp;lt;/pre&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;6-percobaan&#34;&gt;6. Percobaan&lt;/h2&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1123&#34;
-    height=&#34;583&#34;
-    alt=&#34;laporan-pdf-codeigniter-dengan-dompdf.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-kboJqCRNU4o/WKmUXJshcRI/AAAAAAAAEDw/EN3ddQNV6KAd7i8Am8rf2uyIluTFD-0eQCPcB/s1600/laporan-pdf-codeigniter-dengan-dompdf.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Begitulah cara menggunakan Dompdf di Codeigniter.&lt;/p&gt;
-
-&lt;p&gt;Selebihnya anda bisa bereksperiman sendiri.&lt;/p&gt;
-
-&lt;p&gt;Kalau masih belum jelas, bisa cek repositori ini &lt;a href=&#34;https://github.com/ardianta/codeigniter-dompdf&#34;&gt;codeigniter-dompdf&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Dompdf merupakan salah satu pustaka PHP untuk membuat PDF.
+Dompdf membuat PDF dari HTML, sehingga lebih praktis. Selain itu juga, Kita bisa menggunakan CSS di dalamnya.
+Saat ini Dompdf mendukung CSS versi 2.1.
+Untuk menggunakan Dompdf di Codeigniter, silahkan ikuti langkah-langkah berikut ini.
+1. Aktifkan Autoload Composer Kita akan menginstal Dompdf melalui Composer.
+Karena itu, autoload untuk Composer perlu diaktifkan.
+Silahkan buka file application/config/config.php, kemudian isi bagian autoload Composer seperti ini.</description>
     </item>
     
     <item>
@@ -366,138 +47,10 @@ file view bernama &lt;code&gt;laporan_pdf.php&lt;/code&gt; di &lt;code&gt;applic
       <pubDate>Fri, 23 Dec 2016 05:13:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/serangan-xss-codeigniter/</guid>
-      <description>&lt;p&gt;XSS merupakan singkatan yang digunakan untuk istilah &lt;em&gt;cross site scripting&lt;/em&gt;.
-XSS merupakan salah satu jenis serangan injeksi code &lt;em&gt;(code injection attack)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;XSS dilakukan oleh penyerang dengan cara memasukkan kode HTML atau client script code lainnya ke suatu situs.
-Serangan ini akan seolah-olah datang dari situs tersebut.&lt;/p&gt;
-
-&lt;p&gt;Akibat serangan ini antara lain penyerang dapat mem-bypass keamanan di sisi klien,
-mendapatkan informasi sensitif, atau menyimpan aplikasi berbahaya.&lt;/p&gt;
-
-&lt;p&gt;Alasan singkatan yang digunakan XSS bukan CSS karena CSS sudah digunakan untuk &lt;em&gt;cascade style sheet&lt;/em&gt;. – &lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34;&gt;id.wikipedia.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Masih bingung?&lt;/p&gt;
-
-&lt;p&gt;Saya akan perjelas lagi dengan cerita.&lt;/p&gt;
-
-&lt;p&gt;Begini ceritanya,&lt;/p&gt;
-
-&lt;p&gt;Ada sebuah form dan di sana kita diminta untuk mengisi &lt;em&gt;nama&lt;/em&gt;, &lt;em&gt;nip&lt;/em&gt;, dan &lt;em&gt;jabatan&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi, karena ada seorang yang usil. Dia tidak mengisi &lt;em&gt;nama&lt;/em&gt;,
-melainkan mengisi kode HTML dan Javascript.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-RaTvgUtLC_0/WEAYT6jwX_I/AAAAAAAADeY/eD26N9ib44UY0fK8qDymlxWfeEgMQRi3wCK4B/s1600/Percobaan%2Bserangan%2BXSS%2Bmelalui%2BForm.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-RaTvgUtLC_0/WEAYT6jwX_I/AAAAAAAADeY/eD26N9ib44UY0fK8qDymlxWfeEgMQRi3wCK4B/s1600/Percobaan%2Bserangan%2BXSS%2Bmelalui%2BForm.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Maka yang akan tersimpan ke dalam database adalah skrip di atas.&lt;/p&gt;
-
-&lt;p&gt;Secara otomatis, ketika data ditampilkan, browser akan mengekekusi skrip tersebut.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-mKxLOdBzrJ0/WEAYdrVSV7I/AAAAAAAADeg/fNvZ-TPt-OY4bS6-tHDb2favPObm6V9MgCK4B/s1600/Serangan%2Bsukses%2B1%2B-%2Bhacked%2Bby%2Bpetani%2Bkode.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-mKxLOdBzrJ0/WEAYdrVSV7I/AAAAAAAADeg/fNvZ-TPt-OY4bS6-tHDb2favPObm6V9MgCK4B/s1600/Serangan%2Bsukses%2B1%2B-%2Bhacked%2Bby%2Bpetani%2Bkode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Si admin sepertinya akan panik.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_S5JiF6GTVc/WEAYmOKIzYI/AAAAAAAADeo/qjKNEKZgWtE1GapgZMS9v1z9RZI3j_38wCK4B/s1600/hasil%2Bhacking%2BXSS.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-_S5JiF6GTVc/WEAYmOKIzYI/AAAAAAAADeo/qjKNEKZgWtE1GapgZMS9v1z9RZI3j_38wCK4B/s1600/hasil%2Bhacking%2BXSS.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah, itulah salah satu bentuk serangan XSS.
-Penyerang sangant leluasa memasukan skrip ke website kita.&lt;/p&gt;
-
-&lt;p&gt;Lalu, bagaimana cara mengatasi ini di CodeIgniter?&lt;/p&gt;
-
-&lt;p&gt;CodeIgniter sebenarnya sudah menyediakan fitur &lt;em&gt;Global XSS Filtering&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Cara mengaktifkannya, tinggal mengganti nilai &lt;code&gt;FALSE&lt;/code&gt; menjadi &lt;code&gt;TRUE&lt;/code&gt; pada &lt;code&gt;application/config/config.php&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-_C7i3mJy-1A/WECD4J7ifrI/AAAAAAAADe8/s1JFRU96nycO-rwguskQdqIHeNrpIOMGwCK4B/s1600/Global%2BXSS%2BFiltering.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-_C7i3mJy-1A/WECD4J7ifrI/AAAAAAAADe8/s1JFRU96nycO-rwguskQdqIHeNrpIOMGwCK4B/s1600/Global%2BXSS%2BFiltering.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Dengan demikian, semua input dari pengguna atau penyerang akan dikonversi dulu
-sebelum di simpan ke database.&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi fitur ini sudah tidak tersedia lagi.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The &amp;lsquo;global_xss_filtering&amp;rsquo; setting is DEPRECATED and kept solely for backwards-compatibility purposes. XSS escaping should be performed on output, not input!&lt;/p&gt;
-
-&lt;p&gt;&amp;ndash; &lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/input.html?highlight=xss#xss-filtering&#34;&gt;dokumentasi CI&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Sepertinya pengembang CI sudah menyadari, kalau XSS itu masalah pada output, bukan input.&lt;/p&gt;
-
-&lt;p&gt;Cara mengatasi XSS yang lain adalah dengan melakukan validasi input (&lt;code&gt;xss_clean&lt;/code&gt;).
-Namun, seperti yang disebutkan tadi. XSS masalah pada output bukan input.&lt;/p&gt;
-
-&lt;p&gt;Lalu bagaimana?&lt;/p&gt;
-
-&lt;p&gt;Mau tidak mau, kita harus merubah dulu data yang akan ditampilkan agar
-tidak dieksekusi oleh browser.&lt;/p&gt;
-
-&lt;p&gt;Misalnya seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;echo htmlentities($data-&amp;gt;nama, ENT_QUOTES, &#39;UTF-8&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;fungsi &lt;code&gt;htmlentities()&lt;/code&gt; akan merubah kode html menjadi bentuk yang tidak akan dieksekusi.&lt;/p&gt;
-
-&lt;p&gt;Kita harus mengetik fungsi tersebut setiap mau menampilkan data.&lt;/p&gt;
-
-&lt;p&gt;Karena terasa cukup panjang, sebaiknya dijadikan &lt;em&gt;helper&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Buatlah sebuah &lt;em&gt;helper&lt;/em&gt; pada direktori &lt;code&gt;application/helpers&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Berikan nama &lt;code&gt;xss_helper.php&lt;/code&gt;, kemudian isi kodenya seperti berikut ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-oF2kSVvYF2I/WECIbBIH7jI/AAAAAAAADfI/fBgAJyXYRhcbifZ6G9BOd2GrmUEn-AG4ACK4B/s1600/XSS%2BHelper%2BCodeIgniter.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-oF2kSVvYF2I/WECIbBIH7jI/AAAAAAAADfI/fBgAJyXYRhcbifZ6G9BOd2GrmUEn-AG4ACK4B/s1600/XSS%2BHelper%2BCodeIgniter.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-function cetak($str){
-    echo htmlentities($str, ENT_QUOTES, &#39;UTF-8&#39;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu,masukan helper ini ke dalam &lt;em&gt;autoload&lt;/em&gt;. Buka,
-&lt;code&gt;application/config/autoload.php&lt;/code&gt;, kemudian tambahkan &lt;code&gt;xss&lt;/code&gt; pada &lt;em&gt;autoload helper&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;/*
-| -------------------------------------------------------------------
-| Auto-load Helper Files
-| -------------------------------------------------------------------
-| Prototype:
-|
-| $autoload[&#39;helper&#39;] = array(&#39;url&#39;, &#39;file&#39;);
-*/
-$autoload[&#39;helper&#39;] = array(&#39;url&#39;,&#39;cookie&#39;,&#39;form&#39;,&#39;xss&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang fungsi &lt;code&gt;echo&lt;/code&gt;, kita ganti dengan fungsi &lt;code&gt;cetak()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Cara penggunaanya, tinggal kita panggil fungsi &lt;code&gt;cetak()&lt;/code&gt; pada tempat atau
-&lt;em&gt;view&lt;/em&gt; yang mungkin bisa terkena XSS.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;?php foreach($pejabat as $pjb){?&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;nama) ?&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;nip) ?&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;?php cetak($pjb-&amp;gt;jabatan) ?&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;?php } ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka, teks akan ditampilkan apa adanya, tidak lagi dieksekusi oleh browser. 😊&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-D3P_TkOCiQw/WECJoF0hhBI/AAAAAAAADfQ/c6BaAuc_Kts7vgmSjZrrdHRO7vyoV5NEwCK4B/s1600/Hasil%2Boutput%2BXSS%2Bfiltering.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-D3P_TkOCiQw/WECJoF0hhBI/AAAAAAAADfQ/c6BaAuc_Kts7vgmSjZrrdHRO7vyoV5NEwCK4B/s1600/Hasil%2Boutput%2BXSS%2Bfiltering.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Referensi:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://id.wikipedia.org/wiki/XSS&#34;&gt;https://id.wikipedia.org/wiki/XSS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&#34;&gt;http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.htmlentities.php&#34;&gt;http://php.net/manual/en/function.htmlentities.php&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.codeigniter.com/userguide3/libraries/security.html&#34;&gt;https://www.codeigniter.com/userguide3/libraries/security.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&#34;&gt;http://stackoverflow.com/questions/10925720/codeigniter-xss-clean-dilemma&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>XSS merupakan singkatan yang digunakan untuk istilah cross site scripting. XSS merupakan salah satu jenis serangan injeksi code (code injection attack).
+XSS dilakukan oleh penyerang dengan cara memasukkan kode HTML atau client script code lainnya ke suatu situs. Serangan ini akan seolah-olah datang dari situs tersebut.
+Akibat serangan ini antara lain penyerang dapat mem-bypass keamanan di sisi klien, mendapatkan informasi sensitif, atau menyimpan aplikasi berbahaya.
+Alasan singkatan yang digunakan XSS bukan CSS karena CSS sudah digunakan untuk cascade style sheet.</description>
     </item>
     
     <item>
@@ -506,8 +59,8 @@ $autoload[&#39;helper&#39;] = array(&#39;url&#39;,&#39;cookie&#39;,&#39;form&#39
       <pubDate>Thu, 22 Dec 2016 18:21:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;Saat kita membuat sbuah tanggal otomatis dengan fungsi &lt;code&gt;Date()&lt;/code&gt;, kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, &lt;code&gt;Date(&amp;rsquo;d F Y&amp;rsquo;)&lt;/code&gt; akan menghasilkan output &lt;code&gt;22 December 2016&lt;/code&gt; (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.&lt;br /&gt;&lt;br /&gt;Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi &lt;code&gt;Date()&lt;/code&gt;. Kita bisa melakukannya seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;$bulan = Date(&amp;rsquo;m&amp;rsquo;);&lt;br /&gt;switch ($bulan) {&lt;br /&gt;    case 1:&lt;br /&gt;&amp;nbsp; &amp;nbsp;     $bulan = &amp;ldquo;Januari&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 2:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Februari&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 3:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Maret&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 4:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;April&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 5:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Mei&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 6:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Juni&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 7:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Juli&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 8:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Agustus&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 9:&lt;br /&gt;  &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;September&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 10:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Oktober&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 11:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;November&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&amp;nbsp; &amp;nbsp; case 12:&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = &amp;ldquo;Desember&amp;rdquo;;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; default:&lt;br /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; $bulan = Date(&amp;lsquo;F&amp;rsquo;);&lt;br /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; break;&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Karena kita membutuhkannya untuk digunakan atau dijalankan pada&amp;nbsp;&lt;i&gt;view&lt;/i&gt;, sebaiknya dijadikan &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/ba0934a0ee88315359d30095c7e442de.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;Cara menggunakannya, silahkan taruh file &lt;code&gt;tanggal_helper.php&lt;/code&gt;&amp;nbsp;pada direktori &lt;code&gt;application/helpers&lt;/code&gt; kemudian tambahkan pada &lt;i&gt;autoload&lt;/i&gt; &lt;i&gt;helper&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;/&lt;em&gt;&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| &amp;nbsp;Auto-load Helper Files&lt;br /&gt;| &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;br /&gt;| Prototype:&lt;br /&gt;|&lt;br /&gt;|&lt;span class=&#34;Apple-tab-span&#34; style=&#34;white-space: pre;&#34;&gt; &lt;/span&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;, &amp;lsquo;file&amp;rsquo;);&lt;br /&gt;&lt;/em&gt;/&lt;br /&gt;$autoload[&amp;lsquo;helper&amp;rsquo;] = array(&amp;lsquo;url&amp;rsquo;,&amp;lsquo;cookie&amp;rsquo;,&amp;lsquo;form&amp;rsquo;, &amp;lsquo;xss&amp;rsquo;, &amp;lsquo;dump&amp;rsquo;, &amp;lsquo;tanggal&amp;rsquo;);&lt;/code&gt;&lt;/pre&gt;Setelah itu bisa digunakan langsung pada &lt;i&gt;view&lt;/i&gt;, &lt;i&gt;controller&lt;/i&gt;, maupun &lt;i&gt;model&lt;/i&gt; seperti menggunakan helper &lt;code&gt;url&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;lt;div class=&amp;ldquo;tanda-tangan&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;p align=&amp;ldquo;center&amp;rdquo;&amp;gt;Mataram, &amp;lt;?php echo tanggal() ?&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;&lt;span class=&#34;Apple-tab-span&#34; style=&#34;white-space: pre;&#34;&gt; &lt;/span&gt; &amp;nbsp; &amp;nbsp;Kepala Dinas Pertanian&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Provinsi Nusa Tenggara Barat&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/p&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;p align=&amp;ldquo;center&amp;rdquo;&amp;gt;&amp;lt;b&amp;gt;&amp;lt;u&amp;gt;Ir. Hj. Budi Septiani&amp;lt;/b&amp;gt;&amp;lt;/u&amp;gt;&amp;lt;br&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; NIP. &amp;hellip;..&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/p&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;Akan menghasilkan output:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Hasil output format tanggal dalam bahasa indonesia pada CodeIgniter&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Saat kita membuat sbuah tanggal otomatis dengan fungsi Date(), kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, Date(&amp;rsquo;d F Y&amp;rsquo;) akan menghasilkan output 22 December 2016 (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.
+Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi Date().</description>
     </item>
     
     <item>
@@ -516,92 +69,9 @@ $autoload[&#39;helper&#39;] = array(&#39;url&#39;,&#39;cookie&#39;,&#39;form&#39
       <pubDate>Sat, 03 Dec 2016 13:13:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-menggunakan-composer-pada-codeigniter/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;CodeIgniter tidak seperti Laravel yang menggunakan Composer untuk memulai proyeknya.
-Namun, kita juga bisa menggunakan Composer pada CodeIgniter. Composer sebenarnya sudah didukung pada CodeIgninter versi 3, tapi autoload-nya belum diaktifkan.&lt;/p&gt;
-
-&lt;h2 id=&#34;konfigurasi-codeigniter&#34;&gt;Konfigurasi CodeIgniter&lt;/h2&gt;
-
-&lt;p&gt;Buka file konfigurasi proyek CodeIgniter pada &lt;code&gt;application/config/config.php&lt;/code&gt;.
-Kemudian isi nilai autoload untuk Composer seperti beikut ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;instalasi-pustaka&#34;&gt;Instalasi Pustaka&lt;/h2&gt;
-
-&lt;p&gt;Sekarang coba buka file &lt;code&gt;composer.json&lt;/code&gt; yang ada di &lt;em&gt;root&lt;/em&gt; direktori proyek.
-Kemudian tambahkan pustaka FPDF.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;json&#34;&gt;{
-    &#34;description&#34;: &#34;The CodeIgniter framework&#34;,
-    &#34;name&#34;: &#34;codeigniter/framework&#34;,
-    &#34;type&#34;: &#34;project&#34;,
-    &#34;homepage&#34;: &#34;http://codeigniter.com&#34;,
-    &#34;license&#34;: &#34;MIT&#34;,
-    &#34;support&#34;: {
-        &#34;forum&#34;: &#34;http://forum.codeigniter.com/&#34;,
-        &#34;wiki&#34;: &#34;https://github.com/bcit-ci/CodeIgniter/wiki&#34;,
-        &#34;irc&#34;: &#34;irc://irc.freenode.net/codeigniter&#34;,
-        &#34;source&#34;: &#34;https://github.com/bcit-ci/CodeIgniter&#34;
-    },
-    &#34;require&#34;: {
-        &#34;php&#34;: &#34;&gt;=5.2.4&#34;,
-        &lt;mark&gt;&#34;setasign/fpdf&#34;: &#34;1.8.1&#34;&lt;/mark&gt;
-    },
-    &#34;require-dev&#34;: {
-        &#34;mikey179/vfsStream&#34;: &#34;1.1.*&#34;
-    }
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ini hanya sekedar contoh saja. Anda boleh menambahkan atau menggunakan
-pustaka selain FPDF.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, ketik perintah berikut ini untuk menginstal semua pustaka:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;composer update
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tunggulah sampai prosesnya selesai.&lt;/p&gt;
-
-&lt;h2 id=&#34;percobaan-pustaka&#34;&gt;Percobaan Pustaka&lt;/h2&gt;
-
-&lt;p&gt;Sekarang coba tambahkan kode berikut ini pada &lt;em&gt;Controller&lt;/em&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php defined(&#39;BASEPATH&#39;) OR exit(&#39;No direct script access allowed&#39;);
-
-// Class untuk membuat laporan
-
-class Laporan extends CI_Controller{
-
-    function __construct(){
-        parent::__construct();
-    }
-
-    /**
-     Fungsi untuk menampilkan menu laporan penerima bantuan
-     @param none
-     @return void
-    **/
-    function penerima_bantuan(){
-        $pdf = new FPDF();
-        $pdf-&amp;gt;AddPage();
-        $pdf-&amp;gt;SetFont(&#39;Arial&#39;,&#39;B&#39;,16);
-        $pdf-&amp;gt;Cell(40,10,&#39;Hello World!&#39;);
-        $pdf-&amp;gt;Output();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, cobalah lihat hasilnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-8fHaWAf885E/WDhDiJ38GfI/AAAAAAAADdI/uzu77wy_lwMs0cb4ZJvs7FxFtm9jOgOWACK4B/s1600/Penggunaan%2Bpustaka%2BFPDF%2Bdi%2BCodeIgniter%2Bdengan%2BComposer.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-8fHaWAf885E/WDhDiJ38GfI/AAAAAAAADdI/uzu77wy_lwMs0cb4ZJvs7FxFtm9jOgOWACK4B/s1600/Penggunaan%2Bpustaka%2BFPDF%2Bdi%2BCodeIgniter%2Bdengan%2BComposer.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pustaka FPDF berhasil kita gunakan di CodeIgniter. Percobaan di atas sebenarnya untuk memastikan pustaka dari Composer berhasil di-load atau tidak. Selebihnya anda bisa bereksperiman dengan membuat &lt;em&gt;Class&lt;/em&gt; &lt;em&gt;exstend&lt;/em&gt; dari pustaka tersebut.&lt;/p&gt;
-</description>
+      <description>CodeIgniter tidak seperti Laravel yang menggunakan Composer untuk memulai proyeknya. Namun, kita juga bisa menggunakan Composer pada CodeIgniter. Composer sebenarnya sudah didukung pada CodeIgninter versi 3, tapi autoload-nya belum diaktifkan.
+Konfigurasi CodeIgniter Buka file konfigurasi proyek CodeIgniter pada application/config/config.php. Kemudian isi nilai autoload untuk Composer seperti beikut ini:
+$config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;  Instalasi Pustaka Sekarang coba buka file composer.json yang ada di root direktori proyek. Kemudian tambahkan pustaka FPDF.</description>
     </item>
     
     <item>
@@ -610,8 +80,11 @@ class Laporan extends CI_Controller{
       <pubDate>Wed, 30 Nov 2016 11:30:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-mengaktifkan-profiler-codeigniter/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Profiler fungsinya untuk menampilkan beberapa informasi yang diperlukan untuk &lt;i&gt;debugging&lt;/i&gt;. Kita dapat mengetahui &lt;i&gt;query&lt;/i&gt; apa yang dikerjakan, berapa detik &lt;i&gt;query&lt;/i&gt; tersebut dikerjakan, &lt;i&gt;benchmarks&lt;/i&gt;, dan sebagainya. Informasi ini sangat berguna ketika kita membangun sebuah aplikasi dengan CodeIgniter.&lt;br /&gt;&lt;br /&gt;Cara mengaktifkan Profiler di CodeIgniter sangat mudah, cukup menjalankan fungsi ini di &lt;i&gt;Controller&lt;/i&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);&lt;/code&gt;&lt;/pre&gt;Maka kita akan mendapatkan informasi seperti berikut ini:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-gsNeLWLfBhk/WD5EMFf8yLI/AAAAAAAADeE/C3mfDihq1acM5LVhpGFvcAUgng4sxuOIwCK4B/s1600/Profiler%2BCodeIgniter.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-gsNeLWLfBhk/WD5EMFf8yLI/AAAAAAAADeE/C3mfDihq1acM5LVhpGFvcAUgng4sxuOIwCK4B/s1600/Profiler%2BCodeIgniter.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian, agar Profiler aktif di setiap &lt;i&gt;method&lt;/i&gt; atau fungsi, letakan kode tersebut di dalam konstruktor:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;function &lt;strong&gt;construct(){&lt;br /&gt;&amp;nbsp; &amp;nbsp; parent::&lt;/strong&gt;construct();&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; // untuk debugging&lt;br /&gt;&amp;nbsp; &amp;nbsp; $this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Namun, sepertinya akan ada masalah ketika aplikasi kita di-hosting. Kita akan menghapus kode itu lagi, karena tidak mungkin kita tampilkan informasi Profiler pada website yang sudah jadi. Untuk mengatasi hal tersebut, ganti nilai &lt;code&gt;TRUE&lt;/code&gt; menjadi seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;$this-&amp;gt;output-&amp;gt;enable_profiler(ENVIRONMENT == &amp;ldquo;development&amp;rdquo;);&lt;/code&gt;&lt;/pre&gt;Artinya, Profiler hanya akan aktif pada lingkungan &lt;i&gt;development&lt;/i&gt; saja. Sedangkan pada lingkungan &lt;i&gt;production&lt;/i&gt; dan &lt;i&gt;testing&lt;/i&gt; tidak diaktifkan.&lt;br /&gt;&lt;br /&gt;Begitulah cara mengaktifkan Profiler di CodeIgniter. Semoga bermanfaat 😅.&lt;/p&gt;
-</description>
+      <description>Profiler fungsinya untuk menampilkan beberapa informasi yang diperlukan untuk debugging. Kita dapat mengetahui query apa yang dikerjakan, berapa detik query tersebut dikerjakan, benchmarks, dan sebagainya. Informasi ini sangat berguna ketika kita membangun sebuah aplikasi dengan CodeIgniter.
+Cara mengaktifkan Profiler di CodeIgniter sangat mudah, cukup menjalankan fungsi ini di Controller:
+$this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);Maka kita akan mendapatkan informasi seperti berikut ini:
+
+Kemudian, agar Profiler aktif di setiap method atau fungsi, letakan kode tersebut di dalam konstruktor:</description>
     </item>
     
     <item>
@@ -620,8 +93,10 @@ class Laporan extends CI_Controller{
       <pubDate>Sun, 21 Aug 2016 15:18:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-font-awesome/</guid>
-      <description>&lt;p&gt;Dulu saya sempat berpikir, pembuatan web kelihatannya susah. Karena banyak komponen yang harus dibuat, seperti &lt;i&gt;background&lt;/i&gt; dan ikon. Tapi ternyata tidak, soalnya ada framework yang dapat kita gunakan untuk membuat ikon dengan cepat. Nama framework-nya adalah Font Awesome.&lt;br /&gt;&lt;br /&gt;Font awesome merupakan sebuah framework CSS untuk membuat ikon. Font awesome memiliki ratusan ikon yang siap dipakai. Pada kesempatan ini, kita akan belajar cara menggunakanya. Silahkan disimak.&lt;br /&gt;&lt;h2&gt;1. Download Font Awesome&lt;/h2&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-JDOI26gPtMQ/Vp6ZvBMCu2I/AAAAAAAACbo/G1hXw7Y-sso/s1600/Download%2BFont-awesome%2B-%2BPetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-JDOI26gPtMQ/Vp6ZvBMCu2I/AAAAAAAACbo/G1hXw7Y-sso/s1600/Download%2BFont-awesome%2B-%2BPetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Silahkan download Font Awesome di &lt;a href=&#34;http://fontawesome.io/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://fontawesome.io/&#34;&gt;http://fontawesome.io/&lt;/a&gt;&lt;/a&gt;, kemudian ekstrak isinya ke dalam direktori proyek (web).&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-dBL6HhliWSg/Vp6bjlMqJOI/AAAAAAAACb0/83eaU9-V20E/s1600/Ekstrak%2Bfile%2BFont-awesome%2Bke%2Bdalam%2Bproyek%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-dBL6HhliWSg/Vp6bjlMqJOI/AAAAAAAACb0/83eaU9-V20E/s1600/Ekstrak%2Bfile%2BFont-awesome%2Bke%2Bdalam%2Bproyek%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Jangan lupa untuk mengubah namanya menjadi &lt;code&gt;font-awesome&lt;/code&gt; saja, agar mudah disisipkan dalam kode HTML. Serta, tambahkan juga file &lt;code&gt;index.html&lt;/code&gt;-nya.&lt;br /&gt;&lt;h2&gt;2. Menyisipkan Font Awesome&lt;/h2&gt;Penggunaan Font Awesome sama seperti Bootstrap. Kita tinggal me-link-kan file CSS-nya ke dalam file HTML web kita. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;font-awesome/css/font-awesome.min.css&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;Anda juga dapat memanfaatkan CDN, bila ingin menggunakan Font Awesome tampa &lt;i&gt;hosting&lt;/i&gt;.&lt;br /&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;&lt;a href=&#34;https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css&amp;quot;&#34;&gt;https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css&amp;quot;&lt;/a&gt; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2&gt;3. Membuat Ikon&lt;/h2&gt;Ikon dapat kita buat dengan tag &lt;i&gt;inline&lt;/i&gt; yang disertai kelas &lt;code&gt;fa&lt;/code&gt; (font awesome). Biasanya pada Bootstrap, kita menggunakan tag &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; untuk membuat ikon. Namun, pada Font Aawsome disarankan menggunakan tag &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt;. Karena lebih pendek. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;i class=&amp;ldquo;fa fa-coffee&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;fa&lt;/code&gt; = Nama kelas Font Awesome, wajib dipakai.&lt;/li&gt;&lt;li&gt;&lt;code&gt;fa-coffee&lt;/code&gt; = Nama ikon yang akan dipakai, lebih lengkap dapat &lt;a href=&#34;http://fontawesome.io/icons/&#34; target=&#34;_blank&#34;&gt;dilihat di sini&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;Hasil dari contoh di atas adalah: &lt;i class=&#34;fa fa-coffee&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;h2&gt;4. Ukuran Ikon&lt;/h2&gt;Ukuran ikon akan mengikuti ukuran font pada CSS, tapi dapat kita perbesar dan perkecil sesuai kebutuhan. Font Awesome menyediakan kelas-kelas untuk menentukan ukuran ikon, diantaranya: &lt;code&gt;fa-lg&lt;/code&gt; (33% lebih besar),&amp;nbsp; &lt;code&gt;fa-2x&lt;/code&gt;, &lt;code&gt;fa-3x&lt;/code&gt;, &lt;code&gt;fa-4x&lt;/code&gt;, dan &lt;code&gt;fa-5x&lt;/code&gt;. Contoh penggunaan:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;i class=&amp;ldquo;fa fa-coffee fa-2x&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;/code&gt;&lt;/pre&gt;Maka akan menghasilkan: &lt;i class=&#34;fa fa-coffee fa-2x&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;h2&gt;5. Ikon dengan Animasi&lt;/h2&gt;Font-awesome menyediakan kelas untuk menggerakkan ikon, diantaranya: &lt;code&gt;fa-spin&lt;/code&gt; dan &lt;code&gt;fa-pulse&lt;/code&gt;. Kelas ini terlihat bagus bila diterapkan pada ikon &lt;code&gt;fa-refresh&lt;/code&gt;, &lt;code&gt;fa-cog&lt;/code&gt;, dan &lt;code&gt;fa-spinner&lt;/code&gt;. Contoh penggunaan:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;i class=&amp;ldquo;fa fa-spinner fa-spin fa-3x fa-fw&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;br /&gt;&amp;lt;span class=&amp;ldquo;sr-only&amp;rdquo;&amp;gt;Loading&amp;hellip;&amp;lt;/span&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;i class=&amp;ldquo;fa fa-circle-o-notch fa-spin fa-3x fa-fw&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;br /&gt;&amp;lt;span class=&amp;ldquo;sr-only&amp;rdquo;&amp;gt;Loading&amp;hellip;&amp;lt;/span&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;i class=&amp;ldquo;fa fa-refresh fa-spin fa-3x fa-fw&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;br /&gt;&amp;lt;span class=&amp;ldquo;sr-only&amp;rdquo;&amp;gt;Loading&amp;hellip;&amp;lt;/span&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;i class=&amp;ldquo;fa fa-cog fa-spin fa-3x fa-fw&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;br /&gt;&amp;lt;span class=&amp;ldquo;sr-only&amp;rdquo;&amp;gt;Loading&amp;hellip;&amp;lt;/span&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;i class=&amp;ldquo;fa fa-spinner fa-pulse fa-3x fa-fw&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;br /&gt;&amp;lt;span class=&amp;ldquo;sr-only&amp;rdquo;&amp;gt;Loading&amp;hellip;&amp;lt;/span&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;i class=&#34;fa fa-spinner fa-spin fa-3x fa-fw&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;span class=&#34;sr-only&#34;&gt;Loading&amp;hellip;&lt;/span&gt;&lt;br /&gt;&lt;i class=&#34;fa fa-circle-o-notch fa-spin fa-3x fa-fw&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;span class=&#34;sr-only&#34;&gt;Loading&amp;hellip;&lt;/span&gt;&lt;br /&gt;&lt;i class=&#34;fa fa-refresh fa-spin fa-3x fa-fw&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;span class=&#34;sr-only&#34;&gt;Loading&amp;hellip;&lt;/span&gt;&lt;br /&gt;&lt;i class=&#34;fa fa-cog fa-spin fa-3x fa-fw&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;span class=&#34;sr-only&#34;&gt;Loading&amp;hellip;&lt;/span&gt;&lt;br /&gt;&lt;i class=&#34;fa fa-spinner fa-pulse fa-3x fa-fw&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;span class=&#34;sr-only&#34;&gt;Loading&amp;hellip;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Itulah 5 langkah untuk mengetahui cara penggunaan Font Awesome pada web. Penjelasan lebih lanjut, anda bisa pelajari di web &lt;a href=&#34;http://fontawesome.io/examples/&#34; target=&#34;_blank&#34;&gt;Font Awesome&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Dulu saya sempat berpikir, pembuatan web kelihatannya susah. Karena banyak komponen yang harus dibuat, seperti background dan ikon. Tapi ternyata tidak, soalnya ada framework yang dapat kita gunakan untuk membuat ikon dengan cepat. Nama framework-nya adalah Font Awesome.
+Font awesome merupakan sebuah framework CSS untuk membuat ikon. Font awesome memiliki ratusan ikon yang siap dipakai. Pada kesempatan ini, kita akan belajar cara menggunakanya. Silahkan disimak.
+1. Download Font Awesome
+Silahkan download Font Awesome di http://fontawesome.</description>
     </item>
     
     <item>
@@ -630,8 +105,11 @@ class Laporan extends CI_Controller{
       <pubDate>Fri, 12 Aug 2016 10:37:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/mengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;Ketika saya menjadi tutor di sebuah praktikum web, waktu itu kami mempelajari &lt;a href=&#34;http://www.petanikode.com/search/label/CodeIgniter&#34;&gt;CodeIgniter&lt;/a&gt;. Saya menemukan sedikit kasus, terkait tentang penyisipan file aset. Mengapa harus menggunakan fungsi &lt;code&gt;base_url()&lt;/code&gt;? Itulah pertanyaan yang diajukan dari salah satu peserta praktikum.&lt;br /&gt;&lt;br /&gt;Kemudian saya menjawabnya dengan memperlihatkan demo. Bagaimana penyisipan yang menggunakan fungsi &lt;code&gt;base_url()&lt;/code&gt; dan bagaimana yang tanpa fungsi &lt;code&gt;base_url()&lt;/code&gt;.&lt;br /&gt;&lt;br /&gt;Penyisipan file aset dengan fungsi &lt;code&gt;base_url()&lt;/code&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;rdquo;&amp;lt;?php echo base_url(&amp;lsquo;assets/bootstrap/bootstrap.min.css&amp;rsquo;) ?&amp;gt;&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;atau&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;rdquo;&amp;lt;?php echo base_url() ?&amp;gt;assets/bootstrap/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;Penyisipan file aset tanpa fungsi &lt;code&gt;base_url()&lt;/code&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;assets/bootstrap/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;Hasil Kedua-duanya bisa, file asetnya berhasil di sisipkan. Tapi, ternyata opini saya salah. Penyisipan file aset tanpa menggunakan fungsi &lt;code&gt;base_url()&lt;/code&gt; hanya akan valid pada halaman &lt;i&gt;index (root)&lt;/i&gt;. Begitu membuka halaman yang lain, alamat URL asetnya berubah. Contoh, saya membuka URL:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&lt;a href=&#34;http://localhost/proyek/index.php/register&#34;&gt;http://localhost/proyek/index.php/register&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;Maka yang akan terjadi adalah, alamat URL asetnya akan berubah menjadi.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&lt;a href=&#34;http://localhost/proyek/index.php/register/assets/bootstrap/css/bootstrap.min.css&#34;&gt;http://localhost/proyek/index.php/register/assets/bootstrap/css/bootstrap.min.css&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;Lihat, file asetnya tidak akan pernah ditemukan. Lalu, bagaimana kalau penyisipannya seperti ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;rdquo;&lt;span style=&#34;color: red;&#34;&gt;/&lt;/span&gt;assets/bootstrap/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;Perhatikan garis miring (/) di depan &lt;i&gt;assets&lt;/i&gt;. Garis miring tersebut menyatakan &lt;i&gt;root&lt;/i&gt; dari web. Sementara root dari web yang sedang dikerjakan adalah &lt;code&gt;&lt;a href=&#34;http://localhost/&#34;&gt;http://localhost/&lt;/a&gt;&lt;/code&gt;, maka nanti akan membentuk URL seperti berikut ini: &lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&lt;a href=&#34;http://localhost/assets/bootstrap/css/bootstrap.min.css&#34;&gt;http://localhost/assets/bootstrap/css/bootstrap.min.css&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;Cara seperti ini, mungkin akan bekerja bila webnya sudah di-hosting dan diletakan pada &lt;i&gt;root&lt;/i&gt;. Namun, saat ini kita sedang bekerja di &lt;code&gt;localhost&lt;/code&gt;. Jadi, sebaiknya kita gunakan fungsi &lt;code&gt;base_url()&lt;/code&gt; untuk penyisipan file aset agar di &lt;code&gt;localhost&lt;/code&gt; dan di server &lt;i&gt;hosting&lt;/i&gt; bisa bekerja. Bagaimana menurutmu?&lt;/p&gt;
-</description>
+      <description>Ketika saya menjadi tutor di sebuah praktikum web, waktu itu kami mempelajari CodeIgniter. Saya menemukan sedikit kasus, terkait tentang penyisipan file aset. Mengapa harus menggunakan fungsi base_url()? Itulah pertanyaan yang diajukan dari salah satu peserta praktikum.
+Kemudian saya menjawabnya dengan memperlihatkan demo. Bagaimana penyisipan yang menggunakan fungsi base_url() dan bagaimana yang tanpa fungsi base_url().
+Penyisipan file aset dengan fungsi base_url():
+&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;rdquo;&amp;lt;?php echo base_url(&amp;lsquo;assets/bootstrap/bootstrap.min.css&amp;rsquo;) ?&amp;gt;&amp;rdquo; /&amp;gt;atau
+&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;rdquo;&amp;lt;?php echo base_url() ?</description>
     </item>
     
     <item>
@@ -640,8 +118,21 @@ class Laporan extends CI_Controller{
       <pubDate>Tue, 19 Jul 2016 08:50:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/mengganti-list-style-ul-dan-ol-dengan-ikon-fontawesome/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-iXWa0JBLikg/V4owZHnND9I/AAAAAAAADCM/PR3c5r3cIB4hlyL3_VhOZeFMiN_bpPV5wCK4B/s1600/Font-awesome-list-style-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-iXWa0JBLikg/V4owZHnND9I/AAAAAAAADCM/PR3c5r3cIB4hlyL3_VhOZeFMiN_bpPV5wCK4B/s1600/Font-awesome-list-style-petanikode.png&#34; /&gt;&lt;/a&gt;Saat memodifikasi halaman arsip dari &lt;a href=&#34;http://www.petanikode.com/p/arsip-petani-kode.html&#34; target=&#34;_blank&#34;&gt;blog ini&lt;/a&gt;. Saya ingin mengganti &lt;code&gt;list-style&lt;/code&gt; yang digunakan oleh elemen &lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt; atau &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;. Aslinya, bentuknya bulat dan angka. Kemudian saya ingin mengganti dengan ikon &lt;i&gt;fontawesome&lt;/i&gt;. Kebetulan &lt;i&gt;fontawesome&lt;/i&gt; sudah terinstal di blog ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link href=&amp;ldquo;&lt;a href=&#34;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&amp;quot;&#34;&gt;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&amp;quot;&lt;/a&gt; rel=&amp;ldquo;stylesheet&amp;rdquo; type=&amp;ldquo;text/css&amp;rdquo;&amp;gt;&amp;lt;/link&amp;gt;&lt;/code&gt;&lt;/pre&gt;Kode HTML:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;ol&amp;gt;&lt;br /&gt;&amp;lt;li&amp;gt;Item 1&amp;lt;/li&amp;gt;&lt;br /&gt;&amp;lt;li&amp;gt;Item 2&amp;lt;/li&amp;gt;&lt;br /&gt;&amp;lt;li&amp;gt;Item 3&amp;lt;/li&amp;gt; &lt;br /&gt;&amp;lt;/ol&amp;gt;&lt;/code&gt;&lt;/pre&gt;Kode CSS:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;ul {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; list-style: none;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; padding: 0;&lt;br /&gt;}&lt;br /&gt;li {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; padding-left: 1.3em;&lt;br /&gt;}&lt;br /&gt;li:before {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; content: &amp;ldquo;\f073&amp;rdquo;; /* FontAwesome Unicode &lt;em&gt;/&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; font-family: FontAwesome;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; display: inline-block;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; margin-left: -1.3em; /&lt;/em&gt; same as padding-left set on li &lt;em&gt;/&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; width: 1.3em; /&lt;/em&gt; same as padding-left set on li */&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Konsep kerja dari&amp;nbsp; kode CSS di atas adalah sebagai berikut:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Sebunyikan &lt;i&gt;list-style&lt;/i&gt; bawaannya. &lt;/li&gt;&lt;li&gt;Perbaiki ukuran &lt;i&gt;padding&lt;/i&gt;.&lt;/li&gt;&lt;li&gt;Gunakan ikon &lt;i&gt;fontawesome&lt;/i&gt;.&lt;/li&gt;&lt;/ol&gt;Perhatikan kode CSS di bagian &lt;code&gt;li:before&lt;/code&gt;, di sana terdapat atribut &lt;code&gt;content&lt;/code&gt;. Fungsinya untuk mengisi sesuatu sebelum elemen &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt;. Isi konten yang diberikan berupa karakter &lt;i&gt;unicode&lt;/i&gt; dari &lt;i&gt;fontawesome&lt;/i&gt;. Anda bisa temukan karakter &lt;i&gt;unicode fontawesome&lt;/i&gt; &lt;a href=&#34;https://astronautweb.co/snippet/font-awesome/&#34; target=&#34;_blank&#34;&gt;di sini&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;Hasilnya:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-BRGvQdAGPDQ/V4orJKXUEKI/AAAAAAAADB8/bxhOxIlgul4axHW4XR7AuuggAmkbQubtACK4B/s1600/Mengganti%2Bikon%2Bul%2Bol%2Bdengan%2Bfontawesome.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-BRGvQdAGPDQ/V4orJKXUEKI/AAAAAAAADB8/bxhOxIlgul4axHW4XR7AuuggAmkbQubtACK4B/s1600/Mengganti%2Bikon%2Bul%2Bol%2Bdengan%2Bfontawesome.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://stackoverflow.com/a/13354689&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/a/13354689&#34;&gt;http://stackoverflow.com/a/13354689&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Saat memodifikasi halaman arsip dari blog ini. Saya ingin mengganti list-style yang digunakan oleh elemen &amp;lt;ol&amp;gt; atau &amp;lt;ul&amp;gt;. Aslinya, bentuknya bulat dan angka. Kemudian saya ingin mengganti dengan ikon fontawesome. Kebetulan fontawesome sudah terinstal di blog ini.
+&amp;lt;link href=&amp;ldquo;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&amp;quot; rel=&amp;ldquo;stylesheet&amp;rdquo; type=&amp;ldquo;text/css&amp;rdquo;&amp;gt;&amp;lt;/link&amp;gt;Kode HTML:
+&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;Item 1&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Item 2&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Item 3&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt;Kode CSS:
+ul {
+&amp;nbsp;&amp;nbsp;&amp;nbsp; list-style: none;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; padding: 0;
+}
+li {
+&amp;nbsp;&amp;nbsp;&amp;nbsp; padding-left: 1.3em;
+}
+li:before {
+&amp;nbsp;&amp;nbsp;&amp;nbsp; content: &amp;ldquo;\f073&amp;rdquo;; /* FontAwesome Unicode /</description>
     </item>
     
     <item>
@@ -650,8 +141,8 @@ class Laporan extends CI_Controller{
       <pubDate>Mon, 30 May 2016 11:30:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;CodeIgniter - Petani Kode&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;Kadang pengguna (selanjutnya kita sebut &lt;i&gt;user&lt;/i&gt;) sering lupa username-nya, sebagai alternatif &lt;i&gt;user&lt;/i&gt; kadang memasukan alamat email-nya di halaman login. Karena &lt;i&gt;user&lt;/i&gt; lebih mengingat alamat email daripada &lt;i&gt;username&lt;/i&gt; yang telah ia daftarkan. Oleh karena itu, kita perlu membuat sistem login yang mampu menerima &lt;i&gt;username&lt;/i&gt; dan alamat &lt;i&gt;email&lt;/i&gt;. Sehingga &lt;i&gt;user&lt;/i&gt; dapat memilih, mau login dengan &lt;i&gt;username&lt;/i&gt; atau &lt;i&gt;email&lt;/i&gt;.&lt;br /&gt;&lt;h2&gt;Model User&lt;/h2&gt;Sebenarnya, inti dari membuat login yang dapat menerima &lt;i&gt;username&lt;/i&gt; dan &lt;i&gt;password&lt;/i&gt; adalah permainan &lt;i&gt;query&lt;/i&gt; saja. Kita akan membuat sebuah query untuk mencari &lt;i&gt;user&lt;/i&gt; dengan logika &lt;i&gt;clause&lt;/i&gt; &lt;i&gt;where&lt;/i&gt; kira-kira begini: temukan &lt;code&gt;user&lt;/code&gt; dengan username &lt;code&gt;petanikode&lt;/code&gt; atau alamat &lt;code&gt;petanikode@ladang.com&lt;/code&gt; dan password-nya &lt;code&gt;petanitanamkode&lt;/code&gt;. Query tersebut dapat kita buat dalam model &lt;i&gt;User&lt;/i&gt;, kira-kira bentuknya seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php codeigniter&#34;&gt;&amp;lt;?php&lt;br /&gt;&lt;br /&gt;class User extends CI_Model {&lt;br /&gt;&lt;br /&gt;public function cek_user($username, $password) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $this-&amp;gt;db-&amp;gt;where(&amp;ldquo;email = &amp;lsquo;$username&amp;rsquo; or username = &amp;lsquo;$username&amp;rsquo;&amp;rdquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $this-&amp;gt;db-&amp;gt;where(&amp;lsquo;password&amp;rsquo;, md5($password));&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $query = $this-&amp;gt;db-&amp;gt;get(&amp;lsquo;user&amp;rsquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; return $query-&amp;gt;row_array();&lt;br /&gt;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Controller Login&lt;/h2&gt;&lt;i&gt;Controller&lt;/i&gt; login akan mengecek &lt;i&gt;username&lt;/i&gt; atau &lt;i&gt;email&lt;/i&gt; dan &lt;i&gt;password&lt;/i&gt; yang diinputkan &lt;i&gt;user&lt;/i&gt; kemudian mencocokannya dengan data yang ada di &lt;i&gt;database&lt;/i&gt;. Jika cocok, maka login berhasil. Berikut ini kode &lt;i&gt;Controller login&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php codeigniter&#34;&gt;&amp;lt;?php&lt;br /&gt;class Login extends CI_Controller {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; public function index() { &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $this-&amp;gt;load-&amp;gt;view(&amp;lsquo;halaman_login&amp;rsquo;); &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; } &lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; public function proses_login() { &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $user = $this-&amp;gt;input-&amp;gt;post(&amp;lsquo;username&amp;rsquo;); &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $pass = $this-&amp;gt;input-&amp;gt;post(&amp;lsquo;password&amp;rsquo;); &lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $login = $this-&amp;gt;user-&amp;gt;cek_user($user, $pass); &lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (!empty($login)) { &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // login berhasil &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $this-&amp;gt;session-&amp;gt;set_userdata($login); &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; redirect(base_url()); &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; } else { &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // login gagal &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; $this-&amp;gt;session-&amp;gt;set_flashdata(&amp;lsquo;gagal&amp;rsquo;, &amp;lsquo;Username atau Password Salah!&amp;rsquo;); &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; redirect(base_url(&amp;lsquo;login&amp;rsquo;)); &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; } &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; } &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Jika login berhasil, &lt;i&gt;user&lt;/i&gt; akan dialihkan ke halaman utama. Nanti di halaman utama dilakukan pengecekan &lt;i&gt;session&lt;/i&gt; agar halaman tersebut dapat dilihat oleh &lt;i&gt;user&lt;/i&gt; yang sudah login saja.&lt;br /&gt;&lt;h2&gt;VIew Login&lt;/h2&gt;Dalam &lt;i&gt;method&lt;/i&gt; &lt;code&gt;index()&lt;/code&gt; &lt;i&gt;controller Login&lt;/i&gt;, kita me-load &lt;i&gt;view&lt;/i&gt; &lt;code&gt;halaman_login.php&lt;/code&gt;, berikut ini kode &lt;code&gt;halaman_login.php&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;form action=&amp;rdquo;&amp;lt;?php echo base_url(&amp;lsquo;login/proses-login&amp;rsquo;) ?&amp;gt;&amp;rdquo; method=&amp;ldquo;post&amp;rdquo;&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;form-group has-feedback&amp;rdquo;&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;input type=&amp;ldquo;text&amp;rdquo; class=&amp;ldquo;form-control&amp;rdquo; placeholder=&amp;ldquo;Username atau Email&amp;rdquo; name=&amp;ldquo;username&amp;rdquo; required id=&amp;ldquo;username&amp;rdquo;&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;span class=&amp;ldquo;glyphicon glyphicon-user form-control-feedback&amp;rdquo;&amp;gt;&amp;lt;/span&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;form-group has-feedback&amp;rdquo;&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;input type=&amp;ldquo;password&amp;rdquo; class=&amp;ldquo;form-control&amp;rdquo; placeholder=&amp;ldquo;Password&amp;rdquo; name=&amp;ldquo;password&amp;rdquo; required&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;span class=&amp;ldquo;glyphicon glyphicon-lock form-control-feedback&amp;rdquo;&amp;gt;&amp;lt;/span&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;row&amp;rdquo;&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;col-xs-8&amp;rdquo;&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;checkbox icheck&amp;rdquo;&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;input type=&amp;ldquo;checkbox&amp;rdquo;&amp;gt; Ingat Saya &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/label&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; /.col &amp;ndash;&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;ldquo;col-xs-4&amp;rdquo;&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;button type=&amp;ldquo;submit&amp;rdquo; class=&amp;ldquo;btn btn-primary btn-block btn-flat&amp;rdquo;&amp;gt;Masuk&amp;lt;/button&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; /.col &amp;ndash;&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/div&amp;gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/form&amp;gt;&lt;/code&gt;&lt;/pre&gt;Halaman login menggunakan AdminLTE yang sudah diberikan sedikit CSS, berikut ini tampilannya.&lt;a href=&#34;http://2.bp.blogspot.com/-Rh-26KVaqa0/V0myHUN5m2I/AAAAAAAAC2M/sVdReDRINH0mliOLCzANd-igHTeZF7AwgCK4B/s1600/Contoh%2BHalaman%2BLogin%2BCodeIgniter%2Bdengan%2BAdminLTE.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-Rh-26KVaqa0/V0myHUN5m2I/AAAAAAAAC2M/sVdReDRINH0mliOLCzANd-igHTeZF7AwgCK4B/s1600/Contoh%2BHalaman%2BLogin%2BCodeIgniter%2Bdengan%2BAdminLTE.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Pembuatan sistem login yang dapat menerima &lt;i&gt;username&lt;/i&gt; dan alamat &lt;i&gt;email&lt;/i&gt; pada CodeIgniter dilakukan dengan memanipulasi &lt;i&gt;query&lt;/i&gt; pada model. Logika &lt;i&gt;clause&lt;/i&gt; &lt;i&gt;where&lt;/i&gt; yang digunakan adalah &lt;i&gt;username or email and password&lt;/i&gt;.&lt;/p&gt;
-</description>
+      <description>Kadang pengguna (selanjutnya kita sebut user) sering lupa username-nya, sebagai alternatif user kadang memasukan alamat email-nya di halaman login. Karena user lebih mengingat alamat email daripada username yang telah ia daftarkan. Oleh karena itu, kita perlu membuat sistem login yang mampu menerima username dan alamat email. Sehingga user dapat memilih, mau login dengan username atau email.
+Model UserSebenarnya, inti dari membuat login yang dapat menerima username dan password adalah permainan query saja.</description>
     </item>
     
     <item>
@@ -660,92 +151,10 @@ class Laporan extends CI_Controller{
       <pubDate>Sat, 28 May 2016 16:39:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/apa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-width=&#34;800&#34;
-height=&#34;394&#34;
-alt=&#34;codeigniter+-+petanikode.png&#34;
-src=&#34;http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Fungis &lt;code&gt;base_url()&lt;/code&gt; dan &lt;code&gt;site_url()&lt;/code&gt; merupakan dua fungsi untuk mengambil URL web pada framework CodeIgniter. Kedua fungsi ini dapat digunakan dengan mengaktifkan &lt;em&gt;helper&lt;/em&gt; &lt;code&gt;url&lt;/code&gt; terlebih dahulu.&lt;/p&gt;
-
-&lt;h2 id=&#34;fungsi-base-url&#34;&gt;Fungsi &lt;code&gt;base_url()&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;fungsi &lt;code&gt;base_url()&lt;/code&gt; akan menghasilkan sebuah url dasar berdasarkan konfigurasi diisi pada &lt;code&gt;config.php&lt;/code&gt;. Misalkan konfigurasinya seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$config[&#39;base_url&#39;] = &#39;http://petanikode.com/&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka, ketika kita menggunakan fungsi &lt;code&gt;base_url()&lt;/code&gt;, akan mendapatkan nilai:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://petanikode.com/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;fungsi-site-url&#34;&gt;Fungsi &lt;code&gt;site_url()&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Seperti namanya, fungsi &lt;code&gt;site_url()&lt;/code&gt; akan menghasilkan URL atau alamat web beserta file index-nya. Misalkan konfigurasi webnya seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$config[&#39;base_url&#39;] = &#39;http://petanikode.com/&#39;;
-$config[&#39;index_page&#39;] = &#39;index.php&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka, ketika kita menggunakan fungsi &lt;code&gt;site_url()&lt;/code&gt;, akan mendapatkan nilai:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://petanikode.com/index.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kapan-base-url-dan-site-url-dipakai&#34;&gt;Kapan &lt;code&gt;base_url()&lt;/code&gt; dan &lt;code&gt;site_url()&lt;/code&gt; dipakai?&lt;/h2&gt;
-
-&lt;p&gt;Sesui hasil yang didapatkan dari fungsi tersebut, anda bisa menebak sendiri kapan waktu yang tepat menggunakan kedua fungsi tersebut. Fungsi &lt;code&gt;base_url()&lt;/code&gt; biasanya digunakan untuk membuat URL dari &lt;em&gt;resource&lt;/em&gt; yang berada di direktori awal &lt;em&gt;(root)&lt;/em&gt; web. Contohnya, sering dipakai untuk membuat URL &lt;em&gt;assets&lt;/em&gt; seperti berikut ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;1102&#34;
-height=&#34;194&#34;
-alt=&#34;Contoh+penggunaan+fungsi+base_url+codeigniter+-+petanikode.png&#34;
-src=&#34;http://1.bp.blogspot.com/-EUamVuxQjSg/V0lS0Bkh_BI/AAAAAAAAC1E/KYwq8_MGsM4kNi-bIqY-jvWCVYLf1DtpACK4B/s1600/Contoh%2Bpenggunaan%2Bfungsi%2Bbase_url%2Bcodeigniter%2B-%2Bpetanikode.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/2016/08/mengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset/&#34;&gt;Mengapa Harus Menggunakan Fungsi base_url() untuk Menyisipkan File Aset?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Sementara itu, fungsi &lt;code&gt;site_url()&lt;/code&gt; sering digunakan untuk membuat URL ke &lt;em&gt;Controller&lt;/em&gt; atau dengan kata lain, fungsi ini dipakai untuk mengakses Controller tertentu. Contoh penggunaanya sebagai berikut.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;977&#34;
-height=&#34;252&#34;
-alt=&#34;Penggunaan+fungsi+site_url+untuk+mengakses+controller+CI+-+Petani+Kode.png&#34;
-src=&#34;https://2.bp.blogspot.com/-HXg3x6Hj7uo/V62O31kbnyI/AAAAAAAADIs/HVEUePK8JTQK48MpMkpMFY2jXMG8p7jWgCK4B/s1600/Penggunaan%2Bfungsi%2Bsite_url%2Buntuk%2Bmengakses%2Bcontroller%2BCI%2B-%2BPetani%2BKode.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Contoh lain penggunaan fungsi &lt;code&gt;site_url()&lt;/code&gt; untuk mengalihkan &lt;em&gt;(redirect)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;825&#34;
-height=&#34;255&#34;
-alt=&#34;Penggunaan+fungsi+site_url+untuk+redirect.png&#34;
-src=&#34;https://2.bp.blogspot.com/-aOcIvxTEusw/V62PbakJ2mI/AAAAAAAADI0/cLRBz_hE-YsXYVroi9shLYlmtxx4hmPFwCK4B/s1600/Penggunaan%2Bfungsi%2Bsite_url%2Buntuk%2Bredirect.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
-
-&lt;p&gt;Fungsi &lt;code&gt;base_url()&lt;/code&gt; dan fungsi &lt;code&gt;site_url()&lt;/code&gt; adalah fungsi bantuan dari &lt;em&gt;url helper&lt;/em&gt;. Fungsi ini digunakan untk mengambil URL dasar dan URL web. fungsi &lt;code&gt;base_url()&lt;/code&gt; digunakan untuk membangun url untuk mengakses resource yang barada di direktori &lt;em&gt;root&lt;/em&gt; web. Sedangkan fungsi &lt;code&gt;site_url()&lt;/code&gt; digunakan untuk mengakses &lt;em&gt;Controller&lt;/em&gt; tertentu.&lt;/p&gt;
-
-&lt;p&gt;Kurang-lebih, begitulah kesimpulan dari saya. Mungkin ada yang kurang tepat, silahkan ditambahakan.&lt;/p&gt;
-</description>
+      <description>Fungis base_url() dan site_url() merupakan dua fungsi untuk mengambil URL web pada framework CodeIgniter. Kedua fungsi ini dapat digunakan dengan mengaktifkan helper url terlebih dahulu.
+Fungsi base_url() fungsi base_url() akan menghasilkan sebuah url dasar berdasarkan konfigurasi diisi pada config.php. Misalkan konfigurasinya seperti ini.
+$config[&#39;base_url&#39;] = &#39;http://petanikode.com/&#39;;  Maka, ketika kita menggunakan fungsi base_url(), akan mendapatkan nilai:
+http://petanikode.com/  Fungsi site_url() Seperti namanya, fungsi site_url() akan menghasilkan URL atau alamat web beserta file index-nya.</description>
     </item>
     
     <item>
@@ -754,8 +163,9 @@ layout=&#34;responsive&#34;&gt;
       <pubDate>Tue, 12 Jan 2016 16:20:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Cover Tutorial&#34; border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; title=&#34;Tutorial Bootstrap Petani Kode&#34; /&gt;&lt;/a&gt;Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag &lt;i&gt;meta&lt;/i&gt; &lt;i&gt;viewport&lt;/i&gt;. Mengapa kita perlu menambahkan &lt;i&gt;meta viewport&lt;/i&gt;? apa sih fungsinya? Mari kita bahas bersama.&lt;br /&gt;&lt;br /&gt;Pada bagian kepala &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; terdapat tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; yang menampung nilai &lt;i&gt;viewport&lt;/i&gt;. &lt;i&gt;Viewport&lt;/i&gt; merupakan area yang terlihat pada (perangkat) user/pengunjung web. &lt;i&gt;Viewport&lt;/i&gt; digunakan untuk desain web yang responsif &lt;i&gt;(responsive web design)&lt;/i&gt;. Seperti selogan Bootstrap yang mengutamakan desain responsif.&lt;br /&gt;&lt;blockquote class=&#34;tr_bq&#34;&gt;Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.&lt;br /&gt;— &lt;cite&gt;getbootstrap.com&lt;/cite&gt;&lt;/blockquote&gt;Jadi dengan menambahkan &lt;i&gt;viewport&lt;/i&gt;, web akan menjadi responsif. Responsif artinya bisa menyesuaikan diri dengan perangkat yang digunakan oleh user/pengunjung web. Contoh kode viewport yang diberikan di &lt;a href=&#34;http://getbootstrap.com/css/#overview-mobile&#34; target=&#34;_blank&#34;&gt;dokumentasi Bootstrap&lt;/a&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;meta name=&amp;ldquo;viewport&amp;rdquo; content=&amp;ldquo;width=device-width, initial-scale=1&amp;rdquo;&amp;gt;&lt;/code&gt;&lt;/pre&gt;Tag &lt;i&gt;meta viewport&lt;/i&gt; akan memberikan intruksi ke browser untuk mengatur dimensi dan sekala web. Nilai &lt;code&gt;width=device-width&lt;/code&gt;, artinya lebar web akan mengikuti lebar dari layar perangkat yang digunakan. Nilai &lt;code&gt;inital-scale=1&lt;/code&gt;, artinya web akan diberikan skala &lt;i&gt;(zoom)&lt;/i&gt; menjadi &lt;code&gt;1&lt;/code&gt; (normal).&lt;br /&gt;&lt;br /&gt;Pengaruh dari tag &lt;i&gt;meta viewport&lt;/i&gt; ini dapat kita lihat dengan membuka web dari ponsel android atau semacamnya. Tetapi tenang saja, anda juga bisa memanfaatkan fitur &lt;i&gt;inspect element&lt;/i&gt; pada Google Chrome. Baiklah, mari kita uji coba. Pertama kita coba dulu membuka web yang tampa menggunakan tag &lt;i&gt;meta&lt;/i&gt; &lt;i&gt;viewport&lt;/i&gt;. Berikut ini cuplikan kode &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;-nya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;Hello Bootstrap&amp;lt;/title&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; menyisipkan bootstrap &amp;ndash;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/pre&gt;Bukalah dengan Google Chrome. Kemudian klik kanan, lalu pilih &lt;i&gt;inspect element&lt;/i&gt;. Setelah itu klik ikon ponsel ( &lt;i class=&#34;fa fa-mobile&#34;&gt;&lt;/i&gt; ).&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Tampilan web tampa tag meta viewport&#34; border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png&#34; title=&#34;Tampilan web tampa tag meta viewport&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tampa menggunakan &lt;i&gt;viewport&lt;/i&gt; web akan ditampilkan apa adanya. Seperti yang terlihat pada gambar di atas, web tidak diperbesar atau diatur ulang skalanya. Untuk itu, kita perlu menambahkan &lt;i&gt;viewport&lt;/i&gt;. Sehingga kodenya menjadi seperti ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;Hello Bootstrap&amp;lt;/title&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; menyisipkan bootstrap &amp;ndash;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;    &lt;span style=&#34;background-color: #93c47d;&#34;&gt;&amp;lt;meta name=&amp;ldquo;viewport&amp;rdquo; content=&amp;ldquo;width=device-width, initial-scale=1&amp;rdquo;&amp;gt;&lt;/span&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/pre&gt;Setelah menambahkan &lt;i&gt;viewport&lt;/i&gt;, sekarang coba &lt;i&gt;reload&lt;/i&gt; kembali halamanya.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Tampilan web yang menggunakan meta viewport&#34; border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png&#34; title=&#34;Tampilan web yang menggunakan meta viewport&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Jelas sekali &amp;lsquo;kan perbedaanya? Masih belum puas, coba lagi melihat dari ponsel yang berbeda (Nokia Lumia 520).&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520&#34; border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png&#34; title=&#34;Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Selain mencoba simulasi dari inspect element, saya juga mencoba melalui ponsel Samsung Galaxy C1 dan hasilnya sebagai berikut.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Jadi, tag &lt;i&gt;meta viewport&lt;/i&gt; berfungsi untuk mengatur ulang dimensi dan skala (zoom) web. Tag ini diperlukan untuk membangun web yang responsif.&lt;br /&gt;&lt;br /&gt;&amp;mdash; &lt;br /&gt;Nah, sekian dulu tutorial ke-3 ini. Kode lengkap tutorial ini dapat dilihat di file repositori github: &lt;a href=&#34;https://github.com/petanikode/tutorial-bootstrap/blob/master/view_port.html&#34; target=&#34;_blank&#34;&gt;view_port.html&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;&lt;a href=&#34;http://www.w3schools.com/css/css_rwd_viewport.asp&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.w3schools.com/css/css_rwd_viewport.asp&#34;&gt;http://www.w3schools.com/css/css_rwd_viewport.asp&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://getbootstrap.com/css/#overview-mobile&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://getbootstrap.com/css/#overview-mobile&#34;&gt;http://getbootstrap.com/css/#overview-mobile&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt;
-</description>
+      <description>Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag meta viewport. Mengapa kita perlu menambahkan meta viewport? apa sih fungsinya? Mari kita bahas bersama.
+Pada bagian kepala &amp;lt;head&amp;gt; terdapat tag &amp;lt;meta&amp;gt; yang menampung nilai viewport. Viewport merupakan area yang terlihat pada (perangkat) user/pengunjung web. Viewport digunakan untuk desain web yang responsif (responsive web design). Seperti selogan Bootstrap yang mengutamakan desain responsif.
+Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</description>
     </item>
     
     <item>
@@ -764,8 +174,9 @@ layout=&#34;responsive&#34;&gt;
       <pubDate>Mon, 04 Jan 2016 20:37:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Cover Tutorial&#34; border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; title=&#34;Tutorial Bootstrap Petani Kode&#34; /&gt;&lt;/a&gt;Selamat datang di tutorial ke-2 Bootstrap. Pada tutorial kali ini, saya akan membahas sistem grid dan tata letak di Bootstrap. Langsung saja, ya!&lt;br /&gt;&lt;br /&gt;Sistem grid memudahkan kita mengatur tata letak elemen di web. Zaman dulu, kebanyakan web menggunakan tag &lt;i&gt;table&lt;/i&gt; untuk mengatur tata letaknya. Sekarang sudah tidak lagi. Karena kurang efektif dan tidak &lt;i&gt;SEO friendly&lt;/i&gt;. Oleh karena itu, website zaman sekarang menggunakan CSS untuk mengatur tata letaknya.&lt;br /&gt;&lt;br /&gt;Sistem grid di Bootstrap mengadopsi konsep tabel. Karena itu, Kita hanya perlu menggunakan tiga kelas untuk membuatnya. Kelas tersebut kita terapkan dalam tag &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;. Berikut ini tiga kelas yang dimaksud:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Kelas &lt;code&gt;.container&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Kelas &lt;code&gt;.row&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Kelas &lt;code&gt;.col-&lt;em&gt;&lt;/code&gt;&lt;/li&gt;&lt;/ol&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-pFBtnxBZwNM/VolRI8KcjvI/AAAAAAAACWU/LiQnjsrXNeE/s1600/ilustrasi%2Bsistem%2Bgrid%2Bbootstrap%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-pFBtnxBZwNM/VolRI8KcjvI/AAAAAAAACWU/LiQnjsrXNeE/s1600/ilustrasi%2Bsistem%2Bgrid%2Bbootstrap%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Mari kita bahas satu persatu.&lt;br /&gt;&lt;h2&gt;1. Kelas .container&lt;/h2&gt;Kelas kontainer berfungsi membungkus konten web. Kelas ini sama fungsinya seperti tag &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt; dalam pembuatan tabel. Ada dua jenis kelas &lt;code&gt;.container&lt;/code&gt;: (1) Kelas &lt;code&gt;.container&lt;/code&gt; yang ukuran lebarnya tetap &lt;i&gt;(fixed)&lt;/i&gt; dan (2) kelas &lt;code&gt;.container-fluid&lt;/code&gt; yang ukuran lebarnya mengikuti lebar browser.&lt;br /&gt;&lt;br /&gt;Pertama kita coba dulu kelas &lt;code&gt;.container&lt;/code&gt;. Kita tinjau ulang hasil dari &lt;a href=&#34;http://www.petanikode.com/2016/01/tutorial-bootstrap-1-menyisipkan.html&#34; target=&#34;_blank&#34;&gt;tutorial pertama&lt;/a&gt;. Konten web yang belum menggunakan kelas &lt;code&gt;.container&lt;/code&gt;: &lt;a href=&#34;https://github.com/petanikode/tutorial-bootstrap/blob/master/hello_bootstrap.html&#34; target=&#34;_blank&#34;&gt;hello_bootstrap.html&lt;/a&gt;&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-0lCeKXLbuAU/VoY54Zz2k7I/AAAAAAAACU0/DIBpS9YAe38/s1600/Hello%2Bbootstrap%2B-%2Bpetani%2Bkode_2016-01-01_16-32-49.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Hasil output pada tutorial sebelumnya&#34; border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-0lCeKXLbuAU/VoY54Zz2k7I/AAAAAAAACU0/DIBpS9YAe38/s1600/Hello%2Bbootstrap%2B-%2Bpetani%2Bkode_2016-01-01_16-32-49.png&#34; title=&#34;Hasil pada tutorial sebelumnya&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Selanjutnya, kita tambahkan tag &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; dengan kelas &lt;code&gt;.container&lt;/code&gt; dan kode CSS untuk &lt;i&gt;background&lt;/i&gt; dan warna teks. Sehingga kodenya menjadi seperti berikut ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;Hello Bootstrap&amp;lt;/title&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; menyisipkan bootstrap &amp;ndash;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;&amp;lt;div class=&amp;ldquo;container&amp;rdquo; style=&amp;ldquo;background: #008080; color: white&amp;rdquo;&amp;gt;&lt;/span&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;h1&amp;gt;Hello Bootstrap!&amp;lt;/h1&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;p&amp;gt;Selamat datang di tutorial framework bootstrap&amp;lt;/p&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;Maka, hasilnya akan seperti ini:&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-r8zbBHn0TSw/Vok7dz0j_WI/AAAAAAAACV0/kEAWUvdPIqk/s1600/Konten%2Bweb%2Byang%2Bdibungkus%2Bdengan%2Bkelas%2Bcontainer%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Konten web setelah dibungkus dengan kelas container&#34; border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-r8zbBHn0TSw/Vok7dz0j_WI/AAAAAAAACV0/kEAWUvdPIqk/s1600/Konten%2Bweb%2Byang%2Bdibungkus%2Bdengan%2Bkelas%2Bcontainer%2B-%2Bpetanikode.png&#34; title=&#34;Konten web setelah dibungkus dengan kelas container&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Konten web berpindah ke tengah, tidak lagi berada di tepi (samping). Itu disebabkan karena pengaruh dari kelas &lt;code&gt;.container&lt;/code&gt;. Sekarang kita coba menggunakan kelas &lt;code&gt;.container-fluid&lt;/code&gt;. Gantilah kelas &lt;code&gt;container&lt;/code&gt; menjadi kelas &lt;code&gt;container-fluid&lt;/code&gt;. Maka hasilnya akan seperti berikut ini:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-tV1-w0WObTs/Vok_h5JfRJI/AAAAAAAACWE/xNCBWU8OC-E/s1600/Konten%2Bweb%2Byang%2Bdibungkus%2Bdengan%2Bkelas%2Bcontainer-fluid%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Konten web yang dibungkus dengan kelas container-fluid&#34; border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-tV1-w0WObTs/Vok_h5JfRJI/AAAAAAAACWE/xNCBWU8OC-E/s1600/Konten%2Bweb%2Byang%2Bdibungkus%2Bdengan%2Bkelas%2Bcontainer-fluid%2B-%2Bpetanikode.png&#34; title=&#34;Konten web yang dibungkus dengan kelas container-fluid&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Ukuran lebar kontainer akan mengikuti lebar browser. Coba saja perbesar ukuran browser, maka ukuran lebar kontainernya pun akan ikut berubah (membesar).&lt;br /&gt;&lt;br /&gt;Satu hal lagi, di dalam sebuah website boleh memiliki lebih dari satu elemen kontainer. Jadi, bila anda ingin memisahkan kontainer untuk &lt;i&gt;header&lt;/i&gt;, &lt;i&gt;artikel&lt;/i&gt;, &lt;i&gt;footer&lt;/i&gt;, dll. Itu dibolehkan.&lt;br /&gt;&lt;h2&gt;2. Kelas .row&lt;/h2&gt;Di dalam kelas &lt;code&gt;.container&lt;/code&gt; ada kelas lagi, yaitu kelas &lt;code&gt;.row&lt;/code&gt;. Fungsinya untuk membuat baris. Bila dibandungkan dengan tabel, kelas ini seperti tag &lt;code&gt;&amp;lt;tr&amp;gt;&lt;/code&gt;. Kita harus membuat elemen &lt;i&gt;div&lt;/i&gt; dengan kelas &lt;i&gt;row&lt;/i&gt; di dalam kontainer. Jangan membuatnya di luar. Contohnya sebagai berikut:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;div class=&amp;ldquo;container&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;div class=&amp;ldquo;row&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;hellip; konten web di sini &amp;hellip; &lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/div&amp;gt; &lt;br /&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;3. Kelas .col-&lt;/em&gt;&lt;/h2&gt;Di dalam elemen &lt;i&gt;row&lt;/i&gt;, ada kelas &lt;code&gt;.col-&lt;em&gt;&lt;/code&gt;. Fungsinya untuk membuat kolom. Bila dibandingkan dengan tabel, kelas &lt;code&gt;.col-&lt;/em&gt;&lt;/code&gt; seperti tag &lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt;. Kelas &lt;code&gt;.col-&lt;em&gt;&lt;/code&gt; memiliki ukuran-ukuran:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;&lt;code&gt;col-xs-&lt;/em&gt;&lt;/code&gt; &lt;i&gt;(Extra Small)&lt;/i&gt; untuk perangkat dengan layar kecil seperti &lt;u&gt;&lt;b&gt;ponsel&lt;/b&gt;&lt;/u&gt;;&lt;/li&gt;&lt;li&gt;&lt;code&gt;col-sm-&lt;em&gt;&lt;/code&gt; &lt;i&gt;(Small)&lt;/i&gt; untuk perangkat dengan layar agak kecil seperti &lt;b&gt;&lt;u&gt;tablet&lt;/u&gt;&lt;/b&gt;;&lt;/li&gt;&lt;li&gt;&lt;code&gt;col-md-&lt;/em&gt;&lt;/code&gt; &lt;i&gt;(medium)&lt;/i&gt; untuk perangkat dengan layar sedang seperti &lt;u&gt;&lt;b&gt;laptop&lt;/b&gt;&lt;/u&gt;; dan&lt;/li&gt;&lt;li&gt;&lt;code&gt;col-lg-&lt;em&gt;&lt;/code&gt; &lt;i&gt;(Large)&lt;/i&gt; untuk perangkat dengan layar besar seperti &lt;b&gt;&lt;u&gt;komputer (PC)&lt;/u&gt;&lt;/b&gt;.&amp;nbsp;&lt;u&gt; &lt;/u&gt;&lt;/li&gt;&lt;/ol&gt;Jadi, agar ukurannya sesui dengan perangkat yang digunakan, maka gunakanlah semuanya. Karena, sekarang website tidak hanya diakses melalui PC dan laptop saja. Namun, pada tutorial ini, kita sepakati menggunakan yang medium, yaitu &lt;code&gt;col-md-&lt;/em&gt;&lt;/code&gt;.&lt;br /&gt;&lt;br /&gt;Ada lagi ukuran yang harus diketahui, yaitu ukuran lebar kolom. Lebar kolom paling panjang adalah 12 dan paling pendek adalah 1. Untuk membuat kolom dengan lebar 12, kita cukup memanggil nama kelasnya .&lt;code&gt;col-md-12&lt;/code&gt;. Pada dokumentasi Boostrap, sudah dijelaskan seperti ini:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-urJpq3olxtY/VopZDz5Ga_I/AAAAAAAACWk/SaPwMiEABLo/s1600/Sistem%2Bgrid%2Bbootstrap%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Sistem Grid Bootstrap&#34; border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-urJpq3olxtY/VopZDz5Ga_I/AAAAAAAACWk/SaPwMiEABLo/s1600/Sistem%2Bgrid%2Bbootstrap%2B-%2Bpetanikode.png&#34; title=&#34;Sistem grid Bootstrap&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Sekarang mari kita coba menerapkan konsep grid ini dengan membuat kode HTML untuk rancangan web seperti beikut ini:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-7KDsB25rUUw/Vopc3PTDecI/AAAAAAAACWw/b_9IkiYcEqY/s1600/Prototipe%2Bdesain%2Bweb%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-7KDsB25rUUw/Vopc3PTDecI/AAAAAAAACWw/b_9IkiYcEqY/s1600/Prototipe%2Bdesain%2Bweb%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Pada rancangan di atas, terdapat tiga baris &lt;i&gt;(row)&lt;/i&gt; dan satu kolom &lt;i&gt;(col)&lt;/i&gt;. Maka bentuk kodenya akan seperti berikut ini:&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/d329ea9f0423e755d6ca.js&#34;&gt;&lt;/script&gt;Maka akan menghasilkan tampilan seperti berikut ini:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-C1-A3hCOAYM/VopfPCAjVSI/AAAAAAAACXI/urssg0w3u9c/s1600/Hasil%2Boutput%2Bsistem%2Bgrid%2Bbootstrap%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-C1-A3hCOAYM/VopfPCAjVSI/AAAAAAAACXI/urssg0w3u9c/s1600/Hasil%2Boutput%2Bsistem%2Bgrid%2Bbootstrap%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Nah, sampai di sini dulu tutorial kali ini. Semoga dapat dipahami dengan jelas. Kalau pun belum paham, silahkan berdiskusi melalui komentar. Selamat belajar Bootstrap. &lt;br /&gt;&lt;br /&gt;Kode sumber: &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://github.com/petanikode/tutorial-bootstrap&#34; target=&#34;_blank&#34;&gt;petanikode/tutorial-bootstrap&lt;/a&gt;&lt;br /&gt;Referensi: &lt;i class=&#34;fa fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;http://getbootstrap.com/css/&#34; target=&#34;_blank&#34;&gt;Dokumentasi Bootstrap&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Selamat datang di tutorial ke-2 Bootstrap. Pada tutorial kali ini, saya akan membahas sistem grid dan tata letak di Bootstrap. Langsung saja, ya!
+Sistem grid memudahkan kita mengatur tata letak elemen di web. Zaman dulu, kebanyakan web menggunakan tag table untuk mengatur tata letaknya. Sekarang sudah tidak lagi. Karena kurang efektif dan tidak SEO friendly. Oleh karena itu, website zaman sekarang menggunakan CSS untuk mengatur tata letaknya.
+Sistem grid di Bootstrap mengadopsi konsep tabel.</description>
     </item>
     
     <item>
@@ -774,8 +185,9 @@ layout=&#34;responsive&#34;&gt;
       <pubDate>Sat, 02 Jan 2016 08:58:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; /&gt;&lt;/a&gt;Selamat datang di tutorial pertama Bootstrap. Bootstrap adalah sebuah &lt;i&gt;framework&lt;/i&gt; CSS untuk mengatur tampilan web agar menjadi lebih bagus dan &lt;i&gt;responsive&lt;/i&gt;. Pada tutorial pertama ini, saya akan membahas cara menyisipkan Bootstrap ke dalam HTML. Sebelum memulai, silahkan anda unduh dulu Bootstrap-nya di &lt;a href=&#34;http://getbootstrap.com/&#34;&gt;getbootstrap.com&lt;/a&gt;.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-YuS4gVhY3c8/VoYuZhD3GMI/AAAAAAAACUU/74nfHCVCWNE/s1600/Download%2BBootstrap%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Download Bootstrap&#34; border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-YuS4gVhY3c8/VoYuZhD3GMI/AAAAAAAACUU/74nfHCVCWNE/s1600/Download%2BBootstrap%2B-%2Bpetanikode.png&#34; style=&#34;border: 1px solid rgb(221, 221, 221);&#34; title=&#34;Download Bootstrap&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Menyisipkan Bootstrap ke Halaman Web&lt;/h2&gt;Mari kita membuat sebuah direktori bernama &lt;i&gt;belajar-bootstrap&lt;/i&gt;. Kemdudian ekstrak Bootstrap yang sudah diunduh tadi ke dalam direktori tersebut. Extrak direktori bisa dilakukan dengan &lt;i&gt;drag-drop&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-yaEV66dSpTM/VoYw5CHEiQI/AAAAAAAACUk/UFjBnTDj7SU/s1600/Menambahkan%2Bbootstrap%2Bke%2Bproyek%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Menambahkan bootstrap ke dalam proyek&#34; border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-yaEV66dSpTM/VoYw5CHEiQI/AAAAAAAACUk/UFjBnTDj7SU/s1600/Menambahkan%2Bbootstrap%2Bke%2Bproyek%2B-%2Bpetanikode.png&#34; title=&#34;Menambahkan bootstrap ke dalam proyek&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian, ubahlah nama &lt;i&gt;bootstrap-3.3.6-dist&lt;/i&gt; menjadi &lt;i&gt;bootstrap&lt;/i&gt;. Perubahan nama ini bertujuan untuk memudahkan penulisan kode penyisipan bootstrap di HTML. Selanjutnya buatlah berkas HTML baru bernama &lt;code&gt;hello_bootstrap.html&lt;/code&gt; dengan isi sebagai berikut.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;Hello Bootstrap&amp;lt;/title&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; menyisipkan bootstrap &amp;ndash;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;h1&amp;gt;Hello Bootstrap!&amp;lt;/h1&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;p&amp;gt;Selamat datang di tutorial framework bootstrap&amp;lt;/p&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;Setelah itu, cobalah buka file HTML yang sudah dibuat. Maka, anda akan mendapatkan tampilan seperti ini:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-0lCeKXLbuAU/VoY54Zz2k7I/AAAAAAAACU0/DIBpS9YAe38/s1600/Hello%2Bbootstrap%2B-%2Bpetani%2Bkode_2016-01-01_16-32-49.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Hello bootstrap&#34; border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-0lCeKXLbuAU/VoY54Zz2k7I/AAAAAAAACU0/DIBpS9YAe38/s1600/Hello%2Bbootstrap%2B-%2Bpetani%2Bkode_2016-01-01_16-32-49.png&#34; title=&#34;Tampilan web dengan bootstrap&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tampilan seperti gambar di atas, menyatakan Bootstrap sudah berhasil di sisipkan ke halaman web atau HTML. Kode yang perlu anda perhatikan adalah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;Kode tersebut berfungsi untuk membuat relasi antara file HTML dengan &lt;a href=&#34;http://www.petanikode.com/2015/07/berbagai-cara-menulis-kode-css-dalam.html&#34; target=&#34;_blank&#34;&gt;CSS eksternal&lt;/a&gt;. Atribut &lt;code&gt;rel&lt;/code&gt; menyatakan relasinya, sedangkan &lt;code&gt;href&lt;/code&gt; untuk menentukan alamat lokasi file-nya.&lt;br /&gt;&lt;br /&gt;Bila anda menggunakan bootstrap yang online (CDN), maka anda harus memberikan nilai &lt;code&gt;href&lt;/code&gt; dengan alamat URL.&amp;nbsp; Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;&lt;a href=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&amp;quot;&#34;&gt;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&amp;quot;&lt;/a&gt; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Jadi, kita hanya membutuhkan satu baris kode untuk menyisipkan bootstrap ke dalam HTML. Kode itu merupakan tag &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;. Tag ini berfungsi untuk merelasikan dokumen HTML dengan dokumen yang lainnya.&lt;br /&gt;&lt;br /&gt;Nah, sekian dulu tutorial pertama ini. Intinya, saya ingin mengajarkan cara menyisipkan Bootstrap ke dalam proyek dan HTML. Kalau ada yang belum jelas, silahkan ditanyakan melalui komentar di bawah. Sampai jumpa pada &lt;a href=&#34;http://www.petanikode.com/2016/01/tutorial-bootstrap-2-sistem-grid-dan-layout.html&#34; target=&#34;_blank&#34;&gt;tutorial berikutnya&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Selamat datang di tutorial pertama Bootstrap. Bootstrap adalah sebuah framework CSS untuk mengatur tampilan web agar menjadi lebih bagus dan responsive. Pada tutorial pertama ini, saya akan membahas cara menyisipkan Bootstrap ke dalam HTML. Sebelum memulai, silahkan anda unduh dulu Bootstrap-nya di getbootstrap.com.
+
+Menyisipkan Bootstrap ke Halaman WebMari kita membuat sebuah direktori bernama belajar-bootstrap. Kemdudian ekstrak Bootstrap yang sudah diunduh tadi ke dalam direktori tersebut. Extrak direktori bisa dilakukan dengan drag-drop.</description>
     </item>
     
     <item>
@@ -784,96 +196,10 @@ layout=&#34;responsive&#34;&gt;
       <pubDate>Wed, 25 Feb 2015 01:16:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-slimframework-di-linux/</guid>
-      <description>
-
-&lt;p&gt;Slim merupakan sebuah &lt;em&gt;framework&lt;/em&gt; mikro untuk PHP. Slim bisa kita gunakan
-untuk membangun aplikasi web sederhana dan Rest &lt;a href=&#34;https://www.petanikode.com/topik/api&#34;&gt;API&lt;/a&gt;. Kali ini, saya akan
-membawakan tutorial cara menginstal Slim di Linux. Slim yang akan diinstal
-adalah versi 2.0.&lt;/p&gt;
-
-&lt;p&gt;Pastikan &lt;a href=&#34;https://www.petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt; dan &lt;a href=&#34;https://www.petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt; sudah terinstal
-di komputer teman-teman. Setelah itu ikuti langkah-langkah berikut ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-direktori-proyek&#34;&gt;Membuat Direktori Proyek&lt;/h2&gt;
-
-&lt;p&gt;Buatlah sebuah direktori dengan nama proyeknya, misalnya &lt;code&gt;proyek-slim&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir proyek-slim
-cd proyek-slim
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;instalasi-slim-dengan-composer&#34;&gt;Instalasi Slim dengan Composer&lt;/h2&gt;
-
-&lt;p&gt;Ketik perintah berikut untuk meinginstal Slim.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;composer require slim/slim:~2.0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perintah ini akan mendownload Slim dan menyimpannya di dalam direktori &lt;code&gt;vendor&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-file-index-php&#34;&gt;Membuat File &lt;code&gt;index.php&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buat file &lt;code&gt;index.php&lt;/code&gt; di dalam direktori proyeknya dengan isi sebagai
-berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-require &#39;vendor/autoload.php&#39;;
-
-$app = new \Slim\Slim();
-
-$app-&amp;gt;get(&amp;quot;/salam/:nama&amp;quot;, function($nama){
-    echo &amp;quot;Assalamualaikum, $nama&amp;quot;;
-});
-
-$app-&amp;gt;run();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang kita punya struktur proyek seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;proyek-slim/
-├── composer.json
-├── composer.lock
-├── index.php
-└── vendor
-...
-14 directories, 62 files
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bagus, selanjutnya kita bisa menggunakan server bawaan PHP.&lt;/p&gt;
-
-&lt;h2 id=&#34;menjalankan-server-php&#34;&gt;Menjalankan Server PHP&lt;/h2&gt;
-
-&lt;p&gt;Ketik perintah berikut untuk menjalankan server PHP pada &lt;code&gt;localhost&lt;/code&gt; dengan
-nomer &lt;em&gt;port&lt;/em&gt; &lt;code&gt;8000&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;php -S localhost:8000
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, cobalah buka web browser dan arahkan ke alamat tersebut.
-Kalau hasilnya &lt;em&gt;not found&lt;/em&gt; berarti rute &lt;code&gt;/&lt;/code&gt; belum kita buat. Cobalah untuk
-mengakses rute &lt;code&gt;/salam/&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;808&#34;
-    height=&#34;242&#34;
-    alt=&#34;program+salam+dengan+framework+slim.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-BjKgeYvxjJo/VOyqigwX8gI/AAAAAAAABbw/QQcUn20VbYw/s1600/program%2Bsalam%2Bdengan%2Bframework%2Bslim.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kita sudah berhasil menginstal Slim, selanjutnya kita bisa lakukan pengembangan
-lebih lanjut. Sekian dulu untuk kali ini.&lt;/p&gt;
-</description>
+      <description>Slim merupakan sebuah framework mikro untuk PHP. Slim bisa kita gunakan untuk membangun aplikasi web sederhana dan Rest API. Kali ini, saya akan membawakan tutorial cara menginstal Slim di Linux. Slim yang akan diinstal adalah versi 2.0.
+Pastikan Composer dan PHP sudah terinstal di komputer teman-teman. Setelah itu ikuti langkah-langkah berikut ini.
+Membuat Direktori Proyek Buatlah sebuah direktori dengan nama proyeknya, misalnya proyek-slim.
+mkdir proyek-slim cd proyek-slim  Instalasi Slim dengan Composer Ketik perintah berikut untuk meinginstal Slim.</description>
     </item>
     
   </channel>

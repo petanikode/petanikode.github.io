@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Belajar Css on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/seri/belajar-css/index.xml</link>
+    <link>https://www.petanikode.com/seri/belajar-css/</link>
     <description>Recent content in Belajar Css on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/seri/belajar-css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jul 2015 21:14:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/seri/belajar-css/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>3 Cara Penulisan Kode CSS dalam HTML</title>
@@ -15,97 +18,10 @@
       <pubDate>Sun, 12 Jul 2015 21:14:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-penulisan-css-dalam-html/</guid>
-      <description>
+      <description>Penulisan kode CSS dalam HTML dibagi menjadi tiga cara, internal, inline, dan eksternal. Pembagian ini berdasarkan letak kode CSS tersebut ditulis.
+1. Internal CSS Internal CSS adalah istilah untuk kode CSS yang ditulis langsung dalam berkas HTML. Kode CSS ini dituliskan pada tag &amp;lt;style&amp;gt;. Tag ini bisa ditulis di dalam blok head atapun body, kedua-duanya sah. Nah, berikut ini contoh internal CSS.
 
-&lt;p&gt;Penulisan kode CSS dalam HTML dibagi menjadi tiga cara, internal, &lt;em&gt;inline&lt;/em&gt;,
-dan eksternal. Pembagian ini berdasarkan letak kode CSS tersebut ditulis.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-internal-css&#34;&gt;1. Internal CSS&lt;/h2&gt;
-
-&lt;p&gt;Internal CSS adalah istilah untuk kode CSS yang ditulis langsung dalam berkas HTML. Kode CSS ini dituliskan pada tag &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;. Tag ini bisa ditulis di dalam blok &lt;code&gt;head&lt;/code&gt; atapun &lt;code&gt;body&lt;/code&gt;, kedua-duanya sah. Nah, berikut ini contoh internal CSS.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;700&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/eNrXGW/?height=600&amp;theme-id=dark&amp;default-tab=html,result&amp;embed-version=2&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-eksternal-css&#34;&gt;2. Eksternal CSS&lt;/h2&gt;
-
-&lt;p&gt;Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML.
-Eksternal CSS ditulis disebuah berkas khusus yang berekstensi &lt;code&gt;.css&lt;/code&gt;.
-Sebagai contoh, saya akan membuat sebuah berkas bernama &lt;code&gt;style-ku.css&lt;/code&gt;.
-Berikut ini cuplikan isi berkas &lt;code&gt;style-ku.css&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p {
-    font-family: serif;
-    line-height: 1.75em;
-}
-
-i {
-    font-family: sans;
-    color: orange;
-}
-
-h2 {
-    font-family: sans;
-    color: #333;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk menggunakan CSS tersebut dalam HTML, kita perlu mengimpornya. Ada beberapa cara memasukkan kode CSS dari berkas eksternal:&lt;/p&gt;
-
-&lt;p&gt;Pertama menggunakan tag &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style-ku.css&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Atau bisa juga bisa menggunakan &lt;code&gt;@import&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
-@import &amp;quot;style-ku.css&amp;quot;;
-&amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Penulisan pada HTML versi lengkapnya seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;title&amp;gt;Contoh Eksternal CSS&amp;lt;/title&amp;gt;
-    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style-ku.css&amp;quot;&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-    &amp;lt;h2&amp;gt;Ini judul artikel&amp;lt;/h2&amp;gt;
-    &amp;lt;p&amp;gt;Ini adalah paragraf yang memuat isi artikel. Paragraf ini hanya untuk percobaan saja. Percobaan untuk mendemokan &amp;lt;i&amp;gt;internal css&amp;lt;/i&amp;gt;. Seperti namanya, &amp;lt;i&amp;gt;inline CSS&amp;lt;/i&amp;gt; adalah kode CSS yang ditulis langsung dalam file HTML.&amp;lt;/p&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya pun akan sama seperti contoh internal CSS, karena kode CSS-nya sama. Hanya saja berbeda tempat penulisannya.&lt;/p&gt;
-
-&lt;h2 id=&#34;3-inline-css&#34;&gt;3. Inline CSS&lt;/h2&gt;
-
-&lt;p&gt;Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Setiap elemen HTML memiliki atribut &lt;code&gt;style&lt;/code&gt;, di sana lah inline CSS ditulis. Contohnya seperti ini:&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;h2 style=&amp;quot;color:red; font-family: sans;&amp;quot;&amp;gt;Ini judul artikel&amp;lt;/h2&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh lengkap:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;420&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/NqMmjj?height=380&amp;theme-id=dark&amp;default-tab=html,result&amp;embed-version=2&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Referensi:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://matthewjamestaylor.com/blog/adding-css-to-html-with-link-embed-inline-and-import&#34;&gt;http://matthewjamestaylor.com/blog/adding-css-to-html-with-link-embed-inline-and-import&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.w3schools.com/css/css_howto.asp&#34;&gt;http://www.w3schools.com/css/css_howto.asp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.w3.org/TR/xhtml2/mod-styleSheet.html#edef_styleSheet_style&#34;&gt;http://www.w3.org/TR/xhtml2/mod-styleSheet.html#edef_styleSheet_style&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+2. Eksternal CSS Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML.</description>
     </item>
     
   </channel>

@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Css on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/css/index.xml</link>
+    <link>https://www.petanikode.com/topik/css/</link>
     <description>Recent content in Css on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Mar 2017 17:36:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/css/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
@@ -15,220 +18,12 @@
       <pubDate>Tue, 14 Mar 2017 17:36:45 +0800</pubDate>
       
       <guid>https://www.petanikode.com/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</guid>
-      <description>
+      <description>Seperti yang kita ketahui, istilah card memang sering dipakai pada Material Design. Sedangkan Bootstrap versi 3 tidak memiliki komponen card. Mungkin saja akan ditambahkan pada versi ke-4. Kita tunggu saja.
+Pada kesempatan ini, kita akan belajar cara modifikasi komponen panel Bootstrap untuk dijadikan Card.
+Berikut ini tampilan hasil akhir yang akan kita buat:
 
-&lt;p&gt;Seperti yang kita ketahui, istilah card memang sering dipakai pada Material Design.
-Sedangkan Bootstrap versi 3 tidak memiliki komponen card. Mungkin saja akan
-ditambahkan pada versi ke-4. Kita tunggu saja.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, kita akan belajar cara modifikasi komponen panel Bootstrap
-untuk dijadikan Card.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini tampilan hasil akhir yang akan kita buat:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;panel bootstrap sebagai card&#34;
-    src=&#34;https://1.bp.blogspot.com/-0EKCQDsPHPs/WMfRU8kIjYI/AAAAAAAAEZM/9bX9E4TSGTg_Z0VbrROgBRTUtWiEKPrdQCK4B/s1600/panel-bootstrap-sebagai-card.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;mempersiapkan-grid-layout&#34;&gt;Mempersiapkan Grid Layout&lt;/h2&gt;
-
-&lt;p&gt;Pertama, kita siapkan dulu grid layout dengan empat kolom.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
-    &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt;
-            &amp;lt;!-- komponen panel di sini  --&amp;gt;
-        &amp;lt;/div&amp;gt;
-
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;menambahkan-panel&#34;&gt;Menambahkan Panel&lt;/h2&gt;
-
-&lt;p&gt;Nah selanjutnya, kita buat panelnya. Ada empat item yang ingin kita tampilkan:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Gambar Artikel&lt;/li&gt;
-&lt;li&gt;Label&lt;/li&gt;
-&lt;li&gt;Judul Artikel&lt;/li&gt;
-&lt;li&gt;Penulis&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Maka kode panelnya akan seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default&amp;quot;&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
-        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
-        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
-        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
-        &amp;lt;/h3&amp;gt;
-
-        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
-            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nah silahkan masukan kode panel di atas ke dalam kode sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Demo hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/BWdoEM/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Agar tinggi card terlihat sama, gunakan ukuran gambar artikel yang sama. Rekomendasi
-ukuran 700x350 px.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kode-css&#34;&gt;Kode CSS&lt;/h2&gt;
-
-&lt;p&gt;Terlihat pada hasil demo di atas, tampilannya masih belum rapi. Karena menggunakan
-style dari Bootstrap.&lt;/p&gt;
-
-&lt;p&gt;Tugas kita selanjutnya adalah membuat kode CSS sendiri untuk mengatur komponen
-panel tersebut.&lt;/p&gt;
-
-&lt;p&gt;Seperti yang terlihat pada kode panel di atas, terdapat
-&lt;em&gt;class&lt;/em&gt; yang harus kita buat.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;.post-body&lt;/code&gt;: untuk mengatur agar tinggi card sejajar&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-thumb&lt;/code&gt;: untuk mengatur tampilan gambar artikel&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-title&lt;/code&gt;: judul artikel&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.post-author&lt;/code&gt; dan &lt;code&gt;.author-photo&lt;/code&gt; untuk nama dan foto penulisya&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Mari kita buat kodenya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/* tinggi card */
-.post-body {
-    height: 215px;
-    position: relative;
-    padding: 20px 15px 0;
-}
-
-/* untuk menghilangkan padding pada .panel-heading */
-.post-thumb {
-    padding: 0
-}
-
-/* mengatur font dan link judul artikel*/
-.post-title a {
-    color: rgba(0,0,0,0.7);
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 1.5em;
-    letter-spacing: 0.01rem;
-}
-.post-title a:hover { text-decoration: none }
-
-/* posisi author selalu di bawah */
-.post-author {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    font-size: 13px;
-}
-
-.post-author .author-photo {
-    margin-right: 10px;
-    border-radius: 50%;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Demo hasil setelah ditambahkan CSS:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/OpjMbe/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Terlihat cukup bagus.&lt;/p&gt;
-
-&lt;p&gt;Silahkan lakukan kreasi sesukamu.&lt;/p&gt;
-
-&lt;h2 id=&#34;bonus-efek-bayangan-ketika-card-disentuh&#34;&gt;Bonus: Efek Bayangan Ketika Card disentuh&lt;/h2&gt;
-
-&lt;p&gt;Baiklah, sebagai bonus, kita tambahkan efek bayangan ketika card-nya disentuh
-pointer. Efek ini akan membuat card terlihat lebih keren :smile:.&lt;/p&gt;
-
-&lt;p&gt;Tambahkan kode CSS berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.card:hover {
-    box-shadow: 0px 2px 20px rgba(0,0,0,0.2);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, gunakan class &lt;code&gt;.card&lt;/code&gt; pada panel:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;panel panel-default card&amp;quot;&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-heading post-thumb&amp;quot;&amp;gt;
-        &amp;lt;img class=&amp;quot;img img-responsive&amp;quot; src=&amp;quot;gambar.jpg&amp;quot; /&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-    &amp;lt;div class=&amp;quot;panel-body post-body&amp;quot;&amp;gt;
-        &amp;lt;a class=&amp;quot;label label-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;Label&amp;lt;/a&amp;gt;
-        &amp;lt;h3 class=&amp;quot;post-title&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Judul Artikel&amp;lt;/a&amp;gt;
-        &amp;lt;/h3&amp;gt;
-
-        &amp;lt;div class=&amp;quot;post-author&amp;quot;&amp;gt;
-            &amp;lt;img class=&amp;quot;author-photo&amp;quot; height=&amp;quot;32&amp;quot; src=&amp;quot;foto.jpg&amp;quot; width=&amp;quot;32&amp;quot;&amp;gt;
-            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Penulis&amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka hasilnya akan seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe height=&#34;360&#34; width=&#34;600&#34;
-src=&#34;https://codepen.io/ardianta/embed/PpKZKr/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Bagaimana, mudah bukan?&lt;/p&gt;
-
-&lt;p&gt;Selamat berkreasi.&lt;/p&gt;
-</description>
+Mempersiapkan Grid Layout Pertama, kita siapkan dulu grid layout dengan empat kolom.
+&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;col-md-3&amp;quot;&amp;gt; &amp;lt;!</description>
     </item>
     
     <item>
@@ -237,232 +32,8 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
       <pubDate>Fri, 24 Feb 2017 15:28:09 +0800</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-sass-untuk-pemula/</guid>
-      <description>
-
-&lt;p&gt;Setelah mahir CSS, selanjutnya kita bisa coba SASS. SASS singkatan dari
-&lt;em&gt;Syntactically Awesome Style Sheets&lt;/em&gt;, merupakan sebuah bahasa tambahan
-&lt;em&gt;(preprocessor)&lt;/em&gt; untuk CSS yang akan membuat kita menulis kode lebih efisien.
-Karena dengan SASS kita dapat mengurangi pengulangan, &lt;em&gt;maintenance&lt;/em&gt; kode CSS lebih mudah,
-menulis kode yang bersih dan rapi.&lt;/p&gt;
-
-&lt;h2 id=&#34;persiapan-dan-instalasi-sass&#34;&gt;Persiapan dan Instalasi SASS&lt;/h2&gt;
-
-&lt;p&gt;Sebelum kita mulai tutorial ini, persiapkan dulu alat tempurnya. Pertama,
-Pastikan sudah menginstal &lt;a href=&#34;https://www.petanikode.com/topik/ruby&#34;&gt;Ruby&lt;/a&gt; dan &lt;a href=&#34;https://www.petanikode.com/topik/gem&#34;&gt;Gem&lt;/a&gt; di dalam komputernya.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, baru kita bisa instal SASS. Silahkan ketik perintah berikut untuk
-menginstal.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo gem install sass
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Masih belum jelas, silahkan simak video ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe
-width=&#34;836&#34;
-height=&#34;736&#34;
-sandbox=&#34;allow-scripts allow-same-origin&#34;
-src=&#34;https://asciinema.org/api/asciicasts/104463?&amp;speed=2&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;bagaimana-cara-kerja-sass&#34;&gt;Bagaimana Cara kerja SASS?&lt;/h2&gt;
-
-&lt;p&gt;SASS seperti bahasa pemrograman, kita perlu kompilasi dulu sebelum dapat digunakan.
-Kompilasi &lt;em&gt;(compile)&lt;/em&gt; artinya mengubah kode menjadi bentuk yang siap digunakan.
-Cara kompilasi SASS dapat dilakukan dengan perintah berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sass style.scss style.css
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tunggu sebentar! kok ekstensinya &lt;code&gt;.scss&lt;/code&gt; bukan &lt;code&gt;.sass&lt;/code&gt;?&lt;/p&gt;
-
-&lt;p&gt;Menurut penjelasan &lt;a href=&#34;http://thesassway.com/editorial/sass-vs-scss-which-syntax-is-better&#34;&gt;thesassway.com&lt;/a&gt;,
-awalnya sintak SASS cukup sulit dipahami karena sangat berbeda dengan CSS.
-Pada akhirnya, di versi 3, SASS memperkenalkan struktur sintak barunya yaitu
-SCSS &lt;em&gt;(Sassy CSS)&lt;/em&gt; yang lebih mirip dengan CSS dan mudah dipelajari bagi pemula.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;nesting-bersarang&#34;&gt;Nesting (Bersarang)&lt;/h2&gt;
-
-&lt;p&gt;Pertama kita akan pelajari fitur &lt;em&gt;nesting&lt;/em&gt; di SASS. &lt;em&gt;Nesting&lt;/em&gt; merupakan sebuah
-teknik penulisan yang meletakan selektor di dalam selektor yang lainya. Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.ibu {
-    color: blue;
-    .anak {
-        font-size: 12px;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Selektor &lt;code&gt;.anak&lt;/code&gt; berada dalam selektor &lt;code&gt;.ibu&lt;/code&gt;. Setelah dikompilasi ke CSS, akan
-menghasilkan kode seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.ibu {
-  color: blue;
-}
-
-.ibu .anak {
-    font-size: 12px;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bagaiaman, mudah bukan?&lt;/p&gt;
-
-&lt;p&gt;Sekarang mari kita coba praktikan. Buat sebuah struktur file seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;belajar-sass/
-├── index.html
-└── style.scss
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Silahkan buat kode &lt;code&gt;index.html&lt;/code&gt; seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style.css&amp;quot; /&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-&amp;lt;header&amp;gt;
-    &amp;lt;div class=&amp;quot;title&amp;quot;&amp;gt;
-        &amp;lt;h1&amp;gt;Belajar SASS&amp;lt;/h1&amp;gt;
-        &amp;lt;span class=&amp;quot;slogan&amp;quot;&amp;gt;Gampang bangeett!!&amp;lt;/span&amp;gt;
-    &amp;lt;/div&amp;gt;
-&amp;lt;/header&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu buat kode SASS seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.title {
-    border: 4px solid black;
-    text-align: center;
-    padding: 60px;
-    font-family: sans;
-    .slogan {
-        font-size: 18px;
-        color: rgba(0,0,0,0.3);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Lakukan kompilasi dengan perintah ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sass style.scss style.css
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang kita sudah punya file &lt;code&gt;style.css&lt;/code&gt; yang merupakan hasil dari kompilasi
-kode SASS.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;belajar-sass/
-├── index.html
-├── style.css
-├── style.css.map
-└── style.scss
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang cobalah buka dengan browser, hasilnya kira-kira akan seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe
-    height=&#39;300&#39;
-    width=&#39;600&#39;
-    scrolling=&#39;no&#39;
-    title=&#39;Belajar SASS&#39;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34; src=&#39;https://codepen.io/ardianta/embed/mWdaGR/?height=300&amp;theme-id=16572&amp;default-tab=result&amp;embed-version=2&#39;&gt;
-    See the Pen &lt;a href=&#39;http://codepen.io/ardianta/pen/mWdaGR/&#39;&gt;Belajar SASS&lt;/a&gt; by Ardianta Pargo (&lt;a href=&#39;http://codepen.io/ardianta&#39;&gt;@ardianta&lt;/a&gt;).
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;nested-untuk-properti&#34;&gt;&lt;em&gt;Nested&lt;/em&gt; untuk Properti&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Nested&lt;/em&gt; tidak hanya untuk selektor saja. Kita juga bisa melakukan &lt;em&gt;nested&lt;/em&gt;
-untuk properti. Misalnya seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.title {
-    border:{
-        top: 4px solid black;
-        bottom: 4px solid black;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah dikompilasi akan menghasilkan kode CSS seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.title {
-    border-top: 4px solid black;
-    border-bottom: 4px solid black;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Mari kita coba! Sekarang ubahlah kode yang tadi seperti contoh di atas.
-Buat &lt;em&gt;nested&lt;/em&gt; untuk properti.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe
-    height=&#39;300&#39;
-    width=&#39;600&#39;
-    scrolling=&#39;no&#39;
-    title=&#39;Belajar SASS&#39;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34; src=&#39;https://codepen.io/ardianta/embed/YZzBwV/?height=300&amp;theme-id=16572&amp;default-tab=css&amp;embed-version=2&#39;&gt;
-    See the Pen &lt;a href=&#39;http://codepen.io/ardianta/pen/YZzBwV/&#39;&gt;Belajar SASS&lt;/a&gt; by Ardianta Pargo (&lt;a href=&#39;http://codepen.io/ardianta&#39;&gt;@ardianta&lt;/a&gt;).
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Kompilasi lagi, dan lihatlah hasilnya.&lt;/p&gt;
-
-&lt;h2 id=&#34;variabel-dalam-sass&#34;&gt;Variabel dalam SASS&lt;/h2&gt;
-
-&lt;p&gt;SASS memungkinkan kita untuk membuat variabel untuk menyimpan sebuah nilai.
-Nilai yang tersimpan dapat berupa nilai properti, angka, teks, ukuran elemen,
-url gambar, dsb. Pembuatan variabel di SASS menggunaan simbol dolar (&lt;code&gt;$&lt;/code&gt;),
-kemudian diikuti nama variabelnya. Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;$border-default: 4px solid black;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pada contoh di atas, kita membuat sebuah variabel bernama &lt;code&gt;$border-default&lt;/code&gt;
-dengan isi berupa nilai &lt;code&gt;border&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Kita dapat menggunakan variabel tersebut dengan cara seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;.title {
-    border: {
-        top: $border-default;
-        bottom: $border-default;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Mudah bukan?&lt;/p&gt;
-
-&lt;p&gt;Sekarang cobalah untuk membuat variabel seperti contoh di atas.
-Tambahkan juga beberapa variabel yang lain.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe
-    height=&#39;300&#39;
-    width=&#39;600&#39;
-    scrolling=&#39;no&#39;
-    title=&#39;Belajar SASS&#39;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34; src=&#39;https://codepen.io/ardianta/embed/dvyaeV/?height=300&amp;theme-id=16572&amp;default-tab=css&amp;embed-version=2&#39;&gt;
-    See the Pen &lt;a href=&#39;http://codepen.io/ardianta/pen/dvyaeV/&#39;&gt;Belajar SASS: variabel&lt;/a&gt; by Ardianta Pargo (&lt;a href=&#39;http://codepen.io/ardianta&#39;&gt;@ardianta&lt;/a&gt;).
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
-
-&lt;p&gt;Sampai di sini, sepertinya kita sudah mengenal SASS. Sudah merasakan mudahnya
-membuat CSS dengan SASS. Masih banyak lagi yang belum kita pelajari tentang SASS.
-Karena itu, nantikan terus update terbaru di blog ini ya :smile:.&lt;/p&gt;
-</description>
+      <description>Setelah mahir CSS, selanjutnya kita bisa coba SASS. SASS singkatan dari Syntactically Awesome Style Sheets, merupakan sebuah bahasa tambahan (preprocessor) untuk CSS yang akan membuat kita menulis kode lebih efisien. Karena dengan SASS kita dapat mengurangi pengulangan, maintenance kode CSS lebih mudah, menulis kode yang bersih dan rapi.
+Persiapan dan Instalasi SASS Sebelum kita mulai tutorial ini, persiapkan dulu alat tempurnya. Pertama, Pastikan sudah menginstal Ruby dan Gem di dalam komputernya.</description>
     </item>
     
     <item>
@@ -471,78 +42,9 @@ Karena itu, nantikan terus update terbaru di blog ini ya :smile:.&lt;/p&gt;
       <pubDate>Mon, 06 Feb 2017 07:15:11 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-membuat-halaman-github-untuk-proyek-atau-repositori/</guid>
-      <description>
-
-&lt;p&gt;Pada tulisan sebelumnya, saya pernah membahas tentang &lt;a href=&#34;https://www.petanikode.com/2017/01/cara-membuat-halaman-github-kurang-dari-10-menit/&#34;&gt;cara membuat halaman
-Github untuk profil individu dan organisasi&lt;/a&gt;.
-Nah, kali ini kita akan membuat halaman github untuk proyek atau repositori.&lt;/p&gt;
-
-&lt;p&gt;Jadi sebenarnya, setiap proyek atau respositori di Github itu bisa dijadikan
-halaman Github &lt;em&gt;(Github Pages)&lt;/em&gt;. Pastikan di dalam proyek berisi file web statis
-seperti HTML, CSS, dan Javascript.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-repositori&#34;&gt;Membuat repositori&lt;/h2&gt;
-
-&lt;p&gt;Buatlah repositori dengan nama apa saja, kemudian di dalamnya berisi file web statis.
-Setelah itu, upload ke github.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
-git add .
-git commit -m &amp;quot;commit pertama&amp;quot;
-git add remote origin https://github.com/{username}/{nama-repo}
-git push origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;pengaturan-repositori&#34;&gt;Pengaturan Repositori&lt;/h2&gt;
-
-&lt;p&gt;Klik tombol &lt;em&gt;Settings&lt;/em&gt; pada repositori untuk masuk ke pengaturan repositori,
-kemudian gulung ke bawah sampai menemukan bagian &lt;em&gt;Github Pages&lt;/em&gt;. Lalu pada
-&lt;em&gt;Source&lt;/em&gt;, pilih cabang &lt;em&gt;(branch)&lt;/em&gt; yang akan menjadi halaman Github. Kemudian simpan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;748&#34;
-height=&#34;462&#34;
-alt=&#34;Membuat halaman github untuk repositori.png&#34;
-src=&#34;https://1.bp.blogspot.com/-wfzIqx9du78/WJe3rJKMs1I/AAAAAAAADxg/qleBmhPbOEggZ9EnYU_6-4hH_eIYYkC7gCPcB/s1600/Membuat%2Bhalaman%2Bgithub%2Buntuk%2Brepositori.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sebagai contoh, saya menggunakan cabang &lt;code&gt;master&lt;/code&gt;. Sebenarnya tidak disarankan
-menggunakan cabang ini untuk halaman github. Kita disarankan menggunakan cabang lain, tapi
-harus dibuat terlebih dahulu. Cara pembuatan cabang dapat dilakukan dengan perintah berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout -b nama-cabang
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;percobaan&#34;&gt;Percobaan&lt;/h2&gt;
-
-&lt;p&gt;Setelah itu, beberapa detik kemudian, halaman akan langsung jadi. Kita bisa
-mengaksesnya melalui alamat &lt;code&gt;https://{username}.github.io/nama-repo&lt;/code&gt;. Karena
-saya sudah menggunakan domain untuk halaman github, maka nanti saya akan
-mengaksesnya melalui &lt;code&gt;http://petanikode.com/nama-repo&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Contoh yang sudah saya buat:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Halaman Github: &lt;a href=&#34;http://petanikode.com/amp-tools&#34;&gt;http://petanikode.com/amp-tools&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Repositorinya: &lt;a href=&#34;https://github.com/petanikode/amp-tools/&#34;&gt;https://github.com/petanikode/amp-tools/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Selain cara ini, ada juga cara lain, yaitu melalui direktori &lt;code&gt;docs&lt;/code&gt;. Mungkin
-akan saya bahas pada kesempatan berikutnya. Tetap pantau blog ini ya, :smile:.&lt;/p&gt;
-
-&lt;p&gt;Jadi, itulah cara membuat halaman
-github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/p&gt;
-</description>
+      <description>Pada tulisan sebelumnya, saya pernah membahas tentang cara membuat halaman Github untuk profil individu dan organisasi. Nah, kali ini kita akan membuat halaman github untuk proyek atau repositori.
+Jadi sebenarnya, setiap proyek atau respositori di Github itu bisa dijadikan halaman Github (Github Pages). Pastikan di dalam proyek berisi file web statis seperti HTML, CSS, dan Javascript.
+Membuat repositori Buatlah repositori dengan nama apa saja, kemudian di dalamnya berisi file web statis.</description>
     </item>
     
     <item>
@@ -551,111 +53,8 @@ github untuk repositori atau proyek. Apakah kalian sudah pernah membuatnya?&lt;/
       <pubDate>Fri, 25 Nov 2016 15:19:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-web-responsif-pengenalan-rwd-dan-viewport/</guid>
-      <description>
-
-&lt;p&gt;Bagaimana cara membuat web responsif? itulah pertanyaan yang cukup sering ditanyakan
-kepada saya. Pertanyaan ini membutuhkan jawaban yang cukup panjang,
-karena itu saya tidak bisa langsung menjawab secara detail melalui
-lisan maupun pesan instan, selain itu juga waktu yang tidak mendukung.
-Berangkat dari keterbatasan itu, akhirnya saya menrebitkan tulisan ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;apakah-itu-rwd&#34;&gt;Apakah itu RWD?&lt;/h2&gt;
-
-&lt;p&gt;RWD singkatan dari &lt;em&gt;Responsive Web Design&lt;/em&gt;. Responsif artinya webnya dapat
-merespon atau menyesuaikan diri dengan perangkat yang digunakan.
-Misalnya kita membuka webnya melalui ponsel, maka secara otomatis tampilan
-webnya akan disesuikan dengan ukuran layar ponselnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;web-responsif-petanikode.jpg&#34;
-    src=&#34;http://1.bp.blogspot.com/-MCZ3AuXYuWE/WDfTTUPuYuI/AAAAAAAADbQ/aEiKsTSoRSA4umhvvQB4HbTMu90Te2HwgCK4B/s1600/web-responsif-petanikode.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kemunculan teknologi-teknologi &lt;em&gt;mobile&lt;/em&gt; seperti saat ini, membuat kita harus
-menggunakan RWD agar web kita dapat ditampilkan dengan baik di semua perangkat.&lt;/p&gt;
-
-&lt;h2 id=&#34;mengenal-viewport&#34;&gt;Mengenal &lt;em&gt;ViewPort&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;ViewPort&lt;/em&gt; adalah area web yang terlihat dari perangkat &lt;em&gt;(visible area)&lt;/em&gt;.
-Antara komputer dengan ponsel tentu saja memiliki ukuran &lt;em&gt;ViewPort&lt;/em&gt; yang berbeda.
-Ponsel lebih sempit, sedangkan komputer lebih luas.&lt;/p&gt;
-
-&lt;p&gt;Baca Juga: &lt;a href=&#34;https://www.petanikode.com/2016/01/tutorial-bootstrap-3---memahami-fungsi-viewport/&#34;&gt;Tutorial Bootstrap: Memahami Fungsi ViewPort&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-mengatur-viewport&#34;&gt;Cara Mengatur &lt;em&gt;ViewPort&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Kita bisa mengatur &lt;em&gt;ViewPort&lt;/em&gt; sebuah web melalui tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;,
-tapi sebelum melakukan itu, cobalah untuk membuat halaman web dengan kode berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;title&amp;gt;Belajar Web Responsif&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-    &amp;lt;div&amp;gt;
-        &amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;lt;/p&amp;gt;
-    &amp;lt;/div&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya ketika dibuka melalui ponsel:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;427&#34;
-    height=&#34;637&#34;
-    alt=&#34;Web+tanpa+viewport+di+Ponsel+Android.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-ELePoaNCte0/WDfgnP7nHRI/AAAAAAAADbg/SJ_eVKdDRGkHEWJtY0nz95zueUq3O29kACK4B/s1600/Web%2Btanpa%2Bviewport%2Bdi%2BPonsel%2BAndroid.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang, coba modifikasi kode tadi. Tambahkan tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; untuk mengatur &lt;em&gt;ViewPort&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;title&amp;gt;Belajar Web Responsif&amp;lt;/title&amp;gt;&amp;lt;br&amp;gt;
-    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1&amp;quot;&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-    &amp;lt;div&amp;gt;
-        &amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;lt;/p&amp;gt;
-    &amp;lt;/div&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya setelah ditambahkan &lt;em&gt;ViewPort&lt;/em&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;426&#34;
-    height=&#34;635&#34;
-    alt=&#34;Web+dengan+ViewPort+di+ponsel+android.png&#34;
-    src=&#34;http://4.bp.blogspot.com/-HCvVviNGj8I/WDfi31o3sWI/AAAAAAAADbs/puaEgnZEocos4CX8Ki9LU1ykcguu2M51wCK4B/s1600/Web%2Bdengan%2BViewPort%2Bdi%2Bponsel%2Bandroid.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah, bagaimana? sudah tahu &amp;lsquo;kan perbedaanya. Kita baru saja mengetahui fungsi
-dari &lt;em&gt;Viewport&lt;/em&gt; dalam RWD &lt;em&gt;(Responsive Web Design)&lt;/em&gt;. Cukup sampai di sini dulu,
-selanjutnya kita akan pelajari satuan-satuan yang digunakan pada RWD.&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya: Satuan Ukuran untuk RWD (draf)&lt;/p&gt;
-</description>
+      <description>Bagaimana cara membuat web responsif? itulah pertanyaan yang cukup sering ditanyakan kepada saya. Pertanyaan ini membutuhkan jawaban yang cukup panjang, karena itu saya tidak bisa langsung menjawab secara detail melalui lisan maupun pesan instan, selain itu juga waktu yang tidak mendukung. Berangkat dari keterbatasan itu, akhirnya saya menrebitkan tulisan ini.
+Apakah itu RWD? RWD singkatan dari Responsive Web Design. Responsif artinya webnya dapat merespon atau menyesuaikan diri dengan perangkat yang digunakan.</description>
     </item>
     
     <item>
@@ -664,121 +63,11 @@ selanjutnya kita akan pelajari satuan-satuan yang digunakan pada RWD.&lt;/p&gt;
       <pubDate>Sat, 22 Oct 2016 22:23:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-css-warna/</guid>
-      <description>
-
-&lt;p&gt;Nilai warna dalam CSS dapat kita berikan dengan berbagai cara.
-Salah satunya dengan menuliskan nama warna dalam bahasa inggris.&lt;/p&gt;
-
-&lt;p&gt;Misalnya, warna teks untuk paragraf adalah merah, maka kita bisa
-berikan &lt;code&gt;color:red&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Selain menggunakan nama warna, terdapat juga cara lain yang valid
-seperti fungsi &lt;code&gt;rgb()&lt;/code&gt;, kode heksa, dsb.&lt;/p&gt;
-
-&lt;p&gt;Mari kita bahas semuanya&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;1-nama-warna&#34;&gt;1. Nama warna&lt;/h2&gt;
-
-&lt;p&gt;Nama warna merupakan cara yang sering digunakan, karena lebih mudah mengingatnya.
-Misalnya, saya suka warna hijau &lt;em&gt;(teal)&lt;/em&gt;, maka nanti dalam CSS-nya bisa langsung kita tulis &lt;code&gt;teal&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;header {
-    background: teal;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;2-kode-heksadesimal&#34;&gt;2. Kode Heksadesimal&lt;/h2&gt;
-
-&lt;p&gt;Kode heksadesmial merupakan kode yang menggunakan bilangan heksa desmial,
-memiliki nilai dari &lt;code&gt;0&lt;/code&gt; sampai &lt;code&gt;f&lt;/code&gt; (16 dalam desimal).&lt;/p&gt;
-
-&lt;p&gt;Kode heksa demsial diawali dengan tanda pagar (&lt;code&gt;#&lt;/code&gt;),
-kemudian diikuti kode heksanya. Kode ini dapat terdiri dari 3 digit
-atau 6 digit bilangan.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#0011ff (6 digit)
-#01f (3 digit)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setiap angka dalam kode heksa desimal menentukan nilai warna dalam RGB
-(&lt;code&gt;#RRGGBB&lt;/code&gt; atau &lt;code&gt;#RGB&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;Misalnya untuk yang enam digit, dua angka di depan adalah untuk nilai
-warna merah, dua angka berikutnya untuk warna hijua, dan dua angka terakhir untuk warna biru.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-uJxloO6zsjg/WAtj44D3HiI/AAAAAAAADWA/HWwSTgdoKYoVS4A-2lbynLjH7C3162cDgCK4B/s1600/nilai%2Bwarna%2Bdengan%2Bkode%2BHeksa.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-uJxloO6zsjg/WAtj44D3HiI/AAAAAAAADWA/HWwSTgdoKYoVS4A-2lbynLjH7C3162cDgCK4B/s1600/nilai%2Bwarna%2Bdengan%2Bkode%2BHeksa.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-fungsi-rgb&#34;&gt;3. Fungsi RGB&lt;/h2&gt;
-
-&lt;p&gt;Fungsi RGB memiliki tiga parameter, yaitu nilai untuk merah &lt;em&gt;(red)&lt;/em&gt;,
-hijau &lt;em&gt;(green)&lt;/em&gt;, dan biru &lt;em&gt;(blue)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Nilai yang diberikan pada parameter tersebut dimulai dari angka &lt;code&gt;0&lt;/code&gt;~&lt;code&gt;255&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Semakin besar nilai yang diberikan, semakin kuat nilai warna tersebut.&lt;/p&gt;
-
-&lt;p&gt;Contoh penggunaan fungsi RGB.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;h2 {
-    color: rgb(88, 255, 21);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pada contoh diatas, nilai paramter kedua &lt;em&gt;(green)&lt;/em&gt; diberikan maksimal,
-maka nanti hasilnya warna hijau akan menjadi warna dominan.&lt;/p&gt;
-
-&lt;h2 id=&#34;4-fungsi-rgba&#34;&gt;4. Fungsi RGBA&lt;/h2&gt;
-
-&lt;p&gt;Fungsi ini sama seperti fungsi RGB, tapi ada penambahan A dibelakangnya.
-Huruf A artinya &lt;em&gt;Alpha&lt;/em&gt;. Nilai &lt;em&gt;alpha&lt;/em&gt; ini akan menjadi nilai transparansi dari warnanya.&lt;/p&gt;
-
-&lt;p&gt;Nilai &lt;em&gt;alpha&lt;/em&gt; dapat diberikan dari &lt;code&gt;0.0&lt;/code&gt;~&lt;code&gt;1.0&lt;/code&gt;. Semakin mendekati angka satu,
-warnanya akan semakin terang dan semakin mendekati angka nol, warnanya akan
-semakin menghilang. Contoh penggunaan fungsi RGBA.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p {
-    background: rgba(40,23,11,0.7);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pada contoh di atas, nilai &lt;em&gt;alpha&lt;/em&gt; yang diberikan adalah &lt;code&gt;0.7&lt;/code&gt;, atau sama dengan &lt;code&gt;70%&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;5-fungsi-hsl&#34;&gt;5. Fungsi HSL&lt;/h2&gt;
-
-&lt;p&gt;HSL merupakan singkatan dari &lt;em&gt;Hue&lt;/em&gt;, &lt;em&gt;Saturation,&lt;/em&gt; &lt;em&gt;Lightness&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Nilai H &lt;em&gt;(hue)&lt;/em&gt; yang diberikan pada fungsi ini dimulai dari &lt;code&gt;0&lt;/code&gt;~&lt;code&gt;360&lt;/code&gt;, karena palet warna HSL bentuknya seperti tabung, sehingga yang digunakan adalah nilai derajat dari tutup tabungnya.&lt;/p&gt;
-
-&lt;p&gt;Sedangkan untuk nilai S dan L menggunakan persen, dari &lt;code&gt;0%&lt;/code&gt;~&lt;code&gt;100%&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/HSL_color_solid_cylinder_alpha_lowgamma.png/640px-HSL_color_solid_cylinder_alpha_lowgamma.png&#34;&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/HSL_color_solid_cylinder_alpha_lowgamma.png/640px-HSL_color_solid_cylinder_alpha_lowgamma.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Contoh penggunaan fungsi HSL dalam CSS:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;h3 {
-    background: hsl(324, 70%, 40%);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;6-fungsi-hsla&#34;&gt;6. Fungsi HSLA&lt;/h2&gt;
-
-&lt;p&gt;Seperti fungsi RGB, fungsi HSL juga memiliki nilai &lt;em&gt;alpha&lt;/em&gt; untuk menyatakan
-nilai transparansi warna.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;h2 {
-    background: hsla(267, 80%, 45%, 0.6);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Itulah 6 nilai warna yang valid dalam CSS.
-Manakah cara yang paling sering kalian gunakan?&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;http://www.w3schools.com/cssref/css_colors_legal.asp&#34;&gt;w3schools&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Nilai warna dalam CSS dapat kita berikan dengan berbagai cara. Salah satunya dengan menuliskan nama warna dalam bahasa inggris.
+Misalnya, warna teks untuk paragraf adalah merah, maka kita bisa berikan color:red.
+Selain menggunakan nama warna, terdapat juga cara lain yang valid seperti fungsi rgb(), kode heksa, dsb.
+Mari kita bahas semuanya&amp;hellip;
+1. Nama warna Nama warna merupakan cara yang sering digunakan, karena lebih mudah mengingatnya. Misalnya, saya suka warna hijau (teal), maka nanti dalam CSS-nya bisa langsung kita tulis teal.</description>
     </item>
     
     <item>
@@ -787,8 +76,10 @@ Manakah cara yang paling sering kalian gunakan?&lt;/p&gt;
       <pubDate>Sun, 21 Aug 2016 15:18:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-font-awesome/</guid>
-      <description>&lt;p&gt;Dulu saya sempat berpikir, pembuatan web kelihatannya susah. Karena banyak komponen yang harus dibuat, seperti &lt;i&gt;background&lt;/i&gt; dan ikon. Tapi ternyata tidak, soalnya ada framework yang dapat kita gunakan untuk membuat ikon dengan cepat. Nama framework-nya adalah Font Awesome.&lt;br /&gt;&lt;br /&gt;Font awesome merupakan sebuah framework CSS untuk membuat ikon. Font awesome memiliki ratusan ikon yang siap dipakai. Pada kesempatan ini, kita akan belajar cara menggunakanya. Silahkan disimak.&lt;br /&gt;&lt;h2&gt;1. Download Font Awesome&lt;/h2&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-JDOI26gPtMQ/Vp6ZvBMCu2I/AAAAAAAACbo/G1hXw7Y-sso/s1600/Download%2BFont-awesome%2B-%2BPetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-JDOI26gPtMQ/Vp6ZvBMCu2I/AAAAAAAACbo/G1hXw7Y-sso/s1600/Download%2BFont-awesome%2B-%2BPetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Silahkan download Font Awesome di &lt;a href=&#34;http://fontawesome.io/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://fontawesome.io/&#34;&gt;http://fontawesome.io/&lt;/a&gt;&lt;/a&gt;, kemudian ekstrak isinya ke dalam direktori proyek (web).&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-dBL6HhliWSg/Vp6bjlMqJOI/AAAAAAAACb0/83eaU9-V20E/s1600/Ekstrak%2Bfile%2BFont-awesome%2Bke%2Bdalam%2Bproyek%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-dBL6HhliWSg/Vp6bjlMqJOI/AAAAAAAACb0/83eaU9-V20E/s1600/Ekstrak%2Bfile%2BFont-awesome%2Bke%2Bdalam%2Bproyek%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Jangan lupa untuk mengubah namanya menjadi &lt;code&gt;font-awesome&lt;/code&gt; saja, agar mudah disisipkan dalam kode HTML. Serta, tambahkan juga file &lt;code&gt;index.html&lt;/code&gt;-nya.&lt;br /&gt;&lt;h2&gt;2. Menyisipkan Font Awesome&lt;/h2&gt;Penggunaan Font Awesome sama seperti Bootstrap. Kita tinggal me-link-kan file CSS-nya ke dalam file HTML web kita. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;font-awesome/css/font-awesome.min.css&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;Anda juga dapat memanfaatkan CDN, bila ingin menggunakan Font Awesome tampa &lt;i&gt;hosting&lt;/i&gt;.&lt;br /&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;&lt;a href=&#34;https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css&amp;quot;&#34;&gt;https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css&amp;quot;&lt;/a&gt; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2&gt;3. Membuat Ikon&lt;/h2&gt;Ikon dapat kita buat dengan tag &lt;i&gt;inline&lt;/i&gt; yang disertai kelas &lt;code&gt;fa&lt;/code&gt; (font awesome). Biasanya pada Bootstrap, kita menggunakan tag &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; untuk membuat ikon. Namun, pada Font Aawsome disarankan menggunakan tag &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt;. Karena lebih pendek. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;i class=&amp;ldquo;fa fa-coffee&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;fa&lt;/code&gt; = Nama kelas Font Awesome, wajib dipakai.&lt;/li&gt;&lt;li&gt;&lt;code&gt;fa-coffee&lt;/code&gt; = Nama ikon yang akan dipakai, lebih lengkap dapat &lt;a href=&#34;http://fontawesome.io/icons/&#34; target=&#34;_blank&#34;&gt;dilihat di sini&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;Hasil dari contoh di atas adalah: &lt;i class=&#34;fa fa-coffee&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;h2&gt;4. Ukuran Ikon&lt;/h2&gt;Ukuran ikon akan mengikuti ukuran font pada CSS, tapi dapat kita perbesar dan perkecil sesuai kebutuhan. Font Awesome menyediakan kelas-kelas untuk menentukan ukuran ikon, diantaranya: &lt;code&gt;fa-lg&lt;/code&gt; (33% lebih besar),&amp;nbsp; &lt;code&gt;fa-2x&lt;/code&gt;, &lt;code&gt;fa-3x&lt;/code&gt;, &lt;code&gt;fa-4x&lt;/code&gt;, dan &lt;code&gt;fa-5x&lt;/code&gt;. Contoh penggunaan:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;i class=&amp;ldquo;fa fa-coffee fa-2x&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;/code&gt;&lt;/pre&gt;Maka akan menghasilkan: &lt;i class=&#34;fa fa-coffee fa-2x&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;h2&gt;5. Ikon dengan Animasi&lt;/h2&gt;Font-awesome menyediakan kelas untuk menggerakkan ikon, diantaranya: &lt;code&gt;fa-spin&lt;/code&gt; dan &lt;code&gt;fa-pulse&lt;/code&gt;. Kelas ini terlihat bagus bila diterapkan pada ikon &lt;code&gt;fa-refresh&lt;/code&gt;, &lt;code&gt;fa-cog&lt;/code&gt;, dan &lt;code&gt;fa-spinner&lt;/code&gt;. Contoh penggunaan:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;i class=&amp;ldquo;fa fa-spinner fa-spin fa-3x fa-fw&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;br /&gt;&amp;lt;span class=&amp;ldquo;sr-only&amp;rdquo;&amp;gt;Loading&amp;hellip;&amp;lt;/span&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;i class=&amp;ldquo;fa fa-circle-o-notch fa-spin fa-3x fa-fw&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;br /&gt;&amp;lt;span class=&amp;ldquo;sr-only&amp;rdquo;&amp;gt;Loading&amp;hellip;&amp;lt;/span&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;i class=&amp;ldquo;fa fa-refresh fa-spin fa-3x fa-fw&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;br /&gt;&amp;lt;span class=&amp;ldquo;sr-only&amp;rdquo;&amp;gt;Loading&amp;hellip;&amp;lt;/span&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;i class=&amp;ldquo;fa fa-cog fa-spin fa-3x fa-fw&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;br /&gt;&amp;lt;span class=&amp;ldquo;sr-only&amp;rdquo;&amp;gt;Loading&amp;hellip;&amp;lt;/span&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;i class=&amp;ldquo;fa fa-spinner fa-pulse fa-3x fa-fw&amp;rdquo;&amp;gt;&amp;lt;/i&amp;gt;&lt;br /&gt;&amp;lt;span class=&amp;ldquo;sr-only&amp;rdquo;&amp;gt;Loading&amp;hellip;&amp;lt;/span&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;i class=&#34;fa fa-spinner fa-spin fa-3x fa-fw&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;span class=&#34;sr-only&#34;&gt;Loading&amp;hellip;&lt;/span&gt;&lt;br /&gt;&lt;i class=&#34;fa fa-circle-o-notch fa-spin fa-3x fa-fw&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;span class=&#34;sr-only&#34;&gt;Loading&amp;hellip;&lt;/span&gt;&lt;br /&gt;&lt;i class=&#34;fa fa-refresh fa-spin fa-3x fa-fw&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;span class=&#34;sr-only&#34;&gt;Loading&amp;hellip;&lt;/span&gt;&lt;br /&gt;&lt;i class=&#34;fa fa-cog fa-spin fa-3x fa-fw&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;span class=&#34;sr-only&#34;&gt;Loading&amp;hellip;&lt;/span&gt;&lt;br /&gt;&lt;i class=&#34;fa fa-spinner fa-pulse fa-3x fa-fw&#34;&gt;&lt;/i&gt;&lt;br /&gt;&lt;span class=&#34;sr-only&#34;&gt;Loading&amp;hellip;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Itulah 5 langkah untuk mengetahui cara penggunaan Font Awesome pada web. Penjelasan lebih lanjut, anda bisa pelajari di web &lt;a href=&#34;http://fontawesome.io/examples/&#34; target=&#34;_blank&#34;&gt;Font Awesome&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Dulu saya sempat berpikir, pembuatan web kelihatannya susah. Karena banyak komponen yang harus dibuat, seperti background dan ikon. Tapi ternyata tidak, soalnya ada framework yang dapat kita gunakan untuk membuat ikon dengan cepat. Nama framework-nya adalah Font Awesome.
+Font awesome merupakan sebuah framework CSS untuk membuat ikon. Font awesome memiliki ratusan ikon yang siap dipakai. Pada kesempatan ini, kita akan belajar cara menggunakanya. Silahkan disimak.
+1. Download Font Awesome
+Silahkan download Font Awesome di http://fontawesome.</description>
     </item>
     
     <item>
@@ -797,73 +88,12 @@ Manakah cara yang paling sering kalian gunakan?&lt;/p&gt;
       <pubDate>Wed, 20 Jul 2016 07:52:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-bootstrap-modifikasi-navbar/</guid>
-      <description>
+      <description>Ada dua jenis warna pilihan navbar yang ditawarkan Bootstrap: Warna putih (navbar-default) dan warna hitam (navbar-inverse).
+Selain dari dua warna tersebut, kita harus memodifikasinya sendiri.
+Pada kesempatan ini, saya akan berbagi cara cepat memodifikasi navbar Bootstrap dengan cepat.
+1. Menggunakan Generator Ada sebuah generator canggih yang dibuat oleh Samuel Marchal. Generator ini dapat diakses melalui alamat link: http://work.smarchal.com/twbscolor/.
 
-&lt;p&gt;Ada dua jenis warna pilihan navbar yang ditawarkan Bootstrap:
-Warna putih (&lt;code&gt;navbar-default&lt;/code&gt;) dan warna hitam (&lt;code&gt;navbar-inverse&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;Selain dari dua warna tersebut, kita harus memodifikasinya sendiri.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, saya akan berbagi cara cepat memodifikasi navbar
-Bootstrap dengan cepat.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-menggunakan-generator&#34;&gt;1. Menggunakan Generator&lt;/h2&gt;
-
-&lt;p&gt;Ada sebuah generator canggih yang dibuat oleh &lt;a href=&#34;http://smarchal.com/&#34;&gt;Samuel Marchal&lt;/a&gt;.
-Generator ini dapat diakses melalui alamat link: &lt;a href=&#34;http://work.smarchal.com/twbscolor/&#34;&gt;http://work.smarchal.com/twbscolor/&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-oU_a7c_9ZB4/V460LXkihEI/AAAAAAAADEM/g4J3PH01rcYC8QlABJh_m2WIKoANvoS2wCK4B/s1600/Generator%2BNavbar%2BBootstrap.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-oU_a7c_9ZB4/V460LXkihEI/AAAAAAAADEM/g4J3PH01rcYC8QlABJh_m2WIKoANvoS2wCK4B/s1600/Generator%2BNavbar%2BBootstrap.png&#34; alt=&#34;Generator Navbar Bootstrap&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Kita dapat menentukan warna navbar bootstrap sesui selera.
-Kemudian akan diberikan kode CSS, LESS, SCSS, dan SASS yang dapat kita gunakan langsung.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-modifikasi-nama-kelas&#34;&gt;2. Modifikasi nama kelas&lt;/h2&gt;
-
-&lt;p&gt;Generator akan memberikan nama kelas &lt;code&gt;.navbar-default&lt;/code&gt;.
-Agar tidak bentrok dengan nama asli yang di Bootstrap, kita ganti saja,
-misalnya menjadi &lt;code&gt;.navbar-teal&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Penggantian nama ini sifatnya opsional, bisa juga tidak dilakukan.
-Namun, Saya lakukan agar struktur kode di proyek menjadi lebih rapi dan terbaca jelas.&lt;/p&gt;
-
-&lt;p&gt;Dengan memanfaatkan &lt;em&gt;Find and Replace&lt;/em&gt; di teks editor Atom, saya bisa dengan
-cepat merubah namanya.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-hZF1uRUZ9YQ/V462X5jy80I/AAAAAAAADEY/4WiKNA-p5IUvH-U9QQ2e-DhVAdwLvDbGACK4B/s1600/Ganti%2Bnama%2Bclass%2Bdefault%2Bnavbar%2Bbootstrap.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-hZF1uRUZ9YQ/V462X5jy80I/AAAAAAAADEY/4WiKNA-p5IUvH-U9QQ2e-DhVAdwLvDbGACK4B/s1600/Ganti%2Bnama%2Bclass%2Bdefault%2Bnavbar%2Bbootstrap.png&#34; alt=&#34;Ganti nama kelas navbar bootstrap&#34; /&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-uji-coba&#34;&gt;3. Uji Coba&lt;/h2&gt;
-
-&lt;p&gt;Saya menggunakan codeply untuk mencoba, dan berikut ini hasilnya:&lt;/p&gt;
-
-&lt;div data-codeply=&#34;3yJfZjAjfE&#34;&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;4-sedikit-modifikasi-lagi&#34;&gt;4. Sedikit modifikasi lagi&lt;/h2&gt;
-
-&lt;p&gt;Masih ada sedikit kekurangan dari kode CSS yang diberikan generator.
-Coba saja letakkan pointer di atas &lt;em&gt;navbar&lt;/em&gt;, tampilannya tidak cocok.
-Oleh karena itu, kita perlu modifikasi sedikit kode CSS-nya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.nav &amp;gt; li &amp;gt; a:focus, .nav &amp;gt; li &amp;gt; a:hover {
-    text-decoration: none;
-    background-color: rgba(255,255,255,0.1);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;div data-codeply=&#34;OXsuLLMwR4&#34;&gt;
-&lt;/div&gt;
-&lt;script src=&#34;http://codeply.com/js/embed.js&#34;&gt;
-&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
-
-&lt;p&gt;Generator yang dibuat oleh Samuel ini dapat membantu kita dengan cepat
-memodifikasi &lt;em&gt;navbar&lt;/em&gt; Bootstrap.
-Namun ada sedikit kekurangan, generator ini belum mampu membuat
-kode untuk &lt;em&gt;hover&lt;/em&gt; (ketika disentuh pointer).&lt;/p&gt;
-</description>
+Kita dapat menentukan warna navbar bootstrap sesui selera. Kemudian akan diberikan kode CSS, LESS, SCSS, dan SASS yang dapat kita gunakan langsung.</description>
     </item>
     
     <item>
@@ -872,8 +102,21 @@ kode untuk &lt;em&gt;hover&lt;/em&gt; (ketika disentuh pointer).&lt;/p&gt;
       <pubDate>Tue, 19 Jul 2016 08:50:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/mengganti-list-style-ul-dan-ol-dengan-ikon-fontawesome/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-iXWa0JBLikg/V4owZHnND9I/AAAAAAAADCM/PR3c5r3cIB4hlyL3_VhOZeFMiN_bpPV5wCK4B/s1600/Font-awesome-list-style-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-iXWa0JBLikg/V4owZHnND9I/AAAAAAAADCM/PR3c5r3cIB4hlyL3_VhOZeFMiN_bpPV5wCK4B/s1600/Font-awesome-list-style-petanikode.png&#34; /&gt;&lt;/a&gt;Saat memodifikasi halaman arsip dari &lt;a href=&#34;http://www.petanikode.com/p/arsip-petani-kode.html&#34; target=&#34;_blank&#34;&gt;blog ini&lt;/a&gt;. Saya ingin mengganti &lt;code&gt;list-style&lt;/code&gt; yang digunakan oleh elemen &lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt; atau &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;. Aslinya, bentuknya bulat dan angka. Kemudian saya ingin mengganti dengan ikon &lt;i&gt;fontawesome&lt;/i&gt;. Kebetulan &lt;i&gt;fontawesome&lt;/i&gt; sudah terinstal di blog ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link href=&amp;ldquo;&lt;a href=&#34;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&amp;quot;&#34;&gt;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&amp;quot;&lt;/a&gt; rel=&amp;ldquo;stylesheet&amp;rdquo; type=&amp;ldquo;text/css&amp;rdquo;&amp;gt;&amp;lt;/link&amp;gt;&lt;/code&gt;&lt;/pre&gt;Kode HTML:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;ol&amp;gt;&lt;br /&gt;&amp;lt;li&amp;gt;Item 1&amp;lt;/li&amp;gt;&lt;br /&gt;&amp;lt;li&amp;gt;Item 2&amp;lt;/li&amp;gt;&lt;br /&gt;&amp;lt;li&amp;gt;Item 3&amp;lt;/li&amp;gt; &lt;br /&gt;&amp;lt;/ol&amp;gt;&lt;/code&gt;&lt;/pre&gt;Kode CSS:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;ul {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; list-style: none;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; padding: 0;&lt;br /&gt;}&lt;br /&gt;li {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; padding-left: 1.3em;&lt;br /&gt;}&lt;br /&gt;li:before {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; content: &amp;ldquo;\f073&amp;rdquo;; /* FontAwesome Unicode &lt;em&gt;/&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; font-family: FontAwesome;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; display: inline-block;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; margin-left: -1.3em; /&lt;/em&gt; same as padding-left set on li &lt;em&gt;/&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; width: 1.3em; /&lt;/em&gt; same as padding-left set on li */&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Konsep kerja dari&amp;nbsp; kode CSS di atas adalah sebagai berikut:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Sebunyikan &lt;i&gt;list-style&lt;/i&gt; bawaannya. &lt;/li&gt;&lt;li&gt;Perbaiki ukuran &lt;i&gt;padding&lt;/i&gt;.&lt;/li&gt;&lt;li&gt;Gunakan ikon &lt;i&gt;fontawesome&lt;/i&gt;.&lt;/li&gt;&lt;/ol&gt;Perhatikan kode CSS di bagian &lt;code&gt;li:before&lt;/code&gt;, di sana terdapat atribut &lt;code&gt;content&lt;/code&gt;. Fungsinya untuk mengisi sesuatu sebelum elemen &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt;. Isi konten yang diberikan berupa karakter &lt;i&gt;unicode&lt;/i&gt; dari &lt;i&gt;fontawesome&lt;/i&gt;. Anda bisa temukan karakter &lt;i&gt;unicode fontawesome&lt;/i&gt; &lt;a href=&#34;https://astronautweb.co/snippet/font-awesome/&#34; target=&#34;_blank&#34;&gt;di sini&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;Hasilnya:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-BRGvQdAGPDQ/V4orJKXUEKI/AAAAAAAADB8/bxhOxIlgul4axHW4XR7AuuggAmkbQubtACK4B/s1600/Mengganti%2Bikon%2Bul%2Bol%2Bdengan%2Bfontawesome.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-BRGvQdAGPDQ/V4orJKXUEKI/AAAAAAAADB8/bxhOxIlgul4axHW4XR7AuuggAmkbQubtACK4B/s1600/Mengganti%2Bikon%2Bul%2Bol%2Bdengan%2Bfontawesome.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://stackoverflow.com/a/13354689&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/a/13354689&#34;&gt;http://stackoverflow.com/a/13354689&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Saat memodifikasi halaman arsip dari blog ini. Saya ingin mengganti list-style yang digunakan oleh elemen &amp;lt;ol&amp;gt; atau &amp;lt;ul&amp;gt;. Aslinya, bentuknya bulat dan angka. Kemudian saya ingin mengganti dengan ikon fontawesome. Kebetulan fontawesome sudah terinstal di blog ini.
+&amp;lt;link href=&amp;ldquo;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&amp;quot; rel=&amp;ldquo;stylesheet&amp;rdquo; type=&amp;ldquo;text/css&amp;rdquo;&amp;gt;&amp;lt;/link&amp;gt;Kode HTML:
+&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;Item 1&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Item 2&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Item 3&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt;Kode CSS:
+ul {
+&amp;nbsp;&amp;nbsp;&amp;nbsp; list-style: none;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; padding: 0;
+}
+li {
+&amp;nbsp;&amp;nbsp;&amp;nbsp; padding-left: 1.3em;
+}
+li:before {
+&amp;nbsp;&amp;nbsp;&amp;nbsp; content: &amp;ldquo;\f073&amp;rdquo;; /* FontAwesome Unicode /</description>
     </item>
     
     <item>
@@ -882,8 +125,15 @@ kode untuk &lt;em&gt;hover&lt;/em&gt; (ketika disentuh pointer).&lt;/p&gt;
       <pubDate>Tue, 12 Jul 2016 15:56:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/kesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan/</guid>
-      <description>&lt;p&gt;Saya menghabiskan cukup banyak waktu untuk mengatasi masalah ini. Sampai-sampai mencari di Google, tapi tidak dapat solusi. Ceritanya, saya sedang mengerjakan sebuah proyek dengan Admin LTE. Kemudian saya menggunakan Select2 untuk element &lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt;. Akan tetapi, tampilannya tidak seperti yang diharapkan.&lt;br /&gt;&lt;br /&gt;Kode HTML:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;kabupaten&amp;rdquo;&amp;gt;Kabupaten/Kota&amp;lt;/label&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;select name=&amp;ldquo;kabupaten&amp;rdquo; class=&amp;ldquo;select2 form-control&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option selected disabled&amp;gt;Pilih Kabupaten&amp;hellip;&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5201&amp;rdquo;&amp;gt;Kab. Lombok Barat&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5202&amp;rdquo;&amp;gt;Kab. Lombok Tengah&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5203&amp;rdquo;&amp;gt;Kab. Lombok Timur&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5204&amp;rdquo;&amp;gt;Kab. Sumbawa&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5205&amp;rdquo;&amp;gt;Kab. Dompu&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5206&amp;rdquo;&amp;gt;Kab. Bima&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5207&amp;rdquo;&amp;gt;Kab. Sumbawa Barat&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5208&amp;rdquo;&amp;gt;Kab. Lombok Utara&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5271&amp;rdquo;&amp;gt;Kota Mataram&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5272&amp;rdquo;&amp;gt;Kota Bima&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/select&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;kecamatan&amp;rdquo;&amp;gt;Kecamatan&amp;lt;/label&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;select name=&amp;ldquo;kecamatan&amp;rdquo; class=&amp;ldquo;form-control select2&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option selected disabled&amp;gt;Pilih Kecamatan&amp;hellip;&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/select&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;desa&amp;rdquo;&amp;gt;Desa/Kelurahan&amp;lt;/label&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;select name=&amp;ldquo;desa&amp;rdquo; class=&amp;ldquo;form-control select2&amp;rdquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option selected disabled&amp;gt;Pilih Desa&amp;hellip;&amp;lt;/option&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/select&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;Tampilanya: &lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-eRdPeHmZQ1k/V4SZacZlbII/AAAAAAAADAM/lBPFmtR_UEsUwbvV5CJ4fRlH_3abo4A7wCK4B/s1600/Tampilan%2BSelect2%2Byang%2Btidak%2Bsesui.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-eRdPeHmZQ1k/V4SZacZlbII/AAAAAAAADAM/lBPFmtR_UEsUwbvV5CJ4fRlH_3abo4A7wCK4B/s1600/Tampilan%2BSelect2%2Byang%2Btidak%2Bsesui.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tampilan yang saya inginkan agar seperti di dokumentasi Admin LTE.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-oi08U7JTMEc/V4SaJHj4Q4I/AAAAAAAADAY/_gGOyqhOD5wihda0KcsJEHgx0HYr4yEEACK4B/s1600/Tampilan%2BSelect2%2Bdi%2Bdokumentasi%2BAdmin%2BLTE.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-oi08U7JTMEc/V4SaJHj4Q4I/AAAAAAAADAY/_gGOyqhOD5wihda0KcsJEHgx0HYr4yEEACK4B/s1600/Tampilan%2BSelect2%2Bdi%2Bdokumentasi%2BAdmin%2BLTE.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Setelah saya periksa kode sumber (HTML) dokumentasi Admin LTE, saya menemukan solusinya. Ternyata urutan penyisipan kode CSS-nya salah.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;assets/AdminLTE/bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;assets/AdminLTE/dist/css/AdminLTE.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;assets/AdminLTE/dist/css/skins/_all-skins.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;assets/AdminLTE/plugins/select2/select2.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;assets/font-awesome/css/font-awesome.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;script src=&amp;ldquo;assets/AdminLTE/plugins/jQuery/jQuery-2.2.0.min.js&amp;rdquo;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;Pada penyisipan kode CSS di atas, saya menyisipkan kode CSS Select2 di bawah kode CSS AdminLTE. Ternyata urutan ini mempengaruhi hasilnya. Urutan yang benar, sesui yang di dokumentasi:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Kode CSS Bootstrap&lt;/li&gt;&lt;li&gt;Kode CSS Select2&lt;/li&gt;&lt;li&gt;Kode CSS Admin LTE&lt;/li&gt;&lt;li&gt;Kode CSS Skin Admin LTE &lt;/li&gt;&lt;/ol&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;assets/AdminLTE/bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;code class=&#34;html&#34;&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;assets/AdminLTE/plugins/select2/select2.min.css&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;br /&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;assets/AdminLTE/dist/css/AdminLTE.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;assets/AdminLTE/dist/css/skins/_all-skins.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;assets/font-awesome/css/font-awesome.min.css&amp;rdquo; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;Ternyata untuk masalah sekecil ini, saya membutuhkan waktu untuk menyelesaikannya.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-soBAjMWV0w4/V4Secl4x6sI/AAAAAAAADAk/Qz6wCwG08-Iljr8HTE1011U2NtR2qyejwCK4B/s1600/Tampilan%2BSelect2%2Bdi%2BAdmin%2BLTE%2Byang%2Bbenar.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-soBAjMWV0w4/V4Secl4x6sI/AAAAAAAADAk/Qz6wCwG08-Iljr8HTE1011U2NtR2qyejwCK4B/s1600/Tampilan%2BSelect2%2Bdi%2BAdmin%2BLTE%2Byang%2Bbenar.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tampilan di atas, ukuran lebarnya 100%. Artinya kita harus menambahkan kode CSS lagi untuk mengaturnya. Kalau tidak, nanti tampilannya akan seperti di bawah ini.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-jCj1-WRbQZQ/V4SgKd6MnKI/AAAAAAAADAw/DQc6wrZWVKkBA3XPOar70j9xAyvQSNm1wCK4B/s1600/Tampilan%2Blebar%2BSelect2%2Btidak%2B100%2Bpersen.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-jCj1-WRbQZQ/V4SgKd6MnKI/AAAAAAAADAw/DQc6wrZWVKkBA3XPOar70j9xAyvQSNm1wCK4B/s1600/Tampilan%2Blebar%2BSelect2%2Btidak%2B100%2Bpersen.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Oleh karena itu, tambahkan sedikit kode CSS untuk mengaturnya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html css&#34;&gt;&amp;lt;style&amp;gt;.select2 { width: 100% !important }&amp;lt;/style&amp;gt;&lt;/code&gt;&lt;/pre&gt;Atau bisa juga dengan &lt;i&gt;inline css&lt;/i&gt; pada elemen Select2.&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;https://almsaeedstudio.com/themes/AdminLTE/pages/forms/advanced.html&#34; target=&#34;_blank&#34;&gt;Dokumentasi Admin LTE&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Saya menghabiskan cukup banyak waktu untuk mengatasi masalah ini. Sampai-sampai mencari di Google, tapi tidak dapat solusi. Ceritanya, saya sedang mengerjakan sebuah proyek dengan Admin LTE. Kemudian saya menggunakan Select2 untuk element &amp;lt;select&amp;gt;. Akan tetapi, tampilannya tidak seperti yang diharapkan.
+Kode HTML:
+&amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;kabupaten&amp;rdquo;&amp;gt;Kabupaten/Kota&amp;lt;/label&amp;gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;select name=&amp;ldquo;kabupaten&amp;rdquo; class=&amp;ldquo;select2 form-control&amp;rdquo;&amp;gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option selected disabled&amp;gt;Pilih Kabupaten&amp;hellip;&amp;lt;/option&amp;gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5201&amp;rdquo;&amp;gt;Kab. Lombok Barat&amp;lt;/option&amp;gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5202&amp;rdquo;&amp;gt;Kab. Lombok Tengah&amp;lt;/option&amp;gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5203&amp;rdquo;&amp;gt;Kab. Lombok Timur&amp;lt;/option&amp;gt;</description>
     </item>
     
     <item>
@@ -892,8 +142,11 @@ kode untuk &lt;em&gt;hover&lt;/em&gt; (ketika disentuh pointer).&lt;/p&gt;
       <pubDate>Wed, 22 Jun 2016 23:33:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-css-badge/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-xWbsbNaJRHY/V2qqK3fPAvI/AAAAAAAAC3Y/zqm7o77ileEb0rVpvOXOWeKWSbbYmzsbACK4B/s1600/badge-notifikasi-css-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-xWbsbNaJRHY/V2qqK3fPAvI/AAAAAAAAC3Y/zqm7o77ileEb0rVpvOXOWeKWSbbYmzsbACK4B/s1600/badge-notifikasi-css-petanikode.png&#34; /&gt;&lt;/a&gt;Badge notifikasi sering kali kita temukan dalam website maupun aplikasi. Terkadang badge tersebut menggoda kita untuk mengelik link atau tombol notifikasi. Itulah fungsinya, agar user tau, di sana ada sesuatu yang baru. Badge biasanya dilengkapi dengan angka penghitung.&lt;br /&gt;&lt;br /&gt;Framework antarmuka semacam Bootstrap sudah menyediakan &lt;i&gt;class&lt;/i&gt; sendiri untuk pembuatan badge. Namun, karena badge yang dihasilkan tidak sesui seperti harapan, maka kita harus membuatnya sendiri.&lt;br /&gt;&lt;h2&gt;Kode CSS&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;.badge-notif {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; position:relative;&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;.badge-notif[data-badge]:after {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; content:attr(data-badge);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; position:absolute;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; top:-10px;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; right:-10px;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; font-size:.7em;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; background:#e53935;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; color:white;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; width:18px;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;     height:18px;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; text-align:center;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; line-height:18px;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; border-radius: 50%;&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Pada kode CSS di atas, kita mengambil isi badge dari atribut &lt;code&gt;data-badge&lt;/code&gt;. Untuk posisi badge dapat diatur dalam properti &lt;code&gt;top&lt;/code&gt; dan &lt;code&gt;right&lt;/code&gt;. Warna, ukuran, font, background dll. bisa diatur sendiri sesui selera.&lt;br /&gt;&lt;h2&gt;Penggunaan di HTML&lt;/h2&gt;Elemen yang ingin menggunakan badge yang dibuat tadi harus menambahkan class badge-notif dan sebuah atribut data-badge untuk konten badge-nya. Contoh:&lt;br /&gt;&lt;br /&gt;Pada Tombol&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;button class=&amp;ldquo;badge-notif&amp;rdquo; data-badge=&amp;ldquo;12&amp;rdquo;&amp;gt;Notifikasi&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;/pre&gt;Pada Link&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;a href=&amp;ldquo;#!&amp;rdquo; class=&amp;ldquo;badge-notif&amp;rdquo; data-badge=&amp;ldquo;22&amp;rdquo;&amp;gt;Pesan&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Demo&lt;/h2&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/batetij/embed?output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?3.35.13&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-</description>
+      <description>Badge notifikasi sering kali kita temukan dalam website maupun aplikasi. Terkadang badge tersebut menggoda kita untuk mengelik link atau tombol notifikasi. Itulah fungsinya, agar user tau, di sana ada sesuatu yang baru. Badge biasanya dilengkapi dengan angka penghitung.
+Framework antarmuka semacam Bootstrap sudah menyediakan class sendiri untuk pembuatan badge. Namun, karena badge yang dihasilkan tidak sesui seperti harapan, maka kita harus membuatnya sendiri.
+Kode CSS.badge-notif {
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; position:relative;
+}</description>
     </item>
     
     <item>
@@ -902,8 +155,12 @@ kode untuk &lt;em&gt;hover&lt;/em&gt; (ketika disentuh pointer).&lt;/p&gt;
       <pubDate>Sat, 20 Feb 2016 15:54:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/membuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-lQWmaK4Lh_c/Vr7maUTW_cI/AAAAAAAACfs/yrkHWMhC3gY/s1600/membuat%2Btema%2Bwordpress%2Bdari%2Bnol%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-lQWmaK4Lh_c/Vr7maUTW_cI/AAAAAAAACfs/yrkHWMhC3gY/s1600/membuat%2Btema%2Bwordpress%2Bdari%2Bnol%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Pada &lt;a href=&#34;http://www.petanikode.com/2016/02/membuat-tema-wordpress-dari-nol.html&#34; target=&#34;_blank&#34;&gt;tutorial sebelumnya&lt;/a&gt;, kita telah membuat konstruksi file awal. Ada dua file yang telah dibuat, &lt;code&gt;index.php&lt;/code&gt; dan &lt;code&gt;style.css&lt;/code&gt;. Sekarang kita fokus pada file &lt;code&gt;index.php&lt;/code&gt;. Isinya adalah sebuah HTML percobaan &lt;i&gt;(hello world)&lt;/i&gt;. Sekarang kita akan menggantinya.&lt;br /&gt;&lt;br /&gt;File &lt;code&gt;index.php&lt;/code&gt; merupakan file utama tema. File ini yang bertanggung jawab menampilkan halaman utama. Silahkan ganti semua isi file &lt;code&gt;index.php&lt;/code&gt; menjadi seperti berikut ini:&lt;br /&gt;&lt;br /&gt;&lt;script src=&#34;https://gist.github.com/ardianta/d3bf48bd9401ff05f742.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;Kemudian coba buka lagi website wordpress-nya:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-GoTgMg5qGmw/Vr77gh4fymI/AAAAAAAACf8/C1v9iGWKE74/s1600/Hasil%2Bpembuatan%2Bfondasi%2Bhalaman%2Butama.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-GoTgMg5qGmw/Vr77gh4fymI/AAAAAAAACf8/C1v9iGWKE74/s1600/Hasil%2Bpembuatan%2Bfondasi%2Bhalaman%2Butama.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kita telah berhasil menampilkan judul website &lt;i&gt;(header)&lt;/i&gt;, artikel &lt;i&gt;(post)&lt;/i&gt;, dan &lt;i&gt;footer&lt;/i&gt;. Artikelnya cuma ada satu, karena saya belum menambahkannya. Bila ada artikel yang lain, maka akan ditampilkan juga di sana. Tampilannya saat ini masih polos &lt;i&gt;(plain)&lt;/i&gt; karena kita belum menambahkan kode CSS.&lt;br /&gt;&lt;h2&gt;Penjelasan kode&lt;/h2&gt;Dalam kode index.php terdapat beberapa fungsi yang kita panggil. Fungsi-fungsi tersebut adalah fungsi wordpress. Rupanya wordpress sudah menyediakan fungsi PHP yang dapat kita pakai. Mari kita bahas maksud fungsi-fungsi tersebut.&lt;br /&gt;&lt;blockquote class=&#34;tr_bq&#34;&gt;&lt;b&gt;Catatan:&lt;/b&gt; &lt;b&gt;&amp;hellip;&lt;/b&gt; (titik-titik-titik) artinya ada kode lain di sana&lt;/blockquote&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;nbsp;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;lt;html &amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;language_attributes()&lt;/span&gt;; ?&amp;gt;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;meta charset=&amp;rdquo;&amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;bloginfo(&amp;lsquo;charset&amp;rsquo;)&lt;/span&gt;; ?&amp;gt;&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;meta name=&amp;ldquo;viewport&amp;rdquo; content=&amp;ldquo;width=device-width, initial-scale=1&amp;rdquo;/&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;&amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;bloginfo(&amp;lsquo;name&amp;rsquo;)&lt;/span&gt;; ?&amp;gt;&amp;lt;/title&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;wp_head()&lt;/span&gt;; ?&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/head&amp;gt;&lt;br /&gt;&amp;hellip;&lt;/code&gt;&lt;/pre&gt;Terdapat tiga fungsi PHP yang dipanggil di bagian &lt;i&gt;(head)&lt;/i&gt; ini:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;&lt;code&gt;language_attributs()&lt;/code&gt; berfungsi untuk mendapatkan atribut bahasa. Pada wordpress yang saya gunakan, fungsi ini mengembalikan nilai en-US.&lt;/li&gt;&lt;li&gt;&lt;code&gt;bloginfo()&lt;/code&gt; berfungsi untuk menampilkan informasi tentang website/blog. Pada potongan kode di atas, fungsi ini dipanggil dua kali dengna parameter berbeda. Fungsi ini akan menghasilkan nilai sesuai parameter yang diminta. Sebagai contoh, &lt;code&gt;bloginfo(&amp;lsquo;name&amp;rsquo;)&lt;/code&gt; akan menghasilkan judul website yaitu &lt;code&gt;Petani Kode&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;&lt;code&gt;wp_head()&lt;/code&gt; berfungsi untuk memanggil komponen head yang lainnya, seperti tag meta, link css, kode css, javascript, dsb.&lt;/li&gt;&lt;/ol&gt;Selanjugnya bagian body,&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;hellip;&lt;br /&gt;&amp;lt;body &amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;body_class()&lt;/span&gt;; ?&amp;gt; &amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;rdquo;&lt;span style=&#34;background-color: #ffe599;&#34;&gt;container&lt;/span&gt;&amp;ldquo;&amp;gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;hellip;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;lt;/div&amp;gt;&amp;lt;!&amp;ndash; /container &amp;ndash;&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;wp_footer()&lt;/span&gt;; ?&amp;gt;&lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;hellip;&lt;/code&gt;&lt;/pre&gt;pada potongan kode di atas, terdapat dua fungsi PHP yang dipanggil dan sebuah kelas &lt;i&gt;continter&lt;/i&gt;. Fungsi pertama &lt;code&gt;body_class()&lt;/code&gt; untuk memanggil kelas-kelas yang dibutuhkan tag body. Kemudian fungsi &lt;code&gt;wp_footer()&lt;/code&gt; fungsinya hampir mirip dengan &lt;code&gt;wp_head()&lt;/code&gt;, namun &lt;code&gt;wp_footer()&lt;/code&gt; disertai &lt;i&gt;navbar&lt;/i&gt; (warna hitam di atas) dan dikhususkan untuk memanggil javascript. Karena kepercayaan beberapa programmer, memanggil javascrip di akhir dokumen HTML membuatnya lebih cepat di-download.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;hellip;&lt;br /&gt;&amp;lt;header class=&amp;ldquo;site-header&amp;rdquo;&amp;gt;&lt;br /&gt;    &amp;lt;h1&amp;gt;&amp;lt;a href=&amp;rdquo;&amp;lt;?php echo &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;home_url()&lt;/span&gt; ?&amp;gt;&amp;ldquo;&amp;gt;&amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;bloginfo(&amp;lsquo;name&amp;rsquo;)&lt;/span&gt;; ?&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/h1&amp;gt;&lt;br /&gt;    &amp;lt;h5&amp;gt;&amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;bloginfo(&amp;lsquo;description&amp;rsquo;)&lt;/span&gt;; ?&amp;gt;&amp;lt;/h5&amp;gt;&lt;br /&gt;&amp;lt;/header&amp;gt;&lt;br /&gt;&amp;hellip;&lt;/code&gt;&lt;/pre&gt;Pada potongan kode di atas ada dua fungsi PHP yang di panggil. Fungsi &lt;code&gt;home_url()&lt;/code&gt; untuk mendapatkan link &lt;i&gt;home&lt;/i&gt;. Kemudian fungsi &lt;code&gt;bloginfo()&lt;/code&gt;, sudah dijelaskan sebelumnya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;hellip; &lt;br /&gt;&amp;lt;?php &lt;br /&gt;if(&lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;have_posts()&lt;/span&gt;) :&lt;br /&gt;  while (&lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;have_posts()&lt;/span&gt;) : &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;the_post()&lt;/span&gt;; ?&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;  &amp;lt;article class=&amp;rdquo;&lt;span style=&#34;background-color: #ffe599;&#34;&gt;post&lt;/span&gt;&amp;ldquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  &amp;lt;h2&amp;gt;&amp;lt;a href=&amp;rdquo;&amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;the_permalink()&lt;/span&gt; ?&amp;gt;&amp;ldquo;&amp;gt;&amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;the_title()&lt;/span&gt;; ?&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/h2&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;the_content()&lt;/span&gt;; ?&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;  &amp;lt;/article&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp; &amp;lt;?php endwhile;&lt;br /&gt;&lt;br /&gt;else:&lt;br /&gt;&amp;nbsp; echo &amp;ldquo;&amp;lt;p&amp;gt;Tidak ada artikel&amp;lt;/p&amp;gt;&amp;rdquo;;&lt;br /&gt;endif;&lt;br /&gt;?&amp;gt;&lt;br /&gt;&amp;hellip;&lt;/code&gt;&lt;/pre&gt;Potongan kode di atas merupakan potongan kode untuk menampilkan artikel. Ada lima fungsi PHP yang dipanggil di sana.&lt;br /&gt;&lt;ol&gt;&lt;li&gt;&lt;code&gt;have_posts()&lt;/code&gt; merupakan fungsi untuk mengecek, apakah ada artikel (post) atau tidak. Fungsi ini mengembalikan nilai trude dan false.&lt;/li&gt;&lt;li&gt;&lt;code&gt;the_post()&lt;/code&gt; fungsi untuk membuat iterasi (perulangan);&lt;/li&gt;&lt;li&gt;&lt;code&gt;the_permalink()&lt;/code&gt; fungsi untuk mendapatkan link (permanen) artikel;&lt;/li&gt;&lt;li&gt;&lt;code&gt;the_title()&lt;/code&gt; fungsi untuk mendapatkan judul artikel; dan&lt;/li&gt;&lt;li&gt;&lt;code&gt;the_content()&lt;/code&gt; fungsi untuk mendpatkan isi artikel.&lt;/li&gt;&lt;/ol&gt;Selain lima fungsi tersebut, di bagian artikel ini juga terdapat sebuah kelas post. Kelas ini kita butuhkan untuk memberikan&lt;i&gt; style CSS&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Terakhir, bagian footer.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html php&#34;&gt;&amp;hellip; &lt;br /&gt;&amp;lt;footer class=&amp;rdquo;&lt;span style=&#34;background-color: #ffe599;&#34;&gt;site-footer&lt;/span&gt;&amp;ldquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;div class=&amp;rdquo;&lt;span style=&#34;background-color: #ffe599;&#34;&gt;attrib&lt;/span&gt;&amp;ldquo;&amp;gt;Copyright &amp;amp;copy; &amp;lt;?php echo &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;date(&amp;lsquo;Y&amp;rsquo;)&lt;/span&gt;; ?&amp;gt; &amp;lt;a href=&amp;rdquo;&amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;echo home_url()&lt;/span&gt;; ?&amp;gt;&amp;ldquo;&amp;gt;&amp;lt;?php &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;bloginfo(&amp;lsquo;name&amp;rsquo;)&lt;/span&gt;; ?&amp;gt;&amp;lt;/a&amp;gt; | Developed by &amp;lt;a href=&amp;ldquo;&lt;a href=&#34;http://ardianta.tumblr.com&amp;quot;&amp;gt;Ardianta&#34;&gt;http://ardianta.tumblr.com&amp;quot;&amp;gt;Ardianta&lt;/a&gt; Pargo&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;&lt;br /&gt;&amp;lt;/footer&amp;gt;&lt;br /&gt;&amp;hellip;&lt;/code&gt;&lt;/pre&gt;Salah satu fungsi yang perlu saya jelaskan pada potongan kode di atas adalah &lt;code&gt;date()&lt;/code&gt;, karena fungsi-fungsi yang lainya sudah dijelaskan sebelumnya. Fungsi &lt;code&gt;date()&lt;/code&gt; merupakan fungsi PHP untuk mendapatkan tanggal. Parameter &lt;i&gt;Y&lt;/i&gt; (&lt;i&gt;y&lt;/i&gt; kapital) akan menghasilkan nilai tahun sekarang.&lt;br /&gt;&lt;br /&gt;Selain fungsi, pada bagian footer ini juga terdapat dua kelas yang akan kita butuhkan nanti pada pembuatan kode CSS.&amp;nbsp; Saya kira cukup sekian tutorial ini. Cukup banyak fungsi yang harus diingat. [bersambung&amp;hellip;]&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;https://codex.wordpress.org/Function_Reference/&#34;&gt;https://codex.wordpress.org/Function_Reference/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Pada tutorial sebelumnya, kita telah membuat konstruksi file awal. Ada dua file yang telah dibuat, index.php dan style.css. Sekarang kita fokus pada file index.php. Isinya adalah sebuah HTML percobaan (hello world). Sekarang kita akan menggantinya.
+File index.php merupakan file utama tema. File ini yang bertanggung jawab menampilkan halaman utama. Silahkan ganti semua isi file index.php menjadi seperti berikut ini:
+
+Kemudian coba buka lagi website wordpress-nya:
+
+Kita telah berhasil menampilkan judul website (header), artikel (post), dan footer.</description>
     </item>
     
     <item>
@@ -912,8 +169,9 @@ kode untuk &lt;em&gt;hover&lt;/em&gt; (ketika disentuh pointer).&lt;/p&gt;
       <pubDate>Sat, 13 Feb 2016 16:19:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/membuat-tema-wordpress-dari-nol-0-konstruksi-tema/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-lQWmaK4Lh_c/Vr7maUTW_cI/AAAAAAAACfs/yrkHWMhC3gY/s1600/membuat%2Btema%2Bwordpress%2Bdari%2Bnol%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-lQWmaK4Lh_c/Vr7maUTW_cI/AAAAAAAACfs/yrkHWMhC3gY/s1600/membuat%2Btema%2Bwordpress%2Bdari%2Bnol%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Hi, saya sedang belajar membuat tema wordpress dari nol dan ingin membagikan apa yang telah dipelajari. Mungkin postingan ini cocok disebut catatan belajar.&lt;br /&gt;&lt;h2&gt;Persiapan dan peralatan&lt;/h2&gt;Sebelum memulai, pastikan sudah menginstal wordpress dan alat-alat untuk membuat temanya.&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Text editor (untuk menulis kode tema)&lt;/li&gt;&lt;li&gt;Web browser (untuk menampilkan hasilnya)&lt;/li&gt;&lt;/ol&gt;&lt;h2&gt;Konstruksi awal tema&lt;/h2&gt;Semua tema wordpress terletak di direktori &lt;code&gt;wp-content/themes&lt;/code&gt;. Di sanalah kita akan meletakan tema yang akan dibuat. Buatlah sebuah direktori baru di sana. Sebagai contoh, saya membuat sebuah direktori bernama &lt;i&gt;petanikode&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-l6ULxULklIc/Vr7XzagQbHI/AAAAAAAACfE/oLDxdhEqPVE/s1600/direktori%2Btema%2Bwordpress%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-l6ULxULklIc/Vr7XzagQbHI/AAAAAAAACfE/oLDxdhEqPVE/s1600/direktori%2Btema%2Bwordpress%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kita akan meletakan semua file tema di dalam direktori tersebut. Pada tahapan awal pembuatan tema ini, kita buat dulu dua file penting, yaitu:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;&lt;code&gt;index.php&lt;/code&gt;; dan&lt;/li&gt;&lt;li&gt;&lt;code&gt;style.css&lt;/code&gt;&lt;/li&gt;&lt;/ol&gt;File &lt;code&gt;index.php&lt;/code&gt; adalah file utama yang akan diaksess saat website dibuka. Sementara itu, file &lt;code&gt;style.css&lt;/code&gt; berisi kode CSS untuk menghias dan mengatur tampilan tema. Letakkan kedua file tersebut di dalam direktori &lt;i&gt;petanikode&lt;/i&gt;. Karena, akan menjadi fondasi awal tema kita.&lt;br /&gt;&lt;br /&gt;Isi file &lt;code&gt;index.php&lt;/code&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;Tema Wp pertama&amp;lt;/title&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/head&amp;gt; &lt;br /&gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;h1&amp;gt;Hello world, ini adalah tema Wordpress perama saya&amp;lt;/h1&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;p&amp;gt;dibuat dari nol dengan penuh semangat&amp;lt;p&amp;gt;&amp;nbsp;&lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;html&amp;gt;&lt;/code&gt;&lt;/pre&gt;dan isi file &lt;code&gt;style.css&lt;/code&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;css&#34;&gt;/&lt;em&gt;&lt;br /&gt;Theme Name: Petani Kode&lt;br /&gt;Author: Ardianta Pargo&lt;br /&gt;Author URI: &lt;a href=&#34;https://twitter.com/ArdiantaPargo&#34;&gt;https://twitter.com/ArdiantaPargo&lt;/a&gt;&lt;br /&gt;Version: 0.1&lt;br /&gt;Description: Tema ini untuk belajar membuat tema dari nol. Saat ini isinya masih sedikit karena masih dasar. Insa&amp;rsquo;allah nanti akan menjadi makin banyak.&lt;br /&gt;&lt;/em&gt;/&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Ujicoba tema baru&lt;/h2&gt;Masuk ke &lt;i&gt;wp-admin&amp;gt;appearance&amp;gt;themes&lt;/i&gt;, di sana kita akan menemukan sebuah tema misterius. Tema yang baru saja kita buat. Silahkan aktifkan tema tersebut.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-1l3wgA5v3Yc/Vr7aHi1dG1I/AAAAAAAACfQ/iPJ8hLTeDVk/s1600/Tema%2Bwordpress%2Bbaru%2Bpetani%2Bkode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-1l3wgA5v3Yc/Vr7aHi1dG1I/AAAAAAAACfQ/iPJ8hLTeDVk/s1600/Tema%2Bwordpress%2Bbaru%2Bpetani%2Bkode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Setelah itu, coba buka website wordpress-nya.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-ulOVXZtukFY/Vr7brmur-GI/AAAAAAAACfc/2FOj77K9GGo/s1600/Tema%2Bwordpress%2Bpertama%2Bsaya%2Bdibuat%2Bdari%2Bnol.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-ulOVXZtukFY/Vr7brmur-GI/AAAAAAAACfc/2FOj77K9GGo/s1600/Tema%2Bwordpress%2Bpertama%2Bsaya%2Bdibuat%2Bdari%2Bnol.png&#34; /&gt;&lt;/a&gt;Hore! selamat. Tema pertama kita sudah bisa digunakan. Ini adalah tampilan awal. Tentu, ini bukan hasil akhir yang kita inginkan. Kedepan insa&amp;rsquo;allah akan kita kembangkan bersama. Cukup ini saja dulu. &lt;a href=&#34;http://www.petanikode.com/2016/02/membuat-tema-wordpress-dari-nol-1-fondasi-halaman-utama.html&#34; target=&#34;_blank&#34;&gt;[bersambung&amp;hellip;]&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Hi, saya sedang belajar membuat tema wordpress dari nol dan ingin membagikan apa yang telah dipelajari. Mungkin postingan ini cocok disebut catatan belajar.
+Persiapan dan peralatanSebelum memulai, pastikan sudah menginstal wordpress dan alat-alat untuk membuat temanya.
+Text editor (untuk menulis kode tema)Web browser (untuk menampilkan hasilnya)Konstruksi awal temaSemua tema wordpress terletak di direktori wp-content/themes. Di sanalah kita akan meletakan tema yang akan dibuat. Buatlah sebuah direktori baru di sana. Sebagai contoh, saya membuat sebuah direktori bernama petanikode.</description>
     </item>
     
     <item>
@@ -922,113 +180,11 @@ kode untuk &lt;em&gt;hover&lt;/em&gt; (ketika disentuh pointer).&lt;/p&gt;
       <pubDate>Thu, 14 Jan 2016 11:03:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/manfaat-inspect-element-bagi-web-developer/</guid>
-      <description>
-
-&lt;p&gt;Inspect Element merupakan fitur browser yang dibuat untuk memudahkan pengembangan web.&lt;/p&gt;
-
-&lt;p&gt;Inspect Element dapat kita akses dengan klik kanan, kemudian memilih Inspect Element, atau bisa juga dengan menekan tombol &lt;code&gt;F12&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Adapun manfaat dari Inspect Element untuk web Developer adalah sebagai berikut.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-tempat-eksperimen-css&#34;&gt;1. Tempat Eksperimen CSS&lt;/h2&gt;
-
-&lt;p&gt;Selain ada console Javascript, bisa dibilang di Inspect Elemen juga ada console-nya CSS. Ya, di sana kita bisa eksperimen kode CSS.&lt;/p&gt;
-
-&lt;p&gt;Sebelum kita menulis kode CSS, sebaiknya gunakan Inspect Element terlebih dahulu. Karena saat kita menulis kode CSS di Inspect Elemen, browser akan langsung mengeksekusinya. Selain itu, kita diberikan fitur yang memudahkan penulisan CSS seperti autocomplete, colorpicker, filter, visual model box, dll.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1366&#34;
-    height=&#34;768&#34;
-    alt=&#34;Edit CSS d iInspect Element&#34;
-    src=&#34;https://4.bp.blogspot.com/-YA3lbRkw6z0/WKhR5OizENI/AAAAAAAAEAU/vxaVOYaLjBExO0cpMeCw1vnzf3lbMbrswCPcB/s1600/Edit%2BCSS%2Bdi%2BInspect%2BElement.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kode CSS yang ditulis di Inspect Element bersifat temporer. Kita harus menyalinnya ke kode CSS di teks editor agar tersimpan.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-pengujian-web-responsif&#34;&gt;2. Pengujian Web Responsif&lt;/h2&gt;
-
-&lt;p&gt;Kita tidak perlu punya banyak perangkat untuk pengujian responsif. Cukup manfaatkan Inspect Element, kita sudah bisa menggunakan berbagai jenis perangkat mobile.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1270&#34;
-    height=&#34;679&#34;
-    alt=&#34;Pengujian+tampilan+responsif+web+di+inspect+element+-+petanikode.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-F0ipNxOxWnU/WKhTDjXhQzI/AAAAAAAAEAs/dASGP5AdMRgNdTrkNAd2JEkCZpBVom6rgCPcB/s1600/Pengujian%2Btampilan%2Bresponsif%2Bweb%2Bdi%2Binspect%2Belement%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-mengukur-kecepatan-web&#34;&gt;3. Mengukur Kecepatan Web&lt;/h2&gt;
-
-&lt;p&gt;Kita dapat mengetahui seberapa lama web diunduh oleh browser dan berapa kecepatan dan ukuran kapasitas webnya? Silahkan gunakan fitur Network atau Timeline untuk melakukannya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1364&#34;
-    height=&#34;678&#34;
-    alt=&#34;Mengukur+kecepatan+web+di+inspect+element+-+petanikode.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-LDis0GBfR9s/WKhT0iA4nHI/AAAAAAAAEBA/XLqopt_G0nEd1pTUQGHrTMvBhfwTOGYAACPcB/s1600/Mengukur%2Bkecepatan%2Bweb%2Bdi%2Binspect%2Belement%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-debugging-javascript&#34;&gt;4. Debugging Javascript&lt;/h2&gt;
-
-&lt;p&gt;Ada yang bilang, belajar javascript itu susah karena kita tidak tahu tempat error-nya.
-Kadang, browser hanya menampilkan halaman kosong saat error.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;486&#34; height=&#34;657&#34;
-    layout=&#34;responsive&#34;
-    data-tweetid=&#34;818038227143561218&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;Sebenarnya pendapat itu salah, karena kita bisa melihat pesan error javascript pada console-nya. Dimana console-nya? ya di dalam Inspect Elemen. Silahkan buka menu Console.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;5-alat-untuk-audit-web&#34;&gt;5. Alat untuk Audit Web&lt;/h2&gt;
-
-&lt;p&gt;Audit perlu kita lakukan untuk meningkatkan kinerja web. Pada Inspect Elemen milik Google Chrome, kita disediakan fitur audit untuk mengetahui apa saja resource yang digunakan dan yang tidak digunakan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;945&#34;
-    height=&#34;500&#34;
-    alt=&#34;Audit+web+di+Inspect+element+-+petanikode.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-vNQJtWwp3iM/WKhVV2r5KoI/AAAAAAAAEBU/7LlDpgbnLRYoPhmrJcpUIN2GUEBGK1oJwCPcB/s1600/Audit%2Bweb%2Bdi%2BInspect%2Belement%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;6-mengambil-screenshot-dengan-mudah&#34;&gt;6. Mengambil Screenshot dengan Mudah&lt;/h2&gt;
-
-&lt;p&gt;Khusus di Firefox, kita disediakan fitur untuk mengambil screenshot web. Caranya, klik kanan pada elemen yang ingin di-screenshot, kemudian pilih &lt;em&gt;Screenshot Node&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;917&#34;
-    height=&#34;525&#34;
-    alt=&#34;mengambil+screenshoot+di+Inspect+element+firefox.png&#34;
-    src=&#34;https://2.bp.blogspot.com/-xPgOdZAg8YY/WKhWPl_wGdI/AAAAAAAAEBs/K-eZEeDd8PMljRx03SLpEfkHFPj6LaJBgCPcB/s1600/mengambil%2Bscreenshoot%2Bdi%2BInspect%2Belement%2Bfirefox.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;7-mengukur-performa-memori-dan-cpu&#34;&gt;7. Mengukur Performa Memori dan CPU&lt;/h2&gt;
-
-&lt;p&gt;Semakin banyak tab yang kita buka di browser, semakin banyak pula memori yang akan dimakan. Selain itu, skrip-skrip pada web juga membuat CPU berkerja semakin keras. Untuk melihat performa memori dan CPU ketika membuka web, silahkan masuk ke menu &lt;em&gt;Timeline&lt;/em&gt; pada Google Chrome. Sedangkan di Firefox, masuk ke &lt;em&gt;Performance&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;861&#34;
-    height=&#34;680&#34;
-    alt=&#34;Mengukur+Performa+Web.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-FFcmZfK42IM/WKhWgp7E1bI/AAAAAAAAEB0/ATHEopUYKrww2uDAKimbKK8B-OlZfiLzACPcB/s1600/Mengukur%2BPerforma%2BWeb.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah 7 manfaat Inspect Element bagi web developer. Sebanarnya masih banyak lagi manfaat dari Inspect Element yang belum kita ketahui. Selebihnya silahkan cari sendiri atau jika mau menambahkan silahkan corat-coret di komentar.&lt;/p&gt;
-</description>
+      <description>Inspect Element merupakan fitur browser yang dibuat untuk memudahkan pengembangan web.
+Inspect Element dapat kita akses dengan klik kanan, kemudian memilih Inspect Element, atau bisa juga dengan menekan tombol F12.
+Adapun manfaat dari Inspect Element untuk web Developer adalah sebagai berikut.
+1. Tempat Eksperimen CSS Selain ada console Javascript, bisa dibilang di Inspect Elemen juga ada console-nya CSS. Ya, di sana kita bisa eksperimen kode CSS.
+Sebelum kita menulis kode CSS, sebaiknya gunakan Inspect Element terlebih dahulu.</description>
     </item>
     
     <item>
@@ -1037,8 +193,9 @@ Kadang, browser hanya menampilkan halaman kosong saat error.&lt;/p&gt;
       <pubDate>Tue, 12 Jan 2016 16:20:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Cover Tutorial&#34; border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg&#34; title=&#34;Tutorial Bootstrap Petani Kode&#34; /&gt;&lt;/a&gt;Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag &lt;i&gt;meta&lt;/i&gt; &lt;i&gt;viewport&lt;/i&gt;. Mengapa kita perlu menambahkan &lt;i&gt;meta viewport&lt;/i&gt;? apa sih fungsinya? Mari kita bahas bersama.&lt;br /&gt;&lt;br /&gt;Pada bagian kepala &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; terdapat tag &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; yang menampung nilai &lt;i&gt;viewport&lt;/i&gt;. &lt;i&gt;Viewport&lt;/i&gt; merupakan area yang terlihat pada (perangkat) user/pengunjung web. &lt;i&gt;Viewport&lt;/i&gt; digunakan untuk desain web yang responsif &lt;i&gt;(responsive web design)&lt;/i&gt;. Seperti selogan Bootstrap yang mengutamakan desain responsif.&lt;br /&gt;&lt;blockquote class=&#34;tr_bq&#34;&gt;Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.&lt;br /&gt;— &lt;cite&gt;getbootstrap.com&lt;/cite&gt;&lt;/blockquote&gt;Jadi dengan menambahkan &lt;i&gt;viewport&lt;/i&gt;, web akan menjadi responsif. Responsif artinya bisa menyesuaikan diri dengan perangkat yang digunakan oleh user/pengunjung web. Contoh kode viewport yang diberikan di &lt;a href=&#34;http://getbootstrap.com/css/#overview-mobile&#34; target=&#34;_blank&#34;&gt;dokumentasi Bootstrap&lt;/a&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;meta name=&amp;ldquo;viewport&amp;rdquo; content=&amp;ldquo;width=device-width, initial-scale=1&amp;rdquo;&amp;gt;&lt;/code&gt;&lt;/pre&gt;Tag &lt;i&gt;meta viewport&lt;/i&gt; akan memberikan intruksi ke browser untuk mengatur dimensi dan sekala web. Nilai &lt;code&gt;width=device-width&lt;/code&gt;, artinya lebar web akan mengikuti lebar dari layar perangkat yang digunakan. Nilai &lt;code&gt;inital-scale=1&lt;/code&gt;, artinya web akan diberikan skala &lt;i&gt;(zoom)&lt;/i&gt; menjadi &lt;code&gt;1&lt;/code&gt; (normal).&lt;br /&gt;&lt;br /&gt;Pengaruh dari tag &lt;i&gt;meta viewport&lt;/i&gt; ini dapat kita lihat dengan membuka web dari ponsel android atau semacamnya. Tetapi tenang saja, anda juga bisa memanfaatkan fitur &lt;i&gt;inspect element&lt;/i&gt; pada Google Chrome. Baiklah, mari kita uji coba. Pertama kita coba dulu membuka web yang tampa menggunakan tag &lt;i&gt;meta&lt;/i&gt; &lt;i&gt;viewport&lt;/i&gt;. Berikut ini cuplikan kode &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;-nya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;Hello Bootstrap&amp;lt;/title&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; menyisipkan bootstrap &amp;ndash;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/pre&gt;Bukalah dengan Google Chrome. Kemudian klik kanan, lalu pilih &lt;i&gt;inspect element&lt;/i&gt;. Setelah itu klik ikon ponsel ( &lt;i class=&#34;fa fa-mobile&#34;&gt;&lt;/i&gt; ).&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Tampilan web tampa tag meta viewport&#34; border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png&#34; title=&#34;Tampilan web tampa tag meta viewport&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tampa menggunakan &lt;i&gt;viewport&lt;/i&gt; web akan ditampilkan apa adanya. Seperti yang terlihat pada gambar di atas, web tidak diperbesar atau diatur ulang skalanya. Untuk itu, kita perlu menambahkan &lt;i&gt;viewport&lt;/i&gt;. Sehingga kodenya menjadi seperti ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;title&amp;gt;Hello Bootstrap&amp;lt;/title&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;!&amp;ndash; menyisipkan bootstrap &amp;ndash;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;ldquo;bootstrap/css/bootstrap.min.css&amp;rdquo; /&amp;gt;&lt;br /&gt;    &lt;span style=&#34;background-color: #93c47d;&#34;&gt;&amp;lt;meta name=&amp;ldquo;viewport&amp;rdquo; content=&amp;ldquo;width=device-width, initial-scale=1&amp;rdquo;&amp;gt;&lt;/span&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/pre&gt;Setelah menambahkan &lt;i&gt;viewport&lt;/i&gt;, sekarang coba &lt;i&gt;reload&lt;/i&gt; kembali halamanya.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Tampilan web yang menggunakan meta viewport&#34; border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png&#34; title=&#34;Tampilan web yang menggunakan meta viewport&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Jelas sekali &amp;lsquo;kan perbedaanya? Masih belum puas, coba lagi melihat dari ponsel yang berbeda (Nokia Lumia 520).&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520&#34; border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png&#34; title=&#34;Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Selain mencoba simulasi dari inspect element, saya juga mencoba melalui ponsel Samsung Galaxy C1 dan hasilnya sebagai berikut.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;Jadi, tag &lt;i&gt;meta viewport&lt;/i&gt; berfungsi untuk mengatur ulang dimensi dan skala (zoom) web. Tag ini diperlukan untuk membangun web yang responsif.&lt;br /&gt;&lt;br /&gt;&amp;mdash; &lt;br /&gt;Nah, sekian dulu tutorial ke-3 ini. Kode lengkap tutorial ini dapat dilihat di file repositori github: &lt;a href=&#34;https://github.com/petanikode/tutorial-bootstrap/blob/master/view_port.html&#34; target=&#34;_blank&#34;&gt;view_port.html&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;&lt;a href=&#34;http://www.w3schools.com/css/css_rwd_viewport.asp&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.w3schools.com/css/css_rwd_viewport.asp&#34;&gt;http://www.w3schools.com/css/css_rwd_viewport.asp&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://getbootstrap.com/css/#overview-mobile&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://getbootstrap.com/css/#overview-mobile&#34;&gt;http://getbootstrap.com/css/#overview-mobile&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt;
-</description>
+      <description>Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag meta viewport. Mengapa kita perlu menambahkan meta viewport? apa sih fungsinya? Mari kita bahas bersama.
+Pada bagian kepala &amp;lt;head&amp;gt; terdapat tag &amp;lt;meta&amp;gt; yang menampung nilai viewport. Viewport merupakan area yang terlihat pada (perangkat) user/pengunjung web. Viewport digunakan untuk desain web yang responsif (responsive web design). Seperti selogan Bootstrap yang mengutamakan desain responsif.
+Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</description>
     </item>
     
     <item>
@@ -1047,8 +204,80 @@ Kadang, browser hanya menampilkan halaman kosong saat error.&lt;/p&gt;
       <pubDate>Wed, 06 Jan 2016 13:20:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tata-cara-menggunakan-highlight.js-di-blogger/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-WhR_5T4yVSg/VoyfngB0mAI/AAAAAAAACXo/L94qeANsUgI/s1600/higlightjs%2B-%2Bpetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;higlight.js&#34; border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-WhR_5T4yVSg/VoyfngB0mAI/AAAAAAAACXo/L94qeANsUgI/s1600/higlightjs%2B-%2Bpetanikode.jpg&#34; title=&#34;&#34; /&gt;&lt;/a&gt;Template baawan blogger sudah saya modifikasi sedemikian rupa. Namun, masih ada yang kurang, pewarnaan kode &lt;i&gt;(syntax highlighting)&lt;/i&gt;. Kode yang saya sisipkan di dalam artikel tidak berwarna. Kadang saya memanfaatkan &lt;a href=&#34;http://gist.github.com/&#34; target=&#34;_blank&#34;&gt;gist github&lt;/a&gt;, &lt;a href=&#34;http://pastebin.com/&#34; target=&#34;_blank&#34;&gt;pastebin&lt;/a&gt;, &lt;a href=&#34;https://ideone.com/&#34; target=&#34;_blank&#34;&gt;ideone&lt;/a&gt;, dsb. untuk menyisipkan kode yang berwarna.&lt;br /&gt;&lt;br /&gt;Modul &lt;i&gt;highlight.js&lt;/i&gt; berfungsi untuk membuat kode (di web) menjadi berwarna. Kode yang berwarna akan lebih mudah dibaca. Karena itu, kita perlu menggunakan &lt;i&gt;highlight.js&lt;/i&gt;. Berikut ini cara menggunakan &lt;i&gt;highlight.js&lt;/i&gt; di blogger.&lt;br /&gt;&lt;h2&gt;1. Memasang higlight.js&lt;/h2&gt;Kita akan memanfaatkan CDN &lt;i&gt;(&lt;/i&gt;&lt;i&gt;&lt;span class=&#34;st&#34;&gt;&lt;i&gt;content delivery network&lt;/i&gt;&lt;/span&gt;)&lt;/i&gt; nutuk memasang highlight.js, karena blogger tidak menyediakan tempat untuk hosting file. Silahkan masuk ke &lt;i&gt;edit html template&lt;/i&gt;. Kemudian masukkan kode berikut ini ke dalam tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;!&amp;ndash; Syntax highlighter &amp;ndash;&amp;gt;&lt;br /&gt;&amp;lt;link href=&amp;lsquo;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/github.min.css&amp;rsquo; rel=&amp;lsquo;stylesheet&amp;rsquo;/&amp;gt;&lt;br /&gt;&amp;lt;script src=&amp;lsquo;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js&amp;rsquo;/&amp;gt;&lt;br /&gt;&amp;lt;script&amp;gt;hljs.initHighlightingOnLoad();&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;!&amp;ndash; end Syntax highlighter &amp;ndash;&amp;gt;&lt;/code&gt;&lt;/pre&gt;Versi higlight.js yang digunakan adalah versi &lt;code&gt;9.0.0&lt;/code&gt;. Bila ada versi yang lebih baru lagi, anda tinggal mengganti angka itu saja. Kemudian &lt;code&gt;github.min.css&lt;/code&gt; adalah kode CSS tema yang digunakan. Anda bisa menggunakan tema lain. Daftar tema bisa dilihat di &lt;a href=&#34;https://github.com/isagalaev/highlight.js/tree/master/src/styles&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;.&lt;a href=&#34;http://4.bp.blogspot.com/-vP-cTgEQsdY/Vou9k4mDwxI/AAAAAAAACXY/FS3pvvryUdk/s1600/Memasang%2Bhighlight-js%2Bdi%2Btemplate%2Bblogger%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-vP-cTgEQsdY/Vou9k4mDwxI/AAAAAAAACXY/FS3pvvryUdk/s1600/Memasang%2Bhighlight-js%2Bdi%2Btemplate%2Bblogger%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;2. Menggunakan higlight.js&lt;/h2&gt;Cara menggunakan &lt;i&gt;highlight.js&lt;/i&gt; sangat mudah. Kita hanya perlu mengapit kode dengan tag &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; dan &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; yang diberikan atribut kelas dengan nilai sesui dengan nama bahasa pemrogramannya. Contoh:&lt;br /&gt;&lt;br /&gt;Bahasa pemrograman Java &lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;ldquo;java&amp;rdquo;&amp;gt;&lt;br /&gt;Class Contoh{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; public static void main(String[] args){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; System.out.println(&amp;ldquo;Hello World!&amp;rdquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;br /&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasilnya: &lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;Class Contoh{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; public static void main(String[] args){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; System.out.println(&amp;ldquo;Hello World!&amp;rdquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Bahasa pemrograman C++&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;ldquo;cpp&amp;rdquo;&amp;gt;&lt;br /&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&lt;br /&gt;using namespace std;&lt;br /&gt;&lt;br /&gt;int main(){&lt;br /&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;ldquo;Hello World!&amp;rdquo; &amp;lt;&amp;lt; endl;&lt;br /&gt;&amp;nbsp; &amp;nbsp; return 0; &lt;br /&gt;}&lt;br /&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;cpp&#34;&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&lt;br /&gt;using namespace std;&lt;br /&gt;&lt;br /&gt;int main(){&lt;br /&gt;&amp;nbsp; &amp;nbsp; cout &amp;lt;&amp;lt; &amp;ldquo;Hello World!&amp;rdquo; &amp;lt;&amp;lt; endl;&lt;br /&gt;&amp;nbsp; &amp;nbsp; return 0; &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Bagaimana kalau kode bahasa pemrogramannya ada lebih dari satu? Misalnya html, css, javascript, dan PHP. Jawabanya tinggal memanggil nama kelas-kelasnya jadi satu, dipisah dengan spasi. Contoh&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;rdquo;&lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;html css js php&lt;/span&gt;&amp;ldquo;&amp;gt;&lt;br /&gt;&amp;amp;lt;html&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;head&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;style type=&amp;lsquo;text/css&amp;rsquo;&amp;amp;gt;&lt;br /&gt;.body{&lt;br /&gt;&amp;amp;nbsp; &amp;amp;nbsp; background: #008080;&lt;br /&gt;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp; color: white;&lt;br /&gt;}&lt;br /&gt;&amp;amp;lt;/style&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;script type=&amp;lsquo;text/javascript&amp;rsquo;&amp;amp;gt;&lt;br /&gt;console.log(&amp;ldquo;javascript dijalankan&amp;rdquo;); &lt;br /&gt;&amp;amp;lt;/script&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;/head&amp;amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;amp;lt;body&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;?php echo &amp;ldquo;&amp;amp;lt;h2&amp;amp;gt;Hello World&amp;amp;lt;/h2&amp;rdquo;; ?&amp;amp;gt; &lt;br /&gt;&amp;amp;lt;/body&amp;amp;gt;&lt;br /&gt;&amp;amp;lt;/html&amp;amp;gt;&lt;br /&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt;&lt;/pre&gt;Untuk kode HTML, kita perlu meng-encode karater &lt;code&gt;&amp;lt;&lt;/code&gt; (lebih kecil) menjadi &lt;code&gt;&amp;amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt; (lebih besar) menjadi &lt;code&gt;&amp;amp;gt;&lt;/code&gt;, dan spasi menjadi &lt;code&gt;&amp;amp;nbsp;&lt;/code&gt; Hasilnya: &lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;html css js php&#34;&gt;&amp;lt;html&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;lt;style type=&amp;lsquo;text/css&amp;rsquo;&amp;gt;&lt;br /&gt;.body{&lt;br /&gt;&amp;nbsp; &amp;nbsp; background: #008080;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; color: white;&lt;br /&gt;}&lt;br /&gt;&amp;lt;/style&amp;gt;&lt;br /&gt;&amp;lt;script type=&amp;lsquo;text/javascript&amp;rsquo;&amp;gt;&lt;br /&gt;console.log(&amp;ldquo;javascript dijalankan&amp;rdquo;); &lt;br /&gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&amp;lt;?php echo &amp;ldquo;&amp;lt;h2&amp;gt;Hello World&amp;lt;/h2&amp;rdquo;; ?&amp;gt; &lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;Mudah bukan? selamat mencoba.&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;https://highlightjs.org/usage/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://highlightjs.org/usage/&#34;&gt;https://highlightjs.org/usage/&lt;/a&gt; &lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Template baawan blogger sudah saya modifikasi sedemikian rupa. Namun, masih ada yang kurang, pewarnaan kode (syntax highlighting). Kode yang saya sisipkan di dalam artikel tidak berwarna. Kadang saya memanfaatkan gist github, pastebin, ideone, dsb. untuk menyisipkan kode yang berwarna.
+Modul highlight.js berfungsi untuk membuat kode (di web) menjadi berwarna. Kode yang berwarna akan lebih mudah dibaca. Karena itu, kita perlu menggunakan highlight.js. Berikut ini cara menggunakan highlight.js di blogger.
+1. Memasang higlight.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Bootstrap (2) - Sistem Grid dan tata letak</title>
+      <link>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</link>
+      <pubDate>Mon, 04 Jan 2016 20:37:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</guid>
+      <description>Selamat datang di tutorial ke-2 Bootstrap. Pada tutorial kali ini, saya akan membahas sistem grid dan tata letak di Bootstrap. Langsung saja, ya!
+Sistem grid memudahkan kita mengatur tata letak elemen di web. Zaman dulu, kebanyakan web menggunakan tag table untuk mengatur tata letaknya. Sekarang sudah tidak lagi. Karena kurang efektif dan tidak SEO friendly. Oleh karena itu, website zaman sekarang menggunakan CSS untuk mengatur tata letaknya.
+Sistem grid di Bootstrap mengadopsi konsep tabel.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Bootstrap (1) - Menyisipkan Bootstrap ke HTML</title>
+      <link>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</link>
+      <pubDate>Sat, 02 Jan 2016 08:58:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</guid>
+      <description>Selamat datang di tutorial pertama Bootstrap. Bootstrap adalah sebuah framework CSS untuk mengatur tampilan web agar menjadi lebih bagus dan responsive. Pada tutorial pertama ini, saya akan membahas cara menyisipkan Bootstrap ke dalam HTML. Sebelum memulai, silahkan anda unduh dulu Bootstrap-nya di getbootstrap.com.
+
+Menyisipkan Bootstrap ke Halaman WebMari kita membuat sebuah direktori bernama belajar-bootstrap. Kemdudian ekstrak Bootstrap yang sudah diunduh tadi ke dalam direktori tersebut. Extrak direktori bisa dilakukan dengan drag-drop.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial CSS: Cara Membuat Effek Bayangan</title>
+      <link>https://www.petanikode.com/tutorial-css-shadow/</link>
+      <pubDate>Sun, 01 Nov 2015 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-css-shadow/</guid>
+      <description>Properti untuk membuat bayangan (shadow), mulai dikenalkan pada CSS3. Properti tersebut adalah box-shadow dan text-shadow.
+Keduanya sama-sama berfungsi untuk membuat bayangan. Properti box-shadow digunakan untuk membuat bayangan untuk kotak atau elemen kontainer. Sementara itu, properti text-shadow digunakan untuk membuat bayangan pada teks.
+Membuat Bayangan untuk Teks Langsung saja ke contoh, silahkan buat style seperti ini.
+h2 { text-shadow: 3px 2px 1px grey; font-size: 40px; }  kemudian HTML-nya:
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Latihan Bayangan&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style.</description>
+    </item>
+    
+    <item>
+      <title>3 Cara Penulisan Kode CSS dalam HTML</title>
+      <link>https://www.petanikode.com/cara-penulisan-css-dalam-html/</link>
+      <pubDate>Sun, 12 Jul 2015 21:14:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/cara-penulisan-css-dalam-html/</guid>
+      <description>Penulisan kode CSS dalam HTML dibagi menjadi tiga cara, internal, inline, dan eksternal. Pembagian ini berdasarkan letak kode CSS tersebut ditulis.
+1. Internal CSS Internal CSS adalah istilah untuk kode CSS yang ditulis langsung dalam berkas HTML. Kode CSS ini dituliskan pada tag &amp;lt;style&amp;gt;. Tag ini bisa ditulis di dalam blok head atapun body, kedua-duanya sah. Nah, berikut ini contoh internal CSS.
+
+2. Eksternal CSS Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial CSS: Pengenalan Dasar CSS untuk Pemula</title>
+      <link>https://www.petanikode.com/tutorial-css-pengenalan-css-untuk-pemula/</link>
+      <pubDate>Tue, 07 Jul 2015 08:06:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-css-pengenalan-css-untuk-pemula/</guid>
+      <description>Jika HTML adalah kerangka sebuah halaman web, maka CSS adalah kulitnya.
+CSS (Cascade Style Sheet) meruapakan sebuah bahasa untuk mengatur tampilan halaman web sehingga terlihat lebih cantik.
+Cara Menulis kode CSS dalam HTML Penulisan kode CSS di HTML dapat dilakukan di dalam tag &amp;lt;style&amp;gt;. Tag tersebut dapat ditulis di dalam tag &amp;lt;head&amp;gt; atau &amp;lt;body&amp;gt;.
+Kebanyakan orang menulisnya di dalam tag &amp;lt;head&amp;gt;. Perhatiakn contoh berikut ini:
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Contoh Penulisan kode CSS&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; p { color: red } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt;Sebuah contoh paragraf yang sudah dipengaruhi oleh kode CSS&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  Hasilnya, elemen &amp;lt;p&amp;gt; akan berwarna merah:</description>
+    </item>
+    
+    <item>
+      <title>Panduan Membuat tab dengan jQuery</title>
+      <link>https://www.petanikode.com/tutorial-jquery-membuat-tab/</link>
+      <pubDate>Sun, 09 Mar 2014 23:16:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/tutorial-jquery-membuat-tab/</guid>
+      <description>Tab yang akan dibuat nantinya dapat dimanfaatkan untuk widget blog. Tab ini berisi informasi akun media sosial, seperti like box facebook, google+, twitter, dan lain-lain. Menggunakan tab dapat menghemat ruang atau tempat. Dalam satu widget saja, kita dapat menyimpan lebih dari satu informasi.
+Desain TabAgar dapat mengetahui bagaimana tab yang akan dibuat, Saya mendesainnya terlebih dahulu. Desain akan mempermudah kita dalam membuat kodenya. 
+Membuat Kode HTML, CSS, dan jQueryMembuat tab seperti desain di atas, dapat menggunakan kode HTML dan CSS saja.</description>
     </item>
     
   </channel>

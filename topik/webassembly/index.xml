@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Webassembly on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/webassembly/index.xml</link>
+    <link>https://www.petanikode.com/topik/webassembly/</link>
     <description>Recent content in Webassembly on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/webassembly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Mar 2017 11:49:13 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/webassembly/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Apa itu WebAssembly?</title>
@@ -15,183 +18,11 @@
       <pubDate>Wed, 15 Mar 2017 11:49:13 +0800</pubDate>
       
       <guid>https://www.petanikode.com/apa-itu-webassembly/</guid>
-      <description>
-
-&lt;p&gt;Saat pertama kali mendengar kata WebAssembly, saya kira kita akan membuat web dengan
-bahasa assembly. Ternyata bukan.&lt;/p&gt;
-
-&lt;p&gt;Sekitar dua minggu yang lalu saya mendapatkan kiriman link milis melalui channel
-&lt;a href=&#34;https://t.me/reddit_programming/1280&#34;&gt;@reddit_programming&lt;/a&gt; tentang pengumuman WebAssembly.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;WebAssembly akan segera tersedia di Firefox dan Google Chrome bulan ini&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;dan benar saja, Firefox dan Google Chrome merilis versi terbarunya.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.lombokfoss.com/2017/03/firefox-52-rilis-dengan-dukungan-webassembly.html&#34;&gt;Firefox 52 Rilis dengan Dukungan WebAssembly dan Peningkatan Sync&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.lombokfoss.com/2017/03/google-chrome-57-rilis-dengan-dukungan.html&#34;&gt;Google Chrome 57 Rilis dengan Dukungan WebAssembly dan Spesifikasi CSS Gird Baru&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Lalu apa sebenarnya WebAssembly itu?&lt;/p&gt;
-
-&lt;p&gt;Menurut Wikipedia:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;WebAssembly&lt;/strong&gt; atau disingkat wasm adalah sebuah eksperimen untuk menggunakan
-bahasa tingkat bawah pada browser. Proyek ini masih dalam
-tahapan pengembangan yang digarap oleh orang-orang dari Firefox, Webkit (Chromium),
-Google Chrome, Microsoft Edge, dan W3C.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;763&#34;
-    height=&#34;417&#34;
-    alt=&#34;kerjasama google, yahoo, microsoft, webkit, dan w3c untuk membangun webassembly&#34;
-    src=&#34;https://1.bp.blogspot.com/-35sqWt0WdsQ/WMktYpy3rWI/AAAAAAAAEaU/6byqD4vYzgQ75KNdYEcwmdqwYFjgKBonQCPcB/s1600/kerjasama%2Buntuk%2Bmembangun%2Bwebassembly.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Jadi, nanti aplikasi yang menggunakan bahasa pemrograman dari tingkat bawah
-seperti C dan C++ akan bisa berjalan di browser layaknya javascript. :open_mouth:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=686 height=657
-    layout=&#34;responsive&#34;
-    data-tweetid=&#34;841952471450808321&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;p&gt;Sedangkan menurut Eric Elliott, seorang peteran javascript:&lt;/p&gt;
-
-&lt;p&gt;WebAssembly adalah:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Sebuah bahasa baru: Kode WebAssembly merupakan representasi dari AST
-&lt;em&gt;(Abstract Syntax Tree)&lt;/em&gt; dalam format &lt;em&gt;binary&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;Sebuah peningkatan performa untuk javascript.&lt;/li&gt;
-&lt;li&gt;Peningkatan untuk browser: Browser akan mampu mengeksekusi format &lt;em&gt;binary&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;seblum-webassembly&#34;&gt;Seblum WebAssembly&lt;/h2&gt;
-
-&lt;p&gt;Sebelum datangnya WebAssembly beberapa perusahaan sudah berusaha untuk membuat
-sesuatu agar program yang dibuat dari bahasa pemrograman selain javascript
-bisa berjalan dengan mulus di browser.&lt;/p&gt;
-
-&lt;p&gt;Mereka melakuannya dengan cara mereka sendiri,&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Firefox membuat turunan javascript bernama &lt;a href=&#34;http://asmjs.org/&#34;&gt;asm.js&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Microsoft membuat &lt;a href=&#34;https://www.typescriptlang.org/&#34;&gt;typescript&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Google membuat &lt;a href=&#34;https://developer.chrome.com/native-client&#34;&gt;NaCl&lt;/a&gt; (Native Client).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kini mereka semua bersatu membangun WebAssembly. WebAssembly sendiri dibangun
-dari asm.js dan NaCl.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;roadmap-pengembangan-webassembly&#34;&gt;Roadmap Pengembangan WebAssembly&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;April 2015 - Pembentukan tim dan komunitas WebAssembly&lt;/li&gt;
-&lt;li&gt;Juni 2015 - Publikasi pengumuman pertama&lt;/li&gt;
-&lt;li&gt;Maret 2016 - Implementasi fitur inti&lt;/li&gt;
-&lt;li&gt;Oktober 2016 - Versi Preview diluncurkan&lt;/li&gt;
-&lt;li&gt;Februari 2017 - Pemilihan logo resmi&lt;/li&gt;
-&lt;li&gt;Maret 2017 - Beberapa web browser sepakat mulai menggunakan WebAssembly dan
-versi preview berakhir.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Untuk agenda selanjutnya, dapat dipantau di: &lt;a href=&#34;http://webassembly.org/roadmap/&#34;&gt;http://webassembly.org/roadmap/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contoh-kode-webassembly&#34;&gt;Contoh Kode WebAssembly&lt;/h2&gt;
-
-&lt;p&gt;Berikut ini contoh kode yang saya ambil dari Wikipedia:&lt;/p&gt;
-
-&lt;p&gt;program_faktorial.c&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int factorial(int n) {
-    if (n == 0)
-        return 1;
-    else
-        return n * factorial(n-1);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah dikompilasi menjadi WASM:&lt;/p&gt;
-
-&lt;p&gt;program_faktorial.wasm&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;get_local 0
-i64.const 0
-i64.eq
-if i64
-    i64.const 1
-else
-    get_local 0
-    get_local 0
-    i64.const 1
-    i64.sub
-    call 0
-    i64.mul
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;WASM binary (heksadesimal)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;20 00
-42 00
-51
-04 7e
-42 01
-05
-20 00
-20 00
-42 01
-7d
-10 00
-7e
-0b
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;demo-webassembly&#34;&gt;Demo WebAssembly&lt;/h2&gt;
-
-&lt;p&gt;Untuk mengecek browsermu sudah mendukung WebAssembly atau tidak, coba buka
-demo berikut ini:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://webassembly.org/demo/Tanks/&#34;&gt;Game Thanks!&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://s3.amazonaws.com/mozilla-games/ZenGarden/EpicZenGarden.html&#34;&gt;Epic Zen Garden&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kalau belum bisa, maka browsernya harus di-update ke versi terakhir saat ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-youtube width=&#34;480&#34;
-     height=&#34;270&#34;
-     layout=&#34;responsive&#34;
-     data-videoid=&#34;TwuIRcpeUWE&#34;&gt;
- &lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah sedikit hal yang saya ketahui tentang WebAssembly.&lt;/p&gt;
-
-&lt;p&gt;Kedepan mungkin akan lebih banyak lagi game dan aplikasi yang di-porting ke Web dengan
-WebAssembly. Misalnya, nanti kita bisa buka Photoshop di browser. Jadi tidak
-perlu nginstal deh :smile:.&lt;/p&gt;
-
-&lt;p&gt;Referensi:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://webassembly.org&#34;&gt;http://webassembly.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&#34;&gt;https://medium.com/javascript-scene/what-is-webassembly-the-dawn-of-a-new-era-61256ec5a8f6#.e9qb1e9dp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/WebAssembly&#34;&gt;https://en.wikipedia.org/wiki/WebAssembly&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Saat pertama kali mendengar kata WebAssembly, saya kira kita akan membuat web dengan bahasa assembly. Ternyata bukan.
+Sekitar dua minggu yang lalu saya mendapatkan kiriman link milis melalui channel @reddit_programming tentang pengumuman WebAssembly.
+ WebAssembly akan segera tersedia di Firefox dan Google Chrome bulan ini
+ dan benar saja, Firefox dan Google Chrome merilis versi terbarunya.
+ Firefox 52 Rilis dengan Dukungan WebAssembly dan Peningkatan Sync Google Chrome 57 Rilis dengan Dukungan WebAssembly dan Spesifikasi CSS Gird Baru  Lalu apa sebenarnya WebAssembly itu?</description>
     </item>
     
   </channel>

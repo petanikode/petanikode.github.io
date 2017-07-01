@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Belajar Html on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/seri/belajar-html/index.xml</link>
+    <link>https://www.petanikode.com/seri/belajar-html/</link>
     <description>Recent content in Belajar Html on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/seri/belajar-html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Feb 2014 14:16:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/seri/belajar-html/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Belajar HTML: Pengenalan Dasar HTML untuk Pemula</title>
@@ -15,114 +18,9 @@
       <pubDate>Thu, 06 Feb 2014 14:16:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-html-dasar/</guid>
-      <description>
-
-&lt;p&gt;HTML adalah bahasa pertama yang harus dipelajari bila kamu ingin menjadi
-seorang Web Developer, karena HTML merupakan bahan dasar untuk membuat web.&lt;/p&gt;
-
-&lt;!-- @TODO tambahkan link &#34;ingin menjadi web developer&#34; ke /roadmap-untuk-menjadi-web-develoepr --&gt;
-
-&lt;!-- HTML dirancang untuk mengatur struktur dasar dari halaman web. --&gt;
-
-&lt;h2 id=&#34;apa-itu-html&#34;&gt;Apa itu HTML?&lt;/h2&gt;
-
-&lt;p&gt;HTML atau &lt;em&gt;Hyper Text Markup Language&lt;/em&gt; merupakan sebuah bahasa &lt;a href=&#34;http://kbbi.web.id/markah&#34;&gt;markah&lt;/a&gt; untuk membuat halaman web. Padanan HTML dalam bahasa indonesia adalah Bahasa Markah Hiper Teks (BMHT).&lt;/p&gt;
-
-&lt;!-- @TODO Sejarah HTML --&gt;
-
-&lt;!-- @TODO Persiapan Alat-alat untuk Belajar HTML --&gt;
-
-&lt;h2 id=&#34;membuat-file-html&#34;&gt;Membuat file HTML&lt;/h2&gt;
-
-&lt;p&gt;File HTML dapat dibuat dengan teks editor seperti notepad. Lebih bagus lagi menggunakan teks editor yang memiliki fitur &lt;i&gt;syntax highlighter&lt;/i&gt; seperti &lt;i&gt;Notepad++&lt;/i&gt;, &lt;i&gt;Sublime Text&lt;/i&gt;, &lt;i&gt;Gedit&lt;/i&gt;, &lt;i&gt;Kate&lt;/i&gt;, dan lain-lain. File HTML disimpan dengan ekstensi html atau htm.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;572&#34;
-height=&#34;433&#34;
-src=&#34;http://1.bp.blogspot.com/-03w3xksxa4g/VeWQbn42DWI/AAAAAAAABuI/TirRDdRsGno/s1600/Teks%2Beditor%2Bdan%2Bfile%2Bhtml.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contoh-contoh-html&#34;&gt;Contoh-contoh HTML&lt;/h2&gt;
-
-&lt;p&gt;Kita ingin menampilkan informasi di website. Informasi ini merupakan sebuah pesan: &lt;i&gt;Situs web ini milik Ardianta&lt;/i&gt;. Maka bentuk kode HTML-nya akan seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;body&amp;gt;
-Situs web ini milik Ardianta
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;HTML di disusun dengan tag-tag (penanda). Perhatikanlah, letak penulisan informasi yang ingin dimuat di website. Berada di atantara tag &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; dan &lt;code&gt;&amp;lt;/body&amp;gt;&lt;/code&gt;. tag ini merupakan tubuh dokumen. Setiap informasi yang ditulis di dalam penada ini, akan tampil di halaman web.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;893&#34;
-height=&#34;228&#34;
-src=&#34;http://3.bp.blogspot.com/-5uzUabwmnRQ/VMEYPU6P3NI/AAAAAAAABHU/A7TBArK29t8/s1600/situsku%2Bdengan%2Bhtml.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Contoh selanjutnya, kita akan berkenalan dengan tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; dan tag &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt;. Tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; merupakan kepala dokumen. Agar lebih mudah memahami, cantoh yang tadi kita modifikasi. Tambahkanlah tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; dan tag &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt; Sehingga kodenya menjadi seperti di bawah ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;title&amp;gt;Situs Web Ardianta&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-Situs web ini milik Ardianta
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tag &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt; berfungsi untuk membuat judul website. Sementara itu tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; berfungsi untuk membuat kepala dokumen. Tag &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt; harus diletakkan di dalam tag &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;. Perhatikanlah hasilnya, teks yang ada di tag &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt; akan ditampilkan sebagai judul website.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;893&#34;
-height=&#34;228&#34;
-src=&#34;http://3.bp.blogspot.com/-ddZCD2lTm-U/VMEYthp68SI/AAAAAAAABHc/daMrnRJrPBk/s1600/situsku%2Bdengan%2Bhtml%2Belemen%2Bhead.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Contoh berikutnya, kita akan berkenalan dengan tag &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; dan tag &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;. tag &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; berfungsi untuk membuat judul artikel. H1 adalah ukuran judul terbesar di HTML. Sementara itu, tag &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; berfungsi untuk membuat paragraf. Modifikasi lagi kode tadi, sehingga menjadi seperti berikut ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;title&amp;gt;Situs Web Ardianta&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-    &amp;lt;h1&amp;gt;Tentang situs web ini&amp;lt;/h1&amp;gt;
-
-    &amp;lt;p&amp;gt;Situs web ini milik Ardianta. Dibuat pada tanggal 13 Januari 2015.
-    Tujuan membuat situs web ini, untuk latihan saja. Situs ini belum mengudara,
-    karena masih tersimpan di komputer saya sendiri (lokal). Suatu saat nanti,
-    situs ini akan kusimpan (hosting) di sebuah server di internet. &amp;lt;/p&amp;gt;
-
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perhatikanlah hasilnya, Teks yang berada di dalam tag H1 akan ditampilkan lebih besar. Karena teks itu adalah sebuah judul artikel. Sementara itu, teks yang berada di tag &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; akan ditampilkan dengan ukuran normal. Untuk lebih jelasnya, cobalah tambahkan paragraf lagi di bawahnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;893&#34;
-height=&#34;265&#34;
-src=&#34;http://4.bp.blogspot.com/-o3Ndy21pueU/VMEZNQF860I/AAAAAAAABHk/ELn7LBtAOeQ/s1600/html%2Bheading%2Bdan%2Bparagraf.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
-
-&lt;p&gt;HTML adalah bahasa yang wajib dipelajari oleh siapa saja yang tertarik menjadi pembuat website (&lt;i&gt;Web Developer&lt;/i&gt;). Karena HTML merupakan bahan dasar untuk membuat website. Contoh-contoh sederhana di atas sudah menjelaskan bagaimana kode HTML itu. Banyak tag yang harus di hafal. Kunci untuk mengingatnya adalah sering berlatih membuat file HTML. Insa&amp;rsquo;allah anda akan ingat di luar kepala.&lt;br /&gt;&lt;br /&gt;Cukup sekian dulu pengenalan HTML ini, bagaimana pendapatmu? Apakah sudah paham dan mengenal HTML, sekarang?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Referensi:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;W3Schools &amp;ndash; &lt;a href=&#34;http://www.w3schools.com/html/html_intro.asp&#34;&gt;HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.w3.org/QA/2002/04/valid-dtd-list.html&#34;&gt;w3.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>HTML adalah bahasa pertama yang harus dipelajari bila kamu ingin menjadi seorang Web Developer, karena HTML merupakan bahan dasar untuk membuat web.
+Apa itu HTML? HTML atau Hyper Text Markup Language merupakan sebuah bahasa markah untuk membuat halaman web. Padanan HTML dalam bahasa indonesia adalah Bahasa Markah Hiper Teks (BMHT).
+Membuat file HTML File HTML dapat dibuat dengan teks editor seperti notepad. Lebih bagus lagi menggunakan teks editor yang memiliki fitur syntax highlighter seperti Notepad++, Sublime Text, Gedit, Kate, dan lain-lain.</description>
     </item>
     
   </channel>

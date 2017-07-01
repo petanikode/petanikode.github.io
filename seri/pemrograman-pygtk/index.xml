@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pemrograman Pygtk on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/seri/pemrograman-pygtk/index.xml</link>
+    <link>https://www.petanikode.com/seri/pemrograman-pygtk/</link>
     <description>Recent content in Pemrograman Pygtk on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/seri/pemrograman-pygtk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Sep 2014 06:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/seri/pemrograman-pygtk/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Pemrograman PyGTK: Membuat Pesan Tips (Tooltips)</title>
@@ -15,8 +18,11 @@
       <pubDate>Tue, 09 Sep 2014 06:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-pygtk-membuat-pesan-tips-tooltips/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt; &lt;br /&gt;Beberapa komponen antarmuka grafis (GUI) perlu penjelasan tambahan agar pengguna mengerti fungsinya. Penjelasan tambahan dapat kita buat berupa pesan tips. Pesan tips di antarmuka dikenal dengan istilah &lt;i&gt;tooltips&lt;/i&gt;. Pesan tips &lt;i&gt;(tooltips)&lt;/i&gt; akan tampil ketika pointer menyentuh &lt;i&gt;(hover)&lt;/i&gt; komponen tertentu.&lt;br /&gt;&lt;br /&gt;Pesan tips dapat kita buat dengan &lt;i&gt;metod&lt;/i&gt; atau fungsi &lt;code&gt;set_tooltip_text()&lt;/code&gt;. Fungsi ini dipakai pada objek komponen yang akan ditambahkan pesan tips. Perhatikanlah contoh berikut ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;# tooltip.py&lt;br /&gt;import gtk&lt;br /&gt;&lt;br /&gt;class Aplikasi(gtk.Window):&lt;br /&gt;&lt;br /&gt;&amp;nbsp; def &lt;strong&gt;init&lt;/strong&gt;(self):&lt;br /&gt;&amp;nbsp; &amp;nbsp; super(Aplikasi, self).&lt;strong&gt;init&lt;/strong&gt;()&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_title(&amp;ldquo;Tooltips&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_size_request(250,200)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_position(gtk.WIN_POS_CENTER)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.connect(&amp;ldquo;destroy&amp;rdquo;, gtk.main_quit)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.kontainer = gtk.Fixed()&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.add(self.kontainer)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; tombol = gtk.Button(&amp;ldquo;Sebuah Tombol&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tombol.set_size_request(100,35)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.kontainer.put(tombol,50,50)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_tooltip_text(&amp;ldquo;Ini jendela&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tombol.set_tooltip_text(&amp;ldquo;Ini adalah sebuat tombol&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.show_all()&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;Aplikasi()&lt;br /&gt;gtk.main()&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Saat dijalankan, pesan tips akan tampil ketika pointer melewati komponen yang sudah diberikan pesan tips.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-kZJZI-WDazQ/VAv6jQopV8I/AAAAAAAAAng/7QOFEdUT2Vo/s1600/Tooltips_016.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-kZJZI-WDazQ/VAv6jQopV8I/AAAAAAAAAng/7QOFEdUT2Vo/s1600/Tooltips_016.png&#34; /&gt;&lt;/a&gt;  &lt;br /&gt;&lt;br /&gt;Pesan tips dapat diberikan pada komponen yang dapat disentuh pointer, bukan komponen yang tidak terlihat &lt;i&gt;(background)&lt;/i&gt;. Pakailah&lt;i&gt; &lt;/i&gt;pesan tips pada komponen yang membutuhkan informasi tambahan agar antarmuka yang kita buat lebih mudah dipahami.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://zetcode.com/gui/pygtk/firststeps/&#34;&gt;zetcode.com&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Beberapa komponen antarmuka grafis (GUI) perlu penjelasan tambahan agar pengguna mengerti fungsinya. Penjelasan tambahan dapat kita buat berupa pesan tips. Pesan tips di antarmuka dikenal dengan istilah tooltips. Pesan tips (tooltips) akan tampil ketika pointer menyentuh (hover) komponen tertentu.
+Pesan tips dapat kita buat dengan metod atau fungsi set_tooltip_text(). Fungsi ini dipakai pada objek komponen yang akan ditambahkan pesan tips. Perhatikanlah contoh berikut ini:
+# tooltip.py
+import gtk
+class Aplikasi(gtk.</description>
     </item>
     
   </channel>

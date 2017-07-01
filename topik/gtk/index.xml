@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gtk on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/gtk/index.xml</link>
+    <link>https://www.petanikode.com/topik/gtk/</link>
     <description>Recent content in Gtk on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/gtk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Sep 2014 06:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/gtk/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Pemrograman PyGTK: Membuat Pesan Tips (Tooltips)</title>
@@ -15,8 +18,11 @@
       <pubDate>Tue, 09 Sep 2014 06:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-pygtk-membuat-pesan-tips-tooltips/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt; &lt;br /&gt;Beberapa komponen antarmuka grafis (GUI) perlu penjelasan tambahan agar pengguna mengerti fungsinya. Penjelasan tambahan dapat kita buat berupa pesan tips. Pesan tips di antarmuka dikenal dengan istilah &lt;i&gt;tooltips&lt;/i&gt;. Pesan tips &lt;i&gt;(tooltips)&lt;/i&gt; akan tampil ketika pointer menyentuh &lt;i&gt;(hover)&lt;/i&gt; komponen tertentu.&lt;br /&gt;&lt;br /&gt;Pesan tips dapat kita buat dengan &lt;i&gt;metod&lt;/i&gt; atau fungsi &lt;code&gt;set_tooltip_text()&lt;/code&gt;. Fungsi ini dipakai pada objek komponen yang akan ditambahkan pesan tips. Perhatikanlah contoh berikut ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;# tooltip.py&lt;br /&gt;import gtk&lt;br /&gt;&lt;br /&gt;class Aplikasi(gtk.Window):&lt;br /&gt;&lt;br /&gt;&amp;nbsp; def &lt;strong&gt;init&lt;/strong&gt;(self):&lt;br /&gt;&amp;nbsp; &amp;nbsp; super(Aplikasi, self).&lt;strong&gt;init&lt;/strong&gt;()&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_title(&amp;ldquo;Tooltips&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_size_request(250,200)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_position(gtk.WIN_POS_CENTER)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.connect(&amp;ldquo;destroy&amp;rdquo;, gtk.main_quit)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.kontainer = gtk.Fixed()&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.add(self.kontainer)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; tombol = gtk.Button(&amp;ldquo;Sebuah Tombol&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tombol.set_size_request(100,35)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.kontainer.put(tombol,50,50)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_tooltip_text(&amp;ldquo;Ini jendela&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tombol.set_tooltip_text(&amp;ldquo;Ini adalah sebuat tombol&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.show_all()&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;Aplikasi()&lt;br /&gt;gtk.main()&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Saat dijalankan, pesan tips akan tampil ketika pointer melewati komponen yang sudah diberikan pesan tips.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-kZJZI-WDazQ/VAv6jQopV8I/AAAAAAAAAng/7QOFEdUT2Vo/s1600/Tooltips_016.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-kZJZI-WDazQ/VAv6jQopV8I/AAAAAAAAAng/7QOFEdUT2Vo/s1600/Tooltips_016.png&#34; /&gt;&lt;/a&gt;  &lt;br /&gt;&lt;br /&gt;Pesan tips dapat diberikan pada komponen yang dapat disentuh pointer, bukan komponen yang tidak terlihat &lt;i&gt;(background)&lt;/i&gt;. Pakailah&lt;i&gt; &lt;/i&gt;pesan tips pada komponen yang membutuhkan informasi tambahan agar antarmuka yang kita buat lebih mudah dipahami.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://zetcode.com/gui/pygtk/firststeps/&#34;&gt;zetcode.com&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Beberapa komponen antarmuka grafis (GUI) perlu penjelasan tambahan agar pengguna mengerti fungsinya. Penjelasan tambahan dapat kita buat berupa pesan tips. Pesan tips di antarmuka dikenal dengan istilah tooltips. Pesan tips (tooltips) akan tampil ketika pointer menyentuh (hover) komponen tertentu.
+Pesan tips dapat kita buat dengan metod atau fungsi set_tooltip_text(). Fungsi ini dipakai pada objek komponen yang akan ditambahkan pesan tips. Perhatikanlah contoh berikut ini:
+# tooltip.py
+import gtk
+class Aplikasi(gtk.</description>
     </item>
     
     <item>
@@ -25,8 +31,9 @@
       <pubDate>Mon, 08 Sep 2014 07:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-pygtk-tombol-dan-label/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;   &lt;br /&gt;Pada antarmuka grafis (GUI), tombol merupakan komponen penting penyusun antarmuka.Tombol dipakai untuk menjalankan fungsi atau aksi tertentu. Pada kesempatan ini, saya akan membahas langkah-langkah atau proses dalam pembuatan tombol di PyGTK.&lt;br /&gt;&lt;h2&gt;1. Membuat Tombol&lt;/h2&gt;Tombol dibuat dengan membuat objek dari kelas &lt;code&gt;Button()&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;tombol = gtk.Button(&amp;ldquo;Sebuah Tombol&amp;rdquo;)&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;2. Membuat Kontainer&lt;/h2&gt;Kontainer kita perlukan untuk membungkus atau menampung tombol dan komponen-komponen lainnya. Apabila tidak menggunakan kontainer, bisa jadi akan berantakan. Pembuatan kontainer dapat dilakukan dengan membuat objek dari kelas-kelas kontainer, seperti &lt;code&gt;Fixed()&lt;/code&gt; untuk kontainer &lt;i&gt;fixed&lt;/i&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;kontainer = gtk.Fixed()&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;3. Menambahkan tombol ke kontainer&lt;/h2&gt;Setelah membuat kontainer, selanjutnya kita tambahkan komponen ke dalamnya. Penambahan komponen ke kontainer dapat dilakukan dengan fungsi &lt;code&gt;put()&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;kontainer.put(tombol, 20, 30)&lt;/code&gt;&lt;/pre&gt;Tombol akan diletakkan pada posisi koordinat x=20 dan y=30.&lt;br /&gt;&lt;h2&gt;4. Menambahkan kontainer ke jendela&lt;/h2&gt;Semua komponen sudah dimasukkan ke dalam kontainer. Selanjutnya, kita masukkan kontainer ke dalam jendela agar dapat ditampilkan. Hal ini dapat dilakukan dengan fungsi &lt;code&gt;add()&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;jendela.add(kontainer)&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;5. Tampilkan semua komponen&lt;/h2&gt;Terakhir, setelah semua komponen dimasukan ke jendela, kita tampilkan semuanya dengan fungsi&amp;nbsp; &lt;code&gt;show_all()&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;jendela.show_all()&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;6. Contoh Lengkap&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;import gtk&lt;br /&gt;&lt;br /&gt;class Aplikasi(gtk.Window):&lt;br /&gt;&amp;nbsp; def &lt;strong&gt;init&lt;/strong&gt;(self):&lt;br /&gt;&amp;nbsp; &amp;nbsp; super(Aplikasi, self).&lt;strong&gt;init&lt;/strong&gt;()&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_title(&amp;ldquo;Tombol&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_size_request(250,150)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_position(gtk.WIN_POS_CENTER)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl1 = gtk.Button(&amp;ldquo;Tombol 1&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl1.set_sensitive(False) # non-aktifkan tombol&lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl2 = gtk.Button(&amp;ldquo;Tombol 2&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl3 = gtk.Button(stock=gtk.STOCK_CLOSE) &lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl4 = gtk.Button(&amp;ldquo;Tombol 4&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl4.set_size_request(80,40) # set ukuran tombol&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; kontainer = gtk.Fixed() # membuat kontainer&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; kontainer.put(tbl1, 20, 30)&lt;br /&gt;&amp;nbsp; &amp;nbsp; kontainer.put(tbl2, 100, 30)&lt;br /&gt;&amp;nbsp; &amp;nbsp; kontainer.put(tbl3, 20, 80)&lt;br /&gt;&amp;nbsp; &amp;nbsp; kontainer.put(tbl4, 100, 80)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.connect(&amp;ldquo;destroy&amp;rdquo;, gtk.main_quit)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.add(kontainer)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.show_all()&lt;br /&gt;&lt;br /&gt;Aplikasi()&lt;br /&gt;gtk.main()&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-J3vvBeX2_HM/VNjnE2a3-aI/AAAAAAAABTE/c1bjRWUtcMY/s1600/Membuat%2Btombol%2Bdi%2Bpygtk.png&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-J3vvBeX2_HM/VNjnE2a3-aI/AAAAAAAABTE/c1bjRWUtcMY/s1600/Membuat%2Btombol%2Bdi%2Bpygtk.png&#34; /&gt;&lt;/a&gt;   &lt;br /&gt;Terdapat  empat tombol yang telah dibuat. Salah satunya tidak aktif dan ada juga  yang memiliki gambar ikon. Tombol nomor 4 memiliki ukuran yang lebih  besar, karena ukuran awalnya sudah dirubah.&lt;br /&gt;&lt;br /&gt;Referensi: &lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://zetcode.com/gui/pygtk/firststeps/&#34; target=&#34;blank&#34;&gt;zetcode.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://www.pygtk.org/pygtk2reference/class-gtkbutton.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.pygtk.org/pygtk2reference/class-gtkbutton.html&#34;&gt;http://www.pygtk.org/pygtk2reference/class-gtkbutton.html&lt;/a&gt; &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
-</description>
+      <description>Pada antarmuka grafis (GUI), tombol merupakan komponen penting penyusun antarmuka.Tombol dipakai untuk menjalankan fungsi atau aksi tertentu. Pada kesempatan ini, saya akan membahas langkah-langkah atau proses dalam pembuatan tombol di PyGTK.
+1. Membuat TombolTombol dibuat dengan membuat objek dari kelas Button(). Contoh:
+tombol = gtk.Button(&amp;ldquo;Sebuah Tombol&amp;rdquo;)2. Membuat KontainerKontainer kita perlukan untuk membungkus atau menampung tombol dan komponen-komponen lainnya. Apabila tidak menggunakan kontainer, bisa jadi akan berantakan. Pembuatan kontainer dapat dilakukan dengan membuat objek dari kelas-kelas kontainer, seperti Fixed() untuk kontainer fixed.</description>
     </item>
     
     <item>
@@ -35,207 +42,11 @@
       <pubDate>Sun, 07 Sep 2014 10:40:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-pygtk-pengenalan/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Aplikasi dengan antarmuka grafis (GUI) lebih disukai pengguna, karena mudah
-dioperasikan.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, kita akan belajar membuat aplikasi berbasis GUI dengan
-bahasa pemrograman python dan pustaka PyGTK.&lt;/p&gt;
-
-&lt;h2 id=&#34;apa-itu-gtk-dan-pygtk&#34;&gt;Apa itu GTK+ dan PyGTK?&lt;/h2&gt;
-
-&lt;p&gt;GTK+ (GIMP Toolkit) merupakan pustaka yang digunakan untuk membangun
-antarmuka grafis. GTK+ adalah bagian dari proyek GNU.&lt;/p&gt;
-
-&lt;p&gt;GTK+ sendiri merupakan pustaka yang digunakan untuk bahasa C, sedangkan
-untuk python kita menggunakan PyGTK.&lt;/p&gt;
-
-&lt;p&gt;PyGTK adalah pustaka GTK+ yang sudah diracik khusus untuk Python.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-6zHBqlTpopk/WTphCRYMWFI/AAAAAAAAEy8/bWTaNndNUG8CVYydqDBNot3v6fFCg61pACK4B/s1600/website-pygtk.png&#34; alt=&#34;Website Resmi PyGTK&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Informasi lebih lengkap mengenai PyGTK, dapat dibaca pada website resminya
-&lt;a href=&#34;http://www.pygtk.org/&#34;&gt;www.pygtk.org&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;persiapan-pemrograman-pygtk&#34;&gt;Persiapan Pemrograman PyGTK&lt;/h2&gt;
-
-&lt;p&gt;Apa saja alat-alat yang diperlukan untuk pemrograman PyGTK?&lt;/p&gt;
-
-&lt;h3 id=&#34;1-teks-editor&#34;&gt;1. Teks Editor&lt;/h3&gt;
-
-&lt;p&gt;Teks editor digunakan untuk menulis kode. Gunakan teks editor yang anda sukai. Beberapa teks editor rekomendasi: &lt;a href=&#34;http://atom.io/&#34;&gt;Atom&lt;/a&gt;, &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;Ms. Visual Studio Code&lt;/a&gt;, &lt;a href=&#34;http://komodoide.com/komodo-edit/&#34;&gt;Komodo Edit&lt;/a&gt;, &lt;a href=&#34;https://www.geany.org/&#34;&gt;Geany&lt;/a&gt;, dsb.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-xYZSEJ0UIKs/V_mwJCM3-VI/AAAAAAAADTI/DWvKVoole9cE1s1R7tnDh_sxOKXUUHINACK4B/s1600/Text%2BEditor%2BAtom%2Bdi%2BLinux%2BMint%2B18.png&#34; alt=&#34;Teks editor atom&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-python&#34;&gt;2. Python&lt;/h3&gt;
-
-&lt;p&gt;Sebagian besar distro Linux sudah membawa python pada distribusinya, jadi
-tidak perlu diinstal.&lt;/p&gt;
-
-&lt;p&gt;Silahkan cek versi yang terinstal di terminal dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ python --version
-Python 2.7.6
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;3-pip&#34;&gt;3. PIP&lt;/h3&gt;
-
-&lt;p&gt;PIP merupakan sebuah sistem manajemen paket yang digunakan untuk menginstal
-dan mengelola pustaka python.&lt;/p&gt;
-
-&lt;p&gt;Kita membutuhkan PIP untuk menginstal pustaka PyGTK.&lt;/p&gt;
-
-&lt;p&gt;Cara instal PIP:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get isntall python-pip
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;4-instal-pustaka-pygtk&#34;&gt;4. Instal Pustaka PyGTK&lt;/h3&gt;
-
-&lt;p&gt;Sekarang baru kita bisa install pustaka PyGTK-nya. Gunakan perintah berikut
-untuk meingstal:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo pip install PyGTK
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;contoh-program-membauat-jendela&#34;&gt;Contoh Program: Membauat Jendela&lt;/h2&gt;
-
-&lt;p&gt;Setelah semua perealatan siap, mari kita coba membuat sebuah jendela.&lt;/p&gt;
-
-&lt;p&gt;Jendela merupakan bagian utama dari aplikasi GUI.&lt;/p&gt;
-
-&lt;p&gt;Silahkan ikuti kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#impor pustaka GTK
-import gtk
-
-# membuat objek jendela
-jendela = gtk.Window()
-
-# konfigurasi jendela
-jendela.set_size_request(600,200)
-jendela.set_position(gtk.WIN_POS_CENTER)
-jendela.set_title(&amp;quot;Pemrograman PyGTK - Petani Kode&amp;quot;)
-jendela.connect(&amp;quot;destroy&amp;quot;, gtk.main_quit)
-
-# tampilkan jendela
-jendela.show()
-gtk.main()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, simpan dengan nama &lt;code&gt;jendela.py&lt;/code&gt; dan eksekusi skript tersebut.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-4ZsqFLyNQJw/VxJCpKP2XxI/AAAAAAAACu0/3NOoOmf1CbEXQOmE3ki22mrMzAejumbiACK4B/s1600/Membuat%2Bjendela%2Bdengan%2Bobjek.png&#34; alt=&#34;Jendela dengan PyGTK&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika berhasil muncul seperti gambar di atas, berarti program PyGTK pertama
-kita berhasil&amp;hellip; :smile:&lt;/p&gt;
-
-&lt;h3 id=&#34;penjelasan-method&#34;&gt;Penjelasan Method&lt;/h3&gt;
-
-&lt;p&gt;Class &lt;code&gt;gtk.Window()&lt;/code&gt; memiliki beberapa method untuk mengatur konfigurasi jendela,
-berikut ini penjelasannnya:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;.set_size_request(600,200)&lt;/code&gt; untuk menentukan ukuran jendela.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.set_position(gtk.WIN_POS_CENTER)&lt;/code&gt; untuk menentukan posisi muncul jendela. &lt;code&gt;gtk.WIN_POS_CENTER&lt;/code&gt;
-artinya posisi munculnya di tengah-tengah layar.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.set_title()&lt;/code&gt; untuk memberikan judul jendela.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.connect(&amp;quot;destroy&amp;quot;, gtk.main_quit)&lt;/code&gt; untuk menghubungkan sinyal &lt;code&gt;&amp;quot;destroy&amp;quot;&lt;/code&gt; dengan
-fungsi &lt;code&gt;main_quit&lt;/code&gt;. Artinya, ketika tombol &lt;em&gt;close&lt;/em&gt; diklik&amp;hellip; aplikasi akan langsung keluar.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.show()&lt;/code&gt; untuk menampilkan jendela.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Selain method dari class &lt;code&gt;Window()&lt;/code&gt; ada satu hal lagi yang perlu diperhatikan
-yaitu fungsi &lt;code&gt;gtk.main()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;gtk.main()&lt;/code&gt; adalah &lt;em&gt;main loop&lt;/em&gt; (perulangan utama) yang menjaga jendela tetap terbuka.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-jendela-dengan-class&#34;&gt;Membuat Jendela dengan Class&lt;/h2&gt;
-
-&lt;p&gt;Pada contoh di atas kita membuat jendela dengan membuat langsung objek dari
-class &lt;code&gt;gtk.Window()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sekarang kita coba membuat jendela dengan membuat class turunan dari &lt;code&gt;gtk.Window()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import gtk
-
-class Aplikasi(gtk.Window):
-    def init(self):
-        super(Aplikasi, self).init()
-
-        self.connect(&amp;quot;destroy&amp;quot;, gtk.main_quit)
-        self.set_size_request(250, 150)
-        self.set_position(gtk.WIN_POS_CENTER)
-        self.show()
-
-# Tampilkan Jendela
-Aplikasi()
-gtk.main()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pertama kita membuat class bernama &lt;code&gt;Aplikasi()&lt;/code&gt; yang merupakan turunan dari
-class &lt;code&gt;gtk.Window()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Kemudian kita lakukan konfigurasi jendela pada konstruktor class &lt;code&gt;Aplikasi()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Lalu&amp;hellip; pada akhirnya kita bisa langsung menampilkan jendela dengan memanggil
-class-nya atau bisa juga dengan cara membuat objek dari class &lt;code&gt;Aplikasi()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;app = Aplikasi()
-gtk.main()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-RrkkI7-DoHY/VAu8s1tRIaI/AAAAAAAAAmg/MXfKzfAMRFM/s1600/Program%2Bpertama%2Bpygtk%2B-%2Bjendela.png&#34; alt=&#34;Jendela GTK+ dengan Class Turunan&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Cara manakah yang kamu suka?&lt;/p&gt;
-
-&lt;p&gt;Kalau saya lebih suka yang menggunakan class, karena lebih sederhana dan mudah
-dikelola.&lt;/p&gt;
-
-&lt;h2 id=&#34;menambahkan-ikon&#34;&gt;Menambahkan Ikon&lt;/h2&gt;
-
-&lt;p&gt;Untuk menambahkan ikon, kita menggunakan method:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;.set_icon_from_file(&amp;quot;path/ikon.png&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jangan lupa juga untuk menambahkan file ikonnya &lt;code&gt;petanikode.png&lt;/code&gt;. Letakkan
-file tersebut satu direktori dengan skrip python-nya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import gtk
-
-class Aplikasi(gtk.Window):
-    def init(self):
-        super(Aplikasi, self).init()
-
-        self.connect(&amp;quot;destroy&amp;quot;, gtk.main_quit)
-        self.set_size_request(250, 150)
-        self.set_position(gtk.WIN_POS_CENTER)
-        self.set_title(&amp;quot;Jendela dengan Ikon&amp;quot;)
-        self.set_icon_from_file(&amp;quot;petanikode.png&amp;quot;)
-        self.show()
-
-Aplikasi()
-gtk.main()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-VR3-biwSEms/VAvshq_5vFI/AAAAAAAAAnA/awCoTiXk5oI/s1600/pyGTK%2B-%2Bmenggunakan%2Bikon.png&#34; alt=&#34;Jendela dengan Ikon&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
-
-&lt;p&gt;Kita sudah tahu cara membuat jendela dengan PyGTK, selanjutnya kita akan coba &lt;a href=&#34;https://www.petanikode.com/pemrograman-pygtk-tombol/&#34;&gt;membuat tombol dan label&lt;/a&gt; di dalamnya.&lt;/p&gt;
-
-&lt;p&gt;Sekian tutorial PyGTK pertama ini&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Kalau ada yang ditanyakan, silahakan sampaikan melalui komentar.&lt;/p&gt;
-</description>
+      <description>Aplikasi dengan antarmuka grafis (GUI) lebih disukai pengguna, karena mudah dioperasikan.
+Pada kesempatan ini, kita akan belajar membuat aplikasi berbasis GUI dengan bahasa pemrograman python dan pustaka PyGTK.
+Apa itu GTK+ dan PyGTK? GTK+ (GIMP Toolkit) merupakan pustaka yang digunakan untuk membangun antarmuka grafis. GTK+ adalah bagian dari proyek GNU.
+GTK+ sendiri merupakan pustaka yang digunakan untuk bahasa C, sedangkan untuk python kita menggunakan PyGTK.
+PyGTK adalah pustaka GTK+ yang sudah diracik khusus untuk Python.</description>
     </item>
     
   </channel>

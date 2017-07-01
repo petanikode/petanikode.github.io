@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Composer on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/composer/index.xml</link>
+    <link>https://www.petanikode.com/topik/composer/</link>
     <description>Recent content in Composer on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/composer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Dec 2016 13:13:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/composer/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Cara Menggunakan Composer pada CodeIgniter</title>
@@ -15,92 +18,9 @@
       <pubDate>Sat, 03 Dec 2016 13:13:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-menggunakan-composer-pada-codeigniter/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-gWlKpBGdB94/WDg10RRi8PI/AAAAAAAADc4/XAKDYt3FFCUF_pZJyTlOy5fkIQcmjJgLACK4B/s1600/composer-petanikode.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;CodeIgniter tidak seperti Laravel yang menggunakan Composer untuk memulai proyeknya.
-Namun, kita juga bisa menggunakan Composer pada CodeIgniter. Composer sebenarnya sudah didukung pada CodeIgninter versi 3, tapi autoload-nya belum diaktifkan.&lt;/p&gt;
-
-&lt;h2 id=&#34;konfigurasi-codeigniter&#34;&gt;Konfigurasi CodeIgniter&lt;/h2&gt;
-
-&lt;p&gt;Buka file konfigurasi proyek CodeIgniter pada &lt;code&gt;application/config/config.php&lt;/code&gt;.
-Kemudian isi nilai autoload untuk Composer seperti beikut ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;instalasi-pustaka&#34;&gt;Instalasi Pustaka&lt;/h2&gt;
-
-&lt;p&gt;Sekarang coba buka file &lt;code&gt;composer.json&lt;/code&gt; yang ada di &lt;em&gt;root&lt;/em&gt; direktori proyek.
-Kemudian tambahkan pustaka FPDF.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;json&#34;&gt;{
-    &#34;description&#34;: &#34;The CodeIgniter framework&#34;,
-    &#34;name&#34;: &#34;codeigniter/framework&#34;,
-    &#34;type&#34;: &#34;project&#34;,
-    &#34;homepage&#34;: &#34;http://codeigniter.com&#34;,
-    &#34;license&#34;: &#34;MIT&#34;,
-    &#34;support&#34;: {
-        &#34;forum&#34;: &#34;http://forum.codeigniter.com/&#34;,
-        &#34;wiki&#34;: &#34;https://github.com/bcit-ci/CodeIgniter/wiki&#34;,
-        &#34;irc&#34;: &#34;irc://irc.freenode.net/codeigniter&#34;,
-        &#34;source&#34;: &#34;https://github.com/bcit-ci/CodeIgniter&#34;
-    },
-    &#34;require&#34;: {
-        &#34;php&#34;: &#34;&gt;=5.2.4&#34;,
-        &lt;mark&gt;&#34;setasign/fpdf&#34;: &#34;1.8.1&#34;&lt;/mark&gt;
-    },
-    &#34;require-dev&#34;: {
-        &#34;mikey179/vfsStream&#34;: &#34;1.1.*&#34;
-    }
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ini hanya sekedar contoh saja. Anda boleh menambahkan atau menggunakan
-pustaka selain FPDF.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, ketik perintah berikut ini untuk menginstal semua pustaka:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;composer update
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tunggulah sampai prosesnya selesai.&lt;/p&gt;
-
-&lt;h2 id=&#34;percobaan-pustaka&#34;&gt;Percobaan Pustaka&lt;/h2&gt;
-
-&lt;p&gt;Sekarang coba tambahkan kode berikut ini pada &lt;em&gt;Controller&lt;/em&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php defined(&#39;BASEPATH&#39;) OR exit(&#39;No direct script access allowed&#39;);
-
-// Class untuk membuat laporan
-
-class Laporan extends CI_Controller{
-
-    function __construct(){
-        parent::__construct();
-    }
-
-    /**
-     Fungsi untuk menampilkan menu laporan penerima bantuan
-     @param none
-     @return void
-    **/
-    function penerima_bantuan(){
-        $pdf = new FPDF();
-        $pdf-&amp;gt;AddPage();
-        $pdf-&amp;gt;SetFont(&#39;Arial&#39;,&#39;B&#39;,16);
-        $pdf-&amp;gt;Cell(40,10,&#39;Hello World!&#39;);
-        $pdf-&amp;gt;Output();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, cobalah lihat hasilnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-8fHaWAf885E/WDhDiJ38GfI/AAAAAAAADdI/uzu77wy_lwMs0cb4ZJvs7FxFtm9jOgOWACK4B/s1600/Penggunaan%2Bpustaka%2BFPDF%2Bdi%2BCodeIgniter%2Bdengan%2BComposer.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-8fHaWAf885E/WDhDiJ38GfI/AAAAAAAADdI/uzu77wy_lwMs0cb4ZJvs7FxFtm9jOgOWACK4B/s1600/Penggunaan%2Bpustaka%2BFPDF%2Bdi%2BCodeIgniter%2Bdengan%2BComposer.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pustaka FPDF berhasil kita gunakan di CodeIgniter. Percobaan di atas sebenarnya untuk memastikan pustaka dari Composer berhasil di-load atau tidak. Selebihnya anda bisa bereksperiman dengan membuat &lt;em&gt;Class&lt;/em&gt; &lt;em&gt;exstend&lt;/em&gt; dari pustaka tersebut.&lt;/p&gt;
-</description>
+      <description>CodeIgniter tidak seperti Laravel yang menggunakan Composer untuk memulai proyeknya. Namun, kita juga bisa menggunakan Composer pada CodeIgniter. Composer sebenarnya sudah didukung pada CodeIgninter versi 3, tapi autoload-nya belum diaktifkan.
+Konfigurasi CodeIgniter Buka file konfigurasi proyek CodeIgniter pada application/config/config.php. Kemudian isi nilai autoload untuk Composer seperti beikut ini:
+$config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;  Instalasi Pustaka Sekarang coba buka file composer.json yang ada di root direktori proyek. Kemudian tambahkan pustaka FPDF.</description>
     </item>
     
     <item>
@@ -109,226 +29,12 @@ class Laporan extends CI_Controller{
       <pubDate>Sat, 26 Nov 2016 13:02:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-composer-untuk-pemula/</guid>
-      <description>
-
-&lt;p&gt;Bayangkan kita sedang mengerjakan proyek web dengan PHP. Kemudian kita membutuhkan
-beberapa pustaka &lt;em&gt;(library)&lt;/em&gt; untuk melengkapi proyek ini.&lt;/p&gt;
-
-&lt;p&gt;Biasanya, kalau tidak menggunakan composer, kita men-download sendiri pustakanya.&lt;/p&gt;
-
-&lt;p&gt;Tapi&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Kadang pustaka yang satu dengan yang lain saling membutuhkan. Contohnya, pustaka
-&lt;code&gt;X&lt;/code&gt; membutuhkan pustaka &lt;code&gt;Y&lt;/code&gt; agar bisa digunakan. Nah, bagaimana kalau ada banyak
-sekali pustaka yang digunakan? Pastinya akan repot mencari sendiri ketergantungan
-pustakanya.&lt;/p&gt;
-
-&lt;p&gt;Karena itu&amp;hellip;, kita membutuhkan composer.&lt;/p&gt;
-
-&lt;p&gt;Composer merupakan sebuah alat &lt;em&gt;(tool)&lt;/em&gt; untuk manajemen pustaka dalam proyek web PHP.
-Composer dapat kita suruh melakukan instalasi dan &lt;em&gt;update&lt;/em&gt; pustaka yang dibutuhkan.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-instalasi-composer&#34;&gt;1. Instalasi Composer&lt;/h2&gt;
-
-&lt;p&gt;Panduan instalasi Composer sebenarnya sudah lengkap di
-&lt;a href=&#34;https://getcomposer.org/doc/00-intro.md&#34;&gt;dokumentasi Composer&lt;/a&gt;.
-Namun, saya ingin menunjukkan cara saya menginstalnya di Linux.&lt;/p&gt;
-
-&lt;p&gt;Instalasi melalui apt: &lt;code&gt;sudo apt install composer&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;655&#34;
-    height=&#34;413&#34;
-    alt=&#34;Instalasi+Composer+melalui+apt.png&#34;
-    src=&#34;https://2.bp.blogspot.com/-W1-7q5-nUpM/WDgUeuhtduI/AAAAAAAADb8/KAlMQmaMBOEqWeucxHSmsu7NVJulM2EHQCK4B/s1600/Instalasi%2BComposer%2Bmelalui%2Bapt.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada distro Linux yang saya gunakan, paket Composer sudah tersedia di repositori.
-Akan tetapi masih versi beta (&lt;code&gt;1.0.0-beta&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;Pada saat tulisan ini dubuat, versi terakhir Composer adalah &lt;code&gt;1.3-dev&lt;/code&gt;.
-Bila ingin menginstal versi terakhir, bisa menggunakan perintah berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://getcomposer.org/composer.phar
-sudo cp composer.phar /usr/local/bin/composer
-sudo chmod +x /usr/local/bin/composer
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian coba periksa versi yang terinstal:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;petanikode@imajinasi~$ composer --version
-Composer version 1.2.2 2016-11-03 17:43:15
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;2-menggunakan-composer&#34;&gt;2. Menggunakan Composer&lt;/h2&gt;
-
-&lt;p&gt;Sekarang saya punya sebuah proyek yang berlokasi di
-&lt;code&gt;/var/www/html/belajar/belajar-composer&lt;/code&gt;.
-Saya perlu pindah dulu ke direktori tersebut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd  /var/www/html/belajar/belajar-composer
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian ketik:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;composer init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, silahkan isi informasi proyek seperti berikut ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;864&#34;
-    height=&#34;608&#34;
-    alt=&#34;Informasi+proyek+composer+-+petani+kode.png&#34;
-    src=&#34;http://3.bp.blogspot.com/-6VfgmYHYvtA/WDgcgbaPmwI/AAAAAAAADcM/VNYVun0VOEgS0DaqISYXxzvquzJhO_v8wCK4B/s1600/Informasi%2Bproyek%2Bcomposer%2B-%2Bpetani%2Bkode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Perintah di atas akan menghasilkan file &lt;code&gt;composer.json&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-    &amp;quot;name&amp;quot;: &amp;quot;petanikode/belajar-composer&amp;quot;,
-    &amp;quot;description&amp;quot;: &amp;quot;Hanya untuk latihan composer saja&amp;quot;,
-    &amp;quot;type&amp;quot;: &amp;quot;project&amp;quot;,
-    &amp;quot;license&amp;quot;: &amp;quot;GPL&amp;quot;,
-    &amp;quot;authors&amp;quot;: [
-            {
-                &amp;quot;name&amp;quot;: &amp;quot;Ardianta Pargo&amp;quot;,
-                &amp;quot;email&amp;quot;: &amp;quot;ardianta_pargo@yahoo.co.id&amp;quot;
-            }
-        ],
-    &amp;quot;require&amp;quot;: {}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Informasi yang tertera pada file &lt;code&gt;composer.json&lt;/code&gt; merupakan informasi yang baru
-saja kita masukkan. Perhatikan pada atribut &lt;code&gt;&amp;quot;require&amp;quot;&lt;/code&gt;, isinya masih kosong,
-karena tadi kita menjawab &lt;code&gt;no&lt;/code&gt; pada &lt;em&gt;define depedency&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya cobalah instal pustaka &lt;em&gt;Carbon&lt;/em&gt;, pustaka ini menyediakan
-fungsi-fungsi untuk pemrosesan waktu &lt;em&gt;(Date Time)&lt;/em&gt;. Ketik pada terminal:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;composer require nesbot/carbon
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka sekarang file &lt;code&gt;composer.json&lt;/code&gt; akan menjadi seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;json&#34;&gt;{
-    &#34;name&#34;: &#34;petanikode/belajar-composer&#34;,
-    &#34;description&#34;: &#34;Hanya untuk latihan composer saja&#34;,
-    &#34;type&#34;: &#34;project&#34;,
-    &#34;license&#34;: &#34;GPL&#34;,
-    &#34;authors&#34;: [
-        {
-            &#34;name&#34;: &#34;Ardianta Pargo&#34;,
-            &#34;email&#34;: &#34;ardianta_pargo@yahoo.co.id&#34;
-        }
-    ],
-    &#34;require&#34;: {
-        &lt;mark&gt;&#34;nesbot/carbon&#34;: &#34;^1.21&#34;&lt;/mark&gt;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Selain itu juga, perintah tersebut melakukan pengunduhan pustaka ke dalam proyek.
-Cobalah buka direktori proyeknya, pasti ada direktori baru bernama &lt;code&gt;vendor&lt;/code&gt;.
-Semua pustaka yang diunduh Composer akan tersimpan di sana.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;800&#34;
-    height=&#34;364&#34;
-    alt=&#34;direktori+vendor+yang+di+download+composer.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-RFYIlqvd0ls/WDgmlBcqZ7I/AAAAAAAADcc/2BSf_2e72LY43-XnnBQ2-wLTbMXATKgSwCK4B/s1600/direktori%2Bvendor%2Byang%2Bdi%2Bdownload%2Bcomposer.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya, kita akan mencoba pustaka yang baru saja kita tambahkan.
-Buatlah file PHP baru di direktori proyek beranam &lt;code&gt;tes_carbon.php&lt;/code&gt;
-dengan isi sebagai berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-require &#39;vendor/autoload.php&#39;;
-
-use Carbon\Carbon;
-
-$sekarang = Carbon::now();
-
-echo &amp;quot;Sekarang: $sekarang &amp;lt;br&amp;gt;&amp;quot;;
-echo &amp;quot;Umur saya: &amp;quot; . Carbon::createFromDate(2000, 1, 1)-&amp;gt;age . &amp;quot;&amp;lt;br&amp;gt;&amp;quot;;
-echo &amp;quot;Besok: &amp;quot; . $sekarang-&amp;gt;addDay() .&amp;quot;&amp;lt;br&amp;gt;&amp;quot;;
-&amp;lt;br&amp;gt;
-?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasil outputnya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Sekarang: 2016-11-25 21:03:18
-Umur saya: 16
-Besok: 2016-11-26 21:03:18
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;3-mencari-pustaka&#34;&gt;3. Mencari Pustaka&lt;/h2&gt;
-
-&lt;p&gt;Misalkan kita membutuhkan lebih banyak pustaka untuk diinstal.
-Kita hanya perlu menambahkan nama-nama pustakanya ke dalam atribut &lt;code&gt;&amp;quot;require&amp;quot;&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;json&#34;&gt;{
-    &#34;name&#34;:&#34;petanikode/belajar-composer&#34;,
-    &#34;description&#34;:&#34;Hanya untuk latihan composer saja&#34;,
-    &#34;type&#34;:&#34;project&#34;,
-    &#34;license&#34;:&#34;GPL&#34;,
-    &#34;authors&#34;:[
-        {
-            &#34;name&#34;:&#34;Ardianta Pargo&#34;,
-            &#34;email&#34;:&#34;ardianta_pargo@yahoo.co.id&#34;
-        }
-    ],
-    &#34;require&#34;:{
-        &#34;nesbot/carbon&#34;:&#34;^1.21&#34;,
-        &lt;mark&gt;&#34;setasign/fpdf&#34;:&#34;1.8.1&#34;&lt;/mark&gt;
-    }
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Formatnya, &lt;code&gt;&amp;quot;vendor/pustaka&amp;quot;: &amp;quot;versi&amp;quot;&lt;/code&gt;. Lalu, bagaimana cara kita mengetahui
-nama-nama vendor dari pustaka tersebut? Kita dapat menggunakan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;composer search fpdf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perintah tersebut untuk mencari nama vendor penyedia pustaka &lt;code&gt;fpdf&lt;/code&gt;.
-Atau kita juga bisa mencarinya di website &lt;a href=&#34;http://packagist.org/&#34;&gt;packagist.org&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1154&#34;
-    height=&#34;573&#34;
-    alt=&#34;Mencari+pustaka+di+packagist.png&#34;
-    src=&#34;http://4.bp.blogspot.com/-zHazZ7X65qA/WDgq5-qCO-I/AAAAAAAADco/UVGicQ9aEyYYKJPQeQIIDotwiTpfpUPoQCK4B/s1600/Mencari%2Bpustaka%2Bdi%2Bpackagist.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah semua pustaka yang kita butuhkan ditulis dalam file &lt;code&gt;composer.json&lt;/code&gt;,
-selanjutnya kita bisa menginstal semuanya dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;composer update
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
-
-&lt;p&gt;Cukup sekian tutorial cara menggunakan Composer ini. Selengkapnya bisa
-dipelajari pada dokumentasi Composer atau kalau ada yang masih belum jelas,
-bisa ditanyakan melalui komentar.&lt;/p&gt;
-</description>
+      <description>Bayangkan kita sedang mengerjakan proyek web dengan PHP. Kemudian kita membutuhkan beberapa pustaka (library) untuk melengkapi proyek ini.
+Biasanya, kalau tidak menggunakan composer, kita men-download sendiri pustakanya.
+Tapi&amp;hellip;
+Kadang pustaka yang satu dengan yang lain saling membutuhkan. Contohnya, pustaka X membutuhkan pustaka Y agar bisa digunakan. Nah, bagaimana kalau ada banyak sekali pustaka yang digunakan? Pastinya akan repot mencari sendiri ketergantungan pustakanya.
+Karena itu&amp;hellip;, kita membutuhkan composer.
+Composer merupakan sebuah alat (tool) untuk manajemen pustaka dalam proyek web PHP.</description>
     </item>
     
   </channel>

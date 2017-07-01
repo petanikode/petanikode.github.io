@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emulator on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/emulator/index.xml</link>
+    <link>https://www.petanikode.com/topik/emulator/</link>
     <description>Recent content in Emulator on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/emulator/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Nov 2015 21:05:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/emulator/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Emulator alternatif untuk Android Studio</title>
@@ -15,90 +18,10 @@
       <pubDate>Fri, 13 Nov 2015 21:05:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-android-emulator-alternatif/</guid>
-      <description>
-
-&lt;p&gt;Bila kamu tidak ingin menggunakan emulator bawaan Android SDK atau terasa
-berat, mungkin bisa coba emulator alternatif.&lt;/p&gt;
-
-&lt;p&gt;Ada dua alternatif emulator untuk debug dan deploy aplikasi android:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Menggunakan Genymotion&lt;/li&gt;
-&lt;li&gt;Menggunakan Hp sendiri&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Geanymotion adalah emulator android pihak ketiga yang berbasis virtualbox.
-Ada yang mengklaim emulator ini lebih cepat dibandingkan emulator bawaan
-android studio.&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-instal-geanymotion-untuk-emulator-android-studio&#34;&gt;Cara Instal Geanymotion untuk Emulator Android Studio&lt;/h2&gt;
-
-&lt;h3 id=&#34;1-pastikan-virtualbox-sudah-terinstal&#34;&gt;1. Pastikan virtualbox sudah terinstal&lt;/h3&gt;
-
-&lt;p&gt;Genymotion memanfaatkan virtualbox untuk melakuan virtualisasi.
-Jadi pastikan virtualbox sudah terpasang di komputermu.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install virtualbox
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;2-download-dan-instal-genymotion&#34;&gt;2. Download dan Instal Genymotion&lt;/h3&gt;
-
-&lt;p&gt;Download Genymotion di website resminya (&lt;a href=&#34;https://www.genymotion.com/#!/download&#34;&gt;genymotion.com&lt;/a&gt;).
-Kita harus memiliki akun agar bisa mendownloadnya.&lt;/p&gt;
-
-&lt;p&gt;Nanti kita akan mendapatkan file binary, seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-9aMDhjKhdGc/VkXGKfp2ipI/AAAAAAAACMU/IKY6Xw98LdQ/s1600/Genymotion%2Buntuk%2Blinux%2Bsudah%2Bdidownload.png&#34; alt=&#34;Geanymotion untuk Linux&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah mendapatkan genymotion, selanjutnya menginstalnya ke direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Saya pilih direktori ini, karena banyak aplikasi lain juga terinstal di sana.
-Sebenarnya bisa diinstal di mana saja, sesuka anda.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-Us5YgHMvZaE/VkXHuL8ssJI/AAAAAAAACMg/oVFB6UVSftY/s1600/Kumpulan%2Bberkas%2Bgenymotion%2Bsetelah%2Bterinstal.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-Us5YgHMvZaE/VkXHuL8ssJI/AAAAAAAACMg/oVFB6UVSftY/s1600/Kumpulan%2Bberkas%2Bgenymotion%2Bsetelah%2Bterinstal.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar di atas adalah kumpulan file genymotion setelah terinstal di direktori &lt;code&gt;/opt&lt;/code&gt;. Untuk menginstalnya di sana, kita hanya perlu mengeksekusi file &lt;code&gt;genymotion-2.5.2_x86.bin&lt;/code&gt; di direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sekarang coba eksekusi atau jalankan genymotion. Kemudian, tambahkan perangkat virtual (virtual device).&lt;/p&gt;
-
-&lt;p&gt;Penambahan perangkat virtual membutuhkan koneksi internet untuk login dan
-mendownload perangkat virtualnya.&lt;/p&gt;
-
-&lt;p&gt;Login dengan akun yang sudah anda buat di genymotion.com.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-f3EJwTqLgQo/VkXKC4IrwEI/AAAAAAAACMs/H8AoHdlVpp8/s1600/Genymotion%2Bberhasil%2Bberjalan%2Bdi%2Blinux%2Bxubuntu%2B15.04%2B32bit.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-f3EJwTqLgQo/VkXKC4IrwEI/AAAAAAAACMs/H8AoHdlVpp8/s1600/Genymotion%2Bberhasil%2Bberjalan%2Bdi%2Blinux%2Bxubuntu%2B15.04%2B32bit.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Barikut ini tangkapan layar saat salah satu perangkat virtual (mesin virtual) dinyalakan.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-cfL4afw7Yh0/VkXO0ZEV0QI/AAAAAAAACM8/vWGD1yIcBUk/s1600/Genymotion%2Bsedang%2Bberaksi.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-cfL4afw7Yh0/VkXO0ZEV0QI/AAAAAAAACM8/vWGD1yIcBUk/s1600/Genymotion%2Bsedang%2Bberaksi.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-tambahkan-plug-in-genymotion-di-android-studio&#34;&gt;2. Tambahkan Plug-in Genymotion di Android Studio&lt;/h3&gt;
-
-&lt;p&gt;Klik menu &lt;em&gt;file&lt;/em&gt; kemudian pilih &lt;em&gt;Settings&lt;/em&gt;. Pada jendela yang terbuka,
-di bagian sebelah kiri, pilih plugins.&lt;/p&gt;
-
-&lt;p&gt;Cari plugin &amp;ldquo;genymotion&amp;rdquo;, bila tidak ditemukan klik &lt;em&gt;browse&lt;/em&gt;. Kemudian, cari lagi plugin &amp;ldquo;genymotion&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-tAem4UlNjF4/VkXWB0DBRRI/AAAAAAAACNM/DoetsxT-mzo/s1600/Instalasi%2Bplugin%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-tAem4UlNjF4/VkXWB0DBRRI/AAAAAAAACNM/DoetsxT-mzo/s1600/Instalasi%2Bplugin%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah instalasi selesai, silahkan buka ulang Android Studio-nya.&lt;/p&gt;
-
-&lt;h3 id=&#34;3-uji-coba&#34;&gt;3. Uji coba&lt;/h3&gt;
-
-&lt;p&gt;Setelah plugin genymotion berhasil terinstal, maka akan ada tambahan tombol Genymotion di toolbar Android Studio. Bila diklik, maka akan keluar jendela Genymotion Device Manager.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4-XsdNfS_SU/VkXX3U1-Y0I/AAAAAAAACNY/j5PqsSprhZs/s1600/Tombol%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-4-XsdNfS_SU/VkXX3U1-Y0I/AAAAAAAACNY/j5PqsSprhZs/s1600/Tombol%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Silahkan nyalakan salah satu mesin virtual Genymotion. Kemudian &lt;em&gt;run&lt;/em&gt; salah satu proyek app di android studio, maka anda akan dihadapkan dengan jendela pemilihan mesin virtual atau emulator.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-CITW2sYWH5U/VkXb1F5ZSGI/AAAAAAAACNk/ucTfzjf5csQ/s1600/Memilih%2Bmesin%2Bvirtual%2Bsaat%2Bmenjalankan%2Bproyek%2Bandroid%2Bstudio.png&#34;&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-CITW2sYWH5U/VkXb1F5ZSGI/AAAAAAAACNk/ucTfzjf5csQ/s1600/Memilih%2Bmesin%2Bvirtual%2Bsaat%2Bmenjalankan%2Bproyek%2Bandroid%2Bstudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Karena salah satu mesin genymotion sedang dinyalakan, makan akan tampil pilihannya di sana. Setelah dipilih, maka aplikasi pun berhasil dikirim ke mesin virtual genymotion dan dijalankan.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-dAjdV4lnZkk/VkXdVuHOAxI/AAAAAAAACNs/qwJHxIZebzo/s1600/Aplikasi%2Bproyek%2Bberhasil%2Bdi-run.png&#34;&gt;&lt;img src=&#34;http://2.bp.blogspot.com/-dAjdV4lnZkk/VkXdVuHOAxI/AAAAAAAACNs/qwJHxIZebzo/s1600/Aplikasi%2Bproyek%2Bberhasil%2Bdi-run.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Android Studio sudah bisa bekerja dengan Genymotion.&lt;/p&gt;
-</description>
+      <description>Bila kamu tidak ingin menggunakan emulator bawaan Android SDK atau terasa berat, mungkin bisa coba emulator alternatif.
+Ada dua alternatif emulator untuk debug dan deploy aplikasi android:
+ Menggunakan Genymotion Menggunakan Hp sendiri  Geanymotion adalah emulator android pihak ketiga yang berbasis virtualbox. Ada yang mengklaim emulator ini lebih cepat dibandingkan emulator bawaan android studio.
+Cara Instal Geanymotion untuk Emulator Android Studio 1. Pastikan virtualbox sudah terinstal Genymotion memanfaatkan virtualbox untuk melakuan virtualisasi.</description>
     </item>
     
   </channel>

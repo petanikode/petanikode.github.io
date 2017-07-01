@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rss on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/rss/index.xml</link>
+    <link>https://www.petanikode.com/topik/rss/</link>
     <description>Recent content in Rss on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/rss/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jul 2016 14:09:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/rss/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Membuat Bot Telegram Tanpa Menulis Kode Program (Coding)</title>
@@ -15,228 +18,8 @@
       <pubDate>Fri, 08 Jul 2016 14:09:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/membuat-bot-telegram-tanpa-menulis-kode-program-coding/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-width=&#34;712&#34;
-height=&#34;356&#34;
-alt=&#34;telegram-petanikode.png&#34;
-src=&#34;http://1.bp.blogspot.com/-O5BDsC5sx7U/V386o1PkOrI/AAAAAAAAC_s/dYtT6GzAIp8Mv16BMe1uR9Y31fxLR4hzACK4B/s1600/telegram-petanikode.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selain cepat dan bebas iklan, salah satu yang membuat Telegram lebih unggul dari
-aplikasi &lt;em&gt;chat&lt;/em&gt; yang lain adalah adanya Bot (Robot). Bot merupakan akun yang
-dikendalikan oleh program. Bot hanya bertindak sesui intruksi yang diberikan
-melalui kode program.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, kita akan membuat sebuah bot tanpa harus menulis kode
-program &lt;em&gt;(coding)&lt;/em&gt;. Bot yang akan kita buat sederhana saja. Bot bisa mengecek
-&lt;em&gt;post&lt;/em&gt; terbaru yang dikirim ke sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Catatan:&lt;/strong&gt; &lt;a href=&#34;https://www.quora.com/Why-is-Reddit-blocked-by-the-Indonesian-government&#34;&gt;Reddit&lt;/a&gt; sudah lama diblokir di Indonesia. Kemungkinan tidak bisa diakses dari jaringan anda.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;1-membuat-bot&#34;&gt;1. Membuat Bot&lt;/h2&gt;
-
-&lt;p&gt;Ada sebuah bot yang menyediakan layanan untuk membuat bot tanpa kode,
-namanya &lt;a href=&#34;https://manybot.io/&#34;&gt;@manybot&lt;/a&gt;. Silahkan ikuti langkah-langkah beriktu
-ini untuk membuat bot melalui &lt;em&gt;ManyBot&lt;/em&gt;.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Buka Bot manybot: &lt;a href=&#34;http://telegram.me/Manybot&#34;&gt;http://telegram.me/Manybot&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Klik &lt;em&gt;&amp;ldquo;Create a New Bot&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;612&#34;
-height=&#34;268&#34;
-alt=&#34;1.+Buat+Bot+Baru.png&#34;
-src=&#34;http://4.bp.blogspot.com/-ajowRuU6jW8/V3yC8x_CvbI/AAAAAAAAC7k/CI9_sSWppz8WibCGrpLBLB6BcALvcHcZgCK4B/s1600/1.%2BBuat%2BBot%2BBaru.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Anda akan mendapatkan pesan seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;532&#34;
-height=&#34;167&#34;
-alt=&#34;Pembuatan+Bot+-+meminta+api+token.png&#34;
-src=&#34;http://2.bp.blogspot.com/-Tnhtol1cC7Q/V3yDgNL7McI/AAAAAAAAC7w/KyygNTWzDoAKPIWTNysx629JzSkbTJ23gCK4B/s1600/Pembuatan%2BBot%2B-%2Bmeminta%2Bapi%2Btoken.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Silahkan Klik Saja &lt;a href=&#34;http://telegram.me/botfather&#34;&gt;@BotFather&lt;/a&gt; untuk membuat nama Bot dan mendapatkan token API.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-mendapatkan-token-api&#34;&gt;2. Mendapatkan Token API&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Silahkan buka Bot Father: &lt;a href=&#34;http://telegram.me/botfather&#34;&gt;http://telegram.me/botfather&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Klik pada ikon &lt;em&gt;command bot&lt;/em&gt; &amp;ldquo;&lt;code&gt;[/]&lt;/code&gt;&amp;rdquo; kemudian pilih &lt;em&gt;new bot&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;625&#34;
-height=&#34;326&#34;
-alt=&#34;Mendaftaran+Bot+Baru.png&#34;
-src=&#34;http://2.bp.blogspot.com/-wvA6phUQgfQ/V3yFABbfcvI/AAAAAAAAC78/IEzLeehLFUk8_yh2PfZJ9piJF5GEg7b_ACK4B/s1600/Mendaftaran%2BBot%2BBaru.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Tuliskan nama Bot, contoh: &lt;em&gt;Reddit Programming&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;412&#34;
-height=&#34;162&#34;
-alt=&#34;Memberikan+nama+BOT.png&#34;
-src=&#34;http://3.bp.blogspot.com/-Hz7wPgRw-SU/V35-St7Q2dI/AAAAAAAAC9k/y8CZPzJORSILEvVxfqhbBLz4RBczXmAVQCK4B/s1600/Memberikan%2Bnama%2BBOT.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Kemudian tuliskan username untuk bot anda. Username akan menjadi nama unik dari bot yang akan dibuat. Username harus diakhiri dengan kata &lt;em&gt;&amp;ldquo;bot&amp;rdquo;&lt;/em&gt; dibelakangnya, contoh &lt;code&gt;reddit_programming_bot&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-  width=&#34;410&#34;
-  height=&#34;126&#34;
-  alt=&#34;username+bot.png&#34;
-  src=&#34;http://4.bp.blogspot.com/-BF0c9vlcujU/V35_TIZ7YkI/AAAAAAAAC9s/92r1_aCUxJobQ1nL9oMs7gU0I8vavhCdQCK4B/s1600/username%2Bbot.png&#34;
-  layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Kita akan mendapatkan sebua token api, silahkan di-copy dan kirim ke &lt;a href=&#34;http://telegram.me/Manybot&#34;&gt;@manybot&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;406&#34;
-    height=&#34;298&#34;
-    alt=&#34;Mengambil+token+api+dari+botfather.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-nBux4x3OOXQ/V35_ub_Uu5I/AAAAAAAAC94/WSU9EoQkQGoKEf34zV0OjkzLbKRtQtrxgCK4B/s1600/Mengambil%2Btoken%2Bapi%2Bdari%2Bbotfather.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;3-masukkan-token-api&#34;&gt;3. Masukkan Token API&lt;/h2&gt;
-
-&lt;p&gt;Silahkan masukkan token API yang didapatkan dari &lt;em&gt;BotFather&lt;/em&gt; ke &lt;em&gt;ManyBot&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;551&#34;
-    height=&#34;384&#34;
-    alt=&#34;mengirim+bot+ke+manybot.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-8FA_ryVXFu4/V36AfYSj1DI/AAAAAAAAC-I/V-lmC5hRBXY3ep-368O_Q__NtpApcBV1gCK4B/s1600/mengirim%2Bbot%2Bke%2Bmanybot.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang Bot-nya sudah jadi, kita bisa langsung mengetesnya dengan mengelik link username bot atau klik &lt;code&gt;/skip&lt;/code&gt; untuk melewati.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-konfigurasi-bot&#34;&gt;4. Konfigurasi Bot&lt;/h2&gt;
-
-&lt;p&gt;Karena kita ingin mebuat Bot yang mampu mengecek &lt;em&gt;post&lt;/em&gt; terbaru di sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt;, maka kita perlu integrasikan &lt;em&gt;RSS feed&lt;/em&gt; sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt; dengan bot yang baru saja di buat.&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Silahkan buka bot yang beru saja dibuat: &lt;a href=&#34;http://telegram.me/reddit_programming_bot&#34;&gt;@reddit_programming_bot&lt;/a&gt;, kemudian klik &lt;em&gt;Settings&lt;/em&gt; pada keyboard bot.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;488&#34;
-    height=&#34;240&#34;
-    alt=&#34;Setting+Bot.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-diJ_cbYcnwI/V36B7jK6aXI/AAAAAAAAC-U/KrhhRB0UcR4cryFQj4Qslhy-wGYwj87wQCK4B/s1600/Setting%2BBot.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Setelah itu, masuk ke &lt;em&gt;Autoposting&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;489&#34;
-    height=&#34;241&#34;
-    alt=&#34;masuk+ke+autoposting.png&#34;
-    src=&#34;http://3.bp.blogspot.com/-VfRBT61iOHA/V36CTqkgTEI/AAAAAAAAC-c/hBAagHDypgQ6LX6AhbBKA6mEfYpxkR_bgCK4B/s1600/masuk%2Bke%2Bautoposting.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Klik &lt;em&gt;RSS Feed&lt;/em&gt; untuk menambahkan link RSS Feed dari sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;490&#34;
-height=&#34;193&#34;
-alt=&#34;Klik+RSS+feed.png&#34;
-src=&#34;http://3.bp.blogspot.com/-Lcxo1UD4bck/V36Cw2k338I/AAAAAAAAC-o/9wfWgQTCmZYMA2mgU586R5QBBR32tD5mgCK4B/s1600/Klik%2BRSS%2Bfeed.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selain &lt;em&gt;RSS feed&lt;/em&gt; Reddit, kita juga dapat menggunakan link &lt;em&gt;RSS feed&lt;/em&gt; dari blog, twitter,
-dan youtube. Setiap &lt;em&gt;post&lt;/em&gt; terbaru di blog, twitter, dan youtube, akan di-posting juga ke Bot Telegram.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Masukan link &lt;em&gt;RSS Feed&lt;/em&gt; sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt;. Link &lt;em&gt;RSS Feed&lt;/em&gt;: &lt;a href=&#34;https://www.reddit.com/r/programming/.rss&#34;&gt;https://www.reddit.com/r/programming/.rss&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;491&#34;
-height=&#34;163&#34;
-alt=&#34;menambahkan+alamat+RSS+Feed+ke+bot.png&#34;
-src=&#34;http://1.bp.blogspot.com/-PEhyCw_8NtQ/V36D4mmGGEI/AAAAAAAAC-0/1X8ZnJLP6qIavt3YLLQTwJfWyWg37OSnQCK4B/s1600/menambahkan%2Balamat%2BRSS%2BFeed%2Bke%2Bbot.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Selesai, kalau keluar pesan seperti di bawah ini, artinya penambahan link RSS Feed sudah diterima.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;496&#34;
-    height=&#34;413&#34;
-    alt=&#34;Penambahan+RSS+Feed+berhasil.png&#34;
-    src=&#34;http://3.bp.blogspot.com/-8Q7ORUhHTQI/V36EnHzStcI/AAAAAAAAC_A/a7sIcTZuLVQQSSKypmapr2FSfhhK2n_AwCK4B/s1600/Penambahan%2BRSS%2BFeed%2Bberhasil.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kita tinggal tunggu saja. Kalau ada sesuatu yang baru di sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt;, akan dikirim ke Bot.&lt;/p&gt;
-
-&lt;h2 id=&#34;5-uji-coba-bot&#34;&gt;5. Uji Coba Bot&lt;/h2&gt;
-
-&lt;p&gt;Setelah menunggu beberapa menit, akhirnya ada juga kiriman terbaru.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;489&#34;
-    height=&#34;186&#34;
-    alt=&#34;tes+bot+reddit+programming.png&#34;
-    src=&#34;https://1.bp.blogspot.com/-Z6R21Sjd0Kc/V36IwTbTSpI/AAAAAAAAC_Q/pyKaPQL78IQo98vdvsT96JaeZ2tHkgjpwCK4B/s1600/tes%2Bbot%2Breddit%2Bprogramming.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kalau link-nya dibuka:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;841&#34;
-    height=&#34;576&#34;
-    alt=&#34;Hasil+link+reddit+yang+dikirim+ke+bot.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-eryjaWjOR_I/V36JPhGJ1uI/AAAAAAAAC_Y/e7NfiG3xcusSn02hBagyt27NIMlINtYiACK4B/s1600/Hasil%2Blink%2Breddit%2Byang%2Bdikirim%2Bke%2Bbot.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya silahkan baca: &lt;a href=&#34;https://www.petanikode.com/2017/02/integarsi-bot-autoposting-telegram-dengan-channel/&#34;&gt;Cara Itegrasi Bot dengan Channel&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah, bagi yang ingin mengakses Reddit tampa harus dialihkan ke &lt;i&gt;Internet Positif&lt;/i&gt; bisa menggunakan Bot ini.&lt;br&gt;&lt;br&gt;Contoh-contoh link RSS Feeds Reddit yang bisa anda gunakan:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Halaman Depan: &lt;a href=&#34;http://www.reddit.com/.rss&#34;&gt;http://www.reddit.com/.rss&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subreddit: &lt;a href=&#34;http://www.reddit.com/r/news/.rss&#34;&gt;http://www.reddit.com/r/news/.rss&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;User: &lt;a href=&#34;http://www.reddit.com/user/alienth/.rss&#34;&gt;http://www.reddit.com/user/alienth/.rss&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Multireddit: &lt;a href=&#34;http://www.reddit.com/r/news+wtf.rss&#34;&gt;http://www.reddit.com/r/news+wtf.rss&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Dari domain tertentu: &lt;a href=&#34;http://www.reddit.com/domain/microsoft.com/.rss&#34;&gt;http://www.reddit.com/domain/microsoft.com/.rss&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;https://www.reddit.com/wiki/rss&#34;&gt;https://www.reddit.com/wiki/rss&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Selain cepat dan bebas iklan, salah satu yang membuat Telegram lebih unggul dari aplikasi chat yang lain adalah adanya Bot (Robot). Bot merupakan akun yang dikendalikan oleh program. Bot hanya bertindak sesui intruksi yang diberikan melalui kode program.
+Pada kesempatan ini, kita akan membuat sebuah bot tanpa harus menulis kode program (coding). Bot yang akan kita buat sederhana saja. Bot bisa mengecek post terbaru yang dikirim ke sub reddit /r/programming.</description>
     </item>
     
   </channel>

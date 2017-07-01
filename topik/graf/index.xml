@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Graf on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/graf/index.xml</link>
+    <link>https://www.petanikode.com/topik/graf/</link>
     <description>Recent content in Graf on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/graf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Dec 2016 15:53:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/graf/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Cara Termudah Menyimpan Graf pada Database Relasional</title>
@@ -15,127 +18,11 @@
       <pubDate>Sat, 10 Dec 2016 15:53:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-menyimpan-graf-dalam-database/</guid>
-      <description>
-
-&lt;p&gt;Awalnya saya tidak begitu paham dengan kegunaan graf pada komputer.&lt;/p&gt;
-
-&lt;p&gt;Namun, setelah
-belajar beberapa teori seperti kecerdasan buatan, analisa algoritma, struktur data,
-matematika diskrit, kalkulus, dan sebagainya. Saya mendapatkan sedikit pencerahan.&lt;/p&gt;
-
-&lt;p&gt;Graf dapat digunakan untuk menyelesaikan berbagai permasalahan seperti pencarian
-jalur terpendek, relasi hubungan sesuatu, representasi pengetahuan pada AI, dsb.&lt;/p&gt;
-
-&lt;p&gt;Saya kemudian tertarik untuk mengetahui cara melakukan komputasi graf.&lt;/p&gt;
-
-&lt;p&gt;Sebelumnya saya pernah membahas &lt;a href=&#34;https://www.petanikode.com/representasi-graf-dalam-kode-python/&#34;&gt;cara merepresentasikan graf ke dalam kode&lt;/a&gt;
-program dengan bahasa pemrograman python.&lt;/p&gt;
-
-&lt;p&gt;Sekarang, bagaimana caranya kita menyimpan graf di dalam database?&lt;/p&gt;
-
-&lt;p&gt;mari kita bahas&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-menyimpan-graf-di-dalam-database&#34;&gt;Cara Menyimpan Graf di dalam Database&lt;/h2&gt;
-
-&lt;p&gt;Memikirkan sendiri cara penyimpanan graf dalam database membuat saya pusing.&lt;/p&gt;
-
-&lt;p&gt;Tapi, pada akhirnya saya menemukan sebuah &lt;em&gt;slide&lt;/em&gt; milik bapak &lt;a href=&#34;http://www.slideshare.net/billkarwin&#34;&gt;Karwin&lt;/a&gt; yang sangat membantu.&lt;/p&gt;
-
-&lt;p&gt;Beliau menjelaskan empat metode penyimpanan graf pada database relasional
-dan membandingkan setiap metode.&lt;/p&gt;
-
-&lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;485&#34; marginheight=&#34;0&#34; marginwidth=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//www.slideshare.net/slideshow/embed_code/key/tI9jfoqFHAcQdn?startSlide=5&#34; style=&#34;border-width: 1px; border: 1px solid #ccc; margin-bottom: 5px; max-width: 100%;&#34; width=&#34;100%&#34;&gt;
-&lt;/iframe&gt;
-
-&lt;p&gt;Hasil perbandingannya metode &lt;em&gt;Closeure Table&lt;/em&gt; terpilih sebagai cara yang termudah. Termudah yang saya maksudkan di sini adalah mudah untuk melakukan &lt;em&gt;Query&lt;/em&gt; CRUD &lt;em&gt;(Create, Read, Update, Delete)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Masing-masing metode memang memiliki kelebihan dan kekurangan.&lt;/p&gt;
-
-&lt;p&gt;Contohnya metode &lt;em&gt;Path Enumerattion&lt;/em&gt;, bagus digunakan untuk membuat &lt;em&gt;breadcrums. Sedangkan Adjacency List&lt;/em&gt; tidak bagus digunakan untuk graf yang punya banyak &lt;em&gt;node.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;metode-closure-table&#34;&gt;Metode &lt;em&gt;Closure Table&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Mari kita pelajari cara penyimpanan graf dengan metode &lt;em&gt;Closure Table&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Misalkan, kita memiliki graf seperti pada gambar ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-dWgknbxEzmU/WCLzqncwFzI/AAAAAAAADag/6wDc7P2eC7IwFY3dOdmTXHpcaT-woBqFQCK4B/s1600/graf%2Bberarah%2B-%2Bpetanikode.jpg&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-dWgknbxEzmU/WCLzqncwFzI/AAAAAAAADag/6wDc7P2eC7IwFY3dOdmTXHpcaT-woBqFQCK4B/s1600/graf%2Bberarah%2B-%2Bpetanikode.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Anggaplah semua titik-titik pada graf tersebut merupakan sebuah kota yang saling terhubung. Kemudian, yang kita harus lakukan adalah membuat tabel untuk menyimpan kota (titik) dan jalan yang menghubungkannya.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-rCy4_zOhkfE/WDmI8o6D06I/AAAAAAAADdY/cttgx1o55l4VGyGvr-toyHGhEk8aP1qtACK4B/s1600/Relasi%2BTabel%2BGraf.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-rCy4_zOhkfE/WDmI8o6D06I/AAAAAAAADdY/cttgx1o55l4VGyGvr-toyHGhEk8aP1qtACK4B/s1600/Relasi%2BTabel%2BGraf.png&#34; alt=&#34;Diagram Relasi Tabel Graf&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Relasi yang akan tercipta adalah &lt;em&gt;Many-to-Many&lt;/em&gt;. Kolom &lt;code&gt;kota_asal&lt;/code&gt; dan &lt;code&gt;kota_tujuan&lt;/code&gt; akan menyimpan &lt;code&gt;id&lt;/code&gt; dari &lt;em&gt;kota&lt;/em&gt;. Kemudian kolom &lt;code&gt;panjang&lt;/code&gt; untuk menyimpan panjang jalannya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;create table kota(
-    id int,
-    nama char,
-    PRIMARY KEY(id)
-);
-
-
-create table jalan(
-    kota_asal int,
-    kota_tujuan int,
-    panjang int,
-    FOREIGN KEY(kota_asal) REFERENCES kota(id),
-    FOREIGN KEY(kota_tujuan) REFERENCES kota(id)
-);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang kita sudah punya dua tabel yang saling berelasi.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-MpXwEwCU8Ek/WDmLo9QF4rI/AAAAAAAADdk/UsgJ7jVgr8IYkYm1GL7Vs2w-mTxw55HPACK4B/s1600/Relasi%2Btabel%2Bgraf%2Bdi%2Bdatabase%2Bmysql.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-MpXwEwCU8Ek/WDmLo9QF4rI/AAAAAAAADdk/UsgJ7jVgr8IYkYm1GL7Vs2w-mTxw55HPACK4B/s1600/Relasi%2Btabel%2Bgraf%2Bdi%2Bdatabase%2Bmysql.png&#34; alt=&#34;Relasi tabel database Graf&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang kita coba menambahkan semua titik pada graf:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;INSERT INTO kota (id,nama) VALUE (1,&#39;A&#39;);
-INSERT INTO kota (id,nama) VALUE (2,&#39;B&#39;);
-INSERT INTO kota (id,nama) VALUE (3,&#39;C&#39;);
-INSERT INTO kota (id,nama) VALUE (4,&#39;D&#39;);
-INSERT INTO kota (id,nama) VALUE (5,&#39;E&#39;);
-INSERT INTO kota (id,nama) VALUE (6,&#39;F&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Selanjutnya menambahkan data jalan:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (1,2,14);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (1,3,10);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (2,3,6);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (2,4,18);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (3,4,7);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (4,3,9);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (5,6,8);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (6,4,11);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Panjang jalan saya tentukan sendiri. Sekarang semuanya sudah masuk. Mari kita coba-coba melakukan &lt;em&gt;query&lt;/em&gt; yang lain. Misalnya, berapakah panjang jalan dari kota B menuju kota D?&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT panjang FROM `jalan` WHERE kota_asal=2 AND kota_tujuan=4
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;+---------+
-| panjang |
-+---------+
-|      18 |
-+---------+
-1 row in set (0,00 sec)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sebenarnya ada dua jalan yang bisa dilewati dari kota B menuju kota D, yaitu &lt;code&gt;B-&amp;gt;D&lt;/code&gt; dan &lt;code&gt;B-&amp;gt;C-&amp;gt;D&lt;/code&gt;. Akan tetapi &lt;em&gt;query&lt;/em&gt; tersebut hanya memilih jalur &lt;code&gt;B-&amp;gt;D&lt;/code&gt; saja.&lt;/p&gt;
-
-&lt;p&gt;Untuk query yang lebih rumit, mungkin kita bisa lakukan dengan membuat program. Misalnya, program untuk menentukan jalur terpedek.&lt;/p&gt;
-
-&lt;p&gt;File SQL contoh di atas dapat anda download di: &lt;a href=&#34;https://gist.github.com/ardianta/7ae139c95570a35d3af9dc40b70f18db&#34;&gt;gist.github.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Begitulah cara termudah menyimpan graf pada database relasional menurut bapak Karwin.&lt;/p&gt;
-
-&lt;p&gt;Metode &lt;em&gt;Closure Table&lt;/em&gt; memang yang termudah, namun pasti memiliki kekurangan.&lt;/p&gt;
-
-&lt;p&gt;Bagaimana menurutmu?&lt;/p&gt;
-</description>
+      <description>Awalnya saya tidak begitu paham dengan kegunaan graf pada komputer.
+Namun, setelah belajar beberapa teori seperti kecerdasan buatan, analisa algoritma, struktur data, matematika diskrit, kalkulus, dan sebagainya. Saya mendapatkan sedikit pencerahan.
+Graf dapat digunakan untuk menyelesaikan berbagai permasalahan seperti pencarian jalur terpendek, relasi hubungan sesuatu, representasi pengetahuan pada AI, dsb.
+Saya kemudian tertarik untuk mengetahui cara melakukan komputasi graf.
+Sebelumnya saya pernah membahas cara merepresentasikan graf ke dalam kode program dengan bahasa pemrograman python.</description>
     </item>
     
     <item>
@@ -144,95 +31,11 @@ INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (6,4,11);
       <pubDate>Wed, 09 Nov 2016 19:29:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/representasi-graf-dalam-kode-python/</guid>
-      <description>
+      <description>Hari ini saya belajar sesuatu yang cukup menantang, yaitu graf. Bagaiaman menulis graf dalam kode? dan memahami beberapa hal tentang graf.
+Menurut Wikipedia, graf dalam komputer sains (ilmu komputer) adalah sebuah tipe data abstrak. Graf terdiri dari titik-titik (nodes) yang terhubung dengan sisi/busur (edge/arcs).
+Berikut ini contoh graf yang akan kita tulis dalam kode program python:
 
-&lt;p&gt;Hari ini saya belajar sesuatu yang cukup menantang, yaitu graf. &lt;strong&gt;Bagaiaman menulis graf dalam kode?&lt;/strong&gt;
-dan memahami beberapa hal tentang graf.&lt;/p&gt;
-
-&lt;p&gt;Menurut Wikipedia, graf dalam komputer sains (ilmu komputer) adalah sebuah tipe data abstrak. Graf terdiri dari titik-titik &lt;em&gt;(nodes)&lt;/em&gt; yang terhubung dengan sisi/busur &lt;em&gt;(edge/arcs)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini contoh graf yang akan kita tulis dalam kode program python:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-dWgknbxEzmU/WCLzqncwFzI/AAAAAAAADag/6wDc7P2eC7IwFY3dOdmTXHpcaT-woBqFQCK4B/s1600/graf%2Bberarah%2B-%2Bpetanikode.jpg&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-dWgknbxEzmU/WCLzqncwFzI/AAAAAAAADag/6wDc7P2eC7IwFY3dOdmTXHpcaT-woBqFQCK4B/s1600/graf%2Bberarah%2B-%2Bpetanikode.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Graf tersebut merupakan graf berarah yang memiliki enam buah titik dan delapan busur &lt;em&gt;(arcs)&lt;/em&gt;. Adapun delapan busur tersebut bisa kita nyatakan seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;A -&amp;gt; B
-A -&amp;gt; C
-B -&amp;gt; C
-B -&amp;gt; D
-C -&amp;gt; D
-D -&amp;gt; C
-E -&amp;gt; F
-F -&amp;gt; C
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Graf sebenarnya bisa diubah ke dalam bentuk matriks dan ditulis dalam bentuk &lt;em&gt;array&lt;/em&gt; dua dimensi ke dalam kode. Namun, karena contoh yang saya temukan menggunakan &lt;em&gt;dictionary&lt;/em&gt;, maka graf di atas bisa dituliskan seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;graf = {&#39;A&#39;: [&#39;B&#39;, &#39;C&#39;],
-        &#39;B&#39;: [&#39;C&#39;, &#39;D&#39;],
-        &#39;C&#39;: [&#39;D&#39;],
-        &#39;D&#39;: [&#39;C&#39;],
-        &#39;E&#39;: [&#39;F&#39;],
-        &#39;F&#39;: [&#39;C&#39;]}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pada kode di atas, kita menggunakan &lt;em&gt;dictionary&lt;/em&gt; untuk membuat graf dan menggunakan &lt;em&gt;list&lt;/em&gt; untuk menyimpan titik yang menjadi tetangga sebuah titik. Misalkan titik A, terbuhung dengan titik B dan C. Titik B terhubung dengan titik C dan D, dan seterusnya.&lt;/p&gt;
-
-&lt;h1 id=&#34;fungsi-untuk-menentukan-jalur&#34;&gt;Fungsi untuk Menentukan Jalur&lt;/h1&gt;
-
-&lt;p&gt;Fungsi ini akan menemukan sebuah jalur &lt;em&gt;(path)&lt;/em&gt; dari titik awal hingga titik akhir atau tujuan.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def temukan_jalur(graf, awal, akhir, jalur=[]):
-    jalur = jalur + [awal]
-    if awal == akhir:
-        return jalur
-    if not graf.has_key(awal):
-        return None
-    for titik in graf[awal]:
-        if titik not in jalur:
-            jalur_baru = temukan_jalur(graf, titik, akhir, jalur)
-            if jalur_baru: return jalur_baru
-    return None
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Misalkan kita ingin mencari jalur dari titik A ke titik D, maka kita bisa menggunakan fungsi tersebut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt;&amp;gt;&amp;gt; temukan_jalur(graf, &#39;A&#39;, &#39;D&#39;)
-[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;fungsi-untuk-menentukan-semua-jalur&#34;&gt;Fungsi untuk Menentukan Semua Jalur&lt;/h2&gt;
-
-&lt;p&gt;Pada fungsi di atas, kita hanya diberikan satu jalur saja. Sedangkan fungsi berikut ini akan mengembalikan semua jalur yang bisa dilalui dari titik awal hingga akhir.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def temukan_semua_jalur(graf, awal, akhir, jalur=[]):
-    jalur = jalur + [awal]
-    if awal == akhir:
-        return [jalur]
-    if not graf.has_key(awal):
-        return []
-    semua_jalur = []
-    for titik in graf[awal]:
-        if titik not in jalur:
-            jalur_jalur = temukan_semua_jalur(graf, titik, akhir, jalur)
-            for jalur_baru in jalur_jalur:
-                semua_jalur.append(jalur_baru)
-    return semua_jalur
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Misalkan kita ingin mencari semua jalur yang mungkin bisa dilalui dari titik A ke titik D, maka fungsi tersebut akan mengembalikan semua jalur dalam bentuk &lt;em&gt;list&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt;&amp;gt;&amp;gt; temukan_semua_jalur(graf, &#39;A&#39;, &#39;D&#39;)
-[[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;], [&#39;A&#39;, &#39;B&#39;, &#39;D&#39;], [&#39;A&#39;, &#39;C&#39;, &#39;D&#39;]]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pada hasil eksekusi fungsi tersebut, kita diberikan tiga buah jalur yang bisa dilalui dari titik A menuju titik D.&lt;/p&gt;
-
-&lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
-
-&lt;p&gt;Representasi graf ke dalam kode python dapat dilakukan dengan &lt;em&gt;dictionary&lt;/em&gt; dan &lt;em&gt;list&lt;/em&gt;. Semua titik dalam graf dijadikan kunci &lt;em&gt;(key)&lt;/em&gt; dalam &lt;em&gt;dictionary&lt;/em&gt;. Kemudian menyimpan titik tetangganya dalam &lt;em&gt;list&lt;/em&gt;.&lt;/p&gt;
-</description>
+Graf tersebut merupakan graf berarah yang memiliki enam buah titik dan delapan busur (arcs).</description>
     </item>
     
   </channel>

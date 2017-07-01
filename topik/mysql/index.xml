@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mysql on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/mysql/index.xml</link>
+    <link>https://www.petanikode.com/topik/mysql/</link>
     <description>Recent content in Mysql on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jun 2017 17:42:42 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Tutorial PHP dan MySQL: Membuat Aplikasi CRUD [Studi Kasus Pendaftaran Siswa Baru]</title>
@@ -15,738 +18,10 @@
       <pubDate>Sat, 10 Jun 2017 17:42:42 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-php-mysql/</guid>
-      <description>
-
-&lt;p&gt;PHP sering dijodohkan dengan MySQL untuk membangun aplikasi web. MySQL berperan
-sebagai tempat menyimpan data (basis data) sedangkan PHP adalah program yang
-mengelola data tersebut.&lt;/p&gt;
-
-&lt;p&gt;Sebenarnya PHP tidak hanya bisa dijodohkan dengan MySQL saja. PHP juga bisa
-dijodohkan dengan SQLite, PostgreSQL, MongoDB, Ms. Access, dsb.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, kita akan belajar menggunakan PHP dan MySQL untuk membuat
-aplikasi sederhana.&lt;/p&gt;
-
-&lt;h2 id=&#34;bagaimana-php-dan-mysql-dihubungkan&#34;&gt;Bagaimana PHP dan MySQL dihubungkan?&lt;/h2&gt;
-
-&lt;p&gt;PHP dan MySQL dapat saling berhubungan melalui perantara API &lt;em&gt;(Application Programming
-Interface)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/php-mysql.png&#34; alt=&#34;PHP dan MySQL&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ada tiga jenis API MySQL yang disediakan di PHP:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;mysql&lt;/code&gt; API ini sudah tidak didukung/dikembangkan lagi (kadalwarsa).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mysqli&lt;/code&gt; &lt;em&gt;(mysql improvement)&lt;/em&gt; peningkatan dari API &lt;code&gt;mysql&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;PDO &lt;em&gt;(PHP Data Object)&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;API yang pertama sudah tidak didukung lagi sejak PHP versi 5.5.x dan digantikan
-dengan &lt;code&gt;mysqli&lt;/code&gt; yang lebih canggih. Karena &lt;code&gt;mysqli&lt;/code&gt; dapat digunakan secara
-&lt;a href=&#34;https://www.petanikode.com/topik/OOP&#34;&gt;OOP&lt;/a&gt; dan prosedural.&lt;/p&gt;
-
-&lt;p&gt;Sedangkan API PDO digunakan untuk menghubungkan PHP dengan vendor database
-yang lainnya. Jadi tidak hanya untuk MySQL saja.&lt;/p&gt;
-
-&lt;p&gt;Pada tutorial ini, kita akan belajar cara menghubungkan PHP dan MySQL menggunakan
-API &lt;code&gt;mysqli&lt;/code&gt; secara prosedural.&lt;/p&gt;
-
-&lt;h2 id=&#34;menyiapkan-database&#34;&gt;Menyiapkan Database&lt;/h2&gt;
-
-&lt;p&gt;Pertama, mari kita membuat database bernama &lt;code&gt;pendaftaran_siswa&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/membuat-database.png&#34; alt=&#34;Membuat database di phpmyadmin&#34; /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE DATABASE `pendaftaran_siswa`;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, buatlah tabel di dalam database tersbut dengan nama &lt;code&gt;calon_siswa&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/membuat-tabel.png&#34; alt=&#34;Membuat tabel calon_siswa&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikan tipe data kolomnya seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/membuat-kolom.png&#34; alt=&#34;Membuat Kolom di tabel calon_siswa&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu klik &lt;strong&gt;Save&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE TABLE `pendaftaran_siswa`.`calon_siswa` (
-    `id` INT NOT NULL AUTO_INCREMENT ,  
-    `nama` VARCHAR(64) NOT NULL ,  
-    `alamat` VARCHAR(255) NOT NULL ,  
-    `jenis_kelamin` VARCHAR(16) NOT NULL ,  
-    `agama` VARCHAR(16) NOT NULL ,  
-    `sekolah_asal` VARCHAR(64) NOT NULL ,    
-    PRIMARY KEY  (`id`)
-) ENGINE = InnoDB;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian kita coba isi dengan sebuah data, klik &lt;strong&gt;Insert&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/tabel-siswa.png&#34; alt=&#34;Tabel calon siswa&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Silahkan isi seperti berikut:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/insert-data.png&#34; alt=&#34;Insert data ke tabel siswa&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Klik &lt;strong&gt;Go&lt;/strong&gt; untuk menyimpan.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;INSERT INTO `calon_siswa` (`id`, `nama`, `alamat`, `jenis_kelamin`, `agama`, `sekolah_asal`) VALUES (NULL, &#39;Lia&#39;, &#39;Jl. Mangga No. 3, Mataram&#39;, &#39;perempuan&#39;, &#39;islam&#39;, &#39;SMPN 32 Ampenan&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;membuat-proyek-baru&#34;&gt;Membuat Proyek Baru&lt;/h2&gt;
-
-&lt;p&gt;Setelah itu buat proyek/direktori baru di direktori &lt;code&gt;htdocs&lt;/code&gt; atau &lt;code&gt;/var/www/html&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir /var/www/html/pendaftaran-siswa
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Buat file-file PHP yang diperlukan&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;touch /var/www/html/pendaftaran-siswa/{config.php,index.php,list-siswa.php,form-daftar.php,proses-pendaftaran.php,form-edit.php,proses-edit.php,hapus.php}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka akan terbuat delapan file PHP kosong.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/struktur-direktori-proyek.png&#34; alt=&#34;Struktur direktori proyek PHP&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Keterangan:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;config.php&lt;/code&gt; &amp;mdash; untuk menyimpan konfigurasi database;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;index.php&lt;/code&gt; &amp;mdash; halaman utama;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;list-siswa.php&lt;/code&gt; &amp;mdash; halaman untuk menampilkan data siswa;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;form-daftar.php&lt;/code&gt; &amp;mdash; halaman formulir pendaftaran;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;proses-pendaftaran.php&lt;/code&gt; &amp;mdash; skrip yang memproses pendaftaran;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;form-edit.php&lt;/code&gt; &amp;mdash; form untuk edit data siswa;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;proses-edit.php&lt;/code&gt; &amp;mdash; skrip untuk memproses edit/update;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;hapus.php&lt;/code&gt; &amp;mdash; skrip untuk menghapus data dari database;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;cara-membuat-koneksi-ke-dabase-mysql&#34;&gt;Cara Membuat Koneksi ke Dabase MySQL&lt;/h2&gt;
-
-&lt;p&gt;Buka file &lt;code&gt;config.php&lt;/code&gt;, silahkan isi dengan kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-$server = &amp;quot;localhost&amp;quot;;
-$user = &amp;quot;root&amp;quot;;
-$password = &amp;quot;kopi&amp;quot;;
-$nama_database = &amp;quot;pendaftaran_siswa&amp;quot;;
-
-$db = mysqli_connect($server, $user, $password, $nama_database);
-
-if( !$db ){
-    die(&amp;quot;Gagal terhubung dengan database: &amp;quot; . mysqli_connect_error());
-}
-
-?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk menghubungkan PHP dengan MySQL, kita menggunakan fungsi &lt;code&gt;mysqli_connect()&lt;/code&gt;
-dengan parameter alamat server, user, password, dan nama database.&lt;/p&gt;
-
-&lt;p&gt;Silahkan isi password sesuai dengan yang dibuat di servernya. Jika tidak
-menggunakan passsword, maka dikosongkan saja.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$password = &amp;quot;&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika koneksi gagal, variabel &lt;code&gt;$db&lt;/code&gt; akan bernilai &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, kita bisa mengeceknya dengan ekspresi &lt;code&gt;if&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;if( !$db ){
-    die(&amp;quot;Gagal terhubung dengan database: &amp;quot; . mysqli_connect_error());
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Berikut ini tampilan saat koneksinya gagal, karena password-nya salah.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/koneksi-database-gagal.png&#34; alt=&#34;Koneksi PHP dengan MySQL Gagal&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-halaman-indeks&#34;&gt;Membuat Halaman Indeks&lt;/h2&gt;
-
-&lt;p&gt;Rencananya kita akan menaruh dua link di halaman indeks. Link pertama
-untuk menuju ke formulir pendaftaran dan link yang kedua untuk menuju
-ke halaman data siswa yang sudah mendaftar.&lt;/p&gt;
-
-&lt;p&gt;Gamabarannya seperti ini&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/rancangan-halaman.png&#34; alt=&#34;Rancangan halaman sistem pendaftaran siswa&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang, silahkan isi file &lt;code&gt;index.php&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-	&amp;lt;title&amp;gt;Pendaftaran Siswa Baru | SMK Coding&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-	&amp;lt;header&amp;gt;
-		&amp;lt;h3&amp;gt;Pendaftaran Siswa Baru&amp;lt;/h3&amp;gt;
-		&amp;lt;h1&amp;gt;SMK Coding&amp;lt;/h1&amp;gt;
-	&amp;lt;/header&amp;gt;
-
-	&amp;lt;h4&amp;gt;Menu&amp;lt;/h4&amp;gt;
-	&amp;lt;nav&amp;gt;
-		&amp;lt;ul&amp;gt;
-			&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;form-daftar.php&amp;quot;&amp;gt;Daftar Baru&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-			&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;list-siswa.php&amp;quot;&amp;gt;Pendaftar&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-		&amp;lt;/ul&amp;gt;
-	&amp;lt;/nav&amp;gt;
-
-	&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tampilannya awalnya akan menjadi seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/tampilan-awal.png&#34; alt=&#34;Tampilan halaman utama pendaftaran siswa&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-menampilkan-data-tabel-mysql&#34;&gt;Cara Menampilkan Data Tabel MySQL&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka &lt;code&gt;list-siswa.php&lt;/code&gt; dan isi dengan kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php include(&amp;quot;config.php&amp;quot;); ?&amp;gt;
-
-&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-	&amp;lt;title&amp;gt;Pendaftaran Siswa Baru | SMK Coding&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-	&amp;lt;header&amp;gt;
-		&amp;lt;h3&amp;gt;Siswa yang sudah mendaftar&amp;lt;/h3&amp;gt;
-	&amp;lt;/header&amp;gt;
-
-	&amp;lt;nav&amp;gt;
-		&amp;lt;a href=&amp;quot;form-daftar.php&amp;quot;&amp;gt;[+] Tambah Baru&amp;lt;/a&amp;gt;
-	&amp;lt;/nav&amp;gt;
-
-	&amp;lt;br&amp;gt;
-
-	&amp;lt;table border=&amp;quot;1&amp;quot;&amp;gt;
-	&amp;lt;thead&amp;gt;
-		&amp;lt;tr&amp;gt;
-			&amp;lt;th&amp;gt;No&amp;lt;/th&amp;gt;
-			&amp;lt;th&amp;gt;Nama&amp;lt;/th&amp;gt;
-			&amp;lt;th&amp;gt;Alamat&amp;lt;/th&amp;gt;
-			&amp;lt;th&amp;gt;Jenis Kelamin&amp;lt;/th&amp;gt;
-			&amp;lt;th&amp;gt;Agama&amp;lt;/th&amp;gt;
-			&amp;lt;th&amp;gt;Sekolah Asal&amp;lt;/th&amp;gt;
-			&amp;lt;th&amp;gt;Tindakan&amp;lt;/th&amp;gt;
-		&amp;lt;/tr&amp;gt;
-	&amp;lt;/thead&amp;gt;
-	&amp;lt;tbody&amp;gt;
-
-		&amp;lt;?php
-		$sql = &amp;quot;SELECT * FROM calon_siswa&amp;quot;;
-		$query = mysqli_query($db, $sql);
-
-		while($siswa = mysqli_fetch_array($query)){
-			echo &amp;quot;&amp;lt;tr&amp;gt;&amp;quot;;
-
-			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;nama&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;alamat&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;jenis_kelamin&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;agama&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;sekolah_asal&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-
-			echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;;
-			echo &amp;quot;&amp;lt;a href=&#39;form-edit.php?id=&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&#39;&amp;gt;Edit&amp;lt;/a&amp;gt; | &amp;quot;;
-			echo &amp;quot;&amp;lt;a href=&#39;hapus.php?id=&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&#39;&amp;gt;Hapus&amp;lt;/a&amp;gt;&amp;quot;;
-			echo &amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-
-			echo &amp;quot;&amp;lt;/tr&amp;gt;&amp;quot;;
-		}
-		?&amp;gt;
-
-	&amp;lt;/tbody&amp;gt;
-	&amp;lt;/table&amp;gt;
-
-	&amp;lt;p&amp;gt;Total: &amp;lt;?php echo mysqli_num_rows($query) ?&amp;gt;&amp;lt;/p&amp;gt;
-
-	&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pertama kita membutuhkan koneksi ke database, maka kita harus mengimpor
-file &lt;code&gt;config.php&lt;/code&gt; agar variabel &lt;code&gt;$db&lt;/code&gt; dapat dibaca.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php include(&amp;quot;config.php&amp;quot;); ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, kita melakukan query untuk mengambil data siswa pada tabel
-&lt;code&gt;calon_siswa&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$sql = &amp;quot;SELECT * FROM calon_siswa&amp;quot;;
-$query = mysqli_query($db, $sql);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasil dari query tersetbut, kemudian kita ubah menjadi array dengan fungsi
-&lt;code&gt;mysqli_fetch_array()&lt;/code&gt; dan hasilnya disimpan dalam variabel &lt;code&gt;$siswa&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$siswa = mysqli_fetch_array($query)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perulangan &lt;code&gt;while&lt;/code&gt; akan mengulang selama masih ada isi dalam tabel. Kemudain,
-selama perulangan&amp;hellip;kita tampilkan datanya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;while($siswa = mysqli_fetch_array($query)){
-    echo &amp;quot;&amp;lt;tr&amp;gt;&amp;quot;;
-
-    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;nama&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;alamat&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;jenis_kelamin&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;agama&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;.$siswa[&#39;sekolah_asal&#39;].&amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-
-    echo &amp;quot;&amp;lt;td&amp;gt;&amp;quot;;
-    echo &amp;quot;&amp;lt;a href=&#39;form-edit.php?id=&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&#39;&amp;gt;Edit&amp;lt;/a&amp;gt; | &amp;quot;;
-    echo &amp;quot;&amp;lt;a href=&#39;hapus.php?id=&amp;quot;.$siswa[&#39;id&#39;].&amp;quot;&#39;&amp;gt;Hapus&amp;lt;/a&amp;gt;&amp;quot;;
-    echo &amp;quot;&amp;lt;/td&amp;gt;&amp;quot;;
-
-    echo &amp;quot;&amp;lt;/tr&amp;gt;&amp;quot;;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perhatikan array &lt;code&gt;$siswa&lt;/code&gt;, indeksnya sesuai dengan nama kolom pada database dan
-bersifat &lt;em&gt;case sensitive&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Terakhir, kita menampilkan total data yang ada di dalam tabel dengan fungsi
-&lt;code&gt;mysqli_num_rows()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;echo mysqli_num_rows($query);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/list-siswa.png&#34; alt=&#34;menampilkan data dari database&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gampang kaaan&amp;hellip;! :smile:&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-menambahkan-data-ke-tabel-mysql&#34;&gt;Cara Menambahkan Data ke Tabel MySQL&lt;/h2&gt;
-
-&lt;p&gt;Ada dua file yang kita butuhkan untuk menambahkan data ke MySQL.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;form-daftar.php&lt;/code&gt; halaman untuk form input;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;proses-pendaftaran.php&lt;/code&gt; skrip untuk memproses data yang diinputkan.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Sebenarnya bisa saja dibuat dalam satu file, tapi biar lebih mudah
-dipahami&amp;hellip;kita buat terpisah saja.&lt;/p&gt;
-
-&lt;p&gt;Silahkan buka file &lt;code&gt;form-daftar.php&lt;/code&gt; dan isi dengan kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-	&amp;lt;title&amp;gt;Formulir Pendaftaran Siswa Baru | SMK Coding&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-	&amp;lt;header&amp;gt;
-		&amp;lt;h3&amp;gt;Formulir Pendaftaran Siswa Baru&amp;lt;/h3&amp;gt;
-	&amp;lt;/header&amp;gt;
-
-	&amp;lt;form action=&amp;quot;proses-pendaftaran.php&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;
-
-		&amp;lt;fieldset&amp;gt;
-
-		&amp;lt;p&amp;gt;
-			&amp;lt;label for=&amp;quot;nama&amp;quot;&amp;gt;Nama: &amp;lt;/label&amp;gt;
-			&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;nama&amp;quot; placeholder=&amp;quot;nama lengkap&amp;quot; /&amp;gt;
-		&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;
-			&amp;lt;label for=&amp;quot;alamat&amp;quot;&amp;gt;Alamat: &amp;lt;/label&amp;gt;
-			&amp;lt;textarea name=&amp;quot;alamat&amp;quot;&amp;gt;&amp;lt;/textarea&amp;gt;
-		&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;
-			&amp;lt;label for=&amp;quot;jenis_kelamin&amp;quot;&amp;gt;Jenis Kelamin: &amp;lt;/label&amp;gt;
-			&amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;laki-laki&amp;quot;&amp;gt; Laki-laki&amp;lt;/label&amp;gt;
-			&amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;perempuan&amp;quot;&amp;gt; Perempuan&amp;lt;/label&amp;gt;
-		&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;
-			&amp;lt;label for=&amp;quot;agama&amp;quot;&amp;gt;Agama: &amp;lt;/label&amp;gt;
-			&amp;lt;select name=&amp;quot;agama&amp;quot;&amp;gt;
-				&amp;lt;option&amp;gt;Islam&amp;lt;/option&amp;gt;
-				&amp;lt;option&amp;gt;Kristen&amp;lt;/option&amp;gt;
-				&amp;lt;option&amp;gt;Hindu&amp;lt;/option&amp;gt;
-				&amp;lt;option&amp;gt;Budha&amp;lt;/option&amp;gt;
-				&amp;lt;option&amp;gt;Atheis&amp;lt;/option&amp;gt;
-			&amp;lt;/select&amp;gt;
-		&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;
-			&amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;Daftar&amp;quot; name=&amp;quot;daftar&amp;quot; /&amp;gt;
-		&amp;lt;/p&amp;gt;
-
-		&amp;lt;/fieldset&amp;gt;
-
-	&amp;lt;/form&amp;gt;
-
-	&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perhatikan pada tag pembuka &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;, di sana kita menggunakan atribut
-&lt;code&gt;action&lt;/code&gt; dan &lt;code&gt;method&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form action=&amp;quot;proses-pendaftaran.php&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;
-    ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Atribut &lt;code&gt;action&lt;/code&gt; digunakan untuk menentukan skrip mana yang akan memproses
-data inputan. Sedangkan atribut &lt;code&gt;method&lt;/code&gt; untuk menentukan
-metode pengiriman datanya.&lt;/p&gt;
-
-&lt;p&gt;Perhatikan juga pada input-nya, disana ada atribut &lt;code&gt;name&lt;/code&gt;. Atribut ini
-untuk menentukan kunci indeks dari array &lt;code&gt;$_POST&lt;/code&gt; dan &lt;code&gt;$_GET&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/formulir-pendaftaran.png&#34; alt=&#34;Formulir Pendaftaran Siswa Baru&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya silPriscilia Priscilia YulianiPriscilia Yuliani isi file &lt;code&gt;proses-pendaftaran.php&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-include(&amp;quot;config.php&amp;quot;);
-
-// cek apakah tombol daftar sudah diklik atau blum?
-if(isset($_POST[&#39;daftar&#39;])){
-
-	// ambil data dari formulir
-	$nama = $_POST[&#39;nama&#39;];
-	$alamat = $_POST[&#39;alamat&#39;];
-	$jk = $_POST[&#39;jenis_kelamin&#39;];
-	$agama = $_POST[&#39;agama&#39;];
-	$sekolah = $_POST[&#39;sekolah_asal&#39;];
-
-	// buat query
-	$sql = &amp;quot;INSERT INTO calon_siswa (nama, alamat, jenis_kelamin, agama, sekolah_asal) VALUE (&#39;$nama&#39;, &#39;$alamat&#39;, &#39;$jk&#39;, &#39;$agama&#39;, &#39;$sekolah&#39;)&amp;quot;;
-	$query = mysqli_query($db, $sql);
-
-	// apakah query simpan berhasil?
-	if( $query ) {
-		// kalau berhasil alihkan ke halaman index.php dengan status=sukses
-		header(&#39;Location: index.php?status=sukses&#39;);
-	} else {
-		// kalau gagal alihkan ke halaman indek.php dengan status=gagal
-		header(&#39;Location: index.php?status=gagal&#39;);
-	}
-
-
-} else {
-	die(&amp;quot;Akses dilarang...&amp;quot;);
-}
-
-?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pertama kita ambil data yang dikirim dari formulir, semuanya tersimpan
-pada variabel &lt;code&gt;$_POST&lt;/code&gt;. Karena tadi kita menggunakan method &lt;code&gt;POST&lt;/code&gt; pada form.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/input-formulir-pendaftaran.png&#34; alt=&#34;Input data di formulir pendaftaran&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, kita buat query penyimpanan.&lt;/p&gt;
-
-&lt;p&gt;Lalu melakukan pengecekan, apakah query-nya berhasil atau gagal.&lt;/p&gt;
-
-&lt;p&gt;Untuk menampilkan pesan berhasil dan gagal pada halaman &lt;code&gt;index.php&lt;/code&gt;, silahkan
-tambahkan kode berikut di bawah tag &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt; pada file &lt;code&gt;index.php&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php if(isset($_GET[&#39;status&#39;])): ?&amp;gt;
-	&amp;lt;p&amp;gt;
-		&amp;lt;?php
-			if($_GET[&#39;status&#39;] == &#39;sukses&#39;){
-				echo &amp;quot;Pendaftaran siswa baru berhasil!&amp;quot;;
-			} else {
-				echo &amp;quot;Pendaftaran gagal!&amp;quot;;
-			}
-		?&amp;gt;
-	&amp;lt;/p&amp;gt;
-&amp;lt;?php endif; ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/pesan-penyimpanan.png&#34; alt=&#34;Pesan Penyimpanan Sukses pada index&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang kita sudah punya dua data.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/hasil-pendaftaran.png&#34; alt=&#34;Siswa yang sudah mendaftar&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;menghapus-data-dari-tabel-mysql&#34;&gt;Menghapus Data dari Tabel MySQL&lt;/h2&gt;
-
-&lt;p&gt;Kita membutuhkan &lt;code&gt;id&lt;/code&gt; untuk menentukan data yang akan dihapus. Karena itu,
-kita mengirimkan &lt;code&gt;id&lt;/code&gt; melalui &lt;em&gt;query string&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://localhost/pendaftaran-siswa/hapus.php?id=1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Query string-nya adalah &lt;code&gt;?id=1&lt;/code&gt;. Query string akan tersimpan dalam
-variabel &lt;code&gt;$_GET&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Untuk lebih jelasnya, silahkan buka file &lt;code&gt;hapus.php&lt;/code&gt; dan isi dengan kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-include(&amp;quot;config.php&amp;quot;);
-
-if( isset($_GET[&#39;id&#39;]) ){
-
-	// ambil id dari query string
-	$id = $_GET[&#39;id&#39;];
-
-	// buat query hapus
-	$sql = &amp;quot;DELETE FROM calon_siswa WHERE id=$id&amp;quot;;
-	$query = mysqli_query($db, $sql);
-
-	// apakah query hapus berhasil?
-	if( $query ){
-		header(&#39;Location: list-siswa.php&#39;);
-	} else {
-		die(&amp;quot;gagal menghapus...&amp;quot;);
-	}
-
-} else {
-	die(&amp;quot;akses dilarang...&amp;quot;);
-}
-
-?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang coba klik link &lt;em&gt;hapus&lt;/em&gt;, maka datanya akan langsung terhapus.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/list-siswa.png&#34; alt=&#34;Data sudah terhapus&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sebenarnya cara ini kurang aman, karena kita tidak meberikan dialog konfirmasi
-kepada user. Misalnya seperti mananyakan &amp;lsquo;Apakah yakin akan menghapus?&amp;rsquo;&lt;/p&gt;
-
-&lt;h2 id=&#34;update-data-di-tabel-mysql&#34;&gt;Update Data di Tabel MySQL&lt;/h2&gt;
-
-&lt;p&gt;Konsep update data hampir sama seperti menghapus.&lt;/p&gt;
-
-&lt;p&gt;Pertama kita ambil &lt;code&gt;id&lt;/code&gt; data yang akan di-edit. Setelah itu kita melakukan
-query untuk mengambil data dari database dan menampilkannya ke dalam form.&lt;/p&gt;
-
-&lt;p&gt;Setelah di-edit, selanjutnya melakukan query update untuk menyimpan perubahan.&lt;/p&gt;
-
-&lt;p&gt;Untuk lebih jelasnya, silahkan buka file &lt;code&gt;form-edit.php&lt;/code&gt; dan isi dengan kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-include(&amp;quot;config.php&amp;quot;);
-
-// kalau tidak ada id di query string
-if( !isset($_GET[&#39;id&#39;]) ){
-	header(&#39;Location: list-siswa.php&#39;);
-}
-
-//ambil id dari query string
-$id = $_GET[&#39;id&#39;];
-
-// buat query untuk ambil data dari database
-$sql = &amp;quot;SELECT * FROM calon_siswa WHERE id=$id&amp;quot;;
-$query = mysqli_query($db, $sql);
-$siswa = mysqli_fetch_assoc($query);
-
-// jika data yang di-edit tidak ditemukan
-if( mysqli_num_rows($query) &amp;lt; 1 ){
-	die(&amp;quot;data tidak ditemukan...&amp;quot;);
-}
-
-?&amp;gt;
-
-
-&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-	&amp;lt;title&amp;gt;Formulir Edit Siswa | SMK Coding&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-	&amp;lt;header&amp;gt;
-		&amp;lt;h3&amp;gt;Formulir Edit Siswa&amp;lt;/h3&amp;gt;
-	&amp;lt;/header&amp;gt;
-
-	&amp;lt;form action=&amp;quot;proses-edit.php&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;
-
-		&amp;lt;fieldset&amp;gt;
-
-			&amp;lt;input type=&amp;quot;hidden&amp;quot; name=&amp;quot;id&amp;quot; value=&amp;quot;&amp;lt;?php echo $siswa[&#39;id&#39;] ?&amp;gt;&amp;quot; /&amp;gt;
-
-		&amp;lt;p&amp;gt;
-			&amp;lt;label for=&amp;quot;nama&amp;quot;&amp;gt;Nama: &amp;lt;/label&amp;gt;
-			&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;nama&amp;quot; placeholder=&amp;quot;nama lengkap&amp;quot; value=&amp;quot;&amp;lt;?php echo $siswa[&#39;nama&#39;] ?&amp;gt;&amp;quot; /&amp;gt;
-		&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;
-			&amp;lt;label for=&amp;quot;alamat&amp;quot;&amp;gt;Alamat: &amp;lt;/label&amp;gt;
-			&amp;lt;textarea name=&amp;quot;alamat&amp;quot;&amp;gt;&amp;lt;?php echo $siswa[&#39;alamat&#39;] ?&amp;gt;&amp;lt;/textarea&amp;gt;
-		&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;
-			&amp;lt;label for=&amp;quot;jenis_kelamin&amp;quot;&amp;gt;Jenis Kelamin: &amp;lt;/label&amp;gt;
-			&amp;lt;?php $jk = $siswa[&#39;jenis_kelamin&#39;]; ?&amp;gt;
-			&amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;laki-laki&amp;quot; &amp;lt;?php echo ($jk == &#39;laki-laki&#39;) ? &amp;quot;checked&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt; Laki-laki&amp;lt;/label&amp;gt;
-			&amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;perempuan&amp;quot; &amp;lt;?php echo ($jk == &#39;perempuan&#39;) ? &amp;quot;checked&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt; Perempuan&amp;lt;/label&amp;gt;
-		&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;
-			&amp;lt;label for=&amp;quot;agama&amp;quot;&amp;gt;Agama: &amp;lt;/label&amp;gt;
-			&amp;lt;?php $agama = $siswa[&#39;agama&#39;]; ?&amp;gt;
-			&amp;lt;select name=&amp;quot;agama&amp;quot;&amp;gt;
-				&amp;lt;option &amp;lt;?php echo ($agama == &#39;Islam&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Islam&amp;lt;/option&amp;gt;
-				&amp;lt;option &amp;lt;?php echo ($agama == &#39;Kristen&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Kristen&amp;lt;/option&amp;gt;
-				&amp;lt;option &amp;lt;?php echo ($agama == &#39;Hindu&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Hindu&amp;lt;/option&amp;gt;
-				&amp;lt;option &amp;lt;?php echo ($agama == &#39;Budha&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Budha&amp;lt;/option&amp;gt;
-				&amp;lt;option &amp;lt;?php echo ($agama == &#39;Atheis&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Atheis&amp;lt;/option&amp;gt;
-			&amp;lt;/select&amp;gt;
-		&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;
-			&amp;lt;label for=&amp;quot;sekolah_asal&amp;quot;&amp;gt;Sekolah Asal: &amp;lt;/label&amp;gt;
-			&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;sekolah_asal&amp;quot; placeholder=&amp;quot;nama sekolah&amp;quot; value=&amp;quot;&amp;lt;?php echo $siswa[&#39;sekolah_asal&#39;] ?&amp;gt;&amp;quot; /&amp;gt;
-		&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;
-			&amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;Simpan&amp;quot; name=&amp;quot;simpan&amp;quot; /&amp;gt;
-		&amp;lt;/p&amp;gt;
-
-		&amp;lt;/fieldset&amp;gt;
-
-
-	&amp;lt;/form&amp;gt;
-
-	&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ada beberapa hal yang perlu diperhatikan dalam kode tersebut.&lt;/p&gt;
-
-&lt;p&gt;Pertama kita mengubah data dari hasil query menjadi array dengan menggunakan
-fungsi &lt;code&gt;mysqli_fetch_assoc()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Kenapa menggunakan fungsi tersebut?&lt;/p&gt;
-
-&lt;p&gt;Karena data yang akan kita ambil adalah satu baris dan agar indeks array-nya
-menggunakan nama kolom.&lt;/p&gt;
-
-&lt;p&gt;Contoh hasilnya seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;Array
-(
-    [id] =&amp;gt; 1
-    [nama] =&amp;gt; Lia
-    [alamat] =&amp;gt; Jl. Mangga No. 3, Mataram
-    [jenis_kelamin] =&amp;gt; perempuan
-    [agama] =&amp;gt; Islam
-    [sekolah_asal] =&amp;gt; SMPN 32 Ampenan
-)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian data tersebut kita tampilkan untuk menjadi nilai default pada form.&lt;/p&gt;
-
-&lt;p&gt;Jangan lupa untuk membuat input &lt;code&gt;id&lt;/code&gt; dengan tipe &lt;em&gt;hidden&lt;/em&gt; untuk menyimpan
-&lt;code&gt;id&lt;/code&gt; data yang akan di-update.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;input type=&amp;quot;hidden&amp;quot; name=&amp;quot;id&amp;quot; value=&amp;quot;&amp;lt;?php echo $siswa[&#39;id&#39;] ?&amp;gt;&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk input radio dan select, kita menggunakan operator ternary agar
-bisa membuat atribut &lt;code&gt;checked&lt;/code&gt; dan &lt;code&gt;selected&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;p&amp;gt;
-    &amp;lt;label for=&amp;quot;jenis_kelamin&amp;quot;&amp;gt;Jenis Kelamin: &amp;lt;/label&amp;gt;
-    &amp;lt;?php $jk = $siswa[&#39;jenis_kelamin&#39;]; ?&amp;gt;
-    &amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;laki-laki&amp;quot; &amp;lt;?php echo ($jk == &#39;laki-laki&#39;) ? &amp;quot;checked&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt; Laki-laki&amp;lt;/label&amp;gt;
-    &amp;lt;label&amp;gt;&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;jenis_kelamin&amp;quot; value=&amp;quot;perempuan&amp;quot; &amp;lt;?php echo ($jk == &#39;perempuan&#39;) ? &amp;quot;checked&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt; Perempuan&amp;lt;/label&amp;gt;
-&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;
-    &amp;lt;label for=&amp;quot;agama&amp;quot;&amp;gt;Agama: &amp;lt;/label&amp;gt;
-    &amp;lt;?php $agama = $siswa[&#39;agama&#39;]; ?&amp;gt;
-    &amp;lt;select name=&amp;quot;agama&amp;quot;&amp;gt;
-        &amp;lt;option &amp;lt;?php echo ($agama == &#39;Islam&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Islam&amp;lt;/option&amp;gt;
-        &amp;lt;option &amp;lt;?php echo ($agama == &#39;Kristen&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Kristen&amp;lt;/option&amp;gt;
-        &amp;lt;option &amp;lt;?php echo ($agama == &#39;Hindu&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Hindu&amp;lt;/option&amp;gt;
-        &amp;lt;option &amp;lt;?php echo ($agama == &#39;Budha&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Budha&amp;lt;/option&amp;gt;
-        &amp;lt;option &amp;lt;?php echo ($agama == &#39;Atheis&#39;) ? &amp;quot;selected&amp;quot;: &amp;quot;&amp;quot; ?&amp;gt;&amp;gt;Atheis&amp;lt;/option&amp;gt;
-    &amp;lt;/select&amp;gt;
-&amp;lt;/p&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ketika kita lihat dari &lt;a href=&#34;https://www.petanikode.com/7-manfaat-inspect-element-bagi-web-developer/&#34;&gt;inspect elements&lt;/a&gt;&amp;hellip;maka akan tampil seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/inspect-element-edit.png&#34; alt=&#34;Inspect element form edit&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, silahkan isi file &lt;code&gt;proses-edit.php&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-include(&amp;quot;config.php&amp;quot;);
-
-// cek apakah tombol simpan sudah diklik atau blum?
-if(isset($_POST[&#39;simpan&#39;])){
-
-	// ambil data dari formulir
-	$id = $_POST[&#39;id&#39;];
-	$nama = $_POST[&#39;nama&#39;];
-	$alamat = $_POST[&#39;alamat&#39;];
-	$jk = $_POST[&#39;jenis_kelamin&#39;];
-	$agama = $_POST[&#39;agama&#39;];
-	$sekolah = $_POST[&#39;sekolah_asal&#39;];
-
-	// buat query update
-	$sql = &amp;quot;UPDATE calon_siswa SET nama=&#39;$nama&#39;, alamat=&#39;$alamat&#39;, jenis_kelamin=&#39;$jk&#39;, agama=&#39;$agama&#39;, sekolah_asal=&#39;$sekolah&#39; WHERE id=$id&amp;quot;;
-	$query = mysqli_query($db, $sql);
-
-	// apakah query update berhasil?
-	if( $query ) {
-		// kalau berhasil alihkan ke halaman list-siswa.php
-		header(&#39;Location: list-siswa.php&#39;);
-	} else {
-		// kalau gagal tampilkan pesan
-		die(&amp;quot;Gagal menyimpan perubahan...&amp;quot;);
-	}
-
-
-} else {
-	die(&amp;quot;Akses dilarang...&amp;quot;);
-}
-
-?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Silahkan simpan dan cobalah untuk mengedit data.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tutorial-php-mysql/edit-nama.png&#34; alt=&#34;Hasil update data&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;*Nama &lt;strong&gt;Lia&lt;/strong&gt; di-update menjadi &lt;strong&gt;Priscilia Yuliani&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Source code&lt;/strong&gt; dari tutorial ini tersedia di github: &lt;a href=&#34;https://github.com/petanikode/tutorial-php-mysql&#34;&gt;https://github.com/petanikode/tutorial-php-mysql&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;Terima kasih sudah mengikuti tutorial ini sampai akhir.&lt;/p&gt;
-
-&lt;p&gt;Kalau ada yang belum jelas, silahkan diskusikan melalui komentar.&lt;/p&gt;
-
-&lt;p&gt;Selamat belajar. :smile:&lt;/p&gt;
-
-&lt;!-- ## Apa selanjutnya?
-
-- Membuat Fitur Pencarian
-- Membuat Pagination
-- Membuat Fitur Upload
-- Mencegah Serangan SQL Injection
-- CRUD dengan AJAX
-- Tutorial PHP dan MySQL: Menggunakan Session untuk Membuat Login/Register --&gt;
-</description>
+      <description>PHP sering dijodohkan dengan MySQL untuk membangun aplikasi web. MySQL berperan sebagai tempat menyimpan data (basis data) sedangkan PHP adalah program yang mengelola data tersebut.
+Sebenarnya PHP tidak hanya bisa dijodohkan dengan MySQL saja. PHP juga bisa dijodohkan dengan SQLite, PostgreSQL, MongoDB, Ms. Access, dsb.
+Pada kesempatan ini, kita akan belajar menggunakan PHP dan MySQL untuk membuat aplikasi sederhana.
+Bagaimana PHP dan MySQL dihubungkan? PHP dan MySQL dapat saling berhubungan melalui perantara API (Application Programming Interface).</description>
     </item>
     
     <item>
@@ -755,8 +30,8 @@ if(isset($_POST[&#39;simpan&#39;])){
       <pubDate>Sat, 17 Dec 2016 08:09:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/nilai-primary-key-untuk-data-unlimited/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Big Data - MYSQL - Petani Kode&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg&#34; title=&#34;&#34; /&gt;&lt;/a&gt;Pada terbitan sebelumnya saya sudah pernah membahas &lt;a href=&#34;http://www.petanikode.com/2016/08/berapa-banyak-data-yang-mampu-disimpan.html&#34;&gt;keterbatasan AUTO_INCREMENT di MySQL&lt;/a&gt;. AUTO_INCREMENT sangat bergantung pada tipe datanya. Kita tidak bisa menggunakannya untuk data yang tak terhingga &lt;i&gt;(unlimited)&lt;/i&gt;, karena terbatas. Sebagai gantinya, kita harus membuat fungsi generator ID yang mampu membuat ID yang unik.&lt;br /&gt;&lt;br /&gt;Pada kesempatan yang lain, saya juga pernah membuat &lt;a href=&#34;http://www.petanikode.com/2016/07/membuat-generator-id-unik-seperti-id.html&#34; target=&#34;_blank&#34;&gt;generator ID yang mirip seperti ID video Youtube&lt;/a&gt;. Namun, saya belum yakin sepenuhnya dengan ID unik yang dihasilkannya. Mungkin saja, suatu saat nanti generator ini akan membuat ID yang sama. Seperti halnya fungsi bawaan PHP, &lt;code&gt;uniqid()&lt;/code&gt;. Fungsi ini memang menghasilkan ID yang unik. Akan tetapi, masih meragukan, karena kita telah diperingatkan pada dokumentasinya.&lt;br /&gt;&lt;blockquote&gt;&lt;i&gt;&lt;b&gt;Warning&lt;/b&gt;&lt;/i&gt;&lt;br /&gt;&lt;i&gt;This function does not guarantee uniqueness of return value. Since most systems adjust system clock by NTP or like, system time is changed constantly. Therefore, it is possible that this function does not return unique ID for the process/thread. Use more_entropy to increase likelihood of uniqueness.&lt;/i&gt;&lt;/blockquote&gt;Kalau begitu, apa solusinya?&lt;br /&gt;&lt;h2&gt;UUID atau GUID&lt;/h2&gt;UUID merupakan singkatan dari &lt;i&gt;Universally Unique Identifier&lt;/i&gt;. Sedangkan GUID, singkatan dari &lt;i&gt;Globally Unique Identifier&lt;/i&gt;. UUID dan GUID adalah hal yang sama. Perbedaanya, GUID itu merupakan implementasi dari UUID yang dilakukan oleh Microsoft. UUID terdiri dari &lt;code&gt;32&lt;/code&gt; digit bilangan desimal yang dipisahkan dengan tanda &lt;i&gt;hyphens&lt;/i&gt; (-), &lt;code&gt;8-4-4-4-12&lt;/code&gt; sehingga total semuanya adalah &lt;code&gt;32&lt;/code&gt; karakter. Contoh UUID:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;&lt;b&gt;123e4567-e89b-12d3-a456-426655440000&lt;/b&gt;&lt;/code&gt;&lt;/pre&gt;UUID memiliki beberapa versi, yaitu versi 1, 2, 3, 4, dan 5. Versi 4 digunakan untuk nilai acak &lt;i&gt;(random)&lt;/i&gt;. Ini bisa kita manfaatkan untuk nilai &lt;i&gt;Primary Key&lt;/i&gt;. Menurut penjelasan Wikipedia, setelah membuat 1 miliar UUID untuk setiap detik, kemungkinan untuk terjadi duplikasi nilai yang sama untuk 100 tahun berikutnya adalah 50%. &lt;br /&gt;&lt;h2&gt;Fungsi Generator GUID&lt;/h2&gt;Sekarang kita coba membuat sebuah fungsi generator GUID di PHP. Fungsi ini bisa kita manfaatkan untuk pengisian nilai &lt;i&gt;Primary Key&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;php&#34;&gt;&amp;lt;?php&lt;br /&gt;function guidv4()&lt;br /&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (function_exists(&amp;lsquo;com_create_guid&amp;rsquo;) === true)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return trim(com_create_guid(), &amp;lsquo;{}&amp;rsquo;);&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $data = openssl_random_pseudo_bytes(16);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $data[6] = chr(ord($data[6]) &amp;amp; 0x0f | 0x40); // set version to 0100&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $data[8] = chr(ord($data[8]) &amp;amp; 0x3f | 0x80); // set bits 6-7 to 10&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; return vsprintf(&amp;lsquo;%s%s-%s-%s-%s-%s%s%s&amp;rsquo;, str_split(bin2hex($data), 4));&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Hasil ketika mengeksekusi fungsi tersebut:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-Ip3KjGUzH_I/WDzDdszEwYI/AAAAAAAADd0/UMaj3_jOX782kKoafwhu5nFjZOG7VbQFwCK4B/s1600/Percobaan%2Bfungsi%2Bgenerator%2BUUID.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-Ip3KjGUzH_I/WDzDdszEwYI/AAAAAAAADd0/UMaj3_jOX782kKoafwhu5nFjZOG7VbQFwCK4B/s1600/Percobaan%2Bfungsi%2Bgenerator%2BUUID.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Jadi, gunakanlah UUID untuk nilai &lt;i&gt;primary key&lt;/i&gt; bila data anda terlalu banyak, supaya tidak menjadi masalah di masa depan.&lt;br /&gt;&lt;br /&gt;Referensi&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.uniqid.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.uniqid.php&#34;&gt;http://php.net/manual/en/function.uniqid.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid&#34;&gt;http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/18206984/2658551&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/a/18206984/2658551&#34;&gt;http://stackoverflow.com/a/18206984/2658551&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/function.com-create-guid.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://php.net/manual/en/function.com-create-guid.php&#34;&gt;http://php.net/manual/en/function.com-create-guid.php&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Universally_unique_identifier&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Universally_unique_identifier&#34;&gt;https://en.wikipedia.org/wiki/Universally_unique_identifier&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Globally_unique_identifier&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Globally_unique_identifier&#34;&gt;https://en.wikipedia.org/wiki/Globally_unique_identifier&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size&#34;&gt;https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
-</description>
+      <description>Pada terbitan sebelumnya saya sudah pernah membahas keterbatasan AUTO_INCREMENT di MySQL. AUTO_INCREMENT sangat bergantung pada tipe datanya. Kita tidak bisa menggunakannya untuk data yang tak terhingga (unlimited), karena terbatas. Sebagai gantinya, kita harus membuat fungsi generator ID yang mampu membuat ID yang unik.
+Pada kesempatan yang lain, saya juga pernah membuat generator ID yang mirip seperti ID video Youtube. Namun, saya belum yakin sepenuhnya dengan ID unik yang dihasilkannya. Mungkin saja, suatu saat nanti generator ini akan membuat ID yang sama.</description>
     </item>
     
     <item>
@@ -765,127 +40,11 @@ if(isset($_POST[&#39;simpan&#39;])){
       <pubDate>Sat, 10 Dec 2016 15:53:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-menyimpan-graf-dalam-database/</guid>
-      <description>
-
-&lt;p&gt;Awalnya saya tidak begitu paham dengan kegunaan graf pada komputer.&lt;/p&gt;
-
-&lt;p&gt;Namun, setelah
-belajar beberapa teori seperti kecerdasan buatan, analisa algoritma, struktur data,
-matematika diskrit, kalkulus, dan sebagainya. Saya mendapatkan sedikit pencerahan.&lt;/p&gt;
-
-&lt;p&gt;Graf dapat digunakan untuk menyelesaikan berbagai permasalahan seperti pencarian
-jalur terpendek, relasi hubungan sesuatu, representasi pengetahuan pada AI, dsb.&lt;/p&gt;
-
-&lt;p&gt;Saya kemudian tertarik untuk mengetahui cara melakukan komputasi graf.&lt;/p&gt;
-
-&lt;p&gt;Sebelumnya saya pernah membahas &lt;a href=&#34;https://www.petanikode.com/representasi-graf-dalam-kode-python/&#34;&gt;cara merepresentasikan graf ke dalam kode&lt;/a&gt;
-program dengan bahasa pemrograman python.&lt;/p&gt;
-
-&lt;p&gt;Sekarang, bagaimana caranya kita menyimpan graf di dalam database?&lt;/p&gt;
-
-&lt;p&gt;mari kita bahas&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-menyimpan-graf-di-dalam-database&#34;&gt;Cara Menyimpan Graf di dalam Database&lt;/h2&gt;
-
-&lt;p&gt;Memikirkan sendiri cara penyimpanan graf dalam database membuat saya pusing.&lt;/p&gt;
-
-&lt;p&gt;Tapi, pada akhirnya saya menemukan sebuah &lt;em&gt;slide&lt;/em&gt; milik bapak &lt;a href=&#34;http://www.slideshare.net/billkarwin&#34;&gt;Karwin&lt;/a&gt; yang sangat membantu.&lt;/p&gt;
-
-&lt;p&gt;Beliau menjelaskan empat metode penyimpanan graf pada database relasional
-dan membandingkan setiap metode.&lt;/p&gt;
-
-&lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;485&#34; marginheight=&#34;0&#34; marginwidth=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//www.slideshare.net/slideshow/embed_code/key/tI9jfoqFHAcQdn?startSlide=5&#34; style=&#34;border-width: 1px; border: 1px solid #ccc; margin-bottom: 5px; max-width: 100%;&#34; width=&#34;100%&#34;&gt;
-&lt;/iframe&gt;
-
-&lt;p&gt;Hasil perbandingannya metode &lt;em&gt;Closeure Table&lt;/em&gt; terpilih sebagai cara yang termudah. Termudah yang saya maksudkan di sini adalah mudah untuk melakukan &lt;em&gt;Query&lt;/em&gt; CRUD &lt;em&gt;(Create, Read, Update, Delete)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Masing-masing metode memang memiliki kelebihan dan kekurangan.&lt;/p&gt;
-
-&lt;p&gt;Contohnya metode &lt;em&gt;Path Enumerattion&lt;/em&gt;, bagus digunakan untuk membuat &lt;em&gt;breadcrums. Sedangkan Adjacency List&lt;/em&gt; tidak bagus digunakan untuk graf yang punya banyak &lt;em&gt;node.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;metode-closure-table&#34;&gt;Metode &lt;em&gt;Closure Table&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Mari kita pelajari cara penyimpanan graf dengan metode &lt;em&gt;Closure Table&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Misalkan, kita memiliki graf seperti pada gambar ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-dWgknbxEzmU/WCLzqncwFzI/AAAAAAAADag/6wDc7P2eC7IwFY3dOdmTXHpcaT-woBqFQCK4B/s1600/graf%2Bberarah%2B-%2Bpetanikode.jpg&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-dWgknbxEzmU/WCLzqncwFzI/AAAAAAAADag/6wDc7P2eC7IwFY3dOdmTXHpcaT-woBqFQCK4B/s1600/graf%2Bberarah%2B-%2Bpetanikode.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Anggaplah semua titik-titik pada graf tersebut merupakan sebuah kota yang saling terhubung. Kemudian, yang kita harus lakukan adalah membuat tabel untuk menyimpan kota (titik) dan jalan yang menghubungkannya.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-rCy4_zOhkfE/WDmI8o6D06I/AAAAAAAADdY/cttgx1o55l4VGyGvr-toyHGhEk8aP1qtACK4B/s1600/Relasi%2BTabel%2BGraf.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-rCy4_zOhkfE/WDmI8o6D06I/AAAAAAAADdY/cttgx1o55l4VGyGvr-toyHGhEk8aP1qtACK4B/s1600/Relasi%2BTabel%2BGraf.png&#34; alt=&#34;Diagram Relasi Tabel Graf&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Relasi yang akan tercipta adalah &lt;em&gt;Many-to-Many&lt;/em&gt;. Kolom &lt;code&gt;kota_asal&lt;/code&gt; dan &lt;code&gt;kota_tujuan&lt;/code&gt; akan menyimpan &lt;code&gt;id&lt;/code&gt; dari &lt;em&gt;kota&lt;/em&gt;. Kemudian kolom &lt;code&gt;panjang&lt;/code&gt; untuk menyimpan panjang jalannya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;create table kota(
-    id int,
-    nama char,
-    PRIMARY KEY(id)
-);
-
-
-create table jalan(
-    kota_asal int,
-    kota_tujuan int,
-    panjang int,
-    FOREIGN KEY(kota_asal) REFERENCES kota(id),
-    FOREIGN KEY(kota_tujuan) REFERENCES kota(id)
-);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang kita sudah punya dua tabel yang saling berelasi.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-MpXwEwCU8Ek/WDmLo9QF4rI/AAAAAAAADdk/UsgJ7jVgr8IYkYm1GL7Vs2w-mTxw55HPACK4B/s1600/Relasi%2Btabel%2Bgraf%2Bdi%2Bdatabase%2Bmysql.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-MpXwEwCU8Ek/WDmLo9QF4rI/AAAAAAAADdk/UsgJ7jVgr8IYkYm1GL7Vs2w-mTxw55HPACK4B/s1600/Relasi%2Btabel%2Bgraf%2Bdi%2Bdatabase%2Bmysql.png&#34; alt=&#34;Relasi tabel database Graf&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang kita coba menambahkan semua titik pada graf:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;INSERT INTO kota (id,nama) VALUE (1,&#39;A&#39;);
-INSERT INTO kota (id,nama) VALUE (2,&#39;B&#39;);
-INSERT INTO kota (id,nama) VALUE (3,&#39;C&#39;);
-INSERT INTO kota (id,nama) VALUE (4,&#39;D&#39;);
-INSERT INTO kota (id,nama) VALUE (5,&#39;E&#39;);
-INSERT INTO kota (id,nama) VALUE (6,&#39;F&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Selanjutnya menambahkan data jalan:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (1,2,14);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (1,3,10);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (2,3,6);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (2,4,18);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (3,4,7);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (4,3,9);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (5,6,8);
-INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (6,4,11);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Panjang jalan saya tentukan sendiri. Sekarang semuanya sudah masuk. Mari kita coba-coba melakukan &lt;em&gt;query&lt;/em&gt; yang lain. Misalnya, berapakah panjang jalan dari kota B menuju kota D?&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT panjang FROM `jalan` WHERE kota_asal=2 AND kota_tujuan=4
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;+---------+
-| panjang |
-+---------+
-|      18 |
-+---------+
-1 row in set (0,00 sec)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sebenarnya ada dua jalan yang bisa dilewati dari kota B menuju kota D, yaitu &lt;code&gt;B-&amp;gt;D&lt;/code&gt; dan &lt;code&gt;B-&amp;gt;C-&amp;gt;D&lt;/code&gt;. Akan tetapi &lt;em&gt;query&lt;/em&gt; tersebut hanya memilih jalur &lt;code&gt;B-&amp;gt;D&lt;/code&gt; saja.&lt;/p&gt;
-
-&lt;p&gt;Untuk query yang lebih rumit, mungkin kita bisa lakukan dengan membuat program. Misalnya, program untuk menentukan jalur terpedek.&lt;/p&gt;
-
-&lt;p&gt;File SQL contoh di atas dapat anda download di: &lt;a href=&#34;https://gist.github.com/ardianta/7ae139c95570a35d3af9dc40b70f18db&#34;&gt;gist.github.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Begitulah cara termudah menyimpan graf pada database relasional menurut bapak Karwin.&lt;/p&gt;
-
-&lt;p&gt;Metode &lt;em&gt;Closure Table&lt;/em&gt; memang yang termudah, namun pasti memiliki kekurangan.&lt;/p&gt;
-
-&lt;p&gt;Bagaimana menurutmu?&lt;/p&gt;
-</description>
+      <description>Awalnya saya tidak begitu paham dengan kegunaan graf pada komputer.
+Namun, setelah belajar beberapa teori seperti kecerdasan buatan, analisa algoritma, struktur data, matematika diskrit, kalkulus, dan sebagainya. Saya mendapatkan sedikit pencerahan.
+Graf dapat digunakan untuk menyelesaikan berbagai permasalahan seperti pencarian jalur terpendek, relasi hubungan sesuatu, representasi pengetahuan pada AI, dsb.
+Saya kemudian tertarik untuk mengetahui cara melakukan komputasi graf.
+Sebelumnya saya pernah membahas cara merepresentasikan graf ke dalam kode program dengan bahasa pemrograman python.</description>
     </item>
     
     <item>
@@ -894,123 +53,11 @@ INSERT INTO jalan (kota_asal,kota_tujuan,panjang) VALUES (6,4,11);
       <pubDate>Sun, 09 Oct 2016 11:57:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-web-di-linux/</guid>
-      <description>
-
-&lt;p&gt;Pemrograman web yang akan saya bahas alah pemrograman web menggunakan HTML, Javascript,
-PHP, dan MySQL.&lt;/p&gt;
-
-&lt;p&gt;Jika kamu ingin membuat web atau belajar pemrograman web menggunakan Linux, maka
-kamu perlu persiapkan 6 alat ini:&lt;/p&gt;
-
-&lt;h2 id=&#34;1-teks-editor&#34;&gt;1. Teks Editor&lt;/h2&gt;
-
-&lt;p&gt;Teks Editor digunakan untuk menulis kode. Banyak pilihan teks editor yang dapat digunakan, diantaranya: Gedit, Geany, Atom, Sublime, CodeLite, dsb.&lt;/p&gt;
-
-&lt;p&gt;Pilihlah teks editor yang anda sukai.&lt;/p&gt;
-
-&lt;p&gt;Saya sendiri menggunakan teks editor Atom.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-xYZSEJ0UIKs/V_mwJCM3-VI/AAAAAAAADTI/DWvKVoole9cE1s1R7tnDh_sxOKXUUHINACK4B/s1600/Text%2BEditor%2BAtom%2Bdi%2BLinux%2BMint%2B18.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-xYZSEJ0UIKs/V_mwJCM3-VI/AAAAAAAADTI/DWvKVoole9cE1s1R7tnDh_sxOKXUUHINACK4B/s1600/Text%2BEditor%2BAtom%2Bdi%2BLinux%2BMint%2B18.png&#34; alt=&#34;Text Editor Atom di Linux Mint 18&#34; title=&#34;Text Editor Atom di Linux Mint 18&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(baca juga: &lt;a href=&#34;https://www.petanikode.com/teks-editor-cli-linux/&#34;&gt;6 Teks Editor Berbasis Teks (CLI) di Linux untuk Menulis Kode&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-browser&#34;&gt;2. Browser&lt;/h2&gt;
-
-&lt;p&gt;Browser digunakan untuk membuka web.&lt;/p&gt;
-
-&lt;p&gt;Jadi web yang kita buat akan ditampilkan di browser.&lt;/p&gt;
-
-&lt;p&gt;Ada beberapa browser yang dapat digunakan di Linux, diantaranya: Mozilla Firefox, Google Chrome, Chromium, Opera, dsb.&lt;/p&gt;
-
-&lt;p&gt;Pilihlah browser yang anda sukai.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_bmTjI5T_oM/V_mw1EUz8WI/AAAAAAAADTU/mAlTO-krOTIYktqkCCUhsv3xWKWRdi8WACK4B/s1600/Petani%2BKode%2B-%2BMozilla%2BFirefox%2Bdi%2BLinux%2BMint%2B18.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-_bmTjI5T_oM/V_mw1EUz8WI/AAAAAAAADTU/mAlTO-krOTIYktqkCCUhsv3xWKWRdi8WACK4B/s1600/Petani%2BKode%2B-%2BMozilla%2BFirefox%2Bdi%2BLinux%2BMint%2B18.png&#34; alt=&#34;Mozilla Firefox di Linux Mint 18&#34; title=&#34;Mozilla Firefox di Linux Mint 18&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-php&#34;&gt;3. PHP&lt;/h2&gt;
-
-&lt;p&gt;PHP adalah bahasa skrip, karena itu kita membutuhkan interpreter untuk menjalankannya. Silahkan instal PHP dengan perintah berikut ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt install php5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;atau untuk PHP 7&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt install php7.0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Periksalah versi PHP yang terinstal dengan mengetik perintah &lt;code&gt;php -v&lt;/code&gt; pada terminal.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-GdmDmr6NMcQ/V_mzZJGajwI/AAAAAAAADTg/isADxEszD-khKsWt71qqR0mXBmQOFtCtQCK4B/s1600/Versi%2BPHP%2Byang%2Bterinstal.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-GdmDmr6NMcQ/V_mzZJGajwI/AAAAAAAADTg/isADxEszD-khKsWt71qqR0mXBmQOFtCtQCK4B/s1600/Versi%2BPHP%2Byang%2Bterinstal.png&#34; alt=&#34;Cek Versi PHP yang terinstal&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;PHP yang terinstal di linux secara default akan diatur sebagai &lt;em&gt;Production Server&lt;/em&gt;. Silahkan ganti menjadi &lt;em&gt;Development&lt;/em&gt; agar bisa menampilkan &lt;em&gt;error&lt;/em&gt; untuk &lt;em&gt;debugging&lt;/em&gt;. Silahkan baca: &lt;a href=&#34;http://www.petanikode.com/2016/03/cara-menampilkan-pesan-error-untuk-debugging-php.html&#34;&gt;Cara Menampilkan Pesan Error untuk Debugging PHP&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;4-server-web-apache&#34;&gt;4. Server Web (Apache)&lt;/h2&gt;
-
-&lt;p&gt;Tanpa Server Web Apache sebenarnya PHP sudah bisa dijadikan server. Sekarang PHP sudah mampu membuat server sendiri,&amp;ndash;Silahkan baca: &lt;a href=&#34;http://www.petanikode.com/2016/10/cara-menggunakan-web-server-dari-php.html&#34;&gt;Cara Menggunakan Server Web bawaan PHP&lt;/a&gt;&amp;ndash; tapi web server tersebut hanya digunakan untuk &lt;em&gt;development&lt;/em&gt; saja. Oleh karena itu, ada baiknya kita menggunakan server apache.&lt;/p&gt;
-
-&lt;p&gt;Silahkan ketik perintah berikut ini untuk menginstal server apache di Linux.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt install apache2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu coba perikta versi yang terinstal dengan perintah &lt;code&gt;apache2 -v&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-MujHbTNIwkk/V_m3oIOYpSI/AAAAAAAADTs/tGliHR4gXwAy8eFtlE7-Ti15eEX7d7asACK4B/s1600/petanikode%2540imajinasi%2B%257E_021.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-MujHbTNIwkk/V_m3oIOYpSI/AAAAAAAADTs/tGliHR4gXwAy8eFtlE7-Ti15eEX7d7asACK4B/s1600/petanikode%2540imajinasi%2B%257E_021.png&#34; alt=&#34;Versi Apache yang terinstal&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Gunakan perintah berikut ini untuk mengaktifkan server apache&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo service apache2 start
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perintah untuk menghentikan server apache:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo service apache2 stop
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perintah untuk me-restart:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo service apache2 restart
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Selain itu, kita juga bisa membuka alamat &lt;a href=&#34;http://localhost/&#34;&gt;http://localhost&lt;/a&gt; untuk memeriksa apakah server apache sudah berjalan atau belum. Bila tampilannya seperti berikut ini, maka servernya sedang berjalan.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-yc0SNC-8zO0/V_m50vldw_I/AAAAAAAADT4/Q0-zc1Uv9pcOgZixFjbQZI97T0XAb67VwCK4B/s1600/Uji%2Bcoba%2Bserver%2Bapache.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-yc0SNC-8zO0/V_m50vldw_I/AAAAAAAADT4/Q0-zc1Uv9pcOgZixFjbQZI97T0XAb67VwCK4B/s1600/Uji%2Bcoba%2Bserver%2Bapache.png&#34; alt=&#34;Uji coba server apache melalui browser&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Jangan lupa juga untuk mengatur hak akses direktori servernya agar user biasa bebas membuat file dan direktori di sana.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo chmod 777 /var/www/html -R
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;5-server-database-mysql&#34;&gt;5. Server Database (MySQL)&lt;/h2&gt;
-
-&lt;p&gt;Server MySQL digunakan untuk keperluan database. Apabila webnya nanti kompleks dan memerlukan database, maka bisa menggunakan MySQL. Selain MySQL dapat juga menggunakan DBMS (Database Management System) yang lain seperti Ms. SQL, PostgreSQL, Oracle, dsb.&lt;/p&gt;
-
-&lt;p&gt;Silahkan ketik perintah berikut ini untuk menginstal MySQL di Linux.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt install mysql-server
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jangan lupa juga untuk memeriksa versi MySQL yang terinstal dengan perintah &lt;code&gt;mysql --version&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-m9L8OgWTZUc/V_m7kUn3sUI/AAAAAAAADUE/K6QoJRtBOMQ_kpQLH-08-yDX15-QVo8zACK4B/s1600/Periksa%2Bversi%2Bmysql%2B-%2Bpetanikode.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-m9L8OgWTZUc/V_m7kUn3sUI/AAAAAAAADUE/K6QoJRtBOMQ_kpQLH-08-yDX15-QVo8zACK4B/s1600/Periksa%2Bversi%2Bmysql%2B-%2Bpetanikode.png&#34; alt=&#34;Periksa versi mysql yang terinstal&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;6-phpmyadmin&#34;&gt;6. PHPMyAdmin&lt;/h2&gt;
-
-&lt;p&gt;PHPMyAdmin digunakan untuk mengelola database di MySQL. Selain menggunakan PHPMyAdmin, dapat juga menggunakan aplikasi yang lain seperti MySQL Workbench, Navicat, dsb.&lt;/p&gt;
-
-&lt;p&gt;Ketik perintah berikut untuk menginstal PHPMyAdmin di Linux:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt install phpmyadmin
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Dalam proses instalasi anda akan diminta password untuk root, silahkan isi saja dengan password yang mudah diingat.&lt;/p&gt;
-
-&lt;p&gt;Setelah berhasil diinstal, silahkan periksa ke &lt;a href=&#34;http://localhost/phpmyadmin&#34;&gt;http://localhost/phpmyadmin&lt;/a&gt;. Kemudian, cobalah masuk dengan password yang sudah dibuat.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-WvGEqy8eHrs/V_m88ZVj7aI/AAAAAAAADUQ/7PysK__qpkEU61S5HLwGzwr3vDK9EPeOACK4B/s1600/phpMyAdmin%2B-%2BMozilla%2BFirefox_022.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-WvGEqy8eHrs/V_m88ZVj7aI/AAAAAAAADUQ/7PysK__qpkEU61S5HLwGzwr3vDK9EPeOACK4B/s1600/phpMyAdmin%2B-%2BMozilla%2BFirefox_022.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah, semua sudah dipersiapkan. Bila tidak ada error sampai tahap ini, berarti kita sudah berhasil mempersiapkan semua alat-alat yang diperlukan untuk memrogram web di Linux. Selanjutnya, kita bisa mulai membuat web.&lt;/p&gt;
-</description>
+      <description>Pemrograman web yang akan saya bahas alah pemrograman web menggunakan HTML, Javascript, PHP, dan MySQL.
+Jika kamu ingin membuat web atau belajar pemrograman web menggunakan Linux, maka kamu perlu persiapkan 6 alat ini:
+1. Teks Editor Teks Editor digunakan untuk menulis kode. Banyak pilihan teks editor yang dapat digunakan, diantaranya: Gedit, Geany, Atom, Sublime, CodeLite, dsb.
+Pilihlah teks editor yang anda sukai.
+Saya sendiri menggunakan teks editor Atom.</description>
     </item>
     
     <item>
@@ -1019,8 +66,8 @@ kamu perlu persiapkan 6 alat ini:&lt;/p&gt;
       <pubDate>Sun, 07 Aug 2016 11:04:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/berapa-banyak-data-yang-mampu-disimpan-pada-mysql-dengan-auto_increment/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Big Data - MYSQL - Petani Kode&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg&#34; title=&#34;&#34; /&gt;&lt;/a&gt;AUTO_INCREMENT sangat sering saya gunakan dalam mengerjakan proyek. AUTO_INCREMENT membuat Kita tidak perlu mengisi field secara manual maupun dengan generator dalam kode. Tapi, &amp;hellip; apakah ini aman? Apakah tidak masalah bila nanti datanya banyak? Berapa banyak sih data yang mampu ditampung bila menggunakan AUTO_INCREMENT? Mari kita sedikit pikirkan masalah &lt;i&gt;Big Data&lt;/i&gt;.&lt;br /&gt;&lt;h2&gt;Batas AUTO_INCREMENT&lt;/h2&gt;Ternyata AUTO_INCREMENT memiliki batas. Apabila sudah melampaui batas, mungkin sistemnya akan macat. Jadi hati-hati menggunakannya. Berdasarkan jawaban yang saya dapatkan di &lt;a href=&#34;http://stackoverflow.com/a/11264482&#34; target=&#34;_blank&#34;&gt;Stack Overflow&lt;/a&gt;, berikut ini batasan-batasan AUTO_INCREMENT berdasarkan tipe datanya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;TINYINT&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; - 127&lt;br /&gt;UNSIGNED TINYINT&amp;nbsp;&amp;nbsp; - 255&lt;br /&gt;SMALLINT&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; - 32767&lt;br /&gt;UNSIGNED SMALLINT&amp;nbsp; - 65535&lt;br /&gt;MEDIUMINT&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; - 8388607&lt;br /&gt;UNSIGNED MEDIUMINT - 16777215&lt;br /&gt;INT&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; - 2147483647&lt;br /&gt;UNSIGNED INT&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; - 4294967295&lt;br /&gt;BIGINT&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; - 9223372036854775807&lt;br /&gt;UNSIGNED BIGINT&amp;nbsp;&amp;nbsp;&amp;nbsp; - 18446744073709551615&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Apakah ini aman?&lt;/h2&gt;Kalau sistem yang dibangun sekelas tugas sekolah/kuliah, mungkin tidak masalah. Tapi, apa bila kita membangun sistem nyata yang akan menampung banyak sekali data, maka perlu dipertimbangkan penggunaan AUTO_INCREMENT.&lt;br /&gt;&lt;h2&gt;Apa Ada Alternatif?&lt;/h2&gt;Alternatif mungkin bisa menggunakan generator ID yang unik. Nanti tipe datanya dalam bentuk VARCHAR atau CHAR. Isinya berupa karakter unik yang di-generate dari kode.&lt;br /&gt;&lt;br /&gt;Baca: &lt;a href=&#34;http://www.petanikode.com/2016/07/membuat-generator-id-unik-seperti-id.html&#34;&gt;Membuat Generator id Unik seperti id Video YouTube di PHP&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;AUTO_INCREMENT merupakan fitur untuk pengisian record (angka) secara otomatis. AUTO_INCREMENT mengisi angka secara terurut mulai dari 1, 2, 3, &amp;hellip; dan seterusnya. AUTO_INCREMENT memiliki batas mengikuti tipe datanya.&lt;/p&gt;
-</description>
+      <description>AUTO_INCREMENT sangat sering saya gunakan dalam mengerjakan proyek. AUTO_INCREMENT membuat Kita tidak perlu mengisi field secara manual maupun dengan generator dalam kode. Tapi, &amp;hellip; apakah ini aman? Apakah tidak masalah bila nanti datanya banyak? Berapa banyak sih data yang mampu ditampung bila menggunakan AUTO_INCREMENT? Mari kita sedikit pikirkan masalah Big Data.
+Batas AUTO_INCREMENTTernyata AUTO_INCREMENT memiliki batas. Apabila sudah melampaui batas, mungkin sistemnya akan macat. Jadi hati-hati menggunakannya. Berdasarkan jawaban yang saya dapatkan di Stack Overflow, berikut ini batasan-batasan AUTO_INCREMENT berdasarkan tipe datanya.</description>
     </item>
     
     <item>
@@ -1029,8 +76,11 @@ kamu perlu persiapkan 6 alat ini:&lt;/p&gt;
       <pubDate>Tue, 26 Apr 2016 15:02:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/solusi-error-phpmyadmin-mbstring-is-missing/</guid>
-      <description>&lt;p&gt;&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-0iFBzAJkiyk/Vx8UfFI-gEI/AAAAAAAACxM/R4q3xD4xj1sXrGpeD3HYMwcu31gG1zRfgCK4B/s1600/phpMyAdmin%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-0iFBzAJkiyk/Vx8UfFI-gEI/AAAAAAAACxM/R4q3xD4xj1sXrGpeD3HYMwcu31gG1zRfgCK4B/s1600/phpMyAdmin%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Masih segar, Ubuntu saya baru saja ditingkatkan &lt;i&gt;(upgrade)&lt;/i&gt; ke versi 16.04. Secara otomatis semua versi software-nya juga ditingkatkan. Tapi, peningkatan versi tidak selalu menjadi lebih baik. Kadang mendapat &lt;i&gt;bugs&lt;/i&gt; dan masalah baru. Seperti phpMyAdmin, terjadi &lt;i&gt;error&lt;/i&gt; karena menggunakan PHP 7. Pada versi sebelumnya menggunakan PHP 5.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-hCm0pO2WGNE/Vx8MYUuMqLI/AAAAAAAACww/ru4HEoVvEYgYMzi04n5rARbpXh5_81A2ACK4B/s1600/Pesan%2BError%2BphpMyAdmin%2B-%2Bmbstring%2Bextension%2Bis%2Bmissing.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-hCm0pO2WGNE/Vx8MYUuMqLI/AAAAAAAACww/ru4HEoVvEYgYMzi04n5rARbpXh5_81A2ACK4B/s1600/Pesan%2BError%2BphpMyAdmin%2B-%2Bmbstring%2Bextension%2Bis%2Bmissing.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Berdasarkan pesan error tersebut, kesalahanya ada pada konfigurasi PHP. Atur konfigurasi agar dapat me-load ekstensi.&lt;br /&gt;&lt;ol&gt;&lt;li&gt;buka file &lt;code&gt;/etc/php5/apache2/php.ini&lt;/code&gt; atau &lt;code&gt;/etc/php/7.0/apache2/php.ini&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Tambahkan&lt;br /&gt;&lt;pre&gt;&lt;code&gt;extension_dir = /usr/lib/php/20151012/&lt;/code&gt;&lt;/pre&gt;Lokasi &lt;code&gt;/usr/lib/php/20151012/&lt;/code&gt; adalah lokasi ekstensi PHP pada komputer saya.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-6-57E16go-8/Vx8MnQewQ_I/AAAAAAAACw4/3Ivzwbe9DlsGUUld1KkskL5Agy7s3-4EQCK4B/s1600/Konfigurasi%2BPHP.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-6-57E16go-8/Vx8MnQewQ_I/AAAAAAAACw4/3Ivzwbe9DlsGUUld1KkskL5Agy7s3-4EQCK4B/s1600/Konfigurasi%2BPHP.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Nyalakan ulang service apache2&lt;br /&gt;&lt;pre&gt;&lt;code&gt;sudo service apache2 restart&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;/ol&gt;Sekarang coba buka lagi phpMyAdmin. Kalau masih belum berhasil, instal ekstensi &lt;code&gt;php-mbstring&lt;/code&gt;. &lt;br /&gt;&lt;pre&gt;&lt;code&gt;sudo apt install php-mbstring&lt;/code&gt;&lt;/pre&gt;Referensi: &lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/q/12858772&#34;&gt;http://stackoverflow.com/q/12858772&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://php.net/manual/en/mbstring.installation.php&#34;&gt;http://php.net/manual/en/mbstring.installation.php&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
-</description>
+      <description>Masih segar, Ubuntu saya baru saja ditingkatkan (upgrade) ke versi 16.04. Secara otomatis semua versi software-nya juga ditingkatkan. Tapi, peningkatan versi tidak selalu menjadi lebih baik. Kadang mendapat bugs dan masalah baru. Seperti phpMyAdmin, terjadi error karena menggunakan PHP 7. Pada versi sebelumnya menggunakan PHP 5.
+
+Berdasarkan pesan error tersebut, kesalahanya ada pada konfigurasi PHP. Atur konfigurasi agar dapat me-load ekstensi.
+buka file /etc/php5/apache2/php.ini atau /etc/php/7.0/apache2/php.iniTambahkan
+extension_dir = /usr/lib/php/20151012/Lokasi /usr/lib/php/20151012/ adalah lokasi ekstensi PHP pada komputer saya.</description>
     </item>
     
     <item>
@@ -1039,8 +89,12 @@ kamu perlu persiapkan 6 alat ini:&lt;/p&gt;
       <pubDate>Sun, 24 Apr 2016 17:49:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/solusi-masalah-dependensi-server-mysql-di-ubuntu/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://1.bp.blogspot.com/-UZz6uobxiZE/VxyWBdU9HxI/AAAAAAAACwc/xC-LHlNtHZoXkxnr1nYNhCAtK1vE4O4fwCLcB/s1600/MySQL%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-UZz6uobxiZE/VxyWBdU9HxI/AAAAAAAACwc/xC-LHlNtHZoXkxnr1nYNhCAtK1vE4O4fwCLcB/s1600/MySQL%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Gara-gara upgrade versi server MySQL tadi malam, servernya malah error. Awalnya saya menggunakan MySQL versi 5.5, kemudian ditingkatkan &lt;i&gt;(upgrade)&lt;/i&gt; ke versi 5.6.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;$ &lt;b&gt;mysql -u root -p&lt;/b&gt;  &lt;br /&gt;ERROR 2002 (HY000): Can&amp;rsquo;t connect to local MySQL server through socket    &amp;lsquo;/var/run/mysqld/mysqld.sock&amp;rsquo; (2)&lt;/code&gt;&lt;/pre&gt;Kemudian saya mencoba menghapus mysql-server dan meninginstal lagi (instal ulang). &lt;br /&gt;&lt;pre&gt;sudo apt-get remove mysql-server&lt;br /&gt;sudo apt-get install mysql-server&lt;/pre&gt;Malah dapat error dependensi:&lt;br /&gt;&lt;pre style=&#34;overflow: auto;&#34;&gt;&lt;code&gt;$ sudo apt-get install mysql-server&lt;br /&gt;Reading package lists&amp;hellip; Done&lt;br /&gt;Building dependency tree&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;Reading state information&amp;hellip; Done&lt;br /&gt;The following extra packages will be installed:&lt;br /&gt;&amp;nbsp; mysql-server-5.5 mysql-server-core-5.5&lt;br /&gt;Suggested packages:&lt;br /&gt;&amp;nbsp; tinyca mailx&lt;br /&gt;The following NEW packages will be installed:&lt;br /&gt;&amp;nbsp; mysql-server mysql-server-5.5 mysql-server-core-5.5&lt;br /&gt;0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.&lt;br /&gt;Need to get 0 B/5.144 kB of archives.&lt;br /&gt;After this operation, 53,2 MB of additional disk space will be used.&lt;br /&gt;Do you want to continue? [Y/n] y&lt;br /&gt;Preconfiguring packages &amp;hellip;&lt;br /&gt;Selecting previously unselected package mysql-server-core-5.5.&lt;br /&gt;(Reading database &amp;hellip; 272846 files and directories currently installed.)&lt;br /&gt;Preparing to unpack &amp;hellip;/mysql-server-core-5.5_5.5.49-0ubuntu0.14.04.1_amd64.deb &amp;hellip;&lt;br /&gt;Unpacking mysql-server-core-5.5 (5.5.49-0ubuntu0.14.04.1) &amp;hellip;&lt;br /&gt;Selecting previously unselected package mysql-server-5.5.&lt;br /&gt;Preparing to unpack &amp;hellip;/mysql-server-5.5_5.5.49-0ubuntu0.14.04.1_amd64.deb &amp;hellip;&lt;br /&gt;Unpacking mysql-server-5.5 (5.5.49-0ubuntu0.14.04.1) &amp;hellip;&lt;br /&gt;Selecting previously unselected package mysql-server.&lt;br /&gt;Preparing to unpack &amp;hellip;/mysql-server_5.5.49-0ubuntu0.14.04.1_all.deb &amp;hellip;&lt;br /&gt;Unpacking mysql-server (5.5.49-0ubuntu0.14.04.1) &amp;hellip;&lt;br /&gt;Processing triggers for man-db (2.6.7.1-1ubuntu1) &amp;hellip;&lt;br /&gt;Processing triggers for ureadahead (0.100.0-16) &amp;hellip;&lt;br /&gt;Setting up mysql-server-core-5.5 (5.5.49-0ubuntu0.14.04.1) &amp;hellip;&lt;br /&gt;Setting up mysql-server-5.5 (5.5.49-0ubuntu0.14.04.1) &amp;hellip;&lt;br /&gt;160424 14:50:11 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.&lt;br /&gt;160424 14:50:11 [Note] /usr/sbin/mysqld (mysqld 5.5.49-0ubuntu0.14.04.1) starting as process 12092 &amp;hellip;&lt;br /&gt;start: Job failed to start&lt;br /&gt;invoke-rc.d: initscript mysql, action &amp;ldquo;start&amp;rdquo; failed.&lt;br /&gt;dpkg: error processing package mysql-server-5.5 (&amp;ndash;configure):&lt;br /&gt;&amp;nbsp;subprocess installed post-installation script returned error exit status 1&lt;br /&gt;dpkg: dependency problems prevent configuration of mysql-server:&lt;br /&gt;&amp;nbsp;mysql-server depends on mysql-server-5.5; however:&lt;br /&gt;&amp;nbsp; Package mysql-server-5.5 is not configured yet.&lt;br /&gt;&lt;br /&gt;dpkg: error processing package mysql-server (&amp;ndash;configure):&lt;br /&gt;&amp;nbsp;dependency problems - leaving unconfigured&lt;br /&gt;Processing triggers for ureadahead (0.100.0-16) &amp;hellip;&lt;br /&gt;No apport report written because the error message indicates its a followup error from a previous failure.&lt;/code&gt;&lt;/pre&gt;Beberapa solusi sudah dilakukan, tapi masih belum juga bisa. Solusi terakhir yang saya temikan di &lt;a href=&#34;http://stackoverflow.com/a/18456553&#34; target=&#34;_blank&#34;&gt;Stackoverflow&lt;/a&gt; sangat ampuh. Solusi terakhir ini membersihkan semuanya: database, konfigurasi, user, paket-paket MySQL dll. Jangan coba-coba solusi ini, kalau anda belum yakin kehilangan semua hal yang berkaitan dengan MySQL. Berikut ini perintah-perintah ajaibnya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;$ sudo apt-get &amp;ndash;yes autoremove &amp;ndash;purge mysql-server-5.5&lt;br /&gt;&lt;br /&gt;$ sudo apt-get &amp;ndash;yes autoremove &amp;ndash;purge mysql-client-5.5&lt;br /&gt;&lt;br /&gt;$ sudo apt-get &amp;ndash;yes autoremove &amp;ndash;purge mysql-common&lt;br /&gt;&lt;br /&gt;$ sudo rm -rf /var/lib/mysql /etc/mysql ~/.mysql&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;$ sudo deluser mysql&lt;br /&gt;&lt;br /&gt;$ sudo apt-get autoclean&lt;br /&gt;&lt;br /&gt;$ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;br /&gt;&lt;br /&gt;$ sudo apt-get install mysql-server-5.5 mysql-client-5.5&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Server MySQL yang ada di komputer saya pun kembali normal. Tetapi, semua databasenya hilang. Untunglah dulu sudah pernah &lt;a href=&#34;http://2016/02/cara-backup-semua-database-mysql-di.html&#34; target=&#34;_blank&#34;&gt;membuat cadangan &lt;i&gt;(back-up)&lt;/i&gt;&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Gara-gara upgrade versi server MySQL tadi malam, servernya malah error. Awalnya saya menggunakan MySQL versi 5.5, kemudian ditingkatkan (upgrade) ke versi 5.6.
+$ mysql -u root -p ERROR 2002 (HY000): Can&amp;rsquo;t connect to local MySQL server through socket &amp;lsquo;/var/run/mysqld/mysqld.sock&amp;rsquo; (2)Kemudian saya mencoba menghapus mysql-server dan meninginstal lagi (instal ulang). sudo apt-get remove mysql-server
+sudo apt-get install mysql-serverMalah dapat error dependensi:
+$ sudo apt-get install mysql-server
+Reading package lists&amp;hellip; Done
+Building dependency tree&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Reading state information&amp;hellip; Done</description>
     </item>
     
     <item>
@@ -1049,108 +103,8 @@ kamu perlu persiapkan 6 alat ini:&lt;/p&gt;
       <pubDate>Thu, 31 Mar 2016 18:21:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/kode-crud-dalam-satu-file-php/</guid>
-      <description>&lt;p&gt;Pernah mebayangkan, tidak? Membuat CRUD &lt;em&gt;(Create, Read, Update, Delete)&lt;/em&gt; dalam
-satu file PHP. Biasanya, membuat CRUD dilakukan dengan membuat file terpisah.
-Masing-masing file mewakili CRUD. Misalkan file &lt;em&gt;create.php&lt;/em&gt; untuk menambahkan
-data, &lt;em&gt;read.php&lt;/em&gt; untuk menampikan data, &lt;em&gt;update.php&lt;/em&gt; untuk mengubah data, dan
-&lt;em&gt;delete.php&lt;/em&gt; untuk menghapus data. Bagaimana kalau, semuanya digabungkan ke
-dalam satu file PHP?&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam
-satu file PHP. Kode ini, saya buat dengan koneksi database menggunakan API &lt;em&gt;mysqli&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Dalam kode, terdapat empat fungsi yang mewakili CRUD. Pertama fungsi &lt;code&gt;tambah()&lt;/code&gt;
-untuk menambahkan data. Kedua fungsi &lt;code&gt;tampil_data()&lt;/code&gt; untuk membaca data dan
-menampilkanya dalam bentuk tabel. Ketiga fungsi &lt;code&gt;ubah()&lt;/code&gt; untuk mengubah data.
-Terakhir ada fungsi &lt;code&gt;hapus()&lt;/code&gt; untuk menghapus data.&lt;/p&gt;
-
-&lt;p&gt;Fungsi-fungsi tersebut dipanggil pada fungsi (program) utama. Program utama
-bertindak sebagai router yang mengatur pemanggilan fungsi. Misalkan, pada
-halaman Home, fungsi yang dipanggil adalah &lt;code&gt;tambah_data()&lt;/code&gt; dan &lt;code&gt;tampil_data()&lt;/code&gt;.
-Hal ini bisa dilakukan dengan stuktur pemilihan &lt;em&gt;Switch/Case&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Kode lengkapnya bisa dicek di &lt;a href=&#34;https://github.com/petanikode/curd-pertanian&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;700&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/83d60cd7f3c5adb060fd804a206f2158&#34;&gt;
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;p&gt;Sementara untuk database yang digunakan bernama pertanian. Database ini memiliki
-sebuah tabel bernama &lt;code&gt;tabel_panen&lt;/code&gt;. Tabel panen digunakan untuk menyimpan data
-panen pertanian. Berikut ini stuktur &lt;code&gt;tabel_penen&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1352&#34;
-    height=&#34;602&#34;
-    alt=&#34;Struktur+tabel+pertanian+-+crud+dalam+satu+file+php+-+petani+kode.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-9wONg1kdO3Q/Vvug9hW9cuI/AAAAAAAAClQ/agQVDbVLlyAG4FvyPPYuMLS5AScjSizuQ/s1600/Struktur%2Btabel%2Bpertanian%2B-%2Bcrud%2Bdalam%2Bsatu%2Bfile%2Bphp%2B-%2Bpetani%2Bkode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;File SQL-nya tersedia di github: &lt;a href=&#34;https://github.com/petanikode/curd-pertanian/blob/master/pertanian.sql&#34;&gt;pertanian.sql&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Tampilan atau hasil output kode masih dalam bentuk polos. Saya tidak menggunakan
-CSS maupun Javascript. Hanya terdapat PHP dan HTML saja. Berikut ini cuplikan tampilannya.&lt;/p&gt;
-
-&lt;p&gt;Halaman &lt;em&gt;Home&lt;/em&gt; atau halaman utama &lt;em&gt;(index.php)&lt;/em&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;923&#34;
-    height=&#34;600&#34;
-    alt=&#34;Halaman+Home+-+CRUD+dalam+satu+file+php.png&#34;
-    src=&#34;http://4.bp.blogspot.com/-209OSDN5vUI/Vvz05Tf8W_I/AAAAAAAAClk/DfR1UcrDTUgYndpuvZIdGYkxyT5oBMkuQ/s1600/Halaman%2BHome%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Halaman &lt;em&gt;(form)&lt;/em&gt; tambah data:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;923&#34;
-    height=&#34;386&#34;
-    alt=&#34;Halaman+Create+-+CRUD+dalam+satu+file+php.png&#34;
-    src=&#34;http://3.bp.blogspot.com/-h8GF2O3srqI/Vvz1C3zl7XI/AAAAAAAACls/4en9pJoAzQc-tuosZkRsQLXOfiqktMorw/s1600/Halaman%2BCreate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Halaman tampil data:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;923&#34;
-    height=&#34;386&#34;
-    alt=&#34;Halaman+Read+Data+-+CRUD+dalam+satu+file+php.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-hQ-1ygzfj8M/Vvz1MMzrDFI/AAAAAAAACl0/Un_t5yYpsIoYHR46clTHfK3t4Z37srKpA/s1600/Halaman%2BRead%2BData%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Halaman &lt;em&gt;(form)&lt;/em&gt; ubah data:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;923&#34;
-    height=&#34;600&#34;
-    alt=&#34;Halaman+Update+-+CRUD+dalam+satu+file+php.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-lsrvTMidEvc/Vvz1THw_ZsI/AAAAAAAACl8/zMbyn_7J9zIRl_zsfiGEAuVIjoH9NG9QQ/s1600/Halaman%2BUpdate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Demo:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;hND_ycfi1d0&#34;
-    layout=&#34;responsive&#34;
-width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-</description>
+      <description>Pernah mebayangkan, tidak? Membuat CRUD (Create, Read, Update, Delete) dalam satu file PHP. Biasanya, membuat CRUD dilakukan dengan membuat file terpisah. Masing-masing file mewakili CRUD. Misalkan file create.php untuk menambahkan data, read.php untuk menampikan data, update.php untuk mengubah data, dan delete.php untuk menghapus data. Bagaimana kalau, semuanya digabungkan ke dalam satu file PHP?
+Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam satu file PHP. Kode ini, saya buat dengan koneksi database menggunakan API mysqli.</description>
     </item>
     
     <item>
@@ -1159,8 +113,8 @@ width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
       <pubDate>Mon, 07 Mar 2016 17:12:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tipe-data-datetime-dan-timestamp-di-mysql/</guid>
-      <description>&lt;p&gt;Beberapa hari yang lalu, saya melakukan downgrade sistem operasi, dari versi &lt;code&gt;15.10&lt;/code&gt; ke &lt;code&gt;14.04&lt;/code&gt;. Secara otomatis, versi server MySQL-nya juga ikut di-downgrade, dari versi &lt;code&gt;5.6.27&lt;/code&gt; ke  versi &lt;code&gt;5.5.47&lt;/code&gt;. Pada versi yang lebih lama (&lt;code&gt;5.5.47&lt;/code&gt;), tipe data &lt;i&gt;Datetime&lt;/i&gt; dengan nilai &lt;i&gt;default current_timestamp&lt;/i&gt; tidak diterima. Ketika saya mengimpor dari cadangan database, terjadi error.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash sh&#34;&gt;$ mysql -u root -p &amp;lt; db_27_feb_2016.sql  &lt;br /&gt;Enter password:  &lt;br /&gt;ERROR 1067 (42000) at line 41: Invalid default value for &amp;lsquo;tanggal&amp;rsquo;&lt;/code&gt;&lt;/pre&gt;Saya pun mencoba menelusuri ke baris 41 dari file SQL cadangan. Ternyata benar, di sana terdapat tipe data &lt;i&gt;datetime&lt;/i&gt; dengan nilai &lt;i&gt;default current_timestamp&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-l7VxSj8eYiM/Vt08p3RPCoI/AAAAAAAAChw/oRkXWqm08VE/s1600/Tipe%2Bdata%2Bdatetime%2Bdengan%2Bnilai%2Bdefault%2Btimestamp.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-l7VxSj8eYiM/Vt08p3RPCoI/AAAAAAAAChw/oRkXWqm08VE/s1600/Tipe%2Bdata%2Bdatetime%2Bdengan%2Bnilai%2Bdefault%2Btimestamp.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Berdasarkan tangkapan layar di atas, di sana terdapat kode SQL untuk membuat tabel artikel. Tabel ini merupakan tabel untuk proyek &lt;a href=&#34;https://github.com/petanikode/praktikum-blog&#34; target=&#34;_blank&#34;&gt;praktikum blog&lt;/a&gt; yang saya buat dulu. Saya mengganti semua tipe data &lt;i&gt;datetime&lt;/i&gt; yang bernilai &lt;i&gt;default current_timestamp&lt;/i&gt; ke &lt;i&gt;timestamp&lt;/i&gt; dan mencoba mengimpor lagi.&lt;code class=&#34;bash&#34;&gt; &lt;/code&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ERROR 1064 (42000) at line 1866: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &amp;lsquo;STATS_PERSISTENT=0&amp;rsquo; at line 11&lt;/code&gt;&lt;/pre&gt;Fuh!, Error apa lagi ini? Sepertinya, ini masalah perbedaan versi saja. Tapi yang penting, sebagian dari database penting yang saya butuhkan sudah diimpor.&lt;br /&gt;&lt;br /&gt;Sepertinya ini sebuah kesalahan saya yang tidak memperhatikan tipe data dan nilai &lt;i&gt;default&lt;/i&gt; saat membuat database dulu. Jadi, menurut saya, sebaiknya tidak menggunakan nilai &lt;i&gt;default current_timestamp&lt;/i&gt; pada tipe data &lt;i&gt;datetime&lt;/i&gt; dan tipe data &lt;i&gt;datetime&lt;/i&gt; cocoknya digunakan untuk menyimpan data seperti tanggal lahir yang datanya diinputkan secara manual. Sementara untuk data yang tidak diinputkan langsung seperti tanggal log, tanggal terbit artikel, tanggal status, dsb sebaiknya menggunakan tipe data &lt;i&gt;timestamp&lt;/i&gt; dengan nilai default &lt;i&gt;current_timestamp&lt;/i&gt;.&lt;/p&gt;
-</description>
+      <description>Beberapa hari yang lalu, saya melakukan downgrade sistem operasi, dari versi 15.10 ke 14.04. Secara otomatis, versi server MySQL-nya juga ikut di-downgrade, dari versi 5.6.27 ke versi 5.5.47. Pada versi yang lebih lama (5.5.47), tipe data Datetime dengan nilai default current_timestamp tidak diterima. Ketika saya mengimpor dari cadangan database, terjadi error.
+$ mysql -u root -p &amp;lt; db_27_feb_2016.sql Enter password: ERROR 1067 (42000) at line 41: Invalid default value for &amp;lsquo;tanggal&amp;rsquo;Saya pun mencoba menelusuri ke baris 41 dari file SQL cadangan.</description>
     </item>
     
     <item>
@@ -1169,8 +123,10 @@ width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
       <pubDate>Sat, 27 Feb 2016 05:04:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-backup-semua-database-mysql-di-linux/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-b9wzJFZ1-is/VtC9CCTHY2I/AAAAAAAACgQ/qS21Hc7G8S0/s1600/MySQL%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-b9wzJFZ1-is/VtC9CCTHY2I/AAAAAAAACgQ/qS21Hc7G8S0/s1600/MySQL%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Membuat &lt;i&gt;backup&lt;/i&gt; (cadangan) database perlu dilakukan sebelum instal ulang server atau untuk berjaga-jaga bila terjadi sesuatu yang tidak diinginkan. Cadangan bisa dibuat dengan Phpmyadmin. Mengekspor semua database satu persatu. Tapi, pada kesempatan ini, saya akan menggunakan &lt;i&gt;mysqldump&lt;/i&gt;. &lt;i&gt;Mysqldump&lt;/i&gt; merupakan sebuah perintah yang menghasilkan keluaran berupa sintaks SQL.&lt;br /&gt;&lt;br /&gt;&lt;h2&gt;1.Cadangkan Semua Database (Struktur dan Datanya)&lt;/h2&gt;Buka terminal dan ketik perintah berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash sql&#34;&gt;mysqldump -u username -p &amp;ndash;all-databases &amp;gt; cadangan.sql&lt;/code&gt;&lt;/pre&gt;atau&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash sql&#34;&gt;mysqldump -u username -p -A &amp;gt; cadangan.sql&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;Kode tersebut akan menghasilkan sebuah file bernama &lt;code&gt;cadangan.sql&lt;/code&gt;. File tersebut berisi sintaks SQL yang dapat kita impor ke server MySql. Jangan lupa untuk mengganti &lt;code&gt;username&lt;/code&gt; dengan username database anda, misalnya &lt;code&gt;root&lt;/code&gt;.&lt;br /&gt;&lt;br /&gt;&lt;h2&gt;2.Cadangkan Semua Database (Strukturnya Saja)&lt;/h2&gt;Bila ingin membuat cadangan struktur databasenya saja, anda bisa menambahkan argumen &lt;code&gt;&amp;ndash;no-data&lt;/code&gt; atau &lt;code&gt;-d&lt;/code&gt;. Semua record tidak akan ikut dicadangkan.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash sql&#34;&gt;mysqldump -u username -p &amp;ndash;all-databases &amp;ndash;no-data &amp;gt; cadangan.sql&lt;/code&gt;&lt;/pre&gt;atau&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash sql&#34;&gt;mysqldump -u username -p -A -d &amp;gt; cadangan.sql&lt;/code&gt;&lt;/pre&gt;Untuk membuat cadangan dari server &lt;i&gt;remote&lt;/i&gt;, tambahkan argumen &lt;code&gt;-h&lt;/code&gt; untuk menyatakan alamat host-nya, contoh: &lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash sh sql mysql&#34;&gt;mysqldump -u root -h 182.168.1.2 -p -A &amp;gt; cadangan.sql&lt;/code&gt;&lt;/pre&gt;Nah, sampai di sini dulu. Sampai jumpa di &lt;i&gt;post&lt;/i&gt; berikutnya.&lt;/p&gt;
-</description>
+      <description>Membuat backup (cadangan) database perlu dilakukan sebelum instal ulang server atau untuk berjaga-jaga bila terjadi sesuatu yang tidak diinginkan. Cadangan bisa dibuat dengan Phpmyadmin. Mengekspor semua database satu persatu. Tapi, pada kesempatan ini, saya akan menggunakan mysqldump. Mysqldump merupakan sebuah perintah yang menghasilkan keluaran berupa sintaks SQL.
+1.Cadangkan Semua Database (Struktur dan Datanya)Buka terminal dan ketik perintah berikut ini.
+mysqldump -u username -p &amp;ndash;all-databases &amp;gt; cadangan.sqlatau
+mysqldump -u username -p -A &amp;gt; cadangan.</description>
     </item>
     
     <item>
@@ -1179,78 +135,9 @@ width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
       <pubDate>Mon, 03 Aug 2015 05:53:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/query-mysql-untuk-menentukan-pemenang/</guid>
-      <description>&lt;p&gt;&lt;amp-img
-    width=&#34;672&#34;
-    height=&#34;397&#34;
-    alt=&#34;Query-mysql-untuk-menentukan-pemenang-pada-e-voting-system.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-QG4Z1jestZs/Vb6MEZwnejI/AAAAAAAABpY/9Z6O4YtwjRw/s1600/Query-mysql-untuk-menentukan-pemenang-pada-e-voting-system.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan
-framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal
-yang masih membuat saya bingung, yaitu penentuan pemenang setelah pemilihan selesai.&lt;/p&gt;
-
-&lt;p&gt;Query pertama&amp;ndash;menurut saya sesuai&amp;ndash;yang didapatkan dari pencarian di google adalah sebagai berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT
-    calon_idcalon,
-    calon.nama AS nama,
-    calon.foto AS foto,
-    COUNT(calon_idcalon) AS jumlah
-FROM
-    kotak_suara,
-    calon
-WHERE
-    calon_idcalon = calon.nim
-GROUP BY calon_idcalon
-ORDER BY jumlah
-DESC LIMIT 1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak. Tapi, bagaiaman kalau ada dua orang yang memiliki sura terbanyak. Kalau menggunakan query di atas, hasilnya tetap satu orang.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;p&gt;Akhirnya, saya diberikan query manjur dari salah satu member &lt;a href=&#34;https://www.facebook.com/groups/mysql.indonesia/permalink/10153422674235996/&#34;&gt;group MySQL Indonesia&lt;/a&gt;. Query sakti ini dapat menampilkan semua pemenang dengan perolehan suara yang sama.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT
-    calon_idcalon,
-    calon.nama AS nama,
-    calon.foto AS foto,
-    COUNT(calon_idcalon) AS jumlah
-FROM
-    kotak_suara,
-    calon
-WHERE
-    calon_idcalon = calon.nim
-GROUP BY
-    calon_idcalon
-HAVING
-    COUNT( calon_idcalon) &amp;gt;= (
-        SELECT COUNT( calon_idcalon ) AS SUM
-        FROM kotak_suara
-        GROUP BY calon_idcalon
-        ORDER BY SUM
-        DESC LIMIT 1
-    )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;991&#34;
-    height=&#34;503&#34;
-    alt=&#34;Pemenang+yang+terpilih+dari+hasil+query.png&#34;
-    src=&#34;http://3.bp.blogspot.com/-f9AQWcJ4J9s/Vb6PHq3oXpI/AAAAAAAABpk/WFAKYTdT-7w/s1600/Pemenang%2Byang%2Bterpilih%2Bdari%2Bhasil%2Bquery.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-</description>
+      <description>Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membuat saya bingung, yaitu penentuan pemenang setelah pemilihan selesai.
+Query pertama&amp;ndash;menurut saya sesuai&amp;ndash;yang didapatkan dari pencarian di google adalah sebagai berikut:
+SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1  Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak.</description>
     </item>
     
   </channel>

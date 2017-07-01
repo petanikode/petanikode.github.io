@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Desktop on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/kategori/desktop/index.xml</link>
+    <link>https://www.petanikode.com/kategori/desktop/</link>
     <description>Recent content in Desktop on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/kategori/desktop/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Jul 2016 23:03:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/kategori/desktop/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Trik Agar Jendela JFrame Tampil di Tengah Layar</title>
@@ -15,8 +18,10 @@
       <pubDate>Fri, 29 Jul 2016 23:03:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-swing-jendela-di-tengah-layar/</guid>
-      <description>&lt;p&gt;Pada pemrograman GUI dengan &lt;i&gt;Java Swing&lt;/i&gt;, kita sering membuat jendela dengan JFrame. Namun, selalu tampil di pojok kiri atas layar. Pojok kiri atas adalah titik (&lt;code&gt;0&lt;/code&gt;,&lt;code&gt;0&lt;/code&gt;) dalam koordinat layar (x,y). Pada kesempatan ini saya akan berbagi trik, agar setiap jendela yang dibuat dengan &lt;i&gt;JFrame&lt;/i&gt; tampil di tengah-tengah layar.&lt;br /&gt;&lt;h2&gt;1. Komposisi Pustaka&lt;/h2&gt;Ada dua pustaka yang diperlukan untuk membuat jendela &lt;i&gt;JFrame&lt;/i&gt; tampil di tengah-tengah. Silahkan diimpor:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;import java.awt.Dimension;&lt;br /&gt;import java.awt.Toolkit;&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;2. Kode Agar Tampil di Tengah&lt;/h2&gt;Letakan kode berikut di dalam konstruktor &lt;i&gt;JFrame&lt;/i&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();&lt;br /&gt;this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);&lt;/code&gt;&lt;/pre&gt;Pertama kita ambil ukuran layar dengan &lt;i&gt;Toolkit&lt;/i&gt;, kemudian ukuran tersebut dibuat menjadi objek dimensi. Kedua, membagi dua ukuran lebar dan tinggi layar dan dikurangi ukuran &lt;i&gt;JFrame&lt;/i&gt;. Kata kunci &lt;code&gt;this&lt;/code&gt; pada kode di atas merefrensi pada &lt;i&gt;JFrame&lt;/i&gt; (&lt;code&gt;this&lt;/code&gt; itu JFrame-nya). Hasil bagi dua dan pengurangan adalah titik tengah dan itu kita pakai sebagai lokasi awal &lt;i&gt;JFrame&lt;/i&gt;.&lt;br /&gt;&lt;h2&gt;3. Kode Lengkap&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;java&#34;&gt;&lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;import java.awt.Dimension;&lt;br /&gt;import java.awt.Toolkit;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;public class JendelaPercobaan extends javax.swing.JFrame {&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // konstruktor&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; public JendelaPercobaan() {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&#34;background-color: #b6d7a8;&#34;&gt;initComponents();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);&lt;/span&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; @SuppressWarnings(&amp;ldquo;unchecked&amp;rdquo;)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // &amp;lt;editor-fold defaultstate=&amp;ldquo;collapsed&amp;rdquo; desc=&amp;ldquo;Generated Code&amp;rdquo;&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; private void initComponents() {&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; jLabel1 = new javax.swing.JLabel();&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; jLabel1.setText(&amp;ldquo;www.petanikode.com&amp;rdquo;);&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; getContentPane().setLayout(layout);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; layout.setHorizontalGroup(&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; .addGroup(layout.createSequentialGroup()&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; .addGap(138, 138, 138)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; .addComponent(jLabel1)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; .addContainerGap(143, Short.MAX_VALUE))&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; );&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; layout.setVerticalGroup(&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; .addGroup(layout.createSequentialGroup()&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; .addGap(134, 134, 134)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; .addComponent(jLabel1)&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; .addContainerGap(149, Short.MAX_VALUE))&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; );&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; pack();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }// &amp;lt;/editor-fold&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; public static void main(String args[]) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; /* Set the Nimbus look and feel &lt;em&gt;/&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; //&amp;lt;editor-fold defaultstate=&amp;ldquo;collapsed&amp;rdquo; desc=&amp;rdquo; Look and feel setting code (optional) &amp;ldquo;&amp;gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; /&lt;/em&gt; If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; * For details see &lt;a href=&#34;http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html&#34;&gt;http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html&lt;/a&gt; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;em&gt;/&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; try {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (&amp;ldquo;Nimbus&amp;rdquo;.equals(info.getName())) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; javax.swing.UIManager.setLookAndFeel(info.getClassName());&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; break;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; } catch (ClassNotFoundException ex) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; java.util.logging.Logger.getLogger(JendelaPercobaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; } catch (InstantiationException ex) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; java.util.logging.Logger.getLogger(JendelaPercobaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; } catch (IllegalAccessException ex) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; java.util.logging.Logger.getLogger(JendelaPercobaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; } catch (javax.swing.UnsupportedLookAndFeelException ex) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; java.util.logging.Logger.getLogger(JendelaPercobaan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; //&amp;lt;/editor-fold&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; /&lt;/em&gt; Create and display the form */&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; java.awt.EventQueue.invokeLater(new Runnable() {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; public void run() {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; new JendelaPercobaan().setVisible(true);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; });&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // Variables declaration - do not modify&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; private javax.swing.JLabel jLabel1;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // End of variables declaration&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;4. Uji Coba&lt;/h2&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-oK3kCCbzHY0/V5tur3iPgKI/AAAAAAAAAAQ/R3HSbAw1p5Uvj8AMnm9A02kUKzjnFpoMgCK4B/s1600/Jendela%2BJFrame%2Btampil%2Bdi%2Btengah%2Blayar%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-oK3kCCbzHY0/V5tur3iPgKI/AAAAAAAAAAQ/R3HSbAw1p5Uvj8AMnm9A02kUKzjnFpoMgCK4B/s1600/Jendela%2BJFrame%2Btampil%2Bdi%2Btengah%2Blayar%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://stackoverflow.com/a/2442610&#34; target=&#34;_blank&#34;&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Pada pemrograman GUI dengan Java Swing, kita sering membuat jendela dengan JFrame. Namun, selalu tampil di pojok kiri atas layar. Pojok kiri atas adalah titik (0,0) dalam koordinat layar (x,y). Pada kesempatan ini saya akan berbagi trik, agar setiap jendela yang dibuat dengan JFrame tampil di tengah-tengah layar.
+1. Komposisi PustakaAda dua pustaka yang diperlukan untuk membuat jendela JFrame tampil di tengah-tengah. Silahkan diimpor:
+import java.awt.Dimension;
+import java.awt.Toolkit;2. Kode Agar Tampil di TengahLetakan kode berikut di dalam konstruktor JFrame.</description>
     </item>
     
     <item>
@@ -25,8 +30,9 @@
       <pubDate>Fri, 13 Feb 2015 09:29:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-qt-pengenalan/</guid>
-      <description>&lt;p&gt;Program &lt;samp&gt;Hello World&lt;/samp&gt; seringkali dibuat saat pertama kali mempelajari suatu bahasa pemrograman. Program ini begitu legendaris dan populer di dunia pemrograman. Namun, dalam tulisan ini, saya akan mengajak pembaca membuat program &lt;samp&gt;kenalan&lt;/samp&gt; di Qt. Supaya tidak &lt;i&gt;mainstream&lt;/i&gt;.&lt;/p&gt; &lt;a href=&#34;http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Buat sebuah proyek baru bernama &lt;samp&gt;kenalan&lt;/samp&gt;. Silahkan menuju ke menu &lt;i&gt;File&lt;/i&gt;-&gt;&lt;i&gt;New File or Project...&lt;/i&gt; atau tekan tombol &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;N&lt;/kbd&gt;. Kemudian pilih &lt;i&gt;Application&lt;/i&gt;-&gt;&lt;i&gt;Qt Widget Application&lt;/i&gt;, lalu klik tombol &lt;i&gt;Choose...&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-bbLq2cA790A/VNyP6GtlmCI/AAAAAAAABV4/-TQBjXoBk90/s1600/membuat%2Bproyek%2Bbaru%2Bdi%2Bqt.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-bbLq2cA790A/VNyP6GtlmCI/AAAAAAAABV4/-TQBjXoBk90/s1600/membuat%2Bproyek%2Bbaru%2Bdi%2Bqt.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Selanjutnya, menentukan nama proyek dan lokasi penyimpanannya. Berikan nama &lt;samp&gt;kenalan&lt;/samp&gt;, kemudian klik &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt; &lt;a href=&#34;http://4.bp.blogspot.com/-rhkx-lx_nIc/VNyQbD4shSI/AAAAAAAABWA/bQscp9ORrSA/s1600/Menentukan%2Bnama%2Bproyek%2Bdan%2Blokasi%2Bpenyimpanannya.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-rhkx-lx_nIc/VNyQbD4shSI/AAAAAAAABWA/bQscp9ORrSA/s1600/Menentukan%2Bnama%2Bproyek%2Bdan%2Blokasi%2Bpenyimpanannya.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Menentukan &lt;i&gt;kit&lt;/i&gt;, biarkan saja apa adanya kemudian klik &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-t23dDWlD-6c/VNyQ0QWnwuI/AAAAAAAABWI/u5pnytjlvSo/s1600/memilih%2Bkit.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-t23dDWlD-6c/VNyQ0QWnwuI/AAAAAAAABWI/u5pnytjlvSo/s1600/memilih%2Bkit.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Selanjutnya, mengisi informasi kelas. Buatlah kelas dengan &lt;samp&gt;JendelaUtama&lt;/samp&gt;.&lt;/p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-iqnbV9-KLGo/VNyRYk7RkPI/AAAAAAAABWU/F0rWHBeVZzg/s1600/mengisi%2Binformasi%2Bkelas.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-iqnbV9-KLGo/VNyRYk7RkPI/AAAAAAAABWU/F0rWHBeVZzg/s1600/mengisi%2Binformasi%2Bkelas.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Selanjutnya akan tampil informasi rangkuman proyek yang dibuat. Klik &lt;i&gt;Finish&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-1KiptBwhp4U/VNyRxws34qI/AAAAAAAABWc/s_S-RqePWkE/s1600/rangkuman%2Bproyek.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-1KiptBwhp4U/VNyRxws34qI/AAAAAAAABWc/s_S-RqePWkE/s1600/rangkuman%2Bproyek.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Proyek baru-pun tercipta. Silahkan buka berkas &lt;samp&gt;jendelautama.ui&lt;/samp&gt; untuk mendesain tampilan aplikasi.&lt;/p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-iPaWzG35R3A/VNyS5d8rNpI/AAAAAAAABWo/eLnnYKYCcR0/s1600/Proyek%2Bbaru%2Bdi%2BQt.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-iPaWzG35R3A/VNyS5d8rNpI/AAAAAAAABWo/eLnnYKYCcR0/s1600/Proyek%2Bbaru%2Bdi%2BQt.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Masukkan objek &lt;i&gt;QLabel&lt;/i&gt; ke jendela dengan menyeretnya (&lt;i&gt;drag&lt;/i&gt;). Kemudian ganti nilai properti &lt;i&gt;font&lt;/i&gt; dan &lt;i&gt;text&lt;/i&gt; di bagian &lt;i&gt;objek property&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-sfgtSS6NFlE/VNyag33VuTI/AAAAAAAABW4/Uy558dSkMlQ/s1600/menambahkan%2BQLabel.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-sfgtSS6NFlE/VNyag33VuTI/AAAAAAAABW4/Uy558dSkMlQ/s1600/menambahkan%2BQLabel.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Silahkan mainkan imajinasi Anda. Saya sendiri merubah beberapa properti. Saya merubah properti teks &lt;i&gt;QLabel&lt;/i&gt; yang pertama (&lt;samp&gt;label&lt;/samp&gt;) menjadi &lt;samp&gt;Assalamualaikum&lt;/samp&gt; dan memperbesar ukuran fontanya.&lt;/p&gt; &lt;a href=&#34;http://1.bp.blogspot.com/-0UrUHwTgyhA/VNydHrm4_EI/AAAAAAAABXE/uzB3ayPXbO4/s1600/Merubah%2Bproperti%2BQlabel1.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-0UrUHwTgyhA/VNydHrm4_EI/AAAAAAAABXE/uzB3ayPXbO4/s1600/Merubah%2Bproperti%2BQlabel1.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Sedangkan pada &lt;i&gt;QLabel&lt;/i&gt; yang kedua (&lt;samp&gt;label_2&lt;/samp&gt;), saya merubah properti teksnya dan &lt;i&gt;wordWrap&lt;/i&gt; menjadi &lt;i&gt;true&lt;/i&gt; (dicentang) supaya teks dapat tampil lebih dari satu baris.&lt;/p&gt; &lt;a href=&#34;http://2.bp.blogspot.com/-jPj1kMrgegE/VNyeuAcD9xI/AAAAAAAABXQ/I_nKCfwP7S8/s1600/Merubah%2Bproperti%2BQlabel2.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-jPj1kMrgegE/VNyeuAcD9xI/AAAAAAAABXQ/I_nKCfwP7S8/s1600/Merubah%2Bproperti%2BQlabel2.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Sekarang coba jalankan program dengan menglik tombol &lt;i&gt;Run&lt;/i&gt; atau menekan tombol &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;.&lt;/p&gt; &lt;a href=&#34;http://1.bp.blogspot.com/-N8QSReAMz7A/VNyp9vC37yI/AAAAAAAABX4/glNWkO07Czk/s1600/program%2BQt%2Bpertama%2B-%2Bkenalan.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-N8QSReAMz7A/VNyp9vC37yI/AAAAAAAABX4/glNWkO07Czk/s1600/program%2BQt%2Bpertama%2B-%2Bkenalan.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;O, ya, saat menjalankan program ini, saya mendapatkan galat &lt;samp&gt;:-1: error: cannot find -lGL&lt;/samp&gt;. Karena pustaka &lt;i&gt;openGL&lt;/i&gt; belum diinstal di komputer saya. Silahkan baca solusinya di &lt;a href=&#34;http://petanikode.blogspot.com/2015/02/solusi-error-cannot-find-lgl-di-qt-linux.html&#34; rel=&#34;dofollow&#34;&gt;tulisan ini&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Program Hello World seringkali dibuat saat pertama kali mempelajari suatu bahasa pemrograman. Program ini begitu legendaris dan populer di dunia pemrograman. Namun, dalam tulisan ini, saya akan mengajak pembaca membuat program kenalan di Qt. Supaya tidak mainstream.
+ Buat sebuah proyek baru bernama kenalan. Silahkan menuju ke menu File-New File or Project... atau tekan tombol Ctrl+N. Kemudian pilih Application-Qt Widget Application, lalu klik tombol Choose....
+ Selanjutnya, menentukan nama proyek dan lokasi penyimpanannya.</description>
     </item>
     
     <item>
@@ -35,8 +41,16 @@
       <pubDate>Mon, 09 Feb 2015 21:16:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-qt-pengenalan-dan-persiapan/</guid>
-      <description>&lt;p&gt;&lt;p&gt;Assalamualaikum wr. wb., Selamat datang di panduan instalasi Qt di linux. Di tulisan ini saya akan membahas langkah-langkah instalasi Qt di linux. Qt yang akan diinstal adalah Qt versi 5.4.0. Versi ini merupakan versi terakhir saat ini.&lt;/p&gt; &lt;a href=&#34;http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Sedikit informasi distro linux yang saya gunakan di tulisan ini:&lt;/p&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ardianta@imajinasi:~$ &lt;b&gt;hostnamectl &lt;/b&gt;&lt;br /&gt;   Static hostname: imajinasi&lt;br /&gt;         Icon name: computer-laptop&lt;br /&gt;           Chassis: laptop&lt;br /&gt;           Boot ID: baf18095a96a40fcbd9fc497141c1c41&lt;br /&gt;  Operating System: Ubuntu 14.10&lt;br /&gt;            Kernel: Linux 3.16.0-30-generic&lt;br /&gt;      Architecture: i686&lt;/code&gt;&lt;/pre&gt; &lt;h2&gt;Unduh Qt&lt;/h2&gt;&lt;p&gt;Qt yang akan dipakai adalah Qt &lt;i&gt;Open Source&lt;/i&gt;. Qt &lt;i&gt;Open Source&lt;/i&gt; dapat diunduh di situs resminya (&lt;a href=&#34;http://download.qt.io/archive/qt/5.4/5.4.0/&#34;&gt;qt.io&lt;/a&gt;). Silahkan mengunduh berkas instalator sesui dengan prosesor yang Anda gunakan.&lt;/p&gt;&lt;p&gt;&lt;ul&gt;&lt;li&gt;Berkas: &lt;samp&gt;&lt;a href=&#34;http://download.qt.io/archive/qt/5.4/5.4.0/qt-opensource-linux-x86-5.4.0.run.mirrorlist&#34; target=&#34;_blank&#34;&gt;qt-opensource-linux-x86-5.4.0.run&lt;/a&gt;&lt;/samp&gt; | 32bit&lt;/li&gt;&lt;li&gt;Berkas: &lt;samp&gt;&lt;a href=&#34;http://download.qt.io/archive/qt/5.4/5.4.0/qt-opensource-linux-x64-5.4.0.run.mirrorlist&#34; target=&#34;_blank&#34;&gt;qt-opensource-linux-x64-5.4.0.run&lt;/a&gt;&lt;/samp&gt; | 64bit&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt; &lt;a href=&#34;http://3.bp.blogspot.com/-b_NpXKlm9Oo/VNg_e9womuI/AAAAAAAABRQ/mCbcfrhMxfI/s1600/unduh%2Bqt%2Bopensource.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-b_NpXKlm9Oo/VNg_e9womuI/AAAAAAAABRQ/mCbcfrhMxfI/s1600/unduh%2Bqt%2Bopensource.png&#34; title=&#34;Unduh Qt Open Source di cermin server jepang&#34;/&gt;&lt;/a&gt; &lt;h2&gt;Instalasi Qt&lt;/h2&gt;&lt;p&gt;Setelah diunduh, mari kita mulai menginstal Qt. Pertama, Berikan hak akses untuk mengekseskusi berkas instalator dengan printah &lt;code&gt;chmod&lt;/code&gt;. Kemudian eksekusi berkas instalator dengan akun &lt;samp&gt;root&lt;/samp&gt; atau &lt;samp&gt;sudo&lt;/samp&gt;.&lt;/p&gt; &lt;a href=&#34;http://1.bp.blogspot.com/-SSHZhgSNm0o/VNhKEstVCcI/AAAAAAAABRg/DgyKIZGntJw/s1600/instalasi%2BQt.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-SSHZhgSNm0o/VNhKEstVCcI/AAAAAAAABRg/DgyKIZGntJw/s1600/instalasi%2BQt.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Kemudian, jendela instalasi Qt akan muncul, klik &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-2NPv1nlgaUE/VNhKg99npII/AAAAAAAABRo/XaBlSrAzuBM/s1600/1%2BQt%2BSetup.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-2NPv1nlgaUE/VNhKg99npII/AAAAAAAABRo/XaBlSrAzuBM/s1600/1%2BQt%2BSetup.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Menentukan lokasi instalasi Qt, klik saja &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-OQ93y6bCrxM/VNhK1O8kwbI/AAAAAAAABRw/mwAJ0fdD_I0/s1600/2%2BLokasi%2Bberkas%2BQt.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-OQ93y6bCrxM/VNhK1O8kwbI/AAAAAAAABRw/mwAJ0fdD_I0/s1600/2%2BLokasi%2Bberkas%2BQt.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Memilih komponen yang akan diinstal, klik saja &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-5cT0_m8_FrI/VNhLArgpwPI/AAAAAAAABR4/SrPakfVRA1w/s1600/3%2BKomponen%2Byang%2Bakan%2Bdiinstal.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-5cT0_m8_FrI/VNhLArgpwPI/AAAAAAAABR4/SrPakfVRA1w/s1600/3%2BKomponen%2Byang%2Bakan%2Bdiinstal.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Persetujuan lisensi, pilih &amp;lsquo;&lt;i&gt;I have read and agree&amp;hellip;&lt;/i&gt;,&amp;rsquo; kemudian klik &lt;i&gt;Next&lt;/i&gt;&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4W1KRFdTgTs/VNhLNC69YRI/AAAAAAAABSA/Fq84_ii4lnI/s1600/4%2BPersetujuan.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-4W1KRFdTgTs/VNhLNC69YRI/AAAAAAAABSA/Fq84_ii4lnI/s1600/4%2BPersetujuan.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Qt siap diinstal, klik tombol &lt;i&gt;Install&lt;/i&gt; untuk memulai instalasi.&lt;/p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-JVAEAVP1MMU/VNhLdID4ipI/AAAAAAAABSI/fwPXdod7oo4/s1600/5%2BInstalasi%2Bsiap.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-JVAEAVP1MMU/VNhLdID4ipI/AAAAAAAABSI/fwPXdod7oo4/s1600/5%2BInstalasi%2Bsiap.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Tunggu sampai instalasi selesai, kemudian klik &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-UzTIFZ-KzZI/VNhLt3WekXI/AAAAAAAABSQ/gL3f1V8E39w/s1600/6%2Binstalasi%2Bselesai.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-UzTIFZ-KzZI/VNhLt3WekXI/AAAAAAAABSQ/gL3f1V8E39w/s1600/6%2Binstalasi%2Bselesai.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Alhamdulillah, instalasi selesai, klik &lt;i&gt;Finish&lt;/i&gt;&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-0U1KqdjuBss/VNhL53ytgbI/AAAAAAAABSY/OuUFKhtZg-w/s1600/7%2BFinish.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-0U1KqdjuBss/VNhL53ytgbI/AAAAAAAABSY/OuUFKhtZg-w/s1600/7%2BFinish.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Cobalah membuka Qt melalui &lt;i&gt;Menu&lt;/i&gt; -&amp;gt; &lt;i&gt;Development&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-tPwoxzj-A68/VNhMbDep9oI/AAAAAAAABSk/8nDSqcGsOj4/s1600/Qt%2Bdi%2BXubuntu.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-tPwoxzj-A68/VNhMbDep9oI/AAAAAAAABSk/8nDSqcGsOj4/s1600/Qt%2Bdi%2BXubuntu.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Assalamualaikum wr. wb., Selamat datang di panduan instalasi Qt di linux. Di tulisan ini saya akan membahas langkah-langkah instalasi Qt di linux. Qt yang akan diinstal adalah Qt versi 5.4.0. Versi ini merupakan versi terakhir saat ini.
+ Sedikit informasi distro linux yang saya gunakan di tulisan ini:
+ardianta@imajinasi:~$ hostnamectl 
+Static hostname: imajinasi
+Icon name: computer-laptop
+Chassis: laptop
+Boot ID: baf18095a96a40fcbd9fc497141c1c41
+Operating System: Ubuntu 14.10
+Kernel: Linux 3.16.0-30-generic
+Architecture: i686 Unduh QtQt yang akan dipakai adalah Qt Open Source.</description>
     </item>
     
     <item>
@@ -45,8 +59,11 @@
       <pubDate>Tue, 09 Sep 2014 06:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-pygtk-membuat-pesan-tips-tooltips/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt; &lt;br /&gt;Beberapa komponen antarmuka grafis (GUI) perlu penjelasan tambahan agar pengguna mengerti fungsinya. Penjelasan tambahan dapat kita buat berupa pesan tips. Pesan tips di antarmuka dikenal dengan istilah &lt;i&gt;tooltips&lt;/i&gt;. Pesan tips &lt;i&gt;(tooltips)&lt;/i&gt; akan tampil ketika pointer menyentuh &lt;i&gt;(hover)&lt;/i&gt; komponen tertentu.&lt;br /&gt;&lt;br /&gt;Pesan tips dapat kita buat dengan &lt;i&gt;metod&lt;/i&gt; atau fungsi &lt;code&gt;set_tooltip_text()&lt;/code&gt;. Fungsi ini dipakai pada objek komponen yang akan ditambahkan pesan tips. Perhatikanlah contoh berikut ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;# tooltip.py&lt;br /&gt;import gtk&lt;br /&gt;&lt;br /&gt;class Aplikasi(gtk.Window):&lt;br /&gt;&lt;br /&gt;&amp;nbsp; def &lt;strong&gt;init&lt;/strong&gt;(self):&lt;br /&gt;&amp;nbsp; &amp;nbsp; super(Aplikasi, self).&lt;strong&gt;init&lt;/strong&gt;()&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_title(&amp;ldquo;Tooltips&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_size_request(250,200)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_position(gtk.WIN_POS_CENTER)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.connect(&amp;ldquo;destroy&amp;rdquo;, gtk.main_quit)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.kontainer = gtk.Fixed()&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.add(self.kontainer)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; tombol = gtk.Button(&amp;ldquo;Sebuah Tombol&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tombol.set_size_request(100,35)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.kontainer.put(tombol,50,50)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_tooltip_text(&amp;ldquo;Ini jendela&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tombol.set_tooltip_text(&amp;ldquo;Ini adalah sebuat tombol&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.show_all()&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;Aplikasi()&lt;br /&gt;gtk.main()&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Saat dijalankan, pesan tips akan tampil ketika pointer melewati komponen yang sudah diberikan pesan tips.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-kZJZI-WDazQ/VAv6jQopV8I/AAAAAAAAAng/7QOFEdUT2Vo/s1600/Tooltips_016.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-kZJZI-WDazQ/VAv6jQopV8I/AAAAAAAAAng/7QOFEdUT2Vo/s1600/Tooltips_016.png&#34; /&gt;&lt;/a&gt;  &lt;br /&gt;&lt;br /&gt;Pesan tips dapat diberikan pada komponen yang dapat disentuh pointer, bukan komponen yang tidak terlihat &lt;i&gt;(background)&lt;/i&gt;. Pakailah&lt;i&gt; &lt;/i&gt;pesan tips pada komponen yang membutuhkan informasi tambahan agar antarmuka yang kita buat lebih mudah dipahami.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://zetcode.com/gui/pygtk/firststeps/&#34;&gt;zetcode.com&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Beberapa komponen antarmuka grafis (GUI) perlu penjelasan tambahan agar pengguna mengerti fungsinya. Penjelasan tambahan dapat kita buat berupa pesan tips. Pesan tips di antarmuka dikenal dengan istilah tooltips. Pesan tips (tooltips) akan tampil ketika pointer menyentuh (hover) komponen tertentu.
+Pesan tips dapat kita buat dengan metod atau fungsi set_tooltip_text(). Fungsi ini dipakai pada objek komponen yang akan ditambahkan pesan tips. Perhatikanlah contoh berikut ini:
+# tooltip.py
+import gtk
+class Aplikasi(gtk.</description>
     </item>
     
     <item>
@@ -55,8 +72,9 @@
       <pubDate>Mon, 08 Sep 2014 07:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-pygtk-tombol-dan-label/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;   &lt;br /&gt;Pada antarmuka grafis (GUI), tombol merupakan komponen penting penyusun antarmuka.Tombol dipakai untuk menjalankan fungsi atau aksi tertentu. Pada kesempatan ini, saya akan membahas langkah-langkah atau proses dalam pembuatan tombol di PyGTK.&lt;br /&gt;&lt;h2&gt;1. Membuat Tombol&lt;/h2&gt;Tombol dibuat dengan membuat objek dari kelas &lt;code&gt;Button()&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;tombol = gtk.Button(&amp;ldquo;Sebuah Tombol&amp;rdquo;)&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;2. Membuat Kontainer&lt;/h2&gt;Kontainer kita perlukan untuk membungkus atau menampung tombol dan komponen-komponen lainnya. Apabila tidak menggunakan kontainer, bisa jadi akan berantakan. Pembuatan kontainer dapat dilakukan dengan membuat objek dari kelas-kelas kontainer, seperti &lt;code&gt;Fixed()&lt;/code&gt; untuk kontainer &lt;i&gt;fixed&lt;/i&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;kontainer = gtk.Fixed()&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;3. Menambahkan tombol ke kontainer&lt;/h2&gt;Setelah membuat kontainer, selanjutnya kita tambahkan komponen ke dalamnya. Penambahan komponen ke kontainer dapat dilakukan dengan fungsi &lt;code&gt;put()&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;kontainer.put(tombol, 20, 30)&lt;/code&gt;&lt;/pre&gt;Tombol akan diletakkan pada posisi koordinat x=20 dan y=30.&lt;br /&gt;&lt;h2&gt;4. Menambahkan kontainer ke jendela&lt;/h2&gt;Semua komponen sudah dimasukkan ke dalam kontainer. Selanjutnya, kita masukkan kontainer ke dalam jendela agar dapat ditampilkan. Hal ini dapat dilakukan dengan fungsi &lt;code&gt;add()&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;jendela.add(kontainer)&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;5. Tampilkan semua komponen&lt;/h2&gt;Terakhir, setelah semua komponen dimasukan ke jendela, kita tampilkan semuanya dengan fungsi&amp;nbsp; &lt;code&gt;show_all()&lt;/code&gt;. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;jendela.show_all()&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;6. Contoh Lengkap&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;import gtk&lt;br /&gt;&lt;br /&gt;class Aplikasi(gtk.Window):&lt;br /&gt;&amp;nbsp; def &lt;strong&gt;init&lt;/strong&gt;(self):&lt;br /&gt;&amp;nbsp; &amp;nbsp; super(Aplikasi, self).&lt;strong&gt;init&lt;/strong&gt;()&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_title(&amp;ldquo;Tombol&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_size_request(250,150)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.set_position(gtk.WIN_POS_CENTER)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl1 = gtk.Button(&amp;ldquo;Tombol 1&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl1.set_sensitive(False) # non-aktifkan tombol&lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl2 = gtk.Button(&amp;ldquo;Tombol 2&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl3 = gtk.Button(stock=gtk.STOCK_CLOSE) &lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl4 = gtk.Button(&amp;ldquo;Tombol 4&amp;rdquo;)&lt;br /&gt;&amp;nbsp; &amp;nbsp; tbl4.set_size_request(80,40) # set ukuran tombol&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; kontainer = gtk.Fixed() # membuat kontainer&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; kontainer.put(tbl1, 20, 30)&lt;br /&gt;&amp;nbsp; &amp;nbsp; kontainer.put(tbl2, 100, 30)&lt;br /&gt;&amp;nbsp; &amp;nbsp; kontainer.put(tbl3, 20, 80)&lt;br /&gt;&amp;nbsp; &amp;nbsp; kontainer.put(tbl4, 100, 80)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.connect(&amp;ldquo;destroy&amp;rdquo;, gtk.main_quit)&lt;br /&gt;&amp;nbsp; &amp;nbsp;&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.add(kontainer)&lt;br /&gt;&amp;nbsp; &amp;nbsp; self.show_all()&lt;br /&gt;&lt;br /&gt;Aplikasi()&lt;br /&gt;gtk.main()&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-J3vvBeX2_HM/VNjnE2a3-aI/AAAAAAAABTE/c1bjRWUtcMY/s1600/Membuat%2Btombol%2Bdi%2Bpygtk.png&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-J3vvBeX2_HM/VNjnE2a3-aI/AAAAAAAABTE/c1bjRWUtcMY/s1600/Membuat%2Btombol%2Bdi%2Bpygtk.png&#34; /&gt;&lt;/a&gt;   &lt;br /&gt;Terdapat  empat tombol yang telah dibuat. Salah satunya tidak aktif dan ada juga  yang memiliki gambar ikon. Tombol nomor 4 memiliki ukuran yang lebih  besar, karena ukuran awalnya sudah dirubah.&lt;br /&gt;&lt;br /&gt;Referensi: &lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://zetcode.com/gui/pygtk/firststeps/&#34; target=&#34;blank&#34;&gt;zetcode.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;http://www.pygtk.org/pygtk2reference/class-gtkbutton.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.pygtk.org/pygtk2reference/class-gtkbutton.html&#34;&gt;http://www.pygtk.org/pygtk2reference/class-gtkbutton.html&lt;/a&gt; &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
-</description>
+      <description>Pada antarmuka grafis (GUI), tombol merupakan komponen penting penyusun antarmuka.Tombol dipakai untuk menjalankan fungsi atau aksi tertentu. Pada kesempatan ini, saya akan membahas langkah-langkah atau proses dalam pembuatan tombol di PyGTK.
+1. Membuat TombolTombol dibuat dengan membuat objek dari kelas Button(). Contoh:
+tombol = gtk.Button(&amp;ldquo;Sebuah Tombol&amp;rdquo;)2. Membuat KontainerKontainer kita perlukan untuk membungkus atau menampung tombol dan komponen-komponen lainnya. Apabila tidak menggunakan kontainer, bisa jadi akan berantakan. Pembuatan kontainer dapat dilakukan dengan membuat objek dari kelas-kelas kontainer, seperti Fixed() untuk kontainer fixed.</description>
     </item>
     
     <item>
@@ -65,207 +83,11 @@
       <pubDate>Sun, 07 Sep 2014 10:40:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-pygtk-pengenalan/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Aplikasi dengan antarmuka grafis (GUI) lebih disukai pengguna, karena mudah
-dioperasikan.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, kita akan belajar membuat aplikasi berbasis GUI dengan
-bahasa pemrograman python dan pustaka PyGTK.&lt;/p&gt;
-
-&lt;h2 id=&#34;apa-itu-gtk-dan-pygtk&#34;&gt;Apa itu GTK+ dan PyGTK?&lt;/h2&gt;
-
-&lt;p&gt;GTK+ (GIMP Toolkit) merupakan pustaka yang digunakan untuk membangun
-antarmuka grafis. GTK+ adalah bagian dari proyek GNU.&lt;/p&gt;
-
-&lt;p&gt;GTK+ sendiri merupakan pustaka yang digunakan untuk bahasa C, sedangkan
-untuk python kita menggunakan PyGTK.&lt;/p&gt;
-
-&lt;p&gt;PyGTK adalah pustaka GTK+ yang sudah diracik khusus untuk Python.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-6zHBqlTpopk/WTphCRYMWFI/AAAAAAAAEy8/bWTaNndNUG8CVYydqDBNot3v6fFCg61pACK4B/s1600/website-pygtk.png&#34; alt=&#34;Website Resmi PyGTK&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Informasi lebih lengkap mengenai PyGTK, dapat dibaca pada website resminya
-&lt;a href=&#34;http://www.pygtk.org/&#34;&gt;www.pygtk.org&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;persiapan-pemrograman-pygtk&#34;&gt;Persiapan Pemrograman PyGTK&lt;/h2&gt;
-
-&lt;p&gt;Apa saja alat-alat yang diperlukan untuk pemrograman PyGTK?&lt;/p&gt;
-
-&lt;h3 id=&#34;1-teks-editor&#34;&gt;1. Teks Editor&lt;/h3&gt;
-
-&lt;p&gt;Teks editor digunakan untuk menulis kode. Gunakan teks editor yang anda sukai. Beberapa teks editor rekomendasi: &lt;a href=&#34;http://atom.io/&#34;&gt;Atom&lt;/a&gt;, &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;Ms. Visual Studio Code&lt;/a&gt;, &lt;a href=&#34;http://komodoide.com/komodo-edit/&#34;&gt;Komodo Edit&lt;/a&gt;, &lt;a href=&#34;https://www.geany.org/&#34;&gt;Geany&lt;/a&gt;, dsb.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-xYZSEJ0UIKs/V_mwJCM3-VI/AAAAAAAADTI/DWvKVoole9cE1s1R7tnDh_sxOKXUUHINACK4B/s1600/Text%2BEditor%2BAtom%2Bdi%2BLinux%2BMint%2B18.png&#34; alt=&#34;Teks editor atom&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-python&#34;&gt;2. Python&lt;/h3&gt;
-
-&lt;p&gt;Sebagian besar distro Linux sudah membawa python pada distribusinya, jadi
-tidak perlu diinstal.&lt;/p&gt;
-
-&lt;p&gt;Silahkan cek versi yang terinstal di terminal dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ python --version
-Python 2.7.6
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;3-pip&#34;&gt;3. PIP&lt;/h3&gt;
-
-&lt;p&gt;PIP merupakan sebuah sistem manajemen paket yang digunakan untuk menginstal
-dan mengelola pustaka python.&lt;/p&gt;
-
-&lt;p&gt;Kita membutuhkan PIP untuk menginstal pustaka PyGTK.&lt;/p&gt;
-
-&lt;p&gt;Cara instal PIP:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get isntall python-pip
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;4-instal-pustaka-pygtk&#34;&gt;4. Instal Pustaka PyGTK&lt;/h3&gt;
-
-&lt;p&gt;Sekarang baru kita bisa install pustaka PyGTK-nya. Gunakan perintah berikut
-untuk meingstal:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo pip install PyGTK
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;contoh-program-membauat-jendela&#34;&gt;Contoh Program: Membauat Jendela&lt;/h2&gt;
-
-&lt;p&gt;Setelah semua perealatan siap, mari kita coba membuat sebuah jendela.&lt;/p&gt;
-
-&lt;p&gt;Jendela merupakan bagian utama dari aplikasi GUI.&lt;/p&gt;
-
-&lt;p&gt;Silahkan ikuti kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#impor pustaka GTK
-import gtk
-
-# membuat objek jendela
-jendela = gtk.Window()
-
-# konfigurasi jendela
-jendela.set_size_request(600,200)
-jendela.set_position(gtk.WIN_POS_CENTER)
-jendela.set_title(&amp;quot;Pemrograman PyGTK - Petani Kode&amp;quot;)
-jendela.connect(&amp;quot;destroy&amp;quot;, gtk.main_quit)
-
-# tampilkan jendela
-jendela.show()
-gtk.main()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, simpan dengan nama &lt;code&gt;jendela.py&lt;/code&gt; dan eksekusi skript tersebut.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-4ZsqFLyNQJw/VxJCpKP2XxI/AAAAAAAACu0/3NOoOmf1CbEXQOmE3ki22mrMzAejumbiACK4B/s1600/Membuat%2Bjendela%2Bdengan%2Bobjek.png&#34; alt=&#34;Jendela dengan PyGTK&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika berhasil muncul seperti gambar di atas, berarti program PyGTK pertama
-kita berhasil&amp;hellip; :smile:&lt;/p&gt;
-
-&lt;h3 id=&#34;penjelasan-method&#34;&gt;Penjelasan Method&lt;/h3&gt;
-
-&lt;p&gt;Class &lt;code&gt;gtk.Window()&lt;/code&gt; memiliki beberapa method untuk mengatur konfigurasi jendela,
-berikut ini penjelasannnya:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;.set_size_request(600,200)&lt;/code&gt; untuk menentukan ukuran jendela.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.set_position(gtk.WIN_POS_CENTER)&lt;/code&gt; untuk menentukan posisi muncul jendela. &lt;code&gt;gtk.WIN_POS_CENTER&lt;/code&gt;
-artinya posisi munculnya di tengah-tengah layar.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.set_title()&lt;/code&gt; untuk memberikan judul jendela.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.connect(&amp;quot;destroy&amp;quot;, gtk.main_quit)&lt;/code&gt; untuk menghubungkan sinyal &lt;code&gt;&amp;quot;destroy&amp;quot;&lt;/code&gt; dengan
-fungsi &lt;code&gt;main_quit&lt;/code&gt;. Artinya, ketika tombol &lt;em&gt;close&lt;/em&gt; diklik&amp;hellip; aplikasi akan langsung keluar.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.show()&lt;/code&gt; untuk menampilkan jendela.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Selain method dari class &lt;code&gt;Window()&lt;/code&gt; ada satu hal lagi yang perlu diperhatikan
-yaitu fungsi &lt;code&gt;gtk.main()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;gtk.main()&lt;/code&gt; adalah &lt;em&gt;main loop&lt;/em&gt; (perulangan utama) yang menjaga jendela tetap terbuka.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-jendela-dengan-class&#34;&gt;Membuat Jendela dengan Class&lt;/h2&gt;
-
-&lt;p&gt;Pada contoh di atas kita membuat jendela dengan membuat langsung objek dari
-class &lt;code&gt;gtk.Window()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sekarang kita coba membuat jendela dengan membuat class turunan dari &lt;code&gt;gtk.Window()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import gtk
-
-class Aplikasi(gtk.Window):
-    def init(self):
-        super(Aplikasi, self).init()
-
-        self.connect(&amp;quot;destroy&amp;quot;, gtk.main_quit)
-        self.set_size_request(250, 150)
-        self.set_position(gtk.WIN_POS_CENTER)
-        self.show()
-
-# Tampilkan Jendela
-Aplikasi()
-gtk.main()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pertama kita membuat class bernama &lt;code&gt;Aplikasi()&lt;/code&gt; yang merupakan turunan dari
-class &lt;code&gt;gtk.Window()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Kemudian kita lakukan konfigurasi jendela pada konstruktor class &lt;code&gt;Aplikasi()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Lalu&amp;hellip; pada akhirnya kita bisa langsung menampilkan jendela dengan memanggil
-class-nya atau bisa juga dengan cara membuat objek dari class &lt;code&gt;Aplikasi()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;app = Aplikasi()
-gtk.main()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-RrkkI7-DoHY/VAu8s1tRIaI/AAAAAAAAAmg/MXfKzfAMRFM/s1600/Program%2Bpertama%2Bpygtk%2B-%2Bjendela.png&#34; alt=&#34;Jendela GTK+ dengan Class Turunan&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Cara manakah yang kamu suka?&lt;/p&gt;
-
-&lt;p&gt;Kalau saya lebih suka yang menggunakan class, karena lebih sederhana dan mudah
-dikelola.&lt;/p&gt;
-
-&lt;h2 id=&#34;menambahkan-ikon&#34;&gt;Menambahkan Ikon&lt;/h2&gt;
-
-&lt;p&gt;Untuk menambahkan ikon, kita menggunakan method:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;.set_icon_from_file(&amp;quot;path/ikon.png&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jangan lupa juga untuk menambahkan file ikonnya &lt;code&gt;petanikode.png&lt;/code&gt;. Letakkan
-file tersebut satu direktori dengan skrip python-nya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import gtk
-
-class Aplikasi(gtk.Window):
-    def init(self):
-        super(Aplikasi, self).init()
-
-        self.connect(&amp;quot;destroy&amp;quot;, gtk.main_quit)
-        self.set_size_request(250, 150)
-        self.set_position(gtk.WIN_POS_CENTER)
-        self.set_title(&amp;quot;Jendela dengan Ikon&amp;quot;)
-        self.set_icon_from_file(&amp;quot;petanikode.png&amp;quot;)
-        self.show()
-
-Aplikasi()
-gtk.main()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-VR3-biwSEms/VAvshq_5vFI/AAAAAAAAAnA/awCoTiXk5oI/s1600/pyGTK%2B-%2Bmenggunakan%2Bikon.png&#34; alt=&#34;Jendela dengan Ikon&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;apa-selanjutnya&#34;&gt;Apa Selanjutnya?&lt;/h2&gt;
-
-&lt;p&gt;Kita sudah tahu cara membuat jendela dengan PyGTK, selanjutnya kita akan coba &lt;a href=&#34;https://www.petanikode.com/pemrograman-pygtk-tombol/&#34;&gt;membuat tombol dan label&lt;/a&gt; di dalamnya.&lt;/p&gt;
-
-&lt;p&gt;Sekian tutorial PyGTK pertama ini&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Kalau ada yang ditanyakan, silahakan sampaikan melalui komentar.&lt;/p&gt;
-</description>
+      <description>Aplikasi dengan antarmuka grafis (GUI) lebih disukai pengguna, karena mudah dioperasikan.
+Pada kesempatan ini, kita akan belajar membuat aplikasi berbasis GUI dengan bahasa pemrograman python dan pustaka PyGTK.
+Apa itu GTK+ dan PyGTK? GTK+ (GIMP Toolkit) merupakan pustaka yang digunakan untuk membangun antarmuka grafis. GTK+ adalah bagian dari proyek GNU.
+GTK+ sendiri merupakan pustaka yang digunakan untuk bahasa C, sedangkan untuk python kita menggunakan PyGTK.
+PyGTK adalah pustaka GTK+ yang sudah diracik khusus untuk Python.</description>
     </item>
     
     <item>
@@ -274,117 +96,11 @@ gtk.main()
       <pubDate>Mon, 01 Sep 2014 05:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/contoh-program-dengan-variabel-dan-tipe-data-di-lazarus/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;Pemrograman Lazarus&#34;
-    src=&#34;https://3.bp.blogspot.com/-9VfgDnPEBjI/WMRanLQYTjI/AAAAAAAAEUA/JreuyQYgheoCSPmWMbA_XYN9lv7RcHpGgCK4B/s1600/pemrograman-lazarus-petanikode.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Hallo! kali ini kita akan coba membuat sebuah program sederhana di lazarus
-yang menerapkan variabel dan tipe data.&lt;/p&gt;
-
-&lt;p&gt;Variabel merupakan sebuah nama atau simbol tempat kita menyimpan data. Variabel
-ini tersimpan dalam memori memori. Sedangkan tipe data adalah jenis data yang
-akan kita simpan.&lt;/p&gt;
-
-&lt;p&gt;Ok, mari kita coba&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Silahkan buat dulu proyek baru di Lazarus, kemudian ikuti langkah-langkah berikut.&lt;/p&gt;
-
-&lt;h2 id=&#34;langkah-1-desain-form&#34;&gt;Langkah 1: Desain Form&lt;/h2&gt;
-
-&lt;p&gt;Kita akan menggunakan beberapa objek, diantaranya &lt;em&gt;Label&lt;/em&gt;, &lt;em&gt;Edit&lt;/em&gt;, &lt;em&gt;GroupBox&lt;/em&gt;,
-dan &lt;em&gt;Button&lt;/em&gt;. Sebagian dari obejek-objek telah diganti namanya untuk mempermudah
-saat pengkodean.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;610&#34;
-    height=&#34;361&#34;
-    alt=&#34;Desain+Form+-+Program+Biodata+penduduk+Lazarus.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-XsaMngXKjoc/VALCUq7ge7I/AAAAAAAAAl0/6eTf_o2LZxw/s1600/Desain%2BForm%2B-%2BProgram%2BBiodata%2Bpenduduk%2BLazarus.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;langkah-2-menulis-kode-program&#34;&gt;Langkah 2: Menulis Kode Program&lt;/h2&gt;
-
-&lt;p&gt;Kode program akan kita tulis pada &lt;em&gt;event&lt;/em&gt; tombol &lt;em&gt;Tampilkan&lt;/em&gt; diklik. Silahkan
-klik dua kali pada tombol &lt;em&gt;Tampilkan&lt;/em&gt; lalu tuliskan kode berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;procedure TForm1.Button1Click(Sender: TObject);
-var
-    nama: string;
-    thnLahir, thnSekarang, umur: integer;
-
-begin
-    nama := EditNama.Text;
-    thnLahir := StrToInt(EditTahunLahir.Text);
-    thnSekarang := StrToInt(EditTahunSekarang.Text);
-
-    umur := thnSekarang - thnLahir;
-
-    LabelNama.Caption := nama;
-    LabelUmur.Caption := IntToStr(umur);
-end;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Penjelasan&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;Pertama kita mendeklarasikan empat variabel dengan kata kunci &lt;code&gt;var&lt;/code&gt;.
-Empat variabel itu adalah &lt;code&gt;nama&lt;/code&gt;, &lt;code&gt;thnLahir&lt;/code&gt;,&lt;code&gt;thnSekarang&lt;/code&gt;, dan &lt;code&gt;umur&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;var
-    nama: string;
-    thnLahir, thnSekarang, umur: integer;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, kita isi semua variabel ini dengan teks yang diinputkan:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;nama := EditNama.Text;
-thnLahir := StrToInt(EditTahunLahir.Text);
-thnSekarang := StrToInt(EditTahunSekarang.Text);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang semua variabel sudah terisi dan tersimpan dalam memori. Selanjutnya
-kita bisa melakukan operasi pengurangan.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;umur := thnSekarang - thnLahir;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Terahir, kita tampilkan hasil operasi ke &lt;em&gt;Label&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-pascal&#34;&gt;LabelNama.Caption := nama;
-LabelUmur.Caption := IntToStr(umur);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;langkah-3-menjalankan-program&#34;&gt;Langkah 3: Menjalankan Program&lt;/h2&gt;
-
-&lt;p&gt;Simpan semua dengan mengelik tombol &lt;em&gt;save all&lt;/em&gt;. Kemudian jalankan dengna
- menekan tombol &lt;code&gt;F9&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-     width=&#34;382&#34;
-     height=&#34;307&#34;
-     alt=&#34;Biodata+Penduduk+Desa+Lazarus_010.png&#34;
-     src=&#34;http://2.bp.blogspot.com/-ZjzEmnLoVYo/VALFp1ZIpKI/AAAAAAAAAmA/ErmTknrF2ig/s1600/Biodata%2BPenduduk%2BDesa%2BLazarus_010.png&#34;
-     layout=&#34;responsive&#34;&gt;
- &lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah, itulah contoh program sederhana penggunaan variabel di Lazarus.
- Gampang &amp;lsquo;kan?&lt;/p&gt;
-</description>
+      <description>Hallo! kali ini kita akan coba membuat sebuah program sederhana di lazarus yang menerapkan variabel dan tipe data.
+Variabel merupakan sebuah nama atau simbol tempat kita menyimpan data. Variabel ini tersimpan dalam memori memori. Sedangkan tipe data adalah jenis data yang akan kita simpan.
+Ok, mari kita coba&amp;hellip;
+Silahkan buat dulu proyek baru di Lazarus, kemudian ikuti langkah-langkah berikut.
+Langkah 1: Desain Form Kita akan menggunakan beberapa objek, diantaranya Label, Edit, GroupBox, dan Button.</description>
     </item>
     
     <item>
@@ -393,307 +109,11 @@ LabelUmur.Caption := IntToStr(umur);
       <pubDate>Thu, 20 Feb 2014 08:30:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/berkenalan-dengan-lazarus-pengganti-delphi-di-linux/</guid>
-      <description>
-
-&lt;p&gt;Ketika saya mengikuti matakuliah pemrograman Delphi, saya menggunakan Linux
-dan Lazarus sebagai ganti Delphi. Baruntung dosennya tidak mempermasalahkan hal ini.&lt;/p&gt;
-
-&lt;p&gt;Pemrograman Delphi dengan Lazarus memang terlihat sama. Oleh karena itu, tugas
-akhir saya diterima dengan nilai yang memuaskan.&lt;/p&gt;
-
-&lt;p&gt;Lazarus tidak hanya bisa berjalan di Linux, tapi juga bisa untuk sistem operasi
-yang lain seperti Windows, Mac OS, dan Unix.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/instalasi-dan-uji-coba-lazarus-ide-di-windows-7/&#34;&gt;Instalasi dan Ujicoba Lazarus di Windows&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikut ini gambar &lt;em&gt;screenshot&lt;/em&gt; Lazarus yang saya gunakan waktu itu di Kali Linux.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1024&#34;
-    height=&#34;600&#34;
-    alt=&#34;Tampilan Lazarus di Kali Linux&#34;
-    src=&#34;http://4.bp.blogspot.com/-3YOwJwf6vKk/UwOBJyZJztI/AAAAAAAAAWU/5Llyp9KKX-Q/s1600/Tampilan+Lazarus+di+Kali+Linux.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;mendapatkan-lazarus&#34;&gt;Mendapatkan Lazarus&lt;/h2&gt;
-
-&lt;p&gt;Lazarus dapat diunduh di situs resminya:
-&lt;a href=&#34;http://www.lazarus.freepascal.org/index.php?page=downloads&#34;&gt;lazarus.freepascal.org&lt;/a&gt;.
-Pilih &lt;em&gt;Deb Release&lt;/em&gt; bila anda menggunakan distro keluarga debian. Namun, bila
-menggunakan fedora atau redhat pilihlah yang &lt;em&gt;RPM Release&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;835&#34;
-    height=&#34;575&#34;
-    alt=&#34;Website download Lazarus&#34;
-    src=&#34;http://3.bp.blogspot.com/-YBwpO7yQN0c/VKYz9lDvuTI/AAAAAAAAA8o/cmG51sWs-e4/s1600/Lazarus%2B-%2BGoogle%2BChrome_034.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Unduhlah berkas yang sesuai dengan prosesor dan distro linux yang digunakan.
-Saya sendiri menggunakan kali linux 32 bit, maka saya harus mengunduh berkas &lt;em&gt;deb&lt;/em&gt; yang 32 bit.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;835&#34;
-    height=&#34;575&#34;
-    alt=&#34;Download Lazarus di SourceForge.net&#34;
-    src=&#34;http://4.bp.blogspot.com/--aSrSpPf-nc/VKY1V0KTkiI/AAAAAAAAA80/ZCkk5rfqkHU/s1600/Lazarus%2B-%2BBrowse%2B-Lazarus%2BLinux%2Bi386%2BDEB-Lazarus%2B1.2.6%2Bat%2BSourceForge.net%2B-%2BGoogle%2BChrome_035.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;instalasi-lazarus&#34;&gt;Instalasi Lazarus&lt;/h1&gt;
-
-&lt;p&gt;Setelah mengunduh, saatnya menginstal di komputer.
-Berikut ini adalah tiga paket yang sudah diunduh:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;fpc&lt;/code&gt;: Kompilator pascal&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fpcsrc&lt;/code&gt;: source dari fpc&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;lazarus&lt;/code&gt;: Komponen visual Lazarus dan file bantuan.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;338&#34;
-    height=&#34;286&#34;
-    alt=&#34;file+deb+installer+lazarus.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-hm3Un2Weirs/UwODOSDirrI/AAAAAAAAAWg/hrGVijSV-oA/s1600/file+deb+installer+lazarus.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Instalasi dapat dilakukan melalui terminal dengan perintah &lt;code&gt;dpkg&lt;/code&gt;.
-Pastikan berada di dalam direktori tempat paket itu berada,
-kemudian ketik perintah ini untuk memulai instalasi:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo dpkg -i *.deb
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tanda bintang (&lt;code&gt;*&lt;/code&gt;) artinya menginstal semua paket yang ada di dalam direktori.&lt;/p&gt;
-
-&lt;p&gt;Biasanya, kalau baru pertama kali diinstal akan muncul error seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;600&#34;
-    height=&#34;384&#34;
-    alt=&#34;Lazarus-Install-dependency.gif&#34;
-    src=&#34;http://2.bp.blogspot.com/-J0EJCE2i0O8/UYpBSn2jo8I/AAAAAAAAAs0/S-5FWTZ0pDc/s1600/Lazarus-Install-dependency.gif&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Error tersebut memberi tahu kita kalau pustaka &lt;code&gt;libgtk2.0-dev&lt;/code&gt; dibutuhkan oleh
-Lazarus dan pustaka itu belum terinstal.&lt;/p&gt;
-
-&lt;p&gt;Untuk memperbaikinya, ketik perintah ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get -f install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;atau bisa juga dengan menginstal langsung &lt;code&gt;libgtk2.0-dev&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install libgtk2.0-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;mengenal-lingkungan-kerja-lazarus&#34;&gt;Mengenal Lingkungan Kerja Lazarus&lt;/h2&gt;
-
-&lt;p&gt;Tampilan Lazarus yang mirip dengan Delphi membuat pengguna baru mudah menyesuikan diri.
-Lingkungan kerja Lazarus terdiri dari jendela-jendela yang terpisah.
-Masing-masing jendela memiliki fungsi yang berbeda.&lt;/p&gt;
-
-&lt;h3 id=&#34;1-jendela-object-inspector&#34;&gt;1. Jendela Object inspector&lt;/h3&gt;
-
-&lt;p&gt;Jendela Object Inspector terdiri dari &lt;em&gt;Object Tree View&lt;/em&gt; dan tab
-(&lt;em&gt;Object Properties&lt;/em&gt;, &lt;em&gt;Evens&lt;/em&gt;, &lt;em&gt;Favorites&lt;/em&gt; dan &lt;em&gt;Restricted&lt;/em&gt;).&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;303&#34;
-    height=&#34;477&#34;
-    alt=&#34;Jendela Object Inspector&#34;
-    src=&#34;http://2.bp.blogspot.com/-nF_LiOHZB70/UwOIneQu7FI/AAAAAAAAAWw/XncWW5MGQfs/s1600/Object+Inspector_001.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Object Tree View&lt;/em&gt;&lt;/strong&gt;: Merupakan sebuah diagram pohon yang menggambarkan
-hubungan logis semua komponen yang terdapat dalam suatu &lt;em&gt;form&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Object Properties&lt;/em&gt;&lt;/strong&gt;: Berisi informasi nilai atribut tentang objek yang sedang aktif.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Evens&lt;/em&gt;&lt;/strong&gt;: Berisi informasi kode yang akan dijalankan pada kejadian tertentu misalkan pada saat tombol diklik.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Favorites&lt;/em&gt;&lt;/strong&gt;: Berisi properti objek dan &lt;em&gt;event&lt;/em&gt; yang sering digunakan.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Restricted&lt;/em&gt;&lt;/strong&gt;: Berisi informasi aturan-aturan properti suatu objek.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-jendela-form-designer&#34;&gt;2. Jendela form designer&lt;/h3&gt;
-
-&lt;p&gt;Merupakan jendela untuk mendesain tampilan visual aplikasi. Fitur ini memudahkan
-kita membuat form, karena tinggal tarik dan geser saja.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;418&#34;
-    height=&#34;466&#34;
-    alt=&#34;Form designer lazarus&#34;
-    src=&#34;http://3.bp.blogspot.com/-mjq3xydHano/UwONuMKAhJI/AAAAAAAAAXA/X2FQXavmu3k/s1600/Form+designer+lazarus.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;3-jendela-komponen-palette&#34;&gt;3. Jendela komponen Palette&lt;/h3&gt;
-
-&lt;p&gt;Komponen &lt;em&gt;palette&lt;/em&gt; berisi ikon-ikon (&lt;em&gt;tools&lt;/em&gt;) yang digunakan untuk merancang
-tampilan (&lt;em&gt;form&lt;/em&gt;) aplikasi. Dalam komponen &lt;em&gt;palette&lt;/em&gt; semua ikon dikelompokan
-dalam berbagai komponen sesuai dengan fungsinya masing-masing.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;734&#34;
-    height=&#34;116&#34;
-    alt=&#34;Komponen palette lazarus&#34;
-    src=&#34;http://1.bp.blogspot.com/-w4VKGamerc0/UwRKZFU3jkI/AAAAAAAAAXo/GGUyEN9wMRM/s1600/Komponen+palette+lazarus.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;4-jendela-source-code-editor&#34;&gt;4. Jendela Source Code Editor&lt;/h3&gt;
-
-&lt;p&gt;Jendela ini yang kita gunakan untuk menulis kode program.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;558&#34;
-    height=&#34;481&#34;
-    alt=&#34;Source Editor Lazarus.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-Mdh1iHaOuo8/UwRLGqyvFcI/AAAAAAAAAXw/Yaq5eNiZ9zc/s1600/Source+Editor+Lazarus.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;5-jendela-messages&#34;&gt;5. Jendela Messages&lt;/h3&gt;
-
-&lt;p&gt;Jendela tempat melihat pesan kesalahan (&lt;em&gt;error&lt;/em&gt;) saat melakukan kompilasi
-atau &lt;em&gt;debug&lt;/em&gt; (mencari error).&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;467&#34;
-    height=&#34;90&#34;
-    alt=&#34;Jendela Messages Lazarus&#34;
-    src=&#34;http://1.bp.blogspot.com/-2NSw4NWtfWo/UwRL5UkjaUI/AAAAAAAAAX4/W--bhhFBn1E/s1600/Messages+Lazarus.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-program-hello-world&#34;&gt;Membuat Program Hello World&lt;/h2&gt;
-
-&lt;p&gt;Setelah kita mengenal lingkungan kerja Lazarus, mari kita coba membuat program
-&lt;code&gt;Hello World&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;1-membuat-proyek-baru&#34;&gt;1. Membuat proyek baru&lt;/h3&gt;
-
-&lt;p&gt;Untuk membuat proyek baru di Lazarus, silahkan menuju ke menu &lt;em&gt;File&lt;/em&gt; &amp;gt; &lt;em&gt;New&amp;hellip;&lt;/em&gt;,
-kemudian pilih &lt;em&gt;Application&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;475&#34;
-    height=&#34;388&#34;
-    alt=&#34;Membuat Proyek Baru di Lazarus&#34;
-    src=&#34;http://2.bp.blogspot.com/-tF2kXgPGB6Q/UwROWREMhGI/AAAAAAAAAYE/FBvF0AN5n3Q/s1600/New+..._003.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-desain-form&#34;&gt;2. Desain Form&lt;/h3&gt;
-
-&lt;p&gt;Silahkan buat sebuah teks di form dengan komponen &lt;em&gt;Label&lt;/em&gt;. Klik pada ikon &lt;em&gt;label&lt;/em&gt;
-di jendela komponen &lt;em&gt;palette&lt;/em&gt;, kemudian klik sembarang tempat di jendela
-&lt;em&gt;form designer&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, ganti properti &lt;em&gt;caption&lt;/em&gt; dari &lt;em&gt;label&lt;/em&gt; tersebut menjadi &lt;code&gt;Hello World&lt;/code&gt;.
-Kemudian, cobalah jalankan programnya dengan menekan tombol &lt;em&gt;Run&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;562&#34;
-    height=&#34;425&#34;
-    alt=&#34;program+hello+world+lazarus.png&#34;
-    src=&#34;http://4.bp.blogspot.com/-LIZIFQnDUiA/UwRQO0cFQMI/AAAAAAAAAYQ/hKd-tHLvvDA/s1600/program+hello+world+lazarus.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;3-menjalankan-program&#34;&gt;3. Menjalankan program&lt;/h3&gt;
-
-&lt;p&gt;Inilah hasilnya ketika programnya dijalankan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;322&#34;
-    height=&#34;276&#34;
-    alt=&#34;Hello+World+Lazarus.png&#34;
-    src=&#34;http://4.bp.blogspot.com/-dulUojtxjzg/UwRQrtr6nSI/AAAAAAAAAYY/d9_rHCmQBgk/s1600/Hello+World+Lazarus.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;kalau-terjadi-error&#34;&gt;Kalau terjadi error&lt;/h3&gt;
-
-&lt;p&gt;Saat pertama kali menjalankan program, biasanya akan terjadi error.
-Karena lokasi &lt;em&gt;building test&lt;/em&gt;-nya tidak ditemukan. &lt;em&gt;Building test&lt;/em&gt; adalah lokasi
-penyimpanan file biner hasil kompilasi untuk dites.&lt;/p&gt;
-
-&lt;p&gt;Solusinya, mengatur lokasi &lt;em&gt;building test&lt;/em&gt; ke lokasi yang tepat.
-Masuklah ke menu &lt;em&gt;Tools&lt;/em&gt;&amp;gt;&lt;em&gt;Options&lt;/em&gt;, lalu ganti lokasi &lt;em&gt;Building test project&lt;/em&gt;
-ke tempat yang diinginkan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;702&#34;
-    height=&#34;540&#34;
-    alt=&#34;IDE+Options+Lazarus.png&#34;
-    src=&#34;http://3.bp.blogspot.com/-GjiDmUEwXes/UwRcfAqBVrI/AAAAAAAAAYo/d7ewS87iIBE/s1600/IDE+Options+Lazarus.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada pengaturan di atas, saya mengganti lokasi &lt;em&gt;building test&lt;/em&gt; ke &lt;code&gt;/root/lazarus&lt;/code&gt;.
-Saya menggunakan &lt;code&gt;root&lt;/code&gt;, karena itu direktori &lt;em&gt;home&lt;/em&gt; di Kali Linux.&lt;/p&gt;
-
-&lt;h3 id=&#34;menyimpan-proyek&#34;&gt;Menyimpan Proyek&lt;/h3&gt;
-
-&lt;p&gt;Untuk menyimpan proyek di Lazarus, silahkan menuju ke menu &lt;em&gt;File&lt;/em&gt;&amp;gt;&lt;em&gt;Save All&lt;/em&gt;.
-Buat direktori baru, kemudian simpan proyek di direktori tersebut.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;690&#34;
-    height=&#34;511&#34;
-    alt=&#34;Save+project+project1+(-.lpi)_005.png&#34;
-    src=&#34;http://3.bp.blogspot.com/-Jbw6Eu_eWmc/UwReZI6_6nI/AAAAAAAAAY0/Xh6qmsGbeSY/s1600/Save+project+project1+(-.lpi)_005.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikut ini tangkapan layar berkas-berkas proyek lazarus setelah disimpan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;799&#34;
-    height=&#34;538&#34;
-    alt=&#34;Program+Hello+World_+file+proyek+lazarus.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-sqZNCn3HT1o/UwRgnpczQoI/AAAAAAAAAZA/5OSUjyzMvO4/s1600/Program+Hello+World_+file+proyek+lazarus.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Keterangan:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Project1&lt;/code&gt;: berkas &lt;em&gt;executable&lt;/em&gt; hasil kompilasi.
-Berkas ini dapat dijalankan langsung. Pada sistem operasi Windows,
-berkas ini berekstensi &lt;code&gt;exe&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Project1.lpi&lt;/code&gt; (&lt;em&gt;Lazarus Project Information&lt;/em&gt;): berkas XML yang berisi
-informasi tentang proyek. Berkas ini seperti berkas &lt;code&gt;dpr&lt;/code&gt; pada Delphi.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Project1.lpr&lt;/code&gt; (&lt;em&gt;Lazarus Project&lt;/em&gt;): berkas utama proyek&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Project1.lfm&lt;/code&gt; (&lt;em&gt;Lazarus Form&lt;/em&gt;): berkas ini berisi informasi &lt;em&gt;layout&lt;/em&gt;
-(tata letak) desain form.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Unit1.pas&lt;/code&gt;: Berisi kode program.&lt;/li&gt;
-&lt;li&gt;Direktori &lt;code&gt;lib&lt;/code&gt;: berisi pustaka yang diperlukan oleh proyek.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sekian&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Sepertinya pengenalan ini terlalu panjang. Mudah-mudahan saja ada manfaatnya.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;http://wiki.freepascal.org/Lazarus_Tutorial&#34;&gt;http://wiki.freepascal.org/Lazarus_Tutorial&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Ketika saya mengikuti matakuliah pemrograman Delphi, saya menggunakan Linux dan Lazarus sebagai ganti Delphi. Baruntung dosennya tidak mempermasalahkan hal ini.
+Pemrograman Delphi dengan Lazarus memang terlihat sama. Oleh karena itu, tugas akhir saya diterima dengan nilai yang memuaskan.
+Lazarus tidak hanya bisa berjalan di Linux, tapi juga bisa untuk sistem operasi yang lain seperti Windows, Mac OS, dan Unix.
+Baca juga: Instalasi dan Ujicoba Lazarus di Windows
+Berikut ini gambar screenshot Lazarus yang saya gunakan waktu itu di Kali Linux.</description>
     </item>
     
   </channel>

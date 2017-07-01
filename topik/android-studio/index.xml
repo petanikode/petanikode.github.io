@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Android Studio on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/android-studio/index.xml</link>
+    <link>https://www.petanikode.com/topik/android-studio/</link>
     <description>Recent content in Android Studio on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/android-studio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Apr 2016 00:51:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/android-studio/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Pemrograman Android: Cara Periksa Konektivitas Internet Pengguna</title>
@@ -15,72 +18,11 @@
       <pubDate>Sat, 16 Apr 2016 00:51:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-android-periksa-konektivitas-internet/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pengembangan aplikasi yang membutuhkan koneksi internet untuk operasinya,
-perlu melakukan pengecekan terlebih dahulu.&lt;/p&gt;
-
-&lt;p&gt;Contoh sebuah aplikasi yang menreapkan &lt;em&gt;API Google Maps&lt;/em&gt;,
-membutuhkan koneksi internet untuk menampilkan peta.&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi, tidak dilakukan pengecekan koneksi internet.
-Aplikasi pun gagal menampilkan peta dan tampa pesan umpan balik.&lt;/p&gt;
-
-&lt;p&gt;Pengecekan koneksi internet akan membantu kita membuat umpan balik ke pengguna aplikasi.&lt;/p&gt;
-
-&lt;p&gt;Misalkan, ketika user ingin menampilkan peta &lt;em&gt;Google Map&lt;/em&gt;, periksa terlebih
-dahulu koneksi internetnya. Kalau ada koneksi, izinkan untuk membuka &lt;em&gt;activity Google Map&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini fungsi atau &lt;em&gt;method&lt;/em&gt; yang dapat digunakan untuk memeriksa
-koneksi internet pengguna.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;private boolean adaInternet(){
-    ConnectivityManager koneksi = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-    return koneksi.getActiveNetworkInfo() != null;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ketika anda mengetik kode fungsi di atas di Android Studio,
-maka akan otomatis pustakanya diimpor.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import android.content.Context;
-import android.net.ConnectivityManager;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jangan lupa, tambahkan juga dua baris kode ini ke dalam &lt;em&gt;AndroidManifest.xml&lt;/em&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_WIFI_STATE&amp;quot; /&amp;gt;
-&amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, untuk menggunkan fungsi yang dibuat tadi,
-kita dapat memanfaatkan &lt;em&gt;event&lt;/em&gt; tombol diklik atau &lt;em&gt;event&lt;/em&gt; yang lainnya.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Button btn = (Button) findViewById(R.id.button);
-
-btn.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        if(adaInternet()){
-        // tampilkan peta
-        Toast.makeText(getActivity(), &amp;quot;Terhubung ke internet&amp;quot;, Toast.LENGTH_LONG).show();
-        }else{
-        // tampilkan pesan
-        Toast.makeText(getActivity(), &amp;quot;Tidak ada koneksi internet&amp;quot;, Toast.LENGTH_LONG).show();
-        }
-    }
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya akan ditampilkan pesan &lt;em&gt;(Toast)&lt;/em&gt; &amp;ldquo;Terhubung ke internet&amp;rdquo;
-bila ponsel terhubung ke interet.&lt;/p&gt;
-
-&lt;p&gt;Sedangkan kalau tidak, akan ditampilkan pesan &amp;ldquo;Tidak ada koneksi internet&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;http://stackoverflow.com/a/9570292&#34;&gt;http://stackoverflow.com/a/9570292&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Pengembangan aplikasi yang membutuhkan koneksi internet untuk operasinya, perlu melakukan pengecekan terlebih dahulu.
+Contoh sebuah aplikasi yang menreapkan API Google Maps, membutuhkan koneksi internet untuk menampilkan peta.
+Akan tetapi, tidak dilakukan pengecekan koneksi internet. Aplikasi pun gagal menampilkan peta dan tampa pesan umpan balik.
+Pengecekan koneksi internet akan membantu kita membuat umpan balik ke pengguna aplikasi.
+Misalkan, ketika user ingin menampilkan peta Google Map, periksa terlebih dahulu koneksi internetnya. Kalau ada koneksi, izinkan untuk membuka activity Google Map.</description>
     </item>
     
     <item>
@@ -89,78 +31,9 @@ bila ponsel terhubung ke interet.&lt;/p&gt;
       <pubDate>Thu, 14 Apr 2016 14:23:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-android-linux/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pemrograman Android begitu populer saat ini. Banyak programer yang tertarik mempelajari pemrograman Android. Pemrograman Android dapat dilakukan di berbagai platform, salah satunya di sistem operasi Linux. Linux merupakan sistem operasi bebas terbuka dan gratis.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, saya akan membahas persiapan yang dilakukan sebelum memulai pemrograman Android dengan Android Studio.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-instal-jdk&#34;&gt;1. Instal JDK&lt;/h2&gt;
-
-&lt;p&gt;JDK &lt;em&gt;(Java Development Kit)&lt;/em&gt; merupakan bahan dasar yang kita butuhkan untuk pemrograman java. JDK menyediakan kompilator, mesin virtual, dan pustaka &lt;em&gt;(library)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Ada dua jenis JDK di Linux, yaitu Open JDK dan Oracle JDK. Perbedaan Open JDK dan Oracle JDK dapat dibaca &lt;a href=&#34;http://javapapers.com/java/oracle-jdk-vs-openjdk-and-java-jdk-development-process/&#34;&gt;di sini&lt;/a&gt;. Pada persiapan ini, kita akan menginstal Open JDK saja. Ketik perintah berikut untuk menginstal.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install openjdk-8-jdk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;2-install-android-studio&#34;&gt;2. Install Android Studio&lt;/h2&gt;
-
-&lt;p&gt;Android Studio merupakan mesin yang kita butuhkan untuk membuat atau mengembangkan aplikasi Android . Android studio yang digunakan dalam persiapan ini adalah Android Studio 2. Silahkan download Android Studio untuk sistem operasi Linux di &lt;a href=&#34;http://developer.android.com/sdk/index.html&#34;&gt;Website Developer Android&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-sFnqha7T9m4/VwzcDpAOsYI/AAAAAAAACqI/WvN3ZVqJ5C0PkMJK0rKYfz6Ih66S7ZM0wCK4B/s1600/Download%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-sFnqha7T9m4/VwzcDpAOsYI/AAAAAAAACqI/WvN3ZVqJ5C0PkMJK0rKYfz6Ih66S7ZM0wCK4B/s1600/Download%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, buka file manager sebagai user root:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo thunar
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;kemudian ekstrak arsip zip Android Studio ke direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-CVDuqiW_ObE/Vwzf29CxwLI/AAAAAAAACqc/vkuBtq8rPIwmrWg4KxSuQAPYx-FC2qI1gCK4B/s1600/Instal%2BAndroid%2BStudio%2Bdi%2Bdirektori%2Bopt.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-CVDuqiW_ObE/Vwzf29CxwLI/AAAAAAAACqc/vkuBtq8rPIwmrWg4KxSuQAPYx-FC2qI1gCK4B/s1600/Instal%2BAndroid%2BStudio%2Bdi%2Bdirektori%2Bopt.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Tambahkan Android Studio di menu sistem anda. Gunakan aplikasi menu editor. di Linux (Xubuntu) yang saya gunakan menu editornya sudah tersedia. Klik kanan pada menu kemudian pilih &lt;em&gt;Edit Applications&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-xSsZc71coWE/Vwzg-9ULFJI/AAAAAAAACqo/Mo7Vbb1ArIoseBopTo6Rnxtv6gBQol3pgCK4B/s1600/Mendaftarkan%2BAndroid%2BStudio%2Bdi%2BMenu%2BAplikasi.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-xSsZc71coWE/Vwzg-9ULFJI/AAAAAAAACqo/Mo7Vbb1ArIoseBopTo6Rnxtv6gBQol3pgCK4B/s1600/Mendaftarkan%2BAndroid%2BStudio%2Bdi%2BMenu%2BAplikasi.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-instal-android-sdk&#34;&gt;3. Instal Android SDK&lt;/h2&gt;
-
-&lt;p&gt;Android SDK hampir sama persis dengan JDK. Android SDK menyediakan API, Library, Emulator, dan beberapa peralatan yang diperlukan untuk membuat aplikasi. &lt;a href=&#34;https://www.petanikode.com/2016/04/cara-instal-android-sdk-dan-android-ndk.html&#34;&gt;Cara instal Android SDK&lt;/a&gt; sudah saya bahas di tulisan sebelumnya.&lt;/p&gt;
-
-&lt;h2 id=&#34;4-update-api-android-sdk&#34;&gt;4. Update API Android SDK&lt;/h2&gt;
-
-&lt;p&gt;Android SDK yang beru terinstal masih membutuhkan beberapa komponen lain untuk dapat digunakan. Oleh karena itu, kita perlu melakukan update. Ketik perintah berikut id terminal.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;android update sdk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Instal API dan Image Android yang anda butuhkan. Update API Android SDK membutuhkan koneksi internet yang cepat dan stabil. Jika semuanya diinstal, akan memakan banyak ruang (kira-kira sampai 40GB).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-_kUBCAT1Iuk/Vwzml6XJqrI/AAAAAAAACq0/VHBI8qxrDRMdO5YXtHsWnbPjyx7D9O9kACLcB/s1600/Update%2BAPI%2BAndroid%2BSDK.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-_kUBCAT1Iuk/Vwzml6XJqrI/AAAAAAAACq0/VHBI8qxrDRMdO5YXtHsWnbPjyx7D9O9kACLcB/s1600/Update%2BAPI%2BAndroid%2BSDK.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;5-buat-emulator&#34;&gt;5. Buat Emulator&lt;/h2&gt;
-
-&lt;p&gt;Emulator kita perlukan untuk men-debug aplikasi. Bila anda memiliki ponsel bersistem operasi android, anda bisa menggunakan ponsel tersebut.&lt;/p&gt;
-
-&lt;p&gt;Cara membuat emulator, ketik perintah berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;android avd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Klik tombol &lt;em&gt;Create&lt;/em&gt; untuk membuat emulator baru.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-Zc-2QS9C13o/Vwzpp4z18bI/AAAAAAAACrE/KW5rQ8mpS4UroY3_sztEk6yMRnNw1b6CwCK4B/s1600/Membuat%2Bemulator%2Bandroid.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-Zc-2QS9C13o/Vwzpp4z18bI/AAAAAAAACrE/KW5rQ8mpS4UroY3_sztEk6yMRnNw1b6CwCK4B/s1600/Membuat%2Bemulator%2Bandroid.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nilai &lt;em&gt;SD Card&lt;/em&gt; dapat dikosongkan bila tidak bisa membuatnya.&lt;/p&gt;
-
-&lt;h2 id=&#34;6-uji-coba&#34;&gt;6. Uji Coba&lt;/h2&gt;
-
-&lt;p&gt;Buat sebuah proyek baru &lt;em&gt;(Hello World)&lt;/em&gt;, kemudian coba jalankan.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-vrTozLMQh30/Vw8grg8mrzI/AAAAAAAACrQ/W56BQBQ4jlYsZFNVVTGkBlLGzKcHtbflwCLcB/s1600/Test%2BProyek%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-vrTozLMQh30/Vw8grg8mrzI/AAAAAAAACrQ/W56BQBQ4jlYsZFNVVTGkBlLGzKcHtbflwCLcB/s1600/Test%2BProyek%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Pemrograman Android begitu populer saat ini. Banyak programer yang tertarik mempelajari pemrograman Android. Pemrograman Android dapat dilakukan di berbagai platform, salah satunya di sistem operasi Linux. Linux merupakan sistem operasi bebas terbuka dan gratis.
+Pada kesempatan ini, saya akan membahas persiapan yang dilakukan sebelum memulai pemrograman Android dengan Android Studio.
+1. Instal JDK JDK (Java Development Kit) merupakan bahan dasar yang kita butuhkan untuk pemrograman java. JDK menyediakan kompilator, mesin virtual, dan pustaka (library).</description>
     </item>
     
     <item>
@@ -169,97 +42,11 @@ bila ponsel terhubung ke interet.&lt;/p&gt;
       <pubDate>Tue, 05 Apr 2016 22:49:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-TlxFSzn2BzM/VwOQ3IRECxI/AAAAAAAACo4/nmj3R3qUhMAqMy7FuBZanJHQVrszb2Xiw/s1600/Instal%2BJDK%2BLebih%2Bdari%2BSatu%2Bdi%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Saya menginstal lebih dari satu JDK di Linux (Xubuntu).
-Ada Open JDK 8, Open JDK 7, dan Oracle JDK 8. A&lt;/p&gt;
-
-&lt;p&gt;walnya saya hanya punya Open JDK 8. Kemudian setelah mengintal &lt;em&gt;Gradle&lt;/em&gt;,
-Open JDK 7 juga ikut tersintal.&lt;/p&gt;
-
-&lt;p&gt;Selain itu, saya juga menginstal Oracle JDK 8 Secara manual di direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Saat ini JDK yang sedang aktif digunakan adalah Open JDK 7.&lt;/p&gt;
-
-&lt;p&gt;Beberapa IDE tidak mendukung bila menggunakan Open JDK 7.
-Seperti Android Studio, tidak dapat dibuka karena JDK-nya masih versi 7.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini pesan Error-nya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;petanikode@imajinasi:/opt/android-studio/bin$ bash studio.sh
-
-JDK Required: &#39;tools.jar&#39; seems to be not in Studio classpath.
-Please ensure JAVA_HOME points to JDK rather than JRE.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bagaimanakah cara mengganti lagi ke Open JDK 8?&lt;/p&gt;
-
-&lt;p&gt;Apakah harus instal ulang Open JDK 8 dan menghapus OpenJDK 7?&lt;/p&gt;
-
-&lt;p&gt;Itu tidak perlu dilakukan, karena Linux sudah menyediakan sebuah
-perintah untuk memilih alternatif JDK.&lt;/p&gt;
-
-&lt;p&gt;Perintah tersebut adalah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo update-alternatives --config java
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Berikut ini tampilan di komputer saya:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-cG43izUiip0/VwJ0fa6UsKI/AAAAAAAACoI/7slZ-6hjwese84APex-UiPuio44nVOVJg/s1600/Ganti%2BAlternatif%2BJava%2BJDK.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-cG43izUiip0/VwJ0fa6UsKI/AAAAAAAACoI/7slZ-6hjwese84APex-UiPuio44nVOVJg/s1600/Ganti%2BAlternatif%2BJava%2BJDK.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Tinggal pilih nomer &lt;code&gt;2&lt;/code&gt; untuk memilih Open JDK 8.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, ketika saya memeriksa versinya&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;petanikode@imajinasi:~$ java -version
-openjdk version &amp;quot;1.8.0_72-internal&amp;quot;
-OpenJDK Runtime Environment (build 1.8.0_72-internal-b15)
-OpenJDK 64-Bit Server VM (build 25.72-b15, mixed mode)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang saya menggunakan Open JDK 8 dan Android Studio dapat berjalan
-dengan lancar.&lt;/p&gt;
-
-&lt;p&gt;Sementara untuk Oracle JDK yang saya instal secara manual &lt;em&gt;(copy-paste)&lt;/em&gt; di
-direktori &lt;code&gt;/opt&lt;/code&gt; tidak terdaftar dalam pilihan alternatif.&lt;/p&gt;
-
-&lt;p&gt;Untuk menambahkanya, ketik perintah berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo update-alternatives --install /usr/bin/java java &lt;span style=&#34;color: #cc0000;&#34;&gt;/opt/jdk1.8.0_77/bin/java&lt;/span&gt; &lt;span style=&#34;color: blue;&#34;&gt;1080&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Teks yang berwarna merah adalah lokasi saya menginstal Oracle JDK dan teks yang
-berwarna biru adalalah prioritas.&lt;/p&gt;
-
-&lt;p&gt;Nilai prioritas &lt;code&gt;1080&lt;/code&gt; akan menjadikan Oracle JDK berada pada posisi teratas di
-pilihan alternatif, karena prioritas pilihan teratas adalah &lt;code&gt;1071&lt;/code&gt;
-(pada komputer saya).&lt;/p&gt;
-
-&lt;p&gt;Berikut ini hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-JMGRIdE5TMA/VwKLKZJL31I/AAAAAAAACoY/4T8GjvtdmeAnx4CQc4CFf5k2HVL1QtkmA/s1600/Daftar%2Bpilihan%2Balternatif%2BJDK%2Bdi%2BLinux.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-JMGRIdE5TMA/VwKLKZJL31I/AAAAAAAACoY/4T8GjvtdmeAnx4CQc4CFf5k2HVL1QtkmA/s1600/Daftar%2Bpilihan%2Balternatif%2BJDK%2Bdi%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Cek lagi versi java yang dipakai:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;petanikode@imajinasi:~$ java -version
-java version &amp;quot;1.8.0_77&amp;quot;
-Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
-Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekrang java yang dipakai adalah java dari Oracle JDK.&lt;/p&gt;
-
-&lt;p&gt;Untuk menghapus Oracle JDK dari pilihan alternatif, ketik perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo update-alternatives --remove java &lt;span style=&#34;color: #cc0000;&#34;&gt;/opt/jdk1.8.0_77/bin/java&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Begitulah cara saya mengatasi JDK yang lebih dari satu di Linux.
-Tak maslah, berapapun JDK yang diinstal, asalkan mengerti menggunakan
-perintah &lt;code&gt;update-alternatives&lt;/code&gt;, kita bisa mengaturnya sesuai selera.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/pilihan-alternatif-java-dan-symbolic-link-yang-buntu/&#34;&gt;Pilihan Alternatif Java dan Symbolic Link yang Buntu&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Saya menginstal lebih dari satu JDK di Linux (Xubuntu). Ada Open JDK 8, Open JDK 7, dan Oracle JDK 8. A
+walnya saya hanya punya Open JDK 8. Kemudian setelah mengintal Gradle, Open JDK 7 juga ikut tersintal.
+Selain itu, saya juga menginstal Oracle JDK 8 Secara manual di direktori /opt.
+Saat ini JDK yang sedang aktif digunakan adalah Open JDK 7.
+Beberapa IDE tidak mendukung bila menggunakan Open JDK 7.</description>
     </item>
     
     <item>
@@ -268,8 +55,11 @@ perintah &lt;code&gt;update-alternatives&lt;/code&gt;, kita bisa mengaturnya ses
       <pubDate>Thu, 03 Mar 2016 16:15:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-F01xzBHL65Y/Vg5OM7SGGrI/AAAAAAAAB34/78xBzApHESg/s1600/Android-development-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-F01xzBHL65Y/Vg5OM7SGGrI/AAAAAAAAB34/78xBzApHESg/s1600/Android-development-petanikode.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Setelah saya menginstal Andoid Studio di Ubuntu, ternyata saya menemukan masalah dengan pesan kesalahan &lt;i&gt;&amp;ldquo;Your Android SDK is missing , out of date,or is missing templates&amp;rdquo;&lt;/i&gt;. Pesan error itu menandakan, Android Studio tidak menemukan SDK. Jadi, si Android Studio belum mampu membuat proyek baru karena belum ada teman untuk bekerja sama, yaitu si SDK.&lt;br /&gt;&lt;br /&gt;Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.&lt;br /&gt;&lt;br /&gt;1. Buka Android Studio, Klik &lt;i&gt;Configure&lt;/i&gt;&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-3eMGnkftahM/VtfuES_9JBI/AAAAAAAACgg/liOt71cKAZA/s1600/Masuk%2Bke%2Bkonfigurasi%2BAndroid%2BStudio.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-3eMGnkftahM/VtfuES_9JBI/AAAAAAAACgg/liOt71cKAZA/s1600/Masuk%2Bke%2Bkonfigurasi%2BAndroid%2BStudio.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;2. Masuk ke pengaturan &lt;i&gt;Project Default&lt;/i&gt;, klik &lt;i&gt;Project Default&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-ZMyy5turmhc/VtfuaYkuR0I/AAAAAAAACgo/JSsGVgHbYkg/s1600/Masuk%2Bke%2Bpengaturan%2Bproyek%2Bdefault%2BAndroid%2BStudio.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-ZMyy5turmhc/VtfuaYkuR0I/AAAAAAAACgo/JSsGVgHbYkg/s1600/Masuk%2Bke%2Bpengaturan%2Bproyek%2Bdefault%2BAndroid%2BStudio.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;3. Kemudian masuk ke Project Structure.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-NxE9QrHuRRE/Vtfu7q1Gp5I/AAAAAAAACg0/c85EEq3r22I/s1600/Masuk%2Bke%2Bproject%2Bstructure%2Bandroid%2Bstudio.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-NxE9QrHuRRE/Vtfu7q1Gp5I/AAAAAAAACg0/c85EEq3r22I/s1600/Masuk%2Bke%2Bproject%2Bstructure%2Bandroid%2Bstudio.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;4. Kemudian carilah lokasi tempat Anda menaruh SDK setelah itu klik &lt;i&gt;OK&lt;/i&gt;. Kalau belum punya SDK silahkan download &lt;a href=&#34;https://developer.android.com/sdk/index.html&#34; target=&#34;_blank&#34;&gt;di sini&lt;/a&gt;.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-Wcu8v9iTQuo/Vtfvcm7m-MI/AAAAAAAAChA/cLNli2yPIHc/s1600/Menentukan%2Blokasi%2BSDK.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-Wcu8v9iTQuo/Vtfvcm7m-MI/AAAAAAAAChA/cLNli2yPIHc/s1600/Menentukan%2Blokasi%2BSDK.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Sekarang cobalah membuat proyek baru, insa&amp;rsquo;allah bisa.&lt;/p&gt;
-</description>
+      <description>Setelah saya menginstal Andoid Studio di Ubuntu, ternyata saya menemukan masalah dengan pesan kesalahan &amp;ldquo;Your Android SDK is missing , out of date,or is missing templates&amp;rdquo;. Pesan error itu menandakan, Android Studio tidak menemukan SDK. Jadi, si Android Studio belum mampu membuat proyek baru karena belum ada teman untuk bekerja sama, yaitu si SDK.
+Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
+1. Buka Android Studio, Klik Configure
+
+2. Masuk ke pengaturan Project Default, klik Project Default.</description>
     </item>
     
     <item>
@@ -278,8 +68,12 @@ perintah &lt;code&gt;update-alternatives&lt;/code&gt;, kita bisa mengaturnya ses
       <pubDate>Wed, 13 Jan 2016 10:28:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/solusi-error-kvm-is-missing-android-studio/</guid>
-      <description>&lt;p&gt;Emulator Android Studio yang saya instal di Linux (Xubuntu 15.10) 32bit, tidak bisa dijalankan. Meskipun saya sudah memberikan argumen &lt;code&gt;-force-32bit&lt;/code&gt; dan menginstal KVM.&lt;br /&gt;&lt;blockquote&gt;emulator: ERROR: x86 emulation currently requires hardware acceleration!&lt;br /&gt;Please ensure KVM is properly installed and usable.&lt;br /&gt;CPU acceleration status: KVM is not installed on this machine (/dev/kvm is missing).&lt;/blockquote&gt;Itulah pesan error yang saya dapatkan saat mencoba menjalankan sebuah proyek.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-R9XvPzuNUbg/VpUCqrQMV6I/AAAAAAAACYg/jELyIgU9cHs/s1600/Pesan%2Berror%2B-%2BKVM%2Bbelum%2Bterinstal%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-R9XvPzuNUbg/VpUCqrQMV6I/AAAAAAAACYg/jELyIgU9cHs/s1600/Pesan%2Berror%2B-%2BKVM%2Bbelum%2Bterinstal%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Sepertinya masalah ini cukup sulit untuk diatasi. Tetapi, setelah membaca jawaban dari sebuah pertanyaan di &lt;a href=&#34;http://askubuntu.com/a/565013&#34; target=&#34;_blank&#34;&gt;askubuntu&lt;/a&gt;, masalah ini dapat saya atasi. Sekarang sudah bisa menjalankan emulatornya.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-KrvxPR2Bnig/VpUO8afCs1I/AAAAAAAACY8/H3XbqrKzdUs/s1600/Testing%2Bemulator%2Bandroid%2Bstudio%2BXubuntu%2B15.10%2B32bit%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-KrvxPR2Bnig/VpUO8afCs1I/AAAAAAAACY8/H3XbqrKzdUs/s1600/Testing%2Bemulator%2Bandroid%2Bstudio%2BXubuntu%2B15.10%2B32bit%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Solusinya ternyata hanya menyalakan teknologi virtualisasi melalui BIOS:&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-9BtBFthtP2A/VpUMB5ZsHEI/AAAAAAAACYw/CbOJQl-n1XM/s1600/Hidupkan%2Bfitur%2Bteknologi%2Bvirtial%2Bintel%2B-%2Bpetanikode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-9BtBFthtP2A/VpUMB5ZsHEI/AAAAAAAACYw/CbOJQl-n1XM/s1600/Hidupkan%2Bfitur%2Bteknologi%2Bvirtial%2Bintel%2B-%2Bpetanikode.jpg&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Emulator Android Studio yang saya instal di Linux (Xubuntu 15.10) 32bit, tidak bisa dijalankan. Meskipun saya sudah memberikan argumen -force-32bit dan menginstal KVM.
+emulator: ERROR: x86 emulation currently requires hardware acceleration!
+Please ensure KVM is properly installed and usable.
+CPU acceleration status: KVM is not installed on this machine (/dev/kvm is missing).Itulah pesan error yang saya dapatkan saat mencoba menjalankan sebuah proyek.
+
+Sepertinya masalah ini cukup sulit untuk diatasi. Tetapi, setelah membaca jawaban dari sebuah pertanyaan di askubuntu, masalah ini dapat saya atasi.</description>
     </item>
     
     <item>
@@ -288,90 +82,10 @@ perintah &lt;code&gt;update-alternatives&lt;/code&gt;, kita bisa mengaturnya ses
       <pubDate>Fri, 13 Nov 2015 21:05:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-android-emulator-alternatif/</guid>
-      <description>
-
-&lt;p&gt;Bila kamu tidak ingin menggunakan emulator bawaan Android SDK atau terasa
-berat, mungkin bisa coba emulator alternatif.&lt;/p&gt;
-
-&lt;p&gt;Ada dua alternatif emulator untuk debug dan deploy aplikasi android:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Menggunakan Genymotion&lt;/li&gt;
-&lt;li&gt;Menggunakan Hp sendiri&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Geanymotion adalah emulator android pihak ketiga yang berbasis virtualbox.
-Ada yang mengklaim emulator ini lebih cepat dibandingkan emulator bawaan
-android studio.&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-instal-geanymotion-untuk-emulator-android-studio&#34;&gt;Cara Instal Geanymotion untuk Emulator Android Studio&lt;/h2&gt;
-
-&lt;h3 id=&#34;1-pastikan-virtualbox-sudah-terinstal&#34;&gt;1. Pastikan virtualbox sudah terinstal&lt;/h3&gt;
-
-&lt;p&gt;Genymotion memanfaatkan virtualbox untuk melakuan virtualisasi.
-Jadi pastikan virtualbox sudah terpasang di komputermu.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install virtualbox
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;2-download-dan-instal-genymotion&#34;&gt;2. Download dan Instal Genymotion&lt;/h3&gt;
-
-&lt;p&gt;Download Genymotion di website resminya (&lt;a href=&#34;https://www.genymotion.com/#!/download&#34;&gt;genymotion.com&lt;/a&gt;).
-Kita harus memiliki akun agar bisa mendownloadnya.&lt;/p&gt;
-
-&lt;p&gt;Nanti kita akan mendapatkan file binary, seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-9aMDhjKhdGc/VkXGKfp2ipI/AAAAAAAACMU/IKY6Xw98LdQ/s1600/Genymotion%2Buntuk%2Blinux%2Bsudah%2Bdidownload.png&#34; alt=&#34;Geanymotion untuk Linux&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah mendapatkan genymotion, selanjutnya menginstalnya ke direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Saya pilih direktori ini, karena banyak aplikasi lain juga terinstal di sana.
-Sebenarnya bisa diinstal di mana saja, sesuka anda.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-Us5YgHMvZaE/VkXHuL8ssJI/AAAAAAAACMg/oVFB6UVSftY/s1600/Kumpulan%2Bberkas%2Bgenymotion%2Bsetelah%2Bterinstal.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-Us5YgHMvZaE/VkXHuL8ssJI/AAAAAAAACMg/oVFB6UVSftY/s1600/Kumpulan%2Bberkas%2Bgenymotion%2Bsetelah%2Bterinstal.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar di atas adalah kumpulan file genymotion setelah terinstal di direktori &lt;code&gt;/opt&lt;/code&gt;. Untuk menginstalnya di sana, kita hanya perlu mengeksekusi file &lt;code&gt;genymotion-2.5.2_x86.bin&lt;/code&gt; di direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sekarang coba eksekusi atau jalankan genymotion. Kemudian, tambahkan perangkat virtual (virtual device).&lt;/p&gt;
-
-&lt;p&gt;Penambahan perangkat virtual membutuhkan koneksi internet untuk login dan
-mendownload perangkat virtualnya.&lt;/p&gt;
-
-&lt;p&gt;Login dengan akun yang sudah anda buat di genymotion.com.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-f3EJwTqLgQo/VkXKC4IrwEI/AAAAAAAACMs/H8AoHdlVpp8/s1600/Genymotion%2Bberhasil%2Bberjalan%2Bdi%2Blinux%2Bxubuntu%2B15.04%2B32bit.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-f3EJwTqLgQo/VkXKC4IrwEI/AAAAAAAACMs/H8AoHdlVpp8/s1600/Genymotion%2Bberhasil%2Bberjalan%2Bdi%2Blinux%2Bxubuntu%2B15.04%2B32bit.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Barikut ini tangkapan layar saat salah satu perangkat virtual (mesin virtual) dinyalakan.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-cfL4afw7Yh0/VkXO0ZEV0QI/AAAAAAAACM8/vWGD1yIcBUk/s1600/Genymotion%2Bsedang%2Bberaksi.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-cfL4afw7Yh0/VkXO0ZEV0QI/AAAAAAAACM8/vWGD1yIcBUk/s1600/Genymotion%2Bsedang%2Bberaksi.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-tambahkan-plug-in-genymotion-di-android-studio&#34;&gt;2. Tambahkan Plug-in Genymotion di Android Studio&lt;/h3&gt;
-
-&lt;p&gt;Klik menu &lt;em&gt;file&lt;/em&gt; kemudian pilih &lt;em&gt;Settings&lt;/em&gt;. Pada jendela yang terbuka,
-di bagian sebelah kiri, pilih plugins.&lt;/p&gt;
-
-&lt;p&gt;Cari plugin &amp;ldquo;genymotion&amp;rdquo;, bila tidak ditemukan klik &lt;em&gt;browse&lt;/em&gt;. Kemudian, cari lagi plugin &amp;ldquo;genymotion&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-tAem4UlNjF4/VkXWB0DBRRI/AAAAAAAACNM/DoetsxT-mzo/s1600/Instalasi%2Bplugin%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-tAem4UlNjF4/VkXWB0DBRRI/AAAAAAAACNM/DoetsxT-mzo/s1600/Instalasi%2Bplugin%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah instalasi selesai, silahkan buka ulang Android Studio-nya.&lt;/p&gt;
-
-&lt;h3 id=&#34;3-uji-coba&#34;&gt;3. Uji coba&lt;/h3&gt;
-
-&lt;p&gt;Setelah plugin genymotion berhasil terinstal, maka akan ada tambahan tombol Genymotion di toolbar Android Studio. Bila diklik, maka akan keluar jendela Genymotion Device Manager.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4-XsdNfS_SU/VkXX3U1-Y0I/AAAAAAAACNY/j5PqsSprhZs/s1600/Tombol%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-4-XsdNfS_SU/VkXX3U1-Y0I/AAAAAAAACNY/j5PqsSprhZs/s1600/Tombol%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Silahkan nyalakan salah satu mesin virtual Genymotion. Kemudian &lt;em&gt;run&lt;/em&gt; salah satu proyek app di android studio, maka anda akan dihadapkan dengan jendela pemilihan mesin virtual atau emulator.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-CITW2sYWH5U/VkXb1F5ZSGI/AAAAAAAACNk/ucTfzjf5csQ/s1600/Memilih%2Bmesin%2Bvirtual%2Bsaat%2Bmenjalankan%2Bproyek%2Bandroid%2Bstudio.png&#34;&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-CITW2sYWH5U/VkXb1F5ZSGI/AAAAAAAACNk/ucTfzjf5csQ/s1600/Memilih%2Bmesin%2Bvirtual%2Bsaat%2Bmenjalankan%2Bproyek%2Bandroid%2Bstudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Karena salah satu mesin genymotion sedang dinyalakan, makan akan tampil pilihannya di sana. Setelah dipilih, maka aplikasi pun berhasil dikirim ke mesin virtual genymotion dan dijalankan.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-dAjdV4lnZkk/VkXdVuHOAxI/AAAAAAAACNs/qwJHxIZebzo/s1600/Aplikasi%2Bproyek%2Bberhasil%2Bdi-run.png&#34;&gt;&lt;img src=&#34;http://2.bp.blogspot.com/-dAjdV4lnZkk/VkXdVuHOAxI/AAAAAAAACNs/qwJHxIZebzo/s1600/Aplikasi%2Bproyek%2Bberhasil%2Bdi-run.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Android Studio sudah bisa bekerja dengan Genymotion.&lt;/p&gt;
-</description>
+      <description>Bila kamu tidak ingin menggunakan emulator bawaan Android SDK atau terasa berat, mungkin bisa coba emulator alternatif.
+Ada dua alternatif emulator untuk debug dan deploy aplikasi android:
+ Menggunakan Genymotion Menggunakan Hp sendiri  Geanymotion adalah emulator android pihak ketiga yang berbasis virtualbox. Ada yang mengklaim emulator ini lebih cepat dibandingkan emulator bawaan android studio.
+Cara Instal Geanymotion untuk Emulator Android Studio 1. Pastikan virtualbox sudah terinstal Genymotion memanfaatkan virtualbox untuk melakuan virtualisasi.</description>
     </item>
     
   </channel>

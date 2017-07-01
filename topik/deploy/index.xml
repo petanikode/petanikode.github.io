@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deploy on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/deploy/index.xml</link>
+    <link>https://www.petanikode.com/topik/deploy/</link>
     <description>Recent content in Deploy on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/deploy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Jan 2017 12:09:55 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/deploy/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Cara Upload File ke Server FTP ala Git</title>
@@ -15,99 +18,9 @@
       <pubDate>Tue, 31 Jan 2017 12:09:55 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-upload-file-ke-server-ftp-ala-git/</guid>
-      <description>
+      <description>Ketika kita akan men-deploy atau hosting sebuah web di server shared hosting, kita akan diberikan fasilitas FTP untuk upload file. Kita bisa menggunakan FTP Client seperti FileZilla untuk upload file. Namun, bagaimana kalau nanti ada perubahan? Tentu kita akan mencari file yang diubah dan di-upload lagi. Hal ini mungkin terasa sedikit melelahkan.
 
-&lt;p&gt;Ketika kita akan men-deploy atau &lt;em&gt;hosting&lt;/em&gt; sebuah web di server &lt;em&gt;shared hosting&lt;/em&gt;,
-kita akan diberikan fasilitas FTP untuk upload file. Kita bisa menggunakan
-&lt;em&gt;FTP Client&lt;/em&gt; seperti FileZilla untuk upload file. Namun, bagaimana kalau nanti
-ada perubahan? Tentu kita akan mencari file yang diubah dan di-upload lagi.
-Hal ini mungkin terasa sedikit melelahkan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;720&#34;
-height=&#34;380&#34;
-alt=&#34;Git FTP&#34;
-src=&#34;https://1.bp.blogspot.com/-jeWvQeAn-TQ/WJGe6gyu6vI/AAAAAAAADwM/yJ-X3DG9T5sLyIow4kyD-cHt_nCOYP_qgCPcB/s1600/upload-file-ftp-ala-git-petanikode.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sedangkan, kalau kita menggunakan Git. Kita hanya perlu melakukan &lt;em&gt;push&lt;/em&gt; untuk
-mengupload perubahan ke server atau repository &lt;em&gt;remote&lt;/em&gt;. Akan tetapi, server yang
-kita gunakan tidak mendukung Git.&lt;/p&gt;
-
-&lt;p&gt;Sebuah alat bernama &lt;code&gt;git-ftp&lt;/code&gt; memungkinkan kita untuk meng-upload file ke server
-FTP seperti cara Git. Kita tidak akan repot mencari file yang sudah diubah untuk
-diupload lagi dan menindih yang sudah ada di server. Karena &lt;code&gt;git-ftp&lt;/code&gt; akan melakukan
-sinkronisasi berdasarkan perubahan yang dicatat oleh Git.&lt;/p&gt;
-
-&lt;h2 id=&#34;instalasi-git-ftp&#34;&gt;Instalasi git-ftp&lt;/h2&gt;
-
-&lt;p&gt;Instalasi &lt;code&gt;git-ftp&lt;/code&gt; di Ubuntu dapat dilakukan dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;sudo apt install git-ftp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Instalasi di sistem operasi lain, silahkan baca &lt;a href=&#34;https://github.com/git-ftp/git-ftp/blob/develop/INSTALL.md&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;konfigurasi-awal&#34;&gt;Konfigurasi Awal&lt;/h2&gt;
-
-&lt;p&gt;Masuk ke direktori proyeknya. Pastikan sudah menggunakan Git di sana. Kemudian
-tambahkan konfigurasi &lt;code&gt;git-ftp&lt;/code&gt; dengan perintah berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config git-ftp.url ftp.example.net
-git config git-ftp.user ftp-user
-git config git-ftp.password rah4sia
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sebagai contoh, saya menggunakan hosting &lt;a href=&#34;http://api.idhostinger.com/redir/18671649&#34;&gt;gratis dari idhostinger&lt;/a&gt;
-dan membuat akun FTP sebagai berikut.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;924&#34;
-height=&#34;255&#34;
-alt=&#34;Akun FTP di IDhostinger&#34;
-src=&#34;https://4.bp.blogspot.com/-3WZZA8H29bY/WI_rPPRQvJI/AAAAAAAADvs/YpKGbgQs6b0d1zZTwnJYOm9okOq4FlCyQCPcB/s1600/Akun%2BFTP%2Bdi%2Bihostinger.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Misalkan saya ingin upload ke direktori &lt;code&gt;project1&lt;/code&gt;, Maka konfigurasi
-&lt;code&gt;git-ftp&lt;/code&gt;-nya seagai berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config git-ftp.url ftp.petanikode.hol.es/project1
-git config git-ftp.user u898309845.petanikode
-git config git-ftp.password SangatRah4sia
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;upload-pertama&#34;&gt;Upload Pertama&lt;/h2&gt;
-
-&lt;p&gt;Setelah kita melakukan konfigurasi &lt;code&gt;git-ftp&lt;/code&gt;, selanjutnya kita bisa upload semua
-file dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git ftp init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Proses ini akan memakan waktu cukup lama apabila terdapat banyak file yang akan
-di-upload. Perintah ini akan meng-upload semua file, kecuali yang terdaftar dalam
-&lt;code&gt;.gitignore&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;upload-perubahan&#34;&gt;Upload Perubahan&lt;/h2&gt;
-
-&lt;p&gt;Jika ada perubahan, kita harus mealkukan &lt;code&gt;commit&lt;/code&gt; terlebih dahulu.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git add .
-git commit -m &amp;quot;ini perubahan yang dilakukan&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, kita bisa upload lagi perubahannya dengan perintah.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git ftp push
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka &lt;code&gt;git-ftp&lt;/code&gt; akan melakukan upload file-file yang sudah diubah dan menindih
-yang sudah ada di server.&lt;/p&gt;
-
-&lt;p&gt;Begitulah cara upload file seperti cara &lt;a href=&#34;https://www.petanikode.com/topik/git&#34;&gt;Git&lt;/a&gt;. Semoga bermanfaat.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;https://git-ftp.github.io/&#34;&gt;git-ftp.github.io&lt;/a&gt;&lt;/p&gt;
-</description>
+Sedangkan, kalau kita menggunakan Git. Kita hanya perlu melakukan push untuk mengupload perubahan ke server atau repository remote.</description>
     </item>
     
   </channel>

@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ssh on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/ssh/index.xml</link>
+    <link>https://www.petanikode.com/topik/ssh/</link>
     <description>Recent content in Ssh on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Jan 2017 17:52:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Cara Menggunakan SSH di Github</title>
@@ -15,138 +18,12 @@
       <pubDate>Sun, 29 Jan 2017 17:52:51 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-menggunakan-ssh-di-github/</guid>
-      <description>
+      <description>SSH memungkinkan kita untuk melakukan push ke repository github tanpa login. Berbeda dengan cara yang biasa (melalui HTTPS), kita harus memasukkan username dan password setiap kali melakukan push. Tapi dengan SSH kita tidak akan melakukan itu lagi.
+1. Membuat Key SSH Jalankan perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda. Untuk passpharse dikosongkan saja.
 
-&lt;p&gt;SSH memungkinkan kita untuk melakukan &lt;em&gt;push&lt;/em&gt; ke repository github tanpa login.
-Berbeda dengan cara yang biasa (melalui HTTPS), kita harus memasukkan &lt;em&gt;username&lt;/em&gt; dan &lt;em&gt;password&lt;/em&gt;
-setiap kali melakukan &lt;em&gt;push&lt;/em&gt;. Tapi dengan SSH kita tidak akan melakukan itu lagi.&lt;/p&gt;
+Maka di dalam direktori ~/.ssh/ akan tercipa file key baru.
 
-&lt;h2 id=&#34;1-membuat-key-ssh&#34;&gt;1. Membuat Key SSH&lt;/h2&gt;
-
-&lt;p&gt;Jalankan perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda.
-Untuk &lt;em&gt;passpharse&lt;/em&gt; dikosongkan saja.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;644&#34;
-height=&#34;334&#34;
-alt=&#34;perintah ssh-keygen&#34;
-src=&#34;http://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Maka di dalam direktori &lt;code&gt;~/.ssh/&lt;/code&gt; akan tercipa file key baru.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;575&#34;
-height=&#34;116&#34;
-alt=&#34;file key ssh&#34;
-src=&#34;http://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-jalankan-ssh-angen-dan-load-ssh-key&#34;&gt;2. Jalankan SSH Angen dan Load SSH Key&lt;/h2&gt;
-
-&lt;p&gt;Untuk memastikan apakah &lt;em&gt;SSH Agent&lt;/em&gt; sudah berajalan atau tidak, gunakan perintah ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ps -e | grep [s]sh-agent
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kalau hasilnya seperti di bawah ini, berati &lt;em&gt;SSH Agent&lt;/em&gt; sudah berjalan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;884&#34;
-height=&#34;32&#34;
-alt=&#34;cek ssh agent&#34;
-src=&#34;http://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Tapi, kalau belum berjalan, gunakan perintah berikut ini untuk menjalankan SSH agent:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-agent /bin/bash
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Berikutnya kita Load SSH Key. Gunakan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-add ~/.ssh/id_anda
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian untuk mengecek, gunakan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-add -l
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;659&#34;
-height=&#34;106&#34;
-alt=&#34;Mendambahkan SSH&#34;
-src=&#34;http://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-tambahkan-ssh-key-ke-github&#34;&gt;3. Tambahkan SSH Key ke Github&lt;/h2&gt;
-
-&lt;p&gt;Sebelumnya ambil dulu kuncil publik yang sudah anda buat, gunakan perintah &lt;code&gt;cat&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cat ~/.ssh/id_anda.pub
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Copy semua teks yang ditampilkan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;659&#34;
-height=&#34;139&#34;
-alt=&#34;Melihat public key&#34;
-src=&#34;http://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Lalu masuk ke &lt;a href=&#34;https://github.com/settings/keys&#34;&gt;&lt;em&gt;Settings&amp;gt;SSH and GPG Keys&lt;/em&gt;&lt;/a&gt;,
-buat kunci baru dengan mengelik &lt;em&gt;New SSH Key&lt;/em&gt;. Lalu masukkan key yang sudah
-dibuat.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;1012&#34;
-height=&#34;553&#34;
-alt=&#34;Melihat public key&#34;
-src=&#34;https://1.bp.blogspot.com/-OmGVJTJicSU/WI3C0rA5EQI/AAAAAAAADuI/VI7r_F750gApkdo5rZDqOc7csITftAbdACPcB/s1600/Tambah%2BSSH%2Bkey%2Bke%2BGithub.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-uji-konektivitas&#34;&gt;4. Uji Konektivitas&lt;/h2&gt;
-
-&lt;p&gt;Ketik perintah berikut untuk menguji konektivitas SSH ke Github&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh -T git@github.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika hasilnya seperti berikut ini, berarti berhasil. Selanjutnya kita tinggal
-melakukan &lt;em&gt;push&lt;/em&gt; dengan SSH.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;626&#34;
-height=&#34;156&#34;
-alt=&#34;Uji konektivitas SSH Github&#34;
-src=&#34;https://4.bp.blogspot.com/-u_nlbitvZYQ/WI3DluqqeTI/AAAAAAAADuc/pPEzdkn3uhY51L7yGzgBLtm-4SQN--wqQCPcB/s1600/Uji%2Bcoba%2Bkonektivitas%2Bssh%2Bgithub.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Coba &lt;em&gt;clone&lt;/em&gt; sebuah repository dengan SSH dan lakukan push.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;467&#34;
-height=&#34;293&#34;
-alt=&#34;Clone Repositori dengan SSH&#34;
-src=&#34;https://2.bp.blogspot.com/-GWYLb-m67Ho/WI3FCCS2bBI/AAAAAAAADuw/r71ELqTvSD0HLVsW8KrOPv5Z7zb2XO3XwCPcB/s1600/Clone%2Brepository%2Bdengan%2BSSH.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah cara menggunakan SSH di Gitub. Kita hanya perlu membuat &lt;em&gt;public key&lt;/em&gt;,
-kemudian mendaftarkannya di akun Github.&lt;/p&gt;
-
-&lt;p&gt;referensi: &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;help.github.com&lt;/a&gt;&lt;/p&gt;
-</description>
+2. Jalankan SSH Angen dan Load SSH Key Untuk memastikan apakah SSH Agent sudah berajalan atau tidak, gunakan perintah ini:</description>
     </item>
     
     <item>
@@ -155,8 +32,10 @@ kemudian mendaftarkannya di akun Github.&lt;/p&gt;
       <pubDate>Sun, 03 Jul 2016 15:30:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/mengatasi-masalah-public-key-bitbucket/</guid>
-      <description>&lt;p&gt;Jika komputer anda baru pertama kali terhubung dengan bitbucket, mungkin anda akan mendapatkan error ini ketika meng-upload atau &lt;i&gt;push&lt;/i&gt; kode.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-I9CjXcqUABA/V2JBhsEnGYI/AAAAAAAAC3I/fRu1SO9FRaIac3iSymPzkSc_9UAxzlm1wCK4B/s1600/bitbucket-push-key-ssh-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-I9CjXcqUABA/V2JBhsEnGYI/AAAAAAAAC3I/fRu1SO9FRaIac3iSymPzkSc_9UAxzlm1wCK4B/s1600/bitbucket-push-key-ssh-petanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tidak seperti Github yang selalu meminta password setiap kali nge-push. Bitbucket menggunakan metode &lt;i&gt;SSH Key&lt;/i&gt; untuk sinkronisasi repositori lokal dengan repositori &lt;i&gt;remote&lt;/i&gt; (Bitbucket). Oleh karena itu, kita hanya perlu &lt;i&gt;set up&lt;/i&gt; SSH untuk Git Bitbucket.&lt;br /&gt;&lt;h2&gt;1. Membuat KeyGen SSH&lt;/h2&gt;Ketik perintah &lt;code&gt;ssh-keygen&lt;/code&gt; pada termnial. Kemudian inputkan id (identitas) SSH anda.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Maka di dalam direktori &lt;code&gt;~/.ssh/&lt;/code&gt; akan tercipa file key baru.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;2. Jalankan SSH Angen dan Load SSH Key&lt;/h2&gt;Untuk memastikan apakah SSH Agen sudah berajalan atau tidak, gunakan perintah ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ps -e | grep [s]sh-agent&lt;/code&gt;&lt;/pre&gt;Kalau hasilnya seperti di bawah ini, berati SSH Agen sudah berjalan.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tapi, kalau belum berjalan, gunakan perintah berikut ini untuk menjalankan SSH agent:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ssh-agent /bin/bash&lt;/code&gt;&lt;/pre&gt;Berikutnya kita Load SSH Key. Gunakan perintah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ssh-add ~/.ssh/id_anda&lt;/code&gt;&lt;/pre&gt;Kemudian untuk mengecek, gunakan perintah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ssh-add -l&lt;/code&gt;&lt;/pre&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;3. Tambahkan Kunci Publik ke Akun Bitbucket&lt;/h2&gt;Ambil kuncil publik yang sudah anda buat, gunakan perintah cat.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;cat ~/.ssh/id_anda.pub&lt;/code&gt;&lt;/pre&gt;Copy semua teks yang ditampilkan.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian masuk ke akun Bitbucket. Masuk ke &lt;i&gt;Bitbucket Settings&lt;/i&gt; dengan mengelik &lt;i&gt;avatar&lt;/i&gt;. Kemudian cari menu &lt;i&gt;SSH Key&lt;/i&gt; di bagian samping. Tambahkan &lt;i&gt;SSH Key&lt;/i&gt; dari yang sudah di-copy tadi.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-llS_w8e2lJo/V3fa8MGfe-I/AAAAAAAAC7I/vtsUYVj7RdQ0_PwObZhCJEwazJ1SESM_ACK4B/s1600/Tambahkan%2BSSH%2BKey%2Bke%2BAkun%2BBitbucket.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-llS_w8e2lJo/V3fa8MGfe-I/AAAAAAAAC7I/vtsUYVj7RdQ0_PwObZhCJEwazJ1SESM_ACK4B/s1600/Tambahkan%2BSSH%2BKey%2Bke%2BAkun%2BBitbucket.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;4. Periksa Konektivitas&lt;/h2&gt;Ketik perintah berikut ini di terminal:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ssh -T git@bitbucket.org&lt;/code&gt;&lt;/pre&gt;Kalau hasilnya seperti di bawah ini, maka koneksi berhasil. Sekarang anda bisa sinkronkan repositori lokal dengan repositori remote yang ada di Bitbucket.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-msMvX3F3P_8/V3fbhHjriYI/AAAAAAAAC7Q/by5WXzWRwZkvQm97TvSGkG5ABU6lttiEQCK4B/s1600/Koneksi%2Bke%2BBitbucket%2BBerhasil.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-msMvX3F3P_8/V3fbhHjriYI/AAAAAAAAC7Q/by5WXzWRwZkvQm97TvSGkG5ABU6lttiEQCK4B/s1600/Koneksi%2Bke%2BBitbucket%2BBerhasil.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;blockquote class=&#34;tr_bq&#34;&gt;&lt;b&gt;Catatan:&lt;/b&gt; Load kembali kunci SSH bila anda tidak terhubung lagi (jalankan perintah nomer 2).&lt;/blockquote&gt;&lt;br /&gt;Refernsi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html&#34;&gt;https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html&lt;/a&gt;&lt;/a&gt; &lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html&#34;&gt;https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html&lt;/a&gt; &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html&#34;&gt;https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
-</description>
+      <description>Jika komputer anda baru pertama kali terhubung dengan bitbucket, mungkin anda akan mendapatkan error ini ketika meng-upload atau push kode.
+
+Tidak seperti Github yang selalu meminta password setiap kali nge-push. Bitbucket menggunakan metode SSH Key untuk sinkronisasi repositori lokal dengan repositori remote (Bitbucket). Oleh karena itu, kita hanya perlu set up SSH untuk Git Bitbucket.
+1. Membuat KeyGen SSHKetik perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda.</description>
     </item>
     
   </channel>

@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Maven on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/maven/index.xml</link>
+    <link>https://www.petanikode.com/topik/maven/</link>
     <description>Recent content in Maven on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/maven/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jun 2017 13:51:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/maven/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Belajar Pemrograman Kotlin Menggunakan Netbeans</title>
@@ -15,176 +18,12 @@
       <pubDate>Mon, 19 Jun 2017 13:51:39 +0800</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-kotlin-menggunakan-netbeans/</guid>
-      <description>
-
-&lt;p&gt;Pada tulisan sebelumnya kita sudah &lt;a href=&#34;https://www.petanikode.com/pemrograman-kotlin-di-linux/&#34;&gt;belajar pemrograman Kotlin&lt;/a&gt; menggunakan
-Intellij dan kompilasi secara manual melalui terminal.&lt;/p&gt;
-
-&lt;p&gt;Pemrograman Kotlin memang resmi didukung pada Intellij. Namun, bisa juga dilakukan
-di Netbeans dan Eclipse.&lt;/p&gt;
-
-&lt;p&gt;Bagaimana caranya?&lt;/p&gt;
-
-&lt;p&gt;Mari kita bahas&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;instalasi-maven-untuk-pemrograman-kotlin-di-netbeans&#34;&gt;Instalasi Maven untuk Pemrograman Kotlin di Netbeans&lt;/h2&gt;
-
-&lt;p&gt;Maven meruapakan program untuk manajemen proyek Java yang bertugas mengurus
-segala keperluan &lt;em&gt;library&lt;/em&gt; pada proyek.&lt;/p&gt;
-
-&lt;p&gt;Maven dibutuhkan untuk men-download semua &lt;em&gt;library&lt;/em&gt; yang diperlukan oleh Kotlin
-agar dapat digunakan pada Netbeans.&lt;/p&gt;
-
-&lt;p&gt;Install Maven di Linux dengan perintah ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install maven
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, coba periksa versi Maven yang terinstal dengan perintah &lt;code&gt;mvn -version&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/versi-maven.png&#34; alt=&#34;Periksa Versi Maven yang terinstall&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;instalasi-plugin-kotlin-untuk-netbeans&#34;&gt;Instalasi Plugin Kotlin untuk Netbeans&lt;/h2&gt;
-
-&lt;p&gt;Untuk melakukan pemrograman Kotlin dengan IDE Netbeans, kita harus menginstal
-Plugin tambahan untuk Kotlin.&lt;/p&gt;
-
-&lt;p&gt;Silahkan download plugin-nya di &lt;a href=&#34;http://plugins.netbeans.org/plugin/68590/kotlin&#34;&gt;plugins.netbeans.org&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/download-plugin-kotlin.png&#34; alt=&#34;Download Plugins kotlin untuk netbeans&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pilih sesuai dengan versi Netbeans yang kamu gunakan (saya sendiri menggunakan versi 8.1).&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, buka Netbeans dan masuk ke menu &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Plugins&lt;/strong&gt;
-dan buka Tab &lt;strong&gt;Downloaded&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/plugins-netbeans.png&#34; alt=&#34;Menambahkan Plugins Netbeans&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Klik &lt;strong&gt;Add Plugins&amp;hellip;&lt;/strong&gt;, kemudian cari plugins yang telah di-download tadi.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/tambah-plugin.png&#34; alt=&#34;Menambahkan Plugins Kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu klik &lt;strong&gt;install&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/install-plugin-kotlin.png&#34; alt=&#34;Install Plugins Kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Maka akan keluar jendela seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/plugin-installer.png&#34; alt=&#34;Install Plugins Kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sepertinya terjadi masalah. Tombol &lt;em&gt;Next&lt;/em&gt; tidak aktif.&lt;/p&gt;
-
-&lt;p&gt;Tenang&amp;hellip; jangan panik!&lt;/p&gt;
-
-&lt;p&gt;Itu disebabkan karena ada plugin yang belum terinstal untuk melengkapi Kotlin.
-Cara mengatasinya, silahkan masuk ke &lt;strong&gt;Plugins&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Settings&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/plugins-settings.png&#34; alt=&#34;Setting Plugins Netbeans&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Aktifkan semua &lt;em&gt;Update Center&lt;/em&gt;, kemudian masuk ke tab &lt;strong&gt;Update&lt;/strong&gt; untuk meng-update
-plugin.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/update-plugin.png&#34; alt=&#34;Setting Plugins Netbeans&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Centang semuanya lalu klik &lt;strong&gt;Update&lt;/strong&gt; dan tunggulah&amp;hellip; &lt;em&gt;(pastikan koneksi internetmu stabil dan cukup cepat)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah selesai meng-update, sekarang kembali lagi ke tab &lt;strong&gt;Downloaded&lt;/strong&gt; untuk
-menginstal plugin Kotlin.&lt;/p&gt;
-
-&lt;p&gt;Sekarang tombol &lt;em&gt;Next&lt;/em&gt; sudah aktif, langsung saja diklik.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/plugin-installer-kotlin.png&#34; alt=&#34;Instalasi Plugins Netbeans&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya, terima persetujuan &lt;em&gt;&amp;ldquo;License Agreement&amp;rdquo;&lt;/em&gt; kemudian klik &lt;strong&gt;Install&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/persetujuan-plugin.png&#34; alt=&#34;Persetujuan Lisensi Plugin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tunggulah beberapa saat. Netbeans sedang men-download plugin&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/netbeans-download-plugin.png&#34; alt=&#34;Netbeans Download Plugin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Di tengah proses download, kita akan diminta untuk verifikasi sertifikat.
-Langsung saja klik &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/verifikasi-sertifikat.png&#34; alt=&#34;Verifikasi Sertifikat&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah instalasi plugin selesai, kita akan diminta untuk me-restart Netbeans.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/install-plugin-selesai.png&#34; alt=&#34;Instalasi Plugin Selesai&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selesai, sekarang kita bisa memrogram Kotlin di dalam Netbeans.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-proyek-kotlin-di-netbeans&#34;&gt;Membuat Proyek Kotlin di Netbeans&lt;/h2&gt;
-
-&lt;p&gt;Buka menu &lt;strong&gt;File&lt;/strong&gt;-&amp;gt;&lt;strong&gt;New Project&amp;hellip;&lt;/strong&gt; untuk membuat proyek baru di Netbeans.
-Setelah itu, pilih &lt;strong&gt;Maven&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Java Application&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/membuat-proyek-kotlin-netbeans.png&#34; alt=&#34;Membuat Proyek Kotlin di Netbeans&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikan nama proyeknya seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/nama-proyek.png&#34; alt=&#34;Memberikan nama proyek&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Maka sekarang kita punya proyek baru, tapi kode-nya masih kosong.&lt;/p&gt;
-
-&lt;p&gt;Silahkan tambahkan file kotlin dengan klik kanan pada &lt;em&gt;source package&lt;/em&gt;, kemudian
-pilih &lt;strong&gt;New&amp;hellip;&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Kotlin File&amp;hellip;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/tambah-file-kotlin.png&#34; alt=&#34;Menambahkan file kotlin di proyek&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikan nama filenya dengan &lt;code&gt;Main&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/nama-file.png&#34; alt=&#34;Memberikan nama file kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, isi kode &lt;code&gt;Main.kt&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-kotlin&#34;&gt;package com.petanikode.hello.kotlin
-
-fun main(args: Array&amp;lt;String&amp;gt;) {
-    println(&amp;quot;Hello World!&amp;quot;)
-    println(&amp;quot;Coding Kotlin dari Netbeans&amp;quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kode kotlin-nya akan terdeteksi error!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/kode-kotlin.png&#34; alt=&#34;Kode Kotlin di Netbeans&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tenang&amp;hellip;jangan panik!&lt;/p&gt;
-
-&lt;p&gt;Ini terjadi karena kita beru pertama kali menulis kotlin di Netbeans. Karena itu,
-silahkan lakukan &lt;em&gt;Clean and Build&lt;/em&gt; dulu.&lt;/p&gt;
-
-&lt;p&gt;Klik kanan pada proyeknya, lalu pilih &lt;strong&gt;Clean and Build&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/clean-and-build.png&#34; alt=&#34;Kode Kotlin di Netbeans&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Maka Maven akan men-download semua &lt;em&gt;library&lt;/em&gt; yang diperlukan.&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;in&#34; dir=&#34;ltr&#34;&gt;lagi nyoba compile kotlin di netbeans &lt;a href=&#34;https://t.co/vGRE2j0qSA&#34;&gt;pic.twitter.com/vGRE2j0qSA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Petani Kode (@petanikode) &lt;a href=&#34;https://twitter.com/petanikode/status/874186872947326977&#34;&gt;June 12, 2017&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Tunggulah beberapa saat&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Setelah selesai, coba &lt;strong&gt;&lt;em&gt;Run&lt;/em&gt;&lt;/strong&gt; programnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/kotlin-netbeans/run-program-kotlin-netbeans.png&#34; alt=&#34;Run Program Kotlin di Netbeans&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berhasil! Program pertama kita sudah bisa dikompilasi di Netbeans.&lt;/p&gt;
-
-&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir kata&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;Bagaimana, mudah bukan&amp;hellip;?&lt;/p&gt;
-
-&lt;p&gt;Pemrograman Kotlin di Netbeans sepertinya sedikit merepotkan, karena banyak
-yang harus di-download.&lt;/p&gt;
-
-&lt;p&gt;Sebaiknya gunakan Intellij saja yang sudah resmi mendukung untuk pemrograman
-kotlin.&lt;/p&gt;
-
-&lt;!-- Buat yang ingin PDKT sama Kotlin tapi masih malu-malu nginstall Intellij (ciee),
-coba pakai Netbeans :D --&gt;
-</description>
+      <description>Pada tulisan sebelumnya kita sudah belajar pemrograman Kotlin menggunakan Intellij dan kompilasi secara manual melalui terminal.
+Pemrograman Kotlin memang resmi didukung pada Intellij. Namun, bisa juga dilakukan di Netbeans dan Eclipse.
+Bagaimana caranya?
+Mari kita bahas&amp;hellip;
+Instalasi Maven untuk Pemrograman Kotlin di Netbeans Maven meruapakan program untuk manajemen proyek Java yang bertugas mengurus segala keperluan library pada proyek.
+Maven dibutuhkan untuk men-download semua library yang diperlukan oleh Kotlin agar dapat digunakan pada Netbeans.</description>
     </item>
     
   </channel>

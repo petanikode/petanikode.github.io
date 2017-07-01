@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C&#43;&#43; on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/c&#43;&#43;/index.xml</link>
+    <link>https://www.petanikode.com/topik/c&#43;&#43;/</link>
     <description>Recent content in C&#43;&#43; on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/c&#43;&#43;/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Nov 2016 13:23:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/c++/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>7 (Bahasa) Pemrograman yang Dapat Dilakukan Langsung di Ubuntu</title>
@@ -15,296 +18,10 @@
       <pubDate>Sat, 12 Nov 2016 13:23:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/bahasa-pemrograman-di-ubuntu/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;pemrograman+ubuntu+-+petanikode.png&#34;
-    src=&#34;http://4.bp.blogspot.com/-MoeiWG7b-OA/WCM7fgsQeXI/AAAAAAAADaw/G4rOFwrzC-kH_YwuXbXGxWkOv35SMBSmACK4B/s1600/pemrograman%2Bubuntu%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Hallo kawan, kali ini saya akan membahas 7 bahasa pemrograman yang dapat dilakukan
-langsung di Ubuntu tanpa menginstal apapun.&lt;/p&gt;
-
-&lt;p&gt;Eksperimen ini saya lakukan di Ubuntu 16.04 64bit Live CD. Saya sudah disediakan
-teks editor seperti Gedit, Vi, dan Nano untuk menulis kode.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/6-teks-editor-berbasis-teks-cli-di-linux-untuk-menulis-kode/&#34;&gt;6 Teks Editor Berbasis Teks (CLI) di Linux untuk Menulis Kode&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Adapun 7 bahasa pemrograman yang dapat dilakukan langsung di Ubuntu adalah sebagai berikut.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-pemrograman-shell&#34;&gt;1. Pemrograman Shell&lt;/h2&gt;
-
-&lt;p&gt;Skrip Shell merupakan sebuah program yang bisa dijalankan di &lt;em&gt;Unix Shell&lt;/em&gt; atau
-&lt;em&gt;Command Line Interpreter&lt;/em&gt; (CLI). Shell itu sendiri adalah sebuah antarmuka
-untuk mengakses kernel dari sebuah sistem operasi.&lt;/p&gt;
-
-&lt;p&gt;Contoh program shell:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/sh
-echo &amp;quot;Hello World!&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Program ini akan menghasilkan output seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;780&#34;
-    height=&#34;183&#34;
-    alt=&#34;Eksekusi program shell&#34;
-    src=&#34;http://4.bp.blogspot.com/-m7hFZ-tJ3ak/WB7fdpOhswI/AAAAAAAADYk/Wb9CT9L2L8Q_DvxFgvzjcl3Tj-0_0GIvgCK4B/s1600/Pemrograman%2BShell%2Bdi%2BUbuntu%2B-%2BPetani%2BKode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-pemrograman-c&#34;&gt;2. Pemrograman C&lt;/h2&gt;
-
-&lt;p&gt;Bahasa pemrograman C merupakan bahasa pemrograman yang diciptakan oleh Dennies Ritchie.
-Bahasa yang umurnya cukup tua ini, masih digunakan sampai saat ini.
-Bahkan, kernel Linux sendiri ditulis dengan bahasa pemrograman C.&lt;/p&gt;
-
-&lt;p&gt;Untuk melakukan pemrograman C di Linux,
-kita dapat memanfaatkan kompilator &lt;code&gt;gcc&lt;/code&gt; &lt;em&gt;(GNU C Compiler)&lt;/em&gt; atau &lt;em&gt;(GNU Collection Compiler)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Perintah untuk kompilasi program C:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;gcc kode_program.c -o nama_program
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perintah untuk menjalankan program:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;./nama_program
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh kode program:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-void main(){
-    printf(&amp;quot;Hello World\n&amp;quot;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kompilasi dan Eksekusi:&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;774&#34;
-    height=&#34;214&#34;
-    alt=&#34;Kompilasi dan eksekusi program C di Ubuntu&#34;
-    src=&#34;http://2.bp.blogspot.com/-nbZsTPDXF0M/WB7g0OhdSvI/AAAAAAAADYw/snPbfty7yncPioFF4LVXDWxPBtQM2gBZgCK4B/s1600/Program%2BHellow%2BWorld%2Bdi%2BUbuntu%2B-%2BPetani%2BKode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/pemrograman-c-di-linux-persiapan-dan-percobaan/&#34;&gt;Pemrograman C di Linux, Persiapan dan Percobaan&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-pemrograman-c&#34;&gt;3. Pemrograman C++&lt;/h2&gt;
-
-&lt;p&gt;Bahasa pemrograman C++ merupakan bahasa pengembangan dari bahasa C.
-Bahasa C++ mendukung pemrograman berorientasikan objek &lt;em&gt;(Object Oriented Programming)&lt;/em&gt;,
-sedangkan bahasa C tidak.&lt;/p&gt;
-
-&lt;p&gt;Itulah perbedaan yang cukup terlihat dari bahasa C dengan C++.
-Kemudian untuk melakukan pemrograman C++ di Linux, kita dapat menggunakan kompilator &lt;code&gt;g++&lt;/code&gt;.
-Kompilator &lt;code&gt;g++&lt;/code&gt; masih satu paket dengan kompilator &lt;code&gt;gcc&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Perintah kompilasi program C++:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;g++ kode_program.cpp -o nama_program
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Cara eksekusi:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;./nama_program
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh Program:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;iostream&amp;gt;
-
-using namespace std;
-
-int main(){
-    cout &amp;lt;&amp;lt; &amp;quot;Hello pak Petani Kode&amp;quot; &amp;lt;&amp;lt; endl;
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasil kompilasi dan eksekusi:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;762&#34;
-    height=&#34;207&#34;
-    alt=&#34;Kompilasi dan eksekusi program C++ di Ubuntu&#34;
-    src=&#34;http://2.bp.blogspot.com/-AREEOLWRFeI/WB7lVUZ4SOI/AAAAAAAADY8/NFeWxOJvtHcoVAwQWyHFCo_I4Wa8jTl_wCK4B/s1600/kompilasi%2Bdan%2Beksekusi%2Bprogram%2Bc%252B%252B%2Bdi%2BUbuntu%2B-%2BPetani%2BKode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-pemrograman-python&#34;&gt;4. Pemrograman Python&lt;/h2&gt;
-
-&lt;p&gt;Python merupakan bahasa pemrograman skrip &lt;em&gt;(scripting)&lt;/em&gt; yang diciptakan oleh
-Guido Van Rossum. Python kadang digunakan untuk membangun aplikasi Linux baik
-berbasis CLI maupun GUI. Ubuntu sendiri sudah membawa Python dalam distribusinya.
-Jadi, kita tidak perlu menginstal Python untuk melakukan pemrograman Python.&lt;/p&gt;
-
-&lt;p&gt;Cara membuka interpreter Python, ketik &lt;code&gt;python&lt;/code&gt; di terminal:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;765&#34;
-    height=&#34;204&#34;
-    alt=&#34;Membuka Interpreter Python di Ubuntu&#34;
-    src=&#34;http://1.bp.blogspot.com/-sLxG3V7saGc/WB7m5sx-lPI/AAAAAAAADZM/fM9k8b4qqh0g1LfzTkurnfPB74_Wr3c_gCK4B/s1600/Membuka%2BInterpreter%2BPython%2Bdi%2BUbuntu%2B-%2BPetani%2BKode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Cara mengeksekusi sebuah skrip python:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;python nama_skrip.py
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh program:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;print &amp;quot;Hello World!&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasil eksekusi:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;759&#34;
-    height=&#34;193&#34;
-    alt=&#34;Eksekusi program Python di Ubuntu&#34;
-    src=&#34;http://2.bp.blogspot.com/-ledNTy79-xs/WB7nmTG4qlI/AAAAAAAADZU/3UniTiau_AcGNZXsNpPeK2ZLgt5VgFzJACK4B/s1600/Eksekusi%2Bprogram%2BPython%2Bdi%2BUbuntu%2B-%2BPetani%2BKode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Baca juga:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/2014/02/memulai-pemrograman-python-di-linux/&#34;&gt;Memulai Pemrograman Python di Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/2014/02/mengenal-variabel-dan-tipe-data-di-python/&#34;&gt;Mengenal Variabel dan Tipe Data Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;5-pemrograman-perl&#34;&gt;5. Pemrograman Perl&lt;/h2&gt;
-
-&lt;p&gt;Bahasa pemrograman Perl dikembangkan pertama kali oleh Larry Wall pada tahun
-1987 sebagai bahasa skrip &lt;em&gt;(scripting)&lt;/em&gt; untuk Unix. Tujuannya untuk memudahkan
-proses dalam pembuatan laporan.&lt;/p&gt;
-
-&lt;p&gt;Sampai saat ini Perl sudah banyak mengalami preubahan dan revisi.
-Ubuntu juga membawa Perl pada distribusinya. Jadi, kita bisa langsung
-menggunakannya seperti Python.&lt;/p&gt;
-
-&lt;p&gt;Cara eksekusi skrip perl:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;perl nama_skrip.pl
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh Program:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/perl
-
-print &amp;quot;Hello World!\n&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasil eksekusi:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;661&#34;
-    height=&#34;163&#34;
-    alt=&#34;Eksekusi program perl di ubuntu&#34;
-    src=&#34;http://2.bp.blogspot.com/-wgkB-AstwD8/WB73BEoVy9I/AAAAAAAADZo/RoCf1vZyut0a8U9SiP8Ac9MidVO9tVdowCK4B/s1600/Eksekusi%2Bprogram%2Bperl%2Bdi%2Bubuntu%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;6-pemrograman-javascript&#34;&gt;6. Pemrograman Javascript&lt;/h2&gt;
-
-&lt;p&gt;Javascript merupakan bahasa yang tengah populer pada tahun ini. Sekarang
-javascript tidak hanya digunakan di browser, javascript juga digunakan di server,
-mobile, jaringan, dan desktop.&lt;/p&gt;
-
-&lt;p&gt;Ubuntu sendiri membawa Mozilla Firefox pada distribusinya, dengan demikian
-kita bisa melakukan pemrograman Javascript melalui Mozilla Firefox.&lt;/p&gt;
-
-&lt;p&gt;Contoh Program:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;title&amp;gt;Hello World JS&amp;lt;/title&amp;gt;
-    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-        console.log(&amp;quot;hello world! dari Console&amp;quot;);
-        document.write(&amp;quot;Hello World!&amp;quot;);
-    &amp;lt;/script&amp;gt;
-&amp;lt;/head&amp;gt;
-
-&amp;lt;body&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasil di browser:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;803&#34;
-    height=&#34;396&#34;
-    alt=&#34;Percobaan Javascript di Browser FireFox Ubuntu&#34;
-    src=&#34;http://2.bp.blogspot.com/-Kl9xM4qJfGU/WB77xxkq5wI/AAAAAAAADZ4/wBFtH2InxXwDIZETet0_ZoeidOCJ_oOngCK4B/s1600/Percobaan%2BJavascript%2Bdi%2BBrowser%2BFireFox%2BUbuntu%2B-%2BPetani%2BKode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/2015/03/langkah-awal-belajar-javascript/&#34;&gt;Langkah Awal Belajar Javascript&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;7-pemrograman-awk&#34;&gt;7. Pemrograman AWK&lt;/h2&gt;
-
-&lt;p&gt;AWK merpuakan bahasa pemrograman yang didesain untuk memproses teks dan
-biasanya digunakan untuk ekstraksi data dan pembuatan laporan. AWK menjadi
-fitur stadar sistem operasi &lt;em&gt;Unix-like&lt;/em&gt;. Oleh karena itu, Ubuntu juga
-menyediakan AWK pada distribusinya.&lt;/p&gt;
-
-&lt;p&gt;Cara eksekusi program AWK&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;awk -f nama_skrip
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh program:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/awk -f
-
-BEGIN {
-    print &amp;quot;Hello World!&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasil eksekusi:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;680&#34;
-    height=&#34;140&#34;
-    alt=&#34;Eksekusi skrip AWK di Ubuntu&#34;
-    src=&#34;http://2.bp.blogspot.com/-k2zb4Ffdn2Q/WB8EAsYKR9I/AAAAAAAADaQ/PZ9ILcNN5w0XjYnSOtErgMw75l6ZY8XEwCK4B/s1600/Eksekusi%2Bskrip%2BAWK%2Bdi%2BUbuntu%2B-%2BPetani%2BKode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah tujuh bahasa pemrograman yang dapat dilakukan langsung di Ubuntu.
-Mungkin masih ada lagi yang belum dicantumkan. Silahkan ditambahkan di komentar.&lt;/p&gt;
-
-&lt;p&gt;Referensi:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.perl.org/&#34;&gt;https://www.perl.org/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Perl&#34;&gt;https://en.wikipedia.org/wiki/Perl&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Shell_script&#34;&gt;https://en.wikipedia.org/wiki/Shell_script&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/AWK&#34;&gt;https://en.wikipedia.org/wiki/AWK&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Hallo kawan, kali ini saya akan membahas 7 bahasa pemrograman yang dapat dilakukan langsung di Ubuntu tanpa menginstal apapun.
+Eksperimen ini saya lakukan di Ubuntu 16.04 64bit Live CD. Saya sudah disediakan teks editor seperti Gedit, Vi, dan Nano untuk menulis kode.
+Baca juga: 6 Teks Editor Berbasis Teks (CLI) di Linux untuk Menulis Kode
+Adapun 7 bahasa pemrograman yang dapat dilakukan langsung di Ubuntu adalah sebagai berikut.</description>
     </item>
     
     <item>
@@ -313,8 +30,9 @@ Mungkin masih ada lagi yang belum dicantumkan. Silahkan ditambahkan di komentar.
       <pubDate>Fri, 13 Feb 2015 09:29:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-qt-pengenalan/</guid>
-      <description>&lt;p&gt;Program &lt;samp&gt;Hello World&lt;/samp&gt; seringkali dibuat saat pertama kali mempelajari suatu bahasa pemrograman. Program ini begitu legendaris dan populer di dunia pemrograman. Namun, dalam tulisan ini, saya akan mengajak pembaca membuat program &lt;samp&gt;kenalan&lt;/samp&gt; di Qt. Supaya tidak &lt;i&gt;mainstream&lt;/i&gt;.&lt;/p&gt; &lt;a href=&#34;http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Buat sebuah proyek baru bernama &lt;samp&gt;kenalan&lt;/samp&gt;. Silahkan menuju ke menu &lt;i&gt;File&lt;/i&gt;-&gt;&lt;i&gt;New File or Project...&lt;/i&gt; atau tekan tombol &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;N&lt;/kbd&gt;. Kemudian pilih &lt;i&gt;Application&lt;/i&gt;-&gt;&lt;i&gt;Qt Widget Application&lt;/i&gt;, lalu klik tombol &lt;i&gt;Choose...&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-bbLq2cA790A/VNyP6GtlmCI/AAAAAAAABV4/-TQBjXoBk90/s1600/membuat%2Bproyek%2Bbaru%2Bdi%2Bqt.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-bbLq2cA790A/VNyP6GtlmCI/AAAAAAAABV4/-TQBjXoBk90/s1600/membuat%2Bproyek%2Bbaru%2Bdi%2Bqt.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Selanjutnya, menentukan nama proyek dan lokasi penyimpanannya. Berikan nama &lt;samp&gt;kenalan&lt;/samp&gt;, kemudian klik &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt; &lt;a href=&#34;http://4.bp.blogspot.com/-rhkx-lx_nIc/VNyQbD4shSI/AAAAAAAABWA/bQscp9ORrSA/s1600/Menentukan%2Bnama%2Bproyek%2Bdan%2Blokasi%2Bpenyimpanannya.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-rhkx-lx_nIc/VNyQbD4shSI/AAAAAAAABWA/bQscp9ORrSA/s1600/Menentukan%2Bnama%2Bproyek%2Bdan%2Blokasi%2Bpenyimpanannya.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Menentukan &lt;i&gt;kit&lt;/i&gt;, biarkan saja apa adanya kemudian klik &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-t23dDWlD-6c/VNyQ0QWnwuI/AAAAAAAABWI/u5pnytjlvSo/s1600/memilih%2Bkit.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-t23dDWlD-6c/VNyQ0QWnwuI/AAAAAAAABWI/u5pnytjlvSo/s1600/memilih%2Bkit.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Selanjutnya, mengisi informasi kelas. Buatlah kelas dengan &lt;samp&gt;JendelaUtama&lt;/samp&gt;.&lt;/p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-iqnbV9-KLGo/VNyRYk7RkPI/AAAAAAAABWU/F0rWHBeVZzg/s1600/mengisi%2Binformasi%2Bkelas.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-iqnbV9-KLGo/VNyRYk7RkPI/AAAAAAAABWU/F0rWHBeVZzg/s1600/mengisi%2Binformasi%2Bkelas.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Selanjutnya akan tampil informasi rangkuman proyek yang dibuat. Klik &lt;i&gt;Finish&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-1KiptBwhp4U/VNyRxws34qI/AAAAAAAABWc/s_S-RqePWkE/s1600/rangkuman%2Bproyek.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-1KiptBwhp4U/VNyRxws34qI/AAAAAAAABWc/s_S-RqePWkE/s1600/rangkuman%2Bproyek.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Proyek baru-pun tercipta. Silahkan buka berkas &lt;samp&gt;jendelautama.ui&lt;/samp&gt; untuk mendesain tampilan aplikasi.&lt;/p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-iPaWzG35R3A/VNyS5d8rNpI/AAAAAAAABWo/eLnnYKYCcR0/s1600/Proyek%2Bbaru%2Bdi%2BQt.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-iPaWzG35R3A/VNyS5d8rNpI/AAAAAAAABWo/eLnnYKYCcR0/s1600/Proyek%2Bbaru%2Bdi%2BQt.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Masukkan objek &lt;i&gt;QLabel&lt;/i&gt; ke jendela dengan menyeretnya (&lt;i&gt;drag&lt;/i&gt;). Kemudian ganti nilai properti &lt;i&gt;font&lt;/i&gt; dan &lt;i&gt;text&lt;/i&gt; di bagian &lt;i&gt;objek property&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-sfgtSS6NFlE/VNyag33VuTI/AAAAAAAABW4/Uy558dSkMlQ/s1600/menambahkan%2BQLabel.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-sfgtSS6NFlE/VNyag33VuTI/AAAAAAAABW4/Uy558dSkMlQ/s1600/menambahkan%2BQLabel.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Silahkan mainkan imajinasi Anda. Saya sendiri merubah beberapa properti. Saya merubah properti teks &lt;i&gt;QLabel&lt;/i&gt; yang pertama (&lt;samp&gt;label&lt;/samp&gt;) menjadi &lt;samp&gt;Assalamualaikum&lt;/samp&gt; dan memperbesar ukuran fontanya.&lt;/p&gt; &lt;a href=&#34;http://1.bp.blogspot.com/-0UrUHwTgyhA/VNydHrm4_EI/AAAAAAAABXE/uzB3ayPXbO4/s1600/Merubah%2Bproperti%2BQlabel1.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-0UrUHwTgyhA/VNydHrm4_EI/AAAAAAAABXE/uzB3ayPXbO4/s1600/Merubah%2Bproperti%2BQlabel1.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Sedangkan pada &lt;i&gt;QLabel&lt;/i&gt; yang kedua (&lt;samp&gt;label_2&lt;/samp&gt;), saya merubah properti teksnya dan &lt;i&gt;wordWrap&lt;/i&gt; menjadi &lt;i&gt;true&lt;/i&gt; (dicentang) supaya teks dapat tampil lebih dari satu baris.&lt;/p&gt; &lt;a href=&#34;http://2.bp.blogspot.com/-jPj1kMrgegE/VNyeuAcD9xI/AAAAAAAABXQ/I_nKCfwP7S8/s1600/Merubah%2Bproperti%2BQlabel2.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-jPj1kMrgegE/VNyeuAcD9xI/AAAAAAAABXQ/I_nKCfwP7S8/s1600/Merubah%2Bproperti%2BQlabel2.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Sekarang coba jalankan program dengan menglik tombol &lt;i&gt;Run&lt;/i&gt; atau menekan tombol &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;.&lt;/p&gt; &lt;a href=&#34;http://1.bp.blogspot.com/-N8QSReAMz7A/VNyp9vC37yI/AAAAAAAABX4/glNWkO07Czk/s1600/program%2BQt%2Bpertama%2B-%2Bkenalan.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-N8QSReAMz7A/VNyp9vC37yI/AAAAAAAABX4/glNWkO07Czk/s1600/program%2BQt%2Bpertama%2B-%2Bkenalan.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;O, ya, saat menjalankan program ini, saya mendapatkan galat &lt;samp&gt;:-1: error: cannot find -lGL&lt;/samp&gt;. Karena pustaka &lt;i&gt;openGL&lt;/i&gt; belum diinstal di komputer saya. Silahkan baca solusinya di &lt;a href=&#34;http://petanikode.blogspot.com/2015/02/solusi-error-cannot-find-lgl-di-qt-linux.html&#34; rel=&#34;dofollow&#34;&gt;tulisan ini&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Program Hello World seringkali dibuat saat pertama kali mempelajari suatu bahasa pemrograman. Program ini begitu legendaris dan populer di dunia pemrograman. Namun, dalam tulisan ini, saya akan mengajak pembaca membuat program kenalan di Qt. Supaya tidak mainstream.
+ Buat sebuah proyek baru bernama kenalan. Silahkan menuju ke menu File-New File or Project... atau tekan tombol Ctrl+N. Kemudian pilih Application-Qt Widget Application, lalu klik tombol Choose....
+ Selanjutnya, menentukan nama proyek dan lokasi penyimpanannya.</description>
     </item>
     
     <item>
@@ -323,8 +41,16 @@ Mungkin masih ada lagi yang belum dicantumkan. Silahkan ditambahkan di komentar.
       <pubDate>Mon, 09 Feb 2015 21:16:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-qt-pengenalan-dan-persiapan/</guid>
-      <description>&lt;p&gt;&lt;p&gt;Assalamualaikum wr. wb., Selamat datang di panduan instalasi Qt di linux. Di tulisan ini saya akan membahas langkah-langkah instalasi Qt di linux. Qt yang akan diinstal adalah Qt versi 5.4.0. Versi ini merupakan versi terakhir saat ini.&lt;/p&gt; &lt;a href=&#34;http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Sedikit informasi distro linux yang saya gunakan di tulisan ini:&lt;/p&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ardianta@imajinasi:~$ &lt;b&gt;hostnamectl &lt;/b&gt;&lt;br /&gt;   Static hostname: imajinasi&lt;br /&gt;         Icon name: computer-laptop&lt;br /&gt;           Chassis: laptop&lt;br /&gt;           Boot ID: baf18095a96a40fcbd9fc497141c1c41&lt;br /&gt;  Operating System: Ubuntu 14.10&lt;br /&gt;            Kernel: Linux 3.16.0-30-generic&lt;br /&gt;      Architecture: i686&lt;/code&gt;&lt;/pre&gt; &lt;h2&gt;Unduh Qt&lt;/h2&gt;&lt;p&gt;Qt yang akan dipakai adalah Qt &lt;i&gt;Open Source&lt;/i&gt;. Qt &lt;i&gt;Open Source&lt;/i&gt; dapat diunduh di situs resminya (&lt;a href=&#34;http://download.qt.io/archive/qt/5.4/5.4.0/&#34;&gt;qt.io&lt;/a&gt;). Silahkan mengunduh berkas instalator sesui dengan prosesor yang Anda gunakan.&lt;/p&gt;&lt;p&gt;&lt;ul&gt;&lt;li&gt;Berkas: &lt;samp&gt;&lt;a href=&#34;http://download.qt.io/archive/qt/5.4/5.4.0/qt-opensource-linux-x86-5.4.0.run.mirrorlist&#34; target=&#34;_blank&#34;&gt;qt-opensource-linux-x86-5.4.0.run&lt;/a&gt;&lt;/samp&gt; | 32bit&lt;/li&gt;&lt;li&gt;Berkas: &lt;samp&gt;&lt;a href=&#34;http://download.qt.io/archive/qt/5.4/5.4.0/qt-opensource-linux-x64-5.4.0.run.mirrorlist&#34; target=&#34;_blank&#34;&gt;qt-opensource-linux-x64-5.4.0.run&lt;/a&gt;&lt;/samp&gt; | 64bit&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt; &lt;a href=&#34;http://3.bp.blogspot.com/-b_NpXKlm9Oo/VNg_e9womuI/AAAAAAAABRQ/mCbcfrhMxfI/s1600/unduh%2Bqt%2Bopensource.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-b_NpXKlm9Oo/VNg_e9womuI/AAAAAAAABRQ/mCbcfrhMxfI/s1600/unduh%2Bqt%2Bopensource.png&#34; title=&#34;Unduh Qt Open Source di cermin server jepang&#34;/&gt;&lt;/a&gt; &lt;h2&gt;Instalasi Qt&lt;/h2&gt;&lt;p&gt;Setelah diunduh, mari kita mulai menginstal Qt. Pertama, Berikan hak akses untuk mengekseskusi berkas instalator dengan printah &lt;code&gt;chmod&lt;/code&gt;. Kemudian eksekusi berkas instalator dengan akun &lt;samp&gt;root&lt;/samp&gt; atau &lt;samp&gt;sudo&lt;/samp&gt;.&lt;/p&gt; &lt;a href=&#34;http://1.bp.blogspot.com/-SSHZhgSNm0o/VNhKEstVCcI/AAAAAAAABRg/DgyKIZGntJw/s1600/instalasi%2BQt.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-SSHZhgSNm0o/VNhKEstVCcI/AAAAAAAABRg/DgyKIZGntJw/s1600/instalasi%2BQt.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Kemudian, jendela instalasi Qt akan muncul, klik &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-2NPv1nlgaUE/VNhKg99npII/AAAAAAAABRo/XaBlSrAzuBM/s1600/1%2BQt%2BSetup.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-2NPv1nlgaUE/VNhKg99npII/AAAAAAAABRo/XaBlSrAzuBM/s1600/1%2BQt%2BSetup.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Menentukan lokasi instalasi Qt, klik saja &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-OQ93y6bCrxM/VNhK1O8kwbI/AAAAAAAABRw/mwAJ0fdD_I0/s1600/2%2BLokasi%2Bberkas%2BQt.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-OQ93y6bCrxM/VNhK1O8kwbI/AAAAAAAABRw/mwAJ0fdD_I0/s1600/2%2BLokasi%2Bberkas%2BQt.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Memilih komponen yang akan diinstal, klik saja &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-5cT0_m8_FrI/VNhLArgpwPI/AAAAAAAABR4/SrPakfVRA1w/s1600/3%2BKomponen%2Byang%2Bakan%2Bdiinstal.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-5cT0_m8_FrI/VNhLArgpwPI/AAAAAAAABR4/SrPakfVRA1w/s1600/3%2BKomponen%2Byang%2Bakan%2Bdiinstal.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Persetujuan lisensi, pilih &amp;lsquo;&lt;i&gt;I have read and agree&amp;hellip;&lt;/i&gt;,&amp;rsquo; kemudian klik &lt;i&gt;Next&lt;/i&gt;&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4W1KRFdTgTs/VNhLNC69YRI/AAAAAAAABSA/Fq84_ii4lnI/s1600/4%2BPersetujuan.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-4W1KRFdTgTs/VNhLNC69YRI/AAAAAAAABSA/Fq84_ii4lnI/s1600/4%2BPersetujuan.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Qt siap diinstal, klik tombol &lt;i&gt;Install&lt;/i&gt; untuk memulai instalasi.&lt;/p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-JVAEAVP1MMU/VNhLdID4ipI/AAAAAAAABSI/fwPXdod7oo4/s1600/5%2BInstalasi%2Bsiap.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-JVAEAVP1MMU/VNhLdID4ipI/AAAAAAAABSI/fwPXdod7oo4/s1600/5%2BInstalasi%2Bsiap.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Tunggu sampai instalasi selesai, kemudian klik &lt;i&gt;Next&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-UzTIFZ-KzZI/VNhLt3WekXI/AAAAAAAABSQ/gL3f1V8E39w/s1600/6%2Binstalasi%2Bselesai.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-UzTIFZ-KzZI/VNhLt3WekXI/AAAAAAAABSQ/gL3f1V8E39w/s1600/6%2Binstalasi%2Bselesai.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Alhamdulillah, instalasi selesai, klik &lt;i&gt;Finish&lt;/i&gt;&lt;/p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-0U1KqdjuBss/VNhL53ytgbI/AAAAAAAABSY/OuUFKhtZg-w/s1600/7%2BFinish.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-0U1KqdjuBss/VNhL53ytgbI/AAAAAAAABSY/OuUFKhtZg-w/s1600/7%2BFinish.png&#34; /&gt;&lt;/a&gt; &lt;p&gt;Cobalah membuka Qt melalui &lt;i&gt;Menu&lt;/i&gt; -&amp;gt; &lt;i&gt;Development&lt;/i&gt;.&lt;/p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-tPwoxzj-A68/VNhMbDep9oI/AAAAAAAABSk/8nDSqcGsOj4/s1600/Qt%2Bdi%2BXubuntu.png&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-tPwoxzj-A68/VNhMbDep9oI/AAAAAAAABSk/8nDSqcGsOj4/s1600/Qt%2Bdi%2BXubuntu.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Assalamualaikum wr. wb., Selamat datang di panduan instalasi Qt di linux. Di tulisan ini saya akan membahas langkah-langkah instalasi Qt di linux. Qt yang akan diinstal adalah Qt versi 5.4.0. Versi ini merupakan versi terakhir saat ini.
+ Sedikit informasi distro linux yang saya gunakan di tulisan ini:
+ardianta@imajinasi:~$ hostnamectl 
+Static hostname: imajinasi
+Icon name: computer-laptop
+Chassis: laptop
+Boot ID: baf18095a96a40fcbd9fc497141c1c41
+Operating System: Ubuntu 14.10
+Kernel: Linux 3.16.0-30-generic
+Architecture: i686 Unduh QtQt yang akan dipakai adalah Qt Open Source.</description>
     </item>
     
   </channel>

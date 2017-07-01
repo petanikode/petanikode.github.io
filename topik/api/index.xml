@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Api on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/api/index.xml</link>
+    <link>https://www.petanikode.com/topik/api/</link>
     <description>Recent content in Api on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/api/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Feb 2017 20:12:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/api/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Bahaya! Password dan Token API Bisa Dicuri dengan Sangat Mudah di Github</title>
@@ -15,185 +18,9 @@
       <pubDate>Wed, 15 Feb 2017 20:12:19 +0800</pubDate>
       
       <guid>https://www.petanikode.com/password-dan-token-api-bisa-dicuri-di-github/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;github-remove-password-petanikode.jpg&#34;
-    src=&#34;https://1.bp.blogspot.com/-jXRLtOGiGXs/WKSVce4PaDI/AAAAAAAAD_o/tMWKujJUoXwrKxbJBI9QHe2XlNuzQBTHACPcB/s1600/github-remove-password-petanikode.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Tidak perlu kemampuan khusus, tidak pelu &lt;em&gt;tools&lt;/em&gt; yang canggih, hanya bermodal
-kata kunci, kita sudah bisa mencuri password dan token API di Github. Teknik
-ini mirip seperti Google Dork.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Peringatan&lt;/strong&gt;: Tulisan ini bukan untuk mengajarkan anda menjadi pencuri dan
-melakukan perusakan, melainkan untuk berbagi pengetahuan. Agar developer
-semakin teliti dan berhati-hati dalam melakukan &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;password-dan-token-api-dalam-kode&#34;&gt;Password dan Token API dalam Kode&lt;/h2&gt;
-
-&lt;p&gt;Bayangkan kita lagi mengerjakan proyek web dengan &lt;a href=&#34;https://www.petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt;. Nanti
-kalau sudah jadi, kodenya akan kita sebar di Github dengan repositori publik.&lt;/p&gt;
-
-&lt;p&gt;Lalu, ditengah-tengah penulisan kode ini, kita melakukan &lt;em&gt;testing&lt;/em&gt; dengan konfigurasi
-&lt;em&gt;production&lt;/em&gt; dari server yang sudah kita sewa. Kira-kira konfigurasinya akan
-seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-// file: config.php
-
-$dbhost = &amp;quot;mysql.petanikode.com&amp;quot;;
-$dbuser = &amp;quot;petanikode&amp;quot;;
-$dbpass = &amp;quot;kopi&amp;quot;;
-$dbname = &amp;quot;petanikode_web&amp;quot;;
-
-$api_token = &amp;quot;09vasd9a7sdny7asdwqmnbe&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian kita melakukan &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
-git commit -m &amp;quot;blablablabla&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Beberapa saat kemudian, kode sudah hampir jadi dan siap untuk dipublikasikan ke
-Github. Lalu kita menghapus password pada konfigurasi yang tadi, agar tidak diketahui
-orang.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-// file: config.php
-
-$dbhost = &amp;quot;YOUR DB HOST&amp;quot;;
-$dbuser = &amp;quot;YOUR DB USERNAME&amp;quot;;
-$dbpass = &amp;quot;YOUR DB PASS&amp;quot;;
-$dbname = &amp;quot;YOUR DB NAME&amp;quot;;
-
-$api_token = &amp;quot;YOUR API KEY&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu melakukan &lt;em&gt;commit&lt;/em&gt; lagi.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
-git commit -m &amp;quot;remove password&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian melakukan &lt;em&gt;push&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nah! Di sinilah letak kesalahan fatalnya.&lt;/p&gt;
-
-&lt;p&gt;Tunggu sebantar, maksudnya apa?
-Saya kan sudah menghapus password dan token API dalam kode. Kesalahan fatal
-bagaimana maksudnya?&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;berburu-password-dan-token-api-di-github&#34;&gt;Berburu Password dan Token API di Github&lt;/h2&gt;
-
-&lt;p&gt;Berdasarkan kronologi cerita di atas, si Developer secara tidak sadar sudah
-menyebar password dan token API-nya di Github. Perhatikan saja pada &lt;em&gt;commit&lt;/em&gt;
-&lt;strong&gt;&amp;ldquo;remove password&amp;rdquo;&lt;/strong&gt;. Pada saat itu dilakukan, Git akan menyimpan perubahan yang ia lakukan.&lt;/p&gt;
-
-&lt;p&gt;Lalu seseorang mencari di Github dengan kata kunci &lt;strong&gt;&amp;ldquo;remove password&amp;rdquo;&lt;/strong&gt;, dan
-boom! Lihatlah apa yang ditemukan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1147&#34;
-    height=&#34;631&#34;
-    alt=&#34;Search+-+remove+password+-+github+-+petanikode.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-7dZKO50Nk8Y/WKRlNmQrLxI/AAAAAAAAD98/ZVAWYQ24Igsg5mMPAjCnALTrkp8ebmU5QCPcB/s1600/Search%2B-%2Bremove%2Bpassword%2B-%2Bgithub%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Coba lihat salah satu.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;758&#34;
-    height=&#34;436&#34;
-    alt=&#34;password+yang+dibagikan+di+github.png&#34;
-    src=&#34;https://1.bp.blogspot.com/-giPYQqSeGjw/WKRmEoZ-B3I/AAAAAAAAD-Q/TnplB4O0JgYol7FSnRF-dJ0uLRf2Hp8rACPcB/s1600/password%2Byang%2Bdibagikan%2Bdi%2Bgithub.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Lihat, sekarang sudah tahu kan kesalahan fatalnya. Oke, mari kita coba tes.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1366&#34;
-    height=&#34;743&#34;
-    alt=&#34;testing+server+hasil+curian.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-3k5ngoYU3fs/WKRnLXmtZPI/AAAAAAAAD-k/e2AIfgliihISqWYUsNkjpjEyC92OVT1nwCPcB/s1600/testing%2Bserver%2Bhasil%2Bcurian.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Whihihi :smile: bisa.&lt;/p&gt;
-
-&lt;h2 id=&#34;kata-kunci-yang-lain&#34;&gt;Kata Kunci yang Lain&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;add password&lt;/li&gt;
-&lt;li&gt;add .env&lt;/li&gt;
-&lt;li&gt;remove .env&lt;/li&gt;
-&lt;li&gt;delete .env&lt;/li&gt;
-&lt;li&gt;rm .env&lt;/li&gt;
-&lt;li&gt;remove secrets&lt;/li&gt;
-&lt;li&gt;hapus password&lt;/li&gt;
-&lt;li&gt;DriverManager.getConnection(&lt;/li&gt;
-&lt;li&gt;password extension:yaml extension:yml extension:json&lt;/li&gt;
-&lt;li&gt;remove password extension:php&lt;/li&gt;
-&lt;li&gt;I don&amp;rsquo;t know&lt;/li&gt;
-&lt;li&gt;remove credentials&lt;/li&gt;
-&lt;li&gt;Root password&lt;/li&gt;
-&lt;li&gt;Hide password&lt;/li&gt;
-&lt;li&gt;remove api key&lt;/li&gt;
-&lt;li&gt;dll.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;solusi&#34;&gt;Solusi&lt;/h2&gt;
-
-&lt;p&gt;Sebenarnya isu ini sedang ramai diperbincangkan di Hacker News. Orang-orang HN
-&lt;a href=&#34;https://github.com/BinetLoisir/FlipperMap/commit/5a384d9d4658669b9324de7ba933ed5b05911154&#34;&gt;mengomentari&lt;/a&gt; &lt;em&gt;commit&lt;/em&gt; yang dilakukan seperti di atas.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;629&#34;
-    height=&#34;673&#34;
-    alt=&#34;komentar+dari+HN.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-1Ks3Oni8KGY/WKRthVg3pPI/AAAAAAAAD_M/lGS2Laa7J_Q0V57E6PEK47e7W9jhBeQ8QCPcB/s1600/komentar%2Bdari%2BHN.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Solusi yang mereka tawarkan diantaranya:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Masukan file konfigurasi ke dalam &lt;code&gt;.gitignore&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Gunakan &lt;a href=&#34;https://github.com/AGWA/git-crypt&#34;&gt;git-crypt&lt;/a&gt; untuk mengenkripsi data sensitif.&lt;/li&gt;
-&lt;li&gt;Ubah Password&lt;/li&gt;
-&lt;li&gt;Gunakan &lt;a href=&#34;https://github.com/StackExchange/blackbox&#34;&gt;Blackbox&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/removing-sensitive-data-from-a-repository/&#34;&gt;Ikuti saran dari Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
-
-&lt;p&gt;Sekarang kita sudah tahu, bagaimana cara pencurian password dan token API di
-Github. Setidaknya kita bisa berhati-hati agar tidak melakukan kesalahan seperti
-di atas. Bayangkan kalau password server &lt;em&gt;production&lt;/em&gt; yang kita sebar itu milik
-perusahaan atau pemerintah, apa yang akan terjadi?&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;https://news.ycombinator.com/item?id=13650818&#34;&gt;HN&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Tidak perlu kemampuan khusus, tidak pelu tools yang canggih, hanya bermodal kata kunci, kita sudah bisa mencuri password dan token API di Github. Teknik ini mirip seperti Google Dork.
+ Peringatan: Tulisan ini bukan untuk mengajarkan anda menjadi pencuri dan melakukan perusakan, melainkan untuk berbagi pengetahuan. Agar developer semakin teliti dan berhati-hati dalam melakukan commit.
+ Password dan Token API dalam Kode Bayangkan kita lagi mengerjakan proyek web dengan PHP.</description>
     </item>
     
     <item>
@@ -202,445 +29,14 @@ perusahaan atau pemerintah, apa yang akan terjadi?&lt;/p&gt;
       <pubDate>Fri, 09 Sep 2016 14:16:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/api-simsimi-untuk-kendali-bot-telegram/</guid>
-      <description>
-
-&lt;p&gt;Simsimi bisa kita pinjam otaknya untuk mengendalikan bot Telegram.&lt;/p&gt;
-
-&lt;p&gt;Kita bisa mengakses kecerdasan Simsimi dengan API Key/Kunci API/Token.&lt;/p&gt;
-
-&lt;p&gt;Ada dua kunci API/Token yang diberikan oleh simsimi:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Kunci Trial (gratis)&lt;/li&gt;
-&lt;li&gt;Kunci Berbayar&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Kunci &lt;em&gt;trial&lt;/em&gt; hanya berlaku 7 hari dengan batasan 100 request/hari.&lt;/p&gt;
-
-&lt;p&gt;Kalau melewati batas itu, Simsimi tidak mau merespon.&lt;/p&gt;
-
-&lt;p&gt;Tapi tenang saja, ada triknya.&lt;/p&gt;
-
-&lt;p&gt;Nanti saya kasih tahu dibagian akhir panduan ini :smile:.&lt;/p&gt;
-
-&lt;p&gt;Baiklah, mari kita mulai membuat bot Telegram dengan kecerdasan Simsimi.&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-kerja&#34;&gt;Cara Kerja&lt;/h2&gt;
-
-&lt;p&gt;Sebelumnya, perlu diketahui cara komunikasi bot dengan Hook.io dan API Simsimi.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-89RK3vsPeAw/V9FJ-fgPW5I/AAAAAAAADOY/D-R__QHvwzMdNNKsIaNkEU7rzT2hVep7gCK4B/s1600/API%2BSimsimi%2Bdan%2BBot%2BTelegram%2B-%2BPetani%2BKode.png&#34; alt=&#34;Cara komunikasi Bot Telegram dengan Hook.io dan API Simsimi&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Bot mengirim teks (pesan) ke Hook.io, kemudian Hook.io meneruskan request
-tersebut ke Simsimi.&lt;/p&gt;
-
-&lt;p&gt;Simsimi memberikan balasan, kode yang di Hook.io memprosesnya dan mengirim
-balasannya ke Bot.&lt;/p&gt;
-
-&lt;p&gt;Gampang kan?&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Baca Juga:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/cara-membuat-bot-telegram-dengan-layanan-hook.io/&#34;&gt;Cara Membuat Bot Telegram dengan Layanan Hook.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/eksperimen-dengan-api-simsimi/&#34;&gt;Eksperimen dengan API Simsimi&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;bahan-bahan-yang-dibutuhkan&#34;&gt;Bahan-Bahan yang Dibutuhkan&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Token Bot Telegram (&lt;a href=&#34;https://www.petanikode.com/cara-membuat-bot-telegram-dengan-layanan-hook.io/&#34;&gt;Cara mendapatkannya&lt;/a&gt;): fungsinya untuk mengakses Bot Telegram.&lt;/li&gt;
-&lt;li&gt;Akun Hook.io (&lt;a href=&#34;https://hook.io/ardianta?s&#34;&gt;Daftar di sini&lt;/a&gt;): tempat menyimpan kode bot.&lt;/li&gt;
-&lt;li&gt;Kunci API/Token Simsimi (&lt;a href=&#34;http://developer.simsimi.com/api&#34;&gt;Daftar di sini&lt;/a&gt;): fungsinya untuk mengakses kecerdasan Simsimi.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Pastikan sudah menyiapkan semua bahan tersebut.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-service-di-hook-io&#34;&gt;Membuat Service di Hook.io&lt;/h2&gt;
-
-&lt;p&gt;Buatlah sebuah service pada Hook.io (&lt;a href=&#34;https://hook.io/new&#34;&gt;klik di sini&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Name&lt;/em&gt; diisi dengan nama yang diinginkan.&lt;/p&gt;
-
-&lt;p&gt;Sebagai contoh, saya membuat sebuah service bernama &lt;code&gt;iyan-chan&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-hIasWFzSQzg/V9JFX8awRgI/AAAAAAAADOo/q6Jz2sW3op4pgk-47xQ_9AkNWNFU8xrrgCK4B/s1600/Pembuatan%2BService%2Bdi%2BHook.io.png&#34; alt=&#34;Membuat Service di Hook.io&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah selesai, kita akan memiliki server sendiri dengan alamat&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://hook.io/&amp;lt;username&amp;gt;/&amp;lt;nama service&amp;gt;/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh punya saya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://hook.io/ardianta/iyan-chan/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;membuat-variabel-lingkungan&#34;&gt;Membuat Variabel Lingkungan&lt;/h2&gt;
-
-&lt;p&gt;Setelah itu, silahkan buat variabel lingkungan di &lt;a href=&#34;https://hook.io/env&#34;&gt;https://hook.io/env&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Variabel lingkungan berfungsi untuk menampung token dan API Key.&lt;/p&gt;
-
-&lt;p&gt;Ada dua variabel yang perlu dibuat:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;variabel &lt;code&gt;iyan_chan_bot&lt;/code&gt; untuk menyimpan token Bot Telegram&lt;/li&gt;
-&lt;li&gt;variabel &lt;code&gt;simsimi_key&lt;/code&gt; untuk menyimpan token/API Key Simsimi&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/variabel-lingkungan-hookio.png&#34; alt=&#34;Membuat variabel lingkungan hook.io&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;* Abaikan vairabel &lt;code&gt;token_petani_bot&lt;/code&gt;, itu variabel untuk &lt;a href=&#34;https://www.petanikode.com/cara-membuat-bot-telegram-dengan-layanan-hook.io/&#34;&gt;tutorial sebelumnya&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Variabel bersifat &lt;em&gt;case sensitive&lt;/em&gt;, huruf besar dan kecil dibedakan.&lt;/p&gt;
-
-&lt;p&gt;Variabel ini dapat kita akses pada kode dengan objek &lt;code&gt;hook.env&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Lebih jelasnya, silahkan lihat di langkah berikutnya.&lt;/p&gt;
-
-&lt;h2 id=&#34;kode-kendali&#34;&gt;Kode Kendali&lt;/h2&gt;
-
-&lt;p&gt;Buka kembali service yang sudah dibuat.&lt;/p&gt;
-
-&lt;p&gt;Silahkan ganti kode &lt;em&gt;(hook source)&lt;/em&gt; dengan kode berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;module[&#39;exports&#39;] = function iyanChanBot(hook) {
-
-	var request = require(&#39;request&#39;);    
-    var botName = &amp;quot;iyan&amp;quot;; // nama bot, silahkan ganti sesukanya
-    var simiUrl = &#39;http://sandbox.api.simsimi.com/request.p?key=&#39;+hook.env.simsimi_key+&#39;&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=&#39;+hook.params.message.text;
-
-
-    // tulis teks yang dikirim dari Telegram ke Logs
-    console.log(&amp;quot;Telegram: &amp;quot; + hook.params.message.text);
-
-    // buat request ke API Simsimi
-  	request(simiUrl, function (error, response, body) {
-      if (!error &amp;amp;&amp;amp; response.statusCode == 200) {
-         var data = JSON.parse(body);
-
-         // tampilkan balasan dari Simsimi ke Logs
-         console.log(data);
-
-        var pesanBalasan = &amp;quot;&amp;quot;;
-
-        // kode error dari Simsimi
-        // 400-Bad Request.
-		// 401-Unauthorized.
-		// 404-Not found.
-		// 500-Server Error.
-		// 509-melewati batas.
-
-        if(data.result == 509 || data.result == 400 || data.result == 401 || data.result == 404 || data.result == 500 ){
-        	pesanBalasan = botName + &amp;quot; sedang tidur, silahkan hubungi kakak @ardiantapargo!&amp;quot;;
-        } else {
-        	pesanBalasan = data.response;
-
-            // replace teks &amp;quot;simsimi&amp;quot; dengan nama bot
-            pesanBalasan = data.response.replace(/simisimi/g, botName);
-  	        pesanBalasan = data.response.replace(/simsimi/g, botName);
-            pesanBalasan = data.response.replace(/Simsimi/g, botName);      	  
-	        pesanBalasan = data.response.replace(/cimicimi/g, botName);
-        	pesanBalasan = data.response.replace(/Simi/g, botName);
-  			pesanBalasan = data.response.replace(/simi/g, botName);
-        }
-
-        // kirim balasan dari simsimi ke Bot Telegram
-         request
-          .post(&#39;https://api.telegram.org/bot&#39; + hook.env.iyan_chan_bot + &#39;/sendMessage&#39;)
-          .form({
-                &amp;quot;chat_id&amp;quot;: hook.params.message.chat.id,
-                &amp;quot;text&amp;quot;: pesanBalasan
-        });
-
-      }
-    });
-
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;!-- &lt;amp-iframe width=&#34;600&#34; height=&#34;480&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/b67caece3b5ded0a4d958c9fed8adcac&#34;&gt;
-&lt;/amp-iframe&gt; --&gt;
-
-&lt;p&gt;Fungsi utama dari kode di atas adalah menerima dan membuat request.&lt;/p&gt;
-
-&lt;p&gt;Pertama kita akan menerima request dari bot, kemudian request tersebut
-diteruskan ke API Simsimi.&lt;/p&gt;
-
-&lt;p&gt;Setelah mendapatkan balasan dari API simsimi,
-balasan tersebut kita kirim kembali ke bot.&lt;/p&gt;
-
-&lt;p&gt;Perhatikan:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;hook.env.simsimi_key&lt;/code&gt; dan &lt;code&gt;hook.env.iyan_chan_bot&lt;/code&gt; pastikan sama dengan nama variabel lingkungan yang telah dibuat.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, simpan kodenya.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/kode-kendali-bot-di-hookio.png&#34; alt=&#34;Kode Kendali Bot sudah siap&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jangan lupa juga untuk menjalankan service-nya:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/menjalankan-service.png&#34; alt=&#34;Menjalankan Servie Hook.io&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kalau mendapatkan error seperti ini&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/error-saat-menjalankan-service.png&#34; alt=&#34;Error saat menjalankan service&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Abaikan saja.&lt;/p&gt;
-
-&lt;p&gt;Itu karena tidak ada parameter yang diberikan.&lt;/p&gt;
-
-&lt;p&gt;Nanti parameternya berasal dari Bot Telegram.&lt;/p&gt;
-
-&lt;h2 id=&#34;menghubungkan-bot-dengan-hook-io&#34;&gt;Menghubungkan Bot dengan Hook.io&lt;/h2&gt;
-
-&lt;p&gt;Langkah berikutnya menghubungkan Bot dengan Hook.io.&lt;/p&gt;
-
-&lt;p&gt;Kita bisa menggunakan URL berikut untuk melakukannya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://api.telegram.org/bot&amp;lt;TOKEN&amp;gt;/setWebhook?url=https://hook.io/&amp;lt;hook-user&amp;gt;/&amp;lt;hook-name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Silahkan diganti:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;TOKEN&amp;gt;&lt;/code&gt; dengan token bot anda&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;hook-user&amp;gt;&lt;/code&gt; dengan username hook.io anda&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;hook-name&amp;gt;&lt;/code&gt; dengan nama layanan/service hook yang anda buat&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://api.telegram.org/bot247353285:AAHCfe2XSna7zclLalfBq5VCmn3yTzii_zQ/setWebhook?url=https://hook.io/ardianta/iyan-chan/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian, silahkan buka URL tersebut melalui browser.&lt;/p&gt;
-
-&lt;p&gt;Jika mendapatkan balasan seperti ini, maka bot berhasil terhubung dengan layanan hook.io.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-NJWNvnEf3Vg/V8wAe-8k9vI/AAAAAAAADOA/7u1Ezl7Fl5418LAHz49Uu1zm1PZ7xS_jQCK4B/s1600/Respon%2Bberhasil%2Bmengaitkan%2Bhook%2Bdengan%2Bbot%2Btelegram.png&#34; alt=&#34;Menghubungkan Bot dengan Hook.io&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;demo-percobaan&#34;&gt;Demo Percobaan&lt;/h2&gt;
-
-&lt;p&gt;Silahkan chat dengan bot-nya &lt;a href=&#34;https://t.me/iyan_chan_bot&#34;&gt;@iyan_chan_bot&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-eNMhxjFRExs/V9JOMICTWNI/AAAAAAAADPM/Me9uiX9wm7ATgEOrAEoWArpcoRFyxq-mwCK4B/s1600/Percobaan%2Bbot%2Bdengan%2Bapi%2BSimsimi%2B-%2Bpetanikode.jpg&#34; alt=&#34;Demo Percobaan Bot Telegram dengan API Simsimi&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Yohoo!, Bot sudah bisa merespon layaknya Simsimi.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Apa yang harus dilakukan bila Bot tidak merespon?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Pertama coba periksa Logs-nya, apakah ada sesuatu yang ditampilkan di sana?&lt;/p&gt;
-
-&lt;p&gt;Karena kita tadi sudah menggunakan fungsi &lt;code&gt;console.log()&lt;/code&gt; untuk mencetak output ke sana.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/log-bot.png&#34; alt=&#34;Logs Bot di Hook.io&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;yang saya tandai merah adalah &lt;em&gt;logs&lt;/em&gt; error, karena Bot sudah melampaui batas. Alias tidur&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Selain itu, kita bisa menlihat &lt;em&gt;logs&lt;/em&gt; secara &lt;em&gt;realtime&lt;/em&gt; melalui Terminal atau CMD dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;curl -N https://hook.io/ardianta/iyan-chan/logs
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contohnya, simak di video ini.&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/DHgvzjw8fCo&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Hal berikutnya yang perlu dilakukan adalah memeriksa kodenya.&lt;/p&gt;
-
-&lt;p&gt;Apakah ada kode yang salah ketik?&lt;/p&gt;
-
-&lt;p&gt;Apakah ada huruf besar dan huruf kecil yang berbeda?&lt;/p&gt;
-
-&lt;p&gt;Silahkan diteliti.&lt;/p&gt;
-
-&lt;h2 id=&#34;menambahkan-bot-di-grup&#34;&gt;Menambahkan Bot di Grup&lt;/h2&gt;
-
-&lt;p&gt;Sebelumnya, silahkan setting Bot-nya di &lt;a href=&#34;https://t.me/BotFather&#34;&gt;@botfather&lt;/a&gt; agar bisa bergabung dengan
-Grup.&lt;/p&gt;
-
-&lt;p&gt;Kirim perintah &lt;code&gt;/setjoingroups&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/setting-bot-di-bot-father.png&#34; alt=&#34;Mengatur Bot agar bisa bergabung dengan Grup&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu tambahkan ke Grup dan jadikan Botnya sebagai administrator.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/menambahkan-bot-sebagai-admin.png&#34; alt=&#34;Menjadikan Bot sebagai administrator&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Atau jika kamu tidak memiliki akses administrator di Grup, silahkan matikan
-&lt;em&gt;privacy&lt;/em&gt; bot-nya.&lt;/p&gt;
-
-&lt;p&gt;Kirim perintah &lt;code&gt;/setprivacy&lt;/code&gt; ke &lt;a href=&#34;https://t.me/BotFather&#34;&gt;@botfather&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Lalu pilih &lt;em&gt;Disable&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/non-aktifkan-privacy-bot.png&#34; alt=&#34;Menon-aktifkan privacy bot&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Keterangan&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Enable: artinya bot hanya akan menerima pesan pada grup kalau di-mention
-atau dengan perintah &lt;code&gt;/&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Disable: artinya bot akan menerima semua pesan pada grup.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Perlu diketahui, paket gratis hook.io memiliki batasan 1000 request/bulan.&lt;/p&gt;
-
-&lt;p&gt;Jadi gunakan dengan bijak :smile:.&lt;/p&gt;
-
-&lt;h2 id=&#34;trik-agar-bot-tetap-hidup&#34;&gt;Trik Agar Bot Tetap Hidup&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Update [23 Mei 2017]&lt;/strong&gt;: Simsimi sudah menerapkan Capcha pada webnya.
-Jadi, kita tidak bisa mengaksesnya melalui bot. Cara ini sudah tidak bisa digunakan lagi&amp;hellip;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Seperti yang kita ketahui, masa &lt;em&gt;trial&lt;/em&gt; API simsimi sampai 7 hari dengan batasan
-100 request/hari.&lt;/p&gt;
-
-&lt;p&gt;Artinya Bot kita akan tertidur kalau sudah mengirim pesan sebanyak 100 kali dan
-akan mati setelah 7 hari.&lt;/p&gt;
-
-&lt;p&gt;Kalau mau tetap hidup, berarti harus membayar Kunci API dengan &lt;a href=&#34;http://developer.simsimi.com/pricing&#34;&gt;harga paket yang
-sudah ditentukan&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/harga-paket-api-key-simsimi.png&#34; alt=&#34;Harga paket API Key Simsimi&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sepertinya kemahalan kalau hanya untuk eksperimen.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, kita perlu sedikit &amp;lsquo;mengakalinya&amp;rsquo; :smile:.&lt;/p&gt;
-
-&lt;p&gt;Silahkan buka, web &lt;a href=&#34;http://www.simsimi.com/storygame/main&#34;&gt;simsimi.com&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Kemudian klik kanan, pilih &lt;em&gt;inspect elements&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Masuk ke bagian &lt;em&gt;network&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/inspect-element-simsimi.png&#34; alt=&#34;inspect Eelement Network Simsimi&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu coba kirim pesan ke Simsimi dan perhatikan di bagian &lt;em&gt;Network&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/url-request-simsimi.png&#34; alt=&#34;URL Request Simsimi&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Lihat apa yang kita dapatkan&amp;hellip;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://www.simsimi.com/getRealtimeReq?uuid=LUHzowu7l7tpHTCfe2RshB8aH0rwambBme2ZveDFAEr&amp;amp;lc=en&amp;amp;ft=1&amp;amp;reqText=apa+kabar+simsimi%3F&amp;amp;status=W
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;URL request dan sebuah token.&lt;/p&gt;
-
-&lt;p&gt;Kalau kita buka URL tersebut, kita akan mendapatkan JSON seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/simsimi-telegram/respon-simsimi.png&#34; alt=&#34;Respon Simsimi&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah! sudah tahu kan apa yang harus dilakukan selanjutnya.&lt;/p&gt;
-
-&lt;p&gt;Yap! benar sekali&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;kita harus memodifikasi kode kendali bot dengan menggunakan &lt;em&gt;URL Request&lt;/em&gt; ke URL tersebut.&lt;/p&gt;
-
-&lt;p&gt;Maka jadilah seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;module[&#39;exports&#39;] = function iyanChanBot(hook) {
-
-	var request = require(&#39;request&#39;);
-
-    var botName = &amp;quot;iyan&amp;quot;; // nama bot, silahkan ganti sesukanya
-
-    //var simiUrl = &#39;http://sandbox.api.simsimi.com/request.p?key=0858369d-3d2d-4bcd-86b0-eaf9d523d259&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=&#39;+hook.params.message.text;
-
- 	var simiUrlWeb = &#39;http://www.simsimi.com/getRealtimeReq?uuid=h4yA3s9wL3QPPZkPY8CfVtb3kcGYZEhZjtmGjXtT1vL&amp;amp;lc=id&amp;amp;ft=1&amp;amp;reqText=&#39; + hook.params.message.text + &#39;&amp;amp;status=W&#39;;
-
-  	// untuk menyimpan pesan balasan dari Simsimi
-  	var pesanBalasan = &amp;quot;&amp;quot;;
-
-    // tampilkan pesan dari Telegram ke Logs
-  	console.log(&amp;quot;Telegram: &amp;quot; + hook.params.message.text);
-
-  	request(simiUrlWeb, function (error, response, body) {
-
-      console.log(response);      
-
-      if (!error &amp;amp;&amp;amp; response.statusCode == 200) {
-         var data = JSON.parse(body);
-         console.log(data);
-
-        // 400-Bad Request.
-		// 401-Unauthorized.
-		// 404-Not found.
-		// 500-Server Error.
-
-        if ( data.status == 509 || data.status == 400 || data.status == 401 || data.status == 404 || data.status == 500){
-        	pesanBalasan = botName + &amp;quot; sedang tidur, silahkan hubungi kakak @ardiantapargo!&amp;quot;;
-        } else {
-        	pesanBalasan = data.respSentence;
-          	pesanBalasan = data.respSentence.replace(/simisimi/g, botName);
-  	        pesanBalasan = data.respSentence.replace(/simsimi/g, botName);
-            pesanBalasan = data.respSentence.replace(/Simsimi/g, botName);      	  
-	        pesanBalasan = data.respSentence.replace(/cimicimi/g, botName);
-        	pesanBalasan = data.respSentence.replace(/Simi/g, botName);
-  			pesanBalasan = data.respSentence.replace(/simi/g, botName);
-        }
-
-      } else {
-      	// kalau request ke Simsimi gagal
-        pesanBalasan = botName + &amp;quot; sedang tidur, silahkan hubungi kakak @ardiantapargo!&amp;quot;;
-
-      }
-
-
-      //kirim balasan ke Telegram
-      request
-          .post(&#39;https://api.telegram.org/bot&#39; + hook.env.iyan_chan_bot + &#39;/sendMessage&#39;)
-          .form({
-                &amp;quot;chat_id&amp;quot;: hook.params.message.chat.id,
-                &amp;quot;text&amp;quot;: pesanBalasan //hook.params.message.text
-        });
-
-
-    });
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Simpan kodenya dan &lt;em&gt;run&lt;/em&gt; lagi servernya.&lt;/p&gt;
-
-&lt;p&gt;Selamat mencoba.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Catatan&lt;/strong&gt; [Mei 2017]: Token yang didapatkan dari Web simsimi sepertinya tidak bertahan lama.
-Saya tidak tahu persis berapa lama masa token tersebut. Sepertinya mengikuti masa
-&lt;em&gt;Cookie&lt;/em&gt; pada browser.&lt;/p&gt;
-
-&lt;p&gt;Pada eksperimen yang saya lakukan di bot &lt;a href=&#34;https://t.me/iyan_chan_bot&#34;&gt;@iyan_chan_bot&lt;/a&gt;,
- bot-nya sempat mati. Tapi bisa kembali hidup dengan mengganti tokennya dengan yang baru.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;Terima kasih sudah mengikuti panduan ini.&lt;/p&gt;
-
-&lt;p&gt;Jangan lupa tinggalkan komentar dan &lt;em&gt;join&lt;/em&gt; ke channel &lt;a href=&#34;https://t.me/petanikode&#34;&gt;@petanikode&lt;/a&gt; di
-Telegram.&lt;/p&gt;
-</description>
+      <description>Simsimi bisa kita pinjam otaknya untuk mengendalikan bot Telegram.
+Kita bisa mengakses kecerdasan Simsimi dengan API Key/Kunci API/Token.
+Ada dua kunci API/Token yang diberikan oleh simsimi:
+ Kunci Trial (gratis) Kunci Berbayar  Kunci trial hanya berlaku 7 hari dengan batasan 100 request/hari.
+Kalau melewati batas itu, Simsimi tidak mau merespon.
+Tapi tenang saja, ada triknya.
+Nanti saya kasih tahu dibagian akhir panduan ini :smile:.
+Baiklah, mari kita mulai membuat bot Telegram dengan kecerdasan Simsimi.</description>
     </item>
     
     <item>
@@ -649,197 +45,8 @@ Telegram.&lt;/p&gt;
       <pubDate>Mon, 05 Sep 2016 05:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-membuat-bot-telegram-dengan-layanan-hook.io/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;712&#34;
-    height=&#34;356&#34;
-    alt=&#34;telegram-petanikode.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-O5BDsC5sx7U/V386o1PkOrI/AAAAAAAAC_s/dYtT6GzAIp8Mv16BMe1uR9Y31fxLR4hzACK4B/s1600/telegram-petanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada &lt;a href=&#34;https://www.petanikode.com/membuat-bot-telegram-tanpa-menulis-kode-program-coding/&#34;&gt;tulisan sebelumnya&lt;/a&gt;,
-saya sudah membahas cara membuat bot &lt;a href=&#34;https://www.petanikode.com/topik/telegram&#34;&gt;Telegram&lt;/a&gt; melalui &lt;a href=&#34;https://manybot.io/&#34;&gt;@manybot&lt;/a&gt;.
-Tapi hanya sekedar berfungsi untuk &lt;em&gt;auto posting&lt;/em&gt; dari &lt;em&gt;RSS feed,&lt;/em&gt; VK, Youtube dan &lt;em&gt;Twitter&lt;/em&gt;.
-Nah, sekarang kita akan coba membuat bot yang bisa kita kostum sendiri, tentunya dengan kode.&lt;/p&gt;
-
-&lt;p&gt;Kode kendali bot akan kita simpan di Hookio. Menurut Nicola Malizia,
-pada artikelnya yang berjudul &lt;em&gt;&amp;ldquo;How to easily build a Telegram Bot with Hook.io&amp;rdquo;&lt;/em&gt;
-Hook.io merupakan sebuah platform open srouce untuk menyimpan dan membuat layanan mikro HTTP.&lt;/p&gt;
-
-&lt;h2 id=&#34;bahan-bahan-yang-dibutuhkan&#34;&gt;Bahan-bahan yang dibutuhkan&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Token Bot Telegram&lt;/li&gt;
-&lt;li&gt;Akun &lt;a href=&#34;https://hook.io/ardianta?s&#34;&gt;Hook.io&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;membuat-bot-dan-mendapatkan-token&#34;&gt;Membuat Bot dan Mendapatkan Token&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka &lt;a href=&#34;https://telegram.me/botfather&#34;&gt;@botfather&lt;/a&gt; untuk mendaftarkan
-bot baru. Pada tombol perintah bot (&lt;code&gt;/&lt;/code&gt;), pilih &lt;code&gt;/newBot&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;617&#34;
-    height=&#34;506&#34;
-    alt=&#34;Mendaftar+Bot+Baru.png&#34;
-    src=&#34;http://4.bp.blogspot.com/-hJXSKJhBIrs/V8vuG07Lo3I/AAAAAAAADMo/x6GrFA-umIYYPPTMFFg6PBCCAaL-k0zuwCK4B/s1600/Mendaftar%2BBot%2BBaru.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, silahkan balas dengan nama bot yang ingin anda daftarkan. Contoh: &amp;ldquo;Pak Tani&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;642&#34;
-    height=&#34;133&#34;
-    alt=&#34;Memberikan nama bot pak tani&#34;
-    src=&#34;http://2.bp.blogspot.com/-wEukZuaXceo/V8vxUhHisWI/AAAAAAAADNA/siC4xzzQqqckCOhhxkpLnuoB1MmYXG82QCK4B/s1600/Memberikan%2Bnama%2Bbot%2Bpak%2Btani%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya, anda akan diminta &lt;em&gt;username&lt;/em&gt; untuk bot. Setiap &lt;em&gt;username&lt;/em&gt; harus diakhiri dengan kata &lt;em&gt;&amp;ldquo;bot&amp;rdquo;&lt;/em&gt; dibelakangnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;635&#34;
-    height=&#34;125&#34;
-    alt=&#34;username+untuk+pak+tani+bot.png&#34;
-    src=&#34;http://4.bp.blogspot.com/-l0aMjl67n0g/V8vxlfg9TjI/AAAAAAAADNI/DA_R-PpVi8M-FH9m_4tK7rEevsmRkPOMgCK4B/s1600/username%2Buntuk%2Bpak%2Btani%2Bbot.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Lalu anda akan mendapatkan kode token bot.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;617&#34;
-    height=&#34;506&#34;
-    alt=&#34;Token+HTTP+bot+Telegram+-+petanikode.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-touscbOB_TQ/V8vx9XWCD_I/AAAAAAAADNU/w2XUhhaVULAqu7nyvO-lq-1gnv-x3yZhwCK4B/s1600/Token%2BHTTP%2Bbot%2BTelegram%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Simpan token tersebut, karena akan kita gunakan untuk menghubungkannya dengan Hook.io.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-service-di-hook-io&#34;&gt;Membuat &lt;em&gt;Service&lt;/em&gt; di Hook.io&lt;/h2&gt;
-
-&lt;p&gt;Setelah anda membuat akun di Hook.io, silahkan buat service baru. &lt;a href=&#34;https://hook.io/new&#34;&gt;Klik di sini&lt;/a&gt; untuk membuatnya. Isi nama &lt;em&gt;hook&lt;/em&gt; yang akan dibuat, contoh &amp;ldquo;petani&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1155&#34;
-    height=&#34;536&#34;
-    alt=&#34;membuat+hook+untuk+pak+tani+bot+-+petanikode.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-PAz2S5gacWQ/V8v1B18JG_I/AAAAAAAADNg/UcbTwJrOenQg31j8SImshIiNcJ2tCtizgCK4B/s1600/membuat%2Bhook%2Buntuk%2Bpak%2Btani%2Bbot%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Klik Create untuk membuatnya.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-variabel-lingkungan-env&#34;&gt;Membuat Variabel Lingkungan (Env)&lt;/h2&gt;
-
-&lt;p&gt;Silahkan masuk ke &lt;a href=&#34;https://hook.io/env&#34;&gt;https://hook.io/env&lt;/a&gt; untuk membuat variabel lingkungan.
-Variabel lingkungan akan kita gunakan untuk menyimpan token bot agar
-kita tidak mengetik tokennya dalam kode. Karena token bersifat rahasia.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1121&#34;
-    height=&#34;427&#34;
-    alt=&#34;Menyiman+token+dalam+variabel+lingkungan.png&#34;
-    src=&#34;http://3.bp.blogspot.com/-q7KFbPByGMc/V8v3unFLRfI/AAAAAAAADNw/a2FRHAFrdwkGhXynaLSfiD1CY8Qeq-NmwCK4B/s1600/Menyiman%2Btoken%2Bdalam%2Bvariabel%2Blingkungan.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-kode-bot&#34;&gt;Membuat Kode Bot&lt;/h2&gt;
-
-&lt;p&gt;Perahatikan kode &lt;em&gt;Hook Source&lt;/em&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1158&#34;
-    height=&#34;451&#34;
-    alt=&#34;Kode+default+hook.io.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-GD_pTZzcs0o/V8v1stxe8fI/AAAAAAAADNo/MYnrQvepdlwjwQHoqT7l5F2BZvQdGfQIgCK4B/s1600/Kode%2Bdefault%2Bhook.io.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Silahkan ganti kode &lt;em&gt;(Hook Source)&lt;/em&gt; tersebut dengan kode ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;390&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/18d039ef83336779f081a3eb440a1a49&#34;&gt;
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;Perhatikan &lt;code&gt;hook.env.token_petani_bot&lt;/code&gt;, itu adalah nama variabel lingkungan
-yang baru saja kita buat. Kemudian &lt;code&gt;hook.params.message&lt;/code&gt; adalah parameter yang
-diterima dari chat Telegram.&lt;/p&gt;
-
-&lt;p&gt;Pada kode tersebut, kita melakukan &lt;em&gt;request&lt;/em&gt; pengiriman ke API Telegram setelah
-menerima data dari parameter. &lt;em&gt;Method&lt;/em&gt; yang digunakan untuk mengirim/membalas
-pesan adalah &lt;code&gt;/sendMessage&lt;/code&gt;.
-Lihat di &lt;a href=&#34;https://core.telegram.org/bots/api&#34;&gt;dokumentasi API&lt;/a&gt; Telegram.&lt;/p&gt;
-
-&lt;h2 id=&#34;menghubungkan-bot-dengan-hook&#34;&gt;Menghubungkan Bot dengan Hook&lt;/h2&gt;
-
-&lt;p&gt;Untuk menghubungkan bot dengan hook, silahkan susun URL-nya menjadi seperti ini:&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://api.telegram.org/bot&amp;lt;TOKEN&amp;gt;/setWebhook?url=https://hook.io/&amp;lt;hook-user&amp;gt;/&amp;lt;hook-name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Silahkan diganti:&lt;br&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;TOKEN&amp;gt;&lt;/code&gt; dengan token bot anda&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;hook-user&amp;gt;&lt;/code&gt; dengan username hook.io anda&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;hook-name&amp;gt;&lt;/code&gt; dengan nama layanan/service hook yang anda buat&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Setelah itu, silahkan buka URL tersebut melalui browser. Jika anda mendapatkan
-balasan seperti ini, maka bot berhasil dihubungkan dengan layanan hook.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1001&#34;
-    height=&#34;309&#34;
-    alt=&#34;Respon+berhasil+mengaitkan+hook+dengan+bot+telegram.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-NJWNvnEf3Vg/V8wAe-8k9vI/AAAAAAAADOA/7u1Ezl7Fl5418LAHz49Uu1zm1PZ7xS_jQCK4B/s1600/Respon%2Bberhasil%2Bmengaitkan%2Bhook%2Bdengan%2Bbot%2Btelegram.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;percobaan&#34;&gt;Percobaan&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka atau chat dengan bot yang sudah dibuat, &lt;a href=&#34;http://telegram.me/petani_bot&#34;&gt;http://telegram.me/petani_bot&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;617&#34;
-    height=&#34;506&#34;
-    alt=&#34;Hasil+uji+coba+bot.png&#34;
-    src=&#34;http://4.bp.blogspot.com/-OURsnIUYzXg/V8wB9Y0sKVI/AAAAAAAADOI/MJ_9TcnX3SgUQXUzTJFuWKd6vHKdOL7FACK4B/s1600/Hasil%2Buji%2Bcoba%2Bbot.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kesimpulan-dan-saran&#34;&gt;Kesimpulan dan Saran&lt;/h2&gt;
-
-&lt;p&gt;Bot Telegram dapat kita kendalikan dengan kode yang disimpan di Hook.io.
-Kita bisa menentukan bagaimana tingkah laku Bot melalui kode. Saran untuk
-pengembangan selanjutnya, bisa ditambahkan kecerdasan buatan agar bot
-lebih bermanfaat. Misalnya, kecerdasan buatan untuk menganalisa cuaca dan
-tanaman yang harus ditanam pada musim tertentu. Atau bisa kita
-&lt;a href=&#34;https://www.petanikode.com/2016/09/eksperimen-dengan-api-simsimi/&#34;&gt;terapkan API Simsimi&lt;/a&gt;
-agar bot bisa berbicara seperti Simsimi.&lt;/p&gt;
-
-&lt;p&gt;Jangan lupa bergabung ke Channel Petani Kode di Telegram: &lt;a href=&#34;https://t.me/petanikode&#34;&gt;https://t.me/petanikode&lt;/a&gt;
-untuk mendapatkan informasi terbaru.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;https://unnikked.ga/build-telegram-bot-hook-io/&#34;&gt;unnikked.ga&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Pada tulisan sebelumnya, saya sudah membahas cara membuat bot Telegram melalui @manybot. Tapi hanya sekedar berfungsi untuk auto posting dari RSS feed, VK, Youtube dan Twitter. Nah, sekarang kita akan coba membuat bot yang bisa kita kostum sendiri, tentunya dengan kode.
+Kode kendali bot akan kita simpan di Hookio. Menurut Nicola Malizia, pada artikelnya yang berjudul &amp;ldquo;How to easily build a Telegram Bot with Hook.io&amp;rdquo; Hook.io merupakan sebuah platform open srouce untuk menyimpan dan membuat layanan mikro HTTP.</description>
     </item>
     
     <item>
@@ -848,84 +55,8 @@ untuk mendapatkan informasi terbaru.&lt;/p&gt;
       <pubDate>Sat, 03 Sep 2016 04:30:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/penguraian-parshing-json-dari-url-web-service-dengan-python/</guid>
-      <description>
-
-&lt;p&gt;Kita membutuhkan modul atau pustakan &lt;code&gt;urlib&lt;/code&gt; untuk mengambil JSON dari URL
-Web Service. Setelah itu, kita dapat melakukan penguraian &lt;em&gt;(parshing)&lt;/em&gt;
-informasi yang ada di dalamnya. Web service yang akan saya gunakan pada
-tulisan ini adalah web service dari Google.
-Web service tersebut menyediakan RSS Feed untuk Blogger dalam bentuk JSON.&lt;/p&gt;
-
-&lt;h2 id=&#34;percobaan-di-postman&#34;&gt;Percobaan di Postman&lt;/h2&gt;
-
-&lt;p&gt;Sebelum kita mulai &lt;em&gt;parshing&lt;/em&gt;, ada baiknya kita coba dulu URL web service-nya.
-Supaya kita mudah mengetahui, atribut atau kunci yang digunakan pada JSON.&lt;/p&gt;
-
-&lt;p&gt;URL: &lt;a href=&#34;http://ajax.googleapis.com/ajax/services/feed/load?v=1.0#=100&amp;amp;q=http://feeds.feedburner.com/petanikode&#34;&gt;http://ajax.googleapis.com/ajax/services/feed/load?v=1.0#=100&amp;amp;q=http://feeds.feedburner.com/petanikode&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Hasil Percobaan di Postman:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1366&#34;
-    height=&#34;743&#34;
-    alt=&#34;hasil+percobaan+request+dari+Postman.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-Cs1yNESapiE/V8lyiRKIaFI/AAAAAAAADLk/4x3bocxP_hkeZXG2RvQTzZCw6aYI-cIYgCK4B/s1600/hasil%2Bpercobaan%2Brequest%2Bdari%2BPostman.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Hasil respon:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-iframe width=&#34;600&#34; height=&#34;700&#34;
-    layout=&#34;responsive&#34;
-    sandbox=&#34;allow-forms allow-scripts allow-same-origin allow-modals allow-popups&#34;
-    frameborder=&#34;0&#34;
-    src=&#34;https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/2b80ab0dc28b243a5aa3e6655a7d8d3b&#34;&gt;
-&lt;/amp-iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;penguraian-informasi&#34;&gt;Penguraian Informasi&lt;/h2&gt;
-
-&lt;p&gt;Setelah mengetahui, struktur JSON yang diterima. Selanjutnya kita bisa mengurai informasi yang ada di dalamnya dengan mudah. Baiklah! Kita coba tampilkan semua judul yang ada di RSS Feed saja dulu.&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import urllib, json
-
-url = &amp;quot;http://ajax.googleapis.com/ajax/services/feed/load?v=1.0#=100&amp;amp;q=http://feeds.feedburner.com/petanikode&amp;quot;
-respon = urllib.urlopen(url)
-data = json.loads(respon.read())
-
-post = data[&#39;responseData&#39;][&#39;feed&#39;][&#39;entries&#39;]
-
-for artikel in post:&amp;lt;br&amp;gt;
-print artikel[&#39;title&#39;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perhatikan pada kode di atas, kita menggunakan modul &lt;code&gt;urlib&lt;/code&gt; untuk mengambil JSON dari URL. Kemudian kita menggunakan modul &lt;code&gt;json&lt;/code&gt; untuk mengurai informasinya.&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Berikut ini hasil yang akan kita dapatkan dari kode di atas.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;842&#34;
-    height=&#34;460&#34;
-    alt=&#34;hasil+parsing+data+JSON+dari+URL.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-qXSw7cjmP8k/V8l36-nVhhI/AAAAAAAADL0/EYtHY0rKzaoEGU_zdlZMoAZxrOIG4sYSgCK4B/s1600/hasil%2Bparsing%2Bdata%2BJSON%2Bdari%2BURL.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kesimpulan&#34;&gt;Kesimpulan&lt;/h2&gt;
-
-&lt;p&gt;Penguraian data JSON dari URL web service membutuhkan satu lagi modul tambahan,
-yaitu &lt;code&gt;urlib&lt;/code&gt;. Modul tersebut berfungsi mengambil atau meminta (request) data
-JSON yang ada di web service. Kemudian, tainggal kita olah data JSON-nya dengan
-modul &lt;code&gt;json&lt;/code&gt;. Begitulah cara penguraian JSON dari URL, terima kasih! :smile:&lt;/p&gt;
-</description>
+      <description>Kita membutuhkan modul atau pustakan urlib untuk mengambil JSON dari URL Web Service. Setelah itu, kita dapat melakukan penguraian (parshing) informasi yang ada di dalamnya. Web service yang akan saya gunakan pada tulisan ini adalah web service dari Google. Web service tersebut menyediakan RSS Feed untuk Blogger dalam bentuk JSON.
+Percobaan di Postman Sebelum kita mulai parshing, ada baiknya kita coba dulu URL web service-nya. Supaya kita mudah mengetahui, atribut atau kunci yang digunakan pada JSON.</description>
     </item>
     
     <item>
@@ -934,177 +65,13 @@ modul &lt;code&gt;json&lt;/code&gt;. Begitulah cara penguraian JSON dari URL, te
       <pubDate>Fri, 02 Sep 2016 14:25:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/eksperimen-dengan-api-simsimi/</guid>
-      <description>
+      <description>Kali ini saya akan mengajak teman-teman bereksperimen dengan API Simsimi.
+Apa itu Simsimi?
+buat yang belum tau, silahkan instal saja aplikasi Simsimi di smarphone-nya.
+Oke, mari kita mulai.
 
-&lt;p&gt;Kali ini saya akan mengajak teman-teman bereksperimen dengan API Simsimi.&lt;/p&gt;
-
-&lt;p&gt;Apa itu Simsimi?&lt;/p&gt;
-
-&lt;p&gt;buat yang belum tau, silahkan instal saja aplikasi Simsimi
-di smarphone-nya.&lt;/p&gt;
-
-&lt;p&gt;Oke, mari kita mulai.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;simsimi-api+Petani+Kode.jpg&#34;
-    src=&#34;http://2.bp.blogspot.com/-rBmfBrehRwM/V8kRQFVKH1I/AAAAAAAADLU/yOYWb9XdTrIxf5AopZzpLJQdXJHNM3ZwQCK4B/s1600/simsimi-api%2BPetani%2BKode.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;API Simsimi konsepnya sangat sederhana. Kita hanya melakukan &lt;em&gt;request&lt;/em&gt; dari URL dengan &lt;em&gt;query string&lt;/em&gt;, lalu akan mendapatkan jawaban atau respon berdasarkan data yang dimiliki Simsimi. Respon tersebut, bisa kita olah untuk membuat Simsimi versi kita sendiri.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-mendapatkan-kunci-api&#34;&gt;1. Mendapatkan Kunci API&lt;/h2&gt;
-
-&lt;p&gt;Kunci &lt;a href=&#34;https://www.petanikode.com/topik/api&#34;&gt;API&lt;/a&gt; atau &lt;em&gt;API Key&lt;/em&gt;, merupakan kunci yang digunakan untuk
-mengakses API Simsimi. Ada dua jenis kunci API &lt;em&gt;(API Key)&lt;/em&gt; yang disediakan
-oleh Simsimi. Pertama, kunci API percobaan (diberikan gratis selama 7 hari).
-Kedua, API Berbayar. Untuk mendapatkan kunci API, silakan mendaftar di
-&lt;a href=&#34;http://developer.simsimi.com/api&#34;&gt;http://developer.simsimi.com/api&lt;/a&gt;. Isi data diri dan nama aplikasi yang akan
-dibuat. Setelah berhasil, nanti akan mendapatkan kunci API seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1365&#34;
-    height=&#34;562&#34;
-    alt=&#34;Mendapatkan+Kunci+API+key+Simsimi.png)&#34;
-    src=&#34;https://4.bp.blogspot.com/-n2-UI48r17w/V8jmhykWk8I/AAAAAAAADKc/buQnCJ_lzlkHqr5css1FaNwnH9xd1F8uACK4B/s1600/Mendapatkan%2BKunci%2BAPI%2Bkey%2BSimsimi.png)&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-membuat-request&#34;&gt;2. Membuat &lt;em&gt;Request&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Pembuatan &lt;em&gt;Request&lt;/em&gt; dilakukan melalui URL dengan &lt;em&gt;Query String&lt;/em&gt;.
-Kita disediakan dua jenis URL. Pertama, untuk yang menggunakan kunci API
-percobaan (gratis) dan untuk yang menggunakan kinci API berbayar.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Kunci Percobaan: &lt;code&gt;http://sandbox.api.simsimi.com/request.p&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Kunci Berbayar: &lt;code&gt;http://api.simsimi.com/request.p&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Berikut ini parameter untuk membuat request melalui URL di atas.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Tipe Data&lt;/th&gt;
-&lt;th&gt;Wajib&lt;/th&gt;
-&lt;th&gt;Nilai Default&lt;/th&gt;
-&lt;th&gt;Keterangan&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;key&lt;/td&gt;
-&lt;td&gt;String&lt;/td&gt;
-&lt;td&gt;Ya&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Kunci API&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;text&lt;/td&gt;
-&lt;td&gt;String&lt;/td&gt;
-&lt;td&gt;Ya&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Query message&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;lc&lt;/td&gt;
-&lt;td&gt;String&lt;/td&gt;
-&lt;td&gt;Ya&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Kode bahasa (&lt;a href=&#34;http://developer.simsimi.com/lclist&#34;&gt;Cek di sini&lt;/a&gt;)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;ft&lt;/td&gt;
-&lt;td&gt;Double(0.0 ~ 1.0)&lt;/td&gt;
-&lt;td&gt;Tidak&lt;/td&gt;
-&lt;td&gt;0.0&lt;/td&gt;
-&lt;td&gt;1.0 : &amp;lsquo;Bad Word Discriminator&amp;rsquo;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Nah, untuk membuat request-nya, silahkan susun URL-nya menjadi seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://sandbox.api.simsimi.com/request.p?key=KUNCI_API&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=tau petanikode?
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Berikut ini contoh hasil requestnya melalui browser dengan &lt;em&gt;query message&lt;/em&gt; &amp;ldquo;tau petanikode?&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;745&#34;
-    height=&#34;343&#34;
-    alt=&#34;Contoh+Request+dari+Browser.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-sAnaWLlCpc0/V8jrCLLCjEI/AAAAAAAADKo/ysrLyJiCfMg6-ImPwt98NXMni-GWxtZswCK4B/s1600/Contoh%2BRequest%2Bdari%2BBrowser.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Seperti yang kita dapatkan pada gambar di atas, responnya dalam bentuk JSON. Percobaan kedua saya lakukan dengan Postman.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1366&#34;
-    height=&#34;743&#34;
-    alt=&#34;Percobaan+pengiriman+request+melalui+Postman.png&#34;
-    src=&#34;https://2.bp.blogspot.com/-5X2aUgflQJM/V8jse108zvI/AAAAAAAADK0/kgvhXuR-RNgpiZzBs_33EkoXCAw0KKyVwCK4B/s1600/Percobaan%2Bpengiriman%2Brequest%2Bmelalui%2BPostman.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-membuat-aplikasi-chat&#34;&gt;3. Membuat Aplikasi Chat&lt;/h2&gt;
-
-&lt;p&gt;Oke, tiba saatnya di bagian yang paling menyenangkan. Jadi, setelah kita tahu
-respon dari API Simsimi berupa JSON. Kita tinggal melakukan penguraian
-&lt;em&gt;(parshing)&lt;/em&gt; saja sehingga menjadi sebuah aplikasi.
-Untuk melakukan ini, saya menggunakan bahasa pemrograman Python.
-Karena kodenya lebih sederhana dan singkat.&amp;gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import urllib, json
-
-print &amp;quot;Silahkan kirim pesan!&amp;quot;&amp;quot;
-
-while(True):
-    pesan = raw_input(&amp;quot;Anda: &amp;quot;)
-    url = &amp;quot;http://sandbox.api.simsimi.com/request.p?key=KUNCI_API&amp;amp;lc=id&amp;amp;ft=1.0&amp;amp;text=%s&amp;quot; % pesan
-    link_json = urllib.urlopen(url)
-    data = json.loads(link_json.read())
-
-    print &amp;quot;Petanikode-simi: %s&amp;quot; % data[&#39;response&#39;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Baca juga:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/2016/09/penguraian-parshing-json-pada-python/&#34;&gt;Penguraian (parsing) JSON pada Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/2016/09/penguraian-parshing-json-dari-url-web-service-dengan-python/&#34;&gt;Penguraian (parsing) JSON dari URL Web Service dengan Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hasilnya, ketika dijalankan:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;658&#34;
-    height=&#34;412&#34;
-    alt=&#34;aplikasi+chat+berbasis+CLI+dengan+python+-+petanikode+simsimi.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-Pj_inXe0bAo/V8jyen6uLeI/AAAAAAAADLE/H_9jJ4U_554VAJ8s5_RWtQK_A5PVsO6BwCK4B/s1600/aplikasi%2Bchat%2Bberbasis%2BCLI%2Bdengan%2Bpython%2B-%2Bpetanikode%2Bsimsimi.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;http://developer.simsimi.com/api&#34;&gt;http://developer.simsimi.com/api&lt;/a&gt;&lt;/p&gt;
-</description>
+API Simsimi konsepnya sangat sederhana. Kita hanya melakukan request dari URL dengan query string, lalu akan mendapatkan jawaban atau respon berdasarkan data yang dimiliki Simsimi. Respon tersebut, bisa kita olah untuk membuat Simsimi versi kita sendiri.
+1. Mendapatkan Kunci API Kunci API atau API Key, merupakan kunci yang digunakan untuk mengakses API Simsimi.</description>
     </item>
     
     <item>
@@ -1113,8 +80,9 @@ while(True):
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/penguraian-parshing-json-pada-python/</guid>
-      <description>&lt;p&gt;Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul atau pustakan &lt;code&gt;json&lt;/code&gt;. Selain itu, kita juga membutuhkan modul tambahan seperti &lt;code&gt;urlib&lt;/code&gt; bila JSON-nya diambil dari &lt;i&gt;web service&lt;/i&gt;. Oke, mari kita mulai dari hal yang sederhana.&lt;br /&gt;&lt;br /&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-captioned=&#34;&#34; data-instgrm-version=&#34;7&#34; style=&#34;background: #fff; border-radius: 3px; border: 0; box-shadow: 0 0 1px 0 rgba(0 , 0 , 0 , 0.5) , 0 1px 10px 0 rgba(0 , 0 , 0 , 0.15); margin: 1px; max-width: 658px; padding: 0; width: 99.375%;&#34;&gt;&lt;div style=&#34;padding: 8px;&#34;&gt;&lt;div style=&#34;background: #F8F8F8; line-height: 0; margin-top: 40px; padding: 28.1481481481% 0; text-align: center; width: 100%;&#34;&gt;&lt;div style=&#34;background: url(data:image/png; display: block; height: 44px; margin: 0 auto -44px; position: relative; top: -22px; width: 44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&#34;margin: 8px 0 0 0; padding: 0 4px;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BJpb-wNjGAo/&#34; style=&#34;color: black; font-family: &amp;quot;arial&amp;quot; , sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none; word-wrap: break-word;&#34; target=&#34;_blank&#34;&gt;#json #stickynotes #postitnotes #programming #programmer&lt;/a&gt;&lt;/div&gt;&lt;div style=&#34;color: #c9c8cd; font-family: Arial,sans-serif; font-size: 14px; line-height: 17px; margin-bottom: 0; margin-top: 8px; overflow: hidden; padding: 8px 0 7px; text-align: center; text-overflow: ellipsis; white-space: nowrap;&#34;&gt;A photo posted by Petani Kode (@petanikode) on &lt;time datetime=&#34;2016-08-28T09:32:09+00:00&#34; style=&#34;font-family: Arial,sans-serif; font-size: 14px; line-height: 17px;&#34;&gt;Aug 28, 2016 at 2:32am PDT&lt;/time&gt;&lt;/div&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;script async=&#34;&#34; defer=&#34;&#34; src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;h2&gt;Membuat File JSON&lt;/h2&gt;Pertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: &lt;code&gt;petanikode.json&lt;/code&gt;&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;json js&#34;&gt;{&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;nama&amp;rdquo; : &amp;ldquo;Petani Kode&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;url&amp;rdquo;&amp;nbsp; : &amp;ldquo;&lt;a href=&#34;http://petanikode.com&amp;quot;&#34;&gt;http://petanikode.com&amp;quot;&lt;/a&gt;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;media&amp;rdquo;: {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;facebook&amp;rdquo; : &amp;ldquo;petanikode&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;twitter&amp;rdquo;&amp;nbsp; : &amp;ldquo;@petanikode&amp;rdquo;,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;ldquo;instagram&amp;rdquo;: &amp;ldquo;@petanikode&amp;rdquo;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Percobaan di Iterpreter&lt;/h2&gt;Sebelum membuat kode, kita coba dulu mengurai JSON-nya melalui interpreter. Ketik &lt;code&gt;python&lt;/code&gt; pada terminal untuk masuk ke interpreter.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-Cy37z6S8XoU/V8ez7OSirAI/AAAAAAAADJ8/Rk5rvJFyTYoUXMGY6FSMwnKQSnvdDgBQgCK4B/s1600/Percobaan%2Bparsing%2Bfile%2BJSON%2Bdari%2Binterpreter%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Percobaan Penguraian JSON di Interpreter&#34; border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-Cy37z6S8XoU/V8ez7OSirAI/AAAAAAAADJ8/Rk5rvJFyTYoUXMGY6FSMwnKQSnvdDgBQgCK4B/s1600/Percobaan%2Bparsing%2Bfile%2BJSON%2Bdari%2Binterpreter%2B-%2Bpetanikode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Pada percobaan di atas, kita menggunakan fungsi &lt;code&gt;open()&lt;/code&gt; untuk membuka file JSON. Kemudian, kita menggunakan fungsi &lt;code&gt;loads()&lt;/code&gt; dari modul &lt;code&gt;json&lt;/code&gt; untuk me-load data JSON. Data JSON disimpan pada variabel &lt;code&gt;data&lt;/code&gt; dalam bentuk &lt;i&gt;dictionary&lt;/i&gt;. Dengan demikian, kita bisa leluasa mengurai data JSON-nya.&lt;br /&gt;&lt;h2&gt;Meracik Kode untuk Mengurai JSON&lt;/h2&gt;Buat file skrip python dan letakkan di direktori yang sama dengan file JSON-nya. Berikut ini isi skripnya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;py python&#34;&gt;import json&lt;br /&gt;&lt;br /&gt;# buka file JSON-nya dulu&lt;br /&gt;file_json = open(&amp;lsquo;petanikode.json&amp;rsquo;)&lt;br /&gt;&lt;br /&gt;# load file JSON dari file yang sudah dibuka&lt;br /&gt;data = json.loads(file_json.read())&lt;br /&gt;&lt;br /&gt;# cetak isi data&lt;br /&gt;print data &lt;/code&gt;&lt;/pre&gt;Hasil output dari kode di atas:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;{u&amp;rsquo;url&amp;rsquo;: u&amp;rsquo;&lt;a href=&#34;http://petanikode.com&#39;&#34;&gt;http://petanikode.com&#39;&lt;/a&gt;, u&amp;rsquo;nama&amp;rsquo;: u&amp;rsquo;Petani Kode&amp;rsquo;, u&amp;rsquo;media&amp;rsquo;: {u&amp;rsquo;twitter&amp;rsquo;: u&amp;rsquo;@petanikode&amp;rsquo;, u&amp;rsquo;facebook&amp;rsquo;: u&amp;rsquo;petanikode&amp;rsquo;, u&amp;rsquo;instagram&amp;rsquo;: u&amp;rsquo;@petanikode&amp;rsquo;}}&lt;/code&gt;&lt;/pre&gt;Selanjutnya, kita tinggal percantik saja hasil output-nya. Silahkan modifikasi lagi kodenya.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;python py&#34;&gt;import json&lt;br /&gt;&lt;br /&gt;# buka file JSON-nya dulu&lt;br /&gt;file_json = open(&amp;lsquo;petanikode.json&amp;rsquo;)&lt;br /&gt;&lt;br /&gt;# load file JSON dari file yang sudah dibuka&lt;br /&gt;data = json.loads(file_json.read())&lt;br /&gt;&lt;br /&gt;# cetak isi data&lt;br /&gt;print &amp;ldquo;nama \t: %s&amp;rdquo; % data[&amp;lsquo;nama&amp;rsquo;]&lt;br /&gt;print &amp;ldquo;url \t: %s&amp;rdquo; % data[&amp;lsquo;url&amp;rsquo;]&lt;br /&gt;&lt;br /&gt;print &amp;ldquo;Media Sosial &amp;ldquo;&lt;br /&gt;for sosial in data[&amp;lsquo;media&amp;rsquo;]:&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; print &amp;ldquo;\t%s \t: %s&amp;rdquo; % (sosial, data[&amp;lsquo;media&amp;rsquo;][sosial]) &lt;/code&gt;&lt;/pre&gt;Hasil outputnya:&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-JnGCO8WfdgU/V8e5ad3PUkI/AAAAAAAADKM/QANlmwc00W0KajkvQCzL4IC_yCCNL_CcQCK4B/s1600/Hasil%2Bpenguraian%2Bfile%2BJSON%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Hasil Penguraian JSON&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-JnGCO8WfdgU/V8e5ad3PUkI/AAAAAAAADKM/QANlmwc00W0KajkvQCzL4IC_yCCNL_CcQCK4B/s1600/Hasil%2Bpenguraian%2Bfile%2BJSON%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34; title=&#34;&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Begitulah cara penguraian JSON pada Python. Sekian, tulisan pendek ini. Mudah-mudahan ada manfaatnya.&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://docs.python-guide.org/en/latest/scenarios/json/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://docs.python-guide.org/en/latest/scenarios/json/&#34;&gt;http://docs.python-guide.org/en/latest/scenarios/json/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul atau pustakan json. Selain itu, kita juga membutuhkan modul tambahan seperti urlib bila JSON-nya diambil dari web service. Oke, mari kita mulai dari hal yang sederhana.
+#json #stickynotes #postitnotes #programming #programmerA photo posted by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
+Membuat File JSONPertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: petanikode.json</description>
     </item>
     
     <item>
@@ -1123,8 +91,13 @@ while(True):
       <pubDate>Sun, 17 Jul 2016 19:01:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/mengatasi-malsalah-posisi-titik-tengah-peta-google-maps/</guid>
-      <description>&lt;p&gt;Ada masalah yang membuat saya bingung, posisi titik tengah Google maps selalu berada di pojok kiri atas. Pada &lt;a href=&#34;http://petanikode.blogspot.com/2016/07/mengatasi-google-map-yang-tidak-tampil-di-modal.html&#34; target=&#34;_blank&#34;&gt;masalah sebelumnya&lt;/a&gt;, Google Maps tidak bisa ditampilkan karena di letakkan di dalam modal. Meskipun saya sudah set titik tengahnya pada &lt;i&gt;trigger event&lt;/i&gt; &lt;i&gt;&amp;lsquo;resize&amp;rsquo;&lt;/i&gt;, namun tetap saja posisinya berada di pojok kiri atas.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-GaKzQ0vn74w/V4tcFbrY6ZI/AAAAAAAADCc/qebSxRzUKbQaBD058qIvpKosnZ6xylnRgCK4B/s1600/Posisi%2BTitik%2BTengah%2Byang%2Bsalah.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-GaKzQ0vn74w/V4tcFbrY6ZI/AAAAAAAADCc/qebSxRzUKbQaBD058qIvpKosnZ6xylnRgCK4B/s1600/Posisi%2BTitik%2BTengah%2Byang%2Bsalah.png&#34; /&gt;&amp;nbsp;&lt;/a&gt;&lt;br /&gt;Setelah digeser:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-bnYLd04IfFI/V4tcmk65yWI/AAAAAAAADCk/-1xH-mBYhrwHlBKqwC-adIC4bf5KX2fYgCK4B/s1600/Posisi%2BTitik%2Btengah%2Byang%2Bdiinginkan.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-bnYLd04IfFI/V4tcmk65yWI/AAAAAAAADCk/-1xH-mBYhrwHlBKqwC-adIC4bf5KX2fYgCK4B/s1600/Posisi%2BTitik%2Btengah%2Byang%2Bdiinginkan.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kode yang mengatasi saat &lt;i&gt;trigger event&lt;/i&gt; &amp;ldquo;resize&amp;rdquo; atau modal-nya ditampilkan:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;$(&amp;ldquo;#modal-peta&amp;rdquo;).on(&amp;ldquo;shown.bs.modal&amp;rdquo;, function() {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; google.maps.event.trigger(peta, &amp;ldquo;resize&amp;rdquo;, function() {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; peta.setCenter(peta.getCenter());&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; });&lt;br /&gt;&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Ternyata ada yang salah dengan kode tersebut. Setelah saya telusuri dengan kata kunci &lt;i&gt;&amp;ldquo;Google Maps center top left&amp;rdquo;&lt;/i&gt; di Google, saya menemukan jawabanya. Memanggil fungsi di dalam &lt;i&gt;event trigger &amp;ldquo;resize&amp;rdquo;&lt;/i&gt; mungkin tidak bisa. Berdasarkan beberapa jawaban di Stackoverflow mengatakan, pemanggilan fungsi &lt;i&gt;trigger &amp;ldquo;resize&amp;rdquo;&lt;/i&gt; sendiri tidak bisa mengganti posisi tengah peta. Oleh karena itu disarankan kodenya dibuat seperti berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;$(&amp;ldquo;#modal-peta&amp;rdquo;).on(&amp;ldquo;shown.bs.modal&amp;rdquo;, function() {&lt;br /&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // ambil dulu titik tengahnya&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; var tengah = peta.getCenter();&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // resize&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; google.maps.event.trigger(peta, &amp;ldquo;resize&amp;rdquo;);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // set ulang titik tengah&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; peta.setCenter(tengah);&lt;br /&gt;&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-poCubPPfjjI/V4tgURrxQaI/AAAAAAAADC0/O5EidXojz6Izf4TtAjT0uZkqjJXQzMwewCK4B/s1600/Selection_014.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-poCubPPfjjI/V4tgURrxQaI/AAAAAAAADC0/O5EidXojz6Izf4TtAjT0uZkqjJXQzMwewCK4B/s1600/Selection_014.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://stackoverflow.com/a/8559243&#34;&gt;http://stackoverflow.com/a/8559243&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Ada masalah yang membuat saya bingung, posisi titik tengah Google maps selalu berada di pojok kiri atas. Pada masalah sebelumnya, Google Maps tidak bisa ditampilkan karena di letakkan di dalam modal. Meskipun saya sudah set titik tengahnya pada trigger event &amp;lsquo;resize&amp;rsquo;, namun tetap saja posisinya berada di pojok kiri atas.
+&amp;nbsp;
+Setelah digeser:
+
+Kode yang mengatasi saat trigger event &amp;ldquo;resize&amp;rdquo; atau modal-nya ditampilkan:
+$(&amp;ldquo;#modal-peta&amp;rdquo;).on(&amp;ldquo;shown.bs.modal&amp;rdquo;, function() {
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; google.maps.event.trigger(peta, &amp;ldquo;resize&amp;rdquo;, function() {</description>
     </item>
     
     <item>
@@ -1133,228 +106,8 @@ while(True):
       <pubDate>Fri, 08 Jul 2016 14:09:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/membuat-bot-telegram-tanpa-menulis-kode-program-coding/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-width=&#34;712&#34;
-height=&#34;356&#34;
-alt=&#34;telegram-petanikode.png&#34;
-src=&#34;http://1.bp.blogspot.com/-O5BDsC5sx7U/V386o1PkOrI/AAAAAAAAC_s/dYtT6GzAIp8Mv16BMe1uR9Y31fxLR4hzACK4B/s1600/telegram-petanikode.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selain cepat dan bebas iklan, salah satu yang membuat Telegram lebih unggul dari
-aplikasi &lt;em&gt;chat&lt;/em&gt; yang lain adalah adanya Bot (Robot). Bot merupakan akun yang
-dikendalikan oleh program. Bot hanya bertindak sesui intruksi yang diberikan
-melalui kode program.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, kita akan membuat sebuah bot tanpa harus menulis kode
-program &lt;em&gt;(coding)&lt;/em&gt;. Bot yang akan kita buat sederhana saja. Bot bisa mengecek
-&lt;em&gt;post&lt;/em&gt; terbaru yang dikirim ke sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Catatan:&lt;/strong&gt; &lt;a href=&#34;https://www.quora.com/Why-is-Reddit-blocked-by-the-Indonesian-government&#34;&gt;Reddit&lt;/a&gt; sudah lama diblokir di Indonesia. Kemungkinan tidak bisa diakses dari jaringan anda.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;1-membuat-bot&#34;&gt;1. Membuat Bot&lt;/h2&gt;
-
-&lt;p&gt;Ada sebuah bot yang menyediakan layanan untuk membuat bot tanpa kode,
-namanya &lt;a href=&#34;https://manybot.io/&#34;&gt;@manybot&lt;/a&gt;. Silahkan ikuti langkah-langkah beriktu
-ini untuk membuat bot melalui &lt;em&gt;ManyBot&lt;/em&gt;.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Buka Bot manybot: &lt;a href=&#34;http://telegram.me/Manybot&#34;&gt;http://telegram.me/Manybot&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Klik &lt;em&gt;&amp;ldquo;Create a New Bot&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;612&#34;
-height=&#34;268&#34;
-alt=&#34;1.+Buat+Bot+Baru.png&#34;
-src=&#34;http://4.bp.blogspot.com/-ajowRuU6jW8/V3yC8x_CvbI/AAAAAAAAC7k/CI9_sSWppz8WibCGrpLBLB6BcALvcHcZgCK4B/s1600/1.%2BBuat%2BBot%2BBaru.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Anda akan mendapatkan pesan seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;532&#34;
-height=&#34;167&#34;
-alt=&#34;Pembuatan+Bot+-+meminta+api+token.png&#34;
-src=&#34;http://2.bp.blogspot.com/-Tnhtol1cC7Q/V3yDgNL7McI/AAAAAAAAC7w/KyygNTWzDoAKPIWTNysx629JzSkbTJ23gCK4B/s1600/Pembuatan%2BBot%2B-%2Bmeminta%2Bapi%2Btoken.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Silahkan Klik Saja &lt;a href=&#34;http://telegram.me/botfather&#34;&gt;@BotFather&lt;/a&gt; untuk membuat nama Bot dan mendapatkan token API.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-mendapatkan-token-api&#34;&gt;2. Mendapatkan Token API&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Silahkan buka Bot Father: &lt;a href=&#34;http://telegram.me/botfather&#34;&gt;http://telegram.me/botfather&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Klik pada ikon &lt;em&gt;command bot&lt;/em&gt; &amp;ldquo;&lt;code&gt;[/]&lt;/code&gt;&amp;rdquo; kemudian pilih &lt;em&gt;new bot&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;625&#34;
-height=&#34;326&#34;
-alt=&#34;Mendaftaran+Bot+Baru.png&#34;
-src=&#34;http://2.bp.blogspot.com/-wvA6phUQgfQ/V3yFABbfcvI/AAAAAAAAC78/IEzLeehLFUk8_yh2PfZJ9piJF5GEg7b_ACK4B/s1600/Mendaftaran%2BBot%2BBaru.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Tuliskan nama Bot, contoh: &lt;em&gt;Reddit Programming&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;412&#34;
-height=&#34;162&#34;
-alt=&#34;Memberikan+nama+BOT.png&#34;
-src=&#34;http://3.bp.blogspot.com/-Hz7wPgRw-SU/V35-St7Q2dI/AAAAAAAAC9k/y8CZPzJORSILEvVxfqhbBLz4RBczXmAVQCK4B/s1600/Memberikan%2Bnama%2BBOT.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Kemudian tuliskan username untuk bot anda. Username akan menjadi nama unik dari bot yang akan dibuat. Username harus diakhiri dengan kata &lt;em&gt;&amp;ldquo;bot&amp;rdquo;&lt;/em&gt; dibelakangnya, contoh &lt;code&gt;reddit_programming_bot&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-  width=&#34;410&#34;
-  height=&#34;126&#34;
-  alt=&#34;username+bot.png&#34;
-  src=&#34;http://4.bp.blogspot.com/-BF0c9vlcujU/V35_TIZ7YkI/AAAAAAAAC9s/92r1_aCUxJobQ1nL9oMs7gU0I8vavhCdQCK4B/s1600/username%2Bbot.png&#34;
-  layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Kita akan mendapatkan sebua token api, silahkan di-copy dan kirim ke &lt;a href=&#34;http://telegram.me/Manybot&#34;&gt;@manybot&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;406&#34;
-    height=&#34;298&#34;
-    alt=&#34;Mengambil+token+api+dari+botfather.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-nBux4x3OOXQ/V35_ub_Uu5I/AAAAAAAAC94/WSU9EoQkQGoKEf34zV0OjkzLbKRtQtrxgCK4B/s1600/Mengambil%2Btoken%2Bapi%2Bdari%2Bbotfather.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;3-masukkan-token-api&#34;&gt;3. Masukkan Token API&lt;/h2&gt;
-
-&lt;p&gt;Silahkan masukkan token API yang didapatkan dari &lt;em&gt;BotFather&lt;/em&gt; ke &lt;em&gt;ManyBot&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;551&#34;
-    height=&#34;384&#34;
-    alt=&#34;mengirim+bot+ke+manybot.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-8FA_ryVXFu4/V36AfYSj1DI/AAAAAAAAC-I/V-lmC5hRBXY3ep-368O_Q__NtpApcBV1gCK4B/s1600/mengirim%2Bbot%2Bke%2Bmanybot.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sekarang Bot-nya sudah jadi, kita bisa langsung mengetesnya dengan mengelik link username bot atau klik &lt;code&gt;/skip&lt;/code&gt; untuk melewati.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-konfigurasi-bot&#34;&gt;4. Konfigurasi Bot&lt;/h2&gt;
-
-&lt;p&gt;Karena kita ingin mebuat Bot yang mampu mengecek &lt;em&gt;post&lt;/em&gt; terbaru di sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt;, maka kita perlu integrasikan &lt;em&gt;RSS feed&lt;/em&gt; sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt; dengan bot yang baru saja di buat.&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Silahkan buka bot yang beru saja dibuat: &lt;a href=&#34;http://telegram.me/reddit_programming_bot&#34;&gt;@reddit_programming_bot&lt;/a&gt;, kemudian klik &lt;em&gt;Settings&lt;/em&gt; pada keyboard bot.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;488&#34;
-    height=&#34;240&#34;
-    alt=&#34;Setting+Bot.png&#34;
-    src=&#34;http://1.bp.blogspot.com/-diJ_cbYcnwI/V36B7jK6aXI/AAAAAAAAC-U/KrhhRB0UcR4cryFQj4Qslhy-wGYwj87wQCK4B/s1600/Setting%2BBot.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Setelah itu, masuk ke &lt;em&gt;Autoposting&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;489&#34;
-    height=&#34;241&#34;
-    alt=&#34;masuk+ke+autoposting.png&#34;
-    src=&#34;http://3.bp.blogspot.com/-VfRBT61iOHA/V36CTqkgTEI/AAAAAAAAC-c/hBAagHDypgQ6LX6AhbBKA6mEfYpxkR_bgCK4B/s1600/masuk%2Bke%2Bautoposting.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Klik &lt;em&gt;RSS Feed&lt;/em&gt; untuk menambahkan link RSS Feed dari sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;490&#34;
-height=&#34;193&#34;
-alt=&#34;Klik+RSS+feed.png&#34;
-src=&#34;http://3.bp.blogspot.com/-Lcxo1UD4bck/V36Cw2k338I/AAAAAAAAC-o/9wfWgQTCmZYMA2mgU586R5QBBR32tD5mgCK4B/s1600/Klik%2BRSS%2Bfeed.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selain &lt;em&gt;RSS feed&lt;/em&gt; Reddit, kita juga dapat menggunakan link &lt;em&gt;RSS feed&lt;/em&gt; dari blog, twitter,
-dan youtube. Setiap &lt;em&gt;post&lt;/em&gt; terbaru di blog, twitter, dan youtube, akan di-posting juga ke Bot Telegram.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Masukan link &lt;em&gt;RSS Feed&lt;/em&gt; sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt;. Link &lt;em&gt;RSS Feed&lt;/em&gt;: &lt;a href=&#34;https://www.reddit.com/r/programming/.rss&#34;&gt;https://www.reddit.com/r/programming/.rss&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;491&#34;
-height=&#34;163&#34;
-alt=&#34;menambahkan+alamat+RSS+Feed+ke+bot.png&#34;
-src=&#34;http://1.bp.blogspot.com/-PEhyCw_8NtQ/V36D4mmGGEI/AAAAAAAAC-0/1X8ZnJLP6qIavt3YLLQTwJfWyWg37OSnQCK4B/s1600/menambahkan%2Balamat%2BRSS%2BFeed%2Bke%2Bbot.png&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Selesai, kalau keluar pesan seperti di bawah ini, artinya penambahan link RSS Feed sudah diterima.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;496&#34;
-    height=&#34;413&#34;
-    alt=&#34;Penambahan+RSS+Feed+berhasil.png&#34;
-    src=&#34;http://3.bp.blogspot.com/-8Q7ORUhHTQI/V36EnHzStcI/AAAAAAAAC_A/a7sIcTZuLVQQSSKypmapr2FSfhhK2n_AwCK4B/s1600/Penambahan%2BRSS%2BFeed%2Bberhasil.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kita tinggal tunggu saja. Kalau ada sesuatu yang baru di sub reddit &lt;a href=&#34;https://www.reddit.com/r/programming/&#34;&gt;/r/programming&lt;/a&gt;, akan dikirim ke Bot.&lt;/p&gt;
-
-&lt;h2 id=&#34;5-uji-coba-bot&#34;&gt;5. Uji Coba Bot&lt;/h2&gt;
-
-&lt;p&gt;Setelah menunggu beberapa menit, akhirnya ada juga kiriman terbaru.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;489&#34;
-    height=&#34;186&#34;
-    alt=&#34;tes+bot+reddit+programming.png&#34;
-    src=&#34;https://1.bp.blogspot.com/-Z6R21Sjd0Kc/V36IwTbTSpI/AAAAAAAAC_Q/pyKaPQL78IQo98vdvsT96JaeZ2tHkgjpwCK4B/s1600/tes%2Bbot%2Breddit%2Bprogramming.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kalau link-nya dibuka:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;841&#34;
-    height=&#34;576&#34;
-    alt=&#34;Hasil+link+reddit+yang+dikirim+ke+bot.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-eryjaWjOR_I/V36JPhGJ1uI/AAAAAAAAC_Y/e7NfiG3xcusSn02hBagyt27NIMlINtYiACK4B/s1600/Hasil%2Blink%2Breddit%2Byang%2Bdikirim%2Bke%2Bbot.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya silahkan baca: &lt;a href=&#34;https://www.petanikode.com/2017/02/integarsi-bot-autoposting-telegram-dengan-channel/&#34;&gt;Cara Itegrasi Bot dengan Channel&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nah, bagi yang ingin mengakses Reddit tampa harus dialihkan ke &lt;i&gt;Internet Positif&lt;/i&gt; bisa menggunakan Bot ini.&lt;br&gt;&lt;br&gt;Contoh-contoh link RSS Feeds Reddit yang bisa anda gunakan:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Halaman Depan: &lt;a href=&#34;http://www.reddit.com/.rss&#34;&gt;http://www.reddit.com/.rss&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subreddit: &lt;a href=&#34;http://www.reddit.com/r/news/.rss&#34;&gt;http://www.reddit.com/r/news/.rss&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;User: &lt;a href=&#34;http://www.reddit.com/user/alienth/.rss&#34;&gt;http://www.reddit.com/user/alienth/.rss&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Multireddit: &lt;a href=&#34;http://www.reddit.com/r/news+wtf.rss&#34;&gt;http://www.reddit.com/r/news+wtf.rss&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Dari domain tertentu: &lt;a href=&#34;http://www.reddit.com/domain/microsoft.com/.rss&#34;&gt;http://www.reddit.com/domain/microsoft.com/.rss&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;https://www.reddit.com/wiki/rss&#34;&gt;https://www.reddit.com/wiki/rss&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Selain cepat dan bebas iklan, salah satu yang membuat Telegram lebih unggul dari aplikasi chat yang lain adalah adanya Bot (Robot). Bot merupakan akun yang dikendalikan oleh program. Bot hanya bertindak sesui intruksi yang diberikan melalui kode program.
+Pada kesempatan ini, kita akan membuat sebuah bot tanpa harus menulis kode program (coding). Bot yang akan kita buat sederhana saja. Bot bisa mengecek post terbaru yang dikirim ke sub reddit /r/programming.</description>
     </item>
     
     <item>
@@ -1363,8 +116,10 @@ layout=&#34;responsive&#34;&gt;
       <pubDate>Sat, 02 Jul 2016 05:34:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/mengatasi-peta-google-map-yang-tidak-ditampilkan-di-modal/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;Ketika saya menggunakan modal untuk menampilkan peta (Google Maps), petanya tidak mau tampil. Entah mengapa? setelah ukuran layarnya di-resize, petanya bisa tampil. Mungkin karena &lt;i&gt;div&lt;/i&gt; di dalam &lt;i&gt;modal&lt;/i&gt; bersifat dinamis atau responsif.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-NlWODsxclOY/V3DZfEGN23I/AAAAAAAAC4E/pA6aTwOWRe0-NrQ3BVKbMPmkWEUtSoUyACK4B/s1600/Peta%2BGoogle%2BPada%2BModal%2BBootstrap%2BAdmin%2BLTE%2B-%2Bpetanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-NlWODsxclOY/V3DZfEGN23I/AAAAAAAAC4E/pA6aTwOWRe0-NrQ3BVKbMPmkWEUtSoUyACK4B/s1600/Peta%2BGoogle%2BPada%2BModal%2BBootstrap%2BAdmin%2BLTE%2B-%2Bpetanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Peta kosong, hanya ada warna abu-abu. Solusi dari masalah ini saya temukan di Stackoverflow. &lt;a href=&#34;http://stackoverflow.com/users/1416944/marcok&#34; target=&#34;_blank&#34;&gt;MarcoK&lt;/a&gt; memberikan penjelasan jawaban atas masalah ini.&lt;br /&gt;&lt;br /&gt;Google Maps memang akan menampilkan area abu-abu &lt;i&gt;(grey)&lt;/i&gt; kalau ditempatkan di elemen dinamis. Oleh karna itu, kita perlu memanggil fungsi &lt;i&gt;&amp;ldquo;resize&amp;rdquo;&lt;/i&gt; ketika animasi modal sudah selesai.&lt;br /&gt;&lt;br /&gt;Bootstrap 3: &lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;$(&amp;ldquo;#modal-peta&amp;rdquo;).on(&amp;ldquo;shown.bs.modal&amp;rdquo;, function () {&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; google.maps.event.trigger(peta, &amp;ldquo;resize&amp;rdquo;);&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Bootstrap 2:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;$(&amp;lsquo;#modal-peta&amp;rsquo;).on(&amp;lsquo;shown&amp;rsquo;, function () {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; google.maps.event.trigger(peta, &amp;ldquo;resize&amp;rdquo;);&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;&lt;code&gt;#modal-peta&lt;/code&gt; adalah nama &lt;i&gt;id&lt;/i&gt; dari elemen &lt;i&gt;modal&lt;/i&gt; tempat peta tersebut ditampilkan dan variabel &lt;code&gt;peta&lt;/code&gt; adalah variabel objek dari peta (Google Maps). Kode di atas, ditulis dalam fungsi &lt;code&gt;initialize()&lt;/code&gt; atau persiapan peta, &lt;a href=&#34;https://www.petanikode.com/2016/06/tutorial-google-maps-api-menampilkan.html&#34;&gt;lihat tutorial sebelumnya&lt;/a&gt;.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-cGottAA3EMA/V3bfLaX40RI/AAAAAAAAC5Q/vfa--VFwx08qepZ1zB4g0IB6LqXIIqbmwCK4B/s1600/Peta%2BGoogle%2BMaps%2Bdalam%2BModal%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-cGottAA3EMA/V3bfLaX40RI/AAAAAAAAC5Q/vfa--VFwx08qepZ1zB4g0IB6LqXIIqbmwCK4B/s1600/Peta%2BGoogle%2BMaps%2Bdalam%2BModal%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://stackoverflow.com/a/11743005&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/a/11743005&#34;&gt;http://stackoverflow.com/a/11743005&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Ketika saya menggunakan modal untuk menampilkan peta (Google Maps), petanya tidak mau tampil. Entah mengapa? setelah ukuran layarnya di-resize, petanya bisa tampil. Mungkin karena div di dalam modal bersifat dinamis atau responsif.
+
+Peta kosong, hanya ada warna abu-abu. Solusi dari masalah ini saya temukan di Stackoverflow. MarcoK memberikan penjelasan jawaban atas masalah ini.
+Google Maps memang akan menampilkan area abu-abu (grey) kalau ditempatkan di elemen dinamis. Oleh karna itu, kita perlu memanggil fungsi &amp;ldquo;resize&amp;rdquo; ketika animasi modal sudah selesai.</description>
     </item>
     
     <item>
@@ -1373,8 +128,12 @@ layout=&#34;responsive&#34;&gt;
       <pubDate>Sun, 26 Jun 2016 06:58:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;i&gt;Marker&lt;/i&gt; berfungsi sebagai penanda sebuah lokasi atau titik dalam peta. Pada kesempatan ini, kita akan coba membuat sebuah marker di Google Maps. Anda bisa menggunakan &lt;a href=&#34;http://jsbin.com/bejiduz/3/edit&#34; target=&#34;_blank&#34;&gt;contoh kode sebelumnya&lt;/a&gt; untuk uji coba.&lt;br /&gt;&lt;h2&gt;Objek &lt;i&gt;Marker&lt;/i&gt;&lt;/h2&gt;Seperti halnya peta, &lt;i&gt;marker&lt;/i&gt; juga merupakan sebuah objek yang dapat dibuat dengan kode berikut ini.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker = new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: new google.maps.LatLng(-8.5830695,116.3202515),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Pada kode pembuatan marker di atas, terdapat dua properti penting yaitu &lt;code&gt;position&lt;/code&gt; dan &lt;code&gt;map&lt;/code&gt;. Properti &lt;code&gt;position&lt;/code&gt; berfungsi untuk menentukan titik atau posisi &lt;i&gt;marker&lt;/i&gt; pada peta. Sementara itu, properti &lt;code&gt;map&lt;/code&gt; berfungsi untuk meletakkan &lt;i&gt;marker&lt;/i&gt; pada peta. Karena sebelumnya kita sudah membuat objek peta, maka kita tinggal menggunakan saja.&lt;br /&gt;&lt;br /&gt;Kode Lengkapnya:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/7/embed?html&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Hasil output:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/7/embed?output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Animasi &lt;i&gt;Marker&lt;/i&gt;&lt;/h2&gt;Animasi &lt;i&gt;marker&lt;/i&gt; dapat dibuat dengan menambahkan properti &lt;code&gt;animation&lt;/code&gt;, contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker=new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: new google.maps.LatLng(-8.5830695,116.3202515),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; animation: google.maps.Animation.BOUNCE&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Maka akan menghasilkan:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/8/embed&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kostum Ikon&lt;/h2&gt;Kita bisa mengganti ikon bawaan &lt;i&gt;marker&lt;/i&gt; sesui dengan selera kita. Gunakan properti &lt;code&gt;icon&lt;/code&gt; dengan nilai alamat URL gambar ikon. Contoh:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker=new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: new google.maps.LatLng(-8.623592, 116.222123),&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; icon: &amp;ldquo;&lt;a href=&#34;http://www.petanikode.com/favicon.ico&amp;quot;&#34;&gt;http://www.petanikode.com/favicon.ico&amp;quot;&lt;/a&gt;&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Format ikon tidak harus &lt;i&gt;&amp;rsquo;.ico&amp;rsquo;&lt;/i&gt;, format gambar seperti &lt;i&gt;jpg&lt;/i&gt;, &lt;i&gt;png&lt;/i&gt;, dan &lt;i&gt;gif&lt;/i&gt; juga diterima. Kode diatas akan menghasilkan output:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/9/embed&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Taruh Marker ketika Peta Diklik&lt;/h2&gt;Bagaimana kalau, &lt;i&gt;marker&lt;/i&gt; dibuat ketika peta diklik? Hal ini dapat dilakukan dengan menambahkan &lt;i&gt;event listerner&lt;/i&gt; pada peta. Kemudian memanggil fungsi pembuat &lt;i&gt;marker&lt;/i&gt;. Sebelumnya kita buat dulu fungsi pembuat &lt;i&gt;marker&lt;/i&gt; bernama &lt;code&gt;taruhMarker()&lt;/code&gt;.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;function taruhMarker(peta, posisiTitik){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; // membuat Marker&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; var marker = new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: posisiTitik,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; });&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Letakkan fungsi &lt;code&gt;taruhMarker()&lt;/code&gt; di atas fungsi &lt;code&gt;initialize()&lt;/code&gt;. Kemudian tambahkan event listerner pada fungsi &lt;code&gt;initialize()&lt;/code&gt; atau persiapan peta.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;google.maps.event.addListener(peta, &amp;lsquo;click&amp;rsquo;, function(event) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; taruhMarker(this, event.latLng);&lt;br /&gt;});&lt;/code&gt;&lt;/pre&gt;Kode lengkap dan hasil output:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/12/embed?html,output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Taruh Hanya Satu Marker&lt;/h2&gt;Hasil output di atas menampilkan lebih dari satu &lt;i&gt;marker&lt;/i&gt;. Setiap kali peta diklik, &lt;i&gt;marker&lt;/i&gt; akan senantiasa bertambah. Agar hanya ada satu marker saja yang ditaruh di peta, maka kita perlu membuatkan pengecekan kondisi (apakah sudah ada &lt;i&gt;marker&lt;/i&gt; atau tidak?) pada fungsi &lt;code&gt;taruhMarker()&lt;/code&gt;. Sebelumnya, buatlah objek atau variabel &lt;i&gt;marker&lt;/i&gt; menjadi global agar dapat dicek.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;var marker;&lt;br /&gt;function taruhMarker(peta, posisiTitik){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if( marker ){&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // pindahkan marker&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; marker.setPosition(posisiTitik);&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; } else {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; // buat marker baru&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; marker = new google.maps.Marker({&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; position: posisiTitik,&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; });&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;Kode lengkap dan demo hasil:&lt;br /&gt;&lt;a class=&#34;jsbin-embed&#34; href=&#34;http://jsbin.com/raluzez/14/embed?html,output&#34;&gt;JS Bin on jsbin.com&lt;/a&gt;&lt;script src=&#34;http://static.jsbin.com/js/embed.min.js?3.36.9&#34;&gt;&lt;/script&gt;&lt;br /&gt;&lt;h2&gt;Penutup&lt;/h2&gt;Nah!, sekian dulu tutorial ini. Terima kasih sudah membaca. Selemat menunaikan ibadah puasa.&lt;/p&gt;
-</description>
+      <description>Marker berfungsi sebagai penanda sebuah lokasi atau titik dalam peta. Pada kesempatan ini, kita akan coba membuat sebuah marker di Google Maps. Anda bisa menggunakan contoh kode sebelumnya untuk uji coba.
+Objek MarkerSeperti halnya peta, marker juga merupakan sebuah objek yang dapat dibuat dengan kode berikut ini.
+var marker = new google.maps.Marker({
+&amp;nbsp;&amp;nbsp;&amp;nbsp; position: new google.maps.LatLng(-8.5830695,116.3202515),
+&amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta
+});Pada kode pembuatan marker di atas, terdapat dua properti penting yaitu position dan map.</description>
     </item>
     
     <item>
@@ -1383,96 +142,10 @@ layout=&#34;responsive&#34;&gt;
       <pubDate>Wed, 25 Feb 2015 01:16:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-slimframework-di-linux/</guid>
-      <description>
-
-&lt;p&gt;Slim merupakan sebuah &lt;em&gt;framework&lt;/em&gt; mikro untuk PHP. Slim bisa kita gunakan
-untuk membangun aplikasi web sederhana dan Rest &lt;a href=&#34;https://www.petanikode.com/topik/api&#34;&gt;API&lt;/a&gt;. Kali ini, saya akan
-membawakan tutorial cara menginstal Slim di Linux. Slim yang akan diinstal
-adalah versi 2.0.&lt;/p&gt;
-
-&lt;p&gt;Pastikan &lt;a href=&#34;https://www.petanikode.com/topik/composer&#34;&gt;Composer&lt;/a&gt; dan &lt;a href=&#34;https://www.petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt; sudah terinstal
-di komputer teman-teman. Setelah itu ikuti langkah-langkah berikut ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-direktori-proyek&#34;&gt;Membuat Direktori Proyek&lt;/h2&gt;
-
-&lt;p&gt;Buatlah sebuah direktori dengan nama proyeknya, misalnya &lt;code&gt;proyek-slim&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir proyek-slim
-cd proyek-slim
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;instalasi-slim-dengan-composer&#34;&gt;Instalasi Slim dengan Composer&lt;/h2&gt;
-
-&lt;p&gt;Ketik perintah berikut untuk meinginstal Slim.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;composer require slim/slim:~2.0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Perintah ini akan mendownload Slim dan menyimpannya di dalam direktori &lt;code&gt;vendor&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-file-index-php&#34;&gt;Membuat File &lt;code&gt;index.php&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buat file &lt;code&gt;index.php&lt;/code&gt; di dalam direktori proyeknya dengan isi sebagai
-berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-
-require &#39;vendor/autoload.php&#39;;
-
-$app = new \Slim\Slim();
-
-$app-&amp;gt;get(&amp;quot;/salam/:nama&amp;quot;, function($nama){
-    echo &amp;quot;Assalamualaikum, $nama&amp;quot;;
-});
-
-$app-&amp;gt;run();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang kita punya struktur proyek seperti ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;proyek-slim/
-├── composer.json
-├── composer.lock
-├── index.php
-└── vendor
-...
-14 directories, 62 files
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bagus, selanjutnya kita bisa menggunakan server bawaan PHP.&lt;/p&gt;
-
-&lt;h2 id=&#34;menjalankan-server-php&#34;&gt;Menjalankan Server PHP&lt;/h2&gt;
-
-&lt;p&gt;Ketik perintah berikut untuk menjalankan server PHP pada &lt;code&gt;localhost&lt;/code&gt; dengan
-nomer &lt;em&gt;port&lt;/em&gt; &lt;code&gt;8000&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;php -S localhost:8000
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, cobalah buka web browser dan arahkan ke alamat tersebut.
-Kalau hasilnya &lt;em&gt;not found&lt;/em&gt; berarti rute &lt;code&gt;/&lt;/code&gt; belum kita buat. Cobalah untuk
-mengakses rute &lt;code&gt;/salam/&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;808&#34;
-    height=&#34;242&#34;
-    alt=&#34;program+salam+dengan+framework+slim.png&#34;
-    src=&#34;http://2.bp.blogspot.com/-BjKgeYvxjJo/VOyqigwX8gI/AAAAAAAABbw/QQcUn20VbYw/s1600/program%2Bsalam%2Bdengan%2Bframework%2Bslim.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kita sudah berhasil menginstal Slim, selanjutnya kita bisa lakukan pengembangan
-lebih lanjut. Sekian dulu untuk kali ini.&lt;/p&gt;
-</description>
+      <description>Slim merupakan sebuah framework mikro untuk PHP. Slim bisa kita gunakan untuk membangun aplikasi web sederhana dan Rest API. Kali ini, saya akan membawakan tutorial cara menginstal Slim di Linux. Slim yang akan diinstal adalah versi 2.0.
+Pastikan Composer dan PHP sudah terinstal di komputer teman-teman. Setelah itu ikuti langkah-langkah berikut ini.
+Membuat Direktori Proyek Buatlah sebuah direktori dengan nama proyeknya, misalnya proyek-slim.
+mkdir proyek-slim cd proyek-slim  Instalasi Slim dengan Composer Ketik perintah berikut untuk meinginstal Slim.</description>
     </item>
     
     <item>
@@ -1481,8 +154,27 @@ lebih lanjut. Sekian dulu untuk kali ini.&lt;/p&gt;
       <pubDate>Tue, 24 Feb 2015 00:36:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-python-xml/</guid>
-      <description>&lt;p&gt;&lt;p&gt;DOM (&lt;i&gt;Document Object Model&lt;/i&gt;) adalah sebuah API lintas bahasa dari &lt;i&gt;World Wide Web Consortium&lt;/i&gt; (&lt;a href=&#34;http://www.w3.org/&#34; target=&#34;blank&#34;&gt;W3C&lt;/a&gt;). API ini sangat bermanfaat untuk membaca data yang ada di dokumen XML. Tulisan ini saya buat berdasarkan panduan di &lt;a href=&#34;http://www.tutorialspoint.com/python/python_xml_processing.htm&#34; target=&#34;blank&#34;&gt;tutorialspoint.com&lt;/a&gt;.&lt;/p&gt; &lt;a href=&#34;http://3.bp.blogspot.com/-P4ONAPt-5Us/VOtVXL1usII/AAAAAAAABbI/6FwQJ9o2iJQ/s1600/python-xml.jpg&#34; imageanchor=&#34;1&#34; &gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-P4ONAPt-5Us/VOtVXL1usII/AAAAAAAABbI/6FwQJ9o2iJQ/s1600/python-xml.jpg&#34; alt=&#34;python XML programming&#34; title=&#34;Pemrograman python-xml&#34;/&gt;&lt;/a&gt; &lt;p&gt;Saya memiliki dokumen XML bernama &lt;samp&gt;kartu_nama.xml&lt;/samp&gt;, isinya sebagai berikut:&lt;/p&gt; &lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;&lt;br /&gt;&amp;lt;kartuNama&amp;gt;&lt;br /&gt;    &amp;lt;nama&amp;gt;Ardianta Pargo&amp;lt;/nama&amp;gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;jenis-kelamin&amp;gt;Laki-laki&amp;lt;/jenis-kelamin&amp;gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;alamat&amp;gt;&lt;br /&gt;        &amp;lt;dusun&amp;gt;Sisik Goak&amp;lt;/dusun&amp;gt;&lt;br /&gt;        &amp;lt;desa&amp;gt;Sisik&amp;lt;/desa&amp;gt;&lt;br /&gt;        &amp;lt;kecamatan&amp;gt;Pringgarata&amp;lt;/kecamatan&amp;gt;&lt;br /&gt;        &amp;lt;kabupaten&amp;gt;Lombok Tengah&amp;lt;/kabupaten&amp;gt;&lt;br /&gt;    &amp;lt;/alamat&amp;gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;ponsel&amp;gt;087866866694&amp;lt;/ponsel&amp;gt;&lt;br /&gt;    &amp;lt;surel&amp;gt;ardianta_pargo@yahoo.co.id&amp;lt;/surel&amp;gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;sosial-media&amp;gt;&lt;br /&gt;        &amp;lt;facebook&amp;gt;ardianta.pargo&amp;lt;/facebook&amp;gt;&lt;br /&gt;        &amp;lt;twitter&amp;gt;@ArdiantaPargo&amp;lt;/twitter&amp;gt;&lt;br /&gt;    &amp;lt;/sosial-media&amp;gt;&lt;br /&gt;    &amp;lt;situs-web&amp;gt;&lt;a href=&#34;http://petanikode.blogspot.com&amp;lt;/situs-web&amp;gt;&#34;&gt;http://petanikode.blogspot.com&amp;lt;/situs-web&amp;gt;&lt;/a&gt;&lt;br /&gt;&amp;lt;/kartuNama&amp;gt;&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Saya ingin menampilkan data-data yang ada di dokumen XML tersebut dengan python. Oleh karena itu, saya membutuhkan modul &lt;code&gt;xml.dom&lt;/code&gt;. Saya akan menggunakan fungsi &lt;code&gt;minidom.parse()&lt;/code&gt; untuk mengurai isi dokumen XML. Berikut kode lengkapnya:&lt;/p&gt; &lt;pre&gt;&lt;code class=&#34;python&#34;&gt;from xml.dom.minidom import parse&lt;br /&gt;&lt;br /&gt;# membuka dokumen XML&lt;br /&gt;berkasXML = parse(&amp;quot;kartu_nama.xml&amp;quot;)&lt;br /&gt;&lt;br /&gt;# membuat objek kartu nama&lt;br /&gt;kn = berkasXML.documentElement&lt;br /&gt;&lt;br /&gt;# ambil data-data yang ada di dalam XML&lt;br /&gt;nama = kn.getElementsByTagName(&amp;quot;nama&amp;quot;)[0].childNodes[0].data&lt;br /&gt;jenis_kelamin = kn.getElementsByTagName(&amp;quot;jenis-kelamin&amp;quot;)[0].childNodes[0].data&lt;br /&gt;&lt;br /&gt;dusun = kn.getElementsByTagName(&amp;#39;dusun&amp;#39;)[0].childNodes[0].data&lt;br /&gt;desa = kn.getElementsByTagName(&amp;#39;desa&amp;#39;)[0].childNodes[0].data&lt;br /&gt;kecamata = kn.getElementsByTagName(&amp;#39;kecamatan&amp;#39;)[0].childNodes[0].data&lt;br /&gt;kabupaten = kn.getElementsByTagName(&amp;#39;kabupaten&amp;#39;)[0].childNodes[0].data&lt;br /&gt;alamat = dusun + &amp;quot;, Desa &amp;quot; + desa + &amp;quot;, Kecamatan &amp;quot; + kecamata + &amp;quot;, Kabupaten &amp;quot; + kabupaten&lt;br /&gt;&lt;br /&gt;ponsel = kn.getElementsByTagName(&amp;quot;ponsel&amp;quot;)[0].childNodes[0].data&lt;br /&gt;surel = kn.getElementsByTagName(&amp;quot;surel&amp;quot;)[0].childNodes[0].data&lt;br /&gt;&lt;br /&gt;fb = kn.getElementsByTagName(&amp;quot;facebook&amp;quot;)[0].childNodes[0].data&lt;br /&gt;tw = kn.getElementsByTagName(&amp;quot;twitter&amp;quot;)[0].childNodes[0].data&lt;br /&gt;&lt;br /&gt;situs = kn.getElementsByTagName(&amp;quot;situs-web&amp;quot;)[0].childNodes[0].data&lt;br /&gt;&lt;br /&gt;# cetak data yang telah didapatkan&lt;br /&gt;print &amp;quot;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; KARTU NAMA &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;quot;&lt;br /&gt;print &amp;quot;Nama \t\t: %s&amp;quot; % nama&lt;br /&gt;print &amp;quot;Jenis Kelamin \t: %s&amp;quot; % jenis_kelamin&lt;br /&gt;print &amp;quot;Alamat \t\t: %s&amp;quot; % alamat&lt;br /&gt;print &amp;quot;Ponsel \t\t: %s&amp;quot; % ponsel&lt;br /&gt;print &amp;quot;Surel \t\t: %s&amp;quot; % surel&lt;br /&gt;print &amp;quot;Facebook \t: %s&amp;quot; % fb&lt;br /&gt;print &amp;quot;Twitter \t: %s&amp;quot; % tw&lt;br /&gt;print &amp;quot;Situs web \t: %s&amp;quot; % situs&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Hasil saat dijalankan:&lt;/p&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;$ &lt;b&gt;python bacaXML.py&lt;/b&gt; &lt;br /&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; KARTU NAMA &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;br /&gt;Nama   : Ardianta Pargo&lt;br /&gt;Jenis Kelamin  : Laki-laki&lt;br /&gt;Alamat   : Sisik Goak, Desa Sisik, Kecamatan Pringgarata, Kabupaten Lombok Tengah&lt;br /&gt;Ponsel   : 087866866694&lt;br /&gt;Surel   : ardianta_pargo@yahoo.co.id&lt;br /&gt;Facebook  : ardianta.pargo&lt;br /&gt;Twitter  : @ArdiantaPargo&lt;br /&gt;Situs web  : &lt;a href=&#34;http://petanikode.blogspot.com&#34;&gt;http://petanikode.blogspot.com&lt;/a&gt;&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Fungsi atau &lt;i&gt;method&lt;/i&gt; yang saya gunakan untuk menangkap elemen XML adalah &lt;code&gt;getElementsByTagName()&lt;/code&gt;. Fungsi ini akan menangkap elemen dalam bentuk &lt;i&gt;list&lt;/i&gt;.&lt;/p&gt; &lt;pre&gt;&lt;code class=&#34;python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; print kn.getElementsByTagName(&amp;quot;nama&amp;quot;)&lt;br /&gt;[&amp;lt;DOM Element: nama at 0xb720bdec&amp;gt;]&lt;br /&gt;&lt;br /&gt;&amp;gt;&amp;gt;&amp;gt; print kn.getElementsByTagName(&amp;quot;nama&amp;quot;)[0]&lt;br /&gt;&amp;lt;DOM Element: nama at 0xb720bdec&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;gt;&amp;gt;&amp;gt; print kn.getElementsByTagName(&amp;quot;nama&amp;quot;)[0].childNodes&lt;br /&gt;[&amp;lt;DOM Text node &amp;quot;u&amp;#39;Ardianta P&amp;#39;&amp;hellip;&amp;quot;&amp;gt;]&lt;br /&gt;&lt;br /&gt;&amp;gt;&amp;gt;&amp;gt; print kn.getElementsByTagName(&amp;quot;nama&amp;quot;)[0].childNodes&lt;br /&gt;[&amp;lt;DOM Text node &amp;quot;u&amp;#39;Ardianta P&amp;#39;&amp;hellip;&amp;quot;&amp;gt;]&lt;br /&gt;&lt;br /&gt;&amp;gt;&amp;gt;&amp;gt; print kn.getElementsByTagName(&amp;quot;nama&amp;quot;)[0].childNodes[0]&lt;br /&gt;&amp;lt;DOM Text node &amp;quot;u&amp;#39;Ardianta P&amp;#39;&amp;hellip;&amp;quot;&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;gt;&amp;gt;&amp;gt; print kn.getElementsByTagName(&amp;quot;nama&amp;quot;)[0].childNodes[0].data&lt;br /&gt;Ardianta Pargo&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
-</description>
+      <description>DOM (Document Object Model) adalah sebuah API lintas bahasa dari World Wide Web Consortium (W3C). API ini sangat bermanfaat untuk membaca data yang ada di dokumen XML. Tulisan ini saya buat berdasarkan panduan di tutorialspoint.com.
+ Saya memiliki dokumen XML bernama kartu_nama.xml, isinya sebagai berikut:
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;
+&amp;lt;kartuNama&amp;gt;
+&amp;lt;nama&amp;gt;Ardianta Pargo&amp;lt;/nama&amp;gt;
+&amp;lt;jenis-kelamin&amp;gt;Laki-laki&amp;lt;/jenis-kelamin&amp;gt;
+&amp;lt;alamat&amp;gt;
+&amp;lt;dusun&amp;gt;Sisik Goak&amp;lt;/dusun&amp;gt;
+&amp;lt;desa&amp;gt;Sisik&amp;lt;/desa&amp;gt;
+&amp;lt;kecamatan&amp;gt;Pringgarata&amp;lt;/kecamatan&amp;gt;
+&amp;lt;kabupaten&amp;gt;Lombok Tengah&amp;lt;/kabupaten&amp;gt;
+&amp;lt;/alamat&amp;gt;
+&amp;lt;ponsel&amp;gt;087866866694&amp;lt;/ponsel&amp;gt;
+&amp;lt;surel&amp;gt;ardianta_pargo@yahoo.co.id&amp;lt;/surel&amp;gt;
+&amp;lt;sosial-media&amp;gt;
+&amp;lt;facebook&amp;gt;ardianta.pargo&amp;lt;/facebook&amp;gt;
+&amp;lt;twitter&amp;gt;@ArdiantaPargo&amp;lt;/twitter&amp;gt;
+&amp;lt;/sosial-media&amp;gt;
+&amp;lt;situs-web&amp;gt;http://petanikode.blogspot.com&amp;lt;/situs-web&amp;gt;
+&amp;lt;/kartuNama&amp;gt;
+ Saya ingin menampilkan data-data yang ada di dokumen XML tersebut dengan python.</description>
     </item>
     
   </channel>

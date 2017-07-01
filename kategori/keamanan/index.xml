@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Keamanan on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/kategori/keamanan/index.xml</link>
+    <link>https://www.petanikode.com/kategori/keamanan/</link>
     <description>Recent content in Keamanan on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/kategori/keamanan/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Feb 2017 20:12:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/kategori/keamanan/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Bahaya! Password dan Token API Bisa Dicuri dengan Sangat Mudah di Github</title>
@@ -15,185 +18,9 @@
       <pubDate>Wed, 15 Feb 2017 20:12:19 +0800</pubDate>
       
       <guid>https://www.petanikode.com/password-dan-token-api-bisa-dicuri-di-github/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;github-remove-password-petanikode.jpg&#34;
-    src=&#34;https://1.bp.blogspot.com/-jXRLtOGiGXs/WKSVce4PaDI/AAAAAAAAD_o/tMWKujJUoXwrKxbJBI9QHe2XlNuzQBTHACPcB/s1600/github-remove-password-petanikode.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Tidak perlu kemampuan khusus, tidak pelu &lt;em&gt;tools&lt;/em&gt; yang canggih, hanya bermodal
-kata kunci, kita sudah bisa mencuri password dan token API di Github. Teknik
-ini mirip seperti Google Dork.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Peringatan&lt;/strong&gt;: Tulisan ini bukan untuk mengajarkan anda menjadi pencuri dan
-melakukan perusakan, melainkan untuk berbagi pengetahuan. Agar developer
-semakin teliti dan berhati-hati dalam melakukan &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;password-dan-token-api-dalam-kode&#34;&gt;Password dan Token API dalam Kode&lt;/h2&gt;
-
-&lt;p&gt;Bayangkan kita lagi mengerjakan proyek web dengan &lt;a href=&#34;https://www.petanikode.com/topik/php&#34;&gt;PHP&lt;/a&gt;. Nanti
-kalau sudah jadi, kodenya akan kita sebar di Github dengan repositori publik.&lt;/p&gt;
-
-&lt;p&gt;Lalu, ditengah-tengah penulisan kode ini, kita melakukan &lt;em&gt;testing&lt;/em&gt; dengan konfigurasi
-&lt;em&gt;production&lt;/em&gt; dari server yang sudah kita sewa. Kira-kira konfigurasinya akan
-seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-// file: config.php
-
-$dbhost = &amp;quot;mysql.petanikode.com&amp;quot;;
-$dbuser = &amp;quot;petanikode&amp;quot;;
-$dbpass = &amp;quot;kopi&amp;quot;;
-$dbname = &amp;quot;petanikode_web&amp;quot;;
-
-$api_token = &amp;quot;09vasd9a7sdny7asdwqmnbe&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian kita melakukan &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
-git commit -m &amp;quot;blablablabla&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Beberapa saat kemudian, kode sudah hampir jadi dan siap untuk dipublikasikan ke
-Github. Lalu kita menghapus password pada konfigurasi yang tadi, agar tidak diketahui
-orang.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-// file: config.php
-
-$dbhost = &amp;quot;YOUR DB HOST&amp;quot;;
-$dbuser = &amp;quot;YOUR DB USERNAME&amp;quot;;
-$dbpass = &amp;quot;YOUR DB PASS&amp;quot;;
-$dbname = &amp;quot;YOUR DB NAME&amp;quot;;
-
-$api_token = &amp;quot;YOUR API KEY&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu melakukan &lt;em&gt;commit&lt;/em&gt; lagi.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
-git commit -m &amp;quot;remove password&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian melakukan &lt;em&gt;push&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nah! Di sinilah letak kesalahan fatalnya.&lt;/p&gt;
-
-&lt;p&gt;Tunggu sebantar, maksudnya apa?
-Saya kan sudah menghapus password dan token API dalam kode. Kesalahan fatal
-bagaimana maksudnya?&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;berburu-password-dan-token-api-di-github&#34;&gt;Berburu Password dan Token API di Github&lt;/h2&gt;
-
-&lt;p&gt;Berdasarkan kronologi cerita di atas, si Developer secara tidak sadar sudah
-menyebar password dan token API-nya di Github. Perhatikan saja pada &lt;em&gt;commit&lt;/em&gt;
-&lt;strong&gt;&amp;ldquo;remove password&amp;rdquo;&lt;/strong&gt;. Pada saat itu dilakukan, Git akan menyimpan perubahan yang ia lakukan.&lt;/p&gt;
-
-&lt;p&gt;Lalu seseorang mencari di Github dengan kata kunci &lt;strong&gt;&amp;ldquo;remove password&amp;rdquo;&lt;/strong&gt;, dan
-boom! Lihatlah apa yang ditemukan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1147&#34;
-    height=&#34;631&#34;
-    alt=&#34;Search+-+remove+password+-+github+-+petanikode.png&#34;
-    src=&#34;https://3.bp.blogspot.com/-7dZKO50Nk8Y/WKRlNmQrLxI/AAAAAAAAD98/ZVAWYQ24Igsg5mMPAjCnALTrkp8ebmU5QCPcB/s1600/Search%2B-%2Bremove%2Bpassword%2B-%2Bgithub%2B-%2Bpetanikode.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Coba lihat salah satu.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;758&#34;
-    height=&#34;436&#34;
-    alt=&#34;password+yang+dibagikan+di+github.png&#34;
-    src=&#34;https://1.bp.blogspot.com/-giPYQqSeGjw/WKRmEoZ-B3I/AAAAAAAAD-Q/TnplB4O0JgYol7FSnRF-dJ0uLRf2Hp8rACPcB/s1600/password%2Byang%2Bdibagikan%2Bdi%2Bgithub.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Lihat, sekarang sudah tahu kan kesalahan fatalnya. Oke, mari kita coba tes.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;1366&#34;
-    height=&#34;743&#34;
-    alt=&#34;testing+server+hasil+curian.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-3k5ngoYU3fs/WKRnLXmtZPI/AAAAAAAAD-k/e2AIfgliihISqWYUsNkjpjEyC92OVT1nwCPcB/s1600/testing%2Bserver%2Bhasil%2Bcurian.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Whihihi :smile: bisa.&lt;/p&gt;
-
-&lt;h2 id=&#34;kata-kunci-yang-lain&#34;&gt;Kata Kunci yang Lain&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;add password&lt;/li&gt;
-&lt;li&gt;add .env&lt;/li&gt;
-&lt;li&gt;remove .env&lt;/li&gt;
-&lt;li&gt;delete .env&lt;/li&gt;
-&lt;li&gt;rm .env&lt;/li&gt;
-&lt;li&gt;remove secrets&lt;/li&gt;
-&lt;li&gt;hapus password&lt;/li&gt;
-&lt;li&gt;DriverManager.getConnection(&lt;/li&gt;
-&lt;li&gt;password extension:yaml extension:yml extension:json&lt;/li&gt;
-&lt;li&gt;remove password extension:php&lt;/li&gt;
-&lt;li&gt;I don&amp;rsquo;t know&lt;/li&gt;
-&lt;li&gt;remove credentials&lt;/li&gt;
-&lt;li&gt;Root password&lt;/li&gt;
-&lt;li&gt;Hide password&lt;/li&gt;
-&lt;li&gt;remove api key&lt;/li&gt;
-&lt;li&gt;dll.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;solusi&#34;&gt;Solusi&lt;/h2&gt;
-
-&lt;p&gt;Sebenarnya isu ini sedang ramai diperbincangkan di Hacker News. Orang-orang HN
-&lt;a href=&#34;https://github.com/BinetLoisir/FlipperMap/commit/5a384d9d4658669b9324de7ba933ed5b05911154&#34;&gt;mengomentari&lt;/a&gt; &lt;em&gt;commit&lt;/em&gt; yang dilakukan seperti di atas.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;629&#34;
-    height=&#34;673&#34;
-    alt=&#34;komentar+dari+HN.png&#34;
-    src=&#34;https://4.bp.blogspot.com/-1Ks3Oni8KGY/WKRthVg3pPI/AAAAAAAAD_M/lGS2Laa7J_Q0V57E6PEK47e7W9jhBeQ8QCPcB/s1600/komentar%2Bdari%2BHN.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Solusi yang mereka tawarkan diantaranya:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Masukan file konfigurasi ke dalam &lt;code&gt;.gitignore&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Gunakan &lt;a href=&#34;https://github.com/AGWA/git-crypt&#34;&gt;git-crypt&lt;/a&gt; untuk mengenkripsi data sensitif.&lt;/li&gt;
-&lt;li&gt;Ubah Password&lt;/li&gt;
-&lt;li&gt;Gunakan &lt;a href=&#34;https://github.com/StackExchange/blackbox&#34;&gt;Blackbox&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/removing-sensitive-data-from-a-repository/&#34;&gt;Ikuti saran dari Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;penutup&#34;&gt;Penutup&lt;/h2&gt;
-
-&lt;p&gt;Sekarang kita sudah tahu, bagaimana cara pencurian password dan token API di
-Github. Setidaknya kita bisa berhati-hati agar tidak melakukan kesalahan seperti
-di atas. Bayangkan kalau password server &lt;em&gt;production&lt;/em&gt; yang kita sebar itu milik
-perusahaan atau pemerintah, apa yang akan terjadi?&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;https://news.ycombinator.com/item?id=13650818&#34;&gt;HN&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Tidak perlu kemampuan khusus, tidak pelu tools yang canggih, hanya bermodal kata kunci, kita sudah bisa mencuri password dan token API di Github. Teknik ini mirip seperti Google Dork.
+ Peringatan: Tulisan ini bukan untuk mengajarkan anda menjadi pencuri dan melakukan perusakan, melainkan untuk berbagi pengetahuan. Agar developer semakin teliti dan berhati-hati dalam melakukan commit.
+ Password dan Token API dalam Kode Bayangkan kita lagi mengerjakan proyek web dengan PHP.</description>
     </item>
     
   </channel>

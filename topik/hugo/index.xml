@@ -2,12 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/hugo/index.xml</link>
+    <link>https://www.petanikode.com/topik/hugo/</link>
     <description>Recent content in Hugo on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Jul 2017 17:29:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cara Membuat Blog dengan Hugo (Ngeblog dari Teks Editor dan Terminal ala Programmer)</title>
+      <link>https://www.petanikode.com/membuat-blog-dengan-hugo/</link>
+      <pubDate>Sat, 01 Jul 2017 17:29:24 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/membuat-blog-dengan-hugo/</guid>
+      <description>Saya punya blog:
+CMS-nya menggunakan Blogger dan Wordpress&amp;hellip;
+&amp;hellip;tapi tidak pernah terurus.
+Mungkin saya malas, karena koneksi internet yang kurang cepat.
+Maklum tinggal di desa, sinyalnya tidak stabil :smile:.
+Kendala yang saya alami:
+ Malas upload gambar satu per satu ketika membuat artikel. Tidak bisa ngedit artikel secara offline. Tidak memiliki kuasa penuh terhadap CMS-nya. Kurang aman. dan masih banyak lagi.  Karena itu, sekarang saya lebih suka ngeblog dari teks editor menggunakan SSG (Satatic Site Generator) daripada CMS seperti Wordpress.</description>
+    </item>
     
     <item>
       <title>Cara Membuat Tema Hugo dari Nol (Meracik ulang Tema Petani Kode)</title>
@@ -15,181 +33,9 @@
       <pubDate>Fri, 23 Jun 2017 14:21:09 +0800</pubDate>
       
       <guid>https://www.petanikode.com/membuat-tema-hugo/</guid>
-      <description>
-
-&lt;p&gt;Saat ini Saya sedang menggunakan Hugo versi 0.18 dan berencana untuk
-meng-upgrade ke versi 0.24. Kabar baiknya, &lt;a href=&#34;https://github.com/bep&#34;&gt;Beb&lt;/a&gt; sudah merilis &lt;a href=&#34;https://github.com/gohugoio/hugo/releases/tag/v0.24&#34;&gt;versi 0.24&lt;/a&gt; sekitar dua
-hari yang lalu.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tema-hugo/hugo-v0.24.png&#34; alt=&#34;Rilis Hugo versi 0.24&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Selain melakukan upgrade ke mesin terbaru, saya juga berencana meracik
-ulang tema Petani Kode. Karena saya rasa tema ini cukup berantakan,
-baik dari segi kode dan performa.&lt;/p&gt;
-
-&lt;h2 id=&#34;alasan-saya-ingin-membuat-tema-baru&#34;&gt;Alasan Saya ingin Membuat Tema Baru&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Kode tema yang digunakan saat ini masih berantakan.&lt;/li&gt;
-&lt;li&gt;Kode CSS-nya masih murni ditulis dari nol dan saya ingin mencoba bereksperimen dengan &lt;a href=&#34;https://www.petanikode.com/topik/sass&#34;&gt;SASS&lt;/a&gt; di Hugo.&lt;/li&gt;
-&lt;li&gt;Penerapan AMP masih salah dan banyak yang tidak valid.&lt;/li&gt;
-&lt;li&gt;Tema yang digunakan saat ini, tampilannya hanya bisa terlihat sempurna kalau terhubung dengan internet, sedangkan
-kalau digunakan secara offline tampilannya barantakan. Hal ini disebabkan karena
-saya menggunakan CDN &lt;em&gt;(Content Delivery Network)&lt;/em&gt; dan font dari Google.&lt;/li&gt;
-&lt;li&gt;Ingin belajar membuat tema dari nol, karena tema yang digunakan saat ini merupakan
-hasil modifikasi dari tema &lt;a href=&#34;https://themes.gohugo.io/gohugo-amp/&#34;&gt;AMP Starter&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;membuat-tema-baru-di-hugo&#34;&gt;Membuat Tema Baru di Hugo&lt;/h2&gt;
-
-&lt;p&gt;Hugo sudah menyediakan perintah untuk membuat tema baru:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hugo new theme [name]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sebagai contoh, saya akan membuat tema bernama &lt;code&gt;kacang&lt;/code&gt; (karena saat ini lagi musim tanam kacang :smile:).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hugo new theme kacang
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka akan ada direktori baru di dalam direktori &lt;code&gt;themes&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tema-hugo/tema-baru.png&#34; alt=&#34;Tema Baru di Hugo&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hugo sudah membuatkankan kita struktur direktori temanya dan tinggal dimodifikasi saja.
-Tapi sebelumnya, kita harus paham dulu dengan struktur direktori tersebut.&lt;/p&gt;
-
-&lt;h2 id=&#34;struktur-direktori-tema-hugo&#34;&gt;Struktur Direktori Tema Hugo&lt;/h2&gt;
-
-&lt;p&gt;Berikut ini struktur direktori tema Hugo:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;kacang/
-├── archetypes
-│   └── default.md
-├── layouts
-│   ├── 404.html
-│   ├── _default
-│   │   ├── list.html
-│   │   └── single.html
-│   ├── index.html
-│   └── partials
-│       ├── footer.html
-│       └── header.html
-├── LICENSE.md
-├── static
-│   ├── css
-│   └── js
-└── theme.toml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ada tiga direktori yang dibuatkan oleh Hugo:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;archetype&lt;/code&gt; &amp;mdash; direktori yang berisi template konten;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;layouts&lt;/code&gt; &amp;mdash; direktori yang berisi layout temanya;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;static&lt;/code&gt; &amp;mdash; direktori untuk menyimpan file statis seperti css, javascript, gambar, dsb.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Biar lebih jelas, mari kita bahas satu-persatu&amp;hellip;&lt;/p&gt;
-
-&lt;h3 id=&#34;archetype&#34;&gt;Archetype&lt;/h3&gt;
-
-&lt;p&gt;Jika blog kita memiliki beberapa jenis konten, misalnya ada artikel, portofolio,
-podcast, dll. maka kita harus membuatkan &lt;code&gt;archetype&lt;/code&gt; untuk masing-masing jenis
-konten tersebut.&lt;/p&gt;
-
-&lt;p&gt;Di dalam direktori &lt;code&gt;archetype&lt;/code&gt; terdapat file &lt;code&gt;default.md&lt;/code&gt; yang merupakan
-&lt;code&gt;archetype&lt;/code&gt; default yang akan digunakan ketika kita membuat konten
-dengan perintah &lt;code&gt;hugo new&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;layouts&#34;&gt;Layouts&lt;/h3&gt;
-
-&lt;p&gt;Direktori layout menyimpan file-file HTML yang merupakan struktur dasar dari tema.&lt;/p&gt;
-
-&lt;p&gt;Terdapat dua direktori penting di dalamnya:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;_default&lt;/code&gt; berisi struktur HTML untuk halaman konten. Ada dua isinya:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;list.html&lt;/code&gt; file HTML untuk menampilkan daftar konten.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;single.html&lt;/code&gt; file HTML untuk menampilkan satu konten.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tema-hugo/list-single.png&#34; alt=&#34;List vs Single&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;partials&lt;/code&gt; berisi bagian-bagian kecil dari struktur HTML.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tema-hugo/partial.png&#34; alt=&#34;Partials&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Partials&lt;/code&gt; memungkinkan kita memecah kode-kode layout menjadi bagian kecil,
-sehingga lebih efisien.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Kemudian ada juga file HTML:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;404.html&lt;/code&gt; file HTML untuk halaman error 404 not found.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;index.html&lt;/code&gt; file HTML untuk halaman indeks atau homepage.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;static&#34;&gt;Static&lt;/h3&gt;
-
-&lt;p&gt;Direktori ini menyimpan file-file statis seperti CSS, Javascript, Gambar,
-dan sebagainya.&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-halaman-home&#34;&gt;Membuat Halaman Home&lt;/h2&gt;
-
-&lt;p&gt;Hal pertama yang harus kita lakukan adalah membuat halaman utamanya, yaitu
-halaman homepage.&lt;/p&gt;
-
-&lt;p&gt;Layout untuk halaman homepage ditentukan oleh file &lt;code&gt;layouts/index.html&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Silahkan isi file &lt;code&gt;index.html&lt;/code&gt; dengan kode berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-    &amp;lt;head&amp;gt;
-        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-        &amp;lt;title&amp;gt;{{ .Title }}&amp;lt;/title&amp;gt;
-    &amp;lt;/head&amp;gt;
-    &amp;lt;body&amp;gt;
-
-        &amp;lt;h1&amp;gt;Hello World!&amp;lt;/h1&amp;gt;
-        &amp;lt;p&amp;gt;Selamat datang di &amp;lt;b&amp;gt;{{ .Title }}&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;
-
-    &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ini hanya untuk percobaan saja.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu silahkan jalankan server hugo dengan menggunakan tema tersebut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;hugo server -t kacang
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/tema-hugo/percobaan-tema-kacang.png&#34; alt=&#34;Hasil percobaan tema kacang&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berhasil&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya kita tinggal modifikasi saja sesuai selera.&lt;/p&gt;
-
-&lt;p&gt;Untuk referensi nama-nama variabel Hugo, bisa dibaca di &lt;a href=&#34;http://gohugo.io/templates/overview/&#34;&gt;dokumentasi Hugo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;Pengembangan tema ini mungkin akan saya lanjutkan di tulisan terpisah.
-Karena saya belum membuat rancangan dan desainnya.&lt;/p&gt;
-
-&lt;p&gt;Sekarang yang terpenting sudah tahu cara memulainya :smile:.&lt;/p&gt;
-
-&lt;p&gt;Terima kasih sudah membaca sampai akhir.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;: Dok. Hugo &amp;mdash; &lt;a href=&#34;http://gohugo.io/themes/creation/&#34;&gt;Creating a Theme&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Saat ini Saya sedang menggunakan Hugo versi 0.18 dan berencana untuk meng-upgrade ke versi 0.24. Kabar baiknya, Beb sudah merilis versi 0.24 sekitar dua hari yang lalu.
+Selain melakukan upgrade ke mesin terbaru, saya juga berencana meracik ulang tema Petani Kode. Karena saya rasa tema ini cukup berantakan, baik dari segi kode dan performa.
+Alasan Saya ingin Membuat Tema Baru  Kode tema yang digunakan saat ini masih berantakan. Kode CSS-nya masih murni ditulis dari nol dan saya ingin mencoba bereksperimen dengan SASS di Hugo.</description>
     </item>
     
     <item>
@@ -198,118 +44,12 @@ Karena saya belum membuat rancangan dan desainnya.&lt;/p&gt;
       <pubDate>Wed, 19 Apr 2017 10:56:07 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-menambahkan-ssl-untuk-github-pages/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/https.png&#34; alt=&#34;Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada dasarnya Github telah memberikan SSL untuk setiap halaman github &lt;em&gt;(Github Pages)&lt;/em&gt;.
-Akan tetapi, untuk halaman github yang menggunakan domain sendiri tidak diberikan.&lt;/p&gt;
-
-&lt;p&gt;Contoh Halaman github dengan SSL:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://petanikode.github.io
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Lihat, di sana &lt;code&gt;https&lt;/code&gt; menandakan SSL-nya aktif.&lt;/p&gt;
-
-&lt;p&gt;Sedangkan untuk kostum domain, seperti &lt;code&gt;http://petanikode.com&lt;/code&gt; tidak diberikan
-SSL.&lt;/p&gt;
-
-&lt;h2 id=&#34;mengapa-menggunakan-ssl&#34;&gt;Mengapa Menggunakan SSL?&lt;/h2&gt;
-
-&lt;p&gt;Petani Kode memang sebuah halaman statis yang dibuat dengan Hugo.&lt;/p&gt;
-
-&lt;p&gt;Sepertinya SSL tidak terlalu dibutuhkan, karena tidak ada pemerosesan data
-melalui form yang akan dikirim ke database.&lt;/p&gt;
-
-&lt;p&gt;Tapi, menurut beberapa pakar SEO: menggunakan SSL/https di blog akan meningkatkan
-kepercayaan mesin pencari.&lt;/p&gt;
-
-&lt;p&gt;Saya percaya&amp;hellip; karena beru saja membaca: &lt;a href=&#34;https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html&#34;&gt;HTTPS as a ranking signal&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, petani kode harus menggunakan SSL :smile:.&lt;/p&gt;
-
-&lt;h2 id=&#34;mengaktifkan-ssl-cloudflare&#34;&gt;Mengaktifkan SSL Cloudflare&lt;/h2&gt;
-
-&lt;p&gt;Pertama pastikan pengaturan DNS-nya seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-DNS-Cloudflare.png&#34; alt=&#34;Konfigurasi DNS Cloudflare&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Artinya, website kita yang di Github akan melewati Cloudflare kemudian diteruskan
-ke Client.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu masuk ke &lt;strong&gt;Crypto&lt;/strong&gt;, kemudian atur SSL menjadi &lt;strong&gt;Full&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-SSL-Cloudflare.png&#34; alt=&#34;Pengaturan SSL Cloudflare&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ada empat pilihan: off, flexible, full, dan full (strict).&lt;/p&gt;
-
-&lt;p&gt;Perbedaanya seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/cloudflare_ssl_modes.png&#34; alt=&#34;Perbedaan pengaturan SSL Cloudflare&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sumber: &lt;a href=&#34;https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/&#34;&gt;blog.cloudflare.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-page-rules&#34;&gt;Membuat Page Rules&lt;/h2&gt;
-
-&lt;p&gt;Agar &lt;code&gt;http&lt;/code&gt; dialihkan ke &lt;code&gt;https&lt;/code&gt;, maka kita perlu membuat &lt;em&gt;page rules&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Silahkan masuk ke &lt;strong&gt;Page Rules&lt;/strong&gt;, kemudian tambahkan &lt;em&gt;rules&lt;/em&gt; seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-page-rules-untuk-https.png&#34; alt=&#34;Pengaturan Page Rules untuk HTTPS&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tambahkan juga &lt;em&gt;rules&lt;/em&gt; untuk cache-nya seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/pengaturan-page-rules-untuk-cache.png&#34; alt=&#34;Pengaturan Page Rules untuk Cache&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;menugbah-cname-dan-konfigurasi-hugo&#34;&gt;Menugbah CNAME dan Konfigurasi Hugo&lt;/h2&gt;
-
-&lt;p&gt;Karena kita ingin menggunakan alamat dengan &lt;code&gt;https&lt;/code&gt; maka perlu diubah Konfigurasinya.&lt;/p&gt;
-
-&lt;p&gt;Di Hugo, baseurl-nya diubah menjadi seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;baseurl = &amp;quot;https://www.petanikode.com/&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sedangkana di repositori githubnya:&lt;/p&gt;
-
-&lt;p&gt;CNAME: &lt;a href=&#34;https://github.com/petanikode/petanikode.github.io/blob/master/CNAME&#34;&gt;petanikode.github.io/CNAME&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;www.petanikode.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;percobaan-dan-masalah&#34;&gt;Percobaan dan Masalah&lt;/h2&gt;
-
-&lt;p&gt;Saat melakukan percobaan, saya kira SSL-nya tidak bekerja dengan baik.&lt;/p&gt;
-
-&lt;p&gt;Terlihat di browser, ketika membuka  &lt;code&gt;https://www.petanikode.com&lt;/code&gt; warnya abu-abu.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/SSL-masih-belum-aman.png&#34; alt=&#34;SSL Belum aman&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hal ini disebabkan karena ada beberapa link gambar yang masih menggunakan HTTP.&lt;/p&gt;
-
-&lt;p&gt;Kemudian Saya mencoba mencarinya di &lt;em&gt;page source&lt;/em&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/link-aset-yang-masih-menggunakan-http.png&#34; alt=&#34;Link aset yang masih menggunakan http&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah mengetahui, gambar atau &lt;em&gt;assets&lt;/em&gt; yang masih menggunakan &lt;code&gt;http&lt;/code&gt; selanjutnya
-tinggal mengubahnya menjadi &lt;code&gt;https&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pada Hugo, Konfigurasinya saya letakan di &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/mengubah-link-gambar-ke-https.png&#34; alt=&#34;Mengubah link gambar dari http menjadi https&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;hellip;dan akhirnya SSL sudah aktif.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/ssl-petanikode-sudah-aktif.png&#34; alt=&#34;SSL Petani kode sudah aktif&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi, ada satu lagi masalah yang muncul.&lt;/p&gt;
-
-&lt;p&gt;Semua komentar menghilang, karena link yang tersimpan di disqus adalah link versi
-sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Mungkin nanti akan saya perbaiki :smile:, yang penting sekarang sudah HTTPS.&lt;/p&gt;
-</description>
+      <description>Pada dasarnya Github telah memberikan SSL untuk setiap halaman github (Github Pages). Akan tetapi, untuk halaman github yang menggunakan domain sendiri tidak diberikan.
+Contoh Halaman github dengan SSL:
+https://petanikode.github.io  Lihat, di sana https menandakan SSL-nya aktif.
+Sedangkan untuk kostum domain, seperti http://petanikode.com tidak diberikan SSL.
+Mengapa Menggunakan SSL? Petani Kode memang sebuah halaman statis yang dibuat dengan Hugo.
+Sepertinya SSL tidak terlalu dibutuhkan, karena tidak ada pemerosesan data melalui form yang akan dikirim ke database.</description>
     </item>
     
     <item>
@@ -318,119 +58,14 @@ sebelumnya.&lt;/p&gt;
       <pubDate>Fri, 07 Apr 2017 15:22:34 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-redirect-halaman-di-hugo/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-Mv7_MzM09G8/WIDgeFiJCWI/AAAAAAAADrY/0y8-pWVkHe0kjrgbjRxEeGT7jGKai90zACPcB/s1600/hugo-petanikode.jpg&#34; alt=&#34;Cara Redirect Halaman di Hugo untuk Mempertahankan Trafik&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hingga saat ini, &lt;a href=&#34;https://www.petanikode.com/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;proses migrasi Petani Kode ke Hugo&lt;/a&gt; masih belum selesai.&lt;/p&gt;
-
-&lt;p&gt;Mengapa saya katakan demikian?&lt;/p&gt;
-
-&lt;p&gt;Karena banyak artikel yang belum diedit.&lt;/p&gt;
-
-&lt;p&gt;Banyak artikel yang link-nya &lt;code&gt;error 404&lt;/code&gt;, alias tidak ditemukan.&lt;/p&gt;
-
-&lt;p&gt;Terpantau dari laporan Google Webmaster, error 404-nya tembus sampai 546 halaman.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-s4uEDxJPex8/WOdDMQS_3oI/AAAAAAAAEnY/oxFVV2AVafUrCgoVOsIde4_NGFV5R3-AQCK4B/s1600/error%2B404%2Bpetanikode.png&#34; alt=&#34;Error 404 Halaman Artikel Petani Kode&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hal ini akan membuat banyak orang kecewa, termasuk juga saya.&lt;/p&gt;
-
-&lt;p&gt;Karena sudah banyak artikel yang terindeks di google, di-share di sosial media, dan
-link lainnya.&lt;/p&gt;
-
-&lt;p&gt;Ketika mereka membukanya, akan mendapatkan error 404.&lt;/p&gt;
-
-&lt;p&gt;Sebelumnya, saya sudah menggunakan layanan &lt;a href=&#34;https://www.petanikode.com/cara-redirect-domain-dengan-cloudflare/&#34;&gt;Cloud Flare untuk mengalihkan
-&lt;em&gt;(redirect)&lt;/em&gt; halaman&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Hasilnya cukup memuaskan.&lt;/p&gt;
-
-&lt;p&gt;Link yang seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://petanikode.com/2015/10/pemrograman-java-di-lab-4-berkenalan-dengan-scanner/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;bisa dialihkan ke:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://petanikode.com/pemrograman-java-di-lab-4-berkenalan-dengan-scanner/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Karena itu, saya tidak perlu pusing lagi memikirkan pengalihannya.&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi, ada beberapa artikel yang saya edit dan mengganti link-nya.&lt;/p&gt;
-
-&lt;p&gt;Contohnya menjadi seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://petanikode.com/pemrograman-java-input-dan-output/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tentu saja layanan Cloud Flare tidak mampu melakukan pengalihan, karena algoritma
-mereka hanya sebatas melakukan pencocokan saja.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, pengalihan ini harus dilakukan secara manual.&lt;/p&gt;
-
-&lt;p&gt;Untungnya Hugo sudah menyediakan fitur untuk melakukannya.&lt;/p&gt;
-
-&lt;h2 id=&#34;pengalihan-dengan-aliases&#34;&gt;Pengalihan dengan Aliases&lt;/h2&gt;
-
-&lt;p&gt;Panduan lengkap penggunaan &lt;code&gt;aliases&lt;/code&gt; ada di &lt;a href=&#34;https://gohugo.io/extras/aliases/&#34;&gt;dokumentasinya Hugo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Untuk format TOML, &lt;code&gt;aliases&lt;/code&gt; ditulis seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+++
-        ...
-aliases = [
-    &amp;quot;/posts/my-original-url/&amp;quot;,
-    &amp;quot;/2010/01/01/even-earlier-url.html&amp;quot;
-]
-        ...
-+++
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sedangkan untuk YAML, seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;---
-        ...
-aliases:
-    - /posts/my-original-url/
-    - /2010/01/01/even-earlier-url.html
-        ...
----
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-15qdDAXdeBw/WOdFQaEvgAI/AAAAAAAAEnk/4Ou3MEg8hGUgEmECJmCPRfdiiGgaSxDUgCK4B/s1600/Penggunaan%2BAliases%2Bdi%2Bsalah%2Bsatu%2BArtikel%2BHugo.png&#34; alt=&#34;Penggunaan Aliases di salah satu Artikel Hugo&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apa yang akan dilakukan oleh &lt;code&gt;aliases&lt;/code&gt;?&lt;/p&gt;
-
-&lt;p&gt;Ketika link-link yang kita tulis dalam &lt;code&gt;aliases&lt;/code&gt;, kita akan otomatis
-dialihkan ke link barunya &lt;em&gt;(canonical)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;kenapa-melakukan-pengalihan&#34;&gt;Kenapa Melakukan Pengalihan?&lt;/h2&gt;
-
-&lt;p&gt;Kalau kalian perhatikan, link artikel dari Petani Kode saat ini tidak menggunakan
-tanggal.&lt;/p&gt;
-
-&lt;p&gt;Hal ini karena, saya meniru dari beberapa web pakar SEO. Mereka tidak
-mencantumkan tanggal di link-nya.&lt;/p&gt;
-
-&lt;p&gt;Dampaknya, mungkin lebih disukai Search Engine.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-7SVs12ejUJg/WOdIeYknQWI/AAAAAAAAEnw/mO72vT5obD0uobmvRryl2MLWEeUhu3XxQCK4B/s1600/Trafik%2BPetani%2BKode.png&#34; alt=&#34;Trafik Petani Kode&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Lah kok malah bahas SEO&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Hehehe maaf, :smile:.&lt;/p&gt;
-
-&lt;p&gt;Pengalihan saya lakukan agar pengunjung Petani Kode merasa puas dan tidak kecewa.&lt;/p&gt;
-
-&lt;p&gt;Selain itu, saya juga melakukan pengeditan artikel: ditambahkan, dilengkapi,
-dan ditingkatkan kualitasnya.&lt;/p&gt;
-
-&lt;p&gt;Semoga dengan begini, tidak ada lagi yang tersesat ke halaman &lt;code&gt;error 404&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>Hingga saat ini, proses migrasi Petani Kode ke Hugo masih belum selesai.
+Mengapa saya katakan demikian?
+Karena banyak artikel yang belum diedit.
+Banyak artikel yang link-nya error 404, alias tidak ditemukan.
+Terpantau dari laporan Google Webmaster, error 404-nya tembus sampai 546 halaman.
+Hal ini akan membuat banyak orang kecewa, termasuk juga saya.
+Karena sudah banyak artikel yang terindeks di google, di-share di sosial media, dan link lainnya.
+Ketika mereka membukanya, akan mendapatkan error 404.</description>
     </item>
     
     <item>
@@ -439,188 +74,10 @@ dan ditingkatkan kualitasnya.&lt;/p&gt;
       <pubDate>Mon, 30 Jan 2017 20:14:28 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-hosting-hugo-di-github/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;Hosting/deploy&lt;/em&gt; Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu
-mengunggah file yang ada di direktori &lt;code&gt;public&lt;/code&gt; saja.&lt;/p&gt;
-
-&lt;p&gt;Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Hosting ke direktori &lt;code&gt;doc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Hosting ke cabang &lt;code&gt;gh-pages&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Hosting ke halaman personal/organisasi&lt;/li&gt;
-&lt;li&gt;Hosting Github dengan &lt;em&gt;Continuous Integration&lt;/em&gt; (CI)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.&lt;/p&gt;
-
-&lt;p&gt;Kita membutuhkan dua repositori untuk melakukan cara ini.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Repositori untuk menyimpan konten.&lt;/li&gt;
-&lt;li&gt;Repositori untuk menyimpan hasil render.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Mari kita mulai&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;1-membuat-repositori-di-github&#34;&gt;1. Membuat Repositori di Github&lt;/h2&gt;
-
-&lt;p&gt;Buatlah dua repositori di Github dengan nama seperti berikut ini.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;kontent-web-hugo&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;username.github.io&lt;/code&gt; atau &lt;code&gt;organisasi.github.io&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Pertama, repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt; fungsinya untuk menyimpan konten dari Web
-(semua file Hugo).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/hugo/repo-konten-hugo.png&#34; alt=&#34;Repositori Konten Hugo&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sementara repositori &lt;code&gt;username.github.io&lt;/code&gt; untuk menyimpan file yang ada di &lt;code&gt;public&lt;/code&gt;
-atau hasil &lt;em&gt;render&lt;/em&gt; dari Hugo.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/hugo/repo-hasil-render-hugo.png&#34; alt=&#34;Repositori Hasil render Hugo&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nama repositori anda tidak harus &lt;code&gt;kontent-web-hugo&lt;/code&gt;,
-Anda bisa menggunakan nama selain itu.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-persiapkan-repositori-lokal&#34;&gt;2. Persiapkan Repositori Lokal&lt;/h2&gt;
-
-&lt;p&gt;Buatlah repositori baru di dalam proyek hugo dengan melakukan inisialisasi git.&lt;/p&gt;
-
-&lt;p&gt;Silahkan ikuti perintah berikut ini.&lt;/p&gt;
-
-&lt;p&gt;Masuk ke direktori Hugo:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd kontent-web-hugo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Inisialisasi Git:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hapus direktori &lt;code&gt;public&lt;/code&gt;&amp;hellip; tenang nanti kita bisa buat lagi dengan perntah &lt;code&gt;hugo&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rm -rf public
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tambahkan repositori &lt;em&gt;remote&lt;/em&gt; (github):&lt;/p&gt;
-
-&lt;p&gt;Untuk yang menggunakan HTTP:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote add origin https://github.com/{username}/{nama-repo}.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk yang menggunakan SSH:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote add origin git@github.com:{username}/{nama-repo}.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Atau kalau tidak mau repot, URL-nya bisa di-copy dari repo Github-nya.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/hugo/url-repo.png&#34; alt=&#34;URL Repositori Github&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-upload-ke-github&#34;&gt;3. Upload ke Github&lt;/h2&gt;
-
-&lt;p&gt;Repositori lokal sudah dipersiapkan, sekarang kita upload dulu ke github.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
-git commit -m &amp;quot;commit pertama&amp;quot;
-git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;4-membuat-submodul&#34;&gt;4. Membuat Submodul&lt;/h2&gt;
-
-&lt;p&gt;Submodul ini merupakan repositori anak dari repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Repositori ini akan menggunakan repositori &lt;code&gt;username.github.io&lt;/code&gt; sebagai
-repositori remote-nya.&lt;/p&gt;
-
-&lt;p&gt;HTTP:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule add -b master https://github.com/{username}/{username}.github.io.git public
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;SSH:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule add -b master git@github.com:{username}/{username}.github.io.git public
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;5-membuat-skrip-deploy-sh&#34;&gt;5. Membuat Skrip &lt;code&gt;deploy.sh&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Sebenarnya kita bisa langsung upload semua file yang ada di direktori &lt;code&gt;public&lt;/code&gt;
-dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd public
-git add .
-git commit -m &amp;quot;tes Deploy hugo&amp;quot;
-git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Agar kita tidak mengetik perintah di atas terus-menerus setiap mau deploy, maka
-kita memerlukan skrip.&lt;/p&gt;
-
-&lt;p&gt;Untungnya Hugo sudah menyediakannya. Silahkan ditambahkan skrip ini di direktori Hugo-nya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
-
-echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
-
-# Build the project.
-hugo # if using a theme, replace by `hugo -t &amp;lt;yourtheme&amp;gt;`
-
-# Go To Public folder
-cd public
-# Add changes to git.
-git add -A
-
-# Commit changes.
-msg=&amp;quot;rebuilding site `date`&amp;quot;
-if [ $# -eq 1 ]
-  then msg=&amp;quot;$1&amp;quot;
-fi
-git commit -m &amp;quot;$msg&amp;quot;
-
-# Push source and build repos.
-git push origin master
-
-# Come Back
-cd ..
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Berikan hak akses eksekusi untuk skrip ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;chmod +x deploy.sh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nah, kita bisa melakukan deploy dengan skrip tersebut. Setiap kali kita ingin
-meng-update ke Github, kita cukup menjalankan skrip itu saja.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/hugo/deploy-hugo.png&#34; alt=&#34;deploy Hugo ke Github&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kita juga bisa menambahkan pesan commit-nya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./deploy.sh &amp;quot;tes deploy web hugo ke github&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tuggulah beberapa saat, website kita akan segera mengudara di &lt;code&gt;username.github.io&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Cara ini sudah saya coba di blog saya,&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Repositori konten &lt;a href=&#34;https://github.com/ardianta/ardianta-pargo&#34;&gt;https://github.com/ardianta/ardianta-pargo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Repositori hasil render &lt;a href=&#34;https://github.com/ardianta/ardianta.github.io&#34;&gt;https://github.com/ardianta/ardianta.github.io&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Sebenarnya kita tidak harus membuat repositori &lt;code&gt;kontent-web-hugo&lt;/code&gt;, karena webnya
-sudah bisa langsung di-hosting di &lt;code&gt;username.github.io&lt;/code&gt;. Tapi untuk jaga-jaga
-kalau suatu saat nanti repositori lokalnya hilang, maka kita bisa ambil dari sana lagi.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;https://gohugo.io/tutorials/github-pages-blog/&#34;&gt;Dok. Hugo&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu mengunggah file yang ada di direktori public saja.
+Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:
+ Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.
+Kita membutuhkan dua repositori untuk melakukan cara ini.</description>
     </item>
     
     <item>
@@ -629,202 +86,18 @@ kalau suatu saat nanti repositori lokalnya hilang, maka kita bisa ambil dari san
       <pubDate>Wed, 18 Jan 2017 22:06:22 +0800</pubDate>
       
       <guid>https://www.petanikode.com/5-alasan-petani-kode-migrasi-ke-hugo/</guid>
-      <description>
-
-&lt;p&gt;Minggu ini, Petani Kode melakukan migrasi dari Blogger ke Hugo.
-Proses migrasi berjalan dengan lancar, meskipun masih banyak yang belum dikerjakan.
-Ada beberapa alasan, kenapa Petani Kode melakukan migrasi ke Hugo.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-template-blogger-masih-menggunakan-xml&#34;&gt;1. Template Blogger Masih menggunakan XML&lt;/h2&gt;
-
-&lt;p&gt;Salah satu produk Google yang jarang diperbaharui adalah Blogger. Buktinya,
-ketika Google memperkenalkan konsep &lt;em&gt;Material Design&lt;/em&gt;, berbagai produknya kemudian
-menerapkan material desain. Google Analytic, Adsense, Photo, Drive, GMail, dsb.
-Lalu, bagaimana dengan Blogger? tampilannya masih begitu-begitu saja sejak tahun 2012. Aplikasi Androidnya juga kurang bagus.&lt;/p&gt;
-
-&lt;p&gt;Begitu juga dengan template engine-nya, masih menggunakan XML.
-XML membuat saya cukup lelah membuat template. Karena tidak bisa dibuat secara
-offline. Selain itu juga, dokumentasinya kurang lengkap.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-menulis-di-blogger-kurang-efisien&#34;&gt;2. Menulis di Blogger Kurang Efisien&lt;/h2&gt;
-
-&lt;p&gt;Menurut Saya sebagai programmer yang terbiasa menulis di teks editor,
-menulis di Blogger itu kurang efisien. Karena ketika kita menulis di sana, lalu melakukan &lt;em&gt;preview&lt;/em&gt; kita akan membuka tab baru dan men-download hasil &lt;em&gt;preview&lt;/em&gt;.
-Berapa waktu dan kuota yang dihabiskan?&lt;/p&gt;
-
-&lt;p&gt;Dulu saya pernah mencoba menulis draf artikel dalam bentuk teks, html,
-&lt;em&gt;markdown&lt;/em&gt;,  dan dokumen. Namun, ketika ingin diterbitkan, harus disunting
-lagi di Blogger. Berbeda dengan Hugo, kita bisa menulis di teks editor mana saja
-dengan format &lt;em&gt;markdown&lt;/em&gt; dan HTML. Sublime, Atom, Vim, mau pakai yang mana?&lt;/p&gt;
-
-&lt;p&gt;Saya pilih Atom, karena bisa lihat preview-nya langsung.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;675&#34;
-width=&#34;1245&#34;
-alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
-src=&#34;https://2.bp.blogspot.com/-5K1vDdxvIOE/WIAa-PInq_I/AAAAAAAADqQ/2hNl6Vmw_Po5NHOCQ5Kn__0iBefttOHHACPcB/s1600/Nulis%2Bartikel%2Bdi%2BAtom%2Buntuk%2BHugo.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-amp-susah-valid&#34;&gt;3. AMP Susah Valid&lt;/h2&gt;
-
-&lt;p&gt;Validator AMP sangat ketat dalam menilai web. Kita dilarang keras menggunakan
-Javascript. Karena Javascript katanya dapat memperlambat web. Sementara,
-di Blogger banyak menggunakan Javascript; dan parahnya lagi, di sana untuk &lt;em&gt;load&lt;/em&gt;
-widget-nya pakai Javascript.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;380&#34;
-width=&#34;720&#34;
-alt=&#34;Validasi AMP&#34;
-src=&#34;http://i.imgur.com/5sv5CXW.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada Hugo, saya tidak menggunakan Javascript. Kecuali Javascript bawaan AMP.
-Hasilnya pun valid tanpa error.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-twitter width=&#34;486&#34; height=&#34;657&#34;
-    layout=&#34;responsive&#34;
-    data-tweetid=&#34;821021406854946816&#34;&gt;
-&lt;/amp-twitter&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-agar-terbiasa-menggunakan-git&#34;&gt;4. Agar Terbiasa Menggunakan Git&lt;/h2&gt;
-
-&lt;p&gt;Saya harus melakukan &lt;em&gt;push&lt;/em&gt; atau upload ke server repository git untuk &lt;em&gt;update&lt;/em&gt; konten. Karena Hugo sebuah generator web statis. Oleh sebab itu, ini bisa jadi sarana untuk latihan git agar terbiasa.&lt;/p&gt;
-
-&lt;h2 id=&#34;5-ingin-mencoba-teknologi-baru&#34;&gt;5. Ingin Mencoba Teknologi Baru&lt;/h2&gt;
-
-&lt;p&gt;Hugo memang baru, dibangun dengan bahasa pemrograman Go. Versi Hugo saat tulisan
-ini dibut adalah 0.18. Meski belum mencapai versi 1.0, tidak ada salahnya untuk dicoba.&lt;/p&gt;
-
-&lt;p&gt;Ketika mengembangkan Petani Kode, saya sedikit kesulitan,
-karena hasil pencarian Google hanya mengarah ke dokumentasi Hugo, Forum Hugo,
-dan Isu Hugo di Github. Sangat jarang ke Stack Overflow. Namun, itu bukanlah kendala.&lt;/p&gt;
-
-&lt;p&gt;Bahkan saya sampai dusuruh nulis kode dengan bahasa pemrograman Go. Sedangkan
-Saya tidak pernah belajar bahasa pemrograman Go sama sekali.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/2017/01/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/&#34;&gt;Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Itulah lima alasan Petani Kode migrasi ke Hugo.&lt;/p&gt;
-</description>
+      <description>Minggu ini, Petani Kode melakukan migrasi dari Blogger ke Hugo. Proses migrasi berjalan dengan lancar, meskipun masih banyak yang belum dikerjakan. Ada beberapa alasan, kenapa Petani Kode melakukan migrasi ke Hugo.
+1. Template Blogger Masih menggunakan XML Salah satu produk Google yang jarang diperbaharui adalah Blogger. Buktinya, ketika Google memperkenalkan konsep Material Design, berbagai produknya kemudian menerapkan material desain. Google Analytic, Adsense, Photo, Drive, GMail, dsb. Lalu, bagaimana dengan Blogger?</description>
     </item>
     
     <item>
       <title>Saya tidak Bisa Bahasa Pemrograman Go, Terpaksa ini yang Saya Lakukan</title>
-      <link>https://www.petanikode.com/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</link>
+      <link>https://www.petanikode.com/tidak-bisa-bahasa-pemrograman-go/</link>
       <pubDate>Sun, 15 Jan 2017 21:06:22 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/saya-tidak-bisa-bahasa-pemrograman-go-terpaksa-ini-yang-saya-lakukan/</guid>
-      <description>&lt;p&gt;Ada cerita menarik yang saya alami ketika &lt;a href=&#34;https://www.petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;migrasi Petani Kode dari Blogger ke Hugo&lt;/a&gt;.
-Waktu itu, ketika saya ingin mengimpor konten dari Blogger ke Hugo, ada sesuatu
-yang kurang dari skrip Go yang disediakan. Kekuarangnnya tidak mampu membuat
-atau mengambil gambar &lt;em&gt;(thumbnail)&lt;/em&gt; untuk setiap artikel.&lt;/p&gt;
-
-&lt;p&gt;Saya kemudian berpikir, mungkin nanti saya bisa edit setiap gambar untuk artikel.
-Namun, rasanya akan sangat melelahkan melakukannya karena jumlah artikelnya sampai ratusan. Tidak ingin melakukan hal yang berulang-ulang seperti kata orang,
-&lt;em&gt;Don&amp;rsquo;t Repeat Yourself&lt;/em&gt; di singkat DRY. Saya kemudian membuka &lt;a href=&#34;https://github.com/natefinch/blogimport/issues/1&#34;&gt;isu baru&lt;/a&gt; di repositori
-skrip ini.&lt;/p&gt;
-
-&lt;p&gt;Beberapa jam kemudian, Nate Finch membalas isu yang saya buat.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I&amp;rsquo;d be more than happy to accept a pull request for this, if you want to write it.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Terjemahnya kira-kira begini, &amp;ldquo;Saya akan sangat senang sekali menerima &lt;em&gt;pull request&lt;/em&gt; untuk hal ini, jika anda berkenan menulisnya&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;Awalnya saya berharap agar Nate Finch mau meng-update skripnya, tapi malah saya yang disuruh nulis dan saya tidak paham bahasa pemrograman Go sama sekali. Mungkin saja si Nate Finch sedang sibuk, sehingga tidak punya waktu untuk menulis skrip ini lagi.&lt;/p&gt;
-
-&lt;p&gt;Karena isu ini adalah kebutuhan saya, maka mau tidak mau saya sendiri yang harus membuatnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;380&#34;
-width=&#34;720&#34;
-alt=&#34;Ghoper Petani Kode&#34;
-src=&#34;https://3.bp.blogspot.com/-tHAcqs4Bv1o/WIAVwWJzaLI/AAAAAAAADps/sBBGZxVxmcI66poCB-Mj0AEzIkDeDG8KQCPcB/s1600/go-gopher-petanikode.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Saya tidak harus belajar bahasa pemrograman Go dari awal. Karena sintaknya cukup mirip dengan bahasa pemrograman yang pernah saya pelajari. Pertama saya harus pahami dulu skrip yang ditulis Nate Finch.&lt;/p&gt;
-
-&lt;p&gt;Pertama, saya menebak-nebak dulu fungsi dari setiap prosedurnya dengan membaca dari bawah ke atas.&lt;/p&gt;
-
-&lt;p&gt;Saya kemudian mengetahui, fungsi ini untuk membuat file &lt;em&gt;markdown&lt;/em&gt;, meski tidak tahu detail algoritmanya. Saya dapat petunjuk karena melihat ada &lt;code&gt;.md&lt;/code&gt; di sana.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;func writeEntry(e Entry, dir string) error {
-	filename := filepath.Join(dir, makePath(e.Title)+&amp;quot;.md&amp;quot;)
-	f, err := os.OpenFile(filename, os.O_CREATE | os.O_TRUNC | os.O_WRONLY, 0644)
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	return t.Execute(f, e)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian naik ke atas, saya menemukan baris kode ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;if err := writeEntry(entry, dir); err != nil {
-    log.Fatalf(&amp;quot;Failed writing post %q to disk:\n%s&amp;quot;, entry.Title, err)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kode tersebut pasti pemanggilan fungsi yang tadi. Kemudian saya melakukan penelusuran dengan parameternya &lt;code&gt;entry&lt;/code&gt; dan &lt;code&gt;dir&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Bolak-balik, atas-bawah. Saya menemukan:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;parameter &lt;code&gt;dir&lt;/code&gt; dari &lt;code&gt;dir := args[1]&lt;/code&gt;, yaitu argumen yang diberikan ketika menjalankan kode ini. Karena &lt;code&gt;args&lt;/code&gt; itu tidak asing bagi pengguna linux seperti saya.&lt;/li&gt;
-&lt;li&gt;parameter &lt;code&gt;entry&lt;/code&gt; dari nama alias &lt;code&gt;exp.Entries&lt;/code&gt;, karena di sana sepertinya ada perulangan &lt;em&gt;foreach&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kemudian saya menelusuri asal-usul &lt;code&gt;exp.Entries&lt;/code&gt; ini. Ternyata dia barasal dari &lt;code&gt;exp := Export{}&lt;/code&gt;. Lalu, &lt;code&gt;Export{}&lt;/code&gt; itu berasal dari struk &lt;code&gt;Export&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;type Export struct {
-    XMLName xml.Name `xml:&amp;quot;feed&amp;quot;`
-    Entries []Entry `xml:&amp;quot;entry&amp;quot;`
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sampai di sini saya sedikit mengerti algoritma dari skrip ini.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Skrip ini mengubah semua tag XML menjadi struk&lt;/li&gt;
-&lt;li&gt;Lalu Struk tadi diurai dalam perluangan&lt;/li&gt;
-&lt;li&gt;Setelah itu, buat file &lt;em&gt;markdown&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Kira-kira begitulah yang saya pahami.&lt;/p&gt;
-
-&lt;p&gt;Kemudian saya mencoba merubah atribut yang ada dalam struk. Karena saya kira sudah paham maksud dari struk tersebut. Namun ternyata tidak ada hasil apa-apa.&lt;/p&gt;
-
-&lt;p&gt;Saya ingin mengambil URL dari elemen XML ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;media:thumbnail xmlns:media=&#39;http://search.yahoo.com/mrss/&#39; url=&#39;https://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s72-c/thumbnail-image.png&#39; height=&#39;72&#39; width=&#39;72&#39;/&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Terlihat di sana ada penggunaan &lt;em&gt;namespace&lt;/em&gt; untuk elemen tersebut. Kemudian saya mencari dan menemukan jawaban di &lt;a href=&#34;http://stackoverflow.com/a/14152832&#34;&gt;Stack Overflow&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Setelah mencoba dan berhasil mendapatkan URL-nya, yay!&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;400&#34;
-width=&#34;600&#34;
-alt=&#34;Tulis Artikel di Atom untuk Hugo&#34;
-src=&#34;http://i.imgur.com/z7MveXv.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Namun, ukuran gambar dari URL tersebut adalah 72x72 piksel. Lalu, selanjutnya saya menginginkan gambar yang lebih besar.&lt;/p&gt;
-
-&lt;p&gt;Ketemu masalah lagi, gambar tidak bisa diperbesar. Karena tidak ada fungsi untuk &lt;em&gt;replace string&lt;/em&gt; pada template Go. Tidak lama kemudian, saya berhasil menyelesaikannya.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/2017/01/cara-replace-string-dalam-template-go/&#34;&gt;Cara Replace String pada Template Go&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah semuanya beres, saya kemudian melakukan &lt;em&gt;pull request&lt;/em&gt; ke repositori milik Nate Finch. Saat ini masih belum di-reviw, diterima atau ditolak terserah Nate Finch. Saya hanya butuh untuk masalah saya saja. Namun, jika anda juga membutuhkannya bisa klon atau &lt;em&gt;fork&lt;/em&gt; &lt;a href=&#34;https://github.com/ardianta/blogimport&#34;&gt;repositori dari saya&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Luar biasa, tidak pernah belajar bahasa pemrograman Go sama sekali, malah melakukan &lt;em&gt;pull request&lt;/em&gt; ke proyek yang menggnuakan bahasa pemrograman Go.&lt;/p&gt;
-</description>
+      <guid>https://www.petanikode.com/tidak-bisa-bahasa-pemrograman-go/</guid>
+      <description>Ada cerita menarik yang saya alami ketika migrasi Petani Kode dari Blogger ke Hugo. Waktu itu, ketika saya ingin mengimpor konten dari Blogger ke Hugo, ada sesuatu yang kurang dari skrip Go yang disediakan. Kekuarangnnya tidak mampu membuat atau mengambil gambar (thumbnail) untuk setiap artikel.
+Saya kemudian berpikir, mungkin nanti saya bisa edit setiap gambar untuk artikel. Namun, rasanya akan sangat melelahkan melakukannya karena jumlah artikelnya sampai ratusan. Tidak ingin melakukan hal yang berulang-ulang seperti kata orang, Don&amp;rsquo;t Repeat Yourself di singkat DRY.</description>
     </item>
     
     <item>
@@ -833,68 +106,14 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       <pubDate>Fri, 13 Jan 2017 21:08:45 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/</guid>
-      <description>
-
-&lt;p&gt;Dalam rangka migrasi Petani Kode ke Hugo, saya harus melakukan impor artikel dari Blogger ke Hugo.&lt;/p&gt;
-
-&lt;p&gt;Untungnya Hugo sudah menyediakan skrip untuk impor konten dari blogger ke Hugo.&lt;/p&gt;
-
-&lt;p&gt;Proses impor ini memakan waktu cukup cepat. Saya kira, tidak sampai 15 menit.&lt;/p&gt;
-
-&lt;p&gt;Mungkin anda bisa melakukannya lebih cepat.&lt;/p&gt;
-
-&lt;p&gt;Begini caranya&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Sebelumnya, pastikan telah menginstal &lt;a href=&#34;https://golang.org&#34;&gt;Go (Golang)&lt;/a&gt; dan &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Kemudian lakukan langkah-langkah berikut ini.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-ekspor-blog&#34;&gt;1. Ekspor Blog&lt;/h2&gt;
-
-&lt;p&gt;Pertama, kita perlu mengekspor dulu konten yang ada di blogger. Masuk ke &lt;em&gt;Settings&amp;gt;Other&lt;/em&gt; kemudian klik &lt;em&gt;Back up Content&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    src=&#34;https://lh3.googleusercontent.com/8hFKhTL6Mxfi6L9ht8Zy1vGhnbrw-yX12l91QfUShBV9DJrqGfYYDjZgUB0-MKmwvL4OukfMqYBUyi4j7xh7aFPmpgMiRX8mIrNRTiPi1_uNr8dl-v7v-w0IL4ZhSs3kmjB8Moe6DykxLHtME2Ei6qj5_W0xL9BBHht7gErt5vSTaf2Q_sTwtc9eAhoiVkBRgrwFnRp8GwX1gDz9CVI_KT32DhFRMdyWKT-zeFJbIlH4UMbatDm_lGt_S7OtI22z0QbWEH7v1ZoLshqfXLBKrPjlBVneAOdmmV9E4Lbydx1AxHvNQjIGyoZOQLPOTRWQKXApYyTWMdgtdfZv0NqiX9IgQ-ld1lrC2DYTphdIWPvDv7QDcSok3prUz54Wep0AT98m9Y0UCaFIT1qnqIJa8J05JUEfHzsl-nXA43fBmk5J1Kt7JFP7ODlGQkzbSPazkEcxpkVxBVzB6KWQqqaysVad1A14cu-Caa86vP1HMIDxjXTl4RX54l15gIxfa6KpUY34ZCDR9Q8eoIyEuaTTlk70n48MYAvNCFNNUm95Uk1ZOrECYm9AB-xr2aLoCB-DDt2E335GkMzWLy6TOLFQfZhzJDtbIkgSr5pEKdB0C9VQKG8TPEG2=w796-h286-no&#34;
-    width=&#34;796&#34;
-    height=&#34;268&#34;
-    layout=&#34;responsive&#34;
-    alt=&#34;Ekspor kontent blog&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Kita akan mendapatkan file &lt;code&gt;.xml&lt;/code&gt;, nah file ini nanti yang akan kita ekstrak isinya menjadi format &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-download-skrip&#34;&gt;2. Download skrip&lt;/h2&gt;
-
-&lt;p&gt;Selanjutnya kita membutuhkan skrip untuk melakukan ekstrak terhadap file &lt;code&gt;.xml&lt;/code&gt; tadi. Silahkan klon skripnya di &lt;a href=&#34;https://github.com/natefinch/blogimport&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/natefinch/blogimport
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;3-impor-konten&#34;&gt;3. Impor Konten&lt;/h2&gt;
-
-&lt;p&gt;Setelah kita mendapatkan skripnya, sekarang kita harus mengekstrak isi dari file &lt;code&gt;.xml&lt;/code&gt; menjadi file &lt;em&gt;markdown&lt;/em&gt;. Pertama, masuk dulu ke direktori skripnya.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd blogimpor
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu buat direktori baru sebagai tempat menampung hasil ekstraksi.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mkdir artikel
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jalankan skrip:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;go run main.go ~/Downloads/blog-2017-01-13.xml artikel
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, coba periksa direktori artikel.
-&lt;amp-img
-    src=&#34;https://lh3.googleusercontent.com/I36HhwnAxaNYEouTOg7BpGwcbnhX-Gxjab8gCSGUj69Q2Kif1TyPiQbyLuHQ9zLzaoHy6pYS8lZivKFKWkBW69Gh5oNrrl797rBt3LN26t2nqtxXdqH5E95jFxGOUkAE7ule2FuxVEdqQTp3Uc9dEu8O1CldVHZ-5PdthwNCgux7t8R7yEEhvBVOyPZOCoYJLp6agg6Ckmq2sF8lP8P5C3_qxWXo9IcuDURRmn6qnpd0oRTdRtR9NGiR65-8nyQ-cEMbnGvPXer7HG2Nb65ramTqtZ27ycrJA-u8PqK79ZTryEsYj2gBOwRh5U3Yn3xbQkqc41ZnnUJ0qpQFy_M-54BEzHdU43cIgtsHaIRw7GYERk81xor3htxrOc-pF-1JNcq8IcbjWzYHSeDx17zlkiB9kedDhsBoluIjmTPHEWdgoYfsngylDRH8Eg_in4lE05XE9lUIe1S_sbHTik_1VdRp29SFujsfliQYRLfNDGhrHSomljnS8Vf_oM0P8aVvy27Y5ONkmNa-YYLGuYrDSBGonJ53VYVHVXN5gr900nnl7cVMmApjKL25SIlgsbGmX_RKZxKzAExmpOn7q2dsoKc4wR0gzpDFgXRmAEG-lypoeD68ouGj=w854-h457-no&#34;
-    width=&#34;854&#34;
-    height=&#34;457&#34;
-    layout=&#34;responsive&#34;
-    alt=&#34;Ekspor kontent blog&#34;&gt;&lt;/amp-img&gt;
-Selanjutnya, kita bisa pindahkan semua file &lt;em&gt;markdown&lt;/em&gt; ini ke direktori &lt;em&gt;content&lt;/em&gt; di Hugo.&lt;/p&gt;
-</description>
+      <description>Dalam rangka migrasi Petani Kode ke Hugo, saya harus melakukan impor artikel dari Blogger ke Hugo.
+Untungnya Hugo sudah menyediakan skrip untuk impor konten dari blogger ke Hugo.
+Proses impor ini memakan waktu cukup cepat. Saya kira, tidak sampai 15 menit.
+Mungkin anda bisa melakukannya lebih cepat.
+Begini caranya&amp;hellip;
+Sebelumnya, pastikan telah menginstal Go (Golang) dan Git.
+Kemudian lakukan langkah-langkah berikut ini.
+1. Ekspor Blog Pertama, kita perlu mengekspor dulu konten yang ada di blogger.</description>
     </item>
     
     <item>
@@ -903,190 +122,10 @@ Selanjutnya, kita bisa pindahkan semua file &lt;em&gt;markdown&lt;/em&gt; ini ke
       <pubDate>Wed, 11 Jan 2017 22:06:22 +0800</pubDate>
       
       <guid>https://www.petanikode.com/migrasi-petani-kode-dari-blogger-ke-hugo/</guid>
-      <description>
-
-&lt;p&gt;Tercatat pada tanggal 11 Januari 2017, website Petani Kode mulai dikembangkan
-dengan mesin &lt;em&gt;(engine)&lt;/em&gt; Hugo. Hugo adalah salah satu mesin generator web statis
-yang berusia cukup muda.&lt;/p&gt;
-
-&lt;p&gt;Hugo ditulis dengan bahasa pemrograman Go dan diklaim
-&lt;a href=&#34;https://www.youtube.com/watch?v=CdiDYZ51a2o&#34;&gt;lebih cepat&lt;/a&gt; dari mesin sejenisnya
- seperti &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt;, &lt;a href=&#34;https://middlemanapp.com/&#34;&gt;Middleman&lt;/a&gt;,
-&lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt;, dsb.&lt;/p&gt;
-
-&lt;p&gt;Baca juga: &lt;a href=&#34;https://www.petanikode.com/2017/01/5-alasan-petani-kode-migrasi-ke-hugo/&#34;&gt;5 Alasan Petani Kode Migrasi ke Hugo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pengembangan website Petani Kode berlangsung cukup cepat. Meskipun bahasa
-pemrograman Go belum pernah saya pelajari dan pahami. Namun, berkat kerja
-keras dan semangat website ini bisa jadi dalam waktu sekejap. Ya, karena di
-Hugo kita tidak menulis kode Go, melainkan hanya bermain pada template Go yang
-mirip-mirp seperti template engine pada umumnya.&lt;/p&gt;
-
-&lt;p&gt;Kesulitan saya rasakan ketika belum paham fungsi dan variabel dalam template Go.
-Namun, itu bukanlah kendala. Karena Hugo sudah menyediakan
-&lt;a href=&#34;https://gohugo.io/overview/introduction/&#34;&gt;dokumentasi&lt;/a&gt; yang lengkap dan
-&lt;a href=&#34;http://discuss.gohugo.io&#34;&gt;forum disksui&lt;/a&gt; tempat bertanya.&lt;/p&gt;
-
-&lt;p&gt;Saya tidak sadar sudah menulis kode CSS hampir 700 baris. Tema ini jadi
-dalam waktu dua setengah hari. Tema ini menerapkan &lt;a href=&#34;https://www.petanikode.com/topik/amp&#34;&gt;AMP&lt;/a&gt; yang
-dikembangkan dari tema &lt;a href=&#34;https://gohugo-amp.gohugohq.com/&#34;&gt;AMP Starter&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;proses-migrasi&#34;&gt;Proses Migrasi&lt;/h2&gt;
-
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;//membuat-tema-hugo/&#34;&gt;Pembuatan tema Hugo&lt;/a&gt; (11~13 Januari)&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://www.petanikode.com/2017/01/cara-impor-artikel-blogger-ke-hugo-kurang-dari-15-menit/&#34;&gt;Impor Artikel dari Blogger ke Hugo&lt;/a&gt; (13~14 Januari)&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://www.petanikode.com/2017/01/cara-hosting-hugo-di-github/&#34;&gt;Deploy ke domain utama petanikode.com&lt;/a&gt; (15~17 Januari)&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://www.petanikode.com/2017/01/cara-redirect-domain-dengan-cloudflare/&#34;&gt;Redirect link lama ke link baru&lt;/a&gt; (17 Januari)&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Edit Artikel (18 Januari [21%]) &amp;mdash; &lt;em&gt;dalam proses memperbaiki dan peningkatan kualitas&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;sebelum-dan-sesudah-migrasi&#34;&gt;Sebelum dan Sesudah Migrasi&lt;/h2&gt;
-
-&lt;p&gt;Tabel perbandingan:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Item&lt;/th&gt;
-&lt;th&gt;Sebelum&lt;/th&gt;
-&lt;th&gt;Sesudah&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Hosting&lt;/td&gt;
-&lt;td&gt;Blogger&lt;/td&gt;
-&lt;td&gt;Gitlab&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Hosting Gambar&lt;/td&gt;
-&lt;td&gt;Google/Blogger&lt;/td&gt;
-&lt;td&gt;Google, Github&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;DNS&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://member.idwebhost.com/aff.php?aff=7137&#34;&gt;Idwebhost&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Cloudflare&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Engine&lt;/td&gt;
-&lt;td&gt;Blogger&lt;/td&gt;
-&lt;td&gt;Hugo&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Template Engine&lt;/td&gt;
-&lt;td&gt;XML Blogger&lt;/td&gt;
-&lt;td&gt;Go Template, Ace&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Format Artikel&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;Markdown, HTML&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Font&lt;/td&gt;
-&lt;td&gt;Open Sans, Roboto, Merriweather, Font-awesome&lt;/td&gt;
-&lt;td&gt;Merriweather, Open Sans, Font-awesome&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Font Provider&lt;/td&gt;
-&lt;td&gt;Google Font, Wordpress, CDN Bootstrap&lt;/td&gt;
-&lt;td&gt;Google Font, CDN Bootstrap&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Sistem Komentar&lt;/td&gt;
-&lt;td&gt;Disqus, Blogger, Facebook&lt;/td&gt;
-&lt;td&gt;Disqus&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Petani Kode memilih hosting di Gitlab karena di sana bisa membuat &lt;em&gt;private&lt;/em&gt; repositori dan langsung terintegaris dengan CI.&lt;/p&gt;
-
-&lt;p&gt;Sedangkan di Github, tidak bisa membuat repositori &lt;em&gt;private&lt;/em&gt; kalau menggunakan akun gratis. Kemudian, saya juga pernah mencoba di Bitbucket. Akan tetapi terbatas dengan deploy, minimal 5x deploy per hari.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Update&lt;/em&gt;&lt;/strong&gt;: (01 Februari 2017) Petani kode migrasi ke Github, karena sering gagal
-melakukan build di CI Gitlab.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Item&lt;/th&gt;
-&lt;th&gt;Github&lt;/th&gt;
-&lt;th&gt;Gitlab&lt;/th&gt;
-&lt;th&gt;Bitbucket&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Maksimal Ruang Repositori&lt;/td&gt;
-&lt;td&gt;1GB&lt;/td&gt;
-&lt;td&gt;10Gb&lt;/td&gt;
-&lt;td&gt;10GB&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Private Repository&lt;/td&gt;
-&lt;td&gt;premium&lt;/td&gt;
-&lt;td&gt;ya&lt;/td&gt;
-&lt;td&gt;ya&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Dukungan HTTPS&lt;/td&gt;
-&lt;td&gt;github.io&lt;/td&gt;
-&lt;td&gt;ya&lt;/td&gt;
-&lt;td&gt;ya&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Pages&lt;/td&gt;
-&lt;td&gt;Github pages&lt;/td&gt;
-&lt;td&gt;Gitlab Pages&lt;/td&gt;
-&lt;td&gt;Aerobatic&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Sebelum migrasi, penulisan artikel dilakukan dengan membuka Blogger. N
-amun setelah migrasi, penulisan artikel bisa dilakukan di teks editor mana saja.
-Rasanya seperti menulis kode, dan kalau ingin diterbitkan tinggal melakukan &lt;em&gt;push&lt;/em&gt; ke repositori git.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-src=&#34;https://1.bp.blogspot.com/-z2_QdrUKmfE/WHx5QoVkwRI/AAAAAAAADok/AtwB9HQYNV4cxVuOFLlwgYCch_gi41rjQCK4B/s1600/tulisartikel-blogger-dan-hugo.jpg&#34;
-width=&#34;720&#34;
-height=&#34;380&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Perbandingan skor kecepatan, &lt;a href=&#34;https://gtmetrix.com/compare/iHmjKf5p/OF52WEdH&#34;&gt;analisis gtmetrix&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-src=&#34;http://i.imgur.com/gyQ5t6a.png&#34;
-width=&#34;1016&#34;
-height=&#34;570&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Validasi AMP&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-src=&#34;http://i.imgur.com/5sv5CXW.jpg&#34;
-width=&#34;720&#34;
-height=&#34;380&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-</description>
+      <description>Tercatat pada tanggal 11 Januari 2017, website Petani Kode mulai dikembangkan dengan mesin (engine) Hugo. Hugo adalah salah satu mesin generator web statis yang berusia cukup muda.
+Hugo ditulis dengan bahasa pemrograman Go dan diklaim lebih cepat dari mesin sejenisnya seperti Jekyll, Middleman, Octopress, dsb.
+Baca juga: 5 Alasan Petani Kode Migrasi ke Hugo
+Pengembangan website Petani Kode berlangsung cukup cepat. Meskipun bahasa pemrograman Go belum pernah saya pelajari dan pahami.</description>
     </item>
     
   </channel>

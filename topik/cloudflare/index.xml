@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloudflare on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/cloudflare/index.xml</link>
+    <link>https://www.petanikode.com/topik/cloudflare/</link>
     <description>Recent content in Cloudflare on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/cloudflare/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Apr 2017 10:56:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/cloudflare/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)</title>
@@ -15,118 +18,12 @@
       <pubDate>Wed, 19 Apr 2017 10:56:07 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-menambahkan-ssl-untuk-github-pages/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/https.png&#34; alt=&#34;Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada dasarnya Github telah memberikan SSL untuk setiap halaman github &lt;em&gt;(Github Pages)&lt;/em&gt;.
-Akan tetapi, untuk halaman github yang menggunakan domain sendiri tidak diberikan.&lt;/p&gt;
-
-&lt;p&gt;Contoh Halaman github dengan SSL:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://petanikode.github.io
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Lihat, di sana &lt;code&gt;https&lt;/code&gt; menandakan SSL-nya aktif.&lt;/p&gt;
-
-&lt;p&gt;Sedangkan untuk kostum domain, seperti &lt;code&gt;http://petanikode.com&lt;/code&gt; tidak diberikan
-SSL.&lt;/p&gt;
-
-&lt;h2 id=&#34;mengapa-menggunakan-ssl&#34;&gt;Mengapa Menggunakan SSL?&lt;/h2&gt;
-
-&lt;p&gt;Petani Kode memang sebuah halaman statis yang dibuat dengan Hugo.&lt;/p&gt;
-
-&lt;p&gt;Sepertinya SSL tidak terlalu dibutuhkan, karena tidak ada pemerosesan data
-melalui form yang akan dikirim ke database.&lt;/p&gt;
-
-&lt;p&gt;Tapi, menurut beberapa pakar SEO: menggunakan SSL/https di blog akan meningkatkan
-kepercayaan mesin pencari.&lt;/p&gt;
-
-&lt;p&gt;Saya percaya&amp;hellip; karena beru saja membaca: &lt;a href=&#34;https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html&#34;&gt;HTTPS as a ranking signal&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, petani kode harus menggunakan SSL :smile:.&lt;/p&gt;
-
-&lt;h2 id=&#34;mengaktifkan-ssl-cloudflare&#34;&gt;Mengaktifkan SSL Cloudflare&lt;/h2&gt;
-
-&lt;p&gt;Pertama pastikan pengaturan DNS-nya seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-DNS-Cloudflare.png&#34; alt=&#34;Konfigurasi DNS Cloudflare&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Artinya, website kita yang di Github akan melewati Cloudflare kemudian diteruskan
-ke Client.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu masuk ke &lt;strong&gt;Crypto&lt;/strong&gt;, kemudian atur SSL menjadi &lt;strong&gt;Full&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-SSL-Cloudflare.png&#34; alt=&#34;Pengaturan SSL Cloudflare&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ada empat pilihan: off, flexible, full, dan full (strict).&lt;/p&gt;
-
-&lt;p&gt;Perbedaanya seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/cloudflare_ssl_modes.png&#34; alt=&#34;Perbedaan pengaturan SSL Cloudflare&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sumber: &lt;a href=&#34;https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/&#34;&gt;blog.cloudflare.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-page-rules&#34;&gt;Membuat Page Rules&lt;/h2&gt;
-
-&lt;p&gt;Agar &lt;code&gt;http&lt;/code&gt; dialihkan ke &lt;code&gt;https&lt;/code&gt;, maka kita perlu membuat &lt;em&gt;page rules&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Silahkan masuk ke &lt;strong&gt;Page Rules&lt;/strong&gt;, kemudian tambahkan &lt;em&gt;rules&lt;/em&gt; seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-page-rules-untuk-https.png&#34; alt=&#34;Pengaturan Page Rules untuk HTTPS&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tambahkan juga &lt;em&gt;rules&lt;/em&gt; untuk cache-nya seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/pengaturan-page-rules-untuk-cache.png&#34; alt=&#34;Pengaturan Page Rules untuk Cache&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;menugbah-cname-dan-konfigurasi-hugo&#34;&gt;Menugbah CNAME dan Konfigurasi Hugo&lt;/h2&gt;
-
-&lt;p&gt;Karena kita ingin menggunakan alamat dengan &lt;code&gt;https&lt;/code&gt; maka perlu diubah Konfigurasinya.&lt;/p&gt;
-
-&lt;p&gt;Di Hugo, baseurl-nya diubah menjadi seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;baseurl = &amp;quot;https://www.petanikode.com/&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sedangkana di repositori githubnya:&lt;/p&gt;
-
-&lt;p&gt;CNAME: &lt;a href=&#34;https://github.com/petanikode/petanikode.github.io/blob/master/CNAME&#34;&gt;petanikode.github.io/CNAME&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;www.petanikode.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;percobaan-dan-masalah&#34;&gt;Percobaan dan Masalah&lt;/h2&gt;
-
-&lt;p&gt;Saat melakukan percobaan, saya kira SSL-nya tidak bekerja dengan baik.&lt;/p&gt;
-
-&lt;p&gt;Terlihat di browser, ketika membuka  &lt;code&gt;https://www.petanikode.com&lt;/code&gt; warnya abu-abu.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/SSL-masih-belum-aman.png&#34; alt=&#34;SSL Belum aman&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hal ini disebabkan karena ada beberapa link gambar yang masih menggunakan HTTP.&lt;/p&gt;
-
-&lt;p&gt;Kemudian Saya mencoba mencarinya di &lt;em&gt;page source&lt;/em&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/link-aset-yang-masih-menggunakan-http.png&#34; alt=&#34;Link aset yang masih menggunakan http&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah mengetahui, gambar atau &lt;em&gt;assets&lt;/em&gt; yang masih menggunakan &lt;code&gt;http&lt;/code&gt; selanjutnya
-tinggal mengubahnya menjadi &lt;code&gt;https&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pada Hugo, Konfigurasinya saya letakan di &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/mengubah-link-gambar-ke-https.png&#34; alt=&#34;Mengubah link gambar dari http menjadi https&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;hellip;dan akhirnya SSL sudah aktif.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/ssl-petanikode-sudah-aktif.png&#34; alt=&#34;SSL Petani kode sudah aktif&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi, ada satu lagi masalah yang muncul.&lt;/p&gt;
-
-&lt;p&gt;Semua komentar menghilang, karena link yang tersimpan di disqus adalah link versi
-sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Mungkin nanti akan saya perbaiki :smile:, yang penting sekarang sudah HTTPS.&lt;/p&gt;
-</description>
+      <description>Pada dasarnya Github telah memberikan SSL untuk setiap halaman github (Github Pages). Akan tetapi, untuk halaman github yang menggunakan domain sendiri tidak diberikan.
+Contoh Halaman github dengan SSL:
+https://petanikode.github.io  Lihat, di sana https menandakan SSL-nya aktif.
+Sedangkan untuk kostum domain, seperti http://petanikode.com tidak diberikan SSL.
+Mengapa Menggunakan SSL? Petani Kode memang sebuah halaman statis yang dibuat dengan Hugo.
+Sepertinya SSL tidak terlalu dibutuhkan, karena tidak ada pemerosesan data melalui form yang akan dikirim ke database.</description>
     </item>
     
     <item>
@@ -135,56 +32,9 @@ sebelumnya.&lt;/p&gt;
       <pubDate>Tue, 17 Jan 2017 22:06:22 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-redirect-domain-dengan-cloudflare/</guid>
-      <description>
-
-&lt;p&gt;Saya akhirnya mengurus jaringan lagi, setelah sekian lama tidak belajar jaringan.
-Pada &lt;a href=&#34;https://www.petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;proses migrasi&lt;/a&gt; kemarin,
-proses propagasi domain memakan waktu cukup lama.
-Domain Petani Kode &lt;code&gt;www.petanikode.com&lt;/code&gt; masih menunjukan halaman &lt;code&gt;404&lt;/code&gt;. Namun,
-domain yang tanpa menggunakan &lt;code&gt;www&lt;/code&gt;, sudah bisa diakses.&lt;/p&gt;
-
-&lt;p&gt;Karena tidak ingin semua pengunjung mendapatkan &lt;em&gt;error&lt;/em&gt; &lt;code&gt;404&lt;/code&gt;, saya harus melakukan
-&lt;em&gt;redirect&lt;/em&gt; ke domain baru yang tidak menggunakan &lt;code&gt;www&lt;/code&gt;. Berikut ini caranya.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-masuk-ke-halaman-pages-rules&#34;&gt;1. Masuk ke Halaman Pages Rules&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka halaman &lt;em&gt;Pages Rules&lt;/em&gt; di Cloudflare.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;111&#34;
-width=&#34;379&#34;
-alt=&#34;Menu Cloudflare&#34;
-src=&#34;http://i.imgur.com/9m7NJeT.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-buat-pages-rules-baru&#34;&gt;2. Buat Pages Rules Baru&lt;/h2&gt;
-
-&lt;p&gt;Klik tombol &lt;em&gt;Create Page Rule&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;227&#34;
-width=&#34;983&#34;
-alt=&#34;Menu Cloudflare&#34;
-src=&#34;http://i.imgur.com/8OO2z36.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-input-data-domain&#34;&gt;3. Input data domain&lt;/h2&gt;
-
-&lt;p&gt;Masukkan domain yang akan dialihkan ke, misalnya saya ingin mengalihkan
-&lt;code&gt;www.petanikode.com&lt;/code&gt; ke &lt;code&gt;petanikode.com&lt;/code&gt; saja.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;654&#34;
-width=&#34;801&#34;
-alt=&#34;Membuat aturan redirect&#34;
-src=&#34;http://i.imgur.com/7Ih4BiE.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, klik &lt;em&gt;save and deploy&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sampai tahap ini, cobalah untuk mengakses alaman yang dialihkan tadi.
-Kalau pengalihan berhasil berarti konfigurasi sudah benar.&lt;/p&gt;
-</description>
+      <description>Saya akhirnya mengurus jaringan lagi, setelah sekian lama tidak belajar jaringan. Pada proses migrasi kemarin, proses propagasi domain memakan waktu cukup lama. Domain Petani Kode www.petanikode.com masih menunjukan halaman 404. Namun, domain yang tanpa menggunakan www, sudah bisa diakses.
+Karena tidak ingin semua pengunjung mendapatkan error 404, saya harus melakukan redirect ke domain baru yang tidak menggunakan www. Berikut ini caranya.
+1. Masuk ke Halaman Pages Rules Silahkan buka halaman Pages Rules di Cloudflare.</description>
     </item>
     
   </channel>

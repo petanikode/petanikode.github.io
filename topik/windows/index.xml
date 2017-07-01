@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/windows/index.xml</link>
+    <link>https://www.petanikode.com/topik/windows/</link>
     <description>Recent content in Windows on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jun 2017 15:41:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/windows/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Kenapa Saya Menggunakan Linux untuk Pemrograman? [Ini 5 alasannya]</title>
@@ -15,171 +18,13 @@
       <pubDate>Tue, 27 Jun 2017 15:41:28 +0800</pubDate>
       
       <guid>https://www.petanikode.com/menggunakan-linux-untuk-pemrograman/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/linux/alasan/linux-untuk-programmer.png&#34; alt=&#34;Linux untuk Programmer&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Jika kalian bertanya, kenapa saya menggunakan Linux untuk pemrograman?&lt;/p&gt;
-
-&lt;p&gt;Saya jadi ingin menceritakan, bagaimana saya dari awal mulai tertarik dan
-menyukai Linux sampai saat ini.&lt;/p&gt;
-
-&lt;p&gt;Tapi sepertinya akan membutuhkan waktu yang panjang&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Mungkin lain kali saja, (insya&amp;rsquo;allah) di tulisan yang berbeda.&lt;/p&gt;
-
-&lt;p&gt;Balik lagi ke pertanyaan, kenapa saya menggunakan Linux untuk pemrograman?&lt;/p&gt;
-
-&lt;p&gt;Ada beberapa alasannya:&lt;/p&gt;
-
-&lt;h2 id=&#34;1-saya-tidak-suka-virus&#34;&gt;1. Saya Tidak Suka Virus&lt;/h2&gt;
-
-&lt;p&gt;Hal yang paling saya tidak suka saat menggunakan Windows adalah Virus. Setiap
-terkena, wajib install ulang dan konfigurasi ulang semuanya dari awal.&lt;/p&gt;
-
-&lt;p&gt;Saya tidak suka menggunakan Anti Virus, karena memori laptop saya tidak cukup
-banyak dan akan membuatnya terasa berat.&lt;/p&gt;
-
-&lt;p&gt;Sementara di Linux, saya merasa sangat nyaman dan terbebas dari Virus.&lt;/p&gt;
-
-&lt;p&gt;Hingga saat ini, laptop saya tidak pernah virusan lagi. Bahkan banyak teman-teman
-yang minta dihapusin virus dari laptop saya.
-Mungkin mereka kira Linux kebal dari segala virus.&lt;/p&gt;
-
-&lt;p&gt;Padahal itu salah.&lt;/p&gt;
-
-&lt;p&gt;Linux juga bisa terkena virus, bahkan belakangan ini berdar kabar kalau Virus
-Ransomware sudah menyerang beberapa server hosting yang menggunakan Linux (versi lama).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/linux/alasan/linux-ransomware.png&#34; alt=&#34;Penyebab Ransomware di Linux&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sumber: &lt;a href=&#34;https://blog.trendmicro.com/trendlabs-security-intelligence/erebus-resurfaces-as-linux-ransomware/&#34;&gt;blog.trendmicro.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Meskipun begitu, sampai saat ini komputer saya masih aman dan tentram.
-Karena saya tidak menggunakan Wine, Kernel selalu ter-update, dan tidak menginstal
-sembarang software. Apalagi software &lt;em&gt;closed source&lt;/em&gt; yang tidak jelas asal-uslunya.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-lingkungan-development-di-sistem-nix-lebih-bagus&#34;&gt;2. Lingkungan Development di Sistem *Nix Lebih Bagus&lt;/h2&gt;
-
-&lt;p&gt;Ini menurut pendapat saya pribadi, tapi pendapat ini sebenarnya sudah didukung
-sendiri oleh Microsoft dan Apple (cieee :smile:).&lt;/p&gt;
-
-&lt;p&gt;Microsoft sepertinya mengakui, kalau lingkungan &lt;em&gt;coding&lt;/em&gt; di sistem *nix (Linux dan Unix)
-itu lebih bagus. Buktinya, mereka menyertakan &lt;a href=&#34;https://msdn.microsoft.com/en-us/commandline/wsl/faq&#34;&gt;Ubuntu dalam Windows&lt;/a&gt; untuk keperluan Development (pemrograman).&lt;/p&gt;
-
-&lt;p&gt;Kabar baiknya, Microsoft juga sangat suka berkontribusi ke proyek &lt;em&gt;open source&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/linux/alasan/microsoft-love-linux.jpg&#34; alt=&#34;Microsoft love linux&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sementara untuk Mac, ya Mac OS bahan dasarnya dari Unix. Mac juga enak dipakai ngoding
-dan UI-nya bagus. Tapi sayangnya saya tidak punya cukup banyak uang untuk membelinya.
-Akhirnya tetap bertahan menggunakan Linux.&lt;/p&gt;
-
-&lt;p&gt;Kalaupun pakai Mac, nanti juga ada Linux-nya. Soalnya pakai &lt;a href=&#34;https://en.wikipedia.org/wiki/Docker_(software)&#34;&gt;Docker&lt;/a&gt; dan &lt;a href=&#34;https://en.wikipedia.org/wiki/Vagrant_(software)&#34;&gt;Vagrant&lt;/a&gt; untuk pengembangan web.&lt;/p&gt;
-
-&lt;p&gt;Teknologi Docker dan Vagrant menggunakan Linux,
-jadi kita dituntut harus paham sistem Linux.&lt;/p&gt;
-
-&lt;h2 id=&#34;3-mengurangi-main-game-dan-perbanyak-belajar-coding&#34;&gt;3. Mengurangi Main Game dan Perbanyak Belajar &lt;em&gt;Coding&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Saya memang seorang pecandu Game. Waktu luang banyak dihabiskan untuk bermain Game.
-Bahkan dulu rela berjalan berkilo-kilo untuk pergi main PS (karena waktu itu belum banyak
-yang punya PS)&lt;/p&gt;
-
-&lt;p&gt;Prinsip saya, &amp;ldquo;Kalau belum tamat, belum mau berhenti main&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Prinsip tersebut yang membuat saya terus-terusan bermain Game.&lt;/p&gt;
-
-&lt;p&gt;Lalu, setelah punya rasa ketertarikan untuk belajar komputer, minat saya terhadap
-Game mulai berkurang&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Di kampus tempat saya kuliah, banyak sekali Gamer berkeliaran. Dulu pernah
-ikut-ikutan bermain game online saat masih menggunakan &lt;em&gt;dual boot&lt;/em&gt; (Windows dan Ubuntu).&lt;/p&gt;
-
-&lt;p&gt;Tapi semuanya berubah, setelah 100% pakai Linux&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Game tidak lagi bisa diinstal di Laptop, sekarang fokusnya oprek Linux dan
-belajar &lt;em&gt;Coding&lt;/em&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Stop Playing, Start Creating&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Bahkan sekarang punya ketertarikan untuk belajar &lt;em&gt;Game Programming&lt;/em&gt;. Sedikit
-demi sedikit, saya mulai belajar pemrograman grafis dengan OpenGL, SDL, &lt;a href=&#34;https://www.petanikode.com/topik/html5&#34;&gt;HTML5&lt;/a&gt; Canvas,
-dan juga Game Engine.&lt;/p&gt;
-
-&lt;p&gt;Ini screenshot, saya lagi belajar Godot:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/linux/alasan/belajar-godot.png&#34; alt=&#34;Belajar Godot&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kabar baiknya, sekarang &lt;a href=&#34;http://unity3d.com&#34;&gt;Game Engine Unity&lt;/a&gt; sudah mulai didukung di Linux.
-Meskipun sudah ada &lt;a href=&#34;http://www.godotengine.org/&#34;&gt;Godot Engine&lt;/a&gt; yang &lt;em&gt;open source&lt;/em&gt; dan siap bersaing dengannya.&lt;/p&gt;
-
-&lt;p&gt;Kita tunggu saja perkembangannya&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Saat ini saya kebanyakan menggunakan Linux untuk pemrograman &lt;a href=&#34;https://www.petanikode.com/topik/web&#34;&gt;Web&lt;/a&gt; dan desain.&lt;/p&gt;
-
-&lt;h2 id=&#34;4-masih-penasaran-dengan-linux&#34;&gt;4. Masih Penasaran dengan Linux&lt;/h2&gt;
-
-&lt;p&gt;Saya sering punya rasa penasaran yang tinggi terhadap sesuatu yang baru dan belum pernah
-saya ketahui. Karena itu, saya menggunakan Linux.&lt;/p&gt;
-
-&lt;p&gt;Waktu saya pakai Windows, Saya menganggap Linux adalah sesuatu yang sulit dipelajari.
-Tapi ternyata tidak.&lt;/p&gt;
-
-&lt;p&gt;Walaupun pada awalnya banyak mendapatkan error dan masalah, saya masih bisa bertahan
-hingga saat ini.&lt;/p&gt;
-
-&lt;p&gt;Meskipun sadah lama menggunakan Linux, rasa pensaran saya masih ada.
-Karena masih banyak yang belum diketahui.&lt;/p&gt;
-
-&lt;p&gt;Seperti:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Bagaimana kernel bekerja?&lt;/li&gt;
-&lt;li&gt;Bagaimana cara &lt;em&gt;compile&lt;/em&gt; kernel?&lt;/li&gt;
-&lt;li&gt;Bagaimana cara bikin distro linux sendiri?&lt;/li&gt;
-&lt;li&gt;Bagaimana Google mengembangkan Kernel Linux menjadi Android?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sampai saat ini, saya belum paham, karena belum mencobanya.&lt;/p&gt;
-
-&lt;h2 id=&#34;5-berhenti-membajak&#34;&gt;5. Berhenti Membajak&lt;/h2&gt;
-
-&lt;p&gt;Pembajakan software mungkin saudah menjadi hal yang biasa di negara kita.
-Mau install ini, mau install itu&amp;hellip; tinggal cari saja crack-nya.&lt;/p&gt;
-
-&lt;p&gt;Tapi kalau terus-terusan melakukan ini, kapan mau maju?&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Selama masih ada yang membuang sampah ke sungai dan merusak alam, bajir akan
-terus terjadi.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Kira-kira seperti itulah perumpamaannya.&lt;/p&gt;
-
-&lt;p&gt;Saya tidak punya kuasa untuk menghentikan mereka yang membuang samapah di sungai
-dan merusak alam. Karena itu, saya memilih untuk tidak ikutan lagi membuang sampah dan merusak alam.&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-version=&#34;7&#34; style=&#34; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&#34;&gt;&lt;div style=&#34;padding:8px;&#34;&gt; &lt;div style=&#34; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&#34;&gt; &lt;div style=&#34; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BSzsm6Gg7oE/&#34; style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&#34; target=&#34;\_blank&#34;&gt;A post shared by Petani Kode (@petanikode)&lt;/a&gt; on &lt;time style=&#34; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&#34; datetime=&#34;2017-04-13T01:52:24+00:00&#34;&gt;Apr 12, 2017 at 6:52pm PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async defer src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;Untuk saat ini, itulah 5 alasan saya menggunakan Linux untuk pemrograman.&lt;/p&gt;
-
-&lt;p&gt;Jika kalian menggangap saya &amp;ldquo;Linux Fans Boy&amp;rdquo;, &amp;ldquo;Maniak Linux&amp;rdquo;, &amp;ldquo;Fanatik Linux&amp;rdquo;, dan semacamnya.
-Semua itu tidaklah benar, karena saya punya rasa ketertarikan terhadap banyak hal
-termasuk juga Windows. Buktinya blog ini tidak bisa fokus membahas satu topik.&lt;/p&gt;
-
-&lt;p&gt;Bisa jadi saat ini saya masih pakai Linux, mungkin 5 atau 10 tahun mendatang saya sudah
-pakai Mac OS (ngimpi :smile:).&lt;/p&gt;
-
-&lt;p&gt;Apa kamu juga tertarik menggunakan Linux atau sudah menggunakan Linux?&lt;/p&gt;
-
-&lt;p&gt;Mari berbagi di komentar&amp;hellip;&lt;/p&gt;
-</description>
+      <description>Jika kalian bertanya, kenapa saya menggunakan Linux untuk pemrograman?
+Saya jadi ingin menceritakan, bagaimana saya dari awal mulai tertarik dan menyukai Linux sampai saat ini.
+Tapi sepertinya akan membutuhkan waktu yang panjang&amp;hellip;
+Mungkin lain kali saja, (insya&amp;rsquo;allah) di tulisan yang berbeda.
+Balik lagi ke pertanyaan, kenapa saya menggunakan Linux untuk pemrograman?
+Ada beberapa alasannya:
+1. Saya Tidak Suka Virus Hal yang paling saya tidak suka saat menggunakan Windows adalah Virus.</description>
     </item>
     
     <item>
@@ -188,199 +33,9 @@ pakai Mac OS (ngimpi :smile:).&lt;/p&gt;
       <pubDate>Tue, 14 Feb 2017 21:46:29 +0800</pubDate>
       
       <guid>https://www.petanikode.com/activate-power-mode-ada-di-mana-mana/</guid>
-      <description>
-
-&lt;p&gt;Pada akhir tahun 2015, saya pernah menulis tentang &lt;a href=&#34;https://www.petanikode.com/menulis-kode-serasa-main-game-dengan-modul-activate-power-mode-di-atom/&#34;&gt;plug-in Atom&lt;/a&gt;
-bernama &lt;code&gt;activate-power-mode&lt;/code&gt;. Plug-in memang keren, membuat kita merasa semakin asyik
-menulis kode. Kepopuleran plug-in ini membuat programmer yang lain ikut membuat
-plug-in serupa untuk teks editor selain Atom.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini daftar plug-in &lt;code&gt;activate-power-mode&lt;/code&gt;, dikutip dari repositori
-&lt;a href=&#34;https://github.com/codeinthedark/awesome-power-mode&#34;&gt;awesome-power-mode&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-atom&#34;&gt;1. Atom&lt;/h2&gt;
-
-&lt;p&gt;Awalmulanya plug-in ini dibuat sebagai replikas dari &lt;a href=&#34;http://codeinthedark.com/editor/&#34;&gt;&lt;em&gt;Code in Dark Editor&lt;/em&gt;&lt;/a&gt;.
-Kita harus mendapatkan skor di atas 200 untuk dapat menyaksikan efek &lt;code&gt;activate-power-mode&lt;/code&gt;.
-Sedangkan, kalau kita menggunakan plug-in kita tidak perlu mendapatkan skor.&lt;/p&gt;
-
-&lt;p&gt;Cara instal plugin dapat di baca &lt;a href=&#34;https://www.petanikode.com/2015/12/menulis-kode-serasa-main-game-dengan-modul-activate-power-mode-di-atom/&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-anim
-    width=&#34;510&#34;
-    height=&#34;274&#34;
-    src=&#34;https://1.bp.blogspot.com/-2NnuasJU9Oo/VnUCMk2NMTI/AAAAAAAACSE/528Cjx8x_EE/s1600/active-power-mode-atom.gif&#34;&gt;
-&lt;/amp-anim&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-brackets&#34;&gt;2. Brackets&lt;/h2&gt;
-
-&lt;p&gt;Seorang programmer dengan nama akun Github Equals182, membuat plugin &lt;code&gt;activate-power-mode&lt;/code&gt;
-untuk teks editor Brackets.&lt;/p&gt;
-
-&lt;p&gt;Alamat repositorinya: &lt;a href=&#34;https://github.com/Equals182/brackets-power-mode&#34;&gt;https://github.com/Equals182/brackets-power-mode&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-codemirror&#34;&gt;3. Codemirror&lt;/h2&gt;
-
-&lt;p&gt;Pengguna Github bernama chinchang membuat plugin &lt;code&gt;activate-power-mode&lt;/code&gt; untuk
-Codemirror.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-anim
-    width=&#34;655&#34;
-    height=&#34;285&#34;
-    alt=&#34;demo.gif&#34;
-    src=&#34;https://github.com/chinchang/code-blast-codemirror/raw/master/demo.gif&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Live demo: &lt;a href=&#34;https://rawgit.com/chinchang/code-blast-codemirror/master/demo/index.html&#34;&gt;https://rawgit.com/chinchang/code-blast-codemirror/master/demo/index.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Alamat repositorinya: &lt;a href=&#34;https://github.com/chinchang/code-blast-codemirror&#34;&gt;https://github.com/chinchang/code-blast-codemirror&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;4-idea&#34;&gt;4. IDEA&lt;/h2&gt;
-
-&lt;p&gt;IntelliJ IDEA merupakan salah satu IDE untuk bahasa pemrograman Java. Android
-Studio dikembangkan dari IDEA, mungkin saja &lt;code&gt;activate-power-mode&lt;/code&gt; untuk
-IDEA bisa juga digunakan untuk Android Studio.&lt;/p&gt;
-
-&lt;p&gt;Alamat Repositori: &lt;a href=&#34;https://github.com/ViceFantasyPlace/activate-power-mode&#34;&gt;https://github.com/ViceFantasyPlace/activate-power-mode&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-anim
-    width=&#34;736&#34;
-    height=&#34;421&#34;
-    alt=&#34;ActivatePowerModePreview.gif?raw=true&#34;
-    src=&#34;https://github.com/ViceFantasyPlace/activate-power-mode/raw/master/ActivatePowerModePreview.gif?raw=true&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-anim&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;5-phpstrom&#34;&gt;5. PHPStrom&lt;/h2&gt;
-
-&lt;p&gt;PHPStrom juga IDE pengembangan dari IntelliJ IDEA. Namun, ada juga &lt;code&gt;activate-power-mode&lt;/code&gt;-nya
-tersendiri.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Alamat Plugin: &lt;a href=&#34;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&#34;&gt;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Alamat Repositori: &lt;a href=&#34;https://github.com/axaluss/power-mode-intellij-plugin&#34;&gt;https://github.com/axaluss/power-mode-intellij-plugin&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;amp-anim
-    width=&#34;736&#34;
-    height=&#34;421&#34;
-    alt=&#34;screenshot_15884.png&#34;
-    src=&#34;https://plugins.jetbrains.com/files/8251/screenshot_15884.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-anim&gt;&lt;/p&gt;
-
-&lt;p&gt;Woho, panas :smile: &lt;code&gt;activate-power-mode&lt;/code&gt; di PHPStrom ada apinya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;6-javascript&#34;&gt;6. Javascript&lt;/h2&gt;
-
-&lt;p&gt;Javascript memang bukan teks editor. Atom sendiri dibuat dengan Javascript.
-Karena itu, ada juga yang membuatnya untuk &lt;em&gt;libaray&lt;/em&gt; javascript.&lt;/p&gt;
-
-&lt;p&gt;Live demo: &lt;a href=&#34;http://0xabcdef.com/activate-power-mode/&#34;&gt;http://0xabcdef.com/activate-power-mode/&lt;/a&gt;
-Repositori: &lt;a href=&#34;https://github.com/disjukr/activate-power-mode&#34;&gt;https://github.com/disjukr/activate-power-mode&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;7-vim&#34;&gt;7. Vim&lt;/h2&gt;
-
-&lt;p&gt;Teks editor legendaris, tidak banyak yang bisa menggunakannya. Konon,
-yang menguasai teks editor ini, bisa dibilang sudah master.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-anim
-    width=&#34;701&#34;
-    height=&#34;457&#34;
-    alt=&#34;screenshot.gif&#34;
-    src=&#34;https://raw.githubusercontent.com/mattn/vim-particle/master/data/screenshot.gif&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-anim&gt;&lt;/p&gt;
-
-&lt;p&gt;Repositri: &lt;a href=&#34;https://github.com/mattn/vim-particle&#34;&gt;https://github.com/mattn/vim-particle&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;8-visual-studio&#34;&gt;8. Visual Studio&lt;/h2&gt;
-
-&lt;p&gt;Visual Studio merupakan IDE untuk pemrograman VB, C#, dan .NET. Visual Studio
-merupakan produk yang dikeluarkan Microsoft.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;820&#34;
-    height=&#34;180&#34;
-    alt=&#34;Screenshot.png&#34;
-    src=&#34;https://raw.githubusercontent.com/LiamMorrow/Visual-Studio-Power-Mode/master/PowerMode/Resources/Screenshot.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Repositri: &lt;a href=&#34;https://github.com/LiamMorrow/Visual-Studio-Power-Mode&#34;&gt;https://github.com/LiamMorrow/Visual-Studio-Power-Mode&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;9-windows&#34;&gt;9. Windows&lt;/h2&gt;
-
-&lt;p&gt;Activate Power Mode yang satu ini khusus untuk sistem operasi Windows. Efek
-&lt;code&gt;activate-power-mode&lt;/code&gt; muncul ketika mengetik. Bisa untuk Notepad++, Notepad,
-dan teks editor Windows lainnya.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-anim
-    width=&#34;500&#34;
-    height=&#34;200&#34;
-    alt=&#34;demo.gif&#34;
-    src=&#34;https://raw.githubusercontent.com/if1live/ParticleOnTextCursor/master/document/demo.gif&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-anim&gt;&lt;/p&gt;
-
-&lt;p&gt;Repositori: &lt;a href=&#34;https://github.com/if1live/ParticleOnTextCursor&#34;&gt;https://github.com/if1live/ParticleOnTextCursor&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;10-xcode&#34;&gt;10. XCode&lt;/h2&gt;
-
-&lt;p&gt;XCode merupakan IDE untuk MacOS. Tidak mau kalah dengan yang lain, plug-in
-&lt;code&gt;activate-power-mode&lt;/code&gt; untuk XCode tersedia dalam tiga respositori.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-anim
-    width=&#34;500&#34;
-    height=&#34;200&#34;
-    alt=&#34;about.gif&#34;
-    src=&#34;https://github.com/poboke/ActivatePowerMode/raw/master/Screenshots/about.gif&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-anim&gt;&lt;/p&gt;
-
-&lt;p&gt;Repositori&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/poboke/ActivatePowerMode&#34;&gt;https://github.com/poboke/ActivatePowerMode&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/qfish/XActivatePowerMode&#34;&gt;https://github.com/qfish/XActivatePowerMode&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Dawn-/CoderPower&#34;&gt;https://github.com/Dawn-/CoderPower&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;11-hyper&#34;&gt;11. Hyper&lt;/h2&gt;
-
-&lt;p&gt;Hyper bukan teks editor maupun IDE. Hyper adalah Terminal Emulator berbasis Web (&lt;a href=&#34;https://www.petanikode.com/topik/javascript&#34;&gt;Javascript&lt;/a&gt;).
-Pada &lt;a href=&#34;https://hyper.is&#34;&gt;website resminya&lt;/a&gt;, Hyper memperlihatkan efek &lt;code&gt;activate-power-mode&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;457&#34;
-    height=&#34;340&#34;
-    alt=&#34;13c9bfe6-4905-11e6-8fe4-baf8fc8d9293.gif&#34;
-    src=&#34;https://cloud.githubusercontent.com/assets/13041/16820268/13c9bfe6-4905-11e6-8fe4-baf8fc8d9293.gif&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah beberapa plug-in Activate Power Mode untuk berbagai merek teks editor,
-libaray, serta terminal emulator. menurut kalian manakah yang paling bagus?&lt;/p&gt;
-
-&lt;p&gt;Referensi:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/codeinthedark/awesome-power-mode&#34;&gt;github.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hyper.is&#34;&gt;hyper.is&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://plugins.jetbrains.com/phpstorm/plugin/8251-power-mode-ii&#34;&gt;plugins.jetbrains.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Pada akhir tahun 2015, saya pernah menulis tentang plug-in Atom bernama activate-power-mode. Plug-in memang keren, membuat kita merasa semakin asyik menulis kode. Kepopuleran plug-in ini membuat programmer yang lain ikut membuat plug-in serupa untuk teks editor selain Atom.
+Berikut ini daftar plug-in activate-power-mode, dikutip dari repositori awesome-power-mode.
+1. Atom Awalmulanya plug-in ini dibuat sebagai replikas dari Code in Dark Editor. Kita harus mendapatkan skor di atas 200 untuk dapat menyaksikan efek activate-power-mode.</description>
     </item>
     
     <item>
@@ -389,176 +44,12 @@ libaray, serta terminal emulator. menurut kalian manakah yang paling bagus?&lt;/
       <pubDate>Fri, 10 Feb 2017 01:42:35 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-instal-git-di-windows/</guid>
-      <description>
-
-&lt;p&gt;Instalasi Git di Windows memang tidak seperti di Linux yang ketik perintah
-langsung terinstal.&lt;/p&gt;
-
-&lt;p&gt;Kita harus menguduh dulu, kemudian melakukan ritual
-&lt;em&gt;next&amp;gt;next&amp;gt;finish&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Tapi dalam ritual tersebut, ada pilihan
-yang harus diperhatikan agar perintah &lt;code&gt;git&lt;/code&gt; dapat dikenali di CMD.&lt;/p&gt;
-
-&lt;p&gt;Baiklah, kali ini saya numpang &lt;em&gt;screenshot&lt;/em&gt; di laptop teman yang menggunakan
-windows untuk pembuatan tutorial ini.&lt;/p&gt;
-
-&lt;p&gt;Silahkan disimak ya :smile:.&lt;/p&gt;
-
-&lt;h2 id=&#34;unduh-git&#34;&gt;Unduh Git&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka website resminya Git (&lt;a href=&#34;https://git-scm.com/&#34;&gt;git-scm.com&lt;/a&gt;).
-Kemudian unduh Git sesuai dengan arsitektur komputer kita. Kalau menggunakan
-64bit, unduh yang 64bit. Begitu juga kalau menggunakan 32bit.&lt;/p&gt;
-
-&lt;h2 id=&#34;ritual-instal&#34;&gt;Ritual Instal&lt;/h2&gt;
-
-&lt;p&gt;Baiklah, mari kita mulai ritual instalnya. Silahkan klik 2x file instaler Git yang sudah diunduh.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;836&#34;
-height=&#34;268&#34;
-alt=&#34;1.+Buka+file+instaler+Git.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-GJG55D0dDUE/WJyvgHq7V6I/AAAAAAAAD0Y/1eNFR16HwmoDXixtJfQ5HRMZ_hCelqD0gCPcB/s1600/1.%2BBuka%2Bfile%2Binstaler%2BGit.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Maka akan muncul infomasi lisensi Git, klik &lt;em&gt;Next &amp;gt;&lt;/em&gt; untuk melanjutkan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;2.+Informasi+tentang+git.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-NzbswuR4CgU/WJyvgMeY3cI/AAAAAAAAD0Y/aa_6vg_W7Q0l7cf20FkatIkU0dXGAJXtACPcB/s1600/2.%2BInformasi%2Btentang%2Bgit.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya menentukan lokasi instalasi. Biarkan saja apa adanya, kemudian klik
-&lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;3.+Lokasi+instal.JPG&#34;
-src=&#34;https://2.bp.blogspot.com/-Ye-09zmjGXY/WJyvgKQWTxI/AAAAAAAAD0Y/hbIXryc1LBkUOaXOOlP92ynIwdVGAZs9gCPcB/s1600/3.%2BLokasi%2Binstal.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan komoponen, biarkan saja seperti ini kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;4.+Pemilihan+komponen.JPG&#34;
-src=&#34;https://2.bp.blogspot.com/-ywOWK8HlXtY/WJyvgBmH9YI/AAAAAAAAD0Y/IoJbYkEjw0oIQYxLR3Jf7AvbDhwbDneoQCPcB/s1600/4.%2BPemilihan%2Bkomponen.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemlilihan direktori start menu, klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;5.+pembuatan+start+menu.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-iGNC1QrWtDg/WJyvgHelUtI/AAAAAAAAD0Y/fJKy0-mD6MgikbyjrjD4FDabTfPynbCiwCPcB/s1600/5.%2Bpembuatan%2Bstart%2Bmenu.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pengaturan &lt;em&gt;PATH Environment&lt;/em&gt;. Pilih yang tengah agar perintah &lt;code&gt;git&lt;/code&gt;
-dapat di kenali di &lt;em&gt;Command Prompt&lt;/em&gt; (CMD). Setelah itu klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;6.+Path+environment.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-79ZG8B-IzCA/WJyvgLBQbjI/AAAAAAAAD0Y/u87asmJOm9UcFAT0Q87pM8xgcW82kkOOwCPcB/s1600/6.%2BPath%2Benvironment.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya konversi &lt;em&gt;line ending&lt;/em&gt;. Biarkan saja seperti ini, kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;7.+konversi+line+ending.JPG&#34;
-src=&#34;https://3.bp.blogspot.com/-3ZL1Ea4exvo/WJyvgLEi3NI/AAAAAAAAD0Y/3jSy13aPLkAqkaZ5CrFQbmfCNb6m8kniQCPcB/s1600/7.%2Bkonversi%2Bline%2Bending.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan emulator terminal. Pilih saja yang bawah, kemudian klik &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;8.+Pemilihan+emulator+terminal.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-wuVBFyFlmjo/WJyvgNkAcvI/AAAAAAAAD0Y/UDKA-JsD3UIuv2sDOEkdwd_X_gRG8uX3QCPcB/s1600/8.%2BPemilihan%2Bemulator%2Bterminal.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan opsi ekstra. Klik saja &lt;em&gt;Next &amp;gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;9.+Konfigurasi+Opsi+Ekstra.JPG&#34;
-src=&#34;https://1.bp.blogspot.com/-5oq7fAHTb7Q/WJyvgMQFc6I/AAAAAAAAD0Y/-5KmjFlMrsMkIsrPjoja277tQDaA_nr5ACPcB/s1600/9.%2BKonfigurasi%2BOpsi%2BEkstra.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya pemilihan opsi ekspreimental, langsung saja klik &lt;em&gt;Install&lt;/em&gt; untuk memaulai instalasi.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;10.+Opsi+ekperimental.JPG&#34;
-src=&#34;https://2.bp.blogspot.com/-lrAn-7lh7jY/WJyvgMm0PiI/AAAAAAAAD0Y/sEhM1irdMPkvv3v615R5JhIcIDNUJxArQCPcB/s1600/10.%2BOpsi%2Bekperimental.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Tunggu beberapa saat, instalasi sedang dilakukan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;11.+Installing.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-1jecFYkwTzg/WJyvgJt9g5I/AAAAAAAAD0Y/5DG8OAc44Zk31_VjHz3mXybB3kThzHcbwCPcB/s1600/11.%2BInstalling.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah selesai, kita bisa langsung klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;499&#34;
-height=&#34;387&#34;
-alt=&#34;12.+Finish.JPG&#34;
-src=&#34;https://1.bp.blogspot.com/-lCGee-56K5Y/WJyvgAbeLGI/AAAAAAAAD0Y/fNaJIaZKf2cqMFuV_5occ6y4oAi7_vaawCPcB/s1600/12.%2BFinish.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selamat, Git sudah terinstal di Windows. Untuk mencobanya, silahkan buka CMD atau
-PowerShell, kemudian ketik perintah &lt;code&gt;git --version&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;745&#34;
-height=&#34;204&#34;
-alt=&#34;13.+Percobaan.JPG&#34;
-src=&#34;https://4.bp.blogspot.com/-JMZtMOkESYQ/WJyvgOEh_TI/AAAAAAAAD0Y/4Mtf48YbMUwVtQ9jbJc_TYHe2MymmooAQCPcB/s1600/13.%2BPercobaan.JPG&#34;
-layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;OK, meskipun Git sudah terinstal. Akan tetapi masih belum bisa dipakai. Karena
-kita belum melakukan konfigurasi &lt;em&gt;name&lt;/em&gt; dan &lt;em&gt;email&lt;/em&gt;. Cara konfigurasinya
-silahkan &lt;a href=&#34;https://www.petanikode.com/tutorial-git-01---instalasi-dan-persiapan/&#34;&gt;baca di sni&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Instalasi Git di Windows memang tidak seperti di Linux yang ketik perintah langsung terinstal.
+Kita harus menguduh dulu, kemudian melakukan ritual next&amp;gt;next&amp;gt;finish.
+Tapi dalam ritual tersebut, ada pilihan yang harus diperhatikan agar perintah git dapat dikenali di CMD.
+Baiklah, kali ini saya numpang screenshot di laptop teman yang menggunakan windows untuk pembuatan tutorial ini.
+Silahkan disimak ya :smile:.
+Unduh Git Silahkan buka website resminya Git (git-scm.com). Kemudian unduh Git sesuai dengan arsitektur komputer kita.</description>
     </item>
     
     <item>
@@ -567,102 +58,8 @@ silahkan &lt;a href=&#34;https://www.petanikode.com/tutorial-git-01---instalasi-
       <pubDate>Sat, 04 Feb 2017 08:15:19 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-menjalankan-php-melalui-cmd/</guid>
-      <description>
-
-&lt;p&gt;&lt;amp-img
-width=&#34;720&#34;
-height=&#34;380&#34;
-alt=&#34;CMD PHP petnaikode.com&#34;
-src=&#34;http://1.bp.blogspot.com/--fpRGkVGPlg/WGles2AqX4I/AAAAAAAADlM/tJInI6oI6Wo-M0WfJE2aHk1neuIZ3xy0wCK4B/s1600/CMD%2BPHP%2B-%2BPetanikode.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sudah lama tidak otak-atik Windows. Pemrograman di Windows sepertinya terasa sedikit sulit, karena sudah terbiasa dengen Linux. Ketika saya menginginkan apa-apa, tinggal ketik &lt;code&gt;sudo apt install&lt;/code&gt; dan semuanya sudah siap. Namun, kali ini saya sedang meminjam komputer lab. yang menggunakan sistem operasi Windows. Jadi, tidak ada &lt;code&gt;sudo apt install&lt;/code&gt; yang dapat kita suruh-suruh.&lt;/p&gt;
-
-&lt;p&gt;Ketika saya mencoba mengetik perintah &lt;code&gt;php&lt;/code&gt; di &lt;em&gt;Command Prompt&lt;/em&gt; (CMD), perintah tersebut tidak dikenali. Padahal di sana sudah terinstal XAMPP. Menjalankan PHP melalui CMD sebenarnya bisa dilakukan langsung melalui XAMPP Control Panel. Di sana sudah disediakan tombol untuk mengakses &lt;em&gt;shell&lt;/em&gt;. Namun, saya maunya &lt;code&gt;php&lt;/code&gt; dapat dijalankan melalui CMD, bukan dari &lt;em&gt;shell&lt;/em&gt; bawaan XAMPP.&lt;/p&gt;
-
-&lt;p&gt;Adapun langkah-langkah yang harus dilakukan agar perintah &lt;code&gt;php&lt;/code&gt; dapat dikenali pada CMD adalah sebagai berikut.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-cari-lokasi-php-yang-terinstal&#34;&gt;1. Cari Lokasi PHP yang Terinstal&lt;/h2&gt;
-
-&lt;p&gt;Pertama, silahkan cari lokasi PHP terinstal. Kalau menggunakan XAMPP, biasanya lokasinya berada di &lt;code&gt;C:\xampp\php&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;853&#34;
-height=&#34;465&#34;
-alt=&#34;Loksi PHP yang terinstal di windows&#34;
-src=&#34;http://1.bp.blogspot.com/-BwbtpA4Qf4M/WGlYGgzzJMI/AAAAAAAADkA/p7BjNBLUrLEmNxGucbaft6_EMksG5VLzwCK4B/s1600/1.%2BLokasi%2BPHP%2Bdiinstal%2Boleh%2BXAMPP.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-jalankan-system-properties&#34;&gt;2. Jalankan System Properties&lt;/h2&gt;
-
-&lt;p&gt;Tekan tombol Windows+R, kemudian pada jendela Run ketik &lt;code&gt;%windir%\System32\SystemPropertiesAdvanced.exe&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;413&#34;
-height=&#34;212&#34;
-alt=&#34;Jalankan Sistem Properties&#34;
-src=&#34;http://2.bp.blogspot.com/-GgrDET8Sve4/WGlY0botnhI/AAAAAAAADkI/ZExvx82wEaYP3Jko1RP4O9AyAQfA4-n9QCK4B/s1600/2.%2BJalankan%2BSystemPropertiesAdvenced.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-masuk-ke-environtment-variables&#34;&gt;3. Masuk ke &lt;em&gt;Environtment Variables&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Klik tombol &lt;em&gt;Environtment Variables.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;426&#34;
-height=&#34;474&#34;
-alt=&#34;Masuk ke environtment variables&#34;
-src=&#34;http://4.bp.blogspot.com/-eHLY5HjNKeA/WGlZXlU6V7I/AAAAAAAADkQ/UzLvUEsC2Ug4gqTZfa6duacvgF2suM0rQCK4B/s1600/3.%2BKetika%2BEnvironment%2BVariables.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-edit-variabel-path&#34;&gt;4. Edit Variabel Path&lt;/h2&gt;
-
-&lt;p&gt;Pilih dulu variabel &lt;i&gt;path&lt;/i&gt;, kemudian klik tombol &lt;i&gt;Edit&lt;/i&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;394&#34;
-height=&#34;436&#34;
-alt=&#34;Pilih path&#34;
-src=&#34;http://2.bp.blogspot.com/-gx_iydRBbnA/WGlZxn_YrhI/AAAAAAAADkc/hCDMEfxR8KoRao_GwYF2QNvMlsqAwYBngCK4B/s1600/4.%2BPilih%2BPath%2Bkemudian%2Bklik%2BEdit.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;5-masukan-lokasi-php&#34;&gt;5. Masukan Lokasi PHP&lt;/h2&gt;
-
-&lt;p&gt;Tambahkan nilai akhir pada variabel &lt;em&gt;path&lt;/em&gt; dengan lokasi PHP yang kita dapatkan pada langkah pertama tadi. Tambahkan tanda titik koma (&lt;code&gt;;&lt;/code&gt;) di depannya untuk memisahkan. Sehingga menjadi seperti ini &lt;code&gt;;C:\xampp\php&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;394&#34;
-height=&#34;436&#34;
-alt=&#34;Pilih path&#34;
-src=&#34;http://1.bp.blogspot.com/-09vetrJJMrA/WGlaam0jrBI/AAAAAAAADko/H1vZyV144Wkh9tx3xxCgBLMlWASlveP3gCK4B/s1600/5.%2BTambahkan%2Blokasi%2Bphp.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, klik OK.&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;6-percobaan&#34;&gt;6. Percobaan&lt;/h2&gt;
-
-&lt;p&gt;Cobalah untuk mengetik perintah &lt;code&gt;php --version&lt;/code&gt; pada CMD. Kalau hasilnya seperti gambar berikut ini, artinya perintah &lt;code&gt;php&lt;/code&gt; sudah berhasil dikenali pada CMD.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;667&#34;
-height=&#34;342&#34;
-alt=&#34;Percobaan perintah php&#34;
-src=&#34;http://1.bp.blogspot.com/-dsh2u0m42gM/WGla43_2kwI/AAAAAAAADkw/rXmmwo3T__g2j5LdUDg7WBZBXbohl9eegCK4B/s1600/6.%2BPercobaan%2Bperintah%2BPHP%2Bmelalui%2BCMD.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;7-percobaan-eksekusi-file-php&#34;&gt;7. Percobaan Eksekusi File PHP&lt;/h2&gt;
-
-&lt;p&gt;Sekarang Cobalah buat file PHP, kemudian eksekusi melalui CMD.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;667&#34;
-height=&#34;342&#34;
-alt=&#34;Percobaan eksekusi php&#34;
-src=&#34;https://3.bp.blogspot.com/-iliONqyMRiw/WGlb06iwoNI/AAAAAAAADk8/dKuuPCDZl1cBLOajBcIVRlzBMcdLSB3qQCK4B/s1600/7.%2BEksekusi%2BFile%2BPHP%2Bdari%2BCMD.PNG&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Selaamt! Sekarang PHP sudah bisa dijalankan melalui CMD.&lt;/p&gt;
-</description>
+      <description>Sudah lama tidak otak-atik Windows. Pemrograman di Windows sepertinya terasa sedikit sulit, karena sudah terbiasa dengen Linux. Ketika saya menginginkan apa-apa, tinggal ketik sudo apt install dan semuanya sudah siap. Namun, kali ini saya sedang meminjam komputer lab. yang menggunakan sistem operasi Windows. Jadi, tidak ada sudo apt install yang dapat kita suruh-suruh.
+Ketika saya mencoba mengetik perintah php di Command Prompt (CMD), perintah tersebut tidak dikenali. Padahal di sana sudah terinstal XAMPP.</description>
     </item>
     
     <item>
@@ -671,8 +68,11 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
       <pubDate>Fri, 06 Nov 2015 15:06:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/instalasi-dan-uji-coba-lazarus-ide-di-windows-7/</guid>
-      <description>&lt;p&gt;Lazarus merupakan sebuah IDE open source yang mampu berjalan di berbagai sistem operasi (platform). Pada tulisan ini, saya akan memandu anda menginstal lazarus di Windows 7. Lazarus yang akan diinstal ialah Lazarus versi 1.4.4.&lt;br /&gt;&lt;h2&gt;1. Download Lazarus &lt;/h2&gt;Silahkan menuju ke website resminya &lt;a href=&#34;http://www.lazarus-ide.org/&#34; target=&#34;_blank&#34;&gt;Lazarus&lt;/a&gt; untuk mendapatkan instalator Lazarus untuk windows.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-abTbSjfQsCo/Vi7yZw9CNTI/AAAAAAAACFE/znYe2YYiHJ4/s1600/1.%2Bwebsite%2Bresmi%2Blazarus.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-abTbSjfQsCo/Vi7yZw9CNTI/AAAAAAAACFE/znYe2YYiHJ4/s1600/1.%2Bwebsite%2Bresmi%2Blazarus.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Masuklah ke halaman download, kemudian pilih link &lt;a href=&#34;http://sourceforge.net/projects/lazarus/files/Lazarus%20Windows%2032%20bits/Lazarus%201.4.4/lazarus-1.4.4-fpc-2.6.4-win32.exe/download&#34; target=&#34;_blank&#34;&gt;Windows (32 and 64 bits) Direct download&lt;/a&gt;.&lt;a href=&#34;http://1.bp.blogspot.com/-FxaorvEDO0s/Vi7ybOlVNoI/AAAAAAAACFg/gea9Ee2MEmw/s1600/2.%2BDownload%2Blangsung%2Blazarus%2B32%2Bbit%2Bdan%2B64%2Bbit.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-FxaorvEDO0s/Vi7ybOlVNoI/AAAAAAAACFg/gea9Ee2MEmw/s1600/2.%2BDownload%2Blangsung%2Blazarus%2B32%2Bbit%2Bdan%2B64%2Bbit.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Proses download pun dimulai, silahkan menunggu dengan sabar!&lt;a href=&#34;http://4.bp.blogspot.com/-hE_wPjMYoXM/Vi7ybv_mdFI/AAAAAAAACFs/f4WkBExlQdE/s1600/3.%2BProses%2Bdownload%2Bsedang%2Bberlangsung.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-hE_wPjMYoXM/Vi7ybv_mdFI/AAAAAAAACFs/f4WkBExlQdE/s1600/3.%2BProses%2Bdownload%2Bsedang%2Bberlangsung.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;2. Exsekusi Instalator&lt;/h2&gt;Klik ganda pada instalator lazarus &lt;i&gt;(lazarus-1.4.4.-fpc-2.6.4-win.exe)&lt;/i&gt; untuk memulai instalasi. Pada jendela yang muncul, klik saja tombol &lt;i&gt;Run&lt;/i&gt;.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-KBaX6owrfio/Vi7ybgMX5BI/AAAAAAAACGU/RWqZvBtmfCI/s1600/4.%2BRun.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-KBaX6owrfio/Vi7ybgMX5BI/AAAAAAAACGU/RWqZvBtmfCI/s1600/4.%2BRun.PNG&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Kemudian jendela pemilihan bahasa akan muncul, pilih saja &lt;i&gt;English&lt;/i&gt;. Kemudian klik &lt;i&gt;OK&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-w7A9J04AfTk/Vi7yb7ykEvI/AAAAAAAACF0/Skil0J5vd0o/s1600/5.%2BPilih%2Bbahasa.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-w7A9J04AfTk/Vi7yb7ykEvI/AAAAAAAACF0/Skil0J5vd0o/s1600/5.%2BPilih%2Bbahasa.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian akan muncul jendela sambutan selamat datang, klik &lt;i&gt;Next&lt;/i&gt; untuk melanjutkan.&lt;a href=&#34;http://1.bp.blogspot.com/-j5gRbwSTr-o/Vi7yceE81bI/AAAAAAAACGE/sWkTIcPxWNw/s1600/6.%2Bnext.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;br /&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-j5gRbwSTr-o/Vi7yceE81bI/AAAAAAAACGE/sWkTIcPxWNw/s1600/6.%2Bnext.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;3.Lokasi instal&lt;/h2&gt;Menentukan lokasi tempat Lazarus akan terinstal, biarkan saja di &lt;i&gt;C:\lazarus&lt;/i&gt;, kemudian klik &lt;i&gt;Next&lt;/i&gt;. &lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-236hKxaFFDQ/Vi7ycnjbCwI/AAAAAAAACGQ/Qd9JIOZJDMY/s1600/7.%2BLokasi%2Binstalasi.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-236hKxaFFDQ/Vi7ycnjbCwI/AAAAAAAACGQ/Qd9JIOZJDMY/s1600/7.%2BLokasi%2Binstalasi.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;4. Memilih komponen&lt;/h2&gt;Pilih &lt;i&gt;Full instalation&lt;/i&gt; agar semua komponen terinstal. Setelah itu, klik &lt;i&gt;Next&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-T_XRO-lN7UE/Vi7yclrvp0I/AAAAAAAACGM/H0C5oYv1trQ/s1600/8.%2BFitur%2Byang%2Bakan%2Bdiinstal.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-T_XRO-lN7UE/Vi7yclrvp0I/AAAAAAAACGM/H0C5oYv1trQ/s1600/8.%2BFitur%2Byang%2Bakan%2Bdiinstal.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;5. Menentukan direktori menu&lt;/h2&gt;Direktori menu merupakan nama direktori pada &lt;i&gt;Start Menu&lt;/i&gt;. Biarkan saja apa adanya, kemudian klik&amp;nbsp; &lt;i&gt;Next&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-Nuj7-6gH90U/Vi7ydG0wzHI/AAAAAAAACGY/T31w_7a5Wbc/s1600/9.%2BNama%2Bmenu%2Bdi%2Bstart%2Bmenu.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-Nuj7-6gH90U/Vi7ydG0wzHI/AAAAAAAACGY/T31w_7a5Wbc/s1600/9.%2BNama%2Bmenu%2Bdi%2Bstart%2Bmenu.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;6. Pengaturan tambahan&lt;/h2&gt;Silahkan centang Create desktop icon agar ikon Lazarus ditampilkan di desktop. Setelah itu, klik &lt;i&gt;Next&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-hBQEhXe_Vcw/Vi7yZoIzvPI/AAAAAAAACFA/KliiJrcugdo/s1600/10.%2BBuat%2Bikon%2Bke%2Bdesktop.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-hBQEhXe_Vcw/Vi7yZoIzvPI/AAAAAAAACFA/KliiJrcugdo/s1600/10.%2BBuat%2Bikon%2Bke%2Bdesktop.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;7. Informasi rangkuman&lt;/h2&gt;Jendela ini berisi informasi rangkuman instalasi yang akan dilakukan. Klik saja &lt;i&gt;Install &lt;/i&gt;untuk memulai instalasi.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-1KGRpdpmvm4/Vi7yZssJllI/AAAAAAAACFI/hSyLQBNqV38/s1600/11.%2BRangkuman.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-1KGRpdpmvm4/Vi7yZssJllI/AAAAAAAACFI/hSyLQBNqV38/s1600/11.%2BRangkuman.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;8. Proses Instalasi&lt;/h2&gt;Proses instalasi pun dimulai, silahkan menunggu dengan sabar sampai instalasinya selesai. Proses ini tidak membutuhkan waktu yang lama.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-HGlV9PIE33s/Vi7yaRMbqyI/AAAAAAAACFM/_sYUK_8IC7g/s1600/12.%2BProses%2Binstalasi%2Bsedang%2Bberlangsung.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-HGlV9PIE33s/Vi7yaRMbqyI/AAAAAAAACFM/_sYUK_8IC7g/s1600/12.%2BProses%2Binstalasi%2Bsedang%2Bberlangsung.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;9. Instalasi Selesai&lt;/h2&gt;Klik &lt;i&gt;Finish&lt;/i&gt; untuk mengakhiri instalasi. &lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-ZpL7OThAFmg/Vi7yapsGBMI/AAAAAAAACFU/9zYRwlliY-0/s1600/13.%2BInstalasi%2Bselesai.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-ZpL7OThAFmg/Vi7yapsGBMI/AAAAAAAACFU/9zYRwlliY-0/s1600/13.%2BInstalasi%2Bselesai.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&amp;mdash;&lt;br /&gt;&lt;br /&gt;Instalasi telah selesai di lakukan. Selanjutnya, silahkan coba buka Lazarus yang sudah terinstal. Karena baru pertama dibuka, maka anda akan mendapatkan jendela ucapan selamat datang di Lazarus. Tidak perlu merubah apa-apa, langsung saja klik &lt;i&gt;Start IDE&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-8fRIBNzRlWo/Vi7ya23cDbI/AAAAAAAACFY/AC1KTbCk8BA/s1600/14.%2BLazarus%2Bpertama%2Bkali%2Bdibuka.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-8fRIBNzRlWo/Vi7ya23cDbI/AAAAAAAACFY/AC1KTbCk8BA/s1600/14.%2BLazarus%2Bpertama%2Bkali%2Bdibuka.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Selamat, lazarus sudah siap digunakan untuk membuat program&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-gOijBSqnAbI/Vi7yeKENTAI/AAAAAAAACGs/Po5l_WP7QA4/s1600/Lazarus%2Bproject1.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-gOijBSqnAbI/Vi7yeKENTAI/AAAAAAAACGs/Po5l_WP7QA4/s1600/Lazarus%2Bproject1.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Uji Coba Lazarus&lt;/h2&gt;Pada uji coba ini, saya membuat program sederhana. Program ini hanya untuk menampilkan teks &amp;ldquo;Petani Kode&amp;rdquo; saat tombol &lt;i&gt;Proses&lt;/i&gt; diklik.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-jorvefA3y7M/Vi7yeZZq5yI/AAAAAAAACGw/X_FvfVsLClI/s1600/Ujicoba%2Bproject1.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-jorvefA3y7M/Vi7yeZZq5yI/AAAAAAAACGw/X_FvfVsLClI/s1600/Ujicoba%2Bproject1.PNG&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Hasilnya:&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-av8TG8G7-dg/Vi7ydmBeYLI/AAAAAAAACGg/LDuRAbocfgw/s1600/Hasil%2Beksekusi%2Bprogram%2Bproject1%2Blazarus.PNG&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-av8TG8G7-dg/Vi7ydmBeYLI/AAAAAAAACGg/LDuRAbocfgw/s1600/Hasil%2Beksekusi%2Bprogram%2Bproject1%2Blazarus.PNG&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Lazarus merupakan sebuah IDE open source yang mampu berjalan di berbagai sistem operasi (platform). Pada tulisan ini, saya akan memandu anda menginstal lazarus di Windows 7. Lazarus yang akan diinstal ialah Lazarus versi 1.4.4.
+1. Download Lazarus Silahkan menuju ke website resminya Lazarus untuk mendapatkan instalator Lazarus untuk windows.
+
+Masuklah ke halaman download, kemudian pilih link Windows (32 and 64 bits) Direct download.
+Proses download pun dimulai, silahkan menunggu dengan sabar!</description>
     </item>
     
   </channel>

@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Buku on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/buku/index.xml</link>
+    <link>https://www.petanikode.com/topik/buku/</link>
     <description>Recent content in Buku on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/buku/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Mar 2017 22:20:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/buku/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Download Ebook Dasar Pemrograman Golang</title>
@@ -15,69 +18,12 @@
       <pubDate>Sun, 26 Mar 2017 22:20:22 +0800</pubDate>
       
       <guid>https://www.petanikode.com/download-ebook-dasar-pemrograman-golang/</guid>
-      <description>
+      <description>Golang atau Go merupakan bahasa pemrograman open source yang dikembangkan di Google oleh Robert Griesemer, Rob Pike, dan Ken Thompson pada tahun 2007 dan mulai diperkenalkan di kalangan publik pada tahun 2009.
+Go saat ini memegang rekor menjadi bahasa pemrograman yang perkembangannya paling cepat dalam sejarah.
+Kurang dari tujuh tahun, mampu menjadi bahasa pemrograman kelas atas.
 
-&lt;p&gt;Golang atau Go merupakan bahasa pemrograman open source yang dikembangkan di
-Google oleh Robert Griesemer, Rob Pike, dan Ken Thompson pada tahun 2007 dan
-mulai diperkenalkan di kalangan publik pada tahun 2009.&lt;/p&gt;
-
-&lt;p&gt;Go saat ini memegang rekor menjadi bahasa pemrograman yang perkembangannya
-paling cepat dalam sejarah.&lt;/p&gt;
-
-&lt;p&gt;Kurang dari tujuh tahun, mampu menjadi bahasa pemrograman kelas atas.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;p&gt;Go banyak dilirik oleh para developer karena kelebihan-kelebihan yang
-dimilikinya.&lt;/p&gt;
-
-&lt;p&gt;Sudah banyak perusahaan besar yang menggunakan bahasa ini
-untuk produk-produk mereka hingga di level production.&lt;/p&gt;
-
-&lt;p&gt;Kamu bisa melihatnya di
-&lt;a href=&#34;https://github.com/golang/go/wiki/GoUsers&#34;&gt;GoUsers&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Nah, buat kamu yang tertarik belajar bahasa pemrograman Go. Kamu bisa
-baca buku karangan &lt;strong&gt;Noval Agung Prayogo&lt;/strong&gt; ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;download ebook dasar pemrograman golang&#34;
-    src=&#34;https://3.bp.blogspot.com/-1v2sFj7i5a4/WNfZEXpsCPI/AAAAAAAAEeo/YVjMmBn9PIwLOZQOjX_6X859dZ38iPAmACK4B/s1600/ebook-dasar-pemrograman-golang.png&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Download&lt;/strong&gt;: &lt;a href=&#34;https://www.gitbook.com/download/pdf/book/novalagung/dasarpemrogramangolang&#34;&gt;PDF&lt;/a&gt;
- | &lt;a href=&#34;https://www.gitbook.com/download/epub/book/novalagung/dasarpemrogramangolang&#34;&gt;ePub&lt;/a&gt; |
- &lt;a href=&#34;https://www.gitbook.com/download/mobi/book/novalagung/dasarpemrogramangolang&#34;&gt;Mobi&lt;/a&gt; |
- &lt;a href=&#34;https://www.gitbook.com/read/book/novalagung/dasarpemrogramangolang&#34;&gt;Baca Online&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;sinopsis&#34;&gt;Sinopsis&lt;/h2&gt;
-
-&lt;p&gt;Buku ini merupakan salah satu dari sekian banyak referensi yang bisa
-digunakan untuk belajar pemrograman Golang. Hal yang disampaikan disini
-benar-benar dasar, dengan pembelajaran mulai dari 0.
-Diharapkan dengan adanya buku ini kawan-kawan bisa lebih paham dalam
-memahami seperti apa sih Golang itu.&lt;/p&gt;
-
-&lt;p&gt;Source code contoh-contoh program bisa &lt;a href=&#34;https://github.com/novalagung/dasarpemrogramangolang&#34;&gt;diunduh di Github&lt;/a&gt;.
-Dianjurkan untuk tidak copy-paste dari source code dalam belajar,
-usahakan untuk menulis sendiri kode program, agar cepat terbiasa
-dengan bahasa Golang.&lt;/p&gt;
-
-&lt;h2 id=&#34;lisensi&#34;&gt;Lisensi&lt;/h2&gt;
-
-&lt;p&gt;Ebook Dasar Pemrograman Golang gratis untuk disebarluaskan secara bebas,
-selama tidak melanggar aturan lisensi &lt;a href=&#34;http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html&#34;&gt;GNU LGPL 2.1&lt;/a&gt;.&lt;/p&gt;
-</description>
+Go banyak dilirik oleh para developer karena kelebihan-kelebihan yang dimilikinya.
+Sudah banyak perusahaan besar yang menggunakan bahasa ini untuk produk-produk mereka hingga di level production.</description>
     </item>
     
     <item>
@@ -86,30 +32,10 @@ selama tidak melanggar aturan lisensi &lt;a href=&#34;http://www.gnu.org/license
       <pubDate>Mon, 06 Mar 2017 20:05:01 +0800</pubDate>
       
       <guid>https://www.petanikode.com/download-ebook-gratis-panduan-dasar-pemrograman-tizen/</guid>
-      <description>&lt;p&gt;&lt;amp-img
-    width=&#34;720&#34;
-    height=&#34;380&#34;
-    alt=&#34;buku panduan dasar pemrograman tizen&#34;
-    src=&#34;https://1.bp.blogspot.com/-uWdT3vq1ROE/WL1Xe_X8xnI/AAAAAAAAESU/lZj7j37Lkfw9QgMcQDqNfaOejx9VfB0egCLcB/s1600/buku-gratis-panduan-dasar-pemrograman-tizen.jpg&#34;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Buku ini ditulis oleh tiga orang penulis dan disebarkan secara terbuka di Gitbook.
-Terbit pada tanggal 13 Maret 2016 dengan versi 1.0.&lt;/p&gt;
-
-&lt;p&gt;Buku ini berisi panduan dasar pemrograman Tizen menggunakan Windows, Linux,
-dan Mac OS.&lt;/p&gt;
-
-&lt;p&gt;Pada BAB awal, kita akan diperkenalkan dengan Tizen. Kemudian membuat aplikasi
-&lt;em&gt;Hello World&lt;/em&gt; menggunakan Windows, Linux, dan Mac OS.&lt;/p&gt;
-
-&lt;p&gt;Buku ini ditulis dalam bentuk panduan yang mudah dipahami dengan &lt;em&gt;screenshot&lt;/em&gt;
-yang lengkap dan tersetruktur.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Download&lt;/strong&gt;: &lt;a href=&#34;https://www.gitbook.com/download/pdf/book/srin/dasar-tizen&#34;&gt;PDF&lt;/a&gt; |
-&lt;a href=&#34;https://www.gitbook.com/download/epub/book/srin/dasar-tizen&#34;&gt;ePub&lt;/a&gt; |
-&lt;a href=&#34;https://www.gitbook.com/download/mobi/book/srin/dasar-tizen&#34;&gt;Mobi&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Buku ini ditulis oleh tiga orang penulis dan disebarkan secara terbuka di Gitbook. Terbit pada tanggal 13 Maret 2016 dengan versi 1.0.
+Buku ini berisi panduan dasar pemrograman Tizen menggunakan Windows, Linux, dan Mac OS.
+Pada BAB awal, kita akan diperkenalkan dengan Tizen. Kemudian membuat aplikasi Hello World menggunakan Windows, Linux, dan Mac OS.
+Buku ini ditulis dalam bentuk panduan yang mudah dipahami dengan screenshot yang lengkap dan tersetruktur.</description>
     </item>
     
     <item>
@@ -118,35 +44,9 @@ yang lengkap dan tersetruktur.&lt;/p&gt;
       <pubDate>Sun, 16 Oct 2016 05:30:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/buku-pemrograman-gratis-dari-oreilly/</guid>
-      <description>&lt;p&gt;&lt;amp-img
-width=&#34;783&#34;
-height=&#34;402&#34;
-src=&#34;https://4.bp.blogspot.com/-zdw7X_bmgj4/WAJDxnXtlCI/AAAAAAAADVw/QG_O-soXAs8dIlBsQkb0wSx0RQuqQDoOwCK4B/s1600/buku%2Bpemrograaman%2Bgratis%2Bdari%2Bo%2Breilly%2B-%2Bpetanikode.jpg&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Siapa yang tidak kenal O&amp;rsquo;Reilly? Salah satu penerbit buku ternama di dunia.
-Ribuan buku pemrograman komputer dengan berbagai judul dan seri diterbitkan
-olehnya. Salah satu seri buku favorit saya adalah &lt;em&gt;Head First&lt;/em&gt;, karena di
-dalamnya banyak gambar ilustrasi dan isinya mudah dipahami.&lt;/p&gt;
-
-&lt;p&gt;Kali ini saya akan membagikan sebuah link buku gratis dari O&amp;rsquo;Reilly.
-Jangan kasih tahu yang lain ya, hihihi 😄 bercanda. Baik, ini dia
-link-nya: &lt;a href=&#34;http://www.oreilly.com/programming/free/&#34;&gt;http://www.oreilly.com/programming/free/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Selain buku pemrograman, ada juga buku yang lain tentang
-&lt;a href=&#34;http://www.oreilly.com/business/free/&#34;&gt;bisnis&lt;/a&gt;,
-&lt;a href=&#34;http://www.oreilly.com/data/free/&#34;&gt;data&lt;/a&gt;,
-&lt;a href=&#34;http://www.oreilly.com/design/free/&#34;&gt;desain&lt;/a&gt;,
-&lt;a href=&#34;http://www.oreilly.com/iot/free/&#34;&gt;IoT&lt;/a&gt;,
-&lt;em&gt;&lt;a href=&#34;http://www.oreilly.com/web-platform/free/&#34;&gt;Web Development&lt;/a&gt;&lt;/em&gt;,
-&lt;a href=&#34;http://www.oreilly.com/security/free/&#34;&gt;S&lt;em&gt;ecurity&lt;/em&gt;&lt;/a&gt;,
-dan &lt;em&gt;&lt;a href=&#34;http://www.oreilly.com/webops-perf/free/&#34;&gt;WebOps&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Cara download-nya tinggal isi nama depan, nama belakang, dan alamat email.
-Kemudian anda akan dialihkan ke halaman link download-nya. Silahkan pilih
-format yang ingin di-download: ePub, Mobi, atau PDF. Selain itu, kita juga
-disediakan tombol untuk menyimpan bukunya ke Google Drive.&lt;/p&gt;
-</description>
+      <description>Siapa yang tidak kenal O&amp;rsquo;Reilly? Salah satu penerbit buku ternama di dunia. Ribuan buku pemrograman komputer dengan berbagai judul dan seri diterbitkan olehnya. Salah satu seri buku favorit saya adalah Head First, karena di dalamnya banyak gambar ilustrasi dan isinya mudah dipahami.
+Kali ini saya akan membagikan sebuah link buku gratis dari O&amp;rsquo;Reilly. Jangan kasih tahu yang lain ya, hihihi 😄 bercanda. Baik, ini dia link-nya: http://www.oreilly.com/programming/free/
+Selain buku pemrograman, ada juga buku yang lain tentang bisnis, data, desain, IoT, Web Development, Security, dan WebOps.</description>
     </item>
     
     <item>
@@ -155,8 +55,9 @@ disediakan tombol untuk menyimpan bukunya ke Google Drive.&lt;/p&gt;
       <pubDate>Mon, 08 Aug 2016 08:45:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/ratusan-buku-pemrograman-gratis-siap-diunduh-di-github/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-xP9z74nv84g/V6fUuInwXeI/AAAAAAAADHg/ctnofyClXXkfO5kgwoT_TRQ__www3ftbgCK4B/s1600/Buku%2BPemrograman%2Bdi%2BPerpustakaan%2BSTMIK%2BBumigora%2BMataram.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img alt=&#34;Buku pemrograman di perpustakaan STMIK Bumigora Mataram&#34; border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-xP9z74nv84g/V6fUuInwXeI/AAAAAAAADHg/ctnofyClXXkfO5kgwoT_TRQ__www3ftbgCK4B/s1600/Buku%2BPemrograman%2Bdi%2BPerpustakaan%2BSTMIK%2BBumigora%2BMataram.jpg&#34; title=&#34;&#34; /&gt;&lt;/a&gt;Suka belajar pemrograman dari buku? maka kamu mungkin membutuhkan buku-buku ini. Sebuah repositori di Github bernama &lt;code&gt;free-programming-books&lt;/code&gt; mengumpulkan link-link buku gratis. Tidak hanya buku, repositori ini juga mengumpulkan link resource lainnya, seperti &lt;i&gt;screencast&lt;/i&gt; dan &lt;i&gt;podcast&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Silahkan cek ke TKP: &lt;a href=&#34;https://github.com/vhf/free-programming-books&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/vhf/free-programming-books&#34;&gt;https://github.com/vhf/free-programming-books&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Saatnya menggunakan jurus terlarang.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-FV8ZsRxW874/V6fVbg9iKiI/AAAAAAAADHo/Iluvzm2YkH42NwWl1Y_x8c05KY_PtDT9wCK4B/s1600/DownloadThemAll%2B-%2BBuku%2Bgratis%2Bdi%2BGithub.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-FV8ZsRxW874/V6fVbg9iKiI/AAAAAAAADHo/Iluvzm2YkH42NwWl1Y_x8c05KY_PtDT9wCK4B/s1600/DownloadThemAll%2B-%2BBuku%2Bgratis%2Bdi%2BGithub.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Suka belajar pemrograman dari buku? maka kamu mungkin membutuhkan buku-buku ini. Sebuah repositori di Github bernama free-programming-books mengumpulkan link-link buku gratis. Tidak hanya buku, repositori ini juga mengumpulkan link resource lainnya, seperti screencast dan podcast.
+Silahkan cek ke TKP: https://github.com/vhf/free-programming-books
+Saatnya menggunakan jurus terlarang.</description>
     </item>
     
   </channel>

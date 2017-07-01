@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jaringan on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/kategori/jaringan/index.xml</link>
+    <link>https://www.petanikode.com/kategori/jaringan/</link>
     <description>Recent content in Jaringan on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/kategori/jaringan/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Apr 2017 10:56:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/kategori/jaringan/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)</title>
@@ -15,118 +18,12 @@
       <pubDate>Wed, 19 Apr 2017 10:56:07 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-menambahkan-ssl-untuk-github-pages/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/https.png&#34; alt=&#34;Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada dasarnya Github telah memberikan SSL untuk setiap halaman github &lt;em&gt;(Github Pages)&lt;/em&gt;.
-Akan tetapi, untuk halaman github yang menggunakan domain sendiri tidak diberikan.&lt;/p&gt;
-
-&lt;p&gt;Contoh Halaman github dengan SSL:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://petanikode.github.io
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Lihat, di sana &lt;code&gt;https&lt;/code&gt; menandakan SSL-nya aktif.&lt;/p&gt;
-
-&lt;p&gt;Sedangkan untuk kostum domain, seperti &lt;code&gt;http://petanikode.com&lt;/code&gt; tidak diberikan
-SSL.&lt;/p&gt;
-
-&lt;h2 id=&#34;mengapa-menggunakan-ssl&#34;&gt;Mengapa Menggunakan SSL?&lt;/h2&gt;
-
-&lt;p&gt;Petani Kode memang sebuah halaman statis yang dibuat dengan Hugo.&lt;/p&gt;
-
-&lt;p&gt;Sepertinya SSL tidak terlalu dibutuhkan, karena tidak ada pemerosesan data
-melalui form yang akan dikirim ke database.&lt;/p&gt;
-
-&lt;p&gt;Tapi, menurut beberapa pakar SEO: menggunakan SSL/https di blog akan meningkatkan
-kepercayaan mesin pencari.&lt;/p&gt;
-
-&lt;p&gt;Saya percaya&amp;hellip; karena beru saja membaca: &lt;a href=&#34;https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html&#34;&gt;HTTPS as a ranking signal&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, petani kode harus menggunakan SSL :smile:.&lt;/p&gt;
-
-&lt;h2 id=&#34;mengaktifkan-ssl-cloudflare&#34;&gt;Mengaktifkan SSL Cloudflare&lt;/h2&gt;
-
-&lt;p&gt;Pertama pastikan pengaturan DNS-nya seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-DNS-Cloudflare.png&#34; alt=&#34;Konfigurasi DNS Cloudflare&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Artinya, website kita yang di Github akan melewati Cloudflare kemudian diteruskan
-ke Client.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu masuk ke &lt;strong&gt;Crypto&lt;/strong&gt;, kemudian atur SSL menjadi &lt;strong&gt;Full&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-SSL-Cloudflare.png&#34; alt=&#34;Pengaturan SSL Cloudflare&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ada empat pilihan: off, flexible, full, dan full (strict).&lt;/p&gt;
-
-&lt;p&gt;Perbedaanya seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/cloudflare_ssl_modes.png&#34; alt=&#34;Perbedaan pengaturan SSL Cloudflare&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sumber: &lt;a href=&#34;https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/&#34;&gt;blog.cloudflare.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-page-rules&#34;&gt;Membuat Page Rules&lt;/h2&gt;
-
-&lt;p&gt;Agar &lt;code&gt;http&lt;/code&gt; dialihkan ke &lt;code&gt;https&lt;/code&gt;, maka kita perlu membuat &lt;em&gt;page rules&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Silahkan masuk ke &lt;strong&gt;Page Rules&lt;/strong&gt;, kemudian tambahkan &lt;em&gt;rules&lt;/em&gt; seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/Pengaturan-page-rules-untuk-https.png&#34; alt=&#34;Pengaturan Page Rules untuk HTTPS&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tambahkan juga &lt;em&gt;rules&lt;/em&gt; untuk cache-nya seperti ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/pengaturan-page-rules-untuk-cache.png&#34; alt=&#34;Pengaturan Page Rules untuk Cache&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;menugbah-cname-dan-konfigurasi-hugo&#34;&gt;Menugbah CNAME dan Konfigurasi Hugo&lt;/h2&gt;
-
-&lt;p&gt;Karena kita ingin menggunakan alamat dengan &lt;code&gt;https&lt;/code&gt; maka perlu diubah Konfigurasinya.&lt;/p&gt;
-
-&lt;p&gt;Di Hugo, baseurl-nya diubah menjadi seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;baseurl = &amp;quot;https://www.petanikode.com/&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sedangkana di repositori githubnya:&lt;/p&gt;
-
-&lt;p&gt;CNAME: &lt;a href=&#34;https://github.com/petanikode/petanikode.github.io/blob/master/CNAME&#34;&gt;petanikode.github.io/CNAME&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;www.petanikode.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;percobaan-dan-masalah&#34;&gt;Percobaan dan Masalah&lt;/h2&gt;
-
-&lt;p&gt;Saat melakukan percobaan, saya kira SSL-nya tidak bekerja dengan baik.&lt;/p&gt;
-
-&lt;p&gt;Terlihat di browser, ketika membuka  &lt;code&gt;https://www.petanikode.com&lt;/code&gt; warnya abu-abu.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/SSL-masih-belum-aman.png&#34; alt=&#34;SSL Belum aman&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hal ini disebabkan karena ada beberapa link gambar yang masih menggunakan HTTP.&lt;/p&gt;
-
-&lt;p&gt;Kemudian Saya mencoba mencarinya di &lt;em&gt;page source&lt;/em&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/link-aset-yang-masih-menggunakan-http.png&#34; alt=&#34;Link aset yang masih menggunakan http&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah mengetahui, gambar atau &lt;em&gt;assets&lt;/em&gt; yang masih menggunakan &lt;code&gt;http&lt;/code&gt; selanjutnya
-tinggal mengubahnya menjadi &lt;code&gt;https&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pada Hugo, Konfigurasinya saya letakan di &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/mengubah-link-gambar-ke-https.png&#34; alt=&#34;Mengubah link gambar dari http menjadi https&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;hellip;dan akhirnya SSL sudah aktif.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/ssl-petanikode-sudah-aktif.png&#34; alt=&#34;SSL Petani kode sudah aktif&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi, ada satu lagi masalah yang muncul.&lt;/p&gt;
-
-&lt;p&gt;Semua komentar menghilang, karena link yang tersimpan di disqus adalah link versi
-sebelumnya.&lt;/p&gt;
-
-&lt;p&gt;Mungkin nanti akan saya perbaiki :smile:, yang penting sekarang sudah HTTPS.&lt;/p&gt;
-</description>
+      <description>Pada dasarnya Github telah memberikan SSL untuk setiap halaman github (Github Pages). Akan tetapi, untuk halaman github yang menggunakan domain sendiri tidak diberikan.
+Contoh Halaman github dengan SSL:
+https://petanikode.github.io  Lihat, di sana https menandakan SSL-nya aktif.
+Sedangkan untuk kostum domain, seperti http://petanikode.com tidak diberikan SSL.
+Mengapa Menggunakan SSL? Petani Kode memang sebuah halaman statis yang dibuat dengan Hugo.
+Sepertinya SSL tidak terlalu dibutuhkan, karena tidak ada pemerosesan data melalui form yang akan dikirim ke database.</description>
     </item>
     
     <item>
@@ -135,119 +32,14 @@ sebelumnya.&lt;/p&gt;
       <pubDate>Fri, 07 Apr 2017 15:22:34 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-redirect-halaman-di-hugo/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-Mv7_MzM09G8/WIDgeFiJCWI/AAAAAAAADrY/0y8-pWVkHe0kjrgbjRxEeGT7jGKai90zACPcB/s1600/hugo-petanikode.jpg&#34; alt=&#34;Cara Redirect Halaman di Hugo untuk Mempertahankan Trafik&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hingga saat ini, &lt;a href=&#34;https://www.petanikode.com/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;proses migrasi Petani Kode ke Hugo&lt;/a&gt; masih belum selesai.&lt;/p&gt;
-
-&lt;p&gt;Mengapa saya katakan demikian?&lt;/p&gt;
-
-&lt;p&gt;Karena banyak artikel yang belum diedit.&lt;/p&gt;
-
-&lt;p&gt;Banyak artikel yang link-nya &lt;code&gt;error 404&lt;/code&gt;, alias tidak ditemukan.&lt;/p&gt;
-
-&lt;p&gt;Terpantau dari laporan Google Webmaster, error 404-nya tembus sampai 546 halaman.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-s4uEDxJPex8/WOdDMQS_3oI/AAAAAAAAEnY/oxFVV2AVafUrCgoVOsIde4_NGFV5R3-AQCK4B/s1600/error%2B404%2Bpetanikode.png&#34; alt=&#34;Error 404 Halaman Artikel Petani Kode&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hal ini akan membuat banyak orang kecewa, termasuk juga saya.&lt;/p&gt;
-
-&lt;p&gt;Karena sudah banyak artikel yang terindeks di google, di-share di sosial media, dan
-link lainnya.&lt;/p&gt;
-
-&lt;p&gt;Ketika mereka membukanya, akan mendapatkan error 404.&lt;/p&gt;
-
-&lt;p&gt;Sebelumnya, saya sudah menggunakan layanan &lt;a href=&#34;https://www.petanikode.com/cara-redirect-domain-dengan-cloudflare/&#34;&gt;Cloud Flare untuk mengalihkan
-&lt;em&gt;(redirect)&lt;/em&gt; halaman&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Hasilnya cukup memuaskan.&lt;/p&gt;
-
-&lt;p&gt;Link yang seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://petanikode.com/2015/10/pemrograman-java-di-lab-4-berkenalan-dengan-scanner/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;bisa dialihkan ke:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://petanikode.com/pemrograman-java-di-lab-4-berkenalan-dengan-scanner/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Karena itu, saya tidak perlu pusing lagi memikirkan pengalihannya.&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi, ada beberapa artikel yang saya edit dan mengganti link-nya.&lt;/p&gt;
-
-&lt;p&gt;Contohnya menjadi seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://petanikode.com/pemrograman-java-input-dan-output/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tentu saja layanan Cloud Flare tidak mampu melakukan pengalihan, karena algoritma
-mereka hanya sebatas melakukan pencocokan saja.&lt;/p&gt;
-
-&lt;p&gt;Karena itu, pengalihan ini harus dilakukan secara manual.&lt;/p&gt;
-
-&lt;p&gt;Untungnya Hugo sudah menyediakan fitur untuk melakukannya.&lt;/p&gt;
-
-&lt;h2 id=&#34;pengalihan-dengan-aliases&#34;&gt;Pengalihan dengan Aliases&lt;/h2&gt;
-
-&lt;p&gt;Panduan lengkap penggunaan &lt;code&gt;aliases&lt;/code&gt; ada di &lt;a href=&#34;https://gohugo.io/extras/aliases/&#34;&gt;dokumentasinya Hugo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Untuk format TOML, &lt;code&gt;aliases&lt;/code&gt; ditulis seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+++
-        ...
-aliases = [
-    &amp;quot;/posts/my-original-url/&amp;quot;,
-    &amp;quot;/2010/01/01/even-earlier-url.html&amp;quot;
-]
-        ...
-+++
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sedangkan untuk YAML, seperti ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;---
-        ...
-aliases:
-    - /posts/my-original-url/
-    - /2010/01/01/even-earlier-url.html
-        ...
----
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-15qdDAXdeBw/WOdFQaEvgAI/AAAAAAAAEnk/4Ou3MEg8hGUgEmECJmCPRfdiiGgaSxDUgCK4B/s1600/Penggunaan%2BAliases%2Bdi%2Bsalah%2Bsatu%2BArtikel%2BHugo.png&#34; alt=&#34;Penggunaan Aliases di salah satu Artikel Hugo&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apa yang akan dilakukan oleh &lt;code&gt;aliases&lt;/code&gt;?&lt;/p&gt;
-
-&lt;p&gt;Ketika link-link yang kita tulis dalam &lt;code&gt;aliases&lt;/code&gt;, kita akan otomatis
-dialihkan ke link barunya &lt;em&gt;(canonical)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;kenapa-melakukan-pengalihan&#34;&gt;Kenapa Melakukan Pengalihan?&lt;/h2&gt;
-
-&lt;p&gt;Kalau kalian perhatikan, link artikel dari Petani Kode saat ini tidak menggunakan
-tanggal.&lt;/p&gt;
-
-&lt;p&gt;Hal ini karena, saya meniru dari beberapa web pakar SEO. Mereka tidak
-mencantumkan tanggal di link-nya.&lt;/p&gt;
-
-&lt;p&gt;Dampaknya, mungkin lebih disukai Search Engine.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-7SVs12ejUJg/WOdIeYknQWI/AAAAAAAAEnw/mO72vT5obD0uobmvRryl2MLWEeUhu3XxQCK4B/s1600/Trafik%2BPetani%2BKode.png&#34; alt=&#34;Trafik Petani Kode&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Lah kok malah bahas SEO&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Hehehe maaf, :smile:.&lt;/p&gt;
-
-&lt;p&gt;Pengalihan saya lakukan agar pengunjung Petani Kode merasa puas dan tidak kecewa.&lt;/p&gt;
-
-&lt;p&gt;Selain itu, saya juga melakukan pengeditan artikel: ditambahkan, dilengkapi,
-dan ditingkatkan kualitasnya.&lt;/p&gt;
-
-&lt;p&gt;Semoga dengan begini, tidak ada lagi yang tersesat ke halaman &lt;code&gt;error 404&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>Hingga saat ini, proses migrasi Petani Kode ke Hugo masih belum selesai.
+Mengapa saya katakan demikian?
+Karena banyak artikel yang belum diedit.
+Banyak artikel yang link-nya error 404, alias tidak ditemukan.
+Terpantau dari laporan Google Webmaster, error 404-nya tembus sampai 546 halaman.
+Hal ini akan membuat banyak orang kecewa, termasuk juga saya.
+Karena sudah banyak artikel yang terindeks di google, di-share di sosial media, dan link lainnya.
+Ketika mereka membukanya, akan mendapatkan error 404.</description>
     </item>
     
     <item>
@@ -256,99 +48,9 @@ dan ditingkatkan kualitasnya.&lt;/p&gt;
       <pubDate>Tue, 31 Jan 2017 12:09:55 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-upload-file-ke-server-ftp-ala-git/</guid>
-      <description>
+      <description>Ketika kita akan men-deploy atau hosting sebuah web di server shared hosting, kita akan diberikan fasilitas FTP untuk upload file. Kita bisa menggunakan FTP Client seperti FileZilla untuk upload file. Namun, bagaimana kalau nanti ada perubahan? Tentu kita akan mencari file yang diubah dan di-upload lagi. Hal ini mungkin terasa sedikit melelahkan.
 
-&lt;p&gt;Ketika kita akan men-deploy atau &lt;em&gt;hosting&lt;/em&gt; sebuah web di server &lt;em&gt;shared hosting&lt;/em&gt;,
-kita akan diberikan fasilitas FTP untuk upload file. Kita bisa menggunakan
-&lt;em&gt;FTP Client&lt;/em&gt; seperti FileZilla untuk upload file. Namun, bagaimana kalau nanti
-ada perubahan? Tentu kita akan mencari file yang diubah dan di-upload lagi.
-Hal ini mungkin terasa sedikit melelahkan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;720&#34;
-height=&#34;380&#34;
-alt=&#34;Git FTP&#34;
-src=&#34;https://1.bp.blogspot.com/-jeWvQeAn-TQ/WJGe6gyu6vI/AAAAAAAADwM/yJ-X3DG9T5sLyIow4kyD-cHt_nCOYP_qgCPcB/s1600/upload-file-ftp-ala-git-petanikode.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Sedangkan, kalau kita menggunakan Git. Kita hanya perlu melakukan &lt;em&gt;push&lt;/em&gt; untuk
-mengupload perubahan ke server atau repository &lt;em&gt;remote&lt;/em&gt;. Akan tetapi, server yang
-kita gunakan tidak mendukung Git.&lt;/p&gt;
-
-&lt;p&gt;Sebuah alat bernama &lt;code&gt;git-ftp&lt;/code&gt; memungkinkan kita untuk meng-upload file ke server
-FTP seperti cara Git. Kita tidak akan repot mencari file yang sudah diubah untuk
-diupload lagi dan menindih yang sudah ada di server. Karena &lt;code&gt;git-ftp&lt;/code&gt; akan melakukan
-sinkronisasi berdasarkan perubahan yang dicatat oleh Git.&lt;/p&gt;
-
-&lt;h2 id=&#34;instalasi-git-ftp&#34;&gt;Instalasi git-ftp&lt;/h2&gt;
-
-&lt;p&gt;Instalasi &lt;code&gt;git-ftp&lt;/code&gt; di Ubuntu dapat dilakukan dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;sudo apt install git-ftp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Instalasi di sistem operasi lain, silahkan baca &lt;a href=&#34;https://github.com/git-ftp/git-ftp/blob/develop/INSTALL.md&#34;&gt;di sini&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;konfigurasi-awal&#34;&gt;Konfigurasi Awal&lt;/h2&gt;
-
-&lt;p&gt;Masuk ke direktori proyeknya. Pastikan sudah menggunakan Git di sana. Kemudian
-tambahkan konfigurasi &lt;code&gt;git-ftp&lt;/code&gt; dengan perintah berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config git-ftp.url ftp.example.net
-git config git-ftp.user ftp-user
-git config git-ftp.password rah4sia
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sebagai contoh, saya menggunakan hosting &lt;a href=&#34;http://api.idhostinger.com/redir/18671649&#34;&gt;gratis dari idhostinger&lt;/a&gt;
-dan membuat akun FTP sebagai berikut.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;924&#34;
-height=&#34;255&#34;
-alt=&#34;Akun FTP di IDhostinger&#34;
-src=&#34;https://4.bp.blogspot.com/-3WZZA8H29bY/WI_rPPRQvJI/AAAAAAAADvs/YpKGbgQs6b0d1zZTwnJYOm9okOq4FlCyQCPcB/s1600/Akun%2BFTP%2Bdi%2Bihostinger.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Misalkan saya ingin upload ke direktori &lt;code&gt;project1&lt;/code&gt;, Maka konfigurasi
-&lt;code&gt;git-ftp&lt;/code&gt;-nya seagai berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config git-ftp.url ftp.petanikode.hol.es/project1
-git config git-ftp.user u898309845.petanikode
-git config git-ftp.password SangatRah4sia
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;upload-pertama&#34;&gt;Upload Pertama&lt;/h2&gt;
-
-&lt;p&gt;Setelah kita melakukan konfigurasi &lt;code&gt;git-ftp&lt;/code&gt;, selanjutnya kita bisa upload semua
-file dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git ftp init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Proses ini akan memakan waktu cukup lama apabila terdapat banyak file yang akan
-di-upload. Perintah ini akan meng-upload semua file, kecuali yang terdaftar dalam
-&lt;code&gt;.gitignore&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;upload-perubahan&#34;&gt;Upload Perubahan&lt;/h2&gt;
-
-&lt;p&gt;Jika ada perubahan, kita harus mealkukan &lt;code&gt;commit&lt;/code&gt; terlebih dahulu.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git add .
-git commit -m &amp;quot;ini perubahan yang dilakukan&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, kita bisa upload lagi perubahannya dengan perintah.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git ftp push
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka &lt;code&gt;git-ftp&lt;/code&gt; akan melakukan upload file-file yang sudah diubah dan menindih
-yang sudah ada di server.&lt;/p&gt;
-
-&lt;p&gt;Begitulah cara upload file seperti cara &lt;a href=&#34;https://www.petanikode.com/topik/git&#34;&gt;Git&lt;/a&gt;. Semoga bermanfaat.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;https://git-ftp.github.io/&#34;&gt;git-ftp.github.io&lt;/a&gt;&lt;/p&gt;
-</description>
+Sedangkan, kalau kita menggunakan Git. Kita hanya perlu melakukan push untuk mengupload perubahan ke server atau repository remote.</description>
     </item>
     
     <item>
@@ -357,138 +59,12 @@ yang sudah ada di server.&lt;/p&gt;
       <pubDate>Sun, 29 Jan 2017 17:52:51 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-menggunakan-ssh-di-github/</guid>
-      <description>
+      <description>SSH memungkinkan kita untuk melakukan push ke repository github tanpa login. Berbeda dengan cara yang biasa (melalui HTTPS), kita harus memasukkan username dan password setiap kali melakukan push. Tapi dengan SSH kita tidak akan melakukan itu lagi.
+1. Membuat Key SSH Jalankan perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda. Untuk passpharse dikosongkan saja.
 
-&lt;p&gt;SSH memungkinkan kita untuk melakukan &lt;em&gt;push&lt;/em&gt; ke repository github tanpa login.
-Berbeda dengan cara yang biasa (melalui HTTPS), kita harus memasukkan &lt;em&gt;username&lt;/em&gt; dan &lt;em&gt;password&lt;/em&gt;
-setiap kali melakukan &lt;em&gt;push&lt;/em&gt;. Tapi dengan SSH kita tidak akan melakukan itu lagi.&lt;/p&gt;
+Maka di dalam direktori ~/.ssh/ akan tercipa file key baru.
 
-&lt;h2 id=&#34;1-membuat-key-ssh&#34;&gt;1. Membuat Key SSH&lt;/h2&gt;
-
-&lt;p&gt;Jalankan perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda.
-Untuk &lt;em&gt;passpharse&lt;/em&gt; dikosongkan saja.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;644&#34;
-height=&#34;334&#34;
-alt=&#34;perintah ssh-keygen&#34;
-src=&#34;http://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Maka di dalam direktori &lt;code&gt;~/.ssh/&lt;/code&gt; akan tercipa file key baru.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;575&#34;
-height=&#34;116&#34;
-alt=&#34;file key ssh&#34;
-src=&#34;http://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-jalankan-ssh-angen-dan-load-ssh-key&#34;&gt;2. Jalankan SSH Angen dan Load SSH Key&lt;/h2&gt;
-
-&lt;p&gt;Untuk memastikan apakah &lt;em&gt;SSH Agent&lt;/em&gt; sudah berajalan atau tidak, gunakan perintah ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ps -e | grep [s]sh-agent
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kalau hasilnya seperti di bawah ini, berati &lt;em&gt;SSH Agent&lt;/em&gt; sudah berjalan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;884&#34;
-height=&#34;32&#34;
-alt=&#34;cek ssh agent&#34;
-src=&#34;http://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Tapi, kalau belum berjalan, gunakan perintah berikut ini untuk menjalankan SSH agent:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-agent /bin/bash
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Berikutnya kita Load SSH Key. Gunakan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-add ~/.ssh/id_anda
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian untuk mengecek, gunakan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh-add -l
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;659&#34;
-height=&#34;106&#34;
-alt=&#34;Mendambahkan SSH&#34;
-src=&#34;http://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-ad
-    data-ad-client=&#39;ca-pub-6279325630224392&#39;
-    data-ad-slot=&#39;7044550664&#39;
-    width=&#39;720&#39;
-    height=&#39;380&#39;
-    type=&#39;adsense&#39;
-    layout=&#34;responsive&#34;&gt;
-&lt;/amp-ad&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-tambahkan-ssh-key-ke-github&#34;&gt;3. Tambahkan SSH Key ke Github&lt;/h2&gt;
-
-&lt;p&gt;Sebelumnya ambil dulu kuncil publik yang sudah anda buat, gunakan perintah &lt;code&gt;cat&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cat ~/.ssh/id_anda.pub
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Copy semua teks yang ditampilkan.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;659&#34;
-height=&#34;139&#34;
-alt=&#34;Melihat public key&#34;
-src=&#34;http://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Lalu masuk ke &lt;a href=&#34;https://github.com/settings/keys&#34;&gt;&lt;em&gt;Settings&amp;gt;SSH and GPG Keys&lt;/em&gt;&lt;/a&gt;,
-buat kunci baru dengan mengelik &lt;em&gt;New SSH Key&lt;/em&gt;. Lalu masukkan key yang sudah
-dibuat.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;1012&#34;
-height=&#34;553&#34;
-alt=&#34;Melihat public key&#34;
-src=&#34;https://1.bp.blogspot.com/-OmGVJTJicSU/WI3C0rA5EQI/AAAAAAAADuI/VI7r_F750gApkdo5rZDqOc7csITftAbdACPcB/s1600/Tambah%2BSSH%2Bkey%2Bke%2BGithub.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-uji-konektivitas&#34;&gt;4. Uji Konektivitas&lt;/h2&gt;
-
-&lt;p&gt;Ketik perintah berikut untuk menguji konektivitas SSH ke Github&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ssh -T git@github.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jika hasilnya seperti berikut ini, berarti berhasil. Selanjutnya kita tinggal
-melakukan &lt;em&gt;push&lt;/em&gt; dengan SSH.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;626&#34;
-height=&#34;156&#34;
-alt=&#34;Uji konektivitas SSH Github&#34;
-src=&#34;https://4.bp.blogspot.com/-u_nlbitvZYQ/WI3DluqqeTI/AAAAAAAADuc/pPEzdkn3uhY51L7yGzgBLtm-4SQN--wqQCPcB/s1600/Uji%2Bcoba%2Bkonektivitas%2Bssh%2Bgithub.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Coba &lt;em&gt;clone&lt;/em&gt; sebuah repository dengan SSH dan lakukan push.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-width=&#34;467&#34;
-height=&#34;293&#34;
-alt=&#34;Clone Repositori dengan SSH&#34;
-src=&#34;https://2.bp.blogspot.com/-GWYLb-m67Ho/WI3FCCS2bBI/AAAAAAAADuw/r71ELqTvSD0HLVsW8KrOPv5Z7zb2XO3XwCPcB/s1600/Clone%2Brepository%2Bdengan%2BSSH.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Itulah cara menggunakan SSH di Gitub. Kita hanya perlu membuat &lt;em&gt;public key&lt;/em&gt;,
-kemudian mendaftarkannya di akun Github.&lt;/p&gt;
-
-&lt;p&gt;referensi: &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;help.github.com&lt;/a&gt;&lt;/p&gt;
-</description>
+2. Jalankan SSH Angen dan Load SSH Key Untuk memastikan apakah SSH Agent sudah berajalan atau tidak, gunakan perintah ini:</description>
     </item>
     
     <item>
@@ -497,56 +73,9 @@ kemudian mendaftarkannya di akun Github.&lt;/p&gt;
       <pubDate>Tue, 17 Jan 2017 22:06:22 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-redirect-domain-dengan-cloudflare/</guid>
-      <description>
-
-&lt;p&gt;Saya akhirnya mengurus jaringan lagi, setelah sekian lama tidak belajar jaringan.
-Pada &lt;a href=&#34;https://www.petanikode.com/2017/01/migrasi-petani-kode-dari-blogger-ke-hugo/&#34;&gt;proses migrasi&lt;/a&gt; kemarin,
-proses propagasi domain memakan waktu cukup lama.
-Domain Petani Kode &lt;code&gt;www.petanikode.com&lt;/code&gt; masih menunjukan halaman &lt;code&gt;404&lt;/code&gt;. Namun,
-domain yang tanpa menggunakan &lt;code&gt;www&lt;/code&gt;, sudah bisa diakses.&lt;/p&gt;
-
-&lt;p&gt;Karena tidak ingin semua pengunjung mendapatkan &lt;em&gt;error&lt;/em&gt; &lt;code&gt;404&lt;/code&gt;, saya harus melakukan
-&lt;em&gt;redirect&lt;/em&gt; ke domain baru yang tidak menggunakan &lt;code&gt;www&lt;/code&gt;. Berikut ini caranya.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-masuk-ke-halaman-pages-rules&#34;&gt;1. Masuk ke Halaman Pages Rules&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka halaman &lt;em&gt;Pages Rules&lt;/em&gt; di Cloudflare.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;111&#34;
-width=&#34;379&#34;
-alt=&#34;Menu Cloudflare&#34;
-src=&#34;http://i.imgur.com/9m7NJeT.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-buat-pages-rules-baru&#34;&gt;2. Buat Pages Rules Baru&lt;/h2&gt;
-
-&lt;p&gt;Klik tombol &lt;em&gt;Create Page Rule&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;227&#34;
-width=&#34;983&#34;
-alt=&#34;Menu Cloudflare&#34;
-src=&#34;http://i.imgur.com/8OO2z36.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-input-data-domain&#34;&gt;3. Input data domain&lt;/h2&gt;
-
-&lt;p&gt;Masukkan domain yang akan dialihkan ke, misalnya saya ingin mengalihkan
-&lt;code&gt;www.petanikode.com&lt;/code&gt; ke &lt;code&gt;petanikode.com&lt;/code&gt; saja.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-img
-height=&#34;654&#34;
-width=&#34;801&#34;
-alt=&#34;Membuat aturan redirect&#34;
-src=&#34;http://i.imgur.com/7Ih4BiE.png&#34;
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, klik &lt;em&gt;save and deploy&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sampai tahap ini, cobalah untuk mengakses alaman yang dialihkan tadi.
-Kalau pengalihan berhasil berarti konfigurasi sudah benar.&lt;/p&gt;
-</description>
+      <description>Saya akhirnya mengurus jaringan lagi, setelah sekian lama tidak belajar jaringan. Pada proses migrasi kemarin, proses propagasi domain memakan waktu cukup lama. Domain Petani Kode www.petanikode.com masih menunjukan halaman 404. Namun, domain yang tanpa menggunakan www, sudah bisa diakses.
+Karena tidak ingin semua pengunjung mendapatkan error 404, saya harus melakukan redirect ke domain baru yang tidak menggunakan www. Berikut ini caranya.
+1. Masuk ke Halaman Pages Rules Silahkan buka halaman Pages Rules di Cloudflare.</description>
     </item>
     
     <item>
@@ -555,8 +84,10 @@ Kalau pengalihan berhasil berarti konfigurasi sudah benar.&lt;/p&gt;
       <pubDate>Sun, 03 Jul 2016 15:30:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/mengatasi-masalah-public-key-bitbucket/</guid>
-      <description>&lt;p&gt;Jika komputer anda baru pertama kali terhubung dengan bitbucket, mungkin anda akan mendapatkan error ini ketika meng-upload atau &lt;i&gt;push&lt;/i&gt; kode.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-I9CjXcqUABA/V2JBhsEnGYI/AAAAAAAAC3I/fRu1SO9FRaIac3iSymPzkSc_9UAxzlm1wCK4B/s1600/bitbucket-push-key-ssh-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-I9CjXcqUABA/V2JBhsEnGYI/AAAAAAAAC3I/fRu1SO9FRaIac3iSymPzkSc_9UAxzlm1wCK4B/s1600/bitbucket-push-key-ssh-petanikode.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tidak seperti Github yang selalu meminta password setiap kali nge-push. Bitbucket menggunakan metode &lt;i&gt;SSH Key&lt;/i&gt; untuk sinkronisasi repositori lokal dengan repositori &lt;i&gt;remote&lt;/i&gt; (Bitbucket). Oleh karena itu, kita hanya perlu &lt;i&gt;set up&lt;/i&gt; SSH untuk Git Bitbucket.&lt;br /&gt;&lt;h2&gt;1. Membuat KeyGen SSH&lt;/h2&gt;Ketik perintah &lt;code&gt;ssh-keygen&lt;/code&gt; pada termnial. Kemudian inputkan id (identitas) SSH anda.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Maka di dalam direktori &lt;code&gt;~/.ssh/&lt;/code&gt; akan tercipa file key baru.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;2. Jalankan SSH Angen dan Load SSH Key&lt;/h2&gt;Untuk memastikan apakah SSH Agen sudah berajalan atau tidak, gunakan perintah ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ps -e | grep [s]sh-agent&lt;/code&gt;&lt;/pre&gt;Kalau hasilnya seperti di bawah ini, berati SSH Agen sudah berjalan.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Tapi, kalau belum berjalan, gunakan perintah berikut ini untuk menjalankan SSH agent:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ssh-agent /bin/bash&lt;/code&gt;&lt;/pre&gt;Berikutnya kita Load SSH Key. Gunakan perintah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ssh-add ~/.ssh/id_anda&lt;/code&gt;&lt;/pre&gt;Kemudian untuk mengecek, gunakan perintah:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ssh-add -l&lt;/code&gt;&lt;/pre&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;3. Tambahkan Kunci Publik ke Akun Bitbucket&lt;/h2&gt;Ambil kuncil publik yang sudah anda buat, gunakan perintah cat.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;cat ~/.ssh/id_anda.pub&lt;/code&gt;&lt;/pre&gt;Copy semua teks yang ditampilkan.&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Kemudian masuk ke akun Bitbucket. Masuk ke &lt;i&gt;Bitbucket Settings&lt;/i&gt; dengan mengelik &lt;i&gt;avatar&lt;/i&gt;. Kemudian cari menu &lt;i&gt;SSH Key&lt;/i&gt; di bagian samping. Tambahkan &lt;i&gt;SSH Key&lt;/i&gt; dari yang sudah di-copy tadi.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-llS_w8e2lJo/V3fa8MGfe-I/AAAAAAAAC7I/vtsUYVj7RdQ0_PwObZhCJEwazJ1SESM_ACK4B/s1600/Tambahkan%2BSSH%2BKey%2Bke%2BAkun%2BBitbucket.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-llS_w8e2lJo/V3fa8MGfe-I/AAAAAAAAC7I/vtsUYVj7RdQ0_PwObZhCJEwazJ1SESM_ACK4B/s1600/Tambahkan%2BSSH%2BKey%2Bke%2BAkun%2BBitbucket.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;4. Periksa Konektivitas&lt;/h2&gt;Ketik perintah berikut ini di terminal:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ssh -T git@bitbucket.org&lt;/code&gt;&lt;/pre&gt;Kalau hasilnya seperti di bawah ini, maka koneksi berhasil. Sekarang anda bisa sinkronkan repositori lokal dengan repositori remote yang ada di Bitbucket.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-msMvX3F3P_8/V3fbhHjriYI/AAAAAAAAC7Q/by5WXzWRwZkvQm97TvSGkG5ABU6lttiEQCK4B/s1600/Koneksi%2Bke%2BBitbucket%2BBerhasil.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-msMvX3F3P_8/V3fbhHjriYI/AAAAAAAAC7Q/by5WXzWRwZkvQm97TvSGkG5ABU6lttiEQCK4B/s1600/Koneksi%2Bke%2BBitbucket%2BBerhasil.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;blockquote class=&#34;tr_bq&#34;&gt;&lt;b&gt;Catatan:&lt;/b&gt; Load kembali kunci SSH bila anda tidak terhubung lagi (jalankan perintah nomer 2).&lt;/blockquote&gt;&lt;br /&gt;Refernsi:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html&#34;&gt;https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html&lt;/a&gt;&lt;/a&gt; &lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html&#34;&gt;https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html&lt;/a&gt; &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html&#34;&gt;https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
-</description>
+      <description>Jika komputer anda baru pertama kali terhubung dengan bitbucket, mungkin anda akan mendapatkan error ini ketika meng-upload atau push kode.
+
+Tidak seperti Github yang selalu meminta password setiap kali nge-push. Bitbucket menggunakan metode SSH Key untuk sinkronisasi repositori lokal dengan repositori remote (Bitbucket). Oleh karena itu, kita hanya perlu set up SSH untuk Git Bitbucket.
+1. Membuat KeyGen SSHKetik perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda.</description>
     </item>
     
     <item>
@@ -565,72 +96,11 @@ Kalau pengalihan berhasil berarti konfigurasi sudah benar.&lt;/p&gt;
       <pubDate>Sat, 16 Apr 2016 00:51:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-android-periksa-konektivitas-internet/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pengembangan aplikasi yang membutuhkan koneksi internet untuk operasinya,
-perlu melakukan pengecekan terlebih dahulu.&lt;/p&gt;
-
-&lt;p&gt;Contoh sebuah aplikasi yang menreapkan &lt;em&gt;API Google Maps&lt;/em&gt;,
-membutuhkan koneksi internet untuk menampilkan peta.&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi, tidak dilakukan pengecekan koneksi internet.
-Aplikasi pun gagal menampilkan peta dan tampa pesan umpan balik.&lt;/p&gt;
-
-&lt;p&gt;Pengecekan koneksi internet akan membantu kita membuat umpan balik ke pengguna aplikasi.&lt;/p&gt;
-
-&lt;p&gt;Misalkan, ketika user ingin menampilkan peta &lt;em&gt;Google Map&lt;/em&gt;, periksa terlebih
-dahulu koneksi internetnya. Kalau ada koneksi, izinkan untuk membuka &lt;em&gt;activity Google Map&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini fungsi atau &lt;em&gt;method&lt;/em&gt; yang dapat digunakan untuk memeriksa
-koneksi internet pengguna.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;private boolean adaInternet(){
-    ConnectivityManager koneksi = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-    return koneksi.getActiveNetworkInfo() != null;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ketika anda mengetik kode fungsi di atas di Android Studio,
-maka akan otomatis pustakanya diimpor.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import android.content.Context;
-import android.net.ConnectivityManager;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jangan lupa, tambahkan juga dua baris kode ini ke dalam &lt;em&gt;AndroidManifest.xml&lt;/em&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_WIFI_STATE&amp;quot; /&amp;gt;
-&amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, untuk menggunkan fungsi yang dibuat tadi,
-kita dapat memanfaatkan &lt;em&gt;event&lt;/em&gt; tombol diklik atau &lt;em&gt;event&lt;/em&gt; yang lainnya.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Button btn = (Button) findViewById(R.id.button);
-
-btn.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        if(adaInternet()){
-        // tampilkan peta
-        Toast.makeText(getActivity(), &amp;quot;Terhubung ke internet&amp;quot;, Toast.LENGTH_LONG).show();
-        }else{
-        // tampilkan pesan
-        Toast.makeText(getActivity(), &amp;quot;Tidak ada koneksi internet&amp;quot;, Toast.LENGTH_LONG).show();
-        }
-    }
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya akan ditampilkan pesan &lt;em&gt;(Toast)&lt;/em&gt; &amp;ldquo;Terhubung ke internet&amp;rdquo;
-bila ponsel terhubung ke interet.&lt;/p&gt;
-
-&lt;p&gt;Sedangkan kalau tidak, akan ditampilkan pesan &amp;ldquo;Tidak ada koneksi internet&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;http://stackoverflow.com/a/9570292&#34;&gt;http://stackoverflow.com/a/9570292&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Pengembangan aplikasi yang membutuhkan koneksi internet untuk operasinya, perlu melakukan pengecekan terlebih dahulu.
+Contoh sebuah aplikasi yang menreapkan API Google Maps, membutuhkan koneksi internet untuk menampilkan peta.
+Akan tetapi, tidak dilakukan pengecekan koneksi internet. Aplikasi pun gagal menampilkan peta dan tampa pesan umpan balik.
+Pengecekan koneksi internet akan membantu kita membuat umpan balik ke pengguna aplikasi.
+Misalkan, ketika user ingin menampilkan peta Google Map, periksa terlebih dahulu koneksi internetnya. Kalau ada koneksi, izinkan untuk membuka activity Google Map.</description>
     </item>
     
     <item>
@@ -639,63 +109,11 @@ bila ponsel terhubung ke interet.&lt;/p&gt;
       <pubDate>Sat, 26 Mar 2016 12:15:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-menampilkan-pesan-error-untuk-debugging-php/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Secara default, konfigurasi yang akan diberikan pada server Apache di Linux adalah
-mode &lt;em&gt;production&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Server produksi &lt;em&gt;(production server)&lt;/em&gt; merupakan server yang digunakan setelah
-web selesai dikembangkan atau sudah siap dipakai.&lt;/p&gt;
-
-&lt;p&gt;Server produksi tidak akan menampilkan apa-apa kalau terjadi error. Karena itu,
-kita harus mengubahnya ke dalam mode &lt;em&gt;development&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Silahkan simak caranya, sebagai berikut.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-buka-file-konfigurasi-server&#34;&gt;1. Buka File Konfigurasi Server&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka file konfigurasi server yang ada di &lt;code&gt;/etc/php5/apache2/php.ini&lt;/code&gt; dengan teks editor. Jangan lupa, membukanya sebagai root.&lt;/p&gt;
-
-&lt;p&gt;Sebagai contoh, saya menggunakan gedit untuk membukanya, maka perintahnya:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo gedit /etc/php5/apache2/php.ini
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk PHP7:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo gedit /etc/php/7.0/apache2/php.ini
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;2-ubah-nilai-konfigurasi-ke-mode-development&#34;&gt;2. Ubah Nilai Konfigurasi ke Mode Development&lt;/h2&gt;
-
-&lt;p&gt;Ubahlah nilai-nilai konfigurasi error-nya menjadi seperti berikut ini.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;error_reporting = E_ALL
-display_errors = On
-display_startup_errors = On
-track_errors = On
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;3-hidupkan-ulang-service&#34;&gt;3. Hidupkan Ulang Service&lt;/h2&gt;
-
-&lt;p&gt;Nyalakan kembali service apache2 dengan perintah&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service apache2 restart
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang coba buka sebuah file PHP yang memiliki error melalui &lt;code&gt;localhost&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-nqG5_91BQiw/VvYIJtjlEFI/AAAAAAAACjw/0wQL8D_x410F24m0NaDxS2FsIcXvXLkEg/s1600/Error%2Bditampilkan.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-nqG5_91BQiw/VvYIJtjlEFI/AAAAAAAACjw/0wQL8D_x410F24m0NaDxS2FsIcXvXLkEg/s1600/Error%2Bditampilkan.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;Itulah cara mengubah konfigurasi server Apache dari mode &lt;em&gt;production&lt;/em&gt; ke mode
-&lt;em&gt;development&lt;/em&gt; agar bisa menampilkan pesan Error untuk &lt;em&gt;debugging&lt;/em&gt; PHP.&lt;/p&gt;
-
-&lt;p&gt;Semoga bermanfaat.&lt;/p&gt;
-</description>
+      <description>Secara default, konfigurasi yang akan diberikan pada server Apache di Linux adalah mode production.
+Server produksi (production server) merupakan server yang digunakan setelah web selesai dikembangkan atau sudah siap dipakai.
+Server produksi tidak akan menampilkan apa-apa kalau terjadi error. Karena itu, kita harus mengubahnya ke dalam mode development.
+Silahkan simak caranya, sebagai berikut.
+1. Buka File Konfigurasi Server Silahkan buka file konfigurasi server yang ada di /etc/php5/apache2/php.ini dengan teks editor.</description>
     </item>
     
     <item>
@@ -704,60 +122,9 @@ track_errors = On
       <pubDate>Mon, 11 Jan 2016 17:39:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/konfigurasi-server-php-di-linux-agar-bisa-upload-file/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Saya berencana akan melakukan instal ulang dalam waktu dekat ini.
-Karena ada beberapa kerusakan yang saya temukan di Distro Linux yang sedang saya pakai.&lt;/p&gt;
-
-&lt;p&gt;Sebelum melakukan itu, ada baiknya mencatat dulu konfigurasi server yang sedang berjalan.
-Supaya nanti mudah mengonfigurasi lagi.&lt;/p&gt;
-
-&lt;p&gt;Server Apache dan &lt;a href=&#34;https://www.petanikode.com/2015/02/pemrograman-php-di-linux.html&#34;&gt;PHP di Linux&lt;/a&gt; tidak seperti server XAMPP di Windows.
-Server Apache dan PHP di linux memiliki hak akses direktori yang harus dipatuhi.
-Sehingga, kalau kita membuat &lt;a href=&#34;https://www.petanikode.com/pemrograman-php-upload-file/&#34;&gt;skrip upload file&lt;/a&gt; akan selalu gagal. Karena kita tidak diberikan akses untuk menulis di direktori &lt;code&gt;/tmp&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Permasalahan ini bisa diatasi dengan membuat direktori baru sebagai ganti
-atau alternatif direktori &lt;code&gt;/tmp&lt;/code&gt;. Direktori ini saya namakan &lt;code&gt;tmp_upload&lt;/code&gt;
-yang berlokasi di &lt;code&gt;/var/www/&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo mkdir /var/www/tmp_upload
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian memberikan hak akses dengan nomer kode &lt;code&gt;777&lt;/code&gt;.
-Artinya semua orang bisa mengakses, menulis, dan mengeksekusi sesutu dalam direktori ini.
-Nomer kode &lt;code&gt;777&lt;/code&gt;, tidak disarankan digunakan pada server produksi &lt;em&gt;(production server)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo chmod 777 -R /var/www/tmp_upload
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, Barulah kita konfigurasi server php melalui berkas &lt;code&gt;php.ini&lt;/code&gt;
-yang terletak di &lt;code&gt;/etc/php5/apache2/php.ini&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo nano /etc/php5/apache2/php.ini
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Untuk PHP7:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo nano /etc/php/7.0/apache2/php.ini
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nilai-nilai yang diubah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;file_uploads = On
-upload_tmp_dir = /var/www/tmp_upload
-upload_max_filesize = 1024M
-max_file_uploads = 20
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Konfigurasi lengkapnya: cek di &lt;a href=&#34;https://gist.github.com/ardianta/72a17e4a39b631c31303&#34;&gt;gist.github.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Jangan lupa, menghidupkan ulang layanan &lt;code&gt;apache2&lt;/code&gt; setelah dikonfigurasi.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo service apache2 restart
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Semoga bermanfaat.&lt;/p&gt;
-</description>
+      <description>Saya berencana akan melakukan instal ulang dalam waktu dekat ini. Karena ada beberapa kerusakan yang saya temukan di Distro Linux yang sedang saya pakai.
+Sebelum melakukan itu, ada baiknya mencatat dulu konfigurasi server yang sedang berjalan. Supaya nanti mudah mengonfigurasi lagi.
+Server Apache dan PHP di Linux tidak seperti server XAMPP di Windows. Server Apache dan PHP di linux memiliki hak akses direktori yang harus dipatuhi. Sehingga, kalau kita membuat skrip upload file akan selalu gagal.</description>
     </item>
     
   </channel>

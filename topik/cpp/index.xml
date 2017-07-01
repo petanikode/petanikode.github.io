@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cpp on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/cpp/index.xml</link>
+    <link>https://www.petanikode.com/topik/cpp/</link>
     <description>Recent content in Cpp on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Sep 2014 16:46:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/cpp/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Belajar Pemrograman C&#43;&#43;: Variabel dan Tipe Data</title>
@@ -15,8 +18,7 @@
       <pubDate>Fri, 05 Sep 2014 16:46:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-cpp-variabel/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1Q/yapb5BuF8Ts/s1600/cpp.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1Q/yapb5BuF8Ts/s1600/cpp.png&#34; /&gt;&lt;/a&gt;  &lt;br /&gt;&lt;h2&gt;Apa itu Variabel dan Tipe Data?&lt;/h2&gt;&lt;div&gt;Variabel merupakan sebuah nama lokasi penyimpanan di memori. Variabel berperan sebagai wadah, tempat menyimpan data sementara. Data yang tersimpan di dalam variabel memiliki jenis yang beragam. Jenis-jenis data itu, disebut tipe data. Pada umumnya tipe data di permograman C++, dikelompokkan menjadi lima macam, tipe data teks, angka atau bilangan, &lt;i&gt;boolean&lt;/i&gt;, &lt;i&gt;pointer&lt;/i&gt;, dan &lt;i&gt;void&lt;/i&gt;. Tipe data teks terdiri dari &lt;i&gt;string&lt;/i&gt; dan &lt;i&gt;char&lt;/i&gt;. Sementara tipe data angka terdiri dari&lt;i&gt; int (integer)&lt;/i&gt;, &lt;i&gt;float&lt;/i&gt;, &lt;i&gt;double&lt;/i&gt;, dsb.&lt;br /&gt;&lt;h2&gt;Program Variabel&lt;/h2&gt;&lt;/div&gt;&lt;div&gt;Setelah memahami apa itu variabel dan tipe data, mari kita mencoba membuat program dengan memanfaatkan variabel. Variabel dalam pemrograman C++ dapat dibuat di dalam fungsi &lt;code&gt;main()&lt;/code&gt; atau pun di luar. Penulisan atau pembuatan variabel diawali dengan menulis tipe data terlebih dahulu, kemudian diikuti nama variabelnya &lt;/div&gt;&lt;h3&gt;1. Kode Program&lt;/h3&gt;Buatlah sebuah file baru dengan nama &lt;code&gt;variabel.cpp&lt;/code&gt;, kemudian isi dengan kode program berikut ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;cpp&#34;&gt;#include &amp;lt;iostream&amp;gt;&lt;br /&gt;&lt;br /&gt;using namespace std;&lt;br /&gt;&lt;br /&gt;int main(){&lt;br /&gt;&amp;nbsp;&lt;br /&gt;&amp;nbsp; &lt;i&gt;&lt;span style=&#34;color: #999999;&#34;&gt;// deklarasi tipe data variabel&lt;/span&gt;&lt;/i&gt;&lt;br /&gt;&amp;nbsp; string nama;&lt;br /&gt;&amp;nbsp; int umur;&lt;br /&gt;&amp;nbsp; char jenisKelamin;&lt;br /&gt;&amp;nbsp;&lt;br /&gt;&amp;nbsp;&lt;i&gt;&lt;span style=&#34;color: #666666;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #999999;&#34;&gt;// &amp;mdash;&amp;mdash; proses input &amp;mdash;&amp;mdash;&lt;/span&gt;&lt;/i&gt;&lt;br /&gt;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;ldquo;Siapakah namamu?&amp;rdquo; &amp;lt;&amp;lt; endl;&lt;br /&gt;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;ldquo;jawab: &amp;ldquo;;&lt;br /&gt;&amp;nbsp; &lt;i&gt;&lt;span style=&#34;color: #999999;&#34;&gt;// menyimpan data ke variabel&lt;/span&gt;&lt;/i&gt;&lt;br /&gt;&amp;nbsp; getline(cin,nama);&lt;br /&gt;&amp;nbsp;&lt;br /&gt;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;ldquo;Berapa umurmu?&amp;rdquo; &amp;lt;&amp;lt; endl;&lt;br /&gt;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;ldquo;jawab: &amp;ldquo;;&lt;br /&gt;&amp;nbsp; &lt;i&gt;&lt;span style=&#34;color: #999999;&#34;&gt;// menyimpan data ke variabel&lt;/span&gt;&lt;/i&gt;&lt;br /&gt;&amp;nbsp; cin &amp;gt;&amp;gt; umur;&lt;br /&gt;&amp;nbsp;&lt;br /&gt;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;ldquo;Jenis kelamin [L/P]: &amp;ldquo;;&lt;br /&gt;&amp;nbsp; &lt;i&gt;&lt;span style=&#34;color: #999999;&#34;&gt;// menyimpan data ke variabel&lt;/span&gt;&lt;/i&gt;&lt;br /&gt;&amp;nbsp; cin &amp;gt;&amp;gt; jenisKelamin;&lt;br /&gt;&amp;nbsp;&lt;br /&gt;&amp;nbsp;&lt;i&gt;&lt;span style=&#34;color: #666666;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #999999;&#34;&gt;// &amp;mdash;&amp;mdash; proses output &amp;mdash;&amp;mdash;&lt;/span&gt;&lt;/i&gt;&lt;br /&gt;&amp;nbsp; cout &amp;lt;&amp;lt; &amp;ldquo;Salam kenal, &amp;rdquo; &amp;lt;&amp;lt; nama &amp;lt;&amp;lt; &amp;ldquo; Sekarang engkau berusia &amp;ldquo;;&lt;br /&gt;&amp;nbsp; cout &amp;lt;&amp;lt; umur &amp;lt;&amp;lt; &amp;ldquo; dan kau berjenis kelamin &amp;ldquo;&amp;lt;&amp;lt; jenisKelamin;&lt;br /&gt;&amp;nbsp;&lt;br /&gt;&amp;nbsp; return 0;&lt;br /&gt;&lt;br /&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;2. Kompilasi &lt;/h3&gt;Kompilasi program dengan perintah ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;g++ variabel.cpp -o variabel&lt;/code&gt;&lt;/pre&gt;Kemudian eksekusi dengan perintah ini:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;./variabel&lt;/code&gt;&lt;/pre&gt;Hasilnya:&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-CbExTiJpkfg/VAl3P2vll-I/AAAAAAAAAmQ/H-w0OfK8mDQ/s1600/variabel-tipedata-cpp.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-CbExTiJpkfg/VAl3P2vll-I/AAAAAAAAAmQ/H-w0OfK8mDQ/s400/variabel-tipedata-cpp.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h2&gt;Kesimpulan&lt;/h2&gt;&lt;div&gt;Variabel sangat berguna untuk menampung data sementara di memori. Jenis data yang tersimpan pada variabel disebut tipe data. Secara umum, tipe data pada C++ dikelompokkan menjadi lima yaitu: angka (&lt;i&gt;integer&lt;/i&gt;, &lt;i&gt;float&lt;/i&gt;), teks (&lt;i&gt;char&lt;/i&gt;, &lt;i&gt;string&lt;/i&gt;), &lt;i&gt;boolean&lt;/i&gt;, &lt;i&gt;void&lt;/i&gt; dan &lt;i&gt;pointer&lt;/i&gt;.&lt;/div&gt;&lt;/p&gt;
-</description>
+      <description>Apa itu Variabel dan Tipe Data?Variabel merupakan sebuah nama lokasi penyimpanan di memori. Variabel berperan sebagai wadah, tempat menyimpan data sementara. Data yang tersimpan di dalam variabel memiliki jenis yang beragam. Jenis-jenis data itu, disebut tipe data. Pada umumnya tipe data di permograman C++, dikelompokkan menjadi lima macam, tipe data teks, angka atau bilangan, boolean, pointer, dan void. Tipe data teks terdiri dari string dan char. Sementara tipe data angka terdiri dari int (integer), float, double, dsb.</description>
     </item>
     
     <item>
@@ -25,106 +27,11 @@
       <pubDate>Sun, 31 Aug 2014 11:50:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-cpp-di-linux/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1M/4FHFLahyFoU/s1600/cpp.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1M/4FHFLahyFoU/s1600/cpp.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Bahasa pemrograman C++ merupakan bahasa pengembangan dari bahasa C.
-Kita membutuhkan alat-alat berikut untuk melakukan pemrograman C++ di linux:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Teks Editor: Sebagai tempat menulis kode&lt;/li&gt;
-&lt;li&gt;Kompilator &lt;code&gt;g++&lt;/code&gt; : Program yang menerjemahkan bahasa C++ menjadi bahasa mesin (executable).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;membuat-program-salam&#34;&gt;Membuat program salam&lt;/h1&gt;
-
-&lt;p&gt;Program salam yang umum menggunakan&lt;/p&gt;
-
-&lt;p&gt;&lt;samp&gt;Hello World&lt;/samp&gt;&lt;/p&gt;
-
-&lt;p&gt;. Salam tersebut terdengar kurang terlalu &lt;em&gt;mainstream&lt;/em&gt; di dunia pemrograman. Oleh karena itu, Saya akan mengajak Anda menggunakan&lt;/p&gt;
-
-&lt;p&gt;&lt;samp&gt;Assalamualaikum&lt;/samp&gt;&lt;/p&gt;
-
-&lt;p&gt;saja.&lt;/p&gt;
-
-&lt;h2 id=&#34;langkah-1-buka-teks-editor&#34;&gt;Langkah 1: Buka teks editor&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-VvTWqAkHMQU/VAKWEJpZSeI/AAAAAAAAAk4/74ro4nGp9ms/s1600/Scratch_004.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-VvTWqAkHMQU/VAKWEJpZSeI/AAAAAAAAAk4/74ro4nGp9ms/s1600/Scratch_004.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;langkah-2-ketik-kode-ini&#34;&gt;Langkah 2: Ketik kode ini&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
-using namespace std;
-
-int main(){
-cout &amp;lt;&amp;lt; “Assalamualaikum” &amp;lt;&amp;lt; endl;
-return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;langkah-3-simpan-kode&#34;&gt;Langkah 3: Simpan kode&lt;/h2&gt;
-
-&lt;p&gt;Simpan dengan nama&lt;/p&gt;
-
-&lt;p&gt;&lt;samp&gt;salam.cpp&lt;/samp&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-K6X98khsRlc/VAKW5U1G3mI/AAAAAAAAAlA/vq_UkBwCouQ/s1600/Simpan-kode.png&#34;&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-K6X98khsRlc/VAKW5U1G3mI/AAAAAAAAAlA/vq_UkBwCouQ/s1600/Simpan-kode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;langkah-4-kompilasi-kode&#34;&gt;Langkah 4: Kompilasi kode&lt;/h2&gt;
-
-&lt;p&gt;Buka terminal dengan menekan kombinasi tombol&lt;/p&gt;
-
-&lt;p&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;&lt;/p&gt;
-
-&lt;p&gt;+&lt;/p&gt;
-
-&lt;p&gt;&lt;kbd&gt;Alt&lt;/kbd&gt;&lt;/p&gt;
-
-&lt;p&gt;+&lt;/p&gt;
-
-&lt;p&gt;&lt;kbd&gt;T&lt;/kbd&gt;&lt;/p&gt;
-
-&lt;p&gt;. Arahkan ke lokasi kode&lt;/p&gt;
-
-&lt;p&gt;&lt;samp&gt;salam.cpp&lt;/samp&gt;&lt;/p&gt;
-
-&lt;p&gt;tersimpan. Kompilasi kode dengan mengetik perintah di bawah ini:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;g++ salam.cpp -o salam
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-JJHwIcRyvI0/VAKX5PmPgVI/AAAAAAAAAlM/uhp9TlGE-bY/s1600/Compile-Cpp-in-ElementaryOS.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-JJHwIcRyvI0/VAKX5PmPgVI/AAAAAAAAAlM/uhp9TlGE-bY/s1600/Compile-Cpp-in-ElementaryOS.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
-Bila kompilasi berhasil, akan tercipta berkas baru bernama&lt;/p&gt;
-
-&lt;p&gt;&lt;samp&gt;salam&lt;/samp&gt;&lt;/p&gt;
-
-&lt;p&gt;. Berkas tersebut adalah berkas biner (&lt;em&gt;binary&lt;/em&gt;) yang dapat dieksekusi.
-&lt;a href=&#34;http://3.bp.blogspot.com/-A53GIIKmgrY/VAKYF1YXVjI/AAAAAAAAAlU/XHMKdY1mB8U/s1600/Home_elementaryOS_program_salam.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-A53GIIKmgrY/VAKYF1YXVjI/AAAAAAAAAlU/XHMKdY1mB8U/s1600/Home_elementaryOS_program_salam.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;langkah-5-eksekusi-program&#34;&gt;Langkah 5: Eksekusi Program&lt;/h2&gt;
-
-&lt;p&gt;Eksekusi berkas&lt;/p&gt;
-
-&lt;p&gt;&lt;samp&gt;salam&lt;/samp&gt;&lt;/p&gt;
-
-&lt;p&gt;dengan perintah:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;./salam
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Maka, hasil outputnya akan menampilkan ucapan &amp;lsquo;&lt;/p&gt;
-
-&lt;p&gt;&lt;samp&gt;Assalamualaikum&lt;/samp&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;rsquo;. Kode program sudah berhasil dieksekusi.
-&lt;a href=&#34;http://1.bp.blogspot.com/-AYwlvwuvI10/VAKZWnDCQuI/AAAAAAAAAlk/GpFT2RuLMQY/s1600/menjalankan-program.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-AYwlvwuvI10/VAKZWnDCQuI/AAAAAAAAAlk/GpFT2RuLMQY/s1600/menjalankan-program.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Pemrograman C++ di linux hanya membutuhkan dua alat, yaitu teks editor dan kompilator. Teks editor bisa menggunakan teks editor apa saja. Selain teks editor, anda juga bisa menggunakan IDE seperti CodeBlocks dan &lt;a href=&#34;http://petanikode.blogspot.com/2015/02/panduan-instalasi-qt-di-linux.html&#34;&gt;Qt Creator&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Bahasa pemrograman C++ merupakan bahasa pengembangan dari bahasa C. Kita membutuhkan alat-alat berikut untuk melakukan pemrograman C++ di linux:
+ Teks Editor: Sebagai tempat menulis kode Kompilator g++ : Program yang menerjemahkan bahasa C++ menjadi bahasa mesin (executable).  Membuat program salam Program salam yang umum menggunakan
+Hello World
+. Salam tersebut terdengar kurang terlalu mainstream di dunia pemrograman. Oleh karena itu, Saya akan mengajak Anda menggunakan
+Assalamualaikum</description>
     </item>
     
   </channel>

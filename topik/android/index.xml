@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Android on Petani Kode — Programmer Pengguna Linux</title>
-    <link>https://www.petanikode.com/topik/android/index.xml</link>
+    <link>https://www.petanikode.com/topik/android/</link>
     <description>Recent content in Android on Petani Kode — Programmer Pengguna Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <atom:link href="https://www.petanikode.com/topik/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jun 2017 16:52:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/android/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Pemrograman Android dengan Kotlin Extensions (Lebih Cepat!)</title>
@@ -15,233 +18,12 @@
       <pubDate>Wed, 21 Jun 2017 16:52:41 +0800</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-android-kotlin-extensions/</guid>
-      <description>
-
-&lt;p&gt;Pada tulisan sebelumnya, kita telah berhasil &lt;a href=&#34;https://www.petanikode.com/pemrograman-android-dengan-kotlin&#34;&gt;menginstal plugin
-Kotlin pada Android Studio 2.x&lt;/a&gt;,
-sehingga kita dapat menggunakan kotlin di sana.&lt;/p&gt;
-
-&lt;p&gt;Pemrograman Android dengan Kotlin memang masih baru.&lt;/p&gt;
-
-&lt;p&gt;Kemarin saya mencoba membuat kode untuk &lt;em&gt;event listener&lt;/em&gt; &lt;code&gt;onClick()&lt;/code&gt;,
-tapi malah error. Aplikasi tidak bisa dibuka dan langsung menutup dirinya.&lt;/p&gt;
-
-&lt;p&gt;Pesan error pun tidak ditapilkan di Android Studio.&lt;/p&gt;
-
-&lt;p&gt;Namun, masalah ini sudah terpecahkan oleh &lt;em&gt;Kotlin Extension&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;apa-itu-kotlin-extensions&#34;&gt;Apa itu &lt;em&gt;Kotlin Extensions&lt;/em&gt;?&lt;/h2&gt;
-
-&lt;p&gt;Pernah menggunakan fungsi &lt;code&gt;findViewById()&lt;/code&gt;?&lt;/p&gt;
-
-&lt;p&gt;Fungsi ini tugasnya untuk memilih komponen yang ada di layout
-untuk dijadikan objek pada Java.
-Mirip seperti fungsi &lt;code&gt;getElementById()&lt;/code&gt; pada Javascript.&lt;/p&gt;
-
-&lt;p&gt;Pada Kotlin, kita tidak lagi menggunakan fungsi &lt;code&gt;findViewById()&lt;/code&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Karena menurut mereka (Dok. Kotlin):&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Fungsi tersebut berpotensi menimbulkan &lt;em&gt;bugs&lt;/em&gt; dan membuat kode jadi susah dibaca&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;(Pantes saja aplikasi saya error dan tidak bisa dibuka :smile:)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Kotlin memberikan terobosan dengan &lt;em&gt;plugin Kotlin Extensions&lt;/em&gt;,
-sehingga programmer tidak lagi menghabiskan energi dan
-waktunya untuk mengetik fungsi &lt;code&gt;findViewById()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;in&#34; dir=&#34;ltr&#34;&gt;Kotlin membuatnya jadi lebih sederhana&amp;hellip; no more findViewById() 👨‍💻 &lt;a href=&#34;https://t.co/31D53qHu03&#34;&gt;pic.twitter.com/31D53qHu03&lt;/a&gt;&lt;/p&gt;&amp;mdash; Petani Kode (@petanikode) &lt;a href=&#34;https://twitter.com/petanikode/status/877467306921664513&#34;&gt;June 21, 2017&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Bagaimana cara menggunakan &lt;em&gt;Kotlin Extensions&lt;/em&gt;?&lt;/p&gt;
-
-&lt;p&gt;Mari kita bahas dengan praktik&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;membuat-proyek-aplikasi-android&#34;&gt;Membuat Proyek Aplikasi Android&lt;/h2&gt;
-
-&lt;p&gt;Kita gunakan saja proyek yang kemarin. Bila kamu sudah punya proyeknya, silahkan
-langsung lompat ke &lt;a href=&#34;#menambahkan-kotlin-ekstension-pada-proyek-aplikasi&#34;&gt;cara menambahkan kotlin extension di proyek android&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Tapi kalau belum, sialkan dibuat.&lt;/p&gt;
-
-&lt;p&gt;Buka Android Studio dan buat proyek baru.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/1.buat-proyek-android.png&#34; alt=&#34;Membuat proyek baru di android studio&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Lalu tentukan minimum SDK-nya,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/2.pilih-sdk.png&#34; alt=&#34;Memilih minimum SDK untuk Aplikasi Android&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kemudian pilih &lt;em&gt;Activity&lt;/em&gt; yang ingin digunakan. Pilih saja &lt;strong&gt;Empty Activity&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/3.pilih-activity.png&#34; alt=&#34;Memilih Jenis Activity Awal&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, pada pemberian nama Activity, biarkan saja apa adanya.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/4.nama-activity.png&#34; alt=&#34;Memberikan nama Activity&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Klik &lt;strong&gt;Finish&lt;/strong&gt;, dan proyek baru kita akan langsung dibuat.&lt;/p&gt;
-
-&lt;h2 id=&#34;konfigurasi-proyek-kotlin&#34;&gt;Konfigurasi Proyek Kotlin&lt;/h2&gt;
-
-&lt;p&gt;Kita belum dapat menggunakan Kotlin pada proyek yang baru saja kita buat,
-karena masih menggunakan Java.&lt;/p&gt;
-
-&lt;p&gt;Oleh karena itu, Kita perlu melakukan sedikit konfigurasi untuk memberitahu Android Studio
-bahwa kita ingin pakai Kotlin pada proyek ini.&lt;/p&gt;
-
-&lt;p&gt;Silahkan buka menu &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Kotlin&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Configure Kotlin in Project&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/menu-konfigurasi-kotlin.png&#34; alt=&#34;Menu konfigurasi proyek kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kemudian pilih versi kompilator Kotlin yang ingin digunakan.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/pilih-compiler.png&#34; alt=&#34;Menentukan versi kompilator kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, akan muncul pesan notifikasi bila konfigurasi berhasil.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/konfigurasi-sukses.png&#34; alt=&#34;Pesan Konfigurasi kotlin sukses&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;konversi-kode-java-menjadi-kotlin&#34;&gt;Konversi Kode Java Menjadi Kotlin&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka kode &lt;code&gt;MainActivity.java&lt;/code&gt;, Kemudian masuk ke menu &lt;strong&gt;Help&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Find Actions&lt;/strong&gt;
-atau tekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;A&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/find-action.png&#34; alt=&#34;Fitur Find Actions Android Studio&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, silahkan cari aksi dengan kata kunci &lt;strong&gt;&lt;em&gt;&amp;ldquo;Convert Java to&amp;rdquo;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/konversi-file-java-ke-kotlin.png&#34; alt=&#34;Cari Aksi untuk konversi Java ke Kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada hasil yang muncul, tekan Enter pada &lt;strong&gt;&lt;em&gt;&amp;ldquo;Covert Java File to Kotlin File&amp;rdquo;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Tunggu beberapa detik, dan file &lt;code&gt;MainActivity.java&lt;/code&gt; akan segera berubah menjadi
-&lt;code&gt;MainActivity.kt&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;menambahkan-kotlin-ekstension-pada-proyek-aplikasi&#34;&gt;Menambahkan Kotlin Ekstension pada Proyek Aplikasi&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka file &lt;code&gt;build.gradle&lt;/code&gt; (app), kemudian tambahkan kode berikut.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;apply plugin: &#39;kotlin-android-extensions&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tambahkan dibagian atas:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin-ext/add-kotlin-extension.png&#34; alt=&#34;Menambahkan plugin android extensions pada proyek android&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu lakukan &lt;code&gt;sync&lt;/code&gt; proyek agar tidak error. Buka menu &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Android&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Sync Project with Gradle Files&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;menggunakan-kotlin-extension&#34;&gt;Menggunakan &lt;em&gt;Kotlin Extension&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;Setelah proses &lt;code&gt;sync&lt;/code&gt; selesai, sekarang kita bisa menggunakan
-&lt;em&gt;Kotlin Extensions&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Silahkan buka file &lt;code&gt;MainActivity.kt&lt;/code&gt;, tambahkan kode berikut untuk mengimpor
-libaray dari &lt;em&gt;Kotlin Extensions&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-kotlin&#34;&gt;import kotlinx.android.synthetic.main.activity_main.*
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Artinya kita akan mengimpor semua komponen di &lt;code&gt;activity_main.xml&lt;/code&gt; dan langsung
-dijadikan objek tanpa harus menggunakan fungsi &lt;code&gt;findViewById()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sebagai contoh, kita coba buat fungsi untuk meng-handle &lt;em&gt;event onClick&lt;/em&gt;
-bernama &lt;code&gt;ucapSalam()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;File &lt;code&gt;MainActivity.kt&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-kotlin&#34;&gt;package com.petanikode.cobakotlin
-
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import android.view.View
-import kotlinx.android.synthetic.main.activity_main.*
-
-class MainActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-
-    fun ucapSalam(v: View?): Unit {
-        welcome_msg.setText(&amp;quot;Selamat datang di Kotlin!&amp;quot;)
-    }
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu buka &lt;code&gt;activity_main.xml&lt;/code&gt; kemudian tambahkan sebuah &lt;code&gt;Button&lt;/code&gt;
-dan isi properti &lt;code&gt;onClick&lt;/code&gt; dengan nama fungsinya, yaitu: &lt;code&gt;ucapSalam&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin-ext/event-onclick.png&#34; alt=&#34;Properti untuk event onClick Button&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Lalu &lt;code&gt;TextView&lt;/code&gt; di atasnya, kita ganti &lt;code&gt;id&lt;/code&gt;-nya menjadi &lt;code&gt;welcome_msg&lt;/code&gt;.
-Kode lengkap layout-nya seperti ini:&lt;/p&gt;
-
-&lt;p&gt;File &lt;code&gt;activity_main.xml&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
-&amp;lt;RelativeLayout xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
-    xmlns:tools=&amp;quot;http://schemas.android.com/tools&amp;quot;
-    android:id=&amp;quot;@+id/activity_main&amp;quot;
-    android:layout_width=&amp;quot;match_parent&amp;quot;
-    android:layout_height=&amp;quot;match_parent&amp;quot;
-    android:paddingBottom=&amp;quot;@dimen/activity_vertical_margin&amp;quot;
-    android:paddingLeft=&amp;quot;@dimen/activity_horizontal_margin&amp;quot;
-    android:paddingRight=&amp;quot;@dimen/activity_horizontal_margin&amp;quot;
-    android:paddingTop=&amp;quot;@dimen/activity_vertical_margin&amp;quot;
-    tools:context=&amp;quot;com.petanikode.cobakotlin.MainActivity&amp;quot;&amp;gt;
-
-    &amp;lt;TextView
-        android:layout_width=&amp;quot;wrap_content&amp;quot;
-        android:layout_height=&amp;quot;wrap_content&amp;quot;
-        android:text=&amp;quot;Hello World!&amp;quot;
-        android:id=&amp;quot;@+id/welcome_msg&amp;quot; /&amp;gt;
-
-    &amp;lt;Button
-        android:text=&amp;quot;Button&amp;quot;
-        android:layout_width=&amp;quot;wrap_content&amp;quot;
-        android:layout_height=&amp;quot;wrap_content&amp;quot;
-        android:layout_below=&amp;quot;@+id/welcome_msg&amp;quot;
-        android:layout_alignParentStart=&amp;quot;true&amp;quot;
-        android:layout_marginTop=&amp;quot;52dp&amp;quot;
-        android:id=&amp;quot;@+id/button&amp;quot;
-        android:onClick=&amp;quot;ucapSalam&amp;quot; /&amp;gt;
-
-
-&amp;lt;/RelativeLayout&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sekarang coba jalankan aplikasinya&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin-ext/hasil-running-aplikasi.png&#34; alt=&#34;Aplikasi Android dengan Kotlin Extensions&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Berhasil dan tidak ada error! :smile:&lt;/p&gt;
-
-&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;Kode Kotlin terlihat lebih sederhana dan mudah dipahami daripada Java.&lt;/p&gt;
-
-&lt;p&gt;Ditambah lagi dengan &lt;em&gt;Kotlin Extensions&lt;/em&gt; yang membuat kita hemat waktu dan tenaga,
-sehingga dapat membuat aplikasi android dengan lebih cepat.&lt;/p&gt;
-
-&lt;p&gt;Terima kasih sudah mengikuti tutorial ini sampai akhir. Selamat
-bereksperimen dengan Kotlin dan Android.&lt;/p&gt;
-
-&lt;p&gt;Ada kesulitan?&lt;/p&gt;
-
-&lt;p&gt;Tanyakan di komentar!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Dok. Kotlin &amp;mdash; &lt;a href=&#34;https://kotlinlang.org/docs/tutorials/android-plugin.html&#34;&gt;Kotlin Android Extensions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;StackOverflow &amp;mdash; &lt;a href=&#34;https://stackoverflow.com/q/40885426/2658551&#34;&gt;Kotlin in xml onClick not work&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Pada tulisan sebelumnya, kita telah berhasil menginstal plugin Kotlin pada Android Studio 2.x, sehingga kita dapat menggunakan kotlin di sana.
+Pemrograman Android dengan Kotlin memang masih baru.
+Kemarin saya mencoba membuat kode untuk event listener onClick(), tapi malah error. Aplikasi tidak bisa dibuka dan langsung menutup dirinya.
+Pesan error pun tidak ditapilkan di Android Studio.
+Namun, masalah ini sudah terpecahkan oleh Kotlin Extension.
+Apa itu Kotlin Extensions? Pernah menggunakan fungsi findViewById()?</description>
     </item>
     
     <item>
@@ -250,178 +32,15 @@ bereksperimen dengan Kotlin dan Android.&lt;/p&gt;
       <pubDate>Sun, 18 Jun 2017 17:13:53 +0800</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-android-dengan-kotlin/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/android-kotlin.png&#34; alt=&#34;Pemrograman Android dengan Menggunakan Bahasa Pemrograman Kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Android Studio yang saya gunakan masih versi 2.2 dan rasanya agak malas mencoba
-Android Studio yang versi 3.0, karana masih tahap &lt;em&gt;preview&lt;/em&gt;.&lt;/p&gt;
-
-&lt;!-- @TODO update jika android 3.0 sudah resmi dirilis --&gt;
-
-&lt;p&gt;Tapi saya ingin segera mencoba &lt;em&gt;coding&lt;/em&gt; aplikasi android dengan Kotlin.&lt;/p&gt;
-
-&lt;p&gt;Bagaimana caranya?&lt;/p&gt;
-
-&lt;p&gt;Gampang.&lt;/p&gt;
-
-&lt;p&gt;Kita hanya perlu menginstal plugin Kotlin dan melakan sedikit konfigurasi.&lt;/p&gt;
-
-&lt;p&gt;Mari kita coba&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;buat-proyek-baru&#34;&gt;Buat Proyek Baru&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka Android Studio dan buat proyek baru.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/1.buat-proyek-android.png&#34; alt=&#34;Membuat proyek baru di android studio&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Lalu tentukan minimum SDK-nya,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/2.pilih-sdk.png&#34; alt=&#34;Memilih minimum SDK untuk Aplikasi Android&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kemudian pilih &lt;em&gt;Activity&lt;/em&gt; yang ingin digunakan. Pilih saja &lt;strong&gt;Empty Activity&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/3.pilih-activity.png&#34; alt=&#34;Memilih Jenis Activity Awal&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, pada pemberian nama Activity, biarkan saja apa adanya.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/4.nama-activity.png&#34; alt=&#34;Memberikan nama Activity&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Klik &lt;strong&gt;Finish&lt;/strong&gt;, dan proyek baru kita akan langsung dibuat.&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya kita akan melakukan instalasi plugin Kotlin.&lt;/p&gt;
-
-&lt;h2 id=&#34;instalasi-plugin-kotlin-di-android-studio&#34;&gt;Instalasi Plugin Kotlin di Android Studio&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka menu &lt;strong&gt;File&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Settings&lt;/strong&gt; atau tekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;Alt&lt;/code&gt;+&lt;code&gt;s&lt;/code&gt;,
-kemudian masuk ke &lt;strong&gt;Plugins&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/settings-plugin.png&#34; alt=&#34;Setting Plugin android stdio&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Cari plugin dengan kata kunci &amp;ldquo;kotlin&amp;rdquo;. Kalau tidak ketemu, klik &lt;strong&gt;&amp;ldquo;Search in repositories&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(Tindakan ini membutuhkan koneksi internet, pastikan komputer kamu terhubung dengan internet)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah ketemu, silahkan pilih &lt;strong&gt;&amp;ldquo;Kotlin&amp;rdquo;&lt;/strong&gt; &lt;em&gt;(Languages)&lt;/em&gt;, kemudian klik install.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/install-plugin.png&#34; alt=&#34;Install Plugin kotlin di android stdio&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tunggulah beberapa saat&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Setelah selesai diinstal, kita akan diminta untuk me-restart Android Studio.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/restart-android-studio.png&#34; alt=&#34;restart android stdio&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Silahkan di-restart dan mari kita mulai membuat aplikasi Android dengan Kotlin.&lt;/p&gt;
-
-&lt;h2 id=&#34;konfigurasi-proyek-kotlin&#34;&gt;Konfigurasi Proyek Kotlin&lt;/h2&gt;
-
-&lt;p&gt;Kita belum dapat menggunakan Kotlin pada proyek yang baru saja kita buat,
-karena masih menggunakan Java.&lt;/p&gt;
-
-&lt;p&gt;Oleh karena itu, Kita perlu melakukan sedikit konfigurasi untuk memberitahu Android Studio
-bahwa kita ingin pakai Kotlin pada proyek ini.&lt;/p&gt;
-
-&lt;p&gt;Silahkan buka menu &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Kotlin&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Configure Kotlin in Project&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/menu-konfigurasi-kotlin.png&#34; alt=&#34;Menu konfigurasi proyek kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kemudian pilih versi kompilator Kotlin yang ingin digunakan.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/pilih-compiler.png&#34; alt=&#34;Menentukan versi kompilator kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, akan muncul pesan notifikasi bila konfigurasi berhasil.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/konfigurasi-sukses.png&#34; alt=&#34;Pesan Konfigurasi kotlin sukses&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;konversi-kode-java-menjadi-kotlin&#34;&gt;Konversi Kode Java Menjadi Kotlin&lt;/h2&gt;
-
-&lt;p&gt;Silahkan buka kode &lt;code&gt;MainActivity.java&lt;/code&gt;, Kemudian masuk ke menu &lt;strong&gt;Help&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Find Actions&lt;/strong&gt;
-atau tekan tombol &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;A&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/find-action.png&#34; alt=&#34;Fitur Find Actions Android Studio&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, silahkan cari aksi dengan kata kunci &lt;strong&gt;&lt;em&gt;&amp;ldquo;Convert Java to&amp;rdquo;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/konversi-file-java-ke-kotlin.png&#34; alt=&#34;Cari Aksi untuk konversi Java ke Kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada hasil yang muncul, tekan Enter pada &lt;strong&gt;&lt;em&gt;&amp;ldquo;Covert Java File to Kotlin File&amp;rdquo;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Tunggu beberapa detik, dan file &lt;code&gt;MainActivity.java&lt;/code&gt; akan segera berubah menjadi
-&lt;code&gt;MainActivity.kt&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/main-activity-kotlin.png&#34; alt=&#34;Hasil konversi ke Kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;MainActivity.java&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.petanikode.cobakotlin;
-
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;MainActivity.kt&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-kotlin&#34;&gt;package com.petanikode.cobakotlin
-
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-
-class MainActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah berhasil dikonversi, jangan lupa untuk &lt;code&gt;sync&lt;/code&gt; proyeknya untuk
-memastikan proyek kita sudah lengkap dan dapat berjalan dengan baik.&lt;/p&gt;
-
-&lt;p&gt;Masuk ke &lt;strong&gt;Tools&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Android&lt;/strong&gt;-&amp;gt;&lt;strong&gt;Sync Project with Gradle Files&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Tunggu beberapa saat sampai selesai&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;uji-coba-aplikasi-android&#34;&gt;Uji coba Aplikasi Android&lt;/h2&gt;
-
-&lt;p&gt;Kita tidak melakukan perubahan apapun pada aplikasi pertama ini. Silahkan
-langsung saja di-run!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.petanikode.com/img/android/kotlin/uji-coba-app-android-kotlin.png&#34; alt=&#34;Ujicoba aplikasi Android dengan Kotlin&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Bila aplikasi berhasil tampil pada emulator seperti pada gambar di atas&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Maka Selamat!  Aplikasi pertama kita berhasil di-deploy tanpa error :smile:.&lt;/p&gt;
-
-&lt;h2 id=&#34;akhir-kata&#34;&gt;Akhir Kata&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;Terima kasih sudah mengikuti tutorial ini sampai akhir.&lt;/p&gt;
-
-&lt;p&gt;Pemrograman Android dengan kotlin memang masih baru.
-Ada beberapa error yang saya dapatkan dan belum tahu cara mengatasinya.&lt;/p&gt;
-
-&lt;p&gt;Mungkin sebaiknya kita tunggu saja Android Studio 3.0 yang sudah resmi
-mendukung Kotlin.&lt;/p&gt;
-
-&lt;p&gt;Untuk saat ini kita pakai &lt;a href=&#34;https://www.petanikode.com/topik/java&#34;&gt;Java&lt;/a&gt; saja&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Referensi&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Dokumentasi Kotlin &amp;mdash; &lt;a href=&#34;https://kotlinlang.org/docs/tutorials/kotlin-android.html&#34;&gt;Getting started with Android and Kotlin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Medium Juan Ignacio Saravia &amp;mdash; &lt;a href=&#34;https://android.jlelse.eu/learn-kotlin-while-developing-an-android-app-part-1-e0f51fc1a8b3&#34;&gt;Keddit — Part 1: Configuring Android Studio with Kotlin&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Android Studio yang saya gunakan masih versi 2.2 dan rasanya agak malas mencoba Android Studio yang versi 3.0, karana masih tahap preview.
+Tapi saya ingin segera mencoba coding aplikasi android dengan Kotlin.
+Bagaimana caranya?
+Gampang.
+Kita hanya perlu menginstal plugin Kotlin dan melakan sedikit konfigurasi.
+Mari kita coba&amp;hellip;
+Buat Proyek Baru Silahkan buka Android Studio dan buat proyek baru.
+Lalu tentukan minimum SDK-nya,
+Kemudian pilih Activity yang ingin digunakan. Pilih saja Empty Activity.</description>
     </item>
     
     <item>
@@ -430,153 +49,12 @@ mendukung Kotlin.&lt;/p&gt;
       <pubDate>Thu, 28 Apr 2016 06:54:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-android-di-linux-dengan-eclipse/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://4.bp.blogspot.com/-whVGzAqrug0/VyE_fQ3y3pI/AAAAAAAACxY/XkZcdOHA2ZQymp-yJ90WzBSaR4CAkV0IgCLcB/s1600/Pemrograman%2BAndroid%2BEclipse%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-whVGzAqrug0/VyE_fQ3y3pI/AAAAAAAACxY/XkZcdOHA2ZQymp-yJ90WzBSaR4CAkV0IgCLcB/s1600/Pemrograman%2BAndroid%2BEclipse%2BPetani%2BKode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Awalnya Google menggunakan Eclipse sebagai IDE untuk pengembangan Android.
-Kemudian beralih ke Android Studio.&lt;/p&gt;
-
-&lt;p&gt;Eclipse memang lebih ringan daripada Android Studio, akan tetapi Eclipse
-tidak lagi didukung oleh Google.&lt;/p&gt;
-
-&lt;p&gt;Namun tidak ada salahanya menggunakan Eclipse untuk membuat aplikasi Android.&lt;/p&gt;
-
-&lt;p&gt;Bila kamu ingin mencobanya, silahkan ikuti langkah-langkah berikut
-untuk melakukan perisapan.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-install-jdk&#34;&gt;1. Install JDK&lt;/h2&gt;
-
-&lt;p&gt;JDK &lt;em&gt;(Java Development Kit)&lt;/em&gt; merupakan peralatan dasar yang dibutuhkan untuk
-pemrograman Java.&lt;/p&gt;
-
-&lt;p&gt;Karena aplikasi Android menggunakan bahasa pemrograman Java, maka kita perlu
-menginstal JDK.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cara instal JDK di Linux:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;JDK versi 7:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt-get install openjdk-7-jdk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;JDK versi 8:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt-get install openjdk-8-jdk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;* pilih salah satu&lt;/p&gt;
-
-&lt;h2 id=&#34;2-instal-eclipse&#34;&gt;2. Instal Eclipse&lt;/h2&gt;
-
-&lt;p&gt;Silahkan instal Eclipse dengan perintah berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt-get install eclipse
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;3-install-android-sdk&#34;&gt;3. Install Android SDK&lt;/h2&gt;
-
-&lt;p&gt;Android SDK adalah peralatan penting yang harus di persiapkan dalam pemrograman Android.
-Karena Android SDK menyediakan API dan tools yang kita perlukan untuk pembuatan aplikasi.&lt;/p&gt;
-
-&lt;p&gt;Silahkan baca &lt;a href=&#34;https://www.petanikode.com/cara-instal-android-sdk-dan-ndk&#34;&gt;Cara Install Android SDK dan NDK di Linux&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;4-update-android-sdk&#34;&gt;4. Update Android SDK&lt;/h2&gt;
-
-&lt;p&gt;Setelah Android SDK terinstal, lakukan update untuk mendapatkan API versi terbaru.&lt;/p&gt;
-
-&lt;p&gt;Gunakan perintah berikut untuk membuka update manager Android SDK.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;android update sdk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;5-buat-emulator&#34;&gt;5. Buat Emulator&lt;/h2&gt;
-
-&lt;p&gt;Setelah semuanya terupdate, sekarang buat sebuah emulator baru.&lt;/p&gt;
-
-&lt;p&gt;Emulator fungsinya untuk menjalankan aplikasi Android.&lt;/p&gt;
-
-&lt;p&gt;Gunakan perintah berikut untuk membuat emulator:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;android avd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;6-install-plugin-adt&#34;&gt;6. Install Plugin ADT&lt;/h2&gt;
-
-&lt;p&gt;ADT &lt;em&gt;(Android Development Tool)&lt;/em&gt; merupakan plug-in yang diperlukan di Eclipse
-agar dapat digunakan untuk pemrograman Android.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini cara instal Plug-in ADT di Eclipse:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Buka Eclipse&lt;/li&gt;
-&lt;li&gt;Masuk ke menu &lt;em&gt;Help&amp;gt;Instal New Software&amp;hellip;&lt;/em&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Tambahkan Alamat Repositori ADT: &lt;a href=&#34;https://dl-ssl.google.com/android/eclipse/&#34;&gt;https://dl-ssl.google.com/android/eclipse/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-ZS6dsYqZgYY/Vw-JsRo48pI/AAAAAAAACr4/oc5rGiz9nGMHyS9-hs5rIqaBNbWRvAFBgCK4B/s1600/Tambahkan%2Balamat%2Brepostitori%2Bplugin%2BADT.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-ZS6dsYqZgYY/Vw-JsRo48pI/AAAAAAAACr4/oc5rGiz9nGMHyS9-hs5rIqaBNbWRvAFBgCK4B/s1600/Tambahkan%2Balamat%2Brepostitori%2Bplugin%2BADT.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Pilih semua kemudian klik &lt;em&gt;Next.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-N4w0emO3X7Y/Vw-J9k8cKmI/AAAAAAAACsA/KCXoIL9YDiMNQ7lqAuI80aGDsF5hpqRLQCK4B/s1600/Detail%2Binstalasi%2Bplugin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Klik &lt;em&gt;Next.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-EvaWoB8U5oo/Vw-KczeGN_I/AAAAAAAACsM/_RAxgmZXOsEwY-BcobIMCEDqpxJ2aDPHgCK4B/s1600/adt%2B3%2B-%2Bdetail%2Binstalasi.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-EvaWoB8U5oo/Vw-KczeGN_I/AAAAAAAACsM/_RAxgmZXOsEwY-BcobIMCEDqpxJ2aDPHgCK4B/s1600/adt%2B3%2B-%2Bdetail%2Binstalasi.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Pilih &lt;em&gt;&amp;ldquo;I accept the term..&amp;rdquo;&lt;/em&gt;, kemudian klik &lt;em&gt;Next.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-Dah31SsdK8g/Vw-KuXUjLvI/AAAAAAAACsY/UmjalrzUp5oDZqm1M370qEIug9Lvj2eRACK4B/s1600/adt%2B4%2B-%2BKetentuan%2Bdan%2Bpersetujuan.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-Dah31SsdK8g/Vw-KuXUjLvI/AAAAAAAACsY/UmjalrzUp5oDZqm1M370qEIug9Lvj2eRACK4B/s1600/adt%2B4%2B-%2BKetentuan%2Bdan%2Bpersetujuan.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Klik &lt;em&gt;OK&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-rsOQEeNq_r4/Vw-K8eaogXI/AAAAAAAACsg/QlN-wJ2JJYwhf6wDDtt1JJN9-3GUkxbfACK4B/s1600/adt%2B5%2B-%2BKonfirmasi%2Bkeamanan.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-rsOQEeNq_r4/Vw-K8eaogXI/AAAAAAAACsg/QlN-wJ2JJYwhf6wDDtt1JJN9-3GUkxbfACK4B/s1600/adt%2B5%2B-%2BKonfirmasi%2Bkeamanan.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Klik &lt;em&gt;OK&lt;/em&gt; untuk membuka kembali Eclipse&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-qFO9_y2FS7A/Vw-LGhUYdpI/AAAAAAAACss/vGIfb4wQqRga2pbPJ7GNL5b0EpWNWNOtgCK4B/s1600/adt%2B6%2B-%2Binstalasi%2Bselesai.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-qFO9_y2FS7A/Vw-LGhUYdpI/AAAAAAAACss/vGIfb4wQqRga2pbPJ7GNL5b0EpWNWNOtgCK4B/s1600/adt%2B6%2B-%2Binstalasi%2Bselesai.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;7-tes-proyek&#34;&gt;7. Tes Proyek&lt;/h2&gt;
-
-&lt;p&gt;Buka Eclipse, buat sebuah proyek baru.&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, masuk ke menu &lt;em&gt;File&amp;gt;New&amp;gt;Other&lt;/em&gt; kemudian pilih &lt;em&gt;Android Application project.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-e1dNBty7v5E/Vw-MlG0OQtI/AAAAAAAACs8/fUQXvkH_T6MmtkHU2s4FMbb8ABs0tZnjACK4B/s1600/proyek%2B-%2BBuat%2Bproyek%2Bbaru.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-e1dNBty7v5E/Vw-MlG0OQtI/AAAAAAAACs8/fUQXvkH_T6MmtkHU2s4FMbb8ABs0tZnjACK4B/s1600/proyek%2B-%2BBuat%2Bproyek%2Bbaru.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Kemudian isi keterangan data proyek:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-z4jYkgQPbWM/Vw-Mz-II50I/AAAAAAAACtE/3QMe64wWdjY3XNw44-iCUFNsKK6SxzBrwCK4B/s1600/proyek%2B-%2Bketerangan%2Bdata%2Bproyek.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-z4jYkgQPbWM/Vw-Mz-II50I/AAAAAAAACtE/3QMe64wWdjY3XNw44-iCUFNsKK6SxzBrwCK4B/s1600/proyek%2B-%2Bketerangan%2Bdata%2Bproyek.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Lalu, tentukan lokasi dan ikon aplikasi, setelah itu klik &lt;em&gt;Next.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-dv-xco6533s/Vw-NFahuo9I/AAAAAAAACtM/Swhz4BFrPMUrQTzqqsgkq1kpGqOF6fEFgCK4B/s1600/proyek%2B-%2Bkonfigurasi%2Bproyek.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-dv-xco6533s/Vw-NFahuo9I/AAAAAAAACtM/Swhz4BFrPMUrQTzqqsgkq1kpGqOF6fEFgCK4B/s1600/proyek%2B-%2Bkonfigurasi%2Bproyek.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Tentukan ikon, setelah itu klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-KNvRefOelcM/Vw-NMtxdp1I/AAAAAAAACtY/3MgZIiOJ8WcpYHv_Uo0ZI2TszrqLcKbfACK4B/s1600/proyek%2B-%2Bkonfigurasi%2Bikon%2Baplikasi.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-KNvRefOelcM/Vw-NMtxdp1I/AAAAAAAACtY/3MgZIiOJ8WcpYHv_Uo0ZI2TszrqLcKbfACK4B/s1600/proyek%2B-%2Bkonfigurasi%2Bikon%2Baplikasi.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Buat &lt;em&gt;activity&lt;/em&gt;, Pilih saja &lt;em&gt;blank activity&lt;/em&gt;. Kemudian klik &lt;em&gt;Next&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-MW-0VjI7OKw/Vw-NaaZRN0I/AAAAAAAACtk/ZujgA5hq8e88gw-OeHRZDs2UJwh5sfE5QCK4B/s1600/proyek%2B-%2Bmembuat%2Baktivity.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-MW-0VjI7OKw/Vw-NaaZRN0I/AAAAAAAACtk/ZujgA5hq8e88gw-OeHRZDs2UJwh5sfE5QCK4B/s1600/proyek%2B-%2Bmembuat%2Baktivity.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Isi nama &lt;em&gt;activity&lt;/em&gt;, Biarkan saja namanya &lt;em&gt;MainActivity&lt;/em&gt;. Kemudian klik &lt;em&gt;Finish&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-ONLqywZL3Kc/Vw-NljADolI/AAAAAAAACts/_Uop_Nn1vj0hMtBvbXHdzrmYIRl8GdrmACK4B/s1600/proyek%2B-%2Bnama%2Bactivity.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-ONLqywZL3Kc/Vw-NljADolI/AAAAAAAACts/_Uop_Nn1vj0hMtBvbXHdzrmYIRl8GdrmACK4B/s1600/proyek%2B-%2Bnama%2Bactivity.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Proyek pertama sudah jadi.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-yEJF9sUkgpw/Vw-Nsww3r1I/AAAAAAAACt4/WOZo-2x2HxAsFRbHs0SUtHT1B_4dAk5ZQCK4B/s1600/proyek%2B-%2BProyek%2BSedang%2Bdikerjakan.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-yEJF9sUkgpw/Vw-Nsww3r1I/AAAAAAAACt4/WOZo-2x2HxAsFRbHs0SUtHT1B_4dAk5ZQCK4B/s1600/proyek%2B-%2BProyek%2BSedang%2Bdikerjakan.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Klik kanan pada &lt;em&gt;TesProyek&amp;gt;Pilih Run As&amp;gt;Android Application&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-y230elrlXco/Vw-N-_QT4FI/AAAAAAAACuE/-QnmzLLOIbIyHiRm2pzO9Vs7axgRcjq3wCK4B/s1600/proyek%2B-%2BRun%2BProyek%2BAndroid%2Bdi%2BEclipse.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Proyek berhasil di-run pada emulator.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-ZY_3F54_r2Y/Vw-OEh-sjPI/AAAAAAAACuQ/2ksqSTJLz9YoThlcnSXcy3_6XKAN2DmKwCK4B/s1600/Proyek%2BBerhasil%2Bdi%2Brun.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-ZY_3F54_r2Y/Vw-OEh-sjPI/AAAAAAAACuQ/2ksqSTJLz9YoThlcnSXcy3_6XKAN2DmKwCK4B/s1600/Proyek%2BBerhasil%2Bdi%2Brun.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Awalnya Google menggunakan Eclipse sebagai IDE untuk pengembangan Android. Kemudian beralih ke Android Studio.
+Eclipse memang lebih ringan daripada Android Studio, akan tetapi Eclipse tidak lagi didukung oleh Google.
+Namun tidak ada salahanya menggunakan Eclipse untuk membuat aplikasi Android.
+Bila kamu ingin mencobanya, silahkan ikuti langkah-langkah berikut untuk melakukan perisapan.
+1. Install JDK JDK (Java Development Kit) merupakan peralatan dasar yang dibutuhkan untuk pemrograman Java.
+Karena aplikasi Android menggunakan bahasa pemrograman Java, maka kita perlu menginstal JDK.</description>
     </item>
     
     <item>
@@ -585,72 +63,11 @@ agar dapat digunakan untuk pemrograman Android.&lt;/p&gt;
       <pubDate>Sat, 16 Apr 2016 00:51:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-android-periksa-konektivitas-internet/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pengembangan aplikasi yang membutuhkan koneksi internet untuk operasinya,
-perlu melakukan pengecekan terlebih dahulu.&lt;/p&gt;
-
-&lt;p&gt;Contoh sebuah aplikasi yang menreapkan &lt;em&gt;API Google Maps&lt;/em&gt;,
-membutuhkan koneksi internet untuk menampilkan peta.&lt;/p&gt;
-
-&lt;p&gt;Akan tetapi, tidak dilakukan pengecekan koneksi internet.
-Aplikasi pun gagal menampilkan peta dan tampa pesan umpan balik.&lt;/p&gt;
-
-&lt;p&gt;Pengecekan koneksi internet akan membantu kita membuat umpan balik ke pengguna aplikasi.&lt;/p&gt;
-
-&lt;p&gt;Misalkan, ketika user ingin menampilkan peta &lt;em&gt;Google Map&lt;/em&gt;, periksa terlebih
-dahulu koneksi internetnya. Kalau ada koneksi, izinkan untuk membuka &lt;em&gt;activity Google Map&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Berikut ini fungsi atau &lt;em&gt;method&lt;/em&gt; yang dapat digunakan untuk memeriksa
-koneksi internet pengguna.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;private boolean adaInternet(){
-    ConnectivityManager koneksi = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-    return koneksi.getActiveNetworkInfo() != null;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ketika anda mengetik kode fungsi di atas di Android Studio,
-maka akan otomatis pustakanya diimpor.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import android.content.Context;
-import android.net.ConnectivityManager;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Jangan lupa, tambahkan juga dua baris kode ini ke dalam &lt;em&gt;AndroidManifest.xml&lt;/em&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_WIFI_STATE&amp;quot; /&amp;gt;
-&amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setelah itu, untuk menggunkan fungsi yang dibuat tadi,
-kita dapat memanfaatkan &lt;em&gt;event&lt;/em&gt; tombol diklik atau &lt;em&gt;event&lt;/em&gt; yang lainnya.&lt;/p&gt;
-
-&lt;p&gt;Contoh:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Button btn = (Button) findViewById(R.id.button);
-
-btn.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        if(adaInternet()){
-        // tampilkan peta
-        Toast.makeText(getActivity(), &amp;quot;Terhubung ke internet&amp;quot;, Toast.LENGTH_LONG).show();
-        }else{
-        // tampilkan pesan
-        Toast.makeText(getActivity(), &amp;quot;Tidak ada koneksi internet&amp;quot;, Toast.LENGTH_LONG).show();
-        }
-    }
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hasilnya akan ditampilkan pesan &lt;em&gt;(Toast)&lt;/em&gt; &amp;ldquo;Terhubung ke internet&amp;rdquo;
-bila ponsel terhubung ke interet.&lt;/p&gt;
-
-&lt;p&gt;Sedangkan kalau tidak, akan ditampilkan pesan &amp;ldquo;Tidak ada koneksi internet&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Referensi: &lt;a href=&#34;http://stackoverflow.com/a/9570292&#34;&gt;http://stackoverflow.com/a/9570292&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Pengembangan aplikasi yang membutuhkan koneksi internet untuk operasinya, perlu melakukan pengecekan terlebih dahulu.
+Contoh sebuah aplikasi yang menreapkan API Google Maps, membutuhkan koneksi internet untuk menampilkan peta.
+Akan tetapi, tidak dilakukan pengecekan koneksi internet. Aplikasi pun gagal menampilkan peta dan tampa pesan umpan balik.
+Pengecekan koneksi internet akan membantu kita membuat umpan balik ke pengguna aplikasi.
+Misalkan, ketika user ingin menampilkan peta Google Map, periksa terlebih dahulu koneksi internetnya. Kalau ada koneksi, izinkan untuk membuka activity Google Map.</description>
     </item>
     
     <item>
@@ -659,78 +76,9 @@ bila ponsel terhubung ke interet.&lt;/p&gt;
       <pubDate>Thu, 14 Apr 2016 14:23:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-android-linux/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-aPbjsuowhUc/Vw80y0nuMDI/AAAAAAAACrk/flIQQTJJrLscPV9dL9NtVqU9QpG2TNqrgCLcB/s1600/Pemrograman%2BAndroid%2Bdi%2BLinux%2BMenggunakan%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pemrograman Android begitu populer saat ini. Banyak programer yang tertarik mempelajari pemrograman Android. Pemrograman Android dapat dilakukan di berbagai platform, salah satunya di sistem operasi Linux. Linux merupakan sistem operasi bebas terbuka dan gratis.&lt;/p&gt;
-
-&lt;p&gt;Pada kesempatan ini, saya akan membahas persiapan yang dilakukan sebelum memulai pemrograman Android dengan Android Studio.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-instal-jdk&#34;&gt;1. Instal JDK&lt;/h2&gt;
-
-&lt;p&gt;JDK &lt;em&gt;(Java Development Kit)&lt;/em&gt; merupakan bahan dasar yang kita butuhkan untuk pemrograman java. JDK menyediakan kompilator, mesin virtual, dan pustaka &lt;em&gt;(library)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Ada dua jenis JDK di Linux, yaitu Open JDK dan Oracle JDK. Perbedaan Open JDK dan Oracle JDK dapat dibaca &lt;a href=&#34;http://javapapers.com/java/oracle-jdk-vs-openjdk-and-java-jdk-development-process/&#34;&gt;di sini&lt;/a&gt;. Pada persiapan ini, kita akan menginstal Open JDK saja. Ketik perintah berikut untuk menginstal.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install openjdk-8-jdk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;2-install-android-studio&#34;&gt;2. Install Android Studio&lt;/h2&gt;
-
-&lt;p&gt;Android Studio merupakan mesin yang kita butuhkan untuk membuat atau mengembangkan aplikasi Android . Android studio yang digunakan dalam persiapan ini adalah Android Studio 2. Silahkan download Android Studio untuk sistem operasi Linux di &lt;a href=&#34;http://developer.android.com/sdk/index.html&#34;&gt;Website Developer Android&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-sFnqha7T9m4/VwzcDpAOsYI/AAAAAAAACqI/WvN3ZVqJ5C0PkMJK0rKYfz6Ih66S7ZM0wCK4B/s1600/Download%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-sFnqha7T9m4/VwzcDpAOsYI/AAAAAAAACqI/WvN3ZVqJ5C0PkMJK0rKYfz6Ih66S7ZM0wCK4B/s1600/Download%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah itu, buka file manager sebagai user root:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo thunar
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;kemudian ekstrak arsip zip Android Studio ke direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-CVDuqiW_ObE/Vwzf29CxwLI/AAAAAAAACqc/vkuBtq8rPIwmrWg4KxSuQAPYx-FC2qI1gCK4B/s1600/Instal%2BAndroid%2BStudio%2Bdi%2Bdirektori%2Bopt.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-CVDuqiW_ObE/Vwzf29CxwLI/AAAAAAAACqc/vkuBtq8rPIwmrWg4KxSuQAPYx-FC2qI1gCK4B/s1600/Instal%2BAndroid%2BStudio%2Bdi%2Bdirektori%2Bopt.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Tambahkan Android Studio di menu sistem anda. Gunakan aplikasi menu editor. di Linux (Xubuntu) yang saya gunakan menu editornya sudah tersedia. Klik kanan pada menu kemudian pilih &lt;em&gt;Edit Applications&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-xSsZc71coWE/Vwzg-9ULFJI/AAAAAAAACqo/Mo7Vbb1ArIoseBopTo6Rnxtv6gBQol3pgCK4B/s1600/Mendaftarkan%2BAndroid%2BStudio%2Bdi%2BMenu%2BAplikasi.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-xSsZc71coWE/Vwzg-9ULFJI/AAAAAAAACqo/Mo7Vbb1ArIoseBopTo6Rnxtv6gBQol3pgCK4B/s1600/Mendaftarkan%2BAndroid%2BStudio%2Bdi%2BMenu%2BAplikasi.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-instal-android-sdk&#34;&gt;3. Instal Android SDK&lt;/h2&gt;
-
-&lt;p&gt;Android SDK hampir sama persis dengan JDK. Android SDK menyediakan API, Library, Emulator, dan beberapa peralatan yang diperlukan untuk membuat aplikasi. &lt;a href=&#34;https://www.petanikode.com/2016/04/cara-instal-android-sdk-dan-android-ndk.html&#34;&gt;Cara instal Android SDK&lt;/a&gt; sudah saya bahas di tulisan sebelumnya.&lt;/p&gt;
-
-&lt;h2 id=&#34;4-update-api-android-sdk&#34;&gt;4. Update API Android SDK&lt;/h2&gt;
-
-&lt;p&gt;Android SDK yang beru terinstal masih membutuhkan beberapa komponen lain untuk dapat digunakan. Oleh karena itu, kita perlu melakukan update. Ketik perintah berikut id terminal.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;android update sdk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Instal API dan Image Android yang anda butuhkan. Update API Android SDK membutuhkan koneksi internet yang cepat dan stabil. Jika semuanya diinstal, akan memakan banyak ruang (kira-kira sampai 40GB).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-_kUBCAT1Iuk/Vwzml6XJqrI/AAAAAAAACq0/VHBI8qxrDRMdO5YXtHsWnbPjyx7D9O9kACLcB/s1600/Update%2BAPI%2BAndroid%2BSDK.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-_kUBCAT1Iuk/Vwzml6XJqrI/AAAAAAAACq0/VHBI8qxrDRMdO5YXtHsWnbPjyx7D9O9kACLcB/s1600/Update%2BAPI%2BAndroid%2BSDK.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;5-buat-emulator&#34;&gt;5. Buat Emulator&lt;/h2&gt;
-
-&lt;p&gt;Emulator kita perlukan untuk men-debug aplikasi. Bila anda memiliki ponsel bersistem operasi android, anda bisa menggunakan ponsel tersebut.&lt;/p&gt;
-
-&lt;p&gt;Cara membuat emulator, ketik perintah berikut:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;android avd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Klik tombol &lt;em&gt;Create&lt;/em&gt; untuk membuat emulator baru.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-Zc-2QS9C13o/Vwzpp4z18bI/AAAAAAAACrE/KW5rQ8mpS4UroY3_sztEk6yMRnNw1b6CwCK4B/s1600/Membuat%2Bemulator%2Bandroid.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-Zc-2QS9C13o/Vwzpp4z18bI/AAAAAAAACrE/KW5rQ8mpS4UroY3_sztEk6yMRnNw1b6CwCK4B/s1600/Membuat%2Bemulator%2Bandroid.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nilai &lt;em&gt;SD Card&lt;/em&gt; dapat dikosongkan bila tidak bisa membuatnya.&lt;/p&gt;
-
-&lt;h2 id=&#34;6-uji-coba&#34;&gt;6. Uji Coba&lt;/h2&gt;
-
-&lt;p&gt;Buat sebuah proyek baru &lt;em&gt;(Hello World)&lt;/em&gt;, kemudian coba jalankan.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-vrTozLMQh30/Vw8grg8mrzI/AAAAAAAACrQ/W56BQBQ4jlYsZFNVVTGkBlLGzKcHtbflwCLcB/s1600/Test%2BProyek%2BAndroid%2BStudio.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-vrTozLMQh30/Vw8grg8mrzI/AAAAAAAACrQ/W56BQBQ4jlYsZFNVVTGkBlLGzKcHtbflwCLcB/s1600/Test%2BProyek%2BAndroid%2BStudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Pemrograman Android begitu populer saat ini. Banyak programer yang tertarik mempelajari pemrograman Android. Pemrograman Android dapat dilakukan di berbagai platform, salah satunya di sistem operasi Linux. Linux merupakan sistem operasi bebas terbuka dan gratis.
+Pada kesempatan ini, saya akan membahas persiapan yang dilakukan sebelum memulai pemrograman Android dengan Android Studio.
+1. Instal JDK JDK (Java Development Kit) merupakan bahan dasar yang kita butuhkan untuk pemrograman java. JDK menyediakan kompilator, mesin virtual, dan pustaka (library).</description>
     </item>
     
     <item>
@@ -739,129 +87,12 @@ bila ponsel terhubung ke interet.&lt;/p&gt;
       <pubDate>Sun, 03 Apr 2016 17:13:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-instal-android-sdk-dan-ndk/</guid>
-      <description>
+      <description>Android SDK dan NDK adalah dua alat penting yang perlu dipersiapkan untuk membuat aplikasi Android.
+Android SDK menyediakan API (Application Programming Interface) yang digunakan sebagai bahan dasar pembuatan aplikasi. Selain itu juga, dia menyediakan Emulator.
+Sedangkan, Android NDK memungkinkan kita membuat aplikasi Android dengan bahasa pemrograman C/C++.
+Cara Instal Android SDK  Download Android SDK di website resmi Android Developer: http://developer.android.com/sdk/index.html, pilih SDK tools only
 
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-ZtcFanDti8k/VwDdwRqGUII/AAAAAAAACn4/T3KPPklw-Iclxhl4YJdyV5psoudEgE58Q/s1600/instal%2BAndroid%2BSDK%2Bdan%2BAnroid%2BNDK%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-ZtcFanDti8k/VwDdwRqGUII/AAAAAAAACn4/T3KPPklw-Iclxhl4YJdyV5psoudEgE58Q/s1600/instal%2BAndroid%2BSDK%2Bdan%2BAnroid%2BNDK%2Bdi%2BLinux%2B-%2BPetani%2BKode.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Android SDK dan NDK adalah dua alat penting yang perlu dipersiapkan untuk
-membuat aplikasi Android.&lt;/p&gt;
-
-&lt;p&gt;Android SDK menyediakan API &lt;em&gt;(Application Programming Interface)&lt;/em&gt; yang digunakan
-sebagai bahan dasar pembuatan aplikasi. Selain itu juga, dia menyediakan Emulator.&lt;/p&gt;
-
-&lt;p&gt;Sedangkan, Android NDK memungkinkan kita membuat aplikasi Android dengan bahasa
-pemrograman C/C++.&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-instal-android-sdk&#34;&gt;Cara Instal Android SDK&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Download Android SDK di website resmi Android Developer: &lt;a href=&#34;http://developer.android.com/sdk/index.html&#34;&gt;http://developer.android.com/sdk/index.html&lt;/a&gt;, pilih &lt;em&gt;SDK tools only&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-MuZmwn-o5M4/VwC44fgpxTI/AAAAAAAACmQ/bpN-Y11BC1oNbEKPHm8hHYWqdZIR414ag/s1600/Download%2BAndroid%2BSDK%2Buntuk%2BLinux.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-MuZmwn-o5M4/VwC44fgpxTI/AAAAAAAACmQ/bpN-Y11BC1oNbEKPHm8hHYWqdZIR414ag/s1600/Download%2BAndroid%2BSDK%2Buntuk%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Buat direktori bernama &lt;em&gt;Android&lt;/em&gt; di &lt;em&gt;Home&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  mkdir ~/Android
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-5xSoUaWG1-Y/VwC7NniTAWI/AAAAAAAACmc/kElzJOZscTksbBmrHXb2zqgNpPB8AsgEQ/s1600/Direktori%2BAndroid%2Bdi%2BHOME%2Bsebagai%2Blokasi%2Binstal%2BSDK%2Bdan%2BNDK.png&#34;&gt;&lt;img src=&#34;https://4.bp.blogspot.com/-5xSoUaWG1-Y/VwC7NniTAWI/AAAAAAAACmc/kElzJOZscTksbBmrHXb2zqgNpPB8AsgEQ/s1600/Direktori%2BAndroid%2Bdi%2BHOME%2Bsebagai%2Blokasi%2Binstal%2BSDK%2Bdan%2BNDK.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Ekstrak Android SDK ke direktori yang dibuat tadi, kemudian ganti namanya menjadi &lt;em&gt;Sdk&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-yLCGIO1bPQo/VwC-YjyQyWI/AAAAAAAACmo/SZOHTkaeUfksVFvQWAjBQCU7Wn5Y_kekQ/s1600/Instal%2BAndroid%2BSDK%2Bdi%2BLinux.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-yLCGIO1bPQo/VwC-YjyQyWI/AAAAAAAACmo/SZOHTkaeUfksVFvQWAjBQCU7Wn5Y_kekQ/s1600/Instal%2BAndroid%2BSDK%2Bdi%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Tambahkan &lt;em&gt;PATH&lt;/em&gt; Android SDK ke &lt;em&gt;Environment Variable&lt;/em&gt;. Buka file &lt;code&gt;bash.bashrc&lt;/code&gt; dengan teks editor sebagai &lt;em&gt;root&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo nano /etc/bash.bashrc
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tambahkan kode berikut pada akhir file &lt;code&gt;bash.bashrc&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# Variabel untuk menentukan lokasi SDK dan NDK
-export ANDROID_HOME=$HOME/Android
-
-# Env variabel Anrdroid SDK
-export PATH=$PATH:$ANDROID_HOME/Sdk/tools:$ANDROID_HOME/Sdk/platform-tools
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-Ub0z4L35vUA/VwDEaNLLwlI/AAAAAAAACm4/xp4ywZfAMfcBCXkxksSGL_2TbBIqimL1g/s1600/Menambahkan%2BPATH%2BAndroid%2BSDK%2Bke%2BEnvironment%2BVariabel%2BLinux.png&#34;&gt;&lt;img src=&#34;https://2.bp.blogspot.com/-Ub0z4L35vUA/VwDEaNLLwlI/AAAAAAAACm4/xp4ywZfAMfcBCXkxksSGL_2TbBIqimL1g/s1600/Menambahkan%2BPATH%2BAndroid%2BSDK%2Bke%2BEnvironment%2BVariabel%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Tekan &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;x&lt;/code&gt;, kemudian ketik &lt;code&gt;y&lt;/code&gt; lalu tekan &lt;code&gt;Enter&lt;/code&gt; untuk menyimpan.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Selsai!&lt;/p&gt;
-
-&lt;p&gt;Sekarang kita coba, silahkan ketik perintah  &lt;code&gt;android --help&lt;/code&gt; di terminal.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;petanikode@imajinasi:~$ android --help
-
-Usage:
-android [global options] action [action options]
-Global options:
--s --silent     : Silent mode, shows errors only.
--v --verbose    : Verbose mode, shows errors, warnings and all messages.
---clear-cache: Clear the SDK Manager repository manifest cache.
--h --help       : Help on a specific command.
-...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;cara-instal-android-ndk&#34;&gt;Cara Instal Android NDK&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Download Android NDK di website resmi Android Developer: &lt;a href=&#34;http://developer.android.com/ndk/downloads/index.html&#34;&gt;http://developer.android.com/ndk/downloads/index.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-EREYI7aCxW0/VwDHWVfv8UI/AAAAAAAACnE/grCIaskoGR8XvwBCJ133LU1s_SqbUEn8A/s1600/Download%2BNDK%2Buntuk%2BLinux.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-EREYI7aCxW0/VwDHWVfv8UI/AAAAAAAACnE/grCIaskoGR8XvwBCJ133LU1s_SqbUEn8A/s1600/Download%2BNDK%2Buntuk%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Ekstrak paket &lt;em&gt;bin&lt;/em&gt; Android NDK dengan mengeksekusinya.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-VhY-KIb8Oig/VwDM2oLW_9I/AAAAAAAACnc/tE4Yssc3jgIA4fv1hus-V7emdCYyBOyVw/s1600/Ektarksi%2Bpaket%2Bbin%2BAndroid%2BNDK%2Bdengan%2BMengeksekusinya.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-VhY-KIb8Oig/VwDM2oLW_9I/AAAAAAAACnc/tE4Yssc3jgIA4fv1hus-V7emdCYyBOyVw/s1600/Ektarksi%2Bpaket%2Bbin%2BAndroid%2BNDK%2Bdengan%2BMengeksekusinya.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Pindahkan hasil ekstraksi file Android NDK ke direktori &lt;code&gt;~/Android&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-eIhWXlvbMu8/VwDOZAh-7gI/AAAAAAAACno/MlFujW9ecl0k4VYB9oL6eAU4azhA1llIw/s1600/Pindahkan%2BHasil%2Bekstrak%2Bpaket%2BBIN%2BAndroid%2BNDK%2Bke%2Bdalam%2Bdirektori%2BAndroid.png&#34;&gt;&lt;img src=&#34;https://1.bp.blogspot.com/-eIhWXlvbMu8/VwDOZAh-7gI/AAAAAAAACno/MlFujW9ecl0k4VYB9oL6eAU4azhA1llIw/s1600/Pindahkan%2BHasil%2Bekstrak%2Bpaket%2BBIN%2BAndroid%2BNDK%2Bke%2Bdalam%2Bdirektori%2BAndroid.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Tambahkan &lt;em&gt;PATH&lt;/em&gt; Android NDK ke &lt;em&gt;Evnironment Variable&lt;/em&gt;. Buka kembali file &lt;code&gt;bash.bashrc&lt;/code&gt;,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo nano /etc/bash.bashrc
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Tambahkan kode berikut pada akhir file &lt;code&gt;bash.bashrc&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# Env variabel Android NDK
-export PATH=$PATH:$ANDROID_HOME/android-ndk-r11c/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-JgFj9XgqdZ4/VwDJxTSTh8I/AAAAAAAACnQ/Mh6_1lYmK4IOD7qxJunh1tOJY79zs8bfg/s1600/Tambahakan%2BPATH%2BAndroid%2BNDK%2Bke%2BENVIRONMENT%2BVARIABLE%2BLinux.png&#34;&gt;&lt;img src=&#34;https://3.bp.blogspot.com/-JgFj9XgqdZ4/VwDJxTSTh8I/AAAAAAAACnQ/Mh6_1lYmK4IOD7qxJunh1tOJY79zs8bfg/s1600/Tambahakan%2BPATH%2BAndroid%2BNDK%2Bke%2BENVIRONMENT%2BVARIABLE%2BLinux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Ujicoba dengan perintah &lt;code&gt;ndk-build --version&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;petanikode@imajinasi:~$ ndk-build --version
-GNU Make 3.81
-Copyright (C) 2006  Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.
-There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.
-
-This program built for x86_64-pc-linux-gnu
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;!-- @TODO: Tambahkan cara update dan membuat emulator --&gt;
-
-&lt;h2 id=&#34;apa-berikutnya&#34;&gt;Apa Berikutnya?&lt;/h2&gt;
-
-&lt;p&gt;Android SDK dan NDK sudah terinstal di Linux.&lt;/p&gt;
-
-&lt;p&gt;Selanjutnya, kita tinggal konfigurasi IDE agar terintegrasi dengan Android SDK dan NDK.&lt;/p&gt;
-
-&lt;p&gt;Silahkan baca:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.petanikode.com/pemrograman-android-di-linux-dengan-eclipse&#34;&gt;Persiapan Pemrograman Android di Linux Menggunakan Eclipse&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- Baca juga: &lt;ul&gt;&lt;br /&gt;&lt;li&gt;Persiapan Pemrograman Android di Linux Menggunakan Android Studio&lt;/li&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;li&gt;Persiapan Pemrograman Android di Linux Menggunakan Qt Creator&lt;/li&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/ul&gt; --&gt;
-</description>
+ Buat direktori bernama Android di Home.</description>
     </item>
     
     <item>
@@ -870,8 +101,10 @@ This program built for x86_64-pc-linux-gnu
       <pubDate>Mon, 28 Mar 2016 15:41:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-mengaktifkan-developer-options-ponsel-android/</guid>
-      <description>&lt;p&gt;Pada versi Android 4.2 ke atas, fitur &lt;i&gt;Developer Options&lt;/i&gt; disembunyikan. &lt;i&gt;Developer Options&lt;/i&gt; memungkinkan kita menjadikan ponsel sebagai &lt;i&gt;emulator&lt;/i&gt; untuk men-debug aplikasi. Berikut ini cara mengaktifkan &lt;i&gt;Developer Options&lt;/i&gt; pada Ponsel Android.&lt;br /&gt;&lt;ol&gt;&lt;li&gt;Buka &lt;i&gt;Settings&lt;/i&gt;, kemudian masuk ke menu &lt;i&gt;About Phone&lt;/i&gt;&lt;/li&gt;&lt;li&gt;Pada bagian versi, ketuk tujuh kali (7x)&lt;a href=&#34;https://2.bp.blogspot.com/-9GMxh6g-cSI/Vvjc__ZC8rI/AAAAAAAACko/lgxvUx2vKGwW3TY2Mfdd9oeeYMbRDIHsA/s1600/Enable%2BDeveloper%2BOptions%2BPonsel%2BAndroid%2B-%2BPetani%2BKode.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-9GMxh6g-cSI/Vvjc__ZC8rI/AAAAAAAACko/lgxvUx2vKGwW3TY2Mfdd9oeeYMbRDIHsA/s1600/Enable%2BDeveloper%2BOptions%2BPonsel%2BAndroid%2B-%2BPetani%2BKode.jpg&#34; /&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Hingga keluar pesan&lt;a href=&#34;http://2.bp.blogspot.com/-o6fQ3SvXPtM/VvjdrYi-QLI/AAAAAAAACk0/rddBvBBOEK0OMQpVkUwSbUQ4C3jfss6IQ/s1600/nowdeveloper-100361671-large.idge.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-o6fQ3SvXPtM/VvjdrYi-QLI/AAAAAAAACk0/rddBvBBOEK0OMQpVkUwSbUQ4C3jfss6IQ/s1600/nowdeveloper-100361671-large.idge.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;Sekarang fitur &lt;i&gt;Developer Options&lt;/i&gt; sudah aktif, silahkan lihat di &lt;i&gt;Settings&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-HtMZ1_fL54c/VvjfDhQqoWI/AAAAAAAAClE/lyPuz2CFwa4VVJ5ZJ6GphG-DPtTGBmEVw/s1600/Pengaturan%2BDeveloper%2BOptions.jpg&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://3.bp.blogspot.com/-HtMZ1_fL54c/VvjfDhQqoWI/AAAAAAAAClE/lyPuz2CFwa4VVJ5ZJ6GphG-DPtTGBmEVw/s1600/Pengaturan%2BDeveloper%2BOptions.jpg&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Referensi: &lt;a href=&#34;http://www.ubergizmo.com/how-to/enable-android-developer-options/&#34; target=&#34;_blank&#34;&gt;ubergizmo.com&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Pada versi Android 4.2 ke atas, fitur Developer Options disembunyikan. Developer Options memungkinkan kita menjadikan ponsel sebagai emulator untuk men-debug aplikasi. Berikut ini cara mengaktifkan Developer Options pada Ponsel Android.
+Buka Settings, kemudian masuk ke menu About PhonePada bagian versi, ketuk tujuh kali (7x)Hingga keluar pesanSekarang fitur Developer Options sudah aktif, silahkan lihat di Settings.
+
+Referensi: ubergizmo.com</description>
     </item>
     
     <item>
@@ -880,8 +113,11 @@ This program built for x86_64-pc-linux-gnu
       <pubDate>Thu, 03 Mar 2016 16:15:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-F01xzBHL65Y/Vg5OM7SGGrI/AAAAAAAAB34/78xBzApHESg/s1600/Android-development-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-F01xzBHL65Y/Vg5OM7SGGrI/AAAAAAAAB34/78xBzApHESg/s1600/Android-development-petanikode.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Setelah saya menginstal Andoid Studio di Ubuntu, ternyata saya menemukan masalah dengan pesan kesalahan &lt;i&gt;&amp;ldquo;Your Android SDK is missing , out of date,or is missing templates&amp;rdquo;&lt;/i&gt;. Pesan error itu menandakan, Android Studio tidak menemukan SDK. Jadi, si Android Studio belum mampu membuat proyek baru karena belum ada teman untuk bekerja sama, yaitu si SDK.&lt;br /&gt;&lt;br /&gt;Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.&lt;br /&gt;&lt;br /&gt;1. Buka Android Studio, Klik &lt;i&gt;Configure&lt;/i&gt;&lt;br /&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-3eMGnkftahM/VtfuES_9JBI/AAAAAAAACgg/liOt71cKAZA/s1600/Masuk%2Bke%2Bkonfigurasi%2BAndroid%2BStudio.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://4.bp.blogspot.com/-3eMGnkftahM/VtfuES_9JBI/AAAAAAAACgg/liOt71cKAZA/s1600/Masuk%2Bke%2Bkonfigurasi%2BAndroid%2BStudio.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;2. Masuk ke pengaturan &lt;i&gt;Project Default&lt;/i&gt;, klik &lt;i&gt;Project Default&lt;/i&gt;.&lt;br /&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-ZMyy5turmhc/VtfuaYkuR0I/AAAAAAAACgo/JSsGVgHbYkg/s1600/Masuk%2Bke%2Bpengaturan%2Bproyek%2Bdefault%2BAndroid%2BStudio.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://1.bp.blogspot.com/-ZMyy5turmhc/VtfuaYkuR0I/AAAAAAAACgo/JSsGVgHbYkg/s1600/Masuk%2Bke%2Bpengaturan%2Bproyek%2Bdefault%2BAndroid%2BStudio.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;3. Kemudian masuk ke Project Structure.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-NxE9QrHuRRE/Vtfu7q1Gp5I/AAAAAAAACg0/c85EEq3r22I/s1600/Masuk%2Bke%2Bproject%2Bstructure%2Bandroid%2Bstudio.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-NxE9QrHuRRE/Vtfu7q1Gp5I/AAAAAAAACg0/c85EEq3r22I/s1600/Masuk%2Bke%2Bproject%2Bstructure%2Bandroid%2Bstudio.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;4. Kemudian carilah lokasi tempat Anda menaruh SDK setelah itu klik &lt;i&gt;OK&lt;/i&gt;. Kalau belum punya SDK silahkan download &lt;a href=&#34;https://developer.android.com/sdk/index.html&#34; target=&#34;_blank&#34;&gt;di sini&lt;/a&gt;.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-Wcu8v9iTQuo/Vtfvcm7m-MI/AAAAAAAAChA/cLNli2yPIHc/s1600/Menentukan%2Blokasi%2BSDK.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;https://2.bp.blogspot.com/-Wcu8v9iTQuo/Vtfvcm7m-MI/AAAAAAAAChA/cLNli2yPIHc/s1600/Menentukan%2Blokasi%2BSDK.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Sekarang cobalah membuat proyek baru, insa&amp;rsquo;allah bisa.&lt;/p&gt;
-</description>
+      <description>Setelah saya menginstal Andoid Studio di Ubuntu, ternyata saya menemukan masalah dengan pesan kesalahan &amp;ldquo;Your Android SDK is missing , out of date,or is missing templates&amp;rdquo;. Pesan error itu menandakan, Android Studio tidak menemukan SDK. Jadi, si Android Studio belum mampu membuat proyek baru karena belum ada teman untuk bekerja sama, yaitu si SDK.
+Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
+1. Buka Android Studio, Klik Configure
+
+2. Masuk ke pengaturan Project Default, klik Project Default.</description>
     </item>
     
     <item>
@@ -890,90 +126,10 @@ This program built for x86_64-pc-linux-gnu
       <pubDate>Fri, 13 Nov 2015 21:05:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/pemrograman-android-emulator-alternatif/</guid>
-      <description>
-
-&lt;p&gt;Bila kamu tidak ingin menggunakan emulator bawaan Android SDK atau terasa
-berat, mungkin bisa coba emulator alternatif.&lt;/p&gt;
-
-&lt;p&gt;Ada dua alternatif emulator untuk debug dan deploy aplikasi android:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Menggunakan Genymotion&lt;/li&gt;
-&lt;li&gt;Menggunakan Hp sendiri&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Geanymotion adalah emulator android pihak ketiga yang berbasis virtualbox.
-Ada yang mengklaim emulator ini lebih cepat dibandingkan emulator bawaan
-android studio.&lt;/p&gt;
-
-&lt;h2 id=&#34;cara-instal-geanymotion-untuk-emulator-android-studio&#34;&gt;Cara Instal Geanymotion untuk Emulator Android Studio&lt;/h2&gt;
-
-&lt;h3 id=&#34;1-pastikan-virtualbox-sudah-terinstal&#34;&gt;1. Pastikan virtualbox sudah terinstal&lt;/h3&gt;
-
-&lt;p&gt;Genymotion memanfaatkan virtualbox untuk melakuan virtualisasi.
-Jadi pastikan virtualbox sudah terpasang di komputermu.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt install virtualbox
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;2-download-dan-instal-genymotion&#34;&gt;2. Download dan Instal Genymotion&lt;/h3&gt;
-
-&lt;p&gt;Download Genymotion di website resminya (&lt;a href=&#34;https://www.genymotion.com/#!/download&#34;&gt;genymotion.com&lt;/a&gt;).
-Kita harus memiliki akun agar bisa mendownloadnya.&lt;/p&gt;
-
-&lt;p&gt;Nanti kita akan mendapatkan file binary, seperti ini.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-9aMDhjKhdGc/VkXGKfp2ipI/AAAAAAAACMU/IKY6Xw98LdQ/s1600/Genymotion%2Buntuk%2Blinux%2Bsudah%2Bdidownload.png&#34; alt=&#34;Geanymotion untuk Linux&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah mendapatkan genymotion, selanjutnya menginstalnya ke direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Saya pilih direktori ini, karena banyak aplikasi lain juga terinstal di sana.
-Sebenarnya bisa diinstal di mana saja, sesuka anda.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-Us5YgHMvZaE/VkXHuL8ssJI/AAAAAAAACMg/oVFB6UVSftY/s1600/Kumpulan%2Bberkas%2Bgenymotion%2Bsetelah%2Bterinstal.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-Us5YgHMvZaE/VkXHuL8ssJI/AAAAAAAACMg/oVFB6UVSftY/s1600/Kumpulan%2Bberkas%2Bgenymotion%2Bsetelah%2Bterinstal.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Gambar di atas adalah kumpulan file genymotion setelah terinstal di direktori &lt;code&gt;/opt&lt;/code&gt;. Untuk menginstalnya di sana, kita hanya perlu mengeksekusi file &lt;code&gt;genymotion-2.5.2_x86.bin&lt;/code&gt; di direktori &lt;code&gt;/opt&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sekarang coba eksekusi atau jalankan genymotion. Kemudian, tambahkan perangkat virtual (virtual device).&lt;/p&gt;
-
-&lt;p&gt;Penambahan perangkat virtual membutuhkan koneksi internet untuk login dan
-mendownload perangkat virtualnya.&lt;/p&gt;
-
-&lt;p&gt;Login dengan akun yang sudah anda buat di genymotion.com.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-f3EJwTqLgQo/VkXKC4IrwEI/AAAAAAAACMs/H8AoHdlVpp8/s1600/Genymotion%2Bberhasil%2Bberjalan%2Bdi%2Blinux%2Bxubuntu%2B15.04%2B32bit.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-f3EJwTqLgQo/VkXKC4IrwEI/AAAAAAAACMs/H8AoHdlVpp8/s1600/Genymotion%2Bberhasil%2Bberjalan%2Bdi%2Blinux%2Bxubuntu%2B15.04%2B32bit.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Barikut ini tangkapan layar saat salah satu perangkat virtual (mesin virtual) dinyalakan.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-cfL4afw7Yh0/VkXO0ZEV0QI/AAAAAAAACM8/vWGD1yIcBUk/s1600/Genymotion%2Bsedang%2Bberaksi.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-cfL4afw7Yh0/VkXO0ZEV0QI/AAAAAAAACM8/vWGD1yIcBUk/s1600/Genymotion%2Bsedang%2Bberaksi.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2-tambahkan-plug-in-genymotion-di-android-studio&#34;&gt;2. Tambahkan Plug-in Genymotion di Android Studio&lt;/h3&gt;
-
-&lt;p&gt;Klik menu &lt;em&gt;file&lt;/em&gt; kemudian pilih &lt;em&gt;Settings&lt;/em&gt;. Pada jendela yang terbuka,
-di bagian sebelah kiri, pilih plugins.&lt;/p&gt;
-
-&lt;p&gt;Cari plugin &amp;ldquo;genymotion&amp;rdquo;, bila tidak ditemukan klik &lt;em&gt;browse&lt;/em&gt;. Kemudian, cari lagi plugin &amp;ldquo;genymotion&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-tAem4UlNjF4/VkXWB0DBRRI/AAAAAAAACNM/DoetsxT-mzo/s1600/Instalasi%2Bplugin%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34;&gt;&lt;img src=&#34;http://3.bp.blogspot.com/-tAem4UlNjF4/VkXWB0DBRRI/AAAAAAAACNM/DoetsxT-mzo/s1600/Instalasi%2Bplugin%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Setelah instalasi selesai, silahkan buka ulang Android Studio-nya.&lt;/p&gt;
-
-&lt;h3 id=&#34;3-uji-coba&#34;&gt;3. Uji coba&lt;/h3&gt;
-
-&lt;p&gt;Setelah plugin genymotion berhasil terinstal, maka akan ada tambahan tombol Genymotion di toolbar Android Studio. Bila diklik, maka akan keluar jendela Genymotion Device Manager.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-4-XsdNfS_SU/VkXX3U1-Y0I/AAAAAAAACNY/j5PqsSprhZs/s1600/Tombol%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34;&gt;&lt;img src=&#34;http://1.bp.blogspot.com/-4-XsdNfS_SU/VkXX3U1-Y0I/AAAAAAAACNY/j5PqsSprhZs/s1600/Tombol%2Bgenymotion%2Bdi%2Bandroid%2Bstudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Silahkan nyalakan salah satu mesin virtual Genymotion. Kemudian &lt;em&gt;run&lt;/em&gt; salah satu proyek app di android studio, maka anda akan dihadapkan dengan jendela pemilihan mesin virtual atau emulator.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-CITW2sYWH5U/VkXb1F5ZSGI/AAAAAAAACNk/ucTfzjf5csQ/s1600/Memilih%2Bmesin%2Bvirtual%2Bsaat%2Bmenjalankan%2Bproyek%2Bandroid%2Bstudio.png&#34;&gt;&lt;img src=&#34;http://4.bp.blogspot.com/-CITW2sYWH5U/VkXb1F5ZSGI/AAAAAAAACNk/ucTfzjf5csQ/s1600/Memilih%2Bmesin%2Bvirtual%2Bsaat%2Bmenjalankan%2Bproyek%2Bandroid%2Bstudio.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Karena salah satu mesin genymotion sedang dinyalakan, makan akan tampil pilihannya di sana. Setelah dipilih, maka aplikasi pun berhasil dikirim ke mesin virtual genymotion dan dijalankan.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-dAjdV4lnZkk/VkXdVuHOAxI/AAAAAAAACNs/qwJHxIZebzo/s1600/Aplikasi%2Bproyek%2Bberhasil%2Bdi-run.png&#34;&gt;&lt;img src=&#34;http://2.bp.blogspot.com/-dAjdV4lnZkk/VkXdVuHOAxI/AAAAAAAACNs/qwJHxIZebzo/s1600/Aplikasi%2Bproyek%2Bberhasil%2Bdi-run.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Android Studio sudah bisa bekerja dengan Genymotion.&lt;/p&gt;
-</description>
+      <description>Bila kamu tidak ingin menggunakan emulator bawaan Android SDK atau terasa berat, mungkin bisa coba emulator alternatif.
+Ada dua alternatif emulator untuk debug dan deploy aplikasi android:
+ Menggunakan Genymotion Menggunakan Hp sendiri  Geanymotion adalah emulator android pihak ketiga yang berbasis virtualbox. Ada yang mengklaim emulator ini lebih cepat dibandingkan emulator bawaan android studio.
+Cara Instal Geanymotion untuk Emulator Android Studio 1. Pastikan virtualbox sudah terinstal Genymotion memanfaatkan virtualbox untuk melakuan virtualisasi.</description>
     </item>
     
     <item>
@@ -982,8 +138,10 @@ di bagian sebelah kiri, pilih plugins.&lt;/p&gt;
       <pubDate>Fri, 16 Oct 2015 20:36:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/panduan-instalasi-android-studio-di-ubuntu/</guid>
-      <description>&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-F01xzBHL65Y/Vg5OM7SGGrI/AAAAAAAAB34/78xBzApHESg/s1600/Android-development-petanikode.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-F01xzBHL65Y/Vg5OM7SGGrI/AAAAAAAAB34/78xBzApHESg/s1600/Android-development-petanikode.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Android Studio merupakan sebuah IDE berbasis IntelliJ IDEA untuk pengembangan aplikasi android. Instalasi Android Studio saya lakukan di atas Xubuntu 15.04 (32bit). Sebenarnya disarankan menggunakan linux 64bit agar emulator dapat berjalan dengan baik.&lt;br /&gt;&lt;h3&gt;1. Instal openjdk&lt;/h3&gt;Android Studio menggunakan bahasa pemrograman Java. Jadi memerlukan JDK agar bisa mengompilasi program. JDK di linux dapat menggunakan &lt;i&gt;openjdk&lt;/i&gt; maupun &lt;i&gt;oracle JDK&lt;/i&gt;. Berikut ini perintah untuk menginstal &lt;i&gt;openjdk&lt;/i&gt; di ubuntu:&lt;br /&gt;&lt;br /&gt;openjdk versi 7&lt;br /&gt;&lt;pre&gt;sudo apt-get install openjdk-7-jdk&lt;/pre&gt;openjdk versi 8&lt;br /&gt;&lt;pre&gt;sudo apt-get install openjdk-8-jdk&lt;/pre&gt;&lt;h3&gt;2. Download Android Studio&lt;/h3&gt;Download Android Studio di website &lt;a href=&#34;http://developer.android.com/sdk/index.html&#34; target=&#34;_blank&#34;&gt;developer android&lt;/a&gt;. Download yang untuk linux.&lt;br /&gt;&lt;a href=&#34;http://2.bp.blogspot.com/-QT-DQ9GODk4/ViDtM5IZSpI/AAAAAAAACAk/hOSsMLq5KeI/s1600/Download%2Bandroid%2Bstudio%2Buntuk%2Blinux.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://2.bp.blogspot.com/-QT-DQ9GODk4/ViDtM5IZSpI/AAAAAAAACAk/hOSsMLq5KeI/s1600/Download%2Bandroid%2Bstudio%2Buntuk%2Blinux.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;h3&gt;3. Instalasi Android Studio&lt;/h3&gt;Setelah mendownload, ekstrak &lt;i&gt;(extract here)&lt;/i&gt; paket ZIP yang dapatkan. Kemudian, pindahkan direktori &lt;code&gt;android-studio&lt;/code&gt; ke direktori &lt;code&gt;/opt&lt;/code&gt;. Pemindahan ini memerukan akses root. Jadi, bukalah file managar &lt;i&gt;(thunar)&lt;/i&gt; dengan sudo.&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo thunar ~/Downloads&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;separator&#34; style=&#34;clear: both; text-align: center;&#34;&gt;&lt;a href=&#34;http://3.bp.blogspot.com/-I1WxgWh8qxA/VgAeN6OeDqI/AAAAAAAAB20/mON0y6tY0ts/s1600/pemindahan%2Bdirektori%2Bandroid-studio%2Bke%2Bdirektori%2Bopt.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://3.bp.blogspot.com/-I1WxgWh8qxA/VgAeN6OeDqI/AAAAAAAAB20/mON0y6tY0ts/s1600/pemindahan%2Bdirektori%2Bandroid-studio%2Bke%2Bdirektori%2Bopt.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Buat ikon menu dengan cara membuat file &lt;samp&gt;android-studio.desktop&lt;/samp&gt; dengan isi sebagai berikut:&lt;br /&gt;&lt;pre&gt;&lt;code class=&#34;desktop&#34;&gt;[Desktop Entry]&lt;br /&gt;Version=1.0&lt;br /&gt;Type=Application&lt;br /&gt;Terminal=false&lt;br /&gt;Name=Android Studio&lt;br /&gt;Exec=/opt/android-studio/bin/studio.sh&lt;br /&gt;Comment=Integrated Android developer tools for development and debugging.&lt;br /&gt;Icon=androidstudio&lt;br /&gt;Categories=GNOME;GTK;Development;IDE;&lt;/code&gt;&lt;/pre&gt;Simpan di &lt;samp&gt;/usr/share/applications/android-studio.desktop&lt;/samp&gt;&lt;br /&gt;&lt;div class=&#34;separator&#34; style=&#34;clear: both; text-align: center;&#34;&gt;&lt;a href=&#34;http://4.bp.blogspot.com/-8d8oji9EZvM/VgAceHC_WWI/AAAAAAAAB2o/NR3uVlO3CEE/s1600/pembuatan%2Bikon%2Bdesktop%2Bandroid%2Bstudio.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://4.bp.blogspot.com/-8d8oji9EZvM/VgAceHC_WWI/AAAAAAAAB2o/NR3uVlO3CEE/s1600/pembuatan%2Bikon%2Bdesktop%2Bandroid%2Bstudio.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;Pada linux yang saya gunakan, ikonya langsung disesuaikan dengan tema. Bila ikon masih kosong, anda bisa mendownload &lt;a href=&#34;https://raw.githubusercontent.com/PaoloRotolo/android-studio/master/android-studio-4.11.0/androidstudio.svg&#34; target=&#34;_blank&#34;&gt;ikon android studio&lt;/a&gt; (klik kanan save as). Kemudian, simpan ke direktori &lt;samp&gt;/usr/share/icons&lt;/samp&gt;.&lt;br /&gt;&lt;br /&gt;Ubuntu Studio sudah siap digunakan, selamat mencoba.&lt;br /&gt;&lt;div class=&#34;separator&#34;&gt;&lt;a href=&#34;http://1.bp.blogspot.com/-QLvoSAfy13E/VgAfeEiLqYI/AAAAAAAAB3A/CwoIf5qPciM/s1600/Android%2BStudio%2Bsudah%2Bterinstal%2Bdan%2Bmempunyai%2Bikon%2Bdi%2Bmenu.png&#34; imageanchor=&#34;1&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://1.bp.blogspot.com/-QLvoSAfy13E/VgAfeEiLqYI/AAAAAAAAB3A/CwoIf5qPciM/s1600/Android%2BStudio%2Bsudah%2Bterinstal%2Bdan%2Bmempunyai%2Bikon%2Bdi%2Bmenu.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
-</description>
+      <description>Android Studio merupakan sebuah IDE berbasis IntelliJ IDEA untuk pengembangan aplikasi android. Instalasi Android Studio saya lakukan di atas Xubuntu 15.04 (32bit). Sebenarnya disarankan menggunakan linux 64bit agar emulator dapat berjalan dengan baik.
+1. Instal openjdkAndroid Studio menggunakan bahasa pemrograman Java. Jadi memerlukan JDK agar bisa mengompilasi program. JDK di linux dapat menggunakan openjdk maupun oracle JDK. Berikut ini perintah untuk menginstal openjdk di ubuntu:
+openjdk versi 7
+sudo apt-get install openjdk-7-jdkopenjdk versi 8</description>
     </item>
     
   </channel>

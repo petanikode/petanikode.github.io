@@ -687,20 +687,6 @@ SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalo
     </item>
     
     <item>
-      <title>Tutorial CSS: Pengenalan Dasar CSS untuk Pemula</title>
-      <link>https://www.petanikode.com/css-dasar/</link>
-      <pubDate>Tue, 07 Jul 2015 08:06:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/css-dasar/</guid>
-      <description>CSS memegang peranan penting dalam web, tanpanya web akan terlihat kurang menarik.
-Pengetahuan tentang CSS, wajib dimiliki oleh setiap web developer (khususnya front-end).
-Dengan pengetahuan CSS, kamu akan mampu membuat:
- Halaman landing page yang menarik; Template atau tema blog; Mengubah PSD (Desain web) menjadi HTML; dan sebagainya.  Karena itu, mari kita belajar CSS.
-Pada artike ini, kita akan membahas pengenalan dasar CSS, seperti:
- Apa itu CSS? Struktur dasar CSS; Cara Menuliskan CSS di HTML; dan penggunaan inspect element untuk mempermudah belajar CSS.</description>
-    </item>
-    
-    <item>
       <title>Tutorial Pemrograman PHP: Prosedur dan Fungsi</title>
       <link>https://www.petanikode.com/pemrograman-php-fungsi/</link>
       <pubDate>Wed, 11 Mar 2015 19:33:00 +0000</pubDate>

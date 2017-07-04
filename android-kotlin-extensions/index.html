@@ -7,7 +7,7 @@
 
 <html amp lang="id-id" class="no-js">
 <head>
-    <title>Cara Perbaiki Android Studio yang SDK-nya Tidak Ditemukan</title>
+    <title>Pemrograman Android dengan Kotlin Extensions (Lebih Cepat!)</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -20,8 +20,8 @@
 
 
 
-    <link rel="canonical" href="https://www.petanikode.com/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan/" />
-    <link rel="amphtml" href="https://www.petanikode.com/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan/" />
+    <link rel="canonical" href="https://www.petanikode.com/android-kotlin-extensions/" />
+    <link rel="amphtml" href="https://www.petanikode.com/android-kotlin-extensions/" />
 
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
     <meta content='/favicon.png' name='msapplication-TileImage'/>
@@ -48,12 +48,13 @@
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
 <meta name="author" content="Ardianta Pargo"/>
 
-<meta name="keywords" content="Cara Perbaiki Android Studio yang SDK-nya Tidak Ditemukan, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Setelah saya menginstal Andoid Studio di Ubuntu, ternyata saya menemukan masalah dengan pesan kesalahan &ldquo;Your Android SDK is missing , out of date,or is missing templates&rdquo;. Pesan error itu menandakan, Android Studio tidak menemukan SDK. Jadi, si Android Studio belum mampu membuat proyek baru karena belum ada teman untuk bekerja sama, yaitu si SDK.
-Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
-1. Buka Android Studio, Klik Configure
-
-2. Masuk ke pengaturan Project Default, klik Project Default."/>
+<meta name="keywords" content="Pemrograman Android dengan Kotlin Extensions (Lebih Cepat!), Pemrograman Android, Bahasa Pemrograman Kotlin, Belajar Pemrograman Android dengan Kotlin, Tutorial Pemrograman Android Kotlin, belajar bahasa pemrograman Kotlin, pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="Pada tulisan sebelumnya, kita telah berhasil menginstal plugin Kotlin pada Android Studio 2.x, sehingga kita dapat menggunakan kotlin di sana.
+Pemrograman Android dengan Kotlin memang masih baru.
+Kemarin saya mencoba membuat kode untuk event listener onClick(), tapi malah error. Aplikasi tidak bisa dibuka dan langsung menutup dirinya.
+Pesan error pun tidak ditapilkan di Android Studio.
+Namun, masalah ini sudah terpecahkan oleh Kotlin Extension.
+Apa itu Kotlin Extensions? Pernah menggunakan fungsi findViewById()?"/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -69,19 +70,20 @@ Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
 <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
-    <meta property="og:title" content="Cara Perbaiki Android Studio yang SDK-nya Tidak Ditemukan" />
-    <meta property="og:description" content="Setelah saya menginstal Andoid Studio di Ubuntu, ternyata saya menemukan masalah dengan pesan kesalahan &ldquo;Your Android SDK is missing , out of date,or is missing templates&rdquo;. Pesan error itu menandakan, Android Studio tidak menemukan SDK. Jadi, si Android Studio belum mampu membuat proyek baru karena belum ada teman untuk bekerja sama, yaitu si SDK.
-Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
-1. Buka Android Studio, Klik Configure
-
-2. Masuk ke pengaturan Project Default, klik Project Default." />
+    <meta property="og:title" content="Pemrograman Android dengan Kotlin Extensions (Lebih Cepat!)" />
+    <meta property="og:description" content="Pada tulisan sebelumnya, kita telah berhasil menginstal plugin Kotlin pada Android Studio 2.x, sehingga kita dapat menggunakan kotlin di sana.
+Pemrograman Android dengan Kotlin memang masih baru.
+Kemarin saya mencoba membuat kode untuk event listener onClick(), tapi malah error. Aplikasi tidak bisa dibuka dan langsung menutup dirinya.
+Pesan error pun tidak ditapilkan di Android Studio.
+Namun, masalah ini sudah terpecahkan oleh Kotlin Extension.
+Apa itu Kotlin Extensions? Pernah menggunakan fungsi findViewById()?" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.petanikode.com/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan/" />
+    <meta property="og:url" content="https://www.petanikode.com/android-kotlin-extensions/" />
 
-    <meta property="og:image" content="https://1.bp.blogspot.com/-F01xzBHL65Y/Vg5OM7SGGrI/AAAAAAAAB34/78xBzApHESg/s1600/Android-development-petanikode.png" />
+    <meta property="og:image" content="/img/android/kotlin/android-kotlin.png" />
 
     
-    <meta property="og:updated_time" content="2016-03-03 16:15:00 &#43;0000 UTC"/>
+    <meta property="og:updated_time" content="2017-06-21 16:52:41 &#43;0800 WITA"/>
     <meta content='id_ID' property='og:locale'/>
     <meta content='ms_MY' property='og:locale:alternate'/>
     <meta content='en_US' property='og:locale:alternate'/>
@@ -97,6 +99,9 @@ Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
     
     
     
+    	
+    	
+    
 
     <meta property="article:author" content="https://www.facebook.com/petanikode" />
     <meta property="article:publisher" content="https://www.facebook.com/petanikode" />
@@ -105,13 +110,11 @@ Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
     <meta property="article:published_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
     
 
-    <meta property="article:modified_time" content="2016-03-03 16:15:00 &#43;0000 UTC" />
+    <meta property="article:modified_time" content="2017-06-21 16:52:41 &#43;0800 WITA" />
     <meta property="article:section" content="artikel" />
 
     
-    	<meta property="article:tag" content="IDE" />
-    
-    	<meta property="article:tag" content="Android Studio" />
+    	<meta property="article:tag" content="Kotlin" />
     
     	<meta property="article:tag" content="Android" />
     
@@ -188,8 +191,8 @@ Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
         "@type": "ListItem",
         "position": 2,
         "item": {
-            "@id": "https://www.petanikode.com/kategori/pemrograman",
-            "name": "pemrograman"
+            "@id": "https://www.petanikode.com/kategori/mobile",
+            "name": "Mobile"
             }
       },
       
@@ -199,8 +202,8 @@ Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
         "@type": "ListItem",
         "position": 3,
         "item": {
-            "@id": "https://www.petanikode.com/topik/ide",
-            "name": "IDE"
+            "@id": "https://www.petanikode.com/topik/kotlin",
+            "name": "Kotlin"
             }
       }
       
@@ -216,22 +219,23 @@ Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
   "author": {
     "name" : "Ardianta Pargo"
   },
-  "headline": "Cara Perbaiki Android Studio yang SDK-nya Tidak Ditemukan",
-  "description": "Setelah saya menginstal Andoid Studio di Ubuntu, ternyata saya menemukan masalah dengan pesan kesalahan &ldquo;Your Android SDK is missing , out of date,or is missing templates&rdquo;. Pesan error itu menandakan, Android Studio tidak menemukan SDK. Jadi, si Android Studio belum mampu membuat proyek baru karena belum ada teman untuk bekerja sama, yaitu si SDK.
-Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
-1. Buka Android Studio, Klik Configure
-
-2. Masuk ke pengaturan Project Default, klik Project Default.",
-  "wordCount": 110,
-  "datePublished" : "2016-03-03T16:15:00",
-  "dateModified" : "2016-03-03T16:15:00",
+  "headline": "Pemrograman Android dengan Kotlin Extensions (Lebih Cepat!)",
+  "description": "Pada tulisan sebelumnya, kita telah berhasil menginstal plugin Kotlin pada Android Studio 2.x, sehingga kita dapat menggunakan kotlin di sana.
+Pemrograman Android dengan Kotlin memang masih baru.
+Kemarin saya mencoba membuat kode untuk event listener onClick(), tapi malah error. Aplikasi tidak bisa dibuka dan langsung menutup dirinya.
+Pesan error pun tidak ditapilkan di Android Studio.
+Namun, masalah ini sudah terpecahkan oleh Kotlin Extension.
+Apa itu Kotlin Extensions? Pernah menggunakan fungsi findViewById()?",
+  "wordCount": 630,
+  "datePublished" : "2017-06-21T16:52:41",
+  "dateModified" : "2017-06-21T16:52:41",
   "image" : {
       "@type": "ImageObject",
-      "url": "https://1.bp.blogspot.com/-F01xzBHL65Y/Vg5OM7SGGrI/AAAAAAAAB34/78xBzApHESg/s1600/Android-development-petanikode.png",
+      "url": "/img/android/kotlin/android-kotlin.png",
       "height" : 380,
       "width" : 720
     },
-  "mainEntityOfPage" : "https://www.petanikode.com/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan/",
+  "mainEntityOfPage" : "https://www.petanikode.com/android-kotlin-extensions/",
   "publisher" : {
     "@type": "Organization",
     "name" : "petanikode.com",
@@ -245,7 +249,7 @@ Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
 
   "review": {
     "@type": "Review",
-    "url": "https://www.petanikode.com/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan/",
+    "url": "https://www.petanikode.com/android-kotlin-extensions/",
     "author": {
       "@type": "Person",
       "name": "Ardianta Pargo",
@@ -256,12 +260,13 @@ Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
       "name": "petanikode.com",
       "sameAs": "http://petanikode.com"
     },
-    "datePublished": "2016-03-03T16:15:00",
-    "description": "Setelah saya menginstal Andoid Studio di Ubuntu, ternyata saya menemukan masalah dengan pesan kesalahan &ldquo;Your Android SDK is missing , out of date,or is missing templates&rdquo;. Pesan error itu menandakan, Android Studio tidak menemukan SDK. Jadi, si Android Studio belum mampu membuat proyek baru karena belum ada teman untuk bekerja sama, yaitu si SDK.
-Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
-1. Buka Android Studio, Klik Configure
-
-2. Masuk ke pengaturan Project Default, klik Project Default.",
+    "datePublished": "2017-06-21T16:52:41",
+    "description": "Pada tulisan sebelumnya, kita telah berhasil menginstal plugin Kotlin pada Android Studio 2.x, sehingga kita dapat menggunakan kotlin di sana.
+Pemrograman Android dengan Kotlin memang masih baru.
+Kemarin saya mencoba membuat kode untuk event listener onClick(), tapi malah error. Aplikasi tidak bisa dibuka dan langsung menutup dirinya.
+Pesan error pun tidak ditapilkan di Android Studio.
+Namun, masalah ini sudah terpecahkan oleh Kotlin Extension.
+Apa itu Kotlin Extensions? Pernah menggunakan fungsi findViewById()?",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -1199,43 +1204,267 @@ padding: 16px;
     <article class="article block">
     <div class="article-wrapper">
         <div class="content">
-            <h1 class="post-title">Cara Perbaiki Android Studio yang SDK-nya Tidak Ditemukan</h1>
+            <h1 class="post-title">Pemrograman Android dengan Kotlin Extensions (Lebih Cepat!)</h1>
 
             
                 <div class="post-header">
     
         <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
+            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
         </div>
         <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
+        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
+        dalam
+        <span class="author"><a href="/kategori/mobile">Mobile</a></span>
             <br>
-        3 March 2016 · 16:15
-    </div>
+        21 June 2017 · 16:52
+        </div>
     
 </div>
 
-                <p><div class="separator"><a href="http://1.bp.blogspot.com/-F01xzBHL65Y/Vg5OM7SGGrI/AAAAAAAAB34/78xBzApHESg/s1600/Android-development-petanikode.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-F01xzBHL65Y/Vg5OM7SGGrI/AAAAAAAAB34/78xBzApHESg/s1600/Android-development-petanikode.png" /></a></div>Setelah saya menginstal Andoid Studio di Ubuntu, ternyata saya menemukan masalah dengan pesan kesalahan <i>&ldquo;Your Android SDK is missing , out of date,or is missing templates&rdquo;</i>. Pesan error itu menandakan, Android Studio tidak menemukan SDK. Jadi, si Android Studio belum mampu membuat proyek baru karena belum ada teman untuk bekerja sama, yaitu si SDK.<br /><br />Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.<br /><br />1. Buka Android Studio, Klik <i>Configure</i><br /><a href="http://4.bp.blogspot.com/-3eMGnkftahM/VtfuES_9JBI/AAAAAAAACgg/liOt71cKAZA/s1600/Masuk%2Bke%2Bkonfigurasi%2BAndroid%2BStudio.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-3eMGnkftahM/VtfuES_9JBI/AAAAAAAACgg/liOt71cKAZA/s1600/Masuk%2Bke%2Bkonfigurasi%2BAndroid%2BStudio.png" /></a><br />2. Masuk ke pengaturan <i>Project Default</i>, klik <i>Project Default</i>.<br /><a href="http://1.bp.blogspot.com/-ZMyy5turmhc/VtfuaYkuR0I/AAAAAAAACgo/JSsGVgHbYkg/s1600/Masuk%2Bke%2Bpengaturan%2Bproyek%2Bdefault%2BAndroid%2BStudio.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-ZMyy5turmhc/VtfuaYkuR0I/AAAAAAAACgo/JSsGVgHbYkg/s1600/Masuk%2Bke%2Bpengaturan%2Bproyek%2Bdefault%2BAndroid%2BStudio.png" /></a><br />3. Kemudian masuk ke Project Structure.<br /><a href="http://2.bp.blogspot.com/-NxE9QrHuRRE/Vtfu7q1Gp5I/AAAAAAAACg0/c85EEq3r22I/s1600/Masuk%2Bke%2Bproject%2Bstructure%2Bandroid%2Bstudio.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-NxE9QrHuRRE/Vtfu7q1Gp5I/AAAAAAAACg0/c85EEq3r22I/s1600/Masuk%2Bke%2Bproject%2Bstructure%2Bandroid%2Bstudio.png" /></a><br />4. Kemudian carilah lokasi tempat Anda menaruh SDK setelah itu klik <i>OK</i>. Kalau belum punya SDK silahkan download <a href="https://developer.android.com/sdk/index.html" target="_blank">di sini</a>.<br /><a href="http://2.bp.blogspot.com/-Wcu8v9iTQuo/Vtfvcm7m-MI/AAAAAAAAChA/cLNli2yPIHc/s1600/Menentukan%2Blokasi%2BSDK.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-Wcu8v9iTQuo/Vtfvcm7m-MI/AAAAAAAAChA/cLNli2yPIHc/s1600/Menentukan%2Blokasi%2BSDK.png" /></a><br />Sekarang cobalah membuat proyek baru, insa&rsquo;allah bisa.</p>
+                
+
+<p>Pada tulisan sebelumnya, kita telah berhasil <a href="/pemrograman-android-dengan-kotlin">menginstal plugin
+Kotlin pada Android Studio 2.x</a>,
+sehingga kita dapat menggunakan kotlin di sana.</p>
+
+<p>Pemrograman Android dengan Kotlin memang masih baru.</p>
+
+<p>Kemarin saya mencoba membuat kode untuk <em>event listener</em> <code>onClick()</code>,
+tapi malah error. Aplikasi tidak bisa dibuka dan langsung menutup dirinya.</p>
+
+<p>Pesan error pun tidak ditapilkan di Android Studio.</p>
+
+<p>Namun, masalah ini sudah terpecahkan oleh <em>Kotlin Extension</em>.</p>
+
+<h2 id="apa-itu-kotlin-extensions">Apa itu <em>Kotlin Extensions</em>?</h2>
+
+<p>Pernah menggunakan fungsi <code>findViewById()</code>?</p>
+
+<p>Fungsi ini tugasnya untuk memilih komponen yang ada di layout
+untuk dijadikan objek pada Java.
+Mirip seperti fungsi <code>getElementById()</code> pada Javascript.</p>
+
+<p>Pada Kotlin, kita tidak lagi menggunakan fungsi <code>findViewById()</code>&hellip;</p>
+
+<p>Karena menurut mereka (Dok. Kotlin):</p>
+
+<blockquote>
+<p>Fungsi tersebut berpotensi menimbulkan <em>bugs</em> dan membuat kode jadi susah dibaca</p>
+</blockquote>
+
+<p><em>(Pantes saja aplikasi saya error dan tidak bisa dibuka 😄)</em></p>
+
+<p>Kotlin memberikan terobosan dengan <em>plugin Kotlin Extensions</em>,
+sehingga programmer tidak lagi menghabiskan energi dan
+waktunya untuk mengetik fungsi <code>findViewById()</code>.</p>
+
+<p><blockquote class="twitter-tweet" data-lang="en"><p lang="in" dir="ltr">Kotlin membuatnya jadi lebih sederhana&hellip; no more findViewById() 👨‍💻 <a href="https://t.co/31D53qHu03">pic.twitter.com/31D53qHu03</a></p>&mdash; Petani Kode (@petanikode) <a href="https://twitter.com/petanikode/status/877467306921664513">June 21, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>Bagaimana cara menggunakan <em>Kotlin Extensions</em>?</p>
+
+<p>Mari kita bahas dengan praktik&hellip;</p>
+
+<h2 id="membuat-proyek-aplikasi-android">Membuat Proyek Aplikasi Android</h2>
+
+<p>Kita gunakan saja proyek yang kemarin. Bila kamu sudah punya proyeknya, silahkan
+langsung lompat ke <a href="#menambahkan-kotlin-ekstension-pada-proyek-aplikasi">cara menambahkan kotlin extension di proyek android</a>.</p>
+
+<p>Tapi kalau belum, sialkan dibuat.</p>
+
+<p>Buka Android Studio dan buat proyek baru.</p>
+
+<p><img src="/img/android/kotlin/1.buat-proyek-android.png" alt="Membuat proyek baru di android studio" /></p>
+
+<p>Lalu tentukan minimum SDK-nya,</p>
+
+<p><img src="/img/android/kotlin/2.pilih-sdk.png" alt="Memilih minimum SDK untuk Aplikasi Android" /></p>
+
+<p>Kemudian pilih <em>Activity</em> yang ingin digunakan. Pilih saja <strong>Empty Activity</strong>.</p>
+
+<p><img src="/img/android/kotlin/3.pilih-activity.png" alt="Memilih Jenis Activity Awal" /></p>
+
+<p>Setelah itu, pada pemberian nama Activity, biarkan saja apa adanya.</p>
+
+<p><img src="/img/android/kotlin/4.nama-activity.png" alt="Memberikan nama Activity" /></p>
+
+<p>Klik <strong>Finish</strong>, dan proyek baru kita akan langsung dibuat.</p>
+
+<h2 id="konfigurasi-proyek-kotlin">Konfigurasi Proyek Kotlin</h2>
+
+<p>Kita belum dapat menggunakan Kotlin pada proyek yang baru saja kita buat,
+karena masih menggunakan Java.</p>
+
+<p>Oleh karena itu, Kita perlu melakukan sedikit konfigurasi untuk memberitahu Android Studio
+bahwa kita ingin pakai Kotlin pada proyek ini.</p>
+
+<p>Silahkan buka menu <strong>Tools</strong>-&gt;<strong>Kotlin</strong>-&gt;<strong>Configure Kotlin in Project</strong>.</p>
+
+<p><img src="/img/android/kotlin/menu-konfigurasi-kotlin.png" alt="Menu konfigurasi proyek kotlin" /></p>
+
+<p>Kemudian pilih versi kompilator Kotlin yang ingin digunakan.</p>
+
+<p><img src="/img/android/kotlin/pilih-compiler.png" alt="Menentukan versi kompilator kotlin" /></p>
+
+<p>Setelah itu, akan muncul pesan notifikasi bila konfigurasi berhasil.</p>
+
+<p><img src="/img/android/kotlin/konfigurasi-sukses.png" alt="Pesan Konfigurasi kotlin sukses" /></p>
+
+<h2 id="konversi-kode-java-menjadi-kotlin">Konversi Kode Java Menjadi Kotlin</h2>
+
+<p>Silahkan buka kode <code>MainActivity.java</code>, Kemudian masuk ke menu <strong>Help</strong>-&gt;<strong>Find Actions</strong>
+atau tekan tombol <code>Ctrl</code>+<code>Shift</code>+<code>A</code>.</p>
+
+<p><img src="/img/android/kotlin/find-action.png" alt="Fitur Find Actions Android Studio" /></p>
+
+<p>Setelah itu, silahkan cari aksi dengan kata kunci <strong><em>&ldquo;Convert Java to&rdquo;</em></strong>.</p>
+
+<p><img src="/img/android/kotlin/konversi-file-java-ke-kotlin.png" alt="Cari Aksi untuk konversi Java ke Kotlin" /></p>
+
+<p>Pada hasil yang muncul, tekan Enter pada <strong><em>&ldquo;Covert Java File to Kotlin File&rdquo;</em></strong>.</p>
+
+<p>Tunggu beberapa detik, dan file <code>MainActivity.java</code> akan segera berubah menjadi
+<code>MainActivity.kt</code></p>
+
+<h2 id="menambahkan-kotlin-ekstension-pada-proyek-aplikasi">Menambahkan Kotlin Ekstension pada Proyek Aplikasi</h2>
+
+<p>Silahkan buka file <code>build.gradle</code> (app), kemudian tambahkan kode berikut.</p>
+
+<pre><code class="language-gradle">apply plugin: 'kotlin-android-extensions'
+</code></pre>
+
+<p>Tambahkan dibagian atas:</p>
+
+<p><img src="/img/android/kotlin-ext/add-kotlin-extension.png" alt="Menambahkan plugin android extensions pada proyek android" /></p>
+
+<p>Setelah itu lakukan <code>sync</code> proyek agar tidak error. Buka menu <strong>Tools</strong>-&gt;<strong>Android</strong>-&gt;<strong>Sync Project with Gradle Files</strong>.</p>
+
+<h2 id="menggunakan-kotlin-extension">Menggunakan <em>Kotlin Extension</em></h2>
+
+<p>Setelah proses <code>sync</code> selesai, sekarang kita bisa menggunakan
+<em>Kotlin Extensions</em>.</p>
+
+<p>Silahkan buka file <code>MainActivity.kt</code>, tambahkan kode berikut untuk mengimpor
+libaray dari <em>Kotlin Extensions</em>.</p>
+
+<pre><code class="language-kotlin">import kotlinx.android.synthetic.main.activity_main.*
+</code></pre>
+
+<p>Artinya kita akan mengimpor semua komponen di <code>activity_main.xml</code> dan langsung
+dijadikan objek tanpa harus menggunakan fungsi <code>findViewById()</code>.</p>
+
+<p>Sebagai contoh, kita coba buat fungsi untuk meng-handle <em>event onClick</em>
+bernama <code>ucapSalam()</code>.</p>
+
+<p>File <code>MainActivity.kt</code>:</p>
+
+<pre><code class="language-kotlin">package com.petanikode.cobakotlin
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+
+    fun ucapSalam(v: View?): Unit {
+        welcome_msg.setText(&quot;Selamat datang di Kotlin!&quot;)
+    }
+
+}
+</code></pre>
+
+<p>Setelah itu buka <code>activity_main.xml</code> kemudian tambahkan sebuah <code>Button</code>
+dan isi properti <code>onClick</code> dengan nama fungsinya, yaitu: <code>ucapSalam</code>.</p>
+
+<p><img src="/img/android/kotlin-ext/event-onclick.png" alt="Properti untuk event onClick Button" /></p>
+
+<p>Lalu <code>TextView</code> di atasnya, kita ganti <code>id</code>-nya menjadi <code>welcome_msg</code>.
+Kode lengkap layout-nya seperti ini:</p>
+
+<p>File <code>activity_main.xml</code>:</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:id=&quot;@+id/activity_main&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
+    android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
+    tools:context=&quot;com.petanikode.cobakotlin.MainActivity&quot;&gt;
+
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;Hello World!&quot;
+        android:id=&quot;@+id/welcome_msg&quot; /&gt;
+
+    &lt;Button
+        android:text=&quot;Button&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_below=&quot;@+id/welcome_msg&quot;
+        android:layout_alignParentStart=&quot;true&quot;
+        android:layout_marginTop=&quot;52dp&quot;
+        android:id=&quot;@+id/button&quot;
+        android:onClick=&quot;ucapSalam&quot; /&gt;
+
+
+&lt;/RelativeLayout&gt;
+</code></pre>
+
+<p>Sekarang coba jalankan aplikasinya&hellip;</p>
+
+<p><img src="/img/android/kotlin-ext/hasil-running-aplikasi.png" alt="Aplikasi Android dengan Kotlin Extensions" /></p>
+
+<p>Berhasil dan tidak ada error! 😄</p>
+
+<h2 id="akhir-kata">Akhir Kata&hellip;</h2>
+
+<p>Kode Kotlin terlihat lebih sederhana dan mudah dipahami daripada Java.</p>
+
+<p>Ditambah lagi dengan <em>Kotlin Extensions</em> yang membuat kita hemat waktu dan tenaga,
+sehingga dapat membuat aplikasi android dengan lebih cepat.</p>
+
+<p>Terima kasih sudah mengikuti tutorial ini sampai akhir. Selamat
+bereksperimen dengan Kotlin dan Android.</p>
+
+<p>Ada kesulitan?</p>
+
+<p>Tanyakan di komentar!</p>
+
+<p><strong>Referensi</strong>:</p>
+
+<ul>
+<li>Dok. Kotlin &mdash; <a href="https://kotlinlang.org/docs/tutorials/android-plugin.html">Kotlin Android Extensions</a></li>
+<li>StackOverflow &mdash; <a href="https://stackoverflow.com/q/40885426/2658551">Kotlin in xml onClick not work</a></li>
+</ul>
 
                 <div class="post-footer">
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan%2f&t=Cara%20Perbaiki%20Android%20Studio%20yang%20SDK-nya%20Tidak%20Ditemukan" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan%2f&text=Cara%20Perbaiki%20Android%20Studio%20yang%20SDK-nya%20Tidak%20Ditemukan%20https%3a%2f%2fwww.petanikode.com%2fcara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fcara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
-  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fcara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan%2f&description=Cara%20Perbaiki%20Android%20Studio%20yang%20SDK-nya%20Tidak%20Ditemukan" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
-  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fcara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan%2f&title=Cara%20Perbaiki%20Android%20Studio%20yang%20SDK-nya%20Tidak%20Ditemukan" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
-  <li><a href="mailto:?subject=Cara%20Perbaiki%20Android%20Studio%20yang%20SDK-nya%20Tidak%20Ditemukan&body=Cara%20Perbaiki%20Android%20Studio%20yang%20SDK-nya%20Tidak%20Ditemukan:%20https%3a%2f%2fwww.petanikode.com%2fcara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fandroid-kotlin-extensions%2f&t=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fandroid-kotlin-extensions%2f&text=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29%20https%3a%2f%2fwww.petanikode.com%2fandroid-kotlin-extensions%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fandroid-kotlin-extensions%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fandroid-kotlin-extensions%2f&description=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fandroid-kotlin-extensions%2f&title=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29&body=Pemrograman%20Android%20dengan%20Kotlin%20Extensions%20%28Lebih%20Cepat%21%29:%20https%3a%2f%2fwww.petanikode.com%2fandroid-kotlin-extensions%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
 
 
                     <div>Topik:
                       
-                        #<a href="/topik/ide">IDE</a>
-                      
-                        #<a href="/topik/android-studio">Android Studio</a>
+                        #<a href="/topik/kotlin">Kotlin</a>
                       
                         #<a href="/topik/android">Android</a>
                       
@@ -1282,8 +1511,6 @@ padding: 16px;
 
 <ul class="related-post">
     
-    <li><a href="https://www.petanikode.com/android-kotlin-extensions/">Pemrograman Android dengan Kotlin Extensions (Lebih Cepat!)</a> · <i>baca 3 menit</i></li>
-    
 </ul>
 
 
@@ -1295,6 +1522,8 @@ padding: 16px;
 
 
 <ul class="related-post">
+    
+    <li><a href="https://www.petanikode.com/pemrograman-kotlin-menggunakan-netbeans/">Belajar Pemrograman Kotlin Menggunakan Netbeans</a> · <i>baca 3 menit</i></li>
     
 </ul>
 
@@ -1329,9 +1558,9 @@ padding: 16px;
 <script type="text/javascript">
 
 var disqus_config = function () {
-    this.page.url = 'https:\/\/www.petanikode.com\/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan\/';
-    this.page.identifier = 'cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan';
-    this.page.title = 'Cara Perbaiki Android Studio yang SDK-nya Tidak Ditemukan';
+    this.page.url = 'https:\/\/www.petanikode.com\/android-kotlin-extensions\/';
+    this.page.identifier = 'android-kotlin-extensions';
+    this.page.title = 'Pemrograman Android dengan Kotlin Extensions (Lebih Cepat!)';
 };
 
 (function() {

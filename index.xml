@@ -2370,11 +2370,12 @@ SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalo
       <pubDate>Tue, 07 Jul 2015 08:06:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/css-dasar/</guid>
-      <description>Jika HTML adalah kerangka sebuah halaman web, maka CSS adalah kulitnya.
-CSS (Cascade Style Sheet) meruapakan sebuah bahasa untuk mengatur tampilan halaman web sehingga terlihat lebih cantik.
-Cara Menulis kode CSS dalam HTML Penulisan kode CSS di HTML dapat dilakukan di dalam tag &amp;lt;style&amp;gt;. Tag tersebut dapat ditulis di dalam tag &amp;lt;head&amp;gt; atau &amp;lt;body&amp;gt;.
-Kebanyakan orang menulisnya di dalam tag &amp;lt;head&amp;gt;. Perhatiakn contoh berikut ini:
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Contoh Penulisan kode CSS&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; p { color: red } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt;Sebuah contoh paragraf yang sudah dipengaruhi oleh kode CSS&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  Hasilnya, elemen &amp;lt;p&amp;gt; akan berwarna merah:</description>
+      <description>CSS memegang peranan penting dalam web, tanpanya web akan terlihat kurang menarik.
+Pengetahuan tentang CSS, wajib dimiliki oleh setiap web developer (khususnya front-end).
+Dengan pengetahuan CSS, kamu akan mampu membuat:
+ Halaman landing page yang menarik; Template atau tema blog; Mengubah PSD (Desain web) menjadi HTML; dan sebagainya.  Karena itu, mari kita belajar CSS.
+Pada artike ini, kita akan membahas pengenalan dasar CSS, seperti:
+ Apa itu CSS? Struktur dasar CSS; Cara Menuliskan CSS di HTML; dan penggunaan inspect element untuk mempermudah belajar CSS.</description>
     </item>
     
     <item>

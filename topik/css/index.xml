@@ -137,6 +137,23 @@ Kode HTML:
     </item>
     
     <item>
+      <title>Apakah Fungsi `!important` pada CSS dan Kapan Harus Menggunakannya?</title>
+      <link>https://www.petanikode.com/css-important/</link>
+      <pubDate>Sun, 10 Jul 2016 21:08:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/css-important/</guid>
+      <description>Kau begitu !important bagiku&amp;hellip; (cieee :smile:).
+Important artinya sangat penting.
+Kata kunci !important sering kita temukan dalam kode CSS&amp;hellip;
+Apa sih fungsinya?
+Kenapa dan kapan waktu yang tepat menggunakannya?
+Pada artikel ini, kita akan membahasnya dengan sedikit studi kasus.
+Mari kita mulai&amp;hellip;
+Bagaimana Browser Membaca Kode CSS? Browser seperti manusia, dia membaca kode CSS dari atas ke bawah dan mengikuti perintah-perintah dalam CSS.
+Browser selalu menuruti perintah CSS, tapi ada kalanya dia mengabaikan perintah.</description>
+    </item>
+    
+    <item>
       <title>Tutorial CSS: Membuat Style untuk Badge Notifikasi</title>
       <link>https://www.petanikode.com/tutorial-css-badge/</link>
       <pubDate>Wed, 22 Jun 2016 23:33:00 +0000</pubDate>
@@ -258,10 +275,10 @@ h2 { text-shadow: 3px 2px 1px grey; font-size: 40px; }  kemudian HTML-nya:
     
     <item>
       <title>Tutorial CSS: Pengenalan Dasar CSS untuk Pemula</title>
-      <link>https://www.petanikode.com/tutorial-css-pengenalan-css-untuk-pemula/</link>
+      <link>https://www.petanikode.com/css-dasar/</link>
       <pubDate>Tue, 07 Jul 2015 08:06:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-css-pengenalan-css-untuk-pemula/</guid>
+      <guid>https://www.petanikode.com/css-dasar/</guid>
       <description>Jika HTML adalah kerangka sebuah halaman web, maka CSS adalah kulitnya.
 CSS (Cascade Style Sheet) meruapakan sebuah bahasa untuk mengatur tampilan halaman web sehingga terlihat lebih cantik.
 Cara Menulis kode CSS dalam HTML Penulisan kode CSS di HTML dapat dilakukan di dalam tag &amp;lt;style&amp;gt;. Tag tersebut dapat ditulis di dalam tag &amp;lt;head&amp;gt; atau &amp;lt;body&amp;gt;.

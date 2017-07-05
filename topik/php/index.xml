@@ -63,10 +63,10 @@ Alasan singkatan yang digunakan XSS bukan CSS karena CSS sudah digunakan untuk c
     
     <item>
       <title>Helper CodeIgniter untuk Membuat Tanggal dalam Bahasa Indonesia</title>
-      <link>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</link>
+      <link>https://www.petanikode.com/codeigniter-helper-tanggal/</link>
       <pubDate>Thu, 22 Dec 2016 18:21:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</guid>
+      <guid>https://www.petanikode.com/codeigniter-helper-tanggal/</guid>
       <description>Saat kita membuat sbuah tanggal otomatis dengan fungsi Date(), kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, Date(&amp;rsquo;d F Y&amp;rsquo;) akan menghasilkan output 22 December 2016 (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.
 Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi Date().</description>
     </item>

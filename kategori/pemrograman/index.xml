@@ -96,10 +96,10 @@ Maven dibutuhkan untuk men-download semua library yang diperlukan oleh Kotlin ag
     
     <item>
       <title>Pemrograman Android dengan Kotlin pada Android Studio 2.2</title>
-      <link>https://www.petanikode.com/pemrograman-android-dengan-kotlin/</link>
+      <link>https://www.petanikode.com/android-kotlin/</link>
       <pubDate>Sun, 18 Jun 2017 17:13:53 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-android-dengan-kotlin/</guid>
+      <guid>https://www.petanikode.com/android-kotlin/</guid>
       <description>Android Studio yang saya gunakan masih versi 2.2 dan rasanya agak malas mencoba Android Studio yang versi 3.0, karana masih tahap preview.
 Tapi saya ingin segera mencoba coding aplikasi android dengan Kotlin.
 Bagaimana caranya?
@@ -552,16 +552,6 @@ HackerRank merupakan sebuah platform untuk menentukan rangking para programmer b
       <guid>https://www.petanikode.com/17-resolusi-untuk-meningkatkan-kemampuan-pemrograman-di-tahun-2017/</guid>
       <description>Selamat tahun baru 2017. Sejauh mana kemampuan pemrograman yang kalian miliki? apakah kalian ingin meningkatkannya? atau malah menurun dan lebih buruk dari tahun sebelumnya. Wah, semoga saja tidak. Berikut ini ada 17 resolusi untuk meningkatkan kemampuan pemrogramanmu di tahun 2017.
 1. Mulai Menggunakan LinuxBagi kalian yang masih menggunakan windows, tidak ada salahnya mencoba menggunakan linux untuk pemrograman. Kenali konsep dan filosofi open source. Rasakan sensasinya menulis kode dengan linux. Saya yakin, setelah satu tahun menggunakan Linux, anda pasti bisa.</description>
-    </item>
-    
-    <item>
-      <title>Helper CodeIgniter untuk Membuat Tanggal dalam Bahasa Indonesia</title>
-      <link>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</link>
-      <pubDate>Thu, 22 Dec 2016 18:21:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</guid>
-      <description>Saat kita membuat sbuah tanggal otomatis dengan fungsi Date(), kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, Date(&amp;rsquo;d F Y&amp;rsquo;) akan menghasilkan output 22 December 2016 (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.
-Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi Date().</description>
     </item>
     
     <item>
@@ -1071,10 +1061,10 @@ Apa itu Google Maps API?Google Maps API (Application Programming Interface) meru
     
     <item>
       <title>Tutorial CSS: Membuat Style untuk Badge Notifikasi</title>
-      <link>https://www.petanikode.com/tutorial-css-badge/</link>
+      <link>https://www.petanikode.com/css-badge/</link>
       <pubDate>Wed, 22 Jun 2016 23:33:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-css-badge/</guid>
+      <guid>https://www.petanikode.com/css-badge/</guid>
       <description>Badge notifikasi sering kali kita temukan dalam website maupun aplikasi. Terkadang badge tersebut menggoda kita untuk mengelik link atau tombol notifikasi. Itulah fungsinya, agar user tau, di sana ada sesuatu yang baru. Badge biasanya dilengkapi dengan angka penghitung.
 Framework antarmuka semacam Bootstrap sudah menyediakan class sendiri untuk pembuatan badge. Namun, karena badge yang dihasilkan tidak sesui seperti harapan, maka kita harus membuatnya sendiri.
 Kode CSS.badge-notif {
@@ -1123,10 +1113,10 @@ Model UserSebenarnya, inti dari membuat login yang dapat menerima username dan p
     
     <item>
       <title>Menghitung Akar Kuadrat dan Akar Kubik di Java</title>
-      <link>https://www.petanikode.com/menghitung-akar-kuadrat-dan-akar-kubik-di-java/</link>
+      <link>https://www.petanikode.com/java-akar-kuadrad-dan-kubik/</link>
       <pubDate>Sun, 15 May 2016 11:42:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/menghitung-akar-kuadrat-dan-akar-kubik-di-java/</guid>
+      <guid>https://www.petanikode.com/java-akar-kuadrad-dan-kubik/</guid>
       <description>Pada pelajaran Matematika, kadang kita sering menemukan perhitungan akar.
 Contoh, akar kuadrat dari 25 adalah 5, karena 5x5=25, bisa ditulis: $\sqrt{25} = 5$. Lalu kalau akar kubik dari 27 adalah 3, karena 3x3x3=27, bisa ditulis: $\sqrt[3]{27} = 3$.
 Bagaimana cara kita membuat perhitungan tersebu di Java?
@@ -1135,10 +1125,10 @@ Perhitungan akar kuadrat dapat dilakukan dengan fungsi sqrt(). Fungsi ini terdap
     
     <item>
       <title>Konversi Bilangan Desimal ke Bilangan Biner di Java</title>
-      <link>https://www.petanikode.com/konversi-bilangan-desimal-ke-bilangan-biner-di-java/</link>
+      <link>https://www.petanikode.com/java-desimal-biner/</link>
       <pubDate>Sat, 30 Apr 2016 16:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/konversi-bilangan-desimal-ke-bilangan-biner-di-java/</guid>
+      <guid>https://www.petanikode.com/java-desimal-biner/</guid>
       <description>Konversi bilangan desimal ke biner sangat mudah dilakukan di Java, karena ada method atau fungsi yang sudah disediakan untuk melakukannya. Berikut ini tampilan program konversi yang saya buat dengan Java (Swing).Terdapat dua tombol pada program tersebut. Tombol pertama berfungsi untuk menentukan tipe konversinya (Desi-ke-Bin atau Bin-ke-Desi). Kode yang dikerjakan di tombol tersebut adalah sebagai berikut.
 private void btnTipeKonversiActionPerformed(java.awt.event.ActionEvent evt) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</description>
     </item>
@@ -1352,17 +1342,6 @@ Sepertinya masalah ini cukup sulit untuk diatasi. Tetapi, setelah membaca jawaba
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (3) - Memahami fungsi viewport</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</link>
-      <pubDate>Tue, 12 Jan 2016 16:20:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</guid>
-      <description>Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag meta viewport. Mengapa kita perlu menambahkan meta viewport? apa sih fungsinya? Mari kita bahas bersama.
-Pada bagian kepala &amp;lt;head&amp;gt; terdapat tag &amp;lt;meta&amp;gt; yang menampung nilai viewport. Viewport merupakan area yang terlihat pada (perangkat) user/pengunjung web. Viewport digunakan untuk desain web yang responsif (responsive web design). Seperti selogan Bootstrap yang mengutamakan desain responsif.
-Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</description>
-    </item>
-    
-    <item>
       <title>Konfigurasi server PHP di Linux agar bisa upload file</title>
       <link>https://www.petanikode.com/konfigurasi-server-php-di-linux-agar-bisa-upload-file/</link>
       <pubDate>Mon, 11 Jan 2016 17:39:00 +0000</pubDate>
@@ -1385,17 +1364,6 @@ Modul highlight.js berfungsi untuk membuat kode (di web) menjadi berwarna. Kode 
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (2) - Sistem Grid dan tata letak</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</link>
-      <pubDate>Mon, 04 Jan 2016 20:37:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</guid>
-      <description>Selamat datang di tutorial ke-2 Bootstrap. Pada tutorial kali ini, saya akan membahas sistem grid dan tata letak di Bootstrap. Langsung saja, ya!
-Sistem grid memudahkan kita mengatur tata letak elemen di web. Zaman dulu, kebanyakan web menggunakan tag table untuk mengatur tata letaknya. Sekarang sudah tidak lagi. Karena kurang efektif dan tidak SEO friendly. Oleh karena itu, website zaman sekarang menggunakan CSS untuk mengatur tata letaknya.
-Sistem grid di Bootstrap mengadopsi konsep tabel.</description>
-    </item>
-    
-    <item>
       <title>Belajar Pemrograman Java: Memahami Dua Jenis Perulangan dalam Java</title>
       <link>https://www.petanikode.com/pemrograman-java-perulangan/</link>
       <pubDate>Sun, 03 Jan 2016 18:28:00 +0000</pubDate>
@@ -1410,17 +1378,6 @@ Karena itu, kita harus pakai perulangan.
 
 Contoh perulangan:
 for (int hitungan = 0; hitungan &amp;lt;= 1000; hitungan++) { System.</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Bootstrap (1) - Menyisipkan Bootstrap ke HTML</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</link>
-      <pubDate>Sat, 02 Jan 2016 08:58:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</guid>
-      <description>Selamat datang di tutorial pertama Bootstrap. Bootstrap adalah sebuah framework CSS untuk mengatur tampilan web agar menjadi lebih bagus dan responsive. Pada tutorial pertama ini, saya akan membahas cara menyisipkan Bootstrap ke dalam HTML. Sebelum memulai, silahkan anda unduh dulu Bootstrap-nya di getbootstrap.com.
-
-Menyisipkan Bootstrap ke Halaman WebMari kita membuat sebuah direktori bernama belajar-bootstrap. Kemdudian ekstrak Bootstrap yang sudah diunduh tadi ke dalam direktori tersebut. Extrak direktori bisa dilakukan dengan drag-drop.</description>
     </item>
     
     <item>
@@ -1483,10 +1440,10 @@ Siap-siap #ngodejs, kultwit akan segera dimulai!</description>
     
     <item>
       <title>Karakter titik-koma pada pemrograman python</title>
-      <link>https://www.petanikode.com/karakter-titik-koma-pada-pemrograman-python/</link>
+      <link>https://www.petanikode.com/python-titik-koma/</link>
       <pubDate>Sun, 15 Nov 2015 15:30:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/karakter-titik-koma-pada-pemrograman-python/</guid>
+      <guid>https://www.petanikode.com/python-titik-koma/</guid>
       <description>Karakter atau tanda baca titik-koma (;) sering dipakai sebagai penutup suatu perintah pada bahasa pemrograman lain seperti C, C++, Java, PHP, Javascript, dan sebagainya. Tanda baca ini sering menyebabkan error, karena kita lalai atau lupa mengetiknya. Tapi, tidak demikian di bahasa pemrograman python. Tanda baca ini digunakan sebagai penyambung beberapa statement atau kode perintah dalam satu baris.
 Contoh: print &amp;ldquo;Hello!&amp;rdquo;
 print &amp;ldquo;Dunia&amp;rdquo;
@@ -1503,19 +1460,6 @@ print &amp;ldquo;Python&amp;rdquo;Tiga peritah di atas dapat disingkat atau ditu
 Ada dua alternatif emulator untuk debug dan deploy aplikasi android:
  Menggunakan Genymotion Menggunakan Hp sendiri  Geanymotion adalah emulator android pihak ketiga yang berbasis virtualbox. Ada yang mengklaim emulator ini lebih cepat dibandingkan emulator bawaan android studio.
 Cara Instal Geanymotion untuk Emulator Android Studio 1. Pastikan virtualbox sudah terinstal Genymotion memanfaatkan virtualbox untuk melakuan virtualisasi.</description>
-    </item>
-    
-    <item>
-      <title>Instalasi dan uji coba Lazarus IDE di Windows 7</title>
-      <link>https://www.petanikode.com/instalasi-dan-uji-coba-lazarus-ide-di-windows-7/</link>
-      <pubDate>Fri, 06 Nov 2015 15:06:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/instalasi-dan-uji-coba-lazarus-ide-di-windows-7/</guid>
-      <description>Lazarus merupakan sebuah IDE open source yang mampu berjalan di berbagai sistem operasi (platform). Pada tulisan ini, saya akan memandu anda menginstal lazarus di Windows 7. Lazarus yang akan diinstal ialah Lazarus versi 1.4.4.
-1. Download Lazarus Silahkan menuju ke website resminya Lazarus untuk mendapatkan instalator Lazarus untuk windows.
-
-Masuklah ke halaman download, kemudian pilih link Windows (32 and 64 bits) Direct download.
-Proses download pun dimulai, silahkan menunggu dengan sabar!</description>
     </item>
     
     <item>
@@ -1908,11 +1852,11 @@ sudo apt-get install python-setuptools Unduh djangoDjango dapat diunduh di situs
     </item>
     
     <item>
-      <title>Cara kloning proyek di github</title>
-      <link>https://www.petanikode.com/cara-kloning-proyek-di-github/</link>
+      <title>Cara Cloning proyek di github</title>
+      <link>https://www.petanikode.com/github-clone/</link>
       <pubDate>Wed, 11 Feb 2015 17:22:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-kloning-proyek-di-github/</guid>
+      <guid>https://www.petanikode.com/github-clone/</guid>
       <description>Assalamualaikum wr. wb., di tulisan ini saya ingin berbagi cara kloning proyek di Github. Kloing proyek artinya membuat salinan berkas proyek yang ada di server Github ke komputer sendiri.
  Kloning proyek dapat dilakukan dengan perintah git clone [alamat proyek]. Alamat proyek dapat dilihat di halaman repository proyek yang akan dikloning.
  $ git clone https://github.com/b-informatika/kupi.git

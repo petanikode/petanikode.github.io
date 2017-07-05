@@ -96,16 +96,6 @@ Misalkan, sebuah data mata uang bentuknya seperti ini:</description>
     </item>
     
     <item>
-      <title>Konversi Bilangan Desimal ke Bilangan Biner di Java</title>
-      <link>https://www.petanikode.com/konversi-bilangan-desimal-ke-bilangan-biner-di-java/</link>
-      <pubDate>Sat, 30 Apr 2016 16:00:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/konversi-bilangan-desimal-ke-bilangan-biner-di-java/</guid>
-      <description>Konversi bilangan desimal ke biner sangat mudah dilakukan di Java, karena ada method atau fungsi yang sudah disediakan untuk melakukannya. Berikut ini tampilan program konversi yang saya buat dengan Java (Swing).Terdapat dua tombol pada program tersebut. Tombol pertama berfungsi untuk menentukan tipe konversinya (Desi-ke-Bin atau Bin-ke-Desi). Kode yang dikerjakan di tombol tersebut adalah sebagai berikut.
-private void btnTipeKonversiActionPerformed(java.awt.event.ActionEvent evt) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</description>
-    </item>
-    
-    <item>
       <title>Operator ^ (xor) di Java bukan untuk Membuat Pangkat</title>
       <link>https://www.petanikode.com/operator--xor-di-java-bukan-untuk-membuat-pangkat/</link>
       <pubDate>Fri, 29 Apr 2016 06:25:00 +0000</pubDate>
@@ -146,10 +136,10 @@ Siap-siap #ngodejs, kultwit akan segera dimulai!</description>
     
     <item>
       <title>Karakter titik-koma pada pemrograman python</title>
-      <link>https://www.petanikode.com/karakter-titik-koma-pada-pemrograman-python/</link>
+      <link>https://www.petanikode.com/python-titik-koma/</link>
       <pubDate>Sun, 15 Nov 2015 15:30:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/karakter-titik-koma-pada-pemrograman-python/</guid>
+      <guid>https://www.petanikode.com/python-titik-koma/</guid>
       <description>Karakter atau tanda baca titik-koma (;) sering dipakai sebagai penutup suatu perintah pada bahasa pemrograman lain seperti C, C++, Java, PHP, Javascript, dan sebagainya. Tanda baca ini sering menyebabkan error, karena kita lalai atau lupa mengetiknya. Tapi, tidak demikian di bahasa pemrograman python. Tanda baca ini digunakan sebagai penyambung beberapa statement atau kode perintah dalam satu baris.
 Contoh: print &amp;ldquo;Hello!&amp;rdquo;
 print &amp;ldquo;Dunia&amp;rdquo;

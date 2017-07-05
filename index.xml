@@ -122,10 +122,10 @@ Maven dibutuhkan untuk men-download semua library yang diperlukan oleh Kotlin ag
     
     <item>
       <title>Pemrograman Android dengan Kotlin pada Android Studio 2.2</title>
-      <link>https://www.petanikode.com/pemrograman-android-dengan-kotlin/</link>
+      <link>https://www.petanikode.com/android-kotlin/</link>
       <pubDate>Sun, 18 Jun 2017 17:13:53 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-android-dengan-kotlin/</guid>
+      <guid>https://www.petanikode.com/android-kotlin/</guid>
       <description>Android Studio yang saya gunakan masih versi 2.2 dan rasanya agak malas mencoba Android Studio yang versi 3.0, karana masih tahap preview.
 Tapi saya ingin segera mencoba coding aplikasi android dengan Kotlin.
 Bagaimana caranya?
@@ -876,10 +876,10 @@ Alasan singkatan yang digunakan XSS bukan CSS karena CSS sudah digunakan untuk c
     
     <item>
       <title>Helper CodeIgniter untuk Membuat Tanggal dalam Bahasa Indonesia</title>
-      <link>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</link>
+      <link>https://www.petanikode.com/codeigniter-helper-tanggal/</link>
       <pubDate>Thu, 22 Dec 2016 18:21:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</guid>
+      <guid>https://www.petanikode.com/codeigniter-helper-tanggal/</guid>
       <description>Saat kita membuat sbuah tanggal otomatis dengan fungsi Date(), kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, Date(&amp;rsquo;d F Y&amp;rsquo;) akan menghasilkan output 22 December 2016 (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.
 Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi Date().</description>
     </item>
@@ -1241,11 +1241,11 @@ Berikut ini cara menyisipkan Data Tables melalui CDN.</description>
     </item>
     
     <item>
-      <title>Tutorial Font-awesome untuk Membuat Ikon pada Web</title>
-      <link>https://www.petanikode.com/tutorial-font-awesome/</link>
+      <title>Cara Menggunakan Font-awesome untuk Membuat Ikon pada Web</title>
+      <link>https://www.petanikode.com/font-awesome/</link>
       <pubDate>Sun, 21 Aug 2016 15:18:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-font-awesome/</guid>
+      <guid>https://www.petanikode.com/font-awesome/</guid>
       <description>Dulu saya sempat berpikir, pembuatan web kelihatannya susah. Karena banyak komponen yang harus dibuat, seperti background dan ikon. Tapi ternyata tidak, soalnya ada framework yang dapat kita gunakan untuk membuat ikon dengan cepat. Nama framework-nya adalah Font Awesome.
 Font awesome merupakan sebuah framework CSS untuk membuat ikon. Font awesome memiliki ratusan ikon yang siap dipakai. Pada kesempatan ini, kita akan belajar cara menggunakanya. Silahkan disimak.
 1. Download Font Awesome
@@ -1554,10 +1554,10 @@ Apa itu Google Maps API?Google Maps API (Application Programming Interface) meru
     
     <item>
       <title>Tutorial CSS: Membuat Style untuk Badge Notifikasi</title>
-      <link>https://www.petanikode.com/tutorial-css-badge/</link>
+      <link>https://www.petanikode.com/css-badge/</link>
       <pubDate>Wed, 22 Jun 2016 23:33:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-css-badge/</guid>
+      <guid>https://www.petanikode.com/css-badge/</guid>
       <description>Badge notifikasi sering kali kita temukan dalam website maupun aplikasi. Terkadang badge tersebut menggoda kita untuk mengelik link atau tombol notifikasi. Itulah fungsinya, agar user tau, di sana ada sesuatu yang baru. Badge biasanya dilengkapi dengan angka penghitung.
 Framework antarmuka semacam Bootstrap sudah menyediakan class sendiri untuk pembuatan badge. Namun, karena badge yang dihasilkan tidak sesui seperti harapan, maka kita harus membuatnya sendiri.
 Kode CSS.badge-notif {
@@ -1631,10 +1631,10 @@ Apa itu MathJax? MathJax merupakan pustaka (library) javascript untuk menampilka
     
     <item>
       <title>Menghitung Akar Kuadrat dan Akar Kubik di Java</title>
-      <link>https://www.petanikode.com/menghitung-akar-kuadrat-dan-akar-kubik-di-java/</link>
+      <link>https://www.petanikode.com/java-akar-kuadrad-dan-kubik/</link>
       <pubDate>Sun, 15 May 2016 11:42:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/menghitung-akar-kuadrat-dan-akar-kubik-di-java/</guid>
+      <guid>https://www.petanikode.com/java-akar-kuadrad-dan-kubik/</guid>
       <description>Pada pelajaran Matematika, kadang kita sering menemukan perhitungan akar.
 Contoh, akar kuadrat dari 25 adalah 5, karena 5x5=25, bisa ditulis: $\sqrt{25} = 5$. Lalu kalau akar kubik dari 27 adalah 3, karena 3x3x3=27, bisa ditulis: $\sqrt[3]{27} = 3$.
 Bagaimana cara kita membuat perhitungan tersebu di Java?
@@ -1643,10 +1643,10 @@ Perhitungan akar kuadrat dapat dilakukan dengan fungsi sqrt(). Fungsi ini terdap
     
     <item>
       <title>Konversi Bilangan Desimal ke Bilangan Biner di Java</title>
-      <link>https://www.petanikode.com/konversi-bilangan-desimal-ke-bilangan-biner-di-java/</link>
+      <link>https://www.petanikode.com/java-desimal-biner/</link>
       <pubDate>Sat, 30 Apr 2016 16:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/konversi-bilangan-desimal-ke-bilangan-biner-di-java/</guid>
+      <guid>https://www.petanikode.com/java-desimal-biner/</guid>
       <description>Konversi bilangan desimal ke biner sangat mudah dilakukan di Java, karena ada method atau fungsi yang sudah disediakan untuk melakukannya. Berikut ini tampilan program konversi yang saya buat dengan Java (Swing).Terdapat dua tombol pada program tersebut. Tombol pertama berfungsi untuk menentukan tipe konversinya (Desi-ke-Bin atau Bin-ke-Desi). Kode yang dikerjakan di tombol tersebut adalah sebagai berikut.
 private void btnTipeKonversiActionPerformed(java.awt.event.ActionEvent evt) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</description>
     </item>
@@ -1935,11 +1935,11 @@ Sepertinya masalah ini cukup sulit untuk diatasi. Tetapi, setelah membaca jawaba
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (3) - Memahami fungsi viewport</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</link>
+      <title>Tutorial Bootstrap- Memahami Fungsi Viewport</title>
+      <link>https://www.petanikode.com/bootstrap-viewport/</link>
       <pubDate>Tue, 12 Jan 2016 16:20:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</guid>
+      <guid>https://www.petanikode.com/bootstrap-viewport/</guid>
       <description>Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag meta viewport. Mengapa kita perlu menambahkan meta viewport? apa sih fungsinya? Mari kita bahas bersama.
 Pada bagian kepala &amp;lt;head&amp;gt; terdapat tag &amp;lt;meta&amp;gt; yang menampung nilai viewport. Viewport merupakan area yang terlihat pada (perangkat) user/pengunjung web. Viewport digunakan untuk desain web yang responsif (responsive web design). Seperti selogan Bootstrap yang mengutamakan desain responsif.
 Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</description>
@@ -1968,11 +1968,11 @@ Modul highlight.js berfungsi untuk membuat kode (di web) menjadi berwarna. Kode 
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (2) - Sistem Grid dan tata letak</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</link>
+      <title>Tutorial Bootstrap - Sistem Grid dan tata letak</title>
+      <link>https://www.petanikode.com/bootstrap-grid/</link>
       <pubDate>Mon, 04 Jan 2016 20:37:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</guid>
+      <guid>https://www.petanikode.com/bootstrap-grid/</guid>
       <description>Selamat datang di tutorial ke-2 Bootstrap. Pada tutorial kali ini, saya akan membahas sistem grid dan tata letak di Bootstrap. Langsung saja, ya!
 Sistem grid memudahkan kita mengatur tata letak elemen di web. Zaman dulu, kebanyakan web menggunakan tag table untuk mengatur tata letaknya. Sekarang sudah tidak lagi. Karena kurang efektif dan tidak SEO friendly. Oleh karena itu, website zaman sekarang menggunakan CSS untuk mengatur tata letaknya.
 Sistem grid di Bootstrap mengadopsi konsep tabel.</description>
@@ -1996,11 +1996,11 @@ for (int hitungan = 0; hitungan &amp;lt;= 1000; hitungan++) { System.</descripti
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (1) - Menyisipkan Bootstrap ke HTML</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</link>
+      <title>Tutorial Bootstrap - Menyisipkan Bootstrap ke HTML</title>
+      <link>https://www.petanikode.com/bootstrap-dasar/</link>
       <pubDate>Sat, 02 Jan 2016 08:58:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</guid>
+      <guid>https://www.petanikode.com/bootstrap-dasar/</guid>
       <description>Selamat datang di tutorial pertama Bootstrap. Bootstrap adalah sebuah framework CSS untuk mengatur tampilan web agar menjadi lebih bagus dan responsive. Pada tutorial pertama ini, saya akan membahas cara menyisipkan Bootstrap ke dalam HTML. Sebelum memulai, silahkan anda unduh dulu Bootstrap-nya di getbootstrap.com.
 
 Menyisipkan Bootstrap ke Halaman WebMari kita membuat sebuah direktori bernama belajar-bootstrap. Kemdudian ekstrak Bootstrap yang sudah diunduh tadi ke dalam direktori tersebut. Extrak direktori bisa dilakukan dengan drag-drop.</description>
@@ -2066,10 +2066,10 @@ Siap-siap #ngodejs, kultwit akan segera dimulai!</description>
     
     <item>
       <title>Karakter titik-koma pada pemrograman python</title>
-      <link>https://www.petanikode.com/karakter-titik-koma-pada-pemrograman-python/</link>
+      <link>https://www.petanikode.com/python-titik-koma/</link>
       <pubDate>Sun, 15 Nov 2015 15:30:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/karakter-titik-koma-pada-pemrograman-python/</guid>
+      <guid>https://www.petanikode.com/python-titik-koma/</guid>
       <description>Karakter atau tanda baca titik-koma (;) sering dipakai sebagai penutup suatu perintah pada bahasa pemrograman lain seperti C, C++, Java, PHP, Javascript, dan sebagainya. Tanda baca ini sering menyebabkan error, karena kita lalai atau lupa mengetiknya. Tapi, tidak demikian di bahasa pemrograman python. Tanda baca ini digunakan sebagai penyambung beberapa statement atau kode perintah dalam satu baris.
 Contoh: print &amp;ldquo;Hello!&amp;rdquo;
 print &amp;ldquo;Dunia&amp;rdquo;
@@ -2102,10 +2102,10 @@ Cara Instal Geanymotion untuk Emulator Android Studio 1. Pastikan virtualbox sud
     
     <item>
       <title>Instalasi dan uji coba Lazarus IDE di Windows 7</title>
-      <link>https://www.petanikode.com/instalasi-dan-uji-coba-lazarus-ide-di-windows-7/</link>
+      <link>https://www.petanikode.com/lazarus-windows/</link>
       <pubDate>Fri, 06 Nov 2015 15:06:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/instalasi-dan-uji-coba-lazarus-ide-di-windows-7/</guid>
+      <guid>https://www.petanikode.com/lazarus-windows/</guid>
       <description>Lazarus merupakan sebuah IDE open source yang mampu berjalan di berbagai sistem operasi (platform). Pada tulisan ini, saya akan memandu anda menginstal lazarus di Windows 7. Lazarus yang akan diinstal ialah Lazarus versi 1.4.4.
 1. Download Lazarus Silahkan menuju ke website resminya Lazarus untuk mendapatkan instalator Lazarus untuk windows.
 
@@ -2115,10 +2115,10 @@ Proses download pun dimulai, silahkan menunggu dengan sabar!</description>
     
     <item>
       <title>Tutorial CSS: Cara Membuat Effek Bayangan</title>
-      <link>https://www.petanikode.com/tutorial-css-shadow/</link>
+      <link>https://www.petanikode.com/css-shadow/</link>
       <pubDate>Sun, 01 Nov 2015 09:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-css-shadow/</guid>
+      <guid>https://www.petanikode.com/css-shadow/</guid>
       <description>Properti untuk membuat bayangan (shadow), mulai dikenalkan pada CSS3. Properti tersebut adalah box-shadow dan text-shadow.
 Keduanya sama-sama berfungsi untuk membuat bayangan. Properti box-shadow digunakan untuk membuat bayangan untuk kotak atau elemen kontainer. Sementara itu, properti text-shadow digunakan untuk membuat bayangan pada teks.
 Membuat Bayangan untuk Teks Langsung saja ke contoh, silahkan buat style seperti ini.
@@ -2540,11 +2540,11 @@ sudo apt-get install python-setuptools Unduh djangoDjango dapat diunduh di situs
     </item>
     
     <item>
-      <title>Cara kloning proyek di github</title>
-      <link>https://www.petanikode.com/cara-kloning-proyek-di-github/</link>
+      <title>Cara Cloning proyek di github</title>
+      <link>https://www.petanikode.com/github-clone/</link>
       <pubDate>Wed, 11 Feb 2015 17:22:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-kloning-proyek-di-github/</guid>
+      <guid>https://www.petanikode.com/github-clone/</guid>
       <description>Assalamualaikum wr. wb., di tulisan ini saya ingin berbagi cara kloning proyek di Github. Kloing proyek artinya membuat salinan berkas proyek yang ada di server Github ke komputer sendiri.
  Kloning proyek dapat dilakukan dengan perintah git clone [alamat proyek]. Alamat proyek dapat dilihat di halaman repository proyek yang akan dikloning.
  $ git clone https://github.com/b-informatika/kupi.git

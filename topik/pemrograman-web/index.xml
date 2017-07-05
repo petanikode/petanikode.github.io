@@ -7,20 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 22 Dec 2016 18:21:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Nov 2016 11:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/topik/pemrograman-web/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Helper CodeIgniter untuk Membuat Tanggal dalam Bahasa Indonesia</title>
-      <link>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</link>
-      <pubDate>Thu, 22 Dec 2016 18:21:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</guid>
-      <description>Saat kita membuat sbuah tanggal otomatis dengan fungsi Date(), kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, Date(&amp;rsquo;d F Y&amp;rsquo;) akan menghasilkan output 22 December 2016 (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.
-Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi Date().</description>
-    </item>
     
     <item>
       <title>Cara Mengaktifkan Profiler CodeIgniter</title>
@@ -182,48 +172,15 @@ Apa itu Google Maps API?Google Maps API (Application Programming Interface) meru
     
     <item>
       <title>Tutorial CSS: Membuat Style untuk Badge Notifikasi</title>
-      <link>https://www.petanikode.com/tutorial-css-badge/</link>
+      <link>https://www.petanikode.com/css-badge/</link>
       <pubDate>Wed, 22 Jun 2016 23:33:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-css-badge/</guid>
+      <guid>https://www.petanikode.com/css-badge/</guid>
       <description>Badge notifikasi sering kali kita temukan dalam website maupun aplikasi. Terkadang badge tersebut menggoda kita untuk mengelik link atau tombol notifikasi. Itulah fungsinya, agar user tau, di sana ada sesuatu yang baru. Badge biasanya dilengkapi dengan angka penghitung.
 Framework antarmuka semacam Bootstrap sudah menyediakan class sendiri untuk pembuatan badge. Namun, karena badge yang dihasilkan tidak sesui seperti harapan, maka kita harus membuatnya sendiri.
 Kode CSS.badge-notif {
 &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; position:relative;
 }</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Bootstrap (3) - Memahami fungsi viewport</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</link>
-      <pubDate>Tue, 12 Jan 2016 16:20:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</guid>
-      <description>Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag meta viewport. Mengapa kita perlu menambahkan meta viewport? apa sih fungsinya? Mari kita bahas bersama.
-Pada bagian kepala &amp;lt;head&amp;gt; terdapat tag &amp;lt;meta&amp;gt; yang menampung nilai viewport. Viewport merupakan area yang terlihat pada (perangkat) user/pengunjung web. Viewport digunakan untuk desain web yang responsif (responsive web design). Seperti selogan Bootstrap yang mengutamakan desain responsif.
-Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Bootstrap (2) - Sistem Grid dan tata letak</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</link>
-      <pubDate>Mon, 04 Jan 2016 20:37:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</guid>
-      <description>Selamat datang di tutorial ke-2 Bootstrap. Pada tutorial kali ini, saya akan membahas sistem grid dan tata letak di Bootstrap. Langsung saja, ya!
-Sistem grid memudahkan kita mengatur tata letak elemen di web. Zaman dulu, kebanyakan web menggunakan tag table untuk mengatur tata letaknya. Sekarang sudah tidak lagi. Karena kurang efektif dan tidak SEO friendly. Oleh karena itu, website zaman sekarang menggunakan CSS untuk mengatur tata letaknya.
-Sistem grid di Bootstrap mengadopsi konsep tabel.</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Bootstrap (1) - Menyisipkan Bootstrap ke HTML</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</link>
-      <pubDate>Sat, 02 Jan 2016 08:58:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</guid>
-      <description>Selamat datang di tutorial pertama Bootstrap. Bootstrap adalah sebuah framework CSS untuk mengatur tampilan web agar menjadi lebih bagus dan responsive. Pada tutorial pertama ini, saya akan membahas cara menyisipkan Bootstrap ke dalam HTML. Sebelum memulai, silahkan anda unduh dulu Bootstrap-nya di getbootstrap.com.
-
-Menyisipkan Bootstrap ke Halaman WebMari kita membuat sebuah direktori bernama belajar-bootstrap. Kemdudian ekstrak Bootstrap yang sudah diunduh tadi ke dalam direktori tersebut. Extrak direktori bisa dilakukan dengan drag-drop.</description>
     </item>
     
     <item>

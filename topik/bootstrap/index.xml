@@ -70,33 +70,33 @@ Google Maps memang akan menampilkan area abu-abu (grey) kalau ditempatkan di ele
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (3) - Memahami fungsi viewport</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</link>
+      <title>Tutorial Bootstrap- Memahami Fungsi Viewport</title>
+      <link>https://www.petanikode.com/bootstrap-viewport/</link>
       <pubDate>Tue, 12 Jan 2016 16:20:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</guid>
+      <guid>https://www.petanikode.com/bootstrap-viewport/</guid>
       <description>Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag meta viewport. Mengapa kita perlu menambahkan meta viewport? apa sih fungsinya? Mari kita bahas bersama.
 Pada bagian kepala &amp;lt;head&amp;gt; terdapat tag &amp;lt;meta&amp;gt; yang menampung nilai viewport. Viewport merupakan area yang terlihat pada (perangkat) user/pengunjung web. Viewport digunakan untuk desain web yang responsif (responsive web design). Seperti selogan Bootstrap yang mengutamakan desain responsif.
 Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</description>
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (2) - Sistem Grid dan tata letak</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</link>
+      <title>Tutorial Bootstrap - Sistem Grid dan tata letak</title>
+      <link>https://www.petanikode.com/bootstrap-grid/</link>
       <pubDate>Mon, 04 Jan 2016 20:37:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</guid>
+      <guid>https://www.petanikode.com/bootstrap-grid/</guid>
       <description>Selamat datang di tutorial ke-2 Bootstrap. Pada tutorial kali ini, saya akan membahas sistem grid dan tata letak di Bootstrap. Langsung saja, ya!
 Sistem grid memudahkan kita mengatur tata letak elemen di web. Zaman dulu, kebanyakan web menggunakan tag table untuk mengatur tata letaknya. Sekarang sudah tidak lagi. Karena kurang efektif dan tidak SEO friendly. Oleh karena itu, website zaman sekarang menggunakan CSS untuk mengatur tata letaknya.
 Sistem grid di Bootstrap mengadopsi konsep tabel.</description>
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (1) - Menyisipkan Bootstrap ke HTML</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</link>
+      <title>Tutorial Bootstrap - Menyisipkan Bootstrap ke HTML</title>
+      <link>https://www.petanikode.com/bootstrap-dasar/</link>
       <pubDate>Sat, 02 Jan 2016 08:58:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</guid>
+      <guid>https://www.petanikode.com/bootstrap-dasar/</guid>
       <description>Selamat datang di tutorial pertama Bootstrap. Bootstrap adalah sebuah framework CSS untuk mengatur tampilan web agar menjadi lebih bagus dan responsive. Pada tutorial pertama ini, saya akan membahas cara menyisipkan Bootstrap ke dalam HTML. Sebelum memulai, silahkan anda unduh dulu Bootstrap-nya di getbootstrap.com.
 
 Menyisipkan Bootstrap ke Halaman WebMari kita membuat sebuah direktori bernama belajar-bootstrap. Kemdudian ekstrak Bootstrap yang sudah diunduh tadi ke dalam direktori tersebut. Extrak direktori bisa dilakukan dengan drag-drop.</description>

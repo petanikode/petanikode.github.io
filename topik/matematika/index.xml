@@ -53,10 +53,10 @@ Apa itu MathJax? MathJax merupakan pustaka (library) javascript untuk menampilka
     
     <item>
       <title>Menghitung Akar Kuadrat dan Akar Kubik di Java</title>
-      <link>https://www.petanikode.com/menghitung-akar-kuadrat-dan-akar-kubik-di-java/</link>
+      <link>https://www.petanikode.com/java-akar-kuadrad-dan-kubik/</link>
       <pubDate>Sun, 15 May 2016 11:42:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/menghitung-akar-kuadrat-dan-akar-kubik-di-java/</guid>
+      <guid>https://www.petanikode.com/java-akar-kuadrad-dan-kubik/</guid>
       <description>Pada pelajaran Matematika, kadang kita sering menemukan perhitungan akar.
 Contoh, akar kuadrat dari 25 adalah 5, karena 5x5=25, bisa ditulis: $\sqrt{25} = 5$. Lalu kalau akar kubik dari 27 adalah 3, karena 3x3x3=27, bisa ditulis: $\sqrt[3]{27} = 3$.
 Bagaimana cara kita membuat perhitungan tersebu di Java?
@@ -65,10 +65,10 @@ Perhitungan akar kuadrat dapat dilakukan dengan fungsi sqrt(). Fungsi ini terdap
     
     <item>
       <title>Konversi Bilangan Desimal ke Bilangan Biner di Java</title>
-      <link>https://www.petanikode.com/konversi-bilangan-desimal-ke-bilangan-biner-di-java/</link>
+      <link>https://www.petanikode.com/java-desimal-biner/</link>
       <pubDate>Sat, 30 Apr 2016 16:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/konversi-bilangan-desimal-ke-bilangan-biner-di-java/</guid>
+      <guid>https://www.petanikode.com/java-desimal-biner/</guid>
       <description>Konversi bilangan desimal ke biner sangat mudah dilakukan di Java, karena ada method atau fungsi yang sudah disediakan untuk melakukannya. Berikut ini tampilan program konversi yang saya buat dengan Java (Swing).Terdapat dua tombol pada program tersebut. Tombol pertama berfungsi untuk menentukan tipe konversinya (Desi-ke-Bin atau Bin-ke-Desi). Kode yang dikerjakan di tombol tersebut adalah sebagai berikut.
 private void btnTipeKonversiActionPerformed(java.awt.event.ActionEvent evt) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</description>
     </item>

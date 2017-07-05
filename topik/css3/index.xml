@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>Tutorial Font-awesome untuk Membuat Ikon pada Web</title>
-      <link>https://www.petanikode.com/tutorial-font-awesome/</link>
+      <title>Cara Menggunakan Font-awesome untuk Membuat Ikon pada Web</title>
+      <link>https://www.petanikode.com/font-awesome/</link>
       <pubDate>Sun, 21 Aug 2016 15:18:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-font-awesome/</guid>
+      <guid>https://www.petanikode.com/font-awesome/</guid>
       <description>Dulu saya sempat berpikir, pembuatan web kelihatannya susah. Karena banyak komponen yang harus dibuat, seperti background dan ikon. Tapi ternyata tidak, soalnya ada framework yang dapat kita gunakan untuk membuat ikon dengan cepat. Nama framework-nya adalah Font Awesome.
 Font awesome merupakan sebuah framework CSS untuk membuat ikon. Font awesome memiliki ratusan ikon yang siap dipakai. Pada kesempatan ini, kita akan belajar cara menggunakanya. Silahkan disimak.
 1. Download Font Awesome
@@ -26,10 +26,10 @@ Silahkan download Font Awesome di http://fontawesome.</description>
     
     <item>
       <title>Tutorial CSS: Membuat Style untuk Badge Notifikasi</title>
-      <link>https://www.petanikode.com/tutorial-css-badge/</link>
+      <link>https://www.petanikode.com/css-badge/</link>
       <pubDate>Wed, 22 Jun 2016 23:33:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-css-badge/</guid>
+      <guid>https://www.petanikode.com/css-badge/</guid>
       <description>Badge notifikasi sering kali kita temukan dalam website maupun aplikasi. Terkadang badge tersebut menggoda kita untuk mengelik link atau tombol notifikasi. Itulah fungsinya, agar user tau, di sana ada sesuatu yang baru. Badge biasanya dilengkapi dengan angka penghitung.
 Framework antarmuka semacam Bootstrap sudah menyediakan class sendiri untuk pembuatan badge. Namun, karena badge yang dihasilkan tidak sesui seperti harapan, maka kita harus membuatnya sendiri.
 Kode CSS.badge-notif {
@@ -38,22 +38,22 @@ Kode CSS.badge-notif {
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (2) - Sistem Grid dan tata letak</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</link>
+      <title>Tutorial Bootstrap - Sistem Grid dan tata letak</title>
+      <link>https://www.petanikode.com/bootstrap-grid/</link>
       <pubDate>Mon, 04 Jan 2016 20:37:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</guid>
+      <guid>https://www.petanikode.com/bootstrap-grid/</guid>
       <description>Selamat datang di tutorial ke-2 Bootstrap. Pada tutorial kali ini, saya akan membahas sistem grid dan tata letak di Bootstrap. Langsung saja, ya!
 Sistem grid memudahkan kita mengatur tata letak elemen di web. Zaman dulu, kebanyakan web menggunakan tag table untuk mengatur tata letaknya. Sekarang sudah tidak lagi. Karena kurang efektif dan tidak SEO friendly. Oleh karena itu, website zaman sekarang menggunakan CSS untuk mengatur tata letaknya.
 Sistem grid di Bootstrap mengadopsi konsep tabel.</description>
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (1) - Menyisipkan Bootstrap ke HTML</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</link>
+      <title>Tutorial Bootstrap - Menyisipkan Bootstrap ke HTML</title>
+      <link>https://www.petanikode.com/bootstrap-dasar/</link>
       <pubDate>Sat, 02 Jan 2016 08:58:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</guid>
+      <guid>https://www.petanikode.com/bootstrap-dasar/</guid>
       <description>Selamat datang di tutorial pertama Bootstrap. Bootstrap adalah sebuah framework CSS untuk mengatur tampilan web agar menjadi lebih bagus dan responsive. Pada tutorial pertama ini, saya akan membahas cara menyisipkan Bootstrap ke dalam HTML. Sebelum memulai, silahkan anda unduh dulu Bootstrap-nya di getbootstrap.com.
 
 Menyisipkan Bootstrap ke Halaman WebMari kita membuat sebuah direktori bernama belajar-bootstrap. Kemdudian ekstrak Bootstrap yang sudah diunduh tadi ke dalam direktori tersebut. Extrak direktori bisa dilakukan dengan drag-drop.</description>
@@ -61,10 +61,10 @@ Menyisipkan Bootstrap ke Halaman WebMari kita membuat sebuah direktori bernama b
     
     <item>
       <title>Tutorial CSS: Cara Membuat Effek Bayangan</title>
-      <link>https://www.petanikode.com/tutorial-css-shadow/</link>
+      <link>https://www.petanikode.com/css-shadow/</link>
       <pubDate>Sun, 01 Nov 2015 09:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-css-shadow/</guid>
+      <guid>https://www.petanikode.com/css-shadow/</guid>
       <description>Properti untuk membuat bayangan (shadow), mulai dikenalkan pada CSS3. Properti tersebut adalah box-shadow dan text-shadow.
 Keduanya sama-sama berfungsi untuk membuat bayangan. Properti box-shadow digunakan untuk membuat bayangan untuk kotak atau elemen kontainer. Sementara itu, properti text-shadow digunakan untuk membuat bayangan pada teks.
 Membuat Bayangan untuk Teks Langsung saja ke contoh, silahkan buat style seperti ini.

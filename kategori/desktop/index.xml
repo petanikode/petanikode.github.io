@@ -25,6 +25,29 @@ import java.awt.Toolkit;2. Kode Agar Tampil di TengahLetakan kode berikut di dal
     </item>
     
     <item>
+      <title>Konversi Bilangan Desimal ke Bilangan Biner di Java</title>
+      <link>https://www.petanikode.com/java-desimal-biner/</link>
+      <pubDate>Sat, 30 Apr 2016 16:00:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/java-desimal-biner/</guid>
+      <description>Konversi bilangan desimal ke biner sangat mudah dilakukan di Java, karena ada method atau fungsi yang sudah disediakan untuk melakukannya. Berikut ini tampilan program konversi yang saya buat dengan Java (Swing).Terdapat dua tombol pada program tersebut. Tombol pertama berfungsi untuk menentukan tipe konversinya (Desi-ke-Bin atau Bin-ke-Desi). Kode yang dikerjakan di tombol tersebut adalah sebagai berikut.
+private void btnTipeKonversiActionPerformed(java.awt.event.ActionEvent evt) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</description>
+    </item>
+    
+    <item>
+      <title>Instalasi dan uji coba Lazarus IDE di Windows 7</title>
+      <link>https://www.petanikode.com/lazarus-windows/</link>
+      <pubDate>Fri, 06 Nov 2015 15:06:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/lazarus-windows/</guid>
+      <description>Lazarus merupakan sebuah IDE open source yang mampu berjalan di berbagai sistem operasi (platform). Pada tulisan ini, saya akan memandu anda menginstal lazarus di Windows 7. Lazarus yang akan diinstal ialah Lazarus versi 1.4.4.
+1. Download Lazarus Silahkan menuju ke website resminya Lazarus untuk mendapatkan instalator Lazarus untuk windows.
+
+Masuklah ke halaman download, kemudian pilih link Windows (32 and 64 bits) Direct download.
+Proses download pun dimulai, silahkan menunggu dengan sabar!</description>
+    </item>
+    
+    <item>
       <title>Pemrograman GUI dengan Qt: Persiapan dan Pengenalan</title>
       <link>https://www.petanikode.com/pemrograman-qt-pengenalan/</link>
       <pubDate>Fri, 13 Feb 2015 09:29:00 +0000</pubDate>

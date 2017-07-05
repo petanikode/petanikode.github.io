@@ -55,10 +55,10 @@ Alasan singkatan yang digunakan XSS bukan CSS karena CSS sudah digunakan untuk c
     
     <item>
       <title>Helper CodeIgniter untuk Membuat Tanggal dalam Bahasa Indonesia</title>
-      <link>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</link>
+      <link>https://www.petanikode.com/codeigniter-helper-tanggal/</link>
       <pubDate>Thu, 22 Dec 2016 18:21:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/helper-codeigniter-untuk-membuat-tanggal-dalam-bahasa-indonesia/</guid>
+      <guid>https://www.petanikode.com/codeigniter-helper-tanggal/</guid>
       <description>Saat kita membuat sbuah tanggal otomatis dengan fungsi Date(), kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, Date(&amp;rsquo;d F Y&amp;rsquo;) akan menghasilkan output 22 December 2016 (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.
 Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi Date().</description>
     </item>
@@ -88,11 +88,11 @@ Kemudian, agar Profiler aktif di setiap method atau fungsi, letakan kode tersebu
     </item>
     
     <item>
-      <title>Tutorial Font-awesome untuk Membuat Ikon pada Web</title>
-      <link>https://www.petanikode.com/tutorial-font-awesome/</link>
+      <title>Cara Menggunakan Font-awesome untuk Membuat Ikon pada Web</title>
+      <link>https://www.petanikode.com/font-awesome/</link>
       <pubDate>Sun, 21 Aug 2016 15:18:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-font-awesome/</guid>
+      <guid>https://www.petanikode.com/font-awesome/</guid>
       <description>Dulu saya sempat berpikir, pembuatan web kelihatannya susah. Karena banyak komponen yang harus dibuat, seperti background dan ikon. Tapi ternyata tidak, soalnya ada framework yang dapat kita gunakan untuk membuat ikon dengan cepat. Nama framework-nya adalah Font Awesome.
 Font awesome merupakan sebuah framework CSS untuk membuat ikon. Font awesome memiliki ratusan ikon yang siap dipakai. Pada kesempatan ini, kita akan belajar cara menggunakanya. Silahkan disimak.
 1. Download Font Awesome
@@ -158,33 +158,33 @@ http://petanikode.com/  Fungsi site_url() Seperti namanya, fungsi site_url() aka
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (3) - Memahami fungsi viewport</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</link>
+      <title>Tutorial Bootstrap- Memahami Fungsi Viewport</title>
+      <link>https://www.petanikode.com/bootstrap-viewport/</link>
       <pubDate>Tue, 12 Jan 2016 16:20:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-bootstrap-3---memahami-fungsi-viewport/</guid>
+      <guid>https://www.petanikode.com/bootstrap-viewport/</guid>
       <description>Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag meta viewport. Mengapa kita perlu menambahkan meta viewport? apa sih fungsinya? Mari kita bahas bersama.
 Pada bagian kepala &amp;lt;head&amp;gt; terdapat tag &amp;lt;meta&amp;gt; yang menampung nilai viewport. Viewport merupakan area yang terlihat pada (perangkat) user/pengunjung web. Viewport digunakan untuk desain web yang responsif (responsive web design). Seperti selogan Bootstrap yang mengutamakan desain responsif.
 Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</description>
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (2) - Sistem Grid dan tata letak</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</link>
+      <title>Tutorial Bootstrap - Sistem Grid dan tata letak</title>
+      <link>https://www.petanikode.com/bootstrap-grid/</link>
       <pubDate>Mon, 04 Jan 2016 20:37:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-bootstrap-2---sistem-grid-dan-tata-letak/</guid>
+      <guid>https://www.petanikode.com/bootstrap-grid/</guid>
       <description>Selamat datang di tutorial ke-2 Bootstrap. Pada tutorial kali ini, saya akan membahas sistem grid dan tata letak di Bootstrap. Langsung saja, ya!
 Sistem grid memudahkan kita mengatur tata letak elemen di web. Zaman dulu, kebanyakan web menggunakan tag table untuk mengatur tata letaknya. Sekarang sudah tidak lagi. Karena kurang efektif dan tidak SEO friendly. Oleh karena itu, website zaman sekarang menggunakan CSS untuk mengatur tata letaknya.
 Sistem grid di Bootstrap mengadopsi konsep tabel.</description>
     </item>
     
     <item>
-      <title>Tutorial Bootstrap (1) - Menyisipkan Bootstrap ke HTML</title>
-      <link>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</link>
+      <title>Tutorial Bootstrap - Menyisipkan Bootstrap ke HTML</title>
+      <link>https://www.petanikode.com/bootstrap-dasar/</link>
       <pubDate>Sat, 02 Jan 2016 08:58:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-bootstrap-1---menyisipkan-bootstrap-ke-html/</guid>
+      <guid>https://www.petanikode.com/bootstrap-dasar/</guid>
       <description>Selamat datang di tutorial pertama Bootstrap. Bootstrap adalah sebuah framework CSS untuk mengatur tampilan web agar menjadi lebih bagus dan responsive. Pada tutorial pertama ini, saya akan membahas cara menyisipkan Bootstrap ke dalam HTML. Sebelum memulai, silahkan anda unduh dulu Bootstrap-nya di getbootstrap.com.
 
 Menyisipkan Bootstrap ke Halaman WebMari kita membuat sebuah direktori bernama belajar-bootstrap. Kemdudian ekstrak Bootstrap yang sudah diunduh tadi ke dalam direktori tersebut. Extrak direktori bisa dilakukan dengan drag-drop.</description>

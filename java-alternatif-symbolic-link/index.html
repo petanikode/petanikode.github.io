@@ -7,8 +7,7 @@
 
 <html amp lang="id-id" class="no-js">
 <head>
-	<meta name="generator" content="Hugo 0.24" />
-    <title>Petani Kode — Programmer Pengguna Linux</title>
+    <title>Pilihan Alternatif Java dan Symbolic Link yang Buntu</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -21,8 +20,8 @@
 
 
 
-    <link rel="canonical" href="https://www.petanikode.com/" />
-    <link rel="amphtml" href="https://www.petanikode.com/" />
+    <link rel="canonical" href="https://www.petanikode.com/java-alternatif-symbolic-link/" />
+    <link rel="amphtml" href="https://www.petanikode.com/java-alternatif-symbolic-link/" />
 
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
     <meta content='/favicon.png' name='msapplication-TileImage'/>
@@ -31,10 +30,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-    <link href="http://feeds.feedburner.com/petanikode" rel="alternate" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-    <link href="http://feeds.feedburner.com/petanikode" rel="feed" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-
-
+    
 
     
     
@@ -52,8 +48,14 @@
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
 <meta name="author" content="Ardianta Pargo"/>
 
-<meta name="keywords" content="Petani Kode — Programmer Pengguna Linux, pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman"/>
+<meta name="keywords" content="Pilihan Alternatif Java dan Symbolic Link yang Buntu, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error.
+Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif.
+Berikut ini perintah salah yang menyebabkan masalah:
+sudo update-alternative --install /etc/alternatives/java java /opt/jdk1.8.0_77/bin/java Perhatikan teks yang berwarna merah. Teks tersebut merupakan symbolic link yang berlokasi di /etc/alternatives.
+Symbolic link yang seharusnya dimasukkan adalah /usr/bin/java.
+Akibatnya, error:
+petanikode@imajinasi:~$ sudo update-alternatives --config java update-alternatives: error: cannot stat file &#39;/etc/alternatives/java&#39;: Too many levels of symbolic links  Tidak dapat memilih alternatif java, karena symbolic link java yang berada di /etc/alternatives buntu (broken)."/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -69,12 +71,18 @@
 <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
-    <meta property="og:title" content="Petani Kode — Programmer Pengguna Linux" />
-    <meta property="og:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman" />
+    <meta property="og:title" content="Pilihan Alternatif Java dan Symbolic Link yang Buntu" />
+    <meta property="og:description" content="Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error.
+Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif.
+Berikut ini perintah salah yang menyebabkan masalah:
+sudo update-alternative --install /etc/alternatives/java java /opt/jdk1.8.0_77/bin/java Perhatikan teks yang berwarna merah. Teks tersebut merupakan symbolic link yang berlokasi di /etc/alternatives.
+Symbolic link yang seharusnya dimasukkan adalah /usr/bin/java.
+Akibatnya, error:
+petanikode@imajinasi:~$ sudo update-alternatives --config java update-alternatives: error: cannot stat file &#39;/etc/alternatives/java&#39;: Too many levels of symbolic links  Tidak dapat memilih alternatif java, karena symbolic link java yang berada di /etc/alternatives buntu (broken)." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.petanikode.com/" />
+    <meta property="og:url" content="https://www.petanikode.com/java-alternatif-symbolic-link/" />
 
-    <meta property="og:image" content="/images/petanikode-programmer.png" />
+    <meta property="og:image" content="https://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png" />
 
     
     <meta property="og:updated_time" content="2016-04-06 22:50:00 &#43;0000 UTC"/>
@@ -83,6 +91,7 @@
     <meta content='en_US' property='og:locale:alternate'/>
 
     <meta content='152759108115365' property='fb:app_id'/>
+    <meta content='petanikode' property='fb:pages'/>
     <meta content='143461015837500' property='fb:pages'/>
     <meta content='ardianta.pargo' property='fb:profile_id'/>
 
@@ -97,10 +106,14 @@
     <meta property="article:publisher" content="https://www.facebook.com/petanikode" />
 
     
+    <meta property="article:published_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
+    
 
     <meta property="article:modified_time" content="2016-04-06 22:50:00 &#43;0000 UTC" />
-    <meta property="article:section" content="" />
+    <meta property="article:section" content="artikel" />
 
+    
+    	<meta property="article:tag" content="Java" />
     
 
     
@@ -147,6 +160,12 @@
     
     
     
+        
+    
+
+    
+    
+    
 
 
 <script type="application/ld+json">
@@ -165,7 +184,25 @@
       },
 
       
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+            "@id": "https://www.petanikode.com/kategori/pemrograman",
+            "name": "Pemrograman"
+            }
+      },
+      
 
+      
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+            "@id": "https://www.petanikode.com/topik/java",
+            "name": "Java"
+            }
+      }
       
 
     ]
@@ -179,18 +216,24 @@
   "author": {
     "name" : "Ardianta Pargo"
   },
-  "headline": "Petani Kode — Programmer Pengguna Linux",
-  "description": "",
-  "wordCount": 0,
+  "headline": "Pilihan Alternatif Java dan Symbolic Link yang Buntu",
+  "description": "Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error.
+Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif.
+Berikut ini perintah salah yang menyebabkan masalah:
+sudo update-alternative --install /etc/alternatives/java java /opt/jdk1.8.0_77/bin/java Perhatikan teks yang berwarna merah. Teks tersebut merupakan symbolic link yang berlokasi di /etc/alternatives.
+Symbolic link yang seharusnya dimasukkan adalah /usr/bin/java.
+Akibatnya, error:
+petanikode@imajinasi:~$ sudo update-alternatives --config java update-alternatives: error: cannot stat file '/etc/alternatives/java': Too many levels of symbolic links  Tidak dapat memilih alternatif java, karena symbolic link java yang berada di /etc/alternatives buntu (broken).",
+  "wordCount": 284,
   "datePublished" : "2016-04-06T22:50:00",
   "dateModified" : "2016-04-06T22:50:00",
   "image" : {
       "@type": "ImageObject",
-      "url": "",
+      "url": "https://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png",
       "height" : 380,
       "width" : 720
     },
-  "mainEntityOfPage" : "https://www.petanikode.com/",
+  "mainEntityOfPage" : "https://www.petanikode.com/java-alternatif-symbolic-link/",
   "publisher" : {
     "@type": "Organization",
     "name" : "petanikode.com",
@@ -204,7 +247,7 @@
 
   "review": {
     "@type": "Review",
-    "url": "https://www.petanikode.com/",
+    "url": "https://www.petanikode.com/java-alternatif-symbolic-link/",
     "author": {
       "@type": "Person",
       "name": "Ardianta Pargo",
@@ -216,7 +259,13 @@
       "sameAs": "http://petanikode.com"
     },
     "datePublished": "2016-04-06T22:50:00",
-    "description": "",
+    "description": "Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error.
+Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif.
+Berikut ini perintah salah yang menyebabkan masalah:
+sudo update-alternative --install /etc/alternatives/java java /opt/jdk1.8.0_77/bin/java Perhatikan teks yang berwarna merah. Teks tersebut merupakan symbolic link yang berlokasi di /etc/alternatives.
+Symbolic link yang seharusnya dimasukkan adalah /usr/bin/java.
+Akibatnya, error:
+petanikode@imajinasi:~$ sudo update-alternatives --config java update-alternatives: error: cannot stat file '/etc/alternatives/java': Too many levels of symbolic links  Tidak dapat memilih alternatif java, karena symbolic link java yang berada di /etc/alternatives buntu (broken).",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -991,6 +1040,12 @@ padding: 16px;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     
 
+    <link rel="stylesheet" href="/assets/prism/prism.css" />
+    <script src="/assets/prism/prism.js"></script>
+
+    
+
+
 </head>
 
 <body>
@@ -998,6 +1053,34 @@ padding: 16px;
 
 
 
+
+<nav class="fixed-top block">
+    <ul>
+        <li>
+            <a href="#!" on="tap:sidebar.toggle">
+            <i class="fa fa-bars"></i>
+            </a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="https://www.petanikode.com/">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/arsip/">Arsip</a>
+        </li>
+        
+        <li>
+            <a href="/kategori/tips-dan-trik">Tips &amp; Trik</a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="/topik/buku">Buku</a>
+        </li>
+        <li>
+            <a href="mailto:info@petanikode.com">Kirim Saran</a>
+        </li>
+    </ul>
+</nav>
 
 <amp-sidebar id='sidebar'
      layout="nodisplay"
@@ -1091,34 +1174,6 @@ padding: 16px;
   </amp-accordion>
  </amp-sidebar>
 
-<nav class="fixed-top block">
-    <ul>
-        <li>
-            <a href="#!" on="tap:sidebar.toggle">
-            <i class="fa fa-bars"></i>
-            </a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="https://www.petanikode.com/">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="/arsip/">Arsip</a>
-        </li>
-        
-        <li>
-            <a href="/kategori/tips-dan-trik">Tips &amp; Trik</a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="/topik/buku">Buku</a>
-        </li>
-        <li>
-            <a href="mailto:info@petanikode.com">Kirim Saran</a>
-        </li>
-    </ul>
-</nav>
-
 <header class="block-group">
     <section class="header block">
         <div class="site-wrapper">
@@ -1144,16 +1199,14 @@ padding: 16px;
 
 
 <main class="main block-group">
+
     <article class="article block">
+    <div class="article-wrapper">
+        <div class="content">
+            <h1 class="post-title">Pilihan Alternatif Java dan Symbolic Link yang Buntu</h1>
 
-
-    
-
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
+            
+                <div class="post-header">
     
         <div class="author-foto pull-left">
             <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
@@ -1162,266 +1215,213 @@ padding: 16px;
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
         <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
             <br>
-        6 Apr · baca 2 menit
+        6 April 2016 · 22:50
     </div>
     
 </div>
 
+                <p>Ketika saya bermain-main dengan perintah <code>update-alternative</code> untuk
+menambahakan <a href="/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/">pilihan alternatif java</a>, malah terjadi error.</p>
 
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/java-alternatif-symbolic-link/">Pilihan Alternatif Java dan Symbolic Link yang Buntu</a></h2>
-                <a href="/java-alternatif-symbolic-link/">
-                    
-                    <amp-img src="https://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/java-alternatif-symbolic-link/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
+<p>Hal ini disebabkan karena saya salah memasukkan <em>symbolic link</em> ketika
+menambahkan pilihan alternatif.</p>
+
+<p>Berikut ini perintah salah yang menyebabkan masalah:</p>
+
+<pre><code>sudo update-alternative --install <span style="color: red;">/etc/alternatives/java</span> java /opt/jdk1.8.0_77/bin/java</code></pre>
+
+<p>Perhatikan teks yang berwarna merah. Teks tersebut merupakan <em>symbolic link</em>
+yang berlokasi di <code>/etc/alternatives</code>.</p>
+
+<p>Symbolic link yang seharusnya dimasukkan adalah <code>/usr/bin/java</code>.</p>
+
+<p>Akibatnya, error:</p>
+
+<pre><code class="language-bash">petanikode@imajinasi:~$ sudo update-alternatives --config java
+update-alternatives: error: cannot stat file '/etc/alternatives/java': Too many levels of symbolic links
+</code></pre>
+
+<p>Tidak dapat memilih alternatif java, karena symbolic link java yang berada
+di <code>/etc/alternatives</code> buntu <em>(broken)</em>.</p>
+
+<p>Berikut ini cara saya mengatasinya:</p>
+
+<ol>
+<li><p>Hapus <em>symbolic link</em> yang buntu tadi</p>
+
+<pre><code class="language-bash">  sudo rm /etc/alternatives/java
+</code></pre></li>
+
+<li><p>Buat <em>symbolic link</em> java dari JDK yang sudah terinstal</p>
+
+<pre><code class="language-bash">  sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/bin/java /etc/alternatives/java
+</code></pre></li>
+
+<li><p>Hapus pilihan alternatif yang menyebabkan error tadi</p>
+
+<pre><code class="language-bash">  sudo update-alternative --remove java /opt/jdk1.8.0_77/bin/java
+</code></pre></li>
+
+<li><p>Coba pilih alternatif lagi</p>
+
+<pre><code class="language-bash">  sudo update-aternative --config java
+</code></pre></li>
+</ol>
+
+<p>Selanjutnya kita bisa tambahkan lagi alternatif java-nya dengan perintah yang benar.
+Silahkan baca caranya di: <a href="/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/">Cara Mengatasi JDK yang Lebih dari Satu di Linux</a>.</p>
+
+<p>Mengapa perintah yang salah di atas tadi bisa menyebabkan error?</p>
+
+<p>Mungkin karna <em>symbolic link</em> yang ada di direktori <code>/etc/alternatives/</code>
+adalah <em>link</em> yang dipakai untuk menyambungkan <em>symbolic link</em> <code>/usr/bin/java</code>
+dengan java di JDK-nya yang asli.</p>
+
+<p>Berikut ini ilustrasi hubungan antar link dan file asli.</p>
+
+<p><a href="http://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png"><img src="https://3.bp.blogspot.com/-16zBDAFnJlw/VwUcTv2xXVI/AAAAAAAACpo/WHzGc8mSm4IEweDR1zPkFh2RRuFQmPsfQ/s1600/Link%2BAlternatif%2BPilihan%2Bjava%2Bdengan%2Bbanyak%2BJDK.png" alt="" /></a></p>
+
+<p>File java yang berada di dalam JDK pilihan alternatif merupakan file asli.
+Sedangkan, yang berada di luar adalah file link yang saling menyambung hingga ke file asli.</p>
+
+<p>Ketika kita mengetik perintah <code>java</code> di terminal, file yang eksekusi
+adalah <em>symbolic link</em> yang berada di <code>/usr/bin/java</code>.
+File ini tersambung sampai ke file asli.</p>
+
+<p><a href="http://2.bp.blogspot.com/-PUncbwsFVE4/VwUhEeTdCQI/AAAAAAAACp0/fI9GjK-vlRscOdTqyflM5Rtff90F6m64w/s1600/Hubungan%2Bsymbolic%2Blink%2Bsampai%2Bke%2Bfile%2Basli.png"><img src="https://2.bp.blogspot.com/-PUncbwsFVE4/VwUhEeTdCQI/AAAAAAAACp0/fI9GjK-vlRscOdTqyflM5Rtff90F6m64w/s1600/Hubungan%2Bsymbolic%2Blink%2Bsampai%2Bke%2Bfile%2Basli.png" alt="" /></a></p>
+
+<p>Ternyata masalah kecil ini menambah pengalaman dan pengetahuan saya.</p>
+
+<p>Syukuri setiap masalah yang dihadapi. Di balik masalah selalu ada hikmah yang tersembunyi. 😄</p>
+
+                <div class="post-footer">
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fjava-alternatif-symbolic-link%2f&t=Pilihan%20Alternatif%20Java%20dan%20Symbolic%20Link%20yang%20Buntu" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fjava-alternatif-symbolic-link%2f&text=Pilihan%20Alternatif%20Java%20dan%20Symbolic%20Link%20yang%20Buntu%20https%3a%2f%2fwww.petanikode.com%2fjava-alternatif-symbolic-link%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fjava-alternatif-symbolic-link%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fjava-alternatif-symbolic-link%2f&description=Pilihan%20Alternatif%20Java%20dan%20Symbolic%20Link%20yang%20Buntu" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fjava-alternatif-symbolic-link%2f&title=Pilihan%20Alternatif%20Java%20dan%20Symbolic%20Link%20yang%20Buntu" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Pilihan%20Alternatif%20Java%20dan%20Symbolic%20Link%20yang%20Buntu&body=Pilihan%20Alternatif%20Java%20dan%20Symbolic%20Link%20yang%20Buntu:%20https%3a%2f%2fwww.petanikode.com%2fjava-alternatif-symbolic-link%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
+</ul>
+
+
+                    <div>Topik:
+                      
+                        #<a href="/topik/java">Java</a>
+                      
+                    </div>
+                    </div>
 
                 
-            </div>
+<p><b>Artikel Terkait:</b></p>
 
-    </div>
-    </div>
+
+
+
+
+
+<ul class="related-post">
     
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
+</ul>
 
-            <div class="post-header">
+
+
+<ul class="related-post">
     
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+<hr>
+
+                <div align="center">
+                <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                </div>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+var disqus_config = function () {
+    this.page.url = 'https:\/\/www.petanikode.com\/java-alternatif-symbolic-link\/';
+    this.page.identifier = 'java-alternatif-symbolic-link';
+    this.page.title = 'Pilihan Alternatif Java dan Symbolic Link yang Buntu';
+};
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'petanikode';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://petanikode.disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            
+
         </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        5 Apr · baca 2 menit
     </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/java-jdk-lebih-dari-satu/">Cara Mengatasi JDK yang Lebih dari Satu di Linux agar tidak Bentrok</a></h2>
-                <a href="/java-jdk-lebih-dari-satu/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-TlxFSzn2BzM/VwOQ3IRECxI/AAAAAAAACo4/nmj3R3qUhMAqMy7FuBZanJHQVrszb2Xiw/s1600/Instal%2BJDK%2BLebih%2Bdari%2BSatu%2Bdi%2BLinux.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/java-jdk-lebih-dari-satu/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/mobile">Mobile</a></span>
-            <br>
-        3 Apr · baca 2 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/android-sdk-dan-ndk/">Cara Instal Android SDK dan NDK untuk Pemrograman Android di Linux</a></h2>
-                <a href="/android-sdk-dan-ndk/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-ZtcFanDti8k/VwDdwRqGUII/AAAAAAAACn4/T3KPPklw-Iclxhl4YJdyV5psoudEgE58Q/s1600/instal%2BAndroid%2BSDK%2Bdan%2BAnroid%2BNDK%2Bdi%2BLinux%2B-%2BPetani%2BKode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/android-sdk-dan-ndk/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/web">Web</a></span>
-            <br>
-        31 Mar · baca 2 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/kode-crud-dalam-satu-file-php/">Kode CRUD dalam Satu File PHP</a></h2>
-                <a href="/kode-crud-dalam-satu-file-php/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/kode-crud-dalam-satu-file-php/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/mobile">Mobile</a></span>
-            <br>
-        28 Mar · baca 1 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/cara-mengaktifkan-developer-options-ponsel-android/">Cara Mengaktifkan Developer Options Ponsel Android</a></h2>
-                <a href="/cara-mengaktifkan-developer-options-ponsel-android/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-9GMxh6g-cSI/Vvjc__ZC8rI/AAAAAAAACko/lgxvUx2vKGwW3TY2Mfdd9oeeYMbRDIHsA/s1600/Enable%2BDeveloper%2BOptions%2BPonsel%2BAndroid%2B-%2BPetani%2BKode.jpg"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/cara-mengaktifkan-developer-options-ponsel-android/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/web">Web</a></span>
-            <br>
-        26 Mar · baca 1 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/php-pesan-error/">Cara Menampilkan Pesan Error untuk Debugging PHP</a></h2>
-                <a href="/php-pesan-error/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/php-pesan-error/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-
-    <div class="pager">
-    
-    <a class="button button-primary" href="/page/22/">
-        <i class="fa fa-caret-left"></i> Kembali
-    </a>
-    
-    
-        <a class="button button-primary pull-right" href="/page/24/">
-            Selanjutnya <i class="fa fa-caret-right"></i>
-        </a>
-    
-    </div>
-
     </article>
 
     <aside class="aside block">
@@ -1651,6 +1651,7 @@ padding: 16px;
 
 
 </aside>
+
 
 </main>
 

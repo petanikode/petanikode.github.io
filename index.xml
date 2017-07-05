@@ -992,10 +992,10 @@ Graf tersebut merupakan graf berarah yang memiliki enam buah titik dan delapan b
     
     <item>
       <title>Cara Mengambil Input di PHP CLI</title>
-      <link>https://www.petanikode.com/cara-mengambil-input-di-php-cli/</link>
+      <link>https://www.petanikode.com/php-cli-input/</link>
       <pubDate>Sun, 06 Nov 2016 08:08:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-mengambil-input-di-php-cli/</guid>
+      <guid>https://www.petanikode.com/php-cli-input/</guid>
       <description>Seperti yang sudah saya bahas pada tulisan sebelumnya. PHP CLI merupakan PHP yang berjalan di atas Command Line. Biasanya, program yang berbasis teks memiliki fungsi tersendiri untuk mengambil input. Contohnya Python menggunakan fungsi input() dan raw_input(), java menggunakan Scanner dan BufferReader, C++ menggunakan cin, Pascal menggunakan readln(), dsb. Lalu, Bagaiaman dengan PHP?
 Menggunakan Fungsi fopen()Cara pertama mengambil input di PHP CLI adalah dengan menggunakan fungsi fopen(). Pada dasarnya fungsi ini digunakan untuk membuka atau membaca file.</description>
     </item>
@@ -1340,10 +1340,10 @@ import java.awt.Toolkit;2. Kode Agar Tampil di TengahLetakan kode berikut di dal
     
     <item>
       <title>Cara Konversi String Mata Uang (Currency) menjadi Integer di PHP</title>
-      <link>https://www.petanikode.com/cara-konversi-string-mata-uang-currency-menjadi-integer-di-php/</link>
+      <link>https://www.petanikode.com/php-currency-int/</link>
       <pubDate>Wed, 27 Jul 2016 04:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-konversi-string-mata-uang-currency-menjadi-integer-di-php/</guid>
+      <guid>https://www.petanikode.com/php-currency-int/</guid>
       <description>Setiap aplikasi penjualan, pasti menyimpan nilai mata uang di database-nya. Tipe data yang digunakan bisa bermacam-macam. Bisa menggunakan String atau Varchar, Integer, Float atau Double, BigInt, dkk. Pada kesempatan kali ini, saya akan berbagi cara mengkonversi tipe data (Mata Uang) String menjadi Integer.
 1. Manipulasi StringSebelum kita mengubah data string mata uang, kita perlu memanipulasinya terlebih dahulu. Tujuannya untuk menghilangkan simbol dan tanda baca yang ada di dalam string.
 Misalkan, sebuah data mata uang bentuknya seperti ini:</description>
@@ -1774,10 +1774,10 @@ Beberapa IDE tidak mendukung bila menggunakan Open JDK 7.</description>
     
     <item>
       <title>Cara Instal Android SDK dan NDK untuk Pemrograman Android di Linux</title>
-      <link>https://www.petanikode.com/cara-instal-android-sdk-dan-ndk/</link>
+      <link>https://www.petanikode.com/android-sdk-dan-ndk/</link>
       <pubDate>Sun, 03 Apr 2016 17:13:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-instal-android-sdk-dan-ndk/</guid>
+      <guid>https://www.petanikode.com/android-sdk-dan-ndk/</guid>
       <description>Android SDK dan NDK adalah dua alat penting yang perlu dipersiapkan untuk membuat aplikasi Android.
 Android SDK menyediakan API (Application Programming Interface) yang digunakan sebagai bahan dasar pembuatan aplikasi. Selain itu juga, dia menyediakan Emulator.
 Sedangkan, Android NDK memungkinkan kita membuat aplikasi Android dengan bahasa pemrograman C/C++.

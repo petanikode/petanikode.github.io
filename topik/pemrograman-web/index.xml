@@ -86,10 +86,10 @@ Fungsi JavascriptKita membutuhkan fungsi Javascript untuk mengganti bahasa yang 
     
     <item>
       <title>Cara Konversi String Mata Uang (Currency) menjadi Integer di PHP</title>
-      <link>https://www.petanikode.com/cara-konversi-string-mata-uang-currency-menjadi-integer-di-php/</link>
+      <link>https://www.petanikode.com/php-currency-int/</link>
       <pubDate>Wed, 27 Jul 2016 04:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-konversi-string-mata-uang-currency-menjadi-integer-di-php/</guid>
+      <guid>https://www.petanikode.com/php-currency-int/</guid>
       <description>Setiap aplikasi penjualan, pasti menyimpan nilai mata uang di database-nya. Tipe data yang digunakan bisa bermacam-macam. Bisa menggunakan String atau Varchar, Integer, Float atau Double, BigInt, dkk. Pada kesempatan kali ini, saya akan berbagi cara mengkonversi tipe data (Mata Uang) String menjadi Integer.
 1. Manipulasi StringSebelum kita mengubah data string mata uang, kita perlu memanipulasinya terlebih dahulu. Tujuannya untuk menghilangkan simbol dan tanda baca yang ada di dalam string.
 Misalkan, sebuah data mata uang bentuknya seperti ini:</description>

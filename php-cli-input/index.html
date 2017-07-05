@@ -7,8 +7,7 @@
 
 <html amp lang="id-id" class="no-js">
 <head>
-	<meta name="generator" content="Hugo 0.24" />
-    <title>Petani Kode — Programmer Pengguna Linux</title>
+    <title>Cara Mengambil Input di PHP CLI</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -21,8 +20,8 @@
 
 
 
-    <link rel="canonical" href="https://www.petanikode.com/" />
-    <link rel="amphtml" href="https://www.petanikode.com/" />
+    <link rel="canonical" href="https://www.petanikode.com/php-cli-input/" />
+    <link rel="amphtml" href="https://www.petanikode.com/php-cli-input/" />
 
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
     <meta content='/favicon.png' name='msapplication-TileImage'/>
@@ -31,10 +30,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-    <link href="http://feeds.feedburner.com/petanikode" rel="alternate" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-    <link href="http://feeds.feedburner.com/petanikode" rel="feed" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-
-
+    
 
     
     
@@ -52,8 +48,9 @@
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
 <meta name="author" content="Ardianta Pargo"/>
 
-<meta name="keywords" content="Petani Kode — Programmer Pengguna Linux, pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman"/>
+<meta name="keywords" content="Cara Mengambil Input di PHP CLI, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="Seperti yang sudah saya bahas pada tulisan sebelumnya. PHP CLI merupakan PHP yang berjalan di atas Command Line. Biasanya, program yang berbasis teks memiliki fungsi tersendiri untuk mengambil input. Contohnya Python menggunakan fungsi input() dan raw_input(), java menggunakan Scanner dan BufferReader, C&#43;&#43; menggunakan cin, Pascal menggunakan readln(), dsb. Lalu, Bagaiaman dengan PHP?
+Menggunakan Fungsi fopen()Cara pertama mengambil input di PHP CLI adalah dengan menggunakan fungsi fopen(). Pada dasarnya fungsi ini digunakan untuk membuka atau membaca file."/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -69,20 +66,22 @@
 <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
-    <meta property="og:title" content="Petani Kode — Programmer Pengguna Linux" />
-    <meta property="og:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman" />
+    <meta property="og:title" content="Cara Mengambil Input di PHP CLI" />
+    <meta property="og:description" content="Seperti yang sudah saya bahas pada tulisan sebelumnya. PHP CLI merupakan PHP yang berjalan di atas Command Line. Biasanya, program yang berbasis teks memiliki fungsi tersendiri untuk mengambil input. Contohnya Python menggunakan fungsi input() dan raw_input(), java menggunakan Scanner dan BufferReader, C&#43;&#43; menggunakan cin, Pascal menggunakan readln(), dsb. Lalu, Bagaiaman dengan PHP?
+Menggunakan Fungsi fopen()Cara pertama mengambil input di PHP CLI adalah dengan menggunakan fungsi fopen(). Pada dasarnya fungsi ini digunakan untuk membuka atau membaca file." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.petanikode.com/" />
+    <meta property="og:url" content="https://www.petanikode.com/php-cli-input/" />
 
-    <meta property="og:image" content="/images/petanikode-programmer.png" />
+    <meta property="og:image" content="https://2.bp.blogspot.com/-SUy_Ta0eWZ0/WB4QnB9lNkI/AAAAAAAADYU/srstr9Yd6sMJ4UYLRDxWtBOFcr95F3erACK4B/s1600/php-cli-petanikode.png" />
 
     
-    <meta property="og:updated_time" content="2016-08-08 04:29:00 &#43;0000 UTC"/>
+    <meta property="og:updated_time" content="2016-11-06 08:08:00 &#43;0000 UTC"/>
     <meta content='id_ID' property='og:locale'/>
     <meta content='ms_MY' property='og:locale:alternate'/>
     <meta content='en_US' property='og:locale:alternate'/>
 
     <meta content='152759108115365' property='fb:app_id'/>
+    <meta content='petanikode' property='fb:pages'/>
     <meta content='143461015837500' property='fb:pages'/>
     <meta content='ardianta.pargo' property='fb:profile_id'/>
 
@@ -97,10 +96,18 @@
     <meta property="article:publisher" content="https://www.facebook.com/petanikode" />
 
     
+    <meta property="article:published_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
+    
 
-    <meta property="article:modified_time" content="2016-08-08 04:29:00 &#43;0000 UTC" />
-    <meta property="article:section" content="" />
+    <meta property="article:modified_time" content="2016-11-06 08:08:00 &#43;0000 UTC" />
+    <meta property="article:section" content="artikel" />
 
+    
+    	<meta property="article:tag" content="Pemrograman" />
+    
+    	<meta property="article:tag" content="Linux" />
+    
+    	<meta property="article:tag" content="PHP" />
     
 
     
@@ -147,6 +154,12 @@
     
     
     
+        
+    
+
+    
+    
+    
 
 
 <script type="application/ld+json">
@@ -165,7 +178,25 @@
       },
 
       
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+            "@id": "https://www.petanikode.com/kategori/pemrograman",
+            "name": "pemrograman"
+            }
+      },
+      
 
+      
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+            "@id": "https://www.petanikode.com/topik/pemrograman",
+            "name": "Pemrograman"
+            }
+      }
       
 
     ]
@@ -179,18 +210,19 @@
   "author": {
     "name" : "Ardianta Pargo"
   },
-  "headline": "Petani Kode — Programmer Pengguna Linux",
-  "description": "",
-  "wordCount": 0,
-  "datePublished" : "2016-08-08T04:29:00",
-  "dateModified" : "2016-08-08T04:29:00",
+  "headline": "Cara Mengambil Input di PHP CLI",
+  "description": "Seperti yang sudah saya bahas pada tulisan sebelumnya. PHP CLI merupakan PHP yang berjalan di atas Command Line. Biasanya, program yang berbasis teks memiliki fungsi tersendiri untuk mengambil input. Contohnya Python menggunakan fungsi input() dan raw_input(), java menggunakan Scanner dan BufferReader, C++ menggunakan cin, Pascal menggunakan readln(), dsb. Lalu, Bagaiaman dengan PHP?
+Menggunakan Fungsi fopen()Cara pertama mengambil input di PHP CLI adalah dengan menggunakan fungsi fopen(). Pada dasarnya fungsi ini digunakan untuk membuka atau membaca file.",
+  "wordCount": 273,
+  "datePublished" : "2016-11-06T08:08:00",
+  "dateModified" : "2016-11-06T08:08:00",
   "image" : {
       "@type": "ImageObject",
-      "url": "",
+      "url": "https://2.bp.blogspot.com/-SUy_Ta0eWZ0/WB4QnB9lNkI/AAAAAAAADYU/srstr9Yd6sMJ4UYLRDxWtBOFcr95F3erACK4B/s1600/php-cli-petanikode.png",
       "height" : 380,
       "width" : 720
     },
-  "mainEntityOfPage" : "https://www.petanikode.com/",
+  "mainEntityOfPage" : "https://www.petanikode.com/php-cli-input/",
   "publisher" : {
     "@type": "Organization",
     "name" : "petanikode.com",
@@ -204,7 +236,7 @@
 
   "review": {
     "@type": "Review",
-    "url": "https://www.petanikode.com/",
+    "url": "https://www.petanikode.com/php-cli-input/",
     "author": {
       "@type": "Person",
       "name": "Ardianta Pargo",
@@ -215,8 +247,9 @@
       "name": "petanikode.com",
       "sameAs": "http://petanikode.com"
     },
-    "datePublished": "2016-08-08T04:29:00",
-    "description": "",
+    "datePublished": "2016-11-06T08:08:00",
+    "description": "Seperti yang sudah saya bahas pada tulisan sebelumnya. PHP CLI merupakan PHP yang berjalan di atas Command Line. Biasanya, program yang berbasis teks memiliki fungsi tersendiri untuk mengambil input. Contohnya Python menggunakan fungsi input() dan raw_input(), java menggunakan Scanner dan BufferReader, C++ menggunakan cin, Pascal menggunakan readln(), dsb. Lalu, Bagaiaman dengan PHP?
+Menggunakan Fungsi fopen()Cara pertama mengambil input di PHP CLI adalah dengan menggunakan fungsi fopen(). Pada dasarnya fungsi ini digunakan untuk membuka atau membaca file.",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -991,6 +1024,12 @@ padding: 16px;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     
 
+    <link rel="stylesheet" href="/assets/prism/prism.css" />
+    <script src="/assets/prism/prism.js"></script>
+
+    
+
+
 </head>
 
 <body>
@@ -998,6 +1037,34 @@ padding: 16px;
 
 
 
+
+<nav class="fixed-top block">
+    <ul>
+        <li>
+            <a href="#!" on="tap:sidebar.toggle">
+            <i class="fa fa-bars"></i>
+            </a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="https://www.petanikode.com/">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/arsip/">Arsip</a>
+        </li>
+        
+        <li>
+            <a href="/kategori/tips-dan-trik">Tips &amp; Trik</a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="/topik/buku">Buku</a>
+        </li>
+        <li>
+            <a href="mailto:info@petanikode.com">Kirim Saran</a>
+        </li>
+    </ul>
+</nav>
 
 <amp-sidebar id='sidebar'
      layout="nodisplay"
@@ -1091,34 +1158,6 @@ padding: 16px;
   </amp-accordion>
  </amp-sidebar>
 
-<nav class="fixed-top block">
-    <ul>
-        <li>
-            <a href="#!" on="tap:sidebar.toggle">
-            <i class="fa fa-bars"></i>
-            </a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="https://www.petanikode.com/">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="/arsip/">Arsip</a>
-        </li>
-        
-        <li>
-            <a href="/kategori/tips-dan-trik">Tips &amp; Trik</a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="/topik/buku">Buku</a>
-        </li>
-        <li>
-            <a href="mailto:info@petanikode.com">Kirim Saran</a>
-        </li>
-    </ul>
-</nav>
-
 <header class="block-group">
     <section class="header block">
         <div class="site-wrapper">
@@ -1144,16 +1183,14 @@ padding: 16px;
 
 
 <main class="main block-group">
+
     <article class="article block">
+    <div class="article-wrapper">
+        <div class="content">
+            <h1 class="post-title">Cara Mengambil Input di PHP CLI</h1>
 
-
-    
-
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
+            
+                <div class="post-header">
     
         <div class="author-foto pull-left">
             <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
@@ -1162,266 +1199,145 @@ padding: 16px;
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
         <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
             <br>
-        8 Aug · baca 2 menit
+        6 November 2016 · 08:08
     </div>
     
 </div>
 
+                <p><a href="http://2.bp.blogspot.com/-SUy_Ta0eWZ0/WB4QnB9lNkI/AAAAAAAADYU/srstr9Yd6sMJ4UYLRDxWtBOFcr95F3erACK4B/s1600/php-cli-petanikode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-SUy_Ta0eWZ0/WB4QnB9lNkI/AAAAAAAADYU/srstr9Yd6sMJ4UYLRDxWtBOFcr95F3erACK4B/s1600/php-cli-petanikode.png" /></a>Seperti yang sudah saya bahas pada <a href="http://www.petanikode.com/2016/10/mengenal-php-cli-dan-php-interaktif.html" target="_blank">tulisan sebelumnya</a>. PHP CLI merupakan PHP yang berjalan di atas <i>Command Line</i>. Biasanya, program yang berbasis teks memiliki fungsi tersendiri untuk mengambil input. Contohnya Python menggunakan fungsi <code>input()</code> dan <code>raw_input()</code>, java menggunakan <code>Scanner</code> dan <code>BufferReader</code>, C++ menggunakan <code>cin</code>, Pascal menggunakan <code>readln()</code>, dsb. Lalu, Bagaiaman dengan PHP?<br /><h2>Menggunakan Fungsi fopen()</h2>Cara pertama mengambil input di PHP CLI adalah dengan menggunakan fungsi <code>fopen()</code>. Pada dasarnya fungsi ini digunakan untuk membuka atau membaca file. Namun, dapat digunakan juga untuk mengambil input. Contoh penggunaan:<br /><pre><code class="php">&lt;?php<br />echo &ldquo;Siapa nama kamu: &ldquo;;<br />$input_nama = fopen(&ldquo;php://stdin&rdquo;,&ldquo;r&rdquo;);<br />$nama = trim(fgets($input_nama));<br />echo &ldquo;Hello $nama, apa kabar?\n&rdquo;;<br />?&gt;</code></pre>Hasilnya ketika dieksekusi:<br /><a href="http://3.bp.blogspot.com/-nm_zHE6B2fk/WB4HV4gLtuI/AAAAAAAADX4/3DW3I0stpQwU_yNbVtjreQmIA-QsxBwcACK4B/s1600/Percobaan%2Bpengambilan%2Binput%2Bdi%2BPHP%2BCLI.png" imageanchor="1"><img alt="Percobaan pengambilan input di PHP CLI" border="0" src="https://3.bp.blogspot.com/-nm_zHE6B2fk/WB4HV4gLtuI/AAAAAAAADX4/3DW3I0stpQwU_yNbVtjreQmIA-QsxBwcACK4B/s1600/Percobaan%2Bpengambilan%2Binput%2Bdi%2BPHP%2BCLI.png" title="" /></a><br />Pada contoh di atas, fungsi <code>fopen()</code> harus diberikan paramater <code>&ldquo;php://stdin&rdquo;</code> dan <code>&ldquo;r&rdquo;</code> untuk membaca apa yang diketik di Terminal. Kemudian, kita membutuhkan dua fungsi lagi agar mendapatkan nilai yang murni. Fungsi <code>fgets()</code> untuk membaca baris inputan, kemudian fungsi <code>trim()</code> untuk menghapus karakter <i>enter</i> (<code>&ldquo;\n&rdquo;</code>) atau <i>spasi</i> di akhir inputan yang ikut dibaca. Bila kita tidak menggunakan fungsi <code>trim()</code> maka nilai yang akan dibaca ketika diinputkan &ldquo;<code>Petani Kode</code>&rdquo; adalah &ldquo;<code>Petani Kode\n</code>&rdquo;. &ldquo;<code>\n</code>&rdquo; itu didapatkan dari tombol <i>enter</i>.<br /><h2>Menggunakan STDIN</h2>Ada cara yang lebih sederhana, yaitu menggunakan <code>STDIN</code>. Cara ini sama juga seperti yang tadi, cuma perbedaanya tidak menggunakan fungsi <code>fopen()</code>. Kita bisa langsung mengambil nilai dengan fungsi <code>fgets()</code>. Lalu kita gunakan fungsi <code>trim()</code> untuk membersihkannya dari &ldquo;<code>\n</code>&rdquo;. Contoh:<br /><pre><code class="php">&lt;?php<br /><br />echo &ldquo;Dari mana anda berasl: &ldquo;;<br />$asal = trim(fgets(STDIN));<br /><br />echo &ldquo;Oh, dari $asal ya\n&rdquo;;<br />?&gt;</code></pre>Hasil output ketika dieksekusi:<br /><a href="http://4.bp.blogspot.com/-lO4uwMEt0ns/WB4K3du-5dI/AAAAAAAADYE/PzGQNFquPPw1ZybgBY9KolyM0DJ4YxFIwCK4B/s1600/pengambilan%2Binput%2Bdengan%2Bkonstanta%2BSTDIN.png" imageanchor="1"><img alt="Pengambilan input di PHP CLI dengan konstanta STDIN" border="0" src="https://4.bp.blogspot.com/-lO4uwMEt0ns/WB4K3du-5dI/AAAAAAAADYE/PzGQNFquPPw1ZybgBY9KolyM0DJ4YxFIwCK4B/s1600/pengambilan%2Binput%2Bdengan%2Bkonstanta%2BSTDIN.png" title="" /></a><br /><br />Itulah dua cara mengambil input di PHP CLI, manakah cara yang paling mudah? Silahkan anda tentukan sendiri. Kalau pun ada cara lain silahkan ditambahkan dan kalau masih tidak paham silahkan ditanyakan.<br /><br />Referensi: <a href="http://stackoverflow.com/questions/6543841/php-cli-getting-input-from-user-and-then-dumping-into-variable-possible" target="_blank"><a href="http://stackoverflow.com/questions/6543841/php-cli-getting-input-from-user-and-then-dumping-into-variable-possible">http://stackoverflow.com/questions/6543841/php-cli-getting-input-from-user-and-then-dumping-into-variable-possible</a></a></p>
 
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/jquery-form-select/">Memindahkan Nilai dari Elemen Select dengan JQuery</a></h2>
-                <a href="/jquery-form-select/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-_ocnLT3PLhA/V6dIVztJriI/AAAAAAAADHQ/yUb5dtuQ0Zgeb22FyX-k0GuLnd9y6x4vwCK4B/s1600/Memindahkan%2Bnilai%2Bdari%2Belmen%2Bselect%2B-%2Bpetanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/jquery-form-select/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
+                <div class="post-footer">
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fphp-cli-input%2f&t=Cara%20Mengambil%20Input%20di%20PHP%20CLI" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fphp-cli-input%2f&text=Cara%20Mengambil%20Input%20di%20PHP%20CLI%20https%3a%2f%2fwww.petanikode.com%2fphp-cli-input%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fphp-cli-input%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fphp-cli-input%2f&description=Cara%20Mengambil%20Input%20di%20PHP%20CLI" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fphp-cli-input%2f&title=Cara%20Mengambil%20Input%20di%20PHP%20CLI" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Cara%20Mengambil%20Input%20di%20PHP%20CLI&body=Cara%20Mengambil%20Input%20di%20PHP%20CLI:%20https%3a%2f%2fwww.petanikode.com%2fphp-cli-input%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
+</ul>
+
+
+                    <div>Topik:
+                      
+                        #<a href="/topik/pemrograman">Pemrograman</a>
+                      
+                        #<a href="/topik/linux">Linux</a>
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
 
                 
-            </div>
+<p><b>Artikel Terkait:</b></p>
 
-    </div>
-    </div>
+
+
+
+
+
+<ul class="related-post">
     
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
+</ul>
 
-            <div class="post-header">
+
+
+<ul class="related-post">
     
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+<hr>
+
+                <div align="center">
+                <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                </div>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+var disqus_config = function () {
+    this.page.url = 'https:\/\/www.petanikode.com\/php-cli-input\/';
+    this.page.identifier = 'php-cli-input';
+    this.page.title = 'Cara Mengambil Input di PHP CLI';
+};
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'petanikode';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://petanikode.disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            
+
         </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
-            <br>
-        7 Aug · baca 1 menit
     </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/html-validator/">Belajar HTML: Cara Mengganti Bahasa Validator HTML5 ke dalam Bahasa Indonesia</a></h2>
-                <a href="/html-validator/">
-                    
-                    <amp-img src="https://4.bp.blogspot.com/-dNNJvns8P_Y/V3d-ZGdAKRI/AAAAAAAAC5s/28FqVj0Ho3E7CyeXhwv1bmra0VaaADSkwCLcB/s1600/html5-petanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/html-validator/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
-            <br>
-        7 Aug · baca 1 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/berapa-banyak-data-yang-mampu-disimpan-pada-mysql-dengan-auto_increment/">Berapa Banyak Data yang Mampu Disimpan pada MySQL dengan AUTO_INCREMENT?</a></h2>
-                <a href="/berapa-banyak-data-yang-mampu-disimpan-pada-mysql-dengan-auto_increment/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/berapa-banyak-data-yang-mampu-disimpan-pada-mysql-dengan-auto_increment/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        6 Aug · baca 2 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/python-pomodoro/">Membuat Program Pomodoro Timer Berbasis CLI dengan Python</a></h2>
-                <a href="/python-pomodoro/">
-                    
-                    <amp-img src="https://3.bp.blogspot.com/-zNt91vEhpxc/V6W4q8GoR7I/AAAAAAAADGY/TR55AVngJowZ1XZqpilvaND5fE7vJm1KACK4B/s1600/4975166968_793305a326_b.jpg"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/python-pomodoro/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//3.bp.blogspot.com/-WGnY4kxBJRk/V5txWIu1BnI/AAAAAAAAABA/JtsWecc6Hc4PQDYwhovUw3MqatMl9PLUwCK4B/s32/Screenshot_2016-07-27_22-00-06.png"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://www.blogger.com/profile/17161971913501774945" target="_blank">Muhar Dian</a></span> dalam
-        <span class="author"><a href="/kategori/desktop">Desktop</a></span>
-            <br>
-        29 Jul · baca 2 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/java-swing-jendela-di-tengah-layar/">Trik Agar Jendela JFrame Tampil di Tengah Layar</a></h2>
-                <a href="/java-swing-jendela-di-tengah-layar/">
-                    
-                    <amp-img src="https://4.bp.blogspot.com/-oK3kCCbzHY0/V5tur3iPgKI/AAAAAAAAAAQ/R3HSbAw1p5Uvj8AMnm9A02kUKzjnFpoMgCK4B/s1600/Jendela%2BJFrame%2Btampil%2Bdi%2Btengah%2Blayar%2B-%2Bpetanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/java-swing-jendela-di-tengah-layar/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
-            <br>
-        27 Jul · baca 1 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/php-currency-int/">Cara Konversi String Mata Uang (Currency) menjadi Integer di PHP</a></h2>
-                <a href="/php-currency-int/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/php-currency-int/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-
-    <div class="pager">
-    
-    <a class="button button-primary" href="/page/16/">
-        <i class="fa fa-caret-left"></i> Kembali
-    </a>
-    
-    
-        <a class="button button-primary pull-right" href="/page/18/">
-            Selanjutnya <i class="fa fa-caret-right"></i>
-        </a>
-    
-    </div>
-
     </article>
 
     <aside class="aside block">
@@ -1651,6 +1567,7 @@ padding: 16px;
 
 
 </aside>
+
 
 </main>
 

@@ -14,10 +14,10 @@
     
     <item>
       <title>Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kostum Domain)</title>
-      <link>https://www.petanikode.com/cara-menambahkan-ssl-untuk-github-pages/</link>
+      <link>https://www.petanikode.com/ssl-untuk-github-pages/</link>
       <pubDate>Wed, 19 Apr 2017 10:56:07 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menambahkan-ssl-untuk-github-pages/</guid>
+      <guid>https://www.petanikode.com/ssl-untuk-github-pages/</guid>
       <description>Pada dasarnya Github telah memberikan SSL untuk setiap halaman github (Github Pages). Akan tetapi, untuk halaman github yang menggunakan domain sendiri tidak diberikan.
 Contoh Halaman github dengan SSL:
 https://petanikode.github.io  Lihat, di sana https menandakan SSL-nya aktif.
@@ -105,10 +105,10 @@ Misalkan, ketika user ingin menampilkan peta Google Map, periksa terlebih dahulu
     
     <item>
       <title>Cara Menampilkan Pesan Error untuk Debugging PHP</title>
-      <link>https://www.petanikode.com/cara-menampilkan-pesan-error-untuk-debugging-php/</link>
+      <link>https://www.petanikode.com/php-pesan-error/</link>
       <pubDate>Sat, 26 Mar 2016 12:15:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menampilkan-pesan-error-untuk-debugging-php/</guid>
+      <guid>https://www.petanikode.com/php-pesan-error/</guid>
       <description>Secara default, konfigurasi yang akan diberikan pada server Apache di Linux adalah mode production.
 Server produksi (production server) merupakan server yang digunakan setelah web selesai dikembangkan atau sudah siap dipakai.
 Server produksi tidak akan menampilkan apa-apa kalau terjadi error. Karena itu, kita harus mengubahnya ke dalam mode development.

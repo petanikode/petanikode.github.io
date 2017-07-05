@@ -175,10 +175,10 @@ Persiapan dan Instalasi SASS Sebelum kita mulai tutorial ini, persiapkan dulu al
     
     <item>
       <title>Animasi Gambar dengan Javascript</title>
-      <link>https://www.petanikode.com/animasi-gambar-dengan-javascript/</link>
+      <link>https://www.petanikode.com/javascript-animasi-gambar/</link>
       <pubDate>Tue, 21 Feb 2017 08:53:16 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/animasi-gambar-dengan-javascript/</guid>
+      <guid>https://www.petanikode.com/javascript-animasi-gambar/</guid>
       <description>Saya sempat mengira, kalau animasi stiker di facebook menggunakan gif, ternyata bukan.
 Animasi tersebut menggunakan javascript dengan mengubah posisi backgound.
 Coba saja klik kanan pada stikernya, kemudian pilih inspect element, maka kita akan mendapatkan kode seperti ini.
@@ -315,10 +315,10 @@ Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adal
     
     <item>
       <title>Cara Menggunakan Composer pada CodeIgniter</title>
-      <link>https://www.petanikode.com/cara-menggunakan-composer-pada-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-composer/</link>
       <pubDate>Sat, 03 Dec 2016 13:13:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menggunakan-composer-pada-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-composer/</guid>
       <description>CodeIgniter tidak seperti Laravel yang menggunakan Composer untuk memulai proyeknya. Namun, kita juga bisa menggunakan Composer pada CodeIgniter. Composer sebenarnya sudah didukung pada CodeIgninter versi 3, tapi autoload-nya belum diaktifkan.
 Konfigurasi CodeIgniter Buka file konfigurasi proyek CodeIgniter pada application/config/config.php. Kemudian isi nilai autoload untuk Composer seperti beikut ini:
 $config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;  Instalasi Pustaka Sekarang coba buka file composer.json yang ada di root direktori proyek. Kemudian tambahkan pustaka FPDF.</description>
@@ -590,10 +590,10 @@ Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam s
     
     <item>
       <title>Cara Menampilkan Pesan Error untuk Debugging PHP</title>
-      <link>https://www.petanikode.com/cara-menampilkan-pesan-error-untuk-debugging-php/</link>
+      <link>https://www.petanikode.com/php-pesan-error/</link>
       <pubDate>Sat, 26 Mar 2016 12:15:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menampilkan-pesan-error-untuk-debugging-php/</guid>
+      <guid>https://www.petanikode.com/php-pesan-error/</guid>
       <description>Secara default, konfigurasi yang akan diberikan pada server Apache di Linux adalah mode production.
 Server produksi (production server) merupakan server yang digunakan setelah web selesai dikembangkan atau sudah siap dipakai.
 Server produksi tidak akan menampilkan apa-apa kalau terjadi error. Karena itu, kita harus mengubahnya ke dalam mode development.

@@ -83,10 +83,10 @@ Pada kesempatan yang lain, saya juga pernah membuat generator ID yang mirip sepe
     
     <item>
       <title>Cara Menggunakan Composer pada CodeIgniter</title>
-      <link>https://www.petanikode.com/cara-menggunakan-composer-pada-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-composer/</link>
       <pubDate>Sat, 03 Dec 2016 13:13:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menggunakan-composer-pada-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-composer/</guid>
       <description>CodeIgniter tidak seperti Laravel yang menggunakan Composer untuk memulai proyeknya. Namun, kita juga bisa menggunakan Composer pada CodeIgniter. Composer sebenarnya sudah didukung pada CodeIgninter versi 3, tapi autoload-nya belum diaktifkan.
 Konfigurasi CodeIgniter Buka file konfigurasi proyek CodeIgniter pada application/config/config.php. Kemudian isi nilai autoload untuk Composer seperti beikut ini:
 $config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;  Instalasi Pustaka Sekarang coba buka file composer.json yang ada di root direktori proyek. Kemudian tambahkan pustaka FPDF.</description>
@@ -290,10 +290,10 @@ Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam s
     
     <item>
       <title>Cara Menampilkan Pesan Error untuk Debugging PHP</title>
-      <link>https://www.petanikode.com/cara-menampilkan-pesan-error-untuk-debugging-php/</link>
+      <link>https://www.petanikode.com/php-pesan-error/</link>
       <pubDate>Sat, 26 Mar 2016 12:15:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menampilkan-pesan-error-untuk-debugging-php/</guid>
+      <guid>https://www.petanikode.com/php-pesan-error/</guid>
       <description>Secara default, konfigurasi yang akan diberikan pada server Apache di Linux adalah mode production.
 Server produksi (production server) merupakan server yang digunakan setelah web selesai dikembangkan atau sudah siap dipakai.
 Server produksi tidak akan menampilkan apa-apa kalau terjadi error. Karena itu, kita harus mengubahnya ke dalam mode development.

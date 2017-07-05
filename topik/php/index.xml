@@ -339,10 +339,10 @@ Server Apache dan PHP di Linux tidak seperti server XAMPP di Windows. Server Apa
     
     <item>
       <title>6 Fungsi enkripsi di PHP untuk kriptografi</title>
-      <link>https://www.petanikode.com/6-fungsi-enkripsi-di-php-untuk-kriptografi/</link>
+      <link>https://www.petanikode.com/php-fungsi-enkripsi/</link>
       <pubDate>Sun, 20 Sep 2015 21:04:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/6-fungsi-enkripsi-di-php-untuk-kriptografi/</guid>
+      <guid>https://www.petanikode.com/php-fungsi-enkripsi/</guid>
       <description>Enkripsi merupakan proses mengubah teks polos (plain text) menjadi bentuk lain (kode sandi atau hash). Enkripsi bertujuan untuk melindungi informasi rahasia seperti kata sandi atau password. PHP menyediakan beberapa fungsi untuk melakukan enkripsi, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode().
 1. Fungsi password_hash()Fungsi ini akan menghasilkan sebuah kode sandi (hash) baru dengan algoritma one-way hashing. Contoh penggunaan:
 &amp;lt;?php echo password_hash(&amp;ldquo;PetaniKode&amp;rdquo;, PASSWORD_DEFAULT); ?&amp;gt;akan menghasilkan kode acak yang berubah-ubah:

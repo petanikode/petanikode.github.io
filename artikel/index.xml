@@ -662,10 +662,10 @@ Maka di dalam direktori ~/.ssh/ akan tercipa file key baru.
     
     <item>
       <title>4 Cara Penulisan Kode Javascript pada HTML</title>
-      <link>https://www.petanikode.com/4-cara-penulisan-kode-javascript-pada-html/</link>
+      <link>https://www.petanikode.com/javascript-dalam-html/</link>
       <pubDate>Sat, 28 Jan 2017 14:59:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/4-cara-penulisan-kode-javascript-pada-html/</guid>
+      <guid>https://www.petanikode.com/javascript-dalam-html/</guid>
       <description>Javascript sebagai bahasa pemrograman yang berjalan di atas browser harus di tulis di dalam HTML. Ada empat cara penulisan javascript pada HTML.
 1. Tag &amp;lt;script&amp;gt; Cara yang umum yang dipakai adalah menuliskanya dalam tag &amp;lt;script&amp;gt;. Tag &amp;lt;script&amp;gt; bisa dibuat di dalam tag &amp;lt;head&amp;gt;, mauapun di dalam tag &amp;lt;body&amp;gt;. Contoh:
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt; &amp;lt;script&amp;gt; console.log(&amp;quot;Hi, ini kode Javascript&amp;quot;); &amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; document.write(&amp;quot;Javascript itu keren!</description>
@@ -1758,19 +1758,6 @@ Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam s
 Buka Settings, kemudian masuk ke menu About PhonePada bagian versi, ketuk tujuh kali (7x)Hingga keluar pesanSekarang fitur Developer Options sudah aktif, silahkan lihat di Settings.
 
 Referensi: ubergizmo.com</description>
-    </item>
-    
-    <item>
-      <title>3 Hal yang Perlu Dilakukan Setelah Instal Git di Linux</title>
-      <link>https://www.petanikode.com/3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux/</link>
-      <pubDate>Sun, 27 Mar 2016 12:48:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/3-hal-yang-perlu-dilakukan-setelah-instal-git-di-linux/</guid>
-      <description>Setelah menginstal Git, Git belum dapat digunakan, karena belum dikonfigurasi. Silahkan simak tiga hal berikut ini untuk mengkonfigurasi Git di Linux.
-1. Set IdentitasIsilah identitas anda yang akan digunakan setiap melakukan commit. Silahkan ketik perintah berikut ini di terminal.
-Set nama:
-git config &amp;ndash;global user.name &amp;ldquo;Petani Kode&amp;rdquo;Set email:
-git config &amp;ndash;global user.email contoh@petanikode.com2. Set Teks EditorTentukan teks editor yang ingin anda gunakan. Sebagai contoh, saya menggunakan teks editor atom. Maka perintahnya,</description>
     </item>
     
     <item>

@@ -14,10 +14,10 @@
     
     <item>
       <title>4 Cara Penulisan Kode Javascript pada HTML</title>
-      <link>https://www.petanikode.com/4-cara-penulisan-kode-javascript-pada-html/</link>
+      <link>https://www.petanikode.com/javascript-dalam-html/</link>
       <pubDate>Sat, 28 Jan 2017 14:59:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/4-cara-penulisan-kode-javascript-pada-html/</guid>
+      <guid>https://www.petanikode.com/javascript-dalam-html/</guid>
       <description>Javascript sebagai bahasa pemrograman yang berjalan di atas browser harus di tulis di dalam HTML. Ada empat cara penulisan javascript pada HTML.
 1. Tag &amp;lt;script&amp;gt; Cara yang umum yang dipakai adalah menuliskanya dalam tag &amp;lt;script&amp;gt;. Tag &amp;lt;script&amp;gt; bisa dibuat di dalam tag &amp;lt;head&amp;gt;, mauapun di dalam tag &amp;lt;body&amp;gt;. Contoh:
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt; &amp;lt;script&amp;gt; console.log(&amp;quot;Hi, ini kode Javascript&amp;quot;); &amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; document.write(&amp;quot;Javascript itu keren!</description>

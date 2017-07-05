@@ -455,10 +455,10 @@ Silahkan download Font Awesome di http://fontawesome.</description>
     
     <item>
       <title>Membuat Generator id Unik seperti id Video YouTube di PHP</title>
-      <link>https://www.petanikode.com/membuat-generator-id-unik-seperti-id-video-youtube-di-php/</link>
+      <link>https://www.petanikode.com/php-generator-id/</link>
       <pubDate>Tue, 26 Jul 2016 04:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/membuat-generator-id-unik-seperti-id-video-youtube-di-php/</guid>
+      <guid>https://www.petanikode.com/php-generator-id/</guid>
       <description>Dalam sebuah tabel di database, seringkali kita membuat kolom bernama id sebagai primary key. Kadang kolom tersebut kita berikan fungsi auto increment agar otomatis terisi dengan angka. Namun, kali ini kita coba menggunakan karakter yang di-generate dari nilai waktu per milidetik.
 1. Mengambil Niali Unik dari Fungsi WaktuKita dapat menggunakan fungsi microtime() atau fungsi time() untuk mendapatkan nilai unik. Nilai ini, senantiasa akan berubah terus, seiring dengan perubahan waktu.</description>
     </item>

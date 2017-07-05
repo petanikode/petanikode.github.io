@@ -125,26 +125,16 @@ Kode HTML:
     
     <item>
       <title>Tutorial Google Maps API - Pembuatan Marker untuk Menandai Lokasi</title>
-      <link>https://www.petanikode.com/tutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi/</link>
+      <link>https://www.petanikode.com/google-map-marker/</link>
       <pubDate>Sun, 26 Jun 2016 06:58:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi/</guid>
+      <guid>https://www.petanikode.com/google-map-marker/</guid>
       <description>Marker berfungsi sebagai penanda sebuah lokasi atau titik dalam peta. Pada kesempatan ini, kita akan coba membuat sebuah marker di Google Maps. Anda bisa menggunakan contoh kode sebelumnya untuk uji coba.
 Objek MarkerSeperti halnya peta, marker juga merupakan sebuah objek yang dapat dibuat dengan kode berikut ini.
 var marker = new google.maps.Marker({
 &amp;nbsp;&amp;nbsp;&amp;nbsp; position: new google.maps.LatLng(-8.5830695,116.3202515),
 &amp;nbsp;&amp;nbsp;&amp;nbsp; map: peta
 });Pada kode pembuatan marker di atas, terdapat dua properti penting yaitu position dan map.</description>
-    </item>
-    
-    <item>
-      <title>Tutorial Google Maps API - Menampilkan Peta di dalam Web</title>
-      <link>https://www.petanikode.com/tutorial-google-maps-api---menampilkan-peta-di-dalam-web/</link>
-      <pubDate>Fri, 24 Jun 2016 09:37:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/tutorial-google-maps-api---menampilkan-peta-di-dalam-web/</guid>
-      <description>Di tengah-tengah kesibukan mengerjakan proyek, akhirnya saya menyempatkan diri untuk mem-posting sesuatu. Pada kesempatan ini kita akan mempelajari Google Maps API. Karena kebetulan, pada proyek yang sedang saya kerjakan menggunakan Google Map. Saya akan menggunakan referensi yang sahih dan dapat dipercaya, W3Schools dan Google Developer. Baiklah mari kita mulai.
-Apa itu Google Maps API?Google Maps API (Application Programming Interface) merupakan sebuah API yang disediakan oleh Google untuk menggunakan peta Google (Google Map) dalam aplikasi yang kita bangun.</description>
     </item>
     
     <item>

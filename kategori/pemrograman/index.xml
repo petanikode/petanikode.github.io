@@ -612,11 +612,11 @@ Adapun 7 bahasa pemrograman yang dapat dilakukan langsung di Ubuntu adalah sebag
     </item>
     
     <item>
-      <title>Cara Membuat Graf dalam Kode Program dengan Bahasa Pemrograman Python</title>
-      <link>https://www.petanikode.com/representasi-graf-dalam-kode-python/</link>
+      <title>Cara Membuat Graf Coding Graf dengan Python</title>
+      <link>https://www.petanikode.com/python-graf/</link>
       <pubDate>Wed, 09 Nov 2016 19:29:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/representasi-graf-dalam-kode-python/</guid>
+      <guid>https://www.petanikode.com/python-graf/</guid>
       <description>Hari ini saya belajar sesuatu yang cukup menantang, yaitu graf. Bagaiaman menulis graf dalam kode? dan memahami beberapa hal tentang graf.
 Menurut Wikipedia, graf dalam komputer sains (ilmu komputer) adalah sebuah tipe data abstrak. Graf terdiri dari titik-titik (nodes) yang terhubung dengan sisi/busur (edge/arcs).
 Berikut ini contoh graf yang akan kita tulis dalam kode program python:
@@ -810,16 +810,6 @@ Membuat direktoriMari kita mulai percobaan pertama, membuat direktori denga fung
     </item>
     
     <item>
-      <title>Penguraian (parshing) JSON dari URL Web Service dengan Python</title>
-      <link>https://www.petanikode.com/penguraian-parshing-json-dari-url-web-service-dengan-python/</link>
-      <pubDate>Sat, 03 Sep 2016 04:30:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/penguraian-parshing-json-dari-url-web-service-dengan-python/</guid>
-      <description>Kita membutuhkan modul atau pustakan urlib untuk mengambil JSON dari URL Web Service. Setelah itu, kita dapat melakukan penguraian (parshing) informasi yang ada di dalamnya. Web service yang akan saya gunakan pada tulisan ini adalah web service dari Google. Web service tersebut menyediakan RSS Feed untuk Blogger dalam bentuk JSON.
-Percobaan di Postman Sebelum kita mulai parshing, ada baiknya kita coba dulu URL web service-nya. Supaya kita mudah mengetahui, atribut atau kunci yang digunakan pada JSON.</description>
-    </item>
-    
-    <item>
       <title>Eksperimen dengan API Simsimi</title>
       <link>https://www.petanikode.com/api-simsimi/</link>
       <pubDate>Fri, 02 Sep 2016 14:25:00 +0000</pubDate>
@@ -835,14 +825,15 @@ API Simsimi konsepnya sangat sederhana. Kita hanya melakukan request dari URL de
     </item>
     
     <item>
-      <title>Penguraian (Parshing) JSON pada Python</title>
+      <title>Cara Parshing JSON pada Python</title>
       <link>https://www.petanikode.com/python-json/</link>
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/python-json/</guid>
       <description>Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul atau pustakan json. Selain itu, kita juga membutuhkan modul tambahan seperti urlib bila JSON-nya diambil dari web service. Oke, mari kita mulai dari hal yang sederhana.
-#json #stickynotes #postitnotes #programming #programmerA photo posted by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
-Membuat File JSONPertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: petanikode.json</description>
+Parshing File JSON A post shared by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
+ 
+Membuat File JSON Pertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: petanikode.</description>
     </item>
     
     <item>
@@ -1032,10 +1023,10 @@ Tidak seperti Github yang selalu meminta password setiap kali nge-push. Bitbucke
     
     <item>
       <title>Tutorial Google Maps API - Pembuatan Marker untuk Menandai Lokasi</title>
-      <link>https://www.petanikode.com/tutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi/</link>
+      <link>https://www.petanikode.com/google-map-marker/</link>
       <pubDate>Sun, 26 Jun 2016 06:58:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi/</guid>
+      <guid>https://www.petanikode.com/google-map-marker/</guid>
       <description>Marker berfungsi sebagai penanda sebuah lokasi atau titik dalam peta. Pada kesempatan ini, kita akan coba membuat sebuah marker di Google Maps. Anda bisa menggunakan contoh kode sebelumnya untuk uji coba.
 Objek MarkerSeperti halnya peta, marker juga merupakan sebuah objek yang dapat dibuat dengan kode berikut ini.
 var marker = new google.maps.Marker({
@@ -1046,10 +1037,10 @@ var marker = new google.maps.Marker({
     
     <item>
       <title>Tutorial Google Maps API - Menampilkan Peta di dalam Web</title>
-      <link>https://www.petanikode.com/tutorial-google-maps-api---menampilkan-peta-di-dalam-web/</link>
+      <link>https://www.petanikode.com/google-map-dasar/</link>
       <pubDate>Fri, 24 Jun 2016 09:37:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-google-maps-api---menampilkan-peta-di-dalam-web/</guid>
+      <guid>https://www.petanikode.com/google-map-dasar/</guid>
       <description>Di tengah-tengah kesibukan mengerjakan proyek, akhirnya saya menyempatkan diri untuk mem-posting sesuatu. Pada kesempatan ini kita akan mempelajari Google Maps API. Karena kebetulan, pada proyek yang sedang saya kerjakan menggunakan Google Map. Saya akan menggunakan referensi yang sahih dan dapat dipercaya, W3Schools dan Google Developer. Baiklah mari kita mulai.
 Apa itu Google Maps API?Google Maps API (Application Programming Interface) merupakan sebuah API yang disediakan oleh Google untuk menggunakan peta Google (Google Map) dalam aplikasi yang kita bangun.</description>
     </item>
@@ -1160,10 +1151,10 @@ Karena aplikasi Android menggunakan bahasa pemrograman Java, maka kita perlu men
     
     <item>
       <title>Solusi Error phpMyAdmin &#39;mbstring is missing&#39;</title>
-      <link>https://www.petanikode.com/solusi-error-phpmyadmin-mbstring-is-missing/</link>
+      <link>https://www.petanikode.com/phpmyadmin-mbstring-missing/</link>
       <pubDate>Tue, 26 Apr 2016 15:02:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/solusi-error-phpmyadmin-mbstring-is-missing/</guid>
+      <guid>https://www.petanikode.com/phpmyadmin-mbstring-missing/</guid>
       <description>Masih segar, Ubuntu saya baru saja ditingkatkan (upgrade) ke versi 16.04. Secara otomatis semua versi software-nya juga ditingkatkan. Tapi, peningkatan versi tidak selalu menjadi lebih baik. Kadang mendapat bugs dan masalah baru. Seperti phpMyAdmin, terjadi error karena menggunakan PHP 7. Pada versi sebelumnya menggunakan PHP 5.
 
 Berdasarkan pesan error tersebut, kesalahanya ada pada konfigurasi PHP. Atur konfigurasi agar dapat me-load ekstensi.
@@ -1335,11 +1326,11 @@ Server Apache dan PHP di Linux tidak seperti server XAMPP di Windows. Server Apa
     </item>
     
     <item>
-      <title>Tata cara menggunakan highlight.js di blogger</title>
-      <link>https://www.petanikode.com/tata-cara-menggunakan-highlight.js-di-blogger/</link>
+      <title>Cara Menggunakan highlight.js di Blogger</title>
+      <link>https://www.petanikode.com/javascript-highlightjs/</link>
       <pubDate>Wed, 06 Jan 2016 13:20:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tata-cara-menggunakan-highlight.js-di-blogger/</guid>
+      <guid>https://www.petanikode.com/javascript-highlightjs/</guid>
       <description>Template baawan blogger sudah saya modifikasi sedemikian rupa. Namun, masih ada yang kurang, pewarnaan kode (syntax highlighting). Kode yang saya sisipkan di dalam artikel tidak berwarna. Kadang saya memanfaatkan gist github, pastebin, ideone, dsb. untuk menyisipkan kode yang berwarna.
 Modul highlight.js berfungsi untuk membuat kode (di web) menjadi berwarna. Kode yang berwarna akan lebih mudah dibaca. Karena itu, kita perlu menggunakan highlight.js. Berikut ini cara menggunakan highlight.js di blogger.
 1. Memasang higlight.</description>

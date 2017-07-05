@@ -209,10 +209,10 @@ Google Maps memang akan menampilkan area abu-abu (grey) kalau ditempatkan di ele
     
     <item>
       <title>Tutorial Google Maps API - Pembuatan Marker untuk Menandai Lokasi</title>
-      <link>https://www.petanikode.com/tutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi/</link>
+      <link>https://www.petanikode.com/google-map-marker/</link>
       <pubDate>Sun, 26 Jun 2016 06:58:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-google-maps-api---pembuatan-marker-untuk-menandai-lokasi/</guid>
+      <guid>https://www.petanikode.com/google-map-marker/</guid>
       <description>Marker berfungsi sebagai penanda sebuah lokasi atau titik dalam peta. Pada kesempatan ini, kita akan coba membuat sebuah marker di Google Maps. Anda bisa menggunakan contoh kode sebelumnya untuk uji coba.
 Objek MarkerSeperti halnya peta, marker juga merupakan sebuah objek yang dapat dibuat dengan kode berikut ini.
 var marker = new google.maps.Marker({
@@ -223,10 +223,10 @@ var marker = new google.maps.Marker({
     
     <item>
       <title>Tutorial Google Maps API - Menampilkan Peta di dalam Web</title>
-      <link>https://www.petanikode.com/tutorial-google-maps-api---menampilkan-peta-di-dalam-web/</link>
+      <link>https://www.petanikode.com/google-map-dasar/</link>
       <pubDate>Fri, 24 Jun 2016 09:37:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-google-maps-api---menampilkan-peta-di-dalam-web/</guid>
+      <guid>https://www.petanikode.com/google-map-dasar/</guid>
       <description>Di tengah-tengah kesibukan mengerjakan proyek, akhirnya saya menyempatkan diri untuk mem-posting sesuatu. Pada kesempatan ini kita akan mempelajari Google Maps API. Karena kebetulan, pada proyek yang sedang saya kerjakan menggunakan Google Map. Saya akan menggunakan referensi yang sahih dan dapat dipercaya, W3Schools dan Google Developer. Baiklah mari kita mulai.
 Apa itu Google Maps API?Google Maps API (Application Programming Interface) merupakan sebuah API yang disediakan oleh Google untuk menggunakan peta Google (Google Map) dalam aplikasi yang kita bangun.</description>
     </item>
@@ -282,11 +282,11 @@ Bootstrap is the most popular HTML, CSS, and JS framework for developing respons
     </item>
     
     <item>
-      <title>Tata cara menggunakan highlight.js di blogger</title>
-      <link>https://www.petanikode.com/tata-cara-menggunakan-highlight.js-di-blogger/</link>
+      <title>Cara Menggunakan highlight.js di Blogger</title>
+      <link>https://www.petanikode.com/javascript-highlightjs/</link>
       <pubDate>Wed, 06 Jan 2016 13:20:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tata-cara-menggunakan-highlight.js-di-blogger/</guid>
+      <guid>https://www.petanikode.com/javascript-highlightjs/</guid>
       <description>Template baawan blogger sudah saya modifikasi sedemikian rupa. Namun, masih ada yang kurang, pewarnaan kode (syntax highlighting). Kode yang saya sisipkan di dalam artikel tidak berwarna. Kadang saya memanfaatkan gist github, pastebin, ideone, dsb. untuk menyisipkan kode yang berwarna.
 Modul highlight.js berfungsi untuk membuat kode (di web) menjadi berwarna. Kode yang berwarna akan lebih mudah dibaca. Karena itu, kita perlu menggunakan highlight.js. Berikut ini cara menggunakan highlight.js di blogger.
 1. Memasang higlight.</description>

@@ -7,20 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 03 Sep 2016 04:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Sep 2016 14:25:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/topik/json/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Penguraian (parshing) JSON dari URL Web Service dengan Python</title>
-      <link>https://www.petanikode.com/penguraian-parshing-json-dari-url-web-service-dengan-python/</link>
-      <pubDate>Sat, 03 Sep 2016 04:30:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/penguraian-parshing-json-dari-url-web-service-dengan-python/</guid>
-      <description>Kita membutuhkan modul atau pustakan urlib untuk mengambil JSON dari URL Web Service. Setelah itu, kita dapat melakukan penguraian (parshing) informasi yang ada di dalamnya. Web service yang akan saya gunakan pada tulisan ini adalah web service dari Google. Web service tersebut menyediakan RSS Feed untuk Blogger dalam bentuk JSON.
-Percobaan di Postman Sebelum kita mulai parshing, ada baiknya kita coba dulu URL web service-nya. Supaya kita mudah mengetahui, atribut atau kunci yang digunakan pada JSON.</description>
-    </item>
     
     <item>
       <title>Eksperimen dengan API Simsimi</title>
@@ -38,14 +28,15 @@ API Simsimi konsepnya sangat sederhana. Kita hanya melakukan request dari URL de
     </item>
     
     <item>
-      <title>Penguraian (Parshing) JSON pada Python</title>
+      <title>Cara Parshing JSON pada Python</title>
       <link>https://www.petanikode.com/python-json/</link>
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/python-json/</guid>
       <description>Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul atau pustakan json. Selain itu, kita juga membutuhkan modul tambahan seperti urlib bila JSON-nya diambil dari web service. Oke, mari kita mulai dari hal yang sederhana.
-#json #stickynotes #postitnotes #programming #programmerA photo posted by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
-Membuat File JSONPertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: petanikode.json</description>
+Parshing File JSON A post shared by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
+ 
+Membuat File JSON Pertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: petanikode.</description>
     </item>
     
   </channel>

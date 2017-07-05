@@ -64,10 +64,10 @@ Penyisipan file aset dengan fungsi base_url():
     
     <item>
       <title>Memindahkan Nilai dari Elemen Select dengan JQuery</title>
-      <link>https://www.petanikode.com/tutorial-jquery-form-select/</link>
+      <link>https://www.petanikode.com/jquery-form-select/</link>
       <pubDate>Mon, 08 Aug 2016 04:29:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-jquery-form-select/</guid>
+      <guid>https://www.petanikode.com/jquery-form-select/</guid>
       <description>Misalkan, ada sebuah input yang otomatis diisi ketika salah satu opsi pada elemen &amp;lt;select&amp;gt; dipilih. Nilainya diambil dari atribut &amp;lt;option&amp;gt;. Kurang lebih ilustrasinya seperti gambar berikut ini.
 
 Lalu, dari mana dapat nilai lama tanam, berat, dan harga? Sedangkan kita hanya bisa menyimpan nilai pada &amp;lt;option&amp;gt; dalam atribut value. Dalam kasus ini, kita bisa mengakalinya dengan membuat atribut kostum (atribut buatan).

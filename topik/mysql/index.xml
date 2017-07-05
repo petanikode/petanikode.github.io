@@ -26,10 +26,10 @@ Bagaimana PHP dan MySQL dihubungkan? PHP dan MySQL dapat saling berhubungan mela
     
     <item>
       <title>Nilai Primary Key untuk Data Unlimited</title>
-      <link>https://www.petanikode.com/nilai-primary-key-untuk-data-unlimited/</link>
+      <link>https://www.petanikode.com/mysql-primary-key-unlimited/</link>
       <pubDate>Sat, 17 Dec 2016 08:09:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/nilai-primary-key-untuk-data-unlimited/</guid>
+      <guid>https://www.petanikode.com/mysql-primary-key-unlimited/</guid>
       <description>Pada terbitan sebelumnya saya sudah pernah membahas keterbatasan AUTO_INCREMENT di MySQL. AUTO_INCREMENT sangat bergantung pada tipe datanya. Kita tidak bisa menggunakannya untuk data yang tak terhingga (unlimited), karena terbatas. Sebagai gantinya, kita harus membuat fungsi generator ID yang mampu membuat ID yang unik.
 Pada kesempatan yang lain, saya juga pernah membuat generator ID yang mirip seperti ID video Youtube. Namun, saya belum yakin sepenuhnya dengan ID unik yang dihasilkannya. Mungkin saja, suatu saat nanti generator ini akan membuat ID yang sama.</description>
     </item>
@@ -85,10 +85,10 @@ extension_dir = /usr/lib/php/20151012/Lokasi /usr/lib/php/20151012/ adalah lokas
     
     <item>
       <title>Solusi Masalah Dependensi Server MySQL di Ubuntu</title>
-      <link>https://www.petanikode.com/solusi-masalah-dependensi-server-mysql-di-ubuntu/</link>
+      <link>https://www.petanikode.com/mysql-dependensi/</link>
       <pubDate>Sun, 24 Apr 2016 17:49:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/solusi-masalah-dependensi-server-mysql-di-ubuntu/</guid>
+      <guid>https://www.petanikode.com/mysql-dependensi/</guid>
       <description>Gara-gara upgrade versi server MySQL tadi malam, servernya malah error. Awalnya saya menggunakan MySQL versi 5.5, kemudian ditingkatkan (upgrade) ke versi 5.6.
 $ mysql -u root -p ERROR 2002 (HY000): Can&amp;rsquo;t connect to local MySQL server through socket &amp;lsquo;/var/run/mysqld/mysqld.sock&amp;rsquo; (2)Kemudian saya mencoba menghapus mysql-server dan meninginstal lagi (instal ulang). sudo apt-get remove mysql-server
 sudo apt-get install mysql-serverMalah dapat error dependensi:

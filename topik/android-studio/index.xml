@@ -38,10 +38,10 @@ Pada kesempatan ini, saya akan membahas persiapan yang dilakukan sebelum memulai
     
     <item>
       <title>Cara Mengatasi JDK yang Lebih dari Satu di Linux agar tidak Bentrok</title>
-      <link>https://www.petanikode.com/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/</link>
+      <link>https://www.petanikode.com/java-jdk-lebih-dari-satu/</link>
       <pubDate>Tue, 05 Apr 2016 22:49:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/</guid>
+      <guid>https://www.petanikode.com/java-jdk-lebih-dari-satu/</guid>
       <description>Saya menginstal lebih dari satu JDK di Linux (Xubuntu). Ada Open JDK 8, Open JDK 7, dan Oracle JDK 8. A
 walnya saya hanya punya Open JDK 8. Kemudian setelah mengintal Gradle, Open JDK 7 juga ikut tersintal.
 Selain itu, saya juga menginstal Oracle JDK 8 Secara manual di direktori /opt.
@@ -51,10 +51,10 @@ Beberapa IDE tidak mendukung bila menggunakan Open JDK 7.</description>
     
     <item>
       <title>Cara Perbaiki Android Studio yang SDK-nya Tidak Ditemukan</title>
-      <link>https://www.petanikode.com/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan/</link>
+      <link>https://www.petanikode.com/android-studio-sdk-missing/</link>
       <pubDate>Thu, 03 Mar 2016 16:15:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan/</guid>
+      <guid>https://www.petanikode.com/android-studio-sdk-missing/</guid>
       <description>Setelah saya menginstal Andoid Studio di Ubuntu, ternyata saya menemukan masalah dengan pesan kesalahan &amp;ldquo;Your Android SDK is missing , out of date,or is missing templates&amp;rdquo;. Pesan error itu menandakan, Android Studio tidak menemukan SDK. Jadi, si Android Studio belum mampu membuat proyek baru karena belum ada teman untuk bekerja sama, yaitu si SDK.
 Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
 1. Buka Android Studio, Klik Configure
@@ -78,10 +78,10 @@ Sepertinya masalah ini cukup sulit untuk diatasi. Tetapi, setelah membaca jawaba
     
     <item>
       <title>Emulator alternatif untuk Android Studio</title>
-      <link>https://www.petanikode.com/pemrograman-android-emulator-alternatif/</link>
+      <link>https://www.petanikode.com/android-emulator-alternatif/</link>
       <pubDate>Fri, 13 Nov 2015 21:05:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-android-emulator-alternatif/</guid>
+      <guid>https://www.petanikode.com/android-emulator-alternatif/</guid>
       <description>Bila kamu tidak ingin menggunakan emulator bawaan Android SDK atau terasa berat, mungkin bisa coba emulator alternatif.
 Ada dua alternatif emulator untuk debug dan deploy aplikasi android:
  Menggunakan Genymotion Menggunakan Hp sendiri  Geanymotion adalah emulator android pihak ketiga yang berbasis virtualbox. Ada yang mengklaim emulator ini lebih cepat dibandingkan emulator bawaan android studio.

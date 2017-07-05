@@ -62,10 +62,10 @@ Kita membutuhkan dua repositori untuk melakukan cara ini.</description>
     
     <item>
       <title>Cara Menggunakan SSH di Github</title>
-      <link>https://www.petanikode.com/cara-menggunakan-ssh-di-github/</link>
+      <link>https://www.petanikode.com/github-ssh/</link>
       <pubDate>Sun, 29 Jan 2017 17:52:51 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menggunakan-ssh-di-github/</guid>
+      <guid>https://www.petanikode.com/github-ssh/</guid>
       <description>SSH memungkinkan kita untuk melakukan push ke repository github tanpa login. Berbeda dengan cara yang biasa (melalui HTTPS), kita harus memasukkan username dan password setiap kali melakukan push. Tapi dengan SSH kita tidak akan melakukan itu lagi.
 1. Membuat Key SSH Jalankan perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda. Untuk passpharse dikosongkan saja.
 

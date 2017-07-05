@@ -40,10 +40,10 @@ Untuk tahu lebih lanjut, mari kita mulai belajar&amp;hellip;</description>
     
     <item>
       <title>Kenapa Bahasa Pemrograman Java Kurang Cocok untuk Pemula?</title>
-      <link>https://www.petanikode.com/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/</link>
+      <link>https://www.petanikode.com/java-bukan-untuk-pemula/</link>
       <pubDate>Sat, 21 Jan 2017 16:45:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/</guid>
+      <guid>https://www.petanikode.com/java-bukan-untuk-pemula/</guid>
       <description>Sudah dua kali semester saya mengajar di praktikum pemrograman Java. Hasilnya, hanya sebagian mahasiswa yang mengerti. Sebagiannya lagi masih pusing. Karena mereka belum pernah ada pengalaman coding sebelumnya. Bahasa pemrograman Java memang populer, oleh karena itu pihak kampus memilih bahasa ini untuk diajarkan pada semester I.
 
 Om Endy Muhardin, dalam tulisan di blognya yang berjudul Java: Tidak untuk Pemula mengatakan: &amp;ldquo;Java memang bahasa yang mature. Sudah stabil (artinya tidak terlalu banyak perubahan fundamental) dan sudah teruji digunakan berbagai aplikasi besar dengan sukses.</description>
@@ -154,10 +154,10 @@ Masalahnya bagaimana kala datanya banyak, misalkan ada 100 data, pastinya capek 
     
     <item>
       <title>Pilihan Alternatif Java dan Symbolic Link yang Buntu</title>
-      <link>https://www.petanikode.com/pilihan-alternatif-java-dan-symbolic-link-yang-buntu/</link>
+      <link>https://www.petanikode.com/alternatif-java-symbolic-link/</link>
       <pubDate>Wed, 06 Apr 2016 22:50:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pilihan-alternatif-java-dan-symbolic-link-yang-buntu/</guid>
+      <guid>https://www.petanikode.com/alternatif-java-symbolic-link/</guid>
       <description>Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error.
 Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif.
 Berikut ini perintah salah yang menyebabkan masalah:
@@ -169,10 +169,10 @@ petanikode@imajinasi:~$ sudo update-alternatives --config java update-alternativ
     
     <item>
       <title>Cara Mengatasi JDK yang Lebih dari Satu di Linux agar tidak Bentrok</title>
-      <link>https://www.petanikode.com/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/</link>
+      <link>https://www.petanikode.com/java-jdk-lebih-dari-satu/</link>
       <pubDate>Tue, 05 Apr 2016 22:49:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/</guid>
+      <guid>https://www.petanikode.com/java-jdk-lebih-dari-satu/</guid>
       <description>Saya menginstal lebih dari satu JDK di Linux (Xubuntu). Ada Open JDK 8, Open JDK 7, dan Oracle JDK 8. A
 walnya saya hanya punya Open JDK 8. Kemudian setelah mengintal Gradle, Open JDK 7 juga ikut tersintal.
 Selain itu, saya juga menginstal Oracle JDK 8 Secara manual di direktori /opt.

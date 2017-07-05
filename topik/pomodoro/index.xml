@@ -14,10 +14,10 @@
     
     <item>
       <title>Membuat Program Pomodoro Timer Berbasis CLI dengan Python</title>
-      <link>https://www.petanikode.com/membuat-program-pomodoro-timer-berbasis-cli-dengan-python/</link>
+      <link>https://www.petanikode.com/python-pomodoro/</link>
       <pubDate>Sat, 06 Aug 2016 18:31:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/membuat-program-pomodoro-timer-berbasis-cli-dengan-python/</guid>
+      <guid>https://www.petanikode.com/python-pomodoro/</guid>
       <description>Pomodoro merupakan sebuah teknik yang memanfaatkan waktu 25 menit untuk fokus mengerjakan sesuatu. Pomodoro dapat diterapkan untuk berbagai jenis pekerjaan. Pomodoro akan mencegah kita melakukan pekerjaan multitasking dan membantu fokus.
 Pada kesempatan ini, kita akan membuat program Timer Pomodoro. Timer ini mulai menghitung mundur mulai dari 25 menit.
 1. Impor Pustaka yang DiperlukanPada pembuatan program ini, kita memerlukan dua pustaka. Yaitu time dan sys (sistem). Pustaka time kita perlukan untuk melakukan perulangan per detik.</description>

@@ -341,10 +341,10 @@ mari kita simak&amp;hellip;
     
     <item>
       <title>Download Ebook Gratis Panduan Dasar Pemrograman Tizen</title>
-      <link>https://www.petanikode.com/download-ebook-gratis-panduan-dasar-pemrograman-tizen/</link>
+      <link>https://www.petanikode.com/tizen-ebook/</link>
       <pubDate>Mon, 06 Mar 2017 20:05:01 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/download-ebook-gratis-panduan-dasar-pemrograman-tizen/</guid>
+      <guid>https://www.petanikode.com/tizen-ebook/</guid>
       <description>Buku ini ditulis oleh tiga orang penulis dan disebarkan secara terbuka di Gitbook. Terbit pada tanggal 13 Maret 2016 dengan versi 1.0.
 Buku ini berisi panduan dasar pemrograman Tizen menggunakan Windows, Linux, dan Mac OS.
 Pada BAB awal, kita akan diperkenalkan dengan Tizen. Kemudian membuat aplikasi Hello World menggunakan Windows, Linux, dan Mac OS.
@@ -648,10 +648,10 @@ Kita membutuhkan dua repositori untuk melakukan cara ini.</description>
     
     <item>
       <title>Cara Menggunakan SSH di Github</title>
-      <link>https://www.petanikode.com/cara-menggunakan-ssh-di-github/</link>
+      <link>https://www.petanikode.com/github-ssh/</link>
       <pubDate>Sun, 29 Jan 2017 17:52:51 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menggunakan-ssh-di-github/</guid>
+      <guid>https://www.petanikode.com/github-ssh/</guid>
       <description>SSH memungkinkan kita untuk melakukan push ke repository github tanpa login. Berbeda dengan cara yang biasa (melalui HTTPS), kita harus memasukkan username dan password setiap kali melakukan push. Tapi dengan SSH kita tidak akan melakukan itu lagi.
 1. Membuat Key SSH Jalankan perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda. Untuk passpharse dikosongkan saja.
 
@@ -700,10 +700,10 @@ Mulai dari Sekarang dan di sini Benar sekali, jangan ditunda-tunda sampai besok.
     
     <item>
       <title>Kenapa Bahasa Pemrograman Java Kurang Cocok untuk Pemula?</title>
-      <link>https://www.petanikode.com/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/</link>
+      <link>https://www.petanikode.com/java-bukan-untuk-pemula/</link>
       <pubDate>Sat, 21 Jan 2017 16:45:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/kenapa-bahasa-pemrograman-java-kurang-cocok-untuk-pemula/</guid>
+      <guid>https://www.petanikode.com/java-bukan-untuk-pemula/</guid>
       <description>Sudah dua kali semester saya mengajar di praktikum pemrograman Java. Hasilnya, hanya sebagian mahasiswa yang mengerti. Sebagiannya lagi masih pusing. Karena mereka belum pernah ada pengalaman coding sebelumnya. Bahasa pemrograman Java memang populer, oleh karena itu pihak kampus memilih bahasa ini untuk diajarkan pada semester I.
 
 Om Endy Muhardin, dalam tulisan di blognya yang berjudul Java: Tidak untuk Pemula mengatakan: &amp;ldquo;Java memang bahasa yang mature. Sudah stabil (artinya tidak terlalu banyak perubahan fundamental) dan sudah teruji digunakan berbagai aplikasi besar dengan sukses.</description>
@@ -882,10 +882,10 @@ Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adal
     
     <item>
       <title>Nilai Primary Key untuk Data Unlimited</title>
-      <link>https://www.petanikode.com/nilai-primary-key-untuk-data-unlimited/</link>
+      <link>https://www.petanikode.com/mysql-primary-key-unlimited/</link>
       <pubDate>Sat, 17 Dec 2016 08:09:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/nilai-primary-key-untuk-data-unlimited/</guid>
+      <guid>https://www.petanikode.com/mysql-primary-key-unlimited/</guid>
       <description>Pada terbitan sebelumnya saya sudah pernah membahas keterbatasan AUTO_INCREMENT di MySQL. AUTO_INCREMENT sangat bergantung pada tipe datanya. Kita tidak bisa menggunakannya untuk data yang tak terhingga (unlimited), karena terbatas. Sebagai gantinya, kita harus membuat fungsi generator ID yang mampu membuat ID yang unik.
 Pada kesempatan yang lain, saya juga pernah membuat generator ID yang mirip seperti ID video Youtube. Namun, saya belum yakin sepenuhnya dengan ID unik yang dihasilkannya. Mungkin saja, suatu saat nanti generator ini akan membuat ID yang sama.</description>
     </item>
@@ -1217,10 +1217,10 @@ Membuat File JSON Pertama, kita buat dulu file JSON-nya dengan isi seperti pada 
     
     <item>
       <title>Cara Menggunakan Plug-in Data Tables untuk Membuat Tabel Dinamis</title>
-      <link>https://www.petanikode.com/tutorial-jquery-data-tables/</link>
+      <link>https://www.petanikode.com/jquery-data-tables/</link>
       <pubDate>Sat, 27 Aug 2016 19:14:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-jquery-data-tables/</guid>
+      <guid>https://www.petanikode.com/jquery-data-tables/</guid>
       <description>Data Tables merupakan sebuah plug-in jQuery untuk memanipulasi data dalam tabel HTML.
 Data Tables memungkinkan kita melakukan membuat tabel dengan fitur pencarian, membuat pagination, menampilkan data sebanyak yang kita mau, mengambil data dari ajax, dsb.
 1. Menyisipkan Data Tables Plug-in Data Tables yang saya gunakan pada tulisan ini adalah versi online melalui CDN. Bila anda ingin menggunakan versi offline, silahkan di-download dulu Data Tables-nya di https://datatables.net/download/index.
@@ -1285,10 +1285,10 @@ Saatnya menggunakan jurus terlarang.</description>
     
     <item>
       <title>Memindahkan Nilai dari Elemen Select dengan JQuery</title>
-      <link>https://www.petanikode.com/tutorial-jquery-form-select/</link>
+      <link>https://www.petanikode.com/jquery-form-select/</link>
       <pubDate>Mon, 08 Aug 2016 04:29:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-jquery-form-select/</guid>
+      <guid>https://www.petanikode.com/jquery-form-select/</guid>
       <description>Misalkan, ada sebuah input yang otomatis diisi ketika salah satu opsi pada elemen &amp;lt;select&amp;gt; dipilih. Nilainya diambil dari atribut &amp;lt;option&amp;gt;. Kurang lebih ilustrasinya seperti gambar berikut ini.
 
 Lalu, dari mana dapat nilai lama tanam, berat, dan harga? Sedangkan kita hanya bisa menyimpan nilai pada &amp;lt;option&amp;gt; dalam atribut value. Dalam kasus ini, kita bisa mengakalinya dengan membuat atribut kostum (atribut buatan).
@@ -1317,10 +1317,10 @@ Batas AUTO_INCREMENTTernyata AUTO_INCREMENT memiliki batas. Apabila sudah melamp
     
     <item>
       <title>Membuat Program Pomodoro Timer Berbasis CLI dengan Python</title>
-      <link>https://www.petanikode.com/membuat-program-pomodoro-timer-berbasis-cli-dengan-python/</link>
+      <link>https://www.petanikode.com/python-pomodoro/</link>
       <pubDate>Sat, 06 Aug 2016 18:31:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/membuat-program-pomodoro-timer-berbasis-cli-dengan-python/</guid>
+      <guid>https://www.petanikode.com/python-pomodoro/</guid>
       <description>Pomodoro merupakan sebuah teknik yang memanfaatkan waktu 25 menit untuk fokus mengerjakan sesuatu. Pomodoro dapat diterapkan untuk berbagai jenis pekerjaan. Pomodoro akan mencegah kita melakukan pekerjaan multitasking dan membantu fokus.
 Pada kesempatan ini, kita akan membuat program Timer Pomodoro. Timer ini mulai menghitung mundur mulai dari 25 menit.
 1. Impor Pustaka yang DiperlukanPada pembuatan program ini, kita memerlukan dua pustaka. Yaitu time dan sys (sistem). Pustaka time kita perlukan untuk melakukan perulangan per detik.</description>
@@ -1683,10 +1683,10 @@ extension_dir = /usr/lib/php/20151012/Lokasi /usr/lib/php/20151012/ adalah lokas
     
     <item>
       <title>Solusi Masalah Dependensi Server MySQL di Ubuntu</title>
-      <link>https://www.petanikode.com/solusi-masalah-dependensi-server-mysql-di-ubuntu/</link>
+      <link>https://www.petanikode.com/mysql-dependensi/</link>
       <pubDate>Sun, 24 Apr 2016 17:49:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/solusi-masalah-dependensi-server-mysql-di-ubuntu/</guid>
+      <guid>https://www.petanikode.com/mysql-dependensi/</guid>
       <description>Gara-gara upgrade versi server MySQL tadi malam, servernya malah error. Awalnya saya menggunakan MySQL versi 5.5, kemudian ditingkatkan (upgrade) ke versi 5.6.
 $ mysql -u root -p ERROR 2002 (HY000): Can&amp;rsquo;t connect to local MySQL server through socket &amp;lsquo;/var/run/mysqld/mysqld.sock&amp;rsquo; (2)Kemudian saya mencoba menghapus mysql-server dan meninginstal lagi (instal ulang). sudo apt-get remove mysql-server
 sudo apt-get install mysql-serverMalah dapat error dependensi:
@@ -1746,10 +1746,10 @@ Pada kesempatan ini, saya akan membahas persiapan yang dilakukan sebelum memulai
     
     <item>
       <title>Pilihan Alternatif Java dan Symbolic Link yang Buntu</title>
-      <link>https://www.petanikode.com/pilihan-alternatif-java-dan-symbolic-link-yang-buntu/</link>
+      <link>https://www.petanikode.com/alternatif-java-symbolic-link/</link>
       <pubDate>Wed, 06 Apr 2016 22:50:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pilihan-alternatif-java-dan-symbolic-link-yang-buntu/</guid>
+      <guid>https://www.petanikode.com/alternatif-java-symbolic-link/</guid>
       <description>Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error.
 Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif.
 Berikut ini perintah salah yang menyebabkan masalah:
@@ -1761,10 +1761,10 @@ petanikode@imajinasi:~$ sudo update-alternatives --config java update-alternativ
     
     <item>
       <title>Cara Mengatasi JDK yang Lebih dari Satu di Linux agar tidak Bentrok</title>
-      <link>https://www.petanikode.com/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/</link>
+      <link>https://www.petanikode.com/java-jdk-lebih-dari-satu/</link>
       <pubDate>Tue, 05 Apr 2016 22:49:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-mengatasi-jdk-yang-lebih-dari-satu-di-linux/</guid>
+      <guid>https://www.petanikode.com/java-jdk-lebih-dari-satu/</guid>
       <description>Saya menginstal lebih dari satu JDK di Linux (Xubuntu). Ada Open JDK 8, Open JDK 7, dan Oracle JDK 8. A
 walnya saya hanya punya Open JDK 8. Kemudian setelah mengintal Gradle, Open JDK 7 juga ikut tersintal.
 Selain itu, saya juga menginstal Oracle JDK 8 Secara manual di direktori /opt.
@@ -1833,10 +1833,10 @@ $ mysql -u root -p &amp;lt; db_27_feb_2016.sql Enter password: ERROR 1067 (42000
     
     <item>
       <title>Cara Perbaiki Android Studio yang SDK-nya Tidak Ditemukan</title>
-      <link>https://www.petanikode.com/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan/</link>
+      <link>https://www.petanikode.com/android-studio-sdk-missing/</link>
       <pubDate>Thu, 03 Mar 2016 16:15:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-perbaiki-android-studio-yang-sdk-nya-tidak-ditemukan/</guid>
+      <guid>https://www.petanikode.com/android-studio-sdk-missing/</guid>
       <description>Setelah saya menginstal Andoid Studio di Ubuntu, ternyata saya menemukan masalah dengan pesan kesalahan &amp;ldquo;Your Android SDK is missing , out of date,or is missing templates&amp;rdquo;. Pesan error itu menandakan, Android Studio tidak menemukan SDK. Jadi, si Android Studio belum mampu membuat proyek baru karena belum ada teman untuk bekerja sama, yaitu si SDK.
 Berikut ini langkah-langkah yang saya lakukan untuk memperbaikinya.
 1. Buka Android Studio, Klik Configure
@@ -2064,10 +2064,10 @@ sudo apt install sqlite3</description>
     
     <item>
       <title>Emulator alternatif untuk Android Studio</title>
-      <link>https://www.petanikode.com/pemrograman-android-emulator-alternatif/</link>
+      <link>https://www.petanikode.com/android-emulator-alternatif/</link>
       <pubDate>Fri, 13 Nov 2015 21:05:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-android-emulator-alternatif/</guid>
+      <guid>https://www.petanikode.com/android-emulator-alternatif/</guid>
       <description>Bila kamu tidak ingin menggunakan emulator bawaan Android SDK atau terasa berat, mungkin bisa coba emulator alternatif.
 Ada dua alternatif emulator untuk debug dan deploy aplikasi android:
  Menggunakan Genymotion Menggunakan Hp sendiri  Geanymotion adalah emulator android pihak ketiga yang berbasis virtualbox. Ada yang mengklaim emulator ini lebih cepat dibandingkan emulator bawaan android studio.

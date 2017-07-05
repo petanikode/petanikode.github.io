@@ -14,10 +14,10 @@
     
     <item>
       <title>Nilai Primary Key untuk Data Unlimited</title>
-      <link>https://www.petanikode.com/nilai-primary-key-untuk-data-unlimited/</link>
+      <link>https://www.petanikode.com/mysql-primary-key-unlimited/</link>
       <pubDate>Sat, 17 Dec 2016 08:09:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/nilai-primary-key-untuk-data-unlimited/</guid>
+      <guid>https://www.petanikode.com/mysql-primary-key-unlimited/</guid>
       <description>Pada terbitan sebelumnya saya sudah pernah membahas keterbatasan AUTO_INCREMENT di MySQL. AUTO_INCREMENT sangat bergantung pada tipe datanya. Kita tidak bisa menggunakannya untuk data yang tak terhingga (unlimited), karena terbatas. Sebagai gantinya, kita harus membuat fungsi generator ID yang mampu membuat ID yang unik.
 Pada kesempatan yang lain, saya juga pernah membuat generator ID yang mirip seperti ID video Youtube. Namun, saya belum yakin sepenuhnya dengan ID unik yang dihasilkannya. Mungkin saja, suatu saat nanti generator ini akan membuat ID yang sama.</description>
     </item>

@@ -850,10 +850,10 @@ Berikut ini cara menyisipkan Data Tables melalui CDN.</description>
     
     <item>
       <title>Mengapa Harus Menggunakan Fungsi base_url() untuk Menyisipkan File Aset?</title>
-      <link>https://www.petanikode.com/mengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset/</link>
+      <link>https://www.petanikode.com/codeigniter-base-url/</link>
       <pubDate>Fri, 12 Aug 2016 10:37:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/mengapa-harus-menggunakan-fungsi-base_url-untuk-menyisipkan-file-aset/</guid>
+      <guid>https://www.petanikode.com/codeigniter-base-url/</guid>
       <description>Ketika saya menjadi tutor di sebuah praktikum web, waktu itu kami mempelajari CodeIgniter. Saya menemukan sedikit kasus, terkait tentang penyisipan file aset. Mengapa harus menggunakan fungsi base_url()? Itulah pertanyaan yang diajukan dari salah satu peserta praktikum.
 Kemudian saya menjawabnya dengan memperlihatkan demo. Bagaimana penyisipan yang menggunakan fungsi base_url() dan bagaimana yang tanpa fungsi base_url().
 Penyisipan file aset dengan fungsi base_url():

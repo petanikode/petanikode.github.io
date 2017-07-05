@@ -132,17 +132,5 @@ Ada dua alternatif emulator untuk debug dan deploy aplikasi android:
 Cara Instal Geanymotion untuk Emulator Android Studio 1. Pastikan virtualbox sudah terinstal Genymotion memanfaatkan virtualbox untuk melakuan virtualisasi.</description>
     </item>
     
-    <item>
-      <title>Panduan instalasi Android Studio di Ubuntu</title>
-      <link>https://www.petanikode.com/panduan-instalasi-android-studio-di-ubuntu/</link>
-      <pubDate>Fri, 16 Oct 2015 20:36:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/panduan-instalasi-android-studio-di-ubuntu/</guid>
-      <description>Android Studio merupakan sebuah IDE berbasis IntelliJ IDEA untuk pengembangan aplikasi android. Instalasi Android Studio saya lakukan di atas Xubuntu 15.04 (32bit). Sebenarnya disarankan menggunakan linux 64bit agar emulator dapat berjalan dengan baik.
-1. Instal openjdkAndroid Studio menggunakan bahasa pemrograman Java. Jadi memerlukan JDK agar bisa mengompilasi program. JDK di linux dapat menggunakan openjdk maupun oracle JDK. Berikut ini perintah untuk menginstal openjdk di ubuntu:
-openjdk versi 7
-sudo apt-get install openjdk-7-jdkopenjdk versi 8</description>
-    </item>
-    
   </channel>
 </rss>

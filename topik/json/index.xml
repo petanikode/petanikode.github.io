@@ -39,10 +39,10 @@ API Simsimi konsepnya sangat sederhana. Kita hanya melakukan request dari URL de
     
     <item>
       <title>Penguraian (Parshing) JSON pada Python</title>
-      <link>https://www.petanikode.com/penguraian-parshing-json-pada-python/</link>
+      <link>https://www.petanikode.com/python-json/</link>
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/penguraian-parshing-json-pada-python/</guid>
+      <guid>https://www.petanikode.com/python-json/</guid>
       <description>Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul atau pustakan json. Selain itu, kita juga membutuhkan modul tambahan seperti urlib bila JSON-nya diambil dari web service. Oke, mari kita mulai dari hal yang sederhana.
 #json #stickynotes #postitnotes #programming #programmerA photo posted by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
 Membuat File JSONPertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: petanikode.json</description>

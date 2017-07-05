@@ -109,10 +109,10 @@ Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam s
     
     <item>
       <title>Tipe Data Datetime dan Timestamp di MySQL</title>
-      <link>https://www.petanikode.com/tipe-data-datetime-dan-timestamp-di-mysql/</link>
+      <link>https://www.petanikode.com/mysql-datetime-timestamp/</link>
       <pubDate>Mon, 07 Mar 2016 17:12:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tipe-data-datetime-dan-timestamp-di-mysql/</guid>
+      <guid>https://www.petanikode.com/mysql-datetime-timestamp/</guid>
       <description>Beberapa hari yang lalu, saya melakukan downgrade sistem operasi, dari versi 15.10 ke 14.04. Secara otomatis, versi server MySQL-nya juga ikut di-downgrade, dari versi 5.6.27 ke versi 5.5.47. Pada versi yang lebih lama (5.5.47), tipe data Datetime dengan nilai default current_timestamp tidak diterima. Ketika saya mengimpor dari cadangan database, terjadi error.
 $ mysql -u root -p &amp;lt; db_27_feb_2016.sql Enter password: ERROR 1067 (42000) at line 41: Invalid default value for &amp;lsquo;tanggal&amp;rsquo;Saya pun mencoba menelusuri ke baris 41 dari file SQL cadangan.</description>
     </item>
@@ -131,10 +131,10 @@ mysqldump -u username -p -A &amp;gt; cadangan.</description>
     
     <item>
       <title>Query MySQL untuk Menentukan Pemenang</title>
-      <link>https://www.petanikode.com/query-mysql-untuk-menentukan-pemenang/</link>
+      <link>https://www.petanikode.com/mysql-menentukan-pemenang/</link>
       <pubDate>Mon, 03 Aug 2015 05:53:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/query-mysql-untuk-menentukan-pemenang/</guid>
+      <guid>https://www.petanikode.com/mysql-menentukan-pemenang/</guid>
       <description>Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membuat saya bingung, yaitu penentuan pemenang setelah pemilihan selesai.
 Query pertama&amp;ndash;menurut saya sesuai&amp;ndash;yang didapatkan dari pencarian di google adalah sebagai berikut:
 SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1  Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak.</description>

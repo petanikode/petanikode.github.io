@@ -26,21 +26,10 @@ ardianta@imajinasi:~$ sudo apt-cache search freeglut</description>
     
     <item>
       <title>Pemrograman GUI dengan Qt: Persiapan dan Pengenalan</title>
-      <link>https://www.petanikode.com/pemrograman-qt-pengenalan/</link>
+      <link>https://www.petanikode.com/qt-dasar/</link>
       <pubDate>Fri, 13 Feb 2015 09:29:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-qt-pengenalan/</guid>
-      <description>Program Hello World seringkali dibuat saat pertama kali mempelajari suatu bahasa pemrograman. Program ini begitu legendaris dan populer di dunia pemrograman. Namun, dalam tulisan ini, saya akan mengajak pembaca membuat program kenalan di Qt. Supaya tidak mainstream.
- Buat sebuah proyek baru bernama kenalan. Silahkan menuju ke menu File-New File or Project... atau tekan tombol Ctrl+N. Kemudian pilih Application-Qt Widget Application, lalu klik tombol Choose....
- Selanjutnya, menentukan nama proyek dan lokasi penyimpanannya.</description>
-    </item>
-    
-    <item>
-      <title>Panduan Instalasi Qt di Linux</title>
-      <link>https://www.petanikode.com/pemrograman-qt-pengenalan-dan-persiapan/</link>
-      <pubDate>Mon, 09 Feb 2015 21:16:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/pemrograman-qt-pengenalan-dan-persiapan/</guid>
+      <guid>https://www.petanikode.com/qt-dasar/</guid>
       <description>Assalamualaikum wr. wb., Selamat datang di panduan instalasi Qt di linux. Di tulisan ini saya akan membahas langkah-langkah instalasi Qt di linux. Qt yang akan diinstal adalah Qt versi 5.4.0. Versi ini merupakan versi terakhir saat ini.
  Sedikit informasi distro linux yang saya gunakan di tulisan ini:
 ardianta@imajinasi:~$ hostnamectl 

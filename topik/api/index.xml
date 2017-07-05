@@ -76,10 +76,10 @@ API Simsimi konsepnya sangat sederhana. Kita hanya melakukan request dari URL de
     
     <item>
       <title>Penguraian (Parshing) JSON pada Python</title>
-      <link>https://www.petanikode.com/penguraian-parshing-json-pada-python/</link>
+      <link>https://www.petanikode.com/python-json/</link>
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/penguraian-parshing-json-pada-python/</guid>
+      <guid>https://www.petanikode.com/python-json/</guid>
       <description>Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul atau pustakan json. Selain itu, kita juga membutuhkan modul tambahan seperti urlib bila JSON-nya diambil dari web service. Oke, mari kita mulai dari hal yang sederhana.
 #json #stickynotes #postitnotes #programming #programmerA photo posted by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
 Membuat File JSONPertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: petanikode.json</description>
@@ -150,10 +150,10 @@ mkdir proyek-slim cd proyek-slim  Instalasi Slim dengan Composer Ketik perintah 
     
     <item>
       <title>Mengurai dokumen XML dengan DOM API di python</title>
-      <link>https://www.petanikode.com/pemrograman-python-xml/</link>
+      <link>https://www.petanikode.com/python-xml/</link>
       <pubDate>Tue, 24 Feb 2015 00:36:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-python-xml/</guid>
+      <guid>https://www.petanikode.com/python-xml/</guid>
       <description>DOM (Document Object Model) adalah sebuah API lintas bahasa dari World Wide Web Consortium (W3C). API ini sangat bermanfaat untuk membaca data yang ada di dokumen XML. Tulisan ini saya buat berdasarkan panduan di tutorialspoint.com.
  Saya memiliki dokumen XML bernama kartu_nama.xml, isinya sebagai berikut:
 &amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;

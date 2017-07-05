@@ -14,10 +14,10 @@
     
     <item>
       <title>Cara Menggunakan Dompdf di Codeigniter</title>
-      <link>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-dompdf/</link>
       <pubDate>Sun, 19 Feb 2017 16:48:58 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-dompdf/</guid>
       <description>Dompdf merupakan salah satu pustaka PHP untuk membuat PDF.
 Dompdf membuat PDF dari HTML, sehingga lebih praktis. Selain itu juga, Kita bisa menggunakan CSS di dalamnya.
 Saat ini Dompdf mendukung CSS versi 2.1.
@@ -29,10 +29,10 @@ Silahkan buka file application/config/config.php, kemudian isi bagian autoload C
     
     <item>
       <title>Cara Melindungi Web dari Serangan XSS pada Framework CodeIgniter</title>
-      <link>https://www.petanikode.com/serangan-xss-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-serangan-xss/</link>
       <pubDate>Fri, 23 Dec 2016 05:13:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/serangan-xss-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-serangan-xss/</guid>
       <description>XSS merupakan singkatan yang digunakan untuk istilah cross site scripting. XSS merupakan salah satu jenis serangan injeksi code (code injection attack).
 XSS dilakukan oleh penyerang dengan cara memasukkan kode HTML atau client script code lainnya ke suatu situs. Serangan ini akan seolah-olah datang dari situs tersebut.
 Akibat serangan ini antara lain penyerang dapat mem-bypass keamanan di sisi klien, mendapatkan informasi sensitif, atau menyimpan aplikasi berbahaya.
@@ -62,10 +62,10 @@ $config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;; 
     
     <item>
       <title>Cara Mengaktifkan Profiler CodeIgniter</title>
-      <link>https://www.petanikode.com/cara-mengaktifkan-profiler-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-profiler/</link>
       <pubDate>Wed, 30 Nov 2016 11:30:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-mengaktifkan-profiler-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-profiler/</guid>
       <description>Profiler fungsinya untuk menampilkan beberapa informasi yang diperlukan untuk debugging. Kita dapat mengetahui query apa yang dikerjakan, berapa detik query tersebut dikerjakan, benchmarks, dan sebagainya. Informasi ini sangat berguna ketika kita membangun sebuah aplikasi dengan CodeIgniter.
 Cara mengaktifkan Profiler di CodeIgniter sangat mudah, cukup menjalankan fungsi ini di Controller:
 $this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);Maka kita akan mendapatkan informasi seperti berikut ini:
@@ -115,10 +115,10 @@ Penyisipan file aset dengan fungsi base_url():
     
     <item>
       <title>Pemanggilan fungsi base_url() pada File error_404.php CodeIgniter</title>
-      <link>https://www.petanikode.com/pemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-base-url-404/</link>
       <pubDate>Mon, 18 Jul 2016 04:30:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-base-url-404/</guid>
       <description>Ketika saya memodifikasi halaman error 404 CodeIgniter, fungsi base_url() tidak bisa dipanggil. Mungkin saja fungsi ini tidak dikenali di sini. Fungsi base_url() saya butuhkan untuk meyisipkan kode CSS yang ada di direktori assets. Pesan Error-nya:
 Call to undefined function base_url() in the error_404 pageSolusi dari masalah ini sangat sederhana. Kita tidak harus menggunakan fungsi base_url() untuk mendapatkan base url. Kita bisa menggunakan fungsi config_item() dengan parameter &amp;lsquo;base_url&amp;rsquo;. Contoh:
 &amp;lt;?php echo config_item(&amp;lsquo;base_url&amp;rsquo;); ?</description>
@@ -148,10 +148,10 @@ http://petanikode.com/  Fungsi site_url() Seperti namanya, fungsi site_url() aka
     
     <item>
       <title>Query MySQL untuk Menentukan Pemenang</title>
-      <link>https://www.petanikode.com/query-mysql-untuk-menentukan-pemenang/</link>
+      <link>https://www.petanikode.com/mysql-menentukan-pemenang/</link>
       <pubDate>Mon, 03 Aug 2015 05:53:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/query-mysql-untuk-menentukan-pemenang/</guid>
+      <guid>https://www.petanikode.com/mysql-menentukan-pemenang/</guid>
       <description>Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membuat saya bingung, yaitu penentuan pemenang setelah pemilihan selesai.
 Query pertama&amp;ndash;menurut saya sesuai&amp;ndash;yang didapatkan dari pencarian di google adalah sebagai berikut:
 SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1  Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak.</description>

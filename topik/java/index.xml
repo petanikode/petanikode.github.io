@@ -14,10 +14,10 @@
     
     <item>
       <title>Belajar Pemrograman Kotlin: Cara Mengambil Input dan Menampilkan Output</title>
-      <link>https://www.petanikode.com/pemrograman-kotlin-input-dan-output/</link>
+      <link>https://www.petanikode.com/kotlin-input-dan-output/</link>
       <pubDate>Sat, 20 May 2017 18:01:48 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-kotlin-input-dan-output/</guid>
+      <guid>https://www.petanikode.com/kotlin-input-dan-output/</guid>
       <description>Bukan program komputer namanya kalau tidak memiliki input dan output. Input dan output merupakan komponen wajib setiap program komputer.
 Pada kesempatan ini, kita akan belajar cara mengambil input dan Menampilkan output untuk program berbasis teks.
 Kotlin telah menyediakan beberapa fungsi untuk mengambil input dan menampilkan output, diantaranya println(), print(), readLine(), Scanner(), dll.
@@ -27,10 +27,10 @@ Menampilkan Output dengan Fungsi println/print Fungsi println() dan print() digu
     
     <item>
       <title>Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan</title>
-      <link>https://www.petanikode.com/pemrograman-kotlin-di-linux/</link>
+      <link>https://www.petanikode.com/kotlin-linux/</link>
       <pubDate>Fri, 19 May 2017 00:07:50 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-kotlin-di-linux/</guid>
+      <guid>https://www.petanikode.com/kotlin-linux/</guid>
       <description>Kotlin merupakan bahasa pemrograman yang berjalan di atas JVM (Java Virtual Machine) dan juga bisa dikompilasi ke dalam Javascript. Kotlin dikembangkan oleh JetBrains.
 Pada acara Google IO&amp;rsquo;17 kemarin, Kotlin resmi didukung sebagai bahasa untuk pengembangan aplikasi Android dan akan mulai digunakan pada Android Studio 3.0.
 Kotlin dianggap lebih mudah dan menyenangkan daripada Java, karena sintaksnya lebih sederhana.
@@ -65,10 +65,10 @@ for(int i = 1; i &amp;lt;= 10; ++i){ System.out.print(i); }  Kedua perulangan te
     
     <item>
       <title>Trik Agar Jendela JFrame Tampil di Tengah Layar</title>
-      <link>https://www.petanikode.com/pemrograman-swing-jendela-di-tengah-layar/</link>
+      <link>https://www.petanikode.com/java-swing-jendela-di-tengah-layar/</link>
       <pubDate>Fri, 29 Jul 2016 23:03:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-swing-jendela-di-tengah-layar/</guid>
+      <guid>https://www.petanikode.com/java-swing-jendela-di-tengah-layar/</guid>
       <description>Pada pemrograman GUI dengan Java Swing, kita sering membuat jendela dengan JFrame. Namun, selalu tampil di pojok kiri atas layar. Pojok kiri atas adalah titik (0,0) dalam koordinat layar (x,y). Pada kesempatan ini saya akan berbagi trik, agar setiap jendela yang dibuat dengan JFrame tampil di tengah-tengah layar.
 1. Komposisi PustakaAda dua pustaka yang diperlukan untuk membuat jendela JFrame tampil di tengah-tengah. Silahkan diimpor:
 import java.awt.Dimension;
@@ -99,10 +99,10 @@ private void btnTipeKonversiActionPerformed(java.awt.event.ActionEvent evt) { &a
     
     <item>
       <title>Operator ^ (xor) di Java bukan untuk Membuat Pangkat</title>
-      <link>https://www.petanikode.com/operator--xor-di-java-bukan-untuk-membuat-pangkat/</link>
+      <link>https://www.petanikode.com/java-operator-xor/</link>
       <pubDate>Fri, 29 Apr 2016 06:25:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/operator--xor-di-java-bukan-untuk-membuat-pangkat/</guid>
+      <guid>https://www.petanikode.com/java-operator-xor/</guid>
       <description>Sebuah kekeliruan saya temukan ketika memeriksa kode program milik teman. Dia mengimplementasikan rumus berikut ke dalam kode java.
 y = x2 + 3
 Potongan kode program yang dia tulis.
@@ -140,10 +140,10 @@ Pada pemrograman Java, Fungsi atau prosedur dikenal dengan method (metode). Java
     
     <item>
       <title>Belajar Pemrograman Java: Cara Menggunakan Array untuk Menyimpan Banyak Hal</title>
-      <link>https://www.petanikode.com/pemrograman-java-array/</link>
+      <link>https://www.petanikode.com/java-array/</link>
       <pubDate>Thu, 21 Apr 2016 22:34:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-java-array/</guid>
+      <guid>https://www.petanikode.com/java-array/</guid>
       <description>Apa yang akan kita lakukan bila memiliki banyak data yang akan disimpan dalam vairabel?
 Misalkan kita ingin menyimpan nama-nama teman dalam variabel.
 Maka mungkin kita akan melakukannya seperti ini:
@@ -199,10 +199,10 @@ for (int hitungan = 0; hitungan &amp;lt;= 1000; hitungan++) { System.</descripti
     
     <item>
       <title>Belajar Pemrograman Java: Inilah 3 Bentuk Percabangan yang Harus Dipahami</title>
-      <link>https://www.petanikode.com/pemrograman-java-percabangan/</link>
+      <link>https://www.petanikode.com/java-percabangan/</link>
       <pubDate>Sun, 25 Oct 2015 18:33:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-java-percabangan/</guid>
+      <guid>https://www.petanikode.com/java-percabangan/</guid>
       <description>Kalau kita perhatikan, alur pengeksekusian sebuah kode program dikerjakan satu per satu dari atas sampai ke bawah.
 Baris demi baris dibaca, kemudian komputer mengerjakan apa yang diperintahkan.
 Misalnya seperti ini:
@@ -213,21 +213,21 @@ Percabangan juga dikenal dengan &amp;ldquo;Control Flow&amp;rdquo;, &amp;ldquo;S
     </item>
     
     <item>
-      <title>Pemrograman java di lab (8): Menggunakan pangkat</title>
-      <link>https://www.petanikode.com/pemrograman-java-di-lab-8-menggunakan-pangkat/</link>
+      <title>Belajar java: Cara Menggunakan Pangkat</title>
+      <link>https://www.petanikode.com/java-pangkat/</link>
       <pubDate>Sun, 18 Oct 2015 08:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-java-di-lab-8-menggunakan-pangkat/</guid>
+      <guid>https://www.petanikode.com/java-pangkat/</guid>
       <description>Pada contoh kasus program luas lingkaran kemarin, kita menggunakan pangkat dua untuk menghitung luas lingkaran. Pangkat dua dapat ditulis dengan membuat perkalian dengan variabel atau bilangan yang akan dipangkatkan dua. Contoh, r2 dapat ditulis r*r. Tapi, bagaiamana kalau pangkatnya banyak? misal 4112. Tidak mungkin kita akan melakukan perkalian sebanyak itu dalam kode. Oleh karena itu, kita membutuhkan fungsi pangkat untuk menghitungnya.
 Java sudah menyediakan fungsi pangkat yang dapat digunakan kapan saja.</description>
     </item>
     
     <item>
-      <title>Pemrograman java di lab (7): Mengenal JOptionPane dan operator kondisi</title>
-      <link>https://www.petanikode.com/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/</link>
+      <title>Belajar Java-Swing: Cara Menggunakan JOptionPane</title>
+      <link>https://www.petanikode.com/java-swing-joptionpane/</link>
       <pubDate>Sat, 17 Oct 2015 21:34:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/</guid>
+      <guid>https://www.petanikode.com/java-swing-joptionpane/</guid>
       <description>Sebelumnya, kita telah berkenalan dengan operator. Sekarang kita akan coba mengenal JOptionPane dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.
 JOptionPaneJOptionPane merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. JOptionPane bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.
 Sebelum menggunakan JOptionPane, kita perlu mengimpornya ke dalam program:
@@ -248,23 +248,11 @@ Ukuran penuh dari mind map ini dapat kamu lihat di: coggle.</description>
     </item>
     
     <item>
-      <title>Panduan instalasi Android Studio di Ubuntu</title>
-      <link>https://www.petanikode.com/panduan-instalasi-android-studio-di-ubuntu/</link>
-      <pubDate>Fri, 16 Oct 2015 20:36:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/panduan-instalasi-android-studio-di-ubuntu/</guid>
-      <description>Android Studio merupakan sebuah IDE berbasis IntelliJ IDEA untuk pengembangan aplikasi android. Instalasi Android Studio saya lakukan di atas Xubuntu 15.04 (32bit). Sebenarnya disarankan menggunakan linux 64bit agar emulator dapat berjalan dengan baik.
-1. Instal openjdkAndroid Studio menggunakan bahasa pemrograman Java. Jadi memerlukan JDK agar bisa mengompilasi program. JDK di linux dapat menggunakan openjdk maupun oracle JDK. Berikut ini perintah untuk menginstal openjdk di ubuntu:
-openjdk versi 7
-sudo apt-get install openjdk-7-jdkopenjdk versi 8</description>
-    </item>
-    
-    <item>
       <title>Belajar Pemrograman Java: Cara Mengambil Input dan Menampilkan Output</title>
-      <link>https://www.petanikode.com/pemrograman-java-input-dan-output/</link>
+      <link>https://www.petanikode.com/java-input-output/</link>
       <pubDate>Mon, 12 Oct 2015 09:35:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-java-input-dan-output/</guid>
+      <guid>https://www.petanikode.com/java-input-output/</guid>
       <description>Seperti yang kita ketahui, program komputer terdiri dari tiga komponen utama, yaitu: input, proses, dan output.
  Input: nilai yang kita masukan ke program Proses: langkah demi langkah yang dilakukan untuk mengelola input menjadi sesuatu yang berguna Output: hasil pengolahan  Semua bahasa pemrograman telah menyediakan fungs-fungsi untuk melakukan input dan output.
 Java sendiri sudah menyediakan tiga class untuk mengambil input:
@@ -302,10 +290,10 @@ Kita hanya melakukan hal ini:
     
     <item>
       <title>Belajar Java di Linux: Inilah Persiapan yang Harus dilakukan</title>
-      <link>https://www.petanikode.com/pemrograman-java-di-linux/</link>
+      <link>https://www.petanikode.com/java-linux/</link>
       <pubDate>Sun, 11 Jan 2015 16:40:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-java-di-linux/</guid>
+      <guid>https://www.petanikode.com/java-linux/</guid>
       <description>Ingin belajar pemrograman Java di Linux?
 Maka ini adalah artikel yang tepat untukmu.
 Pada artikel ini, saya akan membahas persiapan alat-alat yang digunakan untuk pemrograman Java di Linux.

@@ -26,10 +26,10 @@ Langsunga saja saya menuju ke Google dan memasukan kata kunci &amp;ldquo;js vibr
     
     <item>
       <title>Menggambar Objek dengan Perulangan dan Fungsi Random di HTML5 Canvas</title>
-      <link>https://www.petanikode.com/tutorial-html-canvas-random/</link>
+      <link>https://www.petanikode.com/html-canvas-random/</link>
       <pubDate>Tue, 20 Jun 2017 04:03:51 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-html-canvas-random/</guid>
+      <guid>https://www.petanikode.com/html-canvas-random/</guid>
       <description>Pada artikel pengenalan HTML5 Canvas sebelumnya, kita sudah belajar cara menggamabar objek-objek dasar seperti titik, garis, persegi, lingkaran, dan segitiga.
 Obejek digambar hanya sekali saja.
 Bagaiaman kalau kita ingin menggambar banyak objek dan digambar secara acak?
@@ -41,10 +41,10 @@ Menggambar Objek dengan Perulangan Pada contoh di artikel sebelumnya, kita sudah
     
     <item>
       <title>Mengenal HTML5 Canvas untuk Pemrograman Grafis dan Game</title>
-      <link>https://www.petanikode.com/tutorial-html-canvas/</link>
+      <link>https://www.petanikode.com/html-canvas/</link>
       <pubDate>Thu, 15 Jun 2017 06:50:24 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-html-canvas/</guid>
+      <guid>https://www.petanikode.com/html-canvas/</guid>
       <description>Sebelum kedatangan HTML5, Game dan elemen multimedia lainnya disajikan dalam browser menggunakan Flash.
 Banyak game berbasis Flash yang bisa dimainkan melalui browser. Bahkan Flash juga digunakan untuk memutar video.
 Seingat saya dulu&amp;hellip;tanpa Flash Player, kita tidak bisa memutar video di Youtube.
@@ -55,10 +55,10 @@ Apa itu Canvas? Dalam dunia nyata, canvas sering digunakan untuk menggambar dan 
     
     <item>
       <title>15 Tag HTML yang tidak Memiliki Pasangan Penutup</title>
-      <link>https://www.petanikode.com/tag-html-yang-tidak-memiliki-pasangan/</link>
+      <link>https://www.petanikode.com/html-tag-tanpa-penutup/</link>
       <pubDate>Sat, 11 Mar 2017 05:12:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tag-html-yang-tidak-memiliki-pasangan/</guid>
+      <guid>https://www.petanikode.com/html-tag-tanpa-penutup/</guid>
       <description>Elemen pada HTML terdiri dari tag pembuka dan tag penutup. Namun, ada juga yang tidak memiliki tag penutup.
 Kasihan juga ya, hehe :smile:
 Meskipun demikian, elemen ini tetap valid dan dapat dibaca browser. Elemen yang tidak memiliki tag penutup ini juga disebut void element, karena tidak memiliki isi.
@@ -124,10 +124,10 @@ Lalu, dari mana dapat nilai lama tanam, berat, dan harga? Sedangkan kita hanya b
     
     <item>
       <title>Belajar HTML: Cara Mengganti Bahasa Validator HTML5 ke dalam Bahasa Indonesia</title>
-      <link>https://www.petanikode.com/tutorial-html-validator/</link>
+      <link>https://www.petanikode.com/html-validator/</link>
       <pubDate>Sun, 07 Aug 2016 20:44:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-html-validator/</guid>
+      <guid>https://www.petanikode.com/html-validator/</guid>
       <description>HTML5 memiliki validator form untuk memvalidasi inputan. Misalnya, jika ada field yang masih kosong, maka validator akan membertahukan; kalau data masih kososng. Namun, bahasa yang digunakan adalah bahasa inggris. Bagaimana jika kita ingin merubahnya ke bahasa indonesia?
 Fungsi JavascriptKita membutuhkan fungsi Javascript untuk mengganti bahasa yang digunakan validator HTML5. Fungsi yang dapat digunakan berdasarkan jawaban yang saya temukan di Stack Overflow adalah setCustomValidit(). Fungsi ini kita jalankan ketika input field dalam status invalid (tidak valid).</description>
     </item>
@@ -174,10 +174,10 @@ Kode HTML:
     
     <item>
       <title>Tutorial HTML: Cara Membatasi Nilai Input Maksimum dan Minimum pada Form</title>
-      <link>https://www.petanikode.com/tutorial-html-atribut-min-max/</link>
+      <link>https://www.petanikode.com/html-atribut-min-max/</link>
       <pubDate>Sun, 03 Jul 2016 15:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-html-atribut-min-max/</guid>
+      <guid>https://www.petanikode.com/html-atribut-min-max/</guid>
       <description>Atribut min dan max merupakan atribut untuk menentukan nilai terkecil dan terbesar yang boleh diinputkan pada form. Atribut ini berfungsi untuk membatasi nilai input, misalnya tidak boleh menginput angka negatif, angka lebih dari 10, tanggal kurang dari tahun 2000, dsb.
 Tidak Boleh Input Angka NegatifAgar tidak bisa menginputkan anka negatfi, maka kita perlu batasi nilai minimanya menjadi nol (0).
 &amp;lt;input type=&amp;ldquo;number&amp;rdquo; min=&amp;ldquo;0&amp;rdquo; /&amp;gt;Kode di atas akan menghasilkan:
@@ -235,10 +235,10 @@ Kode CSS.badge-notif {
     
     <item>
       <title>Kode LaTeX untuk Menulis Rumus Matematika di HTML</title>
-      <link>https://www.petanikode.com/tutorial-mathjax/</link>
+      <link>https://www.petanikode.com/mathjax-latex-html/</link>
       <pubDate>Mon, 16 May 2016 16:34:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-mathjax/</guid>
+      <guid>https://www.petanikode.com/mathjax-latex-html/</guid>
       <description>Ketika membaca halaman wikipedia yang memiliki rumus, kita temuakan rumus tersebut dibuat dalam bentuk gamabar.
 Contoh, coba cek halaman ini.
 HTML sendiri memiliki sebuah tag untuk menuliskan rumus matematika. Tapi cukup panjang untuk menggunakannya.
@@ -355,40 +355,40 @@ Upload file merupakan kegiatan pengiriman file dari client (pengunjung web) ke s
     
     <item>
       <title>Belajar HTML: Cara Membuat Link untuk Menghubungkan Halaman</title>
-      <link>https://www.petanikode.com/belajar-html-cara-membuat-link-untuk-menghubungkan-halaman/</link>
+      <link>https://www.petanikode.com/html-link/</link>
       <pubDate>Thu, 01 Jan 2015 18:16:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/belajar-html-cara-membuat-link-untuk-menghubungkan-halaman/</guid>
+      <guid>https://www.petanikode.com/html-link/</guid>
       <description>Link adalah elemen html yang berfungsi menghubungkan suatu tempat ke tempat yang lain. Link ibarat pintu kemana saja. Setiap kali diklik, kita akan dibawa menuju ke suatu tempat. Dalam pembuatan web, link adalah salah satu elemen yang sering digunakan.
 Penulisan LinkLink dapat dibuat dengan tag &amp;lt;a&amp;gt;. Untuk dapat menuju ke tempat lain, tag ini perlu ditambahkan atribut href. Dalam atribut inilah kita menulisakan alamat yang dituju. Di bawah ini adalah contoh link menuju ke google.</description>
     </item>
     
     <item>
       <title>Belajar HTML: Menyajikan Informasi dalam Bentuk List</title>
-      <link>https://www.petanikode.com/tutorial-html-list/</link>
+      <link>https://www.petanikode.com/html-list/</link>
       <pubDate>Wed, 22 Oct 2014 23:07:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-html-list/</guid>
+      <guid>https://www.petanikode.com/html-list/</guid>
       <description>Sebelumnya saya sudah membahas cara menampilkan informasi dalam bentuk tabel. Kali ini saya akan membahas cara menampilkan data dalam bentuk senarai (list).
  List dibagi menjadi tiga yaitu ordered list (senarai terurut), unordered list (tak terurut) dan Description List (daftar deskripsi/daftar definisi). 1. Ordered List Ordered list adalah sebuah senarai yang terurut. Senarai ini ditandai dengan angka atau huruf di depannya sebagai penanda bahwa senarai ini urut. Ordered list dapat dibuat dengan tag &amp;lt;ol&amp;gt;.</description>
     </item>
     
     <item>
       <title>Belajar HTML: Cara Membuat Tabel di HTML</title>
-      <link>https://www.petanikode.com/tutorial-html-cara-membuat-tabel/</link>
+      <link>https://www.petanikode.com/html-tabel/</link>
       <pubDate>Sun, 19 Oct 2014 23:17:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-html-cara-membuat-tabel/</guid>
+      <guid>https://www.petanikode.com/html-tabel/</guid>
       <description>Terkadang informasi perlu disajikan dalam bentuk tabel. Contohnya saya ingin memberikan informasi tentang jadwal pelajaran melalui web. Sangat tidak elegan jika saya membuat tabel di Libre Office lalu saya foto dan di tempel di web. Oleh karena itu, kita perlu membuat tabel di HTML.
  Membuat tabel di HTML dapat menggunakan tag &amp;lt;table&amp;gt;. Tag ini memiliki anak yaitu tag &amp;lt;tr&amp;gt; (table row) untuk membuat baris, tag &amp;lt;td&amp;gt; (table data) Untuk membuat kolom, dan tag &amp;lt;th&amp;gt; (table header) untuk membuat kepala tabel.</description>
     </item>
     
     <item>
       <title>Panduan Membuat tab dengan jQuery</title>
-      <link>https://www.petanikode.com/tutorial-jquery-membuat-tab/</link>
+      <link>https://www.petanikode.com/jquery-membuat-tab/</link>
       <pubDate>Sun, 09 Mar 2014 23:16:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-jquery-membuat-tab/</guid>
+      <guid>https://www.petanikode.com/jquery-membuat-tab/</guid>
       <description>Tab yang akan dibuat nantinya dapat dimanfaatkan untuk widget blog. Tab ini berisi informasi akun media sosial, seperti like box facebook, google+, twitter, dan lain-lain. Menggunakan tab dapat menghemat ruang atau tempat. Dalam satu widget saja, kita dapat menyimpan lebih dari satu informasi.
 Desain TabAgar dapat mengetahui bagaimana tab yang akan dibuat, Saya mendesainnya terlebih dahulu. Desain akan mempermudah kita dalam membuat kodenya. 
 Membuat Kode HTML, CSS, dan jQueryMembuat tab seperti desain di atas, dapat menggunakan kode HTML dan CSS saja.</description>
@@ -396,10 +396,10 @@ Membuat Kode HTML, CSS, dan jQueryMembuat tab seperti desain di atas, dapat meng
     
     <item>
       <title>Aneka macam elemen form HTML 5</title>
-      <link>https://www.petanikode.com/tutorial-html-form/</link>
+      <link>https://www.petanikode.com/html-form/</link>
       <pubDate>Thu, 06 Mar 2014 15:42:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-html-form/</guid>
+      <guid>https://www.petanikode.com/html-form/</guid>
       <description>Form merupakan sebuah antarmuka yang digunakan oleh penunjung website untuk berinteraksi. Formulir dapat menampung data yang akan dikirim ke server. Cara membuat formulirFormulir dibuat dengan tag &amp;lt;form&amp;gt;. Dalam kode tag ini, dapat diisi dengan berbagai jenis ruas pengisian (input field). Contoh:
 &amp;lt;form&amp;gt;
 Nama: &amp;lt;input type=&amp;lsquo;text&amp;rsquo; /&amp;gt;
@@ -409,10 +409,10 @@ Nama: &amp;lt;input type=&amp;lsquo;text&amp;rsquo; /&amp;gt;
     
     <item>
       <title>Belajar HTML: Pengenalan Dasar HTML untuk Pemula</title>
-      <link>https://www.petanikode.com/tutorial-html-dasar/</link>
+      <link>https://www.petanikode.com/html-dasar/</link>
       <pubDate>Thu, 06 Feb 2014 14:16:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-html-dasar/</guid>
+      <guid>https://www.petanikode.com/html-dasar/</guid>
       <description>HTML adalah bahasa pertama yang harus dipelajari bila kamu ingin menjadi seorang Web Developer, karena HTML merupakan bahan dasar untuk membuat web.
 Apa itu HTML? HTML atau Hyper Text Markup Language merupakan sebuah bahasa markah untuk membuat halaman web. Padanan HTML dalam bahasa indonesia adalah Bahasa Markah Hiper Teks (BMHT).
 Membuat file HTML File HTML dapat dibuat dengan teks editor seperti notepad. Lebih bagus lagi menggunakan teks editor yang memiliki fitur syntax highlighter seperti Notepad++, Sublime Text, Gedit, Kate, dan lain-lain.</description>

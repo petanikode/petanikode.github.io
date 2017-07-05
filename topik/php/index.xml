@@ -26,10 +26,10 @@ Bagaimana PHP dan MySQL dihubungkan? PHP dan MySQL dapat saling berhubungan mela
     
     <item>
       <title>Cara Menggunakan Dompdf di Codeigniter</title>
-      <link>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-dompdf/</link>
       <pubDate>Sun, 19 Feb 2017 16:48:58 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-dompdf/</guid>
       <description>Dompdf merupakan salah satu pustaka PHP untuk membuat PDF.
 Dompdf membuat PDF dari HTML, sehingga lebih praktis. Selain itu juga, Kita bisa menggunakan CSS di dalamnya.
 Saat ini Dompdf mendukung CSS versi 2.1.
@@ -41,20 +41,20 @@ Silahkan buka file application/config/config.php, kemudian isi bagian autoload C
     
     <item>
       <title>Cara Menjalankan PHP Melalui CMD</title>
-      <link>https://www.petanikode.com/cara-menjalankan-php-melalui-cmd/</link>
+      <link>https://www.petanikode.com/php-cmd/</link>
       <pubDate>Sat, 04 Feb 2017 08:15:19 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menjalankan-php-melalui-cmd/</guid>
+      <guid>https://www.petanikode.com/php-cmd/</guid>
       <description>Sudah lama tidak otak-atik Windows. Pemrograman di Windows sepertinya terasa sedikit sulit, karena sudah terbiasa dengen Linux. Ketika saya menginginkan apa-apa, tinggal ketik sudo apt install dan semuanya sudah siap. Namun, kali ini saya sedang meminjam komputer lab. yang menggunakan sistem operasi Windows. Jadi, tidak ada sudo apt install yang dapat kita suruh-suruh.
 Ketika saya mencoba mengetik perintah php di Command Prompt (CMD), perintah tersebut tidak dikenali. Padahal di sana sudah terinstal XAMPP.</description>
     </item>
     
     <item>
       <title>Cara Melindungi Web dari Serangan XSS pada Framework CodeIgniter</title>
-      <link>https://www.petanikode.com/serangan-xss-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-serangan-xss/</link>
       <pubDate>Fri, 23 Dec 2016 05:13:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/serangan-xss-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-serangan-xss/</guid>
       <description>XSS merupakan singkatan yang digunakan untuk istilah cross site scripting. XSS merupakan salah satu jenis serangan injeksi code (code injection attack).
 XSS dilakukan oleh penyerang dengan cara memasukkan kode HTML atau client script code lainnya ke suatu situs. Serangan ini akan seolah-olah datang dari situs tersebut.
 Akibat serangan ini antara lain penyerang dapat mem-bypass keamanan di sisi klien, mendapatkan informasi sensitif, atau menyimpan aplikasi berbahaya.
@@ -94,10 +94,10 @@ $config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;; 
     
     <item>
       <title>Cara Mengaktifkan Profiler CodeIgniter</title>
-      <link>https://www.petanikode.com/cara-mengaktifkan-profiler-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-profiler/</link>
       <pubDate>Wed, 30 Nov 2016 11:30:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-mengaktifkan-profiler-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-profiler/</guid>
       <description>Profiler fungsinya untuk menampilkan beberapa informasi yang diperlukan untuk debugging. Kita dapat mengetahui query apa yang dikerjakan, berapa detik query tersebut dikerjakan, benchmarks, dan sebagainya. Informasi ini sangat berguna ketika kita membangun sebuah aplikasi dengan CodeIgniter.
 Cara mengaktifkan Profiler di CodeIgniter sangat mudah, cukup menjalankan fungsi ini di Controller:
 $this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);Maka kita akan mendapatkan informasi seperti berikut ini:
@@ -140,11 +140,11 @@ Bagi yang belajar pemrograman PHP menggunakan XAMPP atau LAMPP, kemungkinan jara
     </item>
     
     <item>
-      <title>Eksekusi Perintah Command Line (CMD) melalui PHP</title>
-      <link>https://www.petanikode.com/eksekusi-perintah-command-line-cmd-melalui-php/</link>
+      <title>Cara Eksekusi Perintah Command Line (CMD) Melalui PHP</title>
+      <link>https://www.petanikode.com/php-command-line/</link>
       <pubDate>Sat, 15 Oct 2016 19:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/eksekusi-perintah-command-line-cmd-melalui-php/</guid>
+      <guid>https://www.petanikode.com/php-command-line/</guid>
       <description>Perintah-perintah dasar yang sering kita ketik di Terminal maupun CMD, dapat juga kita eksekusi melalui web. Tentu saja dengan bantuan PHP. Pada artikel sebelumnya, saya sudah pernah membahas fungsi-fungsi untuk operasi file dan direktori. Nah, sekarang ini kita akan coba fungsi system(). Fungsi ini untuk mengeksekusi perintah-perintah Terminal atau CMD.
 Baca Juga:
  Cara Menghapus dan Mengubah Nama Direktori dengan PHP Membuat dan Menampilkan isi Direktori dengan PHP  Mari kita mulai dengan membuat sebuah file baru bernama eksekusi_perintah.</description>
@@ -247,10 +247,10 @@ Misalkan, sebuah data mata uang bentuknya seperti ini:</description>
     
     <item>
       <title>Pemanggilan fungsi base_url() pada File error_404.php CodeIgniter</title>
-      <link>https://www.petanikode.com/pemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-base-url-404/</link>
       <pubDate>Mon, 18 Jul 2016 04:30:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemanggilan-fungsi-base_url-pada-file-error_404.php-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-base-url-404/</guid>
       <description>Ketika saya memodifikasi halaman error 404 CodeIgniter, fungsi base_url() tidak bisa dipanggil. Mungkin saja fungsi ini tidak dikenali di sini. Fungsi base_url() saya butuhkan untuk meyisipkan kode CSS yang ada di direktori assets. Pesan Error-nya:
 Call to undefined function base_url() in the error_404 pageSolusi dari masalah ini sangat sederhana. Kita tidak harus menggunakan fungsi base_url() untuk mendapatkan base url. Kita bisa menggunakan fungsi config_item() dengan parameter &amp;lsquo;base_url&amp;rsquo;. Contoh:
 &amp;lt;?php echo config_item(&amp;lsquo;base_url&amp;rsquo;); ?</description>
@@ -367,10 +367,10 @@ Upload file merupakan kegiatan pengiriman file dari client (pengunjung web) ke s
     
     <item>
       <title>Query MySQL untuk Menentukan Pemenang</title>
-      <link>https://www.petanikode.com/query-mysql-untuk-menentukan-pemenang/</link>
+      <link>https://www.petanikode.com/mysql-menentukan-pemenang/</link>
       <pubDate>Mon, 03 Aug 2015 05:53:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/query-mysql-untuk-menentukan-pemenang/</guid>
+      <guid>https://www.petanikode.com/mysql-menentukan-pemenang/</guid>
       <description>Saya sedang mengembangkan aplikasi web untuk pemilihan ketua BEM dengan framework CodeIgniter. Aplikasi ini hampir selesai. Namun, ada satu hal yang masih membuat saya bingung, yaitu penentuan pemenang setelah pemilihan selesai.
 Query pertama&amp;ndash;menurut saya sesuai&amp;ndash;yang didapatkan dari pencarian di google adalah sebagai berikut:
 SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalon) AS jumlah FROM kotak_suara, calon WHERE calon_idcalon = calon.nim GROUP BY calon_idcalon ORDER BY jumlah DESC LIMIT 1  Hasil yang didapatkan dari query tersebut, adalah satu orang pemenag dengan suara terbanyak.</description>
@@ -378,10 +378,10 @@ SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalo
     
     <item>
       <title>Tutorial Pemrograman PHP: Prosedur dan Fungsi</title>
-      <link>https://www.petanikode.com/pemrograman-php-fungsi/</link>
+      <link>https://www.petanikode.com/php-prosedur-fungsi/</link>
       <pubDate>Wed, 11 Mar 2015 19:33:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-php-fungsi/</guid>
+      <guid>https://www.petanikode.com/php-prosedur-fungsi/</guid>
       <description>Banyak fungsi build-in dari php yang sering kita gunakan, seperti print(), print_r(), unset(), dll. Kita juga dapat membuat fungsi sendiri sesuai keinginan dan kebutuhan.
 
 Fungsi adalah sekumpulan intruksi yang dibungkus dalam sebuah blok. Fungsi dapat digunakan kapan saja, sesuai kebutuhan. Fungsi di PHP dapat dibuat dngan kata kunci function diikuti dengan nama fungsinya. Contoh:

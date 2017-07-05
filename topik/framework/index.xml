@@ -14,10 +14,10 @@
     
     <item>
       <title>Tips Modifikasi Panel Bootstrap untuk dijadikan Card</title>
-      <link>https://www.petanikode.com/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</link>
+      <link>https://www.petanikode.com/bootstrap-panel-card/</link>
       <pubDate>Tue, 14 Mar 2017 17:36:45 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tips-modifikasi-panel-bootstrap-untuk-dijadikan-card/</guid>
+      <guid>https://www.petanikode.com/bootstrap-panel-card/</guid>
       <description>Seperti yang kita ketahui, istilah card memang sering dipakai pada Material Design. Sedangkan Bootstrap versi 3 tidak memiliki komponen card. Mungkin saja akan ditambahkan pada versi ke-4. Kita tunggu saja.
 Pada kesempatan ini, kita akan belajar cara modifikasi komponen panel Bootstrap untuk dijadikan Card.
 Berikut ini tampilan hasil akhir yang akan kita buat:
@@ -28,10 +28,10 @@ Mempersiapkan Grid Layout Pertama, kita siapkan dulu grid layout dengan empat ko
     
     <item>
       <title>Cara Menggunakan Dompdf di Codeigniter</title>
-      <link>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-dompdf/</link>
       <pubDate>Sun, 19 Feb 2017 16:48:58 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menggunakan-dompdf-di-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-dompdf/</guid>
       <description>Dompdf merupakan salah satu pustaka PHP untuk membuat PDF.
 Dompdf membuat PDF dari HTML, sehingga lebih praktis. Selain itu juga, Kita bisa menggunakan CSS di dalamnya.
 Saat ini Dompdf mendukung CSS versi 2.1.
@@ -43,10 +43,10 @@ Silahkan buka file application/config/config.php, kemudian isi bagian autoload C
     
     <item>
       <title>Cara Melindungi Web dari Serangan XSS pada Framework CodeIgniter</title>
-      <link>https://www.petanikode.com/serangan-xss-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-serangan-xss/</link>
       <pubDate>Fri, 23 Dec 2016 05:13:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/serangan-xss-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-serangan-xss/</guid>
       <description>XSS merupakan singkatan yang digunakan untuk istilah cross site scripting. XSS merupakan salah satu jenis serangan injeksi code (code injection attack).
 XSS dilakukan oleh penyerang dengan cara memasukkan kode HTML atau client script code lainnya ke suatu situs. Serangan ini akan seolah-olah datang dari situs tersebut.
 Akibat serangan ini antara lain penyerang dapat mem-bypass keamanan di sisi klien, mendapatkan informasi sensitif, atau menyimpan aplikasi berbahaya.
@@ -76,10 +76,10 @@ $config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;; 
     
     <item>
       <title>Cara Mengaktifkan Profiler CodeIgniter</title>
-      <link>https://www.petanikode.com/cara-mengaktifkan-profiler-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-profiler/</link>
       <pubDate>Wed, 30 Nov 2016 11:30:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-mengaktifkan-profiler-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-profiler/</guid>
       <description>Profiler fungsinya untuk menampilkan beberapa informasi yang diperlukan untuk debugging. Kita dapat mengetahui query apa yang dikerjakan, berapa detik query tersebut dikerjakan, benchmarks, dan sebagainya. Informasi ini sangat berguna ketika kita membangun sebuah aplikasi dengan CodeIgniter.
 Cara mengaktifkan Profiler di CodeIgniter sangat mudah, cukup menjalankan fungsi ini di Controller:
 $this-&amp;gt;output-&amp;gt;enable_profiler(TRUE);Maka kita akan mendapatkan informasi seperti berikut ini:

@@ -14,14 +14,26 @@
     
     <item>
       <title>Trik Agar Jendela JFrame Tampil di Tengah Layar</title>
-      <link>https://www.petanikode.com/pemrograman-swing-jendela-di-tengah-layar/</link>
+      <link>https://www.petanikode.com/java-swing-jendela-di-tengah-layar/</link>
       <pubDate>Fri, 29 Jul 2016 23:03:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-swing-jendela-di-tengah-layar/</guid>
+      <guid>https://www.petanikode.com/java-swing-jendela-di-tengah-layar/</guid>
       <description>Pada pemrograman GUI dengan Java Swing, kita sering membuat jendela dengan JFrame. Namun, selalu tampil di pojok kiri atas layar. Pojok kiri atas adalah titik (0,0) dalam koordinat layar (x,y). Pada kesempatan ini saya akan berbagi trik, agar setiap jendela yang dibuat dengan JFrame tampil di tengah-tengah layar.
 1. Komposisi PustakaAda dua pustaka yang diperlukan untuk membuat jendela JFrame tampil di tengah-tengah. Silahkan diimpor:
 import java.awt.Dimension;
 import java.awt.Toolkit;2. Kode Agar Tampil di TengahLetakan kode berikut di dalam konstruktor JFrame.</description>
+    </item>
+    
+    <item>
+      <title>Belajar Java-Swing: Cara Menggunakan JOptionPane</title>
+      <link>https://www.petanikode.com/java-swing-joptionpane/</link>
+      <pubDate>Sat, 17 Oct 2015 21:34:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/java-swing-joptionpane/</guid>
+      <description>Sebelumnya, kita telah berkenalan dengan operator. Sekarang kita akan coba mengenal JOptionPane dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.
+JOptionPaneJOptionPane merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. JOptionPane bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.
+Sebelum menggunakan JOptionPane, kita perlu mengimpornya ke dalam program:
+import javax.swing.JOptionPane;Terdapat empat fungsi atau metode yang sering dipakai:</description>
     </item>
     
   </channel>

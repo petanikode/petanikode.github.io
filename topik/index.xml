@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 30 Mar 2015 23:03:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jul 2016 15:56:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/topik/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>.Net</title>
-      <link>https://www.petanikode.com/topik/.net/</link>
-      <pubDate>Mon, 30 Mar 2015 23:03:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/topik/.net/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Admin Lte</title>
@@ -391,6 +382,15 @@
     </item>
     
     <item>
+      <title>Dotnet</title>
+      <link>https://www.petanikode.com/topik/dotnet/</link>
+      <pubDate>Mon, 30 Mar 2015 23:03:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/topik/dotnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ebook</title>
       <link>https://www.petanikode.com/topik/ebook/</link>
       <pubDate>Mon, 06 Mar 2017 20:05:01 +0800</pubDate>
@@ -724,15 +724,6 @@
     </item>
     
     <item>
-      <title>Lab.Java</title>
-      <link>https://www.petanikode.com/topik/lab.java/</link>
-      <pubDate>Sun, 18 Oct 2015 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/topik/lab.java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Latex</title>
       <link>https://www.petanikode.com/topik/latex/</link>
       <pubDate>Mon, 16 May 2016 16:34:00 +0000</pubDate>
@@ -774,15 +765,6 @@
       <pubDate>Mon, 19 Jun 2017 13:51:39 +0800</pubDate>
       
       <guid>https://www.petanikode.com/topik/maven/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mobile Programming</title>
-      <link>https://www.petanikode.com/topik/mobile-programming/</link>
-      <pubDate>Fri, 16 Oct 2015 20:36:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/topik/mobile-programming/</guid>
       <description></description>
     </item>
     
@@ -906,7 +888,7 @@
     <item>
       <title>Pemrograman Gui</title>
       <link>https://www.petanikode.com/topik/pemrograman-gui/</link>
-      <pubDate>Sat, 17 Oct 2015 21:34:00 +0000</pubDate>
+      <pubDate>Mon, 30 Mar 2015 23:03:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/topik/pemrograman-gui/</guid>
       <description></description>
@@ -915,7 +897,7 @@
     <item>
       <title>Pemrograman Web</title>
       <link>https://www.petanikode.com/topik/pemrograman-web/</link>
-      <pubDate>Wed, 30 Nov 2016 11:30:00 +0000</pubDate>
+      <pubDate>Thu, 15 Sep 2016 06:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/topik/pemrograman-web/</guid>
       <description></description>

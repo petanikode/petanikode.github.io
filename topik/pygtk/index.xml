@@ -14,10 +14,10 @@
     
     <item>
       <title>Pemrograman PyGTK: Membuat Pesan Tips (Tooltips)</title>
-      <link>https://www.petanikode.com/pemrograman-pygtk-membuat-pesan-tips-tooltips/</link>
+      <link>https://www.petanikode.com/python-pygtk-tooltips/</link>
       <pubDate>Tue, 09 Sep 2014 06:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-pygtk-membuat-pesan-tips-tooltips/</guid>
+      <guid>https://www.petanikode.com/python-pygtk-tooltips/</guid>
       <description>Beberapa komponen antarmuka grafis (GUI) perlu penjelasan tambahan agar pengguna mengerti fungsinya. Penjelasan tambahan dapat kita buat berupa pesan tips. Pesan tips di antarmuka dikenal dengan istilah tooltips. Pesan tips (tooltips) akan tampil ketika pointer menyentuh (hover) komponen tertentu.
 Pesan tips dapat kita buat dengan metod atau fungsi set_tooltip_text(). Fungsi ini dipakai pada objek komponen yang akan ditambahkan pesan tips. Perhatikanlah contoh berikut ini:
 # tooltip.py
@@ -27,10 +27,10 @@ class Aplikasi(gtk.</description>
     
     <item>
       <title>Pemrograman PyGTK: Membuat Tombol dan Label Teks</title>
-      <link>https://www.petanikode.com/pemrograman-pygtk-tombol-dan-label/</link>
+      <link>https://www.petanikode.com/python-pygtk-tombol-label/</link>
       <pubDate>Mon, 08 Sep 2014 07:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-pygtk-tombol-dan-label/</guid>
+      <guid>https://www.petanikode.com/python-pygtk-tombol-label/</guid>
       <description>Pada antarmuka grafis (GUI), tombol merupakan komponen penting penyusun antarmuka.Tombol dipakai untuk menjalankan fungsi atau aksi tertentu. Pada kesempatan ini, saya akan membahas langkah-langkah atau proses dalam pembuatan tombol di PyGTK.
 1. Membuat TombolTombol dibuat dengan membuat objek dari kelas Button(). Contoh:
 tombol = gtk.Button(&amp;ldquo;Sebuah Tombol&amp;rdquo;)2. Membuat KontainerKontainer kita perlukan untuk membungkus atau menampung tombol dan komponen-komponen lainnya. Apabila tidak menggunakan kontainer, bisa jadi akan berantakan. Pembuatan kontainer dapat dilakukan dengan membuat objek dari kelas-kelas kontainer, seperti Fixed() untuk kontainer fixed.</description>
@@ -38,10 +38,10 @@ tombol = gtk.Button(&amp;ldquo;Sebuah Tombol&amp;rdquo;)2. Membuat KontainerKont
     
     <item>
       <title>Pemrograman PyGTK: Pengenalan dan Persiapan alat Tempurnya</title>
-      <link>https://www.petanikode.com/pemrograman-pygtk-pengenalan/</link>
+      <link>https://www.petanikode.com/python-pygtk/</link>
       <pubDate>Sun, 07 Sep 2014 10:40:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-pygtk-pengenalan/</guid>
+      <guid>https://www.petanikode.com/python-pygtk/</guid>
       <description>Aplikasi dengan antarmuka grafis (GUI) lebih disukai pengguna, karena mudah dioperasikan.
 Pada kesempatan ini, kita akan belajar membuat aplikasi berbasis GUI dengan bahasa pemrograman python dan pustaka PyGTK.
 Apa itu GTK+ dan PyGTK? GTK+ (GIMP Toolkit) merupakan pustaka yang digunakan untuk membangun antarmuka grafis. GTK+ adalah bagian dari proyek GNU.

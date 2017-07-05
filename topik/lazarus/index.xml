@@ -27,10 +27,10 @@ Proses download pun dimulai, silahkan menunggu dengan sabar!</description>
     
     <item>
       <title>Struktur Pemilihan di Pemrograman Lazarus</title>
-      <link>https://www.petanikode.com/pemrograman-lazarus-percabangan/</link>
+      <link>https://www.petanikode.com/lazarus-percabangan/</link>
       <pubDate>Fri, 05 Sep 2014 23:21:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-lazarus-percabangan/</guid>
+      <guid>https://www.petanikode.com/lazarus-percabangan/</guid>
       <description>Stuktur pemilihan adalah struktur kode yang menggunakan kaidah jika-maka. Struktur pemilihan dalam dunia pemrograman dikenal juga dengan percabangan, flow control, if-else, dan sebagainya.
  Terdapat dua macam struktur pemilihan dalam pemrograman Lazarus: if-then dan case-of. Perbedaan if-then dan case-of dapat dilihat dari cara mereka membandingkan suatu kondisi. Struktur pemilihan if-then dan case-of membuat komputer berpikir dan mampu menentukan pilihan.
 Bentuk umum blok kode if-then:
@@ -40,10 +40,10 @@ kerjakan_sesuatu;Bila terdapat lebih dari satu perintah dalam blok if, maka paka
     
     <item>
       <title>Contoh Program dengan Variabel dan Tipe Data di Lazarus</title>
-      <link>https://www.petanikode.com/contoh-program-dengan-variabel-dan-tipe-data-di-lazarus/</link>
+      <link>https://www.petanikode.com/lazarus-variabel-tipe-data/</link>
       <pubDate>Mon, 01 Sep 2014 05:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/contoh-program-dengan-variabel-dan-tipe-data-di-lazarus/</guid>
+      <guid>https://www.petanikode.com/lazarus-variabel-tipe-data/</guid>
       <description>Hallo! kali ini kita akan coba membuat sebuah program sederhana di lazarus yang menerapkan variabel dan tipe data.
 Variabel merupakan sebuah nama atau simbol tempat kita menyimpan data. Variabel ini tersimpan dalam memori memori. Sedangkan tipe data adalah jenis data yang akan kita simpan.
 Ok, mari kita coba&amp;hellip;
@@ -53,10 +53,10 @@ Langkah 1: Desain Form Kita akan menggunakan beberapa objek, diantaranya Label, 
     
     <item>
       <title>Berkenalan dengan Lazarus, Pengganti Delphi di Linux</title>
-      <link>https://www.petanikode.com/berkenalan-dengan-lazarus-pengganti-delphi-di-linux/</link>
+      <link>https://www.petanikode.com/lazarus-delphi-linux/</link>
       <pubDate>Thu, 20 Feb 2014 08:30:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/berkenalan-dengan-lazarus-pengganti-delphi-di-linux/</guid>
+      <guid>https://www.petanikode.com/lazarus-delphi-linux/</guid>
       <description>Ketika saya mengikuti matakuliah pemrograman Delphi, saya menggunakan Linux dan Lazarus sebagai ganti Delphi. Baruntung dosennya tidak mempermasalahkan hal ini.
 Pemrograman Delphi dengan Lazarus memang terlihat sama. Oleh karena itu, tugas akhir saya diterima dengan nilai yang memuaskan.
 Lazarus tidak hanya bisa berjalan di Linux, tapi juga bisa untuk sistem operasi yang lain seperti Windows, Mac OS, dan Unix.

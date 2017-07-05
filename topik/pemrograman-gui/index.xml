@@ -7,29 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 17 Oct 2015 21:34:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2015 23:03:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/topik/pemrograman-gui/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Pemrograman java di lab (7): Mengenal JOptionPane dan operator kondisi</title>
-      <link>https://www.petanikode.com/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/</link>
-      <pubDate>Sat, 17 Oct 2015 21:34:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/</guid>
-      <description>Sebelumnya, kita telah berkenalan dengan operator. Sekarang kita akan coba mengenal JOptionPane dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.
-JOptionPaneJOptionPane merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. JOptionPane bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.
-Sebelum menggunakan JOptionPane, kita perlu mengimpornya ke dalam program:
-import javax.swing.JOptionPane;Terdapat empat fungsi atau metode yang sering dipakai:</description>
-    </item>
-    
-    <item>
       <title>Galat saat kompilasi aplikasi VB.NET di MonoDevelop</title>
-      <link>https://www.petanikode.com/galat-saat-kompilasi-aplikasi-vb.net-di-monodevelop/</link>
+      <link>https://www.petanikode.com/vb-dotnet-linux/</link>
       <pubDate>Mon, 30 Mar 2015 23:03:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/galat-saat-kompilasi-aplikasi-vb.net-di-monodevelop/</guid>
+      <guid>https://www.petanikode.com/vb-dotnet-linux/</guid>
       <description>Saya sedang coba-coba membuat sebuah aplikasi VB.NET di MonoDevelop. Tapi, saat dikompilasi atau dijalankan, Saya mendapatkan galat (Error). Pesan galatnya sebagai berikut:
  Untunglah saya menemukan solusinya di askubuntu.com. Ternyata cukup menginstal kompilator VB.NET-nya:
 sudo apt-get install mono-vbnc Setelah itu, coba kompilasi aplikasinya lagi. Berhasil!</description>
@@ -37,10 +25,10 @@ sudo apt-get install mono-vbnc Setelah itu, coba kompilasi aplikasinya lagi. Ber
     
     <item>
       <title>Pemrograman PyGTK: Membuat Pesan Tips (Tooltips)</title>
-      <link>https://www.petanikode.com/pemrograman-pygtk-membuat-pesan-tips-tooltips/</link>
+      <link>https://www.petanikode.com/python-pygtk-tooltips/</link>
       <pubDate>Tue, 09 Sep 2014 06:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-pygtk-membuat-pesan-tips-tooltips/</guid>
+      <guid>https://www.petanikode.com/python-pygtk-tooltips/</guid>
       <description>Beberapa komponen antarmuka grafis (GUI) perlu penjelasan tambahan agar pengguna mengerti fungsinya. Penjelasan tambahan dapat kita buat berupa pesan tips. Pesan tips di antarmuka dikenal dengan istilah tooltips. Pesan tips (tooltips) akan tampil ketika pointer menyentuh (hover) komponen tertentu.
 Pesan tips dapat kita buat dengan metod atau fungsi set_tooltip_text(). Fungsi ini dipakai pada objek komponen yang akan ditambahkan pesan tips. Perhatikanlah contoh berikut ini:
 # tooltip.py
@@ -50,10 +38,10 @@ class Aplikasi(gtk.</description>
     
     <item>
       <title>Struktur Pemilihan di Pemrograman Lazarus</title>
-      <link>https://www.petanikode.com/pemrograman-lazarus-percabangan/</link>
+      <link>https://www.petanikode.com/lazarus-percabangan/</link>
       <pubDate>Fri, 05 Sep 2014 23:21:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-lazarus-percabangan/</guid>
+      <guid>https://www.petanikode.com/lazarus-percabangan/</guid>
       <description>Stuktur pemilihan adalah struktur kode yang menggunakan kaidah jika-maka. Struktur pemilihan dalam dunia pemrograman dikenal juga dengan percabangan, flow control, if-else, dan sebagainya.
  Terdapat dua macam struktur pemilihan dalam pemrograman Lazarus: if-then dan case-of. Perbedaan if-then dan case-of dapat dilihat dari cara mereka membandingkan suatu kondisi. Struktur pemilihan if-then dan case-of membuat komputer berpikir dan mampu menentukan pilihan.
 Bentuk umum blok kode if-then:

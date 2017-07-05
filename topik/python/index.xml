@@ -49,10 +49,10 @@ Graf tersebut merupakan graf berarah yang memiliki enam buah titik dan delapan b
     
     <item>
       <title>Menghitung Tahun Kabisat dengan Python</title>
-      <link>https://www.petanikode.com/pemrograman-python-tahun-kabisat/</link>
+      <link>https://www.petanikode.com/python-tahun-kabisat/</link>
       <pubDate>Wed, 14 Sep 2016 15:24:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-python-tahun-kabisat/</guid>
+      <guid>https://www.petanikode.com/python-tahun-kabisat/</guid>
       <description>Menurut artikel di wikipedia Tahun kabisat (bahasa Inggris: Leap year) adalah tahun yang mengalami penambahan satu hari dengan tujuan untuk menyesuaikan penanggalan dengan tahun astronomi. Dalam satu tahun tidak secara persis terdiri dari 365 hari, tetapi 365 hari 5 jam 48 menit 45,1814 detik. Jika hal ini tidak dihiraukan, maka setiap 4 tahun akan kekurangan hampir 1 hari (tepatnya 23 jam 15 menit 0,7256 detik).
 Maka untuk mengkompensasi hal ini, setiap 4 tahun sekali (tahun yang bisa dibagi 4), diberi 1 hari ekstra: 29 Februari.</description>
     </item>
@@ -84,10 +84,10 @@ API Simsimi konsepnya sangat sederhana. Kita hanya melakukan request dari URL de
     
     <item>
       <title>Penguraian (Parshing) JSON pada Python</title>
-      <link>https://www.petanikode.com/penguraian-parshing-json-pada-python/</link>
+      <link>https://www.petanikode.com/python-json/</link>
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/penguraian-parshing-json-pada-python/</guid>
+      <guid>https://www.petanikode.com/python-json/</guid>
       <description>Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul atau pustakan json. Selain itu, kita juga membutuhkan modul tambahan seperti urlib bila JSON-nya diambil dari web service. Oke, mari kita mulai dari hal yang sederhana.
 #json #stickynotes #postitnotes #programming #programmerA photo posted by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
 Membuat File JSONPertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: petanikode.json</description>
@@ -106,10 +106,10 @@ Pada kesempatan ini, kita akan membuat program Timer Pomodoro. Timer ini mulai m
     
     <item>
       <title>Ini yang Saya Lakukan untuk Munguasai Dasar Pemrograman Python dalam Sebulan</title>
-      <link>https://www.petanikode.com/menguasai-python-dalam-sebulan/</link>
+      <link>https://www.petanikode.com/belajar-python-dalam-sebulan/</link>
       <pubDate>Mon, 06 Jun 2016 06:13:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/menguasai-python-dalam-sebulan/</guid>
+      <guid>https://www.petanikode.com/belajar-python-dalam-sebulan/</guid>
       <description>Selamat pagi semua, sudah santap sahur?
 Ya, akhirnya kita sudah sampai pada bulan Ramadhan.
 Jadi teringat bulan ramadhan dua tahun yang lalu.
@@ -135,10 +135,10 @@ function fungsiRekursif(){ console.log(&amp;quot;Hello, ini fungsi rekursif&amp;
     
     <item>
       <title>Manfaat fungsi time.sleep() pada pemrograman Python</title>
-      <link>https://www.petanikode.com/pemrograman-python-fungsi-sleep/</link>
+      <link>https://www.petanikode.com/python-fungsi-sleep/</link>
       <pubDate>Fri, 11 Dec 2015 17:24:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-python-fungsi-sleep/</guid>
+      <guid>https://www.petanikode.com/python-fungsi-sleep/</guid>
       <description>Python memiliki sebuah modul waktu (time). Banyak fungsi-fungsi yang berkaitan tentang waktu yang dapat digunakan dengan modul tersebut. Salah satunya adalah fungsi sleep(). Fungsi ini berguna untuk menunda waktu eksekusi. Fungsi ini membawa parameter berupa angka yang menyatakan detik (lama) penundaan.
 Misalkan, ingin menunda selama 5 detik:
 time.sleep(5)Fungsi ini dapat digunakan mengimpor modul time. Contoh program, berhitung sampai sepuluh. Lama penundaan perhitungan adalah 0.5 detik:
@@ -160,10 +160,10 @@ print &amp;ldquo;Python&amp;rdquo;Tiga peritah di atas dapat disingkat atau ditu
     
     <item>
       <title>Belajar Pemrograman Python: Cara Install Python di Windows</title>
-      <link>https://www.petanikode.com/pemrograman-python-di-windows/</link>
+      <link>https://www.petanikode.com/python-windows/</link>
       <pubDate>Fri, 09 Oct 2015 17:47:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-python-di-windows/</guid>
+      <guid>https://www.petanikode.com/python-windows/</guid>
       <description>Instalasi python di Windows sangat gampang. Langkah-langkanya sama seperti menginstal software Windows pada umumnya, next-next-finish.
 Tapi ada konfigurasi yang harus dipilih ditengah-tengah proses instalasi, agar perintah Python dapat dikenali di CMD.
 Python yang akan di instal dalam panduan ini adalah python versi 3. Download di situs resmi python (python.org).
@@ -184,10 +184,10 @@ echo 5 &amp;gt; /sys/class/backlight/intel_backlight/brightnessSeperti yang kita
     
     <item>
       <title>Fungsi range() di pemrograman python</title>
-      <link>https://www.petanikode.com/fungsi-range-di-pemrograman-python/</link>
+      <link>https://www.petanikode.com/python-fungsi-range/</link>
       <pubDate>Sun, 13 Sep 2015 16:06:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/fungsi-range-di-pemrograman-python/</guid>
+      <guid>https://www.petanikode.com/python-fungsi-range/</guid>
       <description>Fungsi range() merupakan fungsi yang menghasilkan list. Fungsi ini akan menciptakan sebuah list baru dengan rentang nilai tertentu. Contoh:
 1. list dari 0 sampai 10
 range(10)akan menghasilkan:
@@ -214,11 +214,11 @@ Contoh kode dalam Javascript:</description>
     </item>
     
     <item>
-      <title>Tebakan bilangan ganjil-genap dengan python</title>
-      <link>https://www.petanikode.com/tebakan-bilangan-ganjil-genap-dengan-python/</link>
+      <title>Program bilangan ganjil-genap dengan python</title>
+      <link>https://www.petanikode.com/python-ganjil-genap/</link>
       <pubDate>Sun, 22 Feb 2015 23:37:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tebakan-bilangan-ganjil-genap-dengan-python/</guid>
+      <guid>https://www.petanikode.com/python-ganjil-genap/</guid>
       <description>Komputer adalah sebuah mesin yang tidak mampu berpikir. Menebak bilangan ganjil atau genap saja tidak bisa. Tapi, berkat bantuan programer komputer dapat melakukannya.
 Di artikel ini saya ingin menunjukan cara memanfaatkan struktur pemilihan agar komputer dapat berpikir dan mengetahui bilangan genap dan ganjil.
 
@@ -239,10 +239,10 @@ sudo apt-get install python-setuptools Unduh djangoDjango dapat diunduh di situs
     
     <item>
       <title>Manfaat fungsi max() di pemrograman python</title>
-      <link>https://www.petanikode.com/pemrograman-python-fungsi-max/</link>
+      <link>https://www.petanikode.com/python-fungsi-max/</link>
       <pubDate>Sat, 18 Oct 2014 18:14:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-python-fungsi-max/</guid>
+      <guid>https://www.petanikode.com/python-fungsi-max/</guid>
       <description>Pernahkan anda bertemu dengan kasus perbandingan suatu nilai yang terbesar? Bila menyelesaikan menggunakan if dan datanya banyak, tentu akan terasa sangat merepotkan. Karena banyak nilai yang akan dibandingkan.
  Fungsi max() adalah fungsi bulid-in untuk mencari nilai tertinggi. Fungsi ini dapat diberikan sebuah parameter berupa angka. Artikel ini sebenarnya dibuat untuk menjawab sebuah pertanyaan di grup Python Indonesia.
 Saya pemilik pabrik sepatu, saya menugaskan staff saya untuk menginput jumlah penjualan bulan Januari, Februari, dan Maret 2014.</description>
@@ -250,10 +250,10 @@ Saya pemilik pabrik sepatu, saya menugaskan staff saya untuk menginput jumlah pe
     
     <item>
       <title>Pemrograman PyGTK: Membuat Pesan Tips (Tooltips)</title>
-      <link>https://www.petanikode.com/pemrograman-pygtk-membuat-pesan-tips-tooltips/</link>
+      <link>https://www.petanikode.com/python-pygtk-tooltips/</link>
       <pubDate>Tue, 09 Sep 2014 06:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-pygtk-membuat-pesan-tips-tooltips/</guid>
+      <guid>https://www.petanikode.com/python-pygtk-tooltips/</guid>
       <description>Beberapa komponen antarmuka grafis (GUI) perlu penjelasan tambahan agar pengguna mengerti fungsinya. Penjelasan tambahan dapat kita buat berupa pesan tips. Pesan tips di antarmuka dikenal dengan istilah tooltips. Pesan tips (tooltips) akan tampil ketika pointer menyentuh (hover) komponen tertentu.
 Pesan tips dapat kita buat dengan metod atau fungsi set_tooltip_text(). Fungsi ini dipakai pada objek komponen yang akan ditambahkan pesan tips. Perhatikanlah contoh berikut ini:
 # tooltip.py
@@ -263,10 +263,10 @@ class Aplikasi(gtk.</description>
     
     <item>
       <title>Pemrograman PyGTK: Membuat Tombol dan Label Teks</title>
-      <link>https://www.petanikode.com/pemrograman-pygtk-tombol-dan-label/</link>
+      <link>https://www.petanikode.com/python-pygtk-tombol-label/</link>
       <pubDate>Mon, 08 Sep 2014 07:00:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-pygtk-tombol-dan-label/</guid>
+      <guid>https://www.petanikode.com/python-pygtk-tombol-label/</guid>
       <description>Pada antarmuka grafis (GUI), tombol merupakan komponen penting penyusun antarmuka.Tombol dipakai untuk menjalankan fungsi atau aksi tertentu. Pada kesempatan ini, saya akan membahas langkah-langkah atau proses dalam pembuatan tombol di PyGTK.
 1. Membuat TombolTombol dibuat dengan membuat objek dari kelas Button(). Contoh:
 tombol = gtk.Button(&amp;ldquo;Sebuah Tombol&amp;rdquo;)2. Membuat KontainerKontainer kita perlukan untuk membungkus atau menampung tombol dan komponen-komponen lainnya. Apabila tidak menggunakan kontainer, bisa jadi akan berantakan. Pembuatan kontainer dapat dilakukan dengan membuat objek dari kelas-kelas kontainer, seperti Fixed() untuk kontainer fixed.</description>
@@ -274,10 +274,10 @@ tombol = gtk.Button(&amp;ldquo;Sebuah Tombol&amp;rdquo;)2. Membuat KontainerKont
     
     <item>
       <title>Pemrograman PyGTK: Pengenalan dan Persiapan alat Tempurnya</title>
-      <link>https://www.petanikode.com/pemrograman-pygtk-pengenalan/</link>
+      <link>https://www.petanikode.com/python-pygtk/</link>
       <pubDate>Sun, 07 Sep 2014 10:40:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-pygtk-pengenalan/</guid>
+      <guid>https://www.petanikode.com/python-pygtk/</guid>
       <description>Aplikasi dengan antarmuka grafis (GUI) lebih disukai pengguna, karena mudah dioperasikan.
 Pada kesempatan ini, kita akan belajar membuat aplikasi berbasis GUI dengan bahasa pemrograman python dan pustaka PyGTK.
 Apa itu GTK+ dan PyGTK? GTK+ (GIMP Toolkit) merupakan pustaka yang digunakan untuk membangun antarmuka grafis. GTK+ adalah bagian dari proyek GNU.
@@ -287,30 +287,30 @@ PyGTK adalah pustaka GTK+ yang sudah diracik khusus untuk Python.</description>
     
     <item>
       <title>Belajar Pemrograman Python: Memahami Perulangan</title>
-      <link>https://www.petanikode.com/pemrograman-python-perulangan/</link>
+      <link>https://www.petanikode.com/python-perulangan/</link>
       <pubDate>Wed, 16 Jul 2014 18:04:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-python-perulangan/</guid>
+      <guid>https://www.petanikode.com/python-perulangan/</guid>
       <description>Perualangan dalam bahasa pemrograman berfungsi menyuruh komputer melakukan sesuatu secara berulang-ulang. Terdapat dua jenis perualangan dalam bahasa pemrograman python, yaitu perulangan dengan for dan while.
 Perulangan for disebut counted loop (perulangan yang terhitung), sementara perulangan while disebut uncounted loop (perulangan yang tak terhitung). Perbedaannya adalah perulangan for biasanya digunakan untuk mengulangi kode yang sudah diketahui banyak perulangannya. Sementara while untuk perulangan yang memiliki syarat dan tidak tentu berapa banyak perulangannya.</description>
     </item>
     
     <item>
       <title>Belajar Pemrograman Python: Memahami Percabangan untuk Membuat Logika Program</title>
-      <link>https://www.petanikode.com/pemrograman-python-percabangan/</link>
+      <link>https://www.petanikode.com/python-percabangan/</link>
       <pubDate>Sat, 22 Feb 2014 08:30:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-python-percabangan/</guid>
+      <guid>https://www.petanikode.com/python-percabangan/</guid>
       <description>Pada kondisi tertentu, kita sering dihadapi dengan pilihan-pilihan. Misalnya, saat pergi ke suatu tempat, terdapat banyak jalan menuju tempat tersebut. Manakah jalan yang akan dipilih? Kita akan berpikir dan mempertimbangkan pilihan yang akan diambil. Apakah melalui jalan x lebih cepat sampai dari pada jalan y, ataukah sebaliknya?
  Kita dapat membuat komputer berpikir seperti di atas dengan kode pemilihan. Ada tiga model kode pemilihan di python: (i) if, dipakai saat pilihan kondisinya ada satu, (ii) if-else, dipakai saat pilihan kondisinya ada dua, dan (iii) if-elif-else dipakai saat pilihan kondisinya lebih dari dua.</description>
     </item>
     
     <item>
       <title>Belajar Pemrograman Python: Mengenal Variabel dan Tipe Data dalam Python</title>
-      <link>https://www.petanikode.com/pemrograman-python-variabel-dan-tipe-data/</link>
+      <link>https://www.petanikode.com/python-variabel-dan-tipe-data/</link>
       <pubDate>Mon, 17 Feb 2014 18:53:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-python-variabel-dan-tipe-data/</guid>
+      <guid>https://www.petanikode.com/python-variabel-dan-tipe-data/</guid>
       <description>Pada kesempatan ini kita akan mempelajari tentang variabel dan tipe data pada Python.
 Pastikan sebelumnya sudah mengetahui cara membuat skrip atau program python.
 Pengertian Variabel dan Tipe Data Variabel merupakan tempat menyimpan data, sedangkan tipe data adalah jenis data yang terseimpan dalam variabel.
@@ -322,10 +322,10 @@ nama_variabel = &amp;lt;nilai&amp;gt;  Contoh:</description>
     
     <item>
       <title>Belajar Pemrograman Python: Pengenalan Dasar Python dan Persiapan Awal</title>
-      <link>https://www.petanikode.com/belajar-pemrograman-python/</link>
+      <link>https://www.petanikode.com/python-linux/</link>
       <pubDate>Sun, 16 Feb 2014 19:03:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/belajar-pemrograman-python/</guid>
+      <guid>https://www.petanikode.com/python-linux/</guid>
       <description>Mau belajar bahasa pemrograman python, tapi masih bingung mulainya dari mana?
 Tenang&amp;hellip;
 Karena di artikel ini kita akan membahas persiapan awalnya sampai tuntas:

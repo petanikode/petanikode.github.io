@@ -14,21 +14,21 @@
     
     <item>
       <title>Galat saat kompilasi aplikasi VB.NET di MonoDevelop</title>
-      <link>https://www.petanikode.com/galat-saat-kompilasi-aplikasi-vb.net-di-monodevelop/</link>
+      <link>https://www.petanikode.com/vb-dotnet-linux/</link>
       <pubDate>Mon, 30 Mar 2015 23:03:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/galat-saat-kompilasi-aplikasi-vb.net-di-monodevelop/</guid>
+      <guid>https://www.petanikode.com/vb-dotnet-linux/</guid>
       <description>Saya sedang coba-coba membuat sebuah aplikasi VB.NET di MonoDevelop. Tapi, saat dikompilasi atau dijalankan, Saya mendapatkan galat (Error). Pesan galatnya sebagai berikut:
  Untunglah saya menemukan solusinya di askubuntu.com. Ternyata cukup menginstal kompilator VB.NET-nya:
 sudo apt-get install mono-vbnc Setelah itu, coba kompilasi aplikasinya lagi. Berhasil!</description>
     </item>
     
     <item>
-      <title>Pemrograman visual basic di Linux dengan Gambas</title>
-      <link>https://www.petanikode.com/pemrograman-visual-basic-di-linux-dengan-gambas/</link>
+      <title>Pemrograman Visual Basic di Linux dengan Gambas</title>
+      <link>https://www.petanikode.com/gambas-visual-basic-linux/</link>
       <pubDate>Sat, 14 Mar 2015 09:54:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-visual-basic-di-linux-dengan-gambas/</guid>
+      <guid>https://www.petanikode.com/gambas-visual-basic-linux/</guid>
       <description>Visual basic (VB) adalah pemrograman visual atau GUI dari bahasa basic yang dikembangkan oleh Microsoft. Pemrograman VB banyak diminati di kalangan pengguna Windows. Ada yang bilang, pemrograman VB hanya bisa dilakukan di windows saja. Pendapat tersebut tidak benar. Kita juga dapat melakukan pemrograman VB di Linux.
  Pemrograman visual basic di linux dapat dilakukan menggunakan Gambas atau MonoDevelop (untuk VB.NET). Gambas singkatan dari  Gambas Almost Means Basic merupakan sebuah IDE untuk pemrograman visual (vb) menggunakan bahasa basic di linux.</description>
     </item>

@@ -14,20 +14,20 @@
     
     <item>
       <title>Cara Menjalankan PHP Melalui CMD</title>
-      <link>https://www.petanikode.com/cara-menjalankan-php-melalui-cmd/</link>
+      <link>https://www.petanikode.com/php-cmd/</link>
       <pubDate>Sat, 04 Feb 2017 08:15:19 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-menjalankan-php-melalui-cmd/</guid>
+      <guid>https://www.petanikode.com/php-cmd/</guid>
       <description>Sudah lama tidak otak-atik Windows. Pemrograman di Windows sepertinya terasa sedikit sulit, karena sudah terbiasa dengen Linux. Ketika saya menginginkan apa-apa, tinggal ketik sudo apt install dan semuanya sudah siap. Namun, kali ini saya sedang meminjam komputer lab. yang menggunakan sistem operasi Windows. Jadi, tidak ada sudo apt install yang dapat kita suruh-suruh.
 Ketika saya mencoba mengetik perintah php di Command Prompt (CMD), perintah tersebut tidak dikenali. Padahal di sana sudah terinstal XAMPP.</description>
     </item>
     
     <item>
       <title>10 Negara dengan Programmer Terbaik dan Indonesia Ranking Berapa?</title>
-      <link>https://www.petanikode.com/10-negara-dengan-programmer-terbaik/</link>
+      <link>https://www.petanikode.com/negara-programmer-terbaik/</link>
       <pubDate>Sat, 14 Jan 2017 15:26:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/10-negara-dengan-programmer-terbaik/</guid>
+      <guid>https://www.petanikode.com/negara-programmer-terbaik/</guid>
       <description>Banyak yang mungkin menduga, Amerika adalah negara dengan programmer terbaik. Karena di sana sarangnya para programmer legendaris seperti Bill Gates, Ken Thompson, Dennis Ritchie, dan Donald Knuth. Namun ternyata bukan. Hal ini dibuktikan oleh HackerRank.
 HackerRank merupakan sebuah platform untuk menentukan rangking para programmer beradasarkan skill coding yang dimilikinya. HackerRank sering mengadakan tantangan (challenges) untuk meningkatkan kemampuan para programmer. Ribuan programmer dari seluruh penjuru dunia ikut berpartisipasi dalam tantangan. Programmer dinilai berdasarkan kombinasi akurasi dan kecepatannya.</description>
     </item>
@@ -54,10 +54,10 @@ Menggunakan Fungsi fopen()Cara pertama mengambil input di PHP CLI adalah dengan 
     
     <item>
       <title>Penguraian (Parshing) JSON pada Python</title>
-      <link>https://www.petanikode.com/penguraian-parshing-json-pada-python/</link>
+      <link>https://www.petanikode.com/python-json/</link>
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/penguraian-parshing-json-pada-python/</guid>
+      <guid>https://www.petanikode.com/python-json/</guid>
       <description>Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul atau pustakan json. Selain itu, kita juga membutuhkan modul tambahan seperti urlib bila JSON-nya diambil dari web service. Oke, mari kita mulai dari hal yang sederhana.
 #json #stickynotes #postitnotes #programming #programmerA photo posted by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
 Membuat File JSONPertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: petanikode.json</description>
@@ -97,10 +97,10 @@ Misalkan, sebuah data mata uang bentuknya seperti ini:</description>
     
     <item>
       <title>Operator ^ (xor) di Java bukan untuk Membuat Pangkat</title>
-      <link>https://www.petanikode.com/operator--xor-di-java-bukan-untuk-membuat-pangkat/</link>
+      <link>https://www.petanikode.com/java-operator-xor/</link>
       <pubDate>Fri, 29 Apr 2016 06:25:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/operator--xor-di-java-bukan-untuk-membuat-pangkat/</guid>
+      <guid>https://www.petanikode.com/java-operator-xor/</guid>
       <description>Sebuah kekeliruan saya temukan ketika memeriksa kode program milik teman. Dia mengimplementasikan rumus berikut ke dalam kode java.
 y = x2 + 3
 Potongan kode program yang dia tulis.
@@ -147,28 +147,6 @@ print &amp;ldquo;Python&amp;rdquo;Tiga peritah di atas dapat disingkat atau ditu
     </item>
     
     <item>
-      <title>Pemrograman java di lab (8): Menggunakan pangkat</title>
-      <link>https://www.petanikode.com/pemrograman-java-di-lab-8-menggunakan-pangkat/</link>
-      <pubDate>Sun, 18 Oct 2015 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/pemrograman-java-di-lab-8-menggunakan-pangkat/</guid>
-      <description>Pada contoh kasus program luas lingkaran kemarin, kita menggunakan pangkat dua untuk menghitung luas lingkaran. Pangkat dua dapat ditulis dengan membuat perkalian dengan variabel atau bilangan yang akan dipangkatkan dua. Contoh, r2 dapat ditulis r*r. Tapi, bagaiamana kalau pangkatnya banyak? misal 4112. Tidak mungkin kita akan melakukan perkalian sebanyak itu dalam kode. Oleh karena itu, kita membutuhkan fungsi pangkat untuk menghitungnya.
-Java sudah menyediakan fungsi pangkat yang dapat digunakan kapan saja.</description>
-    </item>
-    
-    <item>
-      <title>Pemrograman java di lab (7): Mengenal JOptionPane dan operator kondisi</title>
-      <link>https://www.petanikode.com/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/</link>
-      <pubDate>Sat, 17 Oct 2015 21:34:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/pemrograman-java-di-lab-7-mengenal-joptionpane-dan-operator-kondisi/</guid>
-      <description>Sebelumnya, kita telah berkenalan dengan operator. Sekarang kita akan coba mengenal JOptionPane dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.
-JOptionPaneJOptionPane merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. JOptionPane bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.
-Sebelum menggunakan JOptionPane, kita perlu mengimpornya ke dalam program:
-import javax.swing.JOptionPane;Terdapat empat fungsi atau metode yang sering dipakai:</description>
-    </item>
-    
-    <item>
       <title>Inilah 4 Macam Gaya Penulisan Case dalam Pemrograman</title>
       <link>https://www.petanikode.com/gaya-penulisan-case-dalam-pemrograman/</link>
       <pubDate>Sat, 17 Oct 2015 14:49:00 +0000</pubDate>
@@ -186,27 +164,11 @@ ini_penulisan_snake_case(); The_quick_brown_fox_jumps_over_the_lazy_dog nama_var
     </item>
     
     <item>
-      <title>Fungsi range() di pemrograman python</title>
-      <link>https://www.petanikode.com/fungsi-range-di-pemrograman-python/</link>
-      <pubDate>Sun, 13 Sep 2015 16:06:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/fungsi-range-di-pemrograman-python/</guid>
-      <description>Fungsi range() merupakan fungsi yang menghasilkan list. Fungsi ini akan menciptakan sebuah list baru dengan rentang nilai tertentu. Contoh:
-1. list dari 0 sampai 10
-range(10)akan menghasilkan:
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]2. list dari 4 sampai 12
-range(4, 12)akan menghasilkan:
-[4, 5, 6, 7, 8, 9, 10, 11]3. list dari 10 sampai 50 dengan interval 5
-range(10,50,5)akan menghasilkan:
-[10, 15, 20, 25, 30, 35, 40, 45]Dari contoh-contoh di atas, dapat kita pahami arti parameter yang diberikan untuk fungsi ini.</description>
-    </item>
-    
-    <item>
       <title>Manfaat fungsi max() di pemrograman python</title>
-      <link>https://www.petanikode.com/pemrograman-python-fungsi-max/</link>
+      <link>https://www.petanikode.com/python-fungsi-max/</link>
       <pubDate>Sat, 18 Oct 2014 18:14:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/pemrograman-python-fungsi-max/</guid>
+      <guid>https://www.petanikode.com/python-fungsi-max/</guid>
       <description>Pernahkan anda bertemu dengan kasus perbandingan suatu nilai yang terbesar? Bila menyelesaikan menggunakan if dan datanya banyak, tentu akan terasa sangat merepotkan. Karena banyak nilai yang akan dibandingkan.
  Fungsi max() adalah fungsi bulid-in untuk mencari nilai tertinggi. Fungsi ini dapat diberikan sebuah parameter berupa angka. Artikel ini sebenarnya dibuat untuk menjawab sebuah pertanyaan di grup Python Indonesia.
 Saya pemilik pabrik sepatu, saya menugaskan staff saya untuk menginput jumlah penjualan bulan Januari, Februari, dan Maret 2014.</description>
@@ -214,10 +176,10 @@ Saya pemilik pabrik sepatu, saya menugaskan staff saya untuk menginput jumlah pe
     
     <item>
       <title>Panduan Membuat tab dengan jQuery</title>
-      <link>https://www.petanikode.com/tutorial-jquery-membuat-tab/</link>
+      <link>https://www.petanikode.com/jquery-membuat-tab/</link>
       <pubDate>Sun, 09 Mar 2014 23:16:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-jquery-membuat-tab/</guid>
+      <guid>https://www.petanikode.com/jquery-membuat-tab/</guid>
       <description>Tab yang akan dibuat nantinya dapat dimanfaatkan untuk widget blog. Tab ini berisi informasi akun media sosial, seperti like box facebook, google+, twitter, dan lain-lain. Menggunakan tab dapat menghemat ruang atau tempat. Dalam satu widget saja, kita dapat menyimpan lebih dari satu informasi.
 Desain TabAgar dapat mengetahui bagaimana tab yang akan dibuat, Saya mendesainnya terlebih dahulu. Desain akan mempermudah kita dalam membuat kodenya. 
 Membuat Kode HTML, CSS, dan jQueryMembuat tab seperti desain di atas, dapat menggunakan kode HTML dan CSS saja.</description>

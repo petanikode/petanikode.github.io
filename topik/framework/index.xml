@@ -137,10 +137,10 @@ li:before {
     
     <item>
       <title>Cara Membuat Login dengan Username dan Alamat Email di CodeIgniter</title>
-      <link>https://www.petanikode.com/cara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-login/</link>
       <pubDate>Mon, 30 May 2016 11:30:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/cara-membuat-login-dengan-username-dan-alamat-email-di-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-login/</guid>
       <description>Kadang pengguna (selanjutnya kita sebut user) sering lupa username-nya, sebagai alternatif user kadang memasukan alamat email-nya di halaman login. Karena user lebih mengingat alamat email daripada username yang telah ia daftarkan. Oleh karena itu, kita perlu membuat sistem login yang mampu menerima username dan alamat email. Sehingga user dapat memilih, mau login dengan username atau email.
 Model UserSebenarnya, inti dari membuat login yang dapat menerima username dan password adalah permainan query saja.</description>
     </item>

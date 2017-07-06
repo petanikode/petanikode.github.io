@@ -7,7 +7,7 @@
 
 <html amp lang="id-id" class="no-js">
 <head>
-    <title>Web</title>
+    <title>Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -20,8 +20,8 @@
 
 
 
-    <link rel="canonical" href="https://www.petanikode.com/kategori/web/" />
-    <link rel="amphtml" href="https://www.petanikode.com/kategori/web/" />
+    <link rel="canonical" href="https://www.petanikode.com/bot-telegram-simsimi/" />
+    <link rel="amphtml" href="https://www.petanikode.com/bot-telegram-simsimi/" />
 
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
     <meta content='/favicon.png' name='msapplication-TileImage'/>
@@ -30,10 +30,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-    <link href="http://feeds.feedburner.com/petanikode" rel="alternate" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-    <link href="http://feeds.feedburner.com/petanikode" rel="feed" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-
-
+    
 
     
     
@@ -51,8 +48,15 @@
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
 <meta name="author" content="Ardianta Pargo"/>
 
-<meta name="keywords" content="Web, pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman"/>
+<meta name="keywords" content="Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="Simsimi bisa kita pinjam otaknya untuk mengendalikan bot Telegram.
+Kita bisa mengakses kecerdasan Simsimi dengan API Key/Kunci API/Token.
+Ada dua kunci API/Token yang diberikan oleh simsimi:
+ Kunci Trial (gratis) Kunci Berbayar  Kunci trial hanya berlaku 7 hari dengan batasan 100 request/hari.
+Kalau melewati batas itu, Simsimi tidak mau merespon.
+Tapi tenang saja, ada triknya.
+Nanti saya kasih tahu dibagian akhir panduan ini :smile:.
+Baiklah, mari kita mulai membuat bot Telegram dengan kecerdasan Simsimi."/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -68,20 +72,28 @@
 <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
-    <meta property="og:title" content="Web" />
-    <meta property="og:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman" />
+    <meta property="og:title" content="Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io" />
+    <meta property="og:description" content="Simsimi bisa kita pinjam otaknya untuk mengendalikan bot Telegram.
+Kita bisa mengakses kecerdasan Simsimi dengan API Key/Kunci API/Token.
+Ada dua kunci API/Token yang diberikan oleh simsimi:
+ Kunci Trial (gratis) Kunci Berbayar  Kunci trial hanya berlaku 7 hari dengan batasan 100 request/hari.
+Kalau melewati batas itu, Simsimi tidak mau merespon.
+Tapi tenang saja, ada triknya.
+Nanti saya kasih tahu dibagian akhir panduan ini :smile:.
+Baiklah, mari kita mulai membuat bot Telegram dengan kecerdasan Simsimi." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.petanikode.com/kategori/web/" />
+    <meta property="og:url" content="https://www.petanikode.com/bot-telegram-simsimi/" />
 
-    <meta property="og:image" content="/images/petanikode-programmer.png" />
+    <meta property="og:image" content="https://4.bp.blogspot.com/-89RK3vsPeAw/V9FJ-fgPW5I/AAAAAAAADOY/D-R__QHvwzMdNNKsIaNkEU7rzT2hVep7gCK4B/s1600/API%2BSimsimi%2Bdan%2BBot%2BTelegram%2B-%2BPetani%2BKode.png" />
 
     
-    <meta property="og:updated_time" content="2016-05-30 11:30:00 &#43;0000 UTC"/>
+    <meta property="og:updated_time" content="2016-09-09 14:16:00 &#43;0000 UTC"/>
     <meta content='id_ID' property='og:locale'/>
     <meta content='ms_MY' property='og:locale:alternate'/>
     <meta content='en_US' property='og:locale:alternate'/>
 
     <meta content='152759108115365' property='fb:app_id'/>
+    <meta content='petanikode' property='fb:pages'/>
     <meta content='143461015837500' property='fb:pages'/>
     <meta content='ardianta.pargo' property='fb:profile_id'/>
 
@@ -96,10 +108,24 @@
     <meta property="article:publisher" content="https://www.facebook.com/petanikode" />
 
     
+    <meta property="article:published_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
+    
 
-    <meta property="article:modified_time" content="2016-05-30 11:30:00 &#43;0000 UTC" />
-    <meta property="article:section" content="" />
+    <meta property="article:modified_time" content="2016-09-09 14:16:00 &#43;0000 UTC" />
+    <meta property="article:section" content="artikel" />
 
+    
+    	<meta property="article:tag" content="Bot" />
+    
+    	<meta property="article:tag" content="Simsimi" />
+    
+    	<meta property="article:tag" content="WebHook" />
+    
+    	<meta property="article:tag" content="NodeJS" />
+    
+    	<meta property="article:tag" content="Telegram" />
+    
+    	<meta property="article:tag" content="Javascript" />
     
 
     
@@ -152,12 +178,6 @@
     
     
     
-        
-    
-
-    
-    
-    
 
 
 <script type="application/ld+json">
@@ -176,7 +196,25 @@
       },
 
       
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+            "@id": "https://www.petanikode.com/kategori/pemrograman",
+            "name": "Pemrograman"
+            }
+      },
+      
 
+      
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+            "@id": "https://www.petanikode.com/topik/bot",
+            "name": "Bot"
+            }
+      }
       
 
     ]
@@ -190,18 +228,25 @@
   "author": {
     "name" : "Ardianta Pargo"
   },
-  "headline": "Web",
-  "description": "",
-  "wordCount": 0,
-  "datePublished" : "2016-05-30T11:30:00",
-  "dateModified" : "2016-05-30T11:30:00",
+  "headline": "Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io",
+  "description": "Simsimi bisa kita pinjam otaknya untuk mengendalikan bot Telegram.
+Kita bisa mengakses kecerdasan Simsimi dengan API Key/Kunci API/Token.
+Ada dua kunci API/Token yang diberikan oleh simsimi:
+ Kunci Trial (gratis) Kunci Berbayar  Kunci trial hanya berlaku 7 hari dengan batasan 100 request/hari.
+Kalau melewati batas itu, Simsimi tidak mau merespon.
+Tapi tenang saja, ada triknya.
+Nanti saya kasih tahu dibagian akhir panduan ini :smile:.
+Baiklah, mari kita mulai membuat bot Telegram dengan kecerdasan Simsimi.",
+  "wordCount": 1245,
+  "datePublished" : "2016-09-09T14:16:00",
+  "dateModified" : "2016-09-09T14:16:00",
   "image" : {
       "@type": "ImageObject",
-      "url": "",
+      "url": "https://4.bp.blogspot.com/-89RK3vsPeAw/V9FJ-fgPW5I/AAAAAAAADOY/D-R__QHvwzMdNNKsIaNkEU7rzT2hVep7gCK4B/s1600/API%2BSimsimi%2Bdan%2BBot%2BTelegram%2B-%2BPetani%2BKode.png",
       "height" : 380,
       "width" : 720
     },
-  "mainEntityOfPage" : "https://www.petanikode.com/kategori/web/",
+  "mainEntityOfPage" : "https://www.petanikode.com/bot-telegram-simsimi/",
   "publisher" : {
     "@type": "Organization",
     "name" : "petanikode.com",
@@ -215,7 +260,7 @@
 
   "review": {
     "@type": "Review",
-    "url": "https://www.petanikode.com/kategori/web/",
+    "url": "https://www.petanikode.com/bot-telegram-simsimi/",
     "author": {
       "@type": "Person",
       "name": "Ardianta Pargo",
@@ -226,8 +271,15 @@
       "name": "petanikode.com",
       "sameAs": "http://petanikode.com"
     },
-    "datePublished": "2016-05-30T11:30:00",
-    "description": "",
+    "datePublished": "2016-09-09T14:16:00",
+    "description": "Simsimi bisa kita pinjam otaknya untuk mengendalikan bot Telegram.
+Kita bisa mengakses kecerdasan Simsimi dengan API Key/Kunci API/Token.
+Ada dua kunci API/Token yang diberikan oleh simsimi:
+ Kunci Trial (gratis) Kunci Berbayar  Kunci trial hanya berlaku 7 hari dengan batasan 100 request/hari.
+Kalau melewati batas itu, Simsimi tidak mau merespon.
+Tapi tenang saja, ada triknya.
+Nanti saya kasih tahu dibagian akhir panduan ini :smile:.
+Baiklah, mari kita mulai membuat bot Telegram dengan kecerdasan Simsimi.",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -1002,6 +1054,12 @@ padding: 16px;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     
 
+    <link rel="stylesheet" href="/assets/prism/prism.css" />
+    <script src="/assets/prism/prism.js"></script>
+
+    
+
+
 </head>
 
 <body>
@@ -1009,6 +1067,34 @@ padding: 16px;
 
 
 
+
+<nav class="fixed-top block">
+    <ul>
+        <li>
+            <a href="#!" on="tap:sidebar.toggle">
+            <i class="fa fa-bars"></i>
+            </a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="https://www.petanikode.com/">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/arsip/">Arsip</a>
+        </li>
+        
+        <li>
+            <a href="/kategori/tips-dan-trik">Tips &amp; Trik</a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="/topik/buku">Buku</a>
+        </li>
+        <li>
+            <a href="mailto:info@petanikode.com">Kirim Saran</a>
+        </li>
+    </ul>
+</nav>
 
 <amp-sidebar id='sidebar'
      layout="nodisplay"
@@ -1102,34 +1188,6 @@ padding: 16px;
   </amp-accordion>
  </amp-sidebar>
 
-<nav class="fixed-top block">
-    <ul>
-        <li>
-            <a href="#!" on="tap:sidebar.toggle">
-            <i class="fa fa-bars"></i>
-            </a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="https://www.petanikode.com/">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="/arsip/">Arsip</a>
-        </li>
-        
-        <li>
-            <a href="/kategori/tips-dan-trik">Tips &amp; Trik</a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="/topik/buku">Buku</a>
-        </li>
-        <li>
-            <a href="mailto:info@petanikode.com">Kirim Saran</a>
-        </li>
-    </ul>
-</nav>
-
 <header class="block-group">
     <section class="header block">
         <div class="site-wrapper">
@@ -1155,326 +1213,614 @@ padding: 16px;
 
 
 <main class="main block-group">
+
     <article class="article block">
+    <div class="article-wrapper">
+        <div class="content">
+            <h1 class="post-title">Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io</h1>
 
-
-    
-
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
+            
+                <div class="post-header">
     
         <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
+            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
         </div>
         <div>
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/web">Web</a></span>
+        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
             <br>
-        30 May · baca 2 menit
+        9 September 2016 · 14:16
     </div>
     
 </div>
 
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/codeigniter-login/">Cara Membuat Login dengan Username dan Alamat Email di CodeIgniter</a></h2>
-                <a href="/codeigniter-login/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/codeigniter-login/" id="read-more-button">
-                Selengkapnya…
-                </a>
                 
 
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcodeigniter-login%2f&t=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcodeigniter-login%2f&text=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter%20https%3a%2f%2fwww.petanikode.com%2fcodeigniter-login%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fcodeigniter-login%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fcodeigniter-login%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter&body=Cara%20Membuat%20Login%20dengan%20Username%20dan%20Alamat%20Email%20di%20CodeIgniter:%20https%3a%2f%2fwww.petanikode.com%2fcodeigniter-login%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+<p>Simsimi bisa kita pinjam otaknya untuk mengendalikan bot Telegram.</p>
+
+<p>Kita bisa mengakses kecerdasan Simsimi dengan API Key/Kunci API/Token.</p>
+
+<p>Ada dua kunci API/Token yang diberikan oleh simsimi:</p>
+
+<ol>
+<li>Kunci Trial (gratis)</li>
+<li>Kunci Berbayar</li>
+</ol>
+
+<p>Kunci <em>trial</em> hanya berlaku 7 hari dengan batasan 100 request/hari.</p>
+
+<p>Kalau melewati batas itu, Simsimi tidak mau merespon.</p>
+
+<p>Tapi tenang saja, ada triknya.</p>
+
+<p>Nanti saya kasih tahu dibagian akhir panduan ini 😄.</p>
+
+<p>Baiklah, mari kita mulai membuat bot Telegram dengan kecerdasan Simsimi.</p>
+
+<h2 id="cara-kerja">Cara Kerja</h2>
+
+<p>Sebelumnya, perlu diketahui cara komunikasi bot dengan Hook.io dan API Simsimi.</p>
+
+<p><img src="https://4.bp.blogspot.com/-89RK3vsPeAw/V9FJ-fgPW5I/AAAAAAAADOY/D-R__QHvwzMdNNKsIaNkEU7rzT2hVep7gCK4B/s1600/API%2BSimsimi%2Bdan%2BBot%2BTelegram%2B-%2BPetani%2BKode.png" alt="Cara komunikasi Bot Telegram dengan Hook.io dan API Simsimi" /></p>
+
+<p>Bot mengirim teks (pesan) ke Hook.io, kemudian Hook.io meneruskan request
+tersebut ke Simsimi.</p>
+
+<p>Simsimi memberikan balasan, kode yang di Hook.io memprosesnya dan mengirim
+balasannya ke Bot.</p>
+
+<p>Gampang kan?</p>
+
+<hr />
+
+<p>Baca Juga:</p>
+
+<ul>
+<li><a href="/cara-membuat-bot-telegram-dengan-layanan-hook.io/">Cara Membuat Bot Telegram dengan Layanan Hook.io</a></li>
+<li><a href="/eksperimen-dengan-api-simsimi/">Eksperimen dengan API Simsimi</a></li>
 </ul>
 
-            </div>
+<hr />
 
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
+<p><amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='7044550664'
+    width='720'
+    height='380'
+    type='adsense'
+    layout="responsive">
+</amp-ad></p>
 
-            <div class="post-header">
+<h2 id="bahan-bahan-yang-dibutuhkan">Bahan-Bahan yang Dibutuhkan</h2>
+
+<ol>
+<li>Token Bot Telegram (<a href="/cara-membuat-bot-telegram-dengan-layanan-hook.io/">Cara mendapatkannya</a>): fungsinya untuk mengakses Bot Telegram.</li>
+<li>Akun Hook.io (<a href="https://hook.io/ardianta?s">Daftar di sini</a>): tempat menyimpan kode bot.</li>
+<li>Kunci API/Token Simsimi (<a href="http://developer.simsimi.com/api">Daftar di sini</a>): fungsinya untuk mengakses kecerdasan Simsimi.</li>
+</ol>
+
+<p>Pastikan sudah menyiapkan semua bahan tersebut.</p>
+
+<h2 id="membuat-service-di-hook-io">Membuat Service di Hook.io</h2>
+
+<p>Buatlah sebuah service pada Hook.io (<a href="https://hook.io/new">klik di sini</a>).</p>
+
+<p><em>Name</em> diisi dengan nama yang diinginkan.</p>
+
+<p>Sebagai contoh, saya membuat sebuah service bernama <code>iyan-chan</code>.</p>
+
+<p><img src="https://4.bp.blogspot.com/-hIasWFzSQzg/V9JFX8awRgI/AAAAAAAADOo/q6Jz2sW3op4pgk-47xQ_9AkNWNFU8xrrgCK4B/s1600/Pembuatan%2BService%2Bdi%2BHook.io.png" alt="Membuat Service di Hook.io" /></p>
+
+<p>Setelah selesai, kita akan memiliki server sendiri dengan alamat</p>
+
+<pre><code>https://hook.io/&lt;username&gt;/&lt;nama service&gt;/
+</code></pre>
+
+<p>Contoh punya saya:</p>
+
+<pre><code>https://hook.io/ardianta/iyan-chan/
+</code></pre>
+
+<h2 id="membuat-variabel-lingkungan">Membuat Variabel Lingkungan</h2>
+
+<p>Setelah itu, silahkan buat variabel lingkungan di <a href="https://hook.io/env">https://hook.io/env</a>.</p>
+
+<p>Variabel lingkungan berfungsi untuk menampung token dan API Key.</p>
+
+<p>Ada dua variabel yang perlu dibuat:</p>
+
+<ul>
+<li>variabel <code>iyan_chan_bot</code> untuk menyimpan token Bot Telegram</li>
+<li>variabel <code>simsimi_key</code> untuk menyimpan token/API Key Simsimi</li>
+</ul>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/variabel-lingkungan-hookio.png" alt="Membuat variabel lingkungan hook.io" /></p>
+
+<p>* Abaikan vairabel <code>token_petani_bot</code>, itu variabel untuk <a href="/cara-membuat-bot-telegram-dengan-layanan-hook.io/">tutorial sebelumnya</a>.</p>
+
+<p>Variabel bersifat <em>case sensitive</em>, huruf besar dan kecil dibedakan.</p>
+
+<p>Variabel ini dapat kita akses pada kode dengan objek <code>hook.env</code>.</p>
+
+<p>Lebih jelasnya, silahkan lihat di langkah berikutnya.</p>
+
+<h2 id="kode-kendali">Kode Kendali</h2>
+
+<p>Buka kembali service yang sudah dibuat.</p>
+
+<p>Silahkan ganti kode <em>(hook source)</em> dengan kode berikut ini.</p>
+
+<pre><code class="language-javascript">module['exports'] = function iyanChanBot(hook) {
+
+	var request = require('request');    
+    var botName = &quot;iyan&quot;; // nama bot, silahkan ganti sesukanya
+    var simiUrl = 'http://sandbox.api.simsimi.com/request.p?key='+hook.env.simsimi_key+'&amp;lc=id&amp;ft=1.0&amp;text='+hook.params.message.text;
+
+
+    // tulis teks yang dikirim dari Telegram ke Logs
+    console.log(&quot;Telegram: &quot; + hook.params.message.text);
+
+    // buat request ke API Simsimi
+  	request(simiUrl, function (error, response, body) {
+      if (!error &amp;&amp; response.statusCode == 200) {
+         var data = JSON.parse(body);
+
+         // tampilkan balasan dari Simsimi ke Logs
+         console.log(data);
+
+        var pesanBalasan = &quot;&quot;;
+
+        // kode error dari Simsimi
+        // 400-Bad Request.
+		// 401-Unauthorized.
+		// 404-Not found.
+		// 500-Server Error.
+		// 509-melewati batas.
+
+        if(data.result == 509 || data.result == 400 || data.result == 401 || data.result == 404 || data.result == 500 ){
+        	pesanBalasan = botName + &quot; sedang tidur, silahkan hubungi kakak @ardiantapargo!&quot;;
+        } else {
+        	pesanBalasan = data.response;
+
+            // replace teks &quot;simsimi&quot; dengan nama bot
+            pesanBalasan = data.response.replace(/simisimi/g, botName);
+  	        pesanBalasan = data.response.replace(/simsimi/g, botName);
+            pesanBalasan = data.response.replace(/Simsimi/g, botName);      	  
+	        pesanBalasan = data.response.replace(/cimicimi/g, botName);
+        	pesanBalasan = data.response.replace(/Simi/g, botName);
+  			pesanBalasan = data.response.replace(/simi/g, botName);
+        }
+
+        // kirim balasan dari simsimi ke Bot Telegram
+         request
+          .post('https://api.telegram.org/bot' + hook.env.iyan_chan_bot + '/sendMessage')
+          .form({
+                &quot;chat_id&quot;: hook.params.message.chat.id,
+                &quot;text&quot;: pesanBalasan
+        });
+
+      }
+    });
+
+};
+</code></pre>
+
+<!-- <amp-iframe width="600" height="480"
+    layout="responsive"
+    sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups"
+    frameborder="0"
+    src="https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/b67caece3b5ded0a4d958c9fed8adcac">
+</amp-iframe> -->
+
+<p>Fungsi utama dari kode di atas adalah menerima dan membuat request.</p>
+
+<p>Pertama kita akan menerima request dari bot, kemudian request tersebut
+diteruskan ke API Simsimi.</p>
+
+<p>Setelah mendapatkan balasan dari API simsimi,
+balasan tersebut kita kirim kembali ke bot.</p>
+
+<p>Perhatikan:</p>
+
+<p><code>hook.env.simsimi_key</code> dan <code>hook.env.iyan_chan_bot</code> pastikan sama dengan nama variabel lingkungan yang telah dibuat.</p>
+
+<p>Setelah itu, simpan kodenya.</p>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/kode-kendali-bot-di-hookio.png" alt="Kode Kendali Bot sudah siap" /></p>
+
+<p>Jangan lupa juga untuk menjalankan service-nya:</p>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/menjalankan-service.png" alt="Menjalankan Servie Hook.io" /></p>
+
+<p>Kalau mendapatkan error seperti ini</p>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/error-saat-menjalankan-service.png" alt="Error saat menjalankan service" /></p>
+
+<p>Abaikan saja.</p>
+
+<p>Itu karena tidak ada parameter yang diberikan.</p>
+
+<p>Nanti parameternya berasal dari Bot Telegram.</p>
+
+<h2 id="menghubungkan-bot-dengan-hook-io">Menghubungkan Bot dengan Hook.io</h2>
+
+<p>Langkah berikutnya menghubungkan Bot dengan Hook.io.</p>
+
+<p>Kita bisa menggunakan URL berikut untuk melakukannya:</p>
+
+<pre><code>https://api.telegram.org/bot&lt;TOKEN&gt;/setWebhook?url=https://hook.io/&lt;hook-user&gt;/&lt;hook-name&gt;
+</code></pre>
+
+<p>Silahkan diganti:</p>
+
+<ul>
+<li><code>&lt;TOKEN&gt;</code> dengan token bot anda</li>
+<li><code>&lt;hook-user&gt;</code> dengan username hook.io anda</li>
+<li><code>&lt;hook-name&gt;</code> dengan nama layanan/service hook yang anda buat</li>
+</ul>
+
+<p>Contoh:</p>
+
+<pre><code>https://api.telegram.org/bot247353285:AAHCfe2XSna7zclLalfBq5VCmn3yTzii_zQ/setWebhook?url=https://hook.io/ardianta/iyan-chan/
+</code></pre>
+
+<p>Kemudian, silahkan buka URL tersebut melalui browser.</p>
+
+<p>Jika mendapatkan balasan seperti ini, maka bot berhasil terhubung dengan layanan hook.io.</p>
+
+<p><img src="https://2.bp.blogspot.com/-NJWNvnEf3Vg/V8wAe-8k9vI/AAAAAAAADOA/7u1Ezl7Fl5418LAHz49Uu1zm1PZ7xS_jQCK4B/s1600/Respon%2Bberhasil%2Bmengaitkan%2Bhook%2Bdengan%2Bbot%2Btelegram.png" alt="Menghubungkan Bot dengan Hook.io" /></p>
+
+<h2 id="demo-percobaan">Demo Percobaan</h2>
+
+<p>Silahkan chat dengan bot-nya <a href="https://t.me/iyan_chan_bot">@iyan_chan_bot</a>.</p>
+
+<p><img src="https://4.bp.blogspot.com/-eNMhxjFRExs/V9JOMICTWNI/AAAAAAAADPM/Me9uiX9wm7ATgEOrAEoWArpcoRFyxq-mwCK4B/s1600/Percobaan%2Bbot%2Bdengan%2Bapi%2BSimsimi%2B-%2Bpetanikode.jpg" alt="Demo Percobaan Bot Telegram dengan API Simsimi" /></p>
+
+<p>Yohoo!, Bot sudah bisa merespon layaknya Simsimi.</p>
+
+<p><strong>Apa yang harus dilakukan bila Bot tidak merespon?</strong></p>
+
+<p>Pertama coba periksa Logs-nya, apakah ada sesuatu yang ditampilkan di sana?</p>
+
+<p>Karena kita tadi sudah menggunakan fungsi <code>console.log()</code> untuk mencetak output ke sana.</p>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/log-bot.png" alt="Logs Bot di Hook.io" /></p>
+
+<p>yang saya tandai merah adalah <em>logs</em> error, karena Bot sudah melampaui batas. Alias tidur&hellip;</p>
+
+<p>Selain itu, kita bisa menlihat <em>logs</em> secara <em>realtime</em> melalui Terminal atau CMD dengan perintah:</p>
+
+<pre><code>curl -N https://hook.io/ardianta/iyan-chan/logs
+</code></pre>
+
+<p>Contohnya, simak di video ini.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DHgvzjw8fCo" frameborder="0" allowfullscreen></iframe>
+
+<p>Hal berikutnya yang perlu dilakukan adalah memeriksa kodenya.</p>
+
+<p>Apakah ada kode yang salah ketik?</p>
+
+<p>Apakah ada huruf besar dan huruf kecil yang berbeda?</p>
+
+<p>Silahkan diteliti.</p>
+
+<h2 id="menambahkan-bot-di-grup">Menambahkan Bot di Grup</h2>
+
+<p>Sebelumnya, silahkan setting Bot-nya di <a href="https://t.me/BotFather">@botfather</a> agar bisa bergabung dengan
+Grup.</p>
+
+<p>Kirim perintah <code>/setjoingroups</code>.</p>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/setting-bot-di-bot-father.png" alt="Mengatur Bot agar bisa bergabung dengan Grup" /></p>
+
+<p>Setelah itu tambahkan ke Grup dan jadikan Botnya sebagai administrator.</p>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/menambahkan-bot-sebagai-admin.png" alt="Menjadikan Bot sebagai administrator" /></p>
+
+<p>Atau jika kamu tidak memiliki akses administrator di Grup, silahkan matikan
+<em>privacy</em> bot-nya.</p>
+
+<p>Kirim perintah <code>/setprivacy</code> ke <a href="https://t.me/BotFather">@botfather</a>.</p>
+
+<p>Lalu pilih <em>Disable</em>.</p>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/non-aktifkan-privacy-bot.png" alt="Menon-aktifkan privacy bot" /></p>
+
+<p><strong>Keterangan</strong>:</p>
+
+<ul>
+<li>Enable: artinya bot hanya akan menerima pesan pada grup kalau di-mention
+atau dengan perintah <code>/</code>.</li>
+<li>Disable: artinya bot akan menerima semua pesan pada grup.</li>
+</ul>
+
+<p>Perlu diketahui, paket gratis hook.io memiliki batasan 1000 request/bulan.</p>
+
+<p>Jadi gunakan dengan bijak 😄.</p>
+
+<h2 id="trik-agar-bot-tetap-hidup">Trik Agar Bot Tetap Hidup</h2>
+
+<blockquote>
+<p><strong>Update [23 Mei 2017]</strong>: Simsimi sudah menerapkan Capcha pada webnya.
+Jadi, kita tidak bisa mengaksesnya melalui bot. Cara ini sudah tidak bisa digunakan lagi&hellip;</p>
+</blockquote>
+
+<p>Seperti yang kita ketahui, masa <em>trial</em> API simsimi sampai 7 hari dengan batasan
+100 request/hari.</p>
+
+<p>Artinya Bot kita akan tertidur kalau sudah mengirim pesan sebanyak 100 kali dan
+akan mati setelah 7 hari.</p>
+
+<p>Kalau mau tetap hidup, berarti harus membayar Kunci API dengan <a href="http://developer.simsimi.com/pricing">harga paket yang
+sudah ditentukan</a>.</p>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/harga-paket-api-key-simsimi.png" alt="Harga paket API Key Simsimi" /></p>
+
+<p>Sepertinya kemahalan kalau hanya untuk eksperimen.</p>
+
+<p>Karena itu, kita perlu sedikit &lsquo;mengakalinya&rsquo; 😄.</p>
+
+<p>Silahkan buka, web <a href="http://www.simsimi.com/storygame/main">simsimi.com</a>.</p>
+
+<p>Kemudian klik kanan, pilih <em>inspect elements</em>.</p>
+
+<p>Masuk ke bagian <em>network</em>.</p>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/inspect-element-simsimi.png" alt="inspect Eelement Network Simsimi" /></p>
+
+<p>Setelah itu coba kirim pesan ke Simsimi dan perhatikan di bagian <em>Network</em>.</p>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/url-request-simsimi.png" alt="URL Request Simsimi" /></p>
+
+<p>Lihat apa yang kita dapatkan&hellip;</p>
+
+<pre><code>http://www.simsimi.com/getRealtimeReq?uuid=LUHzowu7l7tpHTCfe2RshB8aH0rwambBme2ZveDFAEr&amp;lc=en&amp;ft=1&amp;reqText=apa+kabar+simsimi%3F&amp;status=W
+</code></pre>
+
+<p>URL request dan sebuah token.</p>
+
+<p>Kalau kita buka URL tersebut, kita akan mendapatkan JSON seperti ini.</p>
+
+<p><img src="https://www.petanikode.com/img/simsimi-telegram/respon-simsimi.png" alt="Respon Simsimi" /></p>
+
+<p>Nah! sudah tahu kan apa yang harus dilakukan selanjutnya.</p>
+
+<p>Yap! benar sekali&hellip;</p>
+
+<p>kita harus memodifikasi kode kendali bot dengan menggunakan <em>URL Request</em> ke URL tersebut.</p>
+
+<p>Maka jadilah seperti ini.</p>
+
+<pre><code class="language-javascript">module['exports'] = function iyanChanBot(hook) {
+
+	var request = require('request');
+
+    var botName = &quot;iyan&quot;; // nama bot, silahkan ganti sesukanya
+
+    //var simiUrl = 'http://sandbox.api.simsimi.com/request.p?key=0858369d-3d2d-4bcd-86b0-eaf9d523d259&amp;lc=id&amp;ft=1.0&amp;text='+hook.params.message.text;
+
+ 	var simiUrlWeb = 'http://www.simsimi.com/getRealtimeReq?uuid=h4yA3s9wL3QPPZkPY8CfVtb3kcGYZEhZjtmGjXtT1vL&amp;lc=id&amp;ft=1&amp;reqText=' + hook.params.message.text + '&amp;status=W';
+
+  	// untuk menyimpan pesan balasan dari Simsimi
+  	var pesanBalasan = &quot;&quot;;
+
+    // tampilkan pesan dari Telegram ke Logs
+  	console.log(&quot;Telegram: &quot; + hook.params.message.text);
+
+  	request(simiUrlWeb, function (error, response, body) {
+
+      console.log(response);      
+
+      if (!error &amp;&amp; response.statusCode == 200) {
+         var data = JSON.parse(body);
+         console.log(data);
+
+        // 400-Bad Request.
+		// 401-Unauthorized.
+		// 404-Not found.
+		// 500-Server Error.
+
+        if ( data.status == 509 || data.status == 400 || data.status == 401 || data.status == 404 || data.status == 500){
+        	pesanBalasan = botName + &quot; sedang tidur, silahkan hubungi kakak @ardiantapargo!&quot;;
+        } else {
+        	pesanBalasan = data.respSentence;
+          	pesanBalasan = data.respSentence.replace(/simisimi/g, botName);
+  	        pesanBalasan = data.respSentence.replace(/simsimi/g, botName);
+            pesanBalasan = data.respSentence.replace(/Simsimi/g, botName);      	  
+	        pesanBalasan = data.respSentence.replace(/cimicimi/g, botName);
+        	pesanBalasan = data.respSentence.replace(/Simi/g, botName);
+  			pesanBalasan = data.respSentence.replace(/simi/g, botName);
+        }
+
+      } else {
+      	// kalau request ke Simsimi gagal
+        pesanBalasan = botName + &quot; sedang tidur, silahkan hubungi kakak @ardiantapargo!&quot;;
+
+      }
+
+
+      //kirim balasan ke Telegram
+      request
+          .post('https://api.telegram.org/bot' + hook.env.iyan_chan_bot + '/sendMessage')
+          .form({
+                &quot;chat_id&quot;: hook.params.message.chat.id,
+                &quot;text&quot;: pesanBalasan //hook.params.message.text
+        });
+
+
+    });
+};
+</code></pre>
+
+<p>Simpan kodenya dan <em>run</em> lagi servernya.</p>
+
+<p>Selamat mencoba.</p>
+
+<blockquote>
+<p><strong>Catatan</strong> [Mei 2017]: Token yang didapatkan dari Web simsimi sepertinya tidak bertahan lama.
+Saya tidak tahu persis berapa lama masa token tersebut. Sepertinya mengikuti masa
+<em>Cookie</em> pada browser.</p>
+
+<p>Pada eksperimen yang saya lakukan di bot <a href="https://t.me/iyan_chan_bot">@iyan_chan_bot</a>,
+ bot-nya sempat mati. Tapi bisa kembali hidup dengan mengganti tokennya dengan yang baru.</p>
+</blockquote>
+
+<h2 id="akhir-kata">Akhir Kata&hellip;</h2>
+
+<p>Terima kasih sudah mengikuti panduan ini.</p>
+
+<p>Jangan lupa tinggalkan komentar dan <em>join</em> ke channel <a href="https://t.me/petanikode">@petanikode</a> di
+Telegram.</p>
+
+                <div class="post-footer">
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fbot-telegram-simsimi%2f&t=Menerapkan%20API%20Simsimi%20untuk%20Kendali%20Bot%20Telegram%20dengan%20Layanan%20Hook.io" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fbot-telegram-simsimi%2f&text=Menerapkan%20API%20Simsimi%20untuk%20Kendali%20Bot%20Telegram%20dengan%20Layanan%20Hook.io%20https%3a%2f%2fwww.petanikode.com%2fbot-telegram-simsimi%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fbot-telegram-simsimi%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fbot-telegram-simsimi%2f&description=Menerapkan%20API%20Simsimi%20untuk%20Kendali%20Bot%20Telegram%20dengan%20Layanan%20Hook.io" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fbot-telegram-simsimi%2f&title=Menerapkan%20API%20Simsimi%20untuk%20Kendali%20Bot%20Telegram%20dengan%20Layanan%20Hook.io" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Menerapkan%20API%20Simsimi%20untuk%20Kendali%20Bot%20Telegram%20dengan%20Layanan%20Hook.io&body=Menerapkan%20API%20Simsimi%20untuk%20Kendali%20Bot%20Telegram%20dengan%20Layanan%20Hook.io:%20https%3a%2f%2fwww.petanikode.com%2fbot-telegram-simsimi%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
+</ul>
+
+
+                    <div>Topik:
+                      
+                        #<a href="/topik/bot">Bot</a>
+                      
+                        #<a href="/topik/simsimi">Simsimi</a>
+                      
+                        #<a href="/topik/webhook">WebHook</a>
+                      
+                        #<a href="/topik/nodejs">NodeJS</a>
+                      
+                        #<a href="/topik/telegram">Telegram</a>
+                      
+                        #<a href="/topik/javascript">Javascript</a>
+                      
+                        #<a href="/topik/api">API</a>
+                      
+                        #<a href="/topik/hook">Hook</a>
+                      
+                    </div>
+                    </div>
+
+                
+<p><b>Artikel Terkait:</b></p>
+
+
+
+
+
+
+<ul class="related-post">
     
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+    <li><a href="https://www.petanikode.com/tutorial-html-vibrations/">Mengenal HTML5 Vibration API untuk Membuat Getaran di HP</a> · <i>baca 3 menit</i></li>
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+    <li><a href="https://www.petanikode.com/html-canvas-random/">Menggambar Objek dengan Perulangan dan Fungsi Random di HTML5 Canvas</a> · <i>baca 6 menit</i></li>
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+    <li><a href="https://www.petanikode.com/html-canvas/">Mengenal HTML5 Canvas untuk Pemrograman Grafis dan Game</a> · <i>baca 7 menit</i></li>
+    
+</ul>
+
+<hr>
+
+                <div align="center">
+                <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                </div>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+var disqus_config = function () {
+    this.page.url = 'https:\/\/www.petanikode.com\/bot-telegram-simsimi\/';
+    this.page.identifier = 'bot-telegram-simsimi';
+    this.page.title = 'Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io';
+};
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'petanikode';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://petanikode.disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            
+
         </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/web">Web</a></span>
-            <br>
-        28 May · baca 2 menit
     </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/apa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter/">Apa Perbedaan Fungsi base_url() dengan fungsi site_url() di CodeIgniter?</a></h2>
-                <a href="/apa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="CodeIgniter"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/apa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fapa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter%2f&t=Apa%20Perbedaan%20Fungsi%20base_url%28%29%20dengan%20fungsi%20site_url%28%29%20di%20CodeIgniter%3f" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fapa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter%2f&text=Apa%20Perbedaan%20Fungsi%20base_url%28%29%20dengan%20fungsi%20site_url%28%29%20di%20CodeIgniter%3f%20https%3a%2f%2fwww.petanikode.com%2fapa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fapa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fapa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Apa%20Perbedaan%20Fungsi%20base_url%28%29%20dengan%20fungsi%20site_url%28%29%20di%20CodeIgniter%3f&body=Apa%20Perbedaan%20Fungsi%20base_url%28%29%20dengan%20fungsi%20site_url%28%29%20di%20CodeIgniter%3f:%20https%3a%2f%2fwww.petanikode.com%2fapa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/web">Web</a></span>
-            <br>
-        16 May · baca 1 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/mathjax-latex-html/">Kode LaTeX untuk Menulis Rumus Matematika di HTML</a></h2>
-                <a href="/mathjax-latex-html/">
-                    
-                    <amp-img src="https://4.bp.blogspot.com/-vRUklKdzFEU/Vzahq5aQO1I/AAAAAAAACzU/QUsx7qcPXXYOwA70m9QXrdT8Dz9700yUACK4B/s1600/MathJax%2B-%2BPetani%2BKode%2B-%2BTulis%2Brumus%2Bmatematika%2Bdalam%2BHTML.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/mathjax-latex-html/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmathjax-latex-html%2f&t=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmathjax-latex-html%2f&text=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML%20https%3a%2f%2fwww.petanikode.com%2fmathjax-latex-html%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmathjax-latex-html%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmathjax-latex-html%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML&body=Kode%20LaTeX%20untuk%20Menulis%20Rumus%20Matematika%20di%20HTML:%20https%3a%2f%2fwww.petanikode.com%2fmathjax-latex-html%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/web">Web</a></span>
-            <br>
-        31 Mar · baca 2 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/kode-crud-dalam-satu-file-php/">Kode CRUD dalam Satu File PHP</a></h2>
-                <a href="/kode-crud-dalam-satu-file-php/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/kode-crud-dalam-satu-file-php/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkode-crud-dalam-satu-file-php%2f&t=Kode%20CRUD%20dalam%20Satu%20File%20PHP" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkode-crud-dalam-satu-file-php%2f&text=Kode%20CRUD%20dalam%20Satu%20File%20PHP%20https%3a%2f%2fwww.petanikode.com%2fkode-crud-dalam-satu-file-php%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkode-crud-dalam-satu-file-php%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkode-crud-dalam-satu-file-php%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Kode%20CRUD%20dalam%20Satu%20File%20PHP&body=Kode%20CRUD%20dalam%20Satu%20File%20PHP:%20https%3a%2f%2fwww.petanikode.com%2fkode-crud-dalam-satu-file-php%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/web">Web</a></span>
-            <br>
-        26 Mar · baca 1 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/php-pesan-error/">Cara Menampilkan Pesan Error untuk Debugging PHP</a></h2>
-                <a href="/php-pesan-error/">
-                    
-                    <amp-img src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/php-pesan-error/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fphp-pesan-error%2f&t=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fphp-pesan-error%2f&text=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP%20https%3a%2f%2fwww.petanikode.com%2fphp-pesan-error%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fphp-pesan-error%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fphp-pesan-error%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP&body=Cara%20Menampilkan%20Pesan%20Error%20untuk%20Debugging%20PHP:%20https%3a%2f%2fwww.petanikode.com%2fphp-pesan-error%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/web">Web</a></span>
-            <br>
-        20 Feb · baca 3 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/membuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama/">Membuat tema Wordpress dari nol: (1) Fondasi awal halaman utama</a></h2>
-                <a href="/membuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama/">
-                    
-                    <amp-img src="https://4.bp.blogspot.com/-lQWmaK4Lh_c/Vr7maUTW_cI/AAAAAAAACfs/yrkHWMhC3gY/s1600/membuat%2Btema%2Bwordpress%2Bdari%2Bnol%2B-%2Bpetanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/membuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f&t=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f&text=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama%20https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama&body=Membuat%20tema%20Wordpress%20dari%20nol%3a%20%281%29%20Fondasi%20awal%20halaman%20utama:%20https%3a%2f%2fwww.petanikode.com%2fmembuat-tema-wordpress-dari-nol-1-fondasi-awal-halaman-utama%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-
-    <div class="pager">
-    
-    <a class="button button-primary" href="/kategori/web/page/7/">
-        <i class="fa fa-caret-left"></i> Kembali
-    </a>
-    
-    
-        <a class="button button-primary pull-right" href="/kategori/web/page/9/">
-            Selanjutnya <i class="fa fa-caret-right"></i>
-        </a>
-    
-    </div>
-
     </article>
 
     <aside class="aside block">
@@ -1704,6 +2050,7 @@ padding: 16px;
 
 
 </aside>
+
 
 </main>
 

@@ -1161,8 +1161,15 @@ Baiklah, mari kita mulai membuat bot Telegram dengan kecerdasan Simsimi.</descri
       <pubDate>Mon, 05 Sep 2016 05:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/bot-telegram-hookio/</guid>
-      <description>Pada tulisan sebelumnya, saya sudah membahas cara membuat bot Telegram melalui @manybot. Tapi hanya sekedar berfungsi untuk auto posting dari RSS feed, VK, Youtube dan Twitter. Nah, sekarang kita akan coba membuat bot yang bisa kita kostum sendiri, tentunya dengan kode.
-Kode kendali bot akan kita simpan di Hookio. Menurut Nicola Malizia, pada artikelnya yang berjudul &amp;ldquo;How to easily build a Telegram Bot with Hook.io&amp;rdquo; Hook.io merupakan sebuah platform open srouce untuk menyimpan dan membuat layanan mikro HTTP.</description>
+      <description>Bot Telegram bisa dibuat dengan berbagai macam bahasa pemrograman:
+Bisa PHP, Javascript, Java, Python, Ruby, dan sebagainya.
+Ada dua pengetahuan dasar yang harus dipahami:
+ Cara Membuat Http Request dan Webhook. Cara Mengurai JSON dari Webservice.  Tapi, sekarang masalahnya di mana kita harus taruh kode-kode tersebut?
+&amp;ldquo;Sewa server&amp;hellip;&amp;rdquo;
+Serpertinya terlalu mahal, kalau hanya untuk belajar.
+&amp;ldquo;Bagaimana kalau gunakan yang gratis saja.&amp;rdquo;
+yap, itu dia jawabannya.
+Salah satu layanan hosting gratis yang menyediakan Webhook adalah Hook.</description>
     </item>
     
     <item>

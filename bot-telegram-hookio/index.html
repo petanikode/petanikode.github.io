@@ -240,7 +240,7 @@ Serpertinya terlalu mahal, kalau hanya untuk belajar.
 &ldquo;Bagaimana kalau gunakan yang gratis saja.&rdquo;
 yap, itu dia jawabannya.
 Salah satu layanan hosting gratis yang menyediakan Webhook adalah Hook.",
-  "wordCount": 471,
+  "wordCount": 550,
   "datePublished" : "2016-09-05T05:00:00",
   "dateModified" : "2016-09-05T05:00:00",
   "image" : {
@@ -1283,13 +1283,16 @@ padding: 16px;
 
 <p>Sehingga nanti kita akan mampu membuat bot yang siap pakai.</p>
 
+<p><img src="/img/telegram/hookio/telegram-server-hookio.png" alt="Hubungan Bot dengan Hook.io" /></p>
+
 <!-- Review -->
 
 <p>Ada dua pembahasan utama dalam panduan ini:</p>
 
 <ol>
 <li>Cara Menciptakan Bot di BotFather</li>
-<li>Cara Membuat Layanan untuk Mesin Bot di <a href="https://hook.io/ardianta?s">Hook.io</a>.</li>
+<li>Cara Membuat Layanan untuk Mesin Bot di <a href="https://hook.io/ardianta?s">Hook.io</a>
+menggunakan bahsa pemrograman javascript.</li>
 </ol>
 
 <p>Mari kita mulai&hellip;</p>
@@ -1297,8 +1300,8 @@ padding: 16px;
 <h2 id="bahan-bahan-yang-dibutuhkan">Bahan-bahan yang Dibutuhkan:</h2>
 
 <ol>
-<li>Token API Bot Telegram</li>
-<li>Akun <a href="https://hook.io/ardianta?s">Hook.io</a></li>
+<li>Token API Bot Telegram &mdash; kunci untuk mengakses bot.</li>
+<li>Akun <a href="https://hook.io/ardianta?s">Hook.io</a> &mdash; silahkan <a href="https://hook.io/ardianta?s">daftar dulu</a>!</li>
 </ol>
 
 <h2 id="membuat-bot-dan-token-api">Membuat Bot dan Token API</h2>
@@ -1316,7 +1319,7 @@ bot baru.</p>
     layout="responsive">
 </amp-img></p>
 
-<p>Setelah itu, silahkan balas dengan nama bot yang ingin anda daftarkan. Contoh: &ldquo;Pak Tani&rdquo;.</p>
+<p>Setelah itu, silahkan balas dengan nama bot. Contoh: &ldquo;Pak Tani&rdquo;.</p>
 
 <p><amp-img
     width="642"
@@ -1326,7 +1329,9 @@ bot baru.</p>
     layout="responsive">
 </amp-img></p>
 
-<p>Selanjutnya, anda akan diminta <em>username</em> untuk bot. Setiap <em>username</em> harus diakhiri dengan kata <em>&ldquo;bot&rdquo;</em> dibelakangnya.</p>
+<p>Selanjutnya, kita akan diminta memberikan <em>username</em> untuk bot.</p>
+
+<p>Setiap <em>username</em> bot harus diakhiri dengan kata <em>&ldquo;bot&rdquo;</em> dibelakangnya.</p>
 
 <p><amp-img
     width="635"
@@ -1336,7 +1341,7 @@ bot baru.</p>
     layout="responsive">
 </amp-img></p>
 
-<p>Lalu anda akan mendapatkan kode token bot.</p>
+<p>setelah itu, kita akan mendapatkan kode token API bot.</p>
 
 <p><amp-img
     width="617"
@@ -1359,7 +1364,11 @@ bot baru.</p>
 
 <h2 id="membuat-service-di-hook-io">Membuat <em>Service</em> di Hook.io</h2>
 
-<p>Setelah anda membuat akun di Hook.io, silahkan buat service baru. <a href="https://hook.io/new">Klik di sini</a> untuk membuatnya. Isi nama <em>hook</em> yang akan dibuat, contoh &ldquo;petani&rdquo;.</p>
+<p>Setelah kamu membuat akun di Hook.io, silahkan buat service baru.</p>
+
+<p><a href="https://hook.io/new">Klik di sini</a> untuk membuatnya.</p>
+
+<p>Isi nama <em>hook</em> yang akan dibuat, contoh &ldquo;petani&rdquo;.</p>
 
 <p><amp-img
     width="1155"
@@ -1371,11 +1380,12 @@ bot baru.</p>
 
 <p>Klik Create untuk membuatnya.</p>
 
-<h2 id="membuat-variabel-lingkungan-env">Membuat Variabel Lingkungan (Env)</h2>
+<h2 id="membuat-variabel-lingkungan-env">Membuat Variabel Lingkungan (ENV)</h2>
 
-<p>Silahkan masuk ke <a href="https://hook.io/env">https://hook.io/env</a> untuk membuat variabel lingkungan.
-Variabel lingkungan akan kita gunakan untuk menyimpan token bot agar
+<p>Variabel lingkungan (<code>ENV</code>) akan kita gunakan untuk menyimpan token bot agar
 kita tidak mengetik tokennya dalam kode. Karena token bersifat rahasia.</p>
+
+<p>Silahkan masuk ke <a href="https://hook.io/env">https://hook.io/env</a> untuk membuat variabel lingkungan.</p>
 
 <p><amp-img
     width="1121"
@@ -1385,7 +1395,7 @@ kita tidak mengetik tokennya dalam kode. Karena token bersifat rahasia.</p>
     layout="responsive">
 </amp-img></p>
 
-<h2 id="membuat-kode-bot">Membuat Kode Bot</h2>
+<h2 id="membuat-kode-untuk-kendali-bot">Membuat Kode untuk Kendali Bot</h2>
 
 <p>Perahatikan kode <em>Hook Source</em>:</p>
 
@@ -1399,30 +1409,52 @@ kita tidak mengetik tokennya dalam kode. Karena token bersifat rahasia.</p>
 
 <p>Silahkan ganti kode <em>(Hook Source)</em> tersebut dengan kode ini.</p>
 
-<p><amp-iframe width="600" height="390"
-    layout="responsive"
-    sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups"
-    frameborder="0"
-    src="https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/18d039ef83336779f081a3eb440a1a49">
-</amp-iframe></p>
+<pre><code class="language-javascript">module['exports'] = function petaniBot(hook) {
 
-<p>Perhatikan <code>hook.env.token_petani_bot</code>, itu adalah nama variabel lingkungan
-yang baru saja kita buat. Kemudian <code>hook.params.message</code> adalah parameter yang
-diterima dari chat Telegram.</p>
+    // impor modul request
+    var request = require('request');
 
-<p>Pada kode tersebut, kita melakukan <em>request</em> pengiriman ke API Telegram setelah
-menerima data dari parameter. <em>Method</em> yang digunakan untuk mengirim/membalas
-pesan adalah <code>/sendMessage</code>.
-Lihat di <a href="https://core.telegram.org/bots/api">dokumentasi API</a> Telegram.</p>
+    // buat atau kirim request ke bot telegram
+    request.post('https://api.telegram.org/bot' + hook.env.token_petani_bot + '/sendMessage')
+        .form({
+              'chat_id': hook.params.message.chat.id,
+              'text': 'Anda mengirim: ' + hook.params.message.text
+    });
+}
+</code></pre>
 
-<h2 id="menghubungkan-bot-dengan-hook">Menghubungkan Bot dengan Hook</h2>
+<p>Fungsi dari kode diatas hanya akan mengirimkan <em>request</em> ke Bot Telegram,
+bila ada <em>request</em> atau <em>chat</em> yang masuk.</p>
 
-<p>Untuk menghubungkan bot dengan hook, silahkan susun URL-nya menjadi seperti ini:<br></p>
+<p>Isi kirimannya berupa JSON: (lihat <a href="(https://core.telegram.org/bots/api)">dokumentasi Bot API</a>)</p>
+
+<pre><code class="language-json">{
+    &quot;chat_id&quot;: hook.params.message.chat.id,
+     &quot;text&quot;: &quot;Anda mengirim: &quot; + hook.params.message.text
+}
+</code></pre>
+
+<p>Agar dapat dikirim, kita membutuhkan token bot.</p>
+
+<p>Token bot-nya sudah ada di dalam variabel <code>token_petani_bot</code>, jadi tinggal dipakai saja:</p>
+
+<pre><code class="language-javascript">request.post('https://api.telegram.org/bot' + hook.env.token_petani_bot + '/sendMessage').form(&lt;data&gt;);
+</code></pre>
+
+<p>Kode kendali sudah siap&hellip;</p>
+
+<p>Selanjutnya, kita akan menghubungkan Hook.io dengan bot.</p>
+
+<h2 id="cara-menghubungkan-bot-telegram-dengan-hook-io">Cara Menghubungkan Bot Telegram dengan Hook.io</h2>
+
+<p><img src="/img/telegram/hookio/telegram-server-hookio.png" alt="Hubungan Bot dengan Hook.io" /></p>
+
+<p>Untuk menghubungkan bot dengan hook, silahkan susun URL-nya menjadi seperti ini:</p>
 
 <pre><code>https://api.telegram.org/bot&lt;TOKEN&gt;/setWebhook?url=https://hook.io/&lt;hook-user&gt;/&lt;hook-name&gt;
 </code></pre>
 
-<p>Silahkan diganti:<br></p>
+<p>Silahkan diganti:</p>
 
 <ul>
 <li><code>&lt;TOKEN&gt;</code> dengan token bot anda</li>
@@ -1430,8 +1462,14 @@ Lihat di <a href="https://core.telegram.org/bots/api">dokumentasi API</a> Telegr
 <li><code>&lt;hook-name&gt;</code> dengan nama layanan/service hook yang anda buat</li>
 </ul>
 
-<p>Setelah itu, silahkan buka URL tersebut melalui browser. Jika anda mendapatkan
-balasan seperti ini, maka bot berhasil dihubungkan dengan layanan hook.</p>
+<p>Contoh:</p>
+
+<pre><code>https://api.telegram.org/bot126356123:AASjzsdajhsdiuawajskjdkjh/setWebhook?url=https://hook.io/ardianta/petani
+</code></pre>
+
+<p>Setelah itu, silahkan buka URL tersebut melalui browser.</p>
+
+<p>Jika mendapatkan balasan seperti ini, maka bot berhasil dihubungkan dengan layanan hook.</p>
 
 <p><amp-img
     width="1001"
@@ -1441,7 +1479,7 @@ balasan seperti ini, maka bot berhasil dihubungkan dengan layanan hook.</p>
     layout="responsive">
 </amp-img></p>
 
-<h2 id="percobaan">Percobaan</h2>
+<h2 id="percobaan">Percobaan:</h2>
 
 <p>Silahkan buka atau chat dengan bot yang sudah dibuat, <a href="https://telegram.me/petani_bot">https://telegram.me/petani_bot</a>.</p>
 
@@ -1455,15 +1493,23 @@ balasan seperti ini, maka bot berhasil dihubungkan dengan layanan hook.</p>
 
 <h2 id="kesimpulan-dan-saran">Kesimpulan dan Saran</h2>
 
-<p>Bot Telegram dapat kita kendalikan dengan kode yang disimpan di Hook.io.
-Kita bisa menentukan bagaimana tingkah laku Bot melalui kode. Saran untuk
-pengembangan selanjutnya, bisa ditambahkan kecerdasan buatan agar bot
-lebih bermanfaat. Misalnya, kecerdasan buatan untuk menganalisa cuaca dan
-tanaman yang harus ditanam pada musim tertentu. Atau bisa kita
-<a href="/2016/09/eksperimen-dengan-api-simsimi/">terapkan API Simsimi</a>
-agar bot bisa berbicara seperti Simsimi.</p>
+<p>Bot Telegram dapat kita kendalikan dengan kode yang disimpan di Hook.io.</p>
 
-<p>Jangan lupa bergabung ke Channel Petani Kode di Telegram: <a href="https://t.me/petanikode">https://t.me/petanikode</a>
+<p>Kita bisa menentukan bagaimana tingkah laku Bot melalui kode.</p>
+
+<p>Saran untuk pengembangan selanjutnya:</p>
+
+<ul>
+<li>Tambahkan logika sehingga bot makin cerdas.</li>
+<li>Tambahkan algoritma kecerdasan buatan.</li>
+<li>Akases API pihak ketiga, seperti API untuk mengecek cuaca.</li>
+<li>Menggunakan API Simsimi agar bot-nya bisa berbicara seperti Simsimi</li>
+<li>____ <em>(tambahkan sendiri)</em>.</li>
+</ul>
+
+<p>Terima kasih sudah mengikuti panduan ini&hellip;</p>
+
+<p>Jangan lupa bergabung ke Channel <a href="https://t.me/petanikode">@petanikode</a> di Telegram
 untuk mendapatkan informasi terbaru.</p>
 
 <p>Referensi: <a href="https://unnikked.ga/build-telegram-bot-hook-io/">unnikked.ga</a></p>

@@ -7,23 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 12 Feb 2017 22:44:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Sep 2016 14:16:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/topik/bot/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Integarsi Bot Autoposting Telegram dengan Channel</title>
-      <link>https://www.petanikode.com/integarsi-bot-autoposting-telegram-dengan-channel/</link>
-      <pubDate>Sun, 12 Feb 2017 22:44:49 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/integarsi-bot-autoposting-telegram-dengan-channel/</guid>
-      <description>Pada tulisan sebelumnya, Saya pernah membuat Bot Autoposting dari RSS Reddit. Sekarang bagaimana caranya agar kiriman (post) dari bot tersebut diteruskan ke Channel.
-Channel dapat di-follow setiap orang, sedangkan bot tidak. Bot hanya dapat digunakan saja. Bot tidak cocok sebagai sarana promosi. Oleh karena itu, kita membutuhkan Channel yang dapat melakukan posting otomatis (Autoposting).
-Ok, mari kita mulai. Pastikan anda sudah menyiapkan Channel dan Bot Autoposting.
-
-Tambahkan Bot sebagai Admin Agar Bot dapat melakukan posting otomatis ke Channel kita harus menjadikan bot sebagai admin dalam Channel tersebut.</description>
-    </item>
     
     <item>
       <title>Menerapkan API Simsimi untuk Kendali Bot Telegram dengan Layanan Hook.io</title>

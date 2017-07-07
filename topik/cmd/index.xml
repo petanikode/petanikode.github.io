@@ -18,8 +18,12 @@
       <pubDate>Sat, 04 Feb 2017 08:15:19 +0000</pubDate>
       
       <guid>https://www.petanikode.com/php-cmd/</guid>
-      <description>Sudah lama tidak otak-atik Windows. Pemrograman di Windows sepertinya terasa sedikit sulit, karena sudah terbiasa dengen Linux. Ketika saya menginginkan apa-apa, tinggal ketik sudo apt install dan semuanya sudah siap. Namun, kali ini saya sedang meminjam komputer lab. yang menggunakan sistem operasi Windows. Jadi, tidak ada sudo apt install yang dapat kita suruh-suruh.
-Ketika saya mencoba mengetik perintah php di Command Prompt (CMD), perintah tersebut tidak dikenali. Padahal di sana sudah terinstal XAMPP.</description>
+      <description>Sudah lama sekali saya tidak otak-atik Windows, karena setiap hari menggunakan Linux.
+Saat ini saya menggunakan komputer lab. dengan sistem operasi Windows 7 dan sudah terinstal XAMPP.
+Pada Linux, perintah php sudah bisa langsung dikenali pada terminal, sedangkan pada CMD Windows masih belum.
+Kecuali melalui Shell di XAMPP.
+Pada tulisan ini, saya akan berbagi cara konfigurasi Windows agar dapat mengenali perintah php di CMD maupun PowerShell.
+Caranya sebenarnya sangat sederhana&amp;hellip;</description>
     </item>
     
   </channel>

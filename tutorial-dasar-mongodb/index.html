@@ -1431,18 +1431,18 @@ Kalau di SQL kita menyebutnya dengan record/baris.</p>
 
 <p>Insert data dapat kita lakukan dengan perintah berikut:</p>
 
-<pre><code class="language-javascript">db.koleksi.insert(&lt;data&gt;)
+<pre><code class="language-javascript">db.&lt;koleksi&gt;.insert(&lt;data&gt;)
 </code></pre>
 
 <p>atau</p>
 
-<pre><code class="language-javascript">db.koleksi.save(&lt;data&gt;)
+<pre><code class="language-javascript">db.&lt;koleksi&gt;.save(&lt;data&gt;)
 </code></pre>
 
 <p>Keterangan:</p>
 
 <ul>
-<li><code>koleksi</code> adalah nama koleksi yang akan dibuat;</li>
+<li><code>&lt;koleksi&gt;</code> adalah nama koleksi yang akan dibuat;</li>
 <li><code>&lt;data&gt;</code> adalah data yang akan kita simpan dalam koleksi tersebut
 dengan format JSON.</li>
 </ul>
@@ -1485,7 +1485,7 @@ dengan format JSON.</li>
 <p>Untuk menampilkan data yang sudah ditambahkan, kita bisa menggunakan
 method <code>find()</code>:</p>
 
-<pre><code class="language-javascript">db.koleksi.find()
+<pre><code class="language-javascript">db.&lt;koleksi&gt;.find()
 </code></pre>
 
 <p>Contoh:</p>
@@ -1517,7 +1517,7 @@ akan otomatis dibuat oleh MongoDB disetiap pengisian data.</p>
 
 <p>Untuk mengubah data, kita bisa menggunakan fungsi <code>update()</code>.</p>
 
-<pre><code class="language-javascript">db.koleksi.update(&lt;query&gt;, &lt;data baru&gt;)
+<pre><code class="language-javascript">db.&lt;koleksi&gt;.update(&lt;query&gt;, &lt;data baru&gt;)
 </code></pre>
 
 <p>Keterangan:</p>
@@ -1552,7 +1552,7 @@ akan diturunkan harganya menjadi <code>75000</code>.</p>
 
 <p>Untuk menghapus data, kita bisa menggunakan perintah <code>remove()</code>.</p>
 
-<pre><code class="language-javascript">db.koleksi.remove(&lt;query&gt;)
+<pre><code class="language-javascript">db.&lt;koleksi&gt;.remove(&lt;query&gt;)
 </code></pre>
 
 <p>Sama seperti update data, penghapusan data juga memiliki <code>&lt;query&gt;</code> untuk
@@ -1572,7 +1572,7 @@ sudah habis 😄.</p>
 
 <p>Untuk menghapus semua data dalam koleksi, kita bisa kosongkan nilai query-nya.</p>
 
-<pre><code class="language-javascript">db.koleksi.remove({})
+<pre><code class="language-javascript">db.&lt;koleksi&gt;.remove({})
 </code></pre>
 
 <h2 id="menhapus-dabase-dan-koleksi">Menhapus Dabase dan Koleksi</h2>
@@ -1582,7 +1582,7 @@ method <code>drop()</code> dan <code>dropDatabase()</code>.</p>
 
 <p>Menghapus koleksi:</p>
 
-<pre><code class="language-javascript">db.koleksi.drop();
+<pre><code class="language-javascript">db.&lt;koleksi&gt;.drop();
 </code></pre>
 
 <p>Menghapus database:</p>

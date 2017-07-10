@@ -232,7 +232,7 @@ Contohnya:
 Library X membutuhkan library Y agar bisa digunakan, kemudian library Y membutuhkan library Q,R,S.
 &ldquo;Bagaimana kalau ada banyak sekali library yang digunakan?&rdquo;
 Pastinya akan repot mencari sendiri depedency library-nya.",
-  "wordCount": 846,
+  "wordCount": 855,
   "datePublished" : "2016-11-26T13:02:00",
   "dateModified" : "2016-11-26T13:02:00",
   "image" : {
@@ -1394,16 +1394,16 @@ coba buka CMD dan ketik perintah <code>composer --version</code>:</p>
 
 <h2 id="2-menggunakan-composer">2. Menggunakan Composer</h2>
 
-<p>Sekarang saya punya sebuah proyek yang berlokasi di
-<code>/var/www/html/belajar/belajar-composer</code>.
-Saya perlu pindah dulu ke direktori tersebut.</p>
+<p>Buat direktori baru di <code>htdocs</code> atau <code>/var/www/html</code>, lalu masuk
+ke direktori tersebut.</p>
 
-<pre><code class="language-bash">cd  /var/www/html/belajar/belajar-composer
+<pre><code class="language-bash">mkdir /var/www/html/belajar-composer
+cd /var/www/html/belajar-composer
 </code></pre>
 
-<p>Kemudian ketik:</p>
+<p>Kemudian ketik perintah <code>composer init</code> untuk melakukan inisialisasi composer:</p>
 
-<pre><code>composer init
+<pre><code class="language-bash">composer init
 </code></pre>
 
 <p>Setelah itu, silahkan isi informasi proyek seperti berikut ini.</p>
@@ -1449,12 +1449,14 @@ karena tadi kita menjawab <code>no</code> pada <em>define depedency</em>.</p>
 </amp-ad></p>
 
 <p>Selanjutnya cobalah instal library <em>Carbon</em>, library ini menyediakan
-fungsi-fungsi untuk pemrosesan waktu <em>(Date Time)</em>. Ketik pada terminal:</p>
+fungsi-fungsi untuk pemrosesan waktu <em>(Date Time)</em>.</p>
+
+<p>Ketik pada terminal:</p>
 
 <pre><code>composer require nesbot/carbon
 </code></pre>
 
-<p>Maka sekarang file <code>composer.json</code> akan menjadi seperti ini:</p>
+<p>Maka sekarang file <code>composer.json</code> akan berubah menjadi seperti ini:</p>
 
 <pre><code class="language-json">{
     &quot;name&quot;: &quot;petanikode/belajar-composer&quot;,
@@ -1473,11 +1475,11 @@ fungsi-fungsi untuk pemrosesan waktu <em>(Date Time)</em>. Ketik pada terminal:<
 }
 </code></pre>
 
-<p>Selain itu juga, perintah tersebut melakukan pengunduhan library ke dalam proyek.</p>
+<p>Selain itu juga, perintah tersebut melakukan download library ke dalam proyek.</p>
 
-<p>Cobalah buka direktori proyeknya, pasti ada direktori baru bernama <code>vendor</code>.</p>
+<p>Cobalah buka direktori proyeknya, pasti akan ada direktori baru bernama <code>vendor</code>.</p>
 
-<p>Semua library yang diunduh Composer akan tersimpan di sana.</p>
+<p>Semua library yang di-download Composer akan tersimpan di sana.</p>
 
 <p><amp-img
     width="800"
@@ -1486,6 +1488,10 @@ fungsi-fungsi untuk pemrosesan waktu <em>(Date Time)</em>. Ketik pada terminal:<
     src="http://1.bp.blogspot.com/-RFYIlqvd0ls/WDgmlBcqZ7I/AAAAAAAADcc/2BSf_2e72LY43-XnnBQ2-wLTbMXATKgSwCK4B/s1600/direktori%2Bvendor%2Byang%2Bdi%2Bdownload%2Bcomposer.png"
     layout="responsive">
 </amp-img></p>
+
+<!-- @TODO ## Memahami isi File composer.json -->
+
+<h2 id="menggunakan-library">Menggunakan Library</h2>
 
 <p>Selanjutnya, kita akan mencoba menggunakan library yang baru saja kita tambahkan.</p>
 

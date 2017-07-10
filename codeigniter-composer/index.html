@@ -1234,29 +1234,31 @@ Kemudian isi nilai autoload untuk Composer seperti beikut ini:</p>
 <p>Sekarang coba buka file <code>composer.json</code> yang ada di <em>root</em> direktori proyek.
 Kemudian tambahkan pustaka FPDF.</p>
 
-<pre><code class="json">{
-    "description": "The CodeIgniter framework",
-    "name": "codeigniter/framework",
-    "type": "project",
-    "homepage": "http://codeigniter.com",
-    "license": "MIT",
-    "support": {
-        "forum": "http://forum.codeigniter.com/",
-        "wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
-        "irc": "irc://irc.freenode.net/codeigniter",
-        "source": "https://github.com/bcit-ci/CodeIgniter"
+<pre><code class="language-json">{
+    &quot;description&quot;: &quot;The CodeIgniter framework&quot;,
+    &quot;name&quot;: &quot;codeigniter/framework&quot;,
+    &quot;type&quot;: &quot;project&quot;,
+    &quot;homepage&quot;: &quot;http://codeigniter.com&quot;,
+    &quot;license&quot;: &quot;MIT&quot;,
+    &quot;support&quot;: {
+        &quot;forum&quot;: &quot;http://forum.codeigniter.com/&quot;,
+        &quot;wiki&quot;: &quot;https://github.com/bcit-ci/CodeIgniter/wiki&quot;,
+        &quot;irc&quot;: &quot;irc://irc.freenode.net/codeigniter&quot;,
+        &quot;source&quot;: &quot;https://github.com/bcit-ci/CodeIgniter&quot;
     },
-    "require": {
-        "php": ">=5.2.4",
-        <mark>"setasign/fpdf": "1.8.1"</mark>
+    &quot;require&quot;: {
+        &quot;php&quot;: &quot;&gt;=5.2.4&quot;,
+        &quot;setasign/fpdf&quot;: &quot;1.8.1&quot;
     },
-    "require-dev": {
-        "mikey179/vfsStream": "1.1.*"
+    &quot;require-dev&quot;: {
+        &quot;mikey179/vfsStream&quot;: &quot;1.1.*&quot;
     }
-}</code></pre>
+}
+</code></pre>
 
-<p>Ini hanya sekedar contoh saja. Anda boleh menambahkan atau menggunakan
-pustaka selain FPDF.</p>
+<p>Ini hanya sekedar contoh saja.</p>
+
+<p>Anda boleh menambahkan atau menggunakan pustaka selain FPDF.</p>
 
 <p>Setelah itu, ketik perintah berikut ini untuk menginstal semua pustaka:</p>
 
@@ -1298,7 +1300,11 @@ class Laporan extends CI_Controller{
 
 <p><a href="http://3.bp.blogspot.com/-8fHaWAf885E/WDhDiJ38GfI/AAAAAAAADdI/uzu77wy_lwMs0cb4ZJvs7FxFtm9jOgOWACK4B/s1600/Penggunaan%2Bpustaka%2BFPDF%2Bdi%2BCodeIgniter%2Bdengan%2BComposer.png"><img src="https://3.bp.blogspot.com/-8fHaWAf885E/WDhDiJ38GfI/AAAAAAAADdI/uzu77wy_lwMs0cb4ZJvs7FxFtm9jOgOWACK4B/s1600/Penggunaan%2Bpustaka%2BFPDF%2Bdi%2BCodeIgniter%2Bdengan%2BComposer.png" alt="" /></a></p>
 
-<p>Pustaka FPDF berhasil kita gunakan di CodeIgniter. Percobaan di atas sebenarnya untuk memastikan pustaka dari Composer berhasil di-load atau tidak. Selebihnya anda bisa bereksperiman dengan membuat <em>Class</em> <em>exstend</em> dari pustaka tersebut.</p>
+<p>Pustaka FPDF berhasil kita gunakan di CodeIgniter.</p>
+
+<p>Percobaan di atas sebenarnya untuk memastikan pustaka dari Composer berhasil di-load atau tidak.</p>
+
+<p>Selebihnya anda bisa bereksperiman dengan membuat <em>Class</em> <em>exstend</em> dari pustaka tersebut.</p>
 
                 <div class="post-footer">
                     <div class="artikel-footer">

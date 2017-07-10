@@ -932,17 +932,20 @@ Kemudian, agar Profiler aktif di setiap method atau fungsi, letakan kode tersebu
     </item>
     
     <item>
-      <title>Cara Menggunakan Composer untuk Manajemen Proyek Web PHP</title>
-      <link>https://www.petanikode.com/composer-php/</link>
+      <title>Cara Menggunakan Composer untuk Manajemen Proyek PHP</title>
+      <link>https://www.petanikode.com/php-composer/</link>
       <pubDate>Sat, 26 Nov 2016 13:02:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/composer-php/</guid>
-      <description>Bayangkan kita sedang mengerjakan proyek web dengan PHP. Kemudian kita membutuhkan beberapa pustaka (library) untuk melengkapi proyek ini.
-Biasanya, kalau tidak menggunakan composer, kita men-download sendiri pustakanya.
+      <guid>https://www.petanikode.com/php-composer/</guid>
+      <description>Bayangkan kita sedang mengerjakan proyek web dengan PHP.
+Kemudian kita membutuhkan beberapa library untuk melengkapi proyek ini.
+Biasanya, kita men-download sendiri library-nya dari internet.
 Tapi&amp;hellip;
-Kadang pustaka yang satu dengan yang lain saling membutuhkan. Contohnya, pustaka X membutuhkan pustaka Y agar bisa digunakan. Nah, bagaimana kalau ada banyak sekali pustaka yang digunakan? Pastinya akan repot mencari sendiri ketergantungan pustakanya.
-Karena itu&amp;hellip;, kita membutuhkan composer.
-Composer merupakan sebuah alat (tool) untuk manajemen pustaka dalam proyek web PHP.</description>
+Kadang library yang satu dengan yang lain saling membutuhkan agar bisa digunakan. Hal ini disebut depedency (keterkaitan/ketergantungan).
+Contohnya:
+Library X membutuhkan library Y agar bisa digunakan, kemudian library Y membutuhkan library Q,R,S.
+&amp;ldquo;Bagaimana kalau ada banyak sekali library yang digunakan?&amp;rdquo;
+Pastinya akan repot mencari sendiri depedency library-nya.</description>
     </item>
     
     <item>

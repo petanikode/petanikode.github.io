@@ -69,10 +69,10 @@ Ketika mereka membukanya, akan mendapatkan error 404.</description>
     
     <item>
       <title>Cara Hosting/Deploy Hugo di Github</title>
-      <link>https://www.petanikode.com/cara-hosting-hugo-di-github/</link>
+      <link>https://www.petanikode.com/hugo-hosting-github/</link>
       <pubDate>Mon, 30 Jan 2017 20:14:28 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/cara-hosting-hugo-di-github/</guid>
+      <guid>https://www.petanikode.com/hugo-hosting-github/</guid>
       <description>Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu mengunggah file yang ada di direktori public saja.
 Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:
  Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.

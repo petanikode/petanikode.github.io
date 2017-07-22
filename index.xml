@@ -641,10 +641,10 @@ Sedangkan, kalau kita menggunakan Git. Kita hanya perlu melakukan push untuk men
     
     <item>
       <title>Cara Hosting/Deploy Hugo di Github</title>
-      <link>https://www.petanikode.com/cara-hosting-hugo-di-github/</link>
+      <link>https://www.petanikode.com/hugo-hosting-github/</link>
       <pubDate>Mon, 30 Jan 2017 20:14:28 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/cara-hosting-hugo-di-github/</guid>
+      <guid>https://www.petanikode.com/hugo-hosting-github/</guid>
       <description>Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu mengunggah file yang ada di direktori public saja.
 Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:
  Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.
@@ -1254,10 +1254,13 @@ Berikut ini cara menyisipkan Data Tables melalui CDN.</description>
       <pubDate>Sun, 21 Aug 2016 15:18:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/font-awesome/</guid>
-      <description>Dulu saya sempat berpikir, pembuatan web kelihatannya susah. Karena banyak komponen yang harus dibuat, seperti background dan ikon. Tapi ternyata tidak, soalnya ada framework yang dapat kita gunakan untuk membuat ikon dengan cepat. Nama framework-nya adalah Font Awesome.
-Font awesome merupakan sebuah framework CSS untuk membuat ikon. Font awesome memiliki ratusan ikon yang siap dipakai. Pada kesempatan ini, kita akan belajar cara menggunakanya. Silahkan disimak.
-1. Download Font Awesome
-Silahkan download Font Awesome di http://fontawesome.</description>
+      <description>Dulu&amp;hellip; saya sempat berpikir:
+Pembuatan web sepertinya susah, karena banyak komponen yang harus dibuat. Seperti background dan ikon.
+Bagi seorang desainer, mungkin tidak masalah membuat banyak gambar background dan ikon.
+Tapi, bagi programmer atau developer&amp;hellip;ini sangat merepotkan.
+Untunglah ada Font-awesome, yang merupakan framework CSS untuk membuat ikon pada Web. Font-awesome memiliki ratusan ikon yang bisa kita gunakan.
+Pada tulisan ini, kita akan belajar cara membuat ikon menggunakan Font-awesome.
+Dimulai dari tahap instalasi sampai ke pembuatan animasi.</description>
     </item>
     
     <item>
@@ -1997,7 +2000,7 @@ for (int hitungan = 0; hitungan &amp;lt;= 1000; hitungan++) { System.</descripti
     </item>
     
     <item>
-      <title>Tutorial Bootstrap - Menyisipkan Bootstrap ke HTML</title>
+      <title>Tutorial Bootstrap: Menyisipkan Bootstrap ke HTML</title>
       <link>https://www.petanikode.com/bootstrap-dasar/</link>
       <pubDate>Sat, 02 Jan 2016 08:58:00 +0000</pubDate>
       

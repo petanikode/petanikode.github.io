@@ -2275,15 +2275,17 @@ echo 5 &amp;gt; /sys/class/backlight/intel_backlight/brightnessSeperti yang kita
     </item>
     
     <item>
-      <title>6 Fungsi enkripsi di PHP untuk kriptografi</title>
+      <title>6 Fungsi Enkripsi di PHP untuk Mengamankan Data</title>
       <link>https://www.petanikode.com/php-fungsi-enkripsi/</link>
       <pubDate>Sun, 20 Sep 2015 21:04:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/php-fungsi-enkripsi/</guid>
-      <description>Enkripsi merupakan proses mengubah teks polos (plain text) menjadi bentuk lain (kode sandi atau hash). Enkripsi bertujuan untuk melindungi informasi rahasia seperti kata sandi atau password. PHP menyediakan beberapa fungsi untuk melakukan enkripsi, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode().
-1. Fungsi password_hash()Fungsi ini akan menghasilkan sebuah kode sandi (hash) baru dengan algoritma one-way hashing. Contoh penggunaan:
-&amp;lt;?php echo password_hash(&amp;ldquo;PetaniKode&amp;rdquo;, PASSWORD_DEFAULT); ?&amp;gt;akan menghasilkan kode acak yang berubah-ubah:
-$2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2Sepertinya fungsi ini sangat cocok untuk mengenkripsi password.</description>
+      <description>Data adalah harta karun yang paling berharga dalam sebuah sistem. Apabila itu dicuri&amp;hellip;
+&amp;hellip;bencana besar akan terjadi :smile:.
+Enkripsi adalah teknik untuk mengamankan data-data tersebut agar isinya tidak diketahui orang lain.
+Enkripsi biasanya dilakukan terhadap data-data sensitif seperti password.
+Enkripsi akan menjamin data-data tetap aman meskipun berada di tangan orang lain, karena mereka tidak tahu isi aslinya.
+Pada kesempatan ini, saya akan membahas beberapa fungsi enkripsi yang sudah disediakan oleh PHP, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode().</description>
     </item>
     
     <item>

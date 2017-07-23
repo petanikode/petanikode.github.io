@@ -7,7 +7,7 @@
 
 <html amp lang="id-id" class="no-js">
 <head>
-    <title>6 Fungsi enkripsi di PHP untuk kriptografi</title>
+    <title>6 Fungsi Enkripsi di PHP untuk Mengamankan Data</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -48,11 +48,13 @@
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
 <meta name="author" content="Ardianta Pargo"/>
 
-<meta name="keywords" content="6 Fungsi enkripsi di PHP untuk kriptografi, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Enkripsi merupakan proses mengubah teks polos (plain text) menjadi bentuk lain (kode sandi atau hash). Enkripsi bertujuan untuk melindungi informasi rahasia seperti kata sandi atau password. PHP menyediakan beberapa fungsi untuk melakukan enkripsi, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode().
-1. Fungsi password_hash()Fungsi ini akan menghasilkan sebuah kode sandi (hash) baru dengan algoritma one-way hashing. Contoh penggunaan:
-&lt;?php echo password_hash(&ldquo;PetaniKode&rdquo;, PASSWORD_DEFAULT); ?&gt;akan menghasilkan kode acak yang berubah-ubah:
-$2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2Sepertinya fungsi ini sangat cocok untuk mengenkripsi password."/>
+<meta name="keywords" content="6 Fungsi Enkripsi di PHP untuk Mengamankan Data, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="Data adalah harta karun yang paling berharga dalam sebuah sistem. Apabila itu dicuri&hellip;
+&hellip;bencana besar akan terjadi :smile:.
+Enkripsi adalah teknik untuk mengamankan data-data tersebut agar isinya tidak diketahui orang lain.
+Enkripsi biasanya dilakukan terhadap data-data sensitif seperti password.
+Enkripsi akan menjamin data-data tetap aman meskipun berada di tangan orang lain, karena mereka tidak tahu isi aslinya.
+Pada kesempatan ini, saya akan membahas beberapa fungsi enkripsi yang sudah disediakan oleh PHP, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode()."/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -68,11 +70,13 @@ $2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2Sepertinya fungsi in
 <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
-    <meta property="og:title" content="6 Fungsi enkripsi di PHP untuk kriptografi" />
-    <meta property="og:description" content="Enkripsi merupakan proses mengubah teks polos (plain text) menjadi bentuk lain (kode sandi atau hash). Enkripsi bertujuan untuk melindungi informasi rahasia seperti kata sandi atau password. PHP menyediakan beberapa fungsi untuk melakukan enkripsi, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode().
-1. Fungsi password_hash()Fungsi ini akan menghasilkan sebuah kode sandi (hash) baru dengan algoritma one-way hashing. Contoh penggunaan:
-&lt;?php echo password_hash(&ldquo;PetaniKode&rdquo;, PASSWORD_DEFAULT); ?&gt;akan menghasilkan kode acak yang berubah-ubah:
-$2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2Sepertinya fungsi ini sangat cocok untuk mengenkripsi password." />
+    <meta property="og:title" content="6 Fungsi Enkripsi di PHP untuk Mengamankan Data" />
+    <meta property="og:description" content="Data adalah harta karun yang paling berharga dalam sebuah sistem. Apabila itu dicuri&hellip;
+&hellip;bencana besar akan terjadi :smile:.
+Enkripsi adalah teknik untuk mengamankan data-data tersebut agar isinya tidak diketahui orang lain.
+Enkripsi biasanya dilakukan terhadap data-data sensitif seperti password.
+Enkripsi akan menjamin data-data tetap aman meskipun berada di tangan orang lain, karena mereka tidak tahu isi aslinya.
+Pada kesempatan ini, saya akan membahas beberapa fungsi enkripsi yang sudah disediakan oleh PHP, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode()." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://www.petanikode.com/php-fungsi-enkripsi/" />
 
@@ -107,11 +111,13 @@ $2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2Sepertinya fungsi in
     <meta property="article:section" content="artikel" />
 
     
+    	<meta property="article:tag" content="PHP" />
+    
     	<meta property="article:tag" content="Enkripsi" />
     
     	<meta property="article:tag" content="Kriptografi" />
     
-    	<meta property="article:tag" content="PHP" />
+    	<meta property="article:tag" content="Security" />
     
 
     
@@ -186,8 +192,8 @@ $2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2Sepertinya fungsi in
         "@type": "ListItem",
         "position": 2,
         "item": {
-            "@id": "https://www.petanikode.com/kategori/pemrograman",
-            "name": "pemrograman"
+            "@id": "https://www.petanikode.com/kategori/web",
+            "name": "Web"
             }
       },
       
@@ -197,8 +203,8 @@ $2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2Sepertinya fungsi in
         "@type": "ListItem",
         "position": 3,
         "item": {
-            "@id": "https://www.petanikode.com/topik/enkripsi",
-            "name": "Enkripsi"
+            "@id": "https://www.petanikode.com/topik/php",
+            "name": "PHP"
             }
       }
       
@@ -214,12 +220,14 @@ $2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2Sepertinya fungsi in
   "author": {
     "name" : "Ardianta Pargo"
   },
-  "headline": "6 Fungsi enkripsi di PHP untuk kriptografi",
-  "description": "Enkripsi merupakan proses mengubah teks polos (plain text) menjadi bentuk lain (kode sandi atau hash). Enkripsi bertujuan untuk melindungi informasi rahasia seperti kata sandi atau password. PHP menyediakan beberapa fungsi untuk melakukan enkripsi, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode().
-1. Fungsi password_hash()Fungsi ini akan menghasilkan sebuah kode sandi (hash) baru dengan algoritma one-way hashing. Contoh penggunaan:
-&lt;?php echo password_hash(&ldquo;PetaniKode&rdquo;, PASSWORD_DEFAULT); ?&gt;akan menghasilkan kode acak yang berubah-ubah:
-$2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2Sepertinya fungsi ini sangat cocok untuk mengenkripsi password.",
-  "wordCount": 423,
+  "headline": "6 Fungsi Enkripsi di PHP untuk Mengamankan Data",
+  "description": "Data adalah harta karun yang paling berharga dalam sebuah sistem. Apabila itu dicuri&hellip;
+&hellip;bencana besar akan terjadi :smile:.
+Enkripsi adalah teknik untuk mengamankan data-data tersebut agar isinya tidak diketahui orang lain.
+Enkripsi biasanya dilakukan terhadap data-data sensitif seperti password.
+Enkripsi akan menjamin data-data tetap aman meskipun berada di tangan orang lain, karena mereka tidak tahu isi aslinya.
+Pada kesempatan ini, saya akan membahas beberapa fungsi enkripsi yang sudah disediakan oleh PHP, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode().",
+  "wordCount": 734,
   "datePublished" : "2015-09-20T21:04:00",
   "dateModified" : "2015-09-20T21:04:00",
   "image" : {
@@ -254,10 +262,12 @@ $2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2Sepertinya fungsi in
       "sameAs": "http://petanikode.com"
     },
     "datePublished": "2015-09-20T21:04:00",
-    "description": "Enkripsi merupakan proses mengubah teks polos (plain text) menjadi bentuk lain (kode sandi atau hash). Enkripsi bertujuan untuk melindungi informasi rahasia seperti kata sandi atau password. PHP menyediakan beberapa fungsi untuk melakukan enkripsi, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode().
-1. Fungsi password_hash()Fungsi ini akan menghasilkan sebuah kode sandi (hash) baru dengan algoritma one-way hashing. Contoh penggunaan:
-&lt;?php echo password_hash(&ldquo;PetaniKode&rdquo;, PASSWORD_DEFAULT); ?&gt;akan menghasilkan kode acak yang berubah-ubah:
-$2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2Sepertinya fungsi ini sangat cocok untuk mengenkripsi password.",
+    "description": "Data adalah harta karun yang paling berharga dalam sebuah sistem. Apabila itu dicuri&hellip;
+&hellip;bencana besar akan terjadi :smile:.
+Enkripsi adalah teknik untuk mengamankan data-data tersebut agar isinya tidak diketahui orang lain.
+Enkripsi biasanya dilakukan terhadap data-data sensitif seperti password.
+Enkripsi akan menjamin data-data tetap aman meskipun berada di tangan orang lain, karena mereka tidak tahu isi aslinya.
+Pada kesempatan ini, saya akan membahas beberapa fungsi enkripsi yang sudah disediakan oleh PHP, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode().",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -1199,7 +1209,7 @@ padding: 16px;
     <article class="article block">
     <div class="article-wrapper">
         <div class="content">
-            <h1 class="post-title">6 Fungsi enkripsi di PHP untuk kriptografi</h1>
+            <h1 class="post-title">6 Fungsi Enkripsi di PHP untuk Mengamankan Data</h1>
 
             
                 <div class="post-header">
@@ -1209,35 +1219,322 @@ padding: 16px;
         </div>
         <div>
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
+        <span class="author"><a href="/kategori/web">Web</a></span>
             <br>
         20 September 2015 · 21:04
     </div>
     
 </div>
 
-                <p><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png" /></a></div>Enkripsi merupakan proses mengubah teks polos <i>(plain text)</i> menjadi bentuk lain (kode sandi atau <i>hash</i>). Enkripsi bertujuan untuk melindungi informasi rahasia seperti kata sandi atau <i>password</i>. PHP menyediakan beberapa fungsi untuk melakukan enkripsi, diantaranya: <code>password_hash()</code>, <code>crypt()</code>, <code>md5()</code>, <code>hash()</code>, <code>sha1()</code>, dan <code>base64_encode()</code>.<br /><h3>1. Fungsi password_hash()</h3>Fungsi ini akan menghasilkan sebuah kode sandi <i>(hash)</i> baru dengan algoritma <i>one-way hashing</i>. Contoh penggunaan:<br /><pre><code class="php">&lt;?php echo password_hash(&ldquo;PetaniKode&rdquo;, PASSWORD_DEFAULT); ?&gt;</code></pre>akan menghasilkan kode acak yang berubah-ubah:<br /><pre>$2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2</pre>Sepertinya fungsi ini sangat cocok untuk mengenkripsi password. Karena kode yang dihasilkan selalu berubah. Oleh sebab itu, fungsi ini juga dibantu oleh fungsi <code>password_verify()</code> untuk memverifikasi kode sandi. Contoh penerapan:<br /><br /><script src="https://gist.github.com/ardianta/ca93a579e734f8f58754.js"></script><br /><h3>2. Fungsi crypt()</h3>Fungsi ini menghasilkan kode sandi yang lebih pendek daripada fungsi <code>password<em>hash()</code>. Contoh:<br /><pre><code class="php">&lt;?php echo crypt(&ldquo;petanikode&rdquo;, &ldquo;garam&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>gabeK4a28MgJs</pre>Bila diperhatikan, susuan karakter yang dihasilkan mirip seperti karakter yang digunakan di alamat URL video youtube. Mungkin saja youtube juga menggunakan algoritma yang sama dengan fungsi ini.<br /><br />Pada contoh diatas, fungsi diberikan dua parameter. Parameter pertama adalah teks yang akan dienkripsi. Sementara, parameter kedua adalah <i>salt</i> (garam). &lt;a href=&ldquo;<a href="https://en.wikipedia.org/wiki/Salt">https://en.wikipedia.org/wiki/Salt</a></em>%28cryptography%29&rdquo; target=&rdquo;_blank&rdquo;&gt;Garam</a> adalah sebuah data acak yang dimasukkan ke dalam fungsi enkripsi.<br /><h3>3. Fungsi md5()</h3>Fungsi ini menghasilkan kode sandi sepanjang 32 karakter. Contoh:<br /><pre><code class="php">&lt;?php echo md5(&ldquo;petanikode&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>37ebda33c177743169404948552319df</pre>Bila ditambahkan garam, hasilnya akan berubah. Contoh:<br /><pre><code class="php">&lt;?php echo md5(&ldquo;petanikode&rdquo;, &ldquo;g4r4m&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>7��3�wt1i@IHU#�</pre><h3>4. Fungsi hash()</h3>Fungsi ini akan menciptkan sebuah kode sandi dengan algoritma tertentu. Contoh:<br /><pre><code class="php">&lt;?php echo hash(&ldquo;md5&rdquo;, &ldquo;petanikode&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>37ebda33c177743169404948552319df</pre>Pada contoh di atas, parameter <code>&ldquo;md5&rdquo;</code> adalah nama algortima yang digunakan. Sementara, <code>&ldquo;petanikode&rdquo;</code> adalah teks yang akan dienkripsi.<br /><br />Bila ingin mengetahui nama-nama algoritma yang bisa dipakai fungsi ini. Silahkan coba contoh kode yang diberikan dari <a href="http://php.net/manual/en/function.hash.php#104987" target="_blank">web dokumentasinya</a>:<br /><pre><code class="php">&lt;?php<br />$data = &ldquo;hello&rdquo;;<br /><br />foreach (hash_algos() as $v) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $r = hash($v, $data, false);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf(&ldquo;%-12s %3d %s\n&rdquo;, $v, strlen($r), $r);<br />}<br />?&gt;</code></pre>maka akan menghasilkan:<script src="http://pastebin.com/embed_js.php?i=6sFRTVGq"></script><br /><h3>5. Fungsi sha1()</h3>Fungsi ini akan menghasilkan kode sandi sepanjang 40 karakter. Mirip seperti fungsi <code>md5()</code>. Contoh:<br /><pre><code class="php">&lt;?php echo sha1(&ldquo;petanikode&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>2e71f75dee7cb3e4b8e2e6ef8b8b5e0eab8f78a2</pre>Seperti halnya fungsi <code>md5()</code>, fungsi ini juga akan menciptakan karakter aneh, bila ditambahkan garam. Contoh:<br /><pre><code class="php">&lt;?php echo sha1(&ldquo;petanikode&rdquo;, &ldquo;ga12am&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>.q�]�|�����^��</pre><h3>6. Fungsi base64_encode()</h3>Fungsi ini menghasilkan kode sandi dari teks yang diinputkan. Contoh:<br /><pre><code class="php">&lt;?php echo base64_encode(&ldquo;Petani kode&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>UGV0YW5pIGtvZGU=</pre>Sementara, untuk dekripsi atau dekode dapat menggunakan fungsi <code>base64_decode()</code>. Contoh:<br /><pre><code class="php">&lt;?php echo base64_decode(&ldquo;UGV0YW5pIGtvZGU=&rdquo;); ?&gt;</code></pre>akan menghasilkan:<br /><pre>Petani kode</pre><h3>Kesimpulan </h3>Itulah enam fungsi untuk melakukan enkripsi di PHP. Setiap fungsi memiliki algoritmanya masing-masing. Anda juga bisa meracik sendiri fungsi enkripsi dengan memanfaatkan fungsi-fungsi di atas. Penambahan <i>salt</i> (garam) pada fungsi bertujuan agar password atau kode sandi tidak mudah dipecahkan.<br /><br />Sepertinya, masih ada lagi fungsi lain yang belum disebutkan. Hmm&hellip; ada yang mau menambahkan?<br /><br />&mdash;<br />Referensi:<br /><a href="http://www.w3schools.com/php/func_string_crypt.asp" target="_blank"><a href="http://www.w3schools.com/php/func_string_crypt.asp">http://www.w3schools.com/php/func_string_crypt.asp</a></a><br /><a href="http://php.net/manual/en/refs.crypto.php" target="_blank"><a href="http://php.net/manual/en/refs.crypto.php">http://php.net/manual/en/refs.crypto.php</a></a></p>
+                
+
+<p><img src="http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png" alt="PHP" /></p>
+
+<!-- Agreement -->
+
+<p>Data adalah harta karun yang paling berharga dalam sebuah sistem. Apabila itu dicuri&hellip;</p>
+
+<p>&hellip;bencana besar akan terjadi 😄.</p>
+
+<p>Enkripsi adalah teknik untuk mengamankan data-data tersebut agar isinya tidak diketahui orang lain.</p>
+
+<p>Enkripsi biasanya dilakukan terhadap data-data sensitif seperti password.</p>
+
+<!-- Promise -->
+
+<p>Enkripsi akan menjamin data-data tetap aman meskipun berada di tangan orang lain,
+karena mereka tidak tahu isi aslinya.</p>
+
+<!-- Review -->
+
+<p>Pada kesempatan ini, saya akan membahas beberapa fungsi enkripsi yang sudah disediakan oleh
+PHP, diantaranya: <code>password_hash()</code>, <code>crypt()</code>, <code>md5()</code>, <code>hash()</code>, <code>sha1()</code>, dan <code>base64_encode()</code>.</p>
+
+<p>Masing-masing fungsi memiliki algoritmanya tersedniri, ada yang kuat ada juga yang lemah.</p>
+
+<p>Mari kita bahas satu-per-satu&hellip;</p>
+
+<h2 id="1-fungsi-password-hash">1. Fungsi <code>password_hash()</code></h2>
+
+<p>Fungsi ini akan menghasilkan sebuah kode <em>hash</em> baru dengan algoritma <em>one-way hashing</em>.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-php">&lt;?php echo password_hash(&quot;PetaniKode&quot;, PASSWORD_DEFAULT); ?&gt;
+</code></pre>
+
+<p>Hasilnya:</p>
+
+<pre><code>$2y$10$7PZGQcOAK6ZJXCAO3UFRC.hpv8hjKsQhy5Y7xBOhLNoFNTuxF3lr2
+</code></pre>
+
+<p>Fungsi ini sangat disarankan untuk mengenkripsi password, karena
+sulit didekripsi atau di-crack.</p>
+
+<p>Sebelum mengenal fungsi ini, saya biasanya menggunakan fungsi <code>md5()</code>.
+Namun, fungsi <code>md5()</code> sangat mudah di-crack dengan teknik <em>brute force</em>.</p>
+
+<p>Karena itu, sebaiknya menggunakan fungsi <code>password_hash()</code> untuk melindungi
+password.</p>
+
+<p><strong>Contoh penggunaan</strong>:</p>
+
+<p>Sebelum menyimpan password ke database, sebaiknya dienkripsi terlebih dahulu:</p>
+
+<pre><code class="language-php">&lt;?php
+
+$username = $_POST['username'];
+$password = password_hash($_POST['username'], PASSWORD_DEFAULT); // enkripsi dulu...
+
+// query simpan
+mysqli_query(&quot;INSERT INTO user (username, password) VALUE ('$username','$password')&quot;);
+
+?&gt;
+</code></pre>
+
+<p>Fungsi ini tidak bisa bekerja sendirian, dia memiliki teman bernama <code>password_verify()</code>.</p>
+
+<p>Fungsi <code>password_verify()</code>, biasanya digunakaan saat membuat login untuk membandingkan
+password yang dikirim user dengan password yang tersimpan pada database.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-php">&lt;?php
+// ambil data dari form login
+$username = $_POST['username']; //&lt;-- ini belum aman dari sql injection :D 
+
+// ambil data dari database
+$query = mysqli_query(&quot;SELECT * FROM user WHERE username='$username'&quot;);
+$user = mysqli_fetch_assoc($query);
+
+// bandingkan password yang dikirim dari form login dengan password
+// yang ada di database
+if( password_verify($_POST['password'], $user['password']) ) {
+    // login berhasil
+} else {
+    // login gagal
+}
+?&gt;
+</code></pre>
+
+<p><strong>Tips</strong>: bila ingin menyimpan hasil dari fungsi <code>password_hash()</code> di database, pastikan bertipe
+<code>VARCHAR</code> dengan panjang <code>255</code> karakter.</p>
+
+<h2 id="2-fungsi-crypt">2. Fungsi <code>crypt()</code></h2>
+
+<p>Fungsi ini menghasilkan kode <em>hash</em> yang lebih pendek daripada fungsi <code>password_hash()</code>.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-php">&lt;?php echo crypt(&quot;petanikode&quot;, &quot;garam&quot;); ?&gt;
+</code></pre>
+
+<p>Hasilnya:</p>
+
+<pre><code>gabeK4a28MgJs
+</code></pre>
+
+<p>Bila diperhatikan, susuan karakter yang dihasilkan mirip
+seperti karakter yang digunakan pada alamat URL video youtube.</p>
+
+<p>Mungkin saja youtube juga menggunakan algoritma yang sama dengan fungsi ini.</p>
+
+<p>Pada contoh diatas, kita membarikan dua paramter kepada fungsinya.</p>
+
+<p>Parameter pertama adalah teks yang akan dienkripsi.</p>
+
+<p>Sementara, parameter kedua adalah <code>salt</code> (garam).</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Salt_%28cryptography%29">Garam</a> adalah sebuah data
+acak yang dimasukkan ke dalam fungsi enkripsi.</p>
+
+<h2 id="3-fungsi-md5">3. Fungsi <code>md5()</code></h2>
+
+<p>Fungsi ini akan menghasilkan kode sandi sepanjang 32 karakter.</p>
+
+<pre><code class="language-php">&lt;?php echo md5(&quot;petanikode&quot;); ?&gt;
+</code></pre>
+
+<p>Hasilnya:</p>
+
+<pre><code>37ebda33c177743169404948552319df
+</code></pre>
+
+<p>Bila ditambahkan garam, hasilnya akan berubah.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-php">&lt;?php echo md5(&quot;petanikode&quot;, &quot;g4r4m&quot;); ?&gt;
+</code></pre>
+
+<p>Hasilnya:</p>
+
+<pre><code>7��3�wt1i@IHU#�
+</code></pre>
+
+<h2 id="4-fungsi-hash">4. Fungsi hash()</h2>
+
+<p>Fungsi ini akan menciptkan sebuah kode <em>hash</em> dengan algoritma tertentu.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-php">&lt;?php echo hash(&quot;md5&quot;, &quot;petanikode&quot;); ?&gt;
+</code></pre>
+
+<p>Hasilnya:</p>
+
+<pre><code>37ebda33c177743169404948552319df
+</code></pre>
+
+<p>Pada contoh di atas, parameter <code>&quot;md5&quot;</code> adalah nama algortima yang akan
+digunakan untuk mengenkripsi. Parameter <code>&quot;petanikode&quot;</code>
+adalah teks yang akan dienkripsi.</p>
+
+<p>Bila ingin mengetahui nama-nama algoritma yang bisa dipakai fungsi ini,
+silahkan coba eksekusi kode ini:</p>
+
+<pre><code class="language-php">&lt;?php
+$data = &quot;hello&quot;;
+
+foreach (hash_algos() as $v) {
+    $r = hash($v, $data, false);
+    printf(&quot;%-12s %3d %s\n&quot;, $v, strlen($r), $r);
+}
+?&gt;
+</code></pre>
+
+<p>Hasilnya:</p>
+
+<pre><code>md2           32 a9046c73e00331af68917d3804f70655                  
+md4           32 866437cb7a794bce2b727acc0362ee27
+md5           32 5d41402abc4b2a76b9719d911017c592
+sha1          40 aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d
+sha256        64 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e730
+sha384        96 59e1748777448c69de6b800d7a33bbfb9ff1b463e44354c3553
+sha512       128 9b71d224bd62f3785d96d46ad3ea3d73319bfbc2890caadae2d
+ripemd128     32 789d569f08ed7055e94b4289a4195012
+ripemd160     40 108f07b8382412612c048d07d13f814118445acd
+ripemd256     64 cc1d2594aece0a064b7aed75a57283d9490fd5705ed3d66bf9a
+ripemd320     80 eb0cf45114c56a8421fbcb33430fa22e0cd607560a88bbe14ce
+whirlpool    128 0a25f55d7308eca6b9567a7ed3bd1b46327f0f1ffdc804dd8bb
+tiger128,3    32 a78862336f7ffd2c8a3874f89b1b74f2
+tiger160,3    40 a78862336f7ffd2c8a3874f89b1b74f2f27bdbca
+tiger192,3    48 a78862336f7ffd2c8a3874f89b1b74f2f27bdbca39660254
+tiger128,4    32 1c2a939f230ee5e828f5d0eae5947135
+tiger160,4    40 1c2a939f230ee5e828f5d0eae5947135741cd0ae
+tiger192,4    48 1c2a939f230ee5e828f5d0eae5947135741cd0aefeeb2adc
+snefru        64 7c5f22b1a92d9470efea37ec6ed00b2357a4ce3c41aa6e28e3b
+gost          64 a7eb5d08ddf2363f1ea0317a803fcef81d33863c8b2f9f6d7d1
+adler32        8 062c0215
+crc32          8 3d653119
+crc32b         8 3610a686
+haval128,3    32 85c3e4fac0ba4d85519978fdc3d1d9be
+haval160,3    40 0e53b29ad41cea507a343cdd8b62106864f6b3fe
+haval192,3    48 bfaf81218bbb8ee51b600f5088c4b8601558ff56e2de1c4f
+haval224,3    56 92d0e3354be5d525616f217660e0f860b5d472a9cb99d6766be
+haval256,3    64 26718e4fb05595cb8703a672a8ae91eea071cac5e7426173d4c
+haval128,4    32 fe10754e0b31d69d4ece9c7a46e044e5
+haval160,4    40 b9afd44b015f8afce44e4e02d8b908ed857afbd1
+haval192,4    48 ae73833a09e84691d0214f360ee5027396f12599e3618118
+haval224,4    56 e1ad67dc7a5901496b15dab92c2715de4b120af2baf661ecd92
+haval256,4    64 2d39577df3a6a63168826b2a10f07a65a676f5776a0772e0a87
+haval128,5    32 d20e920d5be9d9d34855accb501d1987
+haval160,5    40 dac5e2024bfea142e53d1422b90c9ee2c8187cc6
+haval192,5    48 bbb99b1e989ec3174019b20792fd92dd67175c2ff6ce5965
+haval224,5    56 aa6551d75e33a9c5cd4141e9a068b1fc7b6d847f85c3ab16295
+haval256,5    64 348298791817d5088a6de6c1b6364756d404a50bd64e645035f
+</code></pre>
+
+<h2 id="5-fungsi-sha1">5. Fungsi <code>sha1()</code></h2>
+
+<p>Fungsi ini akan menghasilkan kode <em>hash</em> sepanjang 40 karakter. Mirip seperti fungsi <code>md5()</code>.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-php">&lt;?php echo sha1(&quot;petanikode&quot;); ?&gt;
+</code></pre>
+
+<p>Hasilnya:</p>
+
+<pre><code>2e71f75dee7cb3e4b8e2e6ef8b8b5e0eab8f78a2
+</code></pre>
+
+<p>Seperti halnya fungsi <code>md5()</code>, fungsi ini juga akan menciptakan karakter aneh,
+bila ditambahkan garam.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-php">&lt;?php echo sha1(&quot;petanikode&quot;, &quot;ga12am&quot;); ?&gt;
+</code></pre>
+
+<p>Hasilnya:</p>
+
+<pre><code>.q�]�|�����^��
+</code></pre>
+
+<h2 id="6-fungsi-base64-encode">6. Fungsi <code>base64_encode()</code></h2>
+
+<p>Fungsi ini menghasilkan kode <em>hash</em> dari teks yang diinputkan.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-php">&lt;?php echo base64_encode(&quot;Petani kode&quot;); ?&gt;
+</code></pre>
+
+<p>Hasilnya:</p>
+
+<pre><code>UGV0YW5pIGtvZGU=
+</code></pre>
+
+<p>Sementara itu, untuk dekripsi atau dekode dapat menggunakan fungsi <code>base64_decode()</code>.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-php">&lt;?php echo base64_decode(&quot;UGV0YW5pIGtvZGU=&quot;); ?&gt;
+</code></pre>
+
+<p>Hasilnya:</p>
+
+<pre><code>Petani kode
+</code></pre>
+
+<h2 id="akhir-kata">Akhir Kata&hellip;</h2>
+
+<p>Itulah 6 (enam) fungsi enkripsi di PHP untuk mengamankan data.
+Setiap fungsi memiliki algoritmanya masing-masing.</p>
+
+<p>Penambahan <i>salt</i> (garam) pada fungsi bertujuan
+agar kode <em>hash</em> tidak mudah dipecahkan.</p>
+
+<p>Referensi:</p>
+
+<ul>
+<li>W3Schools.com &mdash; <a href="https://www.w3schools.com/php/func_string_crypt.asp">PHP crypt() Function</a></li>
+<li>Php.net &mdash; <a href="http://php.net/manual/en/refs.crypto.php">Cryptography Extensions</a></li>
+</ul>
 
                 <div class="post-footer">
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f&t=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f&text=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi%20https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f&t=6%20Fungsi%20Enkripsi%20di%20PHP%20untuk%20Mengamankan%20Data" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f&text=6%20Fungsi%20Enkripsi%20di%20PHP%20untuk%20Mengamankan%20Data%20https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
   <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
-  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f&description=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
-  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f&title=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
-  <li><a href="mailto:?subject=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi&body=6%20Fungsi%20enkripsi%20di%20PHP%20untuk%20kriptografi:%20https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f&description=6%20Fungsi%20Enkripsi%20di%20PHP%20untuk%20Mengamankan%20Data" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f&title=6%20Fungsi%20Enkripsi%20di%20PHP%20untuk%20Mengamankan%20Data" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=6%20Fungsi%20Enkripsi%20di%20PHP%20untuk%20Mengamankan%20Data&body=6%20Fungsi%20Enkripsi%20di%20PHP%20untuk%20Mengamankan%20Data:%20https%3a%2f%2fwww.petanikode.com%2fphp-fungsi-enkripsi%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
 
 
                     <div>Topik:
                       
+                        #<a href="/topik/php">PHP</a>
+                      
                         #<a href="/topik/enkripsi">Enkripsi</a>
                       
                         #<a href="/topik/kriptografi">Kriptografi</a>
                       
-                        #<a href="/topik/php">PHP</a>
+                        #<a href="/topik/security">Security</a>
                       
                     </div>
                     </div>
@@ -1327,7 +1624,7 @@ padding: 16px;
 var disqus_config = function () {
     this.page.url = 'https:\/\/www.petanikode.com\/php-fungsi-enkripsi\/';
     this.page.identifier = 'php-fungsi-enkripsi';
-    this.page.title = '6 Fungsi enkripsi di PHP untuk kriptografi';
+    this.page.title = '6 Fungsi Enkripsi di PHP untuk Mengamankan Data';
 };
 
 (function() {

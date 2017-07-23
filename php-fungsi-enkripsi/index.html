@@ -227,7 +227,7 @@ Enkripsi adalah teknik untuk mengamankan data-data tersebut agar isinya tidak di
 Enkripsi biasanya dilakukan terhadap data-data sensitif seperti password.
 Enkripsi akan menjamin data-data tetap aman meskipun berada di tangan orang lain, karena mereka tidak tahu isi aslinya.
 Pada kesempatan ini, saya akan membahas beberapa fungsi enkripsi yang sudah disediakan oleh PHP, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode().",
-  "wordCount": 803,
+  "wordCount": 847,
   "datePublished" : "2015-09-20T21:04:00",
   "dateModified" : "2015-09-20T21:04:00",
   "image" : {
@@ -1386,6 +1386,8 @@ Sangat mungkin untuk melakukan <em>decrypt</em>.</p>
 
 <p>Fungsi ini akan menciptkan sebuah kode <em>hash</em> dengan algoritma tertentu.</p>
 
+<p><img src="/img/php/enkripsi/hashing.png" alt="Hasing" /></p>
+
 <p>Contoh:</p>
 
 <pre><code class="language-php">&lt;?php echo hash(&quot;md5&quot;, &quot;petanikode&quot;); ?&gt;
@@ -1490,6 +1492,8 @@ dan bisa dikembalikan ke bentuk semula dengan fungsi <code>base64_decode()</code
 
 <p>Metode ini disebut <em>two-way hasing</em>.</p>
 
+<p><img src="/img/php/enkripsi/enkripsi.png" alt="Hasing" /></p>
+
 <p>Contoh:</p>
 
 <pre><code class="language-php">&lt;?php echo base64_encode(&quot;Petani kode&quot;); ?&gt;
@@ -1521,14 +1525,21 @@ karena sangat mudah di-decode.</p>
 <p>Itulah 6 (enam) fungsi enkripsi di PHP untuk mengamankan data.
 Setiap fungsi memiliki algoritmanya masing-masing.</p>
 
-<p>Penambahan <code>salt</code> (garam) pada fungsi bertujuan
-agar kode <em>hash</em> tidak mudah dipecahkan.</p>
+<p>Gunakan fungsi yang menggunakan metode <em>one-way hasing</em> untuk
+melindungi password. Tapi, perlu diselidiki dulu&hellip;apakah fungsi
+tersebut masih aman atau tidak?</p>
+
+<p>Sedangkan untuk fungsi yang menggunakan metode <em>two-way hasing</em>,
+sangat tidak disarankan untuk melindungi password, karena memiliki
+fungsi untuk decode atau mengembalikannya dari bentuk <em>hash</em> menjadi
+<em>plain text</em>.</p>
 
 <p>Referensi:</p>
 
 <ul>
 <li>W3Schools.com &mdash; <a href="https://www.w3schools.com/php/func_string_crypt.asp">PHP crypt() Function</a></li>
 <li>Php.net &mdash; <a href="http://php.net/manual/en/refs.crypto.php">Cryptography Extensions</a></li>
+<li>Stackoverflow &mdash; <a href="https://stackoverflow.com/questions/4948322/fundamental-difference-between-hashing-and-encryption-algorithms">Fundamental difference between Hashing and Encryption algorithms</a></li>
 </ul>
 
                 <div class="post-footer">

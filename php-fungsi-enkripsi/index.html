@@ -227,7 +227,7 @@ Enkripsi adalah teknik untuk mengamankan data-data tersebut agar isinya tidak di
 Enkripsi biasanya dilakukan terhadap data-data sensitif seperti password.
 Enkripsi akan menjamin data-data tetap aman meskipun berada di tangan orang lain, karena mereka tidak tahu isi aslinya.
 Pada kesempatan ini, saya akan membahas beberapa fungsi enkripsi yang sudah disediakan oleh PHP, diantaranya: password_hash(), crypt(), md5(), hash(), sha1(), dan base64_encode().",
-  "wordCount": 734,
+  "wordCount": 729,
   "datePublished" : "2015-09-20T21:04:00",
   "dateModified" : "2015-09-20T21:04:00",
   "image" : {
@@ -1250,7 +1250,7 @@ karena mereka tidak tahu isi aslinya.</p>
 <p>Pada kesempatan ini, saya akan membahas beberapa fungsi enkripsi yang sudah disediakan oleh
 PHP, diantaranya: <code>password_hash()</code>, <code>crypt()</code>, <code>md5()</code>, <code>hash()</code>, <code>sha1()</code>, dan <code>base64_encode()</code>.</p>
 
-<p>Masing-masing fungsi memiliki algoritmanya tersedniri, ada yang kuat ada juga yang lemah.</p>
+<p>Masing-masing fungsi memiliki algoritmanya tersendiri, ada yang kuat ada juga yang lemah.</p>
 
 <p>Mari kita bahas satu-per-satu&hellip;</p>
 
@@ -1272,7 +1272,7 @@ PHP, diantaranya: <code>password_hash()</code>, <code>crypt()</code>, <code>md5(
 sulit didekripsi atau di-crack.</p>
 
 <p>Sebelum mengenal fungsi ini, saya biasanya menggunakan fungsi <code>md5()</code>.
-Namun, fungsi <code>md5()</code> sangat mudah di-crack dengan teknik <em>brute force</em>.</p>
+Namun, fungsi <code>md5()</code> sangat mudah di-crack.</p>
 
 <p>Karena itu, sebaiknya menggunakan fungsi <code>password_hash()</code> untuk melindungi
 password.</p>
@@ -1284,7 +1284,8 @@ password.</p>
 <pre><code class="language-php">&lt;?php
 
 $username = $_POST['username'];
-$password = password_hash($_POST['username'], PASSWORD_DEFAULT); // enkripsi dulu...
+// enkripsi dulu...
+$password = password_hash($_POST['username'], PASSWORD_DEFAULT); 
 
 // query simpan
 mysqli_query(&quot;INSERT INTO user (username, password) VALUE ('$username','$password')&quot;);
@@ -1292,7 +1293,7 @@ mysqli_query(&quot;INSERT INTO user (username, password) VALUE ('$username','$pa
 ?&gt;
 </code></pre>
 
-<p>Fungsi ini tidak bisa bekerja sendirian, dia memiliki teman bernama <code>password_verify()</code>.</p>
+<p>Fungsi <code>passowrd_hash()</code> ini tidak bisa bekerja sendirian, dia memiliki teman bernama <code>password_verify()</code>.</p>
 
 <p>Fungsi <code>password_verify()</code>, biasanya digunakaan saat membuat login untuk membandingkan
 password yang dikirim user dengan password yang tersimpan pada database.</p>
@@ -1350,7 +1351,7 @@ acak yang dimasukkan ke dalam fungsi enkripsi.</p>
 
 <h2 id="3-fungsi-md5">3. Fungsi <code>md5()</code></h2>
 
-<p>Fungsi ini akan menghasilkan kode sandi sepanjang 32 karakter.</p>
+<p>Fungsi ini akan menghasilkan kode <em>hash</em> sepanjang 32 karakter.</p>
 
 <pre><code class="language-php">&lt;?php echo md5(&quot;petanikode&quot;); ?&gt;
 </code></pre>
@@ -1390,7 +1391,7 @@ acak yang dimasukkan ke dalam fungsi enkripsi.</p>
 digunakan untuk mengenkripsi. Parameter <code>&quot;petanikode&quot;</code>
 adalah teks yang akan dienkripsi.</p>
 
-<p>Bila ingin mengetahui nama-nama algoritma yang bisa dipakai fungsi ini,
+<p>Bila ingin mengetahui nama-nama algoritma yang bisa digunakan,
 silahkan coba eksekusi kode ini:</p>
 
 <pre><code class="language-php">&lt;?php

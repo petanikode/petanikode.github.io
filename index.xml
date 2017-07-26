@@ -2807,8 +2807,13 @@ Nama: &amp;lt;input type=&amp;lsquo;text&amp;rsquo; /&amp;gt;
       <pubDate>Sat, 22 Feb 2014 08:30:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/python-percabangan/</guid>
-      <description>Pada kondisi tertentu, kita sering dihadapi dengan pilihan-pilihan. Misalnya, saat pergi ke suatu tempat, terdapat banyak jalan menuju tempat tersebut. Manakah jalan yang akan dipilih? Kita akan berpikir dan mempertimbangkan pilihan yang akan diambil. Apakah melalui jalan x lebih cepat sampai dari pada jalan y, ataukah sebaliknya?
- Kita dapat membuat komputer berpikir seperti di atas dengan kode pemilihan. Ada tiga model kode pemilihan di python: (i) if, dipakai saat pilihan kondisinya ada satu, (ii) if-else, dipakai saat pilihan kondisinya ada dua, dan (iii) if-elif-else dipakai saat pilihan kondisinya lebih dari dua.</description>
+      <description>Mungkin kalian akan bertanya:
+Apa itu percabangan dan kenapa dinamakan percabangan?
+Pada flow chart, logika &amp;ldquo;jika&amp;hellip;maka&amp;rdquo; digambarkan dalam bentuk cabang.
+karena itu, disebut percabangan.
+Selain percabangan, struktur ini juga disebut control flow, decision, struktur kondisi, Struktru if, dsb.
+Percabangan akan mampu membuat program berpikir dan menentukan tindakan sesuai dengan logika/kondisi yang kita berikan.
+Pada kesempatan ini, kita akan belajar struktur percabangan pada python. Mulai dari yang paling dasar hingga yang kompleks.</description>
     </item>
     
     <item>

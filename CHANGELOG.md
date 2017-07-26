@@ -26,3 +26,7 @@ Peningkatan UI, merapikan bagian-bagian yang masih berantakan.
 ## 10 Januari 2017: Migrasi ke Hugo
 
 Petani Kode melakukan [migrasi dari Blogger ke Hugo](https://www.petanikode.com/migrasi-blogger-ke-hugo/).
+
+## 20 Juli 2017: Pembuatan Group Petani Kode di Facebook
+
+Group resmi Petani Kode mulai dibuat di facebook: https://web.facebook.com/groups/petanikode/permalink/244874119335955/

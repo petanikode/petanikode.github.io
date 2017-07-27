@@ -7,7 +7,7 @@
 
 <html amp lang="id-id" class="no-js">
 <head>
-    <title>Linux</title>
+    <title>Mengenal PHP CLI dan PHP Interaktif</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -20,8 +20,8 @@
 
 
 
-    <link rel="canonical" href="https://www.petanikode.com/kategori/linux/" />
-    <link rel="amphtml" href="https://www.petanikode.com/kategori/linux/" />
+    <link rel="canonical" href="https://www.petanikode.com/php-cli/" />
+    <link rel="amphtml" href="https://www.petanikode.com/php-cli/" />
 
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
     <meta content='/favicon.png' name='msapplication-TileImage'/>
@@ -30,10 +30,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-    <link href="http://feeds.feedburner.com/petanikode" rel="alternate" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-    <link href="http://feeds.feedburner.com/petanikode" rel="feed" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-
-
+    
 
     
     
@@ -51,8 +48,11 @@
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
 <meta name="author" content="Ardianta Pargo"/>
 
-<meta name="keywords" content="Linux, pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman"/>
+<meta name="keywords" content="Mengenal PHP CLI dan PHP Interaktif, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="Pada tutorial dan buku pemrograman PHP yang beredar, tidak banyak yang membahas tentang PHP CLI dan PHP interaktif.
+PHP sendiri merupakan sebuah bahasa pemrograman yang fokus untuk pengembangan web. Karena itu, jarang sekali digunakan di lingkungan CLI (Command Line).
+Bagi yang belajar pemrograman PHP menggunakan XAMPP atau LAMPP, kemungkinan jarang menggunakan PHP CLI atau PHP interaktif.
+Tetapi, bagi yang menggunakan paket terpisah (apache2, php, mysql), kemungkinan sering bermain dengan PHP CLI dan PHP interaktif."/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -68,20 +68,24 @@
 <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
-    <meta property="og:title" content="Linux" />
-    <meta property="og:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman" />
+    <meta property="og:title" content="Mengenal PHP CLI dan PHP Interaktif" />
+    <meta property="og:description" content="Pada tutorial dan buku pemrograman PHP yang beredar, tidak banyak yang membahas tentang PHP CLI dan PHP interaktif.
+PHP sendiri merupakan sebuah bahasa pemrograman yang fokus untuk pengembangan web. Karena itu, jarang sekali digunakan di lingkungan CLI (Command Line).
+Bagi yang belajar pemrograman PHP menggunakan XAMPP atau LAMPP, kemungkinan jarang menggunakan PHP CLI atau PHP interaktif.
+Tetapi, bagi yang menggunakan paket terpisah (apache2, php, mysql), kemungkinan sering bermain dengan PHP CLI dan PHP interaktif." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.petanikode.com/kategori/linux/" />
+    <meta property="og:url" content="https://www.petanikode.com/php-cli/" />
 
-    <meta property="og:image" content="/images/petanikode-programmer.png" />
+    <meta property="og:image" content="https://1.bp.blogspot.com/-149dXYXOuY4/WBR5cv5YntI/AAAAAAAADWg/EVvffhSLL9EsM_ljsdwDrvyJeB4iYHp5wCK4B/s1600/PHP%2BCLI%2B-%2BPetani%2BKode.png" />
 
     
-    <meta property="og:updated_time" content="2017-06-27 15:41:28 &#43;0800 WITA"/>
+    <meta property="og:updated_time" content="2016-10-29 19:51:00 &#43;0000 UTC"/>
     <meta content='id_ID' property='og:locale'/>
     <meta content='ms_MY' property='og:locale:alternate'/>
     <meta content='en_US' property='og:locale:alternate'/>
 
     <meta content='152759108115365' property='fb:app_id'/>
+    <meta content='petanikode' property='fb:pages'/>
     <meta content='143461015837500' property='fb:pages'/>
     <meta content='ardianta.pargo' property='fb:profile_id'/>
 
@@ -96,10 +100,14 @@
     <meta property="article:publisher" content="https://www.facebook.com/petanikode" />
 
     
+    <meta property="article:published_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
+    
 
-    <meta property="article:modified_time" content="2017-06-27 15:41:28 &#43;0800 WITA" />
-    <meta property="article:section" content="" />
+    <meta property="article:modified_time" content="2016-10-29 19:51:00 &#43;0000 UTC" />
+    <meta property="article:section" content="artikel" />
 
+    
+    	<meta property="article:tag" content="PHP" />
     
 
     
@@ -152,12 +160,6 @@
     
     
     
-        
-    
-
-    
-    
-    
 
 
 <script type="application/ld+json">
@@ -176,7 +178,25 @@
       },
 
       
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+            "@id": "https://www.petanikode.com/kategori/web",
+            "name": "Web"
+            }
+      },
+      
 
+      
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+            "@id": "https://www.petanikode.com/topik/php",
+            "name": "PHP"
+            }
+      }
       
 
     ]
@@ -190,18 +210,21 @@
   "author": {
     "name" : "Ardianta Pargo"
   },
-  "headline": "Linux",
-  "description": "",
-  "wordCount": 0,
-  "datePublished" : "2017-06-27T15:41:28",
-  "dateModified" : "2017-06-27T15:41:28",
+  "headline": "Mengenal PHP CLI dan PHP Interaktif",
+  "description": "Pada tutorial dan buku pemrograman PHP yang beredar, tidak banyak yang membahas tentang PHP CLI dan PHP interaktif.
+PHP sendiri merupakan sebuah bahasa pemrograman yang fokus untuk pengembangan web. Karena itu, jarang sekali digunakan di lingkungan CLI (Command Line).
+Bagi yang belajar pemrograman PHP menggunakan XAMPP atau LAMPP, kemungkinan jarang menggunakan PHP CLI atau PHP interaktif.
+Tetapi, bagi yang menggunakan paket terpisah (apache2, php, mysql), kemungkinan sering bermain dengan PHP CLI dan PHP interaktif.",
+  "wordCount": 346,
+  "datePublished" : "2016-10-29T19:51:00",
+  "dateModified" : "2016-10-29T19:51:00",
   "image" : {
       "@type": "ImageObject",
-      "url": "",
+      "url": "https://1.bp.blogspot.com/-149dXYXOuY4/WBR5cv5YntI/AAAAAAAADWg/EVvffhSLL9EsM_ljsdwDrvyJeB4iYHp5wCK4B/s1600/PHP%2BCLI%2B-%2BPetani%2BKode.png",
       "height" : 380,
       "width" : 720
     },
-  "mainEntityOfPage" : "https://www.petanikode.com/kategori/linux/",
+  "mainEntityOfPage" : "https://www.petanikode.com/php-cli/",
   "publisher" : {
     "@type": "Organization",
     "name" : "petanikode.com",
@@ -215,7 +238,7 @@
 
   "review": {
     "@type": "Review",
-    "url": "https://www.petanikode.com/kategori/linux/",
+    "url": "https://www.petanikode.com/php-cli/",
     "author": {
       "@type": "Person",
       "name": "Ardianta Pargo",
@@ -226,8 +249,11 @@
       "name": "petanikode.com",
       "sameAs": "http://petanikode.com"
     },
-    "datePublished": "2017-06-27T15:41:28",
-    "description": "",
+    "datePublished": "2016-10-29T19:51:00",
+    "description": "Pada tutorial dan buku pemrograman PHP yang beredar, tidak banyak yang membahas tentang PHP CLI dan PHP interaktif.
+PHP sendiri merupakan sebuah bahasa pemrograman yang fokus untuk pengembangan web. Karena itu, jarang sekali digunakan di lingkungan CLI (Command Line).
+Bagi yang belajar pemrograman PHP menggunakan XAMPP atau LAMPP, kemungkinan jarang menggunakan PHP CLI atau PHP interaktif.
+Tetapi, bagi yang menggunakan paket terpisah (apache2, php, mysql), kemungkinan sering bermain dengan PHP CLI dan PHP interaktif.",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -1006,6 +1032,12 @@ padding: 16px;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     
 
+    <link rel="stylesheet" href="/assets/prism/prism.css" />
+    <script src="/assets/prism/prism.js"></script>
+
+    
+
+
 </head>
 
 <body>
@@ -1013,6 +1045,34 @@ padding: 16px;
 
 
 
+
+<nav class="fixed-top block">
+    <ul>
+        <li>
+            <a href="#!" on="tap:sidebar.toggle">
+            <i class="fa fa-bars"></i>
+            </a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="https://www.petanikode.com/">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/arsip/">Arsip</a>
+        </li>
+        
+        <li>
+            <a href="/kategori/tips-dan-trik">Tips &amp; Trik</a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="/topik/buku">Buku</a>
+        </li>
+        <li>
+            <a href="mailto:info@petanikode.com">Kirim Saran</a>
+        </li>
+    </ul>
+</nav>
 
 <amp-sidebar id='sidebar'
      layout="nodisplay"
@@ -1106,34 +1166,6 @@ padding: 16px;
   </amp-accordion>
  </amp-sidebar>
 
-<nav class="fixed-top block">
-    <ul>
-        <li>
-            <a href="#!" on="tap:sidebar.toggle">
-            <i class="fa fa-bars"></i>
-            </a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="https://www.petanikode.com/">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="/arsip/">Arsip</a>
-        </li>
-        
-        <li>
-            <a href="/kategori/tips-dan-trik">Tips &amp; Trik</a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="/topik/buku">Buku</a>
-        </li>
-        <li>
-            <a href="mailto:info@petanikode.com">Kirim Saran</a>
-        </li>
-    </ul>
-</nav>
-
 <header class="block-group">
     <section class="header block">
         <div class="site-wrapper">
@@ -1159,218 +1191,14 @@ padding: 16px;
 
 
 <main class="main block-group">
+
     <article class="article block">
+    <div class="article-wrapper">
+        <div class="content">
+            <h1 class="post-title">Mengenal PHP CLI dan PHP Interaktif</h1>
 
-
-    
-
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/linux">Linux</a></span>
-            <br>
-        27 Jun · baca 4 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/menggunakan-linux-untuk-pemrograman/">Kenapa Saya Menggunakan Linux untuk Pemrograman? [Ini 5 alasannya]</a></h2>
-                <a href="/menggunakan-linux-untuk-pemrograman/">
-                    
-                    <amp-img src="/img/linux/alasan/linux-untuk-programmer.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Kenapa Saya Menggunakan Linux untuk Pemrograman"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/menggunakan-linux-untuk-pemrograman/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmenggunakan-linux-untuk-pemrograman%2f&t=Kenapa%20Saya%20Menggunakan%20Linux%20untuk%20Pemrograman%3f%20%5bIni%205%20alasannya%5d" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fmenggunakan-linux-untuk-pemrograman%2f&text=Kenapa%20Saya%20Menggunakan%20Linux%20untuk%20Pemrograman%3f%20%5bIni%205%20alasannya%5d%20https%3a%2f%2fwww.petanikode.com%2fmenggunakan-linux-untuk-pemrograman%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fmenggunakan-linux-untuk-pemrograman%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fmenggunakan-linux-untuk-pemrograman%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Kenapa%20Saya%20Menggunakan%20Linux%20untuk%20Pemrograman%3f%20%5bIni%205%20alasannya%5d&body=Kenapa%20Saya%20Menggunakan%20Linux%20untuk%20Pemrograman%3f%20%5bIni%205%20alasannya%5d:%20https%3a%2f%2fwww.petanikode.com%2fmenggunakan-linux-untuk-pemrograman%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        19 May · baca 4 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/kotlin-linux/">Belajar Pemrograman Kotlin di Linux: Pengenalan dan Persiapan</a></h2>
-                <a href="/kotlin-linux/">
-                    
-                    <amp-img src="https://petanikode.com/img/persiapan-kotlin/kotlin.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Pemrograman Kotlin di Linux"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/kotlin-linux/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fkotlin-linux%2f&t=Belajar%20Pemrograman%20Kotlin%20di%20Linux%3a%20Pengenalan%20dan%20Persiapan" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fkotlin-linux%2f&text=Belajar%20Pemrograman%20Kotlin%20di%20Linux%3a%20Pengenalan%20dan%20Persiapan%20https%3a%2f%2fwww.petanikode.com%2fkotlin-linux%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fkotlin-linux%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fkotlin-linux%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Belajar%20Pemrograman%20Kotlin%20di%20Linux%3a%20Pengenalan%20dan%20Persiapan&body=Belajar%20Pemrograman%20Kotlin%20di%20Linux%3a%20Pengenalan%20dan%20Persiapan:%20https%3a%2f%2fwww.petanikode.com%2fkotlin-linux%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        12 Nov · baca 3 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/bahasa-pemrograman-di-ubuntu/">7 (Bahasa) Pemrograman yang Dapat Dilakukan Langsung di Ubuntu</a></h2>
-                <a href="/bahasa-pemrograman-di-ubuntu/">
-                    
-                    <amp-img src="https://4.bp.blogspot.com/-MoeiWG7b-OA/WCM7fgsQeXI/AAAAAAAADaw/G4rOFwrzC-kH_YwuXbXGxWkOv35SMBSmACK4B/s1600/pemrograman%2Bubuntu%2B-%2Bpetanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/bahasa-pemrograman-di-ubuntu/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fbahasa-pemrograman-di-ubuntu%2f&t=7%20%28Bahasa%29%20Pemrograman%20yang%20Dapat%20Dilakukan%20Langsung%20di%20Ubuntu" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fbahasa-pemrograman-di-ubuntu%2f&text=7%20%28Bahasa%29%20Pemrograman%20yang%20Dapat%20Dilakukan%20Langsung%20di%20Ubuntu%20https%3a%2f%2fwww.petanikode.com%2fbahasa-pemrograman-di-ubuntu%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fbahasa-pemrograman-di-ubuntu%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fbahasa-pemrograman-di-ubuntu%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=7%20%28Bahasa%29%20Pemrograman%20yang%20Dapat%20Dilakukan%20Langsung%20di%20Ubuntu&body=7%20%28Bahasa%29%20Pemrograman%20yang%20Dapat%20Dilakukan%20Langsung%20di%20Ubuntu:%20https%3a%2f%2fwww.petanikode.com%2fbahasa-pemrograman-di-ubuntu%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        4 Nov · baca 4 menit
-    </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/seorang-programmer-tunanetra-yang-bekerja-di-bidang-open-source/">Seorang Programmer Tunanetra yang Bekerja di Bidang Open Source</a></h2>
-                <a href="/seorang-programmer-tunanetra-yang-bekerja-di-bidang-open-source/">
-                    
-                    <amp-img src="https://3.bp.blogspot.com/-Luxtg8VF1qI/V9KA5Y6Z9cI/AAAAAAAADPc/3KqZJ5ZxRxo1RnIiS_CiI5mQHMDOu1XiwCK4B/s1600/Mengenal%2BAli%2BMiracle%2B-%2Bseorang%2Bprogrammer%2Btunanetra%2Bpenggiat%2Bopen%2Bsource%2B-%2Bpetanikode.jpg"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/seorang-programmer-tunanetra-yang-bekerja-di-bidang-open-source/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fseorang-programmer-tunanetra-yang-bekerja-di-bidang-open-source%2f&t=Seorang%20Programmer%20Tunanetra%20yang%20Bekerja%20di%20Bidang%20Open%20Source" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fseorang-programmer-tunanetra-yang-bekerja-di-bidang-open-source%2f&text=Seorang%20Programmer%20Tunanetra%20yang%20Bekerja%20di%20Bidang%20Open%20Source%20https%3a%2f%2fwww.petanikode.com%2fseorang-programmer-tunanetra-yang-bekerja-di-bidang-open-source%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fseorang-programmer-tunanetra-yang-bekerja-di-bidang-open-source%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fseorang-programmer-tunanetra-yang-bekerja-di-bidang-open-source%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Seorang%20Programmer%20Tunanetra%20yang%20Bekerja%20di%20Bidang%20Open%20Source&body=Seorang%20Programmer%20Tunanetra%20yang%20Bekerja%20di%20Bidang%20Open%20Source:%20https%3a%2f%2fwww.petanikode.com%2fseorang-programmer-tunanetra-yang-bekerja-di-bidang-open-source%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
+            
+                <div class="post-header">
     
         <div class="author-foto pull-left">
             <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
@@ -1379,104 +1207,243 @@ padding: 16px;
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
         <span class="author"><a href="/kategori/web">Web</a></span>
             <br>
-        29 Oct · baca 2 menit
+        29 October 2016 · 19:51
     </div>
     
 </div>
 
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/php-cli/">Mengenal PHP CLI dan PHP Interaktif</a></h2>
-                <a href="/php-cli/">
-                    
-                    <amp-img src="https://1.bp.blogspot.com/-149dXYXOuY4/WBR5cv5YntI/AAAAAAAADWg/EVvffhSLL9EsM_ljsdwDrvyJeB4iYHp5wCK4B/s1600/PHP%2BCLI%2B-%2BPetani%2BKode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/php-cli/" id="read-more-button">
-                Selengkapnya…
-                </a>
                 
 
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f&t=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f&text=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif%20https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif&body=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif:%20https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+<!-- Agreement  -->
+
+<!-- Promise  -->
+
+<!-- Review  -->
+
+<p>Pada tutorial dan buku pemrograman PHP yang beredar, tidak banyak yang membahas tentang PHP CLI dan PHP interaktif.</p>
+
+<p>PHP sendiri merupakan sebuah bahasa pemrograman yang fokus untuk pengembangan web.
+Karena itu, jarang sekali digunakan di lingkungan CLI <em>(Command Line)</em>.</p>
+
+<p>Bagi yang belajar pemrograman PHP menggunakan XAMPP atau LAMPP,
+kemungkinan jarang menggunakan PHP CLI atau PHP interaktif.</p>
+
+<p>Tetapi, bagi yang <a href="/pemrograman-web-di-linux">menggunakan paket terpisah</a> (apache2, php, mysql), kemungkinan sering bermain dengan PHP CLI dan PHP interaktif.</p>
+
+<h2 id="apa-itu-php-cli">Apa itu PHP CLI?</h2>
+
+<p>PHP CLI <i>(Command Line Interface)</i> merupakan PHP yang berjalan di <i>Command Line</i>.</p>
+
+<p>PHP CLI memungkinkan kita membangun aplikasi <i>shell</i> dengan PHP.</p>
+
+<p>PHP CLI pertama kali diknalkan pada PHP versi 4.2.0 sebagai percobaan <i>(eksperimental)</i>.</p>
+
+<p>Salah satu contoh aplikasi <i>shell</i> yang berjalan di <i>Command Line</i>
+adalah <a href="/topik/composer">Composer</a>.</p>
+
+<p>Composer sendiri merupakan manajemen paket untuk PHP, seperti <code>apt</code> pada Linux.</p>
+
+<h2 id="cara-menggunakan-php-cli">Cara Menggunakan PHP CLI</h2>
+
+<p>Cara menggunakan PHP CLI dapat kita baca melalui manualnya. Manual dapat kita buka dengan perintah <code>man php</code>.</p>
+
+<p><img src="http://1.bp.blogspot.com/-149dXYXOuY4/WBR5cv5YntI/AAAAAAAADWg/EVvffhSLL9EsM_ljsdwDrvyJeB4iYHp5wCK4B/s1600/PHP%2BCLI%2B-%2BPetani%2BKode.png" alt="Dokumentasi PHP CLI" /></p>
+
+<h2 id="contoh-perintah-perintah-dasar-php-cli">Contoh perintah-perintah Dasar PHP CLI</h2>
+
+<p>Menampilkan bantuan:</p>
+
+<pre><code class="language-bash">php -h
+</code></pre>
+
+<p>Mengeksekusi sebuah skrip:</p>
+
+<pre><code class="language-bash">php -f nama-skrip.php
+</code></pre>
+
+<p>atau</p>
+
+<pre><code class="language-bash">php nama-skrip.php
+</code></pre>
+
+<p>Membuat Server:</p>
+
+<pre><code class="language-bash">php -S localhost:8000
+</code></pre>
+
+<p>Menampilkan informasi PHP:</p>
+
+<pre><code>php -i
+</code></pre>
+
+<p>Menampilkan versi PHP:</p>
+
+<pre><code class="language-bash">php -v
+</code></pre>
+
+<p>Eksekusi fungsi bawaan PHP:</p>
+
+<pre><code class="language-bash">php -r 'echo &quot;Sekarang tanggal &quot; . Date(&quot;d/m/Y&quot;) .&quot;\n&quot;;'
+</code></pre>
+
+<p>Hasil output dari eksekusi melalui PHP CLI berupa teks polos <i>(plain text)</i>.</p>
+
+<p>Jadi, meskipun kita mencetak tag HTML, hasilnya akan ditampilkan apa adanya.</p>
+
+<h2 id="php-interaktif">PHP Interaktif</h2>
+
+<p>Salah satu ciri dari bahasa skrip <i>(scripting)</i> adalah memiliki konsol untuk menjalankan atau mengeksekusi sebuah fungsi secara interaktif.</p>
+
+<p>Cara masuk ke mode PHP interaktif adalah dengan mengetik perintah <code>php -a</code> pada terminal.</p>
+
+<p><img src="http://2.bp.blogspot.com/-5J4H59AWzec/WBR__m9xq4I/AAAAAAAADWw/QmDrDYoBQ40NBlahY6kY4BFhxcGRGqzyQCK4B/s1600/Mode%2BPHP%2BInteraktif%2Bdi%2BLinux%2BPetani%2BKode.png" alt="PHP Interaktif" /></p>
+
+<p>Dalam mode interaktif, kita dapat mengetik perintah-perintah atau fungsi PHP secara langsung. Kemudian akan mendapatkan hasil output saat itu juga.</p>
+
+<p>Setiap perintah harus diakhiri dengan titik koma (<code>;</code>).</p>
+
+<p>Kalau tidak, maka akan terjadi error.</p>
+
+<p>Berbeda dengan konsol milik javascript yang boleh tidak memakai titik koma.</p>
+
+<h2 id="kesimpulan">Kesimpulan</h2>
+
+<p>PHP CLI merupakan PHP yang dijalankan melalui <i>Command Line</i>. Sedangkan PHP Interaktif merupakan sebuah konsol PHP yang memungkinkan kita menjalankan fungsi atau perintah PHP secara interaktif.</p>
+
+<p>PHP CLI dan PHP interaktif sering digunakan untuk menguji sebuah kode skrip maupun fungsi.</p>
+
+<p>Referensi:</p>
+
+<ul><li><a href="http://php.net/manual/en/features.commandline.php" target="_blank">http://php.net/manual/en/features.commandline.php</a></li><li><a href="http://www.php-cli.com/" target="_blank">http://www.php-cli.com/ </a></li></ul>
+
+                <div class="post-footer">
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f&t=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f&text=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif%20https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f%20via%20@petanikode" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f&description=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f&title=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif&body=Mengenal%20PHP%20CLI%20dan%20PHP%20Interaktif:%20https%3a%2f%2fwww.petanikode.com%2fphp-cli%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
 
-            </div>
 
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
+                    <div>Topik:
+                      
+                        #<a href="/topik/php">PHP</a>
+                      
+                    </div>
+                    </div>
 
-            <div class="post-header">
+                
+<p><b>Artikel Terkait:</b></p>
+
+
+
+
+
+
+<ul class="related-post">
     
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+
+
+<ul class="related-post">
+    
+</ul>
+
+<hr>
+
+                <div align="center">
+                <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                </div>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+var disqus_config = function () {
+    this.page.url = 'https:\/\/www.petanikode.com\/php-cli\/';
+    this.page.identifier = 'php-cli';
+    this.page.title = 'Mengenal PHP CLI dan PHP Interaktif';
+};
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'petanikode';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://petanikode.disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            
+
         </div>
-        <div>
-        <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/web">Web</a></span>
-            <br>
-        9 Oct · baca 3 menit
     </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/pemrograman-web-di-linux/">Belajar Pemrograman Web di Linux: inilah 6 Alat yang Perlu Dipersiapkan</a></h2>
-                <a href="/pemrograman-web-di-linux/">
-                    
-                    <amp-img src="https://3.bp.blogspot.com/-xYZSEJ0UIKs/V_mwJCM3-VI/AAAAAAAADTI/DWvKVoole9cE1s1R7tnDh_sxOKXUUHINACK4B/s1600/Text%2BEditor%2BAtom%2Bdi%2BLinux%2BMint%2B18.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt=""
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/pemrograman-web-di-linux/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpemrograman-web-di-linux%2f&t=Belajar%20Pemrograman%20Web%20di%20Linux%3a%20inilah%206%20Alat%20yang%20Perlu%20Dipersiapkan" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpemrograman-web-di-linux%2f&text=Belajar%20Pemrograman%20Web%20di%20Linux%3a%20inilah%206%20Alat%20yang%20Perlu%20Dipersiapkan%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-web-di-linux%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-web-di-linux%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpemrograman-web-di-linux%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Belajar%20Pemrograman%20Web%20di%20Linux%3a%20inilah%206%20Alat%20yang%20Perlu%20Dipersiapkan&body=Belajar%20Pemrograman%20Web%20di%20Linux%3a%20inilah%206%20Alat%20yang%20Perlu%20Dipersiapkan:%20https%3a%2f%2fwww.petanikode.com%2fpemrograman-web-di-linux%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-
-    <div class="pager">
-    
-    
-        <a class="button button-primary pull-right" href="/kategori/linux/page/2/">
-            Selanjutnya <i class="fa fa-caret-right"></i>
-        </a>
-    
-    </div>
-
     </article>
 
     <aside class="aside block">
@@ -1706,6 +1673,7 @@ padding: 16px;
 
 
 </aside>
+
 
 </main>
 

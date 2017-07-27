@@ -1207,6 +1207,18 @@ padding: 16px;
                 <p>Beberapa hari yang lalu, saya melakukan downgrade sistem operasi, dari versi <code>15.10</code> ke <code>14.04</code>. Secara otomatis, versi server MySQL-nya juga ikut di-downgrade, dari versi <code>5.6.27</code> ke  versi <code>5.5.47</code>. Pada versi yang lebih lama (<code>5.5.47</code>), tipe data <i>Datetime</i> dengan nilai <i>default current_timestamp</i> tidak diterima. Ketika saya mengimpor dari cadangan database, terjadi error.<br /><pre><code class="bash sh">$ mysql -u root -p &lt; db_27_feb_2016.sql  <br />Enter password:  <br />ERROR 1067 (42000) at line 41: Invalid default value for &lsquo;tanggal&rsquo;</code></pre>Saya pun mencoba menelusuri ke baris 41 dari file SQL cadangan. Ternyata benar, di sana terdapat tipe data <i>datetime</i> dengan nilai <i>default current_timestamp</i>.<br /><a href="http://2.bp.blogspot.com/-l7VxSj8eYiM/Vt08p3RPCoI/AAAAAAAAChw/oRkXWqm08VE/s1600/Tipe%2Bdata%2Bdatetime%2Bdengan%2Bnilai%2Bdefault%2Btimestamp.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-l7VxSj8eYiM/Vt08p3RPCoI/AAAAAAAAChw/oRkXWqm08VE/s1600/Tipe%2Bdata%2Bdatetime%2Bdengan%2Bnilai%2Bdefault%2Btimestamp.png" /></a><br />Berdasarkan tangkapan layar di atas, di sana terdapat kode SQL untuk membuat tabel artikel. Tabel ini merupakan tabel untuk proyek <a href="https://github.com/petanikode/praktikum-blog" target="_blank">praktikum blog</a> yang saya buat dulu. Saya mengganti semua tipe data <i>datetime</i> yang bernilai <i>default current_timestamp</i> ke <i>timestamp</i> dan mencoba mengimpor lagi.<code class="bash"> </code><br /><pre><code class="bash">ERROR 1064 (42000) at line 1866: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &lsquo;STATS_PERSISTENT=0&rsquo; at line 11</code></pre>Fuh!, Error apa lagi ini? Sepertinya, ini masalah perbedaan versi saja. Tapi yang penting, sebagian dari database penting yang saya butuhkan sudah diimpor.<br /><br />Sepertinya ini sebuah kesalahan saya yang tidak memperhatikan tipe data dan nilai <i>default</i> saat membuat database dulu. Jadi, menurut saya, sebaiknya tidak menggunakan nilai <i>default current_timestamp</i> pada tipe data <i>datetime</i> dan tipe data <i>datetime</i> cocoknya digunakan untuk menyimpan data seperti tanggal lahir yang datanya diinputkan secara manual. Sementara untuk data yang tidak diinputkan langsung seperti tanggal log, tanggal terbit artikel, tanggal status, dsb sebaiknya menggunakan tipe data <i>timestamp</i> dengan nilai default <i>current_timestamp</i>.</p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1236,17 +1248,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

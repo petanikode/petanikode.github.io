@@ -1215,6 +1215,18 @@ padding: 16px;
                 <p>Ada sebuah laptop yang bersistem operasi Kali Linux. Tombol FN-nya tidak berfungsi untuk mengatur cahaya layar. Driver VGA yang dipakai ialah intel. Sepertinya Kali Linux belum mampu bekerja dengan baik di laptop ini.<br /><a href="http://4.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz4/skLB5P8yBXY/s1600/python-programming.png" imageanchor="1"><img alt="logo python" border="0" src="http://4.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz4/skLB5P8yBXY/s1600/python-programming.png" /></a><br />Mencari-cari solusi di internet, akhirnya saya menemukan perintah untuk mengatur cahaya. Berikut ini perintahnya:<br /><pre><code class="bash">echo 5 &gt; /sys/class/backlight/intel_backlight/brightness</code></pre>Seperti yang kita lihat, perintah di atas berfungsi untuk mengubah nilai file <i>brightness</i> yang berada di direktori <i>/sys/class/backlight/intel_backlight/</i>. Setiap nilai file itu berubah, cahaya layar pun berubah. Sepertinya file ini lah yang mengendalikan cahaya layar.<br /><br />Jadi, kita hanya perlu merubah nilainya dengan program. Kemudian program itu dieksekusi saat tombol kombinasi FN ditekan. Berikut ini dua program yang saya buat untuk memanipulasi nilainya:<br /><br />Kode program untuk menambahkan cahaya<br /><br /><script src="https://gist.github.com/ardianta/ae0024360d08f48fec57.js"></script><br />Kode program untuk mengurangi cahaya<br /><br /><script src="https://gist.github.com/ardianta/7e9e2a5497684e3d3279.js"></script><br />Perlu di perhatikan, <code>intel_backlight</code> adalah driver yang dipakai laptop. Bisa jadi, berbeda laptop berbeda juga drivernya. Pengeksekusian program membutuhkan akses root. Kalau di Kali Linux, tinggal dieksekusi saja.<br /><pre>python kurangiCahaya.py</pre>Supaya peraktis, buat saja tombol pintasannya. Jadi, setiap kali tombol itu ditekan. Maka kode di atas diekseskusi.<br /><div class="separator"><a href="http://3.bp.blogspot.com/-8njnO-mUJ_Y/VgUu5uz3s5I/AAAAAAAAB3Q/7XfY8nEdZ0c/s1600/Pengaturan%2Btombol%2Bpintasan%2BXFCE.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-8njnO-mUJ_Y/VgUu5uz3s5I/AAAAAAAAB3Q/7XfY8nEdZ0c/s1600/Pengaturan%2Btombol%2Bpintasan%2BXFCE.png" /></a></div><br /></p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1244,17 +1256,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

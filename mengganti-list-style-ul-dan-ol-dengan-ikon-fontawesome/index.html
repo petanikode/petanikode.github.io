@@ -1265,6 +1265,18 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-iXWa0JBLikg/V4owZHnND9I/AAAAAAAADCM/PR3c5r3cIB4hlyL3_VhOZeFMiN_bpPV5wCK4B/s1600/Font-awesome-list-style-petanikode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-iXWa0JBLikg/V4owZHnND9I/AAAAAAAADCM/PR3c5r3cIB4hlyL3_VhOZeFMiN_bpPV5wCK4B/s1600/Font-awesome-list-style-petanikode.png" /></a>Saat memodifikasi halaman arsip dari <a href="http://www.petanikode.com/p/arsip-petani-kode.html" target="_blank">blog ini</a>. Saya ingin mengganti <code>list-style</code> yang digunakan oleh elemen <code>&lt;ol&gt;</code> atau <code>&lt;ul&gt;</code>. Aslinya, bentuknya bulat dan angka. Kemudian saya ingin mengganti dengan ikon <i>fontawesome</i>. Kebetulan <i>fontawesome</i> sudah terinstal di blog ini.<br /><pre><code class="html">&lt;link href=&ldquo;<a href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&quot;">https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&quot;</a> rel=&ldquo;stylesheet&rdquo; type=&ldquo;text/css&rdquo;&gt;&lt;/link&gt;</code></pre>Kode HTML:<br /><pre><code class="html">&lt;ol&gt;<br />&lt;li&gt;Item 1&lt;/li&gt;<br />&lt;li&gt;Item 2&lt;/li&gt;<br />&lt;li&gt;Item 3&lt;/li&gt; <br />&lt;/ol&gt;</code></pre>Kode CSS:<br /><pre><code class="css">ul {<br />&nbsp;&nbsp;&nbsp; list-style: none;<br />&nbsp;&nbsp;&nbsp; padding: 0;<br />}<br />li {<br />&nbsp;&nbsp;&nbsp; padding-left: 1.3em;<br />}<br />li:before {<br />&nbsp;&nbsp;&nbsp; content: &ldquo;\f073&rdquo;; /* FontAwesome Unicode <em>/<br />&nbsp;&nbsp;&nbsp; font-family: FontAwesome;<br />&nbsp;&nbsp;&nbsp; display: inline-block;<br />&nbsp;&nbsp;&nbsp; margin-left: -1.3em; /</em> same as padding-left set on li <em>/<br />&nbsp;&nbsp;&nbsp; width: 1.3em; /</em> same as padding-left set on li */<br />}</code></pre>Konsep kerja dari&nbsp; kode CSS di atas adalah sebagai berikut:<br /><ol><li>Sebunyikan <i>list-style</i> bawaannya. </li><li>Perbaiki ukuran <i>padding</i>.</li><li>Gunakan ikon <i>fontawesome</i>.</li></ol>Perhatikan kode CSS di bagian <code>li:before</code>, di sana terdapat atribut <code>content</code>. Fungsinya untuk mengisi sesuatu sebelum elemen <code>&lt;li&gt;</code>. Isi konten yang diberikan berupa karakter <i>unicode</i> dari <i>fontawesome</i>. Anda bisa temukan karakter <i>unicode fontawesome</i> <a href="https://astronautweb.co/snippet/font-awesome/" target="_blank">di sini</a>.<br /><br />Hasilnya:<br /><a href="http://1.bp.blogspot.com/-BRGvQdAGPDQ/V4orJKXUEKI/AAAAAAAADB8/bxhOxIlgul4axHW4XR7AuuggAmkbQubtACK4B/s1600/Mengganti%2Bikon%2Bul%2Bol%2Bdengan%2Bfontawesome.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-BRGvQdAGPDQ/V4orJKXUEKI/AAAAAAAADB8/bxhOxIlgul4axHW4XR7AuuggAmkbQubtACK4B/s1600/Mengganti%2Bikon%2Bul%2Bol%2Bdengan%2Bfontawesome.png" /></a><br /><br />Referensi: <a href="http://stackoverflow.com/a/13354689" target="_blank"><a href="http://stackoverflow.com/a/13354689">http://stackoverflow.com/a/13354689</a></a></p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1300,17 +1312,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

@@ -1213,6 +1213,18 @@ padding: 16px;
                 <p>Pernahkan anda bertemu dengan kasus perbandingan suatu nilai yang terbesar? Bila menyelesaikan menggunakan <code>if</code> dan datanya banyak, tentu akan terasa sangat merepotkan. Karena banyak nilai yang akan dibandingkan.<br /><a href="http://1.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz8/4sG6fkp4XvM/s1600/python-programming.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-wXTer267F40/VEEneqLnoRI/AAAAAAAAAz8/4sG6fkp4XvM/s1600/python-programming.png" /></a> <br />Fungsi <code>max()</code> adalah fungsi <i>bulid-in</i> untuk mencari nilai tertinggi. Fungsi ini dapat diberikan sebuah parameter berupa angka. Artikel ini sebenarnya dibuat untuk menjawab sebuah pertanyaan di grup <a href="https://www.facebook.com/groups/IndonesianPython/permalink/807438312630829/" target="_blank">Python Indonesia</a>.<br /><blockquote>Saya pemilik pabrik sepatu, saya menugaskan staff saya untuk menginput jumlah penjualan bulan Januari, Februari, dan Maret 2014. Sebagai pemilik saya ingin tahu dibulan mana penjualan tertinggi</blockquote>Permasalahan di atas, dapat diselesaikan dengan fungsi <code>max()</code>. Karena si pemilik pabrik ingin mengetahui di bulan mana penjualan yang tertinggi, maka kita tinggal inputkan bulan-bulan yang ingin dicari nilai tertingginya ke dalam fungsi <code>max()</code><br /><h2>Eksperimen di modus interaktif</h2>Sebelum memulai membuat program, kita coba dulu ngode di modus interaktif.<br /><pre><code class="python">&gt;&gt;&gt; bulan = {&lsquo;jan&rsquo;: 32, &lsquo;feb&rsquo;: 43, &lsquo;mar&rsquo;: 21}<br />&gt;&gt;&gt; tmp = max(bulan[&lsquo;jan&rsquo;], bulan[&lsquo;feb&rsquo;], bulan[&lsquo;mar&rsquo;])<br />&gt;&gt;&gt; tmp<br />43<br />&gt;&gt;&gt; for i in bulan:<br />&hellip;   print i<br />&hellip;<br />jan<br />mar<br />feb<br />&gt;&gt;&gt; for i in bulan:<br />&hellip;   print bulan[i]<br />&hellip;<br />32<br />21<br />43<br />&gt;&gt;&gt; for i in bulan:<br />&hellip;   if tmp == bulan[i]:<br />&hellip;     print i<br />&hellip;<br />feb</code></pre>Pada expereimen di atas saya membuat sebuah <i>dictionary</i> (kamus) dengan nama bulan sebagai kunci. Tiap-tiap bulan ditentukan total penjualannya. Lalu menghitung nilai tertinggi dengan fungsi <code>max()</code>. Kita dapatkan total penjualan tertinggi adalah <code>43</code>. Tapi kita belum tahu, di bulan mana yang bernilai <code>43</code>. Oleh karena itu, dengan menggunakan perulangan, kemudian di dalam perulangan tersebut dibandingkan isi variabel <code>tmp</code> dengan nilai tiap-tiap bulan, maka kita dapatkan penjualan tertinggi terdapat pada bulan <code>feb</code> (februari).<br /><h2>Membuat Program</h2>Setelah memahami, hasil eksperimen, sekarang saatnya membuat program untuk penyelesaian masalah tersebut.<br /><pre><code class="python">print &ldquo;Selamat datang di program penghitungan pendapatan&rdquo;<br />print &ldquo;-&rdquo;<em>50<br /><br /># persiapan awal<br />bulan = {&lsquo;jan&rsquo;: 0, &lsquo;feb&rsquo;: 0, &lsquo;mar&rsquo;: 0}<br /><br /># input data<br />for i in bulan:<br />  bulan[i] = input(&ldquo;Silahkan masukkan pendaptan pada bulan %s: &ldquo; % i)<br /><br /># hitung mana yang tertinggi<br />tertinggi = max(bulan[&lsquo;jan&rsquo;], bulan[&lsquo;feb&rsquo;], bulan[&lsquo;mar&rsquo;])<br /><br /># cari dan cetak di bulan mana yang tertinggi<br />for i in bulan:<br />  if bulan[i] == tertinggi:<br />    print i</code></pre><h2>Uji coba program</h2>Uji coba program dengan masukan data atau nilai yang berbeda untuk tiap bulannya.<br /><a href="http://1.bp.blogspot.com/-UTD-TPVDu0I/VEI87H6VWSI/AAAAAAAAA0k/NOnYRNySETI/s1600/program%2Bhitung%2Bpendapatan%2Btertinggi.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-UTD-TPVDu0I/VEI87H6VWSI/AAAAAAAAA0k/NOnYRNySETI/s1600/program%2Bhitung%2Bpendapatan%2Btertinggi.png" /></a> <br /><b>Notabene:</b><br /></em> Seharusnya program diatas menampilkan pesan <i>Masukkan total penjualan pada bulan <samp>x</samp></i>, tapi karena sudah terlanjur menggunakan kata <i>pendapatan</i>, ya dibiarkan sajalah, yang penting logikanya benar.<br /><br />&nbsp;Ada yang mau menambahkan?</p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1244,17 +1256,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

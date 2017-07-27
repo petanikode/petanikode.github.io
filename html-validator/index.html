@@ -1213,6 +1213,18 @@ padding: 16px;
                 <p><a href="https://4.bp.blogspot.com/-dNNJvns8P_Y/V3d-ZGdAKRI/AAAAAAAAC5s/28FqVj0Ho3E7CyeXhwv1bmra0VaaADSkwCLcB/s1600/html5-petanikode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-dNNJvns8P_Y/V3d-ZGdAKRI/AAAAAAAAC5s/28FqVj0Ho3E7CyeXhwv1bmra0VaaADSkwCLcB/s1600/html5-petanikode.png" /></a>HTML5 memiliki validator form untuk memvalidasi inputan. Misalnya, jika ada field yang masih kosong, maka validator akan membertahukan; kalau data masih kososng. Namun, bahasa yang digunakan adalah bahasa inggris. Bagaimana jika kita ingin merubahnya ke bahasa indonesia?<br /><h2>Fungsi Javascript</h2>Kita membutuhkan fungsi Javascript untuk mengganti bahasa yang digunakan validator HTML5. Fungsi yang dapat digunakan berdasarkan jawaban yang saya temukan di Stack Overflow adalah <code>setCustomValidit()</code>. Fungsi ini kita jalankan ketika input field dalam status <i>invalid</i> (tidak valid). Sebelumnya kita memerlukan JQuery untuk mempermudah pemilihan elemen.<br /><pre><code class="js">$(&lsquo;form input[type=text]&lsquo;).on(&lsquo;change invalid&rsquo;, function() {<br />&nbsp;&nbsp;&nbsp; var textfield = $(this).get(0);<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; // hapus dulu pesan yang sudah ada<br />&nbsp;&nbsp;&nbsp; textfield.setCustomValidity(&ldquo;);<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; if (!textfield.validity.valid) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; textfield.setCustomValidity(&lsquo;Tidak boleh kosong!&rsquo;);&nbsp; <br />&nbsp;&nbsp;&nbsp; }<br />});</code></pre>Kode diatas hanya menyeleksi elemen <code>&lt;input&gt;</code>. Bila dalam form terdapat elemen lain seperti <code>&lt;textarea&gt;</code>, maka perlu ditambahkan pada <i>selector</i>.<br /><pre><code class="js">$(&lsquo;form input[type=text], form textarea&rsquo;).on(&lsquo;change invalid&rsquo;, function() {<br />&nbsp; &nbsp; &hellip; <br />}</code></pre><h2>Demo</h2><iframe allowfullscreen="allowfullscreen" frameborder="0" height="300" src="//jsfiddle.net/Ardianta/a49yzzmw/2/embedded/result,js,html/" width="100%"></iframe><br />Referensi: <a href="http://stackoverflow.com/a/10754847" target="_blank">Stack Overflow</a></p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1248,17 +1260,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

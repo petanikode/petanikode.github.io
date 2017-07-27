@@ -1217,6 +1217,18 @@ padding: 16px;
                 <p><p>Ternyata <a href="http://petanikode.blogspot.com/2015/02/program-hello-world-di-Qt.html" target="blank" title="Program Hello World di Qt">program pertama</a> saya di Qt gagal diluncurkan. Karena pustaka OpenGL belum diinstal di komputer saya. Saya mendapatkan pesan galat <samp>👎 error: cannot find -lGL</samp>. Solusinya, saya harus menginstal pustaka <i>OpenGL</i>.</p> <a href="http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png" imageanchor="1" ><img border="0" src="http://4.bp.blogspot.com/-C1wmjRi_YUA/VNidwJmgYtI/AAAAAAAABS0/uHy-1S1k_90/s1600/Pemrograman%2BQt%2Bdi%2BLinux.png" /></a> <p><i>OpenGL</i> (<i>Open Graphic Library</i>) adalah pustaka untuk membuat grafik. Biasanya digunakan untuk membuat <i>game</i>.</p> <a href="http://1.bp.blogspot.com/-FB8cFaFnF98/VNymI5muCeI/AAAAAAAABXg/GoqUShbzmqI/s1600/galat%2Bcannot%2Bfind%2B-lGL.png" imageanchor="1" ><img border="0" src="http://1.bp.blogspot.com/-FB8cFaFnF98/VNymI5muCeI/AAAAAAAABXg/GoqUShbzmqI/s1600/galat%2Bcannot%2Bfind%2B-lGL.png" /></a> <p>Saya cari dulu, apakah pustaka <i>OpenGL</i> tersedia di <i>repository</i> ubuntu. O, ya, nama paket pustaka <i>OpenGL</i> adalah <samp>freeglut</samp>.</p> <pre><code class="bash">ardianta@imajinasi:~$ <b>sudo apt-cache search freeglut</b><br />[sudo] password for ardianta: <br />freeglut3 - OpenGL Utility Toolkit<br />freeglut3-dbg - OpenGL Utility Toolkit debugging information<br />freeglut3-dev - OpenGL Utility Toolkit development files<br />libtaoframework-freeglut-cil-dev - Tao CLI binding for freeglut - development files<br />libtaoframework-freeglut2.4-cil - Tao CLI binding for freeglut</code></pre> <p>Ternyata tersedia paket <samp>freeglut3</samp>, dengan begini saya dapat menginstalnya dengan <samp>apt-get</samp>. Perintah lenkap instalasi <i>openGL</i> di Ubuntu saya dapatkan di blog <a href="https://malsasa.wordpress.com/2014/04/15/pengantar-pemrograman-opengl-glut-c-di-linux/">Ade Malsasa</a>. Beliau memberikan perintah instalasi ini:</p> <pre><code class="bash">sudo apt-get install freeglut3 freeglut3-dev libglew1.5 libglew1.5-dev libglu1-mesa libglu1-mesa-dev libgl1-mesa-glx libgl1-mesa-dev</code></pre> <p>Saatnya menginstal, </p> <p><a href="http://3.bp.blogspot.com/-355_PmYyvOs/VNyn6s61nFI/AAAAAAAABXs/jkxRxU2XTxI/s1600/Instalasi%2Bpustaka%2BopenGL%2Bdi%2BUbuntu.png" imageanchor="1" ><img border="0" src="http://3.bp.blogspot.com/-355_PmYyvOs/VNyn6s61nFI/AAAAAAAABXs/jkxRxU2XTxI/s1600/Instalasi%2Bpustaka%2BopenGL%2Bdi%2BUbuntu.png" /></a></p> <pre><code class="bash">&hellip;<br />The following NEW packages will be installed:<br />  freeglut3 freeglut3-dev libdrm-dev libgl1-mesa-dev libglew-dev libglew1.10 libglu1-mesa-dev<br />  libx11-xcb-dev libxcb-dri2-0-dev libxcb-dri3-dev libxcb-glx0-dev libxcb-present-dev<br />  libxcb-randr0-dev libxcb-render0-dev libxcb-shape0-dev libxcb-sync-dev libxcb-xfixes0-dev<br />  libxdamage-dev libxext-dev libxfixes-dev libxshmfence-dev libxxf86vm-dev mesa-common-dev<br />  x11proto-damage-dev x11proto-dri2-dev x11proto-fixes-dev x11proto-gl-dev x11proto-xext-dev<br />  x11proto-xf86vidmode-dev<br />0 upgraded, 29 newly installed, 0 to remove and 10 not upgraded.<br />Need to get 1.661 kB of archives.<br />After this operation, 10,4 MB of additional disk space will be used.<br />Do you want to continue? [Y/n] <b>y</b></code></pre> <p>Setelah itu, mencoba lagi <i>build</i> dan meluncurkan program yang saya buat di <i>Qt Creator</i>. Alhamdulillah, berhasil:</p> <a href="http://1.bp.blogspot.com/-N8QSReAMz7A/VNyp9vC37yI/AAAAAAAABX4/glNWkO07Czk/s1600/program%2BQt%2Bpertama%2B-%2Bkenalan.png" imageanchor="1" ><img border="0" src="http://1.bp.blogspot.com/-N8QSReAMz7A/VNyp9vC37yI/AAAAAAAABX4/glNWkO07Czk/s1600/program%2BQt%2Bpertama%2B-%2Bkenalan.png" /></a></p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1248,17 +1260,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

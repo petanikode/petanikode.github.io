@@ -1217,6 +1217,18 @@ padding: 16px;
                 <p><a href="http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg" imageanchor="1"><img alt="Cover Tutorial" border="0" src="http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg" title="Tutorial Bootstrap Petani Kode" /></a>Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag <i>meta</i> <i>viewport</i>. Mengapa kita perlu menambahkan <i>meta viewport</i>? apa sih fungsinya? Mari kita bahas bersama.<br /><br />Pada bagian kepala <code>&lt;head&gt;</code> terdapat tag <code>&lt;meta&gt;</code> yang menampung nilai <i>viewport</i>. <i>Viewport</i> merupakan area yang terlihat pada (perangkat) user/pengunjung web. <i>Viewport</i> digunakan untuk desain web yang responsif <i>(responsive web design)</i>. Seperti selogan Bootstrap yang mengutamakan desain responsif.<br /><blockquote class="tr_bq">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.<br />— <cite>getbootstrap.com</cite></blockquote>Jadi dengan menambahkan <i>viewport</i>, web akan menjadi responsif. Responsif artinya bisa menyesuaikan diri dengan perangkat yang digunakan oleh user/pengunjung web. Contoh kode viewport yang diberikan di <a href="http://getbootstrap.com/css/#overview-mobile" target="_blank">dokumentasi Bootstrap</a>:<br /><pre><code class="html">&lt;meta name=&ldquo;viewport&rdquo; content=&ldquo;width=device-width, initial-scale=1&rdquo;&gt;</code></pre>Tag <i>meta viewport</i> akan memberikan intruksi ke browser untuk mengatur dimensi dan sekala web. Nilai <code>width=device-width</code>, artinya lebar web akan mengikuti lebar dari layar perangkat yang digunakan. Nilai <code>inital-scale=1</code>, artinya web akan diberikan skala <i>(zoom)</i> menjadi <code>1</code> (normal).<br /><br />Pengaruh dari tag <i>meta viewport</i> ini dapat kita lihat dengan membuka web dari ponsel android atau semacamnya. Tetapi tenang saja, anda juga bisa memanfaatkan fitur <i>inspect element</i> pada Google Chrome. Baiklah, mari kita uji coba. Pertama kita coba dulu membuka web yang tampa menggunakan tag <i>meta</i> <i>viewport</i>. Berikut ini cuplikan kode <code>&lt;head&gt;</code>-nya:<br /><pre><code class="html">&lt;head&gt;<br />&nbsp;&nbsp;&nbsp; &lt;title&gt;Hello Bootstrap&lt;/title&gt;<br /><br />&nbsp;&nbsp;&nbsp; &lt;!&ndash; menyisipkan bootstrap &ndash;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;bootstrap/css/bootstrap.min.css&rdquo; /&gt;<br />&nbsp;&nbsp;&nbsp; <br />&lt;/head&gt;</code></pre>Bukalah dengan Google Chrome. Kemudian klik kanan, lalu pilih <i>inspect element</i>. Setelah itu klik ikon ponsel ( <i class="fa fa-mobile"></i> ).<br /><a href="http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png" imageanchor="1"><img alt="Tampilan web tampa tag meta viewport" border="0" src="http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png" title="Tampilan web tampa tag meta viewport" /></a><br />Tampa menggunakan <i>viewport</i> web akan ditampilkan apa adanya. Seperti yang terlihat pada gambar di atas, web tidak diperbesar atau diatur ulang skalanya. Untuk itu, kita perlu menambahkan <i>viewport</i>. Sehingga kodenya menjadi seperti ini:<br /><pre><code class="html">&lt;head&gt;<br />&nbsp;&nbsp;&nbsp; &lt;title&gt;Hello Bootstrap&lt;/title&gt;<br /><br />&nbsp;&nbsp;&nbsp; &lt;!&ndash; menyisipkan bootstrap &ndash;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;bootstrap/css/bootstrap.min.css&rdquo; /&gt;<br />    <span style="background-color: #93c47d;">&lt;meta name=&ldquo;viewport&rdquo; content=&ldquo;width=device-width, initial-scale=1&rdquo;&gt;</span><br />&nbsp;&nbsp;&nbsp; <br />&lt;/head&gt;</code></pre>Setelah menambahkan <i>viewport</i>, sekarang coba <i>reload</i> kembali halamanya.<br /><a href="http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png" imageanchor="1"><img alt="Tampilan web yang menggunakan meta viewport" border="0" src="http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png" title="Tampilan web yang menggunakan meta viewport" /></a><br />Jelas sekali &lsquo;kan perbedaanya? Masih belum puas, coba lagi melihat dari ponsel yang berbeda (Nokia Lumia 520).<br /><a href="http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png" imageanchor="1"><img alt="Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520" border="0" src="http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png" title="Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520" /></a><br />Selain mencoba simulasi dari inspect element, saya juga mencoba melalui ponsel Samsung Galaxy C1 dan hasilnya sebagai berikut.<br /><a href="http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg" /></a><br /><h2>Kesimpulan</h2>Jadi, tag <i>meta viewport</i> berfungsi untuk mengatur ulang dimensi dan skala (zoom) web. Tag ini diperlukan untuk membangun web yang responsif.<br /><br />&mdash; <br />Nah, sekian dulu tutorial ke-3 ini. Kode lengkap tutorial ini dapat dilihat di file repositori github: <a href="https://github.com/petanikode/tutorial-bootstrap/blob/master/view_port.html" target="_blank">view_port.html</a><br /><br />Referensi:<br /><ol><li><a href="http://www.w3schools.com/css/css_rwd_viewport.asp" target="_blank"><a href="http://www.w3schools.com/css/css_rwd_viewport.asp">http://www.w3schools.com/css/css_rwd_viewport.asp</a></a></li><li><a href="http://getbootstrap.com/css/#overview-mobile" target="_blank"><a href="http://getbootstrap.com/css/#overview-mobile">http://getbootstrap.com/css/#overview-mobile</a></a></li></ol></p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1252,17 +1264,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

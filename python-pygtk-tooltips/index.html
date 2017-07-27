@@ -1228,6 +1228,18 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-dblbg2ZJpDk/VxJMSqM3l4I/AAAAAAAACvE/DSncHceQD_Yw2SjxSXD6H7774X5aPYI_gCK4B/s1600/Pemrograman%2BPyGTK%2BPetani%2BKode.png" /></a> <br />Beberapa komponen antarmuka grafis (GUI) perlu penjelasan tambahan agar pengguna mengerti fungsinya. Penjelasan tambahan dapat kita buat berupa pesan tips. Pesan tips di antarmuka dikenal dengan istilah <i>tooltips</i>. Pesan tips <i>(tooltips)</i> akan tampil ketika pointer menyentuh <i>(hover)</i> komponen tertentu.<br /><br />Pesan tips dapat kita buat dengan <i>metod</i> atau fungsi <code>set_tooltip_text()</code>. Fungsi ini dipakai pada objek komponen yang akan ditambahkan pesan tips. Perhatikanlah contoh berikut ini:<br /><pre><code class="python"># tooltip.py<br />import gtk<br /><br />class Aplikasi(gtk.Window):<br /><br />&nbsp; def <strong>init</strong>(self):<br />&nbsp; &nbsp; super(Aplikasi, self).<strong>init</strong>()<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.set_title(&ldquo;Tooltips&rdquo;)<br />&nbsp; &nbsp; self.set_size_request(250,200)<br />&nbsp; &nbsp; self.set_position(gtk.WIN_POS_CENTER)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.connect(&ldquo;destroy&rdquo;, gtk.main_quit)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.kontainer = gtk.Fixed()<br />&nbsp; &nbsp; self.add(self.kontainer)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; tombol = gtk.Button(&ldquo;Sebuah Tombol&rdquo;)<br />&nbsp; &nbsp; tombol.set_size_request(100,35)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.kontainer.put(tombol,50,50)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.set_tooltip_text(&ldquo;Ini jendela&rdquo;)<br />&nbsp; &nbsp; tombol.set_tooltip_text(&ldquo;Ini adalah sebuat tombol&rdquo;)<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; self.show_all()<br />&nbsp; &nbsp;<br />Aplikasi()<br />gtk.main()<br /></code></pre>Saat dijalankan, pesan tips akan tampil ketika pointer melewati komponen yang sudah diberikan pesan tips.<br /><a href="http://2.bp.blogspot.com/-kZJZI-WDazQ/VAv6jQopV8I/AAAAAAAAAng/7QOFEdUT2Vo/s1600/Tooltips_016.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-kZJZI-WDazQ/VAv6jQopV8I/AAAAAAAAAng/7QOFEdUT2Vo/s1600/Tooltips_016.png" /></a>  <br /><br />Pesan tips dapat diberikan pada komponen yang dapat disentuh pointer, bukan komponen yang tidak terlihat <i>(background)</i>. Pakailah<i> </i>pesan tips pada komponen yang membutuhkan informasi tambahan agar antarmuka yang kita buat lebih mudah dipahami.<br /><br /><br />Referensi: <a href="http://zetcode.com/gui/pygtk/firststeps/">zetcode.com</a></p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1263,17 +1275,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

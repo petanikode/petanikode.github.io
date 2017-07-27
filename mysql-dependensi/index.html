@@ -1223,6 +1223,18 @@ padding: 16px;
                 <p><a href="https://1.bp.blogspot.com/-UZz6uobxiZE/VxyWBdU9HxI/AAAAAAAACwc/xC-LHlNtHZoXkxnr1nYNhCAtK1vE4O4fwCLcB/s1600/MySQL%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-UZz6uobxiZE/VxyWBdU9HxI/AAAAAAAACwc/xC-LHlNtHZoXkxnr1nYNhCAtK1vE4O4fwCLcB/s1600/MySQL%2BPetani%2BKode.png" /></a>Gara-gara upgrade versi server MySQL tadi malam, servernya malah error. Awalnya saya menggunakan MySQL versi 5.5, kemudian ditingkatkan <i>(upgrade)</i> ke versi 5.6.<br /><pre><code class="bash">$ <b>mysql -u root -p</b>  <br />ERROR 2002 (HY000): Can&rsquo;t connect to local MySQL server through socket    &lsquo;/var/run/mysqld/mysqld.sock&rsquo; (2)</code></pre>Kemudian saya mencoba menghapus mysql-server dan meninginstal lagi (instal ulang). <br /><pre>sudo apt-get remove mysql-server<br />sudo apt-get install mysql-server</pre>Malah dapat error dependensi:<br /><pre style="overflow: auto;"><code>$ sudo apt-get install mysql-server<br />Reading package lists&hellip; Done<br />Building dependency tree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />Reading state information&hellip; Done<br />The following extra packages will be installed:<br />&nbsp; mysql-server-5.5 mysql-server-core-5.5<br />Suggested packages:<br />&nbsp; tinyca mailx<br />The following NEW packages will be installed:<br />&nbsp; mysql-server mysql-server-5.5 mysql-server-core-5.5<br />0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.<br />Need to get 0 B/5.144 kB of archives.<br />After this operation, 53,2 MB of additional disk space will be used.<br />Do you want to continue? [Y/n] y<br />Preconfiguring packages &hellip;<br />Selecting previously unselected package mysql-server-core-5.5.<br />(Reading database &hellip; 272846 files and directories currently installed.)<br />Preparing to unpack &hellip;/mysql-server-core-5.5_5.5.49-0ubuntu0.14.04.1_amd64.deb &hellip;<br />Unpacking mysql-server-core-5.5 (5.5.49-0ubuntu0.14.04.1) &hellip;<br />Selecting previously unselected package mysql-server-5.5.<br />Preparing to unpack &hellip;/mysql-server-5.5_5.5.49-0ubuntu0.14.04.1_amd64.deb &hellip;<br />Unpacking mysql-server-5.5 (5.5.49-0ubuntu0.14.04.1) &hellip;<br />Selecting previously unselected package mysql-server.<br />Preparing to unpack &hellip;/mysql-server_5.5.49-0ubuntu0.14.04.1_all.deb &hellip;<br />Unpacking mysql-server (5.5.49-0ubuntu0.14.04.1) &hellip;<br />Processing triggers for man-db (2.6.7.1-1ubuntu1) &hellip;<br />Processing triggers for ureadahead (0.100.0-16) &hellip;<br />Setting up mysql-server-core-5.5 (5.5.49-0ubuntu0.14.04.1) &hellip;<br />Setting up mysql-server-5.5 (5.5.49-0ubuntu0.14.04.1) &hellip;<br />160424 14:50:11 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.<br />160424 14:50:11 [Note] /usr/sbin/mysqld (mysqld 5.5.49-0ubuntu0.14.04.1) starting as process 12092 &hellip;<br />start: Job failed to start<br />invoke-rc.d: initscript mysql, action &ldquo;start&rdquo; failed.<br />dpkg: error processing package mysql-server-5.5 (&ndash;configure):<br />&nbsp;subprocess installed post-installation script returned error exit status 1<br />dpkg: dependency problems prevent configuration of mysql-server:<br />&nbsp;mysql-server depends on mysql-server-5.5; however:<br />&nbsp; Package mysql-server-5.5 is not configured yet.<br /><br />dpkg: error processing package mysql-server (&ndash;configure):<br />&nbsp;dependency problems - leaving unconfigured<br />Processing triggers for ureadahead (0.100.0-16) &hellip;<br />No apport report written because the error message indicates its a followup error from a previous failure.</code></pre>Beberapa solusi sudah dilakukan, tapi masih belum juga bisa. Solusi terakhir yang saya temikan di <a href="http://stackoverflow.com/a/18456553" target="_blank">Stackoverflow</a> sangat ampuh. Solusi terakhir ini membersihkan semuanya: database, konfigurasi, user, paket-paket MySQL dll. Jangan coba-coba solusi ini, kalau anda belum yakin kehilangan semua hal yang berkaitan dengan MySQL. Berikut ini perintah-perintah ajaibnya.<br /><pre><code class="bash">$ sudo apt-get &ndash;yes autoremove &ndash;purge mysql-server-5.5<br /><br />$ sudo apt-get &ndash;yes autoremove &ndash;purge mysql-client-5.5<br /><br />$ sudo apt-get &ndash;yes autoremove &ndash;purge mysql-common<br /><br />$ sudo rm -rf /var/lib/mysql /etc/mysql ~/.mysql<br /><br /><br /><br />$ sudo deluser mysql<br /><br />$ sudo apt-get autoclean<br /><br />$ sudo apt-get update &amp;&amp; sudo apt-get upgrade<br /><br />$ sudo apt-get install mysql-server-5.5 mysql-client-5.5<br /></code></pre>Server MySQL yang ada di komputer saya pun kembali normal. Tetapi, semua databasenya hilang. Untunglah dulu sudah pernah <a href="http://2016/02/cara-backup-semua-database-mysql-di.html" target="_blank">membuat cadangan <i>(back-up)</i></a>.</p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1252,17 +1264,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

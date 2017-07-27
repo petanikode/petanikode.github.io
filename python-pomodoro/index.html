@@ -1213,6 +1213,18 @@ padding: 16px;
                 <p>Pomodoro merupakan sebuah teknik yang memanfaatkan waktu 25 menit untuk fokus mengerjakan sesuatu. Pomodoro dapat diterapkan untuk berbagai jenis pekerjaan. Pomodoro akan mencegah kita melakukan pekerjaan multitasking dan membantu fokus.<a href="http://3.bp.blogspot.com/-zNt91vEhpxc/V6W4q8GoR7I/AAAAAAAADGY/TR55AVngJowZ1XZqpilvaND5fE7vJm1KACK4B/s1600/4975166968_793305a326_b.jpg" imageanchor="1"><img alt="pomodoro timer" border="0" src="https://3.bp.blogspot.com/-zNt91vEhpxc/V6W4q8GoR7I/AAAAAAAADGY/TR55AVngJowZ1XZqpilvaND5fE7vJm1KACK4B/s1600/4975166968_793305a326_b.jpg" title="" /></a><br />Pada kesempatan ini, kita akan membuat program Timer Pomodoro. Timer ini mulai menghitung mundur mulai dari 25 menit.<br /><h2>1. Impor Pustaka yang Diperlukan</h2>Pada pembuatan program ini, kita memerlukan dua pustaka. Yaitu time dan sys (sistem). Pustaka time kita perlukan untuk melakukan perulangan per detik. Sedangkan pustaka sys untuk menampilkan ke konsol (CLI).<br /><pre><code class="python">import time<br />import sys</code></pre><h2>2. Deklarasi Variabel Awal</h2>Ada dua variabel awal yang kita butuhkan:<br /><pre><code class="python">menit = 60 # detik<br />pomodoro = 25</code></pre><h2>3. Perulangan Per Detik</h2>Inilah kunci dari program timer pomodoro:<br /><pre><code class="python">for sisa in range(pomodoro * menit, 0, -1):<br />&nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;\r&rdquo;)<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; menit = menit - 1<br />&nbsp;&nbsp;&nbsp; if menit &lt;= 0:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; pomodoro = pomodoro - 1<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; menit = 60<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; if menit &lt;= 9:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;[{:2d}:0{:1d}] Pomodoroing&hellip;!&ldquo;.format(pomodoro-1, menit))<br />&nbsp;&nbsp;&nbsp; else:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;[{:2d}:{:1d}] Pomodoroing&hellip;!&ldquo;.format(pomodoro-1, menit))&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; sys.stdout.flush()<br />&nbsp;&nbsp;&nbsp; time.sleep(1)</code></pre><h2>4. Pesan Ketika Waktu Habis</h2><pre><code class="python">sys.stdout.write(&ldquo;Selesai!\n&rdquo;)</code></pre>Selain menggunakan pesan tertulis, kita juga dapat menggunakan suara untuk menandakan waktu sudah habis.<br /><h2>5. Kode Lengkap: pomodoro.py</h2><pre><code class="python">import time<br />import sys<br /><br />menit = 60<br />pomodoro = 25<br /><br /><br />for sisa in range(pomodoro * menit, 0, -1):<br />&nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;\r&rdquo;)<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; menit = menit - 1<br />&nbsp;&nbsp;&nbsp; if menit &lt;= 0:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; pomodoro = pomodoro - 1<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; menit = 60<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; if menit &lt;= 9:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;[{:2d}:0{:1d}] Pomodoroing&hellip;!&ldquo;.format(pomodoro-1, menit))<br />&nbsp;&nbsp;&nbsp; else:<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sys.stdout.write(&rdquo;[{:2d}:{:1d}] Pomodoroing&hellip;!&ldquo;.format(pomodoro-1, menit))&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; sys.stdout.flush()<br />&nbsp;&nbsp;&nbsp; time.sleep(1)<br /><br />sys.stdout.write(&ldquo;Selesai!\n&rdquo;)</code></pre><h2>6. Demo dalam Timelapse</h2><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/eaIk_ZEPiy4" width="560"></iframe></p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1244,17 +1256,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

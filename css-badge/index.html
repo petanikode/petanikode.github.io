@@ -1225,6 +1225,18 @@ padding: 16px;
                 <p><a href="http://3.bp.blogspot.com/-xWbsbNaJRHY/V2qqK3fPAvI/AAAAAAAAC3Y/zqm7o77ileEb0rVpvOXOWeKWSbbYmzsbACK4B/s1600/badge-notifikasi-css-petanikode.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-xWbsbNaJRHY/V2qqK3fPAvI/AAAAAAAAC3Y/zqm7o77ileEb0rVpvOXOWeKWSbbYmzsbACK4B/s1600/badge-notifikasi-css-petanikode.png" /></a>Badge notifikasi sering kali kita temukan dalam website maupun aplikasi. Terkadang badge tersebut menggoda kita untuk mengelik link atau tombol notifikasi. Itulah fungsinya, agar user tau, di sana ada sesuatu yang baru. Badge biasanya dilengkapi dengan angka penghitung.<br /><br />Framework antarmuka semacam Bootstrap sudah menyediakan <i>class</i> sendiri untuk pembuatan badge. Namun, karena badge yang dihasilkan tidak sesui seperti harapan, maka kita harus membuatnya sendiri.<br /><h2>Kode CSS</h2><pre><code class="css">.badge-notif {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; position:relative;<br />}<br /><br />.badge-notif[data-badge]:after {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; content:attr(data-badge);<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; position:absolute;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; top:-10px;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; right:-10px;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; font-size:.7em;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; background:#e53935;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; color:white;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; width:18px;<br />&nbsp;&nbsp;&nbsp;     height:18px;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; text-align:center;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; line-height:18px;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; border-radius: 50%;<br />}</code></pre>Pada kode CSS di atas, kita mengambil isi badge dari atribut <code>data-badge</code>. Untuk posisi badge dapat diatur dalam properti <code>top</code> dan <code>right</code>. Warna, ukuran, font, background dll. bisa diatur sendiri sesui selera.<br /><h2>Penggunaan di HTML</h2>Elemen yang ingin menggunakan badge yang dibuat tadi harus menambahkan class badge-notif dan sebuah atribut data-badge untuk konten badge-nya. Contoh:<br /><br />Pada Tombol<br /><pre><code class="html">&lt;button class=&ldquo;badge-notif&rdquo; data-badge=&ldquo;12&rdquo;&gt;Notifikasi&lt;/button&gt;</code></pre>Pada Link<br /><pre><code class="html">&lt;a href=&ldquo;#!&rdquo; class=&ldquo;badge-notif&rdquo; data-badge=&ldquo;22&rdquo;&gt;Pesan&lt;/a&gt;</code></pre><h2>Demo</h2><a class="jsbin-embed" href="http://jsbin.com/batetij/embed?output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.13"></script></p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1260,17 +1272,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

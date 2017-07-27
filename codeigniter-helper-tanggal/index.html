@@ -1211,6 +1211,18 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" /></a>Saat kita membuat sbuah tanggal otomatis dengan fungsi <code>Date()</code>, kita akan mendapatkan hasil dalam format bahasa inggris. Contoh, <code>Date(&rsquo;d F Y&rsquo;)</code> akan menghasilkan output <code>22 December 2016</code> (sesui tanggal sekarang). Format penanggalan ini mungkin tidak begitu penting bagi sistem yang tidak digunakan di tempat formal. Namun, bagaimana kalau untuk membuat surat atau laporan formal. Pastinya, kita dituntut untuk menggunakan bahasa indonesia yang baik dan benar.<br /><br />Hal yang perlu kita lakukan untuk merubah tanggal ke dalam bahasa indonesia adalah merubah nama-nama bulan dari fungsi <code>Date()</code>. Kita bisa melakukannya seperti berikut ini.<br /><pre><code class="php">&lt;?php<br />$bulan = Date(&rsquo;m&rsquo;);<br />switch ($bulan) {<br />    case 1:<br />&nbsp; &nbsp;     $bulan = &ldquo;Januari&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br />&nbsp; &nbsp; case 2:<br />&nbsp; &nbsp; &nbsp; &nbsp; $bulan = &ldquo;Februari&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br />&nbsp; &nbsp; case 3:<br />&nbsp; &nbsp; &nbsp; &nbsp; $bulan = &ldquo;Maret&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br />&nbsp; &nbsp; case 4:<br />&nbsp; &nbsp; &nbsp; &nbsp; $bulan = &ldquo;April&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br />&nbsp; &nbsp; case 5:<br />&nbsp; &nbsp; &nbsp; &nbsp; $bulan = &ldquo;Mei&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br />&nbsp; &nbsp; case 6:<br />&nbsp; &nbsp; &nbsp; &nbsp; $bulan = &ldquo;Juni&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br />&nbsp; &nbsp; case 7:<br />&nbsp; &nbsp; &nbsp; &nbsp; $bulan = &ldquo;Juli&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br />&nbsp; &nbsp; case 8:<br />&nbsp; &nbsp; &nbsp; &nbsp; $bulan = &ldquo;Agustus&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br />&nbsp; &nbsp; case 9:<br />  &nbsp; &nbsp; &nbsp; $bulan = &ldquo;September&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br />&nbsp; &nbsp; case 10:<br />&nbsp; &nbsp; &nbsp; &nbsp; $bulan = &ldquo;Oktober&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br />&nbsp; &nbsp; case 11:<br />&nbsp; &nbsp; &nbsp; &nbsp; $bulan = &ldquo;November&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br />&nbsp; &nbsp; case 12:<br />&nbsp; &nbsp; &nbsp; &nbsp; $bulan = &ldquo;Desember&rdquo;;<br />&nbsp; &nbsp; &nbsp; &nbsp; break;<br /><br />&nbsp; &nbsp; default:<br /> &nbsp; &nbsp; &nbsp; $bulan = Date(&lsquo;F&rsquo;);<br /> &nbsp; &nbsp; &nbsp; break;<br />}</code></pre>Karena kita membutuhkannya untuk digunakan atau dijalankan pada&nbsp;<i>view</i>, sebaiknya dijadikan <i>helper</i>.<br /><br /><script src="https://gist.github.com/ardianta/ba0934a0ee88315359d30095c7e442de.js"></script><br />Cara menggunakannya, silahkan taruh file <code>tanggal_helper.php</code>&nbsp;pada direktori <code>application/helpers</code> kemudian tambahkan pada <i>autoload</i> <i>helper</i>.<br /><pre><code class="php">/<em><br />| &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-<br />| &nbsp;Auto-load Helper Files<br />| &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-<br />| Prototype:<br />|<br />|<span class="Apple-tab-span" style="white-space: pre;"> </span>$autoload[&lsquo;helper&rsquo;] = array(&lsquo;url&rsquo;, &lsquo;file&rsquo;);<br /></em>/<br />$autoload[&lsquo;helper&rsquo;] = array(&lsquo;url&rsquo;,&lsquo;cookie&rsquo;,&lsquo;form&rsquo;, &lsquo;xss&rsquo;, &lsquo;dump&rsquo;, &lsquo;tanggal&rsquo;);</code></pre>Setelah itu bisa digunakan langsung pada <i>view</i>, <i>controller</i>, maupun <i>model</i> seperti menggunakan helper <code>url</code>. Contoh:<br /><pre><code class="html php">&lt;div class=&ldquo;tanda-tangan&rdquo;&gt;<br />&nbsp; &nbsp; &lt;p align=&ldquo;center&rdquo;&gt;Mataram, &lt;?php echo tanggal() ?&gt;&lt;br&gt;<br /><span class="Apple-tab-span" style="white-space: pre;"> </span> &nbsp; &nbsp;Kepala Dinas Pertanian&lt;br&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp; Provinsi Nusa Tenggara Barat&lt;br&gt;<br />&nbsp; &nbsp; &lt;/p&gt;<br />&nbsp; &nbsp; &lt;br&gt;<br />&nbsp; &nbsp; &lt;br&gt;<br />&nbsp; &nbsp; &lt;br&gt;<br />&nbsp; &nbsp; &lt;p align=&ldquo;center&rdquo;&gt;&lt;b&gt;&lt;u&gt;Ir. Hj. Budi Septiani&lt;/b&gt;&lt;/u&gt;&lt;br&gt;<br />&nbsp; &nbsp; NIP. &hellip;..<br />&nbsp; &nbsp; &lt;/p&gt;<br />&lt;/div&gt;</code></pre>Akan menghasilkan output:<br /><a href="http://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png" imageanchor="1"><img alt="Hasil output format tanggal dalam bahasa indonesia pada CodeIgniter" border="0" src="https://2.bp.blogspot.com/-d5kjJRE0VnM/WFuoNzzpNDI/AAAAAAAADgE/9ZRUx1Q4-oYMCf2aM6cJXP2riX3KAvSEgCK4B/s1600/Format%2Btanggal%2Bdalam%2Bbahasa%2Bindonesia%2Bpada%2BCodeIgniter.png" title="" /></a></p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1244,17 +1256,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

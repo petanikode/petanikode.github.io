@@ -1219,6 +1219,18 @@ padding: 16px;
                 <p>Jika komputer anda baru pertama kali terhubung dengan bitbucket, mungkin anda akan mendapatkan error ini ketika meng-upload atau <i>push</i> kode.<br /><a href="http://2.bp.blogspot.com/-I9CjXcqUABA/V2JBhsEnGYI/AAAAAAAAC3I/fRu1SO9FRaIac3iSymPzkSc_9UAxzlm1wCK4B/s1600/bitbucket-push-key-ssh-petanikode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-I9CjXcqUABA/V2JBhsEnGYI/AAAAAAAAC3I/fRu1SO9FRaIac3iSymPzkSc_9UAxzlm1wCK4B/s1600/bitbucket-push-key-ssh-petanikode.png" /></a><br />Tidak seperti Github yang selalu meminta password setiap kali nge-push. Bitbucket menggunakan metode <i>SSH Key</i> untuk sinkronisasi repositori lokal dengan repositori <i>remote</i> (Bitbucket). Oleh karena itu, kita hanya perlu <i>set up</i> SSH untuk Git Bitbucket.<br /><h2>1. Membuat KeyGen SSH</h2>Ketik perintah <code>ssh-keygen</code> pada termnial. Kemudian inputkan id (identitas) SSH anda.<br /><a href="http://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png" /></a><br />Maka di dalam direktori <code>~/.ssh/</code> akan tercipa file key baru.<br /><a href="http://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png" /></a><br /><h2>2. Jalankan SSH Angen dan Load SSH Key</h2>Untuk memastikan apakah SSH Agen sudah berajalan atau tidak, gunakan perintah ini:<br /><pre><code class="bash">ps -e | grep [s]sh-agent</code></pre>Kalau hasilnya seperti di bawah ini, berati SSH Agen sudah berjalan.<br /><a href="http://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png" /></a><br />Tapi, kalau belum berjalan, gunakan perintah berikut ini untuk menjalankan SSH agent:<br /><pre><code class="bash">ssh-agent /bin/bash</code></pre>Berikutnya kita Load SSH Key. Gunakan perintah:<br /><pre><code class="bash">ssh-add ~/.ssh/id_anda</code></pre>Kemudian untuk mengecek, gunakan perintah:<br /><pre><code class="bash">ssh-add -l</code></pre><a href="http://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png" /></a><br /><h2>3. Tambahkan Kunci Publik ke Akun Bitbucket</h2>Ambil kuncil publik yang sudah anda buat, gunakan perintah cat.<br /><pre><code class="bash">cat ~/.ssh/id_anda.pub</code></pre>Copy semua teks yang ditampilkan.<br /><a href="http://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png" /></a><br />Kemudian masuk ke akun Bitbucket. Masuk ke <i>Bitbucket Settings</i> dengan mengelik <i>avatar</i>. Kemudian cari menu <i>SSH Key</i> di bagian samping. Tambahkan <i>SSH Key</i> dari yang sudah di-copy tadi.<br /><a href="http://1.bp.blogspot.com/-llS_w8e2lJo/V3fa8MGfe-I/AAAAAAAAC7I/vtsUYVj7RdQ0_PwObZhCJEwazJ1SESM_ACK4B/s1600/Tambahkan%2BSSH%2BKey%2Bke%2BAkun%2BBitbucket.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-llS_w8e2lJo/V3fa8MGfe-I/AAAAAAAAC7I/vtsUYVj7RdQ0_PwObZhCJEwazJ1SESM_ACK4B/s1600/Tambahkan%2BSSH%2BKey%2Bke%2BAkun%2BBitbucket.png" /></a><br /><h2>4. Periksa Konektivitas</h2>Ketik perintah berikut ini di terminal:<br /><pre><code class="bash">ssh -T git@bitbucket.org</code></pre>Kalau hasilnya seperti di bawah ini, maka koneksi berhasil. Sekarang anda bisa sinkronkan repositori lokal dengan repositori remote yang ada di Bitbucket.<br /><a href="http://1.bp.blogspot.com/-msMvX3F3P_8/V3fbhHjriYI/AAAAAAAAC7Q/by5WXzWRwZkvQm97TvSGkG5ABU6lttiEQCK4B/s1600/Koneksi%2Bke%2BBitbucket%2BBerhasil.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-msMvX3F3P_8/V3fbhHjriYI/AAAAAAAAC7Q/by5WXzWRwZkvQm97TvSGkG5ABU6lttiEQCK4B/s1600/Koneksi%2Bke%2BBitbucket%2BBerhasil.png" /></a><br /><blockquote class="tr_bq"><b>Catatan:</b> Load kembali kunci SSH bila anda tidak terhubung lagi (jalankan perintah nomer 2).</blockquote><br />Refernsi:<br /><ul><li><a href="https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html" target="_blank"><a href="https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html">https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html</a></a> </li><li><a href="https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html" target="_blank"><a href="https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html">https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html</a> </a></li><li><a href="https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html" target="_blank"><a href="https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html">https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html</a></a></li></ul></p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1252,17 +1264,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

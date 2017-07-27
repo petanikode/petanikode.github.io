@@ -1225,6 +1225,18 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" /></a>Ketika saya menjadi tutor di sebuah praktikum web, waktu itu kami mempelajari <a href="http://www.petanikode.com/search/label/CodeIgniter">CodeIgniter</a>. Saya menemukan sedikit kasus, terkait tentang penyisipan file aset. Mengapa harus menggunakan fungsi <code>base_url()</code>? Itulah pertanyaan yang diajukan dari salah satu peserta praktikum.<br /><br />Kemudian saya menjawabnya dengan memperlihatkan demo. Bagaimana penyisipan yang menggunakan fungsi <code>base_url()</code> dan bagaimana yang tanpa fungsi <code>base_url()</code>.<br /><br />Penyisipan file aset dengan fungsi <code>base_url()</code>:<br /><pre><code class="html php">&lt;link rel=&ldquo;stylesheet&rdquo; href=&rdquo;&lt;?php echo base_url(&lsquo;assets/bootstrap/bootstrap.min.css&rsquo;) ?&gt;&rdquo; /&gt;</code></pre>atau<br /><pre><code class="html php">&lt;link rel=&ldquo;stylesheet&rdquo; href=&rdquo;&lt;?php echo base_url() ?&gt;assets/bootstrap/bootstrap.min.css&rdquo; /&gt;</code></pre><br />Penyisipan file aset tanpa fungsi <code>base_url()</code>:<br /><pre><code class="html">&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;assets/bootstrap/bootstrap.min.css&rdquo; /&gt;</code></pre><br />Hasil Kedua-duanya bisa, file asetnya berhasil di sisipkan. Tapi, ternyata opini saya salah. Penyisipan file aset tanpa menggunakan fungsi <code>base_url()</code> hanya akan valid pada halaman <i>index (root)</i>. Begitu membuka halaman yang lain, alamat URL asetnya berubah. Contoh, saya membuka URL:<br /><pre><code class="html"><a href="http://localhost/proyek/index.php/register">http://localhost/proyek/index.php/register</a></code></pre>Maka yang akan terjadi adalah, alamat URL asetnya akan berubah menjadi.<br /><pre><code class="html"><a href="http://localhost/proyek/index.php/register/assets/bootstrap/css/bootstrap.min.css">http://localhost/proyek/index.php/register/assets/bootstrap/css/bootstrap.min.css</a></code></pre>Lihat, file asetnya tidak akan pernah ditemukan. Lalu, bagaimana kalau penyisipannya seperti ini.<br /><pre><code class="html">&lt;link rel=&ldquo;stylesheet&rdquo; href=&rdquo;<span style="color: red;">/</span>assets/bootstrap/bootstrap.min.css&rdquo; /&gt;</code></pre>Perhatikan garis miring (/) di depan <i>assets</i>. Garis miring tersebut menyatakan <i>root</i> dari web. Sementara root dari web yang sedang dikerjakan adalah <code><a href="http://localhost/">http://localhost/</a></code>, maka nanti akan membentuk URL seperti berikut ini: <br /><pre><code class="html"><a href="http://localhost/assets/bootstrap/css/bootstrap.min.css">http://localhost/assets/bootstrap/css/bootstrap.min.css</a></code></pre>Cara seperti ini, mungkin akan bekerja bila webnya sudah di-hosting dan diletakan pada <i>root</i>. Namun, saat ini kita sedang bekerja di <code>localhost</code>. Jadi, sebaiknya kita gunakan fungsi <code>base_url()</code> untuk penyisipan file aset agar di <code>localhost</code> dan di server <i>hosting</i> bisa bekerja. Bagaimana menurutmu?</p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1260,17 +1272,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

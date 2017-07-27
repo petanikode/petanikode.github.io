@@ -1209,6 +1209,18 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" /></a>Rasanya kurang lengkap, bila saya hanya memperkenalkan dua fungsi untuk operasi&nbsp; file sistem di PHP. Pada <a href="http://www.petanikode.com/2016/09/membuat-dan-menampilkan-isi-direktori.html" target="_blank">terbitan sebelumnya</a>, saya sudah membahas fungsi <code>mkdir()</code> dan <code>scandir()</code>. Kali ini saya akan membahas fungsi <code>rename()</code> dan <code>rmdir()</code>. <br /><h2>Menghapus direktori</h2>Menghapus direktori dapat dilakukan dengan fungsi <code>rmdir()</code>. Fungsi ini memiliki parameter berupa string. Parameter tersebut adalah nama direktori yang ingin dihapus. Contoh:<br /><pre><code class="php">&lt;?php rmdir(&ldquo;nama_dir&rdquo;); ?&gt;</code></pre>Fungsi tersebut akan menghasilkan error apabila direktorinya tidak ditemukan. Untuk mengatasi ini, kita bisa menggunakan fungsi <code>is_dir()</code> untuk mengecek direktorinya ada atau tidak.<br /><pre><code class="php">&lt;?php<br />$nama_dir = &ldquo;petanikode&rdquo;;<br /><br />if( is_dir($nama_dir) ) {<br />&nbsp; &nbsp; rmdir($nama_dir); <br />} else {<br />&nbsp;&nbsp;&nbsp; echo &ldquo;Direktori tidak ditemukan&rdquo;; <br />}<br />?&gt;</code></pre>Percobaan:<br /><a href="http://3.bp.blogspot.com/-iNbyhRtAH1w/V9ek2zq-VQI/AAAAAAAADRQ/Ne5EXYZ5ulk3Ib6cZzUhFLsM3Gri4S5wACK4B/s1600/Percobaan%2Bpenghapusan%2Bdirektori%2Bdengan%2Bphp.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-iNbyhRtAH1w/V9ek2zq-VQI/AAAAAAAADRQ/Ne5EXYZ5ulk3Ib6cZzUhFLsM3Gri4S5wACK4B/s1600/Percobaan%2Bpenghapusan%2Bdirektori%2Bdengan%2Bphp.png" /></a><br /><h2>Mengubah Nama</h2>Kita dapat merubah nama direktori dengan fungsi <code>rename()</code>. Fungsi ini tidak hanya untuk merubah nama direktori, merubah nama file juga dapat menggunakan fungsi ini. Ada dua parameter yang perlu diberikan kepada fungsi ini. Pertama adalah nama file atau direktori yang akan dirubah namanya. Kedua nama barunya. Contoh:<br /><pre><code class="php">&lt;?php rename(&ldquo;petanikode&rdquo;, &ldquo;petani_kode_baru&rdquo;); ?&gt;</code></pre>Percobaan:<br /><a href="http://1.bp.blogspot.com/-gJXpnYQNh38/V9enQyzUe1I/AAAAAAAADRc/CuGvcEvjBjEh6b4wE1vgwEeuO7yP4ltZQCK4B/s1600/Percobaan%2Brename%2Bdirektori%2Bdengan%2BPHP%2B-%2BPetani%2Bkode.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-gJXpnYQNh38/V9enQyzUe1I/AAAAAAAADRc/CuGvcEvjBjEh6b4wE1vgwEeuO7yP4ltZQCK4B/s1600/Percobaan%2Brename%2Bdirektori%2Bdengan%2BPHP%2B-%2BPetani%2Bkode.png" /></a><br /><br />Begitulah cara menghapus dan mengubah nama direktori dengan PHP. Selamat mencoba!<br /><br />Referensi:<br /><ul><li><a href="http://php.net/manual/en/function.rmdir.php" target="_blank"><a href="http://php.net/manual/en/function.rmdir.php">http://php.net/manual/en/function.rmdir.php</a></a></li><li><a href="http://php.net/manual/en/function.rename.php" target="_blank"><a href="http://php.net/manual/en/function.rename.php">http://php.net/manual/en/function.rename.php</a></a>&nbsp;</li><li><a href="http://www.w3schools.com/php/func_filesystem_rename.asp" target="_blank"><a href="http://www.w3schools.com/php/func_filesystem_rename.asp">http://www.w3schools.com/php/func_filesystem_rename.asp</a></a> </li></ul></p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1240,17 +1252,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

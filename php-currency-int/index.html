@@ -1215,6 +1215,18 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png" /></a>Setiap aplikasi penjualan, pasti menyimpan nilai mata uang di database-nya. Tipe data yang digunakan bisa bermacam-macam. Bisa menggunakan <i>String</i> atau <i>Varchar</i>, <i>Integer</i>, <i>Float</i> atau <i>Double</i>, <i>BigInt</i>, dkk. Pada kesempatan kali ini, saya akan berbagi cara mengkonversi tipe data (Mata Uang) <i>String</i> menjadi <i>Integer</i>.<br /><h2>1. Manipulasi String</h2>Sebelum kita mengubah data <i>string</i> mata uang, kita perlu memanipulasinya terlebih dahulu. Tujuannya untuk menghilangkan simbol dan tanda baca yang ada di dalam <i>string</i>.<br /><br />Misalkan, sebuah data mata uang bentuknya seperti ini:<br /><pre><code class="php">&lt;?php<br />$harga = &ldquo;Rp 450.000&rdquo;;<br />?&gt;</code></pre>Bagaiaman cara memanipulasi <i>string</i> tersebut menjadi <code>&ldquo;450000&rdquo;</code>? Kita bisa memanfaatkan fungsi <i>regular expression</i> untuk melakukannya.<br /><pre><code class="php">&lt;?php<br />$harga_str = preg_replace(&ldquo;/[^0-9]/&ldquo;, &ldquo;&rdquo;, $harga);<br />var_dump($harga_str);<br />?&gt;</code></pre>Hasil output-nya: <code>string(6) &ldquo;450000&rdquo;</code><br /><h2>2. Konversi Ke Integer</h2>Setelah kita berhasil memanipulasi string mata uang menjadi sebuah string (angka). Sekarang kita konversi tipe datanya ke dalam bentuk Integer. Caranya dengan menambahkan <code>(int)</code> di depan variabel atau data <i>string</i>.<br /><pre><code class="php">&lt;?php<br />$harga_str = preg_replace(&ldquo;/[^0-9]/&ldquo;, &ldquo;&rdquo;, $harga);<br />var_dump($harga_str);<br />$harga_int = (int) $harga_str;<br />var_dump($harga_int);<br />?&gt;</code></pre>Hasil Output-nya:<br /><pre><code class="bash">string(6) &ldquo;450000&rdquo;<br />int(450000)</code></pre><h2>Kesimpulan</h2>Konversi tipe data string mata uang ke dalam integer membutuhkan dua langkah. Pertama, hilangkan dulu simbol dan tanda bacanya dengan fungsi <i>regular expression</i>. Kedua, konversi tipe data hasil dari <i>regular expression</i> menjadi <i>integer</i>.<br /><br />Selamat mencoba!</p>
 
                 <div class="post-footer">
+                    <div align="center">
+                    <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
+                    </div>
+                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1248,17 +1260,7 @@ padding: 16px;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                <div align="center">
-                <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                </div>
+                
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
 

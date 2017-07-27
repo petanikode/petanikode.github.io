@@ -221,7 +221,7 @@ Tapi masalahnya sekarang:
 &ldquo;Bagaimana kalau kita membuat program yang cukup besar, apakah kita masih bisa menulis semua kodenya di dalam fungsi main()?&rdquo;
 Bisa-bisa saja, tapi kurang efektif dan akan menghabiskan banyak tenaga untuk mengetik kodenya.
 Belum lagi kalau ada error&hellip;",
-  "wordCount": 741,
+  "wordCount": 883,
   "datePublished" : "2016-04-22T20:31:00",
   "dateModified" : "2016-04-22T20:31:00",
   "image" : {
@@ -1474,7 +1474,58 @@ Luas Persegi = sisi * sisi;
 <pre><code>864
 </code></pre>
 
-<!-- @TODO ## Fungsi Static -->
+<h2 id="fungsi-static-dan-non-static">Fungsi Static dan Non-Static</h2>
+
+<p>Pada contoh-contoh diatas, kita menggunakan kata kunci
+<code>static</code> sebelum membuat fungsi.</p>
+
+<p>Kata kunci <code>static</code> akan membuat fungsi dapat dieksekusi langsung,
+tanpa harus membuat instansiasi objek dari class.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-java">public class FungsiStatic {
+    
+    // Fungsi non-static
+    void makan(String makanan){
+        System.out.println(&quot;Hi!&quot;);
+        System.out.println(&quot;Saya sedang makan &quot; + makanan);
+    }
+    
+    // fungsi static
+    static void minum(String minuman){
+        System.out.println(&quot;Saya sedang minum &quot; + minuman);
+    }
+    
+    // fungsi main
+    public static void main(String[] args) {
+        
+        // pemanggilan fungsi static
+        minum(&quot;Kopi&quot;);
+        
+        
+        // mambuat instansiasi objek saya dari class FungsiStatic
+        FungsiStatic saya = new FungsiStatic();
+        // pemanggilan fungsi non-static
+        saya.makan(&quot;Nasi Goreng&quot;);
+        
+    }
+    
+}
+</code></pre>
+
+<p>Pada contoh tersebut, fungsi <code>makan()</code> adalah fungsi <em>non-static</em>.
+Sedangkan fungsi <code>minum()</code> adalah fungsi <em>static</em>.</p>
+
+<p>Hasil output dari program di atas:</p>
+
+<pre><code>Saya sedang minum Kopi
+Hi!
+Saya sedang makan Nasi Goreng
+</code></pre>
+
+<p>Apabila kita tidak membuat objek untuk memanggil fungsi <em>non-static</em>,
+maka akan terjadi error.</p>
 
 <!-- @TODO ## Variabel Global dan Variabel Lokal -->
 

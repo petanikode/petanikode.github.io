@@ -18,9 +18,12 @@
       <pubDate>Sat, 03 Dec 2016 13:13:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/codeigniter-composer/</guid>
-      <description>CodeIgniter tidak seperti Laravel yang menggunakan Composer untuk memulai proyeknya. Namun, kita juga bisa menggunakan Composer pada CodeIgniter. Composer sebenarnya sudah didukung pada CodeIgninter versi 3, tapi autoload-nya belum diaktifkan.
-Konfigurasi CodeIgniter Buka file konfigurasi proyek CodeIgniter pada application/config/config.php. Kemudian isi nilai autoload untuk Composer seperti beikut ini:
-$config[&#39;composer_autoload&#39;] = &amp;quot;vendor/autoload.php&amp;quot;;  Instalasi Pustaka Sekarang coba buka file composer.json yang ada di root direktori proyek. Kemudian tambahkan pustaka FPDF.</description>
+      <description>Composer sangat dibutuhkan apabila kita bekerja dengan banyak library.
+Composer akan membantu kita menginstal, men-download, meng-update, dan mencarikan depedency dari library yang digunakan.
+Pada CodeIgniter, composer sudah mulai didukung pada versi 3. Namun, autoload-nya belum diaktifkan secara default.
+Pada kesempatan ini, saya akan membahas cara konfigurasi CodeIgniter agar dapat mengunakan Composer.
+Mari kita mulai&amp;hellip;
+Konfigurasi CodeIgniter Buka file konfigurasi CodeIgniter pada application/config/config.php. Kemudian isi nilai autoload untuk Composer seperti beikut ini:</description>
     </item>
     
     <item>

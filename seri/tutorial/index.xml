@@ -403,7 +403,8 @@ Tiga Kelompok Kondisi File dalam Git Sebelum kita membuat revisi, kita akan berk
       <pubDate>Thu, 09 Feb 2017 11:52:59 +0800</pubDate>
       
       <guid>https://www.petanikode.com/git-repositori/</guid>
-      <description>Repositori (repository) dalam bahasa indonesia artinya gudang. Repositori merupakan istilah yang digunakan untuk direktori proyek yang menggunakan Git. Jika kita memiliki sebuah direktori dengan nama proyek-01 dan di dalamnya sudah menggunakan git, maka kita sudah punya repositori bernama proyek-01.
+      <description>Repositori (repository) dalam bahasa indonesia artinya gudang. Repositori merupakan istilah yang digunakan untuk direktori proyek yang menggunakan Git.
+Jika kita memiliki sebuah direktori dengan nama proyek-01 dan di dalamnya sudah menggunakan git, maka kita sudah punya repositori bernama proyek-01.
 Membuat Repositori Pembuatan repositori dapat dilakukan dengan perintah git init nama-dir. Contoh:
 git init proyek-01  Perintah tersebut akan membuat direktori bernama proyek-01. Kalau direktorinya sudah ada, maka Git akan melakukan inisialisasi di dalam direktori tersebut.</description>
     </item>

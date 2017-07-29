@@ -81,20 +81,6 @@ Tiga Kelompok Kondisi File dalam Git Sebelum kita membuat revisi, kita akan berk
     </item>
     
     <item>
-      <title>Panduan Cara Instal Git di Windows</title>
-      <link>https://www.petanikode.com/cara-instal-git-di-windows/</link>
-      <pubDate>Fri, 10 Feb 2017 01:42:35 +0800</pubDate>
-      
-      <guid>https://www.petanikode.com/cara-instal-git-di-windows/</guid>
-      <description>Instalasi Git di Windows memang tidak seperti di Linux yang ketik perintah langsung terinstal.
-Kita harus menguduh dulu, kemudian melakukan ritual next&amp;gt;next&amp;gt;finish.
-Tapi dalam ritual tersebut, ada pilihan yang harus diperhatikan agar perintah git dapat dikenali di CMD.
-Baiklah, kali ini saya numpang screenshot di laptop teman yang menggunakan windows untuk pembuatan tutorial ini.
-Silahkan disimak ya :smile:.
-Unduh Git Silahkan buka website resminya Git (git-scm.com). Kemudian unduh Git sesuai dengan arsitektur komputer kita.</description>
-    </item>
-    
-    <item>
       <title>Tutorial Git 02 - Membuat Repositori</title>
       <link>https://www.petanikode.com/git-repositori/</link>
       <pubDate>Thu, 09 Feb 2017 11:52:59 +0800</pubDate>
@@ -112,11 +98,11 @@ git init proyek-01  Perintah tersebut akan membuat direktori bernama proyek-01. 
       
       <guid>https://www.petanikode.com/git-dasar/</guid>
       <description>Kita sudah mengenal Git pada tulisan sebelumnya. Sekarang Kita akan melakukan instalasi dan persiapan.
-Instalasi Git Instalasi pada Ubuntu dan keluarga Debian lainnya dapat menggunakan perintah ini.
+Cara Install Git di Linux Instalasi Git pada Distro keluarga Debian dapat menggunakan perintah apt.
 sudo apt install git  atau
-sudo apt-get install git  Fedora:
-yum install git  Windows: Cara Instal Git di Windows
- Download Git Instal, Next, Next, Finish  Persiapan Ada beberapa konfigurasi yang harus dupersiapakan sebelum mulai menggunakan Git, seperti name dan email.</description>
+sudo apt-get install git  Pada Fedora:
+yum install git  Setelah itu, coba perika versi yang terinstal dengan perintah:
+git --version  Cara Install Git di Windows Instalasi Git di Windows memang tidak seperti di Linux yang ketik perintah langsung terinstal.</description>
     </item>
     
     <item>

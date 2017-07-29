@@ -99,12 +99,11 @@ git init proyek-01  Perintah tersebut akan membuat direktori bernama proyek-01. 
       
       <guid>https://www.petanikode.com/git-dasar/</guid>
       <description>Kita sudah mengenal Git pada tulisan sebelumnya. Sekarang Kita akan melakukan instalasi dan persiapan.
-Cara Install Git di Linux Instalasi Git pada Distro keluarga Debian dapat menggunakan perintah apt.
+Tulisan ini terbagi menjadi tiga bagian:
+ Cara Instalasi Git di Linux. Cara Instalasi Git di Windows. Konfigurasi Awal yang Harus dilakukan Setelah Menginstal Git.  Mari kita mulai&amp;hellip;
+1. Cara Install Git di Linux Instalasi Git pada Distro keluarga Debian dapat menggunakan perintah apt.
 sudo apt install git  atau
-sudo apt-get install git  Pada Fedora:
-yum install git  Setelah itu, coba perika versi yang terinstal dengan perintah:
-git --version  Pada komputer saya, versi yang terinstal adalah versi 2.7.4.
-  (adsbygoogle = window.</description>
+sudo apt-get install git  Pada Fedora:</description>
     </item>
     
     <item>

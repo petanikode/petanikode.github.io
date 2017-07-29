@@ -580,16 +580,15 @@ yum install git  Windows: Cara Instal Git di Windows
     
     <item>
       <title>Apa itu Git dan Kenapa Penting bagi Programmer?</title>
-      <link>https://www.petanikode.com/apa-itu-git-dan-kenapa-penting-bagi-programmer/</link>
+      <link>https://www.petanikode.com/git-untuk-pemula/</link>
       <pubDate>Wed, 08 Feb 2017 09:08:36 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/apa-itu-git-dan-kenapa-penting-bagi-programmer/</guid>
-      <description>Git adalah salah satu sistem pengontrol versi (Version Control System) pada proyek perangkat lunak yang diciptakan oleh Linus Torvalds.
-Pengontrol versi bertugas mencatat setiap perubahan pada file proyek.
-Awalnya Linus Torvalds menciptakan Git untuk mengelola kode sumber (source kode) kernel Linux.
-Kemudian, Linus Torvalds mempublikasikannya dengan lisensi open soure, semua orang jadi bisa pakai Git secara gratis.
-Sungguh baik ya bapak Linus Torvalds 😄.
-Kenapa Git diciptakan? Bayangkan ada 1000 programmer dari seluruh dunia yang ikut berkontribusi membangun kernel Linux.</description>
+      <guid>https://www.petanikode.com/git-untuk-pemula/</guid>
+      <description>Git adalah salah satu tool yang sering digunakan dalam proyek pengembangan software.
+Git bahkan menjadi tool yang wajib dipahami oleh programmer, karena banyak digunakan di mana-mana.
+Pada kesempatan ini kita akan belajar Git dari dasar.
+Artikel ini hanya akan membahas pengenalan Git saja. Untuk mempelajari Git lebih lanjut, saya sudah menyediakan link di bagian akhir.
+  (adsbygoogle = window.adsbygoogle || []).push({});  Pengertian Git Git adalah salah satu sistem pengontrol versi (Version Control System) pada proyek perangkat lunak yang diciptakan oleh Linus Torvalds.</description>
     </item>
     
     <item>

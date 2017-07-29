@@ -555,17 +555,17 @@ Unduh Git Silahkan buka website resminya Git (git-scm.com). Kemudian unduh Git s
     
     <item>
       <title>Tutorial Git 02 - Membuat Repositori</title>
-      <link>https://www.petanikode.com/tutorial-git-02---membuat-repositori/</link>
+      <link>https://www.petanikode.com/git-repositori/</link>
       <pubDate>Thu, 09 Feb 2017 11:52:59 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-02---membuat-repositori/</guid>
+      <guid>https://www.petanikode.com/git-repositori/</guid>
       <description>Repositori (repository) dalam bahasa indonesia artinya gudang. Repositori merupakan istilah yang digunakan untuk direktori proyek yang menggunakan Git. Jika kita memiliki sebuah direktori dengan nama proyek-01 dan di dalamnya sudah menggunakan git, maka kita sudah punya repositori bernama proyek-01.
 Membuat Repositori Pembuatan repositori dapat dilakukan dengan perintah git init nama-dir. Contoh:
 git init proyek-01  Perintah tersebut akan membuat direktori bernama proyek-01. Kalau direktorinya sudah ada, maka Git akan melakukan inisialisasi di dalam direktori tersebut.</description>
     </item>
     
     <item>
-      <title>Belajar Git 01: Instalasi dan Persiapan</title>
+      <title>Belajar Dasar Git: Instalasi dan Persiapan (untuk pemula)</title>
       <link>https://www.petanikode.com/git-dasar/</link>
       <pubDate>Wed, 08 Feb 2017 11:26:37 +0800</pubDate>
       
@@ -588,7 +588,7 @@ yum install git  Windows: Cara Instal Git di Windows
 Pengontrol versi bertugas mencatat setiap perubahan pada file proyek.
 Awalnya Linus Torvalds menciptakan Git untuk mengelola kode sumber (source kode) kernel Linux.
 Kemudian, Linus Torvalds mempublikasikannya dengan lisensi open soure, semua orang jadi bisa pakai Git secara gratis.
-Sungguh baik ya bapak Linus Torvalds :smile:.
+Sungguh baik ya bapak Linus Torvalds 😄.
 Kenapa Git diciptakan? Bayangkan ada 1000 programmer dari seluruh dunia yang ikut berkontribusi membangun kernel Linux.</description>
     </item>
     

@@ -235,7 +235,7 @@ Untuk menggunakan Dompdf di Codeigniter, silahkan ikuti langkah-langkah berikut 
 1. Aktifkan Autoload Composer Kita akan menginstal Dompdf melalui Composer.
 Karena itu, autoload untuk Composer perlu diaktifkan.
 Silahkan buka file application/config/config.php, kemudian isi bagian autoload Composer seperti ini.",
-  "wordCount": 236,
+  "wordCount": 386,
   "datePublished" : "2017-02-19T16:48:58",
   "dateModified" : "2017-02-19T16:48:58",
   "image" : {
@@ -1330,12 +1330,58 @@ dengan nama <code>pdf.php</code>.</p>
 
 <p>Isinya seperti berikut ini.</p>
 
-<p><amp-iframe width="600" height="1560"
-    layout="responsive"
-    sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups"
-    frameborder="0"
-    src="https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/f4bfa696ca9a040677e87f2cde4d5887">
-</amp-iframe></p>
+<pre><code class="language-php">&lt;?php defined('BASEPATH') OR exit('No direct script access allowed');
+/**
+ * CodeIgniter DomPDF Library
+ *
+ * Generate PDF's from HTML in CodeIgniter
+ *
+ * @packge		CodeIgniter
+ * @subpackage		Libraries
+ * @category		Libraries
+ * @author		Ardianta Pargo
+ * @license		MIT License
+ * @link		https://github.com/ardianta/codeigniter-dompdf
+ */
+use Dompdf\Dompdf;
+class Pdf extends Dompdf{
+	/**
+	 * PDF filename
+	 * @var String
+	 */
+	public $filename;
+	public function __construct(){
+		parent::__construct();
+		$this-&gt;filename = &quot;laporan.pdf&quot;;
+	}
+	/**
+	 * Get an instance of CodeIgniter
+	 *
+	 * @access	protected
+	 * @return	void
+	 */
+	protected function ci()
+	{
+		return get_instance();
+	}
+	/**
+	 * Load a CodeIgniter view into domPDF
+	 *
+	 * @access	public
+	 * @param	string	$view The view to load
+	 * @param	array	$data The view data
+	 * @return	void
+	 */
+	public function load_view($view, $data = array()){
+		$html = $this-&gt;ci()-&gt;load-&gt;view($view, $data, TRUE);
+		$this-&gt;load_html($html);
+		// Render the PDF
+		$this-&gt;render();
+        	// Output the generated PDF to Browser
+       		$this-&gt;stream($this-&gt;filename, array(&quot;Attachment&quot; =&gt; false));
+	}
+}
+</code></pre>
 
 <p>Kode di atas merupakan <em>class exstends</em> dari <em>class</em> Dompdf.</p>
 
@@ -1737,7 +1783,7 @@ var disqus_config = function () {
 
 
     <div class='text-center'>
-    &copy; 2017 <a href="https://www.petanikode.com/">Petani Kode</a> <span class="hide-on-mobile">| Made with ❤️ using <a href='https://gohugo.io' target='_blank'>Hugo 0.24</a>.</span>
+    &copy; 2017 <a href="https://www.petanikode.com/">Petani Kode</a> <span class="hide-on-mobile">| Made with ❤️ using <a href='https://gohugo.io' target='_blank'>Hugo 0.25.1</a>.</span>
     </div>
     </section>
 </footer>

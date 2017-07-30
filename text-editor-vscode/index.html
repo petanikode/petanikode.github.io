@@ -223,7 +223,7 @@ Saya sering melihat foto-foto programmer yang saya ikuti di instagram menggunaka
 Jadi penasaran dan ingin mencobanya&hellip;
 Beberapa minggu ini, saya sudah mencobanya&hellip;dan ingin menulis sedikit review tentangnya.
 Pertama saya akan membahas cara instalasinya, kemudian performa, pengenalan antarmuka, review beberapa fitur, dukungan bahasa, rekomendasi extension, dan ditutup dengan permasalahan yang saya temukan.",
-  "wordCount": 1014,
+  "wordCount": 1032,
   "datePublished" : "2017-07-28T17:52:53",
   "dateModified" : "2017-07-28T17:52:53",
   "image" : {
@@ -443,6 +443,34 @@ li {
 
 fieldset {
     border: 1px solid silver;
+}
+
+.content kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #444d56;
+    vertical-align: middle;
+    background-color: #fafbfc;
+    border: solid 1px #c6cbd1;
+    border-bottom-color: #959da5;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #959da5;
+}
+
+kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: 10px;
+    color: #444d56;
+    vertical-align: middle;
+    background-color: #fafbfc;
+    border: solid 1px #d1d5da;
+    border-bottom-color: #c6cbd1;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #c6cbd1;
 }
 
 .content a:link {
@@ -1337,7 +1365,7 @@ semua perubahan dilakukan di sana.</p>
 <h3 id="2-ada-terminal-di-dalamnya">2. Ada Terminal di dalamnya</h3>
 
 <p>VS Code menyediakan terminal yang bisa dibuka kapan saja dengan tombol
-<code>Ctrl</code>+<code>`</code>.</p>
+<kbd>Ctrl</kbd>+<kbd>`</kbd>.</p>
 
 <p><img src="/img/vscode/vscode-terminal.png" alt="Terminal Internal VS Code" /></p>
 
@@ -1365,7 +1393,7 @@ kode.</p>
 
 <p>Fitur ini sering saya gunakan saat bekerja dengan banyak file.</p>
 
-<p>Untuk memecah editor, kita bisa tekan tombol <code>Ctrl</code>+<code>\</code> atau klik ikon split di pojok kanan atas editor.</p>
+<p>Untuk memecah editor, kita bisa tekan tombol <kbd>Ctrl</kbd>+<kbd>\</kbd> atau klik ikon split di pojok kanan atas editor.</p>
 
 <p><img src="/img/vscode/vscode-split.png" alt="Split Editor" /></p>
 
@@ -1381,7 +1409,7 @@ TypeScript, dan masih banyak lagi.</p>
 <p><img src="/img/vscode/bahasa-pemrograman.png" alt="bahasa pemrograman" /></p>
 
 <p>Untuk mengganti bahasa, silahkan klik pada pojok kanan bawah,
-atau tekan tombol <code>Ctrl</code>+<code>k</code> kemudian tekan <code>m</code>.</p>
+atau tekan tombol <kbd>Ctrl</kbd>+<kbd>k</kbd> kemudian tekan <kbd>m</kbd>.</p>
 
 <p>Maka akan muncul jendela pemilihan bahasa:</p>
 
@@ -1427,7 +1455,7 @@ Objective-C, Rust, Racket, AutoHotkey, AutoIt, Kotlin, Dart, Pascal, Haskell, Ni
 
 <p>Cara install:</p>
 
-<p>Buka VS Code, kemudian tekan <code>Ctrl</code>+<code>p</code>, lalu paste perintah berikut dan tekan enter.</p>
+<p>Buka VS Code, kemudian tekan <kbd>Ctrl</kbd>+<kbd>p</kbd>, lalu paste perintah berikut dan tekan enter.</p>
 
 <pre><code>ext install code-runner
 </code></pre>
@@ -1446,7 +1474,7 @@ dan pesan <em>commit git</em>.</p>
 
 <p>Cara install:</p>
 
-<p>Buka VS Code, kemudian tekan <code>Ctrl</code>+<code>p</code>, lalu paste perintah berikut dan tekan enter.</p>
+<p>Buka VS Code, kemudian tekan <kbd>Ctrl</kbd>+<kbd>p</kbd>, lalu paste perintah berikut dan tekan enter.</p>
 
 <pre><code>ext install emojisense
 </code></pre>
@@ -1460,7 +1488,7 @@ sering bekerja dengan Git.</p>
 
 <p>Cara install:</p>
 
-<p>Buka VS Code, kemudian tekan <code>Ctrl</code>+<code>p</code>, lalu paste perintah berikut dan tekan enter.</p>
+<p>Buka VS Code, kemudian tekan <kbd>Ctrl</kbd>+<kbd>p</kbd>, lalu paste perintah berikut dan tekan enter.</p>
 
 <pre><code>ext install githistory
 </code></pre>
@@ -1476,8 +1504,8 @@ VS Code.</p>
 
 <p>VS Code tidak menggunakan <em>shortcut key</em> seperti pada teks editor umumnya.</p>
 
-<p>Misalnya, pada Sublime dan Atom menggunakan tombol <code>Ctrl</code> untuk melakukan
-tindakan tertentu&hellip;tapi di VS Code menggunakan <code>Alt</code>.</p>
+<p>Misalnya, pada Sublime dan Atom menggunakan tombol <kbd>Ctrl</kbd> untuk melakukan
+tindakan tertentu&hellip;tapi di VS Code menggunakan <kbd>Alt</kbd>.</p>
 
 <p>Ini membuat saya bingung&hellip;</p>
 
@@ -1496,10 +1524,10 @@ mengedit secara masal.</p>
 <p><blockquote class="twitter-tweet" data-lang="en"><p lang="in" dir="ltr"><a href="https://twitter.com/hashtag/atom?src=hash">#atom</a> &amp; <a href="https://twitter.com/hashtag/sublime?src=hash">#sublime</a> <a href="https://twitter.com/hashtag/tips?src=hash">#tips</a>: (edit banyak variabel) tekan dan tahan tombol Ctrl, lalu klik-klik&hellip;dan edit. 🙂 <a href="https://twitter.com/hashtag/coding?src=hash">#coding</a> <a href="https://t.co/1cahuiCcSd">pic.twitter.com/1cahuiCcSd</a></p>&mdash; Petani Kode (@petanikode) <a href="https://twitter.com/petanikode/status/884016383654191104">July 9, 2017</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 
-<p>Pada Atom dan Sublime, pembuatan <em>Multi Cursor</em> menggunakan tombol <code>Ctrl</code>.
-Sedangkan di VS Code menggunakan tombol <code>Alt</code>.</p>
+<p>Pada Atom dan Sublime, pembuatan <em>Multi Cursor</em> menggunakan tombol <kbd>Ctrl</kbd>.
+Sedangkan di VS Code menggunakan tombol <kbd>Alt</kbd>.</p>
 
-<p>Tombol ini bentrok dengan <em>shortcut key</em> Linux. Pada Linux, tombol <code>Alt</code>
+<p>Tombol ini bentrok dengan <em>shortcut key</em> Linux. Pada Linux, tombol <kbd>Alt</kbd>
 digunakan untuk menggeser <em>(drag)</em> jendela.</p>
 
 <p>Beberapa orang dari komunitas sudah <a href="https://github.com/Microsoft/vscode/issues/3091">melaporkan masalah ini</a>,
@@ -1514,12 +1542,17 @@ yang lain.</p>
 
 <h3 id="3-key-untuk-duplikat-baris-bentrok">3. Key untuk Duplikat Baris Bentrok</h3>
 
-<p>Pada Atom saya biasanya menduplikasi baris dengan tombol <code>Ctrl</code>+<code>Shift</code>+<code>d</code>,
+<p>Pada Atom saya biasanya menduplikasi baris dengan tombol <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>d</kbd>,
 tapi di VS Code tombol ini memiliki fungsi yang berbeda.</p>
 
-<p>Tombol untuk duplikasi baris di VS Code adalah: <code>Ctrl</code>+<code>Alt</code>+<code>Shift</code> + arah atas/bawah.</p>
+<p>Tombol untuk duplikasi baris di VS Code adalah: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd> + arah <kbd>⬆️</kbd>/<kbd>⬇️</kbd>.</p>
 
 <p>Sedangkan pada Linux, tombol tersebut digunakan untuk berpindah <em>Workspace</em>.</p>
+
+<p>Lagi-lagi Linux harus mengalah :).</p>
+
+<p><strong>Update</strong>: <a href="https://github.com/Microsoft/vscode/issues/509">Masalah ini</a> sepertinya sudah diperbaiki. Tombol
+yang digunakan adalah <kbd>Windows</kbd>+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+ arah <kbd>⬆️</kbd>/<kbd>⬇️</kbd>.</p>
 
 <!-- Penutup -->
 

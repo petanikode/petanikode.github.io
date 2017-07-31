@@ -28,5 +28,58 @@ Silahkan di simak&amp;hellip;
 1. Penulisan Statement Python Statement adalah sebuah intruksi atau kalimat perintah yang akan dieksekusi oleh komputer.</description>
     </item>
     
+    <item>
+      <title>Belajar Pemrograman Python: Memahami Perulangan</title>
+      <link>https://www.petanikode.com/python-perulangan/</link>
+      <pubDate>Wed, 16 Jul 2014 18:04:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/python-perulangan/</guid>
+      <description>Perualangan dalam bahasa pemrograman berfungsi menyuruh komputer melakukan sesuatu secara berulang-ulang. Terdapat dua jenis perualangan dalam bahasa pemrograman python, yaitu perulangan dengan for dan while.
+Perulangan for disebut counted loop (perulangan yang terhitung), sementara perulangan while disebut uncounted loop (perulangan yang tak terhitung). Perbedaannya adalah perulangan for biasanya digunakan untuk mengulangi kode yang sudah diketahui banyak perulangannya. Sementara while untuk perulangan yang memiliki syarat dan tidak tentu berapa banyak perulangannya.</description>
+    </item>
+    
+    <item>
+      <title>Belajar Pemrograman Python: Memahami Percabangan untuk Membuat Logika Program</title>
+      <link>https://www.petanikode.com/python-percabangan/</link>
+      <pubDate>Sat, 22 Feb 2014 08:30:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/python-percabangan/</guid>
+      <description>Mungkin kalian akan bertanya:
+Apa itu percabangan dan kenapa dinamakan percabangan?
+Pada flow chart, logika &amp;ldquo;jika&amp;hellip;maka&amp;rdquo; digambarkan dalam bentuk cabang.
+Karena itu, disebut percabangan.
+Selain percabangan, struktur ini juga disebut control flow, decision, struktur kondisi, Struktru if, dsb.
+Percabangan akan mampu membuat program berpikir dan menentukan tindakan sesuai dengan logika/kondisi yang kita berikan.
+Pada kesempatan ini, kita akan belajar struktur percabangan pada python. Mulai dari yang paling dasar hingga yang kompleks.</description>
+    </item>
+    
+    <item>
+      <title>Belajar Pemrograman Python: Mengenal Variabel dan Tipe Data dalam Python</title>
+      <link>https://www.petanikode.com/python-variabel-dan-tipe-data/</link>
+      <pubDate>Mon, 17 Feb 2014 18:53:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/python-variabel-dan-tipe-data/</guid>
+      <description>Pada kesempatan ini kita akan mempelajari tentang variabel dan tipe data pada Python.
+Pastikan sebelumnya sudah mengetahui cara membuat skrip atau program python.
+Pengertian Variabel dan Tipe Data Variabel merupakan tempat menyimpan data, sedangkan tipe data adalah jenis data yang terseimpan dalam variabel.
+
+Variabel bersifat mutable, artinya nilainya bisa berubah-ubah.
+Membuat Variabel di Python Variabel di python dapat dibuat dengan format seperti ini:
+nama_variabel = &amp;lt;nilai&amp;gt;  Contoh:</description>
+    </item>
+    
+    <item>
+      <title>Belajar Pemrograman Python: Pengenalan Dasar Python dan Persiapan Awal</title>
+      <link>https://www.petanikode.com/python-linux/</link>
+      <pubDate>Sun, 16 Feb 2014 19:03:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/python-linux/</guid>
+      <description>Mau belajar bahasa pemrograman python, tapi masih bingung mulainya dari mana?
+Tenang&amp;hellip;
+Karena pada artikel ini, kita akan membahas persiapan awalnya sampai tuntas:
+ Apa itu Python dan kenapa belajar Python? Apa saja alat-alat yang diperlukan untuk belajar python? Bagaimana cara membuat program python? Apa yang harus dipelajari selanjutnya?  Mari kita bahas semuanya&amp;hellip;
+Apa itu Python? Python merupakan bahasa pemrograman tingkat tinggi yang diracik oleh Guido van Rossum.</description>
+    </item>
+    
   </channel>
 </rss>

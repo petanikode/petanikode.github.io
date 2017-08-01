@@ -223,10 +223,10 @@ Bila sisanya adalah nol maka bilangan tersebut adalah bilangan genap, tapi kalau
     
     <item>
       <title>Instalasi django di linux</title>
-      <link>https://www.petanikode.com/tutorial-django-persiapan/</link>
+      <link>https://www.petanikode.com/django-untuk-pemula/</link>
       <pubDate>Thu, 12 Feb 2015 17:33:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-django-persiapan/</guid>
+      <guid>https://www.petanikode.com/django-untuk-pemula/</guid>
       <description>Sebuah &amp;lsquo;mainan&amp;rsquo; bagus bernama django. Saya sangat tertarik mempelajarinya. Django adalah framework untuk membuat web dengan bahasa pemrograman python. Di tulisan ini saya ingin membahas cara instalasi django di linux. Nantinya, ‒insa&amp;rsquo;allah‒ akan dibahas teknik pengembangan web menggunakan django.
  Ada beberapa cara melakukan instalasi django. Bisa melalui pip atau easy_install atau dengan setuptools. Di tulisan ini, Saya akan menggunakan setuptools. Pastikan Anda sudah menginstal setuptools.
 sudo apt-get install python-setuptools Unduh djangoDjango dapat diunduh di situs resminya djangoproject.</description>

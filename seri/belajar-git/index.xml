@@ -14,10 +14,10 @@
     
     <item>
       <title>Tutorial Git 07 - Percabangan</title>
-      <link>https://www.petanikode.com/tutorial-git-07---percabangan/</link>
+      <link>https://www.petanikode.com/git-branch/</link>
       <pubDate>Mon, 27 Feb 2017 19:20:26 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-07---percabangan/</guid>
+      <guid>https://www.petanikode.com/git-branch/</guid>
       <description>Bayangkan anda sedang bekerja dengan tim pada suatu repositori Git. Repositori ini dikerjakan secara bersama-sama.
 Kadang&amp;hellip; akan terjadi konflik, karena kode yang kita tulis berbeda dengan yang lain.
 Misalnya, Si A menulis kode untuk fitur X dengan algoritma yang ia ketahui. Sedangkan si B menulis dengan algoritma yang berbeda.
@@ -28,10 +28,10 @@ Agar tidak terjadi hal yang seperti ini, kita harus membuat cabang (branch) ters
     
     <item>
       <title>Tutorial Git 06 - Membatalkan Revisi</title>
-      <link>https://www.petanikode.com/tutorial-git-06---membatalkan-revisi/</link>
+      <link>https://www.petanikode.com/git-membatalkan-revisi/</link>
       <pubDate>Tue, 21 Feb 2017 14:55:42 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-06---membatalkan-revisi/</guid>
+      <guid>https://www.petanikode.com/git-membatalkan-revisi/</guid>
       <description>Pada tutorial git 05, kita sudah belajar cara melihat perbedaan di setiap revisi. Sekarang kita akan belajar, cara membatalkan sebuah revisi.
 Terkadang pada perubahan yang kita lakukan terjadi kesalahan dan kita ingin mengembalikannya seperti keadaan sebelumnya. Maka kita perlu menyuruh git untuk megembalikannya. Ada beberapa perintah yang digunakan diantaranya: git checkout, git reset, dan git revert.
 Membatalkan Perubahan Jika revisi kita belum staged ataupun committed, kita bisa mengembalikannya menggunakan perintah git checkout nama_file.</description>
@@ -39,10 +39,10 @@ Membatalkan Perubahan Jika revisi kita belum staged ataupun committed, kita bisa
     
     <item>
       <title>Tutorial Git 05 - Melihat Perbandingan Revisi</title>
-      <link>https://www.petanikode.com/tutorial-git-05---melihat-perbandingan-revisi/</link>
+      <link>https://www.petanikode.com/git-diff/</link>
       <pubDate>Thu, 16 Feb 2017 13:56:42 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-05---melihat-perbandingan-revisi/</guid>
+      <guid>https://www.petanikode.com/git-diff/</guid>
       <description>Pada tutorial sebelumnya, kita sudah belajar cara melihat log revisi di repositori. Sekarang kita kan peljari perintah git diff, fungsinya untuk melihat perbedaan perubahan di revisi.
 Melihat Perbandingan Perubahan yang Dilakukan pada Revisi Gunakan perintah berikut ini untuk melihat perubahan yang dilakukan pada revisi tertentu.
 git diff cf08ca0837cf26f1c595be36bb3a6b815e311be1  cf08ca0837cf26f1c595be36bb3a6b815e311be1 adalah nomer revisi yang ingin dilihat.
@@ -52,10 +52,10 @@ Lihatlah hasil di atas, simbol plus (+) artinya kode yang ditambahkan. Sedangkan
     
     <item>
       <title>Tutorial Git 04 - Melihat Log Revisi</title>
-      <link>https://www.petanikode.com/tutorial-git-04---melihat-log-revisi/</link>
+      <link>https://www.petanikode.com/git-log/</link>
       <pubDate>Tue, 14 Feb 2017 08:56:09 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-04---melihat-log-revisi/</guid>
+      <guid>https://www.petanikode.com/git-log/</guid>
       <description>Pada tutorial sebelumnya, kita sudah membuat dua revisi pada repositori project-01. Sekarang bagaimana caranya kita melihat catatan log dari revisi-reivisi tersebut?
 Git sudah menyediakan perintah git log untuk melihat catatan log perubahan pada respositori. Contoh penggunaannya:
 git log  Maka kita akan melihat log perubahan apa saja yang sudah dilakukan dalam repositori.
@@ -67,25 +67,26 @@ Log yang Lebih Pendek Untuk menampilkan log yang lebih pendek, kita bisa menamba
     
     <item>
       <title>Tutorial Git 03 - Membuat Revisi</title>
-      <link>https://www.petanikode.com/tutorial-git-03---membuat-revisi/</link>
+      <link>https://www.petanikode.com/git-commit/</link>
       <pubDate>Mon, 13 Feb 2017 17:30:51 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-03---membuat-revisi/</guid>
-      <description>Pada tutorial git yang kedua, kita sudah membuat repositori kosong. Belum ada apa-apa di sana. Sekarang coba tambahkan sebuah file baru. Sebagai contoh, saya akan menambahkan tiga file HTML kosong.
+      <guid>https://www.petanikode.com/git-commit/</guid>
+      <description>Pada tutorial Git yang kedua, kita sudah membuat repositori kosong. Belum ada apa-apa di sana.
+Sekarang coba tambahkan sebuah file baru.
+Sebagai contoh, saya akan menambahkan tiga file HTML kosong.
 
 Setalah ditambahkan, coba ketik perintah git status untuk melihat status repositorinya.
 
 Berdasarkan keterangan di atas, saat ini kita berada cabang (branch) master dan ada tiga file yang belum ditambahkan ke Git.
-
-Tiga Kelompok Kondisi File dalam Git Sebelum kita membuat revisi, kita akan berkenalan dulu dengan tiga kondisi file dalam Git.</description>
+  (adsbygoogle = window.adsbygoogle || []).</description>
     </item>
     
     <item>
       <title>Tutorial Git 02 - Membuat Repositori</title>
-      <link>https://www.petanikode.com/git-repositori/</link>
+      <link>https://www.petanikode.com/git-init/</link>
       <pubDate>Thu, 09 Feb 2017 11:52:59 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/git-repositori/</guid>
+      <guid>https://www.petanikode.com/git-init/</guid>
       <description>Repositori (repository) dalam bahasa indonesia artinya gudang. Repositori merupakan istilah yang digunakan untuk direktori proyek yang menggunakan Git.
 Jika kita memiliki sebuah direktori dengan nama proyek-01 dan di dalamnya sudah menggunakan git, maka kita sudah punya repositori bernama proyek-01.
 Membuat Repositori Pembuatan repositori dapat dilakukan dengan perintah git init nama-dir. Contoh:

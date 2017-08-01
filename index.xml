@@ -396,10 +396,10 @@ Buku ini ditulis dalam bentuk panduan yang mudah dipahami dengan screenshot yang
     
     <item>
       <title>Tutorial Git 08 - Perbedaan Git checkout, Git Reset, dan Git Revert</title>
-      <link>https://www.petanikode.com/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/</link>
+      <link>https://www.petanikode.com/git-checkout-reset-revert/</link>
       <pubDate>Sun, 05 Mar 2017 21:37:21 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-08---perbedaan-git-checkout-git-reset-dan-git-revert/</guid>
+      <guid>https://www.petanikode.com/git-checkout-reset-revert/</guid>
       <description>Pada tutorial ke-6, kita sudah mebahas cara membatalkan revisi menggunakan perintah git checkout, git reset, dan git revert.
 Sekilas, tiga perintah tersebut melakukan hal yang sama. Akan tetapi ada perbedaanya.
 Apa itu?
@@ -426,10 +426,10 @@ Secara tidak sadar&amp;hellip;, saya sudah menjadi Polyglot Programmer.</descrip
     
     <item>
       <title>Tutorial Git 07 - Percabangan</title>
-      <link>https://www.petanikode.com/tutorial-git-07---percabangan/</link>
+      <link>https://www.petanikode.com/git-branch/</link>
       <pubDate>Mon, 27 Feb 2017 19:20:26 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-07---percabangan/</guid>
+      <guid>https://www.petanikode.com/git-branch/</guid>
       <description>Bayangkan anda sedang bekerja dengan tim pada suatu repositori Git. Repositori ini dikerjakan secara bersama-sama.
 Kadang&amp;hellip; akan terjadi konflik, karena kode yang kita tulis berbeda dengan yang lain.
 Misalnya, Si A menulis kode untuk fitur X dengan algoritma yang ia ketahui. Sedangkan si B menulis dengan algoritma yang berbeda.
@@ -450,10 +450,10 @@ Persiapan dan Instalasi SASS Sebelum kita mulai tutorial ini, persiapkan dulu al
     
     <item>
       <title>Tutorial Git 06 - Membatalkan Revisi</title>
-      <link>https://www.petanikode.com/tutorial-git-06---membatalkan-revisi/</link>
+      <link>https://www.petanikode.com/git-membatalkan-revisi/</link>
       <pubDate>Tue, 21 Feb 2017 14:55:42 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-06---membatalkan-revisi/</guid>
+      <guid>https://www.petanikode.com/git-membatalkan-revisi/</guid>
       <description>Pada tutorial git 05, kita sudah belajar cara melihat perbedaan di setiap revisi. Sekarang kita akan belajar, cara membatalkan sebuah revisi.
 Terkadang pada perubahan yang kita lakukan terjadi kesalahan dan kita ingin mengembalikannya seperti keadaan sebelumnya. Maka kita perlu menyuruh git untuk megembalikannya. Ada beberapa perintah yang digunakan diantaranya: git checkout, git reset, dan git revert.
 Membatalkan Perubahan Jika revisi kita belum staged ataupun committed, kita bisa mengembalikannya menggunakan perintah git checkout nama_file.</description>
@@ -492,10 +492,10 @@ Silahkan buka file application/config/config.php, kemudian isi bagian autoload C
     
     <item>
       <title>Tutorial Git 05 - Melihat Perbandingan Revisi</title>
-      <link>https://www.petanikode.com/tutorial-git-05---melihat-perbandingan-revisi/</link>
+      <link>https://www.petanikode.com/git-diff/</link>
       <pubDate>Thu, 16 Feb 2017 13:56:42 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-05---melihat-perbandingan-revisi/</guid>
+      <guid>https://www.petanikode.com/git-diff/</guid>
       <description>Pada tutorial sebelumnya, kita sudah belajar cara melihat log revisi di repositori. Sekarang kita kan peljari perintah git diff, fungsinya untuk melihat perbedaan perubahan di revisi.
 Melihat Perbandingan Perubahan yang Dilakukan pada Revisi Gunakan perintah berikut ini untuk melihat perubahan yang dilakukan pada revisi tertentu.
 git diff cf08ca0837cf26f1c595be36bb3a6b815e311be1  cf08ca0837cf26f1c595be36bb3a6b815e311be1 adalah nomer revisi yang ingin dilihat.
@@ -527,10 +527,10 @@ Berikut ini daftar plug-in activate-power-mode, dikutip dari repositori awesome-
     
     <item>
       <title>Tutorial Git 04 - Melihat Log Revisi</title>
-      <link>https://www.petanikode.com/tutorial-git-04---melihat-log-revisi/</link>
+      <link>https://www.petanikode.com/git-log/</link>
       <pubDate>Tue, 14 Feb 2017 08:56:09 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-04---melihat-log-revisi/</guid>
+      <guid>https://www.petanikode.com/git-log/</guid>
       <description>Pada tutorial sebelumnya, kita sudah membuat dua revisi pada repositori project-01. Sekarang bagaimana caranya kita melihat catatan log dari revisi-reivisi tersebut?
 Git sudah menyediakan perintah git log untuk melihat catatan log perubahan pada respositori. Contoh penggunaannya:
 git log  Maka kita akan melihat log perubahan apa saja yang sudah dilakukan dalam repositori.
@@ -542,25 +542,26 @@ Log yang Lebih Pendek Untuk menampilkan log yang lebih pendek, kita bisa menamba
     
     <item>
       <title>Tutorial Git 03 - Membuat Revisi</title>
-      <link>https://www.petanikode.com/tutorial-git-03---membuat-revisi/</link>
+      <link>https://www.petanikode.com/git-commit/</link>
       <pubDate>Mon, 13 Feb 2017 17:30:51 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-git-03---membuat-revisi/</guid>
-      <description>Pada tutorial git yang kedua, kita sudah membuat repositori kosong. Belum ada apa-apa di sana. Sekarang coba tambahkan sebuah file baru. Sebagai contoh, saya akan menambahkan tiga file HTML kosong.
+      <guid>https://www.petanikode.com/git-commit/</guid>
+      <description>Pada tutorial Git yang kedua, kita sudah membuat repositori kosong. Belum ada apa-apa di sana.
+Sekarang coba tambahkan sebuah file baru.
+Sebagai contoh, saya akan menambahkan tiga file HTML kosong.
 
 Setalah ditambahkan, coba ketik perintah git status untuk melihat status repositorinya.
 
 Berdasarkan keterangan di atas, saat ini kita berada cabang (branch) master dan ada tiga file yang belum ditambahkan ke Git.
-
-Tiga Kelompok Kondisi File dalam Git Sebelum kita membuat revisi, kita akan berkenalan dulu dengan tiga kondisi file dalam Git.</description>
+  (adsbygoogle = window.adsbygoogle || []).</description>
     </item>
     
     <item>
       <title>Tutorial Git 02 - Membuat Repositori</title>
-      <link>https://www.petanikode.com/git-repositori/</link>
+      <link>https://www.petanikode.com/git-init/</link>
       <pubDate>Thu, 09 Feb 2017 11:52:59 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/git-repositori/</guid>
+      <guid>https://www.petanikode.com/git-init/</guid>
       <description>Repositori (repository) dalam bahasa indonesia artinya gudang. Repositori merupakan istilah yang digunakan untuk direktori proyek yang menggunakan Git.
 Jika kita memiliki sebuah direktori dengan nama proyek-01 dan di dalamnya sudah menggunakan git, maka kita sudah punya repositori bernama proyek-01.
 Membuat Repositori Pembuatan repositori dapat dilakukan dengan perintah git init nama-dir. Contoh:
@@ -604,6 +605,7 @@ Artikel ini hanya akan membahas pengenalan Git saja. Untuk mempelajari Git lebih
 Namun, jangan khawatir. Saat kamu kekurangan motivasi dan inspirasi, cobalah untuk nonton video-video berikut ini.
 1. What Most Schools Don&amp;rsquo;t Teach Video ini berisi kompilasi kumpulan pendapat dan nasihat dari orang-orang terkenal seperti Bill Gates, Jack, Mark Zuckerberg, Drew, Gabe, Will.i.am, dll.
 
+  --
 2. 14-Year-Old Prodigy Programmer Dreams In Code Video ini bersisi kisah tentang anak berusia 14 tahun bernama Santiago Gonzalez.</description>
     </item>
     
@@ -1170,7 +1172,7 @@ Maka untuk mengkompensasi hal ini, setiap 4 tahun sekali (tahun yang bisa dibagi
       
       <guid>https://www.petanikode.com/hari-programmer/</guid>
       <description>Banyak yang tidak tahu tentang hari programmer. Karena di Indonesia tidak Banyak merayakannya.
-Hari programmer (Day of the Programmer) merupakan hari internasional yang diakui di berbagai perusahaan teknologi dan industri perangkat lunak.
+Hari programmer (Day of the Programmer) merupakan hari internasional yang diakui di berbagai perusahaan teknologi dan industri software.
 Nah! Pada hari programmer ini, saya ingin berbagai beberapa fakta yang saya kumpulkan dari berbagai sumber.
 1. Hari Programmer bukan Hari Libur Nasional Benar sekali, sama seperti hari ibu, hari bapak, hari guru, hari buruh, hari petani, dsb.</description>
     </item>
@@ -1936,10 +1938,10 @@ Text editor (untuk menulis kode tema)Web browser (untuk menampilkan hasilnya)Kon
     
     <item>
       <title>7 Manfaat Inspect Element Bagi Web Developer</title>
-      <link>https://www.petanikode.com/manfaat-inspect-element-bagi-web-developer/</link>
+      <link>https://www.petanikode.com/inspect-element/</link>
       <pubDate>Thu, 14 Jan 2016 11:03:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/manfaat-inspect-element-bagi-web-developer/</guid>
+      <guid>https://www.petanikode.com/inspect-element/</guid>
       <description>Inspect Element merupakan fitur browser yang dibuat untuk memudahkan pengembangan web.
 Inspect Element dapat kita akses dengan klik kanan, kemudian memilih Inspect Element, atau bisa juga dengan menekan tombol F12.
 Adapun manfaat dari Inspect Element untuk web Developer adalah sebagai berikut.
@@ -2456,10 +2458,10 @@ Apa itu XML dan Apa Bedanya dengan HTML? Menurut W3Schools:</description>
     
     <item>
       <title>Cara Instal Slimframework di Linux dengan Composer</title>
-      <link>https://www.petanikode.com/tutorial-slimframework-di-linux/</link>
+      <link>https://www.petanikode.com/slimframework-untuk-pemula/</link>
       <pubDate>Wed, 25 Feb 2015 01:16:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/tutorial-slimframework-di-linux/</guid>
+      <guid>https://www.petanikode.com/slimframework-untuk-pemula/</guid>
       <description>Slim merupakan sebuah framework mikro untuk PHP. Slim bisa kita gunakan untuk membangun aplikasi web sederhana dan Rest API. Kali ini, saya akan membawakan tutorial cara menginstal Slim di Linux. Slim yang akan diinstal adalah versi 2.0.
 Pastikan Composer dan PHP sudah terinstal di komputer teman-teman. Setelah itu ikuti langkah-langkah berikut ini.
 Membuat Direktori Proyek Buatlah sebuah direktori dengan nama proyeknya, misalnya proyek-slim.

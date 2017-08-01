@@ -178,18 +178,6 @@ Python yang akan di instal dalam panduan ini adalah python versi 3. Download di 
     </item>
     
     <item>
-      <title>Kendalikan cahaya layar dengan python</title>
-      <link>https://www.petanikode.com/kendalikan-cahaya-layar-dengan-python/</link>
-      <pubDate>Fri, 25 Sep 2015 19:53:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/kendalikan-cahaya-layar-dengan-python/</guid>
-      <description>Ada sebuah laptop yang bersistem operasi Kali Linux. Tombol FN-nya tidak berfungsi untuk mengatur cahaya layar. Driver VGA yang dipakai ialah intel. Sepertinya Kali Linux belum mampu bekerja dengan baik di laptop ini.
-
-Mencari-cari solusi di internet, akhirnya saya menemukan perintah untuk mengatur cahaya. Berikut ini perintahnya:
-echo 5 &amp;gt; /sys/class/backlight/intel_backlight/brightnessSeperti yang kita lihat, perintah di atas berfungsi untuk mengubah nilai file brightness yang berada di direktori /sys/class/backlight/intel_backlight/. Setiap nilai file itu berubah, cahaya layar pun berubah.</description>
-    </item>
-    
-    <item>
       <title>Fungsi range() di pemrograman python</title>
       <link>https://www.petanikode.com/python-fungsi-range/</link>
       <pubDate>Sun, 13 Sep 2015 16:06:00 +0000</pubDate>

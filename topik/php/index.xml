@@ -187,23 +187,6 @@ Saya sendiri menggunakan teks editor Atom.</description>
     </item>
     
     <item>
-      <title>Masalah `SyntaxError: unterminated string literal` pada Javascript</title>
-      <link>https://www.petanikode.com/masalah-syntaxerror-unterminated-string-literal-pada-javascript/</link>
-      <pubDate>Thu, 15 Sep 2016 06:00:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/masalah-syntaxerror-unterminated-string-literal-pada-javascript/</guid>
-      <description>Sebuah masalah kecil saya temukan pada proyek yang sudah jadi. Bisa dibilang, web tersebut sudah jadi dan siap di-hosting. Tapi ternyata ada sedikit error yang membuat salah satu fitur tidak bekerja.
-Jadi ceritanya, saya ingin menampilkan detail produk dengan modal. Data produknya diambil dari parameter yang dikirim ke dalam fungsi detail().
-
-Kode fungsi detail() untuk menampilkan modal produk:
-function detail(data){
-&amp;nbsp;&amp;nbsp;&amp;nbsp; console.log(data);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#myModalLabel&amp;rdquo;).html(data.nama);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#gambar-produk&amp;rdquo;).attr(&amp;ldquo;src&amp;rdquo;, data.foto);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#harga&amp;rdquo;).html(data.harga);</description>
-    </item>
-    
-    <item>
       <title>Cara Menghapus dan Mengubah Nama Direktori dengan PHP</title>
       <link>https://www.petanikode.com/cara-menghapus-dan-mengubah-nama-direktori-dengan-php/</link>
       <pubDate>Tue, 13 Sep 2016 15:24:00 +0000</pubDate>
@@ -415,11 +398,11 @@ mkdir proyek-slim cd proyek-slim  Instalasi Slim dengan Composer Ketik perintah 
     </item>
     
     <item>
-      <title>Solusi galat saat inisialisasi Framework Yii di Linux</title>
-      <link>https://www.petanikode.com/solusi-galat-saat-inisialisasi-framework-yii-di-linux/</link>
+      <title>[Solved] Error Yii: `mcrypt required` di Linux</title>
+      <link>https://www.petanikode.com/error-yii-mcrypt-required/</link>
       <pubDate>Fri, 16 Jan 2015 16:50:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/solusi-galat-saat-inisialisasi-framework-yii-di-linux/</guid>
+      <guid>https://www.petanikode.com/error-yii-mcrypt-required/</guid>
       <description>Saat mengikuti praktikum bebas, Saya mendapatkan galat ketika inisialisasi atau mempersiapkan framework Yii di server lokal linux. Tidak seperti di XAMPP (Windows), perintah init dapat berjalan untuk inisialisasi Yii. Tetapi di Linux, perintah init digunakan untuk inisialisasi sistem, bukan untuk inisialisasi framework Yii.
  Perintah untuk inisialisasi Yii di linux adalah php init. Tapi, peintah ini tidak dapat dijalankan. Karena ada sesuatu yang belum di install.
  Perintah php init berfungsi untuk mengekseskusi berkas php yang bernama init.</description>

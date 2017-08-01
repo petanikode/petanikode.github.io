@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>Solusi Error `cannot find -lGL` pada Qt Creator</title>
-      <link>https://www.petanikode.com/solusi-error-cannot-find-lgl/</link>
+      <title>[Solved] Qt Creator: Error `cannot find -lGL` di Linux</title>
+      <link>https://www.petanikode.com/error-qt-cannot-find-lgl/</link>
       <pubDate>Fri, 13 Feb 2015 09:35:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/solusi-error-cannot-find-lgl/</guid>
+      <guid>https://www.petanikode.com/error-qt-cannot-find-lgl/</guid>
       <description>Ternyata program pertama saya di Qt gagal diluncurkan. Karena pustaka OpenGL belum diinstal di komputer saya. Saya mendapatkan pesan galat :-1: error: cannot find -lGL. Solusinya, saya harus menginstal pustaka OpenGL.
  OpenGL (Open Graphic Library) adalah pustaka untuk membuat grafik. Biasanya digunakan untuk membuat game.
  Saya cari dulu, apakah pustaka OpenGL tersedia di repository ubuntu. O, ya, nama paket pustaka OpenGL adalah freeglut.

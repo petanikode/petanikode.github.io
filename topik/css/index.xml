@@ -123,23 +123,6 @@ li:before {
     </item>
     
     <item>
-      <title>Kesalahan Penyisipan CSS Select2 di Admin LTE yang Saya Lakukan</title>
-      <link>https://www.petanikode.com/kesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan/</link>
-      <pubDate>Tue, 12 Jul 2016 15:56:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/kesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan/</guid>
-      <description>Saya menghabiskan cukup banyak waktu untuk mengatasi masalah ini. Sampai-sampai mencari di Google, tapi tidak dapat solusi. Ceritanya, saya sedang mengerjakan sebuah proyek dengan Admin LTE. Kemudian saya menggunakan Select2 untuk element &amp;lt;select&amp;gt;. Akan tetapi, tampilannya tidak seperti yang diharapkan.
-Kode HTML:
-&amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;kabupaten&amp;rdquo;&amp;gt;Kabupaten/Kota&amp;lt;/label&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;select name=&amp;ldquo;kabupaten&amp;rdquo; class=&amp;ldquo;select2 form-control&amp;rdquo;&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option selected disabled&amp;gt;Pilih Kabupaten&amp;hellip;&amp;lt;/option&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5201&amp;rdquo;&amp;gt;Kab. Lombok Barat&amp;lt;/option&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5202&amp;rdquo;&amp;gt;Kab. Lombok Tengah&amp;lt;/option&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5203&amp;rdquo;&amp;gt;Kab. Lombok Timur&amp;lt;/option&amp;gt;</description>
-    </item>
-    
-    <item>
       <title>Apakah Fungsi `!important` pada CSS dan Kapan Harus Menggunakannya?</title>
       <link>https://www.petanikode.com/css-important/</link>
       <pubDate>Sun, 10 Jul 2016 21:08:00 +0000</pubDate>

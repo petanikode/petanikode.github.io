@@ -77,23 +77,6 @@ Kemudian, agar Profiler aktif di setiap method atau fungsi, letakan kode tersebu
     </item>
     
     <item>
-      <title>Masalah `SyntaxError: unterminated string literal` pada Javascript</title>
-      <link>https://www.petanikode.com/masalah-syntaxerror-unterminated-string-literal-pada-javascript/</link>
-      <pubDate>Thu, 15 Sep 2016 06:00:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/masalah-syntaxerror-unterminated-string-literal-pada-javascript/</guid>
-      <description>Sebuah masalah kecil saya temukan pada proyek yang sudah jadi. Bisa dibilang, web tersebut sudah jadi dan siap di-hosting. Tapi ternyata ada sedikit error yang membuat salah satu fitur tidak bekerja.
-Jadi ceritanya, saya ingin menampilkan detail produk dengan modal. Data produknya diambil dari parameter yang dikirim ke dalam fungsi detail().
-
-Kode fungsi detail() untuk menampilkan modal produk:
-function detail(data){
-&amp;nbsp;&amp;nbsp;&amp;nbsp; console.log(data);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#myModalLabel&amp;rdquo;).html(data.nama);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#gambar-produk&amp;rdquo;).attr(&amp;ldquo;src&amp;rdquo;, data.foto);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#harga&amp;rdquo;).html(data.harga);</description>
-    </item>
-    
-    <item>
       <title>Mengapa Harus Menggunakan Fungsi base_url() untuk Menyisipkan File Aset?</title>
       <link>https://www.petanikode.com/codeigniter-base-url/</link>
       <pubDate>Fri, 12 Aug 2016 10:37:00 +0000</pubDate>

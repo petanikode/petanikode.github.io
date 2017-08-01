@@ -731,23 +731,6 @@ Saya sendiri menggunakan teks editor Atom.</description>
     </item>
     
     <item>
-      <title>Masalah `SyntaxError: unterminated string literal` pada Javascript</title>
-      <link>https://www.petanikode.com/masalah-syntaxerror-unterminated-string-literal-pada-javascript/</link>
-      <pubDate>Thu, 15 Sep 2016 06:00:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/masalah-syntaxerror-unterminated-string-literal-pada-javascript/</guid>
-      <description>Sebuah masalah kecil saya temukan pada proyek yang sudah jadi. Bisa dibilang, web tersebut sudah jadi dan siap di-hosting. Tapi ternyata ada sedikit error yang membuat salah satu fitur tidak bekerja.
-Jadi ceritanya, saya ingin menampilkan detail produk dengan modal. Data produknya diambil dari parameter yang dikirim ke dalam fungsi detail().
-
-Kode fungsi detail() untuk menampilkan modal produk:
-function detail(data){
-&amp;nbsp;&amp;nbsp;&amp;nbsp; console.log(data);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#myModalLabel&amp;rdquo;).html(data.nama);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#gambar-produk&amp;rdquo;).attr(&amp;ldquo;src&amp;rdquo;, data.foto);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#harga&amp;rdquo;).html(data.harga);</description>
-    </item>
-    
-    <item>
       <title>Menghitung Tahun Kabisat dengan Python</title>
       <link>https://www.petanikode.com/python-tahun-kabisat/</link>
       <pubDate>Wed, 14 Sep 2016 15:24:00 +0000</pubDate>
@@ -1007,23 +990,6 @@ Call to undefined function base_url() in the error_404 pageSolusi dari masalah i
     </item>
     
     <item>
-      <title>Kesalahan Penyisipan CSS Select2 di Admin LTE yang Saya Lakukan</title>
-      <link>https://www.petanikode.com/kesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan/</link>
-      <pubDate>Tue, 12 Jul 2016 15:56:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/kesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan/</guid>
-      <description>Saya menghabiskan cukup banyak waktu untuk mengatasi masalah ini. Sampai-sampai mencari di Google, tapi tidak dapat solusi. Ceritanya, saya sedang mengerjakan sebuah proyek dengan Admin LTE. Kemudian saya menggunakan Select2 untuk element &amp;lt;select&amp;gt;. Akan tetapi, tampilannya tidak seperti yang diharapkan.
-Kode HTML:
-&amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;kabupaten&amp;rdquo;&amp;gt;Kabupaten/Kota&amp;lt;/label&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;select name=&amp;ldquo;kabupaten&amp;rdquo; class=&amp;ldquo;select2 form-control&amp;rdquo;&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option selected disabled&amp;gt;Pilih Kabupaten&amp;hellip;&amp;lt;/option&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5201&amp;rdquo;&amp;gt;Kab. Lombok Barat&amp;lt;/option&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5202&amp;rdquo;&amp;gt;Kab. Lombok Tengah&amp;lt;/option&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5203&amp;rdquo;&amp;gt;Kab. Lombok Timur&amp;lt;/option&amp;gt;</description>
-    </item>
-    
-    <item>
       <title>Membuat Bot Telegram Tanpa Menulis Kode Program (Coding)</title>
       <link>https://www.petanikode.com/bot-telegram-tanpa-coding/</link>
       <pubDate>Fri, 08 Jul 2016 14:09:00 +0000</pubDate>
@@ -1180,11 +1146,11 @@ Karena aplikasi Android menggunakan bahasa pemrograman Java, maka kita perlu men
     </item>
     
     <item>
-      <title>Solusi Error phpMyAdmin &#39;mbstring is missing&#39;</title>
-      <link>https://www.petanikode.com/phpmyadmin-mbstring-missing/</link>
+      <title>[Solved] Error phpMyAdmin `mbstring is missing` di Linux</title>
+      <link>https://www.petanikode.com/error-phpmyadmin-mbstring-missing/</link>
       <pubDate>Tue, 26 Apr 2016 15:02:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/phpmyadmin-mbstring-missing/</guid>
+      <guid>https://www.petanikode.com/error-phpmyadmin-mbstring-missing/</guid>
       <description>Masih segar, Ubuntu saya baru saja ditingkatkan (upgrade) ke versi 16.04. Secara otomatis semua versi software-nya juga ditingkatkan. Tapi, peningkatan versi tidak selalu menjadi lebih baik. Kadang mendapat bugs dan masalah baru. Seperti phpMyAdmin, terjadi error karena menggunakan PHP 7. Pada versi sebelumnya menggunakan PHP 5.
 
 Berdasarkan pesan error tersebut, kesalahanya ada pada konfigurasi PHP. Atur konfigurasi agar dapat me-load ekstensi.
@@ -1335,10 +1301,10 @@ mysqldump -u username -p -A &amp;gt; cadangan.</description>
     
     <item>
       <title>Solusi error `KVM is missing` Android Studio</title>
-      <link>https://www.petanikode.com/solusi-error-kvm-is-missing-android-studio/</link>
+      <link>https://www.petanikode.com/error-android-kvm-is-missing/</link>
       <pubDate>Wed, 13 Jan 2016 10:28:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/solusi-error-kvm-is-missing-android-studio/</guid>
+      <guid>https://www.petanikode.com/error-android-kvm-is-missing/</guid>
       <description>Emulator Android Studio yang saya instal di Linux (Xubuntu 15.10) 32bit, tidak bisa dijalankan. Meskipun saya sudah memberikan argumen -force-32bit dan menginstal KVM.
 emulator: ERROR: x86 emulation currently requires hardware acceleration!
 Please ensure KVM is properly installed and usable.
@@ -1601,18 +1567,6 @@ Cara di atas, saya rasa masih kurang tepat. Karena setiap mengklik link, kita ak
     </item>
     
     <item>
-      <title>Kendalikan cahaya layar dengan python</title>
-      <link>https://www.petanikode.com/kendalikan-cahaya-layar-dengan-python/</link>
-      <pubDate>Fri, 25 Sep 2015 19:53:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/kendalikan-cahaya-layar-dengan-python/</guid>
-      <description>Ada sebuah laptop yang bersistem operasi Kali Linux. Tombol FN-nya tidak berfungsi untuk mengatur cahaya layar. Driver VGA yang dipakai ialah intel. Sepertinya Kali Linux belum mampu bekerja dengan baik di laptop ini.
-
-Mencari-cari solusi di internet, akhirnya saya menemukan perintah untuk mengatur cahaya. Berikut ini perintahnya:
-echo 5 &amp;gt; /sys/class/backlight/intel_backlight/brightnessSeperti yang kita lihat, perintah di atas berfungsi untuk mengubah nilai file brightness yang berada di direktori /sys/class/backlight/intel_backlight/. Setiap nilai file itu berubah, cahaya layar pun berubah.</description>
-    </item>
-    
-    <item>
       <title>Fungsi range() di pemrograman python</title>
       <link>https://www.petanikode.com/python-fungsi-range/</link>
       <pubDate>Sun, 13 Sep 2015 16:06:00 +0000</pubDate>
@@ -1801,11 +1755,11 @@ program stok_pertanian;  Nama program ditulis seteah kata kunci program.</descri
     </item>
     
     <item>
-      <title>Solusi Error `cannot find -lGL` pada Qt Creator</title>
-      <link>https://www.petanikode.com/solusi-error-cannot-find-lgl/</link>
+      <title>[Solved] Qt Creator: Error `cannot find -lGL` di Linux</title>
+      <link>https://www.petanikode.com/error-qt-cannot-find-lgl/</link>
       <pubDate>Fri, 13 Feb 2015 09:35:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/solusi-error-cannot-find-lgl/</guid>
+      <guid>https://www.petanikode.com/error-qt-cannot-find-lgl/</guid>
       <description>Ternyata program pertama saya di Qt gagal diluncurkan. Karena pustaka OpenGL belum diinstal di komputer saya. Saya mendapatkan pesan galat :-1: error: cannot find -lGL. Solusinya, saya harus menginstal pustaka OpenGL.
  OpenGL (Open Graphic Library) adalah pustaka untuk membuat grafik. Biasanya digunakan untuk membuat game.
  Saya cari dulu, apakah pustaka OpenGL tersedia di repository ubuntu. O, ya, nama paket pustaka OpenGL adalah freeglut.
@@ -1856,11 +1810,11 @@ remote: Compressing objects: 100% (57/57), done.</description>
     </item>
     
     <item>
-      <title>Solusi galat saat inisialisasi Framework Yii di Linux</title>
-      <link>https://www.petanikode.com/solusi-galat-saat-inisialisasi-framework-yii-di-linux/</link>
+      <title>[Solved] Error Yii: `mcrypt required` di Linux</title>
+      <link>https://www.petanikode.com/error-yii-mcrypt-required/</link>
       <pubDate>Fri, 16 Jan 2015 16:50:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/solusi-galat-saat-inisialisasi-framework-yii-di-linux/</guid>
+      <guid>https://www.petanikode.com/error-yii-mcrypt-required/</guid>
       <description>Saat mengikuti praktikum bebas, Saya mendapatkan galat ketika inisialisasi atau mempersiapkan framework Yii di server lokal linux. Tidak seperti di XAMPP (Windows), perintah init dapat berjalan untuk inisialisasi Yii. Tetapi di Linux, perintah init digunakan untuk inisialisasi sistem, bukan untuk inisialisasi framework Yii.
  Perintah untuk inisialisasi Yii di linux adalah php init. Tapi, peintah ini tidak dapat dijalankan. Karena ada sesuatu yang belum di install.
  Perintah php init berfungsi untuk mengekseskusi berkas php yang bernama init.</description>
@@ -1938,10 +1892,10 @@ Penulisan LinkLink dapat dibuat dengan tag &amp;lt;a&amp;gt;. Untuk dapat menuju
     
     <item>
       <title>Belajar Ruby: Pengenalan dasar Pemrograman Ruby untuk Pemula</title>
-      <link>https://www.petanikode.com/ruby-linux/</link>
+      <link>https://www.petanikode.com/ruby-untuk-pemula/</link>
       <pubDate>Sun, 28 Dec 2014 13:15:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/ruby-linux/</guid>
+      <guid>https://www.petanikode.com/ruby-untuk-pemula/</guid>
       <description>&amp;ldquo;Ruby adalah sahabat terbaik programmer&amp;rdquo; &amp;mdash; ruby-lang.org
 Ruby adalah&amp;hellip;
  Bahasa pemrograman open source dinamis, mudah dimengerti dan produktif.

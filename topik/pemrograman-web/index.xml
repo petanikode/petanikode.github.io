@@ -7,27 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 15 Sep 2016 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Sep 2016 15:24:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/topik/pemrograman-web/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Masalah `SyntaxError: unterminated string literal` pada Javascript</title>
-      <link>https://www.petanikode.com/masalah-syntaxerror-unterminated-string-literal-pada-javascript/</link>
-      <pubDate>Thu, 15 Sep 2016 06:00:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/masalah-syntaxerror-unterminated-string-literal-pada-javascript/</guid>
-      <description>Sebuah masalah kecil saya temukan pada proyek yang sudah jadi. Bisa dibilang, web tersebut sudah jadi dan siap di-hosting. Tapi ternyata ada sedikit error yang membuat salah satu fitur tidak bekerja.
-Jadi ceritanya, saya ingin menampilkan detail produk dengan modal. Data produknya diambil dari parameter yang dikirim ke dalam fungsi detail().
-
-Kode fungsi detail() untuk menampilkan modal produk:
-function detail(data){
-&amp;nbsp;&amp;nbsp;&amp;nbsp; console.log(data);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#myModalLabel&amp;rdquo;).html(data.nama);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#gambar-produk&amp;rdquo;).attr(&amp;ldquo;src&amp;rdquo;, data.foto);
-&amp;nbsp;&amp;nbsp;&amp;nbsp; $(&amp;ldquo;#harga&amp;rdquo;).html(data.harga);</description>
-    </item>
     
     <item>
       <title>Cara Menghapus dan Mengubah Nama Direktori dengan PHP</title>
@@ -104,23 +87,6 @@ Misalkan, sebuah data mata uang bentuknya seperti ini:</description>
       <description>Ketika saya memodifikasi halaman error 404 CodeIgniter, fungsi base_url() tidak bisa dipanggil. Mungkin saja fungsi ini tidak dikenali di sini. Fungsi base_url() saya butuhkan untuk meyisipkan kode CSS yang ada di direktori assets. Pesan Error-nya:
 Call to undefined function base_url() in the error_404 pageSolusi dari masalah ini sangat sederhana. Kita tidak harus menggunakan fungsi base_url() untuk mendapatkan base url. Kita bisa menggunakan fungsi config_item() dengan parameter &amp;lsquo;base_url&amp;rsquo;. Contoh:
 &amp;lt;?php echo config_item(&amp;lsquo;base_url&amp;rsquo;); ?</description>
-    </item>
-    
-    <item>
-      <title>Kesalahan Penyisipan CSS Select2 di Admin LTE yang Saya Lakukan</title>
-      <link>https://www.petanikode.com/kesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan/</link>
-      <pubDate>Tue, 12 Jul 2016 15:56:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/kesalahan-penyisipan-css-select2-di-admin-lte-yang-saya-lakukan/</guid>
-      <description>Saya menghabiskan cukup banyak waktu untuk mengatasi masalah ini. Sampai-sampai mencari di Google, tapi tidak dapat solusi. Ceritanya, saya sedang mengerjakan sebuah proyek dengan Admin LTE. Kemudian saya menggunakan Select2 untuk element &amp;lt;select&amp;gt;. Akan tetapi, tampilannya tidak seperti yang diharapkan.
-Kode HTML:
-&amp;lt;div class=&amp;ldquo;form-group&amp;rdquo;&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;label for=&amp;ldquo;kabupaten&amp;rdquo;&amp;gt;Kabupaten/Kota&amp;lt;/label&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;select name=&amp;ldquo;kabupaten&amp;rdquo; class=&amp;ldquo;select2 form-control&amp;rdquo;&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option selected disabled&amp;gt;Pilih Kabupaten&amp;hellip;&amp;lt;/option&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5201&amp;rdquo;&amp;gt;Kab. Lombok Barat&amp;lt;/option&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5202&amp;rdquo;&amp;gt;Kab. Lombok Tengah&amp;lt;/option&amp;gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;option value=&amp;ldquo;5203&amp;rdquo;&amp;gt;Kab. Lombok Timur&amp;lt;/option&amp;gt;</description>
     </item>
     
     <item>

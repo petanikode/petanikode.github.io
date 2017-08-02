@@ -7,10 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 31 Jul 2017 19:37:57 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 02 Aug 2017 09:27:53 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/seri/belajar-python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Belajar Python: Cara Mengambil Input dan Menampilkan Output</title>
+      <link>https://www.petanikode.com/python-input-output/</link>
+      <pubDate>Wed, 02 Aug 2017 09:27:53 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/python-input-output/</guid>
+      <description>Input adalah masukan yang kita berikan ke program.
+Program akan memprosesnya dan menampilkan hasil outputnya.
+Input, proses, dan output adalah inti dari semua program komputer.
+Pada tulisan ini, kita akan belajar cara mengambil input dan menampilkan output untuk program berbasis teks.
+Mari kita mulai&amp;hellip;
+Cara Mengambil Input dari Keyboard Python sudah menyediakan fungsi input() dan raw_input() untuk mengambil inputan dari keyboard.
+Cara pakainya:
+nama_varabel = input(&amp;quot;Sebuah Teks&amp;quot;)  Artinya, teks yang kita inputkan dari keyboard akan disimpan ke dalam nama_variabel.</description>
+    </item>
     
     <item>
       <title>5 Aturan Penulisan Sintaks Python yang Harus dipatuhi</title>

@@ -809,6 +809,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1263,18 +1264,6 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-SUy_Ta0eWZ0/WB4QnB9lNkI/AAAAAAAADYU/srstr9Yd6sMJ4UYLRDxWtBOFcr95F3erACK4B/s1600/php-cli-petanikode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-SUy_Ta0eWZ0/WB4QnB9lNkI/AAAAAAAADYU/srstr9Yd6sMJ4UYLRDxWtBOFcr95F3erACK4B/s1600/php-cli-petanikode.png" /></a>Seperti yang sudah saya bahas pada <a href="http://www.petanikode.com/2016/10/mengenal-php-cli-dan-php-interaktif.html" target="_blank">tulisan sebelumnya</a>. PHP CLI merupakan PHP yang berjalan di atas <i>Command Line</i>. Biasanya, program yang berbasis teks memiliki fungsi tersendiri untuk mengambil input. Contohnya Python menggunakan fungsi <code>input()</code> dan <code>raw_input()</code>, java menggunakan <code>Scanner</code> dan <code>BufferReader</code>, C++ menggunakan <code>cin</code>, Pascal menggunakan <code>readln()</code>, dsb. Lalu, Bagaiaman dengan PHP?<br /><h2>Menggunakan Fungsi fopen()</h2>Cara pertama mengambil input di PHP CLI adalah dengan menggunakan fungsi <code>fopen()</code>. Pada dasarnya fungsi ini digunakan untuk membuka atau membaca file. Namun, dapat digunakan juga untuk mengambil input. Contoh penggunaan:<br /><pre><code class="php">&lt;?php<br />echo &ldquo;Siapa nama kamu: &ldquo;;<br />$input_nama = fopen(&ldquo;php://stdin&rdquo;,&ldquo;r&rdquo;);<br />$nama = trim(fgets($input_nama));<br />echo &ldquo;Hello $nama, apa kabar?\n&rdquo;;<br />?&gt;</code></pre>Hasilnya ketika dieksekusi:<br /><a href="http://3.bp.blogspot.com/-nm_zHE6B2fk/WB4HV4gLtuI/AAAAAAAADX4/3DW3I0stpQwU_yNbVtjreQmIA-QsxBwcACK4B/s1600/Percobaan%2Bpengambilan%2Binput%2Bdi%2BPHP%2BCLI.png" imageanchor="1"><img alt="Percobaan pengambilan input di PHP CLI" border="0" src="https://3.bp.blogspot.com/-nm_zHE6B2fk/WB4HV4gLtuI/AAAAAAAADX4/3DW3I0stpQwU_yNbVtjreQmIA-QsxBwcACK4B/s1600/Percobaan%2Bpengambilan%2Binput%2Bdi%2BPHP%2BCLI.png" title="" /></a><br />Pada contoh di atas, fungsi <code>fopen()</code> harus diberikan paramater <code>&ldquo;php://stdin&rdquo;</code> dan <code>&ldquo;r&rdquo;</code> untuk membaca apa yang diketik di Terminal. Kemudian, kita membutuhkan dua fungsi lagi agar mendapatkan nilai yang murni. Fungsi <code>fgets()</code> untuk membaca baris inputan, kemudian fungsi <code>trim()</code> untuk menghapus karakter <i>enter</i> (<code>&ldquo;\n&rdquo;</code>) atau <i>spasi</i> di akhir inputan yang ikut dibaca. Bila kita tidak menggunakan fungsi <code>trim()</code> maka nilai yang akan dibaca ketika diinputkan &ldquo;<code>Petani Kode</code>&rdquo; adalah &ldquo;<code>Petani Kode\n</code>&rdquo;. &ldquo;<code>\n</code>&rdquo; itu didapatkan dari tombol <i>enter</i>.<br /><h2>Menggunakan STDIN</h2>Ada cara yang lebih sederhana, yaitu menggunakan <code>STDIN</code>. Cara ini sama juga seperti yang tadi, cuma perbedaanya tidak menggunakan fungsi <code>fopen()</code>. Kita bisa langsung mengambil nilai dengan fungsi <code>fgets()</code>. Lalu kita gunakan fungsi <code>trim()</code> untuk membersihkannya dari &ldquo;<code>\n</code>&rdquo;. Contoh:<br /><pre><code class="php">&lt;?php<br /><br />echo &ldquo;Dari mana anda berasl: &ldquo;;<br />$asal = trim(fgets(STDIN));<br /><br />echo &ldquo;Oh, dari $asal ya\n&rdquo;;<br />?&gt;</code></pre>Hasil output ketika dieksekusi:<br /><a href="http://4.bp.blogspot.com/-lO4uwMEt0ns/WB4K3du-5dI/AAAAAAAADYE/PzGQNFquPPw1ZybgBY9KolyM0DJ4YxFIwCK4B/s1600/pengambilan%2Binput%2Bdengan%2Bkonstanta%2BSTDIN.png" imageanchor="1"><img alt="Pengambilan input di PHP CLI dengan konstanta STDIN" border="0" src="https://4.bp.blogspot.com/-lO4uwMEt0ns/WB4K3du-5dI/AAAAAAAADYE/PzGQNFquPPw1ZybgBY9KolyM0DJ4YxFIwCK4B/s1600/pengambilan%2Binput%2Bdengan%2Bkonstanta%2BSTDIN.png" title="" /></a><br /><br />Itulah dua cara mengambil input di PHP CLI, manakah cara yang paling mudah? Silahkan anda tentukan sendiri. Kalau pun ada cara lain silahkan ditambahkan dan kalau masih tidak paham silahkan ditanyakan.<br /><br />Referensi: <a href="http://stackoverflow.com/questions/6543841/php-cli-getting-input-from-user-and-then-dumping-into-variable-possible" target="_blank"><a href="http://stackoverflow.com/questions/6543841/php-cli-getting-input-from-user-and-then-dumping-into-variable-possible">http://stackoverflow.com/questions/6543841/php-cli-getting-input-from-user-and-then-dumping-into-variable-possible</a></a></p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1296,6 +1285,18 @@ padding: 16px;
                         #<a href="/topik/php">PHP</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

@@ -815,6 +815,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1269,18 +1270,6 @@ padding: 16px;
                 <p><a href="https://4.bp.blogspot.com/-dNNJvns8P_Y/V3d-ZGdAKRI/AAAAAAAAC5s/28FqVj0Ho3E7CyeXhwv1bmra0VaaADSkwCLcB/s1600/html5-petanikode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-dNNJvns8P_Y/V3d-ZGdAKRI/AAAAAAAAC5s/28FqVj0Ho3E7CyeXhwv1bmra0VaaADSkwCLcB/s1600/html5-petanikode.png" /></a><br />Atribut <code>min</code> dan <code>max</code> merupakan atribut untuk menentukan nilai terkecil dan terbesar yang boleh diinputkan pada form. Atribut ini berfungsi untuk membatasi nilai input, misalnya tidak boleh menginput angka negatif, angka lebih dari 10, tanggal kurang dari tahun 2000, dsb.<br /><h2>Tidak Boleh Input Angka Negatif</h2>Agar tidak bisa menginputkan anka negatfi, maka kita perlu batasi nilai minimanya menjadi nol (0).<br /><pre><code clsas="html">&lt;input type=&ldquo;number&rdquo; min=&ldquo;0&rdquo; /&gt;</code></pre>Kode di atas akan menghasilkan:<br /><input min="0" type="number" /><br /><h2>Hanya Terima Angka dari 1 sampai 5</h2>Nilai yang boleh diinputkan dari 1 sampai 5, maka kita hanya perlu menentukan nilai terkecilnya 1 dan terbesar 5.<br /><pre><code clsas="html">&lt;input type=&ldquo;number&rdquo; min=&ldquo;1&rdquo; max=&ldquo;5&rdquo; /&gt;</code></pre>Kode di atas akan menghasilkan:<br /><input max="5" min="1" type="number" /><br /><h2>Tanggal Diatas Tahun 2000</h2>Agar tanggal yang dinputkan diatas tahun 2000, maka kita perlu mengatur batas bawahnya <i>(min)</i> menjadi 2000-12-30.<br /><pre><code clsas="html">&lt;input type=&ldquo;date&rdquo; min=&ldquo;2000-12-30&rdquo; /&gt;</code></pre>Kode di atas akan menghasilkan:<br /><input min="2000-12-30" type="date" /><br /><b>Catatan:</b> Input dengan tipe &ldquo;date&rdquo; belum didukung di Firefox.<br /><br />Demo:<br /><a class="jsbin-embed" href="http://jsbin.com/heqegi/1/embed?html,output">Atribut Min-Max &ndash; Petani Kode on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.36.10"></script><br /><h2>Kesimpulan</h2>Atribut <code>min</code> dan <code>max</code> dapat membatasi nilai input di form. Atribut ini menerima nilai berupa angka dan tanggal.<br /><br />Referensi: <a href="http://www.w3schools.com/tags/att_input_min.asp" target="_blank"><a href="http://www.w3schools.com/tags/att_input_min.asp">http://www.w3schools.com/tags/att_input_min.asp</a></a></p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1300,6 +1289,18 @@ padding: 16px;
                         #<a href="/topik/html">HTML</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

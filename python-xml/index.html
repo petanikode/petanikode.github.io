@@ -885,6 +885,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1339,18 +1340,6 @@ padding: 16px;
                 <p><p>DOM (<i>Document Object Model</i>) adalah sebuah API lintas bahasa dari <i>World Wide Web Consortium</i> (<a href="http://www.w3.org/" target="blank">W3C</a>). API ini sangat bermanfaat untuk membaca data yang ada di dokumen XML. Tulisan ini saya buat berdasarkan panduan di <a href="http://www.tutorialspoint.com/python/python_xml_processing.htm" target="blank">tutorialspoint.com</a>.</p> <a href="http://3.bp.blogspot.com/-P4ONAPt-5Us/VOtVXL1usII/AAAAAAAABbI/6FwQJ9o2iJQ/s1600/python-xml.jpg" imageanchor="1" ><img border="0" src="http://3.bp.blogspot.com/-P4ONAPt-5Us/VOtVXL1usII/AAAAAAAABbI/6FwQJ9o2iJQ/s1600/python-xml.jpg" alt="python XML programming" title="Pemrograman python-xml"/></a> <p>Saya memiliki dokumen XML bernama <samp>kartu_nama.xml</samp>, isinya sebagai berikut:</p> <pre><code class="xml">&lt;?xml version=&quot;1.0&quot;?&gt;<br />&lt;kartuNama&gt;<br />    &lt;nama&gt;Ardianta Pargo&lt;/nama&gt;<br /><br />    &lt;jenis-kelamin&gt;Laki-laki&lt;/jenis-kelamin&gt;<br /><br />    &lt;alamat&gt;<br />        &lt;dusun&gt;Sisik Goak&lt;/dusun&gt;<br />        &lt;desa&gt;Sisik&lt;/desa&gt;<br />        &lt;kecamatan&gt;Pringgarata&lt;/kecamatan&gt;<br />        &lt;kabupaten&gt;Lombok Tengah&lt;/kabupaten&gt;<br />    &lt;/alamat&gt;<br /><br />    &lt;ponsel&gt;087866866694&lt;/ponsel&gt;<br />    &lt;surel&gt;ardianta_pargo@yahoo.co.id&lt;/surel&gt;<br /><br />    &lt;sosial-media&gt;<br />        &lt;facebook&gt;ardianta.pargo&lt;/facebook&gt;<br />        &lt;twitter&gt;@ArdiantaPargo&lt;/twitter&gt;<br />    &lt;/sosial-media&gt;<br />    &lt;situs-web&gt;<a href="http://petanikode.blogspot.com&lt;/situs-web&gt;">http://petanikode.blogspot.com&lt;/situs-web&gt;</a><br />&lt;/kartuNama&gt;<br /></code></pre> <p>Saya ingin menampilkan data-data yang ada di dokumen XML tersebut dengan python. Oleh karena itu, saya membutuhkan modul <code>xml.dom</code>. Saya akan menggunakan fungsi <code>minidom.parse()</code> untuk mengurai isi dokumen XML. Berikut kode lengkapnya:</p> <pre><code class="python">from xml.dom.minidom import parse<br /><br /># membuka dokumen XML<br />berkasXML = parse(&quot;kartu_nama.xml&quot;)<br /><br /># membuat objek kartu nama<br />kn = berkasXML.documentElement<br /><br /># ambil data-data yang ada di dalam XML<br />nama = kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes[0].data<br />jenis_kelamin = kn.getElementsByTagName(&quot;jenis-kelamin&quot;)[0].childNodes[0].data<br /><br />dusun = kn.getElementsByTagName(&#39;dusun&#39;)[0].childNodes[0].data<br />desa = kn.getElementsByTagName(&#39;desa&#39;)[0].childNodes[0].data<br />kecamata = kn.getElementsByTagName(&#39;kecamatan&#39;)[0].childNodes[0].data<br />kabupaten = kn.getElementsByTagName(&#39;kabupaten&#39;)[0].childNodes[0].data<br />alamat = dusun + &quot;, Desa &quot; + desa + &quot;, Kecamatan &quot; + kecamata + &quot;, Kabupaten &quot; + kabupaten<br /><br />ponsel = kn.getElementsByTagName(&quot;ponsel&quot;)[0].childNodes[0].data<br />surel = kn.getElementsByTagName(&quot;surel&quot;)[0].childNodes[0].data<br /><br />fb = kn.getElementsByTagName(&quot;facebook&quot;)[0].childNodes[0].data<br />tw = kn.getElementsByTagName(&quot;twitter&quot;)[0].childNodes[0].data<br /><br />situs = kn.getElementsByTagName(&quot;situs-web&quot;)[0].childNodes[0].data<br /><br /># cetak data yang telah didapatkan<br />print &quot;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; KARTU NAMA &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&quot;<br />print &quot;Nama \t\t: %s&quot; % nama<br />print &quot;Jenis Kelamin \t: %s&quot; % jenis_kelamin<br />print &quot;Alamat \t\t: %s&quot; % alamat<br />print &quot;Ponsel \t\t: %s&quot; % ponsel<br />print &quot;Surel \t\t: %s&quot; % surel<br />print &quot;Facebook \t: %s&quot; % fb<br />print &quot;Twitter \t: %s&quot; % tw<br />print &quot;Situs web \t: %s&quot; % situs<br /></code></pre> <p>Hasil saat dijalankan:</p><pre><code class="bash">$ <b>python bacaXML.py</b> <br />&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; KARTU NAMA &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br />Nama   : Ardianta Pargo<br />Jenis Kelamin  : Laki-laki<br />Alamat   : Sisik Goak, Desa Sisik, Kecamatan Pringgarata, Kabupaten Lombok Tengah<br />Ponsel   : 087866866694<br />Surel   : ardianta_pargo@yahoo.co.id<br />Facebook  : ardianta.pargo<br />Twitter  : @ArdiantaPargo<br />Situs web  : <a href="http://petanikode.blogspot.com">http://petanikode.blogspot.com</a><br /></code></pre> <p>Fungsi atau <i>method</i> yang saya gunakan untuk menangkap elemen XML adalah <code>getElementsByTagName()</code>. Fungsi ini akan menangkap elemen dalam bentuk <i>list</i>.</p> <pre><code class="python">&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)<br />[&lt;DOM Element: nama at 0xb720bdec&gt;]<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0]<br />&lt;DOM Element: nama at 0xb720bdec&gt;<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes<br />[&lt;DOM Text node &quot;u&#39;Ardianta P&#39;&hellip;&quot;&gt;]<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes<br />[&lt;DOM Text node &quot;u&#39;Ardianta P&#39;&hellip;&quot;&gt;]<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes[0]<br />&lt;DOM Text node &quot;u&#39;Ardianta P&#39;&hellip;&quot;&gt;<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes[0].data<br />Ardianta Pargo<br /></code></pre></p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1372,6 +1361,18 @@ padding: 16px;
                         #<a href="/topik/api">API</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

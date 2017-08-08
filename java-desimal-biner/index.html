@@ -809,6 +809,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1263,18 +1264,6 @@ padding: 16px;
                 <p><a href="https://2.bp.blogspot.com/-P_5MSHpv9zA/VyKK4CjK9ZI/AAAAAAAACxk/Ptclg7VEuNQija-Acz8opEyp71ejcFQcwCLcB/s1600/Matematika%2BJava%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-P_5MSHpv9zA/VyKK4CjK9ZI/AAAAAAAACxk/Ptclg7VEuNQija-Acz8opEyp71ejcFQcwCLcB/s1600/Matematika%2BJava%2B-%2BPetani%2BKode.png" /></a>Konversi bilangan desimal ke biner sangat mudah dilakukan di Java, karena ada <i>method</i> atau fungsi yang sudah disediakan untuk melakukannya. Berikut ini tampilan program konversi yang saya buat dengan Java (<a href="http://petanikode.com/search/label/Android" target="_blank">Swing</a>).<a href="http://4.bp.blogspot.com/-yRpuezdZqlw/VyKc3J8no-I/AAAAAAAACx4/U5AojmPQXuQ0Zp9SztMpCexi24lbugbegCK4B/s1600/Program%2BKonversi%2BBilangan%2BDesimal%2Bke%2BBiner.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-yRpuezdZqlw/VyKc3J8no-I/AAAAAAAACx4/U5AojmPQXuQ0Zp9SztMpCexi24lbugbegCK4B/s1600/Program%2BKonversi%2BBilangan%2BDesimal%2Bke%2BBiner.png" /></a>Terdapat dua tombol pada program tersebut. Tombol pertama berfungsi untuk menentukan tipe konversinya (Desi-ke-Bin atau Bin-ke-Desi). Kode yang dikerjakan di tombol tersebut adalah sebagai berikut.<br /><pre><code class="java">private void btnTipeKonversiActionPerformed(java.awt.event.ActionEvent evt) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />&nbsp; &nbsp; &nbsp; &nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp; if(btnTipeKonversi.getText().equals(&ldquo;=&gt;&rdquo;)){<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; btnTipeKonversi.setText(&rdquo;&lt;=&ldquo;);<br />&nbsp; &nbsp; &nbsp; &nbsp; } else {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; btnTipeKonversi.setText(&ldquo;=&gt;&rdquo;);<br />&nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; &nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp; if(btnTipeKonversi.getText().equals(&ldquo;=&gt;&rdquo;)){<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; txtBiner.setEnabled(false);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; txtBiner.setText(&ldquo;&rdquo;);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; txtDesimal.setEnabled(true);<br />&nbsp; &nbsp; &nbsp; &nbsp; } else {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; txtBiner.setEnabled(true);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; txtDesimal.setEnabled(false);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; txtDesimal.setText(&ldquo;&rdquo;);<br />&nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; }</code></pre>Sedangkan tombol berikutnya berfungsi untuk mengkonversi bilangan yang diinputkan. Kodenya sebagai berikut.<br /><pre><code class="java">private void btnKonversiActionPerformed(java.awt.event.ActionEvent evt) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />&nbsp; &nbsp; &nbsp; &nbsp; try { &nbsp; <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(txtBiner.getText().isEmpty()){<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int desi = Integer.valueOf(txtDesimal.getText());<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // konversi ke biner<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String bin = Integer.toBinaryString(desi);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; txtBiner.setText(bin);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String biner = txtBiner.getText();<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // konversi ke desimal<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int des = Integer.parseInt(biner, 2);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; txtDesimal.setText(String.valueOf(des));<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp; } catch (Exception e) {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; JOptionPane.showMessageDialog(null, &ldquo;Input tidak valid: &ldquo; + e.getMessage());<br />&nbsp; &nbsp; &nbsp; &nbsp; } finally {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; txtBiner.setEnabled(true);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; txtDesimal.setEnabled(true);<br />&nbsp; &nbsp; &nbsp; &nbsp; }<br /><br />&nbsp; &nbsp; }<code></code></code></pre><i>Method</i> atau fungsi yang melakukan konversi adalah <code>Integer.toBinaryString()</code> dan <code>Integer.parseInt()</code>. Fungsi&nbsp;<span style="font-family: monospace;">Integer.toBinaryString()</span>&nbsp;memiliki parameter dengan tipe <i>integer</i>. Sedangkan fungsi&nbsp;<span style="font-family: monospace;">Integer.parseInt()</span>&nbsp;memiliki parameter dengan tipe <i>string</i> dan <i>integer</i> untuk nilai basis bilangannya. Nilai <code>2</code> diberikan untuk menentukan bilangan berbasis <code>2</code>.<br /><br />Hasil uji coba:<a href="https://2.bp.blogspot.com/-d2hVS5LUkHQ/VyKgxCofSBI/AAAAAAAACyA/h1rLws6TW5U19y_STI5zlGjC5-Cx-s5NACLcB/s1600/Hasil%2BUji%2BCoba%2BProgram%2BKonversi%2BBilangan%2BDesimal%2BKe%2BBiner.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-d2hVS5LUkHQ/VyKgxCofSBI/AAAAAAAACyA/h1rLws6TW5U19y_STI5zlGjC5-Cx-s5NACLcB/s1600/Hasil%2BUji%2BCoba%2BProgram%2BKonversi%2BBilangan%2BDesimal%2BKe%2BBiner.png" /></a><br />Kode sumbernya tersedia di github: <a href="https://github.com/petanikode/desi2biner" target="_blank">petanikode/desi2biner</a></p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1296,6 +1285,18 @@ padding: 16px;
                         #<a href="/topik/struktur-data">Struktur Data</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

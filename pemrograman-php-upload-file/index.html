@@ -833,6 +833,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1287,18 +1288,6 @@ padding: 16px;
                 <p>Teman Saya menanyakan, &ldquo;Cara upload file dengan php, bagaimana?&rdquo; Agak sulit bagi Saya menjelaskannya secara langsung. Oleh karena itu, saya membuat artikel ini untuk menjawabnya.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-1isRO8RZ4rE/VOc9v-3NQaI/AAAAAAAABa8/m1AS1VIbP58/s1600/php.png" /></a></div>Upload file merupakan kegiatan pengiriman file dari client (pengunjung web) ke server. Kita akan mencoba memahami bagaiamana upload file di php bekerja. Baiklah, kita mulai dengan membuat form upload.<br /><pre><code class="html">&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&nbsp; &nbsp; &lt;title&gt;Upload File&lt;/title&gt; <br />&lt;/head&gt;<br /><br />&lt;body&gt;<br />&nbsp; &nbsp; &lt;form action=&ldquo;upload.php&rdquo; method=&ldquo;post&rdquo; enctype=&ldquo;multipart/form-data&rdquo;&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp; Pilih file: &lt;input type=&ldquo;file&rdquo; name=&ldquo;berkas&rdquo; /&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&ldquo;submit&rdquo; name=&ldquo;upload&rdquo; value=&ldquo;upload&rdquo; /&gt;<br />&nbsp; &nbsp; &lt;/form&gt; <br />&lt;/body&gt; <br />&lt;/html&gt;</code></pre>Perhatikanlah atribut-atribut yang digunakan pada elemen form, di sana terdapat atribut <i>action</i>, <i>method</i>, dan <i>enctype</i>. Atribut <i>action</i> berfungsi untuk membuka file (skrip) setelah tombol submit ditekan; Atribut <i>method</i> berfungsi untuk menentukan metode pengiriman yang akan digunakan; Dan atribut <i>enctype</i> berfungsi untuk menentukan enkripsi yang akan digunakan dalam pengiriman data.<br /><br />Perhatikan juga atribut <i>name</i> yang ada pada elemen input. Atribut tersebut akan menentukan nama kuci pada vaeiabel yang menampung data form di PHP. Mungkin lebih jelasnya, kita buat dulu file <i>upload.php</i> dengan isi sebagai berikut:<br /><pre><code class="php">&lt;?php<br />echo &ldquo;&lt;pre&gt;&rdquo;;<br />print_r($_FILES);<br />echo &ldquo;&lt;/pre&gt;&rdquo;;<br />?&gt;</code></pre>Kode PHP di atas hanya akan mencetak isi dari variabel <var>$_FILES</var>. Variabel <var>$_FILES</var> adalah variabel khusus untuk menampung data file yang akan diupload. Berikut ini adalah hasil yang didapatkan saat menguji coba kode tersebut:<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-nvGBVjfZeG8/Ve1PizotuJI/AAAAAAAABuk/o4ovmTgGZNQ/s1600/Data%2Bfile%2Byang%2Bterupload%2Bke%2Bserver.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-nvGBVjfZeG8/Ve1PizotuJI/AAAAAAAABuk/o4ovmTgGZNQ/s1600/Data%2Bfile%2Byang%2Bterupload%2Bke%2Bserver.png" /></a></div>Berdasarkan hasil di atas, kita dapat melakukan sesuatu dengan data itu. Misalkan, untuk melihat nama file yang di-upload, kita bisa mengakses variabel <i>$_Files[&lsquo;berkas&rsquo;][&lsquo;name&rsquo;]</i>. Sekarang, mari kita menata semuanya agar menjadi lebih jelas. Ubahlah kode PHP tadi menjadi seperti ini:<br /><pre><code class="php">&lt;?php<br /><br />$namaFile = $_FILES[&lsquo;berkas&rsquo;][&lsquo;name&rsquo;];<br />$namaSementara = $_FILES[&lsquo;berkas&rsquo;][&lsquo;tmp_name&rsquo;];<br />$dirUpload = &ldquo;terupload/&rdquo;;<br /><br /><br />$terupload = move_uploaded_file($namaSementara, $dirUpload.$namaFile);<br /><br />if ($terupload) {<br />&nbsp;&nbsp;&nbsp; echo &ldquo;Upload berhasil!&lt;br/&gt;&rdquo;;<br />&nbsp;&nbsp;&nbsp; echo &ldquo;Link: &lt;a href=&lsquo;&ldquo;.$dirUpload.$namaFile.&rdquo;&rsquo;&gt;&rdquo;.$namaFile.&rdquo;&lt;/a&gt;&rdquo;;<br />} else {<br />&nbsp;&nbsp;&nbsp; echo &ldquo;Upload Gagal!&rdquo;;<br />}<br /><br />?&gt;</code></pre>Pada kode di atas, kita menambahkan beberapa variabel dan fungsi. Variabel <i>$dirUpload</i> untuk menentukan tempat penyimpanan file setelah berhasil di upload. Sementara, fungsi <i>move_uploaded_file()</i> untuk memindahkan file yang sudah terupload pada<i> tmp_dir</i> ke lokasi yang sudah ditentukan. Sebelum menguji coba kode ini, buatlah direktori bernama &lsquo;terupload&rsquo; dan berikan hak akses seperti berikut ini:<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-fz9dLYvJ4Ko/Ve1ZjPMJETI/AAAAAAAABu4/qJb-4IQvQHE/s1600/Buat%2Bdirektori%2Buntuk%2Bmenampung%2Bberkas%2Byang%2Bdiupload.png" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/-fz9dLYvJ4Ko/Ve1ZjPMJETI/AAAAAAAABu4/qJb-4IQvQHE/s1600/Buat%2Bdirektori%2Buntuk%2Bmenampung%2Bberkas%2Byang%2Bdiupload.png" /></a></div>Sekarang, saatnya menguji coba:<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-aXURGK2xsyA/Ve1bCvsuTHI/AAAAAAAABvE/3zL9-BDTFss/s1600/upload%2Bberhasil.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-aXURGK2xsyA/Ve1bCvsuTHI/AAAAAAAABvE/3zL9-BDTFss/s1600/upload%2Bberhasil.png" /></a></div>Cobalah periksa direktori &lsquo;terupload&rsquo;, apakah filenya berhasil di-upload ke sana atau tidak.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-Yr8I-FfIdUw/Ve1bQiIc1-I/AAAAAAAABvM/LvmOF7rtTjI/s1600/File%2Byang%2Bsudah%2Bdiupload.png" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/-Yr8I-FfIdUw/Ve1bQiIc1-I/AAAAAAAABvM/LvmOF7rtTjI/s1600/File%2Byang%2Bsudah%2Bdiupload.png" /></a></div><h2></h2><h2>Kesimpulan dan saran</h2>Jadi, setiap file yang di-upload ke server, datanya ditampung pada variabel <i>$_FILES</i> dan filenya sendiri disimpan sementara di direktori <i>tmp_dir</i>. Kemudian, fungsi <i>move_uploaded_file()</i> memindahkan file dari direktori <i>tmp_dir </i>ke direktori yang sudah ditentukan.<br /><br />Jika ingin menyimpan data file yang terupload ke database, kita bisa memanfaatkan data yang ada di variabel <i>$_FILES</i>. Kemudian menyimpannya ke database.<br /><br />&mdash;<br />Bagaimana menurutmu, mudah bukan?</p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1320,6 +1309,18 @@ padding: 16px;
                         #<a href="/topik/php">PHP</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

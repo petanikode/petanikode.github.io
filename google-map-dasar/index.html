@@ -809,6 +809,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1263,18 +1264,6 @@ padding: 16px;
                 <p><a href="http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png" /></a>Di tengah-tengah kesibukan mengerjakan proyek, akhirnya saya menyempatkan diri untuk mem-posting sesuatu. Pada kesempatan ini kita akan mempelajari Google Maps API. Karena kebetulan, pada proyek yang sedang saya kerjakan menggunakan Google Map. Saya akan menggunakan referensi yang sahih dan dapat dipercaya, <a href="http://www.w3schools.com/googleapi/default.asp" target="_blank">W3Schools</a> dan <a href="https://developers.google.com/maps/" target="_blank">Google Developer</a>. Baiklah mari kita mulai.<br /><h2>Apa itu Google Maps API?</h2>Google Maps API <i>(Application Programming Interface)</i> merupakan sebuah API yang disediakan oleh Google untuk menggunakan peta Google <i>(Google Map)</i> dalam aplikasi yang kita bangun. Google Maps API memungkinkan kita memodifikasi peta dan informasi yang ada di dalamnya.<br /><br />Google Maps API dikelompokkan berdasarkan platform: Web, Android, dan iOS. Pada kesempatan ini kita akan menggunakan Google Maps API untuk Web. Sedangkan untuk Android dan iOS, mungkin (insa&rsquo;allah) saya akan bahas nanti.<br /><h2>Menampilkan Peta</h2>Ada beberapa langkah yang dilakukan untuk menampilkan peta di dalam Web:<br /><ol><li>Menyisipkan <i>library</i> API Google Map<br /><pre><code class="html">&lt;script src=&ldquo;<a href="http://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt;">http://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt;</a></code></pre></li><li>Membuat sebuah fungsi <code>initialize()</code> untuk mempersiapkan peta.<br /><pre><code class="js">function initialize() { &hellip; }</code></pre></li><li>Membuat properti peta dalam bentuk objek<br /><pre><code class="js">var propertiPeta = {<br />&nbsp;&nbsp;&nbsp; center:new google.maps.LatLng(-8.5830695,116.3202515),<br />&nbsp;&nbsp;&nbsp; zoom:9,<br />&nbsp;&nbsp;&nbsp; mapTypeId:google.maps.MapTypeId.ROADMAP<br />};</code></pre>Letakkan kode di atas dalam fungsi <code>initialize()</code></li><li>Membuat objek Peta<br /><pre><code class="js">var peta = new google.maps.Map(document.getElementById(&ldquo;googleMap&rdquo;), propertiPeta);</code></pre>Letakkan kode di atas dalam fungsi <code>initialize()</code></li><li>Menampilkan peta ketika jendela <i>(window)</i> di-load<br /><pre><code class="js">google.maps.event.addDomListener(window, &lsquo;load&rsquo;, initialize);</code></pre></li><li>Membuat tag <i>div</i> sebagai kontainer untuk menampilkan peta<br /><pre><code class="html">&lt;div id=&ldquo;googleMap&rdquo; style=&ldquo;width:100%;height:380px;&rdquo;&gt;&lt;/div&gt;</code></pre></li></ol>Kode Lengkapnya dan demo hasil:<br /><a class="jsbin-embed" href="http://jsbin.com/bejiduz/embed?html,output">Tutorial Google Map - Petani Kode on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.13"></script><br />Dalam pembuatan properti peta, kita bisa menentukan posisi peta atau titik koordinat mula-mula, skala <i>(zoom)</i>, tipe peta, dsb. Sementara untuk tag <code>&lt;div&gt;</code> untuk menampilkan peta, atribut <i>id</i>-nya harus sesui dengan <i>id</i> yang dipilih saat pembuatan peta (nomer 4).<br /><br />Ada baiknya juga kita perhatikan level zoom yang digunakan. Berdasarkan dokumentasi di <a href="https://developers.google.com/maps/documentation/javascript/tutorial#zoom-levels" target="_blank">Google Developer</a>, berikut ini nilai level zoom dan kegunaanya.<br /><ul><li>0: Bumi (smua peta ditampilkan)</li><li>1: Peta Dunia</li><li>5: Landmass/continent</li><li>10: Kota</li><li>15: Jalan</li><li>20: Bangunan </li></ul><h2>Penutup</h2>Sekian tutorial singkat Google Maps API ini, semoga bermanfaat dan mudah-mudahan saya diberikan kesehatan untuk melanjutkan tutorial ini.</p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1296,6 +1285,18 @@ padding: 16px;
                         #<a href="/topik/javascript">Javascript</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

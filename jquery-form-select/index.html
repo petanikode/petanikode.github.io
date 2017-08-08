@@ -819,6 +819,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1273,18 +1274,6 @@ padding: 16px;
                 <p>Misalkan, ada sebuah input yang otomatis diisi ketika salah satu opsi pada elemen <code>&lt;select&gt;</code> dipilih. Nilainya diambil dari atribut <code>&lt;option&gt;</code>. Kurang lebih ilustrasinya seperti gambar berikut ini.<br /><a href="http://2.bp.blogspot.com/-_ocnLT3PLhA/V6dIVztJriI/AAAAAAAADHQ/yUb5dtuQ0Zgeb22FyX-k0GuLnd9y6x4vwCK4B/s1600/Memindahkan%2Bnilai%2Bdari%2Belmen%2Bselect%2B-%2Bpetanikode.png" imageanchor="1"><img alt="Memindahkan nilai dari elemen Select dengan JQuery" border="0" src="https://2.bp.blogspot.com/-_ocnLT3PLhA/V6dIVztJriI/AAAAAAAADHQ/yUb5dtuQ0Zgeb22FyX-k0GuLnd9y6x4vwCK4B/s1600/Memindahkan%2Bnilai%2Bdari%2Belmen%2Bselect%2B-%2Bpetanikode.png" title="" /></a><br />Lalu, dari mana dapat nilai <i>lama tanam</i>, <i>berat</i>, dan <i>harga</i>? Sedangkan kita hanya bisa menyimpan nilai pada <code>&lt;option&gt;</code> dalam atribut <code>value</code>. Dalam kasus ini, kita bisa mengakalinya dengan membuat atribut kostum (atribut buatan).<br /><h2>1. Kode HTML</h2>Kita akan membuat sebuah elemen <code>&lt;select&gt;</code> dengan <code>5</code> opsi. Sebenarnya opsinya bisa dibuat dengan perulangan dan datanya diambil dari <i>database</i>. Tapi, karena kita tidak menggunakan <i>database</i> jadi langsung saja kita buat dalam kode.<br /><pre><code class="html">Pilih Benih<br />&lt;select id=&ldquo;benih&rdquo;&gt;<br />&nbsp; &nbsp; &lt;option lama=&ldquo;6 bulan&rdquo; berat=&ldquo;1kg&rdquo; harga=&ldquo;Rp 45.000&rdquo;&gt;Kacang&lt;/option&gt;<br />&nbsp; &nbsp; &lt;option lama=&ldquo;5 bulan&rdquo; berat=&ldquo;100kg&rdquo; harga=&ldquo;Rp 700.000&rdquo;&gt;Padi&lt;/option&gt;<br />&nbsp; &nbsp; &lt;option lama=&ldquo;4 bulan&rdquo; berat=&ldquo;2kg&rdquo; harga=&ldquo;Rp 10.000&rdquo;&gt;Semangka&lt;/option&gt;<br />&nbsp; &nbsp; &lt;option lama=&ldquo;5 bulan&rdquo; berat=&ldquo;3kg&rdquo; harga=&ldquo;Rp 80.000&rdquo;&gt;Semangka&lt;/option&gt;<br />&nbsp; &nbsp; &lt;option lama=&ldquo;3 bulan&rdquo; berat=&ldquo;4kg&rdquo; harga=&ldquo;Rp 4.500&rdquo;&gt;Timun&lt;/option&gt;<br />&lt;/select&gt;<br />&lt;br&gt;<br />Lama tanam &lt;input type=<code>&ldquo;text&rdquo; id=&ldquo;lama-tanam&rdquo; /&gt;&lt;br&gt;<br />Berat &lt;input type=&ldquo;text&rdquo; id=&ldquo;berat&rdquo; /&gt;&lt;br&gt;<br />Harga &lt;input type=&ldquo;text&rdquo; id=&ldquo;harga&rdquo; /&gt;</code></code></pre>Pada kode diatas, kita membuat kostum atribut: <code>lama</code>, <code>berat</code>, dan <code>harga</code>. Atribut-atribut ini sebenarnya tidak ada dalam HTML. Lalu bagaiaman cara mengambil nilai-nilai dari kostum atribut tersebut?<br /><h2>2. Kode Javascript/JQuery</h2><pre><code class="js">$(&ldquo;#benih&rdquo;).on(&ldquo;change&rdquo;, function(){<br /><br />&nbsp; // ambil nilai<br />&nbsp; var lama = $(&ldquo;#benih option:selected&rdquo;).attr(&ldquo;lama&rdquo;);<br />&nbsp; var berat = $(&ldquo;#benih option:selected&rdquo;).attr(&ldquo;berat&rdquo;);<br />&nbsp; var harga = $(&ldquo;#benih option:selected&rdquo;).attr(&ldquo;harga&rdquo;);<br />&nbsp; <br />&nbsp; // pindahkan nilai ke input<br />&nbsp; $(&ldquo;#lama-tanam&rdquo;).val(lama);<br />&nbsp; $(&ldquo;#berat&rdquo;).val(berat);<br />&nbsp; $(&ldquo;#harga&rdquo;).val(harga);<br />&nbsp; <br />});</code></pre>Ada dua hal yang dilakukan dalam kode di atas. Pertama mengambil nilai dari opsi yang terpilih. Kedua memindahkannya ke input <i>field</i>. <br /><h2>3. Demo</h2><a class="jsbin-embed" href="http://jsbin.com/zevokop/1/embed?output,html,js">Petanikode - Memindahkan nilai elemen select on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.39.10"></script></p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1308,6 +1297,18 @@ padding: 16px;
                         #<a href="/topik/jquery">jQuery</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

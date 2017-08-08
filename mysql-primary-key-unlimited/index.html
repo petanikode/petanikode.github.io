@@ -811,6 +811,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1265,18 +1266,6 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg" imageanchor="1"><img alt="Big Data - MYSQL - Petani Kode" border="0" src="https://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg" title="" /></a>Pada terbitan sebelumnya saya sudah pernah membahas <a href="http://www.petanikode.com/2016/08/berapa-banyak-data-yang-mampu-disimpan.html">keterbatasan AUTO_INCREMENT di MySQL</a>. AUTO_INCREMENT sangat bergantung pada tipe datanya. Kita tidak bisa menggunakannya untuk data yang tak terhingga <i>(unlimited)</i>, karena terbatas. Sebagai gantinya, kita harus membuat fungsi generator ID yang mampu membuat ID yang unik.<br /><br />Pada kesempatan yang lain, saya juga pernah membuat <a href="http://www.petanikode.com/2016/07/membuat-generator-id-unik-seperti-id.html" target="_blank">generator ID yang mirip seperti ID video Youtube</a>. Namun, saya belum yakin sepenuhnya dengan ID unik yang dihasilkannya. Mungkin saja, suatu saat nanti generator ini akan membuat ID yang sama. Seperti halnya fungsi bawaan PHP, <code>uniqid()</code>. Fungsi ini memang menghasilkan ID yang unik. Akan tetapi, masih meragukan, karena kita telah diperingatkan pada dokumentasinya.<br /><blockquote><i><b>Warning</b></i><br /><i>This function does not guarantee uniqueness of return value. Since most systems adjust system clock by NTP or like, system time is changed constantly. Therefore, it is possible that this function does not return unique ID for the process/thread. Use more_entropy to increase likelihood of uniqueness.</i></blockquote>Kalau begitu, apa solusinya?<br /><h2>UUID atau GUID</h2>UUID merupakan singkatan dari <i>Universally Unique Identifier</i>. Sedangkan GUID, singkatan dari <i>Globally Unique Identifier</i>. UUID dan GUID adalah hal yang sama. Perbedaanya, GUID itu merupakan implementasi dari UUID yang dilakukan oleh Microsoft. UUID terdiri dari <code>32</code> digit bilangan desimal yang dipisahkan dengan tanda <i>hyphens</i> (-), <code>8-4-4-4-12</code> sehingga total semuanya adalah <code>32</code> karakter. Contoh UUID:<br /><pre><code class="bash"><b>123e4567-e89b-12d3-a456-426655440000</b></code></pre>UUID memiliki beberapa versi, yaitu versi 1, 2, 3, 4, dan 5. Versi 4 digunakan untuk nilai acak <i>(random)</i>. Ini bisa kita manfaatkan untuk nilai <i>Primary Key</i>. Menurut penjelasan Wikipedia, setelah membuat 1 miliar UUID untuk setiap detik, kemungkinan untuk terjadi duplikasi nilai yang sama untuk 100 tahun berikutnya adalah 50%. <br /><h2>Fungsi Generator GUID</h2>Sekarang kita coba membuat sebuah fungsi generator GUID di PHP. Fungsi ini bisa kita manfaatkan untuk pengisian nilai <i>Primary Key</i>.<br /><pre><code class="php">&lt;?php<br />function guidv4()<br />{<br />&nbsp;&nbsp;&nbsp; if (function_exists(&lsquo;com_create_guid&rsquo;) === true)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return trim(com_create_guid(), &lsquo;{}&rsquo;);<br /><br />&nbsp;&nbsp;&nbsp; $data = openssl_random_pseudo_bytes(16);<br />&nbsp;&nbsp;&nbsp; $data[6] = chr(ord($data[6]) &amp; 0x0f | 0x40); // set version to 0100<br />&nbsp;&nbsp;&nbsp; $data[8] = chr(ord($data[8]) &amp; 0x3f | 0x80); // set bits 6-7 to 10<br />&nbsp;&nbsp;&nbsp; return vsprintf(&lsquo;%s%s-%s-%s-%s-%s%s%s&rsquo;, str_split(bin2hex($data), 4));<br />}</code></pre>Hasil ketika mengeksekusi fungsi tersebut:<br /><a href="http://1.bp.blogspot.com/-Ip3KjGUzH_I/WDzDdszEwYI/AAAAAAAADd0/UMaj3_jOX782kKoafwhu5nFjZOG7VbQFwCK4B/s1600/Percobaan%2Bfungsi%2Bgenerator%2BUUID.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-Ip3KjGUzH_I/WDzDdszEwYI/AAAAAAAADd0/UMaj3_jOX782kKoafwhu5nFjZOG7VbQFwCK4B/s1600/Percobaan%2Bfungsi%2Bgenerator%2BUUID.png" /></a><br /><br />Jadi, gunakanlah UUID untuk nilai <i>primary key</i> bila data anda terlalu banyak, supaya tidak menjadi masalah di masa depan.<br /><br />Referensi<br /><ul><li><a href="http://php.net/manual/en/function.uniqid.php" target="_blank"><a href="http://php.net/manual/en/function.uniqid.php">http://php.net/manual/en/function.uniqid.php</a></a></li><li><a href="http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid" target="_blank"><a href="http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid">http://stackoverflow.com/questions/246930/is-there-any-difference-between-a-guid-and-a-uuid</a></a></li><li><a href="http://stackoverflow.com/a/18206984/2658551" target="_blank"><a href="http://stackoverflow.com/a/18206984/2658551">http://stackoverflow.com/a/18206984/2658551</a></a></li><li><a href="http://php.net/manual/en/function.com-create-guid.php" target="_blank"><a href="http://php.net/manual/en/function.com-create-guid.php">http://php.net/manual/en/function.com-create-guid.php</a></a></li><li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank"><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">https://en.wikipedia.org/wiki/Universally_unique_identifier</a></a></li><li><a href="https://en.wikipedia.org/wiki/Globally_unique_identifier" target="_blank"><a href="https://en.wikipedia.org/wiki/Globally_unique_identifier">https://en.wikipedia.org/wiki/Globally_unique_identifier</a></a></li><li><a href="https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size" target="_blank"><a href="https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size">https://www.quora.com/How-do-big-data-databases-handle-the-problem-of-primary-key-values-running-out-given-that-the-key-is-not-unlimited-size</a></a></li></ul></p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1300,6 +1289,18 @@ padding: 16px;
                         #<a href="/topik/php">PHP</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

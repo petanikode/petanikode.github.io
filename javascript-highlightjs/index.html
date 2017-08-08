@@ -817,6 +817,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1271,18 +1272,6 @@ padding: 16px;
                 <p><a href="http://1.bp.blogspot.com/-WhR_5T4yVSg/VoyfngB0mAI/AAAAAAAACXo/L94qeANsUgI/s1600/higlightjs%2B-%2Bpetanikode.jpg" imageanchor="1"><img alt="higlight.js" border="0" src="https://1.bp.blogspot.com/-WhR_5T4yVSg/VoyfngB0mAI/AAAAAAAACXo/L94qeANsUgI/s1600/higlightjs%2B-%2Bpetanikode.jpg" title="" /></a>Template baawan blogger sudah saya modifikasi sedemikian rupa. Namun, masih ada yang kurang, pewarnaan kode <i>(syntax highlighting)</i>. Kode yang saya sisipkan di dalam artikel tidak berwarna. Kadang saya memanfaatkan <a href="http://gist.github.com/" target="_blank">gist github</a>, <a href="http://pastebin.com/" target="_blank">pastebin</a>, <a href="https://ideone.com/" target="_blank">ideone</a>, dsb. untuk menyisipkan kode yang berwarna.<br /><br />Modul <i>highlight.js</i> berfungsi untuk membuat kode (di web) menjadi berwarna. Kode yang berwarna akan lebih mudah dibaca. Karena itu, kita perlu menggunakan <i>highlight.js</i>. Berikut ini cara menggunakan <i>highlight.js</i> di blogger.<br /><h2>1. Memasang higlight.js</h2>Kita akan memanfaatkan CDN <i>(</i><i><span class="st"><i>content delivery network</i></span>)</i> nutuk memasang highlight.js, karena blogger tidak menyediakan tempat untuk hosting file. Silahkan masuk ke <i>edit html template</i>. Kemudian masukkan kode berikut ini ke dalam tag <code>&lt;head&gt;</code>:<br /><pre><code class="xml">&lt;!&ndash; Syntax highlighter &ndash;&gt;<br />&lt;link href=&lsquo;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/github.min.css&rsquo; rel=&lsquo;stylesheet&rsquo;/&gt;<br />&lt;script src=&lsquo;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js&rsquo;/&gt;<br />&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;<br />&lt;!&ndash; end Syntax highlighter &ndash;&gt;</code></pre>Versi higlight.js yang digunakan adalah versi <code>9.0.0</code>. Bila ada versi yang lebih baru lagi, anda tinggal mengganti angka itu saja. Kemudian <code>github.min.css</code> adalah kode CSS tema yang digunakan. Anda bisa menggunakan tema lain. Daftar tema bisa dilihat di <a href="https://github.com/isagalaev/highlight.js/tree/master/src/styles" target="_blank">github</a>.<a href="http://4.bp.blogspot.com/-vP-cTgEQsdY/Vou9k4mDwxI/AAAAAAAACXY/FS3pvvryUdk/s1600/Memasang%2Bhighlight-js%2Bdi%2Btemplate%2Bblogger%2B-%2Bpetanikode.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-vP-cTgEQsdY/Vou9k4mDwxI/AAAAAAAACXY/FS3pvvryUdk/s1600/Memasang%2Bhighlight-js%2Bdi%2Btemplate%2Bblogger%2B-%2Bpetanikode.png" /></a><br /><h2>2. Menggunakan higlight.js</h2>Cara menggunakan <i>highlight.js</i> sangat mudah. Kita hanya perlu mengapit kode dengan tag <code>&lt;pre&gt;</code> dan <code>&lt;code&gt;</code> yang diberikan atribut kelas dengan nilai sesui dengan nama bahasa pemrogramannya. Contoh:<br /><br />Bahasa pemrograman Java <br /><pre><code class="html">&lt;pre&gt;&lt;code class=&ldquo;java&rdquo;&gt;<br />Class Contoh{<br />&nbsp;&nbsp;&nbsp; public static void main(String[] args){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&ldquo;Hello World!&rdquo;);<br />&nbsp;&nbsp;&nbsp; }<br />}<br />&lt;/code&gt;&lt;/pre&gt;</code></pre>Hasilnya: <br /><pre><code class="java">Class Contoh{<br />&nbsp;&nbsp;&nbsp; public static void main(String[] args){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&ldquo;Hello World!&rdquo;);<br />&nbsp;&nbsp;&nbsp; }<br />}</code></pre>Bahasa pemrograman C++<br /><pre><code class="html">&lt;pre&gt;&lt;code class=&ldquo;cpp&rdquo;&gt;<br />#include &lt;iostream&gt;<br /><br />using namespace std;<br /><br />int main(){<br />&nbsp; &nbsp; cout &lt;&lt; &ldquo;Hello World!&rdquo; &lt;&lt; endl;<br />&nbsp; &nbsp; return 0; <br />}<br />&lt;/code&gt;&lt;/pre&gt;</code></pre>Hasilnya:<br /><pre><code class="cpp">#include &lt;iostream&gt;<br /><br />using namespace std;<br /><br />int main(){<br />&nbsp; &nbsp; cout &lt;&lt; &ldquo;Hello World!&rdquo; &lt;&lt; endl;<br />&nbsp; &nbsp; return 0; <br />}</code></pre>Bagaimana kalau kode bahasa pemrogramannya ada lebih dari satu? Misalnya html, css, javascript, dan PHP. Jawabanya tinggal memanggil nama kelas-kelasnya jadi satu, dipisah dengan spasi. Contoh<br /><pre><code class="html">&lt;pre&gt;&lt;code class=&rdquo;<span style="background-color: #b6d7a8;">html css js php</span>&ldquo;&gt;<br />&amp;lt;html&amp;gt;<br />&amp;lt;head&amp;gt;<br />&amp;lt;style type=&lsquo;text/css&rsquo;&amp;gt;<br />.body{<br />&amp;nbsp; &amp;nbsp; background: #008080;<br />&amp;nbsp;&amp;nbsp;&amp;nbsp; color: white;<br />}<br />&amp;lt;/style&amp;gt;<br />&amp;lt;script type=&lsquo;text/javascript&rsquo;&amp;gt;<br />console.log(&ldquo;javascript dijalankan&rdquo;); <br />&amp;lt;/script&amp;gt;<br />&amp;lt;/head&amp;gt;<br /><br />&amp;lt;body&amp;gt;<br />&amp;lt;?php echo &ldquo;&amp;lt;h2&amp;gt;Hello World&amp;lt;/h2&rdquo;; ?&amp;gt; <br />&amp;lt;/body&amp;gt;<br />&amp;lt;/html&amp;gt;<br />&lt;/code&gt;&lt;/pre&gt;</code></pre>Untuk kode HTML, kita perlu meng-encode karater <code>&lt;</code> (lebih kecil) menjadi <code>&amp;lt;</code>, <code>&gt;</code> (lebih besar) menjadi <code>&amp;gt;</code>, dan spasi menjadi <code>&amp;nbsp;</code> Hasilnya: <br /><pre><code class="html css js php">&lt;html&gt;<br />&lt;head&gt;<br />&lt;style type=&lsquo;text/css&rsquo;&gt;<br />.body{<br />&nbsp; &nbsp; background: #008080;<br />&nbsp;&nbsp;&nbsp; color: white;<br />}<br />&lt;/style&gt;<br />&lt;script type=&lsquo;text/javascript&rsquo;&gt;<br />console.log(&ldquo;javascript dijalankan&rdquo;); <br />&lt;/script&gt;<br />&lt;/head&gt;<br /><br />&lt;body&gt;<br />&lt;?php echo &ldquo;&lt;h2&gt;Hello World&lt;/h2&rdquo;; ?&gt; <br />&lt;/body&gt;<br />&lt;/html&gt;</code></pre>Mudah bukan? selamat mencoba.<br /><br />Referensi: <a href="https://highlightjs.org/usage/" target="_blank"><a href="https://highlightjs.org/usage/">https://highlightjs.org/usage/</a> </a></p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1308,6 +1297,18 @@ padding: 16px;
                         #<a href="/topik/javascript">Javascript</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

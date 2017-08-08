@@ -821,6 +821,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1275,18 +1276,6 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-r7g_YeB-NTQ/V0lW1e95hSI/AAAAAAAAC1o/bhW4YMd7ydQykOypeSd4xlfr15lhAvshACK4B/s1600/codeigniter%2B-%2Bpetanikode.png" /></a><br />Profiler fungsinya untuk menampilkan beberapa informasi yang diperlukan untuk <i>debugging</i>. Kita dapat mengetahui <i>query</i> apa yang dikerjakan, berapa detik <i>query</i> tersebut dikerjakan, <i>benchmarks</i>, dan sebagainya. Informasi ini sangat berguna ketika kita membangun sebuah aplikasi dengan CodeIgniter.<br /><br />Cara mengaktifkan Profiler di CodeIgniter sangat mudah, cukup menjalankan fungsi ini di <i>Controller</i>:<br /><pre><code class="php">$this-&gt;output-&gt;enable_profiler(TRUE);</code></pre>Maka kita akan mendapatkan informasi seperti berikut ini:<br /><a href="http://1.bp.blogspot.com/-gsNeLWLfBhk/WD5EMFf8yLI/AAAAAAAADeE/C3mfDihq1acM5LVhpGFvcAUgng4sxuOIwCK4B/s1600/Profiler%2BCodeIgniter.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-gsNeLWLfBhk/WD5EMFf8yLI/AAAAAAAADeE/C3mfDihq1acM5LVhpGFvcAUgng4sxuOIwCK4B/s1600/Profiler%2BCodeIgniter.png" /></a><br />Kemudian, agar Profiler aktif di setiap <i>method</i> atau fungsi, letakan kode tersebut di dalam konstruktor:<br /><pre><code class="php">function <strong>construct(){<br />&nbsp; &nbsp; parent::</strong>construct();<br /><br />&nbsp; &nbsp; // untuk debugging<br />&nbsp; &nbsp; $this-&gt;output-&gt;enable_profiler(TRUE);<br />}</code></pre>Namun, sepertinya akan ada masalah ketika aplikasi kita di-hosting. Kita akan menghapus kode itu lagi, karena tidak mungkin kita tampilkan informasi Profiler pada website yang sudah jadi. Untuk mengatasi hal tersebut, ganti nilai <code>TRUE</code> menjadi seperti berikut ini.<br /><pre><code class="php">$this-&gt;output-&gt;enable_profiler(ENVIRONMENT == &ldquo;development&rdquo;);</code></pre>Artinya, Profiler hanya akan aktif pada lingkungan <i>development</i> saja. Sedangkan pada lingkungan <i>production</i> dan <i>testing</i> tidak diaktifkan.<br /><br />Begitulah cara mengaktifkan Profiler di CodeIgniter. Semoga bermanfaat 😅.</p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1308,6 +1297,18 @@ padding: 16px;
                         #<a href="/topik/php">PHP</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

@@ -809,6 +809,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1263,18 +1264,6 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg" imageanchor="1"><img alt="Big Data - MYSQL - Petani Kode" border="0" src="https://2.bp.blogspot.com/-jhcrTo_AfBE/V6YTwM3lJhI/AAAAAAAADHA/7jKkq14ZlX8zJXyCqQLRZNt6qmTiGV5gQCK4B/s1600/Big-Data-MySQL-Petanikode.jpg" title="" /></a>AUTO_INCREMENT sangat sering saya gunakan dalam mengerjakan proyek. AUTO_INCREMENT membuat Kita tidak perlu mengisi field secara manual maupun dengan generator dalam kode. Tapi, &hellip; apakah ini aman? Apakah tidak masalah bila nanti datanya banyak? Berapa banyak sih data yang mampu ditampung bila menggunakan AUTO_INCREMENT? Mari kita sedikit pikirkan masalah <i>Big Data</i>.<br /><h2>Batas AUTO_INCREMENT</h2>Ternyata AUTO_INCREMENT memiliki batas. Apabila sudah melampaui batas, mungkin sistemnya akan macat. Jadi hati-hati menggunakannya. Berdasarkan jawaban yang saya dapatkan di <a href="http://stackoverflow.com/a/11264482" target="_blank">Stack Overflow</a>, berikut ini batasan-batasan AUTO_INCREMENT berdasarkan tipe datanya.<br /><pre><code class="sql">TINYINT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 127<br />UNSIGNED TINYINT&nbsp;&nbsp; - 255<br />SMALLINT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 32767<br />UNSIGNED SMALLINT&nbsp; - 65535<br />MEDIUMINT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 8388607<br />UNSIGNED MEDIUMINT - 16777215<br />INT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 2147483647<br />UNSIGNED INT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 4294967295<br />BIGINT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 9223372036854775807<br />UNSIGNED BIGINT&nbsp;&nbsp;&nbsp; - 18446744073709551615</code></pre><h2>Apakah ini aman?</h2>Kalau sistem yang dibangun sekelas tugas sekolah/kuliah, mungkin tidak masalah. Tapi, apa bila kita membangun sistem nyata yang akan menampung banyak sekali data, maka perlu dipertimbangkan penggunaan AUTO_INCREMENT.<br /><h2>Apa Ada Alternatif?</h2>Alternatif mungkin bisa menggunakan generator ID yang unik. Nanti tipe datanya dalam bentuk VARCHAR atau CHAR. Isinya berupa karakter unik yang di-generate dari kode.<br /><br />Baca: <a href="http://www.petanikode.com/2016/07/membuat-generator-id-unik-seperti-id.html">Membuat Generator id Unik seperti id Video YouTube di PHP</a><br /><h2>Kesimpulan</h2>AUTO_INCREMENT merupakan fitur untuk pengisian record (angka) secara otomatis. AUTO_INCREMENT mengisi angka secara terurut mulai dari 1, 2, 3, &hellip; dan seterusnya. AUTO_INCREMENT memiliki batas mengikuti tipe datanya.</p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1296,6 +1285,18 @@ padding: 16px;
                         #<a href="/topik/big-data">Big Data</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

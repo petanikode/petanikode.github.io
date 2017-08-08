@@ -815,6 +815,7 @@ tr:hover {background-color: #fafafa}
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 32px;
+    border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1269,18 +1270,6 @@ padding: 16px;
                 <p><a href="http://2.bp.blogspot.com/-b9wzJFZ1-is/VtC9CCTHY2I/AAAAAAAACgQ/qS21Hc7G8S0/s1600/MySQL%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-b9wzJFZ1-is/VtC9CCTHY2I/AAAAAAAACgQ/qS21Hc7G8S0/s1600/MySQL%2BPetani%2BKode.png" /></a>Membuat <i>backup</i> (cadangan) database perlu dilakukan sebelum instal ulang server atau untuk berjaga-jaga bila terjadi sesuatu yang tidak diinginkan. Cadangan bisa dibuat dengan Phpmyadmin. Mengekspor semua database satu persatu. Tapi, pada kesempatan ini, saya akan menggunakan <i>mysqldump</i>. <i>Mysqldump</i> merupakan sebuah perintah yang menghasilkan keluaran berupa sintaks SQL.<br /><br /><h2>1.Cadangkan Semua Database (Struktur dan Datanya)</h2>Buka terminal dan ketik perintah berikut ini.<br /><pre><code class="bash sql">mysqldump -u username -p &ndash;all-databases &gt; cadangan.sql</code></pre>atau<br /><pre><code class="bash sql">mysqldump -u username -p -A &gt; cadangan.sql</code></pre><br />Kode tersebut akan menghasilkan sebuah file bernama <code>cadangan.sql</code>. File tersebut berisi sintaks SQL yang dapat kita impor ke server MySql. Jangan lupa untuk mengganti <code>username</code> dengan username database anda, misalnya <code>root</code>.<br /><br /><h2>2.Cadangkan Semua Database (Strukturnya Saja)</h2>Bila ingin membuat cadangan struktur databasenya saja, anda bisa menambahkan argumen <code>&ndash;no-data</code> atau <code>-d</code>. Semua record tidak akan ikut dicadangkan.<br /><pre><code class="bash sql">mysqldump -u username -p &ndash;all-databases &ndash;no-data &gt; cadangan.sql</code></pre>atau<br /><pre><code class="bash sql">mysqldump -u username -p -A -d &gt; cadangan.sql</code></pre>Untuk membuat cadangan dari server <i>remote</i>, tambahkan argumen <code>-h</code> untuk menyatakan alamat host-nya, contoh: <br /><pre><code class="bash sh sql mysql">mysqldump -u root -h 182.168.1.2 -p -A &gt; cadangan.sql</code></pre>Nah, sampai di sini dulu. Sampai jumpa di <i>post</i> berikutnya.</p>
 
                 <div class="post-footer">
-                    <div align="center">
-                    <amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='8953543062'
-    width='468'
-    height='60'
-    type='adsense'
-    layout="responsive">
-</amp-ad>
-
-                    </div>
-                
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
@@ -1300,6 +1289,18 @@ padding: 16px;
                         #<a href="/topik/mysql">MySQL</a>
                       
                     </div>
+                    </div>
+                
+                    <div align="center">
+                        <amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='8953543062'
+    width='468'
+    height='60'
+    type='adsense'
+    layout="responsive">
+</amp-ad>
+
                     </div>
 
                 <p><b>Rekomendasi:</b></p>

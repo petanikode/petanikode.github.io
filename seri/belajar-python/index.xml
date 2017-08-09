@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 02 Aug 2017 09:27:53 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 09 Aug 2017 08:59:24 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/seri/belajar-python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Belajar Python: Cara Membaca dan Menulis File di Python</title>
+      <link>https://www.petanikode.com/python-file/</link>
+      <pubDate>Wed, 09 Aug 2017 08:59:24 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/python-file/</guid>
+      <description>Baca dan tulis file adalah teknik dasar yang harus dipahami dalam pemrograman Python, karena banyak digunakan untuk pengolahan dan pemerosesan file.
+Paham cara membaca dan menulis file dengan Python akan membuatmu mampu membuat aplikasi yang bisa mengambil dan menyimpan data ke file.
+Selain itu juga, kamu akan lebih mudah memahami beberapa materi Python selanjutnya, seperti baca dan parshing file JSON, XML, CSV, XLS, dan sebagainya.
+Ada banyak sekali tipe file pada komputer&amp;hellip;seperti, dokumen, video, gambar, audio, arsip, dll.</description>
+    </item>
     
     <item>
       <title>Belajar Python: Cara Mengambil Input dan Menampilkan Output</title>

@@ -1,4 +1,4 @@
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+ada+apacheconf+apl+applescript+asciidoc+aspnet+autohotkey+bash+basic+c+csharp+cpp+coffeescript+ruby+css-extras+d+dart+django+diff+docker+eiffel+elixir+erlang+fsharp+fortran+gherkin+git+glsl+go+graphql+groovy+haml+haskell+http+j+jade+java+json+julia+kotlin+latex+less+livescript+lua+makefile+markdown+matlab+nasm+ocaml+parser+pascal+perl+php+php-extras+powershell+processing+prolog+properties+protobuf+puppet+pure+python+q+r+jsx+reason+crystal+rust+sass+scala+scheme+smalltalk+smarty+sql+stylus+swift+tcl+textile+twig+typescript+vbnet+vim+yaml */
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+aspnet+bash+basic+c+csharp+cpp+coffeescript+ruby+css-extras+diff+elixir+fsharp+git+go+graphql+haskell+java+json+julia+kotlin+latex+less+makefile+markdown+matlab+nasm+nim+objectivec+pascal+perl+php+php-extras+powershell+processing+python+r+jsx+crystal+rust+sass+scala+sql+swift+twig+vbnet+vim+yaml&plugins=keep-markup */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -31,15 +31,13 @@ pre[class*="language-"] {
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
 	text-shadow: none;
-	background: #A4C639;
-	/*background: #b3d4fc; */
+	background: #b3d4fc;
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
 	text-shadow: none;
-	background: #A4C639;
-	/*background: #b3d4fc;*/
+	background: #b3d4fc;
 }
 
 @media print {
@@ -58,8 +56,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #f8f8f8;
-	/*background: #f5f2f0;*/
+	background: #f5f2f0;
 }
 
 /* Inline code */
@@ -139,3 +136,4 @@ pre[class*="language-"] {
 .token.entity {
 	cursor: help;
 }
+

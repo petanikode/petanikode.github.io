@@ -232,7 +232,7 @@ Pada kesempatan ini kita akan berkenalan dengan Activity dan memahami siklus hid
 Mari kita mulai&hellip;
 Pengertian Activity Activity adalah komponen yang dapat dilihat oleh pengguna, sehingga mereka dapat berinteraksi dengan aplikasi.
 Bila dibandingkan dengan aplikasi web dan desktop, Activity sama seperti halaman dan form.",
-  "wordCount": 879,
+  "wordCount": 881,
   "datePublished" : "2017-08-08T18:44:36",
   "dateModified" : "2017-08-08T18:44:36",
   "image" : {
@@ -390,6 +390,8 @@ h6 {
 	font-size: 90%;
 	margin: 0 0 20px 0;
 }
+
+
 
 p {
 	color: #454444;
@@ -701,6 +703,23 @@ section[expanded] h4, section:not([expanded]) h4 {
 	margin: 3px 10px 0 0;
 	border-radius: 50%;
 }
+
+.content div.fileneme, .content div.terminal {
+    background: #e8e8e8;
+    font-size: 11px;
+    color: rgba(0,0,0, 0.7);
+    font-family: "Open sans", sans-serif;
+    padding: 2px 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+
+.content div.fileneme i, .content div.terminal span {
+    margin-right: 6px;
+}
+
 .content pre, .content code, .content samp {
     font-family: Consolas, Monaco, Monospace,'Courier New',Courier,'Andale Mono';
     font-size:15px;
@@ -717,6 +736,11 @@ section[expanded] h4, section:not([expanded]) h4 {
     margin: 1em 0;
     background: #f8f8f8; /* background tema github */
     padding: 10px;
+}
+
+.content pre[class*="language-"] {
+    margin-top: 0;
+    margin-bottom: 16px;
 }
 
 .content pre code {
@@ -1085,9 +1109,10 @@ padding: 16px;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     
 
-    <link rel="stylesheet" href="/assets/prism/prism.css" />
+     <link rel="stylesheet" href="/assets/prism/prism.css" />
     <script src="/assets/prism/prism.js"></script>
-
+     
+  
     
 
     
@@ -1407,6 +1432,8 @@ kemudian kondisikan kodenya seperti ini.</p>
 
 <p><em>(jangan dicopas, sebaiknya diketik sendiri agar lebih paham)</em></p>
 
+<div class="fileneme"><i class="fa fa-file-o"></i>activity_main.xml</div>
+
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
@@ -1444,6 +1471,8 @@ kemudian kondisikan kodenya seperti ini.</p>
 
 <p>Setelah itu, silahkan buka <code>MainActivity.java</code> dan ikuti kode berikut.</p>
 
+<div class="fileneme"><i class="fa fa-file-o"></i>MainActivity.java</div>
+
 <pre><code class="language-java">package com.petanikode.latihanactivity;
 
 import android.content.Intent;
@@ -1463,7 +1492,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        
         // inisialisasi komponen
         btnClose = (Button) findViewById(R.id.btn_close);
         btnStartActivity = (Button) findViewById(R.id.btn_start_activity);
@@ -1472,6 +1501,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnStartActivity.setOnClickListener(this);
 
         Toast.makeText(this, &quot;Activity: onCreate()&quot;, Toast.LENGTH_SHORT).show();
+        
     }
 
     @Override

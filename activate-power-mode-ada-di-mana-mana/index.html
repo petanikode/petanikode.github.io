@@ -381,6 +381,8 @@ h6 {
 	margin: 0 0 20px 0;
 }
 
+
+
 p {
 	color: #454444;
 	line-height: 1.9em;
@@ -691,6 +693,23 @@ section[expanded] h4, section:not([expanded]) h4 {
 	margin: 3px 10px 0 0;
 	border-radius: 50%;
 }
+
+.content div.fileneme, .content div.terminal {
+    background: #e8e8e8;
+    font-size: 11px;
+    color: rgba(0,0,0, 0.7);
+    font-family: "Open sans", sans-serif;
+    padding: 2px 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+
+.content div.fileneme i, .content div.terminal span {
+    margin-right: 6px;
+}
+
 .content pre, .content code, .content samp {
     font-family: Consolas, Monaco, Monospace,'Courier New',Courier,'Andale Mono';
     font-size:15px;
@@ -707,6 +726,11 @@ section[expanded] h4, section:not([expanded]) h4 {
     margin: 1em 0;
     background: #f8f8f8; /* background tema github */
     padding: 10px;
+}
+
+.content pre[class*="language-"] {
+    margin-top: 0;
+    margin-bottom: 16px;
 }
 
 .content pre code {
@@ -1075,9 +1099,10 @@ padding: 16px;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     
 
-    <link rel="stylesheet" href="/assets/prism/prism.css" />
+     <link rel="stylesheet" href="/assets/prism/prism.css" />
     <script src="/assets/prism/prism.js"></script>
-
+     
+  
     
 
     

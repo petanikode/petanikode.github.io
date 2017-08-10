@@ -219,7 +219,7 @@ Pada artikel ini, kita akan belajar MongoDB yang merupakan salah satu database N
 Database NoSQL (Not Only SQL) hadir untuk menutupi kekurangan-kekurangan tersebut. Selain itu, NoSQL sudah menjadi tuntutan teknologi yang harus dipelajari dalam pengembangan software modern masa kini.
 Contohnya, sekarang lagi populer yang namanya MEAN stack (MongoDB, ExpressJs, AngularJS, dan NodeJS).
 Pada artikel ini, kita akan belajar MongoDB yang merupakan salah satu database NoSQL paling populer.",
-  "wordCount": 1318,
+  "wordCount": 1319,
   "datePublished" : "2017-06-28T08:15:00",
   "dateModified" : "2017-06-28T08:15:00",
   "image" : {
@@ -373,6 +373,8 @@ h6 {
 	font-size: 90%;
 	margin: 0 0 20px 0;
 }
+
+
 
 p {
 	color: #454444;
@@ -684,6 +686,23 @@ section[expanded] h4, section:not([expanded]) h4 {
 	margin: 3px 10px 0 0;
 	border-radius: 50%;
 }
+
+.content div.fileneme, .content div.terminal {
+    background: #e8e8e8;
+    font-size: 11px;
+    color: rgba(0,0,0, 0.7);
+    font-family: "Open sans", sans-serif;
+    padding: 2px 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+
+.content div.fileneme i, .content div.terminal span {
+    margin-right: 6px;
+}
+
 .content pre, .content code, .content samp {
     font-family: Consolas, Monaco, Monospace,'Courier New',Courier,'Andale Mono';
     font-size:15px;
@@ -700,6 +719,11 @@ section[expanded] h4, section:not([expanded]) h4 {
     margin: 1em 0;
     background: #f8f8f8; /* background tema github */
     padding: 10px;
+}
+
+.content pre[class*="language-"] {
+    margin-top: 0;
+    margin-bottom: 16px;
 }
 
 .content pre code {
@@ -1068,9 +1092,10 @@ padding: 16px;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     
 
-    <link rel="stylesheet" href="/assets/prism/prism.css" />
+     <link rel="stylesheet" href="/assets/prism/prism.css" />
     <script src="/assets/prism/prism.js"></script>
-
+     
+  
     
 
     
@@ -1333,6 +1358,11 @@ versi terakhir di website reseminya (<a href="https://www.mongodb.com/download-c
 
 <p>Tapi, jika ingin menggunakan versi lama yang ada di repositori,
 kita bisa menginstalnya dengan perintah:</p>
+
+<div class="terminal"><span class="fa-stack">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+</span><b>Terminal</b></div>
 
 <pre><code class="language-bash">sudo apt install mongodb
 </code></pre>
@@ -1743,11 +1773,13 @@ semuanya bisa dipahami.</p>
 
 <p>Sampaikan di kolom komentar!</p>
 
-<p><strong>Referensi</strong>:</p>
-
-<ul>
+<fieldset>
+    <legend>Referensi:</legend>
+    <ul>
 <li>Dok. MongoDB &mdash; <a href="https://docs.mongodb.com/getting-started/shell/">Getting Started With MongoDB</a></li>
 </ul>
+
+</fieldset>
 
                 <div class="post-footer">
                     <div class="artikel-footer">

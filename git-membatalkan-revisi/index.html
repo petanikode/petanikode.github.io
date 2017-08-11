@@ -1359,7 +1359,7 @@ menggunakan perintah <code>git checkout nama_file.html</code>.</p>
 
 <p>Hasil <code>git diff</code>:</p>
 
-<pre><code>$ git diff
+<pre><code class="language-diff">$ git diff
 diff --git a/index.html b/index.html
 index c5082e6..115efcb 100644
 --- a/index.html
@@ -1410,7 +1410,7 @@ namun belum disimpan (<code>git commit</code>) ke dalam Git.</p>
 <p>Sebagai contoh, kita lakukan perubahan lagi di file <code>index.html</code> seperti pada
 contoh sebelumnya.</p>
 
-<pre><code class="language-bash">$ git diff
+<pre><code class="language-diff">$ git diff
 diff --git a/index.html b/index.html
 index c5082e6..c99aa5b 100644
 --- a/index.html
@@ -1484,7 +1484,7 @@ kemudian mengembalikan perubahannya seperti pada nomer <em>commit</em> tersebut.
 
 <p>Misalkan, kita ubah kembali file <code>index.html</code>.</p>
 
-<pre><code class="language-gitdiff">$ git diff
+<pre><code class="language-diff">$ git diff
 diff --git a/index.html b/index.html
 index c5082e6..3c150a8 100644
 --- a/index.html

@@ -232,7 +232,7 @@ Misalnya, Si A menulis kode untuk fitur X dengan algoritma yang ia ketahui. Seda
 Lalu mereka melakukan commit, dan kode sumber jadi berantakan. Anggota tim yang lain menjadi pusing.
 
 Agar tidak terjadi hal yang seperti ini, kita harus membuat cabang (branch) tersendiri.",
-  "wordCount": 698,
+  "wordCount": 716,
   "datePublished" : "2017-02-27T19:20:26",
   "dateModified" : "2017-02-27T19:20:26",
   "image" : {
@@ -1450,15 +1450,6 @@ coba kembali ke cabang <code>master</code>.</p>
 <p>Ternyata ada. Yep! kita bisa mengambil kesimpulan, kalau perubahan
 pada cabang <code>halaman_login</code> tidak akan berpengaruh di cabang <code>master</code>.</p>
 
-<p><amp-ad
-    data-ad-client='ca-pub-6279325630224392'
-    data-ad-slot='7044550664'
-    width='720'
-    height='380'
-    type='adsense'
-    layout="responsive">
-</amp-ad></p>
-
 <h2 id="menggabungkan-cabang">Menggabungkan Cabang</h2>
 
 <p>Anggaplah kita sudah selesai membuat fitur login di cabang <code>halaman_login</code>.
@@ -1486,10 +1477,8 @@ Sekarang kita ingin Menggabungkannya denga cabang <code>master</code> (utama).</
 
 <p>Hati-hati! kadang sering terjadi bentrok ketika menggabungkan cabang.</p>
 
-<p><amp-twitter width=486 height=657
-    layout="responsive"
-    data-tweetid="835947140383821824">
-</amp-twitter></p>
+<blockquote class="twitter-tweet"><p lang="in" dir="ltr">saat menjalankan perintah `git merge` lalu ada kode yang bentrok <a href="https://t.co/1pYVB5YdYn">pic.twitter.com/1pYVB5YdYn</a></p>&mdash; Petani Kode (@petanikode) <a href="https://twitter.com/petanikode/status/835947140383821824">February 26, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <h2 id="mengatasi-bentrok">Mengatasi Bentrok</h2>
 
@@ -1515,7 +1504,7 @@ Dia harus bertindak adil, kode mana yang harus diambil.</p>
 <p>Setela itu, edit file <code>login.html</code> atau <code>index.html</code>, karena kedua file tersebut
 ada di kedua cabang yang akan kita gabungkan.</p>
 
-<pre><code class="language-bash">$ git diff
+<pre><code class="language-diff">$ git diff
 diff --git a/login.html b/login.html
 index 23a3f5c..eea5658 100644
 --- a/login.html

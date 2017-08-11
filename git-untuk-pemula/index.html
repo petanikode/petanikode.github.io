@@ -226,7 +226,7 @@ Git bahkan menjadi tool yang wajib dipahami oleh programmer, karena banyak digun
 Pada kesempatan ini kita akan belajar Git dari dasar.
 Artikel ini hanya akan membahas pengenalan Git saja. Untuk mempelajari Git lebih lanjut, saya sudah menyediakan link di bagian akhir.
 Mengenal Git Git adalah salah satu sistem pengontrol versi (Version Control System) pada proyek perangkat lunak yang diciptakan oleh Linus Torvalds.",
-  "wordCount": 520,
+  "wordCount": 537,
   "datePublished" : "2017-02-08T09:08:36",
   "dateModified" : "2017-02-08T09:08:36",
   "image" : {
@@ -1350,27 +1350,51 @@ proyek perangkat lunak yang diciptakan oleh Linus Torvalds.</p>
 <p>Pengontrol versi bertugas mencatat setiap perubahan pada file proyek
 yang dikerjakan oleh banyak orang maupun sendiri.</p>
 
-<p>Git dikenal juga dengan <em>distributed revision control</em>,
-artinya penyimpanan file repository Git tidak hanya berada dalam
+<p>Git dikenal juga dengan <em>distributed revision control</em> (VCS terdistribusi),
+artinya penyimpanan database Git tidak hanya berada dalam
 satu tempat saja.</p>
 
-<h2 id="kenapa-git-diciptakan">Kenapa Git diciptakan?</h2>
+<p><img src="/img/git/sistem-git.png" alt="Sistem VSC Terdistribusi" /></p>
 
-<p>Awalnya Linus Torvalds menciptakan Git untuk mengelola kode sumber
-<em>(source kode)</em> kernel Linux.</p>
+<p>Semua orang yang terlibat dalam pengkodean proyek akan menyimpan database Git,
+sehingga akan memudahkan dalam mengelola proyek baik online maupun offline.</p>
 
-<p>Bayangkan ada 1000 programmer dari seluruh dunia yang ikut
-berkontribusi membangun kernel Linux.</p>
+<p>Dalam Git terdapat <a href="/git-branch"><em>merge</em></a> untuk
+menyebut aktifitas penggabungan kode.</p>
 
-<p>Bagaimana cara Linus Torvalds akan mengelola itu semua?</p>
+<p>Sedangkan pada VCS (Version Control System) yang terpusat&hellip;
+database disimpan dalam satu tempat dan setiap perubahan disimpan ke
+sana.</p>
 
-<p>Bagaimana cara menggabungkan kode dari 1000 programmer ini?</p>
+<p><img src="/img/git/vcs-terpusat.png" alt="Sistem VCS Terpusat" /></p>
 
-<p>&ldquo;Kadang ada yang berkontribusi kecil-kecilan, ada juga yang mengubah banyak kode&rdquo;</p>
+<p>VCS terpusat memiliki beberapa kekurangan:</p>
 
-<p>Kalau ada kode yang bentrok gimana?</p>
+<ul>
+<li>Semua tim harus terkoneksi ke jaringan untuk mengakses source-code;</li>
+<li>Tersimpan di satu tempat, nanti kalau server bermasalah bagaimana?</li>
+</ul>
 
-<p>Itulah alasan kenapa git dibuat.</p>
+<p>Karena itu, Git hadir untuk menutupi kerkurangan yang dimiliki oleh
+VCS terpusat.</p>
+
+<!-- ## Kenapa Git diciptakan?
+
+Awalnya Linus Torvalds menciptakan Git untuk mengelola kode sumber
+_(source kode)_ kernel Linux.
+
+Bayangkan ada 1000 programmer dari seluruh dunia yang ikut 
+berkontribusi membangun kernel Linux.
+
+Bagaimana cara Linus Torvalds akan mengelola itu semua?
+
+Bagaimana cara menggabungkan kode dari 1000 programmer ini?
+
+"Kadang ada yang berkontribusi kecil-kecilan, ada juga yang mengubah banyak kode"
+
+Kalau ada kode yang bentrok gimana?
+
+Itulah alasan kenapa git dibuat. -->
 
 <h2 id="apa-yang-dilakukan-oleh-git">Apa yang dilakukan oleh Git?</h2>
 
@@ -1422,7 +1446,6 @@ bisa menggunakan Git.</p>
 
 <ol>
 <li>Bisa menyimpan seluruh revisi;</li>
-<li>Hemat memori;</li>
 <li>Bisa paham cara kolaborasi dalam proyek;</li>
 <li>Bisa ikut berkontribusi ke poryek open-source;</li>
 <li>Bisa mengetahui cara <em>deploy</em> aplikasi modern;</li>
@@ -1441,7 +1464,7 @@ git berikut ini.</p>
 <li><a href="/git-install/">Tutorial Git 01 - Instalasi Git dan Perisiapan Awal</a></li>
 <li><a href="/git-init/">Tutorial Git 02 - Membuat Repositori Git</a></li>
 <li><a href="/git-commit/">Tutorial Git 03 - Membuat Revisi</a></li>
-<li><a href="/git-log/">Tutorial Git 04 - Melihat Log Revisi Git</a></li>
+<li><a href="/git-log/">Tutorial Git 04 - Melihat Catatan Log Revisi Git</a></li>
 <li><a href="/git-diff/">Tutorial Git 05 - Melihat Perbandingan Revisi Git</a></li>
 <li><a href="/git-membatalkan-revisi/">Tutorial Git 06 - Membatalkan Revisi Git</a></li>
 <li><a href="/git-branch/">Tutorial Git 07 - Percabangan</a></li>

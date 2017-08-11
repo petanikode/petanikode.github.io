@@ -1280,11 +1280,12 @@ API Simsimi konsepnya sangat sederhana. Kita hanya melakukan request dari URL de
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/python-json/</guid>
-      <description>Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul atau pustakan json.
-Selain itu, kita juga membutuhkan modul tambahan seperti urlib bila JSON-nya diambil dari web service. Oke, mari kita mulai dari hal yang sederhana.
-Parshing File JSON A post shared by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
- 
-Membuat File JSON Pertama, kita buat dulu file JSON-nya dengan isi seperti pada gambar di atas. Nama file: petanikode.</description>
+      <description>JSON adalah salah satu format standar pertukaran data antar aplikasi.
+Biasanya JSON banyak kita temukan ketika bermain dengan web service atau RESTful API.
+Seperti saat saya bereksperimen dengan API Simsimi, datanya dikirim dengan format JSON.
+ #json #stickynotes #postitnotes #programming #programmer
+A post shared by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
+  JSON hampir bisa dibaca di sebagian besar bahasa pemrograman, seperti C, PHP, Javascript, C++, C#, Java, Ruby, Python, dll.</description>
     </item>
     
     <item>

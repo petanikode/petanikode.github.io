@@ -705,7 +705,7 @@ section[expanded] h4, section:not([expanded]) h4 {
 }
 
 .content div.fileneme, .content div.terminal {
-    background: #e8e8e8;
+    background: white;
     font-size: 11px;
     color: rgba(0,0,0, 0.7);
     font-family: "Open sans", sans-serif;
@@ -716,13 +716,27 @@ section[expanded] h4, section:not([expanded]) h4 {
     border-bottom: none;
 }
 
+.content .code-mark {
+    background: rgba(58, 255, 0, 0.09);
+    margin: 0px -16px;
+    padding: 0 16px;
+    display: block;
+}
+
+.content pre mark, .content pre b {
+    background: rgba(173, 255, 47, 0.2);
+    padding: 3px;
+    padding-left: 0;
+    border-radius: 4px;
+}
+
 .content div.fileneme i, .content div.terminal span {
     margin-right: 6px;
 }
 
 .content pre, .content code, .content samp {
     font-family: Consolas, Monaco, Monospace,'Courier New',Courier,'Andale Mono';
-    font-size:15px;
+    
 }
 
 .content pre {
@@ -741,6 +755,8 @@ section[expanded] h4, section:not([expanded]) h4 {
 .content pre[class*="language-"] {
     margin-top: 0;
     margin-bottom: 16px;
+    background: #f8f8f8;
+    font-size: 13px;
 }
 
 .content pre code {
@@ -1111,7 +1127,7 @@ padding: 16px;
 
      <link rel="stylesheet" href="/assets/prism/prism.css" />
     <script src="/assets/prism/prism.js"></script>
-     
+      
   
     
 
@@ -1473,60 +1489,58 @@ kemudian kondisikan kodenya seperti ini.</p>
 
 <div class="fileneme"><i class="fa fa-file-o"></i>MainActivity.java</div>
 
-<pre><code class="language-java">package com.petanikode.latihanactivity;
+<pre class="language-java"><code class="language-java">package com.petanikode.latihanactivity;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+<b>import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.Toast;</b>
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity <b>implements View.OnClickListener</b> {
 
-    // deklarasi komponen
-    Button btnClose, btnStartActivity;
+    <b>// deklarasi komponen
+    Button btnClose, btnStartActivity;</b>
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        // inisialisasi komponen
+        <b>// inisialisasi komponen
         btnClose = (Button) findViewById(R.id.btn_close);
         btnStartActivity = (Button) findViewById(R.id.btn_start_activity);
 
         btnClose.setOnClickListener(this);
         btnStartActivity.setOnClickListener(this);
 
-        Toast.makeText(this, &quot;Activity: onCreate()&quot;, Toast.LENGTH_SHORT).show();
-        
+        Toast.makeText(this, "Activity: onCreate()", Toast.LENGTH_SHORT).show();</b>
     }
 
-    @Override
+    <b>@Override
     protected void onStart(){
         super.onStart();
 
-        Toast.makeText(this, &quot;Activity: onStart()&quot;, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Activity: onStart()", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onResume(){
         super.onResume();
-        Toast.makeText(this, &quot;Activity: onResume()&quot;, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Activity: onResume()", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onPause(){
         super.onPause();
-        Toast.makeText(this, &quot;Activity: onPause()&quot;, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Activity: onPause()", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onStop(){
         super.onStop();
-        Toast.makeText(this, &quot;Activity: onStop()&quot;, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Activity: onStop()", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -1536,14 +1550,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_start_activity:
                 // buka activity browser
                 Intent petanikodeActivity = new Intent(Intent.ACTION_VIEW);
-                petanikodeActivity.setData(Uri.parse(&quot;http://petanikode.com&quot;));
+                petanikodeActivity.setData(Uri.parse("http://petanikode.com"));
                 startActivity(petanikodeActivity);
                 break;
             case R.id.btn_close:
                 finish();
                 break;
         }
-    }
+    }</b>
 }
 </code></pre>
 
@@ -1582,7 +1596,7 @@ Button btnClose, btnStartActivity;
 <p>Dua tombol tersebut, kemudian diinisialisasikan pada <em>method</em> <code>onCreate()</code>.
 <em>Method</em> ini akan dieksekusi setiap <em>Activity</em> dicitpakan.</p>
 
-<pre><code class="language-java"> @Override
+<pre><code class="language-java">@Override
 protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);

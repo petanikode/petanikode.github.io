@@ -231,7 +231,7 @@ Mungkin saya malas, karena koneksi internet yang kurang cepat.
 Maklum tinggal di desa, sinyalnya tidak stabil :smile:.
 Kendala yang saya alami:
  Malas upload gambar satu per satu ketika membuat artikel. Tidak bisa ngedit artikel secara offline. Tidak memiliki kuasa penuh terhadap CMS-nya. Kurang aman. dan masih banyak lagi.  Karena itu, sekarang saya lebih suka ngeblog dari teks editor menggunakan SSG (Satatic Site Generator) daripada CMS seperti Wordpress.",
-  "wordCount": 1441,
+  "wordCount": 1443,
   "datePublished" : "2017-07-01T17:29:24",
   "dateModified" : "2017-07-01T17:29:24",
   "image" : {
@@ -703,7 +703,7 @@ section[expanded] h4, section:not([expanded]) h4 {
 }
 
 .content div.fileneme, .content div.terminal {
-    background: #e8e8e8;
+    background: white;
     font-size: 11px;
     color: rgba(0,0,0, 0.7);
     font-family: "Open sans", sans-serif;
@@ -714,13 +714,27 @@ section[expanded] h4, section:not([expanded]) h4 {
     border-bottom: none;
 }
 
+.content .code-mark {
+    background: rgba(58, 255, 0, 0.09);
+    margin: 0px -16px;
+    padding: 0 16px;
+    display: block;
+}
+
+.content pre mark, .content pre b {
+    background: rgba(173, 255, 47, 0.2);
+    padding: 3px;
+    padding-left: 0;
+    border-radius: 4px;
+}
+
 .content div.fileneme i, .content div.terminal span {
     margin-right: 6px;
 }
 
 .content pre, .content code, .content samp {
     font-family: Consolas, Monaco, Monospace,'Courier New',Courier,'Andale Mono';
-    font-size:15px;
+    
 }
 
 .content pre {
@@ -739,6 +753,8 @@ section[expanded] h4, section:not([expanded]) h4 {
 .content pre[class*="language-"] {
     margin-top: 0;
     margin-bottom: 16px;
+    background: #f8f8f8;
+    font-size: 13px;
 }
 
 .content pre code {
@@ -1109,7 +1125,7 @@ padding: 16px;
 
      <link rel="stylesheet" href="/assets/prism/prism.css" />
     <script src="/assets/prism/prism.js"></script>
-     
+      
   
     
 
@@ -1543,7 +1559,7 @@ untuk halaman seperti <em>about</em>, <em>contact</em>, <em>portofolio</em>, dll
 <p>Agar tidak repot mengetik link sosial media pada tema, kita bisa membuatkan
 datanya.</p>
 
-<p>file: <code>petanikode-hugo/data/sosmed.toml</code></p>
+<div class="fileneme"><i class="fa fa-file-o"></i>petanikode-hugo/data/sosmed.toml</div>
 
 <pre><code class="language-python">facebook = &quot;https://facebook.com/petanikode&quot;
 twitter = &quot;https://twitter.com/petanikode&quot;
@@ -1583,6 +1599,8 @@ sebagainya.</p>
 
 <p>Contoh konfigurasi milik <strong>Petani Kode</strong>:</p>
 
+<div class="fileneme"><i class="fa fa-file-o"></i>config.toml</div>
+
 <pre><code class="language-python">title = &quot;Petani Kode — Programmer Pengguna Linux&quot;
 baseurl = &quot;https://www.petanikode.com/&quot;
 languageCode = &quot;id-id&quot;
@@ -1614,6 +1632,8 @@ disqusShortname = &quot;petanikode&quot;
 
 <p>Sekarang coba ganti konfigurasi blog yang sudah dibuat&hellip;</p>
 
+<div class="fileneme"><i class="fa fa-file-o"></i>config.toml</div>
+
 <pre><code class="language-python">baseURL = &quot;https://www.lombokfoss.com/&quot;
 languageCode = &quot;en-us&quot;
 title = &quot;Lombokfoss&quot;
@@ -1644,6 +1664,8 @@ agar temanya bisa digunakan sesuai harapan&rdquo;</p>
 <p>Saya akan memilih tema <a href="https://themes.gohugo.io/hugo-octopress/">Hugo Octopress</a>&hellip;</p>
 
 <p>&hellip;maka kita harus membuat konfigurasi seperti ini:</p>
+
+<div class="fileneme"><i class="fa fa-file-o"></i>config.toml</div>
 
 <pre><code class="language-python">baseURL = &quot;https://www.lombokfoss.com/&quot;
 languageCode = &quot;en-us&quot;

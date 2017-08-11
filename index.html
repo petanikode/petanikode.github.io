@@ -647,7 +647,7 @@ section[expanded] h4, section:not([expanded]) h4 {
 }
 
 .content div.fileneme, .content div.terminal {
-    background: #e8e8e8;
+    background: white;
     font-size: 11px;
     color: rgba(0,0,0, 0.7);
     font-family: "Open sans", sans-serif;
@@ -658,13 +658,27 @@ section[expanded] h4, section:not([expanded]) h4 {
     border-bottom: none;
 }
 
+.content .code-mark {
+    background: rgba(58, 255, 0, 0.09);
+    margin: 0px -16px;
+    padding: 0 16px;
+    display: block;
+}
+
+.content pre mark, .content pre b {
+    background: rgba(173, 255, 47, 0.2);
+    padding: 3px;
+    padding-left: 0;
+    border-radius: 4px;
+}
+
 .content div.fileneme i, .content div.terminal span {
     margin-right: 6px;
 }
 
 .content pre, .content code, .content samp {
     font-family: Consolas, Monaco, Monospace,'Courier New',Courier,'Andale Mono';
-    font-size:15px;
+    
 }
 
 .content pre {
@@ -683,6 +697,8 @@ section[expanded] h4, section:not([expanded]) h4 {
 .content pre[class*="language-"] {
     margin-top: 0;
     margin-bottom: 16px;
+    background: #f8f8f8;
+    font-size: 13px;
 }
 
 .content pre code {

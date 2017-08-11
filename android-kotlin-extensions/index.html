@@ -226,7 +226,7 @@ Kemarin saya mencoba membuat kode untuk event listener onClick(), tapi malah err
 Pesan error pun tidak ditapilkan di Android Studio.
 Namun, masalah ini sudah terpecahkan oleh Kotlin Extension.
 Apa itu Kotlin Extensions? Pernah menggunakan fungsi findViewById()?",
-  "wordCount": 630,
+  "wordCount": 653,
   "datePublished" : "2017-06-21T16:52:41",
   "dateModified" : "2017-06-21T16:52:41",
   "image" : {
@@ -697,7 +697,7 @@ section[expanded] h4, section:not([expanded]) h4 {
 }
 
 .content div.fileneme, .content div.terminal {
-    background: #e8e8e8;
+    background: white;
     font-size: 11px;
     color: rgba(0,0,0, 0.7);
     font-family: "Open sans", sans-serif;
@@ -708,13 +708,27 @@ section[expanded] h4, section:not([expanded]) h4 {
     border-bottom: none;
 }
 
+.content .code-mark {
+    background: rgba(58, 255, 0, 0.09);
+    margin: 0px -16px;
+    padding: 0 16px;
+    display: block;
+}
+
+.content pre mark, .content pre b {
+    background: rgba(173, 255, 47, 0.2);
+    padding: 3px;
+    padding-left: 0;
+    border-radius: 4px;
+}
+
 .content div.fileneme i, .content div.terminal span {
     margin-right: 6px;
 }
 
 .content pre, .content code, .content samp {
     font-family: Consolas, Monaco, Monospace,'Courier New',Courier,'Andale Mono';
-    font-size:15px;
+    
 }
 
 .content pre {
@@ -733,6 +747,8 @@ section[expanded] h4, section:not([expanded]) h4 {
 .content pre[class*="language-"] {
     margin-top: 0;
     margin-bottom: 16px;
+    background: #f8f8f8;
+    font-size: 13px;
 }
 
 .content pre code {
@@ -1103,7 +1119,7 @@ padding: 16px;
 
      <link rel="stylesheet" href="/assets/prism/prism.css" />
     <script src="/assets/prism/prism.js"></script>
-     
+      
   
     
 
@@ -1341,8 +1357,11 @@ Mirip seperti fungsi <code>getElementById()</code> pada Javascript.</p>
 sehingga programmer tidak lagi menghabiskan energi dan
 waktunya untuk mengetik fungsi <code>findViewById()</code>.</p>
 
-<p><blockquote class="twitter-tweet" data-lang="en"><p lang="in" dir="ltr">Kotlin membuatnya jadi lebih sederhana&hellip; no more findViewById() 👨‍💻 <a href="https://t.co/31D53qHu03">pic.twitter.com/31D53qHu03</a></p>&mdash; Petani Kode (@petanikode) <a href="https://twitter.com/petanikode/status/877467306921664513">June 21, 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<!-- <blockquote class="twitter-tweet" data-lang="en"><p lang="in" dir="ltr">Kotlin membuatnya jadi lebih sederhana... no more findViewById() 👨‍💻 <a href="https://t.co/31D53qHu03">pic.twitter.com/31D53qHu03</a></p>&mdash; Petani Kode (@petanikode) <a href="https://twitter.com/petanikode/status/877467306921664513">June 21, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+
+<blockquote class="twitter-tweet"><p lang="in" dir="ltr">Kotlin membuatnya jadi lebih sederhana... no more findViewById() 👨‍💻 <a href="https://t.co/31D53qHu03">pic.twitter.com/31D53qHu03</a></p>&mdash; Petani Kode (@petanikode) <a href="https://twitter.com/petanikode/status/877467306921664513">June 21, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>Bagaimana cara menggunakan <em>Kotlin Extensions</em>?</p>
 
@@ -1439,7 +1458,7 @@ dijadikan objek tanpa harus menggunakan fungsi <code>findViewById()</code>.</p>
 <p>Sebagai contoh, kita coba buat fungsi untuk meng-handle <em>event onClick</em>
 bernama <code>ucapSalam()</code>.</p>
 
-<p>File <code>MainActivity.kt</code>:</p>
+<div class="fileneme"><i class="fa fa-file-o"></i>MainActivity.kt</div>
 
 <pre><code class="language-kotlin">package com.petanikode.cobakotlin
 
@@ -1455,6 +1474,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    // dieksekusi saat tombol welcome_msg diklik
     fun ucapSalam(v: View?): Unit {
         welcome_msg.setText(&quot;Selamat datang di Kotlin!&quot;)
     }
@@ -1470,7 +1490,7 @@ dan isi properti <code>onClick</code> dengan nama fungsinya, yaitu: <code>ucapSa
 <p>Lalu <code>TextView</code> di atasnya, kita ganti <code>id</code>-nya menjadi <code>welcome_msg</code>.
 Kode lengkap layout-nya seperti ini:</p>
 
-<p>File <code>activity_main.xml</code>:</p>
+<div class="fileneme"><i class="fa fa-file-o"></i>activity_main.xml</div>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
@@ -1524,12 +1544,14 @@ bereksperimen dengan Kotlin dan Android.</p>
 
 <p>Tanyakan di komentar!</p>
 
-<p><strong>Referensi</strong>:</p>
-
-<ul>
+<fieldset>
+    <legend>📖 Referensi:</legend>
+    <ul>
 <li>Dok. Kotlin &mdash; <a href="https://kotlinlang.org/docs/tutorials/android-plugin.html">Kotlin Android Extensions</a></li>
 <li>StackOverflow &mdash; <a href="https://stackoverflow.com/q/40885426/2658551">Kotlin in xml onClick not work</a></li>
 </ul>
+
+</fieldset>
 
                 <div class="post-footer">
                     <div class="artikel-footer">

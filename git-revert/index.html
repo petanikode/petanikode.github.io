@@ -7,7 +7,7 @@
 
 <html amp lang="id-id" class="no-js">
 <head>
-    <title>Git</title>
+    <title>Tutorial Git 06 - Membatalkan Revisi</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -20,8 +20,8 @@
 
 
 
-    <link rel="canonical" href="https://www.petanikode.com/topik/git/" />
-    <link rel="amphtml" href="https://www.petanikode.com/topik/git/" />
+    <link rel="canonical" href="https://www.petanikode.com/git-revert/" />
+    <link rel="amphtml" href="https://www.petanikode.com/git-revert/" />
 
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
     <meta content='/favicon.png' name='msapplication-TileImage'/>
@@ -30,10 +30,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-    <link href="http://feeds.feedburner.com/petanikode" rel="alternate" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-    <link href="http://feeds.feedburner.com/petanikode" rel="feed" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-
-
+    
 
     
     
@@ -51,8 +48,10 @@
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
 <meta name="author" content="Ardianta Pargo"/>
 
-<meta name="keywords" content="Git, pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman"/>
+<meta name="keywords" content="Tutorial Git 06 - Membatalkan Revisi, Git, Revisi Git, Tutorial Git, Pemrograman, Bahasa Pemrograman, Belajar Pemrograman, Tutorial Pemrograman, pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="Pada tutorial git 05, kita sudah belajar cara melihat perbedaan di setiap revisi. Sekarang kita akan belajar, cara membatalkan sebuah revisi.
+Terkadang pada perubahan yang kita lakukan terjadi kesalahan dan kita ingin mengembalikannya seperti keadaan sebelumnya. Maka kita perlu menyuruh git untuk megembalikannya. Ada beberapa perintah yang digunakan diantaranya: git checkout, git reset, dan git revert.
+Membatalkan Perubahan Jika revisi kita belum staged ataupun committed, kita bisa mengembalikannya menggunakan perintah git checkout nama_file."/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -68,20 +67,23 @@
 <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
-    <meta property="og:title" content="Git" />
-    <meta property="og:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman" />
+    <meta property="og:title" content="Tutorial Git 06 - Membatalkan Revisi" />
+    <meta property="og:description" content="Pada tutorial git 05, kita sudah belajar cara melihat perbedaan di setiap revisi. Sekarang kita akan belajar, cara membatalkan sebuah revisi.
+Terkadang pada perubahan yang kita lakukan terjadi kesalahan dan kita ingin mengembalikannya seperti keadaan sebelumnya. Maka kita perlu menyuruh git untuk megembalikannya. Ada beberapa perintah yang digunakan diantaranya: git checkout, git reset, dan git revert.
+Membatalkan Perubahan Jika revisi kita belum staged ataupun committed, kita bisa mengembalikannya menggunakan perintah git checkout nama_file." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.petanikode.com/topik/git/" />
+    <meta property="og:url" content="https://www.petanikode.com/git-revert/" />
 
-    <meta property="og:image" content="/images/petanikode-programmer.png" />
+    <meta property="og:image" content="https://3.bp.blogspot.com/-ZcUp-f8LtpE/WJhkSmZoDYI/AAAAAAAADzA/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB/s1600/git-petanikode.png" />
 
     
-    <meta property="og:updated_time" content="2017-08-02 16:47:24 &#43;0800 WITA"/>
+    <meta property="og:updated_time" content="2017-02-21 14:55:42 &#43;0800 WITA"/>
     <meta content='id_ID' property='og:locale'/>
     <meta content='ms_MY' property='og:locale:alternate'/>
     <meta content='en_US' property='og:locale:alternate'/>
 
     <meta content='152759108115365' property='fb:app_id'/>
+    <meta content='petanikode' property='fb:pages'/>
     <meta content='143461015837500' property='fb:pages'/>
     <meta content='ardianta.pargo' property='fb:profile_id'/>
 
@@ -91,15 +93,25 @@
     
     
     
+    	
+    	
+    
+    	
+    	
+    
 
     <meta property="article:author" content="https://www.facebook.com/petanikode" />
     <meta property="article:publisher" content="https://www.facebook.com/petanikode" />
 
     
+    <meta property="article:published_time" content="0001-01-01 00:00:00 &#43;0000 UTC" />
+    
 
-    <meta property="article:modified_time" content="2017-08-02 16:47:24 &#43;0800 WITA" />
-    <meta property="article:section" content="" />
+    <meta property="article:modified_time" content="2017-02-21 14:55:42 &#43;0800 WITA" />
+    <meta property="article:section" content="artikel" />
 
+    
+    	<meta property="article:tag" content="Git" />
     
 
     
@@ -152,12 +164,6 @@
     
     
     
-        
-    
-
-    
-    
-    
 
 
 <script type="application/ld+json">
@@ -176,7 +182,25 @@
       },
 
       
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+            "@id": "https://www.petanikode.com/kategori/pemrograman",
+            "name": "Pemrograman"
+            }
+      },
+      
 
+      
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+            "@id": "https://www.petanikode.com/topik/git",
+            "name": "Git"
+            }
+      }
       
 
     ]
@@ -190,18 +214,20 @@
   "author": {
     "name" : "Ardianta Pargo"
   },
-  "headline": "Git",
-  "description": "",
-  "wordCount": 0,
-  "datePublished" : "2017-08-02T16:47:24",
-  "dateModified" : "2017-08-02T16:47:24",
+  "headline": "Tutorial Git 06 - Membatalkan Revisi",
+  "description": "Pada tutorial git 05, kita sudah belajar cara melihat perbedaan di setiap revisi. Sekarang kita akan belajar, cara membatalkan sebuah revisi.
+Terkadang pada perubahan yang kita lakukan terjadi kesalahan dan kita ingin mengembalikannya seperti keadaan sebelumnya. Maka kita perlu menyuruh git untuk megembalikannya. Ada beberapa perintah yang digunakan diantaranya: git checkout, git reset, dan git revert.
+Membatalkan Perubahan Jika revisi kita belum staged ataupun committed, kita bisa mengembalikannya menggunakan perintah git checkout nama_file.",
+  "wordCount": 785,
+  "datePublished" : "2017-02-21T14:55:42",
+  "dateModified" : "2017-02-21T14:55:42",
   "image" : {
       "@type": "ImageObject",
-      "url": "",
+      "url": "https://3.bp.blogspot.com/-ZcUp-f8LtpE/WJhkSmZoDYI/AAAAAAAADzA/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB/s1600/git-petanikode.png",
       "height" : 380,
       "width" : 720
     },
-  "mainEntityOfPage" : "https://www.petanikode.com/topik/git/",
+  "mainEntityOfPage" : "https://www.petanikode.com/git-revert/",
   "publisher" : {
     "@type": "Organization",
     "name" : "petanikode.com",
@@ -215,7 +241,7 @@
 
   "review": {
     "@type": "Review",
-    "url": "https://www.petanikode.com/topik/git/",
+    "url": "https://www.petanikode.com/git-revert/",
     "author": {
       "@type": "Person",
       "name": "Ardianta Pargo",
@@ -226,8 +252,10 @@
       "name": "petanikode.com",
       "sameAs": "http://petanikode.com"
     },
-    "datePublished": "2017-08-02T16:47:24",
-    "description": "",
+    "datePublished": "2017-02-21T14:55:42",
+    "description": "Pada tutorial git 05, kita sudah belajar cara melihat perbedaan di setiap revisi. Sekarang kita akan belajar, cara membatalkan sebuah revisi.
+Terkadang pada perubahan yang kita lakukan terjadi kesalahan dan kita ingin mengembalikannya seperti keadaan sebelumnya. Maka kita perlu menyuruh git untuk megembalikannya. Ada beberapa perintah yang digunakan diantaranya: git checkout, git reset, dan git revert.
+Membatalkan Perubahan Jika revisi kita belum staged ataupun committed, kita bisa mengembalikannya menggunakan perintah git checkout nama_file.",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -1077,15 +1105,34 @@ padding: 16px;
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+
+     <link rel="stylesheet" href="/assets/prism/prism.css" />
+    <script src="/assets/prism/prism.js"></script>
+      
+  
+    
 
     
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-6279325630224392",
-        enable_page_level_ads: true
-    });
-    </script>
+<script type="text/javascript">
+    window._wpemojiSettings = { "baseUrl": "https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1496863874h&ver=4.8-RC2-40878" } };
+    !function (a, b, c) { function d(a) { var b, c, d, e, f = String.fromCharCode; if (!k || !k.fillText) return !1; switch (k.clearRect(0, 0, j.width, j.height), k.textBaseline = "top", k.font = "600 32px Arial", a) { case "flag": return k.fillText(f(55356, 56826, 55356, 56819), 0, 0), b = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 56826, 8203, 55356, 56819), 0, 0), c = j.toDataURL(), b === c && (k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447), 0, 0), b = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447), 0, 0), c = j.toDataURL(), b !== c); case "emoji4": return k.fillText(f(55358, 56794, 8205, 9794, 65039), 0, 0), d = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55358, 56794, 8203, 9794, 65039), 0, 0), e = j.toDataURL(), d !== e }return !1 } function e(a) { var c = b.createElement("script"); c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c) } var f, g, h, i, j = b.createElement("canvas"), k = j.getContext && j.getContext("2d"); for (i = Array("flag", "emoji4"), c.supports = { everything: !0, everythingExceptFlag: !0 }, h = 0; h < i.length; h++)c.supports[i[h]] = d(i[h]), c.supports.everything = c.supports.everything && c.supports[i[h]], "flag" !== i[h] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[i[h]]); c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () { c.DOMReady = !0 }, c.supports.everything || (g = function () { c.readyCallback() }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", g, !1), a.addEventListener("load", g, !1)) : (a.attachEvent("onload", g), b.attachEvent("onreadystatechange", function () { "complete" === b.readyState && c.readyCallback() })), f = c.source || {}, f.concatemoji ? e(f.concatemoji) : f.wpemoji && f.twemoji && (e(f.twemoji), e(f.wpemoji))) }(window, document, window._wpemojiSettings);
+</script>
+<style type="text/css">
+    img.wp-smiley,
+    img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+</style>
+
 
 </head>
 
@@ -1094,6 +1141,34 @@ padding: 16px;
 
 
 
+
+<nav class="fixed-top block">
+    <ul>
+        <li>
+            <a href="#!" on="tap:sidebar.toggle">
+            <i class="fa fa-bars"></i>
+            </a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="https://www.petanikode.com/">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/arsip/">Arsip</a>
+        </li>
+        
+        <li>
+            <a href="/kategori/tips-dan-trik">Tips &amp; Trik</a>
+        </li>
+        <li class="hide-on-mobile">
+            <a href="/topik/buku">Buku</a>
+        </li>
+        <li>
+            <a href="mailto:info@petanikode.com">Kirim Saran</a>
+        </li>
+    </ul>
+</nav>
 
 <amp-sidebar id='sidebar'
      layout="nodisplay"
@@ -1187,34 +1262,6 @@ padding: 16px;
   </amp-accordion>
  </amp-sidebar>
 
-<nav class="fixed-top block">
-    <ul>
-        <li>
-            <a href="#!" on="tap:sidebar.toggle">
-            <i class="fa fa-bars"></i>
-            </a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="https://www.petanikode.com/">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="/arsip/">Arsip</a>
-        </li>
-        
-        <li>
-            <a href="/kategori/tips-dan-trik">Tips &amp; Trik</a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="/topik/buku">Buku</a>
-        </li>
-        <li>
-            <a href="mailto:info@petanikode.com">Kirim Saran</a>
-        </li>
-    </ul>
-</nav>
-
 <header class="block-group">
     <section class="header block">
         <div class="site-wrapper">
@@ -1241,16 +1288,14 @@ padding: 16px;
 
 
 <main class="main block-group">
+
     <article class="article block">
+    <div class="article-wrapper">
+        <div class="content">
+            <h1 class="post-title">Tutorial Git 06 - Membatalkan Revisi</h1>
 
-
-    
-
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
+            
+                <div class="post-header">
     
         <div class="author-foto pull-left">
             <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
@@ -1260,309 +1305,329 @@ padding: 16px;
         dalam
         <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
             <br>
-        2 Aug · baca 7 menit
+        21 February 2017 · 14:55
         </div>
     
 </div>
 
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/github-indonesia/">Kumpulan 101&#43; Link Repositori dan Komunitas Open-source Indonesia di Github</a></h2>
-                <a href="/github-indonesia/">
-                    
-                    <amp-img src="https://www.petanikode.com/img/git/git-indonesia.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Github Indonesia"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/github-indonesia/" id="read-more-button">
-                Selengkapnya…
-                </a>
                 
 
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fgithub-indonesia%2f&t=Kumpulan%20101%2b%20Link%20Repositori%20dan%20Komunitas%20Open-source%20Indonesia%20di%20Github" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fgithub-indonesia%2f&text=Kumpulan%20101%2b%20Link%20Repositori%20dan%20Komunitas%20Open-source%20Indonesia%20di%20Github%20https%3a%2f%2fwww.petanikode.com%2fgithub-indonesia%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fgithub-indonesia%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fgithub-indonesia%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Kumpulan%20101%2b%20Link%20Repositori%20dan%20Komunitas%20Open-source%20Indonesia%20di%20Github&body=Kumpulan%20101%2b%20Link%20Repositori%20dan%20Komunitas%20Open-source%20Indonesia%20di%20Github:%20https%3a%2f%2fwww.petanikode.com%2fgithub-indonesia%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+<p>Pada <a href="http://petanikode.com/2017/02/tutorial-git-05---melihat-perbandingan-revisi/">tutorial git 05</a>,
+kita sudah belajar cara melihat perbedaan di setiap revisi.
+Sekarang kita akan belajar, cara membatalkan sebuah revisi.</p>
+
+<p>Terkadang pada perubahan yang kita lakukan terjadi kesalahan dan kita ingin
+mengembalikannya seperti keadaan sebelumnya. Maka kita perlu menyuruh git untuk
+megembalikannya. Ada beberapa perintah yang digunakan diantaranya: <code>git checkout</code>,
+<code>git reset</code>, dan <code>git revert</code>.</p>
+
+<h2 id="membatalkan-perubahan">Membatalkan Perubahan</h2>
+
+<p>Jika revisi kita belum <em>staged</em> ataupun <em>committed</em>, kita bisa mengembalikannya
+menggunakan perintah <code>git checkout nama_file.html</code>.</p>
+
+<p>Contoh: Misalkan kita akan merubah isi dari file <code>index.html</code> pada repositori <code>project-01</code>.</p>
+
+<p>Sebelum diubah:</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Belajar Git - Project 01&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Hello Dunia!, Saya sedang belajar Git&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Setelah diubah:</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Belajar Git - Project 01&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Hello Dunia!, Saya sudah belajar Git&lt;/p&gt;
+        &lt;p&gt;Belajar git ternyata cukup menyenangkan&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Hasil <code>git diff</code>:</p>
+
+<pre><code class="language-diff">$ git diff
+diff --git a/index.html b/index.html
+index c5082e6..115efcb 100644
+--- a/index.html
++++ b/index.html
+@@ -5,6 +5,7 @@
+         &lt;title&gt;Belajar Git - Project 01&lt;/title&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+-        &lt;p&gt;Hello Dunia!, Saya sedang belajar Git&lt;/p&gt;
++        &lt;p&gt;Hello Dunia!, Saya sudah belajar Git&lt;/p&gt;
++        &lt;p&gt;Belajar git ternyata cukup menyenangkan&lt;/p&gt;
+     &lt;/body&gt;
+ &lt;/html&gt;
+</code></pre>
+
+<p>Sekarang kita akan membatalkan perubahan tersebut. Karena kita belum melakukan
+<em>stage</em> dan <em>commit</em>, maka kita bisa menggnakan perintah:</p>
+
+<pre><code class="language-bash">git checkout index.html
+</code></pre>
+
+<p>Perubahan yang baru saja kita lakukan akan dibatalkan. Kalau tidak percaya,
+coba saja periksa file yang sudah dirubah tadi atau cek dengan perintah <code>git status</code>.</p>
+
+<pre><code class="language-bash">$ git status
+On branch master
+nothing to commit, working directory clean
+</code></pre>
+
+<p>Hati-hati! Terkadang perintah ini sangat berbahaya, karena akan menghapus
+perubahan yang baru saja dilakukan. Bila kita sudah merubah banyak hal, maka
+itu akan sia-sia setelah menjalankan perintah ini.</p>
+
+<p><amp-ad
+    data-ad-client='ca-pub-6279325630224392'
+    data-ad-slot='7044550664'
+    width='720'
+    height='380'
+    type='adsense'
+    layout="responsive">
+</amp-ad></p>
+
+<h2 id="membatalkan-perubahan-file-yang-sudah-dalam-kondisi-staged">Membatalkan Perubahan File yang Sudah dalam Kondisi <em>staged</em></h2>
+
+<p>Kondisi <em>staged</em> merupakan kondisi file yang sudah di <em>add</em> (<code>git add</code>),
+namun belum disimpan (<code>git commit</code>) ke dalam Git.</p>
+
+<p>Sebagai contoh, kita lakukan perubahan lagi di file <code>index.html</code> seperti pada
+contoh sebelumnya.</p>
+
+<pre><code class="language-diff">$ git diff
+diff --git a/index.html b/index.html
+index c5082e6..c99aa5b 100644
+--- a/index.html
++++ b/index.html
+@@ -5,6 +5,7 @@
+         &lt;title&gt;Belajar Git - Project 01&lt;/title&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+-        &lt;p&gt;Hello Dunia!, Saya sedang belajar Git&lt;/p&gt;
++        &lt;p&gt;Hello Dunia!, Saya sudah belajar Git&lt;/p&gt;
++        &lt;p&gt;Belajar git ternyata gampang-gampang susah&lt;/p&gt;
+     &lt;/body&gt;
+ &lt;/html&gt;
+</code></pre>
+
+<p>Setelah itu, kita ubah kondisi file menjadi <em>staged</em> dengan perintah:</p>
+
+<pre><code class="language-bash">git add index.html
+</code></pre>
+
+<p>Cek statunya dulu:</p>
+
+<pre><code class="language-bash">$ git status
+On branch master
+Changes to be committed:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+	modified:   index.html
+</code></pre>
+
+<p>Nah, file <code>index.html</code> sudah masuk ke dalam kondisi <em>staged</em>. Untuk mengubahnya
+menjadi kondisi <em>modified</em>, kita bisa menggunakan perintah <code>git reset</code>.</p>
+
+<pre><code class="language-bash">git reset index.html
+</code></pre>
+
+<p>Cek statusnya lagi:</p>
+
+<pre><code class="language-bash">$ git status
+On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+
+<p>Sekarang file <code>index.html</code> sudah dalam kondisi <em>modified</em>, kita bisa membatalkan
+perubahannya dengan perintah <code>git checkout</code> seperti contoh sebelumnya.</p>
+
+<pre><code class="language-bash">git checkout index.html
+</code></pre>
+
+<p>Maka perubahan yang kita lakukan akan dibatalkan, 😄.</p>
+
+<p><amp-img
+    width="666"
+    height="343"
+    alt="git-reset-petanikode.png"
+    src="https://1.bp.blogspot.com/-nKfz_yfDVa0/WKv4RFDPcdI/AAAAAAAAEHQ/pV5A9iL7cUUyK02t_1yNwRsquFr9x4dnQCPcB/s1600/git-reset-petanikode.png"
+    layout="responsive">
+</amp-img></p>
+
+<h2 id="membatalkan-perubahan-file-yang-sudah-dalam-kondisi-commited">Membatalkan Perubahan File yang Sudah dalam Kondisi <em>Commited</em></h2>
+
+<p>Sekarang bagaimana kalau filenya sudah dalam kondisi <em>commited</em> dan kita ingin
+mengembalikannya? Untuk melakukan ini, kita harus mengetahui nomer <em>commit</em>,
+kemudian mengembalikan perubahannya seperti pada nomer <em>commit</em> tersebut.</p>
+
+<p>Misalkan, kita ubah kembali file <code>index.html</code>.</p>
+
+<pre><code class="language-diff">$ git diff
+diff --git a/index.html b/index.html
+index c5082e6..3c150a8 100644
+--- a/index.html
++++ b/index.html
+@@ -5,6 +5,7 @@
+         &lt;title&gt;Belajar Git - Project 01&lt;/title&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+-        &lt;p&gt;Hello Dunia!, Saya sedang belajar Git&lt;/p&gt;
++        &lt;p&gt;Hello Dunia!, Saya sudah belajar Git&lt;/p&gt;
++        &lt;p&gt;Belajar Git Greget!&lt;/p&gt;
+     &lt;/body&gt;
+ &lt;/html&gt;
+</code></pre>
+
+<p>Kemudian kita melakukan <em>commit</em>.</p>
+
+<pre><code class="language-bash">git add index.html
+git commit -m &quot;belajar git greget!&quot;
+</code></pre>
+
+<p>Sekarang kita akan melihat nomer commit dengan perintah <code>git log</code>.</p>
+
+<p><amp-img
+    width="655"
+    height="413"
+    alt="cek+nomer+commit+dengan+git+log+-+petanikode.png"
+    src="https://2.bp.blogspot.com/-vppCXWn5slY/WKvztiN-TRI/AAAAAAAAEG4/rpE8yVDIHA8CBu51Snc7U1e58kdrbHl8ACPcB/s1600/cek%2Bnomer%2Bcommit%2Bdengan%2Bgit%2Blog%2B-%2Bpetanikode.png"
+    layout="responsive">
+</amp-img></p>
+
+<p>Kita akan mengembalikan kondisi file <code>index.html</code>, seperti pada <em>commit</em>
+sebelumnya. Maka kita bisa menggunakan perintah:</p>
+
+<pre><code class="language-bash">git checkout b05f7d05c9298f2cd11b870369f3cf4b2350eca7 index.html
+</code></pre>
+
+<p>Seperti mesin waktu, kita sudah mengembalikan keadaan file <code>index.html</code> seperti
+keadaan saat <em>commit</em> tersebut. Namun, saat ini kondisi <code>index.html</code> dalam
+keadaan <em>staged</em>. Kita bisa kembalikan ke dalam kondisi <em>modified</em> dengan perintah
+<code>git reset</code>.</p>
+
+<pre><code class="language-bash">git reset index.html
+</code></pre>
+
+<p>Pada contoh tersebut, kita sudah berhasil mengembalikan file <code>index.html</code> ke dalam
+keadaan seperti <em>commit</em> sebelumnya. Apabila kita ingin mengembalikan seluruh file
+dalam commit, kita cukup melakukan <em>checkout</em> ke nomer <em>commit</em> saja, tanpa diikuti
+nama file. Contoh:</p>
+
+<pre><code class="language-bash">git checkout ac6d798f98bac5fad693ef8159f957c5b0805c23
+</code></pre>
+
+<p><strong>Catatan:</strong> Perintah ini akan mengembalikan semua file dalam kondisi
+pada nomer commit yang diberikan, namun bersifat temporer.</p>
+
+<h2 id="kembali-ke-3-commit-sebelumnya">Kembali ke 3 Commit sebelumnya</h2>
+
+<p>Untuk kembali ke 3 <em>commit</em> sebelumnya, kita bisa menggunakan perintah berikut.</p>
+
+<pre><code class="language-bash">git checkout HEAD~3 index.html
+</code></pre>
+
+<h2 id="membatalkan-semua-perubahan-yang-ada">Membatalkan Semua Perubahan yang ada</h2>
+
+<p>Jika kita ingin mengembalikan semua file ke suatu commit, kita
+bisa melakukannya dengan perintah:</p>
+
+<pre><code class="language-bash">git revert -n &lt;nomer commit&gt;
+</code></pre>
+
+<p>Contoh:</p>
+
+<pre><code class="language-bash">git revert -n 2400ba0e258bd6a144caa273012b130d6baa5e42
+</code></pre>
+
+<h2 id="akhir-kata">Akhir Kata</h2>
+
+<p>OK, sekian dulu tutorial ke-6 ini. Rasanya agak kepanjangan. Terima kasih
+sudah membaca. Sampai jumpa di <a href="/git-branch/">tutorial ke-7</a>.</p>
+
+                <div class="post-footer">
+                    <div class="artikel-footer">
+                    <div><b>Bagikan bila bermanfaat:</b></div>
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f&t=Tutorial%20Git%2006%20-%20Membatalkan%20Revisi" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f&text=Tutorial%20Git%2006%20-%20Membatalkan%20Revisi%20https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f%20via%20@petanikode" target="_blank" title="Tweet"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f&description=Tutorial%20Git%2006%20-%20Membatalkan%20Revisi" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f&title=Tutorial%20Git%2006%20-%20Membatalkan%20Revisi" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Tutorial%20Git%2006%20-%20Membatalkan%20Revisi&body=Tutorial%20Git%2006%20-%20Membatalkan%20Revisi:%20https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
 
-            </div>
 
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        5 Mar · baca 3 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
+                    <div>Topik:
+                      
+                        #<a href="/topik/git">Git</a>
+                      
+                    </div>
+                    </div>
                 
-                <h2 class="post-title index-title"><a href="/git-checkout-reset-revert/">Tutorial Git 08 - Perbedaan Git checkout, Git Reset, dan Git Revert</a></h2>
-                <a href="/git-checkout-reset-revert/">
                     
-                    <amp-img src="https://3.bp.blogspot.com/-ZcUp-f8LtpE/WJhkSmZoDYI/AAAAAAAADzA/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB/s1600/git-petanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Tutorial Git 08 - Perbedaan Git Reset dengan Git Revert"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/git-checkout-reset-revert/" id="read-more-button">
-                Selengkapnya…
-                </a>
+
+                <p><b>Rekomendasi:</b></p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-6279325630224392"
+     data-ad-slot="5172754450"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                 
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
 
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fgit-checkout-reset-revert%2f&t=Tutorial%20Git%2008%20-%20Perbedaan%20Git%20checkout%2c%20Git%20Reset%2c%20dan%20Git%20Revert" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fgit-checkout-reset-revert%2f&text=Tutorial%20Git%2008%20-%20Perbedaan%20Git%20checkout%2c%20Git%20Reset%2c%20dan%20Git%20Revert%20https%3a%2f%2fwww.petanikode.com%2fgit-checkout-reset-revert%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fgit-checkout-reset-revert%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fgit-checkout-reset-revert%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Tutorial%20Git%2008%20-%20Perbedaan%20Git%20checkout%2c%20Git%20Reset%2c%20dan%20Git%20Revert&body=Tutorial%20Git%2008%20-%20Perbedaan%20Git%20checkout%2c%20Git%20Reset%2c%20dan%20Git%20Revert:%20https%3a%2f%2fwww.petanikode.com%2fgit-checkout-reset-revert%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
+var disqus_config = function () {
+    this.page.url = 'https:\/\/www.petanikode.com\/git-revert\/';
+    this.page.identifier = 'git-revert';
+    this.page.title = 'Tutorial Git 06 - Membatalkan Revisi';
+};
 
-            </div>
-
-    </div>
-    </div>
+(function() {
     
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
     
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'petanikode';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://petanikode.disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            
+
         </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        27 Feb · baca 4 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/git-branch/">Tutorial Git 07 - Percabangan</a></h2>
-                <a href="/git-branch/">
-                    
-                    <amp-img src="https://3.bp.blogspot.com/-ZcUp-f8LtpE/WJhkSmZoDYI/AAAAAAAADzA/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB/s1600/git-petanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Tutorial Git 07 - percabangan"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/git-branch/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fgit-branch%2f&t=Tutorial%20Git%2007%20-%20Percabangan" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fgit-branch%2f&text=Tutorial%20Git%2007%20-%20Percabangan%20https%3a%2f%2fwww.petanikode.com%2fgit-branch%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fgit-branch%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fgit-branch%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Tutorial%20Git%2007%20-%20Percabangan&body=Tutorial%20Git%2007%20-%20Percabangan:%20https%3a%2f%2fwww.petanikode.com%2fgit-branch%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
     </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        21 Feb · baca 4 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/git-revert/">Tutorial Git 06 - Membatalkan Revisi</a></h2>
-                <a href="/git-revert/">
-                    
-                    <amp-img src="https://3.bp.blogspot.com/-ZcUp-f8LtpE/WJhkSmZoDYI/AAAAAAAADzA/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB/s1600/git-petanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Tutorial Git 06 - Membatalkan Revisi"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/git-revert/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f&t=Tutorial%20Git%2006%20-%20Membatalkan%20Revisi" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f&text=Tutorial%20Git%2006%20-%20Membatalkan%20Revisi%20https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Tutorial%20Git%2006%20-%20Membatalkan%20Revisi&body=Tutorial%20Git%2006%20-%20Membatalkan%20Revisi:%20https%3a%2f%2fwww.petanikode.com%2fgit-revert%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        16 Feb · baca 2 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/git-diff/">Tutorial Git 05 - Melihat Perbandingan Revisi</a></h2>
-                <a href="/git-diff/">
-                    
-                    <amp-img src="https://3.bp.blogspot.com/-ZcUp-f8LtpE/WJhkSmZoDYI/AAAAAAAADzA/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB/s1600/git-petanikode.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Migrasi Petani Kode dari Blogger ke Hugo"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/git-diff/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fgit-diff%2f&t=Tutorial%20Git%2005%20-%20Melihat%20Perbandingan%20Revisi" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fgit-diff%2f&text=Tutorial%20Git%2005%20-%20Melihat%20Perbandingan%20Revisi%20https%3a%2f%2fwww.petanikode.com%2fgit-diff%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fgit-diff%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fgit-diff%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Tutorial%20Git%2005%20-%20Melihat%20Perbandingan%20Revisi&body=Tutorial%20Git%2005%20-%20Melihat%20Perbandingan%20Revisi:%20https%3a%2f%2fwww.petanikode.com%2fgit-diff%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/keamanan">Keamanan</a></span>
-            <br>
-        15 Feb · baca 3 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/password-dan-token-api-bisa-dicuri-di-github/">Bahaya! Password dan Token API Bisa Dicuri dengan Sangat Mudah di Github</a></h2>
-                <a href="/password-dan-token-api-bisa-dicuri-di-github/">
-                    
-                    <amp-img src="https://1.bp.blogspot.com/-jXRLtOGiGXs/WKSVce4PaDI/AAAAAAAAD_o/tMWKujJUoXwrKxbJBI9QHe2XlNuzQBTHACPcB/s1600/github-remove-password-petanikode.jpg"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Migrasi Petani Kode dari Blogger ke Hugo"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/password-dan-token-api-bisa-dicuri-di-github/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpassword-dan-token-api-bisa-dicuri-di-github%2f&t=Bahaya%21%20Password%20dan%20Token%20API%20Bisa%20Dicuri%20dengan%20Sangat%20Mudah%20di%20Github" target="_blank" title="Bagikan ke teman Facebook" class="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpassword-dan-token-api-bisa-dicuri-di-github%2f&text=Bahaya%21%20Password%20dan%20Token%20API%20Bisa%20Dicuri%20dengan%20Sangat%20Mudah%20di%20Github%20https%3a%2f%2fwww.petanikode.com%2fpassword-dan-token-api-bisa-dicuri-di-github%2f%20via%20@petanikode" target="_blank" title="Sebarkan ke Twitter" class="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpassword-dan-token-api-bisa-dicuri-di-github%2f" target="_blank" title="Bagikan di Google+" class="gplus"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="https://www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpassword-dan-token-api-bisa-dicuri-di-github%2f&media=&description=" data-pin-do="buttonPin" target="_blank" title="Simpan dalam koleksimu" class="gplus"><i class="fa fa-pinterest-square fa-lg" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-  <li><a href="mailto:?subject=Bahaya%21%20Password%20dan%20Token%20API%20Bisa%20Dicuri%20dengan%20Sangat%20Mudah%20di%20Github&body=Bahaya%21%20Password%20dan%20Token%20API%20Bisa%20Dicuri%20dengan%20Sangat%20Mudah%20di%20Github:%20https%3a%2f%2fwww.petanikode.com%2fpassword-dan-token-api-bisa-dicuri-di-github%2f" title="Kirim ke email teman"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-</ul>
-
-            </div>
-
-    </div>
-    </div>
-    
-
-    <div class="pager">
-    
-    
-        <a class="button button-primary pull-right" href="/topik/git/page/2/">
-            Selanjutnya <i class="fa fa-caret-right"></i>
-        </a>
-    
-    </div>
-
     </article>
 
     <aside class="aside block">
@@ -1798,6 +1863,7 @@ padding: 16px;
 
 
 </aside>
+
 
 </main>
 

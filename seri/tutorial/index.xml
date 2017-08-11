@@ -327,10 +327,10 @@ Persiapan dan Instalasi SASS Sebelum kita mulai tutorial ini, persiapkan dulu al
     
     <item>
       <title>Tutorial Git 06 - Membatalkan Revisi</title>
-      <link>https://www.petanikode.com/git-membatalkan-revisi/</link>
+      <link>https://www.petanikode.com/git-revert/</link>
       <pubDate>Tue, 21 Feb 2017 14:55:42 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/git-membatalkan-revisi/</guid>
+      <guid>https://www.petanikode.com/git-revert/</guid>
       <description>Pada tutorial git 05, kita sudah belajar cara melihat perbedaan di setiap revisi. Sekarang kita akan belajar, cara membatalkan sebuah revisi.
 Terkadang pada perubahan yang kita lakukan terjadi kesalahan dan kita ingin mengembalikannya seperti keadaan sebelumnya. Maka kita perlu menyuruh git untuk megembalikannya. Ada beberapa perintah yang digunakan diantaranya: git checkout, git reset, dan git revert.
 Membatalkan Perubahan Jika revisi kita belum staged ataupun committed, kita bisa mengembalikannya menggunakan perintah git checkout nama_file.</description>

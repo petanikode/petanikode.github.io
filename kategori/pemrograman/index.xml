@@ -759,12 +759,15 @@ Saya sendiri menggunakan teks editor Atom.</description>
     </item>
     
     <item>
-      <title>Menghitung Tahun Kabisat dengan Python</title>
+      <title>Program Menghitung Tahun Kabisat dengan Python</title>
       <link>https://www.petanikode.com/python-tahun-kabisat/</link>
       <pubDate>Wed, 14 Sep 2016 15:24:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/python-tahun-kabisat/</guid>
-      <description>Menurut artikel di wikipedia Tahun kabisat (bahasa Inggris: Leap year) adalah tahun yang mengalami penambahan satu hari dengan tujuan untuk menyesuaikan penanggalan dengan tahun astronomi. Dalam satu tahun tidak secara persis terdiri dari 365 hari, tetapi 365 hari 5 jam 48 menit 45,1814 detik. Jika hal ini tidak dihiraukan, maka setiap 4 tahun akan kekurangan hampir 1 hari (tepatnya 23 jam 15 menit 0,7256 detik).
+      <description>Menurut wikipedia:
+Tahun kabisat (bahasa Inggris: Leap year) adalah tahun yang mengalami penambahan satu hari dengan tujuan untuk menyesuaikan penanggalan dengan tahun astronomi.
+Dalam satu tahun tidak secara persis terdiri dari 365 hari, tetapi 365 hari 5 jam 48 menit 45,1814 detik.
+Jika hal ini tidak dihiraukan, maka setiap 4 tahun akan kekurangan hampir 1 hari (tepatnya 23 jam 15 menit 0,7256 detik).
 Maka untuk mengkompensasi hal ini, setiap 4 tahun sekali (tahun yang bisa dibagi 4), diberi 1 hari ekstra: 29 Februari.</description>
     </item>
     
@@ -784,10 +787,11 @@ Maka untuk mengkompensasi hal ini, setiap 4 tahun sekali (tahun yang bisa dibagi
       <pubDate>Mon, 12 Sep 2016 17:04:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/hari-programmer/</guid>
-      <description>Banyak yang tidak tahu tentang hari programmer. Karena di Indonesia tidak Banyak merayakannya.
-Hari programmer (Day of the Programmer) merupakan hari internasional yang diakui di berbagai perusahaan teknologi dan industri software.
-Nah! Pada hari programmer ini, saya ingin berbagai beberapa fakta yang saya kumpulkan dari berbagai sumber.
-1. Hari Programmer bukan Hari Libur Nasional Benar sekali, sama seperti hari ibu, hari bapak, hari guru, hari buruh, hari petani, dsb.</description>
+      <description>Banyak yang tidak tahu tentang hari programmer.
+Karena di Indonesia tidak Banyak merayakannya.
+Hari programmer (Day of the Programmer) merupakan hari profesi yang diakui di berbagai perusahaan teknologi dan industri software di dunia.
+Nah! Pada hari programmer ini, saya ingin berbagai beberapa fakta yang dikumpulkan dari berbagai sumber.
+1. Hari Programmer bukan Hari Libur Nasional Benar sekali, sama seperti hari ibu, hari bapak, hari guru, hari buruh, hari petani, dan sejenisnya.</description>
     </item>
     
     <item>
@@ -2008,10 +2012,8 @@ Langkah 1: Desain Form Kita akan menggunakan beberapa objek, diantaranya Label, 
       
       <guid>https://www.petanikode.com/cpp-linux/</guid>
       <description>Bahasa pemrograman C++ merupakan bahasa pengembangan dari bahasa C. Kita membutuhkan alat-alat berikut untuk melakukan pemrograman C++ di linux:
- Teks Editor: Sebagai tempat menulis kode Kompilator g++ : Program yang menerjemahkan bahasa C++ menjadi bahasa mesin (executable).  Membuat program salam Program salam yang umum menggunakan
-Hello World
-. Salam tersebut terdengar kurang terlalu mainstream di dunia pemrograman. Oleh karena itu, Saya akan mengajak Anda menggunakan
-Assalamualaikum</description>
+ Teks Editor: Sebagai tempat menulis kode Kompilator g++ : Program yang menerjemahkan bahasa C++ menjadi bahasa mesin (executable).  Membuat program salam Program salam yang umum menggunakan Hello World. Salam tersebut terdengar kurang terlalu mainstream di dunia pemrograman.
+Oleh karena itu, Saya akan mengajak Anda menggunakan Assalamualaikum saja.</description>
     </item>
     
     <item>

@@ -2444,7 +2444,7 @@ mkdir proyek-slim cd proyek-slim  Instalasi Slim dengan Composer Ketik perintah 
       <pubDate>Tue, 24 Feb 2015 00:36:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/python-xml/</guid>
-      <description>Python memungkinkan kita melakukan parsing (penguraian) dan manipulasi terhadap file XML dan HTML dengan DOM API.
+      <description>Python memungkinkan kita melakukan parsing (penguraian) dan manipulasi terhadap file XML dengan DOM API.
 DOM (Document Object Model) adalah sebuah API yang menyediakan fungsi-fungsi untuk memanipulasi dokumen.
 Salah satu modul DOM yang dapat kita gunakan untuk parsing XML adalah MiniDOM.
 Pada kesempatan ini kita akan belajar cara parsing file XML dan HTML menggunakan MiniDom.

@@ -7,7 +7,7 @@
 
 <html amp lang="id-id" class="no-js">
 <head>
-    <title>Mengurai dokumen XML dengan DOM API di python</title>
+    <title>Cara Parsing XML di Python dengan DOM API</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -48,28 +48,14 @@
 <meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
 <meta name="author" content="Ardianta Pargo"/>
 
-<meta name="keywords" content="Mengurai dokumen XML dengan DOM API di python, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="DOM (Document Object Model) adalah sebuah API lintas bahasa dari World Wide Web Consortium (W3C). API ini sangat bermanfaat untuk membaca data yang ada di dokumen XML. Tulisan ini saya buat berdasarkan panduan di tutorialspoint.com.
- Saya memiliki dokumen XML bernama kartu_nama.xml, isinya sebagai berikut:
-&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;kartuNama&gt;
-&lt;nama&gt;Ardianta Pargo&lt;/nama&gt;
-&lt;jenis-kelamin&gt;Laki-laki&lt;/jenis-kelamin&gt;
-&lt;alamat&gt;
-&lt;dusun&gt;Sisik Goak&lt;/dusun&gt;
-&lt;desa&gt;Sisik&lt;/desa&gt;
-&lt;kecamatan&gt;Pringgarata&lt;/kecamatan&gt;
-&lt;kabupaten&gt;Lombok Tengah&lt;/kabupaten&gt;
-&lt;/alamat&gt;
-&lt;ponsel&gt;087866866694&lt;/ponsel&gt;
-&lt;surel&gt;ardianta_pargo@yahoo.co.id&lt;/surel&gt;
-&lt;sosial-media&gt;
-&lt;facebook&gt;ardianta.pargo&lt;/facebook&gt;
-&lt;twitter&gt;@ArdiantaPargo&lt;/twitter&gt;
-&lt;/sosial-media&gt;
-&lt;situs-web&gt;http://petanikode.blogspot.com&lt;/situs-web&gt;
-&lt;/kartuNama&gt;
- Saya ingin menampilkan data-data yang ada di dokumen XML tersebut dengan python."/>
+<meta name="keywords" content="Cara Parsing XML di Python dengan DOM API, , pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
+<meta name="description" content="Python memungkinkan kita melakukan parsing (penguraian) dan manipulasi terhadap file XML dan HTML dengan DOM API.
+DOM (Document Object Model) adalah sebuah API yang menyediakan fungsi-fungsi untuk memanipulasi dokumen.
+Salah satu modul DOM yang dapat kita gunakan untuk parsing XML adalah MiniDOM.
+Pada kesempatan ini kita akan belajar cara parsing file XML dan HTML menggunakan MiniDom.
+(berdasarkan panduan dari Guru99.com)
+Apa saja yang akan kita pelajari?
+ Cara Parsing XML di Python Cara Membuat Node/Elemen  Mari kita mulai&hellip;"/>
 
 <meta content='index,follow' name='googlebot'/>
 <meta content='follow, all' name='Googlebot-Image'/>
@@ -85,32 +71,18 @@
 <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
 
     
-    <meta property="og:title" content="Mengurai dokumen XML dengan DOM API di python" />
-    <meta property="og:description" content="DOM (Document Object Model) adalah sebuah API lintas bahasa dari World Wide Web Consortium (W3C). API ini sangat bermanfaat untuk membaca data yang ada di dokumen XML. Tulisan ini saya buat berdasarkan panduan di tutorialspoint.com.
- Saya memiliki dokumen XML bernama kartu_nama.xml, isinya sebagai berikut:
-&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;kartuNama&gt;
-&lt;nama&gt;Ardianta Pargo&lt;/nama&gt;
-&lt;jenis-kelamin&gt;Laki-laki&lt;/jenis-kelamin&gt;
-&lt;alamat&gt;
-&lt;dusun&gt;Sisik Goak&lt;/dusun&gt;
-&lt;desa&gt;Sisik&lt;/desa&gt;
-&lt;kecamatan&gt;Pringgarata&lt;/kecamatan&gt;
-&lt;kabupaten&gt;Lombok Tengah&lt;/kabupaten&gt;
-&lt;/alamat&gt;
-&lt;ponsel&gt;087866866694&lt;/ponsel&gt;
-&lt;surel&gt;ardianta_pargo@yahoo.co.id&lt;/surel&gt;
-&lt;sosial-media&gt;
-&lt;facebook&gt;ardianta.pargo&lt;/facebook&gt;
-&lt;twitter&gt;@ArdiantaPargo&lt;/twitter&gt;
-&lt;/sosial-media&gt;
-&lt;situs-web&gt;http://petanikode.blogspot.com&lt;/situs-web&gt;
-&lt;/kartuNama&gt;
- Saya ingin menampilkan data-data yang ada di dokumen XML tersebut dengan python." />
+    <meta property="og:title" content="Cara Parsing XML di Python dengan DOM API" />
+    <meta property="og:description" content="Python memungkinkan kita melakukan parsing (penguraian) dan manipulasi terhadap file XML dan HTML dengan DOM API.
+DOM (Document Object Model) adalah sebuah API yang menyediakan fungsi-fungsi untuk memanipulasi dokumen.
+Salah satu modul DOM yang dapat kita gunakan untuk parsing XML adalah MiniDOM.
+Pada kesempatan ini kita akan belajar cara parsing file XML dan HTML menggunakan MiniDom.
+(berdasarkan panduan dari Guru99.com)
+Apa saja yang akan kita pelajari?
+ Cara Parsing XML di Python Cara Membuat Node/Elemen  Mari kita mulai&hellip;" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://www.petanikode.com/python-xml/" />
 
-    <meta property="og:image" content="http://3.bp.blogspot.com/-P4ONAPt-5Us/VOtVXL1usII/AAAAAAAABbI/6FwQJ9o2iJQ/s1600/python-xml.jpg" />
+    <meta property="og:image" content="https://www.petanikode.com/img/python/python.png" />
 
     
     <meta property="og:updated_time" content="2015-02-24 00:36:00 &#43;0000 UTC"/>
@@ -134,9 +106,13 @@
     <meta property="article:section" content="artikel" />
 
     
+    	<meta property="article:tag" content="Python" />
+    
     	<meta property="article:tag" content="XML" />
     
     	<meta property="article:tag" content="DOM" />
+    
+    	<meta property="article:tag" content="HTML" />
     
     	<meta property="article:tag" content="API" />
     
@@ -214,7 +190,7 @@
         "position": 2,
         "item": {
             "@id": "https://www.petanikode.com/kategori/pemrograman",
-            "name": "pemrograman"
+            "name": "Pemrograman"
             }
       },
       
@@ -224,8 +200,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-            "@id": "https://www.petanikode.com/topik/xml",
-            "name": "XML"
+            "@id": "https://www.petanikode.com/topik/python",
+            "name": "Python"
             }
       }
       
@@ -241,34 +217,20 @@
   "author": {
     "name" : "Ardianta Pargo"
   },
-  "headline": "Mengurai dokumen XML dengan DOM API di python",
-  "description": "DOM (Document Object Model) adalah sebuah API lintas bahasa dari World Wide Web Consortium (W3C). API ini sangat bermanfaat untuk membaca data yang ada di dokumen XML. Tulisan ini saya buat berdasarkan panduan di tutorialspoint.com.
- Saya memiliki dokumen XML bernama kartu_nama.xml, isinya sebagai berikut:
-&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;kartuNama&gt;
-&lt;nama&gt;Ardianta Pargo&lt;/nama&gt;
-&lt;jenis-kelamin&gt;Laki-laki&lt;/jenis-kelamin&gt;
-&lt;alamat&gt;
-&lt;dusun&gt;Sisik Goak&lt;/dusun&gt;
-&lt;desa&gt;Sisik&lt;/desa&gt;
-&lt;kecamatan&gt;Pringgarata&lt;/kecamatan&gt;
-&lt;kabupaten&gt;Lombok Tengah&lt;/kabupaten&gt;
-&lt;/alamat&gt;
-&lt;ponsel&gt;087866866694&lt;/ponsel&gt;
-&lt;surel&gt;ardianta_pargo@yahoo.co.id&lt;/surel&gt;
-&lt;sosial-media&gt;
-&lt;facebook&gt;ardianta.pargo&lt;/facebook&gt;
-&lt;twitter&gt;@ArdiantaPargo&lt;/twitter&gt;
-&lt;/sosial-media&gt;
-&lt;situs-web&gt;http://petanikode.blogspot.com&lt;/situs-web&gt;
-&lt;/kartuNama&gt;
- Saya ingin menampilkan data-data yang ada di dokumen XML tersebut dengan python.",
-  "wordCount": 350,
+  "headline": "Cara Parsing XML di Python dengan DOM API",
+  "description": "Python memungkinkan kita melakukan parsing (penguraian) dan manipulasi terhadap file XML dan HTML dengan DOM API.
+DOM (Document Object Model) adalah sebuah API yang menyediakan fungsi-fungsi untuk memanipulasi dokumen.
+Salah satu modul DOM yang dapat kita gunakan untuk parsing XML adalah MiniDOM.
+Pada kesempatan ini kita akan belajar cara parsing file XML dan HTML menggunakan MiniDom.
+(berdasarkan panduan dari Guru99.com)
+Apa saja yang akan kita pelajari?
+ Cara Parsing XML di Python Cara Membuat Node/Elemen  Mari kita mulai&hellip;",
+  "wordCount": 1254,
   "datePublished" : "2015-02-24T00:36:00",
   "dateModified" : "2015-02-24T00:36:00",
   "image" : {
       "@type": "ImageObject",
-      "url": "http://3.bp.blogspot.com/-P4ONAPt-5Us/VOtVXL1usII/AAAAAAAABbI/6FwQJ9o2iJQ/s1600/python-xml.jpg",
+      "url": "https://www.petanikode.com/img/python/python.png",
       "height" : 380,
       "width" : 720
     },
@@ -298,27 +260,13 @@
       "sameAs": "http://petanikode.com"
     },
     "datePublished": "2015-02-24T00:36:00",
-    "description": "DOM (Document Object Model) adalah sebuah API lintas bahasa dari World Wide Web Consortium (W3C). API ini sangat bermanfaat untuk membaca data yang ada di dokumen XML. Tulisan ini saya buat berdasarkan panduan di tutorialspoint.com.
- Saya memiliki dokumen XML bernama kartu_nama.xml, isinya sebagai berikut:
-&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;kartuNama&gt;
-&lt;nama&gt;Ardianta Pargo&lt;/nama&gt;
-&lt;jenis-kelamin&gt;Laki-laki&lt;/jenis-kelamin&gt;
-&lt;alamat&gt;
-&lt;dusun&gt;Sisik Goak&lt;/dusun&gt;
-&lt;desa&gt;Sisik&lt;/desa&gt;
-&lt;kecamatan&gt;Pringgarata&lt;/kecamatan&gt;
-&lt;kabupaten&gt;Lombok Tengah&lt;/kabupaten&gt;
-&lt;/alamat&gt;
-&lt;ponsel&gt;087866866694&lt;/ponsel&gt;
-&lt;surel&gt;ardianta_pargo@yahoo.co.id&lt;/surel&gt;
-&lt;sosial-media&gt;
-&lt;facebook&gt;ardianta.pargo&lt;/facebook&gt;
-&lt;twitter&gt;@ArdiantaPargo&lt;/twitter&gt;
-&lt;/sosial-media&gt;
-&lt;situs-web&gt;http://petanikode.blogspot.com&lt;/situs-web&gt;
-&lt;/kartuNama&gt;
- Saya ingin menampilkan data-data yang ada di dokumen XML tersebut dengan python.",
+    "description": "Python memungkinkan kita melakukan parsing (penguraian) dan manipulasi terhadap file XML dan HTML dengan DOM API.
+DOM (Document Object Model) adalah sebuah API yang menyediakan fungsi-fungsi untuk memanipulasi dokumen.
+Salah satu modul DOM yang dapat kita gunakan untuk parsing XML adalah MiniDOM.
+Pada kesempatan ini kita akan belajar cara parsing file XML dan HTML menggunakan MiniDom.
+(berdasarkan panduan dari Guru99.com)
+Apa saja yang akan kita pelajari?
+ Cara Parsing XML di Python Cara Membuat Node/Elemen  Mari kita mulai&hellip;",
     "inLanguage": "id",
     "reviewRating": {
       "@type": "Rating",
@@ -1332,43 +1280,423 @@ padding: 16px;
     <article class="article block">
     <div class="article-wrapper">
         <div class="content">
-            <h1 class="post-title">Mengurai dokumen XML dengan DOM API di python</h1>
+            <h1 class="post-title">Cara Parsing XML di Python dengan DOM API</h1>
 
             
                 <div class="post-header">
     
         <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="//lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
+            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
         </div>
         <div>
         <span class="author"><a href="https://plus.google.com/109557982763924282306" target="_blank">Ardianta Pargo</a></span> dalam
-        <span class="author"><a href="/kategori/pemrograman">pemrograman</a></span>
+        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
             <br>
         24 February 2015 · 00:36
     </div>
     
 </div>
 
-                <p><p>DOM (<i>Document Object Model</i>) adalah sebuah API lintas bahasa dari <i>World Wide Web Consortium</i> (<a href="http://www.w3.org/" target="blank">W3C</a>). API ini sangat bermanfaat untuk membaca data yang ada di dokumen XML. Tulisan ini saya buat berdasarkan panduan di <a href="http://www.tutorialspoint.com/python/python_xml_processing.htm" target="blank">tutorialspoint.com</a>.</p> <a href="http://3.bp.blogspot.com/-P4ONAPt-5Us/VOtVXL1usII/AAAAAAAABbI/6FwQJ9o2iJQ/s1600/python-xml.jpg" imageanchor="1" ><img border="0" src="http://3.bp.blogspot.com/-P4ONAPt-5Us/VOtVXL1usII/AAAAAAAABbI/6FwQJ9o2iJQ/s1600/python-xml.jpg" alt="python XML programming" title="Pemrograman python-xml"/></a> <p>Saya memiliki dokumen XML bernama <samp>kartu_nama.xml</samp>, isinya sebagai berikut:</p> <pre><code class="xml">&lt;?xml version=&quot;1.0&quot;?&gt;<br />&lt;kartuNama&gt;<br />    &lt;nama&gt;Ardianta Pargo&lt;/nama&gt;<br /><br />    &lt;jenis-kelamin&gt;Laki-laki&lt;/jenis-kelamin&gt;<br /><br />    &lt;alamat&gt;<br />        &lt;dusun&gt;Sisik Goak&lt;/dusun&gt;<br />        &lt;desa&gt;Sisik&lt;/desa&gt;<br />        &lt;kecamatan&gt;Pringgarata&lt;/kecamatan&gt;<br />        &lt;kabupaten&gt;Lombok Tengah&lt;/kabupaten&gt;<br />    &lt;/alamat&gt;<br /><br />    &lt;ponsel&gt;087866866694&lt;/ponsel&gt;<br />    &lt;surel&gt;ardianta_pargo@yahoo.co.id&lt;/surel&gt;<br /><br />    &lt;sosial-media&gt;<br />        &lt;facebook&gt;ardianta.pargo&lt;/facebook&gt;<br />        &lt;twitter&gt;@ArdiantaPargo&lt;/twitter&gt;<br />    &lt;/sosial-media&gt;<br />    &lt;situs-web&gt;<a href="http://petanikode.blogspot.com&lt;/situs-web&gt;">http://petanikode.blogspot.com&lt;/situs-web&gt;</a><br />&lt;/kartuNama&gt;<br /></code></pre> <p>Saya ingin menampilkan data-data yang ada di dokumen XML tersebut dengan python. Oleh karena itu, saya membutuhkan modul <code>xml.dom</code>. Saya akan menggunakan fungsi <code>minidom.parse()</code> untuk mengurai isi dokumen XML. Berikut kode lengkapnya:</p> <pre><code class="python">from xml.dom.minidom import parse<br /><br /># membuka dokumen XML<br />berkasXML = parse(&quot;kartu_nama.xml&quot;)<br /><br /># membuat objek kartu nama<br />kn = berkasXML.documentElement<br /><br /># ambil data-data yang ada di dalam XML<br />nama = kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes[0].data<br />jenis_kelamin = kn.getElementsByTagName(&quot;jenis-kelamin&quot;)[0].childNodes[0].data<br /><br />dusun = kn.getElementsByTagName(&#39;dusun&#39;)[0].childNodes[0].data<br />desa = kn.getElementsByTagName(&#39;desa&#39;)[0].childNodes[0].data<br />kecamata = kn.getElementsByTagName(&#39;kecamatan&#39;)[0].childNodes[0].data<br />kabupaten = kn.getElementsByTagName(&#39;kabupaten&#39;)[0].childNodes[0].data<br />alamat = dusun + &quot;, Desa &quot; + desa + &quot;, Kecamatan &quot; + kecamata + &quot;, Kabupaten &quot; + kabupaten<br /><br />ponsel = kn.getElementsByTagName(&quot;ponsel&quot;)[0].childNodes[0].data<br />surel = kn.getElementsByTagName(&quot;surel&quot;)[0].childNodes[0].data<br /><br />fb = kn.getElementsByTagName(&quot;facebook&quot;)[0].childNodes[0].data<br />tw = kn.getElementsByTagName(&quot;twitter&quot;)[0].childNodes[0].data<br /><br />situs = kn.getElementsByTagName(&quot;situs-web&quot;)[0].childNodes[0].data<br /><br /># cetak data yang telah didapatkan<br />print &quot;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; KARTU NAMA &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&quot;<br />print &quot;Nama \t\t: %s&quot; % nama<br />print &quot;Jenis Kelamin \t: %s&quot; % jenis_kelamin<br />print &quot;Alamat \t\t: %s&quot; % alamat<br />print &quot;Ponsel \t\t: %s&quot; % ponsel<br />print &quot;Surel \t\t: %s&quot; % surel<br />print &quot;Facebook \t: %s&quot; % fb<br />print &quot;Twitter \t: %s&quot; % tw<br />print &quot;Situs web \t: %s&quot; % situs<br /></code></pre> <p>Hasil saat dijalankan:</p><pre><code class="bash">$ <b>python bacaXML.py</b> <br />&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; KARTU NAMA &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br />Nama   : Ardianta Pargo<br />Jenis Kelamin  : Laki-laki<br />Alamat   : Sisik Goak, Desa Sisik, Kecamatan Pringgarata, Kabupaten Lombok Tengah<br />Ponsel   : 087866866694<br />Surel   : ardianta_pargo@yahoo.co.id<br />Facebook  : ardianta.pargo<br />Twitter  : @ArdiantaPargo<br />Situs web  : <a href="http://petanikode.blogspot.com">http://petanikode.blogspot.com</a><br /></code></pre> <p>Fungsi atau <i>method</i> yang saya gunakan untuk menangkap elemen XML adalah <code>getElementsByTagName()</code>. Fungsi ini akan menangkap elemen dalam bentuk <i>list</i>.</p> <pre><code class="python">&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)<br />[&lt;DOM Element: nama at 0xb720bdec&gt;]<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0]<br />&lt;DOM Element: nama at 0xb720bdec&gt;<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes<br />[&lt;DOM Text node &quot;u&#39;Ardianta P&#39;&hellip;&quot;&gt;]<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes<br />[&lt;DOM Text node &quot;u&#39;Ardianta P&#39;&hellip;&quot;&gt;]<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes[0]<br />&lt;DOM Text node &quot;u&#39;Ardianta P&#39;&hellip;&quot;&gt;<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes[0].data<br />Ardianta Pargo<br /></code></pre></p>
+                
+
+<p><img src="/img/python/python.png" alt="Pemrograman Python" /></p>
+
+<!-- Agreement  -->
+
+<p>Python memungkinkan kita melakukan <em>parsing</em> (penguraian)
+dan manipulasi terhadap file <a href="/topik/xml/">XML</a> dan <a href="/topik/html/">HTML</a>
+dengan DOM API.</p>
+
+<p>DOM <em>(Document Object Model)</em> adalah sebuah API yang menyediakan
+fungsi-fungsi untuk memanipulasi dokumen.</p>
+
+<p>Salah satu modul DOM yang dapat kita gunakan untuk <em>parsing</em>
+XML adalah MiniDOM.</p>
+
+<!-- Promise  -->
+
+<p>Pada kesempatan ini kita akan belajar cara <em>parsing</em>
+file XML dan HTML menggunakan <em>MiniDom</em>.</p>
+
+<p><em>(berdasarkan panduan dari <a href="https://www.guru99.com/manipulating-xml-with-python.html">Guru99.com</a>)</em></p>
+
+<!-- Review  -->
+
+<p>Apa saja yang akan kita pelajari?</p>
+
+<ul>
+<li>Cara Parsing XML di Python</li>
+<li>Cara Membuat Node/Elemen</li>
+</ul>
+
+<p>Mari kita mulai&hellip;</p>
+
+<h2 id="parsing-xml-di-python">Parsing XML di Python</h2>
+
+<p>Pertama, silahkan persiapkan sebuah file XML untuk di-parse.</p>
+
+<p>Letakan filenya satu direktori dengan file program python-nya:</p>
+
+<p><img src="/img/python/xml/file-xml.png" alt="File XML dan Python" /></p>
+
+<p>Isi File XML-nya seperti berikut:</p>
+
+<div class="fileneme"><i class="fa fa-file-o"></i>mahasiswa.xml</div>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;mahasiswa&gt;
+    &lt;nama&gt;Rena&lt;/nama&gt;
+	&lt;alamat&gt;Surabaya&lt;/alamat&gt;
+	&lt;jurusan&gt;Teknik Informatika&lt;/jurusan&gt;
+
+	&lt;hobi name=&quot;Blogging&quot;/&gt;
+	&lt;hobi name=&quot;Membaca Buku&quot;/&gt;
+	&lt;hobi name=&quot;Nonton Anime&quot;/&gt;
+&lt;/mahasiswa&gt;
+</code></pre>
+
+<p>Pada file tersebut, terdapat node akar (root) yaitu <code>&lt;mahasiswa&gt;</code>,
+di dalamnya terdapat node lagi yang berisi data mahasiswa yang
+akan kita <em>parse</em>.</p>
+
+<p>Selanjutnya silahkan kita buat program python-nya:</p>
+
+<div class="fileneme"><i class="fa fa-file-o"></i>parse-xml.py</div>
+
+<pre><code class="language-python">import xml.dom.minidom as minidom
+
+def main():
+    # gunakan fungsi parse() untuk me-load xml ke memori 
+    # dan melakukan parsing
+    doc = minidom.parse(&quot;mahasiswa.xml&quot;)
+
+    # Cetak isi doc dan tag pertamanya
+    print doc.nodeName
+    print doc.firstChild.tagName
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+
+<p>Sekarang coba jalankan dan perhatikan hasilnya:</p>
+
+<p><img src="/img/python/xml/hasil-parse-xml.png" alt="Hasil eksekusi program Python XML" /></p>
+
+<p>Penjelasannya:</p>
+
+<p>Pertama kita membutuhkan modul atau library <code>minidom</code>,
+maka kita harus mengimpornya:</p>
+
+<pre><code class="language-python">import xml.dom.minidom as minidom
+</code></pre>
+
+<p>Setelah itu, kita <em>load</em> file XML-nya ke memori
+dan langsung di-parse oleh fungsi <code>parse()</code> dari <code>minidom</code>.</p>
+
+<pre><code>doc = minidom.parse(&quot;mahasiswa.xml&quot;)
+</code></pre>
+
+<p>Selanjutnya, kita bisa lakukan manipulasi dengan
+variabel objek <code>doc</code>.</p>
+
+<p>Sebagai contoh, kita mencetak nama node-nya dan
+tag pertama (root) yaitu <code>&lt;mahasiswa&gt;</code>.</p>
+
+<pre><code class="language-python">print doc.nodeName
+print doc.firstChild.tagName
+</code></pre>
+
+<p>Paham?</p>
+
+<p>Sangat mudah bukan&hellip;</p>
+
+<p>Baik, selanjutnya silahkan ubah dan lengkapi programmnya menjadi
+seperti ini:</p>
+
+<div class="fileneme"><i class="fa fa-file-o"></i>parse-xml.py</div>
+
+<pre><code class="language-python">import xml.dom.minidom as minidom
+
+def main():
+    # gunakan fungsi parse() untuk me-load xml ke memori 
+    # dan melakukan parsing
+    doc = minidom.parse(&quot;mahasiswa.xml&quot;)
+
+    # Cetak isi doc dan tag pertamanya
+    print doc.nodeName
+    print doc.firstChild.tagName
+
+    nama = doc.getElementsByTagName(&quot;nama&quot;)[0].firstChild.data
+    alamat = doc.getElementsByTagName(&quot;alamat&quot;)[0].firstChild.data
+    jurusan = doc.getElementsByTagName(&quot;jurusan&quot;)[0].firstChild.data
+    list_hobi = doc.getElementsByTagName(&quot;hobi&quot;)
+
+    print &quot;Nama: {}\nAlamat: {}\nJurusan: {}\n&quot;.format(nama, alamat, jurusan)
+
+    print &quot;Memiliki {} hobi:&quot;.format(len(list_hobi))
+
+    for hobi in list_hobi:
+        print &quot;-&quot;, hobi.getAttribute(&quot;name&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+
+<p>Sekarang coba eksekusi, maka hasil outputnya akan seperti ini:</p>
+
+<div class="terminal"><span class="fa-stack">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+</span><b>Terminal</b></div>
+
+<pre><code class="language-bash">#document
+mahasiswa
+Nama: Rena
+Alamat: Surabaya
+Jurusan: Teknik Informatika
+
+Memiliki 3 hobi:
+- Blogging
+- Membaca Buku
+- Nonton Anime
+</code></pre>
+
+<p><strong>Penjelasan</strong>:</p>
+
+<p>Nah untuk mengambil nilai dari node XML, kita dapat menggunakna
+fungsi <code>getElementsByTagName()</code>.</p>
+
+<p>Artinya kita memilih semua elemen dengan nama tag tertentu.</p>
+
+<p>Fungsi tersebut akan menghasilkan list, bertasakan banyak elemen
+di dalam XML.</p>
+
+<p>Misalkan untuk tag <code>&lt;nama&gt;</code>, akan menghasilkan:</p>
+
+<pre><code class="language-python">[&lt;DOM Element: nama at 0x7fe9280e2440&gt;]
+</code></pre>
+
+<p>Sedangkan untuk tag <code>&lt;hobi&gt;</code>:</p>
+
+<pre><code class="language-python">[
+  &lt;DOM Element: hobi at 0x7fe9280e27a0&gt;, 
+  &lt;DOM Element: hobi at 0x7fe9280e2950&gt;, 
+  &lt;DOM Element: hobi at 0x7fe9280e2b00&gt;
+]
+</code></pre>
+
+<p>List tersebut berisi objek DOM yang bisa kita ambil nilainya.</p>
+
+<p>Misalkan kita ingin mengambil nilai nama:</p>
+
+<pre><code class="language-python">nama = doc.getElementsByTagName(&quot;nama&quot;)[0].firstChild.data
+</code></pre>
+
+<p>Kita memilih objek DOM pada indeks ke-0, dan mengambil isinya.</p>
+
+<p>Sedangkan untuk tag <code>&lt;hobi&gt;</code>, kita bisa menggunakan
+perulangan dan method <code>getAttribute()</code> untuk mengambil
+nilai dari atribut.</p>
+
+<pre><code class="language-python">for hobi in list_hobi:
+    print &quot;-&quot;, hobi.getAttribute(&quot;name&quot;)
+</code></pre>
+
+<h2 id="menambahkan-node-pada-xml">Menambahkan Node pada XML</h2>
+
+<p>Node atau elemen dapat kita tambahkan dengan beberapa metode.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-python"># Membuat elemen XML baru &lt;hobi&gt;
+hobi_baru = doc.createElement(&quot;hobi&quot;)
+# Menambahkan atribut name pada &lt;hobi&gt; dengan nilai &quot;programming&quot;
+hobi_baru.setAttribute(&quot;name&quot;, &quot;Programming&quot;)
+# Menambahkan elemen tersebut ke dalam &lt;mahasiswa&gt;
+doc.firstChild.appendChild(hobi_baru)
+</code></pre>
+
+<p>Sekarang modifikasi kembali kode tadi menjadi seperti ini:</p>
+
+<pre><code class="language-python">import xml.dom.minidom as minidom
+
+def main():
+    # gunakan fungsi parse() untuk me-load xml ke memori 
+    # dan melakukan parsing
+    doc = minidom.parse(&quot;mahasiswa.xml&quot;)
+
+    # Cetak isi doc dan tag pertamanya
+    print doc.nodeName
+    print doc.firstChild.tagName
+
+    nama = doc.getElementsByTagName(&quot;nama&quot;)[0].firstChild.data
+    alamat = doc.getElementsByTagName(&quot;alamat&quot;)[0].firstChild.data
+    jurusan = doc.getElementsByTagName(&quot;jurusan&quot;)[0].firstChild.data
+    
+
+    print &quot;Nama: {}\nAlamat: {}\nJurusan: {}\n&quot;.format(nama, alamat, jurusan)
+
+    # Mendambahkan Elemen
+    hobi_baru = doc.createElement(&quot;hobi&quot;)
+    hobi_baru.setAttribute(&quot;name&quot;, &quot;Programming&quot;)
+    doc.firstChild.appendChild(hobi_baru)
+
+    # Ambil kembali daftar hobi
+    list_hobi = doc.getElementsByTagName(&quot;hobi&quot;)
+
+    print &quot;Memiliki {} hobi:&quot;.format(len(list_hobi))
+
+    for hobi in list_hobi:
+        print &quot;-&quot;, hobi.getAttribute(&quot;name&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+
+<p>Sekarang coba eksekusi dan perhatikanlah hasilnya:</p>
+
+<div class="terminal"><span class="fa-stack">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+</span><b>Terminal</b></div>
+
+<pre><code class="language-bash">#document
+mahasiswa
+Nama: Rena
+Alamat: Surabaya
+Jurusan: Teknik Informatika
+
+Memiliki 4 hobi:
+- Blogging
+- Membaca Buku
+- Nonton Anime
+- Programming
+</code></pre>
+
+<p>Hobi sekarang ada 4&hellip;</p>
+
+<p>Tunggu dulu, kok di file XML-nya tidak bertamabah?</p>
+
+<p>Penambahan yang kita lakukan di atas bersifat temporer,
+artinya kalau programnya ditutup semua akan hilang.</p>
+
+<p>Karena elemen tersebut hanya terseimpan dalam memori saja.</p>
+
+<p>Bagaimana kalau kita igin menyimpannya ke dalam file XML?</p>
+
+<p>Gampang.</p>
+
+<p>Kita bisa gunakan teknik <a href="/python-file">baca dan tulis file di Python</a>.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-python"># buka file XML dengan mode write (w)
+file_xml = open(&quot;mahasiswa.xml&quot;,&quot;w&quot;)
+# tulis XML yang ada di memori ke file XML
+doc.writexml(file_xml)
+# tutup file XML
+file_xml.close()
+</code></pre>
+
+<p>Silahkan tambahakan kode tersebut pada program sebelumnya:</p>
+
+<pre><code class="language-python">import xml.dom.minidom as minidom
+
+def main():
+    # gunakan fungsi parse() untuk me-load xml ke memori 
+    # dan melakukan parsing
+    doc = minidom.parse(&quot;mahasiswa.xml&quot;)
+
+    # Cetak isi doc dan tag pertamanya
+    print doc.nodeName
+    print doc.firstChild.tagName
+
+    nama = doc.getElementsByTagName(&quot;nama&quot;)[0].firstChild.data
+    alamat = doc.getElementsByTagName(&quot;alamat&quot;)[0].firstChild.data
+    jurusan = doc.getElementsByTagName(&quot;jurusan&quot;)[0].firstChild.data
+    
+
+    print &quot;Nama: {}\nAlamat: {}\nJurusan: {}\n&quot;.format(nama, alamat, jurusan)
+
+    hobi_baru = doc.createElement(&quot;hobi&quot;)
+    hobi_baru.setAttribute(&quot;name&quot;, &quot;Programming&quot;)
+    doc.firstChild.appendChild(hobi_baru)
+
+    list_hobi = doc.getElementsByTagName(&quot;hobi&quot;)
+
+    print &quot;Memiliki {} hobi:&quot;.format(len(list_hobi))
+
+    for hobi in list_hobi:
+        print &quot;-&quot;, hobi.getAttribute(&quot;name&quot;)
+
+    file_xml = open(&quot;mahasiswa.xml&quot;,&quot;w&quot;)
+    doc.writexml(file_xml)
+    file_xml.close()
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+
+<p>Setelah itu, eksekusi dan coba buka file <code>mahasiswa.xml</code>.</p>
+
+<p><img src="/img/python/xml/tulis-file-xml.png" alt="Menulis File XML" /></p>
+
+<p>Ajaib! 😄</p>
+
+<p>Tag <code>&lt;hobi name=&quot;Programming&quot;/&gt;</code> sudah ditambahkan.</p>
+
+<!-- Penutup  -->
+
+<h2 id="akhir-kata">Akhir Kata&hellip;</h2>
+
+<p>Itulah beberapa teknik memanipulasi, parsing, dan menulis file XML.</p>
+
+<p>Selanjutnya mungkin kamu bisa membuat:</p>
+
+<ul>
+<li>RSS Feed Reader yang membaca XML dari RSS Feed</li>
+<li>Atau membuat sitemap.xml untuk website yang dibangun dengan Python</li>
+</ul>
+
+<p>Kalau ada pertanyaan terkait dengan tutorial ini, silahkan samapaikan
+melalui komentar.</p>
+
+<fieldset>
+    <legend>✍️ Catatan 22 Agustus 2017</legend>
+    <p>Modul minidom tidak saya rekomendasikan, karena terdapat
+<a href="https://docs.python.org/2/library/xml.html#xml-vulnerabilities">celah keamanan <em>(vulnerabilities)</em></a>, tapi setidaknya kita bisa
+paham cara manipulasi file XML di Python dengan Modul ini.</p>
+
+</fieldset>
+
+<!-- <p>DOM (<i>Document Object Model</i>) adalah sebuah API lintas bahasa dari <i>World Wide Web Consortium</i> (<a href="http://www.w3.org/" target="blank">W3C</a>). API ini sangat bermanfaat untuk membaca data yang ada di dokumen XML. Tulisan ini saya buat berdasarkan panduan di <a href="http://www.tutorialspoint.com/python/python_xml_processing.htm" target="blank">tutorialspoint.com</a>.</p> <a href="http://3.bp.blogspot.com/-P4ONAPt-5Us/VOtVXL1usII/AAAAAAAABbI/6FwQJ9o2iJQ/s1600/python-xml.jpg" imageanchor="1" ><img border="0" src="http://3.bp.blogspot.com/-P4ONAPt-5Us/VOtVXL1usII/AAAAAAAABbI/6FwQJ9o2iJQ/s1600/python-xml.jpg" alt="python XML programming" title="Pemrograman python-xml"/></a> <p>Saya memiliki dokumen XML bernama <samp>kartu_nama.xml</samp>, isinya sebagai berikut:</p> <pre><code class="xml">&lt;?xml version=&quot;1.0&quot;?&gt;<br />&lt;kartuNama&gt;<br />    &lt;nama&gt;Ardianta Pargo&lt;/nama&gt;<br /><br />    &lt;jenis-kelamin&gt;Laki-laki&lt;/jenis-kelamin&gt;<br /><br />    &lt;alamat&gt;<br />        &lt;dusun&gt;Sisik Goak&lt;/dusun&gt;<br />        &lt;desa&gt;Sisik&lt;/desa&gt;<br />        &lt;kecamatan&gt;Pringgarata&lt;/kecamatan&gt;<br />        &lt;kabupaten&gt;Lombok Tengah&lt;/kabupaten&gt;<br />    &lt;/alamat&gt;<br /><br />    &lt;ponsel&gt;087866866694&lt;/ponsel&gt;<br />    &lt;surel&gt;ardianta_pargo@yahoo.co.id&lt;/surel&gt;<br /><br />    &lt;sosial-media&gt;<br />        &lt;facebook&gt;ardianta.pargo&lt;/facebook&gt;<br />        &lt;twitter&gt;@ArdiantaPargo&lt;/twitter&gt;<br />    &lt;/sosial-media&gt;<br />    &lt;situs-web&gt;http://petanikode.blogspot.com&lt;/situs-web&gt;<br />&lt;/kartuNama&gt;<br /></code></pre> <p>Saya ingin menampilkan data-data yang ada di dokumen XML tersebut dengan python. Oleh karena itu, saya membutuhkan modul <code>xml.dom</code>. Saya akan menggunakan fungsi <code>minidom.parse()</code> untuk mengurai isi dokumen XML. Berikut kode lengkapnya:</p> <pre><code class="python">from xml.dom.minidom import parse<br /><br /># membuka dokumen XML<br />berkasXML = parse(&quot;kartu_nama.xml&quot;)<br /><br /># membuat objek kartu nama<br />kn = berkasXML.documentElement<br /><br /># ambil data-data yang ada di dalam XML<br />nama = kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes[0].data<br />jenis_kelamin = kn.getElementsByTagName(&quot;jenis-kelamin&quot;)[0].childNodes[0].data<br /><br />dusun = kn.getElementsByTagName(&#39;dusun&#39;)[0].childNodes[0].data<br />desa = kn.getElementsByTagName(&#39;desa&#39;)[0].childNodes[0].data<br />kecamata = kn.getElementsByTagName(&#39;kecamatan&#39;)[0].childNodes[0].data<br />kabupaten = kn.getElementsByTagName(&#39;kabupaten&#39;)[0].childNodes[0].data<br />alamat = dusun + &quot;, Desa &quot; + desa + &quot;, Kecamatan &quot; + kecamata + &quot;, Kabupaten &quot; + kabupaten<br /><br />ponsel = kn.getElementsByTagName(&quot;ponsel&quot;)[0].childNodes[0].data<br />surel = kn.getElementsByTagName(&quot;surel&quot;)[0].childNodes[0].data<br /><br />fb = kn.getElementsByTagName(&quot;facebook&quot;)[0].childNodes[0].data<br />tw = kn.getElementsByTagName(&quot;twitter&quot;)[0].childNodes[0].data<br /><br />situs = kn.getElementsByTagName(&quot;situs-web&quot;)[0].childNodes[0].data<br /><br /># cetak data yang telah didapatkan<br />print &quot;------------------ KARTU NAMA ------------------&quot;<br />print &quot;Nama \t\t: %s&quot; % nama<br />print &quot;Jenis Kelamin \t: %s&quot; % jenis_kelamin<br />print &quot;Alamat \t\t: %s&quot; % alamat<br />print &quot;Ponsel \t\t: %s&quot; % ponsel<br />print &quot;Surel \t\t: %s&quot; % surel<br />print &quot;Facebook \t: %s&quot; % fb<br />print &quot;Twitter \t: %s&quot; % tw<br />print &quot;Situs web \t: %s&quot; % situs<br /></code></pre> <p>Hasil saat dijalankan:</p><pre><code class="bash">$ <b>python bacaXML.py</b> <br />------------------ KARTU NAMA ------------------<br />Nama   : Ardianta Pargo<br />Jenis Kelamin  : Laki-laki<br />Alamat   : Sisik Goak, Desa Sisik, Kecamatan Pringgarata, Kabupaten Lombok Tengah<br />Ponsel   : 087866866694<br />Surel   : ardianta_pargo@yahoo.co.id<br />Facebook  : ardianta.pargo<br />Twitter  : @ArdiantaPargo<br />Situs web  : http://petanikode.blogspot.com<br /></code></pre> <p>Fungsi atau <i>method</i> yang saya gunakan untuk menangkap elemen XML adalah <code>getElementsByTagName()</code>. Fungsi ini akan menangkap elemen dalam bentuk <i>list</i>.</p> <pre><code class="python">&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)<br />[&lt;DOM Element: nama at 0xb720bdec&gt;]<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0]<br />&lt;DOM Element: nama at 0xb720bdec&gt;<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes<br />[&lt;DOM Text node &quot;u&#39;Ardianta P&#39;...&quot;&gt;]<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes<br />[&lt;DOM Text node &quot;u&#39;Ardianta P&#39;...&quot;&gt;]<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes[0]<br />&lt;DOM Text node &quot;u&#39;Ardianta P&#39;...&quot;&gt;<br /><br />&gt;&gt;&gt; print kn.getElementsByTagName(&quot;nama&quot;)[0].childNodes[0].data<br />Ardianta Pargo<br /></code></pre> -->
 
                 <div class="post-footer">
                     <div class="artikel-footer">
                     <div><b>Bagikan bila bermanfaat:</b></div>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f&t=Mengurai%20dokumen%20XML%20dengan%20DOM%20API%20di%20python" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f&text=Mengurai%20dokumen%20XML%20dengan%20DOM%20API%20di%20python%20https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f%20via%20@petanikode" target="_blank" title="Tweet"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f&t=Cara%20Parsing%20XML%20di%20Python%20dengan%20DOM%20API" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f&text=Cara%20Parsing%20XML%20di%20Python%20dengan%20DOM%20API%20https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f%20via%20@petanikode" target="_blank" title="Tweet"><img alt="Tweet" src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
   <li><a href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="/images/flat_web_icon_set/color/Google+.png"></a></li>
-  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f&description=Mengurai%20dokumen%20XML%20dengan%20DOM%20API%20di%20python" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
-  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f&title=Mengurai%20dokumen%20XML%20dengan%20DOM%20API%20di%20python" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
-  <li><a href="mailto:?subject=Mengurai%20dokumen%20XML%20dengan%20DOM%20API%20di%20python&body=Mengurai%20dokumen%20XML%20dengan%20DOM%20API%20di%20python:%20https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f&description=Cara%20Parsing%20XML%20di%20Python%20dengan%20DOM%20API" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="/images/flat_web_icon_set/color/Pinterest.png"></a></li>
+  <li><a href="https://getpocket.com/save?url=https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f&title=Cara%20Parsing%20XML%20di%20Python%20dengan%20DOM%20API" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Add to Pocket" src="/images/flat_web_icon_set/color/Pocket.png"></a></li>
+  <li><a href="mailto:?subject=Cara%20Parsing%20XML%20di%20Python%20dengan%20DOM%20API&body=Cara%20Parsing%20XML%20di%20Python%20dengan%20DOM%20API:%20https%3a%2f%2fwww.petanikode.com%2fpython-xml%2f" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img alt="Send email" src="/images/flat_web_icon_set/color/Email.png"></a></li>
 </ul>
 
 
                     <div>Topik:
                       
+                        #<a href="/topik/python">Python</a>
+                      
                         #<a href="/topik/xml">XML</a>
                       
                         #<a href="/topik/dom">DOM</a>
+                      
+                        #<a href="/topik/html">HTML</a>
                       
                         #<a href="/topik/api">API</a>
                       
@@ -1394,7 +1722,7 @@ padding: 16px;
 var disqus_config = function () {
     this.page.url = 'https:\/\/www.petanikode.com\/python-xml\/';
     this.page.identifier = 'python-xml';
-    this.page.title = 'Mengurai dokumen XML dengan DOM API di python';
+    this.page.title = 'Cara Parsing XML di Python dengan DOM API';
 };
 
 (function() {
@@ -1633,24 +1961,7 @@ var disqus_config = function () {
     </a>
 </div>
  
-    <div class="widget">
-    <h4 class="widget-title">Tanyakan Sesuatu:</h4>
-    <div class="widget-content">
-
-        <amp-iframe
-            src="https://cdn.rawgit.com/petanikode/cdn-petanikode/0f4d0754/amp-messenger.html?page=petanikode"
-            frameborder="0"
-            scrolling="no"
-            width="300"
-            height="330"
-            layout="responsive"
-            sandbox="allow-forms allow-scripts allow-same-origin allow-popups">
-        </amp-iframe>
-
-    </div>
-</div>
-
-
+    
 </aside>
 
 

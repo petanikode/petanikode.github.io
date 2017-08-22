@@ -2439,32 +2439,18 @@ mkdir proyek-slim cd proyek-slim  Instalasi Slim dengan Composer Ketik perintah 
     </item>
     
     <item>
-      <title>Mengurai dokumen XML dengan DOM API di python</title>
+      <title>Cara Parsing XML di Python dengan DOM API</title>
       <link>https://www.petanikode.com/python-xml/</link>
       <pubDate>Tue, 24 Feb 2015 00:36:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/python-xml/</guid>
-      <description>DOM (Document Object Model) adalah sebuah API lintas bahasa dari World Wide Web Consortium (W3C). API ini sangat bermanfaat untuk membaca data yang ada di dokumen XML. Tulisan ini saya buat berdasarkan panduan di tutorialspoint.com.
- Saya memiliki dokumen XML bernama kartu_nama.xml, isinya sebagai berikut:
-&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;
-&amp;lt;kartuNama&amp;gt;
-&amp;lt;nama&amp;gt;Ardianta Pargo&amp;lt;/nama&amp;gt;
-&amp;lt;jenis-kelamin&amp;gt;Laki-laki&amp;lt;/jenis-kelamin&amp;gt;
-&amp;lt;alamat&amp;gt;
-&amp;lt;dusun&amp;gt;Sisik Goak&amp;lt;/dusun&amp;gt;
-&amp;lt;desa&amp;gt;Sisik&amp;lt;/desa&amp;gt;
-&amp;lt;kecamatan&amp;gt;Pringgarata&amp;lt;/kecamatan&amp;gt;
-&amp;lt;kabupaten&amp;gt;Lombok Tengah&amp;lt;/kabupaten&amp;gt;
-&amp;lt;/alamat&amp;gt;
-&amp;lt;ponsel&amp;gt;087866866694&amp;lt;/ponsel&amp;gt;
-&amp;lt;surel&amp;gt;ardianta_pargo@yahoo.co.id&amp;lt;/surel&amp;gt;
-&amp;lt;sosial-media&amp;gt;
-&amp;lt;facebook&amp;gt;ardianta.pargo&amp;lt;/facebook&amp;gt;
-&amp;lt;twitter&amp;gt;@ArdiantaPargo&amp;lt;/twitter&amp;gt;
-&amp;lt;/sosial-media&amp;gt;
-&amp;lt;situs-web&amp;gt;http://petanikode.blogspot.com&amp;lt;/situs-web&amp;gt;
-&amp;lt;/kartuNama&amp;gt;
- Saya ingin menampilkan data-data yang ada di dokumen XML tersebut dengan python.</description>
+      <description>Python memungkinkan kita melakukan parsing (penguraian) dan manipulasi terhadap file XML dan HTML dengan DOM API.
+DOM (Document Object Model) adalah sebuah API yang menyediakan fungsi-fungsi untuk memanipulasi dokumen.
+Salah satu modul DOM yang dapat kita gunakan untuk parsing XML adalah MiniDOM.
+Pada kesempatan ini kita akan belajar cara parsing file XML dan HTML menggunakan MiniDom.
+(berdasarkan panduan dari Guru99.com)
+Apa saja yang akan kita pelajari?
+ Cara Parsing XML di Python Cara Membuat Node/Elemen  Mari kita mulai&amp;hellip;</description>
     </item>
     
     <item>

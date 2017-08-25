@@ -7,10 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 09 Aug 2017 08:59:24 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 23 Aug 2017 12:09:58 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mengenal Virtualenv: Apa Saja yang Harus Kamu Ketahui?</title>
+      <link>https://www.petanikode.com/python-virtualenv/</link>
+      <pubDate>Wed, 23 Aug 2017 12:09:58 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/python-virtualenv/</guid>
+      <description>Waktu awal-awal belajar django, saya sedikit &amp;lsquo;dipusingkan&amp;rsquo; dengan Virtual Environment (virtualenv).
+Banyak tutorial menyarankan menggunakan virtualenv. Bahkan tidak hanya untuk django saja.
+Sepertinya virtualenv adalah tools yang harus digunakan pada pengembangan aplikasi Python.
+Apa itu vritualenv?
+Kenapa kita harus menggunakan virtualenv?
+Bagaimana cara menggunakan vritualenv?
+Mari kita bahas&amp;hellip;
+Apa itu Virtualenv? Vritualenv adalah tools untuk membuat lingkungan python virtual yang terisolasi.
+Terisolasi artinya tertutup dan tidak bisa diakses dari dunia luar.</description>
+    </item>
     
     <item>
       <title>Belajar Python: Cara Membaca dan Menulis File di Python</title>

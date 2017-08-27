@@ -143,6 +143,21 @@ Pertama saya akan membahas cara instalasinya, kemudian performa, pengenalan anta
     </item>
     
     <item>
+      <title>Panduan Migrasi Database Menggunakan PHP Phinx</title>
+      <link>https://www.petanikode.com/php-phinx/</link>
+      <pubDate>Mon, 10 Jul 2017 19:41:25 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/php-phinx/</guid>
+      <description>Migrasi bisa diatrikan berpindah ke platform yang satu ke platfrom yang lain.
+Dalam pengembangan web migrasi adalah hal yang wajib dilakukan.
+Misalnya:
+Saat aplikasi web sudah jadi dan siap untuk di-hosting, apa yang akan kita lakukan berikutnya?
+Ya jelas, kita akan melakukan migrasi (deployment) dari lingkungan localhost ke server production/hosting.
+Biasanya migrasi secara tradisional dilakukan dengan:
+ Ekspor database; Upload proyek ke server production (hosting); Impor database ke server production.</description>
+    </item>
+    
+    <item>
       <title>Tips dan Cara Saya Hosting Gambar untuk Hugo di Github</title>
       <link>https://www.petanikode.com/hugo-hosting-gambar/</link>
       <pubDate>Thu, 06 Jul 2017 15:09:32 +0800</pubDate>

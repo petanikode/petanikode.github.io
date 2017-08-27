@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 28 Jun 2017 08:15:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jul 2017 19:41:25 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/kategori/database/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Panduan Migrasi Database Menggunakan PHP Phinx</title>
+      <link>https://www.petanikode.com/php-phinx/</link>
+      <pubDate>Mon, 10 Jul 2017 19:41:25 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/php-phinx/</guid>
+      <description>Migrasi bisa diatrikan berpindah ke platform yang satu ke platfrom yang lain.
+Dalam pengembangan web migrasi adalah hal yang wajib dilakukan.
+Misalnya:
+Saat aplikasi web sudah jadi dan siap untuk di-hosting, apa yang akan kita lakukan berikutnya?
+Ya jelas, kita akan melakukan migrasi (deployment) dari lingkungan localhost ke server production/hosting.
+Biasanya migrasi secara tradisional dilakukan dengan:
+ Ekspor database; Upload proyek ke server production (hosting); Impor database ke server production.</description>
+    </item>
     
     <item>
       <title>Belajar MongoDB: Pengenalan Dasar MongoDB untuk Pemula </title>

@@ -43,7 +43,8 @@ Sebelumnya saya pernah membahas cara merepresentasikan graf ke dalam kode progra
       <pubDate>Fri, 13 Nov 2015 23:03:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/sqlite-linux/</guid>
-      <description>SQLite merupakan sebuah Relational Database Management System (RDMS) yang tidak memerlukan server untuk beroperasi. Bisa dibilang, SQLite adalah database portable yang bisa digunakan tanpa jaringan. Inilah yang membuatnya banyak digunakan dalam berbagai aplikasi (offline) seperti aplikasi Android, aplikasi desktop, java, VB.net, Game, dsb.
+      <description>SQLite merupakan sebuah Relational Database Management System (RDMS) yang tidak memerlukan server untuk beroperasi.
+Bisa dibilang, SQLite adalah database portable yang bisa digunakan tanpa jaringan. Inilah yang membuatnya banyak digunakan dalam berbagai aplikasi (offline) seperti aplikasi Android, aplikasi desktop, java, VB.net, Game, dsb.
 Pada kesempatan ini, kita akan belajar dasar-dsar SQLite dengan menggunakan Linux.
 Instalasi SQLite di Linux Pertama kita perlu menginstal SQLite-nya dulu, silahkan ketik perintah berikut.
   Terminal sudo apt install sqlite3  Setelah itu jawab y untuk memulai instalasi.</description>

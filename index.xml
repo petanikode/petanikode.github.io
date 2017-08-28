@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 23 Aug 2017 12:09:58 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Aug 2017 08:08:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Belajar Python: Mengenal Struktur Data List</title>
+      <link>https://www.petanikode.com/python-list/</link>
+      <pubDate>Mon, 28 Aug 2017 08:08:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/python-list/</guid>
+      <description>Bagaimana caranya menyimpan banyak data dalam satu veriabel?
+Jawabannya menggunakan List.
+List adalah struktur data pada python yang mampu menyimpan lebih dari satu data, seperti array.
+Pada kesempatan ini, kita akan membahas cara menggunakan list di Python dari yang paling sederhana sampai yang sedikit kompleks.
+Apa saja poin-poin yang akan dipelajari?
+ Cara Membuat List dan Mengisinya Cara Mangambil nilai dari List Cara Menambahkan dan Menghapus isi List Operasi pada List List multi dimensi  Selamat menyimak&amp;hellip;</description>
+    </item>
     
     <item>
       <title>Mengenal Virtualenv: Apa Saja yang Harus Kamu Ketahui?</title>

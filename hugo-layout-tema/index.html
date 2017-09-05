@@ -213,7 +213,7 @@ Adapun halaman-halaman yang harus ada di dalam sebuah blog adalah:
  Homepage/landing page (index.html) Halaman Artikel (single.html) Halaman Taxonomy atau daftar artikel pada kategori atau tag tertentu (list.html)  Namun sebelum membuatnya, kita harus membuat partial terlebih dahulu.
 Partial adalah pecahan-pecahan kode atau komponen dari template.
 Adanya partial memungkinkan kita untuk menggunakan ulang komponen yang sudah ada.",
-  "wordCount": 2155,
+  "wordCount": 2159,
   "datePublished" : "2017-09-05T03:01:11",
   "dateModified" : "2017-09-05T03:01:11",
   "image" : {
@@ -1737,7 +1737,8 @@ tidak akan tampil. Hal ini untuk mencegah pembuatan link baru di akun disqus kit
 <p>Saya kurang paham kodenya, karena ngambil <em>(copas)</em> dari template internal Hugo 😄
 dan sedikit modifikasi agar mendukung untuk Boostrap 4.</p>
 
-<pre><code class="language-twig">{{ $pag := $.Paginator }}
+<pre><code class="language-twig">&lt;nav aria-label=&quot;Page navigation&quot;&gt;
+{{ $pag := $.Paginator }}
 {{ if gt $pag.TotalPages 1 }}
 &lt;ul class=&quot;pagination&quot;&gt;
     {{ with $pag.First }}
@@ -1779,6 +1780,7 @@ dan sedikit modifikasi agar mendukung untuk Boostrap 4.</p>
     {{ end }}
 &lt;/ul&gt;
 {{ end }}
+&lt;/nav&gt;
 </code></pre>
 
 <h2 id="membuat-konfigurasi-dan-achetype">Membuat Konfigurasi dan Achetype</h2>

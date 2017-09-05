@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 06 Jul 2017 15:09:32 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 Sep 2017 03:01:11 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/topik/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Membuat Layout Tema Hugo: 3 Halaman Penting yang Harus Ada dalam Blog</title>
+      <link>https://www.petanikode.com/hugo-layout-tema/</link>
+      <pubDate>Tue, 05 Sep 2017 03:01:11 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/hugo-layout-tema/</guid>
+      <description>Setelah kita membuat template baru, hal yang harus dilakukan selanjutnya adalah membuat layout untuk halaman-halamannya.
+Adapun halaman-halaman yang harus ada di dalam sebuah blog adalah:
+ Homepage/landing page (index.html) Halaman Artikel (single.html) Halaman Taxonomy atau daftar artikel pada kategori atau tag tertentu (list.html)  Namun sebelum membuatnya, kita harus membuat partial terlebih dahulu.
+Partial adalah pecahan-pecahan kode atau komponen dari template.
+Adanya partial memungkinkan kita untuk menggunakan ulang komponen yang sudah ada.</description>
+    </item>
     
     <item>
       <title>Tips dan Cara Saya Hosting Gambar untuk Hugo di Github</title>

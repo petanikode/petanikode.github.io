@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CMS vs Static Site Generator, Pilih yang Mana?</title>
+
+<meta charset="utf-8">
+
+<meta itemprop="name" content="CMS vs Static Site Generator, Pilih yang Mana?">
+<meta itemprop="description" content="Pada umumnya, kebanyakan web&mdash;seperti blog&mdash;dibuat dengan CMS (Content Management System) seperti seperti Wordpress, Joomla, Blogger, Drupal, dsb.
+Tapi, belakangan ini cukup banyak dari kalangan programmer yang ngeblog dengan Static Site Generator (SSG).
+Entah apa pun alasannya&hellip;
+Saya juga jadi ikut tertarik mencobanya&hellip;
+Apa itu Static Site Generator? Untuk menjawab pertanyaan ini, saya ingin membandingkan cara kerja web dinamis dan statis dulu.
+Baiklah!
+Cara kerja web dinamis bisa diumpamakan seperti cafe dan web statis seperti mesin penjual otomatis.">
+
+
+<meta itemprop="dateModified" content="2017-06-24T06:51:28&#43;08:00" />
+<meta itemprop="wordCount" content="429">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta property="og:title" content="CMS vs Static Site Generator, Pilih yang Mana?" />
+<meta property="og:description" content="Pada umumnya, kebanyakan web&mdash;seperti blog&mdash;dibuat dengan CMS (Content Management System) seperti seperti Wordpress, Joomla, Blogger, Drupal, dsb.
+Tapi, belakangan ini cukup banyak dari kalangan programmer yang ngeblog dengan Static Site Generator (SSG).
+Entah apa pun alasannya&hellip;
+Saya juga jadi ikut tertarik mencobanya&hellip;
+Apa itu Static Site Generator? Untuk menjawab pertanyaan ini, saya ingin membandingkan cara kerja web dinamis dan statis dulu.
+Baiklah!
+Cara kerja web dinamis bisa diumpamakan seperti cafe dan web statis seperti mesin penjual otomatis." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://petanikode.gitlab.io/cms-vs-static-site-generator/" />
+
+
+
+<meta property="article:published_time" content="2017-06-24T06:51:28&#43;08:00"/>
+<meta property="article:modified_time" content="2017-06-24T06:51:28&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="CMS vs Static Site Generator, Pilih yang Mana?"/>
+<meta name="twitter:description" content="Pada umumnya, kebanyakan web&mdash;seperti blog&mdash;dibuat dengan CMS (Content Management System) seperti seperti Wordpress, Joomla, Blogger, Drupal, dsb.
+Tapi, belakangan ini cukup banyak dari kalangan programmer yang ngeblog dengan Static Site Generator (SSG).
+Entah apa pun alasannya&hellip;
+Saya juga jadi ikut tertarik mencobanya&hellip;
+Apa itu Static Site Generator? Untuk menjawab pertanyaan ini, saya ingin membandingkan cara kerja web dinamis dan statis dulu.
+Baiklah!
+Cara kerja web dinamis bisa diumpamakan seperti cafe dan web statis seperti mesin penjual otomatis."/>
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+
+
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="https://petanikode.gitlab.io/"><img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
+            alt=""> Petani Kode</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://petanikode.gitlab.io/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.co.id" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-6279325630224392:9670052267" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sa" value="search" />
+                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Kata Kunci" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Cari</button>
+            </form>
+        </div>
+    </div>
+</nav>
+        <header>
+    <div class="jumbotron jumbotron-fluid bg-success text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Programmer Pengguna Linux</h1>
+                    <p class="lead">Belajar Pemrograman Apapun Menggunakan Linux</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container mb-5">
+            <div class="row">
+
+                <div class="col-sm-12 col-lg-8">
+                    <article>
+                        <div class="card">
+                           <div class="card-body p-5">
+                                <h2 class="card-title mb-3">CMS vs Static Site Generator, Pilih yang Mana?</h2>
+                                <div class="post-header mb-5">
+                                    
+                                </div>
+                                <div class="post-content">
+                                    
+
+<p>Pada umumnya, kebanyakan web&mdash;seperti blog&mdash;dibuat dengan CMS <em>(Content Management System)</em>
+seperti seperti Wordpress, Joomla, Blogger, Drupal, dsb.</p>
+
+<p>Tapi, belakangan ini cukup banyak dari kalangan programmer yang <em>ngeblog</em>
+dengan <em>Static Site Generator</em> (SSG).</p>
+
+<p>Entah apa pun alasannya&hellip;</p>
+
+<p>Saya juga jadi ikut tertarik mencobanya&hellip;</p>
+
+<h2 id="apa-itu-static-site-generator">Apa itu <em>Static Site Generator</em>?</h2>
+
+<p>Untuk menjawab pertanyaan ini, saya ingin membandingkan cara kerja web dinamis
+dan statis dulu.</p>
+
+<p>Baiklah!</p>
+
+<p>Cara kerja web dinamis bisa diumpamakan seperti cafe dan web
+statis seperti mesin penjual otomatis.</p>
+
+<p>Misalnya begini, kita ingin pesan minuman di cafe. Lalu kita memilih
+menu dan memberitahukannya ke pelayan.</p>
+
+<p>Setelah itu, minuman dibuat di dapur dengan bahan-bahan yang sudah ada.</p>
+
+<p>Kita menunggu sampai minumannya jadi. Setelah itu, barulah kita bisa
+menikmati minumannya.</p>
+
+<p><img src="/img/cms-vs-ssg/cara-kerja-web.png" alt="Cara kerja web dinamis" /></p>
+
+<p>Pertama pengunjung memnita halaman (pesan minuman) melalui HTTP REQUEST, kemudian
+server membuatkan halamanya.</p>
+
+<p>PHP memproses permintaan berdasarkan data yang ada di database (bahan baku minuman).
+Setelah itu PHP akan membuat output berupa HTML (minuman jadi) dan langsung dikirim ke pengunjung.</p>
+
+<p>Pengunjung pun dapat menikmati halaman yang dimintanya.</p>
+
+<p>Lalu bagaimana dengan web statis?</p>
+
+<p>Seperti yang saya bilang tadi, cara kerja web statis mirip seperti mesin
+penjual otomatis.</p>
+
+<p><img src="/img/cms-vs-ssg/cara-kerja-web-statis.png" alt="Cara kerja web statis" /></p>
+
+<p>Pengunjung meminta halaman, lalu server akan langsung memberikannya,
+tanpa harus diracik dengan database.</p>
+
+<p>Artinya, halaman yang diminta sudah jadi dan tidak perlu dibikin dari awal.</p>
+
+<p>Begitulah cara kerja web statis.</p>
+
+<p>Balik lagi ke pertanyaan: <strong>Apa itu <em>Static Web Generator</em></strong>?</p>
+
+<p><em>Static Web Generator</em> adalah mersin <em>(engine)</em> yang memproduksi halam web
+statis. Biasanya bahan bakunya dari <em>Markdown</em> dan <em>plain text</em>.</p>
+
+<h2 id="perbedaan-cms-dengan-static-web-generator">Perbedaan CMS dengan <em>Static Web Generator</em></h2>
+
+<p>Salah satu perbedaan yang paling mencolok antara CMS dan SSG adalah
+penggunaan bahan baku untuk membuat halaman web.</p>
+
+<p><img src="/img/cms-vs-ssg/cms-ssg.png" alt="CMS vs SSG" /></p>
+
+<p>CMS membuat halaman web dari database, sedangkan SSG tidak menggunakan database.</p>
+
+<p>CMS akan membuat halaman web setiap kali ada permintaan, sedangkan
+SSG tidak.</p>
+
+<p>CMS memiliki halaman admin untuk mengisi konten, sedangkan SSG tidak.
+SSG menggunakan teks editor.</p>
+
+<h3 id="mana-yang-lebih-cepat">Mana yang lebih cepat?</h3>
+
+<p>Kalau menurut saya SSG, karena server tidak berkerja begitu keras setiap
+ada request. Tinggal kirimkan saja halaman yang diminta.</p>
+
+<h3 id="mana-yang-lebih-murah">Mana yang lebih murah?</h3>
+
+<p>Kalau menurut saya, SSG lebih murah. Karena kita tidak perlu sewa hosting
+untuk PHP dan database MySQL-nya.</p>
+
+<p>SSG bisa dihosting di tempat gratisan seperti Github 😄.</p>
+
+<h3 id="mana-yang-lebih-mudah">Mana yang lebih mudah?</h3>
+
+<p>Dari segi kemudahan, tentunya CMS lebih mudah. Karena CMS
+memiliki halaman admin yang bersahabat. Sedangkan SSG lebih bersahabat
+bagi programmer.</p>
+
+<h2 id="perubahan-yang-saya-rasarakan-setelah-menggunakan-ssg">Perubahan yang Saya Rasarakan Setelah Menggunakan SSG</h2>
+
+<p>Sejak migrasi Petani Kode di awal tahun dari Blogger ke Hugo, banyak
+perubahan yang saya rasakan. Seperti dalam hal <em>work flow</em> memproduksi
+artikel.</p>
+
+<p>Hugo adalah <em>Static Web Generator</em> yang dibuat dengan bahasa pemrograman Go
+dan diklaim lebih cepat dari mesin generator sejenisnya.</p>
+
+<p>ref: <a href="https://davidwalsh.name/introduction-static-site-generators">https://davidwalsh.name/introduction-static-site-generators</a></p>
+
+                                </div>
+                                <div class="post-footer">
+                                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'petanikode';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-4">
+                       <aside>
+
+<div class="widget">
+    <a href="http://projects.id/petani_kode" target="_blank">
+    <img src="http://lorempixel.com/360/250" alt="Proyek Petani Kode"/>
+    </a>
+</div>
+
+</aside>
+                    </div>
+            </div>
+        </div>
+
+        <footer class="border border-bottom-0 border-left-0 border-right-0">
+    <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
+        <div class="row">
+            <div class="col">
+
+                &copy; 2017 <a href="https://petanikode.gitlab.io/">Petani Kode</a> | Template by <a href="https://www.petanikode.com" target="blank">Petani Kode</a>
+
+                
+
+            </div>
+        </div>
+    </div>
+</footer>
+        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/prism.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-80537197-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    </body>
+</html>

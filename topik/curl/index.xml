@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Curl on Petani Kode</title>
+    <link>https://petanikode.gitlab.io/topik/curl/</link>
+    <description>Recent content in Curl on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 05 Jul 2017 00:43:33 +0800</lastBuildDate>
+    
+	<atom:link href="https://petanikode.gitlab.io/topik/curl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Belajar PHP Curl: Panduan Menggunakan Curl pada PHP untuk Pemula</title>
+      <link>https://petanikode.gitlab.io/php-curl/</link>
+      <pubDate>Wed, 05 Jul 2017 00:43:33 +0800</pubDate>
+      
+      <guid>https://petanikode.gitlab.io/php-curl/</guid>
+      <description>Hanya bermodalkan pengetahuan CRUD saja, tidaklah cukup untuk membuat aplikasi web yang lebih canggih. (Tweet this!)
+Masih banyak lagi yang harus dipelajari, seperti cara menggunakan library, cara mengakses dan membuat API, cara membuat apilkasi realtime, dan sebagainya.
+Karena itu, pada kesempatan ini, kita akan mempelajari Curl.
+Curl bisa kita gunakan untuk berbagai macam hal, seperti:
+ Membuat Bot; Mengakses API; Membuat Inject (ups! 😄); Membuat Aplikasi download; dan lain-lain.  Pada panduan ini, kita akan belajar dan memahami cara penggunaan Curl pada PHP.</description>
+    </item>
+    
+  </channel>
+</rss>

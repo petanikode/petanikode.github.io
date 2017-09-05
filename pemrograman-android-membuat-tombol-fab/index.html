@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pemrograman Android: Membuat Tombol FAB</title>
+
+<meta charset="utf-8">
+
+<meta itemprop="name" content="Pemrograman Android: Membuat Tombol FAB">
+<meta itemprop="description" content="FAB (Floating Action Button) merupakan sebuah tombol melayang yang biasanya terletak di kanan bawah layar. Tombol FAB mulai dikenal sejak peluncuran desain material (Material Design) oleh Google. Tombol FAB biasanya digunakan untuk aksi tertentu, seperti membuat pesan baru, menambah item tertentu, dsb.
+1. Buat Proyek BaruBuatlah sebuah proyek baru dengan Blank Activity di Anrdoid Studio.
+2. Tambah DepedencyBuka file build.gradle kemudian tambahkan depedency desain material.
+compile &lsquo;com.android.support:design:22.2.0&rsquo;
+ Referensi: http://stackoverflow.com/a/24548910">
+
+
+<meta itemprop="dateModified" content="2016-04-16T00:05:00&#43;00:00" />
+<meta itemprop="wordCount" content="69">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta property="og:title" content="Pemrograman Android: Membuat Tombol FAB" />
+<meta property="og:description" content="FAB (Floating Action Button) merupakan sebuah tombol melayang yang biasanya terletak di kanan bawah layar. Tombol FAB mulai dikenal sejak peluncuran desain material (Material Design) oleh Google. Tombol FAB biasanya digunakan untuk aksi tertentu, seperti membuat pesan baru, menambah item tertentu, dsb.
+1. Buat Proyek BaruBuatlah sebuah proyek baru dengan Blank Activity di Anrdoid Studio.
+2. Tambah DepedencyBuka file build.gradle kemudian tambahkan depedency desain material.
+compile &lsquo;com.android.support:design:22.2.0&rsquo;
+ Referensi: http://stackoverflow.com/a/24548910" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://petanikode.gitlab.io/pemrograman-android-membuat-tombol-fab/" />
+
+
+
+<meta property="article:published_time" content="2016-04-16T00:05:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-04-16T00:05:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Pemrograman Android: Membuat Tombol FAB"/>
+<meta name="twitter:description" content="FAB (Floating Action Button) merupakan sebuah tombol melayang yang biasanya terletak di kanan bawah layar. Tombol FAB mulai dikenal sejak peluncuran desain material (Material Design) oleh Google. Tombol FAB biasanya digunakan untuk aksi tertentu, seperti membuat pesan baru, menambah item tertentu, dsb.
+1. Buat Proyek BaruBuatlah sebuah proyek baru dengan Blank Activity di Anrdoid Studio.
+2. Tambah DepedencyBuka file build.gradle kemudian tambahkan depedency desain material.
+compile &lsquo;com.android.support:design:22.2.0&rsquo;
+ Referensi: http://stackoverflow.com/a/24548910"/>
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+
+
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="https://petanikode.gitlab.io/"><img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
+            alt=""> Petani Kode</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://petanikode.gitlab.io/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.co.id" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-6279325630224392:9670052267" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sa" value="search" />
+                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Kata Kunci" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Cari</button>
+            </form>
+        </div>
+    </div>
+</nav>
+        <header>
+    <div class="jumbotron jumbotron-fluid bg-success text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Programmer Pengguna Linux</h1>
+                    <p class="lead">Belajar Pemrograman Apapun Menggunakan Linux</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container mb-5">
+            <div class="row">
+
+                <div class="col-sm-12 col-lg-8">
+                    <article>
+                        <div class="card">
+                           <div class="card-body p-5">
+                                <h2 class="card-title mb-3">Pemrograman Android: Membuat Tombol FAB</h2>
+                                <div class="post-header mb-5">
+                                    Ardianta Pargo
+                                </div>
+                                <div class="post-content">
+                                    <p>FAB <i>(Floating Action Button)</i> merupakan sebuah tombol melayang yang biasanya terletak di kanan bawah layar. Tombol FAB mulai dikenal sejak peluncuran desain material <i>(Material Design)</i> oleh Google. Tombol FAB biasanya digunakan untuk aksi tertentu, seperti membuat pesan baru, menambah item tertentu, dsb.<br /><h2 id="1.-buat-proyek-baru"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#1.-buat-proyek-baru" name="1.-buat-proyek-baru"></a>1. Buat Proyek Baru</h2>Buatlah sebuah proyek baru dengan <i>Blank Activity</i> di Anrdoid Studio.<br /><img alt="Proyek baru di android studio 2" src="~/Pictures/Blog/Petani Kode/android/Membuat tombol FAB.png" /><br /><h2 id="2.-tambah-depedency"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#2.-tambah-depedency" name="2.-tambah-depedency"></a>2. Tambah Depedency</h2>Buka file <code>build.gradle</code> kemudian tambahkan <i>depedency</i> desain material.<br /><code>compile &lsquo;com.android.support:design:22.2.0&rsquo;</code><br /><h2 id=""><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#" name=""></a> </h2>Referensi: <a href="http://stackoverflow.com/a/24548910">http://stackoverflow.com/a/24548910</a></p>
+
+                                </div>
+                                <div class="post-footer">
+                                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'petanikode';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-4">
+                       <aside>
+
+<div class="widget">
+    <a href="http://projects.id/petani_kode" target="_blank">
+    <img src="http://lorempixel.com/360/250" alt="Proyek Petani Kode"/>
+    </a>
+</div>
+
+</aside>
+                    </div>
+            </div>
+        </div>
+
+        <footer class="border border-bottom-0 border-left-0 border-right-0">
+    <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
+        <div class="row">
+            <div class="col">
+
+                &copy; 2017 <a href="https://petanikode.gitlab.io/">Petani Kode</a> | Template by <a href="https://www.petanikode.com" target="blank">Petani Kode</a>
+
+                
+
+            </div>
+        </div>
+    </div>
+</footer>
+        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/prism.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-80537197-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    </body>
+</html>

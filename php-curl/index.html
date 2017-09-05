@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar PHP Curl: Panduan Menggunakan Curl pada PHP untuk Pemula</title>
+
+<meta charset="utf-8">
+
+<meta itemprop="name" content="Belajar PHP Curl: Panduan Menggunakan Curl pada PHP untuk Pemula">
+<meta itemprop="description" content="Hanya bermodalkan pengetahuan CRUD saja, tidaklah cukup untuk membuat aplikasi web yang lebih canggih. (Tweet this!)
+Masih banyak lagi yang harus dipelajari, seperti cara menggunakan library, cara mengakses dan membuat API, cara membuat apilkasi realtime, dan sebagainya.
+Karena itu, pada kesempatan ini, kita akan mempelajari Curl.
+Curl bisa kita gunakan untuk berbagai macam hal, seperti:
+ Membuat Bot; Mengakses API; Membuat Inject (ups! 😄); Membuat Aplikasi download; dan lain-lain.  Pada panduan ini, kita akan belajar dan memahami cara penggunaan Curl pada PHP.">
+
+
+<meta itemprop="dateModified" content="2017-07-05T00:43:33&#43;08:00" />
+<meta itemprop="wordCount" content="402">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta property="og:title" content="Belajar PHP Curl: Panduan Menggunakan Curl pada PHP untuk Pemula" />
+<meta property="og:description" content="Hanya bermodalkan pengetahuan CRUD saja, tidaklah cukup untuk membuat aplikasi web yang lebih canggih. (Tweet this!)
+Masih banyak lagi yang harus dipelajari, seperti cara menggunakan library, cara mengakses dan membuat API, cara membuat apilkasi realtime, dan sebagainya.
+Karena itu, pada kesempatan ini, kita akan mempelajari Curl.
+Curl bisa kita gunakan untuk berbagai macam hal, seperti:
+ Membuat Bot; Mengakses API; Membuat Inject (ups! 😄); Membuat Aplikasi download; dan lain-lain.  Pada panduan ini, kita akan belajar dan memahami cara penggunaan Curl pada PHP." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://petanikode.gitlab.io/php-curl/" />
+
+
+
+<meta property="article:published_time" content="2017-07-05T00:43:33&#43;08:00"/>
+<meta property="article:modified_time" content="2017-07-05T00:43:33&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Belajar PHP Curl: Panduan Menggunakan Curl pada PHP untuk Pemula"/>
+<meta name="twitter:description" content="Hanya bermodalkan pengetahuan CRUD saja, tidaklah cukup untuk membuat aplikasi web yang lebih canggih. (Tweet this!)
+Masih banyak lagi yang harus dipelajari, seperti cara menggunakan library, cara mengakses dan membuat API, cara membuat apilkasi realtime, dan sebagainya.
+Karena itu, pada kesempatan ini, kita akan mempelajari Curl.
+Curl bisa kita gunakan untuk berbagai macam hal, seperti:
+ Membuat Bot; Mengakses API; Membuat Inject (ups! 😄); Membuat Aplikasi download; dan lain-lain.  Pada panduan ini, kita akan belajar dan memahami cara penggunaan Curl pada PHP."/>
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+
+
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="https://petanikode.gitlab.io/"><img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
+            alt=""> Petani Kode</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://petanikode.gitlab.io/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.co.id" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-6279325630224392:9670052267" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sa" value="search" />
+                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Kata Kunci" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Cari</button>
+            </form>
+        </div>
+    </div>
+</nav>
+        <header>
+    <div class="jumbotron jumbotron-fluid bg-success text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Programmer Pengguna Linux</h1>
+                    <p class="lead">Belajar Pemrograman Apapun Menggunakan Linux</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container mb-5">
+            <div class="row">
+
+                <div class="col-sm-12 col-lg-8">
+                    <article>
+                        <div class="card">
+                           <div class="card-body p-5">
+                                <h2 class="card-title mb-3">Belajar PHP Curl: Panduan Menggunakan Curl pada PHP untuk Pemula</h2>
+                                <div class="post-header mb-5">
+                                    
+                                </div>
+                                <div class="post-content">
+                                    
+
+<p><img src="/images/petanikode-programmer.png" alt="Python Pip" /></p>
+
+<!-- Agreement -->
+
+<!-- ingin tahu curl dasar curl agar bisa membaut aplikasi web yang lebih canggih... -->
+
+<p>Hanya bermodalkan pengetahuan CRUD saja, tidaklah cukup untuk membuat aplikasi web yang
+lebih canggih. (<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.petanikode.com%2Fphp-curl%2F&amp;via=petanikode&amp;text=Hanya%20bermodalkan%20pengetahuan%20CRUD%20saja%2C%20tidaklah%20cukup%20untuk%20membuat%20aplikasi%20web%20yang%20lebih%20canggih&amp;hashtags=php%2C%20curl">Tweet this!</a>)</p>
+
+<p>Masih banyak lagi yang harus dipelajari, seperti cara menggunakan <em>library</em>,
+cara mengakses dan membuat API, cara membuat apilkasi <em>realtime</em>, dan sebagainya.</p>
+
+<!-- Promise -->
+
+<p>Karena itu, pada kesempatan ini, kita akan mempelajari Curl.</p>
+
+<p>Curl bisa kita gunakan untuk berbagai macam hal, seperti:</p>
+
+<ul>
+<li>Membuat Bot;</li>
+<li>Mengakses API;</li>
+<li>Membuat Inject (ups! 😄);</li>
+<li>Membuat Aplikasi download;</li>
+<li>dan lain-lain.</li>
+</ul>
+
+<!-- Review -->
+
+<p>Pada panduan ini, kita akan belajar dan memahami cara penggunaan Curl pada PHP.</p>
+
+<!-- Isi -->
+
+<h2 id="apa-itu-curl">Apa itu Curl?</h2>
+
+<p><strong>Curl</strong> adalah sebuah program dan <em>library</em> untuk mengirim dan mengambil data
+melalui URL.</p>
+
+<p><strong>Curl adalah sebuah program</strong>:</p>
+
+<p>Aritnya curl adalah sebuah program atau tools yang digunakan pada <em>command line</em> (CMD).</p>
+
+<pre><code class="language-bash">curl https://www.petanikode.com
+</code></pre>
+
+<p><strong>Curl adalah sebuah <em>libarary</em></strong>:</p>
+
+<p>Artinya sekumpulan fungsi-fungsi curl yang dibungkus dalam paket <code>libcurl</code> dan
+bisa digunakan dalam berbagai macam bahasa pemrograman.</p>
+
+<h3 id="contoh-penerapan-curl">Contoh Penerapan Curl</h3>
+
+<p>Curl untuk membuat Bot, msialnya Bot Telegram untuk mengetahui cuaca&hellip;</p>
+
+<p><img src="/img/php/curl/peran-curl-pada-bot.png" alt="Peran Curl pada Pembuatan Bot" /></p>
+
+<p>Agar server bot bisa mengambil data dari server lain, maka dia harus mampu
+membuat <em>Http request</em>, di sinilah Curl digunakan.</p>
+
+<p>Tidak hanya untuk itu saja penerapan Curl&hellip;</p>
+
+<p>Bisa juga diterapkan untuk:</p>
+
+<ul>
+<li>Mengambil halaman web lalu mengubahnya jadi PDF;</li>
+<li>Meng-upload dan Download File;</li>
+<li>dan sebagainya.</li>
+</ul>
+
+<h3 id="sejarah-singkat-curl">Sejarah Singkat Curl</h3>
+
+<p>Curl awalnya bernama <strong>HttpGet</strong> dari versi pertama sampai ke-3.</p>
+
+<p>HttpGet awalnya hanya mendukung protokol Http saja&hellip;</p>
+
+<p>&hellip;lalu semakin berkembang dan banyak protokol yang ditambahkan.</p>
+
+<p>Akhirnya pada rilis versi yang ke-4, nama <strong>HttpGet</strong> tidak lagi digunakan.</p>
+
+<p>Sekarang namanya adalah Curl (mulai ditetapkan pada 20 Maret 1998).</p>
+
+<p>Diberikan nama Curl, karena digunakan untuk download/upload data melalui URL.</p>
+
+<p>Huruf &ldquo;c&rdquo; artinya &ldquo;See&rdquo; (melihat), jadi kalau <strong>cURL</strong> di-eja menjadi &ldquo;See URL&rdquo;.
+Selain itu, huruf &ldquo;c&rdquo; juga mengacu kepada <em>client</em>.</p>
+
+<h2 id="instalasi-dan-konfigurasi-curl">Instalasi dan Konfigurasi Curl</h2>
+
+<p>Seperti yang kita ketahui, ada dua bentuk curl: program dan <em>library</em>.</p>
+
+<p>Jika ingin menginstal programnya, maka gunakan perintah:</p>
+
+<pre><code class="language-bash">apt install curl
+</code></pre>
+
+<p>Tapi jika ingin menginstal <em>library</em> untuk PHP, maka gunakan perintah:</p>
+
+<pre><code class="language-bash">apt install php-curl
+</code></pre>
+
+<p>Pada Linux, curl akan otomatis diaktifkan.</p>
+
+<p>Kita bisa mengeceknya dengan kode ini:</p>
+
+<pre><code class="language-php">&lt;?php
+
+phpinfo();
+
+?&gt;
+</code></pre>
+
+<p>Silahkan taruh di <code>htdocs</code> atau <code>/var/www/html</code> dan cobalah buka melalui localhost.</p>
+
+<p>Jika muncul seperti ini, berarti curl sudah aktif dan bisa digunakan.</p>
+
+<p><img src="/img/php/curl/curl-di-php.png" alt="Cek Curl di PHP" /></p>
+
+<p>Sedangkan untuk Windows (XAMPP), <em>library</em> curl sudah terinstal&hellip;</p>
+
+<p>&hellip;tinggal kita aktifkan saja.</p>
+
+<p>Caranya:</p>
+
+<p>Silahkan buka file-file ini dengan teks editor.</p>
+
+<pre><code class="language-bash">C:\Program Files\xampp\apache\bin\php.ini
+C:\Program Files\xampp\php\php.ini
+C:\Program Files\xampp\php\php5\php.ini
+</code></pre>
+
+<p>Kemudian cari baris yang ini:</p>
+
+<pre><code>;extension=php_curl.dll
+</code></pre>
+
+<p>Silahkan dihapus titik-komanya (<code>;</code>).</p>
+
+<pre><code>extension=php_curl.dll
+</code></pre>
+
+<p>Simpan&hellip;</p>
+
+<p>Setelah itu, <em>restart</em> server apache&hellip;maka sekarang Curl sudah aktif.</p>
+
+<h2 id="cara-menggunakan-curl-pada-php">Cara Menggunakan Curl pada PHP</h2>
+
+<!-- Penutup -->
+
+<h2 id="apa-selanjutnya">Apa Selanjutnya?</h2>
+
+<p><a href="http://php.net/manual/en/book.curl.php">http://php.net/manual/en/book.curl.php</a></p>
+
+                                </div>
+                                <div class="post-footer">
+                                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'petanikode';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-4">
+                       <aside>
+
+<div class="widget">
+    <a href="http://projects.id/petani_kode" target="_blank">
+    <img src="http://lorempixel.com/360/250" alt="Proyek Petani Kode"/>
+    </a>
+</div>
+
+</aside>
+                    </div>
+            </div>
+        </div>
+
+        <footer class="border border-bottom-0 border-left-0 border-right-0">
+    <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
+        <div class="row">
+            <div class="col">
+
+                &copy; 2017 <a href="https://petanikode.gitlab.io/">Petani Kode</a> | Template by <a href="https://www.petanikode.com" target="blank">Petani Kode</a>
+
+                
+
+            </div>
+        </div>
+    </div>
+</footer>
+        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/prism.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-80537197-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    </body>
+</html>

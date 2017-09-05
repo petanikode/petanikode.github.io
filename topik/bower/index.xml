@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bower on Petani Kode</title>
+    <link>https://petanikode.gitlab.io/topik/bower/</link>
+    <description>Recent content in Bower on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 04 Apr 2016 08:56:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://petanikode.gitlab.io/topik/bower/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Penggunaan Bower dalam Pengembangan Tema Wordpress</title>
+      <link>https://petanikode.gitlab.io/penggunaan-bower-dalam-pengembangan-tema-wordpress/</link>
+      <pubDate>Mon, 04 Apr 2016 08:56:00 +0000</pubDate>
+      
+      <guid>https://petanikode.gitlab.io/penggunaan-bower-dalam-pengembangan-tema-wordpress/</guid>
+      <description>Cara menggunakan bower untuk pengembangan tema wordpress</description>
+    </item>
+    
+    <item>
+      <title>Belajar Bower untuk Manajemen Paket Front-End</title>
+      <link>https://petanikode.gitlab.io/bower-untuk-pemula/</link>
+      <pubDate>Mon, 04 Apr 2016 08:54:00 +0000</pubDate>
+      
+      <guid>https://petanikode.gitlab.io/bower-untuk-pemula/</guid>
+      <description>Bower merupakan sebuah program untuk manajemen paket front-end. apa itu bower?
+mengapa pakai bower? cara instal bower?
+cara menggunakan bower?</description>
+    </item>
+    
+  </channel>
+</rss>

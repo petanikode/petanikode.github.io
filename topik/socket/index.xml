@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Socket on Petani Kode</title>
+    <link>https://petanikode.gitlab.io/topik/socket/</link>
+    <description>Recent content in Socket on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 11 Dec 2015 17:18:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://petanikode.gitlab.io/topik/socket/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pemrograman Soket dengan Python</title>
+      <link>https://petanikode.gitlab.io/python-socket/</link>
+      <pubDate>Fri, 11 Dec 2015 17:18:00 +0000</pubDate>
+      
+      <guid>https://petanikode.gitlab.io/python-socket/</guid>
+      <description>Mungkin kamu pernah membaca source code inject modem untuk koneksi SSH.
+  Apa itu Socket? Soket (socket) memungkinkan mesin untuk bertukar data dengan mesin yang lain.
+Ketika komputer server dan komputer klien berkomunikasi, maka mereka harus membuat soket. Komunikasi tidak mungkin dapat dilakukan tanpa soket. Dalam jaringan komputer, soket dikenal sebagai ujung koneksi TCP. Soket ditentukan dengan alamat IP host dan nomor port. Pemrograman soket akan membantu anda memahami komunikasi antar mesin dalam jaringan.</description>
+    </item>
+    
+  </channel>
+</rss>

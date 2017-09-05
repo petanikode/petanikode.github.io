@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cordova on Petani Kode</title>
+    <link>https://petanikode.gitlab.io/topik/cordova/</link>
+    <description>Recent content in Cordova on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 19 Apr 2016 22:29:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://petanikode.gitlab.io/topik/cordova/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Persiapan Pemrograman Android di Linux dengan Cordova</title>
+      <link>https://petanikode.gitlab.io/persiapan-pemrograman-android-di-linux-dengan-cordova/</link>
+      <pubDate>Tue, 19 Apr 2016 22:29:00 +0000</pubDate>
+      
+      <guid>https://petanikode.gitlab.io/persiapan-pemrograman-android-di-linux-dengan-cordova/</guid>
+      <description>Cordova merupakan sebuah framework yang memungkinkan kita membuat aplikasi mobile dengan bahasa web seperti HTML 5, CSS 3, dan Javascript. Dengan menggunakan Cordova, kita dapat membangun aplikasi mobile tidak hanya untuk satu flatform.
+Cordova (dulunya adalah PhoneGap), awalnya dibuat oleh perusahaan bernama Nitobi. Pada tahun 2011 kemudian Adobe System membeli perusahaan tersebut, dan menyerahkan pengembangan open-source-nya kepada Apache Software Foundation dengan nama baru Apache Cordova. [Tony Harianto, Codepolitan]
+Pada kesempatan ini, saya akan membahas persiapan yang dilakukan untuk pemrograman aplikasi mobile dengan Cordova.</description>
+    </item>
+    
+  </channel>
+</rss>

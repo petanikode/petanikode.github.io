@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>9 Manfaat Komentar pada Kode Program yang Jarang diketahui</title>
+
+<meta charset="utf-8">
+
+<meta itemprop="name" content="9 Manfaat Komentar pada Kode Program yang Jarang diketahui">
+<meta itemprop="description" content="Komentar memang akan diabaikan oleh kompilator dan interpreter. Tapi sangat berguna bagi programmer.
+Menurut Wikipedia,
+ Dalam pemrograman komputer, sebuah komentar adalah penjelasan atau anotasi dalam kode program yang bisa dibaca oleh programmer (programmer-readable). Komentar dibuat dengan tujuan agar kode program mudah dipahami manusia.
+ Saya sendiri termasuk orang yang jarang menulis komentar, apalagi komentar yang panjang.
+(nulis kode aja masih copas, apalagi mau nulis komentar 😄)
+Tapi tahukah kalian, apa manfaat dan bagaimana penggunaan komentar dalam kode program?">
+
+
+<meta itemprop="dateModified" content="2016-08-09T21:26:00&#43;00:00" />
+<meta itemprop="wordCount" content="486">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta property="og:title" content="9 Manfaat Komentar pada Kode Program yang Jarang diketahui" />
+<meta property="og:description" content="Komentar memang akan diabaikan oleh kompilator dan interpreter. Tapi sangat berguna bagi programmer.
+Menurut Wikipedia,
+ Dalam pemrograman komputer, sebuah komentar adalah penjelasan atau anotasi dalam kode program yang bisa dibaca oleh programmer (programmer-readable). Komentar dibuat dengan tujuan agar kode program mudah dipahami manusia.
+ Saya sendiri termasuk orang yang jarang menulis komentar, apalagi komentar yang panjang.
+(nulis kode aja masih copas, apalagi mau nulis komentar 😄)
+Tapi tahukah kalian, apa manfaat dan bagaimana penggunaan komentar dalam kode program?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://petanikode.gitlab.io/komentar-pada-kode/" />
+
+
+
+<meta property="article:published_time" content="2016-08-09T21:26:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-08-09T21:26:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="9 Manfaat Komentar pada Kode Program yang Jarang diketahui"/>
+<meta name="twitter:description" content="Komentar memang akan diabaikan oleh kompilator dan interpreter. Tapi sangat berguna bagi programmer.
+Menurut Wikipedia,
+ Dalam pemrograman komputer, sebuah komentar adalah penjelasan atau anotasi dalam kode program yang bisa dibaca oleh programmer (programmer-readable). Komentar dibuat dengan tujuan agar kode program mudah dipahami manusia.
+ Saya sendiri termasuk orang yang jarang menulis komentar, apalagi komentar yang panjang.
+(nulis kode aja masih copas, apalagi mau nulis komentar 😄)
+Tapi tahukah kalian, apa manfaat dan bagaimana penggunaan komentar dalam kode program?"/>
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+
+
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="https://petanikode.gitlab.io/"><img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
+            alt=""> Petani Kode</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://petanikode.gitlab.io/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.co.id" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-6279325630224392:9670052267" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sa" value="search" />
+                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Kata Kunci" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Cari</button>
+            </form>
+        </div>
+    </div>
+</nav>
+        <header>
+    <div class="jumbotron jumbotron-fluid bg-success text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Programmer Pengguna Linux</h1>
+                    <p class="lead">Belajar Pemrograman Apapun Menggunakan Linux</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container mb-5">
+            <div class="row">
+
+                <div class="col-sm-12 col-lg-8">
+                    <article>
+                        <div class="card">
+                           <div class="card-body p-5">
+                                <h2 class="card-title mb-3">9 Manfaat Komentar pada Kode Program yang Jarang diketahui</h2>
+                                <div class="post-header mb-5">
+                                    Ardianta Pargo
+                                </div>
+                                <div class="post-content">
+                                    
+
+<p>Komentar memang akan diabaikan oleh kompilator dan interpreter.
+Tapi sangat berguna bagi programmer.</p>
+
+<p>Menurut Wikipedia,</p>
+
+<blockquote>
+<p>Dalam pemrograman komputer, sebuah komentar adalah penjelasan atau anotasi
+dalam kode program yang bisa dibaca oleh programmer <em>(programmer-readable)</em>.
+Komentar dibuat dengan tujuan agar kode program mudah dipahami manusia.</p>
+</blockquote>
+
+<p>Saya sendiri termasuk orang yang jarang menulis komentar, apalagi komentar yang panjang.</p>
+
+<p><em>(nulis kode aja masih copas, apalagi mau nulis komentar 😄)</em></p>
+
+<p>Tapi tahukah kalian, apa manfaat dan bagaimana penggunaan komentar dalam
+kode program?</p>
+
+<p>Mari kita bahas&hellip;.</p>
+
+<h2 id="1-membuat-rencana-dan-review">1. Membuat Rencana dan Review</h2>
+
+<p>Kadang saat kita membuat kode untuk logika tertentu, kita membuat komentarnya
+dulu baru setelah itu membuat kodenya.</p>
+
+<p>Artinya nanti kita akan berenacan membuat logikanya seperti yang dituliskan
+pada komentar.</p>
+
+<p><strong>Contoh</strong>: Recanan untuk membuat logika login</p>
+
+<pre><code class="language-php">// 1. ambil username dan password
+// 2. Cek username, apakah ada di database
+//      - kalau ada cek passwordnya
+//      - kalau tidak kasih tahu kalau dia belum terdaftar
+// 3. alihkan ke halaman dashboard kalau berhasil login
+// 4. tetap berada di halaman login kalau gagal
+</code></pre>
+
+<p>Rencana akan memudahkan kita menulis kode ke depannya. Jadi, cobalah
+untuk melakukannya.</p>
+
+<p>Sedangkan untuk review, kita menulis komentar terhadap kode yang sudah ada
+agar mudah dipahami.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-java">/* loop backwards through all elements returned by the server (they should be processed chronologically)*/
+for (i = (numElementsReturned - 1); i &gt;= 0; i--){
+    /* process each element's data */
+    updatePattern(i, returnedElements[i]);
+}
+</code></pre>
+
+<p>Kadang dalam membuat rencana dan review dilakukan dengan menggunakan tag
+seperti: <code>@TODO</code>, <code>@FIXME</code>, <code>@HACK</code>, dll.</p>
+
+<pre><code class="language-java">// @TODO buat kode untuk pendaftaran user baru
+// @FIXME bugs error 404
+</code></pre>
+
+<p>Pada teks editor atom, tag tersebut akan diwarnai.</p>
+
+<h2 id="2-penjelasan-kode">2. Penjelasan Kode</h2>
+
+<p>Yang ini sering saya lakukan, terutama dalam menulis tutorial.</p>
+
+<p>Biasanya saya menuliskannya seperti ini:</p>
+
+<pre><code class="language-php">&lt;?php
+
+// pertama kita membutuhkan config.php
+include(&quot;config.php&quot;);
+
+// cek apakah variabel $_GET['id'] ada isinya nggak?
+if( isset($_GET['id']) ){
+
+	// ambil id dari query string
+	$id = $_GET['id'];
+
+	// buat query hapus
+	$sql = &quot;DELETE FROM calon_siswa WHERE id=$id&quot;;
+	$query = mysqli_query($db, $sql);
+
+	// apakah query hapus berhasil?
+	if( $query ){
+		header('Location: list-siswa.php');
+	} else {
+		die(&quot;gagal menghapus...&quot;);
+	}
+
+} else {
+	die(&quot;akses dilarang...&quot;);
+}
+
+?&gt;
+</code></pre>
+
+<p>Saya kira dengan begitu, para pembaca kode tersebut akan mudah memahaminya.</p>
+
+<p><em>(ternyata diam-diam saya sering menulis komentar yaa&hellip; 😄)</em></p>
+
+<p>Nah itu contoh komentar dalam tutorial, karena itu ditujukan untuk pemula.</p>
+
+<p>Penjelasan kode untuk programmer yang sudah cukup mahir, beda lagi bunyinya.</p>
+
+<p><strong>Contoh</strong>: Penjelasan kode pada file <code>config.php</code> framework codeigniter.</p>
+
+<pre><code class="language-php">/*
+|--------------------------------------------------------------------------
+| Index File
+|--------------------------------------------------------------------------
+|
+| Typically this will be your index.php file, unless you've renamed it to
+| something else. If you are using mod_rewrite to remove the page set this
+| variable so that it is blank.
+|
+*/
+$config['index_page'] = 'index.php';
+</code></pre>
+
+<p>Paham?</p>
+
+<p>Tidak apa-apa kalau belum paham&hellip;</p>
+
+<h2 id="3-penjelasan-algoritma">3. Penjelasan Algoritma</h2>
+
+<p>Untuk melakukan debugging (aktifkan dan hidupkan kode)</p>
+
+<h2 id="4-resource-inclusion">4. Resource inclusion</h2>
+
+<h2 id="5-metadata">5. Metadata</h2>
+
+<h2 id="6-debugging">6. Debugging</h2>
+
+<h2 id="7-automatic-documentation-generation">7. Automatic documentation generation</h2>
+
+<h2 id="8-syntax-extension">8. Syntax extension</h2>
+
+<h2 id="9-stress-relief">9. Stress relief</h2>
+
+<p>//@TODO: Ambil data dari database</p>
+
+<p>Referensi: Wikipedia &mdash; <a href="https://en.wikipedia.org/wiki/Comment_(computer_programming)">Comment (computer programming)</a></p>
+
+                                </div>
+                                <div class="post-footer">
+                                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'petanikode';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-4">
+                       <aside>
+
+<div class="widget">
+    <a href="http://projects.id/petani_kode" target="_blank">
+    <img src="http://lorempixel.com/360/250" alt="Proyek Petani Kode"/>
+    </a>
+</div>
+
+</aside>
+                    </div>
+            </div>
+        </div>
+
+        <footer class="border border-bottom-0 border-left-0 border-right-0">
+    <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
+        <div class="row">
+            <div class="col">
+
+                &copy; 2017 <a href="https://petanikode.gitlab.io/">Petani Kode</a> | Template by <a href="https://www.petanikode.com" target="blank">Petani Kode</a>
+
+                
+
+            </div>
+        </div>
+    </div>
+</footer>
+        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/prism.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-80537197-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    </body>
+</html>

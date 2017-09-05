@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pdo on Petani Kode</title>
+    <link>https://petanikode.gitlab.io/topik/pdo/</link>
+    <description>Recent content in Pdo on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 23 May 2016 21:17:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://petanikode.gitlab.io/topik/pdo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Koneksi PHP ke MySQL dengan PDO</title>
+      <link>https://petanikode.gitlab.io/koneksi-php-ke-mysql-dengan-pdo/</link>
+      <pubDate>Mon, 23 May 2016 21:17:00 +0000</pubDate>
+      
+      <guid>https://petanikode.gitlab.io/koneksi-php-ke-mysql-dengan-pdo/</guid>
+      <description>PDO (PHP Data Object) merupakan salah satu ekstensi PHP untuk koneksi ke database. PDO tidak hanya mendukung DBMS MySQL, PDO juga mendukung DBMS lain seperti SQLite, PostgreSQL, Ms. SQL Server, ODBC, dsb. Pada kesempatan ini kita akan mencoba membuat kode koneksi PHP dengan database MySQL menggunakan PDO.
+Membuat Koneksi ke MySQL dengan PDOKoneksi PHP dengan MySQL menggunakan PDO membutuhkan DSN (Data Source Name).
+&amp;lt;?php
+$host = &amp;lsquo;localhot&amp;rsquo;;
+$user = &amp;lsquo;root&amp;rsquo;;</description>
+    </item>
+    
+  </channel>
+</rss>

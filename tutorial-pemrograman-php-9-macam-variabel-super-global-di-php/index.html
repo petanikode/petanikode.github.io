@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorial Pemrograman PHP: 9 Macam Variabel Super Global di PHP</title>
+
+<meta charset="utf-8">
+
+<meta itemprop="name" content="Tutorial Pemrograman PHP: 9 Macam Variabel Super Global di PHP">
+<meta itemprop="description" content="Pernah mendengar variabel lokal dan global?
+Saya pernah membahasnya pada artikel &ldquo;Tutorial Pemrograman PHP: Prosedur dan Fungsi&rdquo;.
+Variabel lokal adalah variabel yang bisa diakses dari dalam sebuah fungsi saja. Sedangkan variabel global adalah variabel yang bisa diakses dari fungsi manapun.
+Lalu bagaimana dengan variabel super global?
+Variabel super global merupakan variabel global yang paling tinggi. Dia bisa diakses dari berbagai tempat seperti file, class, fungsi, dan ruang lingkup lainnya.">
+
+
+<meta itemprop="dateModified" content="2016-04-17T01:23:00&#43;00:00" />
+<meta itemprop="wordCount" content="502">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta property="og:title" content="Tutorial Pemrograman PHP: 9 Macam Variabel Super Global di PHP" />
+<meta property="og:description" content="Pernah mendengar variabel lokal dan global?
+Saya pernah membahasnya pada artikel &ldquo;Tutorial Pemrograman PHP: Prosedur dan Fungsi&rdquo;.
+Variabel lokal adalah variabel yang bisa diakses dari dalam sebuah fungsi saja. Sedangkan variabel global adalah variabel yang bisa diakses dari fungsi manapun.
+Lalu bagaimana dengan variabel super global?
+Variabel super global merupakan variabel global yang paling tinggi. Dia bisa diakses dari berbagai tempat seperti file, class, fungsi, dan ruang lingkup lainnya." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://petanikode.gitlab.io/tutorial-pemrograman-php-9-macam-variabel-super-global-di-php/" />
+
+
+
+<meta property="article:published_time" content="2016-04-17T01:23:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-04-17T01:23:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Tutorial Pemrograman PHP: 9 Macam Variabel Super Global di PHP"/>
+<meta name="twitter:description" content="Pernah mendengar variabel lokal dan global?
+Saya pernah membahasnya pada artikel &ldquo;Tutorial Pemrograman PHP: Prosedur dan Fungsi&rdquo;.
+Variabel lokal adalah variabel yang bisa diakses dari dalam sebuah fungsi saja. Sedangkan variabel global adalah variabel yang bisa diakses dari fungsi manapun.
+Lalu bagaimana dengan variabel super global?
+Variabel super global merupakan variabel global yang paling tinggi. Dia bisa diakses dari berbagai tempat seperti file, class, fungsi, dan ruang lingkup lainnya."/>
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+
+
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="https://petanikode.gitlab.io/"><img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
+            alt=""> Petani Kode</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://petanikode.gitlab.io/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.co.id" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-6279325630224392:9670052267" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sa" value="search" />
+                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Kata Kunci" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Cari</button>
+            </form>
+        </div>
+    </div>
+</nav>
+        <header>
+    <div class="jumbotron jumbotron-fluid bg-success text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Programmer Pengguna Linux</h1>
+                    <p class="lead">Belajar Pemrograman Apapun Menggunakan Linux</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container mb-5">
+            <div class="row">
+
+                <div class="col-sm-12 col-lg-8">
+                    <article>
+                        <div class="card">
+                           <div class="card-body p-5">
+                                <h2 class="card-title mb-3">Tutorial Pemrograman PHP: 9 Macam Variabel Super Global di PHP</h2>
+                                <div class="post-header mb-5">
+                                    Ardianta Pargo
+                                </div>
+                                <div class="post-content">
+                                    
+
+<p>Pernah mendengar variabel lokal dan global?</p>
+
+<p>Saya pernah membahasnya pada artikel
+&ldquo;<a href="pemrograman-php-fungsi">Tutorial Pemrograman PHP: Prosedur dan Fungsi</a>&rdquo;.</p>
+
+<p>Variabel lokal adalah variabel yang bisa diakses dari dalam sebuah fungsi saja.
+Sedangkan variabel global adalah variabel yang bisa diakses dari fungsi manapun.</p>
+
+<p>Lalu bagaimana dengan variabel super global?</p>
+
+<p>Variabel super global merupakan variabel global yang paling tinggi. Dia bisa
+diakses dari berbagai tempat seperti file, class, fungsi, dan ruang lingkup lainnya.</p>
+
+<p>Ada 9 jenis variabel super global dalam PHP.</p>
+
+<p>Apa saja itu?</p>
+
+<p>Mari kita bahas satu per satu&hellip;</p>
+
+<h2 id="1-variabel-globals">1. Variabel <code>$GLOBALS</code></h2>
+
+<p>Variabel <code>$GLOBALS</code> merupakan variabel <em>super global</em> yang menampung semua variabel
+<em>super global</em> termasuk dirinya sendiri (rekursif).</p>
+
+<p>Berikut ini isi variabel <code>$GLOBALS</code> di komputer saya:</p>
+
+<pre><code class="language-bash">Array
+(
+    [_GET] =&gt; Array
+        (
+        )
+
+    [_POST] =&gt; Array
+        (
+        )
+
+    [_COOKIE] =&gt; Array
+        (
+        )
+
+    [_FILES] =&gt; Array
+        (
+        )
+
+    [argv] =&gt; Array
+        (
+            [0] =&gt; -
+        )
+
+    [argc] =&gt; 1
+    [_SERVER] =&gt; Array
+        (
+            [LC_PAPER] =&gt; id_ID.UTF-8
+            [XDG_VTNR] =&gt; 8
+            [LC_ADDRESS] =&gt; id_ID.UTF-8
+            [SSH_AGENT_PID] =&gt; 1661
+            [XDG_SESSION_ID] =&gt; c1
+            [TERMINATOR_UUID] =&gt; urn:uuid:21d84b03-2b08-465a-af49-abefdde3e764
+            [IBUS_DISABLE_SNOOPER] =&gt; 1
+            [LC_MONETARY] =&gt; id_ID.UTF-8
+            [QT_STYLE_OVERRIDE] =&gt; gtk
+            [GIO_LAUNCHED_DESKTOP_FILE_PID] =&gt; 2150
+            [TERM] =&gt; xterm
+            [SHELL] =&gt; /bin/bash
+            [XDG_SESSION_COOKIE] =&gt; 2a5d5f96ef9147c0b35535562b32d0ff-1497010804.984429-1225711897
+            [QT_LINUX_ACCESSIBILITY_ALWAYS_ON] =&gt; 1
+            [GJS_DEBUG_OUTPUT] =&gt; stderr
+            [LC_NUMERIC] =&gt; id_ID.UTF-8
+            [WINDOWID] =&gt; 6291460
+            [GJS_DEBUG_TOPICS] =&gt; JS ERROR;JS LOG
+            [SDKMAN_PLATFORM] =&gt; Linux64
+            [GTK_MODULES] =&gt; gail:atk-bridge
+            [SDKMAN_CURRENT_API] =&gt; https://api.sdkman.io/2
+            [USER] =&gt; petanikode
+            [LS_COLORS] =&gt; rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+            [QT_ACCESSIBILITY] =&gt; 1
+            [LC_TELEPHONE] =&gt; id_ID.UTF-8
+            [SDKMAN_LEGACY_API] =&gt; https://api.sdkman.io/1
+            [SSH_AUTH_SOCK] =&gt; /run/user/1000/keyring/ssh
+            [USERNAME] =&gt; petanikode
+            [DEFAULTS_PATH] =&gt; /usr/share/gconf/cinnamon.default.path
+            [SESSION_MANAGER] =&gt; local/imajinasi:@/tmp/.ICE-unix/1593,unix/imajinasi:/tmp/.ICE-unix/1593
+            [GIO_LAUNCHED_DESKTOP_FILE] =&gt; /usr/share/applications/terminator.desktop
+            [ANDROIDTOOL] =&gt; /home/petanikode/Android/Sdk/platform-tools
+            [XDG_CONFIG_DIRS] =&gt; /etc/xdg/xdg-cinnamon:/etc/xdg
+            [PATH] =&gt; /home/petanikode/.sdkman/candidates/kotlin/current/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/petanikode/.composer/vendor/bin:/home/petanikode/.sdkman/candidates/kotlin/1.1.2-2/bin:/home/petanikode/Android/Sdk/platform-tools
+            [DESKTOP_SESSION] =&gt; cinnamon
+            [LC_IDENTIFICATION] =&gt; id_ID.UTF-8
+            [GDM_XSERVER_LOCATION] =&gt; local
+            [PWD] =&gt; /home/petanikode/petanikode-hugo
+            [LANG] =&gt; en_US.UTF-8
+            [SDKMAN_VERSION] =&gt; 5.5.9+231
+            [MANDATORY_PATH] =&gt; /usr/share/gconf/cinnamon.mandatory.path
+            [LC_MEASUREMENT] =&gt; id_ID.UTF-8
+            [KOTLINPATH] =&gt; /home/petanikode/.sdkman/candidates/kotlin/1.1.2-2/bin
+            [GDMSESSION] =&gt; cinnamon
+            [MDM_XSERVER_LOCATION] =&gt; local
+            [CINNAMON_VERSION] =&gt; 3.0.7
+            [SHLVL] =&gt; 1
+            [XDG_SEAT] =&gt; seat0
+            [HOME] =&gt; /home/petanikode
+            [GNOME_DESKTOP_SESSION_ID] =&gt; this-is-deprecated
+            [GTK_OVERLAY_SCROLLING] =&gt; 1
+            [KOTLIN_HOME] =&gt; /home/petanikode/.sdkman/candidates/kotlin/current
+            [XDG_SESSION_DESKTOP] =&gt; cinnamon
+            [LOGNAME] =&gt; petanikode
+            [SDKMAN_DIR] =&gt; /home/petanikode/.sdkman
+            [XDG_DATA_DIRS] =&gt; /usr/share/cinnamon:/usr/share/gnome:/usr/local/share/:/usr/share/:/usr/share/mdm/
+            [DBUS_SESSION_BUS_ADDRESS] =&gt; unix:abstract=/tmp/dbus-RBNtGlfJHr,guid=f1c2176507e9acb33e2e1a7d593a9275
+            [GOPATH] =&gt; /home/petanikode/.go
+            [LESSOPEN] =&gt; | /usr/bin/lesspipe %s
+            [MDMSESSION] =&gt; cinnamon
+            [SDKMAN_CANDIDATES_DIR] =&gt; /home/petanikode/.sdkman/candidates
+            [WINDOWPATH] =&gt; 8
+            [XDG_RUNTIME_DIR] =&gt; /run/user/1000
+            [DISPLAY] =&gt; :0
+            [MDM_LANG] =&gt; en_US.UTF-8
+            [XDG_CURRENT_DESKTOP] =&gt; X-Cinnamon
+            [LESSCLOSE] =&gt; /usr/bin/lesspipe %s %s
+            [COLORTERM] =&gt; gnome-terminal
+            [XAUTHORITY] =&gt; /home/petanikode/.Xauthority
+            [LC_NAME] =&gt; id_ID.UTF-8
+            [OLDPWD] =&gt; /home/petanikode
+            [_] =&gt; /usr/bin/php
+            [PHP_SELF] =&gt; -
+            [SCRIPT_NAME] =&gt; -
+            [SCRIPT_FILENAME] =&gt;
+            [PATH_TRANSLATED] =&gt;
+            [DOCUMENT_ROOT] =&gt;
+            [REQUEST_TIME_FLOAT] =&gt; 1497014573.829
+            [REQUEST_TIME] =&gt; 1497014573
+            [argv] =&gt; Array
+                (
+                    [0] =&gt; -
+                )
+
+            [argc] =&gt; 1
+        )
+
+    [GLOBALS] =&gt; Array
+ *RECURSION*
+)
+</code></pre>
+
+<h2 id="2-variabel-server">2. Variabel <code>$_SERVER</code></h2>
+
+<h2 id="3-variabel-get">3. Variabel <code>$_GET</code></h2>
+
+<p>Variabel <code>$_GET</code> merupakan variabel super global yang digunakan untuk menampung
+nilai dari <em>query string</em>.</p>
+
+<h2 id="4-variabel-post">4. Variabel <code>$_POST</code></h2>
+
+<p>Variabel <code>$_POST</code> merupakan variabel super global yang menampung data dari form yang dikirim dengan metode POST.<br></p>
+
+<h2 id="5-variabel-files">5. Variabel <code>$_FILES</code></h2>
+
+<p>Variabel <code>$_FILES</code> merupakan variabel super global untuk menampung data file
+yang di-upload ke server.</p>
+
+<h2 id="6-variabel-cookie">6. Variabel <code>$_COOKIE</code></h2>
+
+<p>Variabel <code>$_COOKIE</code> merupakan variabel super global yang digunakan untuk
+menampung data cookie.</p>
+
+<h2 id="7-variabel-session">7. Variabel <code>$_SESSION</code></h2>
+
+<p>Variabel <code>$_SESSION</code> merupakan variabel super global yang digunakan untuk
+menampung data sesi.</p>
+
+<h2 id="8-variabel-request">8. Variabel <code>$_REQUEST</code></h2>
+
+<h2 id="9-variabel-env">9. Variabel <code>$_ENV</code></h2>
+
+<p>Referensi:
+<a href="http://php.net/manual/en/language.variables.superglobals.php">dokumentasi PHP</a></p>
+
+                                </div>
+                                <div class="post-footer">
+                                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'petanikode';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-4">
+                       <aside>
+
+<div class="widget">
+    <a href="http://projects.id/petani_kode" target="_blank">
+    <img src="http://lorempixel.com/360/250" alt="Proyek Petani Kode"/>
+    </a>
+</div>
+
+</aside>
+                    </div>
+            </div>
+        </div>
+
+        <footer class="border border-bottom-0 border-left-0 border-right-0">
+    <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
+        <div class="row">
+            <div class="col">
+
+                &copy; 2017 <a href="https://petanikode.gitlab.io/">Petani Kode</a> | Template by <a href="https://www.petanikode.com" target="blank">Petani Kode</a>
+
+                
+
+            </div>
+        </div>
+    </div>
+</footer>
+        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/prism.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-80537197-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    </body>
+</html>

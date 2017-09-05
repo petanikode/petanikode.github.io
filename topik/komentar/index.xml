@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Komentar on Petani Kode</title>
+    <link>https://petanikode.gitlab.io/topik/komentar/</link>
+    <description>Recent content in Komentar on Petani Kode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-id</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 09 Aug 2016 21:26:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://petanikode.gitlab.io/topik/komentar/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>9 Manfaat Komentar pada Kode Program yang Jarang diketahui</title>
+      <link>https://petanikode.gitlab.io/komentar-pada-kode/</link>
+      <pubDate>Tue, 09 Aug 2016 21:26:00 +0000</pubDate>
+      
+      <guid>https://petanikode.gitlab.io/komentar-pada-kode/</guid>
+      <description>Komentar memang akan diabaikan oleh kompilator dan interpreter. Tapi sangat berguna bagi programmer.
+Menurut Wikipedia,
+ Dalam pemrograman komputer, sebuah komentar adalah penjelasan atau anotasi dalam kode program yang bisa dibaca oleh programmer (programmer-readable). Komentar dibuat dengan tujuan agar kode program mudah dipahami manusia.
+ Saya sendiri termasuk orang yang jarang menulis komentar, apalagi komentar yang panjang.
+(nulis kode aja masih copas, apalagi mau nulis komentar 😄)
+Tapi tahukah kalian, apa manfaat dan bagaimana penggunaan komentar dalam kode program?</description>
+    </item>
+    
+  </channel>
+</rss>

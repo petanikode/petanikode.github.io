@@ -324,7 +324,6 @@ Grup Pemrograman Indonesia  PHP Indonesia &amp;mdash; Grup Telegram Komunitas PH
       <description>Golang atau Go merupakan bahasa pemrograman open source yang dikembangkan di Google oleh Robert Griesemer, Rob Pike, dan Ken Thompson pada tahun 2007 dan mulai diperkenalkan di kalangan publik pada tahun 2009.
 Go saat ini memegang rekor menjadi bahasa pemrograman yang perkembangannya paling cepat dalam sejarah.
 Kurang dari tujuh tahun, mampu menjadi bahasa pemrograman kelas atas.
-
 Go banyak dilirik oleh para developer karena kelebihan-kelebihan yang dimilikinya.
 Sudah banyak perusahaan besar yang menggunakan bahasa ini untuk produk-produk mereka hingga di level production.</description>
     </item>
@@ -354,7 +353,8 @@ Emangnya mau&amp;hellip; terus-terusan belajar bahasa pemrograman dan gak mengha
       <description>Buku ini ditulis oleh tiga orang penulis dan disebarkan secara terbuka di Gitbook. Terbit pada tanggal 13 Maret 2016 dengan versi 1.0.
 Buku ini berisi panduan dasar pemrograman Tizen menggunakan Windows, Linux, dan Mac OS.
 Pada BAB awal, kita akan diperkenalkan dengan Tizen. Kemudian membuat aplikasi Hello World menggunakan Windows, Linux, dan Mac OS.
-Buku ini ditulis dalam bentuk panduan yang mudah dipahami dengan screenshot yang lengkap dan tersetruktur.</description>
+Buku ini ditulis dalam bentuk panduan yang mudah dipahami dengan screenshot yang lengkap dan tersetruktur.
+Download: PDF | ePub | Mobi</description>
     </item>
     
     <item>
@@ -397,7 +397,6 @@ Secara tidak sadar&amp;hellip;, saya sudah menjadi Polyglot Programmer.</descrip
 Kadang&amp;hellip; akan terjadi konflik, karena kode yang kita tulis berbeda dengan yang lain.
 Misalnya, Si A menulis kode untuk fitur X dengan algoritma yang ia ketahui. Sedangkan si B menulis dengan algoritma yang berbeda.
 Lalu mereka melakukan commit, dan kode sumber jadi berantakan. Anggota tim yang lain menjadi pusing.
-
 Agar tidak terjadi hal yang seperti ini, kita harus membuat cabang (branch) tersendiri.</description>
     </item>
     
@@ -421,7 +420,6 @@ Membatalkan Perubahan Jika revisi kita belum staged ataupun committed, kita bisa
       <description>Pada tutorial sebelumnya, kita sudah belajar cara melihat log revisi di repositori. Sekarang kita kan peljari perintah git diff, fungsinya untuk melihat perbedaan perubahan di revisi.
 Melihat Perbandingan Perubahan yang Dilakukan pada Revisi Gunakan perintah berikut ini untuk melihat perubahan yang dilakukan pada revisi tertentu.
 git diff cf08ca0837cf26f1c595be36bb3a6b815e311be1  cf08ca0837cf26f1c595be36bb3a6b815e311be1 adalah nomer revisi yang ingin dilihat.
-
 Lihatlah hasil di atas, simbol plus (+) artinya kode yang ditambahkan. Sedangkan kalau ada kode yang dihapus simbolnya akan menggunakan minus (-).</description>
     </item>
     
@@ -456,9 +454,7 @@ Berikut ini daftar plug-in activate-power-mode, dikutip dari repositori awesome-
       <description>Pada tutorial sebelumnya, kita sudah membuat dua revisi pada repositori project-01. Sekarang bagaimana caranya kita melihat catatan log dari revisi-reivisi tersebut?
 Git sudah menyediakan perintah git log untuk melihat catatan log perubahan pada respositori. Contoh penggunaannya:
 git log  Maka kita akan melihat log perubahan apa saja yang sudah dilakukan dalam repositori.
-
 Pada gambar di atas, terdapat dua revisi perubahan yang telah dilakuan.
-
 Log yang Lebih Pendek Untuk menampilkan log yang lebih pendek, kita bisa menambahkan argumen --oneline.</description>
     </item>
     
@@ -471,11 +467,9 @@ Log yang Lebih Pendek Untuk menampilkan log yang lebih pendek, kita bisa menamba
       <description>Pada tutorial Git yang kedua, kita sudah membuat repositori kosong. Belum ada apa-apa di sana.
 Sekarang coba tambahkan sebuah file baru.
 Sebagai contoh, saya akan menambahkan tiga file HTML kosong.
-
 Setalah ditambahkan, coba ketik perintah git status untuk melihat status repositorinya.
-
 Berdasarkan keterangan di atas, saat ini kita berada cabang (branch) master dan ada tiga file yang belum ditambahkan ke Git.
-  (adsbygoogle = window.adsbygoogle || []).</description>
+   (adsbygoogle = window.adsbygoogle || []).push({});  Tiga Kelompok Kondisi File dalam Git Sebelum kita membuat revisi, kita akan berkenalan dulu dengan tiga kondisi file dalam Git.</description>
     </item>
     
     <item>
@@ -496,12 +490,11 @@ git init proyek-01  Perintah tersebut akan membuat direktori bernama proyek-01. 
       <pubDate>Wed, 08 Feb 2017 11:26:37 +0800</pubDate>
       
       <guid>https://www.petanikode.com/git-install/</guid>
-      <description>Kita sudah mengenal Git pada tulisan sebelumnya. Selanjutnya Kita akan melakukan instalasi dan persiapan.
+      <description>Kita sudah mengenal Git pada tulisan sebelumnya. Selanjutnya Kita akan melakukan instalasi dan persiapan untuk mulai belajar Git.
 Tulisan ini terbagi menjadi tiga bagian:
  Cara Instalasi Git di Linux. Cara Instalasi Git di Windows. Konfigurasi Awal yang Harus dilakukan Setelah Menginstal Git.  Mari kita mulai&amp;hellip;
 1. Cara Install Git di Linux Instalasi Git pada Distro keluarga Debian dapat menggunakan perintah apt.
-sudo apt install git  atau
-sudo apt-get install git  Pada Fedora:</description>
+sudo apt install git  atau</description>
     </item>
     
     <item>
@@ -551,9 +544,7 @@ Caranya sebenarnya sangat sederhana&amp;hellip;</description>
       <guid>https://www.petanikode.com/github-ssh/</guid>
       <description>SSH memungkinkan kita untuk melakukan push ke repository github tanpa login. Berbeda dengan cara yang biasa (melalui HTTPS), kita harus memasukkan username dan password setiap kali melakukan push. Tapi dengan SSH kita tidak akan melakukan itu lagi.
 1. Membuat Key SSH Jalankan perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda. Untuk passpharse dikosongkan saja.
-
 Maka di dalam direktori ~/.ssh/ akan tercipa file key baru.
-
 2. Jalankan SSH Angen dan Load SSH Key Untuk memastikan apakah SSH Agent sudah berajalan atau tidak, gunakan perintah ini:</description>
     </item>
     
@@ -565,8 +556,7 @@ Maka di dalam direktori ~/.ssh/ akan tercipa file key baru.
       <guid>https://www.petanikode.com/java-bukan-untuk-pemula/</guid>
       <description>Sudah dua kali semester saya mengajar di praktikum pemrograman Java. Hasilnya, hanya sebagian mahasiswa yang mengerti. Sebagiannya lagi masih pusing (atau mungkin saya yang tidak bisa mengajar).
 Bahasa pemrograman Java memang populer dan banyak digunakan di lapangan, oleh karena itu pihak kampus memilih bahasa ini untuk diajarkan pada semester I.
-
-Bapak Endy Muhardin, dalam tulisan di blognya yang berjudul Java: Tidak untuk Pemula mengatakan: &amp;ldquo;Java memang bahasa yang mature.</description>
+Bapak Endy Muhardin, dalam tulisan di blognya yang berjudul Java: Tidak untuk Pemula mengatakan: &amp;ldquo;Java memang bahasa yang mature. Sudah stabil (artinya tidak terlalu banyak perubahan fundamental) dan sudah teruji digunakan berbagai aplikasi besar dengan sukses.</description>
     </item>
     
     <item>
@@ -660,7 +650,8 @@ Kemudian, agar Profiler aktif di setiap method atau fungsi, letakan kode tersebu
       <pubDate>Wed, 16 Nov 2016 05:07:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/perbedaan-i-increment-dengan-increment-i/</guid>
-      <description>Sebagai pemula, kita mungkin sedikit bingung dengan perbedaan dari i++ (post increment) dengan ++i (pre increment). Simbol ++ artinya tambah satu (+1) atau increment. i++ dan ++i sering kita temukan ketika membuat sebuah perulangan.
+      <description>Sebagai pemula, kita mungkin sedikit bingung dengan perbedaan dari i++ (post increment) dengan ++i (pre increment).
+Simbol ++ artinya tambah satu (+1) atau increment. i++ dan ++i sering kita temukan ketika membuat sebuah perulangan.
 Contoh:
 Post-Increment
 for(int i = 1; i &amp;lt;= 10; i++){ System.out.print(i); }  Pre-Increment
@@ -677,7 +668,8 @@ for(int i = 1; i &amp;lt;= 10; ++i){ System.out.print(i); }  Kedua perulangan te
       <description>Hallo kawan, kali ini saya akan membahas 7 bahasa pemrograman yang dapat dilakukan langsung di Ubuntu tanpa menginstal apapun.
 Eksperimen ini saya lakukan di Ubuntu 16.04 64bit Live CD. Saya sudah disediakan teks editor seperti Gedit, Vi, dan Nano untuk menulis kode.
 Baca juga: 6 Teks Editor Berbasis Teks (CLI) di Linux untuk Menulis Kode
-Adapun 7 bahasa pemrograman yang dapat dilakukan langsung di Ubuntu adalah sebagai berikut.</description>
+Adapun 7 bahasa pemrograman yang dapat dilakukan langsung di Ubuntu adalah sebagai berikut.
+1. Pemrograman Shell Skrip Shell merupakan sebuah program yang bisa dijalankan di Unix Shell atau Command Line Interpreter (CLI).</description>
     </item>
     
     <item>
@@ -749,8 +741,13 @@ Tetapi, bagi yang menggunakan paket terpisah (apache2, php, mysql), kemungkinan 
       <pubDate>Sun, 16 Oct 2016 05:30:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/buku-pemrograman-gratis-dari-oreilly/</guid>
-      <description>Siapa yang tidak kenal O&amp;rsquo;Reilly? Salah satu penerbit buku ternama di dunia. Ribuan buku pemrograman komputer dengan berbagai judul dan seri diterbitkan olehnya. Salah satu seri buku favorit saya adalah Head First, karena di dalamnya banyak gambar ilustrasi dan isinya mudah dipahami.
-Kali ini saya akan membagikan sebuah link buku gratis dari O&amp;rsquo;Reilly. Jangan kasih tahu yang lain ya, hihihi 😄 bercanda. Baik, ini dia link-nya: http://www.oreilly.com/programming/free/
+      <description>Siapa yang tidak kenal O&amp;rsquo;Reilly?
+Salah satu penerbit buku ternama di dunia.
+Ribuan buku pemrograman komputer dengan berbagai judul dan seri diterbitkan olehnya.
+Salah satu seri buku favorit saya adalah Head First, karena di dalamnya banyak gambar ilustrasi dan isinya mudah dipahami.
+Kali ini saya akan membagikan sebuah link buku gratis dari O&amp;rsquo;Reilly.
+Jangan kasih tahu yang lain ya, hihihi 😄 bercanda.
+Baik, ini dia link-nya: http://www.oreilly.com/programming/free/
 Selain buku pemrograman, ada juga buku yang lain tentang bisnis, data, desain, IoT, Web Development, Security, dan WebOps.</description>
     </item>
     
@@ -760,7 +757,9 @@ Selain buku pemrograman, ada juga buku yang lain tentang bisnis, data, desain, I
       <pubDate>Sat, 15 Oct 2016 19:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/php-command-line/</guid>
-      <description>Perintah-perintah dasar yang sering kita ketik di Terminal maupun CMD, dapat juga kita eksekusi melalui web. Tentu saja dengan bantuan PHP. Pada artikel sebelumnya, saya sudah pernah membahas fungsi-fungsi untuk operasi file dan direktori. Nah, sekarang ini kita akan coba fungsi system(). Fungsi ini untuk mengeksekusi perintah-perintah Terminal atau CMD.
+      <description>Perintah-perintah dasar yang sering kita ketik di Terminal maupun CMD, dapat juga kita eksekusi melalui web. Tentu saja dengan bantuan PHP.
+Pada artikel sebelumnya, saya sudah pernah membahas fungsi-fungsi untuk operasi file dan direktori.
+Nah, sekarang ini kita akan coba fungsi system(). Fungsi ini untuk mengeksekusi perintah-perintah Terminal atau CMD.
 Baca Juga:
  Cara Menghapus dan Mengubah Nama Direktori dengan PHP Membuat dan Menampilkan isi Direktori dengan PHP  Mari kita mulai dengan membuat sebuah file baru bernama eksekusi_perintah.</description>
     </item>
@@ -771,7 +770,8 @@ Baca Juga:
       <pubDate>Mon, 10 Oct 2016 10:16:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/web-server-php/</guid>
-      <description>Pada PHP versi 5.4.0, CLI SAPI menyediakan fitur build-in web server yang memungkinkan kita untuk membuat server web dari perintah command line (CLI). Namun, server tersebut hanya bisa digunakan untuk pengembangan (development) aplikasi saja. Bila kita menggunakannya untuk server produksi, kemungkinan akan macet karena terlalu banyak request.
+      <description>Pada PHP versi 5.4.0, CLI SAPI menyediakan fitur build-in web server yang memungkinkan kita untuk membuat server web dari perintah command line (CLI). Namun, server tersebut hanya bisa digunakan untuk pengembangan (development) aplikasi saja.
+Bila kita menggunakannya untuk server produksi, kemungkinan akan macet karena terlalu banyak request.
 Membuat Server dari Commnd Line Pastikan PHP sudah terinstal, kemudian buat sebuah server dengan perintah berikut ini.
 php -S localhost:8000  Perhatikan argumen -S, argumen tersebut menggunakan huruf kapital.</description>
     </item>
@@ -889,13 +889,12 @@ Membuat direktoriMari kita mulai percobaan pertama, membuat direktori denga fung
 Apa itu Simsimi?
 buat yang belum tau, silahkan instal saja aplikasi Simsimi di smarphone-nya.
 Oke, mari kita mulai.
-
 API Simsimi konsepnya sangat sederhana. Kita hanya melakukan request dari URL dengan query string, lalu akan mendapatkan jawaban atau respon berdasarkan data yang dimiliki Simsimi. Respon tersebut, bisa kita olah untuk membuat Simsimi versi kita sendiri.
 1. Mendapatkan Kunci API Kunci API atau API Key, merupakan kunci yang digunakan untuk mengakses API Simsimi.</description>
     </item>
     
     <item>
-      <title>Cara Parshing JSON pada Python</title>
+      <title>Belajar Python: Cara Parsing Data dari JSON</title>
       <link>https://www.petanikode.com/python-json/</link>
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
@@ -931,16 +930,6 @@ Kemudian saya menjawabnya dengan memperlihatkan demo. Bagaimana penyisipan yang 
 Penyisipan file aset dengan fungsi base_url():
 &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;rdquo;&amp;lt;?php echo base_url(&amp;lsquo;assets/bootstrap/bootstrap.min.css&amp;rsquo;) ?&amp;gt;&amp;rdquo; /&amp;gt;atau
 &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;rdquo;&amp;lt;?php echo base_url() ?</description>
-    </item>
-    
-    <item>
-      <title>Seberapa Kuatkah Anda Ingin Menjadi Programmer?</title>
-      <link>https://www.petanikode.com/seberapa-kuatkah-anda-ingin-menjadi-programmer/</link>
-      <pubDate>Wed, 10 Aug 2016 12:53:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/seberapa-kuatkah-anda-ingin-menjadi-programmer/</guid>
-      <description>Kehilangan motivasi saat belajar pemrograman merupakan hal yang wajar bagi setiap orang. Kadang ada saatnya kita sangat bersemangat belajar pemrograman. Kadang juga, kita sangat malas. Buka teks editor saja malas. Mari kita tanya kembali pada diri kita, Seberapa kuatkah ingin menjadi programmer?
-Tadi malam, Saya mendengarkan podcast dari mas Fikry. Judulnya &amp;ldquo;Apakah Anda ingin sukses?&amp;rdquo; Beliau bercerita tentang kisah seorang murid (newbie) yang ingin sukses. Dari cerita tersebut, saya mendapat beberapa quote menarik.</description>
     </item>
     
     <item>
@@ -1420,10 +1409,11 @@ Apa itu tag?Tag, bisa kita katakan sebagai sebuah penanda. Penanda awalan dan ak
       <pubDate>Sat, 19 Dec 2015 15:37:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/activate-power-mode-atom/</guid>
-      <description>Beberapa minggu yang lalu, saya menemukan sebuah gambar animasi gif di facebook. Animasi penulisan kode yang disertai efek partikel bertaburan. Menarik, sepertinya akan menyenangkan menulis kode dengan efek ini. Tidak lama kemudian, saya menemukan modulnya untuk Atom.
+      <description>Beberapa minggu yang lalu, saya menemukan sebuah gambar animasi gif di facebook. Animasi penulisan kode yang disertai efek partikel bertaburan.
+Menarik, sepertinya akan menyenangkan menulis kode dengan efek ini.
+Tidak lama kemudian, saya menemukan modulnya untuk Atom.
 Efek ini awalnya hanya bisa dinikmati di Code in Dark Editor. Kemdian, seorang programmer bernama Joel Besada membuat replikasinya. Joel menulis sebuah modul untuk Atom, namanya activate-power-mode. Berikut ini cuplikannya:
-
-Cara Instal Buka teks editor Atom, kemudian masuk ke manu Edit&amp;gt;Preferences atau tekan tombol Ctrl+, (koma).</description>
+Cara Instal Activate Power Mode Buka teks editor Atom, kemudian masuk ke manu Edit&amp;gt;Preferences atau tekan tombol Ctrl+, (koma).</description>
     </item>
     
     <item>
@@ -1550,7 +1540,7 @@ ini_penulisan_snake_case(); The_quick_brown_fox_jumps_over_the_lazy_dog nama_var
       <description>Seperti yang kita ketahui, program komputer terdiri dari tiga komponen utama, yaitu: input, proses, dan output.
  Input: nilai yang kita masukan ke program Proses: langkah demi langkah yang dilakukan untuk mengelola input menjadi sesuatu yang berguna Output: hasil pengolahan  Semua bahasa pemrograman telah menyediakan fungs-fungsi untuk melakukan input dan output.
 Java sendiri sudah menyediakan tiga class untuk mengambil input:
- Class Scanner; Class BufferReader; dan Class Console.</description>
+ Class Scanner; Class BufferReader; dan Class Console.  Tiga class tersebut untuk mengambil input pada program berbasis teks (console).</description>
     </item>
     
     <item>
@@ -1564,7 +1554,8 @@ Itu saja.
 Serius?
 Iya serius, kalau mau yang lebih panjang&amp;hellip;
 &amp;hellip;coba kita lihat pengertiannya dari Wikipedia:
-Variabel: (Lat) 1. berubah-ubah, tidak tetap; 2. deklarasi sesuatu yang memiliki variasi nilai 3. berbeda-beda dalam bahasa pemrograman disebut juga simbol yang mewakili nilai tertentu, variabel yang dikenal di sub program disebut variabel lokal. sedang yang di kenal secara umum/utuh dalam satu program disebut variabel global.</description>
+Variabel: (Lat) 1. berubah-ubah, tidak tetap; 2. deklarasi sesuatu yang memiliki variasi nilai 3. berbeda-beda dalam bahasa pemrograman disebut juga simbol yang mewakili nilai tertentu, variabel yang dikenal di sub program disebut variabel lokal. sedang yang di kenal secara umum/utuh dalam satu program disebut variabel global.
+Nah, ngerti gak?</description>
     </item>
     
     <item>
@@ -1630,11 +1621,11 @@ range(10,50,5)akan menghasilkan:
       <guid>https://www.petanikode.com/perbedaan-perulangan-while-dan-do-while/</guid>
       <description>Apakah perbedaan perulangan while dengan do/while?
 Keduanya sama-sama perulangan yang tidak tentu (uncounted loop). Akan tetapi memiliki beberapa perbedaan, baik dari segi penggunaan, penulisan kode, dan langkah kerja.
-
 Perulangan While vs Do/While Perulangan while akan melakukan perulangan kalau kondisi (syarat) terpenuhi.
 Sedangkan do/while melakukan perulangan dulu, kemudian memeriksa kondisinya atau sayaratnya.
 Kalau kondisi terpenuhi, maka do/while akan melanjutkan perulangan. Sebaliknya, dia akan berhenti (break).
-Contoh kode dalam Javascript:</description>
+Contoh kode dalam Javascript:
+var bensin = 9; // perulangan while-do while(bensin &amp;gt; 0){ console.</description>
     </item>
     
     <item>
@@ -1777,7 +1768,7 @@ Aturan-aturan ini saya bagi menjadi tujuah bagian, agar mudah dipahami.
 Namun, agar terlihat lebih bagus, sebaiknya diberikan judul.
 Judul program ditulis pada bagian teratas.
 Contoh:
-program stok_pertanian;  Nama program ditulis seteah kata kunci program.</description>
+program stok_pertanian;  Nama program ditulis seteah kata kunci program. Lalu, apabila terdiri dari dia suku kata, maka dipisah dengan garis bawah (_) seperti contoh di atas.</description>
     </item>
     
     <item>
@@ -1823,10 +1814,10 @@ sudo apt-get install python-setuptools Unduh djangoDjango dapat diunduh di situs
     
     <item>
       <title>Cara Cloning proyek di github</title>
-      <link>https://www.petanikode.com/github-clone/</link>
+      <link>https://www.petanikode.com/git-clone/</link>
       <pubDate>Wed, 11 Feb 2015 17:22:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/github-clone/</guid>
+      <guid>https://www.petanikode.com/git-clone/</guid>
       <description>Assalamualaikum wr. wb., di tulisan ini saya ingin berbagi cara kloning proyek di Github. Kloing proyek artinya membuat salinan berkas proyek yang ada di server Github ke komputer sendiri.
  Kloning proyek dapat dilakukan dengan perintah git clone [alamat proyek]. Alamat proyek dapat dilihat di halaman repository proyek yang akan dikloning.
  $ git clone https://github.com/b-informatika/kupi.git
@@ -1902,8 +1893,8 @@ Siap&amp;hellip;?
 Mari kita mulai.
 Persiapan Alat Adapun alat-alat yang perlu dispersiapan untuk belajar pemrograman Java di Linux adalah sebagai berikut:
 1. Teks Editor Teks editor digunakan untuk menulis kode.
-
-Baca juga:</description>
+Baca juga:
+ 6 Teks Editor Berbasis Teks di Linux untuk Menulis Kode  Silahkan gunakan teks editor favoritmu.</description>
     </item>
     
     <item>

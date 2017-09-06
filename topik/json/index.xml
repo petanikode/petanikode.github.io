@@ -22,13 +22,12 @@
 Apa itu Simsimi?
 buat yang belum tau, silahkan instal saja aplikasi Simsimi di smarphone-nya.
 Oke, mari kita mulai.
-
 API Simsimi konsepnya sangat sederhana. Kita hanya melakukan request dari URL dengan query string, lalu akan mendapatkan jawaban atau respon berdasarkan data yang dimiliki Simsimi. Respon tersebut, bisa kita olah untuk membuat Simsimi versi kita sendiri.
 1. Mendapatkan Kunci API Kunci API atau API Key, merupakan kunci yang digunakan untuk mengakses API Simsimi.</description>
     </item>
     
     <item>
-      <title>Cara Parshing JSON pada Python</title>
+      <title>Belajar Python: Cara Parsing Data dari JSON</title>
       <link>https://www.petanikode.com/python-json/</link>
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       

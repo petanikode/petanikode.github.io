@@ -36,8 +36,7 @@ Bila dibandingkan dengan aplikasi web dan desktop, Activity sama seperti halaman
       <guid>https://www.petanikode.com/java-bukan-untuk-pemula/</guid>
       <description>Sudah dua kali semester saya mengajar di praktikum pemrograman Java. Hasilnya, hanya sebagian mahasiswa yang mengerti. Sebagiannya lagi masih pusing (atau mungkin saya yang tidak bisa mengajar).
 Bahasa pemrograman Java memang populer dan banyak digunakan di lapangan, oleh karena itu pihak kampus memilih bahasa ini untuk diajarkan pada semester I.
-
-Bapak Endy Muhardin, dalam tulisan di blognya yang berjudul Java: Tidak untuk Pemula mengatakan: &amp;ldquo;Java memang bahasa yang mature.</description>
+Bapak Endy Muhardin, dalam tulisan di blognya yang berjudul Java: Tidak untuk Pemula mengatakan: &amp;ldquo;Java memang bahasa yang mature. Sudah stabil (artinya tidak terlalu banyak perubahan fundamental) dan sudah teruji digunakan berbagai aplikasi besar dengan sukses.</description>
     </item>
     
     <item>
@@ -46,7 +45,8 @@ Bapak Endy Muhardin, dalam tulisan di blognya yang berjudul Java: Tidak untuk Pe
       <pubDate>Wed, 16 Nov 2016 05:07:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/perbedaan-i-increment-dengan-increment-i/</guid>
-      <description>Sebagai pemula, kita mungkin sedikit bingung dengan perbedaan dari i++ (post increment) dengan ++i (pre increment). Simbol ++ artinya tambah satu (+1) atau increment. i++ dan ++i sering kita temukan ketika membuat sebuah perulangan.
+      <description>Sebagai pemula, kita mungkin sedikit bingung dengan perbedaan dari i++ (post increment) dengan ++i (pre increment).
+Simbol ++ artinya tambah satu (+1) atau increment. i++ dan ++i sering kita temukan ketika membuat sebuah perulangan.
 Contoh:
 Post-Increment
 for(int i = 1; i &amp;lt;= 10; i++){ System.out.print(i); }  Pre-Increment
@@ -250,7 +250,7 @@ Ukuran penuh dari mind map ini dapat kamu lihat di: coggle.</description>
       <description>Seperti yang kita ketahui, program komputer terdiri dari tiga komponen utama, yaitu: input, proses, dan output.
  Input: nilai yang kita masukan ke program Proses: langkah demi langkah yang dilakukan untuk mengelola input menjadi sesuatu yang berguna Output: hasil pengolahan  Semua bahasa pemrograman telah menyediakan fungs-fungsi untuk melakukan input dan output.
 Java sendiri sudah menyediakan tiga class untuk mengambil input:
- Class Scanner; Class BufferReader; dan Class Console.</description>
+ Class Scanner; Class BufferReader; dan Class Console.  Tiga class tersebut untuk mengambil input pada program berbasis teks (console).</description>
     </item>
     
     <item>
@@ -264,7 +264,8 @@ Itu saja.
 Serius?
 Iya serius, kalau mau yang lebih panjang&amp;hellip;
 &amp;hellip;coba kita lihat pengertiannya dari Wikipedia:
-Variabel: (Lat) 1. berubah-ubah, tidak tetap; 2. deklarasi sesuatu yang memiliki variasi nilai 3. berbeda-beda dalam bahasa pemrograman disebut juga simbol yang mewakili nilai tertentu, variabel yang dikenal di sub program disebut variabel lokal. sedang yang di kenal secara umum/utuh dalam satu program disebut variabel global.</description>
+Variabel: (Lat) 1. berubah-ubah, tidak tetap; 2. deklarasi sesuatu yang memiliki variasi nilai 3. berbeda-beda dalam bahasa pemrograman disebut juga simbol yang mewakili nilai tertentu, variabel yang dikenal di sub program disebut variabel lokal. sedang yang di kenal secara umum/utuh dalam satu program disebut variabel global.
+Nah, ngerti gak?</description>
     </item>
     
     <item>
@@ -296,8 +297,8 @@ Siap&amp;hellip;?
 Mari kita mulai.
 Persiapan Alat Adapun alat-alat yang perlu dispersiapan untuk belajar pemrograman Java di Linux adalah sebagai berikut:
 1. Teks Editor Teks editor digunakan untuk menulis kode.
-
-Baca juga:</description>
+Baca juga:
+ 6 Teks Editor Berbasis Teks di Linux untuk Menulis Kode  Silahkan gunakan teks editor favoritmu.</description>
     </item>
     
   </channel>

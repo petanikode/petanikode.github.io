@@ -236,9 +236,7 @@ Persiapan dan Instalasi SASS Sebelum kita mulai tutorial ini, persiapkan dulu al
       <description>Saya sempat mengira, kalau animasi stiker di facebook menggunakan gif, ternyata bukan.
 Animasi tersebut menggunakan javascript dengan mengubah posisi backgound.
 Coba saja klik kanan pada stikernya, kemudian pilih inspect element, maka kita akan mendapatkan kode seperti ini.
-
 Terlihat pada kode di atas, stikernya menggunakan backgound image. Ketika kita membuka backgound tersebut, kita akan mendapatkan gambar seperti berikut ini.
-
 Sekarang, bagaimana kalau kita coba membuatnya.
 Kode HTML Buat kode HTML untuk menampilkan stikernya.</description>
     </item>
@@ -314,22 +312,21 @@ Kita membutuhkan dua repositori untuk melakukan cara ini.</description>
       <guid>https://www.petanikode.com/javascript-dalam-html/</guid>
       <description>Javascript sebagai bahasa pemrograman yang berjalan di atas browser harus di tulis di dalam HTML. Ada empat cara penulisan javascript pada HTML.
 1. Tag &amp;lt;script&amp;gt; Cara yang umum yang dipakai adalah menuliskanya dalam tag &amp;lt;script&amp;gt;. Tag &amp;lt;script&amp;gt; bisa dibuat di dalam tag &amp;lt;head&amp;gt;, mauapun di dalam tag &amp;lt;body&amp;gt;. Contoh:
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt; &amp;lt;script&amp;gt; console.log(&amp;quot;Hi, ini kode Javascript&amp;quot;); &amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; document.write(&amp;quot;Javascript itu keren!</description>
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Penulisan Javascript&amp;lt;/title&amp;gt; &amp;lt;script&amp;gt; console.log(&amp;quot;Hi, ini kode Javascript&amp;quot;); &amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script&amp;gt; document.write(&amp;quot;Javascript itu keren!&amp;quot;); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  2.</description>
     </item>
     
     <item>
       <title>Cara Membuat Halaman Github Kurang dari 10 Menit</title>
-      <link>https://www.petanikode.com/cara-membuat-halaman-github-kurang-dari-10-menit/</link>
+      <link>https://www.petanikode.com/github-pages/</link>
       <pubDate>Wed, 25 Jan 2017 08:06:22 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/cara-membuat-halaman-github-kurang-dari-10-menit/</guid>
+      <guid>https://www.petanikode.com/github-pages/</guid>
       <description>Halaman Github (Github Pages) merupakan layanan hosting web statis yang diberikan oleh Github. Layanan ini diberikan secara gratis dan kita juga akan mendapatkan subdomain .github.io.
-
 Bagaimanakah cara membuatnya?
 Baiklah, pastikan anda sudah punya akun Github dan sudah menginstal Git. Kemudian silahkan ikuti langkah-langkah berikut, tidak sampai 10 menit kok.
 1. Buat Repositori Baru Buatlah repositori baru dengan nama username.github.io. Gunakan username github Anda, contoh petanikode.github.io.
 
-2. Buat Repositri di Komputer Buka terminal atau CMD, kemudian buatlah repositori baru.</description>
+![Membuat Repository Baru]</description>
     </item>
     
     <item>
@@ -419,7 +416,9 @@ Pastinya akan repot mencari sendiri depedency library-nya.</description>
       <pubDate>Fri, 25 Nov 2016 15:19:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-web-responsif-pengenalan-rwd-dan-viewport/</guid>
-      <description>Bagaimana cara membuat web responsif? itulah pertanyaan yang cukup sering ditanyakan kepada saya. Pertanyaan ini membutuhkan jawaban yang cukup panjang, karena itu saya tidak bisa langsung menjawab secara detail melalui lisan maupun pesan instan, selain itu juga waktu yang tidak mendukung. Berangkat dari keterbatasan itu, akhirnya saya menrebitkan tulisan ini.
+      <description>Bagaimana cara membuat web responsif? itulah pertanyaan yang cukup sering ditanyakan kepada saya.
+Pertanyaan ini membutuhkan jawaban yang cukup panjang, karena itu saya tidak bisa langsung menjawab secara detail melalui lisan maupun pesan instan, selain itu juga waktu yang tidak mendukung.
+Berangkat dari keterbatasan itu, akhirnya saya menrebitkan tulisan ini.
 Apakah itu RWD? RWD singkatan dari Responsive Web Design. Responsif artinya webnya dapat merespon atau menyesuaikan diri dengan perangkat yang digunakan.</description>
     </item>
     
@@ -454,7 +453,9 @@ Mari kita bahas semuanya&amp;hellip;
       <pubDate>Sat, 15 Oct 2016 19:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/php-command-line/</guid>
-      <description>Perintah-perintah dasar yang sering kita ketik di Terminal maupun CMD, dapat juga kita eksekusi melalui web. Tentu saja dengan bantuan PHP. Pada artikel sebelumnya, saya sudah pernah membahas fungsi-fungsi untuk operasi file dan direktori. Nah, sekarang ini kita akan coba fungsi system(). Fungsi ini untuk mengeksekusi perintah-perintah Terminal atau CMD.
+      <description>Perintah-perintah dasar yang sering kita ketik di Terminal maupun CMD, dapat juga kita eksekusi melalui web. Tentu saja dengan bantuan PHP.
+Pada artikel sebelumnya, saya sudah pernah membahas fungsi-fungsi untuk operasi file dan direktori.
+Nah, sekarang ini kita akan coba fungsi system(). Fungsi ini untuk mengeksekusi perintah-perintah Terminal atau CMD.
 Baca Juga:
  Cara Menghapus dan Mengubah Nama Direktori dengan PHP Membuat dan Menampilkan isi Direktori dengan PHP  Mari kita mulai dengan membuat sebuah file baru bernama eksekusi_perintah.</description>
     </item>
@@ -465,7 +466,8 @@ Baca Juga:
       <pubDate>Mon, 10 Oct 2016 10:16:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/web-server-php/</guid>
-      <description>Pada PHP versi 5.4.0, CLI SAPI menyediakan fitur build-in web server yang memungkinkan kita untuk membuat server web dari perintah command line (CLI). Namun, server tersebut hanya bisa digunakan untuk pengembangan (development) aplikasi saja. Bila kita menggunakannya untuk server produksi, kemungkinan akan macet karena terlalu banyak request.
+      <description>Pada PHP versi 5.4.0, CLI SAPI menyediakan fitur build-in web server yang memungkinkan kita untuk membuat server web dari perintah command line (CLI). Namun, server tersebut hanya bisa digunakan untuk pengembangan (development) aplikasi saja.
+Bila kita menggunakannya untuk server produksi, kemungkinan akan macet karena terlalu banyak request.
 Membuat Server dari Commnd Line Pastikan PHP sudah terinstal, kemudian buat sebuah server dengan perintah berikut ini.
 php -S localhost:8000  Perhatikan argumen -S, argumen tersebut menggunakan huruf kapital.</description>
     </item>
@@ -484,7 +486,7 @@ Saya sendiri menggunakan teks editor Atom.</description>
     </item>
     
     <item>
-      <title>Cara Parshing JSON pada Python</title>
+      <title>Belajar Python: Cara Parsing Data dari JSON</title>
       <link>https://www.petanikode.com/python-json/</link>
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
@@ -678,7 +680,11 @@ Apa itu MathJax? MathJax merupakan pustaka (library) javascript untuk menampilka
       <pubDate>Thu, 31 Mar 2016 18:21:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/kode-crud-dalam-satu-file-php/</guid>
-      <description>Pernah mebayangkan, tidak? Membuat CRUD (Create, Read, Update, Delete) dalam satu file PHP. Biasanya, membuat CRUD dilakukan dengan membuat file terpisah. Masing-masing file mewakili CRUD. Misalkan file create.php untuk menambahkan data, read.php untuk menampikan data, update.php untuk mengubah data, dan delete.php untuk menghapus data. Bagaimana kalau, semuanya digabungkan ke dalam satu file PHP?
+      <description>Pernah mebayangkan, tidak?
+Membuat CRUD (Create, Read, Update, Delete) dalam satu file PHP.
+Biasanya, membuat aplikasi CRUD dilakukan dengan membuat file terpisah. Masing-masing file mewakili CRUD.
+Misalkan file create.php untuk menambahkan data, read.php untuk menampikan data, update.php untuk mengubah data, dan delete.php untuk menghapus data.
+Bagaimana kalau, semuanya digabungkan ke dalam satu file PHP?
 Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam satu file PHP. Kode ini, saya buat dengan koneksi database menggunakan API mysqli.</description>
     </item>
     
@@ -833,8 +839,7 @@ SELECT calon_idcalon, calon.nama AS nama, calon.foto AS foto, COUNT(calon_idcalo
       <guid>https://www.petanikode.com/css-dalam-html/</guid>
       <description>Penulisan kode CSS dalam HTML dibagi menjadi tiga cara, internal, inline, dan eksternal. Pembagian ini berdasarkan letak kode CSS tersebut ditulis.
 1. Internal CSS Internal CSS adalah istilah untuk kode CSS yang ditulis langsung dalam berkas HTML. Kode CSS ini dituliskan pada tag &amp;lt;style&amp;gt;. Tag ini bisa ditulis di dalam blok head atapun body, kedua-duanya sah. Nah, berikut ini contoh internal CSS.
-
-2. Eksternal CSS Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML.</description>
+ 2. Eksternal CSS Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML.</description>
     </item>
     
     <item>

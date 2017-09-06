@@ -1,1814 +1,804 @@
-
-
 <!DOCTYPE html>
-
-
-
-
-<html amp lang="id-id" class="no-js">
-<head>
+<html>
+    <head>
 	<meta name="generator" content="Hugo 0.26" />
-    <title>Petani Kode — Programmer Pengguna Linux</title>
-    <meta charset="utf-8">
+        <title>Petani Kode — Programmer Pengguna Linux</title>
 
-    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
+<meta itemprop="name" content="Petani Kode — Programmer Pengguna Linux">
+<meta itemprop="description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman">
 
+
+
+<meta property="og:title" content="Petani Kode — Programmer Pengguna Linux" />
+<meta property="og:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.petanikode.com/" />
+
+
+
+<meta property="og:updated_time" content="2017-06-06T21:32:08&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Petani Kode — Programmer Pengguna Linux"/>
+<meta name="twitter:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman"/>
+
+
+
+
+<link rel="icon" href="/img/favicon.png" />
+<link rel="icon" href="/img/logo.svg" />
+<link rel='icon' href="/img/logo.svg" sizes='192x192' type="image/svg+xml" />
+<link rel='icon' href="/img/logo.svg" sizes='32x32' type="image/svg+xml" />
+<link rel='icon' href="/img/logo.svg" sizes='96x96' type="image/svg+xml" />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='57x57' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='60x60' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='72x72' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='76x76' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='114x114' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='120x120' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='144x144' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='152x152' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='180x180' />
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+
+
+
+
+<meta name="telegram:channel" content="@petanikode">
+    </head>
+    <body class="bg-light">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
+    <div class="container">
+
+        <a class="navbar-brand" href="https://www.petanikode.com/"><img src="/img/logo.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
+            alt=""> Petani Kode</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/php">PHP <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/java">Java <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/python">Python</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/javascript">Javascript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/git">Git</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.co.id" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-6279325630224392:9670052267" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sa" value="search" />
+                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Kata Kunci" aria-label="Search">
+                <button class="btn btn-info my-2 my-sm-0" type="submit">Cari</button>
+            </form>
+        </div>
+    </div>
+</nav>
+        <header>
+    <div class="jumbotron jumbotron-fluid bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Programmer Pengguna Linux</h1>
+                    <p class="lead">Belajar Pemrograman Apapun Menggunakan Linux</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <article class="card-post">
+    <div class="container">
+        <div class="row">
+
+            
+            
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="card">
+                        <a href="/kotlin-variabel-tipe-data/">
+                        <img class='card-img-top' 
+                            src='https://petanikode.com/img/persiapan-kotlin/kotlin.png'
+                            alt='Belajar Pemrograman Kotlin: Variabel dan Tipe Data'>
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a class="text-dark" href="/kotlin-variabel-tipe-data/">Belajar Pemrograman Kotlin: Variabel dan Tipe Data</a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="card">
+                        <a href="/belajar-pemrograman-di-bulan-ramadhan/">
+                        <img class='card-img-top' 
+                            src='https://www.petanikode.com/img/coding-ramadhan/pemrograman-arab.jpg'
+                            alt='Bagaimana Saya Memanfaatkan Bulan Ramadhan untuk Belajar Pemrograman?'>
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a class="text-dark" href="/belajar-pemrograman-di-bulan-ramadhan/">Bagaimana Saya Memanfaatkan Bulan Ramadhan untuk Belajar Pemrograman?</a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="card">
+                        <a href="/kotlin-input-dan-output/">
+                        <img class='card-img-top' 
+                            src='https://petanikode.com/img/persiapan-kotlin/kotlin.png'
+                            alt='Belajar Kotlin: Cara Mengambil Input dan Menampilkan Output'>
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a class="text-dark" href="/kotlin-input-dan-output/">Belajar Kotlin: Cara Mengambil Input dan Menampilkan Output</a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="card">
+                        <a href="/kotlin-sintaks/">
+                        <img class='card-img-top' 
+                            src='https://petanikode.com/img/persiapan-kotlin/kotlin.png'
+                            alt='Belajar Pemrograman Kotlin: Sintaks Dasar Kotlin'>
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a class="text-dark" href="/kotlin-sintaks/">Belajar Pemrograman Kotlin: Sintaks Dasar Kotlin</a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="card">
+                        <a href="/kotlin-linux/">
+                        <img class='card-img-top' 
+                            src='https://petanikode.com/img/persiapan-kotlin/kotlin.png'
+                            alt='Belajar Kotlin di Linux: Pengenalan Dasar Kotlin dan Persiapan Awal'>
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a class="text-dark" href="/kotlin-linux/">Belajar Kotlin di Linux: Pengenalan Dasar Kotlin dan Persiapan Awal</a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="card">
+                        <a href="/ssl-untuk-github-pages/">
+                        <img class='card-img-top' 
+                            src='https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/https.png'
+                            alt='Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kustom Domain)'>
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a class="text-dark" href="/ssl-untuk-github-pages/">Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kustom Domain)</a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            
+
+        </div>
+    </div>
+</article>
+
+<br>
+
+<div class="container mb-5">
+    <nav aria-label="Page navigation">
+
+
+<ul class="pagination">
     
-
-
-
-
-
-    <link rel="canonical" href="https://www.petanikode.com/" />
-    <link rel="amphtml" href="https://www.petanikode.com/" />
-
-    <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
-    <meta content='/favicon.png' name='msapplication-TileImage'/>
-
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-
-    <link href="http://feeds.feedburner.com/petanikode" rel="alternate" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-    <link href="http://feeds.feedburner.com/petanikode" rel="feed" type="application/rss+xml" title="Petani Kode — Programmer Pengguna Linux" />
-
-
-
+    <li class="page-item">
+        <a class="page-link" href="/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
     
-    
-    <meta name="theme-color" content="#008080">
-    
-    <meta name="msapplication-navbutton-color" content="#008080">
-    
-    <meta name="apple-mobile-web-app-status-bar-style" content="#008080">
-
-    <meta content='ID-id' http-equiv='content-language'/>
-<meta content='index,follow' name='robots'/>
-<meta content='Petani Kode — Programmer Pengguna Linux' name='copyright'/>
-<meta content='Indonesian' name='language'/>
-<meta content='6F355AD626E325F1305BDE3A0BA81A7A' name='msvalidate.01'/>
-<meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification'/>
-<meta name="author" content="Ardianta Pargo"/>
-
-<meta name="keywords" content="Petani Kode — Programmer Pengguna Linux, pemrograman, petani kode, petanikode, tutorial pemrograman, belajar pemrograman, panduan pemrograman, programmer indonesia, latihan pemrograman, algoritma dan pemrograman, algoritma, petanicode, coding, coder indonesia, Petani Coding, Belajar Python, pemrograman python, pemrograman ruby, php, html, javascript, java, pascal, css, css3, html5, Pemrograman web, pemrograman mobile, pemrograman jaringan, pemrograman databse, pemrograman desktop, pemrograman linux, pemrograman game, tutorial programmer, git, github, motivasi pemrograman, motivasi programmer, programmer lombok, lombok developers, lombok dev, kode, pemrograman C, pemrograman C&#43;&#43;"/>
-<meta name="description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman"/>
-
-<meta content='index,follow' name='googlebot'/>
-<meta content='follow, all' name='Googlebot-Image'/>
-<meta content='follow, all' name='Scooter'/>
-<meta content='follow, all' name='msnbot'/>
-<meta content='follow, all' name='alexabot'/>
-<meta content='follow, all' name='Slurp'/>
-<meta content='follow, all' name='ZyBorg'/>
-<meta content='follow, all' name='Scooter'/>
-<meta content='true' name='MSSmartTagsPreventParsing'/>
-<meta content='ALL' name='SPIDERS'/>
-<meta content='ALL' name='WEBCRAWLERS'/>
-<meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
-
-    
-    <meta property="og:title" content="Petani Kode — Programmer Pengguna Linux" />
-    <meta property="og:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.petanikode.com/" />
-
-    <meta property="og:image" content="/images/petanikode-programmer.png" />
-
-    
-    <meta property="og:updated_time" content="2017-06-06 21:32:08 &#43;0800 WITA"/>
-    <meta content='id_ID' property='og:locale'/>
-    <meta content='ms_MY' property='og:locale:alternate'/>
-    <meta content='en_US' property='og:locale:alternate'/>
-
-    <meta content='152759108115365' property='fb:app_id'/>
-    <meta content='143461015837500' property='fb:pages'/>
-    <meta content='ardianta.pargo' property='fb:profile_id'/>
-
-    
-
+    <li
+    >
+    <a class="page-link" href="/page/4/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
     
     
     
     
-
-    <meta property="article:author" content="https://www.facebook.com/petanikode" />
-    <meta property="article:publisher" content="https://www.facebook.com/petanikode" />
-
     
-
-    <meta property="article:modified_time" content="2017-06-06 21:32:08 &#43;0800 WITA" />
-    <meta property="article:section" content="" />
-
     
-
+        
+        
     
-    <meta property="fb:admins" content="ardianta.pargo" />
-
     
-    <meta content='summary_large_image' name='twitter:card'/>
-    <meta content='@petanikode' name='twitter:site'/>
-    <meta content='@ardiantapargo' name='twitter:creator'/>
+    <li
+    ><a class="page-link" href="/">1</a></li>
     
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a class="page-link" href="/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a class="page-link" href="/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a class="page-link" href="/page/4/">4</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    class="active page-item"><a class="page-link" href="/page/5/">5</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a class="page-link" href="/page/6/">6</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="disabled page-item"><a class="page-link" href="#"><span aria-hidden="true">&hellip;</span></a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a class="page-link" href="/page/38/">38</a></li>
+    
+    
+    <li
+    >
+    <a class="page-link" href="/page/6/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a class="page-link" href="/page/38/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
 
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        "name": "Petani Kode — Programmer Pengguna Linux",
-        "alternateName": "Petanikode",
-        "url": "https://www.petanikode.com/",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "http://petanikode.com/topik/{search_term_string}",
-            "query-input": "required name=search_term_string"
-         }
-    }
-    </script>
+</nav>
+</div>
 
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "name": "petanikode.com",
-  "url": "https://www.petanikode.com/"
-  
-  , "logo": "https://petanikode.com/petanikode-logo-bg-cerah.png"
-  , "address": "Gang H. Abdul Basit, Desa Sisik, Kecamtatan Pringgarata, Lombok Tengah"
-  
-}
+         
+            <section>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    
+                    <p class="lead">Msukkan email kamu biar tidak ketinggalan update dari <b>Petani Kode</b>...</p>
+
+                    <p>
+                    
+
+                    <div id="mlb2-6053117" class="ml-subscribe-form ml-subscribe-form-6053117">
+                        <div class="ml-vertical-align-center">
+                            <div class="subscribe-form ml-block-success" style="display:none">
+                                <div class="form-section alert alert-success">
+                                    Thank you! You have successfully subscribed to our newsletter.
+                                </div>
+                            </div>
+                            <form class="ml-block-form form-inline my-2 my-lg-0" action="https://app.mailerlite.com/webforms/submit/m6b0m1" data-id="554721" data-code="m6b0m1"
+                                method="POST" target="_blank">
+                                <div class="subscribe-form horizontal">
+                                    
+                                    <div class="form-section horizontal">
+                                        <div class="form-group ml-field-email ml-validate-required ml-validate-email">
+                                            <input type="email" name="fields[email]" class="form-control mr-sm-2" placeholder="email@contoh.com" value="" autocomplete="email" x-autocompletetype="email"
+                                                spellcheck="false" autocapitalize="off" autocorrect="off">
+                                        
+                                            <button type="submit" class="primary btn btn-info my-2 my-sm-0">Berlangganan</button>
+                                            </div>
+                                    </div>
+                                    <div class="form-section horizontal ml-button-position mt-4">
+                                       
+                                        <span disabled="disabled" style="display: none;" class="loading">
+                                            <img src="https://static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;">
+                                        </span>
+                                    </div>
+                                    <div class="clearfix" style="clear: both;"></div>
+                                    <input type="hidden" name="ml-submit" value="1" />
+                                </div>
+                            </form>
+                            <script>
+                                function ml_webform_success_6053117() {
+                                    var $ = ml_jQuery || jQuery;
+
+                                    $('.ml-subscribe-form-6053117 .ml-block-success').show();
+                                    $('.ml-subscribe-form-6053117 .ml-block-form').hide();
+                                };
+                            </script>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="https://static.mailerlite.com/js/w/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f"></script>
+                    </p>
+
+                    <p>Atau ikuti melalui: </p>
+                    <div>
+                        <a class="mr-2" href="https://www.facebook.com/petanikode">
+                            <img src="/img/icon/entypo/entypo-social/facebook-with-circle.svg" width="32" height="32" alt="Facebook"/>
+                        </a>
+                        <a class="mr-2" href="https://twitter.com/petanikode">
+                            <img src="/img/icon/entypo/entypo-social/twitter-with-circle.svg" width="32" height="32" alt="Twitter"/>
+                        </a>
+                        <a class="mr-2" href="https://t.me/petanikode">
+                            <img src="/img/icon/entypo/entypo-social/telegram-with-circle.svg" width="32" height="32" alt="Telegram"/>
+                        </a>
+                        <a class="mr-2" href="https://instagram.com/petanikode">
+                            <img src="/img/icon/entypo/entypo-social/instagram-with-circle.svg" width="32" height="32" alt="Instagram"/>
+                        </a>
+                        <a class="mr-2" href="https://www.youtube.com/channel/UCVEEB0XiaogU6UodKXRaNyg">
+                            <img src="/img/icon/entypo/entypo-social/youtube-with-circle.svg" width="32" height="32" alt="Youtube"/>
+                        </a>
+                        <a class="mr-2" href="https://google.com/+PetaniKode">
+                            <img src="/img/icon/entypo/entypo-social/google+-with-circle.svg" width="32" height="32" alt="Google+"/>
+                        </a>
+                        <a class="mr-2" href="http://feeds.feedburner.com/petanikode">
+                            <img src="/img/icon/entypo/entypo-social/rss-with-circle.svg" width="32" height="32" alt="RSS Feed"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section>
+
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <img class="w-100" src="/img/maskot-petanikode.png" />
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <h2 class="my-3">Tentang Petnai Kode</h2>
+
+                    <p>
+                        Petani Kode adalah blog yang membahas seputar dunia pemrograman dan Linux.
+                        Tersedia tips dan panduan pemrograman menggunakan Linux yang bisa diikuti
+                        oleh siapa saja yang tertarik melakukan pemrograman menggunakan Linux.
+                        Tidak menutup kemungkinan juga, ada panduan yang menggunakan Windows.
+                    </p>
+                    <p>
+                        Saat ini, topik yang sering dibahas seputar 
+                        <a href="/topik/php">#php</a>, 
+                        <a href="/topik/java">#java</a>, 
+                        <a href="/topik/python">#python</a>,
+                        <a href="/topik/javascript">#javascript</a>, 
+                        dan <a href="/topik/git">#git</a>.
+                    </p>
+
+                    
+
+                    <h3>Komunitas Petnai Kode</h3>
+                    
+                    <ul>
+                        <li><a href="https://www.facebook.com/groups/petanikode" target="blank">Group Facebook Petani Kode</a></li>
+                        <li><a href="https://t.me/petani_kode" target="blank">Group Telegram Petani Kode</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+</section>
+        
+           
+        <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
+    <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+
+
+                <ul class="nav justify-content-fg-left">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://projects.id/petani_kode" target="blank">Proyek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tentang-petani-kode">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:info@petanikode.com">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-md-6 col-sm-12 text-sm-center text-md-right">
+
+                &copy; 2017 <a href="https://www.petanikode.com/">Petani Kode</a> | Made with ❤️ using <a href='https://gohugo.io' target='_blank'>Hugo 0.26</a></a>
+
+            </div>
+
+            
+        </div>
+    </div>
+</footer>
+        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/prism.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-80537197-1', 'auto');
+ga('send', 'pageview');
 </script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
 
 
 
-
-
-    
-    
-    
-
-
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-            "@id": "https://www.petanikode.com/",
-            "name": "home"
-            }
-      },
-
-      
-
-      
-
-    ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Article",
-  "author": {
-    "name" : "Ardianta Pargo"
-  },
-  "headline": "Petani Kode — Programmer Pengguna Linux",
-  "description": "",
-  "wordCount": 0,
-  "datePublished" : "2017-06-06T21:32:08",
-  "dateModified" : "2017-06-06T21:32:08",
-  "image" : {
-      "@type": "ImageObject",
-      "url": "",
-      "height" : 380,
-      "width" : 720
-    },
-  "mainEntityOfPage" : "https://www.petanikode.com/",
-  "publisher" : {
-    "@type": "Organization",
-    "name" : "petanikode.com",
-    "logo" : {
-        "@type" : "ImageObject",
-        "url" : "https://petanikode.com/petanikode-logo-bg-cerah.png",
-        "height" : 60,
-        "width" : 600
-    }
-  },
-
-  "review": {
-    "@type": "Review",
-    "url": "https://www.petanikode.com/",
-    "author": {
-      "@type": "Person",
-      "name": "Ardianta Pargo",
-      "sameAs": "https://twitter.com/ardiantapargo"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "petanikode.com",
-      "sameAs": "http://petanikode.com"
-    },
-    "datePublished": "2017-06-06T21:32:08",
-    "description": "",
-    "inLanguage": "id",
-    "reviewRating": {
-      "@type": "Rating",
-      "worstRating": 1,
-      "bestRating": 5,
-      "ratingValue": 5
-    }
-  }
-}
-</script>
-
-
-
-
-
-
-
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <style amp-custom>
-        /**
-* stylesheet.html
-* ---------------
-* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
-* in your project file.
-*
-* For further details, please have a look at:
-* https://gohugo-amp.gohugohq.com/install/
-*
-**/
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
-::selection { background: #A4C639;color:white }
-::-webkit-selection { background: #A4C639; color:white}
-::-moz-selection { background: #A4C639; color:white}
-
-/*! PocketGrid 1.1.0
-* Copyright 2013 Arnaud Leray
-* MIT License
-* http://arnaudleray.github.io/pocketgrid/docs/
-*/
-
-.block-group,.block,.block-group:after,.block:after,.block-group:before,.block:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*/
-/*.block-group{*zoom:1}*/
-.block-group:before,.block-group:after{display:table;content:"";line-height:0}
-.block-group:after{clear:both}
-.block-group{list-style-type:none; margin: 0;}
-.block-group>.block-group{clear:none;float:left;margin:0 }
-.block{float:left;width:100%;padding: 0;}
-
-.fa {font-size:1.6em;}
-
-html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
-html,button,input{color:#222;}
-
-main, aside, article, header, footer {
-	transition:all .5s ease-in-out;
-	-o-transition:all .5s ease-in-out;
-	-moz-transition:all .5s ease-in-out;
-	-webkit-transition:all .5s ease-in-out;
-}
-
-body{
-	margin:0;
-	color: rgba(0,0,0,0.7);
-	font-family: "Noto Sans", "Open Sans", Arial, sans-serif;
-	font-size: 14px;
-	line-height: 22px;
-    background: #fafafa;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	color: #121214;
-	font-family: "Noto Sans", "Open sans", sans-serif;
-	font-weight: 200;
-	margin: 0;
-}
-
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-	font-weight: 600;
-	line-height: 42px;
-}
-
-
-h2 {
-	font-size: 160%;
-	margin: 32px 0 20px 0;
-}
-
-h3 {
-	font-size: 140%;
-	margin: 30px 0 20px 0;
-}
-
-h4 {
-	font-size: 120%;
-	margin: 0 0 20px 0;
-}
-
-h5 {
-	font-size: 100%;
-	margin: 0 0 20px 0;
-}
-
-h6 {
-	font-size: 90%;
-	margin: 0 0 20px 0;
-}
-
-
-
-p {
-	color: #454444;
-	line-height: 1.9em;
-	margin: 0 0 20px;
-}
-
-ul{margin:1em 0;padding:0 0 0 15px;}
-li {
-	line-height: 24px;
-}
-
-.text-center{text-align:center;}
-.pull-left{float:left;}
-.pull-right{float:right;}
-
-.button-primary {
-    border-color: #008080;
-}
-.button-primary, .button-primary .label, .button-primary.button--link {
-    color: #008080;
-}
-.button-small {
-    height: 32px;
-    line-height: 30px;
-    padding: 0 14px;
-    font-size: 12px;
-}
-
-.button {
-    line-height: 35px;
-}
-.button {
-    display: inline-block;
-    position: relative;
-    height: 37px;
-    padding: 0 16px;
-    color: rgba(0,0,0,.44);
-    background: rgba(0,0,0,0);
-    font-size: 14px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: 1px solid rgba(0,0,0,.15);
-    vertical-align: bottom;
-    white-space: nowrap;
-    text-rendering: auto;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    box-sizing: border-box;
-    border-radius: 4px;
-    font-family: "Noto Sans", "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-    letter-spacing: 0;
-    font-weight: 400;
-    font-style: normal;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: "liga" on;
-}
-
-fieldset {
-    border: 1px solid silver;
-}
-
-.content kbd {
-    display: inline-block;
-    padding: 3px 5px;
-    font-size: 14px;
-    line-height: 14px;
-    color: #444d56;
-    vertical-align: middle;
-    background-color: #fafbfc;
-    border: solid 1px #c6cbd1;
-    border-bottom-color: #959da5;
-    border-radius: 3px;
-    box-shadow: inset 0 -1px 0 #959da5;
-}
-
-kbd {
-    display: inline-block;
-    padding: 3px 5px;
-    font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    line-height: 10px;
-    color: #444d56;
-    vertical-align: middle;
-    background-color: #fafbfc;
-    border: solid 1px #d1d5da;
-    border-bottom-color: #c6cbd1;
-    border-radius: 3px;
-    box-shadow: inset 0 -1px 0 #c6cbd1;
-}
-
-.content a:link {
-  color:rgb(58, 170, 100);
-  text-decoration:none;
-}
-.content a:visited {
-  color:#008080;
-  text-decoration:none;
-}
-.content a:hover {
-  color:#A4C639;
-  text-decoration: underline;
-}
-.content a img, .content img {
-  border-width:0;
-  max-width: 100%;
-}
-
-.content ul {
-	padding-left: 40px;
-}
-.content ol li, .content ul li {
-	margin-bottom: 16px;
-}
-
-.fixed-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-nav {
-    background-color: #fff;
-    text-align: left;
-    height: 40px;
-    box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);
-    z-index: 1;
-}
-
-nav ul {
-	margin-top: 0;
-}
-
-nav ul li {
-    list-style: none;
-    display: -moz-inline-stack;
-    display: inline-block;
-    margin: 0;
-    line-height: 0.8em;
-    padding: 0;
-}
-
-nav li:first-child a {
-    padding: 0 0 10px 0;
-}
-nav li a {
-    display: block;
-    line-height: 40px;
-    text-decoration: none;
-    color: #333;
-    padding: 0 10px;
-    margin-right: 5px;
-	font-weight: 400;
-}
-
-/* AMP SIDEBAR */
-.amp-close-image {
-   top: 15px;
-   /*left: 225px;*/
-   cursor: pointer;
-}
-amp-sidebar {
-    width: 250px;
-    padding-right: 10px;
-	z-index: 3147483646 ;
-	background: white;
-	font-weight: 400;
-}
-
-amp-sidebar li {
-    margin-bottom: 20px;
-    list-style: none;
-    font-family: 'Noto sans',Sans-serif;
-	padding: 4px;
-}
-
-amp-sidebar ul.sidebar-icon li a, amp-sidebar ul li a{
-	margin-right: 16px;
-	text-decoration: none;
-	color: rgba(0, 0, 0, 0.7);
-}
-amp-sidebar ul.sidebar-icon li a:hover, amp-sidebar ul li a:hover{
-	color: #A4C639;
-}
-/*E:AMP SIDEBAR*/
-
-/*S: AMP ACCORDION */
-section[expanded] .show-more {
-   display: none;
-}
-section:not([expanded]) .show-less {
-   display: none;
-}
-.nested-accordion h4 {
-   font-size: 14px;
-   background-color: white;
-}
-section[expanded] h4, section:not([expanded]) h4 {
-	background: white;
-	border: 0;
-	padding: 0 0 10px 14px;
-	border-bottom: 1px solid whitesmoke;
-	margin-bottom: 20px;
-	font-weight: inherit;
-}
-/*E: AMP ACCORDION */
-
-.header {
-    background: #008080;
-    color: white;
-    padding: 6%;
-    margin-top: 40px;
-}
-
-.header a {
-    color: white;
-}
-
-.header .site-title{
-    width: 260px;
-    margin: 0 auto;
-}
-
-.pengumuman {
-	margin-top: 0;
-	margin-bottom: 64px;
-    color: white;
-    padding: 10px;
-}
-
-.pengumuman-warning {
-	background: #ffeb81;
-}
-
-.pengumuman .pengumuman-text {
-	padding: 10px;
-	color: #8a6d3b;
-}
-
-.pengumuman .pengumuman-text i.fa {
-	margin-right: 8px;
-}
-
-.article {
-    line-height: 1.8em;
-    vertical-align: baseline;
-    letter-spacing: 0.01em;
-    font-weight: 400;
-    color: #333;
-    font-family: Merriweather, Georgia, serif;
-    font-size: 1rem;
-}
-
-.article-wrapper {
-    max-width: 100%;
-    padding: 50px 8%;
-    background: white;
-    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-    border: 1px solid rgba(0,0,0,.09);
-	margin-bottom: 10px;
-}
-
-.article-wrapper-index {
-    padding: 4%;
-}
-
-.content {
-    overflow-wrap: break-word;
-}
-
-.content .post-title {
-    font-family: "Noto Sans", "Open sans", sans-serif;
-    font-weight: 700;
-    font-size: 200%;
-    color: #333;
-	line-height: 1.2em;
-	letter-spacing: -0.01em;
-	margin: 0 0 32px 0;
-}
-
-.content .post-header { margin-bottom: 32px }
-.content .post-header, .content a.read-more {
-	font: 12px "Noto Sans", "Open Sans", sans-serif;
-	color: rgba(0,0,0,0.44);
-	font-weight: bold;
-}
-
-.content .post-header .author {
-	font-size: 14px;
-}
-
-/* indeks title untuk judul dibagian indeks atau list artikel*/
-.content .index-title {
-    font-size: 160%;
-	margin-bottom: 16px;
-}
-
-.article-wrapper-index .post-header  { margin-bottom: 16px }
-
-.content amp-img{
-    margin: 24px 0;
-}
-
-.author-foto amp-img {
-	margin: 3px 10px 0 0;
-	border-radius: 50%;
-}
-
-.content div.fileneme, .content div.terminal {
-    background: white;
-    font-size: 11px;
-    color: rgba(0,0,0, 0.7);
-    font-family: "Open sans", sans-serif;
-    padding: 2px 10px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border: 1px solid #ddd;
-    border-bottom: none;
-}
-
-.content .code-mark {
-    background: rgba(58, 255, 0, 0.09);
-    margin: 0px -16px;
-    padding: 0 16px;
-    display: block;
-}
-
-.content pre mark, .content pre b {
-    background: rgba(173, 255, 47, 0.2);
-    padding: 3px;
-    padding-left: 0;
-    border-radius: 4px;
-}
-
-.content div.fileneme i, .content div.terminal span {
-    margin-right: 6px;
-}
-
-.content pre, .content code, .content samp {
-    font-family: Consolas, Monaco, Monospace,'Courier New',Courier,'Andale Mono';
-    
-}
-
-.content pre {
-    line-height: 1.5em;
-    border: 1px solid #ddd;
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
-    margin: 1em 0;
-    background: #f8f8f8; /* background tema github */
-    padding: 10px;
-    font-size: 13px;
-}
-
-.content pre[class*="language-"] {
-    margin-top: 0;
-    margin-bottom: 16px;
-    background: #f8f8f8;
-    font-size: 13px;
-}
-
-.content pre code {
-    color: #333;
-}
-
-.content :not(pre) > code {
-    color: black;
-    line-height: 20px;
-    font-size: 100%;
-    padding: .1em .25em;
-    border: solid 1px rgba(51,51,51,0.12);
-    border-radius: .3em;
-    background: #f8f8f8;
-}
-
-.related-posts > a:nth-of-type(n+3), .related-posts > h3:nth-of-type(n+1) {
-  display: none;
-}
-
-hr {
-    border: 1px solid whitesmoke;
-}
-
-/*--- Blockqute -----*/
-blockquote{
-  display:block;
-  background: whitesmoke;
-  padding: 15px 20px 15px 45px;
-  margin: 0 0 20px;
-  position: relative;
-
-  /*Font*/
-  /*font-family: Georgia, serif;*/
-  font-size: 16px;
-  line-height: 1.2;
-  color: #666;
-
-
-  /*Borders - (Optional)*/
-  border-left: 15px solid #008080;
-  border-right: 2px solid #008080;
-
-  /*Box Shadow - (Optional)*/
-  /*-moz-box-shadow: 2px 2px 15px #ccc;
-  -webkit-box-shadow: 2px 2px 15px #ccc;
-  box-shadow: 2px 2px 15px #ccc;*/
-}
-
-blockquote::before{
-  content: "\201C"; /*Unicode for Left Double Quote*/
-
-  /*Font*/
-  font-family: Georgia, serif;
-  font-size: 60px;
-  font-weight: bold;
-  color: #999;
-
-  /*Positioning*/
-  position: absolute;
-  left: 10px;
-  top:5px;
-}
-
-blockquote::after{
-  /*Reset to make sure*/
-  content: "";
-}
-
-blockquote a{
-  text-decoration: none;
-  cursor: pointer;
-  padding: 0 3px;
-  color: #c76c0c;
-}
-
-blockquote em{
-  font-style: italic;
-}
-/*--- End Blockqute -----*/
-
-/*--- Table -----*/
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin:24px 0;
-	overflow-x: auto;
-	display: block;
-}
-table, td, th {
-    border: 1px solid rgba(0,0,0,0.1);
-}
-th {
-    background-color: #008080;
-    color: white;
-}
-th, td {
-    padding: 4px 16px;
-    text-align: left;
-    font-family: "Noto Sans", "Open sans", sans-serif;
-    font-size: 80%;
-}
-tr:nth-child(even) {background-color: whitesmoke}
-tr:hover {background-color: #fafafa}
-/*--- END Table -----*/
-
-.post-footer {
-	margin-top: 64px;
-}
-
-.artikel-footer {
-    background: whitesmoke;
-    padding: 16px;
-    font-family: "Noto Sans", "Open sans", sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    margin-bottom: 32px;
-    border-top: 1px solid #d8d8d8;
-    border-bottom: 1px solid #d8d8d8;
-}
-
-/* Share button ------------*/
-ul.share-buttons{
-  list-style: none;
-  padding: 0;
-  margin: 4px 0;
-}
-
-ul.share-buttons li{
-  display: inline;
-  margin-right: 4px;
-}
-
-ul.share-buttons .sr-only {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-/* end share button ----------*/
-
-.pager { margin-top: 64px; }
-
-/* ---- aside dan widget ----------*/
-.widget {
-	padding: 10px;
-	margin-bottom: 40px;
-}
-
-.widget-title {
-	padding-top: 8px;
-	padding-bottom: 8px;
-	font-weight: 700;
-    border-bottom: 1px solid rgba(0,0,0,.0785);
-	font-size: 18px;
-}
-
-.widget-content ul.recent-post li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-.widget-content ul.recent-post li a:hover {
-    color: #A4C639;
-}
-.widget-content ul.recent-post li{
-    margin-bottom: 32px;
-	list-style: none;
-}
-.widget-content ul.recent-post .recent-thumb, .widget-content .kategori-ikon{
-    margin-right: 18px;
-	margin-top: 10px;
-	width: 32px;
-	height: 32px;
-}
-
-.widget-content ul.recent-post .recent-thumb {
-    margin-bottom: 32px;
-}
-.widget-content ul.recent-post .recent-thumb img{
-    border-radius: 50%;
-}
-
-/* Profil Sosial */
-.profil-sosial {
-text-align: center;
-padding: 16px;
-}
-.profil-sosial a {
-    margin: 0 8px;
-}
-
-.profil-sosial .facebook, .share-buttons a.facebook { color: #3b5998 }
-.profil-sosial .twitter, .share-buttons a.twitter { color: #55acee }
-.profil-sosial .gplus, .share-buttons a.gplus { color: #dd4b39 }
-.profil-sosial .instagram, .share-buttons a.instagram { color: #e95950 }
-.profil-sosial .youtube, .share-buttons a.youtube { color: #bb0000 }
-.profil-sosial .rss, .share-buttons a.rss { color: #ff6600 }
-/* /Profil Sosial */
-
-.link-footer { margin: 16px 0; text-align: center }
-.link-footer a {margin: 10px 10px 0 0;
-    display: inline-block
- }
-
- /* Footer ----------------------------------------------- */
-.footer-wrapper {
-    width:100vw;
-    clear:both;
-    color:#666;
-    display:block;
-    font-weight: 600;
-    background-color:white;
-	margin-top:64px;
-	box-shadow: 0 1px 7px rgba(0,0,0,.05);
-	border-top: 1px solid rgba(0,0,0,.09);
-    display: inline-block;
-}
-
-.footer {
-    max-width:980px;
-    margin:0 auto;
-    padding:2% 0;
-    color:#666;
-}
-
-.footer a {
-    color: rgb(58, 170, 100);
-    text-decoration:none;
-}
-
-.footer a:hover {
-    color: #A4C639;
-}
-
-.form-input {
-    height: 32px;
-    padding: 10px
-}
-.form-input:focus {
-    border: 2px solid #a4c664;
-    outline: none;
-}
-
-.btn {
-    height: 32px;
-    border: 0;
-    padding: 0 30px;
-}
-
-.btn-success {
-    background: #48c639;
-    color: white;
-}
-
-/*------------------------ Responsive ----------------------*/
-
-/* Smartphone version
-   Nothing to do: blocks are stacked by default. */
-
-.hide-on-mobile, .hidden {
-	display: none;
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 960px) {
-
-}
-
-
-/* Desktop large screen */
-@media (min-width: 1024px) {
-	.hide-on-mobile { display: inline-block; }
-    .block{float:left;width:100%;padding: 2px 6px;}
-
-	table {
-		border: 0;
-	}
-
-    nav ul {
-        margin: 0 auto;
-        padding: 0 -2px;
-        display: block;
-    }
-    .header {
-        background: #008080;
-        color: white;
-        padding: 4% 0;
-        margin-bottom: 64px;
-    }
-
-
-	.pengumuman {
-		margin-top: -64px;
-	}
-
-    .site-wrapper, .header .site-wrapper, nav ul{
-        max-width: 1024px;
-        margin:0 auto;
-    }
-
-    .header .site-title{
-        margin:0 16px;
-    }
-
-    .main {
-        margin: 0 auto;
-        max-width: 1024px;
-        /*margin: 64px auto;*/
-    }
-
-    .article {
-        width: 640px    ;
-        /*border:1px dashed grey;*/
-    }
-
-    .article-wrapper {
-        border-radius: 4px
-    }
-
-
-    .aside {
-        width: 360px;
-        float: right;
-    }
-}
-/* Desktop large screen */
-@media (min-width: 1200px) {
-
-    .header .site-wrapper, nav ul{
-        max-width: 1024px;
-        /*margin:0 auto;*/
-    }
-
-    .main {
-        margin: 0 auto;
-        max-width: 1024px;
-        /*margin: 64px auto;*/
-    }
-
-    .article {
-        width: 660px;
-        /*border:1px dashed grey;*/
-    }
-    .article-wrapper {
-        border-radius: 4px
-    }
-    .content {
-        margin: 15px 0 .75em;
-    }
-    .aside {
-        width: 360px;
-        float: right;
-    }
-}
-
-    </style>
-
-
-
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
-    
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
     (adsbygoogle = window.adsbygoogle || []).push({
         google_ad_client: "ca-pub-6279325630224392",
         enable_page_level_ads: true
     });
-    </script>
-
-    <meta name="telegram:channel" content="@petanikode">
-
-</head>
-
-<body>
-
-
-
-
-
-<amp-sidebar id='sidebar'
-     layout="nodisplay"
-     side="left">
-   <amp-img class='amp-close-image pull-right'
-       src="https://ampbyexample.com/img/ic_close_black_18dp_2x.png"
-       width="20"
-       height="20"
-       alt="close sidebar"
-       on="tap:sidebar.close"
-       role="button"
-       tabindex="0"></amp-img>
-
-
-       <ul>
-         <li>
-           <a href="/"><i class="fa fa-home fa-lg"></i> Home</a>
-         </li>
-       </ul>
-
-       <ul class="sidebar-icon">
-         <li>
-           <a href="/arsip"><i class="fa fa-archive fa-lg" title="Arsip Artikel"></i></a>&nbsp;
-           <a href="/indeks"><i class="fa fa-tags fa-lg" title="Indeks Topik, Kategori, dan Serial"></i></a>&nbsp;
-           <a href="mailto:info@ptanikode.com" title="Kontak Petani Kode"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;
-           <a href="/tentang"><i class="fa fa-info-circle fa-lg" title="Tentang Petani Kode"></i></a>&nbsp;
-           <a href="http://feeds.feedburner.com/petanikode"><i class="fa fa-rss fa-lg" title="Berlangganan RSS Feed"></i></a>&nbsp;
-         </li>
-       </ul>
-
-   <amp-accordion>
-
-    <section expanded>
-      <h4><i class="fa fa-caret-down"></i> Pemrograman</h4>
-      <ul>
-        <li><a href="/kategori/pemrograman"><i class="fa fa-code fa-lg"></i> Dasar</a></li>
-        <li><a href="/kategori/web"><i class="fa fa-globe fa-lg"></i> Web</a></li>
-        <li><a href="/kategori/mobile"><i class="fa fa-tablet fa-lg"></i> Mobile</a></li>
-        <li><a href="/kategori/desktop"><i class="fa fa-desktop fa-lg"></i> Desktop</a></li>
-        <li><a href="/kategori/database"><i class="fa fa-database fa-lg"></i> Database</a></li>
-        <li><a href="/kategori/linux"><i class="fa fa-linux fa-lg"></i> Linux</a></li>
-        <li><a href="/kategori/jaringan"><i class="fa fa-sitemap fa-lg"></i> Jaringan</a></li>
-        <li><a href="/kategori/game"><i class="fa fa-gamepad fa-lg"></i> Game</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h4><i class="fa fa-caret-right"></i> Bahasa</h4>
-      <ul>
-        <li><a href="/topik/pascal">Pascal</a></li>
-        <li><a href="/topik/ruby">Ruby</a></li>
-        <li><a href="/topik/python">Python</a></li>
-        <li><a href="/topik/go">Go</a></li>
-        <li><a href="/topik/java">Java</a></li>
-        <li><a href="/topik/php">PHP</a></li>
-        <li><a href="/topik/c">C</a></li>
-        <li><a href="/topik/c++">C++</a></li>
-        <li><a href="/topik/css">CSS</a></li>
-        <li><a href="/topik/html">HTML</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h4><i class="fa fa-caret-right"></i> Framework</h4>
-      <ul>
-        <li><a href="/topik/codeigniter">CodeIgniter</a></li>
-        <li><a href="/topik/laravel">Laravel</a></li>
-        <li><a href="/topik/slim">Slim</a></li>
-        <li><a href="/topik/django">Django</a></li>
-        <li><a href="/topik/yii">Yii</a></li>
-        <li><a href="/topik/qt">Qt</a></li>
-        <li><a href="/topik/bootstrap">Bootstrap</a></li>
-        <li><a href="/topik/materialize">Materialize CSS</a></li>
-        <li><a href="/topik/ruby-on-rails">Ruby on Rails</a></li>
-        <li><a href="/topik/hugo">Hugo</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h4><i class="fa fa-caret-right"></i> Peralatan</h4>
-      <ul>
-        <li><a href="/topik/text-editor">Text Editor</a></li>
-        <li><a href="/topik/ide">IDE</a></li>
-        <li><a href="/topik/build-tools">Build Tools</a></li>
-        <li><a href="/topik/kompilator">Kompilator</a></li>
-        <li><a href="/topik/manajemen-paket">Manajemen Paket</a></li>
-        <li><a href="/topik/git">Git</a></li>
-      </ul>
-    </section>
-
-  </amp-accordion>
- </amp-sidebar>
-
-<nav class="fixed-top block">
-    <ul>
-        <li>
-            <a href="#!" on="tap:sidebar.toggle">
-            <i class="fa fa-bars"></i>
-            </a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="https://www.petanikode.com/">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="/arsip/">Arsip</a>
-        </li>
-        
-        <li>
-            <a href="/kategori/tips-dan-trik">Tips &amp; Trik</a>
-        </li>
-        <li class="hide-on-mobile">
-            <a href="/topik/buku">Buku</a>
-        </li>
-        <li>
-            <a href="mailto:info@petanikode.com">Kirim Saran</a>
-        </li>
-    </ul>
-</nav>
-
-<header class="block-group">
-    <section class="header block">
-        <div class="site-wrapper">
-            <div class="site-title">
-
-                    <a href="https://www.petanikode.com/">
-                        <amp-img
-                            src="https://2.bp.blogspot.com/-pJdBch_oQqw/V3y2tFqPZ4I/AAAAAAAAC9U/7ujD0ZwCPp8ONjjVN_Hsh7zKqg6z7SKjwCK4B/s1600/petanikode-logo-2016-withtext.png"
-                            layout="responsive"
-                            width="367"
-                            height="79"
-                            >
-                        </amp-img>
-                    </a>
-
-            </div>
-        </div>
-    </section>
-
-    
-    
-
-</header>
-
-
-<main class="main block-group">
-    <article class="article block">
-
-
-    
-
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        6 Jun · baca 4 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/kotlin-variabel-tipe-data/">Belajar Pemrograman Kotlin: Variabel dan Tipe Data</a></h2>
-                <a href="/kotlin-variabel-tipe-data/">
-                    
-                    <amp-img src="https://petanikode.com/img/persiapan-kotlin/kotlin.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Belajar Kotlin: Mengenal Variabel dan Tipe Data"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/kotlin-variabel-tipe-data/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/tips-dan-trik">Tips dan Trik</a></span>
-            <br>
-        24 May · baca 3 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/belajar-pemrograman-di-bulan-ramadhan/">Bagaimana Saya Memanfaatkan Bulan Ramadhan untuk Belajar Pemrograman?</a></h2>
-                <a href="/belajar-pemrograman-di-bulan-ramadhan/">
-                    
-                    <amp-img src="https://www.petanikode.com/img/coding-ramadhan/pemrograman-arab.jpg"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Bagaimana Cara Saya Memanfaatkan Bulan Ramadhan untuk Belajar Pemrograman?"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/belajar-pemrograman-di-bulan-ramadhan/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        20 May · baca 4 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/kotlin-input-dan-output/">Belajar Kotlin: Cara Mengambil Input dan Menampilkan Output</a></h2>
-                <a href="/kotlin-input-dan-output/">
-                    
-                    <amp-img src="https://petanikode.com/img/persiapan-kotlin/kotlin.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Belajar Pemrograman Kotlin: Cara Mengambil Input dan Menampilkan Output"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/kotlin-input-dan-output/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        19 May · baca 2 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/kotlin-sintaks/">Belajar Pemrograman Kotlin: Sintaks Dasar Kotlin</a></h2>
-                <a href="/kotlin-sintaks/">
-                    
-                    <amp-img src="https://petanikode.com/img/persiapan-kotlin/kotlin.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Belajar Kotlin: Sintaks Dasar kotlin"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/kotlin-sintaks/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/pemrograman">Pemrograman</a></span>
-            <br>
-        19 May · baca 4 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/kotlin-linux/">Belajar Kotlin di Linux: Pengenalan Dasar Kotlin dan Persiapan Awal</a></h2>
-                <a href="/kotlin-linux/">
-                    
-                    <amp-img src="https://petanikode.com/img/persiapan-kotlin/kotlin.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Pemrograman Kotlin di Linux"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/kotlin-linux/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-    <div class="article-wrapper article-wrapper-index">
-    <div class="content">
-
-            <div class="post-header">
-    
-        <div class="author-foto pull-left">
-            <amp-img width="32" height="32" layout="fixed" src="https://lh5.googleusercontent.com/-h2tLsyijw8Q/AAAAAAAAAAI/AAAAAAAACys/WBpjN_34z3o/s32-c/photo.jpg"></amp-img>
-        </div>
-        <div>
-        <span class="author"><a href="https://twitter.com/ardiantapargo" target="_blank">Ardianta Pargo</a></span>
-        dalam
-        <span class="author"><a href="/kategori/jaringan">Jaringan</a></span>
-            <br>
-        19 Apr · baca 2 menit
-        </div>
-    
-</div>
-
-
-            <div class="post-content">
-                
-                <h2 class="post-title index-title"><a href="/ssl-untuk-github-pages/">Cara Menambahkan SSL Gratis dari Cloudflare untuk Github Pages (Kustom Domain)</a></h2>
-                <a href="/ssl-untuk-github-pages/">
-                    
-                    <amp-img src="https://www.petanikode.com/img/cara-menambahkan-ssl-untuk-github-pages/https.png"
-                        height="380"
-                        width="720"
-                        layout="responsive"
-                        alt="Migrasi Petani Kode dari Blogger ke Hugo"
-                        attribution="CC">
-                    </amp-img>
-                    
-                </a>
-                <a class="read-more" href="/ssl-untuk-github-pages/" id="read-more-button">
-                Selengkapnya…
-                </a>
-                
-
-                
-            </div>
-
-    </div>
-    </div>
-    
-
-    <div class="pager">
-    
-    <a class="button button-primary" href="/page/4/">
-        <i class="fa fa-caret-left"></i> Kembali
-    </a>
-    
-    
-        <a class="button button-primary pull-right" href="/page/6/">
-            Selanjutnya <i class="fa fa-caret-right"></i>
-        </a>
-    
-    </div>
-
-    </article>
-
-    <aside class="aside block">
-
-    <div class="widget">
-    
-    <div class="widget-content">
-
-        
-
-        <script type="text/javascript">
-
-            document.write('\n\n<style>\n	\n	\n						@import url(\'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext\');\n													\n\n	#mlb2-4827284,\n	#mlb2-4827284 *,\n	#mlb2-4827284 a:hover,\n	#mlb2-4827284 a:visited,\n	#mlb2-4827284 a:focus,\n	#mlb2-4827284 a:active {\n	    overflow:visible;\n	    position:static;\n	    background:none;\n	    border:none;\n	    bottom:auto;\n	    clear:none;\n	    cursor:default;\n	    float:none;\n	    letter-spacing:normal;\n	    line-height:normal;\n	    text-align:left;\n	    text-indent:0;\n	    text-transform:none;\n	    visibility:visible;\n	    white-space:normal;\n	\n	    max-height:none;\n	    max-width:none;\n	    left:auto;\n	    min-height:0;\n	    min-width:0;\n	    right:auto;\n	    top:auto;\n	    width:auto;\n	    z-index:auto;\n	\n	    text-shadow: none;\n	    box-shadow: none;\n	    outline: medium none;\n	}\n	\n	#mlb2-4827284 a:hover {\n		cursor: pointer !important;\n	}\n	\n	#mlb2-4827284 h4 {\n	    font-weight: normal;\n	}\n\n	#mlb2-4827284 .subscribe-form {\n	\n		padding: 20px;\n				width: 350px !important;\n				border: 2px solid #F6F6F6 !important;\n		background: #f6f6f6 none !important;\n		border-radius: 0px !important;\n		box-sizing: border-box !important;\n	\n	\n	}\n	\n	#mlb2-4827284 .ml-block-form {\n	 \n		margin-bottom: 0px;\n	\n	}\n    \n    #mlb2-4827284 .subscribe-form .form-section {\n    \n        margin-bottom: 20px;\n        width: 100%;\n    \n    }\n    \n    #mlb2-4827284 .subscribe-form .form-section.mb10 {\n    \n        margin-bottom: 10px;\n        float: left;\n    \n    }\n    \n    #mlb2-4827284 .subscribe-form .form-section.mb0 {\n    \n        margin-bottom: 0px;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section h4 {\n    \n        margin: 0px 0px 10px 0px !important;\n        padding: 0px !important;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 28px !important;\n        line-height: 100%;\n        text-align: left !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section p,\n    #mlb2-4827284 .subscribe-form .form-section li {\n    \n        line-height: 150%;\n        padding: 0px !important;\n        margin: 0px 0px 10px 0px;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section a {\n    \n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .confirmation_checkbox {\n    \n        line-height: 150%;\n        padding: 0px !important;\n        margin: 0px 0px 15px 0px !important;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 12px !important;\n        font-weight: normal !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .confirmation_checkbox input[type=\"checkbox\"] {\n    \n        margin-right: 5px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .form-group {\n    \n        margin-bottom: 15px;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .form-group label {\n    \n        float: left;\n        margin-bottom: 10px;\n        width: 100%;\n        line-height: 100%;\n        font-weight: bold;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox {\n        \n\n        width: 100%;\n        margin: 0px 0px 10px 0px;\n        \n\n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox label {\n\n    \n\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n\n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox input {\n\n    \n        margin: 0px 5px 0px 0px;\n    \n\n    }\n    \n     #mlb2-4827284 .subscribe-form .form-section .checkbox input[type=checkbox] {\n\n    \n       -webkit-appearance: checkbox;\n    \n\n    }\n\n\n    #mlb2-4827284.ml-subscribe-form .form-group .form-control {\n\n    \n\n        width: 100%;\n        font-size: 13px;\n        padding: 10px 10px;\n        height: auto;\n        font-family: Arial;\n        border-radius: 0px;\n        border: 1px solid #cccccc !important;\n        color: #000000 !important;\n        background-color: #FFFFFF !important;\n    	-webkit-box-sizing: border-box;\n    	-moz-box-sizing: border-box;\n    	box-sizing: border-box;\n        clear: left;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button {\n\n    \n\n        border: none !important;\n        cursor: pointer !important;\n        width: 100% !important;\n        border-radius: 0px !important;\n        height: 40px !important;\n        background-color: #008080 !important;\n        color: #FFFFFF !important;\n        font-family: \'Arial\', sans-serif !important;\n        font-size: 16px !important;\n        text-align: center !important;\n        padding: 0 !important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button.gradient-on {\n\n    \n\n            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button.gradient-on:hover {\n\n    \n\n            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button[disabled] {\n\n    \n\n            cursor: not-allowed!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-section.ml-error label {\n\n    \n\n        color: red!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-group.ml-error label {\n\n    \n\n        color: red!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-group.ml-error .form-control  {\n\n    \n\n        border-color: red!important;\n\n    \n\n    }\n    \n\n    \n        \n    \n    \n            \n    @media (max-width: 768px) {\n	    \n	    #mlb2-4827284 {\n		    \n		    width: 100% !important;\n		    \n	    }\n	    \n	    #mlb2-4827284 form.ml-block-form,\n	    #mlb2-4827284 .subscribe-form {\n			\n			width: 100% !important;\n			\n		}\n		\n	}\n	\n	    \n    \n<\/style>\n\n\n\n<div id=\"mlb2-4827284\" class=\"ml-subscribe-form ml-subscribe-form-4827284\">\n	\n	<div class=\"ml-vertical-align-center\">\n	    \n	    <div class=\"subscribe-form ml-block-success\" style=\"display:none\">\n	       \n	        	        \n	        <div class=\"form-section\">\n		        \n		        	            \n	            <p>Terima kasih... Silahkan cek inbox untuk mengkonfirmasi!<\/p>\n	            \n	        <\/div>\n	        \n	    <\/div>\n	\n	    <form class=\"ml-block-form\" action=\"//app.mailerlite.com/webforms/submit/c8d3m1\" data-id=\"385614\" data-code=\"c8d3m1\" method=\"POST\" target=\"_blank\">\n	\n		    	\n		    <div class=\"subscribe-form\">\n			    		        <div class=\"form-section mb10\">\n			        		            		            <p><strong><span style=\"font-size: 18px;\">Susah belajar pemrograman? <\/span><\/strong><\/p>\n<p>Dapatkan panduan dan tips eksklusif dari Petani Kode untuk membantumu belajar pemrograman<\/p>\n		            		        <\/div>\n		        \n		        <div class=\"form-section\">\n								        <div class=\"form-group ml-field-name\">\n			            			            <input type=\"text\" name=\"fields[name]\" class=\"form-control\" placeholder=\"Nama\" value=\"\"  autocomplete=\"name\" x-autocompletetype=\"name\" spellcheck=\"false\" autocapitalize=\"off\" autocorrect=\"off\">\n			        <\/div>\n								        <div class=\"form-group ml-field-email ml-validate-required ml-validate-email\">\n			            			            <input type=\"email\" name=\"fields[email]\" class=\"form-control\" placeholder=\"Email*\" value=\"\" autocomplete=\"email\" x-autocompletetype=\"email\"  spellcheck=\"false\" autocapitalize=\"off\" autocorrect=\"off\">\n			        <\/div>\n							        <\/div>\n		        \n		        	\n																	\n		\n	        	\n	        <input type=\"hidden\" name=\"ml-submit\" value=\"1\" />\n			\n						\n	        <button type=\"submit\" class=\"primary\">\n	            Ya, Saya Mau!\n	        <\/button>\n	\n	        <button disabled=\"disabled\" style=\"display: none;\" type=\"button\" class=\"loading\">\n	            <img src=\"//static.mailerlite.com/images/rolling.gif\" width=\"20\" height=\"20\" style=\"width: 20px; height: 20px;\">\n	        <\/button>\n	        \n	        	\n	    <\/div>\n	\n	    <\/form>\n	\n	\n	    <script>\n	        function ml_webform_success_4827284 () {\n	                        var $ = ml_jQuery || jQuery;\n\n	            $(\'.ml-subscribe-form-4827284 .ml-block-success\').show();\n	            $(\'.ml-subscribe-form-4827284 .ml-block-form\').hide();\n	        	        };\n	    <\/script>\n	\n	<\/div>\n<\/div>\n\n\n    ');
-            var script_tag = document.createElement('script');
-            script_tag.setAttribute("type","text/javascript");
-            script_tag.setAttribute("src", "//static.mailerlite.com/js/w/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f");
-            document.getElementsByTagName("head")[0].appendChild(script_tag);
-
-        </script>
-
-    </div>
-</div>
-
-    <div class="widget" align="center">
-    
-    <div class="widget-content">
-        <amp-ad width='300' height='250'
-          type="adsense"
-          data-ad-client="ca-pub-6279325630224392"
-          data-ad-slot="3775834661">
-        </amp-ad>
-    </div>
-</div>
- 
-    <div class="widget">
-    <h4 class="widget-title"><i class="fa fa-bolt"></i> Terbaru</h4>
-    <div class="widget-content">
-        <ul class="recent-post">
-            
-               
-               <li>
-                   <div class="pull-left recent-thumb">
-                       <a href="/hugo-layout-tema/">
-                           
-                                <amp-img src="https://2.bp.blogspot.com/-Mv7_MzM09G8/WIDgeFiJCWI/AAAAAAAADrY/0y8-pWVkHe0kjrgbjRxEeGT7jGKai90zACPcB/s180-c/hugo-petanikode.jpg" width="32" height="32" layout="fixed"></amp-img>
-                           
-                        </a>
-                   </div>
-                   <div class="recent-title">
-                   <a href="/hugo-layout-tema/">Membuat Layout Tema Hugo: 3 Halaman Penting yang Harus Ada dalam Blog</a><br>
-                    05 Sep 2017 · baca 11 menit
-                    </div>
-
-                </li>
-               
-            
-               
-               <li>
-                   <div class="pull-left recent-thumb">
-                       <a href="/python-list/">
-                           
-                                <amp-img src="https://www.petanikode.com/img/python/python-sqr.png" width="32" height="32" layout="fixed"></amp-img>
-                           
-                        </a>
-                   </div>
-                   <div class="recent-title">
-                   <a href="/python-list/">Belajar Python: Mengenal Struktur Data List</a><br>
-                    28 Aug 2017 · baca 6 menit
-                    </div>
-
-                </li>
-               
-            
-               
-               <li>
-                   <div class="pull-left recent-thumb">
-                       <a href="/python-virtualenv/">
-                           
-                                <amp-img src="https://www.petanikode.com/img/python/virtualenv/virtualenv-sqr.png" width="32" height="32" layout="fixed"></amp-img>
-                           
-                        </a>
-                   </div>
-                   <div class="recent-title">
-                   <a href="/python-virtualenv/">Mengenal Virtualenv: Apa Saja yang Harus Kamu Ketahui?</a><br>
-                    23 Aug 2017 · baca 4 menit
-                    </div>
-
-                </li>
-               
-            
-               
-               <li>
-                   <div class="pull-left recent-thumb">
-                       <a href="/bootstrap4/">
-                           
-                                <amp-img src="https://www.petanikode.com/img/bootstrap/4/bootstrap4-sqr.png" width="32" height="32" layout="fixed"></amp-img>
-                           
-                        </a>
-                   </div>
-                   <div class="recent-title">
-                   <a href="/bootstrap4/">Mencoba Bootstrap 4: Apa saja yang baru di Bootstrap 4?</a><br>
-                    19 Aug 2017 · baca 5 menit
-                    </div>
-
-                </li>
-               
-            
-               
-               <li>
-                   <div class="pull-left recent-thumb">
-                       <a href="/ebook-android/">
-                           
-                                <amp-img src="/img/android/ebook/ebook-android-sqr.png" width="32" height="32" layout="fixed"></amp-img>
-                           
-                        </a>
-                   </div>
-                   <div class="recent-title">
-                   <a href="/ebook-android/">Ebook dan Video Pemrograman Android Gratis dari Google</a><br>
-                    18 Aug 2017 · baca 2 menit
-                    </div>
-
-                </li>
-               
-            
-        </ul>
-    </div>
-</div>
- 
-    <div class="widget">
-    <h4 class="widget-title">Kategori</h4>
-    <div class="widget-content">
-
-        <ul class="recent-post">
-               <li>
-                   <div class="pull-left kategori-ikon">
-                       <a href="/kategori/pemrograman"><i class="fa fa-code fa-lg"></i></a>
-                    </div>
-                   <div>
-                   <a href="/kategori/pemrograman">Pemrograman</a><br>
-                    Tutorial dan dasar pemrograman
-                    </div>
-                </li>
-               <li>
-                   <div class="pull-left kategori-ikon">
-                       <a href="/kategori/web"><i class="fa fa-globe fa-lg"></i></a>
-                    </div>
-                   <div>
-                   <a href="/kategori/web">Pemrograman Web</a><br>
-                    Segala hal tentang web
-                    </div>
-                </li>
-               <li>
-                   <div class="pull-left kategori-ikon">
-                       <a href="/kategori/mobile"><i class="fa fa-tablet fa-lg"></i></a>
-                    </div>
-                   <div>
-                   <a href="/kategori/mobile">Pemrograman Mobile</a><br>
-                    Android, iPhone, dan lainnya
-                    </div>
-                </li>
-               <li>
-                   <div class="pull-left kategori-ikon">
-                       <a href="/kategori/desktop"><i class="fa fa-desktop fa-lg"></i></a>
-                    </div>
-                   <div>
-                   <a href="/kategori/desktop">Pemrograman Dekstop</a><br>
-                    Aplikasi GUI untuk dekstop
-                    </div>
-                </li>
-               <li>
-                   <div class="pull-left kategori-ikon">
-                       <a href="/kategori/database"><i class="fa fa-database fa-lg"></i></a>
-                    </div>
-                   <div>
-                   <a href="/kategori/database">Pemrograman Database</a><br>
-                    SQL, NoSQL, MySQL, dan lainnya
-                    </div>
-                </li>
-               <li>
-                   <div class="pull-left kategori-ikon">
-                       <a href="/kategori/linux"><i class="fa fa-linux fa-lg"></i></a>
-                    </div>
-                   <div>
-                   <a href="/kategori/linux">Pemrograman Linux</a><br>
-                    Hack Linux
-                    </div>
-                </li>
-               <li>
-                   <div class="pull-left kategori-ikon">
-                       <a href="/kategori/jaringan"><i class="fa fa-sitemap fa-lg"></i></a>
-                    </div>
-                   <div>
-                   <a href="/kategori/jaringan">Pemrograman Jaringan</a><br>
-                    Buat program untuk jaringan
-                    </div>
-                </li>
-               <li>
-                   <div class="pull-left kategori-ikon">
-                       <a href="/kategori/game"><i class="fa fa-gamepad fa-lg"></i></a>
-                    </div>
-                   <div>
-                   <a href="/kategori/game">Pemrograman Game</a><br>
-                    Bikin game sendiri
-                    </div>
-                </li>
-        </ul>
-
-    </div>
-</div>
-
-    <div class="widget" align="center">
-    <a href="http://projects.id/petani_kode" target="_blank">
-    <img src="/images/petanikode-projects.png" alt="Proyek Petani Kode"/>
-    </a>
-</div>
- 
-    
-</aside>
-
-</main>
-
-<footer class='footer-wrapper block-group'>
-    <section class="footer">
-    <div class="link-footer">
-        <a href="https://www.petanikode.com/">Home</a>
-        <a href="/arsip">Arsip</a>
-        <a href="http://projects.id/petani_kode" target="_blank">Proyek</a>
-        <a href="/tentang-petani-kode">Tentang</a>
-        <a href="mailto:info@petanikode.com">Kirim Saran</a>
-    </div>
-
-    <div class='profil-sosial'>
-        <a href="https://facebook.com/petanikode" class="facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
-        <a href="https://twitter.com/petanikode" class="twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
-        <a href="https://google.com/+PetaniKode" class="gplus"><i class="fa fa-google-plus-square fa-2x"></i></a>
-        <a href="https://instagram.com/petanikode" class="instagram"><i class="fa fa-instagram fa-2x"></i></a>
-        <a href="https://www.youtube.com/channel/UCVEEB0XiaogU6UodKXRaNyg" class="youtube"><i class="fa fa-youtube-square fa-2x"></i></a>
-        <a href="http://feeds.feedburner.com/petanikode" class="rss"><i class="fa fa-rss-square fa-2x"></i></a>
-    </div>
-
-
-    <div class='text-center'>
-    &copy; 2017 <a href="https://www.petanikode.com/">Petani Kode</a> <span class="hide-on-mobile">| Made with ❤️ using <a href='https://gohugo.io' target='_blank'>Hugo 0.26</a>.</span>
-    </div>
-    </section>
-</footer>
-
-
-
-
-
-<script src="/assets/prism/prism.js"></script>
-
-
-
-
-<script type="text/javascript">
-    window._wpemojiSettings = { "baseUrl": "https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1496863874h&ver=4.8-RC2-40878" } };
-    !function (a, b, c) { function d(a) { var b, c, d, e, f = String.fromCharCode; if (!k || !k.fillText) return !1; switch (k.clearRect(0, 0, j.width, j.height), k.textBaseline = "top", k.font = "600 32px Arial", a) { case "flag": return k.fillText(f(55356, 56826, 55356, 56819), 0, 0), b = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 56826, 8203, 55356, 56819), 0, 0), c = j.toDataURL(), b === c && (k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447), 0, 0), b = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447), 0, 0), c = j.toDataURL(), b !== c); case "emoji4": return k.fillText(f(55358, 56794, 8205, 9794, 65039), 0, 0), d = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55358, 56794, 8203, 9794, 65039), 0, 0), e = j.toDataURL(), d !== e }return !1 } function e(a) { var c = b.createElement("script"); c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c) } var f, g, h, i, j = b.createElement("canvas"), k = j.getContext && j.getContext("2d"); for (i = Array("flag", "emoji4"), c.supports = { everything: !0, everythingExceptFlag: !0 }, h = 0; h < i.length; h++)c.supports[i[h]] = d(i[h]), c.supports.everything = c.supports.everything && c.supports[i[h]], "flag" !== i[h] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[i[h]]); c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () { c.DOMReady = !0 }, c.supports.everything || (g = function () { c.readyCallback() }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", g, !1), a.addEventListener("load", g, !1)) : (a.attachEvent("onload", g), b.attachEvent("onreadystatechange", function () { "complete" === b.readyState && c.readyCallback() })), f = c.source || {}, f.concatemoji ? e(f.concatemoji) : f.wpemoji && f.twemoji && (e(f.twemoji), e(f.wpemoji))) }(window, document, window._wpemojiSettings);
 
 </script>
-<style type="text/css">
-    img.wp-smiley,
-    img.emoji {
-        display: inline !important;
-        border: none !important;
-        box-shadow: none !important;
-        height: 1em !important;
-        width: 1em !important;
-        margin: 0 .07em !important;
-        vertical-align: -0.1em !important;
-        background: none !important;
-        padding: 0 !important;
-    }
-</style>
-
-
-
-
-
-
-<amp-analytics type="googleanalytics">
-    <script type="application/json">
-        {
-            "vars": {
-                "account": "UA-80537197-1"
-            },
-            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
-        }
-    </script>
-</amp-analytics>
-
-
-</body>
+    </body>
 </html>
-

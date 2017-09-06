@@ -66,7 +66,9 @@ Membuat repositori Buatlah repositori dengan nama apa saja, kemudian di dalamnya
       <pubDate>Fri, 25 Nov 2016 15:19:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/tutorial-web-responsif-pengenalan-rwd-dan-viewport/</guid>
-      <description>Bagaimana cara membuat web responsif? itulah pertanyaan yang cukup sering ditanyakan kepada saya. Pertanyaan ini membutuhkan jawaban yang cukup panjang, karena itu saya tidak bisa langsung menjawab secara detail melalui lisan maupun pesan instan, selain itu juga waktu yang tidak mendukung. Berangkat dari keterbatasan itu, akhirnya saya menrebitkan tulisan ini.
+      <description>Bagaimana cara membuat web responsif? itulah pertanyaan yang cukup sering ditanyakan kepada saya.
+Pertanyaan ini membutuhkan jawaban yang cukup panjang, karena itu saya tidak bisa langsung menjawab secara detail melalui lisan maupun pesan instan, selain itu juga waktu yang tidak mendukung.
+Berangkat dari keterbatasan itu, akhirnya saya menrebitkan tulisan ini.
 Apakah itu RWD? RWD singkatan dari Responsive Web Design. Responsif artinya webnya dapat merespon atau menyesuaikan diri dengan perangkat yang digunakan.</description>
     </item>
     
@@ -268,8 +270,7 @@ h2 { text-shadow: 3px 2px 1px grey; font-size: 40px; }  kemudian HTML-nya:
       <guid>https://www.petanikode.com/css-dalam-html/</guid>
       <description>Penulisan kode CSS dalam HTML dibagi menjadi tiga cara, internal, inline, dan eksternal. Pembagian ini berdasarkan letak kode CSS tersebut ditulis.
 1. Internal CSS Internal CSS adalah istilah untuk kode CSS yang ditulis langsung dalam berkas HTML. Kode CSS ini dituliskan pada tag &amp;lt;style&amp;gt;. Tag ini bisa ditulis di dalam blok head atapun body, kedua-duanya sah. Nah, berikut ini contoh internal CSS.
-
-2. Eksternal CSS Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML.</description>
+ 2. Eksternal CSS Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML.</description>
     </item>
     
     <item>

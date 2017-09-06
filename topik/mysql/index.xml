@@ -103,7 +103,11 @@ Building dependency tree&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;n
       <pubDate>Thu, 31 Mar 2016 18:21:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/kode-crud-dalam-satu-file-php/</guid>
-      <description>Pernah mebayangkan, tidak? Membuat CRUD (Create, Read, Update, Delete) dalam satu file PHP. Biasanya, membuat CRUD dilakukan dengan membuat file terpisah. Masing-masing file mewakili CRUD. Misalkan file create.php untuk menambahkan data, read.php untuk menampikan data, update.php untuk mengubah data, dan delete.php untuk menghapus data. Bagaimana kalau, semuanya digabungkan ke dalam satu file PHP?
+      <description>Pernah mebayangkan, tidak?
+Membuat CRUD (Create, Read, Update, Delete) dalam satu file PHP.
+Biasanya, membuat aplikasi CRUD dilakukan dengan membuat file terpisah. Masing-masing file mewakili CRUD.
+Misalkan file create.php untuk menambahkan data, read.php untuk menampikan data, update.php untuk mengubah data, dan delete.php untuk menghapus data.
+Bagaimana kalau, semuanya digabungkan ke dalam satu file PHP?
 Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam satu file PHP. Kode ini, saya buat dengan koneksi database menggunakan API mysqli.</description>
     </item>
     

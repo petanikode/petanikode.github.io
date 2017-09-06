@@ -106,7 +106,8 @@ Silahkan di simak&amp;hellip;
       <description>Hallo kawan, kali ini saya akan membahas 7 bahasa pemrograman yang dapat dilakukan langsung di Ubuntu tanpa menginstal apapun.
 Eksperimen ini saya lakukan di Ubuntu 16.04 64bit Live CD. Saya sudah disediakan teks editor seperti Gedit, Vi, dan Nano untuk menulis kode.
 Baca juga: 6 Teks Editor Berbasis Teks (CLI) di Linux untuk Menulis Kode
-Adapun 7 bahasa pemrograman yang dapat dilakukan langsung di Ubuntu adalah sebagai berikut.</description>
+Adapun 7 bahasa pemrograman yang dapat dilakukan langsung di Ubuntu adalah sebagai berikut.
+1. Pemrograman Shell Skrip Shell merupakan sebuah program yang bisa dijalankan di Unix Shell atau Command Line Interpreter (CLI).</description>
     </item>
     
     <item>
@@ -145,13 +146,12 @@ Maka untuk mengkompensasi hal ini, setiap 4 tahun sekali (tahun yang bisa dibagi
 Apa itu Simsimi?
 buat yang belum tau, silahkan instal saja aplikasi Simsimi di smarphone-nya.
 Oke, mari kita mulai.
-
 API Simsimi konsepnya sangat sederhana. Kita hanya melakukan request dari URL dengan query string, lalu akan mendapatkan jawaban atau respon berdasarkan data yang dimiliki Simsimi. Respon tersebut, bisa kita olah untuk membuat Simsimi versi kita sendiri.
 1. Mendapatkan Kunci API Kunci API atau API Key, merupakan kunci yang digunakan untuk mengakses API Simsimi.</description>
     </item>
     
     <item>
-      <title>Cara Parshing JSON pada Python</title>
+      <title>Belajar Python: Cara Parsing Data dari JSON</title>
       <link>https://www.petanikode.com/python-json/</link>
       <pubDate>Thu, 01 Sep 2016 13:28:00 +0000</pubDate>
       
@@ -265,11 +265,11 @@ range(10,50,5)akan menghasilkan:
       <guid>https://www.petanikode.com/perbedaan-perulangan-while-dan-do-while/</guid>
       <description>Apakah perbedaan perulangan while dengan do/while?
 Keduanya sama-sama perulangan yang tidak tentu (uncounted loop). Akan tetapi memiliki beberapa perbedaan, baik dari segi penggunaan, penulisan kode, dan langkah kerja.
-
 Perulangan While vs Do/While Perulangan while akan melakukan perulangan kalau kondisi (syarat) terpenuhi.
 Sedangkan do/while melakukan perulangan dulu, kemudian memeriksa kondisinya atau sayaratnya.
 Kalau kondisi terpenuhi, maka do/while akan melanjutkan perulangan. Sebaliknya, dia akan berhenti (break).
-Contoh kode dalam Javascript:</description>
+Contoh kode dalam Javascript:
+var bensin = 9; // perulangan while-do while(bensin &amp;gt; 0){ console.</description>
     </item>
     
     <item>

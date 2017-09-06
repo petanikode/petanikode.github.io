@@ -22,7 +22,7 @@
 Bisa dibilang, SQLite adalah database portable yang bisa digunakan tanpa jaringan. Inilah yang membuatnya banyak digunakan dalam berbagai aplikasi (offline) seperti aplikasi Android, aplikasi desktop, java, VB.net, Game, dsb.
 Pada kesempatan ini, kita akan belajar dasar-dsar SQLite dengan menggunakan Linux.
 Instalasi SQLite di Linux Pertama kita perlu menginstal SQLite-nya dulu, silahkan ketik perintah berikut.
-  Terminal sudo apt install sqlite3  Setelah itu jawab y untuk memulai instalasi.</description>
+sudo apt install sqlite3  Setelah itu jawab y untuk memulai instalasi.</description>
     </item>
     
   </channel>

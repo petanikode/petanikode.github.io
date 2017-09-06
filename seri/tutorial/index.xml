@@ -382,7 +382,6 @@ git checkout 06f735af7724558164c87f6b1ce3ca7778eb1c1b  Maka semua file akan dike
 Kadang&amp;hellip; akan terjadi konflik, karena kode yang kita tulis berbeda dengan yang lain.
 Misalnya, Si A menulis kode untuk fitur X dengan algoritma yang ia ketahui. Sedangkan si B menulis dengan algoritma yang berbeda.
 Lalu mereka melakukan commit, dan kode sumber jadi berantakan. Anggota tim yang lain menjadi pusing.
-
 Agar tidak terjadi hal yang seperti ini, kita harus membuat cabang (branch) tersendiri.</description>
     </item>
     
@@ -416,9 +415,7 @@ Membatalkan Perubahan Jika revisi kita belum staged ataupun committed, kita bisa
       <description>Saya sempat mengira, kalau animasi stiker di facebook menggunakan gif, ternyata bukan.
 Animasi tersebut menggunakan javascript dengan mengubah posisi backgound.
 Coba saja klik kanan pada stikernya, kemudian pilih inspect element, maka kita akan mendapatkan kode seperti ini.
-
 Terlihat pada kode di atas, stikernya menggunakan backgound image. Ketika kita membuka backgound tersebut, kita akan mendapatkan gambar seperti berikut ini.
-
 Sekarang, bagaimana kalau kita coba membuatnya.
 Kode HTML Buat kode HTML untuk menampilkan stikernya.</description>
     </item>
@@ -447,7 +444,6 @@ Silahkan buka file application/config/config.php, kemudian isi bagian autoload C
       <description>Pada tutorial sebelumnya, kita sudah belajar cara melihat log revisi di repositori. Sekarang kita kan peljari perintah git diff, fungsinya untuk melihat perbedaan perubahan di revisi.
 Melihat Perbandingan Perubahan yang Dilakukan pada Revisi Gunakan perintah berikut ini untuk melihat perubahan yang dilakukan pada revisi tertentu.
 git diff cf08ca0837cf26f1c595be36bb3a6b815e311be1  cf08ca0837cf26f1c595be36bb3a6b815e311be1 adalah nomer revisi yang ingin dilihat.
-
 Lihatlah hasil di atas, simbol plus (+) artinya kode yang ditambahkan. Sedangkan kalau ada kode yang dihapus simbolnya akan menggunakan minus (-).</description>
     </item>
     
@@ -460,9 +456,7 @@ Lihatlah hasil di atas, simbol plus (+) artinya kode yang ditambahkan. Sedangkan
       <description>Pada tutorial sebelumnya, kita sudah membuat dua revisi pada repositori project-01. Sekarang bagaimana caranya kita melihat catatan log dari revisi-reivisi tersebut?
 Git sudah menyediakan perintah git log untuk melihat catatan log perubahan pada respositori. Contoh penggunaannya:
 git log  Maka kita akan melihat log perubahan apa saja yang sudah dilakukan dalam repositori.
-
 Pada gambar di atas, terdapat dua revisi perubahan yang telah dilakuan.
-
 Log yang Lebih Pendek Untuk menampilkan log yang lebih pendek, kita bisa menambahkan argumen --oneline.</description>
     </item>
     
@@ -475,11 +469,9 @@ Log yang Lebih Pendek Untuk menampilkan log yang lebih pendek, kita bisa menamba
       <description>Pada tutorial Git yang kedua, kita sudah membuat repositori kosong. Belum ada apa-apa di sana.
 Sekarang coba tambahkan sebuah file baru.
 Sebagai contoh, saya akan menambahkan tiga file HTML kosong.
-
 Setalah ditambahkan, coba ketik perintah git status untuk melihat status repositorinya.
-
 Berdasarkan keterangan di atas, saat ini kita berada cabang (branch) master dan ada tiga file yang belum ditambahkan ke Git.
-  (adsbygoogle = window.adsbygoogle || []).</description>
+   (adsbygoogle = window.adsbygoogle || []).push({});  Tiga Kelompok Kondisi File dalam Git Sebelum kita membuat revisi, kita akan berkenalan dulu dengan tiga kondisi file dalam Git.</description>
     </item>
     
     <item>
@@ -500,12 +492,11 @@ git init proyek-01  Perintah tersebut akan membuat direktori bernama proyek-01. 
       <pubDate>Wed, 08 Feb 2017 11:26:37 +0800</pubDate>
       
       <guid>https://www.petanikode.com/git-install/</guid>
-      <description>Kita sudah mengenal Git pada tulisan sebelumnya. Selanjutnya Kita akan melakukan instalasi dan persiapan.
+      <description>Kita sudah mengenal Git pada tulisan sebelumnya. Selanjutnya Kita akan melakukan instalasi dan persiapan untuk mulai belajar Git.
 Tulisan ini terbagi menjadi tiga bagian:
  Cara Instalasi Git di Linux. Cara Instalasi Git di Windows. Konfigurasi Awal yang Harus dilakukan Setelah Menginstal Git.  Mari kita mulai&amp;hellip;
 1. Cara Install Git di Linux Instalasi Git pada Distro keluarga Debian dapat menggunakan perintah apt.
-sudo apt install git  atau
-sudo apt-get install git  Pada Fedora:</description>
+sudo apt install git  atau</description>
     </item>
     
     <item>
@@ -525,8 +516,9 @@ Pembuatan tag amp-img secara manual terasa sangat melelahkan, karena saya harus 
       <pubDate>Tue, 31 Jan 2017 12:09:55 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-upload-file-ke-server-ftp-ala-git/</guid>
-      <description>Ketika kita akan men-deploy atau hosting sebuah web di server shared hosting, kita akan diberikan fasilitas FTP untuk upload file. Kita bisa menggunakan FTP Client seperti FileZilla untuk upload file. Namun, bagaimana kalau nanti ada perubahan? Tentu kita akan mencari file yang diubah dan di-upload lagi. Hal ini mungkin terasa sedikit melelahkan.
-
+      <description>Ketika kita akan men-deploy atau hosting sebuah web di server shared hosting, kita akan diberikan fasilitas FTP untuk upload file.
+Kita bisa menggunakan FTP Client seperti FileZilla untuk upload file. Namun, bagaimana kalau nanti ada perubahan?
+Tentu kita akan mencari file yang diubah dan di-upload lagi. Hal ini mungkin terasa sedikit melelahkan.
 Sedangkan, kalau kita menggunakan Git. Kita hanya perlu melakukan push untuk mengupload perubahan ke server atau repository remote.</description>
     </item>
     

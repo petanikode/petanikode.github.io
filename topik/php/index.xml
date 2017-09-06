@@ -172,7 +172,9 @@ Tetapi, bagi yang menggunakan paket terpisah (apache2, php, mysql), kemungkinan 
       <pubDate>Sat, 15 Oct 2016 19:00:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/php-command-line/</guid>
-      <description>Perintah-perintah dasar yang sering kita ketik di Terminal maupun CMD, dapat juga kita eksekusi melalui web. Tentu saja dengan bantuan PHP. Pada artikel sebelumnya, saya sudah pernah membahas fungsi-fungsi untuk operasi file dan direktori. Nah, sekarang ini kita akan coba fungsi system(). Fungsi ini untuk mengeksekusi perintah-perintah Terminal atau CMD.
+      <description>Perintah-perintah dasar yang sering kita ketik di Terminal maupun CMD, dapat juga kita eksekusi melalui web. Tentu saja dengan bantuan PHP.
+Pada artikel sebelumnya, saya sudah pernah membahas fungsi-fungsi untuk operasi file dan direktori.
+Nah, sekarang ini kita akan coba fungsi system(). Fungsi ini untuk mengeksekusi perintah-perintah Terminal atau CMD.
 Baca Juga:
  Cara Menghapus dan Mengubah Nama Direktori dengan PHP Membuat dan Menampilkan isi Direktori dengan PHP  Mari kita mulai dengan membuat sebuah file baru bernama eksekusi_perintah.</description>
     </item>
@@ -183,7 +185,8 @@ Baca Juga:
       <pubDate>Mon, 10 Oct 2016 10:16:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/web-server-php/</guid>
-      <description>Pada PHP versi 5.4.0, CLI SAPI menyediakan fitur build-in web server yang memungkinkan kita untuk membuat server web dari perintah command line (CLI). Namun, server tersebut hanya bisa digunakan untuk pengembangan (development) aplikasi saja. Bila kita menggunakannya untuk server produksi, kemungkinan akan macet karena terlalu banyak request.
+      <description>Pada PHP versi 5.4.0, CLI SAPI menyediakan fitur build-in web server yang memungkinkan kita untuk membuat server web dari perintah command line (CLI). Namun, server tersebut hanya bisa digunakan untuk pengembangan (development) aplikasi saja.
+Bila kita menggunakannya untuk server produksi, kemungkinan akan macet karena terlalu banyak request.
 Membuat Server dari Commnd Line Pastikan PHP sudah terinstal, kemudian buat sebuah server dengan perintah berikut ini.
 php -S localhost:8000  Perhatikan argumen -S, argumen tersebut menggunakan huruf kapital.</description>
     </item>
@@ -294,7 +297,11 @@ http://petanikode.com/  Fungsi site_url() Seperti namanya, fungsi site_url() aka
       <pubDate>Thu, 31 Mar 2016 18:21:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/kode-crud-dalam-satu-file-php/</guid>
-      <description>Pernah mebayangkan, tidak? Membuat CRUD (Create, Read, Update, Delete) dalam satu file PHP. Biasanya, membuat CRUD dilakukan dengan membuat file terpisah. Masing-masing file mewakili CRUD. Misalkan file create.php untuk menambahkan data, read.php untuk menampikan data, update.php untuk mengubah data, dan delete.php untuk menghapus data. Bagaimana kalau, semuanya digabungkan ke dalam satu file PHP?
+      <description>Pernah mebayangkan, tidak?
+Membuat CRUD (Create, Read, Update, Delete) dalam satu file PHP.
+Biasanya, membuat aplikasi CRUD dilakukan dengan membuat file terpisah. Masing-masing file mewakili CRUD.
+Misalkan file create.php untuk menambahkan data, read.php untuk menampikan data, update.php untuk mengubah data, dan delete.php untuk menghapus data.
+Bagaimana kalau, semuanya digabungkan ke dalam satu file PHP?
 Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam satu file PHP. Kode ini, saya buat dengan koneksi database menggunakan API mysqli.</description>
     </item>
     

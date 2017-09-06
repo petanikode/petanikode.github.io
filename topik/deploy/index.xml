@@ -18,8 +18,9 @@
       <pubDate>Tue, 31 Jan 2017 12:09:55 +0800</pubDate>
       
       <guid>https://www.petanikode.com/cara-upload-file-ke-server-ftp-ala-git/</guid>
-      <description>Ketika kita akan men-deploy atau hosting sebuah web di server shared hosting, kita akan diberikan fasilitas FTP untuk upload file. Kita bisa menggunakan FTP Client seperti FileZilla untuk upload file. Namun, bagaimana kalau nanti ada perubahan? Tentu kita akan mencari file yang diubah dan di-upload lagi. Hal ini mungkin terasa sedikit melelahkan.
-
+      <description>Ketika kita akan men-deploy atau hosting sebuah web di server shared hosting, kita akan diberikan fasilitas FTP untuk upload file.
+Kita bisa menggunakan FTP Client seperti FileZilla untuk upload file. Namun, bagaimana kalau nanti ada perubahan?
+Tentu kita akan mencari file yang diubah dan di-upload lagi. Hal ini mungkin terasa sedikit melelahkan.
 Sedangkan, kalau kita menggunakan Git. Kita hanya perlu melakukan push untuk mengupload perubahan ke server atau repository remote.</description>
     </item>
     

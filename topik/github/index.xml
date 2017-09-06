@@ -94,33 +94,30 @@ Kita membutuhkan dua repositori untuk melakukan cara ini.</description>
       <guid>https://www.petanikode.com/github-ssh/</guid>
       <description>SSH memungkinkan kita untuk melakukan push ke repository github tanpa login. Berbeda dengan cara yang biasa (melalui HTTPS), kita harus memasukkan username dan password setiap kali melakukan push. Tapi dengan SSH kita tidak akan melakukan itu lagi.
 1. Membuat Key SSH Jalankan perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda. Untuk passpharse dikosongkan saja.
-
 Maka di dalam direktori ~/.ssh/ akan tercipa file key baru.
-
 2. Jalankan SSH Angen dan Load SSH Key Untuk memastikan apakah SSH Agent sudah berajalan atau tidak, gunakan perintah ini:</description>
     </item>
     
     <item>
       <title>Cara Membuat Halaman Github Kurang dari 10 Menit</title>
-      <link>https://www.petanikode.com/cara-membuat-halaman-github-kurang-dari-10-menit/</link>
+      <link>https://www.petanikode.com/github-pages/</link>
       <pubDate>Wed, 25 Jan 2017 08:06:22 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/cara-membuat-halaman-github-kurang-dari-10-menit/</guid>
+      <guid>https://www.petanikode.com/github-pages/</guid>
       <description>Halaman Github (Github Pages) merupakan layanan hosting web statis yang diberikan oleh Github. Layanan ini diberikan secara gratis dan kita juga akan mendapatkan subdomain .github.io.
-
 Bagaimanakah cara membuatnya?
 Baiklah, pastikan anda sudah punya akun Github dan sudah menginstal Git. Kemudian silahkan ikuti langkah-langkah berikut, tidak sampai 10 menit kok.
 1. Buat Repositori Baru Buatlah repositori baru dengan nama username.github.io. Gunakan username github Anda, contoh petanikode.github.io.
 
-2. Buat Repositri di Komputer Buka terminal atau CMD, kemudian buatlah repositori baru.</description>
+![Membuat Repository Baru]</description>
     </item>
     
     <item>
       <title>Cara Cloning proyek di github</title>
-      <link>https://www.petanikode.com/github-clone/</link>
+      <link>https://www.petanikode.com/git-clone/</link>
       <pubDate>Wed, 11 Feb 2015 17:22:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/github-clone/</guid>
+      <guid>https://www.petanikode.com/git-clone/</guid>
       <description>Assalamualaikum wr. wb., di tulisan ini saya ingin berbagi cara kloning proyek di Github. Kloing proyek artinya membuat salinan berkas proyek yang ada di server Github ke komputer sendiri.
  Kloning proyek dapat dilakukan dengan perintah git clone [alamat proyek]. Alamat proyek dapat dilihat di halaman repository proyek yang akan dikloning.
  $ git clone https://github.com/b-informatika/kupi.git

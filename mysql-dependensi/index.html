@@ -87,6 +87,12 @@ Building dependency tree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reading state infor
 <meta name="telegram:channel" content="@petanikode">
 
 <meta name="keywords" content="Solusi Masalah Dependensi Server MySQL di Ubuntu, "/>
+<meta name="description" content="Gara-gara upgrade versi server MySQL tadi malam, servernya malah error. Awalnya saya menggunakan MySQL versi 5.5, kemudian ditingkatkan (upgrade) ke versi 5.6.
+$ mysql -u root -p ERROR 2002 (HY000): Can&rsquo;t connect to local MySQL server through socket &lsquo;/var/run/mysqld/mysqld.sock&rsquo; (2)Kemudian saya mencoba menghapus mysql-server dan meninginstal lagi (instal ulang). sudo apt-get remove mysql-server
+sudo apt-get install mysql-serverMalah dapat error dependensi:
+$ sudo apt-get install mysql-server
+Reading package lists&hellip; Done
+Building dependency tree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reading state information&hellip; Done" />
 
 <meta content='ID-id' http-equiv='content-language' />
 <meta content='index,follow' name='robots' />

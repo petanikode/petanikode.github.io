@@ -84,6 +84,11 @@ extension_dir = /usr/lib/php/20151012/Lokasi /usr/lib/php/20151012/ adalah lokas
 <meta name="telegram:channel" content="@petanikode">
 
 <meta name="keywords" content="[Solved] Error phpMyAdmin `mbstring is missing` di Linux, "/>
+<meta name="description" content="Masih segar, Ubuntu saya baru saja ditingkatkan (upgrade) ke versi 16.04. Secara otomatis semua versi software-nya juga ditingkatkan. Tapi, peningkatan versi tidak selalu menjadi lebih baik. Kadang mendapat bugs dan masalah baru. Seperti phpMyAdmin, terjadi error karena menggunakan PHP 7. Pada versi sebelumnya menggunakan PHP 5.
+
+Berdasarkan pesan error tersebut, kesalahanya ada pada konfigurasi PHP. Atur konfigurasi agar dapat me-load ekstensi.
+buka file /etc/php5/apache2/php.ini atau /etc/php/7.0/apache2/php.iniTambahkan
+extension_dir = /usr/lib/php/20151012/Lokasi /usr/lib/php/20151012/ adalah lokasi ekstensi PHP pada komputer saya." />
 
 <meta content='ID-id' http-equiv='content-language' />
 <meta content='index,follow' name='robots' />

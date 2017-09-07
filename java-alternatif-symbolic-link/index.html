@@ -90,6 +90,13 @@ petanikode@imajinasi:~$ sudo update-alternatives --config java update-alternativ
 <meta name="telegram:channel" content="@petanikode">
 
 <meta name="keywords" content="Pilihan Alternatif Java dan Symbolic Link yang Buntu, "/>
+<meta name="description" content="Ketika saya bermain-main dengan perintah update-alternative untuk menambahakan pilihan alternatif java, malah terjadi error.
+Hal ini disebabkan karena saya salah memasukkan symbolic link ketika menambahkan pilihan alternatif.
+Berikut ini perintah salah yang menyebabkan masalah:
+sudo update-alternative --install /etc/alternatives/java java /opt/jdk1.8.0_77/bin/java Perhatikan teks yang berwarna merah. Teks tersebut merupakan symbolic link yang berlokasi di /etc/alternatives.
+Symbolic link yang seharusnya dimasukkan adalah /usr/bin/java.
+Akibatnya, error:
+petanikode@imajinasi:~$ sudo update-alternatives --config java update-alternatives: error: cannot stat file &#39;/etc/alternatives/java&#39;: Too many levels of symbolic links  Tidak dapat memilih alternatif java, karena symbolic link java yang berada di /etc/alternatives buntu (broken)." />
 
 <meta content='ID-id' http-equiv='content-language' />
 <meta content='index,follow' name='robots' />

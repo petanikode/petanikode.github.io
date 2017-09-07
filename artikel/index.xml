@@ -1480,29 +1480,6 @@ Kita dapat menentukan warna navbar bootstrap sesui selera. Kemudian akan diberik
     </item>
     
     <item>
-      <title>Mengganti list-style ul dan ol dengan Ikon Fontawesome </title>
-      <link>https://www.petanikode.com/mengganti-list-style-ul-dan-ol-dengan-ikon-fontawesome/</link>
-      <pubDate>Tue, 19 Jul 2016 08:50:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/mengganti-list-style-ul-dan-ol-dengan-ikon-fontawesome/</guid>
-      <description>Saat memodifikasi halaman arsip dari blog ini. Saya ingin mengganti list-style yang digunakan oleh elemen &amp;lt;ol&amp;gt; atau &amp;lt;ul&amp;gt;. Aslinya, bentuknya bulat dan angka. Kemudian saya ingin mengganti dengan ikon fontawesome. Kebetulan fontawesome sudah terinstal di blog ini.
-&amp;lt;link href=&amp;ldquo;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&amp;quot; rel=&amp;ldquo;stylesheet&amp;rdquo; type=&amp;ldquo;text/css&amp;rdquo;&amp;gt;&amp;lt;/link&amp;gt;Kode HTML:
-&amp;lt;ol&amp;gt;
-&amp;lt;li&amp;gt;Item 1&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Item 2&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Item 3&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt;Kode CSS:
-ul {
-&amp;nbsp;&amp;nbsp;&amp;nbsp; list-style: none;
-&amp;nbsp;&amp;nbsp;&amp;nbsp; padding: 0;
-}
-li {
-&amp;nbsp;&amp;nbsp;&amp;nbsp; padding-left: 1.3em;
-}
-li:before {
-&amp;nbsp;&amp;nbsp;&amp;nbsp; content: &amp;ldquo;\f073&amp;rdquo;; /* FontAwesome Unicode /</description>
-    </item>
-    
-    <item>
       <title>Pemanggilan fungsi base_url() pada File error_404.php CodeIgniter</title>
       <link>https://www.petanikode.com/codeigniter-base-url-404/</link>
       <pubDate>Mon, 18 Jul 2016 04:30:00 +0000</pubDate>

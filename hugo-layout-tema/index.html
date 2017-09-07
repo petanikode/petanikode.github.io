@@ -15,7 +15,7 @@ Adanya partial memungkinkan kita untuk menggunakan ulang komponen yang sudah ada
 
 
 <meta itemprop="dateModified" content="2017-09-05T03:01:11&#43;08:00" />
-<meta itemprop="wordCount" content="2159">
+<meta itemprop="wordCount" content="2174">
 
 
 
@@ -361,6 +361,9 @@ saya rekomendasikan untuk melihat-lihat repositori ini: <a href="https://github.
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/bootstrap.min.css&quot; /&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/style.css&quot; /&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/prism.css&quot; /&gt;
+
+&lt;!-- Taru kode Google Analytic di sini, karena menurut aturan harus di dalam Head --&gt;
+{{ template &quot;_internal/google_analytics.html&quot; . }}
 </code></pre>
 
 <p><strong>Penjelasan</strong>:</p>
@@ -579,8 +582,6 @@ menulis kode-kode javascript yang diperlukan.</p>
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/popper.min.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/prism.js&quot;&gt;&lt;/script&gt;
-
-{{ template &quot;_internal/google_analytics_async.html&quot; . }}
 </code></pre>
 
 <p>Kenapa tidak ada <code>css-init</code>?</p>

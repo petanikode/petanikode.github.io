@@ -11,7 +11,7 @@
 
 
 <meta itemprop="dateModified" content="2017-09-08T06:44:27&#43;08:00" />
-<meta itemprop="wordCount" content="2031">
+<meta itemprop="wordCount" content="2075">
 
 
 
@@ -267,11 +267,11 @@ kita bisa mengakses dan mengelola datanya dari program Java.</p>
 <p>Ada beberapa istilah yang harus dipahami dalam JDBC:</p>
 
 <ul>
-<li><strong>DriverManager</strong>: adalah sebuah class yang mengelola dirver;</li>
-<li><strong>Driver</strong>: adalah interface yang menangai komunikasi dengan database.</li>
-<li><strong>Connection</strong>: adalah interface yang menyediakan method untuk menghubungi database;</li>
-<li><strong>Statement</strong>: adalah inteface untuk mengeksekusi <em>query</em>;</li>
-<li><strong>ResultSet</strong>: adalah interface untuk menampung data hasil <em>query</em>.</li>
+<li><strong>DriverManager</strong>: adalah sebuah <em>class</em> yang mengelola dirver;</li>
+<li><strong>Driver</strong>: adalah <em>interface</em> yang menangani komunikasi dengan database.</li>
+<li><strong>Connection</strong>: adalah <em>interface</em> yang menyediakan method untuk menghubungi database;</li>
+<li><strong>Statement</strong>: adalah <em>inteface</em> untuk mengeksekusi <em>query</em>;</li>
+<li><strong>ResultSet</strong>: adalah <em>interface</em> untuk menampung data hasil <em>query</em>.</li>
 </ul>
 
 <p><strong>Langkah-langkah menghubungkan Java dengan MySQL</strong>:</p>
@@ -431,14 +431,15 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 </code></pre>
 
-<p>Kode di atas maksudnya adalah mengimpor class dan interface yang kita butuhkan.
-Bisa juga disingkat seperti ini:</p>
+<p>Kode di atas maksudnya adalah mengimpor class dan interface yang kita butuhkan.</p>
+
+<p>Bisa juga disingkat seperti ini:</p>
 
 <pre><code class="language-java">import java.sql.*;
 </code></pre>
 
 <p>Setelah kita mengimpor, selanjutnya kita siapkan dulu sebuah konstanta untuk
-parameter yang akan digunakan untuk koneksi ke database.</p>
+parameter yang akan digunakan saat membuat koneksi ke database.</p>
 
 <pre><code class="language-java">// Menyiapkan paramter JDBC untuk koneksi ke datbase
 static final String JDBC_DRIVER = &quot;com.mysql.jdbc.Driver&quot;;
@@ -467,7 +468,7 @@ Class.forName(JDBC_DRIVER);
 <p>Dalam contoh tersebut, kita menggunakan driver <code>&quot;com.mysql.jdbc.Driver&quot;</code>
 untuk database MySQL.</p>
 
-<p>Sedangkan untuk vendor yang lain, beda lagi drivernya.</p>
+<p>Sedangkan untuk database yang lain, beda lagi drivernya.</p>
 
 <!-- Tabel driver -->
 
@@ -498,7 +499,7 @@ untuk database MySQL.</p>
 </ul>
 
 <p>Setelah memilih driver, selanjutnya kita lakukan koneksi
-ke database dengan parameter yang sudah dibua.</p>
+ke database dengan parameter yang sudah dibuat.</p>
 
 <pre><code class="language-java">// buat koneksi ke database
 conn = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -512,7 +513,8 @@ conn = DriverManager.getConnection(DB_URL, USER, PASS);
 stmt = conn.createStatement();
 </code></pre>
 
-<p>Setelah itu, buat Query, eksekusi, dan hasilnya disimpan ke dalam objek <code>rs</code> (ResultSet).</p>
+<p>Setelah itu, buat sebuah Query, eksekusi, dan hasilnya
+akan disimpan ke dalam objek <code>rs</code> (ResultSet).</p>
 
 <pre><code class="language-java">// buat query ke database
 String sql = &quot;SELECT * FROM buku&quot;;
@@ -544,18 +546,25 @@ while(rs.next()){
 </code></pre>
 
 <p>Perulangan tersebut akan mengulang sebanyak isi tabelnya, atau dengan
-kata lain &ldquo;Ulangi selama <code>rs</code> masih munya isi&rdquo;.</p>
+kata lain &ldquo;Ulangi selama <code>rs</code> masih punya isi&rdquo;.</p>
 
 <p>Cara mengambil nilai dari objek <code>rs</code> menggunakan method <code>get*</code> dengan
 parameter nama kolom di tabel database.</p>
 
 <p>Contoh mau ambil id buku yang bertipe Integer:</p>
 
-<pre><code class="language-java">rs.getInt(&quot;id_buku&quot;);
+<pre><code class="language-java">int idBuku = rs.getInt(&quot;id_buku&quot;);
+</code></pre>
+
+<p>Kalau mau ambil dengan tipe String bagaimana?</p>
+
+<p>Ya tinggal diganti method-nya:</p>
+
+<pre><code class="language-java">String idBuku = rs.getString(&quot;id_buku&quot;);
 </code></pre>
 
 <p>Pastikan paramternya sama persis dengan nama kolom di database.
-Kalau di database pakai huruf besar, ya  ikuti pakai huruf besar.</p>
+Jika di database pakai huruf kapital, ya  ikuti pakai huruf kapital.</p>
 
 <p><img src="/img/java/mysql/getkolom.png" alt="Mengambil data dari ResultSet" /></p>
 
@@ -681,7 +690,7 @@ dan perulangannya akan berhenti setelah user memilih menu <em>keluar</em>.</p>
 }
 </code></pre>
 
-<p>Di dalam tersebut, kita menggunakan <a href="/java-percabangan/">logika percabangan switch/case</a> untuk
+<p>Di dalam method tersebut, kita menggunakan <a href="/java-percabangan/">logika percabangan switch/case</a> untuk
 pemilihan menu.</p>
 
 <p>Perhatikan lagi, di sana ada pemanggilan method <code>insertBuku()</code>, <code>showData()</code>,
@@ -712,7 +721,7 @@ pemilihan menu.</p>
 }
 </code></pre>
 
-<p>Method show data hanya berfungsi untuk menampilkan data hasil query dari database.</p>
+<p>Method show data hanya berfungsi untuk menampilkan data hasil dari database.</p>
 
 <p>Kita menggunakan fungsi <code>String.format()</code> untuk memudahkan penggabungan string.
 Kalau belum paham, silahkan baca meteri tentang <a href="/java-input-output/#format-string">mengambil input dan menampilkan output
@@ -740,6 +749,11 @@ di Java</a>.</p>
     }
 }
 </code></pre>
+
+<p>Untuk melakukan query simpan, kita menggunakan method <code>execute()</code>.</p>
+
+<p>Method ini akan mengembalikan nilai <em>boolean</em>: <code>true</code> bila query berhasil dan
+<code>false</code> bila gagal.</p>
 
 <p>Selanjutnya membuat method <code>updateBuku()</code>:</p>
 
@@ -965,7 +979,7 @@ public class JavaCRUD {
 }
 </code></pre>
 
-<p>Cobalah untuk mengeksekusi dan analisis sendiri 😄&hellip;</p>
+<p>Cobalah untuk mengeksekusi dan analisis sendiri hasinya 😄&hellip;</p>
 
 <p><img src="/img/java/mysql/program-crud-java-mysql.png" alt="Program CRUD Java dan MySQL" /></p>
 
@@ -1004,7 +1018,7 @@ jelas, bisa ditanyakan melalui komentar.</p>
 <p>O ya, <em>source code</em> dari contoh program di atas bisa di-download di Github:</p>
 
 <ul>
-<li>🎁 <a href="https://github.com/petanikode/belajar-java-mysql">https://github.com/petanikode/belajar-java-mysql</a></li>
+<li>🎁 <a href="https://github.com/petanikode/belajar-java-mysql">github.com/petanikode/belajar-java-mysql</a></li>
 </ul>
 
                                     

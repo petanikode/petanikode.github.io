@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jdbc</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<meta itemprop="name" content="Jdbc">
+<meta itemprop="description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman">
+
+
+
+<meta property="og:title" content="Jdbc" />
+<meta property="og:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.petanikode.com/topik/jdbc/" />
+
+
+
+<meta property="og:updated_time" content="2017-09-08T06:44:27&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Jdbc"/>
+<meta name="twitter:description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman"/>
+
+
+
+<link rel="icon" href="/img/favicon.png" />
+<link rel="icon" href="/img/logo.svg" />
+<link rel='icon' href="/img/logo.svg" sizes='192x192' type="image/svg+xml" />
+<link rel='icon' href="/img/logo.svg" sizes='32x32' type="image/svg+xml" />
+<link rel='icon' href="/img/logo.svg" sizes='96x96' type="image/svg+xml" />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='57x57' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='60x60' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='72x72' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='76x76' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='114x114' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='120x120' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='144x144' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='152x152' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='180x180' />
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+
+
+
+
+<meta name="telegram:channel" content="@petanikode">
+
+<meta name="keywords" content="Jdbc, "/>
+<meta name="description" content="Blog Programmer pengguna Linux, tempat singgah dan berteduh saat kelelahan bertani di ladang kode. Blog yang menyajikan informasi seputar pemrograman, tutorial pemrograman, pemrograman linux, tips dan trik pemrograman" />
+
+<meta content='ID-id' http-equiv='content-language' />
+<meta content='index,follow' name='robots' />
+<meta content='Copyright (c) 2017, Petani Kode; all rights reserved.' name='copyright' />
+<meta content='Indonesian' name='language' />
+<meta content='6F355AD626E325F1305BDE3A0BA81A7A' name='msvalidate.01' />
+<meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification' />
+
+<meta content='index,follow' name='googlebot' />
+<meta content='follow, all' name='Googlebot-Image' />
+<meta content='follow, all' name='Scooter' />
+<meta content='follow, all' name='msnbot' />
+<meta content='follow, all' name='alexabot' />
+<meta content='follow, all' name='Slurp' />
+<meta content='follow, all' name='ZyBorg' />
+<meta content='follow, all' name='Scooter' />
+<meta content='true' name='MSSmartTagsPreventParsing' />
+<meta content='ALL' name='SPIDERS' />
+<meta content='ALL' name='WEBCRAWLERS' />
+<meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot'
+    name='search engines' />
+
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Petani Kode — Programmer Pengguna Linux",
+        "url": "https://www.petanikode.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.petanikode.com/topik/{search_term_string}",
+            "query-input": "required name=search_term_string"
+         }
+    }
+</script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80537197-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+    </head>
+    <body class="bg-light">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
+    <div class="container">
+
+        <a class="navbar-brand" href="https://www.petanikode.com/"><img src="/img/logo.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
+            alt=""> Petani Kode</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/php">PHP <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/java">Java <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/python">Python</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/javascript">Javascript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/git">Git</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.co.id" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-6279325630224392:9670052267" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sa" value="search" />
+                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Kata Kunci" aria-label="Search">
+                <button class="btn btn-info my-2 my-sm-0" type="submit">Cari</button>
+            </form>
+        </div>
+    </div>
+</nav>
+        <header>
+    <div class="jumbotron jumbotron-fluid bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Programmer Pengguna Linux</h1>
+                    <p class="lead">Belajar Pemrograman Apapun Menggunakan Linux</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <article class="card-post">
+    <div class="container">
+        <div class="row">
+
+            
+            
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="card">
+                        <a href="/java-mysql/">
+                        <img class='card-img-top' 
+                            src='/img/java/mysql/java-mysql.png'
+                            alt='Tutorial Java dan MySQL: Membuat Program CRUD Berbasis Teks' />
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a class="text-dark" href="/java-mysql/">Tutorial Java dan MySQL: Membuat Program CRUD Berbasis Teks</a>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            
+
+        </div>
+    </div>
+</article>
+
+<br>
+
+<div class="container mb-5">
+    <nav aria-label="Page navigation">
+
+
+</nav>
+</div>
+
+        <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
+    <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+
+
+                <ul class="nav justify-content-fg-left">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://projects.id/petani_kode" target="blank">Proyek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tentang-petani-kode">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:info@petanikode.com">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-md-6 col-sm-12 text-sm-center text-md-right">
+
+                &copy; 2017 <a href="https://www.petanikode.com/">Petani Kode</a>
+                <span> | Made with ❤️ using <a href='https://gohugo.io' target='_blank'>Hugo 0.26</a></span>
+
+            </div>
+
+            
+        </div>
+    </div>
+</footer>
+        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/prism.js"></script>
+
+ 
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6279325630224392",
+        enable_page_level_ads: true
+    });
+</script>
+
+
+
+<script type="text/javascript">
+    window._wpemojiSettings = { "baseUrl": "https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1496863874h&ver=4.8-RC2-40878" } };
+    !function (a, b, c) { function d(a) { var b, c, d, e, f = String.fromCharCode; if (!k || !k.fillText) return !1; switch (k.clearRect(0, 0, j.width, j.height), k.textBaseline = "top", k.font = "600 32px Arial", a) { case "flag": return k.fillText(f(55356, 56826, 55356, 56819), 0, 0), b = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 56826, 8203, 55356, 56819), 0, 0), c = j.toDataURL(), b === c && (k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447), 0, 0), b = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447), 0, 0), c = j.toDataURL(), b !== c); case "emoji4": return k.fillText(f(55358, 56794, 8205, 9794, 65039), 0, 0), d = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55358, 56794, 8203, 9794, 65039), 0, 0), e = j.toDataURL(), d !== e }return !1 } function e(a) { var c = b.createElement("script"); c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c) } var f, g, h, i, j = b.createElement("canvas"), k = j.getContext && j.getContext("2d"); for (i = Array("flag", "emoji4"), c.supports = { everything: !0, everythingExceptFlag: !0 }, h = 0; h < i.length; h++)c.supports[i[h]] = d(i[h]), c.supports.everything = c.supports.everything && c.supports[i[h]], "flag" !== i[h] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[i[h]]); c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () { c.DOMReady = !0 }, c.supports.everything || (g = function () { c.readyCallback() }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", g, !1), a.addEventListener("load", g, !1)) : (a.attachEvent("onload", g), b.attachEvent("onreadystatechange", function () { "complete" === b.readyState && c.readyCallback() })), f = c.source || {}, f.concatemoji ? e(f.concatemoji) : f.wpemoji && f.twemoji && (e(f.twemoji), e(f.wpemoji))) }(window, document, window._wpemojiSettings);
+</script>
+<style type="text/css">
+    img.wp-smiley,
+    img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+</style>
+
+
+    </body>
+</html>

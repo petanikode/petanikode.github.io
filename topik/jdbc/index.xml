@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jdbc on Petani Kode — Programmer Pengguna Linux</title>
+    <link>https://www.petanikode.com/topik/jdbc/</link>
+    <description>Recent content in Jdbc on Petani Kode — Programmer Pengguna Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 08 Sep 2017 06:44:27 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/jdbc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tutorial Java dan MySQL: Membuat Program CRUD Berbasis Teks</title>
+      <link>https://www.petanikode.com/java-mysql/</link>
+      <pubDate>Fri, 08 Sep 2017 06:44:27 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/java-mysql/</guid>
+      <description>Program Java yang sering kita buat, biasanya akan menyimpan data dalam memori (RAM).
+Setelah program ditutup, semuanya akan hilang. Karena sifatnya temporer.
+Agar data yang diinputkan dapat disimpan secara &amp;lsquo;permanen&amp;rsquo;, kita membutuhkan database.
+Ada banyak sekali pilihan database yang bisa digunakan, diantaranya: MySQL, SQLite, PostgreSQL, Ms. SQL Server, Oracle, MongoDB, dan sebagainya.
+Pada kesempatan ini, kita akan belajar cara menghubungkan Java dengan MySQL dan membuat sebuah program CRUD sederhana berbasis teks.</description>
+    </item>
+    
+  </channel>
+</rss>

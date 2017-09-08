@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.petanikode.com/java-mysql/</loc>
+    <lastmod>2017-09-08T06:44:27+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.petanikode.com/hugo-layout-tema/</loc>
     <lastmod>2017-09-05T03:01:11+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1647,7 +1654,7 @@
   
   <url>
     <loc>https://www.petanikode.com/artikel/</loc>
-    <lastmod>2017-09-05T03:01:11+08:00</lastmod>
+    <lastmod>2017-09-08T06:44:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1713,7 +1720,7 @@
   
   <url>
     <loc>https://www.petanikode.com/seri/belajar-java/</loc>
-    <lastmod>2015-01-11T16:40:00+00:00</lastmod>
+    <lastmod>2017-09-08T06:44:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1875,7 +1882,7 @@
   
   <url>
     <loc>https://www.petanikode.com/kategori/database/</loc>
-    <lastmod>2017-07-10T19:41:25+08:00</lastmod>
+    <lastmod>2017-09-08T06:44:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2115,13 +2122,19 @@
   
   <url>
     <loc>https://www.petanikode.com/topik/java/</loc>
-    <lastmod>2017-08-08T18:44:36+08:00</lastmod>
+    <lastmod>2017-09-08T06:44:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.petanikode.com/topik/javascript/</loc>
     <lastmod>2017-06-22T06:35:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.petanikode.com/topik/jdbc/</loc>
+    <lastmod>2017-09-08T06:44:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2145,7 +2158,7 @@
   
   <url>
     <loc>https://www.petanikode.com/kategori/</loc>
-    <lastmod>2017-07-10T19:41:25+08:00</lastmod>
+    <lastmod>2017-09-08T06:44:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2235,7 +2248,7 @@
   
   <url>
     <loc>https://www.petanikode.com/topik/mysql/</loc>
-    <lastmod>2017-06-10T17:42:42+00:00</lastmod>
+    <lastmod>2017-09-08T06:44:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2301,7 +2314,7 @@
   
   <url>
     <loc>https://www.petanikode.com/kategori/pemrograman/</loc>
-    <lastmod>2017-08-28T08:08:00+00:00</lastmod>
+    <lastmod>2017-09-08T06:44:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2337,7 +2350,7 @@
   
   <url>
     <loc>https://www.petanikode.com/</loc>
-    <lastmod>2017-09-05T03:01:11+08:00</lastmod>
+    <lastmod>2017-09-08T06:44:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2558,14 +2571,14 @@
   </url>
   
   <url>
-    <loc>https://www.petanikode.com/seri/tutorial/</loc>
-    <lastmod>2017-09-05T03:01:11+08:00</lastmod>
+    <loc>https://www.petanikode.com/kategori/tutorial/</loc>
+    <lastmod>2016-10-22T22:23:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.petanikode.com/kategori/tutorial/</loc>
-    <lastmod>2016-10-22T22:23:00+00:00</lastmod>
+    <loc>https://www.petanikode.com/seri/tutorial/</loc>
+    <lastmod>2017-09-05T03:01:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   

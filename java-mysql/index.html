@@ -11,7 +11,7 @@
 
 
 <meta itemprop="dateModified" content="2017-09-08T06:44:27&#43;08:00" />
-<meta itemprop="wordCount" content="1972">
+<meta itemprop="wordCount" content="2031">
 
 
 
@@ -527,8 +527,7 @@ Method ini biasanya digunakan untuk mengambil data dari database.</p>
 <p>Selain itu ada juga method untuk eksekusi query simpan, update, batch, dsb.</p>
 
 <div class="alert alert-info">
-    <p><strong>Tips</strong>: Tekan tobol <kbd>Ctrl</kbd>+<kbd>Spasi</kbd> saat menulis kode untuk melihatnya.</p>
-
+    <strong>Tips</strong>: Tekan tobol <kbd>Ctrl</kbd>+<kbd>Spasi</kbd> saat menulis kode untuk melihatnya.
 </div>
 
 <p><img src="/img/java/mysql/method-eksekusi-query.png" alt="Method untuk eksekusi Query" /></p>
@@ -594,7 +593,7 @@ import java.sql.ResultSet;
 </code></pre>
 
 <p>Class <code>BuffereReader</code> dan <code>InputStreamReader</code> kita butuhkan
-untuk <a href="/java-input-output">mengambil input dari keyboard</a>.</p>
+untuk <a href="/java-input-output/">mengambil input dari keyboard</a>.</p>
 
 <p>Seteleh itu, kita siapkan parameter, variabel, dan objek yang dibutuhkan.</p>
 
@@ -611,10 +610,11 @@ static InputStreamReader inputStreamReader = new InputStreamReader(System.in);
 static BufferedReader input = new BufferedReader(inputStreamReader);
 </code></pre>
 
-<p>Selanjutnya membuat method <code>main()</code> yang merupakan entri poin dari sebuah
+<p>Selanjutnya membuat method <code>main()</code> yang merupakan entri point dari sebuah
 program.</p>
 
-<p>Di dalam method ini kita akan melakukan perulangan selama terkoneksi dengan database.</p>
+<p>Di dalam method ini kita akan melakukan perulangan selama terkoneksi dengan database
+dan perulangannya akan berhenti setelah user memilih menu <em>keluar</em>.</p>
 
 <pre><code class="language-java">public static void main(String[] args) {
 
@@ -639,7 +639,7 @@ program.</p>
 }
 </code></pre>
 
-<p>Perhatikan, di sana ada pemanggilan fungsi atau method <code>showMenu()</code>.</p>
+<p>Perhatikan, di sana ada pemanggilan <a href="/java-prosedur-dan-fungsi/">fungsi atau method</a> <code>showMenu()</code>.</p>
 
 <p>Berarti kita harus membuatnya:</p>
 
@@ -681,8 +681,11 @@ program.</p>
 }
 </code></pre>
 
+<p>Di dalam tersebut, kita menggunakan <a href="/java-percabangan/">logika percabangan switch/case</a> untuk
+pemilihan menu.</p>
+
 <p>Perhatikan lagi, di sana ada pemanggilan method <code>insertBuku()</code>, <code>showData()</code>,
-<code>updateBuku()</code>, dan <code>deleteBuku()</code>.</p>
+<code>updateBuku()</code>, dan <code>deleteBuku()</code> di masing-masing pilihan menu.</p>
 
 <p>Tugas kita selanjutnya adalah membuat keempat method tersebut.</p>
 
@@ -709,7 +712,13 @@ program.</p>
 }
 </code></pre>
 
-<p>Setelah itu, membuat method <code>inserBuku()</code>:</p>
+<p>Method show data hanya berfungsi untuk menampilkan data hasil query dari database.</p>
+
+<p>Kita menggunakan fungsi <code>String.format()</code> untuk memudahkan penggabungan string.
+Kalau belum paham, silahkan baca meteri tentang <a href="/java-input-output/#format-string">mengambil input dan menampilkan output
+di Java</a>.</p>
+
+<p>Setelah itu, kita buat method <code>insertBuku()</code>:</p>
 
 <pre><code class="language-java">static void insertBuku() {
     try {
@@ -718,9 +727,11 @@ program.</p>
         String judul = input.readLine().trim();
         System.out.print(&quot;Pengarang: &quot;);
         String pengarang = input.readLine().trim();
+        
         // query simpan
         String sql = &quot;INSERT INTO buku (judul, pengarang) VALUE('%s', '%s')&quot;;
         sql = String.format(sql, judul, pengarang);
+        
         // simpan buku
         stmt.execute(sql);
         
@@ -741,9 +752,11 @@ program.</p>
         String judul = input.readLine().trim();
         System.out.print(&quot;Pengarang: &quot;);
         String pengarang = input.readLine().trim();
+
         // query update
         String sql = &quot;UPDATE buku SET judul='%s', pengarang='%s' WHERE id_buku=%d&quot;;
         sql = String.format(sql, judul, pengarang, idBuku);
+
         // update data buku
         stmt.execute(sql);
         
@@ -767,7 +780,7 @@ program.</p>
         // hapus data
         stmt.execute(sql);
         
-        System.out.println(&quot;Data terlah terhapus...&quot;);
+        System.out.println(&quot;Data telah terhapus...&quot;);
     } catch (Exception e) {
         e.printStackTrace();
     }
@@ -944,7 +957,7 @@ public class JavaCRUD {
             // hapus data
             stmt.execute(sql);
             
-            System.out.println(&quot;Data terlah terhapus...&quot;);
+            System.out.println(&quot;Data telah terhapus...&quot;);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -952,7 +965,7 @@ public class JavaCRUD {
 }
 </code></pre>
 
-<p>Cobalah untuk mengeksekusi dan analisis sendiri 😄</p>
+<p>Cobalah untuk mengeksekusi dan analisis sendiri 😄&hellip;</p>
 
 <p><img src="/img/java/mysql/program-crud-java-mysql.png" alt="Program CRUD Java dan MySQL" /></p>
 

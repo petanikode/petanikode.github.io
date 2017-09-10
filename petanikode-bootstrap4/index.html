@@ -11,7 +11,7 @@
 
 
 <meta itemprop="dateModified" content="2017-09-07T12:17:04&#43;08:00" />
-<meta itemprop="wordCount" content="678">
+<meta itemprop="wordCount" content="1062">
 
 
 
@@ -349,7 +349,38 @@ masukan ke tag <code>&lt;img&gt;</code> sebagai <code>src</code>:</p>
 <li><a href="http://glyph.smarticons.co/">Glyph</a></li>
 </ul>
 
-<h3 id="2-menghentikan-dukungan-untuk-amp">2. Menghentikan Dukungan untuk AMP</h3>
+<h3 id="2-menambahkan-twemoji-twitter-emoji">2. Menambahkan Twemoji (Twitter Emoji)</h3>
+
+<p>Pada template sebelumnya, Petani Kode menggunakan twitter emoji
+dari Wordpress dengan kode berikut:</p>
+
+<pre><code class="language-html">&lt;!-- Twitter Emoji dari Wordpress  --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    window._wpemojiSettings = { &quot;baseUrl&quot;: &quot;https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/&quot;, &quot;ext&quot;: &quot;.png&quot;, &quot;svgUrl&quot;: &quot;https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/&quot;, &quot;svgExt&quot;: &quot;.svg&quot;, &quot;source&quot;: { &quot;concatemoji&quot;: &quot;https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1496863874h&amp;ver=4.8-RC2-40878&quot; } };
+    !function (a, b, c) { function d(a) { var b, c, d, e, f = String.fromCharCode; if (!k || !k.fillText) return !1; switch (k.clearRect(0, 0, j.width, j.height), k.textBaseline = &quot;top&quot;, k.font = &quot;600 32px Arial&quot;, a) { case &quot;flag&quot;: return k.fillText(f(55356, 56826, 55356, 56819), 0, 0), b = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 56826, 8203, 55356, 56819), 0, 0), c = j.toDataURL(), b === c &amp;&amp; (k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447), 0, 0), b = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447), 0, 0), c = j.toDataURL(), b !== c); case &quot;emoji4&quot;: return k.fillText(f(55358, 56794, 8205, 9794, 65039), 0, 0), d = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55358, 56794, 8203, 9794, 65039), 0, 0), e = j.toDataURL(), d !== e }return !1 } function e(a) { var c = b.createElement(&quot;script&quot;); c.src = a, c.defer = c.type = &quot;text/javascript&quot;, b.getElementsByTagName(&quot;head&quot;)[0].appendChild(c) } var f, g, h, i, j = b.createElement(&quot;canvas&quot;), k = j.getContext &amp;&amp; j.getContext(&quot;2d&quot;); for (i = Array(&quot;flag&quot;, &quot;emoji4&quot;), c.supports = { everything: !0, everythingExceptFlag: !0 }, h = 0; h &lt; i.length; h++)c.supports[i[h]] = d(i[h]), c.supports.everything = c.supports.everything &amp;&amp; c.supports[i[h]], &quot;flag&quot; !== i[h] &amp;&amp; (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag &amp;&amp; c.supports[i[h]]); c.supports.everythingExceptFlag = c.supports.everythingExceptFlag &amp;&amp; !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () { c.DOMReady = !0 }, c.supports.everything || (g = function () { c.readyCallback() }, b.addEventListener ? (b.addEventListener(&quot;DOMContentLoaded&quot;, g, !1), a.addEventListener(&quot;load&quot;, g, !1)) : (a.attachEvent(&quot;onload&quot;, g), b.attachEvent(&quot;onreadystatechange&quot;, function () { &quot;complete&quot; === b.readyState &amp;&amp; c.readyCallback() })), f = c.source || {}, f.concatemoji ? e(f.concatemoji) : f.wpemoji &amp;&amp; f.twemoji &amp;&amp; (e(f.twemoji), e(f.wpemoji))) }(window, document, window._wpemojiSettings);
+
+&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    img.wp-smiley,
+    img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+&lt;/style&gt;
+&lt;!-- /Twitter Emoji dari Wordpress  --&gt;
+</code></pre>
+
+<p>Namun sekarang sudah berubah, ikon untuk emojinya dihosting sendiri
+biar mudah mengatur cache-nya.</p>
+
+<h3 id="3-menghentikan-dukungan-untuk-amp">3. Menghentikan Dukungan untuk AMP</h3>
 
 <p>Bisa dibilang, AMP adalah <em>instant view</em>-nya Google.</p>
 
@@ -363,7 +394,7 @@ masukan ke tag <code>&lt;img&gt;</code> sebagai <code>src</code>:</p>
 <p>Untuk saat ini, Petani Kode tidak lagi menggunakan AMP.
 Mungkin nanti akan digunakan lagi setelah paham cara penerapan AMP yang benar.</p>
 
-<h3 id="3-menambahkan-lazyload">3. Menambahkan Lazyload</h3>
+<h3 id="4-menambahkan-lazyload">4. Menambahkan Lazyload</h3>
 
 <p>Lazyload adalah library javascript untuk men-download gambar secara <em>asynchronous</em>,
 sehingga dapat mempercepat loading.</p>
@@ -593,7 +624,7 @@ target="_blank" title="Berbagi ke Twitter">
                     </div>
                     <div class="col-9 col-xs-12 pl-4">
                         <p class="mb-1">Nekat Menggunakan Bootstrap 4 Versi Beta, Petani Kode Akhirnya Kena Deface</p>
-                        <small class="text-secondary">07 Sep 2017 · baca 4 menit</small>
+                        <small class="text-secondary">07 Sep 2017 · baca 5 menit</small>
                     </div>
                     </div>
                 </a>

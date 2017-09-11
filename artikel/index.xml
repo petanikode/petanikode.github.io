@@ -1869,12 +1869,11 @@ Beberapa IDE tidak mendukung bila menggunakan Open JDK 7.</description>
       <pubDate>Sun, 03 Apr 2016 17:13:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/android-sdk-dan-ndk/</guid>
-      <description>Android SDK dan NDK adalah dua alat penting yang perlu dipersiapkan untuk membuat aplikasi Android.
-Android SDK menyediakan API (Application Programming Interface) yang digunakan sebagai bahan dasar pembuatan aplikasi. Selain itu juga, dia menyediakan Emulator.
+      <description>Android SDK (Software Development Kit) dan NDK (Nativte Development Kit) adalah dua alat yang harus kita persiapkan untuk membuat aplikasi Android.
+Android SDK berisi peralatan, API, dan Emulator yang kita butuhkan dalam pengembangan aplikasi Android.
 Sedangkan, Android NDK memungkinkan kita membuat aplikasi Android dengan bahasa pemrograman C/C++.
-Cara Instal Android SDK  Download Android SDK di website resmi Android Developer: http://developer.android.com/sdk/index.html, pilih SDK tools only
-
- Buat direktori bernama Android di Home.</description>
+Pada kesempatan ini kita akan belajar cara menginstal Android SDK dan NDK di Linux.
+Cara Instal Android SDK di Linux  Download Android SDK di website resmi Android Developer: http://developer.</description>
     </item>
     
     <item>

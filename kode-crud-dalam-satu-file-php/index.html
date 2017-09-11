@@ -16,7 +16,7 @@ Pada kesempatan ini, saya ingin membagikan sebuah kode CRUD yang ditulis dalam s
 
 
 <meta itemprop="dateModified" content="2016-03-31T18:21:00&#43;00:00" />
-<meta itemprop="wordCount" content="233">
+<meta itemprop="wordCount" content="776">
 
 
 
@@ -286,14 +286,198 @@ bertindak sebagai router yang mengatur pemanggilan fungsi.</p>
 halaman Home, fungsi yang dipanggil adalah <code>tambah_data()</code> dan <code>tampil_data()</code>.
 Hal ini bisa dilakukan dengan stuktur pemilihan <em>Switch/Case</em>.</p>
 
-<p>Kode lengkapnya bisa dicek di <a href="https://github.com/petanikode/curd-pertanian">github</a></p>
+<p>Kode lengkapnya bisa dicek di <a href="https://github.com/petanikode/curd-pertanian">github</a>.</p>
 
-<p><iframe width="600" height="700"
-    layout="responsive"
-    sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups"
-    frameborder="0"
-    src="https://cdn.rawgit.com/petanikode/cdn-petanikode/3217e023/amp-gist.html?url=https://gist.github.com/ardianta/83d60cd7f3c5adb060fd804a206f2158">
-<iframe></p>
+<pre><code class="language-php">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;CRUD Petani Kode&lt;/title&gt;
+	&lt;link rel=&quot;icon&quot; href=&quot;http://www.petanikode.com/favicon.ico&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;?php
+// --- koneksi ke database
+$koneksi = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;kopi&quot;,&quot;pertanian&quot;) or die(mysqli_error());
+// --- Fngsi tambah data (Create)
+function tambah($koneksi){
+	
+	if (isset($_POST['btn_simpan'])){
+		$id = time();
+		$nm_tanaman = $_POST['nm_tanaman'];
+		$hasil = $_POST['hasil'];
+		$lama = $_POST['lama'];
+		$tgl_panen = $_POST['tgl_panen'];
+		
+		if(!empty($nm_tanaman) &amp;&amp; !empty($hasil) &amp;&amp; !empty($lama) &amp;&amp; !empty($tgl_panen)){
+			$sql = &quot;INSERT INTO tabel_panen (id,nama_tanaman, hasil_panen, lama_tanam, tanggal_panen) VALUES(&quot;.$id.&quot;,'&quot;.$nm_tanaman.&quot;','&quot;.$hasil.&quot;','&quot;.$lama.&quot;','&quot;.$tgl_panen.&quot;')&quot;;
+			$simpan = mysqli_query($koneksi, $sql);
+			if($simpan &amp;&amp; isset($_GET['aksi'])){
+				if($_GET['aksi'] == 'create'){
+					header('location: index.php');
+				}
+			}
+		} else {
+			$pesan = &quot;Tidak dapat menyimpan, data belum lengkap!&quot;;
+		}
+	}
+	?&gt; 
+		&lt;form action=&quot;&quot; method=&quot;POST&quot;&gt;
+			&lt;fieldset&gt;
+				&lt;legend&gt;&lt;h2&gt;Tambah data&lt;/h2&gt;&lt;/legend&gt;
+				&lt;label&gt;Nama tanaman &lt;input type=&quot;text&quot; name=&quot;nm_tanaman&quot; /&gt;&lt;/label&gt; &lt;br&gt;
+				&lt;label&gt;Hasil panen &lt;input type=&quot;number&quot; name=&quot;hasil&quot; /&gt; kg&lt;/label&gt;&lt;br&gt;
+				&lt;label&gt;Lama tanam &lt;input type=&quot;number&quot; name=&quot;lama&quot; /&gt; bulan&lt;/label&gt; &lt;br&gt;
+				&lt;label&gt;Tanggal panen &lt;input type=&quot;date&quot; name=&quot;tgl_panen&quot; /&gt;&lt;/label&gt; &lt;br&gt;
+				&lt;br&gt;
+				&lt;label&gt;
+					&lt;input type=&quot;submit&quot; name=&quot;btn_simpan&quot; value=&quot;Simpan&quot;/&gt;
+					&lt;input type=&quot;reset&quot; name=&quot;reset&quot; value=&quot;Besihkan&quot;/&gt;
+				&lt;/label&gt;
+				&lt;br&gt;
+				&lt;p&gt;&lt;?php echo isset($pesan) ? $pesan : &quot;&quot; ?&gt;&lt;/p&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;?php
+}
+// --- Tutup Fngsi tambah data
+// --- Fungsi Baca Data (Read)
+function tampil_data($koneksi){
+	$sql = &quot;SELECT * FROM tabel_panen&quot;;
+	$query = mysqli_query($koneksi, $sql);
+	
+	echo &quot;&lt;fieldset&gt;&quot;;
+	echo &quot;&lt;legend&gt;&lt;h2&gt;Data Panen&lt;/h2&gt;&lt;/legend&gt;&quot;;
+	
+	echo &quot;&lt;table border='1' cellpadding='10'&gt;&quot;;
+	echo &quot;&lt;tr&gt;
+			&lt;th&gt;ID&lt;/th&gt;
+			&lt;th&gt;Nama Tanaman&lt;/th&gt;
+			&lt;th&gt;Hasil Panen&lt;/th&gt;
+			&lt;th&gt;Lama Tanam&lt;/th&gt;
+			&lt;th&gt;Tanggal Panen&lt;/th&gt;
+			&lt;th&gt;Tindakan&lt;/th&gt;
+		  &lt;/tr&gt;&quot;;
+	
+	while($data = mysqli_fetch_array($query)){
+		?&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;?php echo $data['id']; ?&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;?php echo $data['nama_tanaman']; ?&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;?php echo $data['hasil_panen']; ?&gt; Kg&lt;/td&gt;
+				&lt;td&gt;&lt;?php echo $data['lama_tanam']; ?&gt; bulan&lt;/td&gt;
+				&lt;td&gt;&lt;?php echo $data['tanggal_panen']; ?&gt;&lt;/td&gt;
+				&lt;td&gt;
+					&lt;a href=&quot;index.php?aksi=update&amp;id=&lt;?php echo $data['id']; ?&gt;&amp;nama=&lt;?php echo $data['nama_tanaman']; ?&gt;&amp;hasil=&lt;?php echo $data['hasil_panen']; ?&gt;&amp;lama=&lt;?php echo $data['lama_tanam']; ?&gt;&amp;tanggal=&lt;?php echo $data['tanggal_panen']; ?&gt;&quot;&gt;Ubah&lt;/a&gt; |
+					&lt;a href=&quot;index.php?aksi=delete&amp;id=&lt;?php echo $data['id']; ?&gt;&quot;&gt;Hapus&lt;/a&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;?php
+	}
+	echo &quot;&lt;/table&gt;&quot;;
+	echo &quot;&lt;/fieldset&gt;&quot;;
+}
+// --- Tutup Fungsi Baca Data (Read)
+// --- Fungsi Ubah Data (Update)
+function ubah($koneksi){
+	// ubah data
+	if(isset($_POST['btn_ubah'])){
+		$id = $_POST['id'];
+		$nm_tanaman = $_POST['nm_tanaman'];
+		$hasil = $_POST['hasil'];
+		$lama = $_POST['lama'];
+		$tgl_panen = $_POST['tgl_panen'];
+		
+		if(!empty($nm_tanaman) &amp;&amp; !empty($hasil) &amp;&amp; !empty($lama) &amp;&amp; !empty($tgl_panen)){
+			$perubahan = &quot;nama_tanaman='&quot;.$nm_tanaman.&quot;',hasil_panen=&quot;.$hasil.&quot;,lama_tanam=&quot;.$lama.&quot;,tanggal_panen='&quot;.$tgl_panen.&quot;'&quot;;
+			$sql_update = &quot;UPDATE tabel_panen SET &quot;.$perubahan.&quot; WHERE id=$id&quot;;
+			$update = mysqli_query($koneksi, $sql_update);
+			if($update &amp;&amp; isset($_GET['aksi'])){
+				if($_GET['aksi'] == 'update'){
+					header('location: index.php');
+				}
+			}
+		} else {
+			$pesan = &quot;Data tidak lengkap!&quot;;
+		}
+	}
+	
+	// tampilkan form ubah
+	if(isset($_GET['id'])){
+		?&gt;
+			&lt;a href=&quot;index.php&quot;&gt; &amp;laquo; Home&lt;/a&gt; | 
+			&lt;a href=&quot;index.php?aksi=create&quot;&gt; (+) Tambah Data&lt;/a&gt;
+			&lt;hr&gt;
+			
+			&lt;form action=&quot;&quot; method=&quot;POST&quot;&gt;
+			&lt;fieldset&gt;
+				&lt;legend&gt;&lt;h2&gt;Ubah data&lt;/h2&gt;&lt;/legend&gt;
+				&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;&lt;?php echo $_GET['id'] ?&gt;&quot;/&gt;
+				&lt;label&gt;Nama tanaman &lt;input type=&quot;text&quot; name=&quot;nm_tanaman&quot; value=&quot;&lt;?php echo $_GET['nama'] ?&gt;&quot;/&gt;&lt;/label&gt; &lt;br&gt;
+				&lt;label&gt;Hasil panen &lt;input type=&quot;number&quot; name=&quot;hasil&quot; value=&quot;&lt;?php echo $_GET['hasil'] ?&gt;&quot;/&gt; kg&lt;/label&gt;&lt;br&gt;
+				&lt;label&gt;Lama tanam &lt;input type=&quot;number&quot; name=&quot;lama&quot; value=&quot;&lt;?php echo $_GET['lama'] ?&gt;&quot;/&gt; bulan&lt;/label&gt; &lt;br&gt;
+				&lt;label&gt;Tanggal panen &lt;input type=&quot;date&quot; name=&quot;tgl_panen&quot; value=&quot;&lt;?php echo $_GET['tanggal'] ?&gt;&quot;/&gt;&lt;/label&gt; &lt;br&gt;
+				&lt;br&gt;
+				&lt;label&gt;
+					&lt;input type=&quot;submit&quot; name=&quot;btn_ubah&quot; value=&quot;Simpan Perubahan&quot;/&gt; atau &lt;a href=&quot;index.php?aksi=delete&amp;id=&lt;?php echo $_GET['id'] ?&gt;&quot;&gt; (x) Hapus data ini&lt;/a&gt;!
+				&lt;/label&gt;
+				&lt;br&gt;
+				&lt;p&gt;&lt;?php echo isset($pesan) ? $pesan : &quot;&quot; ?&gt;&lt;/p&gt;
+				
+			&lt;/fieldset&gt;
+			&lt;/form&gt;
+		&lt;?php
+	}
+	
+}
+// --- Tutup Fungsi Update
+// --- Fungsi Delete
+function hapus($koneksi){
+	if(isset($_GET['id']) &amp;&amp; isset($_GET['aksi'])){
+		$id = $_GET['id'];
+		$sql_hapus = &quot;DELETE FROM tabel_panen WHERE id=&quot; . $id;
+		$hapus = mysqli_query($koneksi, $sql_hapus);
+		
+		if($hapus){
+			if($_GET['aksi'] == 'delete'){
+				header('location: index.php');
+			}
+		}
+	}
+	
+}
+// --- Tutup Fungsi Hapus
+// ===================================================================
+// --- Program Utama
+if (isset($_GET['aksi'])){
+	switch($_GET['aksi']){
+		case &quot;create&quot;:
+			echo '&lt;a href=&quot;index.php&quot;&gt; &amp;laquo; Home&lt;/a&gt;';
+			tambah($koneksi);
+			break;
+		case &quot;read&quot;:
+			tampil_data($koneksi);
+			break;
+		case &quot;update&quot;:
+			ubah($koneksi);
+			tampil_data($koneksi);
+			break;
+		case &quot;delete&quot;:
+			hapus($koneksi);
+			break;
+		default:
+			echo &quot;&lt;h3&gt;Aksi &lt;i&gt;&quot;.$_GET['aksi'].&quot;&lt;/i&gt; tidaka ada!&lt;/h3&gt;&quot;;
+			tambah($koneksi);
+			tampil_data($koneksi);
+	}
+} else {
+	tambah($koneksi);
+	tampil_data($koneksi);
+}
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
 <p>Sementara untuk database yang digunakan bernama <code>pertanian</code>.</p>
 
@@ -303,7 +487,12 @@ panen pertanian.</p>
 
 <p>Berikut ini stuktur <code>tabel_penen</code>.</p>
 
-<p><img src="https://4.bp.blogspot.com/-9wONg1kdO3Q/Vvug9hW9cuI/AAAAAAAAClQ/agQVDbVLlyAG4FvyPPYuMLS5AScjSizuQ/s1600/Struktur%2Btabel%2Bpertanian%2B-%2Bcrud%2Bdalam%2Bsatu%2Bfile%2Bphp%2B-%2Bpetani%2Bkode.png" alt="Skema database Pertanian" /></p>
+<img 
+    class="lazyload mb-3"
+    data-src="https://4.bp.blogspot.com/-9wONg1kdO3Q/Vvug9hW9cuI/AAAAAAAAClQ/agQVDbVLlyAG4FvyPPYuMLS5AScjSizuQ/s1600/Struktur%2Btabel%2Bpertanian%2B-%2Bcrud%2Bdalam%2Bsatu%2Bfile%2Bphp%2B-%2Bpetani%2Bkode.png" 
+    src="/img/placeholder.svg"
+    alt="Skema database pertanian"
+ />
 
 <p>File SQL-nya tersedia di github: <a href="https://github.com/petanikode/curd-pertanian/blob/master/pertanian.sql">pertanian.sql</a></p>
 
@@ -314,27 +503,39 @@ CSS maupun Javascript. Hanya terdapat PHP dan HTML saja.</p>
 
 <p>Halaman <em>Home</em> atau halaman utama <em>(index.php)</em>:</p>
 
-<p><img src="http://4.bp.blogspot.com/-209OSDN5vUI/Vvz05Tf8W_I/AAAAAAAAClk/DfR1UcrDTUgYndpuvZIdGYkxyT5oBMkuQ/s1600/Halaman%2BHome%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" alt="Halaman Home" /></p>
+<img 
+    class="lazyload mb-3"
+    data-src="http://4.bp.blogspot.com/-209OSDN5vUI/Vvz05Tf8W_I/AAAAAAAAClk/DfR1UcrDTUgYndpuvZIdGYkxyT5oBMkuQ/s1600/Halaman%2BHome%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" 
+    src="/img/placeholder.svg"
+    alt="Halaman Home"
+ />
 
 <p>Halaman <em>(form)</em> tambah data:</p>
 
-<p><amp-img
-    width="923"
-    height="386"
-    alt="Halaman+Create+-+CRUD+dalam+satu+file+php.png"
-    src=""
-    layout="responsive">
-</amp-img></p>
-
-<p><img src="http://3.bp.blogspot.com/-h8GF2O3srqI/Vvz1C3zl7XI/AAAAAAAACls/4en9pJoAzQc-tuosZkRsQLXOfiqktMorw/s1600/Halaman%2BCreate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" alt="Halaman Create" /></p>
+<img 
+    class="lazyload mb-3"
+    data-src="http://3.bp.blogspot.com/-h8GF2O3srqI/Vvz1C3zl7XI/AAAAAAAACls/4en9pJoAzQc-tuosZkRsQLXOfiqktMorw/s1600/Halaman%2BCreate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" 
+    src="/img/placeholder.svg"
+    alt="Halaman Create Data"
+ />
 
 <p>Halaman tampil data:</p>
 
-<p><img src="http://2.bp.blogspot.com/-hQ-1ygzfj8M/Vvz1MMzrDFI/AAAAAAAACl0/Un_t5yYpsIoYHR46clTHfK3t4Z37srKpA/s1600/Halaman%2BRead%2BData%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" alt="Halaman Read Data" /></p>
+<img 
+    class="lazyload mb-3"
+    data-src="http://2.bp.blogspot.com/-hQ-1ygzfj8M/Vvz1MMzrDFI/AAAAAAAACl0/Un_t5yYpsIoYHR46clTHfK3t4Z37srKpA/s1600/Halaman%2BRead%2BData%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" 
+    src="/img/placeholder.svg"
+    alt="Halaman Read Data"
+ />
 
 <p>Halaman <em>(form)</em> ubah data:</p>
 
-<p><img src="http://2.bp.blogspot.com/-lsrvTMidEvc/Vvz1THw_ZsI/AAAAAAAACl8/zMbyn_7J9zIRl_zsfiGEAuVIjoH9NG9QQ/s1600/Halaman%2BUpdate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" alt="Halaman Update" /></p>
+<img 
+    class="lazyload mb-3"
+    data-src="http://2.bp.blogspot.com/-lsrvTMidEvc/Vvz1THw_ZsI/AAAAAAAACl8/zMbyn_7J9zIRl_zsfiGEAuVIjoH9NG9QQ/s1600/Halaman%2BUpdate%2B-%2BCRUD%2Bdalam%2Bsatu%2Bfile%2Bphp.png" 
+    src="/img/placeholder.svg"
+    alt="Halaman Update"
+ />
 
 <h2 id="demo">Demo:</h2>
 
@@ -343,6 +544,10 @@ CSS maupun Javascript. Hanya terdapat PHP dan HTML saja.</p>
   <iframe src="//www.youtube.com/embed/hND_ycfi1d0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
 
+
+<p>Tampilannya memang masih <em>plain</em> (polos).</p>
+
+<p>Silahkan tambahkan CSS untuk menghiasnya 😃.</p>
 
                                     
                                     <div class="post-footer mt-5 py-4">
@@ -466,7 +671,10 @@ target="_blank" title="Berbagi ke Twitter">
                 <a href="/java-mysql/" class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row">
                     <div class="col-3 col-xs-12">
-                        <img class="rounded lazyload"  src="/img/placeholder-sqr.svg" data-src="/img/java/mysql/java-mysql-sqr.png" width="80" height="80" />
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/java/mysql/java-mysql-sqr.png" 
+                            width="70" height="70" />
                     </div>
                     <div class="col-9 col-xs-12 pl-4">
                         <p class="mb-1">Tutorial Java dan MySQL: Membuat Program CRUD Berbasis Teks</p>
@@ -479,7 +687,10 @@ target="_blank" title="Berbagi ke Twitter">
                 <a href="/petanikode-bootstrap4/" class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row">
                     <div class="col-3 col-xs-12">
-                        <img class="rounded lazyload"  src="/img/placeholder-sqr.svg" data-src="/img/hugo/kacang/deface-sqr.png" width="80" height="80" />
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/hugo/kacang/deface-sqr.png" 
+                            width="70" height="70" />
                     </div>
                     <div class="col-9 col-xs-12 pl-4">
                         <p class="mb-1">Nekat Menggunakan Bootstrap 4 Versi Beta, Petani Kode Akhirnya Kena Deface</p>
@@ -492,7 +703,10 @@ target="_blank" title="Berbagi ke Twitter">
                 <a href="/hugo-layout-tema/" class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row">
                     <div class="col-3 col-xs-12">
-                        <img class="rounded lazyload"  src="/img/placeholder-sqr.svg" data-src="/img/tema-hugo/membuat-tema-hugo-square.png" width="80" height="80" />
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/tema-hugo/membuat-tema-hugo-square.png" 
+                            width="70" height="70" />
                     </div>
                     <div class="col-9 col-xs-12 pl-4">
                         <p class="mb-1">Membuat Layout Tema Hugo: 3 Halaman Penting yang Harus Ada dalam Blog</p>
@@ -505,7 +719,10 @@ target="_blank" title="Berbagi ke Twitter">
                 <a href="/python-list/" class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row">
                     <div class="col-3 col-xs-12">
-                        <img class="rounded lazyload"  src="/img/placeholder-sqr.svg" data-src="https://www.petanikode.com/img/python/python-sqr.png" width="80" height="80" />
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="https://www.petanikode.com/img/python/python-sqr.png" 
+                            width="70" height="70" />
                     </div>
                     <div class="col-9 col-xs-12 pl-4">
                         <p class="mb-1">Belajar Python: Mengenal Struktur Data List</p>
@@ -518,7 +735,10 @@ target="_blank" title="Berbagi ke Twitter">
                 <a href="/python-virtualenv/" class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row">
                     <div class="col-3 col-xs-12">
-                        <img class="rounded lazyload"  src="/img/placeholder-sqr.svg" data-src="https://www.petanikode.com/img/python/virtualenv/virtualenv-sqr.png" width="80" height="80" />
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="https://www.petanikode.com/img/python/virtualenv/virtualenv-sqr.png" 
+                            width="70" height="70" />
                     </div>
                     <div class="col-9 col-xs-12 pl-4">
                         <p class="mb-1">Mengenal Virtualenv: Apa Saja yang Harus Kamu Ketahui?</p>

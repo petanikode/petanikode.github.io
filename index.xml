@@ -2220,15 +2220,19 @@ sudo apt install sqlite3  Setelah itu jawab y untuk memulai instalasi.</descript
     </item>
     
     <item>
-      <title>Emulator alternatif untuk Android Studio</title>
+      <title>Emulator Alternatif untuk Android Studio</title>
       <link>https://www.petanikode.com/android-emulator-alternatif/</link>
       <pubDate>Fri, 13 Nov 2015 21:05:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/android-emulator-alternatif/</guid>
-      <description>Bila kamu tidak ingin menggunakan emulator bawaan Android SDK atau terasa berat, mungkin bisa coba emulator alternatif.
-Ada dua alternatif emulator untuk debug dan deploy aplikasi android:
- Menggunakan Genymotion Menggunakan Hp sendiri  Geanymotion adalah emulator android pihak ketiga yang berbasis virtualbox. Ada yang mengklaim emulator ini lebih cepat dibandingkan emulator bawaan android studio.
-Cara Instal Geanymotion untuk Emulator Android Studio 1. Pastikan virtualbox sudah terinstal Genymotion memanfaatkan virtualbox untuk melakuan virtualisasi.</description>
+      <description>Emulator Android terasa berat?
+Mungkin kamu harus upgrade RAM atau gunakan emulator alternatif.
+Emulator bawaan Android memang terasa berat bagi yang menggunakan komputer dengan spesifikasi rendah.
+Android manyarankan spesifikasi minimal RAM 8GB, tapi kita tidak punya RAM sebanyak itu.
+Bagaimana cara mengatasinya?
+Gunakan emulator alternatif.
+Ada dua emulator alternatif yang bisa kita gunakan untuk debug dan deploy aplikasi android:
+ Menggunakan Genymotion Menggunakan Hp sendiri  Pada tulisan ini kita akan belajar cara menggunakan emulator alternatif untuk mengembangkan aplikasi android.</description>
     </item>
     
     <item>

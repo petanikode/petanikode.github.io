@@ -541,10 +541,11 @@ Sedangkan, kalau kita menggunakan Git. Kita hanya perlu melakukan push untuk men
       <pubDate>Mon, 30 Jan 2017 20:14:28 +0800</pubDate>
       
       <guid>https://www.petanikode.com/hugo-hosting-github/</guid>
-      <description>Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu mengunggah file yang ada di direktori public saja.
-Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:
- Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.
-Kita membutuhkan dua repositori untuk melakukan cara ini.</description>
+      <description>Github memiliki layanan hosting Static Page yang bisa kita manfaatkan untuk hosting Hugo.
+Pada dasarnya SSG seperti Hugo akan membuat sebuah file statis yang (biasanya) berada di dalam direktori public.
+Nah direktori ini yang akan kita upload ke Github agar website atau blog kita bisa dibuka melalui: https://username.github.io atau kustom domain sendiri.
+Berdasarkan panduan di dokumentasi Hugo, ada empat cara yang bisa dilakukan untuk hosting Hugo di Github:
+ Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.</description>
     </item>
     
     <item>

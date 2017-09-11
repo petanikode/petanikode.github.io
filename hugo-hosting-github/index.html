@@ -7,14 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
 <meta itemprop="name" content="Cara Hosting/Deploy Hugo di Github">
-<meta itemprop="description" content="Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu mengunggah file yang ada di direktori public saja.
-Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:
- Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.
-Kita membutuhkan dua repositori untuk melakukan cara ini.">
+<meta itemprop="description" content="Github memiliki layanan hosting Static Page yang bisa kita manfaatkan untuk hosting Hugo.
+Pada dasarnya SSG seperti Hugo akan membuat sebuah file statis yang (biasanya) berada di dalam direktori public.
+Nah direktori ini yang akan kita upload ke Github agar website atau blog kita bisa dibuka melalui: https://username.github.io atau kustom domain sendiri.
+Berdasarkan panduan di dokumentasi Hugo, ada empat cara yang bisa dilakukan untuk hosting Hugo di Github:
+ Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.">
 
 
 <meta itemprop="dateModified" content="2017-01-30T20:14:28&#43;08:00" />
-<meta itemprop="wordCount" content="515">
+<meta itemprop="wordCount" content="747">
 
 
 
@@ -22,10 +23,11 @@ Kita membutuhkan dua repositori untuk melakukan cara ini.">
 
 
 <meta property="og:title" content="Cara Hosting/Deploy Hugo di Github" />
-<meta property="og:description" content="Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu mengunggah file yang ada di direktori public saja.
-Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:
- Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.
-Kita membutuhkan dua repositori untuk melakukan cara ini." />
+<meta property="og:description" content="Github memiliki layanan hosting Static Page yang bisa kita manfaatkan untuk hosting Hugo.
+Pada dasarnya SSG seperti Hugo akan membuat sebuah file statis yang (biasanya) berada di dalam direktori public.
+Nah direktori ini yang akan kita upload ke Github agar website atau blog kita bisa dibuka melalui: https://username.github.io atau kustom domain sendiri.
+Berdasarkan panduan di dokumentasi Hugo, ada empat cara yang bisa dilakukan untuk hosting Hugo di Github:
+ Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.petanikode.com/hugo-hosting-github/" />
 
@@ -45,10 +47,11 @@ Kita membutuhkan dua repositori untuk melakukan cara ini." />
 
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Cara Hosting/Deploy Hugo di Github"/>
-<meta name="twitter:description" content="Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu mengunggah file yang ada di direktori public saja.
-Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:
- Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.
-Kita membutuhkan dua repositori untuk melakukan cara ini."/>
+<meta name="twitter:description" content="Github memiliki layanan hosting Static Page yang bisa kita manfaatkan untuk hosting Hugo.
+Pada dasarnya SSG seperti Hugo akan membuat sebuah file statis yang (biasanya) berada di dalam direktori public.
+Nah direktori ini yang akan kita upload ke Github agar website atau blog kita bisa dibuka melalui: https://username.github.io atau kustom domain sendiri.
+Berdasarkan panduan di dokumentasi Hugo, ada empat cara yang bisa dilakukan untuk hosting Hugo di Github:
+ Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang."/>
 
 
 
@@ -96,10 +99,11 @@ Kita membutuhkan dua repositori untuk melakukan cara ini."/>
 <meta name="telegram:channel" content="@petanikode">
 
 <meta name="keywords" content="Cara Hosting/Deploy Hugo di Github, Pemrograman, Bahasa Pemrograman, Belajar Pemrograman, Tutorial Pemrograman, Cara hosting, Cara hosting hugo di Github, Cara deploy hugo, Deploy Hugo di Github"/>
-<meta name="description" content="Hosting/deploy Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu mengunggah file yang ada di direktori public saja.
-Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:
- Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang.
-Kita membutuhkan dua repositori untuk melakukan cara ini." />
+<meta name="description" content="Github memiliki layanan hosting Static Page yang bisa kita manfaatkan untuk hosting Hugo.
+Pada dasarnya SSG seperti Hugo akan membuat sebuah file statis yang (biasanya) berada di dalam direktori public.
+Nah direktori ini yang akan kita upload ke Github agar website atau blog kita bisa dibuka melalui: https://username.github.io atau kustom domain sendiri.
+Berdasarkan panduan di dokumentasi Hugo, ada empat cara yang bisa dilakukan untuk hosting Hugo di Github:
+ Hosting ke direktori doc Hosting ke cabang gh-pages Hosting ke halaman personal/organisasi Hosting Github dengan Continuous Integration (CI)  Kita akan mencoba cara yang nomer 3, karena menurut saya cukup gampang." />
 
 <meta content='ID-id' http-equiv='content-language' />
 <meta content='index,follow' name='robots' />
@@ -240,10 +244,18 @@ ga('send', 'pageview');
                                 <div class="post-content">
                                     
 
-<p><em>Hosting/deploy</em> Hugo di Github tidaklah sulit, karena sebenarnya kita hanya perlu
-mengunggah file yang ada di direktori <code>public</code> saja.</p>
+<p>Github memiliki layanan hosting <em>Static Page</em> yang bisa
+kita manfaatkan untuk hosting Hugo.</p>
 
-<p>Ada empat cara hosting Hugo di Github yang diberikan pada dokumentasi, diantaranya:</p>
+<p>Pada dasarnya SSG seperti Hugo akan membuat sebuah file statis
+yang (biasanya) berada di dalam direktori <code>public</code>.</p>
+
+<p>Nah direktori ini yang akan kita upload ke Github agar
+website atau blog kita bisa dibuka melalui:
+<a href="https://username.github.io">https://username.github.io</a> atau kustom domain sendiri.</p>
+
+<p>Berdasarkan panduan di dokumentasi Hugo, ada empat cara
+yang bisa dilakukan untuk hosting Hugo di Github:</p>
 
 <ol>
 <li>Hosting ke direktori <code>doc</code></li>
@@ -257,7 +269,7 @@ mengunggah file yang ada di direktori <code>public</code> saja.</p>
 <p>Kita membutuhkan dua repositori untuk melakukan cara ini.</p>
 
 <ol>
-<li>Repositori untuk menyimpan konten.</li>
+<li>Repositori untuk menyimpan konten (opsional).</li>
 <li>Repositori untuk menyimpan hasil render.</li>
 </ol>
 
@@ -268,12 +280,22 @@ mengunggah file yang ada di direktori <code>public</code> saja.</p>
 <p>Buatlah dua repositori di Github dengan nama seperti berikut ini.</p>
 
 <ol>
-<li><code>kontent-web-hugo</code></li>
+<li><code>blog</code> (opsional)</li>
 <li><code>username.github.io</code> atau <code>organisasi.github.io</code></li>
 </ol>
 
-<p>Pertama, repositori <code>kontent-web-hugo</code> fungsinya untuk menyimpan konten dari Web
-(semua file Hugo).</p>
+<p>Saat membut repository, jangan centang &ldquo;Initalize this repository with
+README.md&rdquo; agar kosong.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/hugo/hosting/membuat-repository.png" 
+    src="/img/placeholder.svg"
+    alt="Membuat Repository di Github"
+ />
+
+<p>Repositori <code>blog</code> berfungsi untuk menyimpan semua
+file Hugo (proyek hugo). Repository ini bisa kita gunakan untuk back-up.</p>
 
 <p><img src="/img/hugo/repo-konten-hugo.png" alt="Repositori Konten Hugo" /></p>
 
@@ -282,18 +304,19 @@ atau hasil <em>render</em> dari Hugo.</p>
 
 <p><img src="/img/hugo/repo-hasil-render-hugo.png" alt="Repositori Hasil render Hugo" /></p>
 
-<p>Nama repositori anda tidak harus <code>kontent-web-hugo</code>,
-Anda bisa menggunakan nama selain itu.</p>
+<p>Semua file statis yang ada di repository <code>username.github.io</code> akan
+bisa diakses melalui <code>https://username.github.io</code>.</p>
 
 <h2 id="2-persiapkan-repositori-lokal">2. Persiapkan Repositori Lokal</h2>
 
-<p>Buatlah repositori baru di dalam proyek hugo dengan melakukan inisialisasi git.</p>
+<p>Setelah kita membuat repository kosong di Github, selanjutnya
+buatlah repository baru di dalam proyek hugo dengan melakukan inisialisasi git.</p>
 
 <p>Silahkan ikuti perintah berikut ini.</p>
 
 <p>Masuk ke direktori Hugo:</p>
 
-<pre><code class="language-bash">cd kontent-web-hugo
+<pre><code class="language-bash">cd blog
 </code></pre>
 
 <p>Inisialisasi Git:</p>
@@ -308,7 +331,7 @@ Anda bisa menggunakan nama selain itu.</p>
 
 <p>Tambahkan repositori <em>remote</em> (github):</p>
 
-<p>Untuk yang menggunakan HTTP:</p>
+<p>Untuk yang menggunakan HTTPS:</p>
 
 <pre><code class="language-bash">git remote add origin https://github.com/{username}/{nama-repo}.git
 </code></pre>
@@ -324,21 +347,43 @@ Anda bisa menggunakan nama selain itu.</p>
 
 <h2 id="3-upload-ke-github">3. Upload ke Github</h2>
 
-<p>Repositori lokal sudah dipersiapkan, sekarang kita upload dulu ke github.</p>
+<p>Repositori lokal sudah dipersiapkan, sekarang kita <em>upload/push</em> ke github.</p>
 
 <pre><code class="language-bash">git add .
 git commit -m &quot;commit pertama&quot;
 git push -u origin master
 </code></pre>
 
-<h2 id="4-membuat-submodul">4. Membuat Submodul</h2>
+<p>Nah sekarang, semua file Hugo sudah dipublikasikan ke repository <code>blog</code>.</p>
 
-<p>Submodul ini merupakan repositori anak dari repositori <code>kontent-web-hugo</code>.</p>
+<div class="alert alert-info">
+    <p><strong>Tips</strong>: Buat yang mau menyimpan secara private,
+bisa belangganan akun premium Github atau menggunakan layanan lain seperti
+Gitlab dan Bitbucket</p>
 
-<p>Repositori ini akan menggunakan repositori <code>username.github.io</code> sebagai
-repositori remote-nya.</p>
+</div>
 
-<p>HTTP:</p>
+<h2 id="4-membuat-submodule">4. Membuat Submodule</h2>
+
+<p>Kita sudah meng-upload semua file Hugo ke repository <code>blog</code>,
+namun blog <a href="https://username.github.io">https://username.github.io</a> masih <strong>Error 404 Not Found</strong>.</p>
+
+<p>Kenapa bisa begini?</p>
+
+<p>Karena repository <code>username.github.io</code> belum ada isinya.</p>
+
+<p>Untuk mengisinya, kita akan membuatkan submodule dari repository inti (<code>blog</code>).</p>
+
+<p>Pastikan sedang berada di repository <code>blog</code>, lalu ketik perintah
+berikut untuk menambahkan <em>submodule</em>.</p>
+
+<div class="alert alert-info">
+    <p><strong>Tips</strong>: Jika kamu menggunakan HTTPS, maka kamu akan diminta password
+disetiap kali nge-push ke Github, maka cobalah untuk <a href="/github-ssh">menggunakan SSH</a>.</p>
+
+</div>
+
+<p>HTTPS:</p>
 
 <pre><code class="language-bash">git submodule add -b master https://github.com/{username}/{username}.github.io.git public
 </code></pre>
@@ -348,55 +393,87 @@ repositori remote-nya.</p>
 <pre><code class="language-bash">git submodule add -b master git@github.com:{username}/{username}.github.io.git public
 </code></pre>
 
-<h2 id="5-membuat-skrip-deploy-sh">5. Membuat Skrip <code>deploy.sh</code></h2>
+<p>Perintah tersebut akan melakukan <em>clone</em> repository <code>username.github.io</code> ke dalam
+direktori <code>public</code>.</p>
 
-<p>Sebenarnya kita bisa langsung upload semua file yang ada di direktori <code>public</code>
-dengan perintah:</p>
+<p>Sekarang kita bisa mulai mempublikasikan web atau blognya.</p>
 
-<pre><code class="language-bash">cd public
+<p>Silahkan ketik perintah berikut:</p>
+
+<pre><code class="language-bash"># generate statc web
+hugo
+
+# push ke repository
+cd public
 git add .
 git commit -m &quot;tes Deploy hugo&quot;
 git push -u origin master
 </code></pre>
 
-<p>Agar kita tidak mengetik perintah di atas terus-menerus setiap mau deploy, maka
-kita memerlukan skrip.</p>
+<p>Perintah <code>hugo</code> akan menghasilkan sekumpulan file web statis di dalam direktori
+<code>public</code>. Setelah itu kita melakukan <em>push</em> ke repository <code>username.github.io</code>.</p>
 
-<p>Untungnya Hugo sudah menyediakannya. Silahkan ditambahkan skrip ini di direktori Hugo-nya.</p>
+<p>Hal ini akan terus kita lakukan setiap kali kita mau update konten.</p>
+
+<p>Biar tidak repot, kita bisa membuatkan sktrip untuk perintah-perintah
+tersebut.</p>
+
+<h2 id="5-membuat-skrip-deploy-sh">5. Membuat Skrip <code>deploy.sh</code></h2>
+
+<p>Setiap kali kita mau update blog, kita harus melakukan upload atau <em>push</em> ke
+Github, dengan perintah-perintah ini:</p>
+
+<pre><code class="language-bash"># generate statc web
+hugo
+
+# push ke repository
+cd public
+git add .
+git commit -m &quot;tes Deploy hugo&quot;
+git push -u origin master
+</code></pre>
+
+<p>Nah biar tidak repot, kita bisa bungkus perintah-perintah tersebut
+ke dalam sebuah file skrip.</p>
 
 <pre><code class="language-bash">#!/bin/bash
 
 echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
 
-# Build the project.
+# Genterate file statis
 hugo # if using a theme, replace by `hugo -t &lt;yourtheme&gt;`
 
-# Go To Public folder
+# pindah ke direktoru publik
 cd public
-# Add changes to git.
+# tambahkan perubahan ke Git
 git add -A
 
-# Commit changes.
+# Buat sebuah commit baru
 msg=&quot;rebuilding site `date`&quot;
 if [ $# -eq 1 ]
   then msg=&quot;$1&quot;
 fi
 git commit -m &quot;$msg&quot;
 
-# Push source and build repos.
+# Push atau puload ke Github
 git push origin master
 
-# Come Back
+# Balik ke direktori sebelumnya
 cd ..
 </code></pre>
 
-<p>Berikan hak akses eksekusi untuk skrip ini.</p>
+<p>File skrip tersebut dapat kita simpan di dalam
+<em>root</em> direktory proyek Hugo.</p>
+
+<p>Sebagai contoh, kita simpan dengan dengan <code>deploy.sh</code>.</p>
+
+<p>Setelah itu, berikan hak akses eksekusi untuk skrip ini.</p>
 
 <pre><code class="language-bash">chmod +x deploy.sh
 </code></pre>
 
 <p>Nah, kita bisa melakukan deploy dengan skrip tersebut. Setiap kali kita ingin
-meng-update ke Github, kita cukup menjalankan skrip itu saja.</p>
+meng-update blog, kita cukup menjalankan skrip itu saja.</p>
 
 <p><img src="/img/hugo/deploy-hugo.png" alt="deploy Hugo ke Github" /></p>
 
@@ -407,16 +484,12 @@ meng-update ke Github, kita cukup menjalankan skrip itu saja.</p>
 
 <p>Tuggulah beberapa saat, website kita akan segera mengudara di <code>username.github.io</code>.</p>
 
-<p>Cara ini sudah saya coba di blog saya,</p>
+<p>Cara ini saya gunakan di Petani Kode dan juga di blog saya:</p>
 
 <ol>
-<li>Repositori konten <a href="https://github.com/ardianta/ardianta-pargo">https://github.com/ardianta/ardianta-pargo</a></li>
+<li>Repositori konten <a href="https://github.com/ardianta/blog">https://github.com/ardianta/blog</a></li>
 <li>Repositori hasil render <a href="https://github.com/ardianta/ardianta.github.io">https://github.com/ardianta/ardianta.github.io</a></li>
 </ol>
-
-<p>Sebenarnya kita tidak harus membuat repositori <code>kontent-web-hugo</code>, karena webnya
-sudah bisa langsung di-hosting di <code>username.github.io</code>. Tapi untuk jaga-jaga
-kalau suatu saat nanti repositori lokalnya hilang, maka kita bisa ambil dari sana lagi.</p>
 
 <p>Referensi: <a href="https://gohugo.io/tutorials/github-pages-blog/">Dok. Hugo</a></p>
 

@@ -268,7 +268,7 @@ pemrograman C/C++.</p>
 
 <li><p>Buat direktori bernama <em>Android</em> di <em>Home</em>.</p>
 
-<pre><code>  mkdir ~/Android
+<pre><code class="language-bash">  mkdir ~/Android
 </code></pre>
 
 <p><a href="http://4.bp.blogspot.com/-5xSoUaWG1-Y/VwC7NniTAWI/AAAAAAAACmc/kElzJOZscTksbBmrHXb2zqgNpPB8AsgEQ/s1600/Direktori%2BAndroid%2Bdi%2BHOME%2Bsebagai%2Blokasi%2Binstal%2BSDK%2Bdan%2BNDK.png"><img src="https://4.bp.blogspot.com/-5xSoUaWG1-Y/VwC7NniTAWI/AAAAAAAACmc/kElzJOZscTksbBmrHXb2zqgNpPB8AsgEQ/s1600/Direktori%2BAndroid%2Bdi%2BHOME%2Bsebagai%2Blokasi%2Binstal%2BSDK%2Bdan%2BNDK.png" alt="" /></a></p></li>
@@ -279,12 +279,12 @@ pemrograman C/C++.</p>
 
 <li><p>Tambahkan <em>PATH</em> Android SDK ke <em>Environment Variable</em>. Buka file <code>bash.bashrc</code> dengan teks editor sebagai <em>root</em>.</p>
 
-<pre><code>sudo nano /etc/bash.bashrc
+<pre><code class="language-bash">sudo nano /etc/bash.bashrc
 </code></pre>
 
 <p>Tambahkan kode berikut pada akhir file <code>bash.bashrc</code></p>
 
-<pre><code># Variabel untuk menentukan lokasi SDK dan NDK
+<pre><code class="language-bash"># Variabel untuk menentukan lokasi SDK dan NDK
 export ANDROID_HOME=$HOME/Android
 
 # Env variabel Anrdroid SDK
@@ -293,7 +293,7 @@ export PATH=$PATH:$ANDROID_HOME/Sdk/tools:$ANDROID_HOME/Sdk/platform-tools
 
 <p><a href="http://2.bp.blogspot.com/-Ub0z4L35vUA/VwDEaNLLwlI/AAAAAAAACm4/xp4ywZfAMfcBCXkxksSGL_2TbBIqimL1g/s1600/Menambahkan%2BPATH%2BAndroid%2BSDK%2Bke%2BEnvironment%2BVariabel%2BLinux.png"><img src="https://2.bp.blogspot.com/-Ub0z4L35vUA/VwDEaNLLwlI/AAAAAAAACm4/xp4ywZfAMfcBCXkxksSGL_2TbBIqimL1g/s1600/Menambahkan%2BPATH%2BAndroid%2BSDK%2Bke%2BEnvironment%2BVariabel%2BLinux.png" alt="" /></a></p>
 
-<p>Tekan <code>Ctrl</code>+<code>x</code>, kemudian ketik <code>y</code> lalu tekan <code>Enter</code> untuk menyimpan.</p></li>
+<p>Tekan <kbd>Ctrl</kbd>+<kbd>x</kbd>, kemudian ketik <code>y</code> lalu tekan <kbd>Enter</kbd> untuk menyimpan.</p></li>
 </ol>
 
 <p>Selsai!</p>
@@ -329,12 +329,12 @@ Global options:
 
 <li><p>Tambahkan <em>PATH</em> Android NDK ke <em>Evnironment Variable</em>. Buka kembali file <code>bash.bashrc</code>,</p>
 
-<pre><code>sudo nano /etc/bash.bashrc
+<pre><code class="language-bash">sudo nano /etc/bash.bashrc
 </code></pre>
 
 <p>Tambahkan kode berikut pada akhir file <code>bash.bashrc</code></p>
 
-<pre><code># Env variabel Android NDK
+<pre><code class="language-bash"># Env variabel Android NDK
 export PATH=$PATH:$ANDROID_HOME/android-ndk-r11c/
 </code></pre>
 
@@ -343,7 +343,7 @@ export PATH=$PATH:$ANDROID_HOME/android-ndk-r11c/
 
 <p>Ujicoba dengan perintah <code>ndk-build --version</code>:</p>
 
-<pre><code>petanikode@imajinasi:~$ ndk-build --version
+<pre><code class="language-bash">petanikode@imajinasi:~$ ndk-build --version
 GNU Make 3.81
 Copyright (C) 2006  Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.

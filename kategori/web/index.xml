@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 05 Sep 2017 03:01:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 13 Sep 2017 00:48:18 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/kategori/web/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Mengakses Webcam dari HTML dan Mengambil Gambar</title>
+      <link>https://www.petanikode.com/html-webcam/</link>
+      <pubDate>Wed, 13 Sep 2017 00:48:18 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/html-webcam/</guid>
+      <description>Biasanya pada web-web tertentu kita membutuhkan Webcam untuk mengambil gambar, misalnya pada web yang mimiliki fitur Video Call seperti Facebook.
+Kalau dulu, hal ini mungkin dilakukan dengan bantuan Plug-in seperti Flash dan Silverlight.
+Namun, sekarang HTML5 sudah menyediakan API yang bisa kita gunakan untuk mengakses Webcam secara native.
+Pada kesempatan ini, kita akan belajar cara mengakses Webcam untuk ditampilkan di dalam halaman web dan mengambil gambar.
+    (adsbygoogle = window.</description>
+    </item>
     
     <item>
       <title>Membuat Layout Tema Hugo: 3 Halaman Penting yang Harus Ada dalam Blog</title>

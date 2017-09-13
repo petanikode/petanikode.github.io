@@ -281,10 +281,10 @@ Model UserSebenarnya, inti dari membuat login yang dapat menerima username dan p
     
     <item>
       <title>Apa Perbedaan Fungsi base_url() dengan fungsi site_url() di CodeIgniter?</title>
-      <link>https://www.petanikode.com/apa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter/</link>
+      <link>https://www.petanikode.com/codeigniter-base-url-site-url/</link>
       <pubDate>Sat, 28 May 2016 16:39:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/apa-perbedaan-fungsi-base_url-dengan-fungsi-site_url-di-codeigniter/</guid>
+      <guid>https://www.petanikode.com/codeigniter-base-url-site-url/</guid>
       <description>Fungis base_url() dan site_url() merupakan dua fungsi untuk mengambil URL web pada framework CodeIgniter. Kedua fungsi ini dapat digunakan dengan mengaktifkan helper url terlebih dahulu.
 Fungsi base_url() fungsi base_url() akan menghasilkan sebuah url dasar berdasarkan konfigurasi diisi pada config.php. Misalkan konfigurasinya seperti ini.
 $config[&#39;base_url&#39;] = &#39;http://petanikode.com/&#39;;  Maka, ketika kita menggunakan fungsi base_url(), akan mendapatkan nilai:

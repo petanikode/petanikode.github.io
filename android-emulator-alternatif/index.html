@@ -18,7 +18,7 @@ Ada dua emulator alternatif yang bisa kita gunakan untuk debug dan deploy aplika
 
 
 <meta itemprop="dateModified" content="2015-11-13T21:05:00&#43;00:00" />
-<meta itemprop="wordCount" content="589">
+<meta itemprop="wordCount" content="685">
 
 
 
@@ -290,6 +290,10 @@ android studio.</p>
 
 <h3 id="cara-install-genymotion-di-linux">Cara Install Genymotion di Linux</h3>
 
+<p>Untuk dapat menggunakan Genymotion, kita harus menginstalnya terlebih dahulu.</p>
+
+<p>Berikut ini langkah-langkah menginstal Genymotion di Linux.</p>
+
 <h4 id="1-pastikan-virtualbox-sudah-terinstal">1. Pastikan virtualbox Sudah Terinstal</h4>
 
 <p>Genymotion memanfaatkan virtualbox untuk melakuan virtualisasi.
@@ -301,7 +305,14 @@ Jadi pastikan virtualbox sudah terpasang di komputermu.</p>
 <h4 id="2-download-dan-install-genymotion">2. Download dan Install Genymotion</h4>
 
 <p>Download Genymotion di website resminya (<a href="https://www.genymotion.com/#!/download">genymotion.com</a>).
-Kita harus memiliki akun agar bisa mendownloadnya.</p>
+Silahkan buat akun dan download.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/android/emulator/download-genymotion.png" 
+    src="/img/placeholder.svg"
+    alt="Download Genymotion"
+ />
 
 <p>Nanti kita akan mendapatkan file <em>binary</em>, seperti ini.</p>
 
@@ -319,44 +330,102 @@ Sebenarnya bisa diinstal di mana saja.</p>
 
 <p>Silahkan copy atau pindahkan file binary yang didapatkan tadi ke direktori <code>/opt</code>.</p>
 
-<pre><code class="language-bash">cp ~/Downloads/genymotion-2.5.2_x86.bin /opt/genymotion-2.5.2_x86.bin
+<pre><code class="language-bash">sudo cp ~/Downloads/genymotion-2.5.2_x86.bin  /opt/
 </code></pre>
 
 <p>Setelah itu eksekusi filenya:</p>
 
 <pre><code class="language-bash">cd /opt
-chmod +x genymotion-2.5.2_x86.bin
-./genymotion-2.5.2_x86.bin
+sudo chmod +x genymotion-2.5.2_x86.bin
+sudo ./genymotion-2.5.2_x86.bin
 </code></pre>
 
-<p>Setelah itu kita akan memiliki direktory baru bernama <code>genymotion</code> di dalam
-<code>/opt</code>.</p>
+<p>Jika instalasi berhasil, akan muncul pesan seperti berikut ini.</p>
 
 <img 
     class="lazyload mb-3"
-    data-src="http://3.bp.blogspot.com/-Us5YgHMvZaE/VkXHuL8ssJI/AAAAAAAACMg/oVFB6UVSftY/s1600/Kumpulan%2Bberkas%2Bgenymotion%2Bsetelah%2Bterinstal.png" 
+    data-src="/img/android/emulator/instalasi-genymotion.png" 
     src="/img/placeholder.svg"
-    alt="Intalasi Genymotion"
+    alt="Instalasi Genymotion"
  />
 
-<p>Klik 2x pada file <code>genymotion</code> untuk mengeksekusinya. Kemudian, tambahkan perangkat virtual <em>(virtual device)</em>.</p>
+<p>Setelah itu kita akan memiliki direktory baru bernama <code>genymobile</code> di dalam
+<code>/opt</code> dan item baru di Menu.</p>
 
-<div class="alert alert-info">
-    Penambahan perangkat virtual membutuhkan koneksi internet untuk login dan
-mendownload perangkat virtual.
-</div>
+<img 
+    class="lazyload mb-3"
+    data-src="/img/android/emulator/menu-genymotion.png" 
+    src="/img/placeholder.svg"
+    alt="Menu Genymotion"
+ />
+
+<h3 id="membuat-emulator-genymotion">Membuat Emulator Genymotion</h3>
+
+<p>Silahkan buka Genymotion, kemudian pada jendela <strong>Welcome</strong>, pilih <strong>Personal Use</strong>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/android/emulator/jenis-lisensi-genymotion.png" 
+    src="/img/placeholder.svg"
+    alt="Pemilihan jenis lisensi Genymotion"
+ />
+
+<p>Kemudian silahkan setujui EULA, atau baca-baca bila sempat.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/android/emulator/eula.png" 
+    src="/img/placeholder.svg"
+    alt="Persetujuan EULA Genymotion"
+ />
+
+<p>Setelah itu akan muncul sebuah dialog, <em>&ldquo;Apakah anda ingin
+membuat perangkat virtual?&rdquo;</em> jawab saja <strong>Yes</strong>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/android/emulator/dialog.png" 
+    src="/img/placeholder.svg"
+    alt="Jendela dialog"
+ />
+
+<p>Kemudian, kita akan diminta untuk login dengan akun yang sudah dibuat.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/android/emulator/signin.png" 
+    src="/img/placeholder.svg"
+    alt="Login akun genymotion"
+ />
+
+<p>Setelah berhasil login, selanjutnya silahkan pilih perangkat virutal yang
+akan diinstal.</p>
+
+<p>Sebagai contoh saya memilih Google Nexus 5 dengan OS Android 6.0.0 (API 23).</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/android/emulator/pemilihan-device.png" 
+    src="/img/placeholder.svg"
+    alt="Pemilihan virtual device yang akan diinstal"
+ />
+
+<p>Selanjutnya klik <strong>Next</strong>, berikan nama dan klik <strong>Next</strong> lagi.</p>
+
+<p>Tunggulah beberapa menit, perangkat virtualnya sedang di-download.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/android/emulator/download-virtual-device.png" 
+    src="/img/placeholder.svg"
+    alt="Download perangkat virtual"
+ />
 
 <p>Setelah login dengan ke akun Genymotion, kita bisa menambahkan dan men-download emulator
 dengan mengklik tombol <strong>Add</strong>.</p>
 
-<img 
-    class="lazyload mb-3"
-    data-src="http://3.bp.blogspot.com/-f3EJwTqLgQo/VkXKC4IrwEI/AAAAAAAACMs/H8AoHdlVpp8/s1600/Genymotion%2Bberhasil%2Bberjalan%2Bdi%2Blinux%2Bxubuntu%2B15.04%2B32bit.png" 
-    src="/img/placeholder.svg"
-    alt="Emulator Genymotion"
- />
-
-<p>Setelah itu, kita bisa menjalankan emulatornya dengan mengklik tombol <strong>Start</strong>.</p>
+<p>Setelah selesai, klik <strong>Finish</strong> dan selanjutnya kita bisa menjalankan emulator dengan
+mengelik tombol <strong>Start</strong>.</p>
 
 <img 
     class="lazyload mb-3"
@@ -369,7 +438,7 @@ dengan mengklik tombol <strong>Add</strong>.</p>
 
 <p>Lalu bagaimana caranya mengintegrasikannya dengan Android Studio?</p>
 
-<h4 id="2-tambahkan-plug-in-genymotion-di-android-studio">2. Tambahkan Plug-in Genymotion di Android Studio</h4>
+<h3 id="menambahkan-plug-in-genymotion-di-android-studio">Menambahkan Plug-in Genymotion di Android Studio</h3>
 
 <p>Klik menu <strong><em>file</em></strong> kemudian pilih <strong><em>Settings</em></strong>. Pada jendela yang terbuka,
 di bagian sebelah kiri, pilih <strong><em>plugins</em></strong>.</p>

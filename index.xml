@@ -1145,13 +1145,14 @@ Apakah itu RWD? RWD singkatan dari Responsive Web Design. Responsif artinya webn
       <pubDate>Wed, 16 Nov 2016 05:07:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/perbedaan-i-increment-dengan-increment-i/</guid>
-      <description>Sebagai pemula, kita mungkin sedikit bingung dengan perbedaan dari i++ (post increment) dengan ++i (pre increment).
-Simbol ++ artinya tambah satu (+1) atau increment. i++ dan ++i sering kita temukan ketika membuat sebuah perulangan.
+      <description>Dalam materi-materi perluangan simbol ++ sering kita temukan.
+Simbol tersebut termasuk dalam operator aritmatika untuk meningkatkan atau menambah satu (+1) sebuah variabel.
+Kadang ditulis seperti ini i++ dan juga seperti ini ++i.
+Apa sih perbedaanya?
+Post-increment dan Pre-increment Penulisan simbol ++ di dibelakang vairbel disebut dengan post-incement, sedangkan bila ditulis di depan, disebut dengan pre-increment.
 Contoh:
-Post-Increment
-for(int i = 1; i &amp;lt;= 10; i++){ System.out.print(i); }  Pre-Increment
-for(int i = 1; i &amp;lt;= 10; ++i){ System.out.print(i); }  Kedua perulangan tersebut akan menghasilkan bilangan dari 1 sampai 10.
-12345678910  i++ itu sama seperti i = i + 1, jadi nilai variabel i yang sebelumnya akan ditambah satu.</description>
+Post-increment:
+for(int i = 1; i &amp;lt;= 10; i++){ System.out.print(i); }  Pre-increment:</description>
     </item>
     
     <item>

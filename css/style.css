@@ -32,3 +32,20 @@ a:hover {text-decoration: none}
 .post-content img, .post-content iframe {
     max-width: 100%;
 }
+
+/* Table */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 1em;
+}
+
+th, td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}

@@ -139,7 +139,7 @@ ga('send', 'pageview');
     <div class="container">
 
         <a class="navbar-brand" href="https://www.petanikode.com/"><img src="/img/logo.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
-            alt=""> Petani Kode</a>
+            alt="Logo"> Petani Kode</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -729,7 +729,7 @@ ga('send', 'pageview');
                                     <div class="form-section horizontal ml-button-position mt-4">
                                        
                                         <span disabled="disabled" style="display: none;" class="loading">
-                                            <img src="https://static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;">
+                                            <img src="https://static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;" alt="rolling">
                                         </span>
                                     </div>
                                     <div class="clearfix" style="clear: both;"></div>
@@ -845,7 +845,7 @@ ga('send', 'pageview');
             <div class="col-md-6 col-sm-12 text-center text-md-right pt-2">
 
                 &copy; 2017 <a href="https://www.petanikode.com/">Petani Kode</a>
-                <span class="d-none d-lg-inline"> | Made with ❤️ using <a href='https://gohugo.io' target='_blank'>Hugo 0.26</a></span>
+                <span class="d-none d-lg-inline"> | Made with <img class="emoji" draggable="false" alt="❤️" src="/img/icon/twemoji/2764.svg" /> using <a href='https://gohugo.io' target='_blank'>Hugo 0.26</a></span>
 
             </div>
 
@@ -862,7 +862,8 @@ ga('send', 'pageview');
 
 <script>
     
-    twemoji.parse(document.body, {
+    var article = document.querySelector("article");
+    twemoji.parse(article, {
         base: "/img/icon/twemoji/",
         
         ext: ".svg",

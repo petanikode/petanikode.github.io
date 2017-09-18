@@ -802,10 +802,10 @@ Baca Juga:
     
     <item>
       <title>Cara Menggunakan Web Server dari PHP</title>
-      <link>https://www.petanikode.com/web-server-php/</link>
+      <link>https://www.petanikode.com/php-web-server/</link>
       <pubDate>Mon, 10 Oct 2016 10:16:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/web-server-php/</guid>
+      <guid>https://www.petanikode.com/php-web-server/</guid>
       <description>Pada PHP versi 5.4.0, CLI SAPI menyediakan fitur build-in web server yang memungkinkan kita untuk membuat server web dari perintah command line (CLI). Namun, server tersebut hanya bisa digunakan untuk pengembangan (development) aplikasi saja.
 Bila kita menggunakannya untuk server produksi, kemungkinan akan macet karena terlalu banyak request.
 Membuat Server dari Commnd Line Pastikan PHP sudah terinstal, kemudian buat sebuah server dengan perintah berikut ini.

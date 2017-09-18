@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Apakah Fungsi `!important` pada CSS dan Kapan Harus Menggunakannya?</title>
+        <title>Cara Menggunakan Web Server dari PHP</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-<meta itemprop="name" content="Apakah Fungsi `!important` pada CSS dan Kapan Harus Menggunakannya?">
-<meta itemprop="description" content="Memahami fungsi !important pada CSS dan kapan waktu yang tepat menggunakannya?">
+<meta itemprop="name" content="Cara Menggunakan Web Server dari PHP">
+<meta itemprop="description" content="Pada PHP versi 5.4.0, CLI SAPI menyediakan fitur build-in web server yang memungkinkan kita untuk membuat server web dari perintah command line (CLI). Namun, server tersebut hanya bisa digunakan untuk pengembangan (development) aplikasi saja.
+Bila kita menggunakannya untuk server produksi, kemungkinan akan macet karena terlalu banyak request.
+Membuat Server dari Commnd Line Pastikan PHP sudah terinstal, kemudian buat sebuah server dengan perintah berikut ini.
+php -S localhost:8000  Perhatikan argumen -S, argumen tersebut menggunakan huruf kapital.">
 
 
-<meta itemprop="dateModified" content="2016-07-10T21:08:00&#43;00:00" />
-<meta itemprop="wordCount" content="571">
+<meta itemprop="dateModified" content="2016-10-10T10:16:00&#43;00:00" />
+<meta itemprop="wordCount" content="435">
 
 
 
 <meta itemprop="keywords" content="" />
 
 
-<meta property="og:title" content="Apakah Fungsi `!important` pada CSS dan Kapan Harus Menggunakannya?" />
-<meta property="og:description" content="Memahami fungsi !important pada CSS dan kapan waktu yang tepat menggunakannya?" />
+<meta property="og:title" content="Cara Menggunakan Web Server dari PHP" />
+<meta property="og:description" content="Pada PHP versi 5.4.0, CLI SAPI menyediakan fitur build-in web server yang memungkinkan kita untuk membuat server web dari perintah command line (CLI). Namun, server tersebut hanya bisa digunakan untuk pengembangan (development) aplikasi saja.
+Bila kita menggunakannya untuk server produksi, kemungkinan akan macet karena terlalu banyak request.
+Membuat Server dari Commnd Line Pastikan PHP sudah terinstal, kemudian buat sebuah server dengan perintah berikut ini.
+php -S localhost:8000  Perhatikan argumen -S, argumen tersebut menggunakan huruf kapital." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.petanikode.com/css-important/" />
+<meta property="og:url" content="https://www.petanikode.com/php-web-server/" />
 
 
 
-<meta property="article:published_time" content="2016-07-10T21:08:00&#43;00:00"/>
-<meta property="article:modified_time" content="2016-07-10T21:08:00&#43;00:00"/>
+<meta property="article:published_time" content="2016-10-10T10:16:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-10-10T10:16:00&#43;00:00"/>
 
 
 
@@ -46,8 +52,8 @@
 
 
 
-<meta property='og:image' content='/img/css/important/css-important.png' />
-<meta property="og:updated_time" content="2016-07-10 21:08:00 &#43;0000 UTC" />
+<meta property='og:image' content='https://2.bp.blogspot.com/-2IG-jFUmMEo/VvYL3XC817I/AAAAAAAACkA/RvgROBUYFpYXXZ4tSwUMNm1tIjpvZOeoQ/s1600/Pemrograman%2BPHP%2BPetani%2BKode.png' />
+<meta property="og:updated_time" content="2016-10-10 10:16:00 &#43;0000 UTC" />
 <meta content='id_ID' property='og:locale' />
 <meta content='ms_MY' property='og:locale:alternate' />
 <meta content='en_US' property='og:locale:alternate' />
@@ -90,8 +96,11 @@
 
 <meta name="telegram:channel" content="@petanikode">
 
-<meta name="keywords" content="Apakah Fungsi `!important` pada CSS dan Kapan Harus Menggunakannya?, "/>
-<meta name="description" content="Memahami fungsi !important pada CSS dan kapan waktu yang tepat menggunakannya?" />
+<meta name="keywords" content="Cara Menggunakan Web Server dari PHP, "/>
+<meta name="description" content="Pada PHP versi 5.4.0, CLI SAPI menyediakan fitur build-in web server yang memungkinkan kita untuk membuat server web dari perintah command line (CLI). Namun, server tersebut hanya bisa digunakan untuk pengembangan (development) aplikasi saja.
+Bila kita menggunakannya untuk server produksi, kemungkinan akan macet karena terlalu banyak request.
+Membuat Server dari Commnd Line Pastikan PHP sudah terinstal, kemudian buat sebuah server dengan perintah berikut ini.
+php -S localhost:8000  Perhatikan argumen -S, argumen tersebut menggunakan huruf kapital." />
 
 <meta content='ID-id' http-equiv='content-language' />
 <meta content='index,follow' name='robots' />
@@ -207,15 +216,15 @@ ga('send', 'pageview');
                                     
                                     <div class="mb-3">
                                     <img src="/img/author-photo.jpg" class="rounded-circle mr-1" width="32" height="32" alt="author" />
-                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Dian</a> <small class="align-middle text-muted">· <time>10 Jul 2016</time></small>
+                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Dian</a> <small class="align-middle text-muted">· <time>10 Oct 2016</time></small>
                                     </div>
 
-                                    <h2 class="card-title mb-3">Apakah Fungsi `!important` pada CSS dan Kapan Harus Menggunakannya?</h2>
+                                    <h2 class="card-title mb-3">Cara Menggunakan Web Server dari PHP</h2>
                                     
                                     <div>
                                         
                                         <span class="badge badge-success">
-                                             #<a class="text-white" href="/topik/css">CSS</a>
+                                             #<a class="text-white" href="/topik/php">PHP</a>
                                         </span> 
                                         
                                     </div>
@@ -224,223 +233,145 @@ ga('send', 'pageview');
                                 <div class="post-content">
                                     
 
-<p><img src="/img/css/important/css-important.png" alt="CSS Important" /></p>
+<p>Pada PHP versi <code>5.4.0</code>, <acronym title="Command Line Interpreter/Interface">CLI</acronym>
+<acronym title="Server Application Programming Interface">SAPI</acronym>
+menyediakan fitur <em>build-in web server</em> yang memungkinkan kita untuk membuat
+server web dari perintah <em>command line</em> (CLI). Namun, server tersebut hanya
+bisa digunakan untuk pengembangan <em>(development)</em> aplikasi saja.</p>
 
-<!-- Agreement -->
+<p>Bila kita menggunakannya untuk server produksi, kemungkinan akan macet
+karena terlalu banyak <em>request</em>.</p>
 
-<p>Kau begitu <code>!important</code> bagiku&hellip; (cieee 😄).</p>
+<h2 id="membuat-server-dari-commnd-line">Membuat Server dari Commnd Line</h2>
 
-<p><em>Important</em> artinya sangat penting.</p>
+<p>Pastikan PHP sudah terinstal, kemudian buat sebuah server dengan perintah berikut ini.</p>
 
-<p>Kata kunci <code>!important</code> sering kita temukan dalam kode CSS&hellip;</p>
-
-<!-- Promise -->
-
-<p>Apa sih fungsinya?</p>
-
-<p>Kenapa dan kapan waktu yang tepat menggunakannya?</p>
-
-<!-- Review -->
-
-<p>Pada artikel ini, kita akan membahasnya dengan sedikit studi kasus.</p>
-
-<p>Mari kita mulai&hellip;</p>
-
-<h2 id="bagaimana-browser-membaca-kode-css">Bagaimana Browser Membaca Kode CSS?</h2>
-
-<p>Browser seperti manusia, dia membaca kode CSS dari atas ke bawah dan
-mengikuti perintah-perintah dalam CSS.</p>
-
-<p>Browser selalu menuruti perintah CSS, tapi ada kalanya dia mengabaikan
-perintah.</p>
-
-<p>Contoh:</p>
-
-<p>Kode CSS</p>
-
-<pre><code class="language-css">body {
-    background: black; /* hi brow ganti bg-nya jadi hitam */
-    color: green; /* teksnya warna hijau ya */
-}
+<pre><code class="language-bash">php -S localhost:8000
 </code></pre>
 
-<p>Sementara itu di HTML-nya diberikan inline CSS.</p>
+<p>Perhatikan argumen <code>-S</code>, argumen tersebut menggunakan huruf kapital.
+Kemudian argumen kedua adalah alamat server dan nomer <em>port</em> yang akan digunakan.
+Nomer <em>port</em> bebas, asalkan tidak bentrok dengan nomer <em>port</em> service lain.</p>
 
-<pre><code class="language-html">&lt;body style=&quot;background:yellow&quot;&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;    
-&lt;/body&gt;
+<p><img src="http://4.bp.blogspot.com/-h7cY8GOTbl4/V_nnICrIa1I/AAAAAAAADUg/g65OMsk6eVkJO3zQigyTUeDz9H_K70iiQCK4B/s1600/Menjalankan%2Bserver%2BPHP%2Bmelalui%2Bterminal.png" alt="Menjalankan Server PHP melalui Terminal" /></p>
+
+<p>Gambar di atas menunjukkan, kalau servernya siap menerima request dari
+alamat <a href="http://localhost:8000">http://localhost:8000</a> dengan root dokumenya <code>/home/petanikode</code>.</p>
+
+<p><img src="http://1.bp.blogspot.com/-a5zVUWb3pFk/V_no0tnn66I/AAAAAAAADUs/qzgltxRLU7gqTFWUdx3bGeH98EMTVgaeQCK4B/s1600/Uji%2Bcoba%2Bserver%2Bweb%2Bbuild%2Bin%2Bphp.png" alt="Percobaan server PHP" /></p>
+
+<p>Kita akan mendapatkan <em>error 404</em>, karena tidak ada file <code>index.php</code> di <em>root</em>
+dokumen server tersebut. Berikut ini log yang akan tampil di terminal.</p>
+
+<pre><code class="language-bash">petanikode@imajinasi ~ $ php -S localhost:8000
+PHP 7.0.8-0ubuntu0.16.04.3 Development Server started at Sun Oct  9 14:43:04 2016
+Listening on http://localhost:8000
+Document root is /home/petanikode
+Press Ctrl-C to quit.
+[Sun Oct  9 14:49:15 2016] 127.0.0.1:40244 [404]: / - No such file or directory
+[Sun Oct  9 14:49:15 2016] 127.0.0.1:40246 [404]: /favicon.ico - No such file or directory
+[Sun Oct  9 14:49:15 2016] 127.0.0.1:40248 [404]: /favicon.ico - No such file or directory
 </code></pre>
 
-<p>Hasilnya:</p>
+<p>Untuk menghentikan server, tekan tombol <code>Ctrl</code>+<code>c</code>.</p>
 
-<p><img src="/img/css/important/css-tanpa-important.png" alt="Hasil Kode CSS tanpa !important" /></p>
+<h2 id="root-document">Root Document</h2>
 
-<p>Ya, jelas warna background-nya akan kuning, karena itu perintah terakhir
-yang diberikan ke browser. Sedangkan perintah yang awal (<code>background: black</code>) diabaikan.</p>
+<p>Root Document merupakan lokasi dari dokumen proyek atau web.</p>
 
-<p>Lalu bagaimana caranya agar hitam?</p>
+<p>Misalkan,
+pada contoh percobaan di atas, root dokumennya berada di <code>/home/petanikode/</code>.</p>
 
-<p>Di sinilah peran <code>!important</code>.</p>
+<p>Karena saya menjalankan perintah tersebut di home direktori.
+Mari kita coba menggunakan root dokumen yang lain.</p>
 
-<h2 id="kenapa-kita-harus-menggunakan-important">Kenapa Kita Harus Menggunakan !important?</h2>
+<ol>
+<li><p>Buat sebuah direktori baru, kemudian masuk ke direktori tersebut</p>
 
-<p>Seperti kasus di atas, browser akan menuruti perintah terakhir yang diberikan pada CSS.</p>
+<pre><code class="language-bash">  mkdir webku
+  cd webku
+</code></pre></li>
 
-<p><img src="/img/css/important/prioritas-css.png" alt="Prioritas CSS dalam Browser" /></p>
+<li><p>Buat sebuah file baru bernama <code>index.php</code></p>
 
-<p>Maka, untuk memberikan prioritas terhadap perintah tertentu,
-kita harus menggunakan kata kunci <code>!important</code>.</p>
+<pre><code class="language-bash">  touch index.php
+</code></pre></li>
 
-<pre><code class="language-css">body {
-    background: black !important; /* hi brow ganti bg-nya jadi hitam  (PENTING BANGET!)*/
-    color: green; /* teksnya warna hijau ya */
-}
+<li><p>Isi file tersebut dengan kode berikut ini</p>
+
+<pre><code class="language-php">  &lt;?php
+  echo &quot;Hallo, ini webku. Selamat datang ya&quot;;
+  ?&gt;
+</code></pre></li>
+
+<li><p>Keumudian jalankan servernya</p>
+
+<pre><code class="language-bash">  php -S localhost:8000
+</code></pre></li>
+</ol>
+
+<p>Berikut ini hasil output yang akan kita dapatkan.</p>
+
+<p><img src="http://2.bp.blogspot.com/-YkBn91rPNFo/V_nu52JjIeI/AAAAAAAADU8/XoCirCb8aUk8Lsv46LypT1AGxFjFvzEowCK4B/s1600/Hasil%2Boutput%2Bserver%2Bdengan%2Bdirektori%2Broot%2Byang%2Bberbeda.png" alt="Hasil Output Server dengan direktori root yang berbeda" /></p>
+
+<p>Lokasi dokumen root juga dapat kita tentukan secara spesifik dengan arugmen <code>-t</code>. Misalnya,</p>
+
+<pre><code class="language-bash">php -S localhost:8000 -t /var/www/html/proyek-web/
 </code></pre>
 
-<p>Walaupun ada perintah lagi dibawahnya untuk mengganti background&hellip;</p>
+<h2 id="menggunakan-skrip-router">Menggunakan Skrip Router</h2>
 
-<pre><code class="language-html">&lt;body style=&quot;background:yellow&quot;&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;    
-&lt;/body&gt;
-</code></pre>
+<p>Router fungsinya untuk mengatur arah dan tujuan. Misalkan,
+sebuah permintaan <em>(request)</em> dengan <acronym title="Uniform Resource Identifier">URI</acronym>
+<code>/profil</code> maka arahkan atau buka halaman <code>profil.php</code>.</p>
 
-<p>Browser akan tetap memprioritaskan perintah yang diberikan kata kunci <code>!important</code>.</p>
+<ol>
+<li><p>Buatlah file baru pada direktori sebelumnya dengan nama <code>router.php</code>, kemudian isi dengan kode berukut.</p>
 
-<p><img src="/img/css/important/css-menggunakan-important.png" alt="Hasil Kode CSS menggunakan !important" /></p>
+<pre><code class="language-php">  &lt;?php // router.php
+  switch ($_SERVER[&quot;REQUEST_URI&quot;]){
 
-<h2 id="kapan-waktu-yang-tepat-menggunakan-important">Kapan Waktu yang Tepat Menggunakan <code>Important</code>?</h2>
+  case &quot;/profil&quot;:
+    include(&quot;profil.php&quot;);
+    break;
+  case &quot;/home&quot;:
+    echo &quot;Ini halaman Home&quot;;
+    break;
+  default:
+    echo &quot;404: Halaman tidak ditemukan&quot;;
 
-<p>Waktu yang tepat menggunakan <code>!important</code> adalah saat kita menggunakan banyak
-CSS dalam sebuah halaman web.</p>
+  }
+  ?&gt;
+</code></pre></li>
 
-<p>Menurut saran dari beberapa orang, sebaiknya penggunaan <code>!important</code> dikurangi
-atau jangan terlalu banyak agar tidak merusak <em>flow</em> CSS-nya&hellip;</p>
+<li><p>Kemudian buatlah file bernama <code>profil.php</code> dengan isi sebagai berikut.</p>
 
-<p>Tapi menurut <a href="https://css-tricks.com/when-using-important-is-the-right-choice/">css-tricks.com</a>,
-penggunaan <code>!important</code> cukup bagus digunakan untuk class <code>.button</code>.</p>
+<pre><code class="language-php">  &lt;?php
+  echo &quot;Ini halaman profil&quot;;
+  ?&gt;
+</code></pre></li>
 
-<p>Kenapa?</p>
+<li><p>Jalankan servernya</p>
 
-<p>Begini alasannya:</p>
+<pre><code class="language-bash">  php -S localhost:8000 router.php
+</code></pre></li>
+</ol>
 
-<p>Misalkan kita punya class <code>.button</code> dengan <em>style</em> seperti ini.</p>
+<p>Hasil output yang akan kita dapatkan adalah seperti gambar ini.</p>
 
-<pre><code class="language-css">.button {
-   background: red;
-   color: white;
-   padding: 3px;
-   border-radius: 5px;
-   border: 1px solid black;
-}
-</code></pre>
+<p><img src="https://3.bp.blogspot.com/-I0UD1uAfeec/V_pBrFH2nSI/AAAAAAAADVM/9hP64iz-PSg0MBxSgvP-CQ4-C8N-pYfwgCK4B/s1600/Mozilla%2BFirefox_023.png" alt="Hasil Output" /></p>
 
-<p>Waktu kita gunakan class-nya pada link (<code>&lt;a&gt;</code>):</p>
+<p>Nah, itulah cara menggunakan web server bawaan PHP. Lebih lengkapnya, bisa
+dipelajari di dokumentasi PHP. Sekian tulisan kali ini, mudah-mudahan bermanfaat.</p>
 
-<pre><code class="language-html">&lt;section id=&quot;content&quot;&gt;
-   &lt;p&gt;Menerapkan class di &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Tombol&lt;/a&gt;  &lt;/p&gt;
-&lt;/section&gt;
-</code></pre>
-
-<p>Ternyata ada style lain yang digunakan untuk tag tersebut.</p>
-
-<pre><code class="language-css">#content a {
-   border-bottom: 2px dotted blue;
-}
-</code></pre>
-
-<p>Hasilnya:</p>
-
-<p><img src="/img/css/important/tombol-tanpa-important.png" alt="Tombol tanpa Important" /></p>
-
-<p>Hasilnya tidak sesuai dengan harapan&hellip;</p>
-
-<p>Ada garis bertitik biru di bawahnya, itu disebabkan oleh selektor <code>#content a</code>
-dan ada garis bawah di teksnya disebabkan oleh CSS default untuk tag <code>&lt;a&gt;</code>.</p>
-
-<p>Maka dari itu, class <code>.button</code> harus diberikan <code>!important</code>.</p>
-
-<pre><code class="language-css">.button {
-   background: red            !important;
-   color: white               !important;
-   padding: 3px               !important;
-   border-radius: 5px         !important;
-   border: 1px solid black    !important;
-
-   /* agar garis bawah di teks hilang */
-   text-decoration: none      !important;
-}
-</code></pre>
-
-<p>Hasilnya:</p>
-
-<p><img src="/img/css/important/tombol-menggunakan-important.png" alt="Tombol Setelah menggunakan important" /></p>
-
-<p>Style tombolnya akan tetap konsisten seperti itu dan tidak akan terpengaruh
-lagi oleh style CSS yang lain.</p>
-
-<p>Kode lengkap dari contoh di atas:</p>
-
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;title&gt;CSS !important&lt;/title&gt;
-
-        &lt;style type=&quot;text/css&quot;&gt;
-        body {
-            background: silver !important;
-            color: black;
-        }
-
-        .button {
-           background: red            !important;
-           color: white               !important;
-           padding: 3px               !important;
-           border-radius: 5px         !important;
-           border: 1px solid black    !important;
-
-           /* agar garis bawah di teks hilang */
-           text-decoration: none      !important;
-        }
-
-        #content a {
-           border-bottom: 2px dotted blue;
-        }
-
-        &lt;/style&gt;
-
-        &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
-
-    &lt;/head&gt;
-
-    &lt;body style=&quot;background: yellow&quot;&gt;
-        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
-
-        &lt;section id=&quot;content&quot;&gt;
-           &lt;p&gt;Menerapkan class di &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Tombol&lt;/a&gt;  &lt;/p&gt;
-        &lt;/section&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<h2 id="akhir-kata">Akhir Kata&hellip;</h2>
-
-<p>Terima kasih sudah menyimak sampai akhir, mudah-mudahan bisa dipahami.</p>
-
-<p>Masih bingung?</p>
-
-<p>Coba tanyakan di komentar&hellip;</p>
-
-<!-- Atau pelajari:
-
-- [Langkah Awal Belajar CSS (Pengenalan Dasar CSS untuk Pemula)](/css-dasar) -->
+<p>Referensi: <a href="http://php.net/manual/en/features.commandline.webserver.php">php.net</a></p>
 
                                     
                                     <div class="post-footer mt-5 py-4">
                                         <div class="mb-4 py-3 border border-left-0 border-right-0">
     <h6>Berbagi manfaat:</h6>
     <a class="mr-2" 
-        href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcss-important%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Apakah%20Fungsi%20%60%21important%60%20pada%20CSS%20dan%20Kapan%20Harus%20Menggunakannya%3f" 
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fphp-web-server%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Cara%20Menggunakan%20Web%20Server%20dari%20PHP" 
         title="Bagikan ke Facebook" 
         target="_blank"
         onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=' + encodeURIComponent(document.URL));
@@ -448,28 +379,28 @@ lagi oleh style CSS yang lain.</p>
         <img src="/img/icon/entypo/entypo-social/facebook-with-circle.svg" width="32" height="32" alt="Facebook"/>
     </a>
     <a class="mr-2" 
-        href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcss-important%2f%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Apakah%20Fungsi%20%60%21important%60%20pada%20CSS%20dan%20Kapan%20Harus%20Menggunakannya%3f%20https%3a%2f%2fwww.petanikode.com%2fcss-important%2f%20via%20@petanikode"
-        onclick="window.open('https://twitter.com/intent/tweet?source=https:\/\/www.petanikode.com\/css-important\/%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Apakah Fungsi `!important` pada CSS dan Kapan Harus Menggunakannya?%20https:\/\/www.petanikode.com\/css-important\/%20via%20@petanikode'); return false;"
+        href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fphp-web-server%2f%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Cara%20Menggunakan%20Web%20Server%20dari%20PHP%20https%3a%2f%2fwww.petanikode.com%2fphp-web-server%2f%20via%20@petanikode"
+        onclick="window.open('https://twitter.com/intent/tweet?source=https:\/\/www.petanikode.com\/php-web-server\/%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Cara Menggunakan Web Server dari PHP%20https:\/\/www.petanikode.com\/php-web-server\/%20via%20@petanikode'); return false;"
         target="_blank" 
         title="Berbagi ke Twitter">
         <img src="/img/icon/entypo/entypo-social/twitter-with-circle.svg" width="32" height="32" alt="Twitter"/>
     </a>
     <a class="mr-2" 
-        href="https://t.me/share/url?url=https%3a%2f%2fwww.petanikode.com%2fcss-important%2f%3Futm_source%3Dtelegram.org%26utm_medium%3Dshare"
-        onclick="window.open('https://t.me/share/url?url=https:\/\/www.petanikode.com\/css-important\/%3Futm_source%3Dtelegram.org%26utm_medium%3Dshare');return false;"
+        href="https://t.me/share/url?url=https%3a%2f%2fwww.petanikode.com%2fphp-web-server%2f%3Futm_source%3Dtelegram.org%26utm_medium%3Dshare"
+        onclick="window.open('https://t.me/share/url?url=https:\/\/www.petanikode.com\/php-web-server\/%3Futm_source%3Dtelegram.org%26utm_medium%3Dshare');return false;"
         target="_blank" 
         title="Bagikan ke Telegram">
         <img src="/img/icon/entypo/entypo-social/telegram-with-circle.svg" width="32" height="32" alt="Telegram"/>
     </a>
     <a class="mr-2" 
-        href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fcss-important%2f%3Futm_source%3Dplus.google.com%26utm_medium%3Dshare" 
+        href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fphp-web-server%2f%3Futm_source%3Dplus.google.com%26utm_medium%3Dshare" 
         target="_blank" 
         title="Bagikan ke Google+" 
         onclick="window.open('https://plus.google.com/share?url='+ encodeURIComponent(document.URL)); return false;">
         <img src="/img/icon/entypo/entypo-social/google+-with-circle.svg" width="32" height="32" alt="Google+"/>
     </a>
     <a class="mr-2" 
-        href="mailto:?subject=Apakah%20Fungsi%20%60%21important%60%20pada%20CSS%20dan%20Kapan%20Harus%20Menggunakannya%3f&body=Apakah%20Fungsi%20%60%21important%60%20pada%20CSS%20dan%20Kapan%20Harus%20Menggunakannya%3f:%20https%3a%2f%2fwww.petanikode.com%2fcss-important%2f%3Futm_source%3Demail%26utm_medium%3Dshare" 
+        href="mailto:?subject=Cara%20Menggunakan%20Web%20Server%20dari%20PHP&body=Cara%20Menggunakan%20Web%20Server%20dari%20PHP:%20https%3a%2f%2fwww.petanikode.com%2fphp-web-server%2f%3Futm_source%3Demail%26utm_medium%3Dshare" 
         title="Kirim ke Email">
         <img src="/img/icon/entypo/entypo-social/mail-with-circle.svg" width="32" height="32" alt="Email"/>
     </a>

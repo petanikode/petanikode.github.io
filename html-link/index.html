@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Belajar HTML: Cara Membuat Link untuk Menghubungkan Halaman</title>
+
+<head>
+    <title>Belajar HTML: Cara Membuat Link untuk Menghubungkan Halaman</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -143,10 +144,11 @@ ga('send', 'pageview');
 </script>
 
 
-    </head>
-    <body class="bg-light">
+</head>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
     <div class="container">
 
         <a class="navbar-brand" href="https://www.petanikode.com/"><img src="/img/logo.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
@@ -183,8 +185,7 @@ ga('send', 'pageview');
             </form>
         </div>
     </div>
-</nav>
-        <header>
+</nav> <header>
     <div class="jumbotron jumbotron-fluid bg-dark text-white">
         <div class="container">
             <div class="row">
@@ -198,42 +199,40 @@ ga('send', 'pageview');
     </div>
 </header>
 
-        <div class="container mb-5">
-            <div class="row">
+    <div class="container mb-5">
+        <div class="row">
 
-                <div class="col-sm-12 col-lg-8 mb-5 p-0">
-                    <article class="card mb-5">
-                        <div class="">
-                           <div class="card-body p-md-5">
-                                
-                               <div class="post-header mb-5">
-                                    
-                                    <div class="mb-3">
+            <div class="col-sm-12 col-lg-8 mb-5 p-0">
+                <article class="card mb-5">
+                    <div class="">
+                        <div class="card-body p-md-5">
+
+                            <div class="post-header mb-5">
+
+                                <div class="mb-3">
                                     <img src="/img/author-photo.jpg" class="rounded-circle mr-1" width="32" height="32" alt="author" />
-                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Dian</a> <small class="align-middle text-muted">· <time>01 Jan 2015</time></small>
-                                    </div>
+                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Muhar Dian</a>                                    <small class="align-middle text-muted">· <time>01 Jan 2015</time></small>
+                                </div>
 
-                                    <h2 class="card-title mb-3">Belajar HTML: Cara Membuat Link untuk Menghubungkan Halaman</h2>
+                                <h2 class="card-title mb-3">Belajar HTML: Cara Membuat Link untuk Menghubungkan Halaman</h2>
+
+                                <div>
                                     
-                                    <div>
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/html5">HTML5</a>
                                         </span> 
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/html">HTML</a>
                                         </span> 
-                                        
-                                    </div>
-
                                 </div>
-                                <div class="post-content">
-                                    <p><a href="http://4.bp.blogspot.com/W7AY9ekgzOOEhAhE-XFS_B8RAlvJiUQD64bIBio8UfA=s0" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/W7AY9ekgzOOEhAhE-XFS_B8RAlvJiUQD64bIBio8UfA=s0" /></a><br />Link adalah elemen html yang berfungsi menghubungkan suatu tempat ke tempat yang lain. Link ibarat pintu kemana saja. Setiap kali diklik, kita akan dibawa menuju ke suatu tempat. Dalam pembuatan web, link adalah salah satu elemen yang sering digunakan.<br /><h2>Penulisan Link</h2>Link dapat dibuat dengan tag <code>&lt;a&gt;</code>. Untuk dapat menuju ke tempat lain, tag ini perlu ditambahkan atribut <code>href</code>. Dalam atribut inilah kita menulisakan alamat yang dituju. Di bawah ini adalah contoh link menuju ke google.<br /><pre><code class="html">&lt;a href=&ldquo;<a href="https://google.com&quot;&gt;Link">https://google.com&quot;&gt;Link</a> ini menuju ke Google&lt;/a&gt;</code></pre>Isi atribut <code>href</code> dapat berupa URL, nama <i>domain</i>, id element HTML, nama berkas dan lain-lain. Selain menuju ke suatu tempat, link juga dapat digunakan untuk memanggil aplikasi tertentu. Misalkan memanggil aplikasi<i> mail client</i> untuk menulis surat.<br /><h2>Atribut-Atribut Link</h2>Seain atribut <code>href</code> terdapat juga atribut yang lain seperti <code>target</code>, <code>title</code>, <code>rel</code>, dan lain-lain. Dalam tulisan ini saya akan membahas atribut yang sering digunkan di situs web.<br /><h3>Atribut target</h3>Atribut ini berfungsi untuk memberi tahu link, target membukanya di mana. Misalkan targetnya adalah di jendela baru atau tab baru, maka atribut target harus diisi dengan <code>blank</code> atau <code>_blank</code>.<br /><pre><code class="html">&lt;a href=&lsquo;<a href="http://ardianta.tumblr.com'">http://ardianta.tumblr.com'</a> target=&lsquo;blank&rsquo;&gt;Balog tumblr&lt;/a&gt;</code></pre>Selain itu atribut ini dapat juga di isi dengan <code>_parent</code>, <code>_self</code>, <code>_top</code> dan nama sebuah <i>frame</i>. Contoh:<br /><pre><code class="html">&lt;a href=&ldquo;<a href="http://petanikode.blogspot.com&quot;">http://petanikode.blogspot.com&quot;</a> target=&ldquo;tampil&rdquo;&gt;Sebuah Link&lt;/a&gt;<br />&lt;iframe name=&ldquo;tampil&rdquo;&gt;<br />&lt;/iframe&gt;<br /></code></pre>Hasilnya akan dibuka di dalam elemen <i>frame</i> yang memiliki atribut <code>name=&ldquo;tampil&rdquo;</code><br /><a href="http://1.bp.blogspot.com/-kJRQ1Xyk_08/VKT8UI0ySGI/AAAAAAAAA70/ZPGXkBbwSPE/s1600/contoh%2Blink%2Bdengan%2Btarget.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-kJRQ1Xyk_08/VKT8UI0ySGI/AAAAAAAAA70/ZPGXkBbwSPE/s1600/contoh%2Blink%2Bdengan%2Btarget.png" /></a><br /><h3>Atribut title</h3>Atribut ini berfungsi untuk membuat <i>tooltips</i>. Tooltips adalah informasi yang tampil saat link di lewati (disentuh) pointer.<br /><pre><code class="html">&lt;a href=&ldquo;mailto:ardianta_pargo@yahoo.co.id&rdquo; title=&ldquo;kirim email ke Ardianta Pargo&rdquo;&gt;Hubungi Saya&lt;/a&gt;</code></pre>Link di atas akan memanggil aplikasi mail client, karena saya mengisi nilai <code>href</code> dengan <code>mailto:ardianta_pargo@yahoo.co.id</code>.<br /><h2>Contoh dokumen HTML dengan beberapa link</h2>Pada contoh ini, akan dibuat berbagai macam link.<br />berkas: <samp>link.html</samp><br /><pre><code class="html">&lt;!DOCTYPE html&gt;<br /><br />&lt;html&gt;<br /><br />&lt;head&gt;<br /><br /><span class="Apple-tab-span" style="white-space: pre;"> </span>&lt;title&gt;Berlatih Membuat Link&lt;/title&gt;<br /><br />&lt;/head&gt;<br /><br /><br /><br />&lt;body&gt;<br /><br /><span class="Apple-tab-span" style="white-space: pre;"> </span><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;a href=&ldquo;#penutup&rdquo;&gt;Menuju ke penutup&lt;/a&gt; | &lt;a href=&ldquo;file_lain.html&rdquo;&gt;buka file: file_lain.html&lt;/a&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2 id=&ldquo;penutup&rdquo;&gt;Penutup&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;/body&gt;<br /><br />&lt;/html&gt;<br /><br /><div><br /></div><br /></code></pre>berkas: <samp>file_lain.html</samp><br /><pre><code class="html">&lt;!DOCTYPE html&gt;<br /><br />&lt;html&gt;<br /><br />&lt;head&gt;<br /><br /><span class="Apple-tab-span" style="white-space: pre;"> </span>&lt;title&gt;Ini dokumen html lain&lt;/title&gt;<br /><br />&lt;/head&gt;<br /><br /><br /><br />&lt;body&gt;<br /><br />&lt;h3&gt;Selamat datang di file lain&lt;/h3&gt;<br /><br />&lt;p&gt;Ini adalah file lain&lt;/p&gt;<br /><br />&lt;/body&gt;<br /><br />&lt;/html&gt;</code></pre><h3>Tampilan di pramban web</h3><a href="http://3.bp.blogspot.com/-OmzVuG9Bj4s/VKUbBKf99SI/AAAAAAAAA8E/jNyHkw5W7rA/s1600/Berlatih%2BMembuat%2BLink%2B-%2BGoogle%2BChrome_031.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-OmzVuG9Bj4s/VKUbBKf99SI/AAAAAAAAA8E/jNyHkw5W7rA/s1600/Berlatih%2BMembuat%2BLink%2B-%2BGoogle%2BChrome_031.png" /></a> <br />Saat link <i>Menuju ke penutup</i> diklik, maka kita akan dibawa ke elemen yang memiliki <code>id=&ldquo;penutup&rdquo;</code><br /><a href="http://4.bp.blogspot.com/-4hc0hv17hq8/VKUbghoxSxI/AAAAAAAAA8M/NrEyLbgGwIo/s1600/Berlatih%2BMembuat%2BLink%2B-%2Bmenuju%2Belemen%2Bpenutup.png" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/-4hc0hv17hq8/VKUbghoxSxI/AAAAAAAAA8M/NrEyLbgGwIo/s1600/Berlatih%2BMembuat%2BLink%2B-%2Bmenuju%2Belemen%2Bpenutup.png" /></a> <br />Saat link <i>buka file: file_lain.html</i> diklik, maka kita akan dibawa ke dokumen html yang bernama <samp>file_lain.html</samp><br /><a href="http://1.bp.blogspot.com/-f2G-MIsNFj8/VKUctxXcaDI/AAAAAAAAA8Y/UcOxOmQ0CsU/s1600/Ini%2Bdokumen%2Bhtml%2Blain%2B-%2Bmenuju%2Bfile%2Blain.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-f2G-MIsNFj8/VKUctxXcaDI/AAAAAAAAA8Y/UcOxOmQ0CsU/s1600/Ini%2Bdokumen%2Bhtml%2Blain%2B-%2Bmenuju%2Bfile%2Blain.png" /></a></p>
 
-                                    
-                                    <div class="post-footer mt-5 py-4">
-                                        <div class="mb-4 py-3 border border-left-0 border-right-0">
+                            </div>
+                            <div class="post-content">
+                                <p><a href="http://4.bp.blogspot.com/W7AY9ekgzOOEhAhE-XFS_B8RAlvJiUQD64bIBio8UfA=s0" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/W7AY9ekgzOOEhAhE-XFS_B8RAlvJiUQD64bIBio8UfA=s0" /></a><br />Link adalah elemen html yang berfungsi menghubungkan suatu tempat ke tempat yang lain. Link ibarat pintu kemana saja. Setiap kali diklik, kita akan dibawa menuju ke suatu tempat. Dalam pembuatan web, link adalah salah satu elemen yang sering digunakan.<br /><h2>Penulisan Link</h2>Link dapat dibuat dengan tag <code>&lt;a&gt;</code>. Untuk dapat menuju ke tempat lain, tag ini perlu ditambahkan atribut <code>href</code>. Dalam atribut inilah kita menulisakan alamat yang dituju. Di bawah ini adalah contoh link menuju ke google.<br /><pre><code class="html">&lt;a href=&ldquo;<a href="https://google.com&quot;&gt;Link">https://google.com&quot;&gt;Link</a> ini menuju ke Google&lt;/a&gt;</code></pre>Isi atribut <code>href</code> dapat berupa URL, nama <i>domain</i>, id element HTML, nama berkas dan lain-lain. Selain menuju ke suatu tempat, link juga dapat digunakan untuk memanggil aplikasi tertentu. Misalkan memanggil aplikasi<i> mail client</i> untuk menulis surat.<br /><h2>Atribut-Atribut Link</h2>Seain atribut <code>href</code> terdapat juga atribut yang lain seperti <code>target</code>, <code>title</code>, <code>rel</code>, dan lain-lain. Dalam tulisan ini saya akan membahas atribut yang sering digunkan di situs web.<br /><h3>Atribut target</h3>Atribut ini berfungsi untuk memberi tahu link, target membukanya di mana. Misalkan targetnya adalah di jendela baru atau tab baru, maka atribut target harus diisi dengan <code>blank</code> atau <code>_blank</code>.<br /><pre><code class="html">&lt;a href=&lsquo;<a href="http://ardianta.tumblr.com'">http://ardianta.tumblr.com'</a> target=&lsquo;blank&rsquo;&gt;Balog tumblr&lt;/a&gt;</code></pre>Selain itu atribut ini dapat juga di isi dengan <code>_parent</code>, <code>_self</code>, <code>_top</code> dan nama sebuah <i>frame</i>. Contoh:<br /><pre><code class="html">&lt;a href=&ldquo;<a href="http://petanikode.blogspot.com&quot;">http://petanikode.blogspot.com&quot;</a> target=&ldquo;tampil&rdquo;&gt;Sebuah Link&lt;/a&gt;<br />&lt;iframe name=&ldquo;tampil&rdquo;&gt;<br />&lt;/iframe&gt;<br /></code></pre>Hasilnya akan dibuka di dalam elemen <i>frame</i> yang memiliki atribut <code>name=&ldquo;tampil&rdquo;</code><br /><a href="http://1.bp.blogspot.com/-kJRQ1Xyk_08/VKT8UI0ySGI/AAAAAAAAA70/ZPGXkBbwSPE/s1600/contoh%2Blink%2Bdengan%2Btarget.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-kJRQ1Xyk_08/VKT8UI0ySGI/AAAAAAAAA70/ZPGXkBbwSPE/s1600/contoh%2Blink%2Bdengan%2Btarget.png" /></a><br /><h3>Atribut title</h3>Atribut ini berfungsi untuk membuat <i>tooltips</i>. Tooltips adalah informasi yang tampil saat link di lewati (disentuh) pointer.<br /><pre><code class="html">&lt;a href=&ldquo;mailto:ardianta_pargo@yahoo.co.id&rdquo; title=&ldquo;kirim email ke Ardianta Pargo&rdquo;&gt;Hubungi Saya&lt;/a&gt;</code></pre>Link di atas akan memanggil aplikasi mail client, karena saya mengisi nilai <code>href</code> dengan <code>mailto:ardianta_pargo@yahoo.co.id</code>.<br /><h2>Contoh dokumen HTML dengan beberapa link</h2>Pada contoh ini, akan dibuat berbagai macam link.<br />berkas: <samp>link.html</samp><br /><pre><code class="html">&lt;!DOCTYPE html&gt;<br /><br />&lt;html&gt;<br /><br />&lt;head&gt;<br /><br /><span class="Apple-tab-span" style="white-space: pre;"> </span>&lt;title&gt;Berlatih Membuat Link&lt;/title&gt;<br /><br />&lt;/head&gt;<br /><br /><br /><br />&lt;body&gt;<br /><br /><span class="Apple-tab-span" style="white-space: pre;"> </span><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;a href=&ldquo;#penutup&rdquo;&gt;Menuju ke penutup&lt;/a&gt; | &lt;a href=&ldquo;file_lain.html&rdquo;&gt;buka file: file_lain.html&lt;/a&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2 id=&ldquo;penutup&rdquo;&gt;Penutup&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;h2&gt;Membuat Link di HTML&lt;/h2&gt;<br /><br />&lt;p&gt;Membuat link di HTML tidaklah sulit. Berikut ini adalah contoh link yang saya buat:<br /><br />&nbsp;Link menuju ke &lt;a href=&ldquo;<a href="https://facebook.com&quot;">https://facebook.com&quot;</a> target=&rdquo;_blank&rdquo;&gt;facebook&lt;/a&gt;<br /><br />&lt;/p&gt;<br /><br /><br /><br />&lt;/body&gt;<br /><br />&lt;/html&gt;<br /><br /><div><br /></div><br /></code></pre>berkas: <samp>file_lain.html</samp><br /><pre><code class="html">&lt;!DOCTYPE html&gt;<br /><br />&lt;html&gt;<br /><br />&lt;head&gt;<br /><br /><span class="Apple-tab-span" style="white-space: pre;"> </span>&lt;title&gt;Ini dokumen html lain&lt;/title&gt;<br /><br />&lt;/head&gt;<br /><br /><br /><br />&lt;body&gt;<br /><br />&lt;h3&gt;Selamat datang di file lain&lt;/h3&gt;<br /><br />&lt;p&gt;Ini adalah file lain&lt;/p&gt;<br /><br />&lt;/body&gt;<br /><br />&lt;/html&gt;</code></pre><h3>Tampilan di pramban web</h3><a href="http://3.bp.blogspot.com/-OmzVuG9Bj4s/VKUbBKf99SI/AAAAAAAAA8E/jNyHkw5W7rA/s1600/Berlatih%2BMembuat%2BLink%2B-%2BGoogle%2BChrome_031.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-OmzVuG9Bj4s/VKUbBKf99SI/AAAAAAAAA8E/jNyHkw5W7rA/s1600/Berlatih%2BMembuat%2BLink%2B-%2BGoogle%2BChrome_031.png" /></a> <br />Saat link <i>Menuju ke penutup</i> diklik, maka kita akan dibawa ke elemen yang memiliki <code>id=&ldquo;penutup&rdquo;</code><br /><a href="http://4.bp.blogspot.com/-4hc0hv17hq8/VKUbghoxSxI/AAAAAAAAA8M/NrEyLbgGwIo/s1600/Berlatih%2BMembuat%2BLink%2B-%2Bmenuju%2Belemen%2Bpenutup.png" imageanchor="1"><img border="0" src="http://4.bp.blogspot.com/-4hc0hv17hq8/VKUbghoxSxI/AAAAAAAAA8M/NrEyLbgGwIo/s1600/Berlatih%2BMembuat%2BLink%2B-%2Bmenuju%2Belemen%2Bpenutup.png" /></a> <br />Saat link <i>buka file: file_lain.html</i> diklik, maka kita akan dibawa ke dokumen html yang bernama <samp>file_lain.html</samp><br /><a href="http://1.bp.blogspot.com/-f2G-MIsNFj8/VKUctxXcaDI/AAAAAAAAA8Y/UcOxOmQ0CsU/s1600/Ini%2Bdokumen%2Bhtml%2Blain%2B-%2Bmenuju%2Bfile%2Blain.png" imageanchor="1"><img border="0" src="http://1.bp.blogspot.com/-f2G-MIsNFj8/VKUctxXcaDI/AAAAAAAAA8Y/UcOxOmQ0CsU/s1600/Ini%2Bdokumen%2Bhtml%2Blain%2B-%2Bmenuju%2Bfile%2Blain.png" /></a></p>
+
+
+                                <div class="post-footer mt-5 py-4">
+                                    <div class="mb-4 py-3 border border-left-0 border-right-0">
     <h6>Berbagi manfaat:</h6>
     <a class="mr-2" 
         href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fhtml-link%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Belajar%20HTML%3a%20Cara%20Membuat%20Link%20untuk%20Menghubungkan%20Halaman" 
@@ -270,10 +269,7 @@ ga('send', 'pageview');
         <img src="/img/icon/entypo/entypo-social/mail-with-circle.svg" width="32" height="32" alt="Email"/>
     </a>
 </div>
-
-                                        
-                                        
-                                        <div id="disqus_thread"></div>
+  <div id="disqus_thread"></div>
 <script type="text/javascript">
     (function () {
         
@@ -289,33 +285,32 @@ ga('send', 'pageview');
 
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-                                        
-                                    </div>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
                                 </div>
-                                
                             </div>
 
-                            
                         </div>
-                    </article>
 
-                     
-                    <div class="card p-3">
-                        
+
+                    </div>
+                </article>
+
+                
+                <div class="card p-3">
+                    
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-format="autorelaxed"
      data-ad-client="ca-pub-6279325630224392"
      data-ad-slot="5172754450"></ins>
 
-                    </div>
-                     
+                </div>
+                
 
-                    </div>
+            </div>
 
-                    <div class="col-sm-12 col-lg-4">
-                       <aside>
+            <div class="col-sm-12 col-lg-4">
+                <aside>
 
     
 <div class="widget mb-5">
@@ -442,14 +437,14 @@ ga('send', 'pageview');
 
 
 </aside>
-                    </div>
-                    
             </div>
+
         </div>
+    </div>
 
-        
 
-        <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
+
+    <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
     <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
         <div class="row">
             <div class="col-md-6 col-sm-12 mb-0 mb-sm-3">
@@ -481,8 +476,7 @@ ga('send', 'pageview');
             
         </div>
     </div>
-</footer>
-        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+</footer> <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
 <script type="text/javascript" src="/js/popper.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/prism.js"></script>
@@ -527,5 +521,6 @@ $(document).ready(function(){
 });
 </script>
 
-    </body>
+</body>
+
 </html>

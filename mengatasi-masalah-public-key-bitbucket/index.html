@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Mengatasi Masalah Public Key BitBucket</title>
+
+<head>
+    <title>Mengatasi Masalah Public Key BitBucket</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -149,10 +150,11 @@ ga('send', 'pageview');
 </script>
 
 
-    </head>
-    <body class="bg-light">
+</head>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
     <div class="container">
 
         <a class="navbar-brand" href="https://www.petanikode.com/"><img src="/img/logo.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
@@ -189,8 +191,7 @@ ga('send', 'pageview');
             </form>
         </div>
     </div>
-</nav>
-        <header>
+</nav> <header>
     <div class="jumbotron jumbotron-fluid bg-dark text-white">
         <div class="container">
             <div class="row">
@@ -204,46 +205,43 @@ ga('send', 'pageview');
     </div>
 </header>
 
-        <div class="container mb-5">
-            <div class="row">
+    <div class="container mb-5">
+        <div class="row">
 
-                <div class="col-sm-12 col-lg-8 mb-5 p-0">
-                    <article class="card mb-5">
-                        <div class="">
-                           <div class="card-body p-md-5">
-                                
-                               <div class="post-header mb-5">
-                                    
-                                    <div class="mb-3">
+            <div class="col-sm-12 col-lg-8 mb-5 p-0">
+                <article class="card mb-5">
+                    <div class="">
+                        <div class="card-body p-md-5">
+
+                            <div class="post-header mb-5">
+
+                                <div class="mb-3">
                                     <img src="/img/author-photo.jpg" class="rounded-circle mr-1" width="32" height="32" alt="author" />
-                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Dian</a> <small class="align-middle text-muted">· <time>03 Jul 2016</time></small>
-                                    </div>
+                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Muhar Dian</a>                                    <small class="align-middle text-muted">· <time>03 Jul 2016</time></small>
+                                </div>
 
-                                    <h2 class="card-title mb-3">Mengatasi Masalah Public Key BitBucket</h2>
+                                <h2 class="card-title mb-3">Mengatasi Masalah Public Key BitBucket</h2>
+
+                                <div>
                                     
-                                    <div>
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/bitbucket">bitbucket</a>
                                         </span> 
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/git">git</a>
                                         </span> 
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/ssh">SSH</a>
                                         </span> 
-                                        
-                                    </div>
-
                                 </div>
-                                <div class="post-content">
-                                    <p>Jika komputer anda baru pertama kali terhubung dengan bitbucket, mungkin anda akan mendapatkan error ini ketika meng-upload atau <i>push</i> kode.<br /><a href="http://2.bp.blogspot.com/-I9CjXcqUABA/V2JBhsEnGYI/AAAAAAAAC3I/fRu1SO9FRaIac3iSymPzkSc_9UAxzlm1wCK4B/s1600/bitbucket-push-key-ssh-petanikode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-I9CjXcqUABA/V2JBhsEnGYI/AAAAAAAAC3I/fRu1SO9FRaIac3iSymPzkSc_9UAxzlm1wCK4B/s1600/bitbucket-push-key-ssh-petanikode.png" /></a><br />Tidak seperti Github yang selalu meminta password setiap kali nge-push. Bitbucket menggunakan metode <i>SSH Key</i> untuk sinkronisasi repositori lokal dengan repositori <i>remote</i> (Bitbucket). Oleh karena itu, kita hanya perlu <i>set up</i> SSH untuk Git Bitbucket.<br /><h2>1. Membuat KeyGen SSH</h2>Ketik perintah <code>ssh-keygen</code> pada termnial. Kemudian inputkan id (identitas) SSH anda.<br /><a href="http://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png" /></a><br />Maka di dalam direktori <code>~/.ssh/</code> akan tercipa file key baru.<br /><a href="http://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png" /></a><br /><h2>2. Jalankan SSH Angen dan Load SSH Key</h2>Untuk memastikan apakah SSH Agen sudah berajalan atau tidak, gunakan perintah ini:<br /><pre><code class="bash">ps -e | grep [s]sh-agent</code></pre>Kalau hasilnya seperti di bawah ini, berati SSH Agen sudah berjalan.<br /><a href="http://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png" /></a><br />Tapi, kalau belum berjalan, gunakan perintah berikut ini untuk menjalankan SSH agent:<br /><pre><code class="bash">ssh-agent /bin/bash</code></pre>Berikutnya kita Load SSH Key. Gunakan perintah:<br /><pre><code class="bash">ssh-add ~/.ssh/id_anda</code></pre>Kemudian untuk mengecek, gunakan perintah:<br /><pre><code class="bash">ssh-add -l</code></pre><a href="http://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png" /></a><br /><h2>3. Tambahkan Kunci Publik ke Akun Bitbucket</h2>Ambil kuncil publik yang sudah anda buat, gunakan perintah cat.<br /><pre><code class="bash">cat ~/.ssh/id_anda.pub</code></pre>Copy semua teks yang ditampilkan.<br /><a href="http://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png" /></a><br />Kemudian masuk ke akun Bitbucket. Masuk ke <i>Bitbucket Settings</i> dengan mengelik <i>avatar</i>. Kemudian cari menu <i>SSH Key</i> di bagian samping. Tambahkan <i>SSH Key</i> dari yang sudah di-copy tadi.<br /><a href="http://1.bp.blogspot.com/-llS_w8e2lJo/V3fa8MGfe-I/AAAAAAAAC7I/vtsUYVj7RdQ0_PwObZhCJEwazJ1SESM_ACK4B/s1600/Tambahkan%2BSSH%2BKey%2Bke%2BAkun%2BBitbucket.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-llS_w8e2lJo/V3fa8MGfe-I/AAAAAAAAC7I/vtsUYVj7RdQ0_PwObZhCJEwazJ1SESM_ACK4B/s1600/Tambahkan%2BSSH%2BKey%2Bke%2BAkun%2BBitbucket.png" /></a><br /><h2>4. Periksa Konektivitas</h2>Ketik perintah berikut ini di terminal:<br /><pre><code class="bash">ssh -T git@bitbucket.org</code></pre>Kalau hasilnya seperti di bawah ini, maka koneksi berhasil. Sekarang anda bisa sinkronkan repositori lokal dengan repositori remote yang ada di Bitbucket.<br /><a href="http://1.bp.blogspot.com/-msMvX3F3P_8/V3fbhHjriYI/AAAAAAAAC7Q/by5WXzWRwZkvQm97TvSGkG5ABU6lttiEQCK4B/s1600/Koneksi%2Bke%2BBitbucket%2BBerhasil.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-msMvX3F3P_8/V3fbhHjriYI/AAAAAAAAC7Q/by5WXzWRwZkvQm97TvSGkG5ABU6lttiEQCK4B/s1600/Koneksi%2Bke%2BBitbucket%2BBerhasil.png" /></a><br /><blockquote class="tr_bq"><b>Catatan:</b> Load kembali kunci SSH bila anda tidak terhubung lagi (jalankan perintah nomer 2).</blockquote><br />Refernsi:<br /><ul><li><a href="https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html" target="_blank"><a href="https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html">https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html</a></a> </li><li><a href="https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html" target="_blank"><a href="https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html">https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html</a> </a></li><li><a href="https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html" target="_blank"><a href="https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html">https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html</a></a></li></ul></p>
 
-                                    
-                                    <div class="post-footer mt-5 py-4">
-                                        <div class="mb-4 py-3 border border-left-0 border-right-0">
+                            </div>
+                            <div class="post-content">
+                                <p>Jika komputer anda baru pertama kali terhubung dengan bitbucket, mungkin anda akan mendapatkan error ini ketika meng-upload atau <i>push</i> kode.<br /><a href="http://2.bp.blogspot.com/-I9CjXcqUABA/V2JBhsEnGYI/AAAAAAAAC3I/fRu1SO9FRaIac3iSymPzkSc_9UAxzlm1wCK4B/s1600/bitbucket-push-key-ssh-petanikode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-I9CjXcqUABA/V2JBhsEnGYI/AAAAAAAAC3I/fRu1SO9FRaIac3iSymPzkSc_9UAxzlm1wCK4B/s1600/bitbucket-push-key-ssh-petanikode.png" /></a><br />Tidak seperti Github yang selalu meminta password setiap kali nge-push. Bitbucket menggunakan metode <i>SSH Key</i> untuk sinkronisasi repositori lokal dengan repositori <i>remote</i> (Bitbucket). Oleh karena itu, kita hanya perlu <i>set up</i> SSH untuk Git Bitbucket.<br /><h2>1. Membuat KeyGen SSH</h2>Ketik perintah <code>ssh-keygen</code> pada termnial. Kemudian inputkan id (identitas) SSH anda.<br /><a href="http://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-oIHGHMzwl5E/V3fWJKqKBxI/AAAAAAAAC6Q/U1vCKjvmkc03PgDoIvyMavUajCY5Dbi2wCK4B/s1600/membuat%2BKeyGen%2BSSH.png" /></a><br />Maka di dalam direktori <code>~/.ssh/</code> akan tercipa file key baru.<br /><a href="http://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-Q36H_1UkQ7w/V3fWqbxXPcI/AAAAAAAAC6Y/BSOo5TXyL30CwpUYQkEvOiE9nTnJ0C_1wCK4B/s1600/File%2BSSH%2Bkey%2Byang%2Bdigenerate.png" /></a><br /><h2>2. Jalankan SSH Angen dan Load SSH Key</h2>Untuk memastikan apakah SSH Agen sudah berajalan atau tidak, gunakan perintah ini:<br /><pre><code class="bash">ps -e | grep [s]sh-agent</code></pre>Kalau hasilnya seperti di bawah ini, berati SSH Agen sudah berjalan.<br /><a href="http://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-4Ug2nsAk-RA/V3fXgWFxyWI/AAAAAAAAC6k/k2YP8c1qPucWiG1ypLjsNxPKWOLzVMvCACK4B/s1600/Periksa%2BSSH%2BAgent.png" /></a><br />Tapi, kalau belum berjalan, gunakan perintah berikut ini untuk menjalankan SSH agent:<br /><pre><code class="bash">ssh-agent /bin/bash</code></pre>Berikutnya kita Load SSH Key. Gunakan perintah:<br /><pre><code class="bash">ssh-add ~/.ssh/id_anda</code></pre>Kemudian untuk mengecek, gunakan perintah:<br /><pre><code class="bash">ssh-add -l</code></pre><a href="http://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png" imageanchor="1"><img border="0" src="https://3.bp.blogspot.com/-g4fIWdVMl_o/V3fYwKQpNRI/AAAAAAAAC60/nNXcB_ZV1CItIsDeqDiaAGXmVnyPg0jYgCK4B/s1600/Tambahkan%2Batau%2BLoad%2BSSH%2BKey.png" /></a><br /><h2>3. Tambahkan Kunci Publik ke Akun Bitbucket</h2>Ambil kuncil publik yang sudah anda buat, gunakan perintah cat.<br /><pre><code class="bash">cat ~/.ssh/id_anda.pub</code></pre>Copy semua teks yang ditampilkan.<br /><a href="http://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png" imageanchor="1"><img border="0" src="https://4.bp.blogspot.com/-KOCrbZL7IlA/V3favJse4EI/AAAAAAAAC7A/SGjCiv0geX4AMM0nS_ni2RpnUKSlTWcGACK4B/s1600/Kunci%2BPublik%2BKomputer%2BSaya.png" /></a><br />Kemudian masuk ke akun Bitbucket. Masuk ke <i>Bitbucket Settings</i> dengan mengelik <i>avatar</i>. Kemudian cari menu <i>SSH Key</i> di bagian samping. Tambahkan <i>SSH Key</i> dari yang sudah di-copy tadi.<br /><a href="http://1.bp.blogspot.com/-llS_w8e2lJo/V3fa8MGfe-I/AAAAAAAAC7I/vtsUYVj7RdQ0_PwObZhCJEwazJ1SESM_ACK4B/s1600/Tambahkan%2BSSH%2BKey%2Bke%2BAkun%2BBitbucket.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-llS_w8e2lJo/V3fa8MGfe-I/AAAAAAAAC7I/vtsUYVj7RdQ0_PwObZhCJEwazJ1SESM_ACK4B/s1600/Tambahkan%2BSSH%2BKey%2Bke%2BAkun%2BBitbucket.png" /></a><br /><h2>4. Periksa Konektivitas</h2>Ketik perintah berikut ini di terminal:<br /><pre><code class="bash">ssh -T git@bitbucket.org</code></pre>Kalau hasilnya seperti di bawah ini, maka koneksi berhasil. Sekarang anda bisa sinkronkan repositori lokal dengan repositori remote yang ada di Bitbucket.<br /><a href="http://1.bp.blogspot.com/-msMvX3F3P_8/V3fbhHjriYI/AAAAAAAAC7Q/by5WXzWRwZkvQm97TvSGkG5ABU6lttiEQCK4B/s1600/Koneksi%2Bke%2BBitbucket%2BBerhasil.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-msMvX3F3P_8/V3fbhHjriYI/AAAAAAAAC7Q/by5WXzWRwZkvQm97TvSGkG5ABU6lttiEQCK4B/s1600/Koneksi%2Bke%2BBitbucket%2BBerhasil.png" /></a><br /><blockquote class="tr_bq"><b>Catatan:</b> Load kembali kunci SSH bila anda tidak terhubung lagi (jalankan perintah nomer 2).</blockquote><br />Refernsi:<br /><ul><li><a href="https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html" target="_blank"><a href="https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html">https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html</a></a> </li><li><a href="https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html" target="_blank"><a href="https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html">https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html</a> </a></li><li><a href="https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html" target="_blank"><a href="https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html">https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html</a></a></li></ul></p>
+
+
+                                <div class="post-footer mt-5 py-4">
+                                    <div class="mb-4 py-3 border border-left-0 border-right-0">
     <h6>Berbagi manfaat:</h6>
     <a class="mr-2" 
         href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fmengatasi-masalah-public-key-bitbucket%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Mengatasi%20Masalah%20Public%20Key%20BitBucket" 
@@ -280,10 +278,7 @@ ga('send', 'pageview');
         <img src="/img/icon/entypo/entypo-social/mail-with-circle.svg" width="32" height="32" alt="Email"/>
     </a>
 </div>
-
-                                        
-                                        
-                                        <div id="disqus_thread"></div>
+  <div id="disqus_thread"></div>
 <script type="text/javascript">
     (function () {
         
@@ -299,33 +294,32 @@ ga('send', 'pageview');
 
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-                                        
-                                    </div>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
                                 </div>
-                                
                             </div>
 
-                            
                         </div>
-                    </article>
 
-                     
-                    <div class="card p-3">
-                        
+
+                    </div>
+                </article>
+
+                
+                <div class="card p-3">
+                    
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-format="autorelaxed"
      data-ad-client="ca-pub-6279325630224392"
      data-ad-slot="5172754450"></ins>
 
-                    </div>
-                     
+                </div>
+                
 
-                    </div>
+            </div>
 
-                    <div class="col-sm-12 col-lg-4">
-                       <aside>
+            <div class="col-sm-12 col-lg-4">
+                <aside>
 
     
 <div class="widget mb-5">
@@ -452,14 +446,14 @@ ga('send', 'pageview');
 
 
 </aside>
-                    </div>
-                    
             </div>
+
         </div>
+    </div>
 
-        
 
-        <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
+
+    <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
     <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
         <div class="row">
             <div class="col-md-6 col-sm-12 mb-0 mb-sm-3">
@@ -491,8 +485,7 @@ ga('send', 'pageview');
             
         </div>
     </div>
-</footer>
-        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+</footer> <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
 <script type="text/javascript" src="/js/popper.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/prism.js"></script>
@@ -537,5 +530,6 @@ $(document).ready(function(){
 });
 </script>
 
-    </body>
+</body>
+
 </html>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Tutorial Google Maps API - Menampilkan Peta di dalam Web</title>
+
+<head>
+    <title>Tutorial Google Maps API - Menampilkan Peta di dalam Web</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -143,10 +144,11 @@ ga('send', 'pageview');
 </script>
 
 
-    </head>
-    <body class="bg-light">
+</head>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
     <div class="container">
 
         <a class="navbar-brand" href="https://www.petanikode.com/"><img src="/img/logo.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
@@ -183,8 +185,7 @@ ga('send', 'pageview');
             </form>
         </div>
     </div>
-</nav>
-        <header>
+</nav> <header>
     <div class="jumbotron jumbotron-fluid bg-dark text-white">
         <div class="container">
             <div class="row">
@@ -198,46 +199,43 @@ ga('send', 'pageview');
     </div>
 </header>
 
-        <div class="container mb-5">
-            <div class="row">
+    <div class="container mb-5">
+        <div class="row">
 
-                <div class="col-sm-12 col-lg-8 mb-5 p-0">
-                    <article class="card mb-5">
-                        <div class="">
-                           <div class="card-body p-md-5">
-                                
-                               <div class="post-header mb-5">
-                                    
-                                    <div class="mb-3">
+            <div class="col-sm-12 col-lg-8 mb-5 p-0">
+                <article class="card mb-5">
+                    <div class="">
+                        <div class="card-body p-md-5">
+
+                            <div class="post-header mb-5">
+
+                                <div class="mb-3">
                                     <img src="/img/author-photo.jpg" class="rounded-circle mr-1" width="32" height="32" alt="author" />
-                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Dian</a> <small class="align-middle text-muted">· <time>24 Jun 2016</time></small>
-                                    </div>
+                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Muhar Dian</a>                                    <small class="align-middle text-muted">· <time>24 Jun 2016</time></small>
+                                </div>
 
-                                    <h2 class="card-title mb-3">Tutorial Google Maps API - Menampilkan Peta di dalam Web</h2>
+                                <h2 class="card-title mb-3">Tutorial Google Maps API - Menampilkan Peta di dalam Web</h2>
+
+                                <div>
                                     
-                                    <div>
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/html">HTML</a>
                                         </span> 
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/google-maps">Google Maps</a>
                                         </span> 
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/javascript">Javascript</a>
                                         </span> 
-                                        
-                                    </div>
-
                                 </div>
-                                <div class="post-content">
-                                    <p><a href="http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png" /></a>Di tengah-tengah kesibukan mengerjakan proyek, akhirnya saya menyempatkan diri untuk mem-posting sesuatu. Pada kesempatan ini kita akan mempelajari Google Maps API. Karena kebetulan, pada proyek yang sedang saya kerjakan menggunakan Google Map. Saya akan menggunakan referensi yang sahih dan dapat dipercaya, <a href="http://www.w3schools.com/googleapi/default.asp" target="_blank">W3Schools</a> dan <a href="https://developers.google.com/maps/" target="_blank">Google Developer</a>. Baiklah mari kita mulai.<br /><h2>Apa itu Google Maps API?</h2>Google Maps API <i>(Application Programming Interface)</i> merupakan sebuah API yang disediakan oleh Google untuk menggunakan peta Google <i>(Google Map)</i> dalam aplikasi yang kita bangun. Google Maps API memungkinkan kita memodifikasi peta dan informasi yang ada di dalamnya.<br /><br />Google Maps API dikelompokkan berdasarkan platform: Web, Android, dan iOS. Pada kesempatan ini kita akan menggunakan Google Maps API untuk Web. Sedangkan untuk Android dan iOS, mungkin (insa&rsquo;allah) saya akan bahas nanti.<br /><h2>Menampilkan Peta</h2>Ada beberapa langkah yang dilakukan untuk menampilkan peta di dalam Web:<br /><ol><li>Menyisipkan <i>library</i> API Google Map<br /><pre><code class="html">&lt;script src=&ldquo;<a href="http://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt;">http://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt;</a></code></pre></li><li>Membuat sebuah fungsi <code>initialize()</code> untuk mempersiapkan peta.<br /><pre><code class="js">function initialize() { &hellip; }</code></pre></li><li>Membuat properti peta dalam bentuk objek<br /><pre><code class="js">var propertiPeta = {<br />&nbsp;&nbsp;&nbsp; center:new google.maps.LatLng(-8.5830695,116.3202515),<br />&nbsp;&nbsp;&nbsp; zoom:9,<br />&nbsp;&nbsp;&nbsp; mapTypeId:google.maps.MapTypeId.ROADMAP<br />};</code></pre>Letakkan kode di atas dalam fungsi <code>initialize()</code></li><li>Membuat objek Peta<br /><pre><code class="js">var peta = new google.maps.Map(document.getElementById(&ldquo;googleMap&rdquo;), propertiPeta);</code></pre>Letakkan kode di atas dalam fungsi <code>initialize()</code></li><li>Menampilkan peta ketika jendela <i>(window)</i> di-load<br /><pre><code class="js">google.maps.event.addDomListener(window, &lsquo;load&rsquo;, initialize);</code></pre></li><li>Membuat tag <i>div</i> sebagai kontainer untuk menampilkan peta<br /><pre><code class="html">&lt;div id=&ldquo;googleMap&rdquo; style=&ldquo;width:100%;height:380px;&rdquo;&gt;&lt;/div&gt;</code></pre></li></ol>Kode Lengkapnya dan demo hasil:<br /><a class="jsbin-embed" href="http://jsbin.com/bejiduz/embed?html,output">Tutorial Google Map - Petani Kode on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.13"></script><br />Dalam pembuatan properti peta, kita bisa menentukan posisi peta atau titik koordinat mula-mula, skala <i>(zoom)</i>, tipe peta, dsb. Sementara untuk tag <code>&lt;div&gt;</code> untuk menampilkan peta, atribut <i>id</i>-nya harus sesui dengan <i>id</i> yang dipilih saat pembuatan peta (nomer 4).<br /><br />Ada baiknya juga kita perhatikan level zoom yang digunakan. Berdasarkan dokumentasi di <a href="https://developers.google.com/maps/documentation/javascript/tutorial#zoom-levels" target="_blank">Google Developer</a>, berikut ini nilai level zoom dan kegunaanya.<br /><ul><li>0: Bumi (smua peta ditampilkan)</li><li>1: Peta Dunia</li><li>5: Landmass/continent</li><li>10: Kota</li><li>15: Jalan</li><li>20: Bangunan </li></ul><h2>Penutup</h2>Sekian tutorial singkat Google Maps API ini, semoga bermanfaat dan mudah-mudahan saya diberikan kesehatan untuk melanjutkan tutorial ini.</p>
 
-                                    
-                                    <div class="post-footer mt-5 py-4">
-                                        <div class="mb-4 py-3 border border-left-0 border-right-0">
+                            </div>
+                            <div class="post-content">
+                                <p><a href="http://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://1.bp.blogspot.com/-4h4KbDn4jx8/V2yQN--7ekI/AAAAAAAAC30/9nOk82OyNDoXhcWmMpG-jqkZyDPOixwEQCK4B/s1600/Tutorial%2BGoogle%2BMaps%2BAPI%2B-%2BPetani%2BKode.png" /></a>Di tengah-tengah kesibukan mengerjakan proyek, akhirnya saya menyempatkan diri untuk mem-posting sesuatu. Pada kesempatan ini kita akan mempelajari Google Maps API. Karena kebetulan, pada proyek yang sedang saya kerjakan menggunakan Google Map. Saya akan menggunakan referensi yang sahih dan dapat dipercaya, <a href="http://www.w3schools.com/googleapi/default.asp" target="_blank">W3Schools</a> dan <a href="https://developers.google.com/maps/" target="_blank">Google Developer</a>. Baiklah mari kita mulai.<br /><h2>Apa itu Google Maps API?</h2>Google Maps API <i>(Application Programming Interface)</i> merupakan sebuah API yang disediakan oleh Google untuk menggunakan peta Google <i>(Google Map)</i> dalam aplikasi yang kita bangun. Google Maps API memungkinkan kita memodifikasi peta dan informasi yang ada di dalamnya.<br /><br />Google Maps API dikelompokkan berdasarkan platform: Web, Android, dan iOS. Pada kesempatan ini kita akan menggunakan Google Maps API untuk Web. Sedangkan untuk Android dan iOS, mungkin (insa&rsquo;allah) saya akan bahas nanti.<br /><h2>Menampilkan Peta</h2>Ada beberapa langkah yang dilakukan untuk menampilkan peta di dalam Web:<br /><ol><li>Menyisipkan <i>library</i> API Google Map<br /><pre><code class="html">&lt;script src=&ldquo;<a href="http://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt;">http://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt;</a></code></pre></li><li>Membuat sebuah fungsi <code>initialize()</code> untuk mempersiapkan peta.<br /><pre><code class="js">function initialize() { &hellip; }</code></pre></li><li>Membuat properti peta dalam bentuk objek<br /><pre><code class="js">var propertiPeta = {<br />&nbsp;&nbsp;&nbsp; center:new google.maps.LatLng(-8.5830695,116.3202515),<br />&nbsp;&nbsp;&nbsp; zoom:9,<br />&nbsp;&nbsp;&nbsp; mapTypeId:google.maps.MapTypeId.ROADMAP<br />};</code></pre>Letakkan kode di atas dalam fungsi <code>initialize()</code></li><li>Membuat objek Peta<br /><pre><code class="js">var peta = new google.maps.Map(document.getElementById(&ldquo;googleMap&rdquo;), propertiPeta);</code></pre>Letakkan kode di atas dalam fungsi <code>initialize()</code></li><li>Menampilkan peta ketika jendela <i>(window)</i> di-load<br /><pre><code class="js">google.maps.event.addDomListener(window, &lsquo;load&rsquo;, initialize);</code></pre></li><li>Membuat tag <i>div</i> sebagai kontainer untuk menampilkan peta<br /><pre><code class="html">&lt;div id=&ldquo;googleMap&rdquo; style=&ldquo;width:100%;height:380px;&rdquo;&gt;&lt;/div&gt;</code></pre></li></ol>Kode Lengkapnya dan demo hasil:<br /><a class="jsbin-embed" href="http://jsbin.com/bejiduz/embed?html,output">Tutorial Google Map - Petani Kode on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.13"></script><br />Dalam pembuatan properti peta, kita bisa menentukan posisi peta atau titik koordinat mula-mula, skala <i>(zoom)</i>, tipe peta, dsb. Sementara untuk tag <code>&lt;div&gt;</code> untuk menampilkan peta, atribut <i>id</i>-nya harus sesui dengan <i>id</i> yang dipilih saat pembuatan peta (nomer 4).<br /><br />Ada baiknya juga kita perhatikan level zoom yang digunakan. Berdasarkan dokumentasi di <a href="https://developers.google.com/maps/documentation/javascript/tutorial#zoom-levels" target="_blank">Google Developer</a>, berikut ini nilai level zoom dan kegunaanya.<br /><ul><li>0: Bumi (smua peta ditampilkan)</li><li>1: Peta Dunia</li><li>5: Landmass/continent</li><li>10: Kota</li><li>15: Jalan</li><li>20: Bangunan </li></ul><h2>Penutup</h2>Sekian tutorial singkat Google Maps API ini, semoga bermanfaat dan mudah-mudahan saya diberikan kesehatan untuk melanjutkan tutorial ini.</p>
+
+
+                                <div class="post-footer mt-5 py-4">
+                                    <div class="mb-4 py-3 border border-left-0 border-right-0">
     <h6>Berbagi manfaat:</h6>
     <a class="mr-2" 
         href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fgoogle-map-dasar%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Tutorial%20Google%20Maps%20API%20-%20Menampilkan%20Peta%20di%20dalam%20Web" 
@@ -274,10 +272,7 @@ ga('send', 'pageview');
         <img src="/img/icon/entypo/entypo-social/mail-with-circle.svg" width="32" height="32" alt="Email"/>
     </a>
 </div>
-
-                                        
-                                        
-                                        <div id="disqus_thread"></div>
+  <div id="disqus_thread"></div>
 <script type="text/javascript">
     (function () {
         
@@ -293,33 +288,32 @@ ga('send', 'pageview');
 
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-                                        
-                                    </div>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
                                 </div>
-                                
                             </div>
 
-                            
                         </div>
-                    </article>
 
-                     
-                    <div class="card p-3">
-                        
+
+                    </div>
+                </article>
+
+                
+                <div class="card p-3">
+                    
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-format="autorelaxed"
      data-ad-client="ca-pub-6279325630224392"
      data-ad-slot="5172754450"></ins>
 
-                    </div>
-                     
+                </div>
+                
 
-                    </div>
+            </div>
 
-                    <div class="col-sm-12 col-lg-4">
-                       <aside>
+            <div class="col-sm-12 col-lg-4">
+                <aside>
 
     
 <div class="widget mb-5">
@@ -446,14 +440,14 @@ ga('send', 'pageview');
 
 
 </aside>
-                    </div>
-                    
             </div>
+
         </div>
+    </div>
 
-        
 
-        <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
+
+    <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
     <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
         <div class="row">
             <div class="col-md-6 col-sm-12 mb-0 mb-sm-3">
@@ -485,8 +479,7 @@ ga('send', 'pageview');
             
         </div>
     </div>
-</footer>
-        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+</footer> <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
 <script type="text/javascript" src="/js/popper.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/prism.js"></script>
@@ -531,5 +524,6 @@ $(document).ready(function(){
 });
 </script>
 
-    </body>
+</body>
+
 </html>

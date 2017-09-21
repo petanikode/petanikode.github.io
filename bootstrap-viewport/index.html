@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Tutorial Bootstrap - Memahami Fungsi Viewport</title>
+
+<head>
+    <title>Tutorial Bootstrap - Memahami Fungsi Viewport</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -146,10 +147,11 @@ ga('send', 'pageview');
 </script>
 
 
-    </head>
-    <body class="bg-light">
+</head>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
     <div class="container">
 
         <a class="navbar-brand" href="https://www.petanikode.com/"><img src="/img/logo.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
@@ -186,8 +188,7 @@ ga('send', 'pageview');
             </form>
         </div>
     </div>
-</nav>
-        <header>
+</nav> <header>
     <div class="jumbotron jumbotron-fluid bg-dark text-white">
         <div class="container">
             <div class="row">
@@ -201,50 +202,46 @@ ga('send', 'pageview');
     </div>
 </header>
 
-        <div class="container mb-5">
-            <div class="row">
+    <div class="container mb-5">
+        <div class="row">
 
-                <div class="col-sm-12 col-lg-8 mb-5 p-0">
-                    <article class="card mb-5">
-                        <div class="">
-                           <div class="card-body p-md-5">
-                                
-                               <div class="post-header mb-5">
-                                    
-                                    <div class="mb-3">
+            <div class="col-sm-12 col-lg-8 mb-5 p-0">
+                <article class="card mb-5">
+                    <div class="">
+                        <div class="card-body p-md-5">
+
+                            <div class="post-header mb-5">
+
+                                <div class="mb-3">
                                     <img src="/img/author-photo.jpg" class="rounded-circle mr-1" width="32" height="32" alt="author" />
-                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Dian</a> <small class="align-middle text-muted">· <time>12 Jan 2016</time></small>
-                                    </div>
+                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Muhar Dian</a>                                    <small class="align-middle text-muted">· <time>12 Jan 2016</time></small>
+                                </div>
 
-                                    <h2 class="card-title mb-3">Tutorial Bootstrap - Memahami Fungsi Viewport</h2>
+                                <h2 class="card-title mb-3">Tutorial Bootstrap - Memahami Fungsi Viewport</h2>
+
+                                <div>
                                     
-                                    <div>
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/css">CSS</a>
                                         </span> 
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/html">HTML</a>
                                         </span> 
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/bootstrap">Bootstrap</a>
                                         </span> 
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/framework">Framework</a>
                                         </span> 
-                                        
-                                    </div>
-
                                 </div>
-                                <div class="post-content">
-                                    <p><a href="http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg" imageanchor="1"><img alt="Cover Tutorial" border="0" src="http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg" title="Tutorial Bootstrap Petani Kode" /></a>Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag <i>meta</i> <i>viewport</i>. Mengapa kita perlu menambahkan <i>meta viewport</i>? apa sih fungsinya? Mari kita bahas bersama.<br /><br />Pada bagian kepala <code>&lt;head&gt;</code> terdapat tag <code>&lt;meta&gt;</code> yang menampung nilai <i>viewport</i>. <i>Viewport</i> merupakan area yang terlihat pada (perangkat) user/pengunjung web. <i>Viewport</i> digunakan untuk desain web yang responsif <i>(responsive web design)</i>. Seperti selogan Bootstrap yang mengutamakan desain responsif.<br /><blockquote class="tr_bq">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.<br />— <cite>getbootstrap.com</cite></blockquote>Jadi dengan menambahkan <i>viewport</i>, web akan menjadi responsif. Responsif artinya bisa menyesuaikan diri dengan perangkat yang digunakan oleh user/pengunjung web. Contoh kode viewport yang diberikan di <a href="http://getbootstrap.com/css/#overview-mobile" target="_blank">dokumentasi Bootstrap</a>:<br /><pre><code class="html">&lt;meta name=&ldquo;viewport&rdquo; content=&ldquo;width=device-width, initial-scale=1&rdquo;&gt;</code></pre>Tag <i>meta viewport</i> akan memberikan intruksi ke browser untuk mengatur dimensi dan sekala web. Nilai <code>width=device-width</code>, artinya lebar web akan mengikuti lebar dari layar perangkat yang digunakan. Nilai <code>inital-scale=1</code>, artinya web akan diberikan skala <i>(zoom)</i> menjadi <code>1</code> (normal).<br /><br />Pengaruh dari tag <i>meta viewport</i> ini dapat kita lihat dengan membuka web dari ponsel android atau semacamnya. Tetapi tenang saja, anda juga bisa memanfaatkan fitur <i>inspect element</i> pada Google Chrome. Baiklah, mari kita uji coba. Pertama kita coba dulu membuka web yang tampa menggunakan tag <i>meta</i> <i>viewport</i>. Berikut ini cuplikan kode <code>&lt;head&gt;</code>-nya:<br /><pre><code class="html">&lt;head&gt;<br />&nbsp;&nbsp;&nbsp; &lt;title&gt;Hello Bootstrap&lt;/title&gt;<br /><br />&nbsp;&nbsp;&nbsp; &lt;!&ndash; menyisipkan bootstrap &ndash;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;bootstrap/css/bootstrap.min.css&rdquo; /&gt;<br />&nbsp;&nbsp;&nbsp; <br />&lt;/head&gt;</code></pre>Bukalah dengan Google Chrome. Kemudian klik kanan, lalu pilih <i>inspect element</i>. Setelah itu klik ikon ponsel ( <i class="fa fa-mobile"></i> ).<br /><a href="http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png" imageanchor="1"><img alt="Tampilan web tampa tag meta viewport" border="0" src="http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png" title="Tampilan web tampa tag meta viewport" /></a><br />Tampa menggunakan <i>viewport</i> web akan ditampilkan apa adanya. Seperti yang terlihat pada gambar di atas, web tidak diperbesar atau diatur ulang skalanya. Untuk itu, kita perlu menambahkan <i>viewport</i>. Sehingga kodenya menjadi seperti ini:<br /><pre><code class="html">&lt;head&gt;<br />&nbsp;&nbsp;&nbsp; &lt;title&gt;Hello Bootstrap&lt;/title&gt;<br /><br />&nbsp;&nbsp;&nbsp; &lt;!&ndash; menyisipkan bootstrap &ndash;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;bootstrap/css/bootstrap.min.css&rdquo; /&gt;<br />    <span style="background-color: #93c47d;">&lt;meta name=&ldquo;viewport&rdquo; content=&ldquo;width=device-width, initial-scale=1&rdquo;&gt;</span><br />&nbsp;&nbsp;&nbsp; <br />&lt;/head&gt;</code></pre>Setelah menambahkan <i>viewport</i>, sekarang coba <i>reload</i> kembali halamanya.<br /><a href="http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png" imageanchor="1"><img alt="Tampilan web yang menggunakan meta viewport" border="0" src="http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png" title="Tampilan web yang menggunakan meta viewport" /></a><br />Jelas sekali &lsquo;kan perbedaanya? Masih belum puas, coba lagi melihat dari ponsel yang berbeda (Nokia Lumia 520).<br /><a href="http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png" imageanchor="1"><img alt="Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520" border="0" src="http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png" title="Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520" /></a><br />Selain mencoba simulasi dari inspect element, saya juga mencoba melalui ponsel Samsung Galaxy C1 dan hasilnya sebagai berikut.<br /><a href="http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg" /></a><br /><h2>Kesimpulan</h2>Jadi, tag <i>meta viewport</i> berfungsi untuk mengatur ulang dimensi dan skala (zoom) web. Tag ini diperlukan untuk membangun web yang responsif.<br /><br />&mdash; <br />Nah, sekian dulu tutorial ke-3 ini. Kode lengkap tutorial ini dapat dilihat di file repositori github: <a href="https://github.com/petanikode/tutorial-bootstrap/blob/master/view_port.html" target="_blank">view_port.html</a><br /><br />Referensi:<br /><ol><li><a href="http://www.w3schools.com/css/css_rwd_viewport.asp" target="_blank"><a href="http://www.w3schools.com/css/css_rwd_viewport.asp">http://www.w3schools.com/css/css_rwd_viewport.asp</a></a></li><li><a href="http://getbootstrap.com/css/#overview-mobile" target="_blank"><a href="http://getbootstrap.com/css/#overview-mobile">http://getbootstrap.com/css/#overview-mobile</a></a></li></ol></p>
 
-                                    
-                                    <div class="post-footer mt-5 py-4">
-                                        <div class="mb-4 py-3 border border-left-0 border-right-0">
+                            </div>
+                            <div class="post-content">
+                                <p><a href="http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg" imageanchor="1"><img alt="Cover Tutorial" border="0" src="http://1.bp.blogspot.com/--1kuzpfYgXo/VokjO5hakSI/AAAAAAAACVg/S06c36HRwik/s1600/Tutorial%2BBootstrap%2B-%2BPetanikode.jpg" title="Tutorial Bootstrap Petani Kode" /></a>Selamat datang di tutorial Bootstrap yang ke-3. Pada tutorial ini, saya akan membahas tag <i>meta</i> <i>viewport</i>. Mengapa kita perlu menambahkan <i>meta viewport</i>? apa sih fungsinya? Mari kita bahas bersama.<br /><br />Pada bagian kepala <code>&lt;head&gt;</code> terdapat tag <code>&lt;meta&gt;</code> yang menampung nilai <i>viewport</i>. <i>Viewport</i> merupakan area yang terlihat pada (perangkat) user/pengunjung web. <i>Viewport</i> digunakan untuk desain web yang responsif <i>(responsive web design)</i>. Seperti selogan Bootstrap yang mengutamakan desain responsif.<br /><blockquote class="tr_bq">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.<br />— <cite>getbootstrap.com</cite></blockquote>Jadi dengan menambahkan <i>viewport</i>, web akan menjadi responsif. Responsif artinya bisa menyesuaikan diri dengan perangkat yang digunakan oleh user/pengunjung web. Contoh kode viewport yang diberikan di <a href="http://getbootstrap.com/css/#overview-mobile" target="_blank">dokumentasi Bootstrap</a>:<br /><pre><code class="html">&lt;meta name=&ldquo;viewport&rdquo; content=&ldquo;width=device-width, initial-scale=1&rdquo;&gt;</code></pre>Tag <i>meta viewport</i> akan memberikan intruksi ke browser untuk mengatur dimensi dan sekala web. Nilai <code>width=device-width</code>, artinya lebar web akan mengikuti lebar dari layar perangkat yang digunakan. Nilai <code>inital-scale=1</code>, artinya web akan diberikan skala <i>(zoom)</i> menjadi <code>1</code> (normal).<br /><br />Pengaruh dari tag <i>meta viewport</i> ini dapat kita lihat dengan membuka web dari ponsel android atau semacamnya. Tetapi tenang saja, anda juga bisa memanfaatkan fitur <i>inspect element</i> pada Google Chrome. Baiklah, mari kita uji coba. Pertama kita coba dulu membuka web yang tampa menggunakan tag <i>meta</i> <i>viewport</i>. Berikut ini cuplikan kode <code>&lt;head&gt;</code>-nya:<br /><pre><code class="html">&lt;head&gt;<br />&nbsp;&nbsp;&nbsp; &lt;title&gt;Hello Bootstrap&lt;/title&gt;<br /><br />&nbsp;&nbsp;&nbsp; &lt;!&ndash; menyisipkan bootstrap &ndash;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;bootstrap/css/bootstrap.min.css&rdquo; /&gt;<br />&nbsp;&nbsp;&nbsp; <br />&lt;/head&gt;</code></pre>Bukalah dengan Google Chrome. Kemudian klik kanan, lalu pilih <i>inspect element</i>. Setelah itu klik ikon ponsel ( <i class="fa fa-mobile"></i> ).<br /><a href="http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png" imageanchor="1"><img alt="Tampilan web tampa tag meta viewport" border="0" src="http://4.bp.blogspot.com/-O3dlLqpksBo/VpSp7pebhqI/AAAAAAAACX4/7OybbtDiVik/s1600/Tampilan%2Bweb%2Btampa%2Btag%2Bmeta%2Bviewport%2B-%2Bpetanikode.png" title="Tampilan web tampa tag meta viewport" /></a><br />Tampa menggunakan <i>viewport</i> web akan ditampilkan apa adanya. Seperti yang terlihat pada gambar di atas, web tidak diperbesar atau diatur ulang skalanya. Untuk itu, kita perlu menambahkan <i>viewport</i>. Sehingga kodenya menjadi seperti ini:<br /><pre><code class="html">&lt;head&gt;<br />&nbsp;&nbsp;&nbsp; &lt;title&gt;Hello Bootstrap&lt;/title&gt;<br /><br />&nbsp;&nbsp;&nbsp; &lt;!&ndash; menyisipkan bootstrap &ndash;&gt;<br />&nbsp;&nbsp;&nbsp; &lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo;bootstrap/css/bootstrap.min.css&rdquo; /&gt;<br />    <span style="background-color: #93c47d;">&lt;meta name=&ldquo;viewport&rdquo; content=&ldquo;width=device-width, initial-scale=1&rdquo;&gt;</span><br />&nbsp;&nbsp;&nbsp; <br />&lt;/head&gt;</code></pre>Setelah menambahkan <i>viewport</i>, sekarang coba <i>reload</i> kembali halamanya.<br /><a href="http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png" imageanchor="1"><img alt="Tampilan web yang menggunakan meta viewport" border="0" src="http://4.bp.blogspot.com/-DQfCS1I7xS8/VpStB12iqfI/AAAAAAAACYE/1kHWfhKtz98/s1600/Screenshot_2016-01-12_15-32-57.png" title="Tampilan web yang menggunakan meta viewport" /></a><br />Jelas sekali &lsquo;kan perbedaanya? Masih belum puas, coba lagi melihat dari ponsel yang berbeda (Nokia Lumia 520).<br /><a href="http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png" imageanchor="1"><img alt="Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520" border="0" src="http://2.bp.blogspot.com/-3wxI-gMezdk/VpSvsAgHzOI/AAAAAAAACYQ/aiT2hhVxZG0/s1600/Tampilan%2Bweb%2Bdari%2Bponsel%2BNokia%2BLumia%2B520%2B-%2BPetanikode.png" title="Melihat tampilan web dari ponsel (simulasi) Nokia Lumia 520" /></a><br />Selain mencoba simulasi dari inspect element, saya juga mencoba melalui ponsel Samsung Galaxy C1 dan hasilnya sebagai berikut.<br /><a href="http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-XZKqhv0staU/VpaxTkbbDcI/AAAAAAAACZM/VSlRM8MXMmk/s1600/Perbedaan%2Bweb%2Byang%2Bmenggunakan%2Btag%2Bviewport%2Bdilihat%2Bdari%2Bponsel%2B-%2Bpetanikode.jpg" /></a><br /><h2>Kesimpulan</h2>Jadi, tag <i>meta viewport</i> berfungsi untuk mengatur ulang dimensi dan skala (zoom) web. Tag ini diperlukan untuk membangun web yang responsif.<br /><br />&mdash; <br />Nah, sekian dulu tutorial ke-3 ini. Kode lengkap tutorial ini dapat dilihat di file repositori github: <a href="https://github.com/petanikode/tutorial-bootstrap/blob/master/view_port.html" target="_blank">view_port.html</a><br /><br />Referensi:<br /><ol><li><a href="http://www.w3schools.com/css/css_rwd_viewport.asp" target="_blank"><a href="http://www.w3schools.com/css/css_rwd_viewport.asp">http://www.w3schools.com/css/css_rwd_viewport.asp</a></a></li><li><a href="http://getbootstrap.com/css/#overview-mobile" target="_blank"><a href="http://getbootstrap.com/css/#overview-mobile">http://getbootstrap.com/css/#overview-mobile</a></a></li></ol></p>
+
+
+                                <div class="post-footer mt-5 py-4">
+                                    <div class="mb-4 py-3 border border-left-0 border-right-0">
     <h6>Berbagi manfaat:</h6>
     <a class="mr-2" 
         href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fbootstrap-viewport%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Tutorial%20Bootstrap%20-%20Memahami%20Fungsi%20Viewport" 
@@ -281,10 +278,7 @@ ga('send', 'pageview');
         <img src="/img/icon/entypo/entypo-social/mail-with-circle.svg" width="32" height="32" alt="Email"/>
     </a>
 </div>
-
-                                        
-                                        
-                                        <div id="disqus_thread"></div>
+  <div id="disqus_thread"></div>
 <script type="text/javascript">
     (function () {
         
@@ -300,33 +294,32 @@ ga('send', 'pageview');
 
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-                                        
-                                    </div>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
                                 </div>
-                                
                             </div>
 
-                            
                         </div>
-                    </article>
 
-                     
-                    <div class="card p-3">
-                        
+
+                    </div>
+                </article>
+
+                
+                <div class="card p-3">
+                    
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-format="autorelaxed"
      data-ad-client="ca-pub-6279325630224392"
      data-ad-slot="5172754450"></ins>
 
-                    </div>
-                     
+                </div>
+                
 
-                    </div>
+            </div>
 
-                    <div class="col-sm-12 col-lg-4">
-                       <aside>
+            <div class="col-sm-12 col-lg-4">
+                <aside>
 
     
 <div class="widget mb-5">
@@ -453,14 +446,14 @@ ga('send', 'pageview');
 
 
 </aside>
-                    </div>
-                    
             </div>
+
         </div>
+    </div>
 
-        
 
-        <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
+
+    <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
     <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
         <div class="row">
             <div class="col-md-6 col-sm-12 mb-0 mb-sm-3">
@@ -492,8 +485,7 @@ ga('send', 'pageview');
             
         </div>
     </div>
-</footer>
-        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+</footer> <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
 <script type="text/javascript" src="/js/popper.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/prism.js"></script>
@@ -538,5 +530,6 @@ $(document).ready(function(){
 });
 </script>
 
-    </body>
+</body>
+
 </html>

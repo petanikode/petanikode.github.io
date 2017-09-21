@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Operator ^ (xor) di Java bukan untuk Membuat Pangkat</title>
+
+<head>
+    <title>Operator ^ (xor) di Java bukan untuk Membuat Pangkat</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -161,10 +162,11 @@ ga('send', 'pageview');
 </script>
 
 
-    </head>
-    <body class="bg-light">
+</head>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
     <div class="container">
 
         <a class="navbar-brand" href="https://www.petanikode.com/"><img src="/img/logo.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
@@ -201,8 +203,7 @@ ga('send', 'pageview');
             </form>
         </div>
     </div>
-</nav>
-        <header>
+</nav> <header>
     <div class="jumbotron jumbotron-fluid bg-dark text-white">
         <div class="container">
             <div class="row">
@@ -216,46 +217,43 @@ ga('send', 'pageview');
     </div>
 </header>
 
-        <div class="container mb-5">
-            <div class="row">
+    <div class="container mb-5">
+        <div class="row">
 
-                <div class="col-sm-12 col-lg-8 mb-5 p-0">
-                    <article class="card mb-5">
-                        <div class="">
-                           <div class="card-body p-md-5">
-                                
-                               <div class="post-header mb-5">
-                                    
-                                    <div class="mb-3">
+            <div class="col-sm-12 col-lg-8 mb-5 p-0">
+                <article class="card mb-5">
+                    <div class="">
+                        <div class="card-body p-md-5">
+
+                            <div class="post-header mb-5">
+
+                                <div class="mb-3">
                                     <img src="/img/author-photo.jpg" class="rounded-circle mr-1" width="32" height="32" alt="author" />
-                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Dian</a> <small class="align-middle text-muted">· <time>29 Apr 2016</time></small>
-                                    </div>
+                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Muhar Dian</a>                                    <small class="align-middle text-muted">· <time>29 Apr 2016</time></small>
+                                </div>
 
-                                    <h2 class="card-title mb-3">Operator ^ (xor) di Java bukan untuk Membuat Pangkat</h2>
+                                <h2 class="card-title mb-3">Operator ^ (xor) di Java bukan untuk Membuat Pangkat</h2>
+
+                                <div>
                                     
-                                    <div>
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/pemrograman">Pemrograman</a>
                                         </span> 
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/java">Java</a>
                                         </span> 
-                                        
-                                        <span class="badge badge-success">
+                                    <span class="badge badge-success">
                                              #<a class="text-white" href="/topik/matematika">Matematika</a>
                                         </span> 
-                                        
-                                    </div>
-
                                 </div>
-                                <div class="post-content">
-                                    <p><a href="https://2.bp.blogspot.com/-P_5MSHpv9zA/VyKK4CjK9ZI/AAAAAAAACxk/Ptclg7VEuNQija-Acz8opEyp71ejcFQcwCLcB/s1600/Matematika%2BJava%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-P_5MSHpv9zA/VyKK4CjK9ZI/AAAAAAAACxk/Ptclg7VEuNQija-Acz8opEyp71ejcFQcwCLcB/s1600/Matematika%2BJava%2B-%2BPetani%2BKode.png" /></a><br />Sebuah kekeliruan saya temukan ketika memeriksa kode program milik teman. Dia mengimplementasikan rumus berikut ke dalam kode java.<br /><pre><code>y = x<sup>2</sup> + 3<br /></code></pre>Potongan kode program yang dia tulis.<br /><pre><code class="java">int x = 3;<br />int y = x^2 + 3;<br /></code></pre>Hasilnya pun <code>6</code>; tidak sesuai harapan. Seharusnya menghasilkan <code>12</code>.<br /><br />Operator <code>^</code> <i>(Exclusive Or)</i> disingkat <code>xor</code>, merupakan operator <i>bitwise</i>. Operator <i>bitwise</i> merupakan operator untuk memanipulasi bilangan biner.<br />Contoh konversi bilangan desimal ke biner (8bit):<br /><ul><li><code>0 = 0000 0000</code></li><li><code>1 = 0000 0001</code></li><li><code>2 = 0000 0010</code></li><li><code>3 = 0000 0011</code></li><li><code>4 = 0000 0100</code></li><li><code>5 = 0000 0101</code></li><li><code>6 = 0000 0110</code></li><li><code>7 = 0000 0111</code></li><li><code>8 = 0000 1000</code></li><li><code>9 = 0000 1001</code></li><li><code>10 = 0000 1010</code></li></ul>Kita tinjau lagi perhitungan kode di atas:<br /><pre><code>y = x^2 + 3<br />y = 3^2 + 3<br />y = 6<br /></code></pre>Pada operasi <code>3^2</code> akan menghasilkan <code>1</code> (<code>0000 0001</code>). Kemudian ditambah <code>3</code> akan menghasilkan <code>6</code>. Mengapa bisa menghasilkan <code>6</code>, bukannya <code>1 + 3 = 4</code>. Aneh ‘kan?<br /><br />Operator bitwise xor akan menhasilkan bilangan biner. Oleh sebab itu, penjumlahan yang dilakukan pada operasi di atas adalah penjumlahan bilangan biner, bukan penjumlahan bilangan desimal. Jadi <code>1 + 3 = 6</code> itu sama dengan <code>00000001 + 00000011 = 000000110</code>.<br /><h2 id="memahami-operator-^-(xor)"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#memahami-operator-^-(xor)" name="memahami-operator-^-(xor)"></a>Memahami operator ^ (xor)</h2>Jadi, megnapa <code>3^2</code> menghasilkan <code>1</code>? Silahkan tinjau lagi pelajaran logika matematika (<code>xor</code>).<br /><table border="1" cellpadding="10" class="table table-responsive table bordered" style="max-width: 100%; width: 100%;"><thead><tr> <th style="text-align: center;">a</th> <th style="text-align: center;">b</th> <th style="text-align: center;">a or b</th> <th style="text-align: center;">a xor b</th> </tr></thead> <tbody><tr> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> <td style="text-align: center;">0</td> </tr><tr> <td style="text-align: center;">1</td> <td style="text-align: center;">0</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> </tr><tr> <td style="text-align: center;">0</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> </tr><tr> <td style="text-align: center;">0</td> <td style="text-align: center;">0</td> <td style="text-align: center;">0</td> <td style="text-align: center;">0</td> </tr></tbody> </table>Sehingga,<br /><pre><code>  3 = 0000 0011<br />  2 = 0000 0010<br />&mdash;&mdash;&mdash;&mdash;&mdash; ^ (xor)<br />3^2 = 0000 0001<br /></code></pre><h2 id="bagaimana-membuat-pangkat-di-java?"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#bagaimana-membuat-pangkat-di-java?" name="bagaimana-membuat-pangkat-di-java?"></a>Bagaimana membuat pangkat di Java?</h2>Pangkat dapat dibuat dengan fungsi     <code>Math.pow()</code>. Fungsi ini memiliki dua parameter. Parameter pertama adalah bilangan yang akan dipangkatkan. Parameter kedua adalah bilangan pangkatnya. Contoh: 3<sup>2</sup>.<br /><pre><code class="java">Math.pow(3, 2);<br /></code></pre>Akan menghasilkan <code>9</code>.<br /><h2 id="kesimpulan"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#kesimpulan" name="kesimpulan"></a>Kesimpulan</h2>Operator <i>bitwise</i> ^ (xor) bukan operator untuk pemangkatan. Operator <i>bitwise</i> ^ (xor) digunakan untuk operasi bilangan biner.</p>
 
-                                    
-                                    <div class="post-footer mt-5 py-4">
-                                        <div class="mb-4 py-3 border border-left-0 border-right-0">
+                            </div>
+                            <div class="post-content">
+                                <p><a href="https://2.bp.blogspot.com/-P_5MSHpv9zA/VyKK4CjK9ZI/AAAAAAAACxk/Ptclg7VEuNQija-Acz8opEyp71ejcFQcwCLcB/s1600/Matematika%2BJava%2B-%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-P_5MSHpv9zA/VyKK4CjK9ZI/AAAAAAAACxk/Ptclg7VEuNQija-Acz8opEyp71ejcFQcwCLcB/s1600/Matematika%2BJava%2B-%2BPetani%2BKode.png" /></a><br />Sebuah kekeliruan saya temukan ketika memeriksa kode program milik teman. Dia mengimplementasikan rumus berikut ke dalam kode java.<br /><pre><code>y = x<sup>2</sup> + 3<br /></code></pre>Potongan kode program yang dia tulis.<br /><pre><code class="java">int x = 3;<br />int y = x^2 + 3;<br /></code></pre>Hasilnya pun <code>6</code>; tidak sesuai harapan. Seharusnya menghasilkan <code>12</code>.<br /><br />Operator <code>^</code> <i>(Exclusive Or)</i> disingkat <code>xor</code>, merupakan operator <i>bitwise</i>. Operator <i>bitwise</i> merupakan operator untuk memanipulasi bilangan biner.<br />Contoh konversi bilangan desimal ke biner (8bit):<br /><ul><li><code>0 = 0000 0000</code></li><li><code>1 = 0000 0001</code></li><li><code>2 = 0000 0010</code></li><li><code>3 = 0000 0011</code></li><li><code>4 = 0000 0100</code></li><li><code>5 = 0000 0101</code></li><li><code>6 = 0000 0110</code></li><li><code>7 = 0000 0111</code></li><li><code>8 = 0000 1000</code></li><li><code>9 = 0000 1001</code></li><li><code>10 = 0000 1010</code></li></ul>Kita tinjau lagi perhitungan kode di atas:<br /><pre><code>y = x^2 + 3<br />y = 3^2 + 3<br />y = 6<br /></code></pre>Pada operasi <code>3^2</code> akan menghasilkan <code>1</code> (<code>0000 0001</code>). Kemudian ditambah <code>3</code> akan menghasilkan <code>6</code>. Mengapa bisa menghasilkan <code>6</code>, bukannya <code>1 + 3 = 4</code>. Aneh ‘kan?<br /><br />Operator bitwise xor akan menhasilkan bilangan biner. Oleh sebab itu, penjumlahan yang dilakukan pada operasi di atas adalah penjumlahan bilangan biner, bukan penjumlahan bilangan desimal. Jadi <code>1 + 3 = 6</code> itu sama dengan <code>00000001 + 00000011 = 000000110</code>.<br /><h2 id="memahami-operator-^-(xor)"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#memahami-operator-^-(xor)" name="memahami-operator-^-(xor)"></a>Memahami operator ^ (xor)</h2>Jadi, megnapa <code>3^2</code> menghasilkan <code>1</code>? Silahkan tinjau lagi pelajaran logika matematika (<code>xor</code>).<br /><table border="1" cellpadding="10" class="table table-responsive table bordered" style="max-width: 100%; width: 100%;"><thead><tr> <th style="text-align: center;">a</th> <th style="text-align: center;">b</th> <th style="text-align: center;">a or b</th> <th style="text-align: center;">a xor b</th> </tr></thead> <tbody><tr> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> <td style="text-align: center;">0</td> </tr><tr> <td style="text-align: center;">1</td> <td style="text-align: center;">0</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> </tr><tr> <td style="text-align: center;">0</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> <td style="text-align: center;">1</td> </tr><tr> <td style="text-align: center;">0</td> <td style="text-align: center;">0</td> <td style="text-align: center;">0</td> <td style="text-align: center;">0</td> </tr></tbody> </table>Sehingga,<br /><pre><code>  3 = 0000 0011<br />  2 = 0000 0010<br />&mdash;&mdash;&mdash;&mdash;&mdash; ^ (xor)<br />3^2 = 0000 0001<br /></code></pre><h2 id="bagaimana-membuat-pangkat-di-java?"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#bagaimana-membuat-pangkat-di-java?" name="bagaimana-membuat-pangkat-di-java?"></a>Bagaimana membuat pangkat di Java?</h2>Pangkat dapat dibuat dengan fungsi     <code>Math.pow()</code>. Fungsi ini memiliki dua parameter. Parameter pertama adalah bilangan yang akan dipangkatkan. Parameter kedua adalah bilangan pangkatnya. Contoh: 3<sup>2</sup>.<br /><pre><code class="java">Math.pow(3, 2);<br /></code></pre>Akan menghasilkan <code>9</code>.<br /><h2 id="kesimpulan"><a href="https://www.blogger.com/blogger.g?blogID=2407178719979772668#kesimpulan" name="kesimpulan"></a>Kesimpulan</h2>Operator <i>bitwise</i> ^ (xor) bukan operator untuk pemangkatan. Operator <i>bitwise</i> ^ (xor) digunakan untuk operasi bilangan biner.</p>
+
+
+                                <div class="post-footer mt-5 py-4">
+                                    <div class="mb-4 py-3 border border-left-0 border-right-0">
     <h6>Berbagi manfaat:</h6>
     <a class="mr-2" 
         href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fjava-operator-xor%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Operator%20%5e%20%28xor%29%20di%20Java%20bukan%20untuk%20Membuat%20Pangkat" 
@@ -292,10 +290,7 @@ ga('send', 'pageview');
         <img src="/img/icon/entypo/entypo-social/mail-with-circle.svg" width="32" height="32" alt="Email"/>
     </a>
 </div>
-
-                                        
-                                        
-                                        <div id="disqus_thread"></div>
+  <div id="disqus_thread"></div>
 <script type="text/javascript">
     (function () {
         
@@ -311,33 +306,32 @@ ga('send', 'pageview');
 
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-                                        
-                                    </div>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
                                 </div>
-                                
                             </div>
 
-                            
                         </div>
-                    </article>
 
-                     
-                    <div class="card p-3">
-                        
+
+                    </div>
+                </article>
+
+                
+                <div class="card p-3">
+                    
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-format="autorelaxed"
      data-ad-client="ca-pub-6279325630224392"
      data-ad-slot="5172754450"></ins>
 
-                    </div>
-                     
+                </div>
+                
 
-                    </div>
+            </div>
 
-                    <div class="col-sm-12 col-lg-4">
-                       <aside>
+            <div class="col-sm-12 col-lg-4">
+                <aside>
 
     
 <div class="widget mb-5">
@@ -464,14 +458,14 @@ ga('send', 'pageview');
 
 
 </aside>
-                    </div>
-                    
             </div>
+
         </div>
+    </div>
 
-        
 
-        <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
+
+    <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
     <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
         <div class="row">
             <div class="col-md-6 col-sm-12 mb-0 mb-sm-3">
@@ -503,8 +497,7 @@ ga('send', 'pageview');
             
         </div>
     </div>
-</footer>
-        <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+</footer> <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
 <script type="text/javascript" src="/js/popper.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/prism.js"></script>
@@ -549,5 +542,6 @@ $(document).ready(function(){
 });
 </script>
 
-    </body>
+</body>
+
 </html>

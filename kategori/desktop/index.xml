@@ -13,15 +13,17 @@
     
     
     <item>
-      <title>Trik Agar Jendela JFrame Tampil di Tengah Layar</title>
+      <title>Trik Agar Jendela JFrame Selalu Tampil di Tengah Layar</title>
       <link>https://www.petanikode.com/java-swing-jendela-di-tengah-layar/</link>
       <pubDate>Fri, 29 Jul 2016 23:03:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/java-swing-jendela-di-tengah-layar/</guid>
-      <description>Pada pemrograman GUI dengan Java Swing, kita sering membuat jendela dengan JFrame. Namun, selalu tampil di pojok kiri atas layar. Pojok kiri atas adalah titik (0,0) dalam koordinat layar (x,y). Pada kesempatan ini saya akan berbagi trik, agar setiap jendela yang dibuat dengan JFrame tampil di tengah-tengah layar.
-1. Komposisi PustakaAda dua pustaka yang diperlukan untuk membuat jendela JFrame tampil di tengah-tengah. Silahkan diimpor:
-import java.awt.Dimension;
-import java.awt.Toolkit;2. Kode Agar Tampil di TengahLetakan kode berikut di dalam konstruktor JFrame.</description>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  Saat kita membuat program GUI dengan Swing, jendelanya sering tampil pada pojok kiri atas atau pada titik (0,0).
+Bagaimana caranya agar jendela selalu tampil di tengah-tengah layar?
+Apakah kita harus mengatur manual posisi titiknya?
+Ya perlu, untuk lebih jelasnya mari kita bahas&amp;hellip;
+Class-class yang dibutuhkan Ada dua class yang kita butuhkan untuk membuat jendela JFrame tampil di tengah-tengah.
+ Dimension untuk membuat objek dimensi Toolkit untuk mengambil ukuran layar  Kedua class tersebut berada dalam package java.</description>
     </item>
     
     <item>

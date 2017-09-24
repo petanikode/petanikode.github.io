@@ -2,29 +2,37 @@
 <html>
 
 <head>
-    <title>Belajar Pemrograman C&#43;&#43; di linux</title>
+    <title>Belajar Pemrograman C&#43;&#43; di Linux: Membuat Program C&#43;&#43; Pertama</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-<meta itemprop="name" content="Belajar Pemrograman C&#43;&#43; di linux">
-<meta itemprop="description" content="Bahasa pemrograman C&#43;&#43; merupakan bahasa pengembangan dari bahasa C. Kita membutuhkan alat-alat berikut untuk melakukan pemrograman C&#43;&#43; di linux:
- Teks Editor: Sebagai tempat menulis kode Kompilator g&#43;&#43; : Program yang menerjemahkan bahasa C&#43;&#43; menjadi bahasa mesin (executable).  Membuat program salam Program salam yang umum menggunakan Hello World. Salam tersebut terdengar kurang terlalu mainstream di dunia pemrograman.
-Oleh karena itu, Saya akan mengajak Anda menggunakan Assalamualaikum saja.">
+<meta itemprop="name" content="Belajar Pemrograman C&#43;&#43; di Linux: Membuat Program C&#43;&#43; Pertama">
+<meta itemprop="description" content="Ada banyak alat yang bisa kita gunakan untuk belajar pemrograman C&#43;&#43; di Linux.
+Bisa menggunakan Qt Creator, Codeblocks, Codelite, Geany, dan sebagainya.
+Namun, yang akan kita bahas di sini adalah menggunakan teks editor biasa dan melakukan kompilasi secara manual melalui terminal.
+Kenapa menggunakan cara manual?
+Pemrograman C&#43;&#43; menggunakan Qt Creator (selanjutnya kita sebut IDE) memang lebih mudah.
+Tulis kode, kemunian klik run, program pun langsung diekseskusi.
+Namun, untuk paham lebih dalam&hellip; kita harus mencoba kompilasi program C&#43;&#43; secara manual.">
 
 
 <meta itemprop="dateModified" content="2014-08-31T11:50:00&#43;00:00" />
-<meta itemprop="wordCount" content="199">
+<meta itemprop="wordCount" content="697">
 
 
 
 <meta itemprop="keywords" content="" />
 
 
-<meta property="og:title" content="Belajar Pemrograman C&#43;&#43; di linux" />
-<meta property="og:description" content="Bahasa pemrograman C&#43;&#43; merupakan bahasa pengembangan dari bahasa C. Kita membutuhkan alat-alat berikut untuk melakukan pemrograman C&#43;&#43; di linux:
- Teks Editor: Sebagai tempat menulis kode Kompilator g&#43;&#43; : Program yang menerjemahkan bahasa C&#43;&#43; menjadi bahasa mesin (executable).  Membuat program salam Program salam yang umum menggunakan Hello World. Salam tersebut terdengar kurang terlalu mainstream di dunia pemrograman.
-Oleh karena itu, Saya akan mengajak Anda menggunakan Assalamualaikum saja." />
+<meta property="og:title" content="Belajar Pemrograman C&#43;&#43; di Linux: Membuat Program C&#43;&#43; Pertama" />
+<meta property="og:description" content="Ada banyak alat yang bisa kita gunakan untuk belajar pemrograman C&#43;&#43; di Linux.
+Bisa menggunakan Qt Creator, Codeblocks, Codelite, Geany, dan sebagainya.
+Namun, yang akan kita bahas di sini adalah menggunakan teks editor biasa dan melakukan kompilasi secara manual melalui terminal.
+Kenapa menggunakan cara manual?
+Pemrograman C&#43;&#43; menggunakan Qt Creator (selanjutnya kita sebut IDE) memang lebih mudah.
+Tulis kode, kemunian klik run, program pun langsung diekseskusi.
+Namun, untuk paham lebih dalam&hellip; kita harus mencoba kompilasi program C&#43;&#43; secara manual." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.petanikode.com/cpp-linux/" />
 
@@ -84,8 +92,8 @@ Oleh karena itu, Saya akan mengajak Anda menggunakan Assalamualaikum saja." />
 
 
 <link rel="stylesheet" href="/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/css/style.css" />
 <link rel="stylesheet" href="/css/prism.css" />
+<link rel="stylesheet" href="/css/style.css" />
 
 
 <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
@@ -95,10 +103,14 @@ Oleh karena itu, Saya akan mengajak Anda menggunakan Assalamualaikum saja." />
 
 <meta name="telegram:channel" content="@petanikode">
 
-<meta name="keywords" content="Belajar Pemrograman C&#43;&#43; di linux, "/>
-<meta name="description" content="Bahasa pemrograman C&#43;&#43; merupakan bahasa pengembangan dari bahasa C. Kita membutuhkan alat-alat berikut untuk melakukan pemrograman C&#43;&#43; di linux:
- Teks Editor: Sebagai tempat menulis kode Kompilator g&#43;&#43; : Program yang menerjemahkan bahasa C&#43;&#43; menjadi bahasa mesin (executable).  Membuat program salam Program salam yang umum menggunakan Hello World. Salam tersebut terdengar kurang terlalu mainstream di dunia pemrograman.
-Oleh karena itu, Saya akan mengajak Anda menggunakan Assalamualaikum saja." />
+<meta name="keywords" content="Belajar Pemrograman C&#43;&#43; di Linux: Membuat Program C&#43;&#43; Pertama, "/>
+<meta name="description" content="Ada banyak alat yang bisa kita gunakan untuk belajar pemrograman C&#43;&#43; di Linux.
+Bisa menggunakan Qt Creator, Codeblocks, Codelite, Geany, dan sebagainya.
+Namun, yang akan kita bahas di sini adalah menggunakan teks editor biasa dan melakukan kompilasi secara manual melalui terminal.
+Kenapa menggunakan cara manual?
+Pemrograman C&#43;&#43; menggunakan Qt Creator (selanjutnya kita sebut IDE) memang lebih mudah.
+Tulis kode, kemunian klik run, program pun langsung diekseskusi.
+Namun, untuk paham lebih dalam&hellip; kita harus mencoba kompilasi program C&#43;&#43; secara manual." />
 
 <meta content='ID-id' http-equiv='content-language' />
 <meta content='index,follow' name='robots' />
@@ -217,7 +229,7 @@ ga('send', 'pageview');
                                     <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Muhar Dian</a>                                    <small class="align-middle text-muted">· <time>31 Aug 2014</time></small>
                                 </div>
 
-                                <h2 class="card-title mb-3">Belajar Pemrograman C&#43;&#43; di linux</h2>
+                                <h2 class="card-title mb-3">Belajar Pemrograman C&#43;&#43; di Linux: Membuat Program C&#43;&#43; Pertama</h2>
 
                                 <div>
                                     
@@ -232,78 +244,302 @@ ga('send', 'pageview');
 
 <p><a href="http://3.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1M/4FHFLahyFoU/s1600/cpp.png"><img src="http://3.bp.blogspot.com/-_WGjSJhKBpw/VENim2j3fHI/AAAAAAAAA1M/4FHFLahyFoU/s1600/cpp.png" alt="" /></a></p>
 
-<p>Bahasa pemrograman C++ merupakan bahasa pengembangan dari bahasa C.
-Kita membutuhkan alat-alat berikut untuk melakukan pemrograman C++ di linux:</p>
+<!-- Agreement -->
+
+<p>Ada banyak alat yang bisa kita gunakan untuk belajar pemrograman C++ di Linux.</p>
+
+<p>Bisa menggunakan Qt Creator, Codeblocks, Codelite, Geany, dan sebagainya.</p>
+
+<!-- Baca nanti:
+- Pemrograman C++ di Linux Menggunakan Qt Creator
+- Pemrograman C++ di Linux Menggunakan Codeblocks
+- Pemrograman C++ di Linux Menggunakan CodeLite
+ -->
+
+<p>Namun, yang akan kita bahas di sini adalah menggunakan teks editor
+biasa dan melakukan kompilasi secara manual melalui terminal.</p>
+
+<p>Kenapa menggunakan cara manual?</p>
+
+<p>Pemrograman C++ menggunakan Qt Creator (selanjutnya kita sebut IDE)
+memang lebih mudah.</p>
+
+<p>Tulis kode, kemunian klik <em>run</em>, program pun langsung diekseskusi.</p>
+
+<p>Namun, untuk paham lebih dalam&hellip; kita harus mencoba kompilasi program
+C++ secara manual.</p>
+
+<h2 id="pengertian-bahasa-pemrograman-c">Pengertian Bahasa Pemrograman C++</h2>
+
+<p>Bahasa pemrograman C++ merupakan bahasa pengembangan dari bahasa C.</p>
+
+<p>Apa bedanya C++ dengan C?</p>
+
+<p>C++ memiliki fitur yang lebih banyak dari C.</p>
+
+<p>Contohnya:</p>
+
+<p>Pada bahasa C, kita tidak bisa membuat <code>class</code> sedangkan pada C++ kita bisa
+membuatnya.</p>
+
+<h2 id="alat-alat-untuk-membuat-program-c">Alat-alat untuk Membuat Program C++</h2>
+
+<p>Sebenarny ada dua alat yang harus kita persiapkan:</p>
 
 <ol>
-<li>Teks Editor: Sebagai tempat menulis kode</li>
-<li>Kompilator <code>g++</code> : Program yang menerjemahkan bahasa C++ menjadi bahasa mesin (executable).</li>
+<li>Teks Editor: sebagai tempat menulis kode.</li>
+<li>Kompilator <code>g++</code>: Program yang menerjemahkan bahasa C++ menjadi bahasa mesin <em>(executable)</em>.</li>
 </ol>
 
-<h1 id="membuat-program-salam">Membuat program salam</h1>
+<p>Teks editor ada banyak sekali di Linux, ada Gedit, Xed, Leafpad, Mousepad, dll.</p>
 
-<p>Program salam yang umum menggunakan <code>Hello World</code>.
-Salam tersebut terdengar kurang terlalu <em>mainstream</em> di dunia pemrograman.</p>
+<p>Baca nanti:</p>
 
-<p>Oleh karena itu, Saya akan mengajak Anda menggunakan Assalamualaikum saja.</p>
+<ul>
+<li><a href="/teks-editor-cli-linux">6 Teks Editor Berbasis Teks untuk Menulis Kode di Linux</a></li>
+<li><a href="/text-editor-vscode">[Review] Teks Editor Visual Studio Code di Linux</a></li>
+</ul>
 
-<h2 id="langkah-1-buka-teks-editor">Langkah 1: Buka teks editor</h2>
+<p>Lalu untuk kompilatornya, kita bisa menggunakan <code>g++</code>.</p>
 
-<p><a href="http://1.bp.blogspot.com/-VvTWqAkHMQU/VAKWEJpZSeI/AAAAAAAAAk4/74ro4nGp9ms/s1600/Scratch_004.png"><img src="http://1.bp.blogspot.com/-VvTWqAkHMQU/VAKWEJpZSeI/AAAAAAAAAk4/74ro4nGp9ms/s1600/Scratch_004.png" alt="" /></a></p>
+<p>Cara install <code>g++</code>:</p>
 
-<h2 id="langkah-2-ketik-kode-ini">Langkah 2: Ketik kode ini</h2>
+<pre><code class="language-bash">apt install g++
+</code></pre>
 
-<pre><code>#include &lt;iostream&gt;
+<p>Setelah terinstal, silahkan cek dengan perintah <code>g++ --version</code>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/cpp/hello-world/versi-cpp.png" 
+    src="/img/placeholder.svg"
+    alt="Versi G&#43;&#43; yang terinstall]"
+ />
+
+<h2 id="membuat-program-c-pertama">Membuat Program C++ Pertama</h2>
+
+<p>Baik, sekarang kita akan coba membuat program <code>Hello World</code>.</p>
+
+<p>Silahkan buka teks editor kemudian ketik kode berikut:</p>
+
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 
 int main(){
-cout &lt;&lt; “Assalamualaikum” &lt;&lt; endl;
-return 0;
+    cout &lt;&lt; &quot;Hello World!&quot; &lt;&lt; endl;
+    return 0;
 }
 </code></pre>
 
-<h2 id="langkah-3-simpan-kode">Langkah 3: Simpan kode</h2>
+<p>Simpan dengan nama <code>hello-world.cpp</code>.</p>
 
-<p>Simpan dengan nama</p>
+<img 
+    class="lazyload mb-3"
+    data-src="/img/cpp/hello-world/program-cpp.png" 
+    src="/img/placeholder.svg"
+    alt="Program C&#43;&#43; Hello World"
+ />
 
-<p><samp>salam.cpp</samp></p>
+<p>Setelah itu, buka Terminal dan masuk ke direktori
+tempat <em>souce code</em> C++ yang tadi tersimpan.</p>
 
-<p><a href="http://4.bp.blogspot.com/-K6X98khsRlc/VAKW5U1G3mI/AAAAAAAAAlA/vq_UkBwCouQ/s1600/Simpan-kode.png"><img src="http://4.bp.blogspot.com/-K6X98khsRlc/VAKW5U1G3mI/AAAAAAAAAlA/vq_UkBwCouQ/s1600/Simpan-kode.png" alt="" /></a></p>
+<p>Sebagai contoh, saya menyimpannya di dalam
+<code>~/Desktop/belajar-cpp</code>.</p>
 
-<h2 id="langkah-4-kompilasi-kode">Langkah 4: Kompilasi kode</h2>
-
-<p>Buka terminal dengan menekan kombinasi tombol <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>. Arahkan ke lokasi kode <code>salam.cpp</code> tersimpan.</p>
-
-<p>Kompilasi kode dengan mengetik perintah:</p>
-
-<pre><code class="language-bash">g++ salam.cpp -o salam
+<pre><code class="language-bash">cd ~/Desktop/belajar-cpp/
 </code></pre>
 
-<p><a href="http://3.bp.blogspot.com/-JJHwIcRyvI0/VAKX5PmPgVI/AAAAAAAAAlM/uhp9TlGE-bY/s1600/Compile-Cpp-in-ElementaryOS.png"><img src="http://3.bp.blogspot.com/-JJHwIcRyvI0/VAKX5PmPgVI/AAAAAAAAAlM/uhp9TlGE-bY/s1600/Compile-Cpp-in-ElementaryOS.png" alt="" /></a>
-Bila kompilasi berhasil, akan tercipta berkas baru bernama <code>salam</code>. Berkas tersebut adalah berkas biner (<em>binary</em>) yang dapat dieksekusi.
-<a href="http://3.bp.blogspot.com/-A53GIIKmgrY/VAKYF1YXVjI/AAAAAAAAAlU/XHMKdY1mB8U/s1600/Home_elementaryOS_program_salam.png"><img src="http://3.bp.blogspot.com/-A53GIIKmgrY/VAKYF1YXVjI/AAAAAAAAAlU/XHMKdY1mB8U/s1600/Home_elementaryOS_program_salam.png" alt="" /></a></p>
+<p>Setelah itu lakukan kompilasi dengan perintah:</p>
 
-<h2 id="langkah-5-eksekusi-program">Langkah 5: Eksekusi Program</h2>
-
-<p>Eksekusi berkas <code>salam</code>  dengan perintah:</p>
-
-<pre><code class="language-bash">./salam
+<pre><code class="language-bash">g++ hello-world.cpp -o hello-world
 </code></pre>
 
-<p>Maka, hasil outputnya akan menampilkan ucapan &lsquo;<code>Assalamualaikum</code>&rsquo;. Kode program sudah berhasil dieksekusi.</p>
+<p>Keterangan:</p>
 
-<p><a href="http://1.bp.blogspot.com/-AYwlvwuvI10/VAKZWnDCQuI/AAAAAAAAAlk/GpFT2RuLMQY/s1600/menjalankan-program.png"><img src="http://1.bp.blogspot.com/-AYwlvwuvI10/VAKZWnDCQuI/AAAAAAAAAlk/GpFT2RuLMQY/s1600/menjalankan-program.png" alt="" /></a></p>
+<ul>
+<li><code>g++</code> adalah perintah untuk mengkompilasi program C++;</li>
+<li><code>hello-world.cpp</code> adalah file yang berisi kode program C++ <em>(source code)</em>;</li>
+<li><code>-o</code> adalah argumen untuk menyatakan output;</li>
+<li><code>hello-world</code> adalah nama file hasil kompilasi.</li>
+</ul>
 
-<hr />
+<p>Kalau tidak ada error, maka akan
+menghasilkan file <em>executable</em> baru:</p>
 
-<p>Pemrograman C++ di linux hanya membutuhkan dua alat, yaitu teks editor dan kompilator. Teks editor bisa menggunakan teks editor apa saja. Selain teks editor, anda juga bisa menggunakan IDE seperti CodeBlocks dan <a href="/qt-dasar">Qt Creator</a>.</p>
+<img 
+    class="lazyload mb-3"
+    data-src="/img/cpp/hello-world/program-hello-world.png" 
+    src="/img/placeholder.svg"
+    alt="program C&#43;&#43; executable"
+ />
+
+<p>Kita bisa mengeksekusi file tersebut dengan perintah:</p>
+
+<pre><code class="language-bash">./hello-world
+</code></pre>
+
+<p>Hasilnya:</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/cpp/hello-world/hasil-eksekusi.png" 
+    src="/img/placeholder.svg"
+    alt="Hasi eksekusi program hello world"
+ />
+
+<p>Mudah bukan?</p>
+
+<h2 id="bedah-kode">Bedah Kode</h2>
+
+<p>Waktunya saya menjelaskan arti dan maksud dari kode program di atas.</p>
+
+<p>Pertama dimulai dari:</p>
+
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+</code></pre>
+
+<p>Maksud dari kode di atas adalah mendeklarasikan fungsi apa saja yang akan
+kita gunakan dalam program.</p>
+
+<p>Contohnya:</p>
+
+<p>Karena kita membutuhkan fungsi <code>cout</code> untuk menampilkan teks
+ke layar, maka kita harus mengimpor fungsi tersebut dari <code>&lt;iostream&gt;</code>.</p>
+
+<p>Fungsi <code>cout</code> berada dalam <em>namespace</em> <code>std</code>.</p>
+
+<p>Maka kita membutuhkan kode berikut:</p>
+
+<pre><code class="language-cpp">using namespace std;
+</code></pre>
+
+<p>Jika tanpa itu, kita akan menuliskan perintah <code>cout</code> lengkap dengan namespace-nya:</p>
+
+<pre><code class="language-cpp">std::cout &lt;&lt; &quot;Hello world&quot;;
+</code></pre>
+
+<p>Setelah itu, kita membuat fungsi main.</p>
+
+<p>Fungsi main adalah fungsi utama di dalam program C++.</p>
+
+<p>Fungsi ini akan dieksekusi pertamakali setiap kali program dijalankan.</p>
+
+<pre><code class="language-cpp">int main(){
+    cout &lt;&lt; &quot;Hello World!&quot; &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+
+<p>Kita harus menuliskan perintah atau fungsi di dalam fungsi main
+agar dapat dieksekusi.</p>
+
+<p>Sebagai contoh, kita memberikan perintah:</p>
+
+<pre><code class="language-cpp">cout &lt;&lt; &quot;Hello World!&quot; &lt;&lt; endl;
+</code></pre>
+
+<p>Perintah <code>cout</code> adalah perintah untuk menampilkan teks ke layar.</p>
+
+<p>Tunggu dulu, apa itu <code>endl</code>?</p>
+
+<p><code>endl</code> <em>(endline)</em> fungsinya untuk membuat baris baru.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-cpp">cout &lt;&lt; &quot;Hello&quot; &lt;&lt; endl;
+cout &lt;&lt; &quot;World!&quot; &lt;&lt; endl;
+</code></pre>
+
+<p>Akan menghasilkan output:</p>
+
+<pre><code class="language-bash">Hello
+World!
+</code></pre>
+
+<p>Sedangkan tanpa <code>endl</code>:</p>
+
+<pre><code class="language-cpp">cout &lt;&lt; &quot;Hello&quot;;
+cout &lt;&lt; &quot;World!&quot;;
+</code></pre>
+
+<p>akan menghasilkan:</p>
+
+<pre><code class="language-bash">Hello World!
+</code></pre>
+
+<p>Lalu, terakhir ada perintah <code>return 0</code> apa artinya?</p>
+
+<p>Karena fungsi main yang kita buat memiliki kembalikan berupa nilai integer:</p>
+
+<pre><code class="language-cpp">int main(){
+    ...
+}
+</code></pre>
+
+<p>Maka harus ada nilai kembalian berupa integer. Nol (<code>0</code>) adalah salah satu nilai
+integer.</p>
+
+<h2 id="latihan">Latihan</h2>
+
+<p>Mau meningkatkan skill-mu?</p>
+
+<p>Jangan malas-malas untuk mencoba latihan berikut.</p>
+
+<p>Program <code>biodata.cpp</code>:</p>
+
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    cout &lt;&lt; &quot;Program Biodata!&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;---------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;Nama: Petani Kode!&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;Umur: 19&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;Alamat: Mataram&quot; &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+
+<p>Program <code>kalkulator.cpp</code>:</p>
+
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    cout &lt;&lt; &quot;2+2 = &quot; &lt;&lt; 2+2 &lt;&lt; endl;
+    cout &lt;&lt; &quot;3-2 = &quot; &lt;&lt; 3-2 &lt;&lt; endl;
+    cout &lt;&lt; &quot;4*2 = &quot; &lt;&lt; 4*2 &lt;&lt; endl;
+    cout &lt;&lt; &quot;5/2 = &quot; &lt;&lt; 5/2 &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+
+<h2 id="apa-selanjutnya">Apa Selanjutnya?</h2>
+
+<p>Kita sudah mempersiapkan alat-alat untuk pemrograman C++ dan mencoba
+membuat program pertama, lalu apa yang harus dipelajari selanjutnya?</p>
+
+<p>Selanjutnya kamu bisa pelajari tentang:</p>
+
+<!-- - [Aturan Dasar Penulisan Kode C++](/cpp-sintaks) -->
+
+<ul>
+<li><a href="/cpp-variabel">Variabel dan Tipe data pada C++</a>
+<!-- - [Struktur Percabangan untuk Membuat Logika Program](/cpp-percabangan) --></li>
+</ul>
+
+<p>Ada saran dan pertanyaan?</p>
+
+<p>Silahkan sampaikan melalui komentar.</p>
 
 
                                 <div class="post-footer mt-5 py-4">
                                     <div class="mb-4 py-3 border border-left-0 border-right-0">
     <h6>Berbagi manfaat:</h6>
     <a class="mr-2" 
-        href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcpp-linux%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Belajar%20Pemrograman%20C%2b%2b%20di%20linux" 
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fcpp-linux%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Belajar%20Pemrograman%20C%2b%2b%20di%20Linux%3a%20Membuat%20Program%20C%2b%2b%20Pertama" 
         title="Bagikan ke Facebook" 
         target="_blank"
         onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=' + encodeURIComponent(document.URL));
@@ -311,8 +547,8 @@ Bila kompilasi berhasil, akan tercipta berkas baru bernama <code>salam</code>. B
         <img src="/img/icon/entypo/entypo-social/facebook-with-circle.svg" width="32" height="32" alt="Facebook"/>
     </a>
     <a class="mr-2" 
-        href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcpp-linux%2f%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Belajar%20Pemrograman%20C%2b%2b%20di%20linux%20https%3a%2f%2fwww.petanikode.com%2fcpp-linux%2f%20via%20@petanikode"
-        onclick="window.open('https://twitter.com/intent/tweet?source=https:\/\/www.petanikode.com\/cpp-linux\/%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Belajar Pemrograman C\x2b\x2b di linux%20https:\/\/www.petanikode.com\/cpp-linux\/%20via%20@petanikode'); return false;"
+        href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fcpp-linux%2f%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Belajar%20Pemrograman%20C%2b%2b%20di%20Linux%3a%20Membuat%20Program%20C%2b%2b%20Pertama%20https%3a%2f%2fwww.petanikode.com%2fcpp-linux%2f%20via%20@petanikode"
+        onclick="window.open('https://twitter.com/intent/tweet?source=https:\/\/www.petanikode.com\/cpp-linux\/%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Belajar Pemrograman C\x2b\x2b di Linux: Membuat Program C\x2b\x2b Pertama%20https:\/\/www.petanikode.com\/cpp-linux\/%20via%20@petanikode'); return false;"
         target="_blank" 
         title="Berbagi ke Twitter">
         <img src="/img/icon/entypo/entypo-social/twitter-with-circle.svg" width="32" height="32" alt="Twitter"/>
@@ -332,7 +568,7 @@ Bila kompilasi berhasil, akan tercipta berkas baru bernama <code>salam</code>. B
         <img src="/img/icon/entypo/entypo-social/google+-with-circle.svg" width="32" height="32" alt="Google+"/>
     </a>
     <a class="mr-2" 
-        href="mailto:?subject=Belajar%20Pemrograman%20C%2b%2b%20di%20linux&body=Belajar%20Pemrograman%20C%2b%2b%20di%20linux:%20https%3a%2f%2fwww.petanikode.com%2fcpp-linux%2f%3Futm_source%3Demail%26utm_medium%3Dshare" 
+        href="mailto:?subject=Belajar%20Pemrograman%20C%2b%2b%20di%20Linux%3a%20Membuat%20Program%20C%2b%2b%20Pertama&body=Belajar%20Pemrograman%20C%2b%2b%20di%20Linux%3a%20Membuat%20Program%20C%2b%2b%20Pertama:%20https%3a%2f%2fwww.petanikode.com%2fcpp-linux%2f%3Futm_source%3Demail%26utm_medium%3Dshare" 
         title="Kirim ke Email">
         <img src="/img/icon/entypo/entypo-social/mail-with-circle.svg" width="32" height="32" alt="Email"/>
     </a>

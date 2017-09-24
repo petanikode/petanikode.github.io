@@ -33,6 +33,11 @@ a:hover {text-decoration: none}
     max-width: 100%;
 }
 
+.post-content pre {
+    margin-bottom: 1rem;
+    background: #f5f2f0;
+}
+
 /* Table */
 table {
     border-collapse: collapse;

@@ -22,14 +22,18 @@
     </item>
     
     <item>
-      <title>Belajar Pemrograman C&#43;&#43; di linux</title>
+      <title>Belajar Pemrograman C&#43;&#43; di Linux: Membuat Program C&#43;&#43; Pertama</title>
       <link>https://www.petanikode.com/cpp-linux/</link>
       <pubDate>Sun, 31 Aug 2014 11:50:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cpp-linux/</guid>
-      <description>Bahasa pemrograman C++ merupakan bahasa pengembangan dari bahasa C. Kita membutuhkan alat-alat berikut untuk melakukan pemrograman C++ di linux:
- Teks Editor: Sebagai tempat menulis kode Kompilator g++ : Program yang menerjemahkan bahasa C++ menjadi bahasa mesin (executable).  Membuat program salam Program salam yang umum menggunakan Hello World. Salam tersebut terdengar kurang terlalu mainstream di dunia pemrograman.
-Oleh karena itu, Saya akan mengajak Anda menggunakan Assalamualaikum saja.</description>
+      <description>Ada banyak alat yang bisa kita gunakan untuk belajar pemrograman C++ di Linux.
+Bisa menggunakan Qt Creator, Codeblocks, Codelite, Geany, dan sebagainya.
+Namun, yang akan kita bahas di sini adalah menggunakan teks editor biasa dan melakukan kompilasi secara manual melalui terminal.
+Kenapa menggunakan cara manual?
+Pemrograman C++ menggunakan Qt Creator (selanjutnya kita sebut IDE) memang lebih mudah.
+Tulis kode, kemunian klik run, program pun langsung diekseskusi.
+Namun, untuk paham lebih dalam&amp;hellip; kita harus mencoba kompilasi program C++ secara manual.</description>
     </item>
     
   </channel>

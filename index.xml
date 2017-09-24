@@ -1525,15 +1525,17 @@ Pada kesempatan ini, kita akan membuat program Timer Pomodoro. Timer ini mulai m
     </item>
     
     <item>
-      <title>Trik Agar Jendela JFrame Tampil di Tengah Layar</title>
+      <title>Trik Agar Jendela JFrame Selalu Tampil di Tengah Layar</title>
       <link>https://www.petanikode.com/java-swing-jendela-di-tengah-layar/</link>
       <pubDate>Fri, 29 Jul 2016 23:03:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/java-swing-jendela-di-tengah-layar/</guid>
-      <description>Pada pemrograman GUI dengan Java Swing, kita sering membuat jendela dengan JFrame. Namun, selalu tampil di pojok kiri atas layar. Pojok kiri atas adalah titik (0,0) dalam koordinat layar (x,y). Pada kesempatan ini saya akan berbagi trik, agar setiap jendela yang dibuat dengan JFrame tampil di tengah-tengah layar.
-1. Komposisi PustakaAda dua pustaka yang diperlukan untuk membuat jendela JFrame tampil di tengah-tengah. Silahkan diimpor:
-import java.awt.Dimension;
-import java.awt.Toolkit;2. Kode Agar Tampil di TengahLetakan kode berikut di dalam konstruktor JFrame.</description>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  Saat kita membuat program GUI dengan Swing, jendelanya sering tampil pada pojok kiri atas atau pada titik (0,0).
+Bagaimana caranya agar jendela selalu tampil di tengah-tengah layar?
+Apakah kita harus mengatur manual posisi titiknya?
+Ya perlu, untuk lebih jelasnya mari kita bahas&amp;hellip;
+Class-class yang dibutuhkan Ada dua class yang kita butuhkan untuk membuat jendela JFrame tampil di tengah-tengah.
+ Dimension untuk membuat objek dimensi Toolkit untuk mengambil ukuran layar  Kedua class tersebut berada dalam package java.</description>
     </item>
     
     <item>
@@ -2878,14 +2880,18 @@ Langkah 1: Desain Form Kita akan menggunakan beberapa objek, diantaranya Label, 
     </item>
     
     <item>
-      <title>Belajar Pemrograman C&#43;&#43; di linux</title>
+      <title>Belajar Pemrograman C&#43;&#43; di Linux: Membuat Program C&#43;&#43; Pertama</title>
       <link>https://www.petanikode.com/cpp-linux/</link>
       <pubDate>Sun, 31 Aug 2014 11:50:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cpp-linux/</guid>
-      <description>Bahasa pemrograman C++ merupakan bahasa pengembangan dari bahasa C. Kita membutuhkan alat-alat berikut untuk melakukan pemrograman C++ di linux:
- Teks Editor: Sebagai tempat menulis kode Kompilator g++ : Program yang menerjemahkan bahasa C++ menjadi bahasa mesin (executable).  Membuat program salam Program salam yang umum menggunakan Hello World. Salam tersebut terdengar kurang terlalu mainstream di dunia pemrograman.
-Oleh karena itu, Saya akan mengajak Anda menggunakan Assalamualaikum saja.</description>
+      <description>Ada banyak alat yang bisa kita gunakan untuk belajar pemrograman C++ di Linux.
+Bisa menggunakan Qt Creator, Codeblocks, Codelite, Geany, dan sebagainya.
+Namun, yang akan kita bahas di sini adalah menggunakan teks editor biasa dan melakukan kompilasi secara manual melalui terminal.
+Kenapa menggunakan cara manual?
+Pemrograman C++ menggunakan Qt Creator (selanjutnya kita sebut IDE) memang lebih mudah.
+Tulis kode, kemunian klik run, program pun langsung diekseskusi.
+Namun, untuk paham lebih dalam&amp;hellip; kita harus mencoba kompilasi program C++ secara manual.</description>
     </item>
     
     <item>

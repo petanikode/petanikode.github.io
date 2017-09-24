@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pemrograman Gui Dengan Swing on Petani Kode — Programmer Pengguna Linux</title>
+    <link>https://www.petanikode.com/seri/pemrograman-gui-dengan-swing/</link>
+    <description>Recent content in Pemrograman Gui Dengan Swing on Petani Kode — Programmer Pengguna Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 29 Jul 2016 23:03:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/seri/pemrograman-gui-dengan-swing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Trik Agar Jendela JFrame Selalu Tampil di Tengah Layar</title>
+      <link>https://www.petanikode.com/java-swing-jendela-di-tengah-layar/</link>
+      <pubDate>Fri, 29 Jul 2016 23:03:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/java-swing-jendela-di-tengah-layar/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  Saat kita membuat program GUI dengan Swing, jendelanya sering tampil pada pojok kiri atas atau pada titik (0,0).
+Bagaimana caranya agar jendela selalu tampil di tengah-tengah layar?
+Apakah kita harus mengatur manual posisi titiknya?
+Ya perlu, untuk lebih jelasnya mari kita bahas&amp;hellip;
+Class-class yang dibutuhkan Ada dua class yang kita butuhkan untuk membuat jendela JFrame tampil di tengah-tengah.
+ Dimension untuk membuat objek dimensi Toolkit untuk mengambil ukuran layar  Kedua class tersebut berada dalam package java.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2857,12 +2857,16 @@ kerjakan_sesuatu;Bila terdapat lebih dari satu perintah dalam blok if, maka paka
     </item>
     
     <item>
-      <title>Belajar Pemrograman C&#43;&#43;: Variabel dan Tipe Data</title>
+      <title>Belajar Pemrograman C&#43;&#43;: Mengenal Variabel dan Tipe Data</title>
       <link>https://www.petanikode.com/cpp-variabel/</link>
       <pubDate>Fri, 05 Sep 2014 16:46:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/cpp-variabel/</guid>
-      <description>Apa itu Variabel dan Tipe Data?Variabel merupakan sebuah nama lokasi penyimpanan di memori. Variabel berperan sebagai wadah, tempat menyimpan data sementara. Data yang tersimpan di dalam variabel memiliki jenis yang beragam. Jenis-jenis data itu, disebut tipe data. Pada umumnya tipe data di permograman C++, dikelompokkan menjadi lima macam, tipe data teks, angka atau bilangan, boolean, pointer, dan void. Tipe data teks terdiri dari string dan char. Sementara tipe data angka terdiri dari int (integer), float, double, dsb.</description>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  Inti dari sebuah program komputer adalah menerima input, melakukan pemrosesan, dan menghasilkan output.
+Nilai input bisa kita dapatkan dari keyboard, file, kamera, mikrofon, dan sebagainya.
+Sementara output dapat kita tampilkan ke monitor, cetak ke dokumen, atau ke dalam sebuah file.
+Pada tahap pemrosesan, program membutuhkan bantuan variabel untuk menyimpan nilai sementara.
+Sama seperti waktu kita berpikir, kita membutuhkan beberapa ingatan untuk memproses informasi.</description>
     </item>
     
     <item>

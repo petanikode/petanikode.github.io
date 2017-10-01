@@ -226,19 +226,5 @@ Tidak seperti Github yang selalu meminta password setiap kali nge-push. Bitbucke
 1. Membuat KeyGen SSHKetik perintah ssh-keygen pada termnial. Kemudian inputkan id (identitas) SSH anda.</description>
     </item>
     
-    <item>
-      <title>Cara Cloning proyek di github</title>
-      <link>https://www.petanikode.com/git-clone/</link>
-      <pubDate>Wed, 11 Feb 2015 17:22:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/git-clone/</guid>
-      <description>Assalamualaikum wr. wb., di tulisan ini saya ingin berbagi cara kloning proyek di Github. Kloing proyek artinya membuat salinan berkas proyek yang ada di server Github ke komputer sendiri.
- Kloning proyek dapat dilakukan dengan perintah git clone [alamat proyek]. Alamat proyek dapat dilihat di halaman repository proyek yang akan dikloning.
- $ git clone https://github.com/b-informatika/kupi.git
-Cloning into &#39;kupi&#39;...
-remote: Counting objects: 71, done.
-remote: Compressing objects: 100% (57/57), done.</description>
-    </item>
-    
   </channel>
 </rss>

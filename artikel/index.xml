@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 13 Sep 2017 00:48:18 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 Sep 2017 23:16:52 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tutorial Git: Bekerja dengan Remote Repositori</title>
+      <link>https://www.petanikode.com/git-remote/</link>
+      <pubDate>Fri, 29 Sep 2017 23:16:52 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/git-remote/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  Pada proyek pengembangan software yang melibatkan banyak orang (tim), kita tidak hanya akan menyimpan sendiri repository proyeknya.
+Semua tim yang terlibat dalam pengkodean (coding) akan menyimpan repository lokal di komputernya masing-masing.
+Setelah itu, akan dilakukan penggabungan ke repository inti atau remote.
+Biasanya akan ada repository pusat atau untuk menyimpan source code yang sudah digabungkan (merge) dari beberapa orang.
+Di mana nyimpan repository remote-nya?</description>
+    </item>
     
     <item>
       <title>Cara Mengakses Webcam dari HTML dan Mengambil Gambar</title>

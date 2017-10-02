@@ -508,10 +508,10 @@ Ketika mereka membukanya, akan mendapatkan error 404.</description>
     
     <item>
       <title>Download Ebook Dasar Pemrograman Golang</title>
-      <link>https://www.petanikode.com/download-ebook-dasar-pemrograman-golang/</link>
+      <link>https://www.petanikode.com/ebook-pemrograman-golang/</link>
       <pubDate>Sun, 26 Mar 2017 22:20:22 +0800</pubDate>
       
-      <guid>https://www.petanikode.com/download-ebook-dasar-pemrograman-golang/</guid>
+      <guid>https://www.petanikode.com/ebook-pemrograman-golang/</guid>
       <description>Golang atau Go merupakan bahasa pemrograman open source yang dikembangkan di Google oleh Robert Griesemer, Rob Pike, dan Ken Thompson pada tahun 2007 dan mulai diperkenalkan di kalangan publik pada tahun 2009.
 Go saat ini memegang rekor menjadi bahasa pemrograman yang perkembangannya paling cepat dalam sejarah.
 Kurang dari tujuh tahun, mampu menjadi bahasa pemrograman kelas atas.
@@ -1426,9 +1426,8 @@ API Simsimi konsepnya sangat sederhana. Kita hanya melakukan request dari URL de
       <description>JSON adalah salah satu format standar pertukaran data antar aplikasi.
 Biasanya JSON banyak kita temukan ketika bermain dengan web service atau RESTful API.
 Seperti saat saya bereksperimen dengan API Simsimi, datanya dikirim dengan format JSON.
- #json #stickynotes #postitnotes #programming #programmer
-A post shared by Petani Kode (@petanikode) on Aug 28, 2016 at 2:32am PDT
-  JSON hampir bisa dibaca di sebagian besar bahasa pemrograman, seperti C, PHP, Javascript, C++, C#, Java, Ruby, Python, dll.</description>
+JSON hampir bisa dibaca di sebagian besar bahasa pemrograman, seperti C, PHP, Javascript, C++, C#, Java, Ruby, Python, dll.
+Cara Parsing File JSON di Python Penguraian JSON pada bahasa pemrograman Python, membutuhkan modul json dan urllib untuk mendown-load JSON dari web service.</description>
     </item>
     
     <item>
@@ -2008,6 +2007,19 @@ Silahkan simak caranya, sebagai berikut.
     </item>
     
     <item>
+      <title>Apa Fungsi String[] args pada Pemrograman Java?</title>
+      <link>https://www.petanikode.com/java-args/</link>
+      <pubDate>Sat, 19 Mar 2016 22:04:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/java-args/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  Saat awal-awal beralajar Java, kita sering menuliskan String[] args pada fungsi main().
+class Program { public static void main(String[] args){ //... } }  Tanpa String[] args program tidak akan bisa dieksekusi. Bahkan akan mendapatkan error seperti ini.
+Fungsi main() tidak akan dikenali sebagai fungsi main() karena tidak memiliki parameter String[] args.
+Apa sih kegunaan dari String[] args?
+Kenapa kita harus menuliskannya?</description>
+    </item>
+    
+    <item>
       <title>Tipe Data Datetime dan Timestamp di MySQL</title>
       <link>https://www.petanikode.com/mysql-datetime-timestamp/</link>
       <pubDate>Mon, 07 Mar 2016 17:12:00 +0000</pubDate>
@@ -2318,7 +2330,7 @@ Java sudah menyediakan fungsi pangkat yang dapat digunakan kapan saja.</descript
     </item>
     
     <item>
-      <title>Belajar Java-Swing: Cara Menggunakan JOptionPane</title>
+      <title>Pemrograman Java Swing: Cara Menggunakan JOptionPane</title>
       <link>https://www.petanikode.com/java-swing-joptionpane/</link>
       <pubDate>Sat, 17 Oct 2015 21:34:00 +0000</pubDate>
       
@@ -2330,7 +2342,7 @@ import javax.swing.JOptionPane;Terdapat empat fungsi atau metode yang sering dip
     </item>
     
     <item>
-      <title>Belajar Pemrograman Java: Inilah 6 Jenis Operator yang Harus Kamu Ketahui</title>
+      <title>Belajar Pemrograman Java: 6 Jenis Operator yang Harus Dipahami</title>
       <link>https://www.petanikode.com/java-operator/</link>
       <pubDate>Sat, 17 Oct 2015 20:12:00 +0000</pubDate>
       

@@ -227,6 +227,19 @@ Beberapa IDE tidak mendukung bila menggunakan Open JDK 7.</description>
     </item>
     
     <item>
+      <title>Apa Fungsi String[] args pada Pemrograman Java?</title>
+      <link>https://www.petanikode.com/java-args/</link>
+      <pubDate>Sat, 19 Mar 2016 22:04:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/java-args/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  Saat awal-awal beralajar Java, kita sering menuliskan String[] args pada fungsi main().
+class Program { public static void main(String[] args){ //... } }  Tanpa String[] args program tidak akan bisa dieksekusi. Bahkan akan mendapatkan error seperti ini.
+Fungsi main() tidak akan dikenali sebagai fungsi main() karena tidak memiliki parameter String[] args.
+Apa sih kegunaan dari String[] args?
+Kenapa kita harus menuliskannya?</description>
+    </item>
+    
+    <item>
       <title>Belajar Pemrograman Java: Memahami Dua Jenis Perulangan dalam Java</title>
       <link>https://www.petanikode.com/java-perulangan/</link>
       <pubDate>Sun, 03 Jan 2016 18:28:00 +0000</pubDate>
@@ -269,7 +282,7 @@ Java sudah menyediakan fungsi pangkat yang dapat digunakan kapan saja.</descript
     </item>
     
     <item>
-      <title>Belajar Java-Swing: Cara Menggunakan JOptionPane</title>
+      <title>Pemrograman Java Swing: Cara Menggunakan JOptionPane</title>
       <link>https://www.petanikode.com/java-swing-joptionpane/</link>
       <pubDate>Sat, 17 Oct 2015 21:34:00 +0000</pubDate>
       
@@ -281,7 +294,7 @@ import javax.swing.JOptionPane;Terdapat empat fungsi atau metode yang sering dip
     </item>
     
     <item>
-      <title>Belajar Pemrograman Java: Inilah 6 Jenis Operator yang Harus Kamu Ketahui</title>
+      <title>Belajar Pemrograman Java: 6 Jenis Operator yang Harus Dipahami</title>
       <link>https://www.petanikode.com/java-operator/</link>
       <pubDate>Sat, 17 Oct 2015 20:12:00 +0000</pubDate>
       

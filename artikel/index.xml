@@ -2278,10 +2278,13 @@ Java sudah menyediakan fungsi pangkat yang dapat digunakan kapan saja.</descript
       <pubDate>Sat, 17 Oct 2015 21:34:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/java-swing-joptionpane/</guid>
-      <description>Sebelumnya, kita telah berkenalan dengan operator. Sekarang kita akan coba mengenal JOptionPane dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.
-JOptionPaneJOptionPane merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. JOptionPane bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.
-Sebelum menggunakan JOptionPane, kita perlu mengimpornya ke dalam program:
-import javax.swing.JOptionPane;Terdapat empat fungsi atau metode yang sering dipakai:</description>
+      <description>Agar program yang kita mempu berinteraksi dengan pengguna, kita harus membuat sebuah dialog dengannya.
+Pada Java Swing, terdapat sebuah komponen bernama JOptionPane untuk membuat dialog yang interakif.
+Bagaimana cara menggunakan JOptionPane?
+Mari kita simak pembahsannya&amp;hellip;
+Mengenal JOptionPane JOptionPane merupakan sebuah kelas yang menyediakan jendela dialog.
+JOptionPane bisa kita gunakan untuk mengambil input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan lain-lain.
+Sebelum menggunakan JOptionPane, kita harus mengimpornya terlebih dahulu ke dalam program:</description>
     </item>
     
     <item>

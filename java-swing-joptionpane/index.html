@@ -8,14 +8,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
 <meta itemprop="name" content="Pemrograman Java Swing: Cara Menggunakan JOptionPane">
-<meta itemprop="description" content="Sebelumnya, kita telah berkenalan dengan operator. Sekarang kita akan coba mengenal JOptionPane dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.
-JOptionPaneJOptionPane merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. JOptionPane bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.
-Sebelum menggunakan JOptionPane, kita perlu mengimpornya ke dalam program:
-import javax.swing.JOptionPane;Terdapat empat fungsi atau metode yang sering dipakai:">
+<meta itemprop="description" content="Agar program yang kita mempu berinteraksi dengan pengguna, kita harus membuat sebuah dialog dengannya.
+Pada Java Swing, terdapat sebuah komponen bernama JOptionPane untuk membuat dialog yang interakif.
+Bagaimana cara menggunakan JOptionPane?
+Mari kita simak pembahsannya&hellip;
+Mengenal JOptionPane JOptionPane merupakan sebuah kelas yang menyediakan jendela dialog.
+JOptionPane bisa kita gunakan untuk mengambil input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan lain-lain.
+Sebelum menggunakan JOptionPane, kita harus mengimpornya terlebih dahulu ke dalam program:">
 
 
 <meta itemprop="dateModified" content="2015-10-17T21:34:00&#43;00:00" />
-<meta itemprop="wordCount" content="245">
+<meta itemprop="wordCount" content="353">
 
 
 
@@ -23,10 +26,13 @@ import javax.swing.JOptionPane;Terdapat empat fungsi atau metode yang sering dip
 
 
 <meta property="og:title" content="Pemrograman Java Swing: Cara Menggunakan JOptionPane" />
-<meta property="og:description" content="Sebelumnya, kita telah berkenalan dengan operator. Sekarang kita akan coba mengenal JOptionPane dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.
-JOptionPaneJOptionPane merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. JOptionPane bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.
-Sebelum menggunakan JOptionPane, kita perlu mengimpornya ke dalam program:
-import javax.swing.JOptionPane;Terdapat empat fungsi atau metode yang sering dipakai:" />
+<meta property="og:description" content="Agar program yang kita mempu berinteraksi dengan pengguna, kita harus membuat sebuah dialog dengannya.
+Pada Java Swing, terdapat sebuah komponen bernama JOptionPane untuk membuat dialog yang interakif.
+Bagaimana cara menggunakan JOptionPane?
+Mari kita simak pembahsannya&hellip;
+Mengenal JOptionPane JOptionPane merupakan sebuah kelas yang menyediakan jendela dialog.
+JOptionPane bisa kita gunakan untuk mengambil input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan lain-lain.
+Sebelum menggunakan JOptionPane, kita harus mengimpornya terlebih dahulu ke dalam program:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.petanikode.com/java-swing-joptionpane/" />
 
@@ -98,10 +104,13 @@ import javax.swing.JOptionPane;Terdapat empat fungsi atau metode yang sering dip
 <meta name="telegram:channel" content="@petanikode">
 
 <meta name="keywords" content="Pemrograman Java Swing: Cara Menggunakan JOptionPane, "/>
-<meta name="description" content="Sebelumnya, kita telah berkenalan dengan operator. Sekarang kita akan coba mengenal JOptionPane dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.
-JOptionPaneJOptionPane merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. JOptionPane bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.
-Sebelum menggunakan JOptionPane, kita perlu mengimpornya ke dalam program:
-import javax.swing.JOptionPane;Terdapat empat fungsi atau metode yang sering dipakai:" />
+<meta name="description" content="Agar program yang kita mempu berinteraksi dengan pengguna, kita harus membuat sebuah dialog dengannya.
+Pada Java Swing, terdapat sebuah komponen bernama JOptionPane untuk membuat dialog yang interakif.
+Bagaimana cara menggunakan JOptionPane?
+Mari kita simak pembahsannya&hellip;
+Mengenal JOptionPane JOptionPane merupakan sebuah kelas yang menyediakan jendela dialog.
+JOptionPane bisa kita gunakan untuk mengambil input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan lain-lain.
+Sebelum menggunakan JOptionPane, kita harus mengimpornya terlebih dahulu ke dalam program:" />
 
 <meta content='ID-id' http-equiv='content-language' />
 <meta content='index,follow' name='robots' />
@@ -234,7 +243,42 @@ ga('send', 'pageview');
 
                             </div>
                             <div class="post-content">
-                                <p><a href="http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png" /></a><br />Sebelumnya, kita telah <a href="http://petanikode.blogspot.com/2015/10/pemrograman-java-di-lab-6-mengenal.html" target="_blank">berkenalan dengan operator</a>. Sekarang kita akan coba mengenal <i>JOptionPane</i> dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.<br /><h2>JOptionPane</h2><i>JOptionPane</i> merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. <i>JOptionPane</i> bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.<br /><br />Sebelum menggunakan <i>JOptionPane</i>, kita perlu mengimpornya ke dalam program:<br /><pre>import javax.swing.JOptionPane;</pre>Terdapat empat fungsi atau metode yang sering dipakai:<br /><ol><li><code>showConfirmDialog()</code> : untuk menampilkan dialog konfirmasi</li><li><code>showInputDialog()</code> : untuk menampilkan dialog input</li><li><code>showMessageDialog()</code> : untuk menampilkan pesan/informasi</li><li><code>showOptionDialog()</code> : untuk menampilkan dialog pilihan</li></ol><h2>Operator Kondisi</h2>Operator kondisi merupakan sebuah operator khusus untuk memeriksa kondisi tertentu. Bisa dibilang, oprator ini termasuk ke dalam operator logika atau operator untuk membuat implikasi. Operator ini disimbolkan dengan tanda tanya (?). Struktur operator kondisi:<br /><pre>(kondisi) ? benar : salah;</pre>Kalau kondisi bernilai <code>true</code>, maka kode <code>benar</code> akan dikerjakan. Tapi, kalau tidak atau bernilai <code>false</code>, maka kode <code>salah</code> akan dikerjkana.<br /><br />Sebagai contoh, kita akan membuat sebuah program baru dengan bahan <i>JOptionPane</i> dan operator kondisi. Buatlah kelas baru bernama <i>OperatorKondisi</i> di paket <i>pertemuan3</i>. Kemudian ikuti kode berikut ini:<br /><a href="http://2.bp.blogspot.com/-pwf8JhORFbs/ViJKacf93QI/AAAAAAAACC0/Sbw711AF5j4/s1600/kode%2Bprogram%2Boperator%2Bkondisi%2Bdan%2BJOptionPane.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-pwf8JhORFbs/ViJKacf93QI/AAAAAAAACC0/Sbw711AF5j4/s1600/kode%2Bprogram%2Boperator%2Bkondisi%2Bdan%2BJOptionPane.png" /></a><br />Program di atas, akan menghasilkan output seperti berikut ini:<br />Dialog input,<br /><a href="http://3.bp.blogspot.com/-_0gjBZCAd0M/ViJL3GgzPkI/AAAAAAAACDQ/z3dkpg_k4dA/s1600/dialog%2Binput%2BJOptionPane.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-_0gjBZCAd0M/ViJL3GgzPkI/AAAAAAAACDQ/z3dkpg_k4dA/s1600/dialog%2Binput%2BJOptionPane.png" /></a><br />dialog output,<br /><a href="http://2.bp.blogspot.com/-azlCzuPesBs/ViJLdsIkSPI/AAAAAAAACDI/6Fi73g6hFXQ/s1600/outpu%2Batau%2Bmessage%2Bdialog%2BJOptionPane.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-azlCzuPesBs/ViJLdsIkSPI/AAAAAAAACDI/6Fi73g6hFXQ/s1600/outpu%2Batau%2Bmessage%2Bdialog%2BJOptionPane.png" /></a><br /><br /><b>Catatan</b>: Dialog input <i>JOptionPane</i> sama seperti <a href="http://petanikode.blogspot.com/2015/10/pemrograman-java-di-lab-4-berkenalan.html" target="_blank">Scanner</a>. Perbedaanya, Scanner dipkai untuk antarmuka teks atau <i>console</i>. Sedangkan Dialog input <i>JOptionPane</i> dipakai untuk antarmuka grafis (GUI). Pengguna komputer lebih senang dengan antarmuka grafis, karena mudah digunakan. Sedangkan antarmuka teks, sangat jarang dipakai pada pengguna komputer umum.<br /><br />Referensi:<br /><ul><li><a href="https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html">https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html</a></li><li><a href="http://www.herongyang.com/Swing/JOptionPane-Display-Option-Dialog-Box.html">http://www.herongyang.com/Swing/JOptionPane-Display-Option-Dialog-Box.html</a></li><li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html" target="_blank"><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html</a> </a></li></ul><br />&mdash;<br />Sampai di sini, ada yang mau ditanyakan? siahkan kirim melalui komentar!</p>
+                                
+
+<p>Agar program yang kita mempu berinteraksi dengan pengguna,
+kita harus membuat sebuah dialog dengannya.</p>
+
+<p>Pada Java Swing, terdapat sebuah komponen bernama <code>JOptionPane</code>
+untuk membuat dialog yang interakif.</p>
+
+<p>Bagaimana cara menggunakan <code>JOptionPane</code>?</p>
+
+<p>Mari kita simak pembahsannya&hellip;</p>
+
+<h2 id="mengenal-joptionpane">Mengenal JOptionPane</h2>
+
+<p>JOptionPane merupakan sebuah kelas yang menyediakan jendela dialog.</p>
+
+<p>JOptionPane bisa kita gunakan untuk mengambil input,
+menampilkan informasi, menampilkan pesan error,
+menampilkan dialog konfirmasi, dan lain-lain.</p>
+
+<p>Sebelum menggunakan <code>JOptionPane</code>, kita harus mengimpornya terlebih dahulu
+ke dalam program:</p>
+
+<pre><code class="language-java">import javax.swing.JOptionPane;
+</code></pre>
+
+<p>Terdapat empat fungsi atau metode yang sering digunakan pada <code>JOptionPane</code>:</p>
+
+<ol>
+<li><code>showConfirmDialog()</code> : untuk menampilkan dialog konfirmasi;</li>
+<li><code>showInputDialog()</code> : untuk menampilkan dialog input;</li>
+<li><code>showMessageDialog()</code> : untuk menampilkan pesan/informasi;</li>
+<li><code>showOptionDialog()</code> : untuk menampilkan dialog pilihan.</li>
+</ol>
+
+<p><a href="http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-FXkb84tWS_Q/VhUetgpL57I/AAAAAAAAB6I/fvNLQwpVTxI/s1600/Lab%2BJava%2BPetani%2BKode.png" /></a><br />Sebelumnya, kita telah <a href="http://petanikode.blogspot.com/2015/10/pemrograman-java-di-lab-6-mengenal.html" target="_blank">berkenalan dengan operator</a>. Sekarang kita akan coba mengenal <i>JOptionPane</i> dan operator kondisi. Pembahasan sengaja dibuat terpisah, agar pembahasan operator tidak terlalu panjang.<br /><h2>JOptionPane</h2><i>JOptionPane</i> merupakan sebuah kelas yang menyediakan jendela dialog sebagai antarmuka. <i>JOptionPane</i> bisa digunakan untuk mendapatkan input, menampilkan informasi, menampilkan pesan error, menampilkan dialog konfirmasi, dan sebagainya.<br /><br />Sebelum menggunakan <i>JOptionPane</i>, kita perlu mengimpornya ke dalam program:<br /><pre>import javax.swing.JOptionPane;</pre>Terdapat empat fungsi atau metode yang sering dipakai:<br /><ol><li><code>showConfirmDialog()</code> : untuk menampilkan dialog konfirmasi</li><li><code>showInputDialog()</code> : untuk menampilkan dialog input</li><li><code>showMessageDialog()</code> : untuk menampilkan pesan/informasi</li><li><code>showOptionDialog()</code> : untuk menampilkan dialog pilihan</li></ol><h2>Operator Kondisi</h2>Operator kondisi merupakan sebuah operator khusus untuk memeriksa kondisi tertentu. Bisa dibilang, oprator ini termasuk ke dalam operator logika atau operator untuk membuat implikasi. Operator ini disimbolkan dengan tanda tanya (?). Struktur operator kondisi:<br /><pre>(kondisi) ? benar : salah;</pre>Kalau kondisi bernilai <code>true</code>, maka kode <code>benar</code> akan dikerjakan. Tapi, kalau tidak atau bernilai <code>false</code>, maka kode <code>salah</code> akan dikerjkana.<br /><br />Sebagai contoh, kita akan membuat sebuah program baru dengan bahan <i>JOptionPane</i> dan operator kondisi. Buatlah kelas baru bernama <i>OperatorKondisi</i> di paket <i>pertemuan3</i>. Kemudian ikuti kode berikut ini:<br /><a href="http://2.bp.blogspot.com/-pwf8JhORFbs/ViJKacf93QI/AAAAAAAACC0/Sbw711AF5j4/s1600/kode%2Bprogram%2Boperator%2Bkondisi%2Bdan%2BJOptionPane.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-pwf8JhORFbs/ViJKacf93QI/AAAAAAAACC0/Sbw711AF5j4/s1600/kode%2Bprogram%2Boperator%2Bkondisi%2Bdan%2BJOptionPane.png" /></a><br />Program di atas, akan menghasilkan output seperti berikut ini:<br />Dialog input,<br /><a href="http://3.bp.blogspot.com/-_0gjBZCAd0M/ViJL3GgzPkI/AAAAAAAACDQ/z3dkpg_k4dA/s1600/dialog%2Binput%2BJOptionPane.png" imageanchor="1"><img border="0" src="http://3.bp.blogspot.com/-_0gjBZCAd0M/ViJL3GgzPkI/AAAAAAAACDQ/z3dkpg_k4dA/s1600/dialog%2Binput%2BJOptionPane.png" /></a><br />dialog output,<br /><a href="http://2.bp.blogspot.com/-azlCzuPesBs/ViJLdsIkSPI/AAAAAAAACDI/6Fi73g6hFXQ/s1600/outpu%2Batau%2Bmessage%2Bdialog%2BJOptionPane.png" imageanchor="1"><img border="0" src="http://2.bp.blogspot.com/-azlCzuPesBs/ViJLdsIkSPI/AAAAAAAACDI/6Fi73g6hFXQ/s1600/outpu%2Batau%2Bmessage%2Bdialog%2BJOptionPane.png" /></a><br /><br /><b>Catatan</b>: Dialog input <i>JOptionPane</i> sama seperti <a href="http://petanikode.blogspot.com/2015/10/pemrograman-java-di-lab-4-berkenalan.html" target="_blank">Scanner</a>. Perbedaanya, Scanner dipkai untuk antarmuka teks atau <i>console</i>. Sedangkan Dialog input <i>JOptionPane</i> dipakai untuk antarmuka grafis (GUI). Pengguna komputer lebih senang dengan antarmuka grafis, karena mudah digunakan. Sedangkan antarmuka teks, sangat jarang dipakai pada pengguna komputer umum.<br /><br />Referensi:<br /><ul><li><a href="https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html">https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html</a></li><li><a href="http://www.herongyang.com/Swing/JOptionPane-Display-Option-Dialog-Box.html">http://www.herongyang.com/Swing/JOptionPane-Display-Option-Dialog-Box.html</a></li><li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html" target="_blank"><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html</a> </a></li></ul><br />&mdash;<br />Sampai di sini, ada yang mau ditanyakan? siahkan kirim melalui komentar!</p>
 
 
                                 <div class="post-footer mt-5 py-4">

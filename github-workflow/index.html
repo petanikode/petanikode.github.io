@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Github Workflow: Cara Berkontribusi di Proyek Open Source</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<meta itemprop="name" content="Github Workflow: Cara Berkontribusi di Proyek Open Source">
+<meta itemprop="description" content="Memahami Github Workflow (alur kerja Github) agar bisa berkolaborasi dan berkontribusi di Proyek Open Source">
+
+
+<meta itemprop="dateModified" content="2017-10-01T14:53:15&#43;08:00" />
+<meta itemprop="wordCount" content="680">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta property="og:title" content="Github Workflow: Cara Berkontribusi di Proyek Open Source" />
+<meta property="og:description" content="Memahami Github Workflow (alur kerja Github) agar bisa berkolaborasi dan berkontribusi di Proyek Open Source" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.petanikode.com/github-workflow/" />
+
+
+
+<meta property="article:published_time" content="2017-10-01T14:53:15&#43;08:00"/>
+<meta property="article:modified_time" content="2017-10-01T14:53:15&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content='summary_large_image' name='twitter:card' />
+<meta content='@petanikode' name='twitter:site' />
+<meta content='@ardiantapargo' name='twitter:creator' />
+
+
+
+<meta property='og:image' content='https://www.petanikode.com/img/github/workflow/github-workflow.png' />
+<meta property="og:updated_time" content="2017-10-01 14:53:15 &#43;0800 WITA" />
+<meta content='id_ID' property='og:locale' />
+<meta content='ms_MY' property='og:locale:alternate' />
+<meta content='en_US' property='og:locale:alternate' />
+
+<meta content='152759108115365' property='fb:app_id' />
+<meta content='petanikode' property='fb:pages' />
+<meta content='143461015837500' property='fb:pages' />
+<meta content='ardianta.pargo' property='fb:profile_id' />
+
+<meta property="article:author" content="https://www.facebook.com/petanikode" />
+<meta property="article:publisher" content="https://www.facebook.com/petanikode" />
+
+
+<link rel="icon" href="/img/favicon.png" />
+<link rel="icon" href="/img/logo.svg" />
+<link rel='icon' href="/img/logo.svg" sizes='192x192' type="image/svg+xml" />
+<link rel='icon' href="/img/logo.svg" sizes='32x32' type="image/svg+xml" />
+<link rel='icon' href="/img/logo.svg" sizes='96x96' type="image/svg+xml" />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='57x57' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='60x60' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='72x72' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='76x76' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='114x114' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='120x120' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='144x144' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='152x152' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='180x180' />
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+<link rel="stylesheet" href="/css/style.css" />
+
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+
+
+
+
+<meta name="telegram:channel" content="@petanikode">
+
+<meta name="keywords" content="Github Workflow: Cara Berkontribusi di Proyek Open Source, Github Workflow, Bahasa Pemrograman, Belajar Pemrograman, Tutorial Pemrograman, belajar bahasa pemrograman"/>
+<meta name="description" content="Memahami Github Workflow (alur kerja Github) agar bisa berkolaborasi dan berkontribusi di Proyek Open Source" />
+
+<meta content='ID-id' http-equiv='content-language' />
+<meta content='index,follow' name='robots' />
+<meta content='Copyright (c) 2017, Petani Kode; all rights reserved.' name='copyright' />
+<meta content='Indonesian' name='language' />
+<meta content='6F355AD626E325F1305BDE3A0BA81A7A' name='msvalidate.01' />
+<meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification' />
+
+<meta content='index,follow' name='googlebot' />
+<meta content='follow, all' name='Googlebot-Image' />
+<meta content='follow, all' name='Scooter' />
+<meta content='follow, all' name='msnbot' />
+<meta content='follow, all' name='alexabot' />
+<meta content='follow, all' name='Slurp' />
+<meta content='follow, all' name='ZyBorg' />
+<meta content='follow, all' name='Scooter' />
+<meta content='true' name='MSSmartTagsPreventParsing' />
+<meta content='ALL' name='SPIDERS' />
+<meta content='ALL' name='WEBCRAWLERS' />
+<meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot'
+    name='search engines' />
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Petani Kode — Programmer Pengguna Linux",
+        "url": "https://www.petanikode.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.petanikode.com/topik/{search_term_string}",
+            "query-input": "required name=search_term_string"
+         }
+    }
+</script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80537197-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
+    <div class="container">
+
+        <a class="navbar-brand" href="https://www.petanikode.com/"><img src="/img/logo.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
+            alt="Logo"> Petani Kode</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/php">PHP <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/java">Java <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/python">Python</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/javascript">Javascript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/git">Git</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.co.id" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-6279325630224392:9670052267" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sa" value="search" />
+                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Kata Kunci" aria-label="Search">
+                <button class="btn btn-info my-2 my-sm-0" type="submit">Cari</button>
+            </form>
+        </div>
+    </div>
+</nav> <header>
+    <div class="jumbotron jumbotron-fluid bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Programmer Pengguna Linux</h1>
+                    <p class="lead">Belajar Pemrograman Apapun Menggunakan Linux</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="container mb-5">
+        <div class="row">
+
+            <div class="col-sm-12 col-lg-8 mb-5 p-0">
+                <article class="card mb-5">
+                    <div class="">
+                        <div class="card-body p-md-5">
+
+                            <div class="post-header mb-5">
+
+                                <div class="mb-3">
+                                    <img src="/img/author-photo.jpg" class="rounded-circle mr-1" width="32" height="32" alt="author" />
+                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Muhar Dian</a>                                    <small class="align-middle text-muted">· <time>01 Oct 2017</time></small>
+                                </div>
+
+                                <h2 class="card-title mb-3">Github Workflow: Cara Berkontribusi di Proyek Open Source</h2>
+
+                                <div>
+                                    
+                                    <span class="badge badge-success">
+                                             #<a class="text-white" href="/topik/git">Git</a>
+                                        </span> 
+                                    <span class="badge badge-success">
+                                             #<a class="text-white" href="/topik/github">Github</a>
+                                        </span> 
+                                </div>
+
+                            </div>
+                            <div class="post-content">
+                                
+
+<p><img src="/img/github/workflow/github-workflow.png" alt="Github Workflow untuk berkontribusi di Poryek Open Source" /></p>
+
+<!-- Agreement -->
+
+<p>Github saat ini sudah menjadi rumah bagi proyek-proyek open source.</p>
+
+<p>Jutaan programmer dari seluruh dunia menaruh kodenya di sana.</p>
+
+<p>Bahkan proyek open source seperti <a href="https://github.com/torvalds/linux">Linux</a>, <a href="https://github.com/linuxmint/Cinnamon">Cinnamon</a>, <a href="https://github.com/laravel/laravel">Laravel</a>,
+<a href="https://github.com/BlankOn">BlankOn</a>, dll. menggunakan Github.</p>
+
+<p>Bagaimana proyek-proyek itu digarap bersama?</p>
+
+<p>Itulah yang akan kita pelajari pada artikel ini.</p>
+
+<!-- Promise -->
+
+<p>Kita akan belajar tentang Git dan Github <em>workflow</em> atau alur kerja Github
+untuk berkontribusi pada proyek open source.</p>
+
+<p>Kita akan langsung melakukan kontribusi pada proyek &ldquo;dummy&rdquo;
+yang sudah saya siapkan.</p>
+
+<!-- Pertama kita akan belajar berkontribusi pada 
+proyek "dummy" yang sudah saya buat.
+
+Lalu saya akan menunjukan studi kasus pada proyek yang lain. -->
+
+<!-- Review -->
+
+<p>Sebelumnya siapkan dulu alat-alat berikut:</p>
+
+<ol>
+<li><a href="https://github.com">Akun Github</a>;</li>
+<li><a href="/topik/git/">Git</a>;</li>
+<li><a href="/topik/text-editor/">Teks Editor</a>.</li>
+</ol>
+
+
+<div class="border my-5">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-6279325630224392"
+     data-ad-slot="7009414453">
+</ins>
+</div>
+
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<!-- Isi -->
+
+<h2 id="langkah-langkah-berkontribusi-pada-proyek-open-source-di-github">Langkah-langkah Berkontribusi pada Proyek Open Source di Github</h2>
+
+<p>Ada beberapa langkah yang harus dilakukan untuk berkontribusi di Proyek
+open source:</p>
+
+<h3 id="1-baca-aturan-berkontribusi">1. Baca Aturan Berkontribusi</h3>
+
+<p>Jika kamu tertarik berkontribusi pada sebuah proyek di Github,
+pastikan membaca aturan kontribusi.</p>
+
+<p>Pada aturan kontribusi, biasanya akan ada larangan dan
+tata cara berkontribusi yang harus dipatuhi bersama.</p>
+
+<p>Aturan berkontribusi biasanya ditulis pada
+file <code>CONTRIBUTING.md</code> dan <code>README.md</code>.</p>
+
+<p>Contoh aturan berkontribusi pada <a href="https://github.com/gohugoio/hugo">proyek Hugo</a>:</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/contributing.png" 
+    src="/img/placeholder.svg"
+    alt="Contoh Aturan Kontribusi"
+ />
+
+<p>Apa yang akan terjadi bila saya tidak mengikuti aturan
+berkontribusi?</p>
+
+<p>Bisa jadi kontribusimu akan ditolak oleh admin dari proyek tersebut.</p>
+
+<p>Karena itu, bacalah aturan berkontribusi dengan teliti dan seksama.</p>
+
+<h3 id="2-fork-clone-repository">2. Fork &amp; Clone Repository</h3>
+
+<p>Setelah kita selesai membaca aturan berkontribusi,
+langkah selanjutnya adalah melakukan fork repository ke akun kita.</p>
+
+<p>Frok bisa kita artikan sebagai menyalin repository dari akun
+orang lain atau organisasi ke akun kita sendiri.</p>
+
+<p>Nah untuk memprektekan hal ini, saya sudah menyapkan proyek
+bernama <a href="https://github.com/petanikode/belajar-git">belajar-git</a>.</p>
+
+<p>Silahkan buka proyek tersebut, lalu klik tombol <strong><em>Fork</em></strong>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/fork.png" 
+    src="/img/placeholder.svg"
+    alt="Fork Repository"
+ />
+
+<p>Tunggu beberapa saat, repository sedang di-fork.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/forking.png" 
+    src="/img/placeholder.svg"
+    alt="Forking repository"
+ />
+
+<p>Setelah itu, kita akan punya repository baru bernama <code>belajar-git</code>
+di akun kita.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/hasil-fork.png" 
+    src="/img/placeholder.svg"
+    alt="Hasil Fork"
+ />
+
+<p>Sekarang repository <code>belajar-git</code> telah menjadi milik kita dan
+bebas melakukan melakukan apa saja terhadapnya.</p>
+
+<p>Selanjutnya silahkan <em>clone</em> (download) repository tersebut ke komputer
+lokal.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/clone-github.png" 
+    src="/img/placeholder.svg"
+    alt="URL Clone repository"
+ />
+
+<p>HTTPS:</p>
+
+<pre><code class="language-bash">git clone https://github.com/ardianta/belajar-git.git
+</code></pre>
+
+<p>SSH:</p>
+
+<pre><code class="language-bash">git clone git@github.com:ardianta/belajar-git.git
+</code></pre>
+
+<p>Saya biasanya <a href="/github-ssh">menggunakan SSH</a>, biar tidak memasukkan password saat
+melakukan <em>push</em>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/git-clone.png" 
+    src="/img/placeholder.svg"
+    alt="Clone repository ke Lokal"
+ />
+
+<h3 id="3-lakukan-modifikasi">3. Lakukan Modifikasi</h3>
+
+<p>Setelah kita melakukan <em>clone</em> ke komputer lokal, selanjutnya silahkan
+buka dengan teks editor dan lakukan modifikasi.</p>
+
+<p>Sebagai contoh, saya membukanya dengan <a href="/text-editor-vscode">VS Code</a>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/vscode-belajar-git.png" 
+    src="/img/placeholder.svg"
+    alt="Buka repository dengan teks editor VS Code"
+ />
+
+<p>Lakukanlah beberapa perubahan dan simpan perubahan yang kamu lakukan
+dengan Git.</p>
+
+<p>Lakulan <em>commit</em> terhadap apa yang kamu rubah.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/commit-perubahan.png" 
+    src="/img/placeholder.svg"
+    alt="Commit Perubahan"
+ />
+
+<p>Perlu diperhatikan juga:</p>
+
+<ul>
+<li>Gunakan pesan <em>commit</em> yang informatif dan mewakili apa yang sudah kamu ubah.</li>
+<li>Hindari menggunakan <code>git add .</code> untuk melakukan <em>commit</em> ke semua file.</li>
+</ul>
+
+<h3 id="4-push-kontribusimu">4. Push Kontribusimu</h3>
+
+<p>Setelah kita selesai melakukan perubahan dan <em>commit</em>, langkah berikutnya
+adalah melakukan <em>push</em>.</p>
+
+<p>Push-nya ke mana?</p>
+
+<p>Ya ke repository hasil fork tadi.</p>
+
+<p>Repository yang kita <em>clone</em> dari Github, akan
+otomatis membuat remote bernama <code>origin</code>.</p>
+
+<p>Untuk melihatnya, gunakan perintah <code>git remote -v</code>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/git-remote.png" 
+    src="/img/placeholder.svg"
+    alt="Alamat Remote"
+ />
+
+<p>Alamat tujuan <em>push</em> dan <em>fetch</em> mengarah ke alamat repository di akun kita.</p>
+
+<p>Silahkan melakukan <em>push</em> dengan perintah berikut.</p>
+
+<pre><code class="language-bash">git push origin master
+</code></pre>
+
+<p>Tunggulah beberapa saat&hellip;</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/git-push.png" 
+    src="/img/placeholder.svg"
+    alt="Push Perubahan"
+ />
+
+<p>Setelah selesai, coba lihat repository <code>belajar-git</code> di akun Github-mu.</p>
+
+<p>Apakah berhasil di-push atau tidak?</p>
+
+<p>Kalau berhasil, silahkan lanjutkan ke langkah berikutnya.</p>
+
+<h3 id="5-membuat-pull-request">5. Membuat Pull Request</h3>
+
+<p><em>Pull Request</em> adalah istilah yang bisa kita artikan sebagai
+permintaan untuk menggabungkan kode.</p>
+
+<p>Kita sudah membuat perubahan di repository hasil fork,
+lalu ingin menggabungkan dengan repository sumber.</p>
+
+<p>Maka kita harus membuat <em>Pull Request</em>.</p>
+
+<p>Silahkan klik tombol <strong><em>New Pull Request</em></strong> pada repository <code>belajar-git</code> hasil fork.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/new-pull-req.png" 
+    src="/img/placeholder.svg"
+    alt="Membuat Pull Request baru"
+ />
+
+<p>Setelah itu, Github akan melakukan komparasi.</p>
+
+<p>Apakah ada kode yang bentrok atau tidak?</p>
+
+<p>Kalau tidak ada yang bentrok biasanya akan muncul tulisan hijau <em>&ldquo;Able to merge&rdquo;</em>.</p>
+
+<p>Selanjutnya silahkan klik tombol <strong><em>Create Pull Request</em></strong>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/create-pull.png" 
+    src="/img/placeholder.svg"
+    alt="Membuat Pull Request baru"
+ />
+
+<p>Setelah itu, silahkan isi judul <em>Pull Request</em> dan pesan yang ingin disampaikan
+ke komunitas.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/diskusi-pull.png" 
+    src="/img/placeholder.svg"
+    alt="Pesan Pull Request baru"
+ />
+
+<p>Setelah itu admin atau owner akan melakukan review terhadap kontribusimu.</p>
+
+<p>Biasanya akan terjadi diskusi untuk membahas <em>pull request</em> yang
+telah kita buat.</p>
+
+<p>Apakah akan ditolak atau diterima?</p>
+
+<p>Kalau diterima, biasanya akan ada tulisan <em>&ldquo;Marged&rdquo;</em> berwarna ungu.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/github/workflow/marged.png" 
+    src="/img/placeholder.svg"
+    alt="Pull Request diterima"
+ />
+
+<p>Selesai.</p>
+
+<p>Jika ingin berkontribusi lagi, pastikan repository lokal tetap terupdate
+dengan repository sumber.</p>
+
+<p>Update bisa dilakukan dengan perintah <code>git pull</code> atau <code>git fetch</code>.</p>
+
+<p>Pelajari caranya di sini: <a href="/git-remote/">Bekerja dengan Remote Repository</a>.</p>
+
+
+<div class="border my-5">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-6279325630224392"
+     data-ad-slot="7009414453">
+</ins>
+</div>
+
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<!-- ## Studi Kasus: Kontribusi di Proyek 'Free Programming Book' -->
+
+<!-- Bagaimana jika ingin berkontribasi lagi di repository yang sama? -->
+
+<!-- Penutup -->
+
+<h2 id="akhir-kata">Akhir Kata&hellip;</h2>
+
+<p>Itulah langkah-langkah yang harus dilakukan untuk berkontribusi
+pada proyek open source di Github.</p>
+
+<p>Sekecil apapun kontribusimu akan tetap dihargai oleh pemilik
+repo.</p>
+
+<p>Namun, jangan kecewa apabila ditolak.</p>
+
+<p>Mungkin saja kamu melanggar aturan atau perubahan yang
+kamu buat bentrok dan menciptakan banyak bugs.</p>
+
+<p>Tetap semangat, dan&hellip;</p>
+
+<p>Selamat berkontribusi di dunia open source.</p>
+
+
+                                <div class="post-footer mt-5 py-4">
+                                    <div class="mb-4 py-3 border border-left-0 border-right-0">
+    <h6>Berbagi manfaat:</h6>
+    <a class="mr-2" 
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fgithub-workflow%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Github%20Workflow%3a%20Cara%20Berkontribusi%20di%20Proyek%20Open%20Source" 
+        title="Bagikan ke Facebook" 
+        target="_blank"
+        onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=' + encodeURIComponent(document.URL));
+        return false;">
+        <img src="/img/icon/entypo/entypo-social/facebook-with-circle.svg" width="32" height="32" alt="Facebook"/>
+    </a>
+    <a class="mr-2" 
+        href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fgithub-workflow%2f%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Github%20Workflow%3a%20Cara%20Berkontribusi%20di%20Proyek%20Open%20Source%20https%3a%2f%2fwww.petanikode.com%2fgithub-workflow%2f%20via%20@petanikode"
+        onclick="window.open('https://twitter.com/intent/tweet?source=https:\/\/www.petanikode.com\/github-workflow\/%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Github Workflow: Cara Berkontribusi di Proyek Open Source%20https:\/\/www.petanikode.com\/github-workflow\/%20via%20@petanikode'); return false;"
+        target="_blank" 
+        title="Berbagi ke Twitter">
+        <img src="/img/icon/entypo/entypo-social/twitter-with-circle.svg" width="32" height="32" alt="Twitter"/>
+    </a>
+    <a class="mr-2" 
+        href="https://t.me/share/url?url=https%3a%2f%2fwww.petanikode.com%2fgithub-workflow%2f%3Futm_source%3Dtelegram.org%26utm_medium%3Dshare"
+        onclick="window.open('https://t.me/share/url?url=https:\/\/www.petanikode.com\/github-workflow\/%3Futm_source%3Dtelegram.org%26utm_medium%3Dshare');return false;"
+        target="_blank" 
+        title="Bagikan ke Telegram">
+        <img src="/img/icon/entypo/entypo-social/telegram-with-circle.svg" width="32" height="32" alt="Telegram"/>
+    </a>
+    <a class="mr-2" 
+        href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fgithub-workflow%2f%3Futm_source%3Dplus.google.com%26utm_medium%3Dshare" 
+        target="_blank" 
+        title="Bagikan ke Google+" 
+        onclick="window.open('https://plus.google.com/share?url='+ encodeURIComponent(document.URL)); return false;">
+        <img src="/img/icon/entypo/entypo-social/google+-with-circle.svg" width="32" height="32" alt="Google+"/>
+    </a>
+    <a class="mr-2" 
+        href="mailto:?subject=Github%20Workflow%3a%20Cara%20Berkontribusi%20di%20Proyek%20Open%20Source&body=Github%20Workflow%3a%20Cara%20Berkontribusi%20di%20Proyek%20Open%20Source:%20https%3a%2f%2fwww.petanikode.com%2fgithub-workflow%2f%3Futm_source%3Demail%26utm_medium%3Dshare" 
+        title="Kirim ke Email">
+        <img src="/img/icon/entypo/entypo-social/mail-with-circle.svg" width="32" height="32" alt="Email"/>
+    </a>
+</div>
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'petanikode';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </article>
+
+                
+                <div class="card p-3">
+                    
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-6279325630224392"
+     data-ad-slot="5172754450"></ins>
+
+                </div>
+                
+
+            </div>
+
+            <div class="col-sm-12 col-lg-4">
+                <aside>
+
+    
+<div class="widget mb-5">
+    
+    <div class="widget-content">
+
+        
+
+        <script type="text/javascript">
+
+            document.write('\n\n<style>\n	\n	\n						@import url(\'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext\');\n													\n\n	#mlb2-4827284,\n	#mlb2-4827284 *,\n	#mlb2-4827284 a:hover,\n	#mlb2-4827284 a:visited,\n	#mlb2-4827284 a:focus,\n	#mlb2-4827284 a:active {\n	    overflow:visible;\n	    position:static;\n	    background:none;\n	    border:none;\n	    bottom:auto;\n	    clear:none;\n	    cursor:default;\n	    float:none;\n	    letter-spacing:normal;\n	    line-height:normal;\n	    text-align:left;\n	    text-indent:0;\n	    text-transform:none;\n	    visibility:visible;\n	    white-space:normal;\n	\n	    max-height:none;\n	    max-width:none;\n	    left:auto;\n	    min-height:0;\n	    min-width:0;\n	    right:auto;\n	    top:auto;\n	    width:auto;\n	    z-index:auto;\n	\n	    text-shadow: none;\n	    box-shadow: none;\n	    outline: medium none;\n	}\n	\n	#mlb2-4827284 a:hover {\n		cursor: pointer !important;\n	}\n	\n	#mlb2-4827284 h4 {\n	    font-weight: normal;\n	}\n\n	#mlb2-4827284 .subscribe-form {\n	\n		padding: 20px;\n				width: 350px !important;\n				border: 2px solid #F6F6F6 !important;\n		background: #f6f6f6 none !important;\n		border-radius: 0px !important;\n		box-sizing: border-box !important;\n	\n	\n	}\n	\n	#mlb2-4827284 .ml-block-form {\n	 \n		margin-bottom: 0px;\n	\n	}\n    \n    #mlb2-4827284 .subscribe-form .form-section {\n    \n        margin-bottom: 20px;\n        width: 100%;\n    \n    }\n    \n    #mlb2-4827284 .subscribe-form .form-section.mb10 {\n    \n        margin-bottom: 10px;\n        float: left;\n    \n    }\n    \n    #mlb2-4827284 .subscribe-form .form-section.mb0 {\n    \n        margin-bottom: 0px;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section h4 {\n    \n        margin: 0px 0px 10px 0px !important;\n        padding: 0px !important;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 28px !important;\n        line-height: 100%;\n        text-align: left !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section p,\n    #mlb2-4827284 .subscribe-form .form-section li {\n    \n        line-height: 150%;\n        padding: 0px !important;\n        margin: 0px 0px 10px 0px;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section a {\n    \n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .confirmation_checkbox {\n    \n        line-height: 150%;\n        padding: 0px !important;\n        margin: 0px 0px 15px 0px !important;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 12px !important;\n        font-weight: normal !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .confirmation_checkbox input[type=\"checkbox\"] {\n    \n        margin-right: 5px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .form-group {\n    \n        margin-bottom: 15px;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .form-group label {\n    \n        float: left;\n        margin-bottom: 10px;\n        width: 100%;\n        line-height: 100%;\n        font-weight: bold;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox {\n        \n\n        width: 100%;\n        margin: 0px 0px 10px 0px;\n        \n\n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox label {\n\n    \n\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n\n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox input {\n\n    \n        margin: 0px 5px 0px 0px;\n    \n\n    }\n    \n     #mlb2-4827284 .subscribe-form .form-section .checkbox input[type=checkbox] {\n\n    \n       -webkit-appearance: checkbox;\n    \n\n    }\n\n\n    #mlb2-4827284.ml-subscribe-form .form-group .form-control {\n\n    \n\n        width: 100%;\n        font-size: 13px;\n        padding: 10px 10px;\n        height: auto;\n        font-family: Arial;\n        border-radius: 0px;\n        border: 1px solid #cccccc !important;\n        color: #000000 !important;\n        background-color: #FFFFFF !important;\n    	-webkit-box-sizing: border-box;\n    	-moz-box-sizing: border-box;\n    	box-sizing: border-box;\n        clear: left;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button {\n\n    \n\n        border: none !important;\n        cursor: pointer !important;\n        width: 100% !important;\n        border-radius: 0px !important;\n        height: 40px !important;\n        background-color: #008080 !important;\n        color: #FFFFFF !important;\n        font-family: \'Arial\', sans-serif !important;\n        font-size: 16px !important;\n        text-align: center !important;\n        padding: 0 !important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button.gradient-on {\n\n    \n\n            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button.gradient-on:hover {\n\n    \n\n            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button[disabled] {\n\n    \n\n            cursor: not-allowed!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-section.ml-error label {\n\n    \n\n        color: red!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-group.ml-error label {\n\n    \n\n        color: red!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-group.ml-error .form-control  {\n\n    \n\n        border-color: red!important;\n\n    \n\n    }\n    \n\n    \n        \n    \n    \n            \n    @media (max-width: 768px) {\n	    \n	    #mlb2-4827284 {\n		    \n		    width: 100% !important;\n		    \n	    }\n	    \n	    #mlb2-4827284 form.ml-block-form,\n	    #mlb2-4827284 .subscribe-form {\n			\n			width: 100% !important;\n			\n		}\n		\n	}\n	\n	    \n    \n<\/style>\n\n\n\n<div id=\"mlb2-4827284\" class=\"ml-subscribe-form ml-subscribe-form-4827284\">\n	\n	<div class=\"ml-vertical-align-center\">\n	    \n	    <div class=\"subscribe-form ml-block-success\" style=\"display:none\">\n	       \n	        	        \n	        <div class=\"form-section\">\n		        \n		        	            \n	            <p>Terima kasih... Silahkan cek inbox untuk mengkonfirmasi!<\/p>\n	            \n	        <\/div>\n	        \n	    <\/div>\n	\n	    <form class=\"ml-block-form\" action=\"//app.mailerlite.com/webforms/submit/c8d3m1\" data-id=\"385614\" data-code=\"c8d3m1\" method=\"POST\" target=\"_blank\">\n	\n		    	\n		    <div class=\"subscribe-form\">\n			    		        <div class=\"form-section mb10\">\n			        		            		            <p><strong><span style=\"font-size: 18px;\">Susah belajar pemrograman? <\/span><\/strong><\/p>\n<p>Dapatkan panduan dan tips eksklusif dari Petani Kode untuk membantumu belajar pemrograman<\/p>\n		            		        <\/div>\n		        \n		        <div class=\"form-section\">\n								        <div class=\"form-group ml-field-name\">\n			            			            <input type=\"text\" name=\"fields[name]\" class=\"form-control\" placeholder=\"Nama\" value=\"\"  autocomplete=\"name\" x-autocompletetype=\"name\" spellcheck=\"false\" autocapitalize=\"off\" autocorrect=\"off\">\n			        <\/div>\n								        <div class=\"form-group ml-field-email ml-validate-required ml-validate-email\">\n			            			            <input type=\"email\" name=\"fields[email]\" class=\"form-control\" placeholder=\"Email*\" value=\"\" autocomplete=\"email\" x-autocompletetype=\"email\"  spellcheck=\"false\" autocapitalize=\"off\" autocorrect=\"off\">\n			        <\/div>\n							        <\/div>\n		        \n		        	\n																	\n		\n	        	\n	        <input type=\"hidden\" name=\"ml-submit\" value=\"1\" />\n			\n						\n	        <button type=\"submit\" class=\"primary\">\n	            Ya, Saya Mau!\n	        <\/button>\n	\n	        <button disabled=\"disabled\" style=\"display: none;\" type=\"button\" class=\"loading\">\n	            <img src=\"//static.mailerlite.com/images/rolling.gif\" width=\"20\" height=\"20\" style=\"width: 20px; height: 20px;\">\n	        <\/button>\n	        \n	        	\n	    <\/div>\n	\n	    <\/form>\n	\n	\n	    <script>\n	        function ml_webform_success_4827284 () {\n	                        var $ = ml_jQuery || jQuery;\n\n	            $(\'.ml-subscribe-form-4827284 .ml-block-success\').show();\n	            $(\'.ml-subscribe-form-4827284 .ml-block-form\').hide();\n	        	        };\n	    <\/script>\n	\n	<\/div>\n<\/div>\n\n\n    ');
+            var script_tag = document.createElement('script');
+            script_tag.setAttribute("type","text/javascript");
+            script_tag.setAttribute("src", "//static.mailerlite.com/js/w/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f");
+            document.getElementsByTagName("head")[0].appendChild(script_tag);
+
+        </script>
+
+    </div>
+</div>
+
+    
+<div class="widget mb-5">
+    
+    <div class="widget-content">
+
+            
+            
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6279325630224392" data-ad-slot="3924804668" data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+</div>
+</div>
+
+    <div class="widget mb-5">
+
+    <div class="widget-content">
+
+        <div class="card">
+
+            <div class="card-body">
+                <h4 class="card-title">Artikel Terbaru</h4>
+            </div>
+            <div class="list-group list-group-flush">
+                
+                
+                
+                 
+                <a href="/github-workflow/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/github/workflow/github-workflow-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Github Workflow: Cara Berkontribusi di Proyek Open Source</p>
+                        <small class="text-secondary">01 Oct 2017 · baca 4 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                  
+                <a href="/git-remote/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="https://3.bp.blogspot.com/-ZcUp-f8LtpE/WJhkSmZoDYI/AAAAAAAADzA/yCVxld7RX54uxKKBhY-0pI-TfOqmTaFugCPcB/s160-c/git-petanikode.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Tutorial Git: Bekerja dengan Remote Repositori</p>
+                        <small class="text-secondary">29 Sep 2017 · baca 7 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                    
+                <a href="/html-webcam/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/html/webcam/html-webcam-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Cara Mengakses Webcam dari HTML dan Mengambil Gambar</p>
+                        <small class="text-secondary">13 Sep 2017 · baca 3 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                  
+                <a href="/java-mysql/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/java/mysql/java-mysql-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Tutorial Java dan MySQL: Membuat Program CRUD Berbasis Teks</p>
+                        <small class="text-secondary">08 Sep 2017 · baca 10 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                 
+            </div>
+            <div class="card-body">
+                <a href="https://feedburner.google.com/fb/a/mailverify?uri=petanikode&amp;loc=en_US" class="card-link" target="_blank">Langganan Artikel via Email</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+</aside>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
+    <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 mb-0 mb-sm-3">
+
+                <ul class="nav justify-content-center justify-content-lg-start">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://projects.id/petani_kode" target="blank">Proyek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tentang-petani-kode">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:info@petanikode.com">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-md-6 col-sm-12 text-center text-md-right pt-2">
+
+                &copy; 2017 <a href="https://www.petanikode.com/">Petani Kode</a>
+                <span class="d-none d-lg-inline"> | Made with <img class="emoji" draggable="false" alt="❤️" src="/img/icon/twemoji/2764.svg" /> using <a href='https://gohugo.io' target='_blank'>Hugo 0.26</a></span>
+
+            </div>
+
+            
+        </div>
+    </div>
+</footer> <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script type="text/javascript" async src="/js/lazysizes.min.js"></script>
+<script type="text/javascript" src="/js/twemoji.min.js"></script>
+
+
+<script>
+    
+    var article = document.querySelector("article");
+    twemoji.parse(article, {
+        base: "/img/icon/twemoji/",
+        
+        ext: ".svg",
+        callback: function (icon, options) {
+            return '/img/icon/twemoji/' + icon + '.svg';
+        }
+    });
+</script>
+
+
+
+
+
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6279325630224392",
+        enable_page_level_ads: true
+    });
+</script>
+
+
+<script>
+$(document).ready(function(){
+    
+    (adsbygoogle = window.adsbygoogle || []).push({});
+});
+</script>
+
+</body>
+
+</html>

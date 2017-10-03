@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 29 Sep 2017 23:16:52 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Oct 2017 14:53:15 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Github Workflow: Cara Berkontribusi di Proyek Open Source</title>
+      <link>https://www.petanikode.com/github-workflow/</link>
+      <pubDate>Sun, 01 Oct 2017 14:53:15 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/github-workflow/</guid>
+      <description>Github saat ini sudah menjadi rumah bagi proyek-proyek open source.
+Jutaan programmer dari seluruh dunia menaruh kodenya di sana.
+Bahkan proyek open source seperti Linux, Cinnamon, Laravel, BlankOn, dll. menggunakan Github.
+Bagaimana proyek-proyek itu digarap bersama?
+Itulah yang akan kita pelajari pada artikel ini.
+Kita akan belajar tentang Git dan Github workflow atau alur kerja Github untuk berkontribusi pada proyek open source.
+Kita akan langsung melakukan kontribusi pada proyek &amp;ldquo;dummy&amp;rdquo; yang sudah saya siapkan.</description>
+    </item>
     
     <item>
       <title>Tutorial Git: Bekerja dengan Remote Repositori</title>

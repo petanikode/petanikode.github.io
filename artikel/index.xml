@@ -2609,33 +2609,17 @@ program stok_pertanian;  Nama program ditulis seteah kata kunci program. Lalu, a
     </item>
     
     <item>
-      <title>[Solved] Qt Creator: Error `cannot find -lGL` di Linux</title>
-      <link>https://www.petanikode.com/error-qt-cannot-find-lgl/</link>
-      <pubDate>Fri, 13 Feb 2015 09:35:00 +0000</pubDate>
-      
-      <guid>https://www.petanikode.com/error-qt-cannot-find-lgl/</guid>
-      <description>Ternyata program pertama saya di Qt gagal diluncurkan. Karena pustaka OpenGL belum diinstal di komputer saya. Saya mendapatkan pesan galat :-1: error: cannot find -lGL. Solusinya, saya harus menginstal pustaka OpenGL.
- OpenGL (Open Graphic Library) adalah pustaka untuk membuat grafik. Biasanya digunakan untuk membuat game.
- Saya cari dulu, apakah pustaka OpenGL tersedia di repository ubuntu. O, ya, nama paket pustaka OpenGL adalah freeglut.
-ardianta@imajinasi:~$ sudo apt-cache search freeglut</description>
-    </item>
-    
-    <item>
-      <title>Pemrograman GUI dengan Qt: Persiapan dan Pengenalan</title>
+      <title>Belajar Pemrograman GUI dengan Qt di Linux: Persiapan Awal dan Pengenalan</title>
       <link>https://www.petanikode.com/qt-dasar/</link>
       <pubDate>Fri, 13 Feb 2015 09:29:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/qt-dasar/</guid>
-      <description>Assalamualaikum wr. wb., Selamat datang di panduan instalasi Qt di linux. Di tulisan ini saya akan membahas langkah-langkah instalasi Qt di linux. Qt yang akan diinstal adalah Qt versi 5.4.0. Versi ini merupakan versi terakhir saat ini.
- Sedikit informasi distro linux yang saya gunakan di tulisan ini:
-ardianta@imajinasi:~$ hostnamectl 
-Static hostname: imajinasi
-Icon name: computer-laptop
-Chassis: laptop
-Boot ID: baf18095a96a40fcbd9fc497141c1c41
-Operating System: Ubuntu 14.10
-Kernel: Linux 3.16.0-30-generic
-Architecture: i686 Unduh QtQt yang akan dipakai adalah Qt Open Source.</description>
+      <description>Qt adalah salah satu librarya atau framework yang bisa kita gunakan untuk membuat antar muka grafis (GUI).
+Qt tidak hanya bisa digunakan di Linux, Qt juga bisa untuk Windows dan MacOS.
+Jadi, dengan Qt kita cukup buat satu program dan akan bisa dikompilasi dan berjalan di berbagai platform.
+Pada tulisan ini, kita akan belajar membuat program Qt menggunakan Linux.
+Dimulai dari melakukan instalasi, sampai membuat program sederhana.
+Bahasa pemrograman yang digunakan oleh Qt adalah C++.</description>
     </item>
     
     <item>

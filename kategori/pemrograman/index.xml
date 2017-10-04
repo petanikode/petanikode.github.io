@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 01 Oct 2017 14:53:15 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 Oct 2017 12:21:50 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Membuat Contact Form di Laravel dengan Library PHPMailer</title>
+      <link>https://www.petanikode.com/laravel-mailer/</link>
+      <pubDate>Wed, 04 Oct 2017 12:21:50 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/laravel-mailer/</guid>
+      <description>Halaman Contact adalah halaman yang harus ada di setiap website, karena dengan halaman tersebut pengunjung dapat memberikan masukan dan berkomunikasi dengan pemilik atau pengelola web.
+Biasanya pesan yang diinputkan pada halaman contact akan terkirim ke alamat email pengelola web.
+Pengiriman email bisa kita lakukan dengan API yang sudah disediakan oleh Laravel seperti Mailgun, SparkPost, Amazon SES.
+Namun, yang akan kita coba pada tulisan ini adalah menggunakan Library PHPMailer.
+   (adsbygoogle = window.</description>
+    </item>
     
     <item>
       <title>Github Workflow: Cara Berkontribusi di Proyek Open Source</title>

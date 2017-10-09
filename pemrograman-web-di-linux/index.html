@@ -16,7 +16,7 @@ Saya sendiri menggunakan teks editor Atom.">
 
 
 <meta itemprop="dateModified" content="2016-10-09T11:57:00&#43;00:00" />
-<meta itemprop="wordCount" content="506">
+<meta itemprop="wordCount" content="520">
 
 
 
@@ -286,12 +286,17 @@ kamu perlu persiapkan 6 alat ini:</p>
 
 <p>PHP adalah bahasa skrip, karena itu kita membutuhkan interpreter untuk menjalankannya. Silahkan instal PHP dengan perintah berikut ini:</p>
 
-<pre><code>sudo apt install php5
+<pre><code class="language-bash">sudo apt install php5
 </code></pre>
 
 <p>atau untuk PHP 7</p>
 
-<pre><code>sudo apt install php7.0
+<pre><code class="language-bash">sudo apt install php7.0
+</code></pre>
+
+<p>Setelah itu, jangan lupa install library umum yang dibutuhkan.</p>
+
+<pre><code class="language-bash">apt install libapache2-mod-php php-mcrypt php-mysql
 </code></pre>
 
 <p>Periksalah versi PHP yang terinstal dengan mengetik perintah <code>php -v</code> pada terminal.</p>
@@ -306,7 +311,7 @@ kamu perlu persiapkan 6 alat ini:</p>
 
 <p>Silahkan ketik perintah berikut ini untuk menginstal server apache di Linux.</p>
 
-<pre><code>sudo apt install apache2
+<pre><code class="language-bash">sudo apt install apache2
 </code></pre>
 
 <p>Setelah itu coba perikta versi yang terinstal dengan perintah <code>apache2 -v</code>.</p>
@@ -315,17 +320,17 @@ kamu perlu persiapkan 6 alat ini:</p>
 
 <p>Gunakan perintah berikut ini untuk mengaktifkan server apache</p>
 
-<pre><code>sudo service apache2 start
+<pre><code class="language-bash">sudo service apache2 start
 </code></pre>
 
 <p>Perintah untuk menghentikan server apache:</p>
 
-<pre><code>sudo service apache2 stop
+<pre><code class="language-bash">sudo service apache2 stop
 </code></pre>
 
 <p>Perintah untuk me-restart:</p>
 
-<pre><code>sudo service apache2 restart
+<pre><code class="language-bash">sudo service apache2 restart
 </code></pre>
 
 <p>Selain itu, kita juga bisa membuka alamat <a href="http://localhost/">http://localhost</a> untuk memeriksa apakah server apache sudah berjalan atau belum. Bila tampilannya seperti berikut ini, maka servernya sedang berjalan.</p>
@@ -334,7 +339,7 @@ kamu perlu persiapkan 6 alat ini:</p>
 
 <p>Jangan lupa juga untuk mengatur hak akses direktori servernya agar user biasa bebas membuat file dan direktori di sana.</p>
 
-<pre><code>sudo chmod 777 /var/www/html -R
+<pre><code class="language-bash">sudo chmod 777 /var/www/html -R
 </code></pre>
 
 <h2 id="5-server-database-mysql">5. Server Database (MySQL)</h2>
@@ -343,7 +348,7 @@ kamu perlu persiapkan 6 alat ini:</p>
 
 <p>Silahkan ketik perintah berikut ini untuk menginstal MySQL di Linux.</p>
 
-<pre><code>sudo apt install mysql-server
+<pre><code class="language-bash">sudo apt install mysql-server
 </code></pre>
 
 <p>Jangan lupa juga untuk memeriksa versi MySQL yang terinstal dengan perintah <code>mysql --version</code>.</p>

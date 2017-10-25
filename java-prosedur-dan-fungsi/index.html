@@ -17,7 +17,7 @@ Belum lagi kalau ada error&hellip;">
 
 
 <meta itemprop="dateModified" content="2016-04-22T20:31:00&#43;00:00" />
-<meta itemprop="wordCount" content="888">
+<meta itemprop="wordCount" content="1793">
 
 
 
@@ -446,7 +446,7 @@ static void ucapin(String ucapan, String kepada){
 
 <h2 id="fungsi-yang-mengembalikan-nilai">Fungsi yang Mengembalikan Nilai</h2>
 
-<p>Setelah fungsi memprosed data yang diinputkan melalui parameter, selanjutnya
+<p>Setelah fungsi memproses data yang diinputkan melalui parameter, selanjutnya
 fungsi harus mengembalikan nilai agar dapat diolah pada proses berikutnya.</p>
 
 <p>Pengembalian nilai pada fungsi menggunakan kata kunci <code>return</code>.</p>
@@ -459,7 +459,7 @@ fungsi harus mengembalikan nilai agar dapat diolah pada proses berikutnya.</p>
 }
 </code></pre>
 
-<p>Pada contoh tersebut, kita membuat sebua parameter bernama <code>sisi</code>.
+<p>Pada contoh tersebut, kita membuat sebuah parameter bernama <code>sisi</code>.
 Kemudian fungsi akan mengembalikan nilai dengan tipe <code>int</code> <em>(integer)</em>
 dari variabel <code>luas</code>.</p>
 
@@ -470,7 +470,7 @@ dari variabel <code>luas</code>.</p>
 
 <p>Hasil Output:</p>
 
-<pre><code>Luas Persegi dengan panjang sisi 5 adalah 25
+<pre><code class="language-bash">Luas Persegi dengan panjang sisi 5 adalah 25
 </code></pre>
 
 <h2 id="pemanggilan-fungsi-di-fungsi-lain">Pemanggilan Fungsi di Fungsi Lain</h2>
@@ -515,7 +515,7 @@ Luas Persegi = sisi * sisi;
 
 <p>Hasil output</p>
 
-<pre><code>864
+<pre><code class="language-bash">864
 </code></pre>
 
 <h2 id="fungsi-static-dan-non-static">Fungsi Static dan Non-Static</h2>
@@ -571,9 +571,378 @@ Saya sedang makan Nasi Goreng
 <p>Apabila kita tidak membuat objek untuk memanggil fungsi <em>non-static</em>,
 maka akan terjadi error.</p>
 
-<!-- @TODO ## Variabel Global dan Variabel Lokal -->
+<h2 id="variabel-global-dan-variabel-lokal-pada-java">Variabel Global dan Variabel Lokal pada Java</h2>
 
-<!-- @TODO ## Contoh Program yang Menggunakan Fungsi -->
+<p>Variabel global adalah variabel yang bisa diakses dari semua fungsi.
+Sedangkan variabel lokal adalah variabel yang hanya bisa diakses dari
+dalam fungsi tempat variabel itu berada.</p>
+
+<p>Bingung?</p>
+
+<p>Mari kita lihat contohnya:</p>
+
+<pre><code class="language-java">class ProgramKu{
+
+    // ini variabel global
+    static String nama = &quot;Programku&quot;;
+    static String version = &quot;1.0.0&quot;;
+
+    static void help(){
+
+        // ini variabel lokal
+        String nama = &quot;Petani Kode&quot;;
+
+        // mengakses variabel global di dalam fungso help()
+        System.out.println(&quot;Nama: &quot; + nama);
+        System.out.println(&quot;Versi: &quot; + version);
+    }
+
+    public static void main(String args[]){
+        
+        // panggil fungsi help()
+        help();
+        
+        System.out.println(&quot;Nama: &quot; + nama);
+        System.out.println(&quot;Versi: &quot; + version);
+
+    }
+
+}
+</code></pre>
+
+<p>Hasil outputnya:</p>
+
+<pre><code class="language-bash">Nama: Petani Kode
+Versi: 1.0.0
+Nama: Programku
+Versi: 1.0.0
+</code></pre>
+
+<p>Saat pemanggilan fungsi <code>help()</code> kita membuat ulang variabel <code>nama</code>. Sehingga
+variabel nama menjadi variabel lokal pada fungsi <code>help()</code> dan
+nilainya berubah menjadi <code>&quot;Petani Kode&quot;</code>.</p>
+
+<p>Sedangkan, saat kita akases lagi variabel nama melalui fungsi <code>main()</code> nilainya
+tetap sama seperti yang didefinisikan.</p>
+
+<h2 id="contoh-program-dengan-fungsi-dan-prosedur">Contoh Program dengan Fungsi dan Prosedur</h2>
+
+<p>Program ini adalah program sederhana dengan fitur sebagai
+berikut:</p>
+
+<ol>
+<li>Baca data dari ArrayList</li>
+<li>Simpan data ke ArrayList</li>
+<li>Ubah data</li>
+<li>Hapus Data</li>
+<li>Keluar</li>
+</ol>
+
+<p>Belum tahu tentang ArrayList?</p>
+
+<p>Silahkan baca meteri: <a href="/java-array/">Mengenal Array di Java</a></p>
+
+<p>Baiklah, silahkan buat class baru bernama <code>FungsiProsedur</code>.
+Lalu impor class-class yang dibutuhkan.</p>
+
+<pre><code class="language-java">import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+</code></pre>
+
+<p>Setelah itu buat variabel global di dalam class <code>FungsiProsedur</code>:</p>
+
+<pre><code class="language-java">static ArrayList listBuah = new ArrayList();
+static boolean isRunning = true;
+static InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+static BufferedReader input = new BufferedReader(inputStreamReader);
+</code></pre>
+
+<p>Penjelasan:</p>
+
+<ul>
+<li>Variabel <code>listBuah</code> adalah variabel global untuk menyimpan nama-nama buah.</li>
+<li>Variabel <code>isRunning</code> adalah variabel global untuk membuat loop.</li>
+<li>Kemudian <code>inputStreamReader</code> dan <code>input</code> adalah objek yang kita butuhkan
+untuk mengambil input dari keyboard.</li>
+</ul>
+
+<p>Setelah itu, buat masing-masing fungsi.</p>
+
+<p><strong>Fungsi untuk menampilkan menu</strong>:</p>
+
+<pre><code class="language-java">static void showMenu() throws IOException {
+        
+    System.out.println(&quot;========= MENU ========&quot;);
+    System.out.println(&quot;[1] Show All Buah&quot;);
+    System.out.println(&quot;[2] Insert Buah&quot;);
+    System.out.println(&quot;[3] Edit Buah&quot;);
+    System.out.println(&quot;[4] Delete Buah&quot;);
+    System.out.println(&quot;[5] Exit&quot;);
+    System.out.print(&quot;PILIH MENU&gt; &quot;);
+    
+    int selectedMenu = Integer.valueOf(input.readLine());
+    
+    switch(selectedMenu){
+        case 1:
+            showAllBuah();
+            break;
+        case 2:
+            insertBuah();
+            break;
+        case 3:
+            editBuah();
+            break;
+        case 4:
+            deleteBuah();
+            break;
+        case 5:
+            System.exit(0);
+            break;
+        default:
+            System.out.println(&quot;Pilihan salah!&quot;);
+                 
+    }
+        
+}
+</code></pre>
+
+<p>Fungsi tersebut bertugas untuk menampilkan menu dan menentukan
+fungsi mana yang akan dipanggil berdasarkan nomer menu yang diinputkan.</p>
+
+<p>Apa itu <code>throws IOException</code>?</p>
+
+<p>Nanti saya akan bahas di kesempatan berikutnya. Untuk saat ini diabaikan saja dulu.
+Ini karena kita menggunakan Buffereader, jadi <code>throws IOException</code> wajib ditulis.</p>
+
+<p><strong>Fungsi untuk menampilkan data</strong>:</p>
+
+<pre><code class="language-java">static void showAllBuah(){
+    if(listBuah.isEmpty()){
+       System.out.println(&quot;Belum ada data&quot;);
+    } else {
+         // tampilkan semua buah
+        for(int i = 0; i &lt; listBuah.size(); i++){
+            System.out.println(String.format(&quot;[%d] %s&quot;,i, listBuah.get(i)));
+        }
+    }
+}
+</code></pre>
+
+<p>Fungsi tersebut bertugas menampilkan isi dari <code>listBuah</code>. Kalau <code>listBuah</code> kosong,
+maka akan ditampilkan pesan <code>&quot;Belum ada data&quot;</code>.</p>
+
+<p><strong>Fungsi untuk menambah data buah</strong>:</p>
+
+<pre><code class="language-java">static void insertBuah() throws IOException{
+    System.out.print(&quot;Nama buah: &quot;);
+    String namaBuah = input.readLine();
+    listBuah.add(namaBuah);
+}
+</code></pre>
+
+<p>Pada fungsi tersebut, kita menggunakan method <code>listBuah.add(namaBuah);</code> untuk menambah
+data ke dalam <code>listBuah</code> berdasarkan <code>namaBuah</code> yang diberikan.</p>
+
+<p><strong>Fungsi untuk mengubah data buah</strong>:</p>
+
+<pre><code class="language-java">static void editBuah() throws IOException{
+    showAllBuah();
+    System.out.print(&quot;Pilih nomer buah: &quot;);
+    int indexBuah = Integer.valueOf(input.readLine());
+    
+    System.out.print(&quot;Nama Baru: &quot;);
+    String namaBaru = input.readLine();
+    
+    // ubah nama buah
+    listBuah.set(indexBuah, namaBaru);
+}
+</code></pre>
+
+<p>Pertama kita perlu tampilkan dulu daftar buahnya, lalu kita minta
+user untuk memilih buah mana yang akan diedit.</p>
+
+<p>Setelah itu, kita update buahnya dengan method <code>listBuah.set(indexBuah, namaBaru);</code>.</p>
+
+<p><strong>Fungsi untuk menghapus buah</strong>:</p>
+
+<pre><code class="language-java">static void deleteBuah() throws IOException{
+    showAllBuah();
+    System.out.print(&quot;Pilih nomer buah: &quot;);
+    int indexBuah = Integer.valueOf(input.readLine());
+    // hapus buah
+    listBuah.remove(indexBuah);
+}
+</code></pre>
+
+<p>Hampir sama seperti edit buah, untuk menghapus buah kita juga butuh
+nomer indeks buah yang akan dihapus.</p>
+
+<p>Lalu mengapusnya dengan method <code>listBuah.remove(indexBuah);</code>.</p>
+
+<p><strong>Fungsi main</strong>:</p>
+
+<pre><code class="language-java">public static void main(String[] args) throws IOException {
+        
+    do {
+        showMenu();
+    } while (isRunning);
+    
+}
+</code></pre>
+
+<p>Lengkap sudah, berikut ini bentuk kode lengkapnya.</p>
+
+<pre><code class="language-java">import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class FungsiProsedur {
+    
+    static ArrayList listBuah = new ArrayList();
+    static boolean isRunning = true;
+    static InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+    static BufferedReader input = new BufferedReader(inputStreamReader);
+    
+    static void showMenu() throws IOException{
+        
+        System.out.println(&quot;========= MENU ========&quot;);
+        System.out.println(&quot;[1] Show All Buah&quot;);
+        System.out.println(&quot;[2] Insert Buah&quot;);
+        System.out.println(&quot;[3] Edit Buah&quot;);
+        System.out.println(&quot;[4] Delete Buah&quot;);
+        System.out.println(&quot;[5] Exit&quot;);
+        System.out.print(&quot;PILIH MENU&gt; &quot;);
+        
+        int selectedMenu = Integer.valueOf(input.readLine());
+        
+        switch(selectedMenu){
+            case 1:
+                showAllBuah();
+                break;
+            case 2:
+                insertBuah();
+                break;
+            case 3:
+                editBuah();
+                break;
+            case 4:
+                deleteBuah();
+                break;
+            case 5:
+                System.exit(0);
+                break;
+            default:
+                System.out.println(&quot;Pilihan salah!&quot;);
+                     
+        }
+        
+        
+    }
+
+    static void showAllBuah(){
+        if(listBuah.isEmpty()){
+           System.out.println(&quot;Belum ada data&quot;);
+        } else {
+             // tampilkan semua buah
+            for(int i = 0; i &lt; listBuah.size(); i++){
+                System.out.println(String.format(&quot;[%d] %s&quot;,i, listBuah.get(i)));
+            }
+        }
+    }
+    
+    static void insertBuah() throws IOException{
+        System.out.print(&quot;Nama buah: &quot;);
+        String namaBuah = input.readLine();
+        listBuah.add(namaBuah);
+    }
+    
+    static void editBuah() throws IOException{
+        showAllBuah();
+        System.out.print(&quot;Pilih nomer buah: &quot;);
+        int indexBuah = Integer.valueOf(input.readLine());
+        
+        System.out.print(&quot;Nama Baru: &quot;);
+        String namaBaru = input.readLine();
+        
+        // ubah nama buah
+        listBuah.set(indexBuah, namaBaru);
+    }
+    
+    static void deleteBuah() throws IOException{
+        showAllBuah();
+        System.out.print(&quot;Pilih nomer buah: &quot;);
+        int indexBuah = Integer.valueOf(input.readLine());
+        // hapus buah
+        listBuah.remove(indexBuah);
+    }
+    
+    public static void main(String[] args) throws IOException {
+        
+        do {
+            showMenu();
+        } while (isRunning);
+        
+    }
+    
+}
+</code></pre>
+
+<p>Setelah itu, silahkan dijalankan dan perhatikanlah hasilnya.</p>
+
+<pre><code class="language-bash">========= MENU ========
+[1] Show All Buah
+[2] Insert Buah
+[3] Edit Buah
+[4] Delete Buah
+[5] Exit
+PILIH MENU&gt; 1
+Belum ada data
+========= MENU ========
+[1] Show All Buah
+[2] Insert Buah
+[3] Edit Buah
+[4] Delete Buah
+[5] Exit
+PILIH MENU&gt; 2
+Nama buah: Apel
+========= MENU ========
+[1] Show All Buah
+[2] Insert Buah
+[3] Edit Buah
+[4] Delete Buah
+[5] Exit
+PILIH MENU&gt; 1
+[0] Apel
+========= MENU ========
+[1] Show All Buah
+[2] Insert Buah
+[3] Edit Buah
+[4] Delete Buah
+[5] Exit
+PILIH MENU&gt; 
+</code></pre>
+
+<p>Silahkan coba untuk melakukan insert, edit, dan delete.</p>
+
+
+<div class="border my-5">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-6279325630224392"
+     data-ad-slot="7009414453">
+</ins>
+</div>
+
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
 <h2 id="akhir-kata">Akhir Kata&hellip;</h2>
 
@@ -584,8 +953,11 @@ dikatakan kamu sudah menguasai dasar pemrograman dengan Java.</p>
 
 <p>Bila ada yang belum dipahami, silahkan ditanyakan melalui komentar.</p>
 
-<p>Selanjutnya silahkan pelajari tentang cara menggunakan <em>library</em> dan membuat
-<em>library</em> sendiri pada Java.</p>
+<p>Selanjutnya silahkan pelajari:</p>
+
+<ul>
+<li><a href="/java-mysql/">Java dan MySQL: Membuat Program CRUD</a></li>
+</ul>
 
 
                                 <div class="post-footer mt-5 py-4">

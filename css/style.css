@@ -36,6 +36,7 @@ a:hover {text-decoration: none}
 .post-content pre {
     margin-bottom: 1rem;
     background: #f5f2f0;
+    padding: 1em;
 }
 
 /* Table */

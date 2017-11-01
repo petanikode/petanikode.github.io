@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 04 Oct 2017 12:21:50 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 Nov 2017 07:16:22 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Belajar Python: Memahami Fungsi dan Prosedur pada Python</title>
+      <link>https://www.petanikode.com/python-fungsi/</link>
+      <pubDate>Wed, 01 Nov 2017 07:16:22 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/python-fungsi/</guid>
+      <description>Pada pembuatan program yang kompleks dan memiliki banyak fitur, kita diharuskan menggunakan fungsi.
+Kenapa memangnya kalau tidak menggunakan fungsi?
+Bisa jadi kita akan kerepotan menulis kode programnya, karena banyak yang harus ditulis dan kode akan menjadi sulit dibaca dan dirawat (maintenance).
+Dengan fungsi, kita dapat memecah program besar menjadi sub program yang lebih sederhana.
+Masing-masing fitur pada program dapat kita buat dalam satu fungsi.
+Pada saat kita membutuhkan fitur tersebut, kita tinggal panggil fungsinya saja.</description>
+    </item>
     
     <item>
       <title>Cara Membuat Contact Form di Laravel dengan Library PHPMailer</title>

@@ -55,3 +55,16 @@ th, td {
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
+
+@media (max-width: 480px) { 
+    .post-outer { 
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .post-outer .card {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
+}

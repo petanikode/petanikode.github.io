@@ -7,10 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 01 Nov 2017 07:16:22 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Nov 2017 21:57:55 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/artikel/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Apa Maksud dari *args dan **kwargs pada Python?</title>
+      <link>https://www.petanikode.com/python-args-kwargs/</link>
+      <pubDate>Thu, 02 Nov 2017 21:57:55 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/python-args-kwargs/</guid>
+      <description>*args dan **kwargs sebenarnya adalah sebuah variabel. Kadang juga disebut dengan magic variable, karena kemampuannya yang aneh. 😄
+Variabel ini memiliki kemampuan khusus karena ada tanda bintang (*) di depannya.
+Kalau tidak ada itu&amp;hellip;
+&amp;hellip;maka akan menjadi variabel yang biasa-biasa saja.
+Lalu bagaimana cara menggunakan dalam program?
+Kapan waktu yang tepat menggunakannya?
+Apa bedanya *args dan **kwargs?
+Mari kita bahas.
+    (adsbygoogle = window.adsbygoogle || []).push({});  Kapan *args dan **kwargs digunakan?</description>
+    </item>
     
     <item>
       <title>Belajar Python: Memahami Fungsi dan Prosedur pada Python</title>

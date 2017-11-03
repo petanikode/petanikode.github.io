@@ -7,10 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 18 Aug 2017 18:27:14 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 03 Nov 2017 21:45:25 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/topik/android/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Install Android Studio 3.x di Linux</title>
+      <link>https://www.petanikode.com/android-studio-linux/</link>
+      <pubDate>Fri, 03 Nov 2017 21:45:25 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/android-studio-linux/</guid>
+      <description>Pada bulan oktober kemarin, Android Studio 3.0.0 resmi dirilis.
+Menarik untuk dicoba, karena pada versi ini, Kotlin sudah didukung secara resmi.
+Selain itu, ada cukup banyak perubahan lain.
+Selengkapnya bisa disimak dalam video ini:
+  
+Saat ini saya masih menggunakan Android Studio 2.x dan berencana akan menghapusnya setelah menginstal yang 3.0.
+Baiklah&amp;hellip;
+Langsung saja kita mulai instalasinya.
+   (adsbygoogle = window.adsbygoogle || []).push({});  Install Library 32-bit Jika kamu menggunakan Linux 64-bit, maka harus menginstall library berikut:</description>
+    </item>
     
     <item>
       <title>Ebook dan Video Pemrograman Android Gratis dari Google</title>

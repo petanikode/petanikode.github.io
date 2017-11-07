@@ -56,6 +56,63 @@ th, td {
 
 tr:nth-child(even){background-color: #f2f2f2}
 
+/*--- Blockqute -----*/
+blockquote{
+  display:block;
+  background: whitesmoke;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+
+  /*Font*/
+  /*font-family: Georgia, serif;*/
+  font-size: 16px;
+  line-height: 1.2;
+  color: #666;
+
+
+  /*Borders - (Optional)*/
+  border-left: 15px solid #008080;
+  border-right: 2px solid #008080;
+
+  /*Box Shadow - (Optional)*/
+  /*-moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;*/
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote em{
+  font-style: italic;
+}
+/*--- End Blockqute -----*/
+
 @media only screen and (max-width: 570px) { 
     .post-outer { 
         padding-right: 0 !important;

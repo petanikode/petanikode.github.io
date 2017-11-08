@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tutorial PHP &amp; MySQL: Membuat Login dan Register (dengan Bootstrap 4)</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<meta itemprop="name" content="Tutorial PHP &amp; MySQL: Membuat Login dan Register (dengan Bootstrap 4)">
+<meta itemprop="description" content="Tutorial langkah demi langkah membuat login dan register di PHP dengan tampilan menggunakan Bootstrap 4.">
+
+
+<meta itemprop="dateModified" content="2017-11-08T17:07:55&#43;08:00" />
+<meta itemprop="wordCount" content="2289">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta property="og:title" content="Tutorial PHP &amp; MySQL: Membuat Login dan Register (dengan Bootstrap 4)" />
+<meta property="og:description" content="Tutorial langkah demi langkah membuat login dan register di PHP dengan tampilan menggunakan Bootstrap 4." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.petanikode.com/php-login-register/" />
+
+
+
+<meta property="article:published_time" content="2017-11-08T17:07:55&#43;08:00"/>
+<meta property="article:modified_time" content="2017-11-08T17:07:55&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content='summary_large_image' name='twitter:card' />
+<meta content='@petanikode' name='twitter:site' />
+<meta content='@ardiantapargo' name='twitter:creator' />
+
+
+
+<meta property='og:image' content='https://www.petanikode.com/img/php/login-reg/php-login-register.jpg' />
+<meta property="og:updated_time" content="2017-11-08 17:07:55 &#43;0800 WITA" />
+<meta content='id_ID' property='og:locale' />
+<meta content='ms_MY' property='og:locale:alternate' />
+<meta content='en_US' property='og:locale:alternate' />
+
+<meta content='152759108115365' property='fb:app_id' />
+<meta content='petanikode' property='fb:pages' />
+<meta content='143461015837500' property='fb:pages' />
+<meta content='ardianta.pargo' property='fb:profile_id' />
+
+<meta property="article:author" content="https://www.facebook.com/petanikode" />
+<meta property="article:publisher" content="https://www.facebook.com/petanikode" />
+
+
+<link rel="icon" href="/img/favicon.png" />
+<link rel="icon" href="/img/logo.svg" />
+<link rel='icon' href="/img/logo.svg" sizes='192x192' type="image/svg+xml" />
+<link rel='icon' href="/img/logo.svg" sizes='32x32' type="image/svg+xml" />
+<link rel='icon' href="/img/logo.svg" sizes='96x96' type="image/svg+xml" />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='57x57' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='60x60' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='72x72' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='76x76' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='114x114' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='120x120' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='144x144' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='152x152' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='180x180' />
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+<link rel="stylesheet" href="/css/style.css" />
+
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+
+
+
+
+<meta name="telegram:channel" content="@petanikode">
+
+<meta name="keywords" content="Tutorial PHP &amp; MySQL: Membuat Login dan Register (dengan Bootstrap 4), PHP Login Register, Bahasa Pemrograman PHP, Belajar Pemrograman PHP dan MySQL, Tutorial Pemrograman PHP, belajar bahasa pemrograman PHP"/>
+<meta name="description" content="Tutorial langkah demi langkah membuat login dan register di PHP dengan tampilan menggunakan Bootstrap 4." />
+
+<meta content='ID-id' http-equiv='content-language' />
+<meta content='index,follow' name='robots' />
+<meta content='Copyright (c) 2017, Petani Kode; all rights reserved.' name='copyright' />
+<meta content='Indonesian' name='language' />
+<meta content='6F355AD626E325F1305BDE3A0BA81A7A' name='msvalidate.01' />
+<meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification' />
+
+<meta content='index,follow' name='googlebot' />
+<meta content='follow, all' name='Googlebot-Image' />
+<meta content='follow, all' name='Scooter' />
+<meta content='follow, all' name='msnbot' />
+<meta content='follow, all' name='alexabot' />
+<meta content='follow, all' name='Slurp' />
+<meta content='follow, all' name='ZyBorg' />
+<meta content='follow, all' name='Scooter' />
+<meta content='true' name='MSSmartTagsPreventParsing' />
+<meta content='ALL' name='SPIDERS' />
+<meta content='ALL' name='WEBCRAWLERS' />
+<meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot'
+    name='search engines' />
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Petani Kode — Programmer Pengguna Linux",
+        "url": "https://www.petanikode.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.petanikode.com/topik/{search_term_string}",
+            "query-input": "required name=search_term_string"
+         }
+    }
+</script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80537197-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode">
+    <div class="container">
+
+        <a class="navbar-brand" href="https://www.petanikode.com/"><img src="/img/logo.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
+            alt="Logo"> Petani Kode</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/php">PHP <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/java">Java <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/python">Python</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/javascript">Javascript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/git">Git</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Jobs</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="https://id.jooble.org/lowongan-kerja-programmer" title="Lowongan Kerja untuk Programmer" target="_blank">Loker Programmer</a>
+                        <a class="dropdown-item" href="http://projects.id/petani_kode" title="Remote Jobs untuk Freelancer" target="_blank">Remote Jobs</a>
+                    </div>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.co.id" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-6279325630224392:9670052267" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sa" value="search" />
+                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Kata Kunci" aria-label="Search">
+                <button class="btn btn-info my-2 my-sm-0" type="submit">Cari</button>
+            </form>
+        </div>
+    </div>
+</nav> <header>
+    <div class="jumbotron jumbotron-fluid bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Programmer Pengguna Linux</h1>
+                    <p class="lead">Belajar Pemrograman Apapun Menggunakan Linux</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="container mb-5">
+
+         <div class="row mb-3">
+    <div class="col-md-12">
+        <div class="alert alert-info">Wujudkan ide/aplikasi kamu demi kemajuan Indonesia di <a href="http://iwic.indosatooredoo.com" target="blank">Hackathon IWIC 11</a>!</div>
+    </div>
+</div>
+
+
+        <div class="row">
+
+            <div class="col-sm-12 col-lg-8 mb-5 post-outer">
+                <article class="card mb-5">
+                    <div class="">
+                        <div class="card-body p-md-5">
+
+                            <div class="post-header mb-5">
+
+                                <div class="mb-3">
+                                    <img src="/img/author-photo.jpg" class="rounded-circle mr-1" width="32" height="32" alt="author" />
+                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Muhar Dian</a>                                    <small class="align-middle text-muted">· <time>08 Nov 2017</time></small>
+                                </div>
+
+                                <h2 class="card-title mb-3">Tutorial PHP &amp; MySQL: Membuat Login dan Register (dengan Bootstrap 4)</h2>
+
+                                <div>
+                                    
+                                    <span class="badge badge-success">
+                                             #<a class="text-white" href="/topik/php">PHP</a>
+                                        </span> 
+                                    <span class="badge badge-success">
+                                             #<a class="text-white" href="/topik/mysql">MySQL</a>
+                                        </span> 
+                                </div>
+
+                            </div>
+                            <div class="post-content">
+                                
+
+<!-- Agreement -->
+
+<p>Login dan register adalah fitur yang sering dibutuhkan dalam
+pengembangan aplikasi web.</p>
+
+<p>Biasanya saat membuat halaman admin. Kita pasti akan membuat
+login dan register.</p>
+
+<p>Lalu bagaimana cara membuatnya?</p>
+
+<!-- Promise -->
+
+<p>Tulisan ini akan menjawabnya&hellip;</p>
+
+<!-- Review -->
+
+<p>Sebelum itu, saya ingin menyampaikan apa saja yang akan dibahas
+di sini.</p>
+
+<ul>
+<li>Tutorial ini menggunakan PHP Native dan PDO sebagai koneksi ke database;</li>
+<li>Tutorial ini menggunakan <a href="/bootstrap4/">Framework Bootstrap 4</a> untuk tampilan;</li>
+<li>Tutorial ini hanya akan fokus membahas fitur login dan register saja,
+untuk class-class bootstrap saya tidak akan jelaskan. Saya anggap,
+pembaca sudah paham dengan Bootstrap.</li>
+</ul>
+
+<p><img src="/img/php/login-reg/php-login-register.jpg" alt="Php Login Register" /></p>
+
+<p>Baiklah, mari kita mulai&hellip;</p>
+
+<p>
+<div class="border my-5">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-6279325630224392"
+     data-ad-slot="7009414453">
+</ins>
+</div>
+
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- Isi --></p>
+
+<h2 id="persiapan-alat-dan-bahan">Persiapan Alat dan Bahan</h2>
+
+<p>Berikut ini alat-alat yang dibutuhkan:</p>
+
+<ol>
+<li><strong>Teks Editor</strong>: <a href="/text-editor-vscode/">VS Code</a> (pakai yang lain juga boleh);</li>
+<li><strong>Web Browser</strong>: Google Chrome, Opera, Firefox, dll;</li>
+<li><strong>Server</strong>: PHP (versi 5.6 ke atas), Apache2/Nginx, dan MySQL.</li>
+</ol>
+
+<p>Sementara untuk bahan-bahannya silahkan sediakan:</p>
+
+<ol>
+<li><a href="/bootstrap4">Bootstrap 4</a>;</li>
+<li>Beberapa gambar.</li>
+</ol>
+
+<p>Silahkan download di sini semua bahannya: <a href="https://github.com/petanikode/bahan-login-register">bahan-bahan.zip</a></p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/download-bahan.png" 
+    src="/img/placeholder.svg"
+    alt="Download Bahan-bahan"
+ />
+
+<p>Alat dan bahan sudah siap.</p>
+
+<p>Mari kita mulai <del>memasak</del> <em>coding</em>&hellip; 😄</p>
+
+<h2 id="membuat-project-baru">Membuat Project Baru</h2>
+
+<p>Buatlah sebuah direktori baru bernama <code>php-login-register</code> di <code>htdocs</code> buat
+yang menggunakan XAMPP. Sedangkan yang menggunakan server <strong>apache2</strong> dan <strong>nginx</strong>,
+silahkan buat di <code>/var/www/html</code>.</p>
+
+<p>Ikuti perintah berikut:</p>
+
+<pre><code class="language-bash">sudo chmod 777 /var/www/html -R # berikan hak akses dulu
+mkdir /var/www/html/php-login-register # buat direktori baru
+cd /var/www/html/php-login-register # pindah ke direktori baru
+</code></pre>
+
+<p>Buat tiga direktori di dalamnya:</p>
+
+<pre><code class="language-bash">mkdir css js img # buat tiga direktori sekaligus
+</code></pre>
+
+<p>Setelah itu buat file yang dibutuhkan:</p>
+
+<pre><code class="language-bash"># membuat file kosong
+touch index.php login.php register.php logout.php timeline.php auth.php config.php
+</code></pre>
+
+<p>Buka dengan VS Code:</p>
+
+<pre><code class="language-bash"># buka direktori ini dengan VS Code, pastikan kamu sudah menginstall VS Code
+code .
+</code></pre>
+
+<p>Sehingga kita memiliki struktur direktori seperti ini:</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/struktur-project.png" 
+    src="/img/placeholder.svg"
+    alt="Struktur direktori project php"
+ />
+
+<p>Setelah itu, silahkan ekstrak dan <em>copy</em> semua bahan yang di-download tadi ke sana.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/ekstrak.png" 
+    src="/img/placeholder.svg"
+    alt="Ekstrak Bahan-bahan"
+ />
+
+<p>Beres&hellip;</p>
+
+<p>Semua bahan-bahan sudah siap.</p>
+
+<h2 id="menyiapkan-database">Menyiapkan Database</h2>
+
+<p>Sebelum kita mulai menulis kode, siapkan dulu database-nya.</p>
+
+<p>Silahkan buka phpmyadmin <a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a> dan
+buat database baru bernama <code>pesbuk</code>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/membuat-database.png" 
+    src="/img/placeholder.svg"
+    alt="Membuat Database Baru di PHPmyadmin"
+ />
+
+<p>Setelah itu, buatlah sebuah tabel baru dengan nama <code>users</code> dan buat kolomnya
+seperti ini:</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/membuat-tabel.png" 
+    src="/img/placeholder.svg"
+    alt="Membuat tabel baru"
+ />
+
+<p>Kode SQL-nya:</p>
+
+<pre><code class="language-sql">CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `photo` varchar(255) NOT NULL DEFAULT 'default.svg'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+</code></pre>
+
+<p>Selesai, selanjutnya kita mulai <em>coding</em>&hellip;</p>
+
+<h2 id="membuat-koneksi-ke-database">Membuat Koneksi ke Database</h2>
+
+<p>Hal pertama yang harus kita lakukan adalah membuat kode untuk koneksi ke database.</p>
+
+<p>Silahkan buka file <code>config.php</code>, lalu isi kodenya seperti ini:</p>
+
+<pre><code class="language-php">&lt;?php
+
+$db_host = &quot;localhost&quot;;
+$db_user = &quot;root&quot;;
+$db_pass = &quot;kopi&quot;;
+$db_name = &quot;pesbuk&quot;;
+
+try {    
+    //create PDO connection 
+    $db = new PDO(&quot;mysql:host=$db_host;dbname=$db_name&quot;, $db_user, $db_pass);
+} catch(PDOException $e) {
+    //show error
+    die(&quot;Terjadi masalah: &quot; . $e-&gt;getMessage());
+}
+</code></pre>
+
+<p>Sesuaikan <strong>user</strong> dan <strong>password</strong>-nya dengan konfigurasi di komputermu.
+Karena di komputer saya, <strong>password</strong> mysql-nya menggunakan <code>kopi</code>.</p>
+
+<p>Jika tidak menggunakan password, maka dikosongkan saja.</p>
+
+<pre><code class="language-php">$db_pass = &quot;&quot;;
+</code></pre>
+
+<p><strong>Apa maksud kode config.php di atas?</strong></p>
+
+<p>Pertama kita membuat variabel untuk menyimpan konfigurasi database:</p>
+
+<pre><code class="language-php">$db_host = &quot;localhost&quot;;
+$db_user = &quot;root&quot;;
+$db_pass = &quot;kopi&quot;;
+$db_name = &quot;pesbuk&quot;;
+</code></pre>
+
+<p>Setelah itu, kita membuat sebuah objek baru bernama <code>$db</code>, objek ini kita perlukan
+untuk melakukan query ke database.</p>
+
+<pre><code class="language-php">$db = new PDO(&quot;mysql:host=$db_host;dbname=$db_name&quot;, $db_user, $db_pass);
+</code></pre>
+
+<p>Saat kita membuat objek PDO, kita gunakan blok <em>Try/Catch</em> untuk menangai error.</p>
+
+<p>Coba kita tes.</p>
+
+<p>Silahkan buka terminal di VS Code (Tekan <kbd>Ctrl</kbd>+<kbd>`</kbd>), lalu jalankan server PHP di sana
+dengan perintah:</p>
+
+<pre><code class="language-bash">php -S localhost:8000
+</code></pre>
+
+<p>Argumen <code>-S</code> menggunakan huruf besar/kapital.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/server-php.png" 
+    src="/img/placeholder.svg"
+    alt="Menjalankan Server PHP"
+ />
+
+<p>Sekarang buka: <a href="http://localhost:8000/config.php">http://localhost:8000/config.php</a></p>
+
+<p>Jika tampilannya kosong, maka koneksi berhasil dan tidak ada error.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/koneksi-berhasil.png" 
+    src="/img/placeholder.svg"
+    alt="Koneksi PHP ke MySQL berhasil"
+ />
+
+<p>Tapi kalau ada error, biasanya akan tampil seperti ini.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/koneksi-gagal.png" 
+    src="/img/placeholder.svg"
+    alt="Error saat koneksi PHP dan MYSQL"
+ />
+
+
+<div class="border my-5">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-6279325630224392"
+     data-ad-slot="7009414453">
+</ins>
+</div>
+
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<h2 id="membuat-halaman-utama">Membuat Halaman Utama</h2>
+
+<p>Halaman utama adalah halaman yang akan dibuka pertama kali oleh pengunjung web.</p>
+
+<p>Halaman ini bertugas sebagai <em>landing page</em>, isinya cuma html saja.</p>
+
+<p>Silahkan buka file <code>index.php</code> lalu isi kodenya seperti ini:</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Pesbuk&lt;/title&gt;
+
+    &lt;!-- menyisipkan bootstrap --&gt;
+     &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+    &lt;header&gt;
+        &lt;div class=&quot;jumbotron jumbotron-fluid&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-md-8&quot;&gt;
+                        &lt;h1&gt;Selamat datang di Pesbuk&lt;/h1&gt;
+                        &lt;p&gt;Bergabunglah bersama jutaan orang lainnya...&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;a href=&quot;login.php&quot; class=&quot;btn btn-secondary&quot;&gt;Masuk&lt;/a&gt;
+                        &lt;a href=&quot;register.php&quot; class=&quot;btn btn-success&quot;&gt;Daftar&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;section&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;img class=&quot;img img-responsive&quot; src=&quot;img/connect.png&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Setelah itu, coba buka <a href="http://localhost:8000/">http://localhost:8000/</a>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/index.png" 
+    src="/img/placeholder.svg"
+    alt="Landing page"
+ />
+
+<p>Keren &lsquo;kan?</p>
+
+<p>O ya gambarnya kita pinjam dari Facebook 😄.</p>
+
+<p>Tidak apa-apa, ini kan hanya untuk belajar saja. Nanti kalau
+sudah buat web sungguhan, <strong>tidak boleh</strong> menggunakan gambar
+orang lain <strong>tanpa izin</strong>.</p>
+
+<h2 id="membuat-fitur-register-di-php">Membuat Fitur Register di PHP</h2>
+
+<p>Berikutnya kita akan membuat fitur registrasi.</p>
+
+<p>Alur kerjanya:</p>
+
+<ol>
+<li>Input data dari form;</li>
+<li>Filter data yang diinputkan;</li>
+<li>Simpan ke database;</li>
+<li>Kalau berhasil, alihkan ke halaman login.</li>
+</ol>
+
+<p>Mari kita buat.</p>
+
+<p>Silahkan buka file <code>register.php</code>, lalu isi dengan kode berikut:</p>
+
+<pre><code class="language-php">&lt;?php
+
+require_once(&quot;config.php&quot;);
+
+if(isset($_POST['register'])){
+
+    // filter data yang diinputkan
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+    // enkripsi password
+    $password = password_hash($_POST[&quot;password&quot;], PASSWORD_DEFAULT);
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+
+
+    // menyiapkan query
+    $sql = &quot;INSERT INTO users (name, username, email, password) 
+            VALUES (:name, :username, :email, :password)&quot;;
+    $stmt = $db-&gt;prepare($sql);
+
+    // bind parameter ke query
+    $params = array(
+        &quot;:name&quot; =&gt; $name,
+        &quot;:username&quot; =&gt; $username,
+        &quot;:password&quot; =&gt; $password,
+        &quot;:email&quot; =&gt; $email
+    );
+
+    // eksekusi query untuk menyimpan ke database
+    $saved = $stmt-&gt;execute($params);
+
+    // jika query simpan berhasil, maka user sudah terdaftar
+    // maka alihkan ke halaman login
+    if($saved) header(&quot;Location: login.php&quot;);
+}
+
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Register Pesbuk&lt;/title&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+
+&lt;div class=&quot;container mt-5&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+
+        &lt;p&gt;&amp;larr; &lt;a href=&quot;index.php&quot;&gt;Home&lt;/a&gt;
+
+        &lt;h4&gt;Bergabunglah bersama ribuan orang lainnya...&lt;/h4&gt;
+        &lt;p&gt;Sudah punya akun? &lt;a href=&quot;login.php&quot;&gt;Login di sini&lt;/a&gt;&lt;/p&gt;
+
+        &lt;form action=&quot;&quot; method=&quot;POST&quot;&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;name&quot;&gt;Nama Lengkap&lt;/label&gt;
+                &lt;input class=&quot;form-control&quot; type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;Nama kamu&quot; /&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
+                &lt;input class=&quot;form-control&quot; type=&quot;text&quot; name=&quot;username&quot; placeholder=&quot;Username&quot; /&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+                &lt;input class=&quot;form-control&quot; type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Alamat Email&quot; /&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
+                &lt;input class=&quot;form-control&quot; type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;Password&quot; /&gt;
+            &lt;/div&gt;
+
+            &lt;input type=&quot;submit&quot; class=&quot;btn btn-success btn-block&quot; name=&quot;register&quot; value=&quot;Daftar&quot; /&gt;
+
+        &lt;/form&gt;
+            
+        &lt;/div&gt;
+
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;img class=&quot;img img-responsive&quot; src=&quot;img/connect.png&quot; /&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>Penjelasan:</strong></p>
+
+<p>Pertama kita membutuhkan objek <code>$db</code> untuk melakukan query,
+maka kita impor <code>config.php</code> dengan fungsi <code>require_once()</code>.</p>
+
+<pre><code class="language-php">require_once(&quot;config.php&quot;);
+</code></pre>
+
+<p>Setelah itu, baru kita buat kode untuk menyimpan data ke database.</p>
+
+<p>Sebelumnya, kita cek dulu. Apakah tombol <strong>Register</strong> sudah ditekan atau belum:</p>
+
+<pre><code class="language-php">if(isset($_POST['register'])){
+
+    // ...
+}
+?&gt;
+</code></pre>
+
+<p>Selanjutnya melakukan filter dan enkripsi password terhadap data yang diinputkan:</p>
+
+<pre><code class="language-php">// filter data yang diinputkan
+$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+// enkripsi password
+$password = password_hash($_POST[&quot;password&quot;], PASSWORD_DEFAULT);
+$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+</code></pre>
+
+<p>Kenapa harus di-filter dan dienkripsi?</p>
+
+<p>Jangan percaya pada apa yang diinputkan user, bisa saja dia menginputkan
+<code>username</code> dan <code>name</code> seperti ini:</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/serangan-xss.png" 
+    src="/img/placeholder.svg"
+    alt="Serangan XSS"
+ />
+
+<p>Ini salah satu bentuk <a href="/codeigniter-serangan-xss/">serangan XSS</a>.</p>
+
+<p>Karena itu, kita harus memfilternya agar skrip yang diinputkan
+user diubah menjadi karakter yang aman.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/database-filter.png" 
+    src="/img/placeholder.svg"
+    alt="Filter XSS"
+ />
+
+<p>Lalu kenapa password harus dienkripsi?</p>
+
+<p>Tujuannya untuk keamanan. Nanti kalau database dicuri, si
+pencuri tidak akan tahu password dari akun-akun yang sudah terdaftar.</p>
+
+<pre><code class="language-php">// enkripsi password
+$password = password_hash($_POST[&quot;password&quot;], PASSWORD_DEFAULT);
+</code></pre>
+
+<p>Tunggu dulu&hellip;</p>
+
+<p>Kenapa password tidak di-filter?</p>
+
+<p>Karena agar user dapat menggunakan simbol untuk membuat password.</p>
+
+<p>Kalau kita filter nanti user tidak bisa membuat password dengan
+simbol-simbol seperti: <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>, <code>%</code>, dll.</p>
+
+<p>Setelah data di-filter, selanjutnya kita buat query dengan
+objek <code>$db</code>.</p>
+
+<pre><code class="language-php">$sql = &quot;INSERT INTO users (name, username, email, password) 
+            VALUES (:name, :username, :email, :password)&quot;;
+$stmt = $db-&gt;prepare($sql);
+</code></pre>
+
+<p><code>:name, :username, :email, :password</code> adalah <em>placeholder</em>.
+Tujuannya agar terhindar dari serangan <strong>SQL Injection</strong>.</p>
+
+<p>Setelah itu, kita <em>bind</em> parameter atau mengisi <em>placeholder</em>
+dengan nilai yang kita dapatkan dari hasil filter.</p>
+
+<pre><code class="language-php">// bind parameter ke query
+$params = array(
+    &quot;:name&quot; =&gt; $name,
+    &quot;:username&quot; =&gt; $username,
+    &quot;:password&quot; =&gt; $password,
+    &quot;:email&quot; =&gt; $email
+);
+</code></pre>
+
+<p>Selanjutnya, kita eksekusi query-nya:</p>
+
+<pre><code class="language-php">// eksekusi query untuk menyimpan ke database
+$saved = $stmt-&gt;execute($params);
+</code></pre>
+
+<p>Eksekusi query akan menghasilkan nilai <code>true</code> jika berhasil.</p>
+
+<p>Sehingga kita bisa membuat sebuah kondisi:</p>
+
+<pre><code class="language-php">// jika query simpan berhasil, maka user sudah terdaftar
+// maka alihkan ke halaman login
+if($saved) header(&quot;Location: login.php&quot;);
+</code></pre>
+
+<p>Lalu yang terakhir adalah kode untuk form registernya:</p>
+
+<pre><code class="language-html">&lt;form action=&quot;&quot; method=&quot;POST&quot;&gt;
+...
+&lt;/form&gt;
+</code></pre>
+
+<p>Atribut <code>action=&quot;&quot;</code> artinya data akan dikirim ke file itu sendiri, yaitu: <code>register.php</code>.</p>
+
+<p>Mudah bukan?</p>
+
+<p>Selanjutnya kita akan membuat fitur login.</p>
+
+
+<div class="border my-5">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-6279325630224392"
+     data-ad-slot="7009414453">
+</ins>
+</div>
+
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<h2 id="membuat-fitur-login-di-php">Membuat Fitur Login di PHP</h2>
+
+<p>Silahkan buka file <code>login.php</code> lalu isi&mdash;ketik! jangan copas&mdash;dengan kode berikut:</p>
+
+<pre><code class="language-php">&lt;?php 
+
+require_once(&quot;config.php&quot;);
+
+if(isset($_POST['login'])){
+
+    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+
+    $sql = &quot;SELECT * FROM users WHERE username=:username OR email=:email&quot;;
+    $stmt = $db-&gt;prepare($sql);
+    
+    // bind parameter ke query
+    $params = array(
+        &quot;:username&quot; =&gt; $username,
+        &quot;:email&quot; =&gt; $username
+    );
+
+    $stmt-&gt;execute($params);
+
+    $user = $stmt-&gt;fetch(PDO::FETCH_ASSOC);
+
+    // jika user terdaftar
+    if($user){
+        // verifikasi password
+        if(password_verify($password, $user[&quot;password&quot;])){
+            // buat Session
+            session_start();
+            $_SESSION[&quot;user&quot;] = $user;
+            // login sukses, alihkan ke halaman timeline
+            header(&quot;Location: timeline.php&quot;);
+        }
+    }
+}
+?&gt;
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Login Pesbuk&lt;/title&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+
+&lt;div class=&quot;container mt-5&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+
+        &lt;p&gt;&amp;larr; &lt;a href=&quot;index.php&quot;&gt;Home&lt;/a&gt;
+
+        &lt;h4&gt;Masuk ke Pesbuk&lt;/h4&gt;
+        &lt;p&gt;Belum punya akun? &lt;a href=&quot;register.php&quot;&gt;Daftar di sini&lt;/a&gt;&lt;/p&gt;
+
+        &lt;form action=&quot;&quot; method=&quot;POST&quot;&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
+                &lt;input class=&quot;form-control&quot; type=&quot;text&quot; name=&quot;username&quot; placeholder=&quot;Username atau email&quot; /&gt;
+            &lt;/div&gt;
+
+
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
+                &lt;input class=&quot;form-control&quot; type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;Password&quot; /&gt;
+            &lt;/div&gt;
+
+            &lt;input type=&quot;submit&quot; class=&quot;btn btn-success btn-block&quot; name=&quot;login&quot; value=&quot;Masuk&quot; /&gt;
+
+        &lt;/form&gt;
+            
+        &lt;/div&gt;
+
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;!-- isi dengan sesuatu di sini --&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>Penjelasan:</strong></p>
+
+<p>Algoritmanya hampir sama seperti register.</p>
+
+<p>Pertama kita mengimpor file <code>config.php</code>:</p>
+
+<pre><code class="language-php">require_once(&quot;config.php&quot;);
+</code></pre>
+
+<p>Setelah itu, kita cek apakah tombol login sudah ditekan atau belum:</p>
+
+<pre><code class="language-php">if(isset($_POST['login'])){
+    // ...
+}
+</code></pre>
+
+<p>Lalu melakukan filter:</p>
+
+<pre><code class="language-php">$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+$password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+</code></pre>
+
+<p>Selanjutnya melakukan query:</p>
+
+<pre><code class="language-php">$sql = &quot;SELECT * FROM users WHERE username=:username OR email=:email&quot;;
+$stmt = $db-&gt;prepare($sql);
+</code></pre>
+
+<p>Pada query, kita menggunakan logika <code>OR</code> agar user bisa login dengan <code>email</code> dan <code>username</code> .</p>
+
+<p>Selanjutnya <em>bind</em> parameter dan ekekusi querynya.</p>
+
+<pre><code class="language-php">// bind parameter ke query
+$params = array(
+    &quot;:username&quot; =&gt; $username,
+    &quot;:email&quot; =&gt; $username
+);
+$stmt-&gt;execute($params);
+</code></pre>
+
+<p>Setelah query dieksekusi, kita ambil hasilnya dengan fungsi <code>fetch()</code>.</p>
+
+<pre><code class="language-php">$user = $stmt-&gt;fetch(PDO::FETCH_ASSOC);
+</code></pre>
+
+<p>Artinya, kita akan mengambil hasil query sebagai array assosiatif.</p>
+
+<p>Fungsi <code>fetch()</code> akan menghasilkan <code>null</code> kalau tidak ada data,
+maka kita bisa membuat kondisi seperti ini:</p>
+
+<pre><code class="language-php">// jika user terdaftar
+if($user){
+    //...
+}
+</code></pre>
+
+<p>Selanjutnya, kita lakukan verifikasi password yang diinputkan oleh
+user dengan password yang ada di database.</p>
+
+<pre><code class="language-php">if(password_verify($password, $user[&quot;password&quot;])){
+    //...
+}
+</code></pre>
+
+<p>Fungsi <code>password_verify()</code> akan menghasilkan nilai <code>true</code> kalau password
+yang diinputkan sama dengan yang di database.</p>
+
+<p>Langkah terakhir adalah membuat <em>session</em> dan mengalihkannya ke
+halaman <code>timeline.php</code>.</p>
+
+<pre><code class="language-php">// buat Session
+session_start();
+$_SESSION[&quot;user&quot;] = $user;
+// login sukses, alihkan ke halaman timeline
+header(&quot;Location: timeline.php&quot;);
+</code></pre>
+
+<p>Variabel <code>$_SESSION</code> adalah variabel super global yang bisa dibaca dari semua file PHP,
+karena diingat oleh server.</p>
+
+<p>Untuk dapat menggunakan variabel <code>$_SESSION</code> kita harus memanggil fungsi <code>session_start()</code>
+terlebih dahulu.</p>
+
+<p><code>$_SESSION[&quot;user&quot;] = $user;</code> artinya kita menyimpan data user ke dalam <em>session</em>.</p>
+
+<p>Ini yang akan kita manfaatkan untuk mengecek apakah user sudah login atau belum.</p>
+
+<h2 id="membuat-halaman-timeline">Membuat Halaman Timeline</h2>
+
+<p>Sebelum membuat kode untuk halaman <code>timeline.php</code>, kita buat dulu
+<code>auth.php</code>.</p>
+
+<p>File <code>auth.php</code> berfungsi untuk mengecek <em>session</em>, apakah user sudah login
+atau belum.</p>
+
+<p>Silahkan buka file <code>auth.php</code> kemudian isi seperti ini:</p>
+
+<pre><code class="language-php">&lt;?php
+
+session_start();
+if(!isset($_SESSION[&quot;user&quot;])) header(&quot;Location: login.php&quot;);
+</code></pre>
+
+<p><strong>Penjelasan:</strong></p>
+
+<p>Seperti penjelasan sebelumnya, saat kita ingin menggunakan variabel <code>$_SESSION</code>,
+maka kita harus memanggil fungsi <code>session_start()</code> terlebih dahulu.</p>
+
+<p>Setelah itu kita cek dengan:</p>
+
+<pre><code class="language-php">if(!isset($_SESSION[&quot;user&quot;])) header(&quot;Location: login.php&quot;);
+</code></pre>
+
+<p>Artinya, jika variabel <code>$_SESSION[&quot;user&quot;]</code> tidak memiliki nilai, maka
+user belum login&hellip; paksa dia untuk login 😄.</p>
+
+<p>Tanda seru (<code>!</code>) di depan <code>isset()</code> artinya tidak.
+Berarti tidak ter-set (variabel belum dibuat).</p>
+
+<p>Nah barulah sekarang kita buat halaman <code>timeline.php</code>.</p>
+
+<p>Silahkan buka file <code>timeline.php</code>, lalu isi dengan kode berikut:</p>
+
+<pre><code class="language-php">&lt;?php require_once(&quot;auth.php&quot;); ?&gt;
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Pesbuk Timeline&lt;/title&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+
+&lt;div class=&quot;container mt-5&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-4&quot;&gt;
+
+            &lt;div class=&quot;card&quot;&gt;
+                &lt;div class=&quot;card-body text-center&quot;&gt;
+
+                    &lt;img class=&quot;img img-responsive rounded-circle mb-3&quot; width=&quot;160&quot; src=&quot;img/&lt;?php echo $_SESSION['user']['photo'] ?&gt;&quot; /&gt;
+                    
+                    &lt;h3&gt;&lt;?php echo  $_SESSION[&quot;user&quot;][&quot;name&quot;] ?&gt;&lt;/h3&gt;
+                    &lt;p&gt;&lt;?php echo $_SESSION[&quot;user&quot;][&quot;email&quot;] ?&gt;&lt;/p&gt;
+
+                    &lt;p&gt;&lt;a href=&quot;logout.php&quot;&gt;Logout&lt;/a&gt;&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            
+        &lt;/div&gt;
+
+
+        &lt;div class=&quot;col-md-8&quot;&gt;
+
+            &lt;form action=&quot;&quot; method=&quot;post&quot; /&gt;
+                &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;textarea class=&quot;form-control&quot; placeholder=&quot;Apa yang kamu pikirkan?&quot;&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+
+            &lt;?php for($i=0; $i &lt; 6; $i++){ ?&gt;
+            &lt;div class=&quot;card mb-3&quot;&gt;
+                &lt;div class=&quot;card-body&quot;&gt;
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veritatis nemo ad recusandae labore nihil iure qui eum consequatur, officiis facere quis sunt tempora impedit ullam reprehenderit facilis ex amet!
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;?php } ?&gt;
+            
+        &lt;/div&gt;
+    
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Halaman <code>timeline.php</code> hanya boleh dibuka oleh user yang sudah login saja.
+Maka kita harus mengeceknya.</p>
+
+<p>Bagaimana caranya?</p>
+
+<p>Cukup dengan mengimpor file <code>auth.php</code>:</p>
+
+<pre><code class="language-php">&lt;?php require_once(&quot;auth.php&quot;); ?&gt;
+</code></pre>
+
+<p>Apa bila user-nya belum login, maka dia akan dialihkan ke halaman login.
+Sesuai kondisi logika yang kita buat pada file <code>auth.php</code>.</p>
+
+<p>Karena kita sudah mengimpor file <code>auth.php</code>, kita bisa menggunakan
+variabel <code>$_SESSION</code> di sini.</p>
+
+<p>Mari kita coba ambil nilai yang disimpan di sana:</p>
+
+<pre><code class="language-php">&lt;img class=&quot;img img-responsive rounded-circle mb-3&quot; width=&quot;160&quot; src=&quot;img/&lt;?php echo $_SESSION['user']['photo'] ?&gt;&quot; /&gt;
+&lt;h3&gt;&lt;?php echo  $_SESSION[&quot;user&quot;][&quot;name&quot;] ?&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;?php echo $_SESSION[&quot;user&quot;][&quot;email&quot;] ?&gt;&lt;/p&gt;
+</code></pre>
+
+<p>Lalu membuat sebuah status <em>dummy</em> &ldquo;lorem ipsum&rdquo; sebanyak 6:</p>
+
+<pre><code class="language-php">&lt;?php for($i=0; $i &lt; 6; $i++){ ?&gt;
+&lt;div class=&quot;card mb-3&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veritatis nemo recusandae labore nihil iure qui eum consequatur, officiis facere quis sunt tempoimpedit ullam reprehenderit facilis ex amet!
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;?php } ?&gt;
+</code></pre>
+
+<p>Maka hasilnya:</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/php/login-reg/halaman-timeline.png" 
+    src="/img/placeholder.svg"
+    alt="Halaman Timeline"
+ />
+
+<p>Kereenn&hellip; 😍</p>
+
+<p>Terakhir, tinggal buat <code>logout.php</code> saja nih.</p>
+
+<h2 id="membuat-logout-di-php">Membuat Logout di PHP</h2>
+
+<p>Silahkan buka file <code>logout.php</code>, kemudian isi dengan kode berikut:</p>
+
+<pre><code class="language-php">&lt;?php
+
+session_start();
+session_unset(&quot;user&quot;);
+header(&quot;Location: index.php&quot;);
+</code></pre>
+
+<p>Tungas dari file <code>logout.php</code> adalah menghancurkan atau menghapus
+<em>session</em> yang sudah dibuat.</p>
+
+<p>Pertama-tama, kita harus memanggil fungsi <code>session_start()</code>, karena kita akan
+menggunakan <em>session</em> di sini.</p>
+
+<pre><code class="language-php">session_start();
+</code></pre>
+
+<p>Setelah itu, kita hancurkan atau hapus variabel <code>$_SESSION['user']</code> dengan
+fungsi <code>session_unset(&quot;user&quot;)</code>.</p>
+
+<pre><code class="language-php">session_unset(&quot;user&quot;);
+</code></pre>
+
+<p>Penghancuran <em>session</em> selesai.</p>
+
+<p>Selanjutnya kita alihkan ke halaman utama.</p>
+
+<pre><code class="language-php">header(&quot;Location: index.php&quot;);
+</code></pre>
+
+
+<div class="border my-5">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-6279325630224392"
+     data-ad-slot="7009414453">
+</ins>
+</div>
+
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<!-- Penutup -->
+
+<h2 id="apa-selanjutnya">Apa Selanjutnya?</h2>
+
+<p>Kita sudah berhasil membuat fitur login register.
+Selanjutnya tinggal dikembangkan saja.</p>
+
+<p>Silahkan coba buat fitur:</p>
+
+<ul>
+<li>Edit Profile;</li>
+<li>Update Status;</li>
+<li>Cari Teman;</li>
+<li>Follow dan Unfollow;</li>
+<li>Realtime Chat;</li>
+<li>dan lain-lain.</li>
+</ul>
+
+<p>Selamat coding&hellip;</p>
+
+<p>Jangan lupa di-share!</p>
+
+
+                                <div class="post-footer mt-5 py-4">
+                                    <div class="mb-4 py-3 border border-left-0 border-right-0">
+    <h6>Berbagi manfaat:</h6>
+    <a class="mr-2" 
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fphp-login-register%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Tutorial%20PHP%20%26%20MySQL%3a%20Membuat%20Login%20dan%20Register%20%28dengan%20Bootstrap%204%29" 
+        title="Bagikan ke Facebook" 
+        target="_blank"
+        onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=' + encodeURIComponent(document.URL));
+        return false;">
+        <img src="/img/icon/entypo/entypo-social/facebook-with-circle.svg" width="32" height="32" alt="Facebook"/>
+    </a>
+    <a class="mr-2" 
+        href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fphp-login-register%2f%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Tutorial%20PHP%20%26%20MySQL%3a%20Membuat%20Login%20dan%20Register%20%28dengan%20Bootstrap%204%29%20https%3a%2f%2fwww.petanikode.com%2fphp-login-register%2f%20via%20@petanikode"
+        onclick="window.open('https://twitter.com/intent/tweet?source=https:\/\/www.petanikode.com\/php-login-register\/%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Tutorial PHP \x26 MySQL: Membuat Login dan Register (dengan Bootstrap 4)%20https:\/\/www.petanikode.com\/php-login-register\/%20via%20@petanikode'); return false;"
+        target="_blank" 
+        title="Berbagi ke Twitter">
+        <img src="/img/icon/entypo/entypo-social/twitter-with-circle.svg" width="32" height="32" alt="Twitter"/>
+    </a>
+    <a class="mr-2" 
+        href="https://t.me/share/url?url=https%3a%2f%2fwww.petanikode.com%2fphp-login-register%2f%3Futm_source%3Dtelegram.org%26utm_medium%3Dshare"
+        onclick="window.open('https://t.me/share/url?url=https:\/\/www.petanikode.com\/php-login-register\/%3Futm_source%3Dtelegram.org%26utm_medium%3Dshare');return false;"
+        target="_blank" 
+        title="Bagikan ke Telegram">
+        <img src="/img/icon/entypo/entypo-social/telegram-with-circle.svg" width="32" height="32" alt="Telegram"/>
+    </a>
+    <a class="mr-2" 
+        href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fphp-login-register%2f%3Futm_source%3Dplus.google.com%26utm_medium%3Dshare" 
+        target="_blank" 
+        title="Bagikan ke Google+" 
+        onclick="window.open('https://plus.google.com/share?url='+ encodeURIComponent(document.URL)); return false;">
+        <img src="/img/icon/entypo/entypo-social/google+-with-circle.svg" width="32" height="32" alt="Google+"/>
+    </a>
+    <a class="mr-2" 
+        href="mailto:?subject=Tutorial%20PHP%20%26%20MySQL%3a%20Membuat%20Login%20dan%20Register%20%28dengan%20Bootstrap%204%29&body=Tutorial%20PHP%20%26%20MySQL%3a%20Membuat%20Login%20dan%20Register%20%28dengan%20Bootstrap%204%29:%20https%3a%2f%2fwww.petanikode.com%2fphp-login-register%2f%3Futm_source%3Demail%26utm_medium%3Dshare" 
+        title="Kirim ke Email">
+        <img src="/img/icon/entypo/entypo-social/mail-with-circle.svg" width="32" height="32" alt="Email"/>
+    </a>
+</div>
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'petanikode';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </article>
+
+                
+                <div class="card p-3">
+                    
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-6279325630224392"
+     data-ad-slot="5172754450"></ins>
+
+                </div>
+                
+
+            </div>
+
+            <div class="col-sm-12 col-lg-4">
+                <aside>
+
+    
+<div class="widget mb-5">
+    
+    <div class="widget-content">
+
+        
+
+        <script type="text/javascript">
+
+            document.write('\n\n<style>\n	\n	\n						@import url(\'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext\');\n													\n\n	#mlb2-4827284,\n	#mlb2-4827284 *,\n	#mlb2-4827284 a:hover,\n	#mlb2-4827284 a:visited,\n	#mlb2-4827284 a:focus,\n	#mlb2-4827284 a:active {\n	    overflow:visible;\n	    position:static;\n	    background:none;\n	    border:none;\n	    bottom:auto;\n	    clear:none;\n	    cursor:default;\n	    float:none;\n	    letter-spacing:normal;\n	    line-height:normal;\n	    text-align:left;\n	    text-indent:0;\n	    text-transform:none;\n	    visibility:visible;\n	    white-space:normal;\n	\n	    max-height:none;\n	    max-width:none;\n	    left:auto;\n	    min-height:0;\n	    min-width:0;\n	    right:auto;\n	    top:auto;\n	    width:auto;\n	    z-index:auto;\n	\n	    text-shadow: none;\n	    box-shadow: none;\n	    outline: medium none;\n	}\n	\n	#mlb2-4827284 a:hover {\n		cursor: pointer !important;\n	}\n	\n	#mlb2-4827284 h4 {\n	    font-weight: normal;\n	}\n\n	#mlb2-4827284 .subscribe-form {\n	\n		padding: 20px;\n				width: 350px !important;\n				border: 2px solid #F6F6F6 !important;\n		background: #f6f6f6 none !important;\n		border-radius: 0px !important;\n		box-sizing: border-box !important;\n	\n	\n	}\n	\n	#mlb2-4827284 .ml-block-form {\n	 \n		margin-bottom: 0px;\n	\n	}\n    \n    #mlb2-4827284 .subscribe-form .form-section {\n    \n        margin-bottom: 20px;\n        width: 100%;\n    \n    }\n    \n    #mlb2-4827284 .subscribe-form .form-section.mb10 {\n    \n        margin-bottom: 10px;\n        float: left;\n    \n    }\n    \n    #mlb2-4827284 .subscribe-form .form-section.mb0 {\n    \n        margin-bottom: 0px;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section h4 {\n    \n        margin: 0px 0px 10px 0px !important;\n        padding: 0px !important;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 28px !important;\n        line-height: 100%;\n        text-align: left !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section p,\n    #mlb2-4827284 .subscribe-form .form-section li {\n    \n        line-height: 150%;\n        padding: 0px !important;\n        margin: 0px 0px 10px 0px;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section a {\n    \n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .confirmation_checkbox {\n    \n        line-height: 150%;\n        padding: 0px !important;\n        margin: 0px 0px 15px 0px !important;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 12px !important;\n        font-weight: normal !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .confirmation_checkbox input[type=\"checkbox\"] {\n    \n        margin-right: 5px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .form-group {\n    \n        margin-bottom: 15px;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .form-group label {\n    \n        float: left;\n        margin-bottom: 10px;\n        width: 100%;\n        line-height: 100%;\n        font-weight: bold;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox {\n        \n\n        width: 100%;\n        margin: 0px 0px 10px 0px;\n        \n\n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox label {\n\n    \n\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n\n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox input {\n\n    \n        margin: 0px 5px 0px 0px;\n    \n\n    }\n    \n     #mlb2-4827284 .subscribe-form .form-section .checkbox input[type=checkbox] {\n\n    \n       -webkit-appearance: checkbox;\n    \n\n    }\n\n\n    #mlb2-4827284.ml-subscribe-form .form-group .form-control {\n\n    \n\n        width: 100%;\n        font-size: 13px;\n        padding: 10px 10px;\n        height: auto;\n        font-family: Arial;\n        border-radius: 0px;\n        border: 1px solid #cccccc !important;\n        color: #000000 !important;\n        background-color: #FFFFFF !important;\n    	-webkit-box-sizing: border-box;\n    	-moz-box-sizing: border-box;\n    	box-sizing: border-box;\n        clear: left;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button {\n\n    \n\n        border: none !important;\n        cursor: pointer !important;\n        width: 100% !important;\n        border-radius: 0px !important;\n        height: 40px !important;\n        background-color: #008080 !important;\n        color: #FFFFFF !important;\n        font-family: \'Arial\', sans-serif !important;\n        font-size: 16px !important;\n        text-align: center !important;\n        padding: 0 !important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button.gradient-on {\n\n    \n\n            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button.gradient-on:hover {\n\n    \n\n            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button[disabled] {\n\n    \n\n            cursor: not-allowed!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-section.ml-error label {\n\n    \n\n        color: red!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-group.ml-error label {\n\n    \n\n        color: red!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-group.ml-error .form-control  {\n\n    \n\n        border-color: red!important;\n\n    \n\n    }\n    \n\n    \n        \n    \n    \n            \n    @media (max-width: 768px) {\n	    \n	    #mlb2-4827284 {\n		    \n		    width: 100% !important;\n		    \n	    }\n	    \n	    #mlb2-4827284 form.ml-block-form,\n	    #mlb2-4827284 .subscribe-form {\n			\n			width: 100% !important;\n			\n		}\n		\n	}\n	\n	    \n    \n<\/style>\n\n\n\n<div id=\"mlb2-4827284\" class=\"ml-subscribe-form ml-subscribe-form-4827284\">\n	\n	<div class=\"ml-vertical-align-center\">\n	    \n	    <div class=\"subscribe-form ml-block-success\" style=\"display:none\">\n	       \n	        	        \n	        <div class=\"form-section\">\n		        \n		        	            \n	            <p>Terima kasih... Silahkan cek inbox untuk mengkonfirmasi!<\/p>\n	            \n	        <\/div>\n	        \n	    <\/div>\n	\n	    <form class=\"ml-block-form\" action=\"//app.mailerlite.com/webforms/submit/c8d3m1\" data-id=\"385614\" data-code=\"c8d3m1\" method=\"POST\" target=\"_blank\">\n	\n		    	\n		    <div class=\"subscribe-form\">\n			    		        <div class=\"form-section mb10\">\n			        		            		            <p><strong><span style=\"font-size: 18px;\">Susah belajar pemrograman? <\/span><\/strong><\/p>\n<p>Dapatkan panduan dan tips eksklusif dari Petani Kode untuk membantumu belajar pemrograman<\/p>\n		            		        <\/div>\n		        \n		        <div class=\"form-section\">\n								        <div class=\"form-group ml-field-name\">\n			            			            <input type=\"text\" name=\"fields[name]\" class=\"form-control\" placeholder=\"Nama\" value=\"\"  autocomplete=\"name\" x-autocompletetype=\"name\" spellcheck=\"false\" autocapitalize=\"off\" autocorrect=\"off\">\n			        <\/div>\n								        <div class=\"form-group ml-field-email ml-validate-required ml-validate-email\">\n			            			            <input type=\"email\" name=\"fields[email]\" class=\"form-control\" placeholder=\"Email*\" value=\"\" autocomplete=\"email\" x-autocompletetype=\"email\"  spellcheck=\"false\" autocapitalize=\"off\" autocorrect=\"off\">\n			        <\/div>\n							        <\/div>\n		        \n		        	\n																	\n		\n	        	\n	        <input type=\"hidden\" name=\"ml-submit\" value=\"1\" />\n			\n						\n	        <button type=\"submit\" class=\"primary\">\n	            Ya, Saya Mau!\n	        <\/button>\n	\n	        <button disabled=\"disabled\" style=\"display: none;\" type=\"button\" class=\"loading\">\n	            <img src=\"//static.mailerlite.com/images/rolling.gif\" width=\"20\" height=\"20\" style=\"width: 20px; height: 20px;\">\n	        <\/button>\n	        \n	        	\n	    <\/div>\n	\n	    <\/form>\n	\n	\n	    <script>\n	        function ml_webform_success_4827284 () {\n	                        var $ = ml_jQuery || jQuery;\n\n	            $(\'.ml-subscribe-form-4827284 .ml-block-success\').show();\n	            $(\'.ml-subscribe-form-4827284 .ml-block-form\').hide();\n	        	        };\n	    <\/script>\n	\n	<\/div>\n<\/div>\n\n\n    ');
+            var script_tag = document.createElement('script');
+            script_tag.setAttribute("type","text/javascript");
+            script_tag.setAttribute("src", "//static.mailerlite.com/js/w/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f");
+            document.getElementsByTagName("head")[0].appendChild(script_tag);
+
+        </script>
+
+    </div>
+</div>
+
+    
+<div class="widget mb-5">
+    
+    <div class="widget-content">
+
+            
+            
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6279325630224392" data-ad-slot="3924804668" data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+</div>
+</div>
+
+    <div class="widget mb-5">
+
+    <div class="widget-content">
+
+        <div class="card">
+
+            <div class="card-body">
+                <h4 class="card-title">Artikel Terbaru</h4>
+            </div>
+            <div class="list-group list-group-flush">
+                
+                
+                
+                 
+                <a href="/php-login-register/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/tutorial-php-mysql/php-mysql-square.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Tutorial PHP &amp; MySQL: Membuat Login dan Register (dengan Bootstrap 4)</p>
+                        <small class="text-secondary">08 Nov 2017 · baca 11 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                  
+                <a href="/belajar-pemrograman/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/belajar-pemrograman/programmer-coding-sqr.jpg" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Bagaimana Cara Belajar Pemrograman? [ini 5 Tips yang bisa kamu coba]</p>
+                        <small class="text-secondary">07 Nov 2017 · baca 4 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                  
+                <a href="/android-studio-linux/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/android/studio3/android-studio-3-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Cara Install Android Studio 3.x di Linux</p>
+                        <small class="text-secondary">03 Nov 2017 · baca 4 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                  
+                <a href="/python-args-kwargs/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/python/python-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Apa Maksud dari *args dan **kwargs pada Python?</p>
+                        <small class="text-secondary">02 Nov 2017 · baca 4 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                  
+                <a href="/python-fungsi/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/python/python-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Belajar Python: Memahami Fungsi dan Prosedur pada Python</p>
+                        <small class="text-secondary">01 Nov 2017 · baca 8 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                   
+            </div>
+            <div class="card-body">
+                <a href="https://feedburner.google.com/fb/a/mailverify?uri=petanikode&amp;loc=en_US" class="card-link" target="_blank">Langganan Artikel via Email</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.10&appId=152759108115365';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-page" data-href="https://www.facebook.com/petanikode/" data-small-header="false" data-adapt-container-width="true"
+    data-hide-cover="false" data-show-facepile="true">
+    <blockquote cite="https://www.facebook.com/petanikode/" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/petanikode/">Petani Kode</a>
+    </blockquote>
+</div>
+
+</aside>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
+    <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 mb-0 mb-sm-3">
+
+                <ul class="nav justify-content-center justify-content-lg-start">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/faqs">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:info@petanikode.com">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-md-6 col-sm-12 text-center text-md-right pt-2">
+
+                &copy; 2017 <a href="https://www.petanikode.com/">Petani Kode</a>
+                <span class="d-none d-lg-inline"> | Made with <img class="emoji" draggable="false" alt="❤️" src="/img/icon/twemoji/2764.svg" /> using <a href='https://gohugo.io' target='_blank'>Hugo 0.26</a></span>
+
+            </div>
+
+            
+        </div>
+    </div>
+</footer> <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script type="text/javascript" async src="/js/lazysizes.min.js"></script>
+<script type="text/javascript" src="/js/twemoji.min.js"></script>
+
+
+<script>
+    
+    var article = document.querySelector("article");
+    twemoji.parse(article, {
+        base: "/img/icon/twemoji/",
+        
+        ext: ".svg",
+        callback: function (icon, options) {
+            return '/img/icon/twemoji/' + icon + '.svg';
+        }
+    });
+</script>
+
+
+
+
+
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6279325630224392",
+        enable_page_level_ads: true
+    });
+</script>
+
+
+<script>
+$(document).ready(function(){
+    
+    (adsbygoogle = window.adsbygoogle || []).push({});
+
+    
+});
+</script>
+
+</body>
+
+</html>

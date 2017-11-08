@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 08 Sep 2017 06:44:27 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Nov 2017 17:07:55 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/kategori/database/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tutorial PHP &amp; MySQL: Membuat Login dan Register (dengan Bootstrap 4)</title>
+      <link>https://www.petanikode.com/php-login-register/</link>
+      <pubDate>Wed, 08 Nov 2017 17:07:55 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/php-login-register/</guid>
+      <description>Login dan register adalah fitur yang sering dibutuhkan dalam pengembangan aplikasi web.
+Biasanya saat membuat halaman admin. Kita pasti akan membuat login dan register.
+Lalu bagaimana cara membuatnya?
+Tulisan ini akan menjawabnya&amp;hellip;
+Sebelum itu, saya ingin menyampaikan apa saja yang akan dibahas di sini.
+ Tutorial ini menggunakan PHP Native dan PDO sebagai koneksi ke database; Tutorial ini menggunakan Framework Bootstrap 4 untuk tampilan; Tutorial ini hanya akan fokus membahas fitur login dan register saja, untuk class-class bootstrap saya tidak akan jelaskan.</description>
+    </item>
     
     <item>
       <title>Tutorial Java dan MySQL: Membuat Program CRUD Berbasis Teks</title>

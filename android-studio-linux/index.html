@@ -12,7 +12,7 @@
 
 
 <meta itemprop="dateModified" content="2017-11-03T21:45:25&#43;08:00" />
-<meta itemprop="wordCount" content="791">
+<meta itemprop="wordCount" content="808">
 
 
 
@@ -297,7 +297,14 @@ setelah menginstal yang 3.0.</p>
 
 <p>Jika kamu menggunakan Linux 64-bit, maka harus menginstall library berikut:</p>
 
-<pre><code class="language-bash">sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
+<p>Untuk pengguna Ubuntu, Linux Mint, Debian:</p>
+
+<pre><code class="language-bash">sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+</code></pre>
+
+<p>Untuk pengguna fedora 64-bit:</p>
+
+<pre><code class="language-bash">sudo yum install zlib.i686 ncurses-libs.i686 bzip2-libs.i686
 </code></pre>
 
 <h2 id="download-android-studio">Download Android Studio</h2>

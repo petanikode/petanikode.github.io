@@ -20,7 +20,7 @@ Pastinya akan repot mencari sendiri depedency library-nya.">
 
 
 <meta itemprop="dateModified" content="2016-11-26T13:02:00&#43;00:00" />
-<meta itemprop="wordCount" content="855">
+<meta itemprop="wordCount" content="863">
 
 
 
@@ -465,8 +465,12 @@ fungsi-fungsi untuk pemrosesan waktu <em>(Date Time)</em>.</p>
 
 <p>Ketik pada terminal:</p>
 
-<pre><code>composer require nesbot/carbon
+<pre><code>composer require nesbot/carbon -vvv
 </code></pre>
+
+<div class="alert alert-info">
+    Kita memberikan argumen <code>-vvv</code> agar bisa melihat proses-nya
+</div>
 
 <p>Maka sekarang file <code>composer.json</code> akan berubah menjadi seperti ini:</p>
 
@@ -515,7 +519,7 @@ $sekarang = Carbon::now();
 echo &quot;Sekarang: $sekarang &lt;br&gt;&quot;;
 echo &quot;Umur saya: &quot; . Carbon::createFromDate(2000, 1, 1)-&gt;age . &quot;&lt;br&gt;&quot;;
 echo &quot;Besok: &quot; . $sekarang-&gt;addDay() .&quot;&lt;br&gt;&quot;;
-&lt;br&gt;
+
 ?&gt;
 </code></pre>
 

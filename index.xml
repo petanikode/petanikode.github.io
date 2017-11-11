@@ -954,7 +954,7 @@ Saat ini saya menggunakan komputer lab. dengan sistem operasi Windows 7 dan suda
 Pada Linux, perintah php sudah bisa langsung dikenali pada terminal, sedangkan pada CMD Windows masih belum.
 Kecuali melalui Shell di XAMPP.
 Pada tulisan ini, saya akan berbagi cara konfigurasi Windows agar dapat mengenali perintah php di CMD maupun PowerShell.
-Caranya sebenarnya sangat sederhana&amp;hellip;</description>
+Sehingga dapat digunakan untuk composer dan pengembangan web tingkat lanjut.</description>
     </item>
     
     <item>
@@ -1014,9 +1014,8 @@ Maka di dalam direktori ~/.ssh/ akan tercipa file key baru.
       <description>Halaman Github (Github Pages) merupakan layanan hosting web statis yang diberikan oleh Github. Layanan ini diberikan secara gratis dan kita juga akan mendapatkan subdomain .github.io.
 Bagaimanakah cara membuatnya?
 Baiklah, pastikan anda sudah punya akun Github dan sudah menginstal Git. Kemudian silahkan ikuti langkah-langkah berikut, tidak sampai 10 menit kok.
-1. Buat Repositori Baru Buatlah repositori baru dengan nama username.github.io. Gunakan username github Anda, contoh petanikode.github.io.
-
-![Membuat Repository Baru]</description>
+1. Buat Repositori Baru Buatlah repositori baru dengan nama username.github.io. Gunakan username github Anda, contoh petanikode.github.io. &amp;lt;!&amp;ndash; 
+![Membuat Repository Baru] &amp;ndash;&amp;gt;</description>
     </item>
     
     <item>
@@ -2854,7 +2853,7 @@ Pada tulisan ini, kita akan belajar pascal menggunakan kompilator Free Pascal.</
     </item>
     
     <item>
-      <title>Belajar Java di Linux: Inilah Persiapan yang Harus dilakukan</title>
+      <title>Belajar Java di Linux: Persiapan Awal yang Harus dilakukan</title>
       <link>https://www.petanikode.com/java-linux/</link>
       <pubDate>Sun, 11 Jan 2015 16:40:00 +0000</pubDate>
       

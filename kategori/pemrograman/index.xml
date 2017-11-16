@@ -1140,13 +1140,19 @@ Lalu, dari mana dapat nilai lama tanam, berat, dan harga? Sedangkan kita hanya b
     </item>
     
     <item>
-      <title>Belajar HTML: Cara Mengganti Bahasa Validator HTML5 ke dalam Bahasa Indonesia</title>
+      <title>Cara Mengganti Bahasa Validator HTML5 ke dalam Bahasa Indonesia</title>
       <link>https://www.petanikode.com/html-validator/</link>
       <pubDate>Sun, 07 Aug 2016 20:44:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/html-validator/</guid>
-      <description>HTML5 memiliki validator form untuk memvalidasi inputan. Misalnya, jika ada field yang masih kosong, maka validator akan membertahukan; kalau data masih kososng. Namun, bahasa yang digunakan adalah bahasa inggris. Bagaimana jika kita ingin merubahnya ke bahasa indonesia?
-Fungsi JavascriptKita membutuhkan fungsi Javascript untuk mengganti bahasa yang digunakan validator HTML5. Fungsi yang dapat digunakan berdasarkan jawaban yang saya temukan di Stack Overflow adalah setCustomValidit(). Fungsi ini kita jalankan ketika input field dalam status invalid (tidak valid).</description>
+      <description>Validasi input sangat penting dilakukan untuk mencegah kesalahan dalam nilai input.
+Misalnya:
+Jika ada field masih kosong, maka akan akan tampil pesan data masih kososng.
+Dulu, kita memvalidasi inputan menggunakan Javascript.
+Sekarang sudah tidak lagi.
+Karena HTML 5 sudah menyediakan atribut yang dapat kita gunakan untuk validasi.
+Namun, bahasa yang digunakan adalah bahasa inggris. (Tergantung dari lokliasasi pengaturan di Browser)
+Bagaimana jika kita ingin merubahnya ke bahasa indonesia saja?</description>
     </item>
     
     <item>

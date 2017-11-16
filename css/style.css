@@ -2,6 +2,11 @@
     background: #008080;
 }
 
+.hero {
+    /* Margin berdasarkan tinggi navbar */
+    margin-top: 56px;
+}
+
 img.emoji {
     display: inline !important;
     border: none !important;

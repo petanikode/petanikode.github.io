@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Tutorial Git 07 - Percabangan</title>
+      <title>Tutorial Git #7: Menggunakan Percabangan untuk Mencegah Konflik</title>
       <link>https://www.petanikode.com/git-branch/</link>
       <pubDate>Mon, 27 Feb 2017 19:20:26 +0800</pubDate>
       
@@ -26,7 +26,7 @@ Agar tidak terjadi hal yang seperti ini, kita harus membuat cabang (branch) ters
     </item>
     
     <item>
-      <title>Tutorial Git 06 - Membatalkan Revisi</title>
+      <title>Tutorial Git #6: Perintah untuk Membatalkan Revisi</title>
       <link>https://www.petanikode.com/git-revert/</link>
       <pubDate>Tue, 21 Feb 2017 14:55:42 +0800</pubDate>
       
@@ -37,7 +37,7 @@ Membatalkan Perubahan Jika revisi kita belum staged ataupun committed, kita bisa
     </item>
     
     <item>
-      <title>Tutorial Git 05 - Melihat Perbandingan Revisi</title>
+      <title>Tutorial Git #5: Melihat Perbandingan Revisi dengan Git Diff</title>
       <link>https://www.petanikode.com/git-diff/</link>
       <pubDate>Thu, 16 Feb 2017 13:56:42 +0800</pubDate>
       
@@ -49,7 +49,7 @@ Lihatlah hasil di atas, simbol plus (+) artinya kode yang ditambahkan. Sedangkan
     </item>
     
     <item>
-      <title>Tutorial Git 04 - Melihat Log Revisi</title>
+      <title>Tutorial Git #4: Melihat Catatan Log Revisi</title>
       <link>https://www.petanikode.com/git-log/</link>
       <pubDate>Tue, 14 Feb 2017 08:56:09 +0800</pubDate>
       
@@ -62,7 +62,7 @@ Log yang Lebih Pendek Untuk menampilkan log yang lebih pendek, kita bisa menamba
     </item>
     
     <item>
-      <title>Tutorial Git 03 - Membuat Revisi</title>
+      <title>Tutorial Git #3: Simpan Perubahan Revisi dengan Git Commit</title>
       <link>https://www.petanikode.com/git-commit/</link>
       <pubDate>Mon, 13 Feb 2017 17:30:51 +0800</pubDate>
       
@@ -76,7 +76,7 @@ Berdasarkan keterangan di atas, saat ini kita berada cabang (branch) master dan 
     </item>
     
     <item>
-      <title>Tutorial Git 02 - Membuat Repositori</title>
+      <title>Tutorial Git #2: Cara Membuat Repositori Baru dalam Proyek</title>
       <link>https://www.petanikode.com/git-init/</link>
       <pubDate>Thu, 09 Feb 2017 11:52:59 +0800</pubDate>
       
@@ -88,7 +88,7 @@ git init proyek-01  Perintah tersebut akan membuat direktori bernama proyek-01. 
     </item>
     
     <item>
-      <title>Belajar Dasar Git: Instalasi dan Persiapan (untuk pemula)</title>
+      <title>Tutorial Git #1: Cara Install Git dan Konfigurasi Awal yang Harus Dilakukan</title>
       <link>https://www.petanikode.com/git-install/</link>
       <pubDate>Wed, 08 Feb 2017 11:26:37 +0800</pubDate>
       

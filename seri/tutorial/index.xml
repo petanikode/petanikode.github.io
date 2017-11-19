@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 18 Nov 2017 19:06:44 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Nov 2017 04:06:27 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/seri/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tutorial Slim Framework: Cara Upload File ke Webservice</title>
+      <link>https://www.petanikode.com/slim-api-upload/</link>
+      <pubDate>Mon, 20 Nov 2017 04:06:27 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/slim-api-upload/</guid>
+      <description>Upload file adalah fitur yang harus ada di setiap aplikasi web.
+Lalu bagaimana cara kita membuat fitur upload untuk RESTful API atau webservice?
+Itulah yang akan kita pelajari pada tutorial ini.
+Kenapa harus upload ke webservice?
+Karena kita akan bisa upload file dari mana saja, dari aplikasi android, web, dekstop, bot, dan sebagainya.
+    (adsbygoogle = window.adsbygoogle || []).push({});  Konsep Upload File di Slim Framework File yang di-upload ke aplikasi Slim dapat kita tangkap dengan fungsi atau method getUploadedFiles().</description>
+    </item>
     
     <item>
       <title>Tutorial Membuat RESTful API dengan Slim Framework</title>

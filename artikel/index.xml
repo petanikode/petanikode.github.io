@@ -22,7 +22,7 @@
 Lalu bagaimana cara kita membuat fitur upload untuk RESTful API atau webservice?
 Itulah yang akan kita pelajari pada tutorial ini.
 Kenapa harus upload ke webservice?
-Karena kita akan bisa upload file dari mana saja, dari aplikasi android, web, dekstop, bot, dan sebagainya.
+Karena kita akan bisa upload file dari mana saja, dari aplikasi android, web, desktop, bot, dan sebagainya.
     (adsbygoogle = window.adsbygoogle || []).push({});  Konsep Upload File di Slim Framework File yang di-upload ke aplikasi Slim dapat kita tangkap dengan fungsi atau method getUploadedFiles().</description>
     </item>
     

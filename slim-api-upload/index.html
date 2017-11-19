@@ -12,7 +12,7 @@
 
 
 <meta itemprop="dateModified" content="2017-11-20T04:06:27&#43;08:00" />
-<meta itemprop="wordCount" content="717">
+<meta itemprop="wordCount" content="736">
 
 
 
@@ -366,7 +366,21 @@ pengaturan seperti ini.</p>
 
 <p>Berikutnya kita akan membuat rute upload-nya.</p>
 
-<p>Silahkan buka file <code>src/routes.php</code>, kemudian tambahkan kode berikut:</p>
+<p>Silahkan buka file <code>src/routes.php</code>, kemudian tambahkan kode berikut di paling atas:</p>
+
+<pre><code class="language-php">use Slim\Http\UploadedFile;
+</code></pre>
+
+<p>Kode tersebut berfungsi untuk mengimpor fungsi <code>getUploadedFiles()</code>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/slim/upload/use-upload.png" 
+    src="/img/placeholder.svg"
+    alt="Impor fungsi upload"
+ />
+
+<p>Selanjutnya, silahkan buat rute untuk upload file:</p>
 
 <pre><code class="language-php">$app-&gt;post('/books/cover/{id}', function(Request $request, Response $response, $args) {
     

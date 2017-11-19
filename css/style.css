@@ -25,10 +25,6 @@ a:hover {text-decoration: none}
     font-family: Merriweather, Georgia, Sans-serif;
 }
 
-.post-content, .post-content :not(pre) {
-    letter-spacing: 0.01rem;
-}
-
 .post-content h2, 
 .post-content h3, 
 .post-content h4, 
@@ -40,6 +36,7 @@ a:hover {text-decoration: none}
 
 .post-content p {
     margin-bottom: 1.5em;
+    letter-spacing: 0.01rem;
 }
 
 .post-content img, .post-content iframe {

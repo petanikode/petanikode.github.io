@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>.Net on Petani Kode — Programmer Pengguna Linux</title>
+    <link>https://www.petanikode.com/topik/.net/</link>
+    <description>Recent content in .Net on Petani Kode — Programmer Pengguna Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 21 Nov 2017 10:44:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Belajar Pemrograman C# .NET di Linux, Apakah Bisa?</title>
+      <link>https://www.petanikode.com/cs-dotnet-linux/</link>
+      <pubDate>Tue, 21 Nov 2017 10:44:58 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/cs-dotnet-linux/</guid>
+      <description>Saya pernah berpikir:
+Sepertinya pemrograman .NET (dibaca &amp;ldquo;Dot net&amp;rdquo;) tidak mungkin bisa dilakukan di Linux. Karena .NET sendiri merupakan produk dari Microsoft.
+Ternyata itu salah&amp;hellip; (karena kurang piknik sih 😸)
+Dunia sudah berubah.
+Sejak CEO Microsoft Satya Nadella menyatakan:
+&amp;ldquo;Microsoft Love Linux&amp;rdquo;
+Beberapa produk Microsoft menjadi open source, termasuk juga .NET yang sudah di-open-sourcekan sejak tahun 2014.
+Programmer Microsoft juga banyak yang berkontribusi di proyek-proyek open source.
+Buktinya, Microsoft menjadi organisasi yang paling banyak berkontribusi di proyek open source (di Github), mengalahkan Facebook dan Google.</description>
+    </item>
+    
+    <item>
+      <title>Galat saat kompilasi aplikasi VB.NET di MonoDevelop</title>
+      <link>https://www.petanikode.com/vb-dotnet-linux/</link>
+      <pubDate>Mon, 30 Mar 2015 23:03:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/vb-dotnet-linux/</guid>
+      <description>Saya sedang coba-coba membuat sebuah aplikasi VB.NET di MonoDevelop. Tapi, saat dikompilasi atau dijalankan, Saya mendapatkan galat (Error). Pesan galatnya sebagai berikut:
+ Untunglah saya menemukan solusinya di askubuntu.com. Ternyata cukup menginstal kompilator VB.NET-nya:
+sudo apt-get install mono-vbnc Setelah itu, coba kompilasi aplikasinya lagi. Berhasil!</description>
+    </item>
+    
+  </channel>
+</rss>

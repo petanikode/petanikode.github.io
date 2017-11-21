@@ -7,10 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 20 Nov 2017 04:06:27 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Nov 2017 10:44:58 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Belajar Pemrograman C# .NET di Linux, Apakah Bisa?</title>
+      <link>https://www.petanikode.com/cs-dotnet-linux/</link>
+      <pubDate>Tue, 21 Nov 2017 10:44:58 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/cs-dotnet-linux/</guid>
+      <description>Saya pernah berpikir:
+Sepertinya pemrograman .NET (dibaca &amp;ldquo;Dot net&amp;rdquo;) tidak mungkin bisa dilakukan di Linux. Karena .NET sendiri merupakan produk dari Microsoft.
+Ternyata itu salah&amp;hellip; (karena kurang piknik sih 😸)
+Dunia sudah berubah.
+Sejak CEO Microsoft Satya Nadella menyatakan:
+&amp;ldquo;Microsoft Love Linux&amp;rdquo;
+Beberapa produk Microsoft menjadi open source, termasuk juga .NET yang sudah di-open-sourcekan sejak tahun 2014.
+Programmer Microsoft juga banyak yang berkontribusi di proyek-proyek open source.
+Buktinya, Microsoft menjadi organisasi yang paling banyak berkontribusi di proyek open source (di Github), mengalahkan Facebook dan Google.</description>
+    </item>
     
     <item>
       <title>Tutorial Slim Framework: Cara Upload File ke Webservice</title>

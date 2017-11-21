@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vb on Petani Kode — Programmer Pengguna Linux</title>
+    <link>https://www.petanikode.com/topik/vb/</link>
+    <description>Recent content in Vb on Petani Kode — Programmer Pengguna Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 30 Mar 2015 23:03:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.petanikode.com/topik/vb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Galat saat kompilasi aplikasi VB.NET di MonoDevelop</title>
+      <link>https://www.petanikode.com/vb-dotnet-linux/</link>
+      <pubDate>Mon, 30 Mar 2015 23:03:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/vb-dotnet-linux/</guid>
+      <description>Saya sedang coba-coba membuat sebuah aplikasi VB.NET di MonoDevelop. Tapi, saat dikompilasi atau dijalankan, Saya mendapatkan galat (Error). Pesan galatnya sebagai berikut:
+ Untunglah saya menemukan solusinya di askubuntu.com. Ternyata cukup menginstal kompilator VB.NET-nya:
+sudo apt-get install mono-vbnc Setelah itu, coba kompilasi aplikasinya lagi. Berhasil!</description>
+    </item>
+    
+  </channel>
+</rss>

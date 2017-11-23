@@ -171,11 +171,11 @@ var marker = new google.maps.Marker({
     </item>
     
     <item>
-      <title>Cara Instal Slimframework di Linux dengan Composer</title>
-      <link>https://www.petanikode.com/slimframework-untuk-pemula/</link>
+      <title>Pengenalan Slim Framework untuk Pemula</title>
+      <link>https://www.petanikode.com/slim-untuk-pemula/</link>
       <pubDate>Wed, 25 Feb 2015 01:16:00 +0000</pubDate>
       
-      <guid>https://www.petanikode.com/slimframework-untuk-pemula/</guid>
+      <guid>https://www.petanikode.com/slim-untuk-pemula/</guid>
       <description>Slim merupakan sebuah framework mikro untuk PHP. Slim bisa kita gunakan untuk membangun aplikasi web sederhana dan Rest API. Kali ini, saya akan membawakan tutorial cara menginstal Slim di Linux. Slim yang akan diinstal adalah versi 2.0.
 Pastikan Composer dan PHP sudah terinstal di komputer teman-teman. Setelah itu ikuti langkah-langkah berikut ini.
 Membuat Direktori Proyek Buatlah sebuah direktori dengan nama proyeknya, misalnya proyek-slim.

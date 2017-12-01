@@ -5,7 +5,13 @@
     <title>Tutorial Google Maps API: Membuat Marker untuk Menandai Lokasi</title>
 
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
 
 <meta itemprop="name" content="Tutorial Google Maps API: Membuat Marker untuk Menandai Lokasi">
 <meta itemprop="description" content="Marker sering digunakan untuk menandai sebuah lokasi. Biasanya sering digunakan dalam membuat aplikasi Geolocation.
@@ -70,8 +76,8 @@ var marker = new google." />
 <meta content='143461015837500' property='fb:pages' />
 <meta content='ardianta.pargo' property='fb:profile_id' />
 
-<meta property="article:author" content="https://www.facebook.com/petanikode" />
-<meta property="article:publisher" content="https://www.facebook.com/petanikode" />
+<meta property="article:author" content="https://web.facebook.com/petanikode" />
+<meta property="article:publisher" content="https://web.facebook.com/petanikode" />
 
 
 <link rel="icon" href="/img/favicon.png" />
@@ -548,7 +554,7 @@ Lalu memanggil fungsi untuk membuat <em>marker</em>.</p>
 
 <p>Lalu fungsi tersebut kita panggil saat <em>event</em> peta diklik:</p>
 
-<pre><code class="language-javascript">google.maps.event.addListener(peta, ‘click’, function(event) {
+<pre><code class="language-javascript">google.maps.event.addListener(peta, 'click', function(event) {
     taruhMarker(this, event.latLng);
 });
 </code></pre>

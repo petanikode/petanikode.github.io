@@ -721,6 +721,19 @@ Google Maps memang akan menampilkan area abu-abu (grey) kalau ditempatkan di ele
     </item>
     
     <item>
+      <title>Tutorial Google Maps API: Membuat Marker untuk Menandai Lokasi</title>
+      <link>https://www.petanikode.com/google-map-marker/</link>
+      <pubDate>Sun, 26 Jun 2016 06:58:00 +0000</pubDate>
+      
+      <guid>https://www.petanikode.com/google-map-marker/</guid>
+      <description>Marker sering digunakan untuk menandai sebuah lokasi. Biasanya sering digunakan dalam membuat aplikasi Geolocation.
+Pada kesempatan ini, kita akan belajar membuat sebuah marker di Google Maps.
+Kamu bisa menggunakan contoh kode sebelumnya untuk uji coba.
+Mengenal Objek Marker Marker merupakan sebuah objek yang bisa kita buat dengan kode berikut:
+var marker = new google.maps.Marker({ position: new google.maps.LatLng(-8.5830695,116.3202515), map: peta });  Terdapat dua properti penting yang harus diberikan ke marker:</description>
+    </item>
+    
+    <item>
       <title>Cara Membuat Login dengan Username dan Alamat Email di CodeIgniter</title>
       <link>https://www.petanikode.com/codeigniter-login/</link>
       <pubDate>Mon, 30 May 2016 11:30:00 +0000</pubDate>

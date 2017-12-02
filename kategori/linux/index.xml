@@ -106,16 +106,17 @@ Pico merupakan teks editor berbasis teks yang mudah digunakan. Teks editor ini m
     </item>
     
     <item>
-      <title>Belajar Pemrograman C di Linux: Pengenalan dan Persiapan</title>
+      <title>Belajar Pemrograman C di Linux: Pengenalan dan Persiapan Awal</title>
       <link>https://www.petanikode.com/c-linux/</link>
       <pubDate>Thu, 21 Jul 2016 12:11:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/c-linux/</guid>
-      <description>Sebenarnya sudah lama sekali artikel ini tersimpan dalam tumpukan draf di blog ini. Tidak terbit-terbit sampai menjadi fosil. Oleh karena itu, dari pada disimpan terus, lebih baik saya terbitkan saja apa adanya.
-
-Bahasa pemrograman C memang bahasa yang cukup tua dan tidak begitu populer saat ini. Tetapi tidak ada salahnya kita pelajari, karena bahasa yang populer saat ini berasal dari bahasa C.
-
-Teknologi yang pupuler saat ini menurut survey stackoverflow.</description>
+      <description>Bahasa pemrograman C adalah bahasa pemrograman yang dibuat oleh Dennis Ritchie pada tahun 1969&amp;ndash;1973 di Bell Labs.
+Bahasa pemrograman legendaris :open_mouth:&amp;hellip;
+Bahasa pemrograman C memang bahasa yang cukup tua, namun masih banyak digunakan hingga saat ini.
+(Teknologi yang pupuler saat ini menurut survey stackoverflow).
+Bahasa C banyak menginspirasi bahasa-bahasa yang lain seperti Java, Javascript, C++, C#, PHP, dsb. Bahasa-bahasa tersebut memiliki sintaks yang hampir sama dengan bahasa C.
+Selain itu, kernel Linux yang kita gunakan saat ini, ditulis dengan bahasa C oleh Linus Torvalds.</description>
     </item>
     
     <item>
@@ -124,12 +125,11 @@ Teknologi yang pupuler saat ini menurut survey stackoverflow.</description>
       <pubDate>Thu, 28 Apr 2016 06:54:00 +0000</pubDate>
       
       <guid>https://www.petanikode.com/android-linux-eclipse/</guid>
-      <description>Awalnya Google menggunakan Eclipse sebagai IDE untuk pengembangan Android. Kemudian beralih ke Android Studio.
-Eclipse memang lebih ringan daripada Android Studio, akan tetapi Eclipse tidak lagi didukung oleh Google.
+      <description>Awalnya Google menggunakan Eclipse sebagai IDE untuk pengembangan aplikasi Android. Kemudian beralih ke Android Studio.
+Eclipse memang lebih ringan daripada Android Studio, akan tetapi Eclipse sudah tidak lagi didukung oleh Google.
+Artinya, kalau ada fitur terbaru atau API terbaru dari Android, kita (mungkin) tidak akan bisa menggunakannya di Eclipse.
 Namun tidak ada salahanya menggunakan Eclipse untuk membuat aplikasi Android.
-Bila kamu ingin mencobanya, silahkan ikuti langkah-langkah berikut untuk melakukan perisapan.
-1. Install JDK JDK (Java Development Kit) merupakan peralatan dasar yang dibutuhkan untuk pemrograman Java.
-Karena aplikasi Android menggunakan bahasa pemrograman Java, maka kita perlu menginstal JDK.</description>
+Bila kamu ingin mencobanya, silahkan ikuti langkah-langkah berikut untuk melakukan perisapan.</description>
     </item>
     
     <item>

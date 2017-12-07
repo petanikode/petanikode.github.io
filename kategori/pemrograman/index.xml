@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 21 Nov 2017 10:44:58 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 Dec 2017 15:50:01 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/kategori/pemrograman/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Persiapan Pemrograman Tizen di Linux</title>
+      <link>https://www.petanikode.com/tizen-linux/</link>
+      <pubDate>Mon, 04 Dec 2017 15:50:01 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/tizen-linux/</guid>
+      <description>Tizen adalah sistem operasi open source untuk perangkat mobile yang dikembangkan dari Linux.
+Lebih jelasnya, silahkan simak video ini:
+  Lalu apa saja yang harus kita persiapkan bila ingin membuat aplikasi Tizen di Linux?
+Sama halnya seperti Android, Tizen juga memiliki IDE khusus untuk membuat aplikasinya.
+ Pertama kita harus siapkan JDK (Java Development Kit), karena IDE Tizen membutuhkannya; Tizen Studio adalah IDE yang akan digunakan untuk membuat aplikasi; Tizen Emulator dan Tizen SDK (Software Development Kit).</description>
+    </item>
     
     <item>
       <title>Belajar Pemrograman C# .NET di Linux, Apakah Bisa?</title>

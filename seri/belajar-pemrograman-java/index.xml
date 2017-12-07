@@ -38,7 +38,6 @@ Maka kita bisa menyuruhnya seperti ini:
 System.out.println(&amp;quot;Petani Kode&amp;quot;); System.out.println(&amp;quot;Petani Kode&amp;quot;); System.out.println(&amp;quot;Petani Kode&amp;quot;); System.out.println(&amp;quot;Petani Kode&amp;quot;); System.out.println(&amp;quot;Petani Kode&amp;quot;);  Tapi&amp;hellip; bagaimana kalau sebanyak 1000x, apa kita akan mampu mengetik kode sebanyak itu?
 Tentunya tidak.
 Karena itu, kita harus pakai perulangan.
-
 Contoh perulangan:
 for (int hitungan = 0; hitungan &amp;lt;= 1000; hitungan++) { System.</description>
     </item>

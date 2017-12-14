@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Belajar Java OOP: Memahami Konsep Dasar OOP (untuk Pemula)</title>
+
+<meta charset="utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+<meta itemprop="name" content="Belajar Java OOP: Memahami Konsep Dasar OOP (untuk Pemula)">
+<meta itemprop="description" content="Pengantar Konsep dasar OOP untuk Pemula. OOP merupakan hal yang harus dipelajari untuk memahami Java lebih dalam. Jika kamu ingin memahami Framework, pelajari dulu konsep OOP">
+
+
+<meta itemprop="dateModified" content="2017-11-10T02:51:27&#43;08:00" />
+<meta itemprop="wordCount" content="1063">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<meta property="og:title" content="Belajar Java OOP: Memahami Konsep Dasar OOP (untuk Pemula)" />
+<meta property="og:description" content="Pengantar Konsep dasar OOP untuk Pemula. OOP merupakan hal yang harus dipelajari untuk memahami Java lebih dalam. Jika kamu ingin memahami Framework, pelajari dulu konsep OOP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.petanikode.com/java-oop/" />
+
+
+
+<meta property="article:published_time" content="2017-11-10T02:51:27&#43;08:00"/>
+<meta property="article:modified_time" content="2017-11-10T02:51:27&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content='summary_large_image' name='twitter:card' />
+<meta content='@petanikode' name='twitter:site' />
+<meta content='@ardiantapargo' name='twitter:creator' />
+
+
+
+<meta property='og:image' content='https://www.petanikode.com/img/java/oop/oop-petanikode.png' />
+<meta property="og:updated_time" content="2017-11-10 02:51:27 &#43;0800 WITA" />
+<meta content='id_ID' property='og:locale' />
+<meta content='ms_MY' property='og:locale:alternate' />
+<meta content='en_US' property='og:locale:alternate' />
+
+<meta content='152759108115365' property='fb:app_id' />
+<meta content='petanikode' property='fb:pages' />
+<meta content='143461015837500' property='fb:pages' />
+<meta content='ardianta.pargo' property='fb:profile_id' />
+
+<meta property="article:author" content="https://web.facebook.com/petanikode" />
+<meta property="article:publisher" content="https://web.facebook.com/petanikode" />
+
+
+<link rel="icon" href="/img/favicon.png" />
+<link rel="icon" href="/img/logo.svg" />
+<link rel='icon' href="/img/logo.svg" sizes='192x192' type="image/svg+xml" />
+<link rel='icon' href="/img/logo.svg" sizes='32x32' type="image/svg+xml" />
+<link rel='icon' href="/img/logo.svg" sizes='96x96' type="image/svg+xml" />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='57x57' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='60x60' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='72x72' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='76x76' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='114x114' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='120x120' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='144x144' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='152x152' />
+<link rel='apple-touch-icon' href="/img/logo.svg" sizes='180x180' />
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+<link rel="stylesheet" href="/css/style.css" />
+
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+
+
+
+
+<meta name="telegram:channel" content="@petanikode">
+
+<meta name="keywords" content="Belajar Java OOP: Memahami Konsep Dasar OOP (untuk Pemula), Java Oop, Bahasa Pemrograman, Belajar Pemrograman, Tutorial Pemrograman, belajar bahasa pemrograman"/>
+<meta name="description" content="Pengantar Konsep dasar OOP untuk Pemula. OOP merupakan hal yang harus dipelajari untuk memahami Java lebih dalam. Jika kamu ingin memahami Framework, pelajari dulu konsep OOP" />
+
+<meta content='ID-id' http-equiv='content-language' />
+<meta content='index,follow' name='robots' />
+<meta content='Copyright (c) 2017, Petani Kode; all rights reserved.' name='copyright' />
+<meta content='Indonesian' name='language' />
+<meta content='6F355AD626E325F1305BDE3A0BA81A7A' name='msvalidate.01' />
+<meta content='3Ro7gUj4083OA_4gzbJPGj5nyAWw_axhVlf20IUFXck' name='google-site-verification' />
+
+<meta content='index,follow' name='googlebot' />
+<meta content='follow, all' name='Googlebot-Image' />
+<meta content='follow, all' name='Scooter' />
+<meta content='follow, all' name='msnbot' />
+<meta content='follow, all' name='alexabot' />
+<meta content='follow, all' name='Slurp' />
+<meta content='follow, all' name='ZyBorg' />
+<meta content='follow, all' name='Scooter' />
+<meta content='true' name='MSSmartTagsPreventParsing' />
+<meta content='ALL' name='SPIDERS' />
+<meta content='ALL' name='WEBCRAWLERS' />
+<meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot'
+    name='search engines' />
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Petani Kode — Programmer Pengguna Linux",
+        "url": "https://www.petanikode.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.petanikode.com/topik/{search_term_string}",
+            "query-input": "required name=search_term_string"
+         }
+    }
+</script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80537197-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-petanikode sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="https://www.petanikode.com/"><img src="/img/logo.svg" width="30" height="30" class="d-inline-block align-top rounded-circle"
+            alt="Logo"> Petani Kode</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/php">PHP <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/java">Java <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/python">Python</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/javascript">Javascript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topik/git">Git</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Jobs</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="https://id.jooble.org/lowongan-kerja-programmer" title="Lowongan Kerja untuk Programmer" target="_blank">Loker Programmer</a>
+                        <a class="dropdown-item" href="http://projects.id/petani_kode" title="Remote Jobs untuk Freelancer" target="_blank">Remote Jobs</a>
+                    </div>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.co.id" id="cse-search-box">
+                <input type="hidden" name="cx" value="partner-pub-6279325630224392:9670052267" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sa" value="search" />
+                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Kata Kunci" aria-label="Search">
+                <button class="btn btn-info my-2 my-sm-0" type="submit">Cari</button>
+            </form>
+        </div>
+    </div>
+</nav> <header class="">
+    <div class="jumbotron jumbotron-fluid bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Programmer Pengguna Linux</h1>
+                    <p class="lead">Belajar Pemrograman Apapun Menggunakan Linux</p>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="container mb-5">
+
+         <div class="row mb-3">
+    <div class="col-md-12">
+        <div class="alert alert-secondary"><img draggable="false" class="emoji" alt="🎁" src="/img/icon/twemoji/1f381.svg"> Apa bahasa pemrograman yang ingin kamu pelajari? <a href="https://goo.gl/forms/C3tKLIQ8M1uCphfS2" target="blank">Kirim Jawaban</a></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+        <div class="row">
+
+            <div class="col-sm-12 col-lg-8 mb-5 post-outer">
+                <article class="card mb-5">
+                    <div class="">
+                        <div class="card-body p-md-5">
+
+                            <div class="post-header mb-5">
+
+                                <div class="mb-3">
+                                    <img src="/img/author-photo.jpg" class="rounded-circle mr-1" width="32" height="32" alt="author" />
+                                    <a class="align-middle text-dark" href="https://twitter.com/ardiantapargo">Muhar Dian</a>                                    <small class="align-middle text-muted">· <time>10 Nov 2017</time></small>
+                                </div>
+
+                                <h2 class="card-title mb-3">Belajar Java OOP: Memahami Konsep Dasar OOP (untuk Pemula)</h2>
+
+                                <div>
+                                    
+                                    <span class="badge badge-success">
+                                             #<a class="text-white" rel="tag" href="/topik/java">Java</a>
+                                        </span> 
+                                    <span class="badge badge-success">
+                                             #<a class="text-white" rel="tag" href="/topik/oop">OOP</a>
+                                        </span> 
+                                </div>
+
+                            </div>
+                            <div class="post-content">
+                                
+
+<p><img src="/img/java/oop/oop-petanikode.png" alt="Belajar Java OOP" /></p>
+
+<!-- Agreement -->
+
+<!-- Saat [membut program pertama di Java](/java-linux/), kita diwajibkan 
+menggunakan _class_.
+
+```java
+class NamaProgram {
+    public static void main(String[] args){
+        // logika program di sini
+    }
+}
+```
+
+Kita mengibaratkan _class_ sebagai nama program. Namun, bukan
+itu fungsi _class_ yang sesungguhnya.
+
+Kita memang bisa menganggap _class_ sebagai nama program.
+
+Kenapa tidak menggunakan kata kunci `program` seperti pada Pascal:
+
+```pascal
+program nama_program
+
+begin
+    // logika program di sini
+end.
+```
+
+__Jawabannya__: karena Java adalah bahasa pemrograman yang menggunakan paradigma OOP. -->
+
+<!-- Apa itu OOP dan Kenapa Harus OOP?
+
+Apa saja hal dasar yang harus dipahami dalam OOP?
+
+Pada tutorial awal, kita mengibaratkan _class_ itu sebuah nama program. Namun, sebenarnya bukan.
+
+_Class_ dalam sudut pandang OOP memiliki arti yang berbeda. _(Nanti kita akan bahas lebih dalam)_
+
+Apa itu _class_?
+
+Dulu kita menyepakati, _class_ adalah nama program. 
+Tapi sekrang artinya akan berbeda menurut sudut pandang OOP.
+
+
+OOP adalah hal yang wajib kita pelajari dalam Java,
+karena Java sendiri sudah menggunakan OOP.
+
+Buktinya, kita diwajibkan menggunakan _class_ saat 
+membut program [Hello World!](/sejarah-asal-usul-hello-world). -->
+
+<!-- Promise -->
+
+<p>OOP merupakan hal yang harus dipelajari untuk memahami Java lebih dalam.
+Karena Java sendiri merupakan bahasa yang didesain untuk OOP.</p>
+
+<p>Buktinya:</p>
+
+<p>Saat kita <a href="/java-linux/">membuat program pertama</a>, kita diwajibkan menggunakan <em>class</em>.</p>
+
+<pre><code class="language-java">class Hello {
+    public static void main(String[] args){
+        System.out.println(&quot;Hello World!&quot;);
+    }
+}
+</code></pre>
+
+<p>OOP dikenal sebagai teknik pemrograman modern yang lebih efisien dan banyak digunakan
+pada <em>Framework</em>.</p>
+
+<blockquote>
+<h4 id="jika-kamu-ingin-memahami-framework-pelajari-dulu-konsep-oop">Jika kamu ingin memahami Framework, pelajari dulu konsep OOP</h4>
+</blockquote>
+
+<!-- Review -->
+
+<p>Jadi tidak ada alasan untuk tidak belajar OOP.</p>
+
+<p>Apa saja yang akan kita pelajari pada artikel ini?</p>
+
+<ol>
+<li>Apa itu OOP?</li>
+<li>Objek dan Class</li>
+<li>Class Diagram</li>
+</ol>
+
+<p>Mari kita mulai&hellip;</p>
+
+
+<div class="border my-5">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-6279325630224392"
+     data-ad-slot="7009414453">
+</ins>
+</div>
+
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<!-- Isi -->
+
+<h2 id="apa-itu-oop">Apa itu OOP?</h2>
+
+<p>OOP (<em>Object Oriented Programming</em>) atau
+dalam bahasa indonesia dikenal dengan pemrograman berorientasikan
+objek (PBO) merupakan sebuah paradigma atau teknik pemrograman yang berorientesikan
+Objek.</p>
+
+<p>Pada OOP, Fungsi dan variabel <strong>dibungkus</strong> dalam sebuah <strong>objek</strong> atau <em>class</em> yang dapat saling
+brinteraksi, sehingga membentuk sebuah program.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/object.png" 
+    src="/img/placeholder.svg"
+    alt="Objek"
+ />
+
+<p>Variabel dalam objek akan menyimpan data dari objek. Sedangkan
+fungsi akan menentukan operasinya.</p>
+
+<p>Contoh objek dalam dunia nyata: Mobil, Burung, Drone, Meja, Pohon, dll.</p>
+
+<pre><code>------------------OBJEK
+Drone
+------------------Variabel/Atribut
+energi = 100;
+ketinggian = 200;
+kecepatan = 29;
+------------------Fungsi
+terbang();
+matikanMesin();
+turun();
+maju();
+mundur();
+belok();
+------------------
+</code></pre>
+
+<p>Semua objek di dunia nyata yang memiliki sifat dan tingkah laku,
+bisa kita representasikan dalam kode.</p>
+
+<p>Kata kunci yang perlu diingat:</p>
+
+<p><strong>&ldquo;Objek isinya data dan fungsi&rdquo;</strong></p>
+
+<h2 id="class-dan-object">Class dan Object</h2>
+
+<p>Class adalah rancangan atau <em>blue print</em> dari sebuah objek.</p>
+
+<p>Sedangkan objek dalam pemrograman adalah sebuah variabel
+yang merupakan <em>instance</em> dari <em>Class</em>.</p>
+
+<p><em>Instance</em> bisa diartikan sebagai wujud dari <em>class</em>.</p>
+
+<p><em>Class</em> berisi definisi variabel dan fungsi yang menggambarkan
+sebuah objek.</p>
+
+<p>Dalam OOP:</p>
+
+<ul>
+<li><strong>Variabel</strong> disebut <strong>atribut</strong> atau <strong>properti</strong>;</li>
+<li><strong>Fungsi</strong> disebut <strong>method</strong>.</li>
+</ul>
+
+<p>Contoh <em>Class</em>:</p>
+
+<pre><code class="language-java">class NamaClass {
+    String atribut1;
+    String atribut2;
+
+    void namaMethod(){ ... }
+    void namaMethodLain(){ ... }
+}
+</code></pre>
+
+<p>Lalu, Kita biasanya membuat objek <em>(instance)</em> seperti ini:</p>
+
+<pre><code class="language-java">NamaClass namaObj = new NamaClass();
+</code></pre>
+
+<p>Kata kunci <code>new</code> berfungsi untuk membuat objek baru dari <em>class</em> tertentu.</p>
+
+<p>Setelah membuat objek, kita bisa mengakses atribut dan method dari
+objek tersebut.</p>
+
+<p>Contoh:</p>
+
+<pre><code class="language-java">namaObj.namaMethod();
+namaObj.atribut1;
+</code></pre>
+
+<p>Tanda titik (<code>.</code>) berfungsi untuk mengakses atribut dan method.</p>
+
+<h2 id="contoh-program-oop">Contoh Program OOP</h2>
+
+<p>Kita akan menggunakan Netbeans, silahkan buat project baru.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/pilih-project.png" 
+    src="/img/placeholder.svg"
+    alt="Memilih project Java"
+ />
+
+<p>Isi nama project-nya dengan <strong>&ldquo;BelajarOOP&rdquo;</strong> dan jangan centang <strong>&ldquo;Create Main Class&rdquo;</strong>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/project-baru.png" 
+    src="/img/placeholder.svg"
+    alt="Memberikan nama project Java"
+ />
+
+<p>Setelah itu, silahkan buat <em>package</em> baru. Klik kanan pada <strong>&lt;default package&gt;</strong>,
+lalu pilih <strong>New-&gt;Java Package</strong>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/membuat-package.png" 
+    src="/img/placeholder.svg"
+    alt="Membuat package Java"
+ />
+
+<p>Isi nama <em>package</em> dengan <strong>&ldquo;dasar&rdquo;</strong>:</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/nama-package.png" 
+    src="/img/placeholder.svg"
+    alt="Membuat package Java"
+ />
+
+<p>Setelah itu, di dalam package <code>dasar</code>, silahkan buat <em>class</em> baru bernama
+<code>Player.java</code>.</p>
+
+<p>Klik kanan pada package <code>dasar</code> lalu pilih <strong>New-&gt;Java Class</strong>.
+Setelah itu, isi namanya dengan <code>Player.java</code>.</p>
+
+<p>Silahkan tulis kode pada <code>Player.java</code> seperti ini:</p>
+
+<pre><code class="language-java">package dasar;
+
+public class Player {
+    
+    // definisi atribut
+    String name;
+    int speed;
+    int healthPoin;
+
+    // definisi method run
+    void run(){
+        System.out.println(name +&quot; is running...&quot;);
+        System.out.println(&quot;Speed: &quot;+ speed);
+    }
+
+    // definisi method isDead untuk mengecek nilai kesehatan (healthPoin)
+    boolean isDead(){
+        if(healthPoin &lt;= 0) return true;
+        return false;
+    }
+    
+}
+</code></pre>
+
+<p>Berikutnya, buat <em>class</em> baru lagi bernama <code>Game.java</code> dan isi kodenya
+seperti ini:</p>
+
+<pre><code class="language-java">package dasar;
+
+public class Game {
+    public static void main(String[] args){
+
+        // membuat objek player
+        Player petani = new Player();
+
+        // mengisi atribut player
+        petani.name = &quot;Petani Kode&quot;;
+        petani.speed = 78;
+        petani.healthPoin = 100;
+
+        // menalankan method
+        petani.run();
+
+        if(petani.isDead()){
+            System.out.println(&quot;Game Over!&quot;);
+        }
+
+    }
+}
+</code></pre>
+
+<p>Coba eksekusi <code>Game.java</code> dengan klik kanan pada <code>Game.java</code> lalu pilih <strong>Run File</strong>.
+Maka hasilnya:</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/program-oop.png" 
+    src="/img/placeholder.svg"
+    alt="Contoh Program OOP Java"
+ />
+
+<p>Coba ganti nilai <code>healthPoin</code> menjadi <code>0</code>.</p>
+
+<pre><code class="language-java">petani.healthPoin = 0;
+</code></pre>
+
+<p>Setelah itu, coba eksekusi lagi:</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/output-game-over.png" 
+    src="/img/placeholder.svg"
+    alt="Output program"
+ />
+
+<p>Player <code>petani</code> sudah mati, Game selsai! 😄</p>
+
+<h4 id="kok-bisa-begitu-jelaskan-donk">Kok Bisa Begitu? Jelaskan Donk!</h4>
+
+<p>Baik, kita mulai dari pembuatan <em>class</em>.</p>
+
+<p>Pertama-tama, kita membuat sebuah <em>class</em> dengan nama <code>Player</code>.
+Class ini mendefinisikan objek Player dalam Game dengan
+atribut sebagai berikut:</p>
+
+<ul>
+<li><code>name</code> adalah nama objek;</li>
+<li><code>speed</code> adalah kecepatan;</li>
+<li><code>healthPoin</code> adalah nilai kesehatan dari player, biasanya disingkat <code>hp</code>.</li>
+</ul>
+
+<p>Lalu class <code>Player</code> memiliki method:</p>
+
+<ul>
+<li><code>run()</code> untuk menggerakkan player;</li>
+<li><code>isDead()</code> untuk mengecek kondisi kesehatan player. Method ini akan mengembalikan nilai <code>true</code> apabila nilai <code>hp</code>
+lebih kecil atau sama dengan nol (<code>0</code>), sebaliknya akan mengembalikan nilai <code>false</code>.</li>
+</ul>
+
+<p>Berikutnya kita membuat objek baru dari class <code>Player</code> pada class <code>Game</code> bernama <code>petani</code>.</p>
+
+<pre><code class="language-java">// membuat objek player
+Player petani = new Player();
+</code></pre>
+
+<p>Setelah itu mengisi atribut-atributny. Karena kalau tidak diisi akan bernilai <em>Null</em> dan bisa
+menyebabkan <em>NullPointerException</em>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/objek-petani.png" 
+    src="/img/placeholder.svg"
+    alt="Objek Petani"
+ />
+
+<p>Berikutnya kita coba modifikasi nilai <code>hp</code> menjadi nol.</p>
+
+<p>Hasilnya, pesan <code>Game Over!</code> akan ditampilkan. Karena method <code>isDead()</code> akan mengembalikan
+nilai <code>true</code> jika nilai <code>hp</code> kurang atau sama dengan nol.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/objek-petani-dead.png" 
+    src="/img/placeholder.svg"
+    alt="Objek Petani"
+ />
+
+<h2 id="contoh-program-oop-2-program-drone">Contoh Program OOP 2: Program Drone</h2>
+
+<p>Untuk praktek berikutnya, coba buat class <code>Drone</code>.</p>
+
+<pre><code class="language-java">class Drone {
+    // atribut
+    int energi;
+    int ketinggian;
+    int kecepatan;
+    String merek;
+
+    // method
+    void terbang(){
+        energi--;
+        if(energi &gt; 10){
+            // terbang berarti nilai ketinggian bertambah
+            ketinggian++;
+            System.out.println(&quot;Dorne terbang...&quot;);
+        } else {
+            System.out.println(&quot;Energi lemah: Drone nggak bisa terbang&quot;);
+        }
+    }
+
+    void matikanMesin(){
+        if(ketinggian &gt; 0){
+            System.out.println(&quot;Mesin tidak bisa dimatikan karena sedang terbang&quot;);
+        } else {
+            System.out.println(&quot;Mesin dimatikan...&quot;);
+        }
+    }
+
+    void turun(){
+        // ketinggian berkurang, karena turun
+        ketinggian--;
+        energi--;
+        System.out.println(&quot;Drone turun&quot;);
+    }
+
+    void belok(){
+        energi--;
+        System.out.println(&quot;Drone belok&quot;);
+        // belok ke mana? perlu dicek :)
+    }
+
+    void maju(){
+        energi--;
+        System.out.println(&quot;Drone maju ke depan&quot;);
+        kecepatan++;
+    }
+
+    void maju(){
+        energi--;
+        System.out.println(&quot;Drone mundur&quot;);
+        kecepatan++;
+    }
+}
+</code></pre>
+
+<h2 id="bagaimana-menentukan-atribut-dan-method-dari-objek">Bagaimana Menentukan Atribut dan Method dari Objek?</h2>
+
+<p>Seperti yang sudah dijelaskan di awal. Objek memiliki
+data (atribut) dan operasi (fungsi).</p>
+
+<p>Kuncinya:</p>
+
+<ul>
+<li>Atribut itu seperti ciri-ciri dari objek.</li>
+<li>Method itu seperti tingkah laku atau operasi.</li>
+</ul>
+
+<p>Contoh:</p>
+
+<p>Misalkan kita ingin membuat <em>class</em> dari <code>Senjata</code>.</p>
+
+<p>Apa ciri-ciri dari senjata atau data yang bisa dijadikan atribut?</p>
+
+<ul>
+<li>jumlah peluru</li>
+<li>jenis</li>
+<li>nama senjata</li>
+<li>berat</li>
+<li>warna</li>
+<li>dll</li>
+</ul>
+
+<p>Lalu apa tingkah laku atau operasi (fungsi) yang bisa dilakukan?</p>
+
+<ul>
+<li>tembak()</li>
+<li>lempar()</li>
+<li>kurangiPeluru()</li>
+<li>reload()</li>
+<li>dll.</li>
+</ul>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/objek-senjata.png" 
+    src="/img/placeholder.svg"
+    alt="Objek Senjata"
+ />
+
+<p>Maka class-nya bisa dibuat seperti ini:</p>
+
+<pre><code class="language-java">class Senjata {
+    // atribut
+    String nama;
+    int jumlahPeluru;
+    
+    // method
+    void tembak(){
+        //..
+        // setelah nembak, kurangi peluru
+        jumlahPeluru--;
+    }
+
+    void reload(){
+        //..
+        // kalau di-reload maka jumlah peluru diisi ulang
+        jumlahPeluru = 300;
+    }
+}
+</code></pre>
+
+<p>Mudah bukan&hellip;</p>
+
+<h2 id="mengenal-class-diagram">Mengenal Class Diagram</h2>
+
+<p><em>Class Diagram</em> adalah sebuah diagram yang menggambarkan hubungan antar <em>class</em>. <em>Class Diagram</em>
+dapat kita buat dengan aplikasi perancangan (CASE), seperti StarUML.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/starUML.png" 
+    src="/img/placeholder.svg"
+    alt="Class diagram di StarUML"
+ />
+
+<p>Sebauh <em>class</em> digambarkan dengan sebuah tabel 1 kolom dan 3 baris.</p>
+
+<p>Baris pertama berisi nama <em>class</em>; Baris kedua berisi atribut; dan
+Baris ketiga berisi method.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/class.png" 
+    src="/img/placeholder.svg"
+    alt="Class diagram di StarUML"
+ />
+
+<p>Selain itu, terdapat garis yang menggambarkan hubungan antar <em>class</em>.</p>
+
+<img 
+    class="lazyload mb-3"
+    data-src="/img/java/oop/garis-relasi.png" 
+    src="/img/placeholder.svg"
+    alt="Relasi diagram di StarUML"
+ />
+
+<p><em>Class Diagram</em> biasanya digunakan oleh <em>software engineer</em> untuk merancang
+software dengan paradigma OOP.</p>
+
+<p>Sebagai programmer, kita hanya perlu tahu cara membaca
+dan menuliskannya ke dalam kode.</p>
+
+<p>Jika kamu tertarik dengan <em>class</em> diagram, bisa membaca buku-buku
+tentang UML.</p>
+
+<!-- Penutup -->
+
+<h2 id="akhir-kata">Akhir Kata&hellip;</h2>
+
+<p>Buat yang baru pertama belajar OOP, mungkin akan merasa kesulitan. Karena
+banyak hal baru yang belum dipahami.</p>
+
+<p>Namun tenang saja&hellip;</p>
+
+<p>Itu adalah proses belajar.</p>
+
+<p>Silahkan banyak-banyak latihan dan pahami hakikat dari <em>class</em>, atribut,
+<em>method</em>, dll.</p>
+
+<p>Selamat belajar.</p>
+
+
+                                <div class="post-footer mt-5 py-4">
+                                    <div class="mb-4 py-3 border border-left-0 border-right-0">
+    <h6>Berbagi manfaat:</h6>
+    <a class="mr-2" 
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.petanikode.com%2fjava-oop%2f%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=Belajar%20Java%20OOP%3a%20Memahami%20Konsep%20Dasar%20OOP%20%28untuk%20Pemula%29" 
+        title="Bagikan ke Facebook" 
+        target="_blank"
+        onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '%3Futm_source%3Dfacebook.com%26utm_medium%3Dshare&t=' + encodeURIComponent(document.URL));
+        return false;">
+        <img src="/img/icon/entypo/entypo-social/facebook-with-circle.svg" width="32" height="32" alt="Facebook"/>
+    </a>
+    <a class="mr-2" 
+        href="https://twitter.com/intent/tweet?source=https%3a%2f%2fwww.petanikode.com%2fjava-oop%2f%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Belajar%20Java%20OOP%3a%20Memahami%20Konsep%20Dasar%20OOP%20%28untuk%20Pemula%29%20https%3a%2f%2fwww.petanikode.com%2fjava-oop%2f%20via%20@petanikode"
+        onclick="window.open('https://twitter.com/intent/tweet?source=https:\/\/www.petanikode.com\/java-oop\/%3Futm_source%3Dtwitter.com%26utm_medium%3Dshare&text=Belajar Java OOP: Memahami Konsep Dasar OOP (untuk Pemula)%20https:\/\/www.petanikode.com\/java-oop\/%20via%20@petanikode'); return false;"
+        target="_blank" 
+        title="Berbagi ke Twitter">
+        <img src="/img/icon/entypo/entypo-social/twitter-with-circle.svg" width="32" height="32" alt="Twitter"/>
+    </a>
+    <a class="mr-2" 
+        href="https://t.me/share/url?url=https%3a%2f%2fwww.petanikode.com%2fjava-oop%2f%3Futm_source%3Dtelegram.org%26utm_medium%3Dshare"
+        onclick="window.open('https://t.me/share/url?url=https:\/\/www.petanikode.com\/java-oop\/%3Futm_source%3Dtelegram.org%26utm_medium%3Dshare');return false;"
+        target="_blank" 
+        title="Bagikan ke Telegram">
+        <img src="/img/icon/entypo/entypo-social/telegram-with-circle.svg" width="32" height="32" alt="Telegram"/>
+    </a>
+    <a class="mr-2" 
+        href="https://plus.google.com/share?url=https%3a%2f%2fwww.petanikode.com%2fjava-oop%2f%3Futm_source%3Dplus.google.com%26utm_medium%3Dshare" 
+        target="_blank" 
+        title="Bagikan ke Google+" 
+        onclick="window.open('https://plus.google.com/share?url='+ encodeURIComponent(document.URL)); return false;">
+        <img src="/img/icon/entypo/entypo-social/google+-with-circle.svg" width="32" height="32" alt="Google+"/>
+    </a>
+    <a class="mr-2" 
+        href="mailto:?subject=Belajar%20Java%20OOP%3a%20Memahami%20Konsep%20Dasar%20OOP%20%28untuk%20Pemula%29&body=Belajar%20Java%20OOP%3a%20Memahami%20Konsep%20Dasar%20OOP%20%28untuk%20Pemula%29:%20https%3a%2f%2fwww.petanikode.com%2fjava-oop%2f%3Futm_source%3Demail%26utm_medium%3Dshare" 
+        title="Kirim ke Email">
+        <img src="/img/icon/entypo/entypo-social/mail-with-circle.svg" width="32" height="32" alt="Email"/>
+    </a>
+</div>
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'petanikode';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </article>
+
+                
+                <div class="card p-3">
+                    
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-6279325630224392"
+     data-matched-content-ui-type="image_stacked"
+     data-matched-content-rows-num="2" 
+     data-matched-content-columns-num="3"
+     data-ad-slot="5172754450"></ins>
+
+                </div>
+                
+
+            </div>
+
+            <div class="col-sm-12 col-lg-4">
+                <aside>
+
+    
+<div class="widget mb-5">
+    
+    <div class="widget-content">
+
+        
+
+        <script type="text/javascript">
+
+            document.write('\n\n<style>\n	\n	\n						@import url(\'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext\');\n													\n\n	#mlb2-4827284,\n	#mlb2-4827284 *,\n	#mlb2-4827284 a:hover,\n	#mlb2-4827284 a:visited,\n	#mlb2-4827284 a:focus,\n	#mlb2-4827284 a:active {\n	    overflow:visible;\n	    position:static;\n	    background:none;\n	    border:none;\n	    bottom:auto;\n	    clear:none;\n	    cursor:default;\n	    float:none;\n	    letter-spacing:normal;\n	    line-height:normal;\n	    text-align:left;\n	    text-indent:0;\n	    text-transform:none;\n	    visibility:visible;\n	    white-space:normal;\n	\n	    max-height:none;\n	    max-width:none;\n	    left:auto;\n	    min-height:0;\n	    min-width:0;\n	    right:auto;\n	    top:auto;\n	    width:auto;\n	    z-index:auto;\n	\n	    text-shadow: none;\n	    box-shadow: none;\n	    outline: medium none;\n	}\n	\n	#mlb2-4827284 a:hover {\n		cursor: pointer !important;\n	}\n	\n	#mlb2-4827284 h4 {\n	    font-weight: normal;\n	}\n\n	#mlb2-4827284 .subscribe-form {\n	\n		padding: 20px;\n				width: 350px !important;\n				border: 2px solid #F6F6F6 !important;\n		background: #f6f6f6 none !important;\n		border-radius: 0px !important;\n		box-sizing: border-box !important;\n	\n	\n	}\n	\n	#mlb2-4827284 .ml-block-form {\n	 \n		margin-bottom: 0px;\n	\n	}\n    \n    #mlb2-4827284 .subscribe-form .form-section {\n    \n        margin-bottom: 20px;\n        width: 100%;\n    \n    }\n    \n    #mlb2-4827284 .subscribe-form .form-section.mb10 {\n    \n        margin-bottom: 10px;\n        float: left;\n    \n    }\n    \n    #mlb2-4827284 .subscribe-form .form-section.mb0 {\n    \n        margin-bottom: 0px;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section h4 {\n    \n        margin: 0px 0px 10px 0px !important;\n        padding: 0px !important;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 28px !important;\n        line-height: 100%;\n        text-align: left !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section p,\n    #mlb2-4827284 .subscribe-form .form-section li {\n    \n        line-height: 150%;\n        padding: 0px !important;\n        margin: 0px 0px 10px 0px;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section a {\n    \n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .confirmation_checkbox {\n    \n        line-height: 150%;\n        padding: 0px !important;\n        margin: 0px 0px 15px 0px !important;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 12px !important;\n        font-weight: normal !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .confirmation_checkbox input[type=\"checkbox\"] {\n    \n        margin-right: 5px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .form-group {\n    \n        margin-bottom: 15px;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .form-group label {\n    \n        float: left;\n        margin-bottom: 10px;\n        width: 100%;\n        line-height: 100%;\n        font-weight: bold;\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox {\n        \n\n        width: 100%;\n        margin: 0px 0px 10px 0px;\n        \n\n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox label {\n\n    \n\n        color: #000000 !important;\n        font-family: \'Open Sans\', sans-serif !important;\n        font-size: 14px !important;\n    \n\n    }\n\n    #mlb2-4827284 .subscribe-form .form-section .checkbox input {\n\n    \n        margin: 0px 5px 0px 0px;\n    \n\n    }\n    \n     #mlb2-4827284 .subscribe-form .form-section .checkbox input[type=checkbox] {\n\n    \n       -webkit-appearance: checkbox;\n    \n\n    }\n\n\n    #mlb2-4827284.ml-subscribe-form .form-group .form-control {\n\n    \n\n        width: 100%;\n        font-size: 13px;\n        padding: 10px 10px;\n        height: auto;\n        font-family: Arial;\n        border-radius: 0px;\n        border: 1px solid #cccccc !important;\n        color: #000000 !important;\n        background-color: #FFFFFF !important;\n    	-webkit-box-sizing: border-box;\n    	-moz-box-sizing: border-box;\n    	box-sizing: border-box;\n        clear: left;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button {\n\n    \n\n        border: none !important;\n        cursor: pointer !important;\n        width: 100% !important;\n        border-radius: 0px !important;\n        height: 40px !important;\n        background-color: #008080 !important;\n        color: #FFFFFF !important;\n        font-family: \'Arial\', sans-serif !important;\n        font-size: 16px !important;\n        text-align: center !important;\n        padding: 0 !important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button.gradient-on {\n\n    \n\n            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n            background: linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button.gradient-on:hover {\n\n    \n\n            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n            background: linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form button[disabled] {\n\n    \n\n            cursor: not-allowed!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-section.ml-error label {\n\n    \n\n        color: red!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-group.ml-error label {\n\n    \n\n        color: red!important;\n\n    \n\n    }\n\n    #mlb2-4827284.ml-subscribe-form .form-group.ml-error .form-control  {\n\n    \n\n        border-color: red!important;\n\n    \n\n    }\n    \n\n    \n        \n    \n    \n            \n    @media (max-width: 768px) {\n	    \n	    #mlb2-4827284 {\n		    \n		    width: 100% !important;\n		    \n	    }\n	    \n	    #mlb2-4827284 form.ml-block-form,\n	    #mlb2-4827284 .subscribe-form {\n			\n			width: 100% !important;\n			\n		}\n		\n	}\n	\n	    \n    \n<\/style>\n\n\n\n<div id=\"mlb2-4827284\" class=\"ml-subscribe-form ml-subscribe-form-4827284\">\n	\n	<div class=\"ml-vertical-align-center\">\n	    \n	    <div class=\"subscribe-form ml-block-success\" style=\"display:none\">\n	       \n	        	        \n	        <div class=\"form-section\">\n		        \n		        	            \n	            <p>Terima kasih... Silahkan cek inbox untuk mengkonfirmasi!<\/p>\n	            \n	        <\/div>\n	        \n	    <\/div>\n	\n	    <form class=\"ml-block-form\" action=\"//app.mailerlite.com/webforms/submit/c8d3m1\" data-id=\"385614\" data-code=\"c8d3m1\" method=\"POST\" target=\"_blank\">\n	\n		    	\n		    <div class=\"subscribe-form\">\n			    		        <div class=\"form-section mb10\">\n			        		            		            <p><strong><span style=\"font-size: 18px;\">Susah belajar pemrograman? <\/span><\/strong><\/p>\n<p>Dapatkan panduan dan tips eksklusif dari Petani Kode untuk membantumu belajar pemrograman<\/p>\n		            		        <\/div>\n		        \n		        <div class=\"form-section\">\n								        <div class=\"form-group ml-field-name\">\n			            			            <input type=\"text\" name=\"fields[name]\" class=\"form-control\" placeholder=\"Nama\" value=\"\"  autocomplete=\"name\" x-autocompletetype=\"name\" spellcheck=\"false\" autocapitalize=\"off\" autocorrect=\"off\">\n			        <\/div>\n								        <div class=\"form-group ml-field-email ml-validate-required ml-validate-email\">\n			            			            <input type=\"email\" name=\"fields[email]\" class=\"form-control\" placeholder=\"Email*\" value=\"\" autocomplete=\"email\" x-autocompletetype=\"email\"  spellcheck=\"false\" autocapitalize=\"off\" autocorrect=\"off\">\n			        <\/div>\n							        <\/div>\n		        \n		        	\n																	\n		\n	        	\n	        <input type=\"hidden\" name=\"ml-submit\" value=\"1\" />\n			\n						\n	        <button type=\"submit\" class=\"primary\">\n	            Ya, Saya Mau!\n	        <\/button>\n	\n	        <button disabled=\"disabled\" style=\"display: none;\" type=\"button\" class=\"loading\">\n	            <img src=\"//static.mailerlite.com/images/rolling.gif\" width=\"20\" height=\"20\" style=\"width: 20px; height: 20px;\">\n	        <\/button>\n	        \n	        	\n	    <\/div>\n	\n	    <\/form>\n	\n	\n	    <script>\n	        function ml_webform_success_4827284 () {\n	                        var $ = ml_jQuery || jQuery;\n\n	            $(\'.ml-subscribe-form-4827284 .ml-block-success\').show();\n	            $(\'.ml-subscribe-form-4827284 .ml-block-form\').hide();\n	        	        };\n	    <\/script>\n	\n	<\/div>\n<\/div>\n\n\n    ');
+            var script_tag = document.createElement('script');
+            script_tag.setAttribute("type","text/javascript");
+            script_tag.setAttribute("src", "//static.mailerlite.com/js/w/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f");
+            document.getElementsByTagName("head")[0].appendChild(script_tag);
+
+        </script>
+
+    </div>
+</div>
+
+    
+<div class="widget mb-5 hidden-md-down hidden-print">
+    
+    <div class="widget-content">
+
+            
+            
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6279325630224392" data-ad-slot="3924804668" data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+</div>
+</div>
+
+    <div class="widget mb-5">
+
+    <div class="widget-content">
+
+        <div class="card">
+
+            <div class="card-body">
+                <h4 class="card-title">Artikel Terbaru</h4>
+            </div>
+            <div class="list-group list-group-flush">
+                
+                
+                
+                 
+                <a href="/tizen-linux/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/tizen/tizen-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Persiapan Pemrograman Tizen di Linux</p>
+                        <small class="text-secondary">04 Dec 2017 · baca 4 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                  
+                <a href="/cs-dotnet-linux/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/cs/dotnet-linux-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Belajar Pemrograman C# .NET di Linux, Apakah Bisa?</p>
+                        <small class="text-secondary">21 Nov 2017 · baca 5 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                  
+                <a href="/slim-api-upload/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/slim/slim-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Tutorial Slim Framework: Cara Upload File ke Webservice</p>
+                        <small class="text-secondary">20 Nov 2017 · baca 4 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                  
+                <a href="/slim-api/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/slim/slim-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Tutorial Membuat RESTful API dengan Slim Framework</p>
+                        <small class="text-secondary">18 Nov 2017 · baca 10 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                  
+                <a href="/git-vscode/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/github/workflow/github-workflow-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Menggunakan Git pada Visual Studio Code (Lebih praktis!)</p>
+                        <small class="text-secondary">16 Nov 2017 · baca 3 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                  
+                <a href="/java-oop/" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                    <div class="col-3 col-xs-12">
+                        <img class="rounded lazyload"  
+                            src="/img/placeholder-sqr.svg" 
+                            data-src="/img/java/oop/oop-petanikode-sqr.png" 
+                            width="70" height="70" />
+                    </div>
+                    <div class="col-9 col-xs-12 pl-4">
+                        <p class="mb-1">Belajar Java OOP: Memahami Konsep Dasar OOP (untuk Pemula)</p>
+                        <small class="text-secondary">10 Nov 2017 · baca 5 menit</small>
+                    </div>
+                    </div>
+                </a>
+
+                 
+            </div>
+            <div class="card-body">
+                <a href="https://feedburner.google.com/fb/a/mailverify?uri=petanikode&amp;loc=en_US" class="card-link" target="_blank">Langganan Artikel via Email</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+    
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.10&appId=152759108115365';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-page" data-href="https://www.facebook.com/petanikode/" data-small-header="false" data-adapt-container-width="true"
+    data-hide-cover="false" data-show-facepile="true">
+    <blockquote cite="https://www.facebook.com/petanikode/" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/petanikode/">Petani Kode</a>
+    </blockquote>
+</div>
+
+
+</aside>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <footer class="border bg-white border-bottom-0 border-left-0 border-right-0 ">
+    <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 mb-0 mb-sm-3">
+
+                <ul class="nav justify-content-center justify-content-lg-start">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/faqs">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:info@petanikode.com">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-md-6 col-sm-12 text-center text-md-right pt-2">
+
+                &copy; 2017 <a href="https://www.petanikode.com/">Petani Kode</a>
+                <span class="d-none d-lg-inline"> | Made with <img class="emoji" draggable="false" alt="❤️" src="/img/icon/twemoji/2764.svg" /> using <a href='https://gohugo.io' target='_blank'>Hugo 0.26</a></span>
+
+            </div>
+
+            
+        </div>
+    </div>
+</footer> <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script type="text/javascript" async src="/js/lazysizes.min.js"></script>
+<script type="text/javascript" src="/js/twemoji.min.js"></script>
+
+
+<script>
+    
+    var article = document.querySelector("article");
+    twemoji.parse(article, {
+        base: "/img/icon/twemoji/",
+        
+        ext: ".svg",
+        callback: function (icon, options) {
+            return '/img/icon/twemoji/' + icon + '.svg';
+        }
+    });
+</script>
+
+
+
+
+
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6279325630224392",
+        enable_page_level_ads: true
+    });
+</script>
+
+
+<script>
+$(document).ready(function(){
+    
+    (adsbygoogle = window.adsbygoogle || []).push({});
+
+    
+});
+</script>
+
+</body>
+
+</html>

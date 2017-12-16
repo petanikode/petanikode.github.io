@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <copyright>Copyright (c) 2017, Petani Kode; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 10 Nov 2017 02:51:27 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 Dec 2017 15:55:17 +0800</lastBuildDate>
     
 	<atom:link href="https://www.petanikode.com/topik/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cara Menggunakan Maven pada Proyek Aplikasi Java</title>
+      <link>https://www.petanikode.com/java-maven/</link>
+      <pubDate>Thu, 14 Dec 2017 15:55:17 +0800</pubDate>
+      
+      <guid>https://www.petanikode.com/java-maven/</guid>
+      <description>Maven adalah salah satu build tool yang sering digunakan dalam proyek aplikasi Java.
+Dengan Maven kita bisa:
+ Kompilasi source code dengan mudah; Melakukan Testing; Menginstal library yang dibutuhkan;  Selain digunakan untuk Java, Maven juga dapat digunakan untuk mengelola project dengan bahasa Kotlin, C#, Ruby, Scala, dan sebagainya.
+Maven adalah program berbasis teks yang digunakan pada command line. Namun, bisa juga digunakan dalam IDE.
+Karena sebagian besar IDE Java seperti Intellij, Eclipse, dan Netbeans sudah mendukungnya.</description>
+    </item>
     
     <item>
       <title>Belajar Java OOP: Memahami Konsep Dasar OOP (untuk Pemula)</title>
